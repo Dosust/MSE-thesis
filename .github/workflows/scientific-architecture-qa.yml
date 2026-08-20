@@ -79,3 +79,27 @@ jobs:
               assert root.tag.endswith('svg')
               print(f'{f}: PASS')
           PY
+
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.11"
+
+      - name: Julia coupled-model smoke test
+        run: |
+          julia --startup-file=no -e '
+            include("methods/architecture/CoupledInfrastructure.jl");
+            using .CoupledInfrastructure;
+            p = ModelParameters();
+            x = [0.9, 0.8, 0.7, 0.2];
+            z = [0.10, 0.10, 0.08, 0.06];
+            u = zeros(4);
+            dx = zeros(4);
+            dz = zeros(4);
+            infrastructure_rhs!(dx, x, z, u, 0.5, p);
+            interface_rhs!(dz, x, z, 0.5, p);
+            @assert all(isfinite, dx);
+            @assert all(isfinite, dz);
+            @assert realized_flood_hazard(0.5, x[4], p) >= 0;
+            println("Julia coupled-model scaffold: PASS");
+          '
