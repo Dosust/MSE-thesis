@@ -1,0 +1,219 @@
+    confs = np.zeros_like(centers)
+    dispositions = []
+    for i, r in enumerate(records):
+        status, reason = prisma_status(r)
+        dispositions.append({"status": status, "reason": reason})
+        for j, f in enumerate(funcs):
+            mu, c = f(r)
+            centers[i, j] = float(np.clip(mu, 0.0, 1.0))
+            confs[i, j] = float(np.clip(c, 0.0, 1.0))
+    return centers, confs, dispositions
+
+
+def beta_parameters(centers: np.ndarray, confs: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+    # Concentration transforms data confidence into uncertainty width.
+    # Missing/weak evidence stays broad; audited fields become concentrated.
+    k = 4.0 + 96.0 * confs
+    mu = np.clip(centers, 0.01, 0.99)
+    a = mu * k
+    b = (1.0 - mu) * k
+    return a, b
+
+
+def sample_weights(rng: np.random.Generator, n: int) -> Tuple[np.ndarray, np.ndarray]:
+    names = list(WEIGHT_SCENARIOS)
+    scenario_idx = rng.integers(0, len(names), size=n)
+    W = np.empty((n, len(CRITERIA)), dtype=float)
+    for s_idx, name in enumerate(names):
+        rows = np.where(scenario_idx == s_idx)[0]
+        if rows.size:
+            alpha = DIRICHLET_CONCENTRATION * WEIGHT_SCENARIOS[name]
+            W[rows, :] = rng.dirichlet(alpha, size=rows.size)
+    return W, scenario_idx
+
+
+def jaccard(a: set, b: set) -> float:
+    if not a and not b:
+        return 1.0
+    return len(a & b) / len(a | b)
+
+
+def spearman_no_ties(x: np.ndarray, y: np.ndarray) -> float:
+    """Pearson correlation of rank-like arrays; sufficient here because rank fields are unique where present."""
+    if x.size < 3:
+        return math.nan
+    xs = x - x.mean()
+    ys = y - y.mean()
+    den = math.sqrt(float(np.dot(xs, xs) * np.dot(ys, ys)))
+    return float(np.dot(xs, ys) / den) if den > 0 else math.nan
+
+
+def run_mc(records: List[Dict[str, str]], centers: np.ndarray, confs: np.ndarray, dispositions: List[Dict[str, Any]], seed: int, batches: int, draws_per_batch: int) -> Dict[str, Any]:
+    eligible_global = np.array([d["status"] == "ELIGIBLE" for d in dispositions], dtype=bool)
+    idx = np.where(eligible_global)[0]
+    n = len(idx)
+    if n < 2:
+        raise ValueError("Too few PRISMA-eligible substantive papers to rank")
+
+    C = centers[idx]
+    Q = confs[idx]
+    a, b = beta_parameters(C, Q)
+
+    rng = np.random.default_rng(seed)
+    rank_counts = np.zeros((n, n), dtype=np.int64)
+    rank_sum = np.zeros(n, dtype=np.float64)
+    score_sum = np.zeros(n, dtype=np.float64)
+    score_sq_sum = np.zeros(n, dtype=np.float64)
+    top1 = np.zeros(n, dtype=np.int64)
+    top5 = np.zeros(n, dtype=np.int64)
+    top10 = np.zeros(n, dtype=np.int64)
+    top25 = np.zeros(n, dtype=np.int64)
+
+    cumulative_snapshots = []
+    scenario_counts = Counter()
+    total = 0
+
+    for batch in range(batches):
+        B = draws_per_batch
+        W, scenario_idx = sample_weights(rng, B)
+        for s_i, name in enumerate(WEIGHT_SCENARIOS):
+            scenario_counts[name] += int(np.sum(scenario_idx == s_i))
+
+        scores = np.zeros((B, n), dtype=np.float64)
+        for j in range(len(CRITERIA)):
+            Xj = rng.beta(a[:, j], b[:, j], size=(B, n))
+            scores += W[:, j][:, None] * Xj
+
+        order = np.argsort(-scores, axis=1, kind="mergesort")
+        ranks = np.empty_like(order, dtype=np.int16)
+        ranks[np.arange(B)[:, None], order] = np.arange(1, n + 1, dtype=np.int16)[None, :]
+
+        rank_sum += ranks.sum(axis=0)
+        score_sum += scores.sum(axis=0)
+        score_sq_sum += np.square(scores).sum(axis=0)
+        top1 += np.sum(ranks == 1, axis=0)
+        top5 += np.sum(ranks <= 5, axis=0)
+        top10 += np.sum(ranks <= 10, axis=0)
+        top25 += np.sum(ranks <= 25, axis=0)
+
+        for i in range(n):
+            rank_counts[i] += np.bincount(ranks[:, i] - 1, minlength=n)
+
+        total += B
+        exp_rank_now = rank_sum / total
+        top10_now = top10 / total
+        top10_set = set(np.argsort(exp_rank_now)[:10].tolist())
+        cumulative_snapshots.append({
+            "batch": batch + 1,
+            "draws": total,
+            "expected_rank": exp_rank_now.copy(),
+            "top10_probability": top10_now.copy(),
+            "top10_set": top10_set,
+        })
+
+    mean_score = score_sum / total
+    var_score = np.maximum(0.0, score_sq_sum / total - np.square(mean_score))
+    sd_score = np.sqrt(var_score)
+    expected_rank = rank_sum / total
+
+    result = {
+        "eligible_indices": idx,
+        "n_eligible": n,
+        "draws": total,
+        "mean_score": mean_score,
+        "sd_score": sd_score,
+        "expected_rank": expected_rank,
+        "p_top1": top1 / total,
+        "p_top5": top5 / total,
+        "p_top10": top10 / total,
+        "p_top25": top25 / total,
+        "rank_acceptability": rank_counts / total,
+        "snapshots": cumulative_snapshots,
+        "scenario_counts": dict(scenario_counts),
+    }
+    return result
+
+
+def convergence_diagnostics(mc: Dict[str, Any]) -> Dict[str, Any]:
+    snaps = mc["snapshots"]
+    recent = snaps[-5:] if len(snaps) >= 5 else snaps
+    if len(recent) >= 2:
+        max_prob_change = max(
+            float(np.max(np.abs(recent[k]["top10_probability"] - recent[k-1]["top10_probability"])))
+            for k in range(1, len(recent))
+        )
+        min_jaccard = min(
+            jaccard(recent[k]["top10_set"], recent[k-1]["top10_set"])
+            for k in range(1, len(recent))
+        )
+    else:
+        max_prob_change = math.nan
+        min_jaccard = math.nan
+
+    N = mc["draws"]
+    # Worst-case binomial Monte Carlo SE for any rank acceptability probability.
+    worst_se = 0.5 / math.sqrt(N)
+    worst_95_halfwidth = 1.96 * worst_se
+    # Hoeffding bound for mean score S in [0,1]: P(|Sbar-E[S]|>=eps) <= 2e^{-2N eps^2}
+    alpha = 0.01
+    hoeffding_eps_99 = math.sqrt(math.log(2.0 / alpha) / (2.0 * N))
+
+    precision_pass = worst_95_halfwidth <= 0.005
+    stability_pass = (max_prob_change <= 0.010) if not math.isnan(max_prob_change) else False
+    set_pass = (min_jaccard >= 0.80) if not math.isnan(min_jaccard) else False
+
+    return {
+        "N": N,
+        "worst_case_probability_SE": worst_se,
+        "worst_case_probability_95pct_halfwidth": worst_95_halfwidth,
+        "hoeffding_99pct_mean_score_epsilon": hoeffding_eps_99,
+        "last5_max_abs_change_top10_probability": max_prob_change,
+        "last5_min_top10_set_jaccard": min_jaccard,
+        "precision_pass": precision_pass,
+        "probability_stability_pass": stability_pass,
+        "top10_set_stability_pass": set_pass,
+        "overall_convergence_pass": bool(precision_pass and stability_pass and set_pass),
+    }
+
+
+def rank_eligible(records: List[Dict[str, str]], mc: Dict[str, Any]) -> List[Dict[str, Any]]:
+    idx = mc["eligible_indices"]
+    order = np.argsort(mc["expected_rank"], kind="mergesort")
+    out = []
+    for new_rank, local_i in enumerate(order, start=1):
+        global_i = int(idx[local_i])
+        r = records[global_i]
+        out.append({
+            "MC_Robust_Rank": new_rank,
+            "Canonical_ID": txt(r.get("Canonical_ID")),
+            "Canonical_Title": txt(r.get("Canonical_Title")),
+            "DOI": txt(r.get("DOI")),
+            "Journal": txt(r.get("Journal")),
+            "Expected_Rank": float(mc["expected_rank"][local_i]),
+            "P_Rank_1": float(mc["p_top1"][local_i]),
+            "P_Top_5": float(mc["p_top5"][local_i]),
+            "P_Top_10": float(mc["p_top10"][local_i]),
+            "P_Top_25": float(mc["p_top25"][local_i]),
+            "Mean_MC_Score": float(mc["mean_score"][local_i]),
+            "SD_MC_Score": float(mc["sd_score"][local_i]),
+            "Verification_Status": txt(r.get("Verification_Status")),
+            "Data_Quality_Notes": txt(r.get("Data_Quality_Notes")),
+        })
+    return out
+
+
+def write_csv(path: Path, rows: List[Dict[str, Any]], fieldnames: List[str] | None = None) -> None:
+    if not rows:
+        return
+    if fieldnames is None:
+        fieldnames = list(rows[0].keys())
+    with path.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def validation_against_prior(records: List[Dict[str, str]], ranked: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    # Validation only: these comparisons NEVER feed back into the Monte Carlo score.
+    mc_rank_by_id = {r["Canonical_ID"]: float(r["MC_Robust_Rank"]) for r in ranked}
+    out = []
