@@ -1,0 +1,63 @@
+name: Reconstruct framework images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/frameworks/_payload/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct WebP framework images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/frameworks
+          for key in comparison type_i type_ii type_iii; do
+            case "$key" in
+              comparison) out='framework_comparison_all_types.webp' ;;
+              type_i) out='type_i_theory_first_framework.webp' ;;
+              type_ii) out='type_ii_digital_twin_framework.webp' ;;
+              type_iii) out='type_iii_resilience_by_design_framework.webp' ;;
+            esac
+            cat assets/frameworks/_payload/${key}/part_*.b64 | tr -d '\n\r' | base64 --decode > "assets/frameworks/${out}"
+          done
+
+      - name: Verify expected images
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s assets/frameworks/framework_comparison_all_types.webp
+          test -s assets/frameworks/type_i_theory_first_framework.webp
+          test -s assets/frameworks/type_ii_digital_twin_framework.webp
+          test -s assets/frameworks/type_iii_resilience_by_design_framework.webp
+          file assets/frameworks/*.webp
+          sha256sum assets/frameworks/*.webp > assets/frameworks/SHA256SUMS.txt
+
+      - name: Remove transport payload
+        shell: bash
+        run: rm -rf assets/frameworks/_payload
+
+      - name: Commit reconstructed images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/frameworks
+          if git diff --cached --quiet; then
+            echo 'No image changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add generated Type I, II, III framework images'
+          git push
