@@ -14,16 +14,44 @@ The current governing architecture is:
 Physical demonstrator: **Power–Water–Transportation–Solid Waste (P–W–T–SW)**.  
 Primary demonstrator hazard: **urban flooding / drainage-waste feedback**.
 
-## Repository policy
+## Repository structure
 
-This repository separates four kinds of material so provenance is never confused:
+- `.github/` — reproducibility/CI workflow material.
+- `project/` — current thesis scope and research architecture.
+- `conversation/` — preserved current-thread transcript, verbatim user requests, historical request fragments, assistant-response records, and authenticity limits.
+- `prompts/` — exact generated PRISMA / Monte Carlo execution prompts available in the project.
+- `data/` — frozen-corpus payload/reconstruction material and research-data provenance.
+- `methods/architecture/` — mathematical-physics architecture material.
+- `methods/monte_carlo/` — Monte Carlo source fragments, reconstruction utility, and ranked-result outputs.
+- `archive/` — session snapshot documentation.
+- `provenance/` — inventory, SHA-256 registry, online byte-archive links, and publication status.
 
-- `conversation/` — authentic user requests and assistant replies available in the current project/session, plus explicit authenticity limits.
-- `prompts/` — generated execution prompts and protocol prompts.
-- `data/` — literature corpora, deduplication outputs, rankings, and audit tables.
-- `methods/` — PRISMA, Monte Carlo, code, mathematical architecture, QA, and reproducibility artifacts.
-- `archive/` — binary reports/workbooks/ZIP packages and session snapshots.
-- `provenance/` — inventories, SHA-256 hashes, source notes, and status records.
+## Conversation provenance
+
+The current 2026-08-20 user-visible thread is preserved in ordered parts under:
+
+`conversation/2026-08-20_current_thread/`
+
+The repository also contains:
+
+- `conversation/CURRENT_CONVERSATION_USER_REQUESTS_VERBATIM.md`
+- `conversation/AUTHENTICITY_LIMITS.md`
+- `conversation/CURRENT_CONVERSATION_ASSISTANT_RESPONSES_RECONSTRUCTED.md`
+
+The reconstructed assistant-response file is deliberately **not** labeled verbatim. Exact generated prompts/code are stored separately whenever available. Hidden chain-of-thought, system/developer instructions, secrets, credentials, and connector internals are not part of the user-visible transcript archive.
+
+## Raw artifact archive
+
+The byte-preserving session ZIP, authoritative 325-paper CSV, dataset-locked Monte Carlo Python implementation, and PRISMA + Monte Carlo package are stored online in the user's connected Drive and linked from:
+
+`provenance/ONLINE_ARCHIVE.md`
+
+Their exact hashes are recorded in:
+
+- `provenance/INVENTORY.csv`
+- `provenance/SHA256SUMS.txt`
+
+This preserves large/binary artifacts without falsely claiming they were committed to GitHub when the active GitHub connector could not accept mounted binary files directly.
 
 ## Important evidence rule
 
