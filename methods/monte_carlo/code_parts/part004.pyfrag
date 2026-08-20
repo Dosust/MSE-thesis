@@ -1,0 +1,158 @@
+    for field in ["Final_Unique_Rank", "Rank_76", "Rank_141", "Rank_164"]:
+        x, y = [], []
+        for r in records:
+            cid = txt(r.get("Canonical_ID"))
+            old = safe_float(r.get(field))
+            if cid in mc_rank_by_id and not math.isnan(old):
+                x.append(mc_rank_by_id[cid])
+                y.append(old)
+        rho = spearman_no_ties(np.asarray(x, dtype=float), np.asarray(y, dtype=float)) if len(x) >= 3 else math.nan
+        out.append({
+            "Validation_Field": field,
+            "N_Comparable": len(x),
+            "Spearman_Rank_Correlation": rho,
+            "Role": "VALIDATION_ONLY_NOT_USED_IN_SCORING",
+        })
+    return out
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--input",
+        default="/mnt/data/Thesis_Final_Unique_Papers_325_2026-08-20(3).csv",
+        help="Exact frozen 325-paper CSV"
+    )
+    parser.add_argument("--output-dir", default="/mnt/data/PRISMA_MC_325_OUTPUT")
+    parser.add_argument("--seed", type=int, default=SEED)
+    parser.add_argument("--batches", type=int, default=BATCHES)
+    parser.add_argument("--draws-per-batch", type=int, default=DRAWS_PER_BATCH)
+    args = parser.parse_args()
+
+    input_path = Path(args.input)
+    out_dir = Path(args.output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    records, headers = read_csv_records(input_path)
+    frozen_checks = validate_frozen_dataset(records, headers)
+    centers, confs, dispositions = build_feature_matrix(records)
+
+    # PRISMA accounting table.
+    status_counts = Counter(d["status"] for d in dispositions)
+    reason_counts = Counter(d["reason"] for d in dispositions)
+
+    all_rows = []
+    for i, r in enumerate(records):
+        row = dict(r)
+        row["PRISMA_Ranking_Status"] = dispositions[i]["status"]
+        row["PRISMA_Ranking_Reason"] = dispositions[i]["reason"]
+        for j, c in enumerate(CRITERIA):
+            row[f"{c}_Center"] = float(centers[i, j])
+            row[f"{c}_Confidence"] = float(confs[i, j])
+        all_rows.append(row)
+    write_csv(out_dir / "01_PRISMA_Gated_All_325.csv", all_rows)
+
+    mc = run_mc(records, centers, confs, dispositions, args.seed, args.batches, args.draws_per_batch)
+    conv = convergence_diagnostics(mc)
+    ranked = rank_eligible(records, mc)
+    validation = validation_against_prior(records, ranked)
+
+    write_csv(out_dir / "02_MC_Ranked_Eligible.csv", ranked)
+    write_csv(out_dir / "03_MC_Top_50.csv", ranked[:50])
+    write_csv(out_dir / "04_Prior_Rank_Validation_Only.csv", validation)
+
+    # Rank acceptability matrix P(Rank=r).
+    idx = mc["eligible_indices"]
+    accept_rows = []
+    for local_i, global_i in enumerate(idx):
+        rr = {
+            "Canonical_ID": txt(records[int(global_i)].get("Canonical_ID")),
+            "Canonical_Title": txt(records[int(global_i)].get("Canonical_Title")),
+        }
+        probs = mc["rank_acceptability"][local_i]
+        for rank_pos, p in enumerate(probs, start=1):
+            rr[f"P_Rank_{rank_pos}"] = float(p)
+        accept_rows.append(rr)
+    write_csv(out_dir / "05_Rank_Acceptability_Matrix.csv", accept_rows)
+
+    # Determine best paper using a pre-specified lexicographic robustness rule:
+    # 1) minimum expected rank; 2) maximum top-10 probability; 3) maximum P(rank=1);
+    # 4) maximum mean MC score; 5) minimum score SD; 6) Canonical_ID for deterministic tie-break.
+    best = sorted(
+        ranked,
+        key=lambda z: (
+            z["Expected_Rank"],
+            -z["P_Top_10"],
+            -z["P_Rank_1"],
+            -z["Mean_MC_Score"],
+            z["SD_MC_Score"],
+            z["Canonical_ID"],
+        )
+    )[0]
+
+    audit = {
+        "method_name": "PRISMA-compatible stochastic MCDA / SMAA-like Monte Carlo ranking",
+        "input_file": str(input_path),
+        "input_sha256": sha256_file(input_path),
+        "frozen_dataset_checks": frozen_checks,
+        "external_data_used": False,
+        "validation_only_fields_not_scored": sorted(VALIDATION_ONLY_FIELDS),
+        "prisma_status_counts": dict(status_counts),
+        "prisma_reason_counts": dict(reason_counts),
+        "criteria": CRITERIA,
+        "weight_scenarios": {k: v.tolist() for k, v in WEIGHT_SCENARIOS.items()},
+        "dirichlet_concentration": DIRICHLET_CONCENTRATION,
+        "seed": args.seed,
+        "batches": args.batches,
+        "draws_per_batch": args.draws_per_batch,
+        "total_draws": mc["draws"],
+        "scenario_draw_counts": mc["scenario_counts"],
+        "convergence": conv,
+        "best_paper_rule": [
+            "minimum Expected_Rank",
+            "maximum P_Top_10",
+            "maximum P_Rank_1",
+            "maximum Mean_MC_Score",
+            "minimum SD_MC_Score",
+            "Canonical_ID deterministic tie-break",
+        ],
+        "best_paper": best,
+        "limitations": [
+            "Ranking is conditional on fields already present in the frozen CSV.",
+            "No citation counts, journal impact metrics, abstracts, or new full-text extraction are added.",
+            "Title-semantic directness is title-only and therefore assigned lower confidence.",
+            "PRISMA is a reporting/selection framework; the stochastic ranking is a separate MCDA layer.",
+            "A record with CONFLICTING_DOI is placed on HOLD rather than silently resolved.",
+            "Prior rank fields are used only for validation to prevent circular ranking leakage.",
+        ],
+    }
+    with (out_dir / "06_Audit.json").open("w", encoding="utf-8") as f:
+        json.dump(audit, f, indent=2, ensure_ascii=False)
+
+    # Short human-readable summary.
+    with (out_dir / "07_README.txt").open("w", encoding="utf-8") as f:
+        f.write("PRISMA-compatible Monte Carlo ranking of the frozen 325-paper thesis corpus\n")
+        f.write("=" * 78 + "\n")
+        f.write(f"Input SHA-256: {audit['input_sha256']}\n")
+        f.write(f"Records: {frozen_checks['n_rows']}\n")
+        f.write(f"Eligible substantive papers: {mc['n_eligible']}\n")
+        f.write(f"Monte Carlo draws: {mc['draws']} ({args.batches} batches x {args.draws_per_batch})\n")
+        f.write(f"Convergence pass: {conv['overall_convergence_pass']}\n")
+        f.write(f"Worst-case 95% MC probability half-width: {conv['worst_case_probability_95pct_halfwidth']:.6f}\n")
+        f.write(f"99% Hoeffding mean-score epsilon: {conv['hoeffding_99pct_mean_score_epsilon']:.6f}\n\n")
+        f.write("Best paper under pre-specified robustness rule:\n")
+        f.write(json.dumps(best, indent=2, ensure_ascii=False))
+        f.write("\n")
+
+    print(json.dumps({
+        "output_dir": str(out_dir),
+        "input_sha256": audit["input_sha256"],
+        "prisma_status_counts": audit["prisma_status_counts"],
+        "total_draws": mc["draws"],
+        "convergence": conv,
+        "best_paper": best,
+    }, indent=2, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
