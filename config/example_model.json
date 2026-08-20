@@ -1,0 +1,56 @@
+{
+  "state": {
+    "power": ["critical_load_service", "available_generation"],
+    "water": ["pump_service", "distribution_service", "drainage_capacity"],
+    "transportation": ["network_accessibility", "critical_route_service"],
+    "solid_waste": ["uncollected_waste", "waste_removal_service"]
+  },
+  "interfaces": [
+    {
+      "source": "power",
+      "target": "water",
+      "mechanism": "electric power required for pumping and treatment",
+      "dynamic": true,
+      "state_symbol": "Z_PW",
+      "timescale_symbol": "tau_PW"
+    },
+    {
+      "source": "transportation",
+      "target": "solid_waste",
+      "mechanism": "road accessibility constrains waste collection and removal",
+      "dynamic": true,
+      "state_symbol": "Z_TSW",
+      "timescale_symbol": "tau_TSW"
+    },
+    {
+      "source": "solid_waste",
+      "target": "water",
+      "mechanism": "waste blockage reduces effective drainage capacity",
+      "dynamic": true,
+      "state_symbol": "Z_SWW",
+      "timescale_symbol": "tau_SWW"
+    }
+  ],
+  "hazard": {
+    "forcing_symbol": "xi",
+    "realized_hazard_symbol": "eta",
+    "feedbacks": [
+      "solid_waste -> drainage_blockage -> realized_flood_hazard",
+      "transport_accessibility -> waste_removal -> solid_waste"
+    ]
+  },
+  "admissibility": {
+    "physical": ["sector_state_bounds", "flow_capacity_constraints"],
+    "service": ["critical_service_minima"],
+    "sustainability": ["declared_environmental_resource_constraints"],
+    "equity": ["declared_population_service_distribution_constraints"]
+  },
+  "analysis": {
+    "viability": true,
+    "recovery": true,
+    "uncertainty": true,
+    "control": true,
+    "design": true,
+    "optimization": false
+  }
+}
