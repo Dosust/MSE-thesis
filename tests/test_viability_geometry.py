@@ -36,9 +36,10 @@ def test_hausdorff_symmetric():
     assert math.isclose(vg.hausdorff_distance(a, b), vg.hausdorff_distance(b, a))
 
 
-def test_dynamic_static_demo_is_finite():
+def test_dynamic_static_demo_has_nontrivial_boundary_deformation():
     result = vg.demo_boundary_deformation()
-    assert result["n_static"] > 0
-    assert result["n_dynamic"] > 0
+    assert 0 < result["n_static"] < result["n_grid"]
+    assert 0 < result["n_dynamic"] < result["n_grid"]
+    assert result["n_static"] != result["n_dynamic"]
     assert math.isfinite(result["hausdorff_grid_distance"])
-    assert result["hausdorff_grid_distance"] >= 0.0
+    assert result["hausdorff_grid_distance"] > 0.0
