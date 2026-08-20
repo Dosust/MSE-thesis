@@ -1,0 +1,52 @@
+version: 1
+project: MSE-thesis
+scientific_object: boundary_of_sustainable_equitable_viability_kernel
+state_sectors:
+  - power
+  - water
+  - transportation
+  - solid_waste
+
+propositions:
+  P1:
+    name: dynamic_interfaces_matter
+    object: viability_boundary_deformation
+    metric: hausdorff_distance
+    comparison: dynamic_interface_vs_static_interface
+  P2:
+    name: interface_identifiability_matters
+    object: inferred_viability_reliability
+    metric: posterior_boundary_uncertainty
+    comparison: true_or_benchmark_vs_inferred_parameters
+  P3:
+    name: timescale_ratio_controls_static_validity
+    object: interface_to_system_timescale_ratio
+    metric: dynamic_static_error
+    regimes:
+      - fast_interface
+      - commensurate_timescale
+      - slow_interface
+  P4:
+    name: sustainability_equity_deform_viability
+    object: admissible_set_and_viability_kernel
+    metric: boundary_and_measure_change
+    comparison: technical_only_vs_sustainability_equity
+  P5:
+    name: recovery_is_not_viability
+    object: capture_basin_and_recovery_time
+    metric: recoverable_nonviable_measure
+  P6:
+    name: waste_drainage_flood_feedback_matters
+    object: pwtsw_coupled_response
+    metric: boundary_service_and_recovery_change
+    comparison: feedback_on_vs_feedback_off
+  P7:
+    name: reduced_models_preserve_decisions
+    object: reduced_viability_geometry
+    metric: conservative_projection_error
+
+inference_rules:
+  require_predeclared_metric: true
+  require_uncertainty_when_applicable: true
+  require_scope_statement: true
+  prohibit_global_novelty_from_literature_rank: true
