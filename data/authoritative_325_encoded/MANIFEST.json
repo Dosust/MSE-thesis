@@ -1,10 +1,12 @@
 {
+  "status": "COMPLETE_ONLINE_LOSSLESS_RECONSTRUCTION",
   "source_filename": "Thesis_Final_Unique_Papers_325_2026-08-20(2).csv",
   "source_bytes": 215584,
   "source_sha256": "047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f",
   "gzip_bytes": 34688,
   "gzip_sha256": "5ea00a127c096445518ecf704cccd0c9c96e5c56527599df2cdf645f7feb032f",
   "encoding": "gzip then base64 split into ordered parts",
-  "parts": 5,
-  "reconstruct_macos_linux": "cat part_*.b64 | base64 --decode | gunzip > 'Thesis_Final_Unique_Papers_325_2026-08-20(2).csv'"
+  "parts": ["part_01.b64", "part_02.b64", "part_03.b64", "part_04.b64", "part_05.b64"],
+  "reconstruct_macos_linux": "cat part_*.b64 | base64 --decode | gunzip > 'Thesis_Final_Unique_Papers_325_2026-08-20(2).csv'",
+  "verification": "After reconstruction, SHA-256 MUST equal 047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f"
 }
