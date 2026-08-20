@@ -1,0 +1,1282 @@
+# MASTER PROMPT — PRISMA + MONTE CARLO / SMAA RANKING
+## Dataset-locked version for `Thesis_Final_Unique_Papers_325_2026-08-20(2).csv`
+
+You are acting as a scientific systematic-review engineer, mathematical-physics researcher, Monte Carlo / stochastic MCDA specialist, evidence auditor, and reproducibility engineer.
+
+Your ONLY literature input is the attached file:
+
+`Thesis_Final_Unique_Papers_325_2026-08-20(2).csv`
+
+The purpose is to identify the most important papers for the thesis:
+
+# Mathematical Physics of Sustainable Infrastructure Resilience
+
+with the frozen conceptual architecture:
+
+\[
+\mathcal D_{\mathrm{obs}}
+\rightarrow
+(\hat G,\hat\theta,\Sigma_\theta)
+\rightarrow
+\mathcal F_{\mathrm{dyn}}
+\rightarrow
+K_{\mathrm{sus,eq}}
+\rightarrow
+\mathcal V_{\mathrm{sus,eq}}
+\rightarrow
+\mathcal C_{\mathrm{sus,eq}},
+\]
+
+for coupled Power–Water–Transportation–Solid-Waste (P-W-T-SW) infrastructure under urban flooding.
+
+The scientific targets are H1–H6 and T1; H7 is secondary.
+
+---
+
+# 0. NON-NEGOTIABLE DATASET LOCK
+
+1. Use ONLY `Thesis_Final_Unique_Papers_325_2026-08-20(2).csv`.
+2. Do NOT ingest the 164-, 207-, 259-, 342-paper corpora or any other prior dataset.
+3. Do NOT browse the web to add, replace, correct, or enrich papers.
+4. Do NOT add papers from memory.
+5. Do NOT invent missing authors, years, abstracts, full-text findings, citations, DOIs, or journals.
+6. Do NOT use outside citation counts, journal impact factors, university reputation, or author reputation.
+7. Do NOT treat historical rankings in the CSV as primary scientific evidence.
+8. If the CSV does not support a claim, mark it `NOT_ESTABLISHED_IN_DATASET`.
+9. All final ranking language must be dataset-scoped:
+   - allowed: `highest-ranked paper within this frozen 325-record dataset`;
+   - forbidden: `best paper in the entire global literature`.
+10. Preserve all 325 input rows in the audit trail even if some are excluded from scientific Monte Carlo ranking.
+
+---
+
+# 1. EXPECTED DATASET IDENTITY
+
+The input must contain exactly 325 rows and the following 34 columns:
+
+- Final_Unique_Rank
+- Canonical_ID
+- Canonical_Title
+- Canonical_Title_Selection
+- Authors
+- Year
+- Journal
+- DOI
+- DOI_URL
+- URL
+- Primary_Discipline
+- Discipline_Coverage
+- Relevant_Hypotheses
+- Relevance_207
+- Relevance_259
+- Evidence_Stratum_207
+- High_Rigor_Candidate_259
+- Local_Full_Text_207
+- Verification_Status
+- Best_Priority_Tier
+- Max_Importance_Score
+- Selected_Core_164
+- Rank_76
+- Rank_141
+- Rank_164
+- Theory_Architecture_Anchors_or_Selection
+- Source_Presence
+- CSV_Record_Occurrences
+- Primary_Record_Group_Size
+- Merge_Basis
+- Alternate_Titles
+- 207_Paper_IDs
+- 259_Corpus_IDs
+- Data_Quality_Notes
+
+Fail loudly if a required column is absent.
+
+Calculate and freeze SHA-256 of the exact CSV before analysis.
+
+---
+
+# 2. PRISMA SCOPE FOR THIS DATASET
+
+This file is treated as a FROZEN POST-DEDUPLICATION CANDIDATE CORPUS.
+
+Do NOT fabricate upstream PRISMA search counts.
+
+Record:
+
+`UPSTREAM_PRISMA_IDENTIFICATION_COUNTS = NOT_AVAILABLE_IN_THIS_325_DATASET`
+
+and
+
+`UPSTREAM_DATABASE_SEARCH_COUNTS = NOT_AVAILABLE_IN_THIS_325_DATASET`
+
+The PRISMA role in this task is:
+
+\[
+325\text{ frozen records}
+\rightarrow
+\text{identity audit}
+\rightarrow
+\text{scientific eligibility}
+\rightarrow
+\text{evidence classification}
+\rightarrow
+\text{Monte Carlo ranking}.
+\]
+
+PRISMA is an admissibility/reporting layer, NOT a ranking score.
+
+---
+
+# 3. HARD IDENTITY CONDITIONS
+
+Normalize titles and DOIs deterministically.
+
+## DOI normalization
+
+\[
+d_i =
+\operatorname{lower}
+(
+\operatorname{strip}
+(
+\operatorname{remove\_doi\_prefix}(DOI_i)
+)
+).
+\]
+
+Remove:
+- `doi:`
+- `https://doi.org/`
+- `http://doi.org/`
+- trailing punctuation/whitespace.
+
+## Title normalization
+
+Use:
+- lowercase;
+- HTML removal;
+- ampersand normalization;
+- punctuation normalization;
+- whitespace collapse.
+
+Require:
+
+\[
+\#\{\text{Canonical_ID}\}=325
+\]
+
+and
+
+\[
+\#\{\text{normalized canonical titles}\}=325.
+\]
+
+For nonblank DOI records require:
+
+\[
+\#\{\text{normalized DOI}\}
+=
+\#\{\text{nonblank DOI rows}\}.
+\]
+
+If duplicate Canonical_ID, normalized title, or normalized nonblank DOI is found:
+
+`PIPELINE_STATUS = FAIL_IDENTITY_DUPLICATION`
+
+and do not run Monte Carlo.
+
+---
+
+# 4. DATASET-SPECIFIC QUALITY CONDITIONS
+
+Use `Data_Quality_Notes`.
+
+## Hard hold
+
+Any row containing:
+
+`CONFLICTING_DOI`
+
+must receive:
+
+`PRISMA_Ranking_Status = HOLD_IDENTITY_CONFLICT`
+
+and cannot enter scientific Monte Carlo until manually adjudicated.
+
+## Provisional conflict
+
+Any row containing:
+
+`YEAR_CONFLICT`
+
+may enter provisional Monte Carlo because paper identity remains unique, but:
+
+`Final_Tier1_Eligible = FALSE`
+
+until the year conflict is resolved.
+
+## Resolved variants
+
+The following do NOT cause exclusion by themselves:
+
+- TITLE_VARIANT_RESOLVED
+- JOURNAL_VARIANT
+
+They should lower record-integrity confidence slightly but remain rankable.
+
+---
+
+# 5. PROTOCOL-SUPPORT STRATUM
+
+Rows whose `Primary_Discipline` contains:
+
+`Systematic Review Methodology`
+
+or whose `Relevance_259` is:
+
+`C_PROTOCOL_SUPPORT`
+
+must be retained in the PRISMA audit but excluded from the scientific top-paper competition:
+
+`PRISMA_Ranking_Status = PROTOCOL_SUPPORT_NOT_SCIENTIFIC_RANK`
+
+They may be separately ranked as protocol references, but must not compete against mathematical-physics or infrastructure research papers for the thesis's scientific Top 10.
+
+---
+
+# 6. PROHIBITED RANKING LEAKAGE
+
+The following fields are historical/derived ranking outputs and MUST NOT be used as primary Monte Carlo input features:
+
+- Final_Unique_Rank
+- Rank_76
+- Rank_141
+- Rank_164
+- Max_Importance_Score
+- Best_Priority_Tier
+- Selected_Core_164
+
+They may be used ONLY after the new Monte Carlo ranking as post-hoc sensitivity/consistency diagnostics.
+
+Do not let the new ranking reproduce the old ranking by construction.
+
+`Relevance_207`, `Relevance_259`, and `High_Rigor_Candidate_259` may be retained for audit/interpretation but should not control the primary stochastic utility score.
+
+---
+
+# 7. SCIENTIFIC CRITERIA
+
+For every eligible paper \(p_i\), construct:
+
+\[
+\boldsymbol{\mu}_i
+=
+(\mu_{i1},\ldots,\mu_{i10}),
+\quad
+0\le\mu_{ij}\le1.
+\]
+
+Use exactly these ten primary criteria:
+
+\[
+\begin{aligned}
+C_1 &= \text{Thesis architecture alignment},\\
+C_2 &= \text{Mathematical/physical depth},\\
+C_3 &= \text{Dynamic-interface relevance},\\
+C_4 &= \text{Viability/HJ/reachability relevance},\\
+C_5 &= \text{Identification/inverse/UQ relevance},\\
+C_6 &= \text{Recovery/reliability relevance},\\
+C_7 &= \text{Sustainability/equity relevance},\\
+C_8 &= \text{P-W-T-SW/flood demonstrator relevance},\\
+C_9 &= \text{Evidence verification strength},\\
+C_{10} &= \text{Record integrity}.
+\end{aligned}
+\]
+
+Scientific scoring must use only these dataset fields:
+
+- Primary_Discipline
+- Discipline_Coverage
+- Relevant_Hypotheses
+- Theory_Architecture_Anchors_or_Selection
+- Local_Full_Text_207
+- Verification_Status
+- DOI
+- URL
+- Data_Quality_Notes
+
+Do NOT use paper title alone to infer a high scientific score.
+
+---
+
+# 8. DATASET-ADAPTED SCORING RULES
+
+## C1 — Thesis architecture alignment
+
+Let:
+
+\[
+H_i\subseteq\{H1,H2,H3,H4,H5,H6,H7,T1\}
+\]
+
+be the parsed `Relevant_Hypotheses`.
+
+Use hypothesis contributions:
+
+\[
+a_{H1}=a_{H2}=a_{H3}=0.20,
+\]
+
+\[
+a_{H4}=a_{H5}=a_{H6}=a_{T1}=0.15,
+\]
+
+\[
+a_{H7}=0.06.
+\]
+
+If hypothesis mappings exist:
+
+\[
+\mu_{i1}
+=
+\min
+\left[
+1,
+0.35+\sum_{h\in H_i}a_h
++0.08I(A_i\neq\emptyset)
+\right],
+\]
+
+where \(A_i\) is `Theory_Architecture_Anchors_or_Selection`.
+
+If no hypothesis mapping but an architecture anchor exists:
+
+\[
+\mu_{i1}=0.68.
+\]
+
+If neither is available:
+
+\[
+\mu_{i1}=0.50
+\]
+
+with broad uncertainty.
+
+Missing mapping is UNKNOWN, not zero.
+
+---
+
+## C2 — Mathematical/physical depth
+
+Using `Primary_Discipline` and `Discipline_Coverage`:
+
+- mathematics / HJ / reachability / viability / control → 0.98
+- physics / complex networks / network science → 0.90
+- reliability engineering / infrastructure systems → 0.68
+- sustainable engineering / industrial ecology → 0.55
+- cross-disciplinary methods → 0.60
+- otherwise → 0.50 with low confidence
+
+---
+
+## C3 — Dynamic-interface relevance
+
+- H2 or explicit timescale/static-dynamic/dynamic-interface architecture anchor → 0.98
+- H1/H3 or explicit interdependency/coupling/interface/cascade evidence in architecture/discipline fields → 0.82
+- infrastructure/complex-network/reliability discipline only → 0.62
+- otherwise unknown → 0.50
+
+---
+
+## C4 — Viability/HJ/reachability
+
+- H3 or T1 or explicit viability/reachability/Hamilton-Jacobi/reduction anchor → 0.98
+- mathematics/control discipline without explicit mapping → 0.72
+- otherwise unknown → 0.50
+
+---
+
+## C5 — Identification/inverse/UQ
+
+- H1 or explicit identification/inverse/UQ/Bayesian/estimation anchor → 0.98
+- mathematics/control/reliability discipline without explicit mapping → 0.62
+- otherwise unknown → 0.50
+
+---
+
+## C6 — Recovery/reliability
+
+- H5 or explicit recovery/restoration/capture anchor → 0.98
+- reliability/resilience engineering → 0.76
+- infrastructure systems → 0.64
+- otherwise unknown → 0.50
+
+---
+
+## C7 — Sustainability/equity
+
+- H4 or explicit sustainability/equity anchor → 0.98
+- sustainable engineering / industrial ecology → 0.86
+- otherwise unknown → 0.50
+
+---
+
+## C8 — P-W-T-SW / flood demonstrator
+
+- H6 or explicit flood/waste/drainage architecture anchor → 0.98
+- infrastructure systems without H6 → 0.64
+- otherwise unknown → 0.50
+
+---
+
+## C9 — Evidence verification
+
+Use only the CSV's verification fields.
+
+- full-text evidence prior audit or Local_Full_Text includes YES → 1.00
+- online page / publisher verification → 0.86
+- curated prior audit → 0.80
+- project master DOI-title audited → 0.72
+- abstract-only prior audit → 0.55
+- otherwise → 0.65 with broader uncertainty
+
+---
+
+## C10 — Record integrity
+
+Start at:
+
+\[
+\mu_{i,10}=1.
+\]
+
+Apply:
+
+- missing DOI: \(-0.10\)
+- TITLE_VARIANT_RESOLVED: \(-0.03\)
+- JOURNAL_VARIANT: \(-0.04\)
+- YEAR_CONFLICT: \(-0.16\)
+- missing URL: \(-0.08\)
+
+truncate to \([0.50,1]\).
+
+CONFLICTING_DOI does not get a low score; it is excluded before ranking.
+
+---
+
+# 9. SCORE UNCERTAINTY
+
+For every eligible paper and criterion use a Beta uncertainty model:
+
+\[
+X_{ij}
+\sim
+\operatorname{Beta}
+(\alpha_{ij},\beta_{ij}),
+\]
+
+with:
+
+\[
+\alpha_{ij}=\mu_{ij}\kappa_{ij},
+\qquad
+\beta_{ij}=(1-\mu_{ij})\kappa_{ij}.
+\]
+
+Use clipping only for numerical stability:
+
+\[
+10^{-4}\le\mu_{ij}\le1-10^{-4}.
+\]
+
+Evidence confidence controls \(\kappa\):
+
+- high confidence: \(\kappa=180\)
+- medium confidence: \(\kappa=75\)
+- low confidence: \(\kappa=25\)
+
+If a criterion is based on missing hypothesis/architecture information rather than positive evidence, use broad uncertainty:
+
+\[
+\kappa\in[12,25].
+\]
+
+Thus missing evidence is not automatically scored as absence.
+
+---
+
+# 10. WEIGHT SIMPLEX
+
+Let:
+
+\[
+\mathbf w=(w_1,\ldots,w_{10}).
+\]
+
+Require:
+
+\[
+w_j\ge0
+\]
+
+and
+
+\[
+\sum_{j=1}^{10}w_j=1.
+\]
+
+Never sample each weight independently from a uniform interval.
+
+---
+
+# 11. WEIGHT BOUNDS
+
+Use frozen bounds:
+
+\[
+L=(0.08,0.08,0.07,0.07,0.06,0.05,0.05,0.04,0.04,0.03),
+\]
+
+\[
+U=(0.22,0.22,0.20,0.20,0.18,0.17,0.17,0.14,0.15,0.12).
+\]
+
+Require additionally:
+
+\[
+w_1+w_2+w_3+w_4\ge0.40.
+\]
+
+Reject and redraw any sampled weight vector violating these conditions.
+
+---
+
+# 12. FIVE FROZEN WEIGHT REGIMES
+
+Use equal regime probability:
+
+\[
+P(W_r)=0.20.
+\]
+
+## W1 balanced
+
+\[
+(0.13,0.13,0.12,0.12,0.10,0.09,0.09,0.07,0.08,0.07)
+\]
+
+## W2 mathematics / viability / inverse heavy
+
+\[
+(0.14,0.17,0.10,0.15,0.13,0.07,0.06,0.05,0.07,0.06)
+\]
+
+## W3 interface / physics heavy
+
+\[
+(0.13,0.14,0.17,0.12,0.10,0.08,0.06,0.07,0.07,0.06)
+\]
+
+## W4 sustainability / recovery heavy
+
+\[
+(0.12,0.10,0.10,0.10,0.08,0.14,0.15,0.09,0.06,0.06)
+\]
+
+## W5 evidence / validation heavy
+
+\[
+(0.11,0.11,0.10,0.10,0.08,0.10,0.08,0.07,0.15,0.10)
+\]
+
+All regime centers must sum exactly to 1.
+
+Sample around each center using:
+
+\[
+\mathbf w^{(b,r)}
+\sim
+\operatorname{Dirichlet}
+(\kappa_w\bar{\mathbf w}_r),
+\]
+
+with:
+
+\[
+\kappa_w=90.
+\]
+
+Then apply the frozen weight bounds and central-core constraint.
+
+---
+
+# 13. WEIGHT-SAMPLING QA
+
+For every accepted draw require:
+
+\[
+\left|\sum_jw_j-1\right|<10^{-12},
+\]
+
+\[
+L_j\le w_j\le U_j,
+\]
+
+and:
+
+\[
+w_1+w_2+w_3+w_4\ge0.40.
+\]
+
+If a sampler cannot obtain the required number of accepted draws without pathological rejection, fail loudly rather than silently changing the bounds.
+
+---
+
+# 14. MONTE CARLO UTILITY
+
+For realization \(b\):
+
+\[
+U_i^{(b)}
+=
+\sum_{j=1}^{10}
+w_j^{(b)}X_{ij}^{(b)}.
+\]
+
+Then calculate rank:
+
+\[
+R_i^{(b)}
+=
+\operatorname{rank}_{\mathrm{descending}}
+(U_i^{(b)}).
+\]
+
+Use deterministic tie handling.
+
+---
+
+# 15. REQUIRED MONTE CARLO SIZE
+
+For probability estimation, use Hoeffding:
+
+\[
+P(|\hat p-p|\ge\epsilon)
+\le2e^{-2B\epsilon^2}.
+\]
+
+For \(N\) eligible papers, use the conservative union bound:
+
+\[
+P
+\left(
+\max_i|\hat p_i-p_i|\ge\epsilon
+\right)
+\le
+2Ne^{-2B\epsilon^2}.
+\]
+
+Therefore:
+
+\[
+B_{\min}
+=
+\left\lceil
+\frac{\ln(2N/\delta)}
+{2\epsilon^2}
+\right\rceil.
+\]
+
+Freeze:
+
+\[
+\epsilon=0.01,
+\qquad
+\delta=0.01.
+\]
+
+For the current file, after the protocol-support and conflicting-DOI holds, expected:
+
+\[
+N=321,
+\]
+
+giving approximately:
+
+\[
+B_{\min}=55{,}349.
+\]
+
+Use:
+
+\[
+\boxed{B=100{,}000\text{ draws per seed}}
+\]
+
+with:
+
+\[
+\boxed{K=10\text{ independent seeds}}
+\]
+
+for:
+
+\[
+\boxed{1{,}000{,}000\text{ total Monte Carlo draws}}.
+\]
+
+If eligible \(N\) changes, recompute \(B_{\min}\).
+
+Never run fewer than \(B_{\min}\) for the production ranking.
+
+---
+
+# 16. REQUIRED RANK METRICS
+
+For every paper calculate:
+
+\[
+P_i^{(1)}
+=
+P(R_i=1),
+\]
+
+\[
+P_i^{(5)}
+=
+P(R_i\le5),
+\]
+
+\[
+P_i^{(10)}
+=
+P(R_i\le10),
+\]
+
+\[
+P_i^{(20)}
+=
+P(R_i\le20),
+\]
+
+\[
+E[R_i],
+\]
+
+\[
+\operatorname{Median}(R_i),
+\]
+
+\[
+Q_{0.90}(R_i),
+\]
+
+\[
+E[U_i],
+\]
+
+and
+
+\[
+SD(U_i).
+\]
+
+Do NOT rank only by expected utility.
+
+---
+
+# 17. PRIMARY ROBUST ORDER
+
+The final dataset-scoped robust ordering must use:
+
+1. \(P(R_i\le10)\) descending;
+2. expected rank ascending;
+3. \(P(R_i=1)\) descending;
+4. Canonical_ID ascending as deterministic final tie-break.
+
+This rule must be frozen before reading the final Monte Carlo results.
+
+---
+
+# 18. TOP-TIER CONDITION
+
+A paper may receive:
+
+`ROBUST_DATASET_ONLY_TOP_TIER`
+
+only when all conditions hold:
+
+\[
+P(R_i\le10)\ge0.80,
+\]
+
+\[
+\operatorname{Median}(R_i)\le10,
+\]
+
+\[
+Q_{0.90}(R_i)\le25,
+\]
+
+full-text evidence is indicated in this dataset,
+
+and:
+
+`YEAR_CONFLICT = FALSE`
+
+and:
+
+`CONFLICTING_DOI = FALSE`.
+
+Otherwise:
+
+`PROVISIONAL_DATASET_ONLY_RANK`.
+
+If no paper meets all top-tier conditions, state:
+
+`NO PAPER MEETS THE FROZEN DATASET-ONLY TOP-TIER CONDITIONS`.
+
+Do not lower the threshold after seeing results.
+
+---
+
+# 19. #1 PAPER CONDITION
+
+The highest-ranked paper in the dataset is the first paper under the frozen robust ordering.
+
+However, call it:
+
+`highest-ranked paper within the frozen 325-record dataset`
+
+not:
+
+`best paper globally`.
+
+If the top paper fails `Final_Tier1_Eligible`, explicitly state that it is a provisional top-ranked candidate rather than a frozen top-tier paper.
+
+---
+
+# 20. CROSS-SEED REPRODUCIBILITY
+
+For each of 10 seeds, construct the Top 20 set:
+
+\[
+A_s.
+\]
+
+For every seed pair:
+
+\[
+J(A_s,A_t)
+=
+\frac{|A_s\cap A_t|}
+{|A_s\cup A_t|}.
+\]
+
+Require:
+
+\[
+\min_{s\ne t}J(A_s,A_t)\ge0.85.
+\]
+
+If not:
+
+`RANKING_UNSTABLE`.
+
+Do not call the Top 20 frozen.
+
+---
+
+# 21. CORRELATION / DOUBLE-COUNTING AUDIT
+
+Using deterministic criterion means, calculate Spearman correlation:
+
+\[
+\rho_{jk}.
+\]
+
+If:
+
+\[
+|\rho_{jk}|\ge0.80,
+\]
+
+write the pair to:
+
+`high_correlation_flags.csv`
+
+with:
+
+`SENSITIVITY_REVIEW_REQUIRED`.
+
+Do not silently delete or merge a criterion after seeing the result.
+
+The primary frozen ranking stays unchanged.
+
+Any criterion-removal analysis belongs to sensitivity analysis only.
+
+---
+
+# 22. PARETO AUDIT
+
+For criterion means, paper \(a\) weakly dominates \(b\) when:
+
+\[
+\mu_{aj}\ge\mu_{bj}
+\quad\forall j
+\]
+
+and strictly for at least one criterion.
+
+Flag any strong inconsistency where a heavily dominated paper materially outranks its dominator.
+
+Do not automatically overwrite Monte Carlo results; report the inconsistency.
+
+---
+
+# 23. ROLE-SPECIFIC OUTPUTS
+
+In addition to the overall ranking, generate filtered ranking tables for:
+
+- Mathematics
+- Physics
+- Reliability Engineering
+- Infrastructure Systems
+- Sustainable Engineering
+- Industrial Ecology
+
+and:
+
+- H1
+- H2
+- H3
+- H4
+- H5
+- H6
+- H7
+- T1
+
+These are filtered views of the same frozen Monte Carlo evidence, not independently manipulated rankings.
+
+---
+
+# 24. HISTORICAL-RANK VALIDATION
+
+Only AFTER the new ranking is complete, compare it to:
+
+- Final_Unique_Rank
+- Rank_76
+- Rank_141
+- Rank_164
+- Max_Importance_Score
+- Best_Priority_Tier
+- Selected_Core_164
+
+for sensitivity and disagreement diagnostics.
+
+These fields must have zero influence on:
+
+\[
+\mu_{ij},
+\quad
+\kappa_{ij},
+\quad
+w_j,
+\quad
+U_i,
+\quad
+R_i.
+\]
+
+This is a hard anti-circularity condition.
+
+---
+
+# 25. REQUIRED OUTPUTS
+
+Create:
+
+1. `01_identity_audit.csv`
+2. `02_prisma_postdedup_eligibility.csv`
+3. `03_dataset_only_score_matrix.csv`
+4. `04_criterion_spearman_correlation.csv`
+5. `05_high_correlation_flags.csv`
+6. `06_prisma_accounting_dataset_scope.json`
+7. `07_ranking_by_regime_and_seed.csv`
+8. `08_ranking_by_seed.csv`
+9. `09_final_robust_ranking.csv`
+10. `10_cross_seed_top20_stability.csv`
+11. `11_legacy_rank_posthoc_validation.csv`
+12. `12_final_summary.json`
+13. role-specific ranking CSVs
+14. H1–H7/T1 ranking CSVs
+15. `run_manifest.json`
+
+Also generate a final Excel workbook if spreadsheet tools are available.
+
+---
+
+# 26. REQUIRED MANIFEST
+
+Record:
+
+- protocol version;
+- input path;
+- input SHA-256;
+- Python version;
+- OS/platform;
+- numpy version;
+- pandas version;
+- random seeds;
+- Monte Carlo iterations;
+- weight profiles;
+- weight bounds;
+- Dirichlet concentration;
+- eligible record count;
+- Hoeffding minimum;
+- all excluded/held record counts;
+- leakage columns prohibited from scoring.
+
+---
+
+# 27. REQUIRED QA
+
+The run must fail if:
+
+- input row count != 325;
+- required columns are missing;
+- duplicate Canonical_ID exists;
+- duplicate normalized canonical title exists;
+- duplicate normalized nonblank DOI exists;
+- Monte Carlo iterations are below the Hoeffding minimum;
+- sampled weights fail the simplex condition;
+- sampled weights violate frozen bounds;
+- a conflicting-DOI record enters scientific MC;
+- a protocol-support record enters the scientific top-paper competition;
+- a historical ranking field enters the primary utility calculation.
+
+---
+
+# 28. REQUIRED SCIENTIFIC LANGUAGE
+
+Allowed:
+
+> Paper X has the highest robust rank within the frozen 325-record dataset under the frozen PRISMA + Monte Carlo/SMAA protocol.
+
+Allowed:
+
+> Paper X has an estimated 0.87 probability of appearing in the Top 10 under the admissible uncertainty and weight space.
+
+Allowed:
+
+> The ranking is stable across the 10 seeds because the minimum pairwise Top-20 Jaccard coefficient is 0.89.
+
+Forbidden:
+
+> Paper X is objectively the best paper in the world.
+
+Forbidden:
+
+> Monte Carlo proves this paper is true.
+
+Forbidden:
+
+> PRISMA proves this paper is novel.
+
+Forbidden:
+
+> No better paper exists.
+
+---
+
+# 29. STOP / FREEZE LOGIC
+
+The ranking is not frozen when any of the following holds:
+
+\[
+\text{identity duplication}>0,
+\]
+
+\[
+\text{unresolved conflicting DOI in ranked set}>0,
+\]
+
+\[
+B<B_{\min},
+\]
+
+\[
+\min J<0.85,
+\]
+
+or:
+
+\[
+\text{weight/score invariant failure}=1.
+\]
+
+Then output:
+
+`FINAL_RANKING_NOT_FROZEN`.
+
+Otherwise:
+
+`DATASET_SCOPED_RANKING_REPRODUCIBLE`.
+
+This still does NOT imply global literature completeness.
+
+---
+
+# 30. EXECUTION REQUIREMENT
+
+If Python execution is available:
+
+- use the supplied Python implementation;
+- run syntax validation;
+- run dataset validation;
+- run the full 100,000 × 10 Monte Carlo production analysis;
+- save every output;
+- do not merely describe the code;
+- do not reduce the number of iterations for convenience;
+- do not change weights after seeing results.
+
+If full execution is technically impossible, state exactly:
+
+`FULL_MONTE_CARLO_NOT_EXECUTED`
+
+and report which validated stages did run.
+
+---
+
+# 31. FINAL REPORT
+
+End with exactly these sections:
+
+## A. Dataset integrity
+- input rows
+- DOI count
+- duplicate checks
+- data-quality holds
+
+## B. PRISMA dataset-scope accounting
+- protocol-support rows
+- identity-hold rows
+- scientific MC eligible rows
+
+## C. Mathematical Monte Carlo configuration
+- criteria
+- uncertainty model
+- weight simplex
+- weight regimes
+- Hoeffding minimum
+- total simulations
+- seeds
+
+## D. Stability
+- minimum Top-20 Jaccard
+- correlation flags
+- ranking freeze status
+
+## E. Top overall papers
+At least Top 20 with:
+- robust rank
+- title
+- DOI
+- journal
+- primary discipline
+- hypotheses
+- P(rank 1)
+- P(Top 5)
+- P(Top 10)
+- P(Top 20)
+- expected rank
+- median rank
+- 90th-percentile rank
+- full-text flag
+- final-tier eligibility
+
+## F. Role-specific top papers
+Mathematics, Physics, Reliability, Infrastructure, Sustainability, Industrial Ecology.
+
+## G. H1–H7/T1 top papers
+
+## H. Highest-ranked paper
+State clearly whether it is:
+- `ROBUST_DATASET_ONLY_TOP_TIER`, or
+- `PROVISIONAL_DATASET_ONLY_RANK`.
+
+## I. Limitations
+Explicitly state that:
+- only this 325-record dataset was used;
+- no outside literature was added;
+- upstream PRISMA search counts are unavailable in this dataset;
+- missing evidence was modeled as uncertainty rather than absence;
+- the result is a dataset-scoped robust ranking, not universal truth.
+
+---
+
+# 32. CORE MATHEMATICAL ARCHITECTURE
+
+The entire ranking must be representable as:
+
+\[
+\boxed{
+\mathcal P_{325}
+\xrightarrow{\text{identity + PRISMA eligibility}}
+\mathcal P_{\mathrm{MC}}
+\xrightarrow{\text{dataset-derived }(\mu,\kappa)}
+X_{ij}
+\xrightarrow{\mathbf w\in\mathcal W}
+U_i
+\xrightarrow{\text{Monte Carlo}}
+R_i
+\xrightarrow{\text{rank acceptability + stability}}
+\text{robust dataset-scoped ranking}
+}
+\]
+
+where:
+
+\[
+X_{ij}
+\sim
+\operatorname{Beta}
+(\mu_{ij}\kappa_{ij},(1-\mu_{ij})\kappa_{ij}),
+\]
+
+\[
+\mathbf w
+\sim
+\operatorname{Dirichlet}
+(\kappa_w\bar{\mathbf w}_r),
+\]
+
+subject to the frozen bounds and simplex conditions,
+
+and:
+
+\[
+U_i
+=
+\sum_j w_jX_{ij}.
+\]
+
+The scientific objective is:
+
+\[
+\boxed{
+\text{identify the papers whose high thesis importance is robust to reasonable uncertainty in evidence and weights}
+}
+\]
+
+not:
+
+\[
+\boxed{
+\text{force the existing historical ranking to reappear}.
+}
+\]
+
+BEGIN BY HASHING AND VALIDATING THE 325-PAPER CSV. DO NOT ACCESS OR MERGE ANY OTHER LITERATURE DATASET.
