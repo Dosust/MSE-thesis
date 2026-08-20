@@ -1,7 +1,9 @@
 {
   "archive": "MSE-thesis-source-text-snapshot.tar.gz",
   "sha256": "9d0cb9371a85265fb1df46d359660fc9655e540a288296d84d0b121a969d41af",
-  "encoding": "base64 split into ordered part_###.b64 files",
-  "parts": 20,
-  "reconstruction": "cat part_*.b64 | base64 --decode > MSE-thesis-source-text-snapshot.tar.gz"
+  "status": "LOCAL_SNAPSHOT_BUILT__PART_UPLOAD_BLOCKED_BY_CONNECTOR_BINARY_TEXT_PAYLOAD_LIMITS",
+  "note": "The exact text-source snapshot was built locally and hashed. Individual source files critical to reproducibility are being published separately. The 20 base64 parts were not claimed as uploaded because the connector cannot stream local files directly into GitHub.",
+  "original_encoding_plan": "base64 split into ordered part_###.b64 files",
+  "parts_expected": 20,
+  "reconstruction_if_parts_are_later_uploaded": "cat part_*.b64 | base64 --decode > MSE-thesis-source-text-snapshot.tar.gz"
 }
