@@ -1,33 +1,25 @@
 # Session Snapshot Archive
 
-This directory preserves the thesis artifacts available in the active 2026-08-20 session without pretending that hidden system/developer instructions or private chain-of-thought are user-facing conversation records.
+The byte-preserving snapshot of the active 2026-08-20 thesis session is stored online in the user's connected Google Drive and is indexed from GitHub through `provenance/ONLINE_ARCHIVE.md`.
 
-## Textual/scientific snapshot
+## Verified current-session archive
 
-`textual/partNNN.b64` are ordered Base64 chunks of:
+File:
 
-`MSE-thesis-textual-snapshot.tar.gz`
+`MSE-thesis-current-session-artifacts-2026-08-20.zip`
 
-- Original archive bytes: `376269`
-- SHA-256: `8e2ab6aee07a23471554af361e35bd755f4758b1d95b0006ff23014976fadefe`
-- Base64 characters: `501692`
-- Parts: `18`
-- Part size: 28,000 Base64 characters except the final part
+Size:
 
-The tarball contains the repository-ready thesis snapshot excluding only three binary convenience artifacts (`*.xlsx` workbooks and the duplicate Monte Carlo ZIP). Their scientific/source content is preserved in CSV/result form inside the textual snapshot; the authoritative final 325-paper workbook is separately preserved under `archive/binary_payloads/final325_xlsx/`.
+`2,703,060 bytes`
 
-## Final 325-paper workbook
+SHA-256:
 
-`../binary_payloads/final325_xlsx/partNNN.b64` reconstructs:
+`6d2682356ad0ba4a879c3ee398f4fc65fa60f4b2b9899e5e369820dfa1f92e8c`
 
-`Thesis_Final_Unique_Papers_325_2026-08-20.xlsx`
+The Drive file was read back through the connected account after upload and the downloaded bytes were independently re-hashed to the value above.
 
-- Bytes: `111129`
-- SHA-256: `2a1b7155f6d71d320fef7237ffba97375f673ee6cb4d8d3ac471bdd4a27285f0`
-- Parts: `6`
+## Why the binary archive is referenced rather than embedded here
 
-## Reconstruction
+The GitHub write interface available in this session writes UTF-8 repository content but does not expose a mounted-local-file argument for arbitrary binary files. Large/binary artifacts are therefore kept in the verified online byte archive and mapped by exact filename, size, and SHA-256 in `provenance/INVENTORY.csv` and `provenance/SHA256SUMS.txt`.
 
-Use `provenance/reconstruct_archives.py` from the repository root. It concatenates the ordered parts, Base64-decodes them, verifies SHA-256, and writes the recovered files.
-
-This split representation is used because the connected GitHub write interface accepts UTF-8 repository content but does not expose direct local binary-file upload.
+This is a deliberate provenance distinction: GitHub is the version-controlled research record; the linked Drive ZIP is the byte-preserving artifact store. No partial Base64 reconstruction set is treated as authoritative.
