@@ -1,0 +1,73 @@
+name: Repair framework image binary encoding
+
+on:
+  push:
+    branches: [archive-import]
+    paths:
+      - '.github/workflows/decode-framework-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  decode-framework-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out archive branch
+        uses: actions/checkout@v4
+        with:
+          ref: archive-import
+          fetch-depth: 0
+
+      - name: Decode Base64-text WebP payloads and verify binary signatures
+        shell: bash
+        run: |
+          set -euo pipefail
+          repaired=0
+          for f in 08_framework_images/*.webp; do
+            [ -f "$f" ] || continue
+            first4="$(head -c 4 "$f" || true)"
+            if [ "$first4" = "UklG" ]; then
+              tmp="${f}.decoded"
+              tr -d '\r\n' < "$f" | base64 --decode > "$tmp"
+              python3 - "$tmp" <<'PY'
+import pathlib, sys
+p = pathlib.Path(sys.argv[1])
+b = p.read_bytes()
+if len(b) < 12 or b[:4] != b'RIFF' or b[8:12] != b'WEBP':
+    raise SystemExit(f'FAIL_WEBP_SIGNATURE: {p}')
+print(f'VALID_WEBP: {p} bytes={len(b)}')
+PY
+              mv "$tmp" "$f"
+              repaired=$((repaired+1))
+            fi
+          done
+          echo "REPAIRED_COUNT=$repaired"
+
+          # Final invariant: every .webp must be a binary RIFF/WEBP image.
+          python3 - <<'PY'
+from pathlib import Path
+files = sorted(Path('08_framework_images').glob('*.webp'))
+assert files, 'No framework WebP files found'
+for p in files:
+    b = p.read_bytes()
+    assert len(b) >= 12, f'Too short: {p}'
+    assert b[:4] == b'RIFF', f'Not RIFF: {p}'
+    assert b[8:12] == b'WEBP', f'Not WEBP: {p}'
+    print(f'PASS {p} {len(b)} bytes')
+PY
+
+      - name: Commit repaired binary images
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- 08_framework_images; then
+            echo 'No repair commit required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 08_framework_images/*.webp
+          git commit -m 'Fix framework image binary encoding'
+          git push origin HEAD:archive-import
