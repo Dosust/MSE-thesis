@@ -71,3 +71,5 @@ PY
           git add 08_framework_images/*.webp
           git commit -m 'Fix framework image binary encoding'
           git push origin HEAD:archive-import
+
+# retrigger: 2026-08-20T16:26+08:00
