@@ -54,14 +54,17 @@ jobs:
           print('Scientific proposition registry: PASS')
           PY
 
-      - name: Validate JSON schema
+      - name: Validate JSON schema and example model
         run: |
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
           schema = json.load(open('schemas/thesis_model.schema.json'))
+          instance = json.load(open('config/example_model.json'))
           Draft202012Validator.check_schema(schema)
+          Draft202012Validator(schema).validate(instance)
           print('Thesis model JSON schema: PASS')
+          print('Example model instance: PASS')
           PY
 
       - name: Validate SVG assets
