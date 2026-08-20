@@ -1,0 +1,225 @@
+        signals += 1
+    if txt(r.get("Theory_Architecture_Anchors_or_Selection")):
+        signals += 1
+    d = low(r.get("Primary_Discipline")) + ";" + low(r.get("Discipline_Coverage"))
+    if any(k in d for k in ["mathemat", "physics", "infrastructure", "reliab", "sustainab", "industrial ecology"]):
+        signals += 1
+    return signals
+
+
+def prisma_status(r: Dict[str, str]) -> Tuple[str, str]:
+    """Pre-specified PRISMA-compatible disposition for substantive ranking."""
+    if not identity_ok(r):
+        return "EXCLUDE", "Insufficient canonical identity fields"
+    if protocol_support(r):
+        return "METHODS_ONLY", "Protocol/reporting methodology retained separately; not substantive thesis-paper ranking"
+    if critical_metadata_hold(r):
+        return "HOLD", "Critical metadata conflict (CONFLICTING_DOI) requires manual resolution"
+    if substantive_scope_signal_count(r) < 1:
+        return "HOLD", "No substantive thesis-scope signal in frozen dataset"
+    return "ELIGIBLE", "Pass"
+
+
+def feature_direct_relevance(r: Dict[str, str]) -> Tuple[float, float]:
+    vals = []
+    for lab in split_labels(r.get("Relevance_207")):
+        if lab in RELEVANCE_207_MAP:
+            vals.append(RELEVANCE_207_MAP[lab])
+    v259 = txt(r.get("Relevance_259"))
+    if v259 in RELEVANCE_259_MAP and v259 != "C_PROTOCOL_SUPPORT":
+        vals.append(RELEVANCE_259_MAP[v259])
+    if not vals:
+        return 0.50, 0.25  # non-informative prior, high uncertainty
+    center = float(np.mean(vals))
+    conf = 0.95 if len(vals) >= 2 else 0.78
+    return center, conf
+
+
+def feature_theory_architecture(r: Dict[str, str]) -> Tuple[float, float]:
+    labels = set(split_labels(r.get("Relevant_Hypotheses")))
+    present = [h for h in HYPOTHESIS_PRIORITY if h in labels]
+    if present:
+        max_fit = max(HYPOTHESIS_PRIORITY[h] for h in present) / MAX_H_PRIORITY
+        coverage_mass = sum(HYPOTHESIS_PRIORITY[h] for h in present)
+        coverage = 1.0 - math.exp(-2.5 * coverage_mass)
+        hypothesis_fit = 0.70 * max_fit + 0.30 * coverage
+    else:
+        hypothesis_fit = 0.45
+
+    anchor = low(r.get("Theory_Architecture_Anchors_or_Selection"))
+    explicit_anchor_terms = [
+        "h1 identification/inverse/uq", "h2 timescale/static-dynamic",
+        "h3 viability/reachability/sensitivity", "h4 sustainability/equity",
+        "h5 recovery/control", "h6 flood/waste/drainage",
+        "physics/network cascades", "industrial_ecology_coverage",
+        "t1 reduction/decomposition",
+    ]
+    if any(term in anchor for term in explicit_anchor_terms):
+        anchor_score = 1.00
+    elif anchor:
+        anchor_score = 0.72
+    else:
+        anchor_score = 0.45
+
+    center = 0.76 * hypothesis_fit + 0.24 * anchor_score
+    if present and anchor:
+        conf = 0.95
+    elif present or anchor:
+        conf = 0.78
+    else:
+        conf = 0.30
+    return min(1.0, max(0.0, center)), conf
+
+
+def feature_disciplinary_fit(r: Dict[str, str]) -> Tuple[float, float]:
+    d = (low(r.get("Primary_Discipline")) + ";" + low(r.get("Discipline_Coverage"))).strip(";")
+    if not d:
+        return 0.50, 0.25
+
+    mathphys = 0.0
+    if "mathemat" in d:
+        mathphys = max(mathphys, 1.00)
+    if "physics" in d or "network science" in d or "complex network" in d:
+        mathphys = max(mathphys, 0.96)
+    if "control" in d or "reachability" in d or "viability" in d or "inverse problem" in d or "uncertainty quantification" in d:
+        mathphys = max(mathphys, 1.00)
+
+    infra = 0.0
+    if "infrastructure" in d:
+        infra = max(infra, 1.00)
+    if "reliability" in d or "resilience engineering" in d:
+        infra = max(infra, 0.95)
+
+    sust = 0.0
+    if "sustainable" in d:
+        sust = max(sust, 1.00)
+    if "industrial ecology" in d:
+        sust = max(sust, 0.90)
+    if "equity" in d or "climate" in d:
+        sust = max(sust, 0.90)
+
+    axes = np.array([mathphys, infra, sust], dtype=float)
+    strongest = float(np.max(axes))
+    breadth = float(np.mean(axes))
+    # Strong single-pillar foundations remain valuable; cross-pillar papers receive a breadth bonus.
+    center = 0.66 * strongest + 0.34 * breadth
+    conf = 0.94 if txt(r.get("Primary_Discipline")) and txt(r.get("Discipline_Coverage")) else 0.76
+    return center, conf
+
+
+def verification_score(status: str) -> float:
+    s = low(status)
+    if not s:
+        return 0.45
+    scores = [0.50]
+    if "full_text_evidence_prior_audit" in s:
+        scores.append(1.00)
+    if "publisher_verified" in s or "publisher page verified" in s:
+        scores.append(0.94)
+    if "project_master_doi_title_audited" in s:
+        scores.append(0.92)
+    if "curated_prior_audit" in s:
+        scores.append(0.86)
+    if "local_metadata_verified" in s or "bibliographic metadata verified" in s or "publisher metadata verified" in s:
+        scores.append(0.84)
+    if any(x in s for x in ["elsevier publisher", "wiley publisher", "nature publisher", "siam publisher", "asce publisher", "aps publisher"]):
+        scores.append(0.88)
+    if "publisher_index_verified" in s:
+        scores.append(0.85)
+    if "abstract_only_prior_audit" in s:
+        scores.append(0.60)
+    if "primary preprint verified" in s or "arxiv" in s:
+        scores.append(0.70)
+    if "known_primary_guideline" in s:
+        scores.append(0.90)
+    return max(scores)
+
+
+def feature_evidence_credibility(r: Dict[str, str]) -> Tuple[float, float]:
+    v = verification_score(txt(r.get("Verification_Status")))
+
+    stratum = txt(r.get("Evidence_Stratum_207")).upper()
+    stratum_score = {"A": 1.00, "A/B": 0.90, "B": 0.76}.get(stratum, 0.55)
+
+    ft = txt(r.get("Local_Full_Text_207")).upper()
+    if "YES" in ft:
+        fulltext = 1.00
+    elif ft == "ONLINE_PAGE":
+        fulltext = 0.76
+    elif ft == "NO":
+        fulltext = 0.28
+    elif ft == "UNKNOWN" or not ft:
+        fulltext = 0.52
+    else:
+        fulltext = 0.52
+    if "FULL_TEXT_EVIDENCE_PRIOR_AUDIT" in txt(r.get("Verification_Status")).upper():
+        fulltext = max(fulltext, 0.98)
+
+    doi_score = 1.00 if txt(r.get("DOI")) else 0.55
+
+    dq = txt(r.get("Data_Quality_Notes")).upper()
+    if "CONFLICTING_DOI" in dq:
+        dq_score = 0.00
+    elif "YEAR_CONFLICT" in dq:
+        dq_score = 0.68
+    elif dq:
+        dq_score = 0.88
+    else:
+        dq_score = 1.00
+
+    center = 0.45 * v + 0.20 * stratum_score + 0.20 * fulltext + 0.10 * doi_score + 0.05 * dq_score
+    conf = 0.96 if txt(r.get("Verification_Status")) else 0.60
+    if "YEAR_CONFLICT" in dq:
+        conf = min(conf, 0.78)
+    if "CONFLICTING_DOI" in dq:
+        conf = 0.35
+    return center, conf
+
+
+def feature_primary_corpus_corroboration(r: Dict[str, str]) -> Tuple[float, float]:
+    s = low(r.get("Source_Presence"))
+    in207 = "207_framework_csv" in s
+    in259 = "259_combined_csv" in s
+    if in207 and in259:
+        return 1.00, 1.00
+    if in207 or in259:
+        return 0.64, 1.00
+    return 0.40, 0.70
+
+
+def feature_title_semantics(r: Dict[str, str]) -> Tuple[float, float]:
+    t = norm_title(r.get("Canonical_Title"))
+    if not t:
+        return 0.50, 0.20
+
+    coupling = 1.0 if contains_any(t, TITLE_PATTERNS["coupling"]) else 0.18
+    dynamics = min(1.0, 0.30 + 0.70 * matched_fraction(t, TITLE_PATTERNS["dynamics_control"]))
+    climate = 1.0 if contains_any(t, TITLE_PATTERNS["climate_hazard"]) else 0.20
+    sust = 1.0 if contains_any(t, TITLE_PATTERNS["sustainability_equity"]) else 0.20
+
+    sector_hits = sum(contains_any(t, pats) for pats in SECTOR_PATTERNS.values())
+    if sector_hits >= 3:
+        sectors = 1.00
+    elif sector_hits == 2:
+        sectors = 0.90
+    elif sector_hits == 1:
+        sectors = 0.62
+    else:
+        # General infrastructure / systems theory can still be directly relevant.
+        sectors = 0.52 if ("infrastructure" in t or "network" in t or "system" in t) else 0.25
+
+    center = 0.25 * coupling + 0.25 * dynamics + 0.20 * sectors + 0.15 * climate + 0.15 * sust
+    # Title-only semantic inference is intentionally assigned lower confidence than curated fields.
+    return center, 0.70
+
+
+def build_feature_matrix(records: List[Dict[str, str]]) -> Tuple[np.ndarray, np.ndarray, List[Dict[str, Any]]]:
+    funcs = [
+        feature_direct_relevance,
+        feature_theory_architecture,
+        feature_disciplinary_fit,
+        feature_evidence_credibility,
+        feature_primary_corpus_corroboration,
+        feature_title_semantics,
+    ]
+    centers = np.zeros((len(records), len(funcs)), dtype=float)
