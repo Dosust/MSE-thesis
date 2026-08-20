@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/schemas/thesis_model.schema.json",
+  "title": "MSE Thesis Coupled Infrastructure Model",
+  "type": "object",
+  "required": ["state", "interfaces", "hazard", "admissibility", "analysis"],
+  "properties": {
+    "state": {
+      "type": "object",
+      "required": ["power", "water", "transportation", "solid_waste"],
+      "properties": {
+        "power": {"type": "array", "items": {"type": "string"}},
+        "water": {"type": "array", "items": {"type": "string"}},
+        "transportation": {"type": "array", "items": {"type": "string"}},
+        "solid_waste": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "mechanism", "dynamic"],
+        "properties": {
+          "source": {"enum": ["power", "water", "transportation", "solid_waste"]},
+          "target": {"enum": ["power", "water", "transportation", "solid_waste"]},
+          "mechanism": {"type": "string", "minLength": 1},
+          "dynamic": {"type": "boolean"},
+          "state_symbol": {"type": "string"},
+          "timescale_symbol": {"type": "string"}
+        }
+      }
+    },
+    "hazard": {
+      "type": "object",
+      "required": ["forcing_symbol", "realized_hazard_symbol"],
+      "properties": {
+        "forcing_symbol": {"type": "string", "const": "xi"},
+        "realized_hazard_symbol": {"type": "string", "const": "eta"},
+        "feedbacks": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "admissibility": {
+      "type": "object",
+      "required": ["physical", "service", "sustainability", "equity"],
+      "properties": {
+        "physical": {"type": "array", "items": {"type": "string"}},
+        "service": {"type": "array", "items": {"type": "string"}},
+        "sustainability": {"type": "array", "items": {"type": "string"}},
+        "equity": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["viability", "recovery", "uncertainty"],
+      "properties": {
+        "viability": {"type": "boolean"},
+        "recovery": {"type": "boolean"},
+        "uncertainty": {"type": "boolean"},
+        "control": {"type": "boolean"},
+        "design": {"type": "boolean"},
+        "optimization": {"type": "boolean"}
+      }
+    }
+  },
+  "additionalProperties": false
+}
