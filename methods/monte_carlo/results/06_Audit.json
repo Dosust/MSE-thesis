@@ -1,0 +1,101 @@
+{
+  "method_name": "PRISMA-compatible stochastic MCDA / SMAA-like Monte Carlo ranking",
+  "input_file": "/mnt/data/Thesis_Final_Unique_Papers_325_2026-08-20(3).csv",
+  "input_sha256": "047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f",
+  "frozen_dataset_checks": {
+    "n_rows": 325,
+    "unique_ids": 325,
+    "nonempty_dois": 308,
+    "duplicate_dois": 0,
+    "duplicate_normalized_titles": 0
+  },
+  "external_data_used": false,
+  "validation_only_fields_not_scored": [
+    "Best_Priority_Tier",
+    "Final_Unique_Rank",
+    "Max_Importance_Score",
+    "Rank_141",
+    "Rank_164",
+    "Rank_76",
+    "Selected_Core_164"
+  ],
+  "prisma_status_counts": {
+    "ELIGIBLE": 321,
+    "HOLD": 1,
+    "METHODS_ONLY": 3
+  },
+  "prisma_reason_counts": {
+    "Pass": 321,
+    "Critical metadata conflict (CONFLICTING_DOI) requires manual resolution": 1,
+    "Protocol/reporting methodology retained separately; not substantive thesis-paper ranking": 3
+  },
+  "criteria": [
+    "Direct_Relevance",
+    "Theory_Architecture",
+    "Disciplinary_Fit",
+    "Evidence_Credibility",
+    "Primary_Corpus_Corroboration",
+    "Title_Semantic_Directness"
+  ],
+  "weight_scenarios": {
+    "balanced": [0.22,0.22,0.16,0.2,0.06,0.14],
+    "theory_first": [0.15,0.3,0.2,0.18,0.04,0.13],
+    "evidence_first": [0.18,0.18,0.14,0.32,0.06,0.12],
+    "applied_direct": [0.28,0.16,0.12,0.18,0.06,0.2]
+  },
+  "dirichlet_concentration": 80.0,
+  "seed": 20260820,
+  "batches": 20,
+  "draws_per_batch": 5000,
+  "total_draws": 100000,
+  "scenario_draw_counts": {
+    "balanced": 25240,
+    "theory_first": 25027,
+    "evidence_first": 24921,
+    "applied_direct": 24812
+  },
+  "convergence": {
+    "N": 100000,
+    "worst_case_probability_SE": 0.0015811388300841895,
+    "worst_case_probability_95pct_halfwidth": 0.0030990321069650113,
+    "hoeffding_99pct_mean_score_epsilon": 0.005146997846583986,
+    "last5_max_abs_change_top10_probability": 0.0007333333333332526,
+    "last5_min_top10_set_jaccard": 1.0,
+    "precision_pass": true,
+    "probability_stability_pass": true,
+    "top10_set_stability_pass": true,
+    "overall_convergence_pass": true
+  },
+  "best_paper_rule": [
+    "minimum Expected_Rank",
+    "maximum P_Top_10",
+    "maximum P_Rank_1",
+    "maximum Mean_MC_Score",
+    "minimum SD_MC_Score",
+    "Canonical_ID deterministic tie-break"
+  ],
+  "best_paper": {
+    "MC_Robust_Rank": 1,
+    "Canonical_ID": "P_553266e64e3d",
+    "Canonical_Title": "Sustainability and climate resilience metrics and trade-offs in transport infrastructure asset recovery",
+    "DOI": "10.1016/j.trd.2023.103800",
+    "Journal": "Transportation Research Part D: Transport and Environment",
+    "Expected_Rank": 3.34372,
+    "P_Rank_1": 0.27974,
+    "P_Top_5": 0.8352,
+    "P_Top_10": 0.96792,
+    "P_Top_25": 0.99977,
+    "Mean_MC_Score": 0.917751604130968,
+    "SD_MC_Score": 0.019011171763678603,
+    "Verification_Status": "FULL_TEXT_EVIDENCE_PRIOR_AUDIT; PROJECT_MASTER_DOI_TITLE_AUDITED",
+    "Data_Quality_Notes": ""
+  },
+  "limitations": [
+    "Ranking is conditional on fields already present in the frozen CSV.",
+    "No citation counts, journal impact metrics, abstracts, or new full-text extraction are added.",
+    "Title-semantic directness is title-only and therefore assigned lower confidence.",
+    "PRISMA is a reporting/selection framework; the stochastic ranking is a separate MCDA layer.",
+    "A record with CONFLICTING_DOI is placed on HOLD rather than silently resolved.",
+    "Prior rank fields are used only for validation to prevent circular ranking leakage."
+  ]
+}
