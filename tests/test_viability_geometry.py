@@ -1,10 +1,13 @@
 import math
 import importlib.util
+import sys
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "methods" / "architecture" / "viability_geometry.py"
 spec = importlib.util.spec_from_file_location("viability_geometry", MODULE_PATH)
+assert spec is not None
 vg = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = vg
 assert spec.loader is not None
 spec.loader.exec_module(vg)
 
