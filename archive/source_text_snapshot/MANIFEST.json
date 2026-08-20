@@ -1,0 +1,7 @@
+{
+  "archive": "MSE-thesis-source-text-snapshot.tar.gz",
+  "sha256": "9d0cb9371a85265fb1df46d359660fc9655e540a288296d84d0b121a969d41af",
+  "encoding": "base64 split into ordered part_###.b64 files",
+  "parts": 20,
+  "reconstruction": "cat part_*.b64 | base64 --decode > MSE-thesis-source-text-snapshot.tar.gz"
+}
