@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+"""
+PRISMA-compatible Monte Carlo ranking for the frozen 325-paper thesis corpus.
+
+IMPORTANT:
+- Uses ONLY the supplied CSV. No internet, API, Crossref, Scopus, Google Scholar,
+  citation counts, journal metrics, or outside metadata are used.
+- PRISMA is used for transparent eligibility/reporting gates. PRISMA itself is
+  not a paper-ranking method. Ranking is performed by a stochastic MCDA/SMAA-like
+  Monte Carlo layer after eligibility.
+- Prior ranking outputs in the dataset are NEVER used to compute the new score:
+  Final_Unique_Rank, Best_Priority_Tier, Max_Importance_Score, Selected_Core_164,
+  Rank_76, Rank_141, and Rank_164 are validation-only fields.
+
+Default input is adapted exactly to:
+Thesis_Final_Unique_Papers_325_2026-08-20(3).csv
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import math
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Dict, List, Tuple, Any
+
+import numpy as np
+
+EXPECTED_N = 325
+SEED = 20260820
+BATCHES = 20
+DRAWS_PER_BATCH = 5000
+N_DRAWS = BATCHES * DRAWS_PER_BATCH
+
+# Prior/downstream ranking fields: NEVER score with these.
+VALIDATION_ONLY_FIELDS = {
+    "Final_Unique_Rank",
+    "Best_Priority_Tier",
+    "Max_Importance_Score",
+    "Selected_Core_164",
+    "Rank_76",
+    "Rank_141",
+    "Rank_164",
+}
+
+REQUIRED_COLUMNS = {
+    "Canonical_ID", "Canonical_Title", "Journal", "URL", "DOI",
+    "Primary_Discipline", "Discipline_Coverage", "Relevant_Hypotheses",
+    "Relevance_207", "Relevance_259", "Evidence_Stratum_207",
+    "High_Rigor_Candidate_259", "Local_Full_Text_207",
+    "Verification_Status", "Theory_Architecture_Anchors_or_Selection",
+    "Source_Presence", "Data_Quality_Notes",
+}
+
+CRITERIA = [
+    "Direct_Relevance",
+    "Theory_Architecture",
+    "Disciplinary_Fit",
+    "Evidence_Credibility",
+    "Primary_Corpus_Corroboration",
+    "Title_Semantic_Directness",
+]
+
+# Structural weight uncertainty: four scientifically defensible perspectives.
+# Each vector sums to 1. A scenario is selected uniformly for each Monte Carlo draw,
+# then local weights are sampled from a Dirichlet distribution around that scenario.
+WEIGHT_SCENARIOS = {
+    "balanced": np.array([0.22, 0.22, 0.16, 0.20, 0.06, 0.14]),
+    "theory_first": np.array([0.15, 0.30, 0.20, 0.18, 0.04, 0.13]),
+    "evidence_first": np.array([0.18, 0.18, 0.14, 0.32, 0.06, 0.12]),
+    "applied_direct": np.array([0.28, 0.16, 0.12, 0.18, 0.06, 0.20]),
+}
+DIRICHLET_CONCENTRATION = 80.0
+
+# Dataset-coded thesis hypotheses / theory dimensions.
+# These are used only because the frozen dataset itself contains these labels.
+HYPOTHESIS_PRIORITY = {
+    "H1": 0.11,  # identification / inverse / UQ anchor in dataset
+    "H2": 0.15,  # timescale / static-dynamic anchor in dataset
+    "H3": 0.17,  # viability / reachability / sensitivity anchor in dataset
+    "H4": 0.15,  # sustainability / equity anchor in dataset
+    "H5": 0.17,  # recovery / control anchor in dataset
+    "H6": 0.15,  # flood / waste / drainage anchor in dataset
+    "H7": 0.05,  # additional coded hypothesis dimension
+    "T1": 0.05,  # reduction / decomposition / transferable theory dimension
+}
+MAX_H_PRIORITY = max(HYPOTHESIS_PRIORITY.values())
+
+RELEVANCE_207_MAP = {
+    "CORE": 1.00,
+    "STRONG_APPLIED": 0.86,
+    "FOUNDATION": 0.78,
+    "SUPPORTING": 0.58,
+}
+RELEVANCE_259_MAP = {
+    "A_CORE_DIRECT": 1.00,
+    "B_FOUNDATIONAL_TRANSFERABLE": 0.80,
+    "C_SUPPORTING_METHOD_CONTEXT": 0.58,
+    "C_PROTOCOL_SUPPORT": 0.15,
+}
+
+TITLE_PATTERNS = {
+    "coupling": [
+        r"\binterdepend", r"\bcoupled\b", r"\binterface", r"\bmultilayer",
+        r"\bcross[- ]sector", r"\bcascad", r"\bco[- ]simulation",
+        r"\bnetwork reconstruction",
+    ],
+    "dynamics_control": [
+        r"\bdynamic", r"time[- ]vary", r"time[- ]depend", r"\bnonlinear",
+        r"\bviabil", r"\breachab", r"\bcontrol", r"\brecover", r"\brestor",
+        r"\bresilien", r"differential inclusion", r"\bstochastic",
+    ],
+    "climate_hazard": [
+        r"\bclimate", r"\bflood", r"\bstorm", r"rainstorm", r"\bhazard",
+        r"extreme weather", r"\bdisaster", r"\bdrought", r"\bheat",
+    ],
+    "sustainability_equity": [
+        r"\bsustainab", r"\bequit", r"\bjustice", r"\bdepriv", r"\bcarbon",
+        r"life[- ]cycle|lifecycle", r"industrial ecology",
+    ],
+}
+SECTOR_PATTERNS = {
+    "power": [r"\bpower\b", r"electric", r"\bgrid\b", r"energy system"],
+    "water": [r"\bwater\b", r"wastewater", r"stormwater", r"drainage", r"hydraulic"],
+    "transport": [r"transport", r"\broad\b", r"mobility", r"traffic"],
+    "waste": [r"solid waste", r"\bwaste\b", r"\bdebris\b", r"waste-to-energy"],
+}
+
+
+def read_csv_records(path: Path) -> Tuple[List[Dict[str, str]], List[str]]:
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        records = [dict(r) for r in reader]
+        return records, list(reader.fieldnames or [])
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def txt(v: Any) -> str:
+    if v is None:
+        return ""
+    return str(v).strip()
+
+
+def low(v: Any) -> str:
+    return txt(v).lower()
+
+
+def norm_title(v: Any) -> str:
+    s = low(v)
+    s = re.sub(r"https?://\S+", " ", s)
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def split_labels(v: Any) -> List[str]:
+    return [x.strip() for x in re.split(r"[;,|]+", txt(v)) if x.strip()]
+
+
+def safe_float(v: Any) -> float:
+    try:
+        s = txt(v)
+        return float(s) if s else math.nan
+    except Exception:
+        return math.nan
+
+
+def contains_any(text: str, patterns: List[str]) -> bool:
+    return any(re.search(p, text, flags=re.I) for p in patterns)
+
+
+def matched_fraction(text: str, patterns: List[str]) -> float:
+    if not patterns:
+        return 0.0
+    hits = sum(bool(re.search(p, text, flags=re.I)) for p in patterns)
+    return min(1.0, hits / max(1.0, min(3.0, len(patterns))))
+
+
+def validate_frozen_dataset(records: List[Dict[str, str]], headers: List[str]) -> Dict[str, Any]:
+    missing_cols = sorted(REQUIRED_COLUMNS.difference(headers))
+    if missing_cols:
+        raise ValueError(f"Missing required columns: {missing_cols}")
+    if len(records) != EXPECTED_N:
+        raise ValueError(f"Frozen dataset condition failed: expected {EXPECTED_N} rows, found {len(records)}")
+
+    ids = [txt(r["Canonical_ID"]) for r in records]
+    if any(not x for x in ids):
+        raise ValueError("Canonical_ID contains missing values")
+    dup_ids = [x for x, n in Counter(ids).items() if n > 1]
+    if dup_ids:
+        raise ValueError(f"Duplicate Canonical_ID values remain: {dup_ids[:10]}")
+
+    # DOI uniqueness among non-empty DOI values.
+    dois = [low(r["DOI"]).replace("https://doi.org/", "").strip() for r in records if txt(r["DOI"])]
+    dup_dois = [x for x, n in Counter(dois).items() if n > 1]
+    if dup_dois:
+        raise ValueError(f"Duplicate DOI values remain: {dup_dois[:10]}")
+
+    # Exact normalized title uniqueness.
+    nts = [norm_title(r["Canonical_Title"]) for r in records]
+    dup_titles = [x for x, n in Counter(nts).items() if x and n > 1]
+    if dup_titles:
+        raise ValueError(f"Duplicate normalized titles remain: {dup_titles[:10]}")
+
+    return {
+        "n_rows": len(records),
+        "unique_ids": len(set(ids)),
+        "nonempty_dois": len(dois),
+        "duplicate_dois": len(dup_dois),
+        "duplicate_normalized_titles": len(dup_titles),
+    }
+
+
+def protocol_support(r: Dict[str, str]) -> bool:
+    return (
+        txt(r.get("Relevance_259")) == "C_PROTOCOL_SUPPORT"
+        or "systematic review methodology" in low(r.get("Primary_Discipline"))
+    )
+
+
+def critical_metadata_hold(r: Dict[str, str]) -> bool:
+    # A conflicting DOI is identity-critical and cannot be silently resolved from this frozen dataset.
+    return "CONFLICTING_DOI" in txt(r.get("Data_Quality_Notes")).upper()
+
+
+def identity_ok(r: Dict[str, str]) -> bool:
+    return all(txt(r.get(c)) for c in ["Canonical_ID", "Canonical_Title", "Journal", "URL"])
+
+
+def substantive_scope_signal_count(r: Dict[str, str]) -> int:
+    signals = 0
+    if txt(r.get("Relevance_207")):
+        signals += 1
+    if txt(r.get("Relevance_259")) and txt(r.get("Relevance_259")) != "C_PROTOCOL_SUPPORT":
+        signals += 1
+    if txt(r.get("Relevant_Hypotheses")):
