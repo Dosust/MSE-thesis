@@ -112,10 +112,15 @@ def hausdorff_distance(a: Iterable[Point], b: Iterable[Point]) -> float:
 
 
 def static_interface_field(zbar: float) -> Callable[[Point, float], Point]:
-    """Reference static-interface vector field."""
+    """Reference static-interface vector field with a nontrivial safe-set boundary.
+
+    The weakly unstable x1 direction is deliberate: it ensures the finite-horizon
+    admissible set is a proper subset of K, so dynamic/static interface changes can
+    produce a measurable synthetic boundary deformation.
+    """
     def field(x: Point, _t: float) -> Point:
         x1, x2 = x
-        return (-0.50 * x1 + zbar * x2, -0.35 * x2 + 0.20 * x1)
+        return (0.18 * x1 + zbar * x2, -0.12 * x2 + 0.18 * x1)
     return field
 
 
@@ -124,20 +129,29 @@ def dynamic_interface_field(
     amplitude: float = 0.18,
     omega: float = 1.0,
 ) -> Callable[[Point, float], Point]:
-    """Reference time-varying interface vector field."""
+    """Reference time-varying interface field used only for P1 synthetic QA."""
     def field(x: Point, t: float) -> Point:
         x1, x2 = x
         z = z0 + amplitude * math.sin(omega * t)
-        return (-0.50 * x1 + z * x2, -0.35 * x2 + 0.20 * x1)
+        return (0.18 * x1 + z * x2, -0.12 * x2 + 0.18 * x1)
     return field
 
 
 def demo_boundary_deformation() -> dict[str, float | int]:
-    """Reproducible P1 smoke test: dynamic vs static finite-horizon viability."""
+    """Reproducible P1 smoke test: dynamic vs static finite-horizon viability.
+
+    Expected reference behavior on the default 81x81 grid:
+      * both viable sets are non-empty and proper subsets of K;
+      * dynamic and static approximations are not identical;
+      * the grid-based Hausdorff distance is positive.
+
+    These are software/geometry checks, not empirical thesis results.
+    """
     k = Rectangle(-1.0, 1.0, -1.0, 1.0)
     v_static = approximate_viable_grid(k, static_interface_field(0.25), 5.0, 0.02)
     v_dynamic = approximate_viable_grid(k, dynamic_interface_field(), 5.0, 0.02)
     return {
+        "n_grid": 81 * 81,
         "n_static": len(v_static),
         "n_dynamic": len(v_dynamic),
         "hausdorff_grid_distance": hausdorff_distance(v_static, v_dynamic),
