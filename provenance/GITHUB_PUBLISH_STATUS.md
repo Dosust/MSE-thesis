@@ -6,18 +6,34 @@ Branch: `main`
 
 ## Published directly to GitHub
 
-- repository README and thesis scope;
-- conversation authenticity policy;
-- verbatim current-conversation user requests available in the visible thread;
-- assistant-response artifact index;
-- provenance rules and full session artifact inventory with SHA-256 identities.
+The repository currently contains:
+
+- the project README and current thesis scope;
+- conversation authenticity/provenance rules;
+- verbatim current-conversation user requests that are available in the visible thread;
+- a correctly labeled reconstructed/indexed assistant-response record;
+- the exact 325-paper closed-corpus PRISMA + Monte Carlo master prompt;
+- the artifact inventory and SHA-256 provenance registry;
+- online-archive pointers for the complete raw artifact bundle.
+
+## Raw byte archive online
+
+A byte-preserving ZIP of the active 2026-08-20 thesis session is stored in the user's connected Google Drive and linked from:
+
+`provenance/ONLINE_ARCHIVE.md`
+
+Archive SHA-256:
+
+`6d2682356ad0ba4a879c3ee398f4fc65fa60f4b2b9899e5e369820dfa1f92e8c`
+
+A separate ZIP for the 325-paper PRISMA + Monte Carlo package is also stored online and linked from the same file.
 
 ## Artifact-byte inventory
 
-`provenance/INVENTORY.csv` records the exact names, sizes, and SHA-256 values of the source datasets, derived corpora, prompts, Python code, workbooks, reports, previews, and ZIP packages prepared in the active session.
+`provenance/INVENTORY.csv` records exact file names, byte sizes, and SHA-256 values for the source datasets, derived corpora, prompts, Python code, workbooks, reports, previews, and ZIP packages prepared in the active session.
 
-## Connector boundary
+## GitHub connector boundary
 
-The available GitHub write actions accept UTF-8 content inline but do not expose a local-file upload parameter for arbitrary binary/local-runtime files. Therefore the inventory is authoritative for artifacts that could not be transferred byte-for-byte through the connector in this run. No missing artifact is falsely described as uploaded.
+The GitHub text writer available in this session accepts UTF-8 text directly. It does not expose a mounted-local-file argument for arbitrary binary artifacts. Large/binary session artifacts are therefore preserved in the online byte archive and indexed cryptographically from GitHub rather than being falsely described as GitHub-committed files.
 
-This status file must be updated if additional raw artifacts are subsequently committed.
+This is an explicit provenance distinction, not a loss of the artifacts.
