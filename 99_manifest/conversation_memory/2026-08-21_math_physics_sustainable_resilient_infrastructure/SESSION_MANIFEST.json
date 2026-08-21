@@ -4,27 +4,86 @@
   "repository": "Dossiya-SE/MSE-thesis",
   "branch": "main",
   "archive_root": "99_manifest/conversation_memory/2026-08-21_math_physics_sustainable_resilient_infrastructure",
+  "verification_revision": "2026-08-21_verified_correction",
+  "precedence_files": [
+    "08_verified_state/CORRECTION_LEDGER_2026-08-21.md",
+    "08_verified_state/THESIS_FROZEN_STATE_v0.5.md",
+    "07_future_chat_bootstrap/FUTURE_CHAT_BOOTSTRAP.md"
+  ],
+  "frozen_mse": {
+    "title_family": "Mathematical Physics of Sustainable Infrastructure Resilience",
+    "v0_5_focus": "Equity-Constrained Viability of Dynamic Power-Transport-Water Interfaces under Climate Stress",
+    "executable_core": ["Power", "Transport", "Water"],
+    "extension_sectors": ["Solid Waste"],
+    "main_formal_distinction": "safe recovery reachability versus post-recovery controlled viability",
+    "formal_objects": ["K_hard(t)", "K_R(t)", "K_R^V(t)", "B_R(t0)"]
+  },
+  "general_research_program": {
+    "long_term_direction": "Mathematics + Physics foundation for sustainable resilient infrastructure from governing laws to lifecycle decisions",
+    "six_chains": [
+      "Physical-System",
+      "Observation-Inference-Prediction",
+      "Hazard-Failure-Consequence",
+      "Resilience-Viability-Recovery",
+      "Engineering Design-Operation-Adaptation",
+      "Sustainability-Equity-Governance-Decision"
+    ],
+    "chains_are": "distinct analytical logics connected by feedback, not one causal pipeline"
+  },
+  "taxonomy_architecture": {
+    "duke_2002": {
+      "role": "optional educational browse taxonomy",
+      "url": "https://sites.math.duke.edu/education/mathnsdl02/math-taxonomy-0202-1web.htm",
+      "not_equivalent_to": "MSC2020"
+    },
+    "msc2020": {
+      "role": "canonical scholarly research classification",
+      "official_urls": [
+        "https://msc2020.org/",
+        "https://mathscinet.ams.org/mathscinet/msc/msc2020.html",
+        "https://zbmath.org/classification/"
+      ]
+    },
+    "binding_rule": "taxonomy hierarchy does not imply theorem dependency, prerequisite structure, or physical causality"
+  },
   "figma": {
     "file_key": "Iss9o33vEjRmHaODdkeuc6",
     "url": "https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6",
-    "preferred_page": "Candidate 1 — Wolfram Fidelity Rebuild v2",
-    "preferred_frame": "Candidate 1 — Computational Visual Summary",
-    "preferred_frame_node_id": "4:3"
+    "live_audit_date": "2026-08-21",
+    "verified_page": {
+      "node_id": "0:1",
+      "name": "Candidate 1 — Sustainable Viability"
+    },
+    "verified_primary_frame": {
+      "node_id": "1:2",
+      "name": "Poster — Candidate 1"
+    },
+    "superseded_memory": [
+      "Candidate 1 — Wolfram Fidelity Rebuild v2",
+      "node 4:3"
+    ]
   },
   "monte_carlo": {
-    "draws": 10000000,
-    "seed": 57420260821,
+    "declared_draws": 10000000,
+    "declared_seed": 57420260821,
     "code": "02_or_monte_carlo/run_or_mc.py",
     "results_json": "02_or_monte_carlo/or_mc10m_results_compact.json",
-    "results_text": "02_or_monte_carlo/OR_infrastructure_AI_10M_results.txt"
+    "results_text": "02_or_monte_carlo/OR_infrastructure_AI_10M_results.txt",
+    "interpretation": "uncertainty/robustness analysis conditional on the OR decision model; not web scraping and not optimization by itself"
   },
-  "primary_research_system": ["Power", "Water", "Transportation", "Solid Waste"],
-  "primary_long_term_title": "Mathematical Physics of Sustainable Infrastructure Viability",
-  "current_strongest_thesis_sized_candidate": "Dynamic Interface Identification → Viability Uncertainty",
   "exact_text_archive": {
-    "format": "tar.gz split as base64 text parts",
-    "sha256": "0ad7d244b8ed54bc9fc00f7c8a6fb649907040b6d55ea7a22ccc7eac85b2310f",
-    "parts": 8
+    "original_status": "INCOMPLETE_DO_NOT_TREAT_AS_RECONSTRUCTIBLE",
+    "original_declared_parts": 8,
+    "missing_parts_confirmed": ["part03", "part06", "part07"],
+    "previous_declared_sha256": "0ad7d244b8ed54bc9fc00f7c8a6fb649907040b6d55ea7a22ccc7eac85b2310f",
+    "sha256_status": "not a verified reconstructible archive because declared parts are missing",
+    "v2_status": "started but incomplete",
+    "preferred_recovery_method": "individual source-file preservation + verified file index + reconstructed memory ledger with explicit provenance labels"
   },
-  "authenticity_note": "Reconstructed summaries are explicitly separated from verbatim current-conversation attachments and exact generated artifacts. No hidden chain-of-thought or unavailable transcript text is fabricated."
+  "conversation_file_surface": {
+    "verified_uploaded_pasted_markdown_count": 6,
+    "phantom_inventory_item_removed": "Pasted markdown(20260821-114450).md",
+    "source": "current ChatGPT conversation file surface audit on 2026-08-21"
+  },
+  "authenticity_note": "Reconstructed summaries are explicitly separated from source facts, uploaded artifacts, computed results, formal results, and verbatim text. No unavailable transcript turns or hidden chain-of-thought are represented as verbatim provenance."
 }
