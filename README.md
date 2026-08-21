@@ -8,11 +8,13 @@
   <img src="assets/math-art/master_architecture.svg" alt="Master mathematical architecture" width="100%" />
 </p>
 
+> **Project-memory entry point:** [`PROJECT_MEMORY.md`](PROJECT_MEMORY.md) → corrected canonical v2 memory under [`project_memory/2026-08-21_chain_architecture_v2/`](project_memory/2026-08-21_chain_architecture_v2/).
+
 ---
 
-## 1. Central mathematical architecture
+## 1. Core thesis architecture and broader research program
 
-The governing chain is
+The **core MSE architecture**, consistent with [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md), is
 
 $$
 \boxed{
@@ -29,12 +31,26 @@ K_R
 \mathcal C_R
 \longrightarrow
 \mathcal U_{\mathrm{recovery}}
-\longrightarrow
-d
 }
 $$
 
-or, scientifically:
+The central mathematical contribution is concentrated on
+
+$$
+\boxed{
+\text{Dynamic Coupling}
+\rightarrow
+\text{Admissibility}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Recovery}
+}
+$$
+
+with identification/inverse problems/UQ upstream and control/design as structured extensions.
+
+The **broader long-term research program** can continue through
 
 $$
 \boxed{
@@ -53,8 +69,14 @@ $$
 \text{Control}
 \rightarrow
 \text{Design}
+\rightarrow
+\text{Optimization}
+\rightarrow
+\text{Decision}
 }
 $$
+
+without implying equal original contribution at every stage in one MSE thesis.
 
 The central geometric object is
 
@@ -75,6 +97,10 @@ Q_3 &: \text{What interventions or designs move it in a favorable direction?}
 \end{aligned}}
 $$
 
+The current central research question is:
+
+> **How accurately must dynamic cross-infrastructure interfaces be identified and represented before sustainable/equitable viability and recovery predictions can be trusted?**
+
 Full mathematical specification: [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
 
 ---
@@ -83,13 +109,14 @@ Full mathematical specification: [`project/MATHEMATICAL_FOUNDATION.md`](project/
 
 | Symbol | Mathematical role | Physical meaning |
 |---|---|---|
-| $X(t)$ | coupled state vector | state of Power–Water–Transportation–Solid-Waste infrastructure |
+| $X(t)$ | coupled state vector | state of Power–Water/Drainage–Transportation–Solid-Waste infrastructure |
 | $Z(t)$ | interface state | evolving cross-sector coupling mechanisms |
 | $m(t)$ | discrete mode | operating/failure configuration |
 | $u(t)$ | control | recovery/intervention action |
 | $\xi(t)$ | exogenous forcing | climate forcing |
 | $\eta(t)$ | realized hazard | local flood/stress acting on infrastructure |
 | $\theta$ | uncertain parameters | capacities, coupling strengths, thresholds, model parameters |
+| $Y(t)$ | observation vector | partial/noisy measurements |
 | $K_R$ | admissible set | physical + service + sustainability + equity constraints |
 | $\mathcal V_R$ | viability kernel | states from which admissibility can be maintained |
 | $\mathcal C_R$ | capture/recovery set | states from which $\mathcal V_R$ can be reached in finite time |
@@ -157,7 +184,7 @@ The off-diagonal terms represent specified **interface mechanisms/interdependenc
 
 ---
 
-## 5. Climate forcing and waste–drainage feedback
+## 5. Climate forcing and waste–drainage–transport feedbacks
 
 External forcing and realized hazard are separated:
 
@@ -187,7 +214,7 @@ B_{\mathrm{drain}}
 }
 $$
 
-Transportation may also affect waste-removal accessibility, closing an additional feedback loop. These arrows are mechanisms to be specified and tested; the diagram alone is not evidence of causal magnitude.
+Transportation accessibility may affect waste-removal capacity and restoration logistics, closing additional feedback loops. The authoritative scope therefore describes the demonstrator as **urban flooding with waste–drainage–transport feedbacks**. These arrows are mechanisms to be specified and tested; the diagram alone is not evidence of causal magnitude.
 
 ---
 
@@ -242,6 +269,8 @@ X(t;x_0,u,\eta,\theta)\in K_R
 $$
 
 The research problem is therefore not merely to compute a resilience score, but to determine and explain the geometry of $\mathcal V_R$ and especially $\partial\mathcal V_R$.
+
+A later finite-horizon, time-varying-admissibility, stochastic or nonanticipative formulation must be documented as an explicit mathematical amendment rather than silently substituted for this current definition.
 
 ---
 
@@ -376,8 +405,7 @@ A viability-preserving control set may be represented as
 $$
 \mathcal U_V(x)
 =
-\left\{
-u:F(x,u,\eta)\in T_{K_R}(x)
+\left\{u:F(x,u,\eta)\in T_{K_R}(x)
 \right\}
 $$
 
@@ -404,6 +432,8 @@ $$
 $$
 
 subject to declared physical, service, sustainability, equity, recovery, and budget constraints.
+
+These are **structured extensions** of the MSE core rather than an assertion that every downstream layer must contain an independent original contribution.
 
 ---
 
@@ -439,13 +469,15 @@ $$
 \rightarrow
 p(X,\theta,Z\mid\mathcal D)
 \rightarrow
-p(\mathcal V_R)
+p(\mathcal V_R\mid\mathcal D)
 \rightarrow
 u_t
 }
 $$
 
 **Core question:** What is happening, what will happen, and what should we do now?
+
+The term **digital twin** should be used operationally only when an actual observation-update/calibration/validation loop is implemented.
 
 ![Type II framework](assets/frameworks/type_ii_digital_twin_framework.webp)
 
@@ -471,9 +503,13 @@ $$
 
 Framework archive and image hashes: [`assets/frameworks/README.md`](assets/frameworks/README.md)
 
+Current MSE recommendation: **Type-I-centered core + Type-II upstream identification/UQ + limited Type-III downstream demonstration if feasible.**
+
 ---
 
 ## 13. Falsifiable scientific propositions
+
+The current formal proposition registry is **P1–P7**. Historical H1–H7/T1 literature-ranking labels are preserved separately and should not be silently relabeled.
 
 | ID | Proposition | Primary test |
 |---|---|---|
@@ -483,17 +519,18 @@ Framework archive and image hashes: [`assets/frameworks/README.md`](assets/frame
 | **P4** | Sustainability/equity constraints deform the viable region beyond technical constraints. | Compare $\mathcal V(K_{tech})$ and $\mathcal V(K_{sus,eq})$. |
 | **P5** | Recovery geometry contains information not captured by viability alone. | Compute $\mathcal C_R\setminus\mathcal V_R$ and $\tau_R$. |
 | **P6** | Waste–drainage–flood feedback shifts coupled P–W–T–SW resilience boundaries. | Compare otherwise identical models with feedback on/off. |
-| **P7** | Reduced models used for decisions must preserve or conservatively bound viability conclusions. | Compare $\mathcal V_r$ with the projected full-order viability geometry. |
+| **P7** | Reduced models used for decisions must preserve or conservatively bound viability conclusions. | Compare $\mathcal V_r$ with projected full-order viability geometry. |
 
 Detailed protocol: [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)  
-Machine-readable registry: [`config/scientific_propositions.yaml`](config/scientific_propositions.yaml)
+Machine-readable registry: [`config/scientific_propositions.yaml`](config/scientific_propositions.yaml)  
+Historical-label crosswalk: [`project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md`](project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md)
 
 ---
 
 ## 14. Primary physical demonstrator
 
-**System:** coupled Power–Water–Transportation–Solid-Waste infrastructure.  
-**Hazard:** urban flooding with a drainage/waste feedback mechanism.
+**System:** coupled Power–Water/Drainage–Transportation–Solid-Waste infrastructure.  
+**Hazard/demonstrator:** **urban flooding with waste–drainage–transport feedbacks**.
 
 The demonstrator is intended to test the mathematical architecture through a physically interpretable coupled system, not to imply that every possible P–W–T–SW interaction is represented.
 
@@ -524,11 +561,11 @@ Different languages/formats are used only where they contribute a specific funct
 | **Markdown + LaTeX** | mathematical specification and derivation |
 | **Mermaid** | inspectable architecture diagrams |
 | **SVG** | version-controlled mathematical art / state-space geometry |
-| **Python** | numerical QA, finite-grid viability baselines, geometry metrics, tests |
+| **Python** | numerical QA, finite-grid viability baselines, geometry metrics, tests, memory audit |
 | **Julia** | compact multiscale coupled-dynamics scaffold |
 | **YAML** | machine-readable proposition registry |
-| **JSON Schema** | formal model-configuration contract |
-| **GitHub Actions** | automated scientific-architecture QA |
+| **JSON / JSON Schema** | project-memory and model-configuration contracts |
+| **GitHub Actions** | automated scientific-architecture and memory-consistency QA |
 
 Implementation entry point: [`methods/architecture/README.md`](methods/architecture/README.md)
 
@@ -539,14 +576,15 @@ Implementation entry point: [`methods/architecture/README.md`](methods/architect
 - [`schemas/thesis_model.schema.json`](schemas/thesis_model.schema.json)
 - [`tests/test_viability_geometry.py`](tests/test_viability_geometry.py)
 - [`.github/workflows/scientific-architecture-qa.yml`](.github/workflows/scientific-architecture-qa.yml)
+- [`.github/workflows/project-memory-qa.yml`](.github/workflows/project-memory-qa.yml)
 
-The committed numerical examples are **synthetic reference implementations**. They are used to verify geometry logic and software plumbing before the final calibrated thesis model is frozen.
+The committed numerical examples are **synthetic reference implementations**. They verify geometry logic and software plumbing before a final calibrated thesis model is frozen.
 
 ---
 
 ## 17. Current literature-ranking status
 
-The latest closed-corpus Monte Carlo ranking protocol is hard-locked to:
+The frozen logical closed-corpus protocol is hard-locked to:
 
 `Thesis_Final_Unique_Papers_325_2026-08-20(1).csv`
 
@@ -554,7 +592,11 @@ SHA-256:
 
 `047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f`
 
+The high-rigor archived run used a byte-identical uploaded copy named `Thesis_Final_Unique_Papers_325_2026-08-20(4).csv` with the same hash.
+
 The protocol forbids historical rank/selection variables from entering the scientific score and interprets Top-K results only **within the locked dataset**.
+
+A later three-model comparison found that the top ordering is model-sensitive enough that the two leading papers should be treated as **co-dominant primary precedents**, not as evidence of one universally dominant global paper. See [`project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md).
 
 The global PRISMA systematic-search layer remains methodologically separate from this closed-corpus ranking layer.
 
@@ -565,17 +607,18 @@ The global PRISMA systematic-search layer remains methodologically separate from
 ```text
 MSE-thesis/
 ├── README.md
+├── PROJECT_MEMORY.md
 ├── assets/
 │   ├── frameworks/                 # Type I / II / III generated framework images
 │   └── math-art/                   # repository-native SVG mathematical figures
 ├── config/                         # machine-readable research configuration
 ├── schemas/                        # formal model schemas
 ├── project/                        # scope, mathematical foundation, propositions
+├── project_memory/                 # versioned future-chat scientific memory
 ├── methods/
 │   ├── architecture/               # Python / Julia architecture implementation
-│   └── monte_carlo/                # corpus-ranking implementation/results
+│   └── monte_carlo/                # corpus-ranking code/index/results material
 ├── tests/                          # numerical architecture smoke tests
-├── data/                           # frozen corpus/provenance material
 ├── prompts/                        # exact available execution prompts
 ├── conversation/                   # user-visible research-development provenance
 ├── provenance/                     # hashes, inventories, archive status
@@ -583,24 +626,32 @@ MSE-thesis/
 └── .github/workflows/              # automated reproducibility/QA
 ```
 
+**Raw datasets and large binary packages are not assumed to live under a root `data/` directory.** Their current storage/identity must be verified through the actual GitHub tree and `provenance/ONLINE_ARCHIVE.md` / `provenance/INVENTORY.csv` before describing them as GitHub-committed.
+
 ---
 
-## 19. Reproducibility and provenance
+## 19. Reproducibility, conversation memory, and provenance
 
-The current user-visible thread is preserved under:
+Historical user-visible material is preserved under `conversation/`, including the 2026-08-20 current-thread archive and the 2026-08-21 chain/framework segment.
 
-`conversation/2026-08-20_current_thread/`
+The corrected future-chat memory entry point is:
 
-The repository also distinguishes:
+`project_memory/2026-08-21_chain_architecture_v2/`
+
+The repository distinguishes:
 
 - exact/verbatim user requests where available;
+- user-supplied reference text;
 - reconstructed assistant-response indexes where exact wording is unavailable;
 - exact prompts/code when preserved;
+- corpus-derived results;
+- synthetic QA;
+- empirical/validated results;
 - cryptographic hashes for frozen datasets and archived artifacts.
 
 Hidden chain-of-thought, system/developer instructions, credentials, secrets, and connector internals are not part of the user-visible transcript archive.
 
-Large byte-preserving artifacts that could not be committed directly through the active GitHub connector are registered through `provenance/ONLINE_ARCHIVE.md`, `provenance/INVENTORY.csv`, and `provenance/SHA256SUMS.txt` rather than being falsely represented as native GitHub files.
+Large byte-preserving artifacts that are stored externally are registered through `provenance/ONLINE_ARCHIVE.md`, `provenance/INVENTORY.csv`, and hash records rather than being falsely represented as native GitHub files.
 
 ---
 
@@ -612,9 +663,11 @@ The repository distinguishes clearly among:
 
 - **formal definitions**;
 - **testable propositions**;
+- **mathematical templates**;
 - **synthetic demonstrations**;
 - **empirical evidence**;
 - **literature-derived evidence**;
-- **validated results**.
+- **validated results**;
+- **pending claims**.
 
 No synthetic illustration or ranking result should be interpreted as empirical proof beyond its declared scope.
