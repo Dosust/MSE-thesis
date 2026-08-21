@@ -1,0 +1,30 @@
+{
+  "archive_date": "2026-08-21",
+  "timezone": "Asia/Singapore",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "archive_root": "99_manifest/conversation_memory/2026-08-21_math_physics_sustainable_resilient_infrastructure",
+  "figma": {
+    "file_key": "Iss9o33vEjRmHaODdkeuc6",
+    "url": "https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6",
+    "preferred_page": "Candidate 1 — Wolfram Fidelity Rebuild v2",
+    "preferred_frame": "Candidate 1 — Computational Visual Summary",
+    "preferred_frame_node_id": "4:3"
+  },
+  "monte_carlo": {
+    "draws": 10000000,
+    "seed": 57420260821,
+    "code": "02_or_monte_carlo/run_or_mc.py",
+    "results_json": "02_or_monte_carlo/or_mc10m_results_compact.json",
+    "results_text": "02_or_monte_carlo/OR_infrastructure_AI_10M_results.txt"
+  },
+  "primary_research_system": ["Power", "Water", "Transportation", "Solid Waste"],
+  "primary_long_term_title": "Mathematical Physics of Sustainable Infrastructure Viability",
+  "current_strongest_thesis_sized_candidate": "Dynamic Interface Identification → Viability Uncertainty",
+  "exact_text_archive": {
+    "format": "tar.gz split as base64 text parts",
+    "sha256": "0ad7d244b8ed54bc9fc00f7c8a6fb649907040b6d55ea7a22ccc7eac85b2310f",
+    "parts": 8
+  },
+  "authenticity_note": "Reconstructed summaries are explicitly separated from verbatim current-conversation attachments and exact generated artifacts. No hidden chain-of-thought or unavailable transcript text is fabricated."
+}
