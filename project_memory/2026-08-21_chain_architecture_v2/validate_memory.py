@@ -40,8 +40,10 @@ def main() -> None:
     require("Power (P)" in scope and "Water / drainage (W)" in scope, "P/W sector scope mismatch")
     require("Transportation (T)" in scope and "Solid Waste (SW)" in scope, "T/SW sector scope mismatch")
     require(demonstrator in scope, "Primary demonstrator wording drifted from project/THESIS_SCOPE.md")
-    require("dynamic coupling → admissibility → viability → recovery" in scope,
-            "Core mathematical contribution statement missing from authoritative scope")
+    require(
+        "dynamic coupling → admissibility → viability → recovery" in scope,
+        "Core mathematical contribution statement missing from authoritative scope",
+    )
 
     # 3. Mathematical-object invariants.
     foundation = read(ROOT / "project" / "MATHEMATICAL_FOUNDATION.md")
@@ -59,27 +61,47 @@ def main() -> None:
     # 5. Frozen corpus lock.
     prompt = read(ROOT / "prompts" / "PRISMA_Monte_Carlo_325_Single_Dataset_Master_Prompt.md")
     dataset_hash = memory["monte_carlo"]["sha256"]
-    require("Thesis_Final_Unique_Papers_325_2026-08-20(1).csv" in prompt,
-            "Frozen logical dataset filename drift")
+    require(
+        "Thesis_Final_Unique_Papers_325_2026-08-20(1).csv" in prompt,
+        "Frozen logical dataset filename drift",
+    )
     require(dataset_hash in prompt, "Frozen dataset SHA-256 drift")
     require("325" in prompt and "34" in prompt, "Frozen dataset shape declaration missing")
 
     # 6. High-rigor archive copy identity.
     run = read(ROOT / "methods" / "monte_carlo" / "final_run_2026-08-20" / "README.md")
-    require("Thesis_Final_Unique_Papers_325_2026-08-20(4).csv" in run,
-            "High-rigor execution-copy filename missing")
+    require(
+        "Thesis_Final_Unique_Papers_325_2026-08-20(4).csv" in run,
+        "High-rigor execution-copy filename missing",
+    )
     require(dataset_hash in run, "High-rigor execution copy does not declare frozen hash")
     require("Robust core size" in run and "**80**" in run, "High-rigor robust-core summary drift")
 
     # 7. Memory-version invariants.
     require(memory["version"] == 2, "PROJECT_MEMORY.json is not v2")
-    require(memory["supersedes"] == "project_memory/2026-08-21_chain_architecture/",
-            "Superseded v1 path drift")
+    require(
+        memory["supersedes"] == "project_memory/2026-08-21_chain_architecture/",
+        "Superseded v1 path drift",
+    )
 
-    # 8. Root README known-issue detection (warning only).
+    # 8. Root README alignment with corrected v2 memory.
     root_readme = read(ROOT / "README.md")
-    if "\\nu" in root_readme or "\\nu_t" in root_readme:
-        print("WARNING: root README still contains \\nu / \\nu_t control-variable typo; see v2 correction log.")
+    require(demonstrator in root_readme, "Root README demonstrator drifted from authoritative scope")
+    require(
+        "project_memory/2026-08-21_chain_architecture_v2" in root_readme,
+        "Root README does not point to corrected v2 memory",
+    )
+    require(
+        "dynamic coupling" in root_readme.lower()
+        and "admissibility" in root_readme.lower()
+        and "viability" in root_readme.lower()
+        and "recovery" in root_readme.lower(),
+        "Root README no longer exposes the core MSE architecture",
+    )
+
+    # 9. Correction-log guardrail: the intermediate nu-notation claim must remain retracted.
+    correction_log = read(CAPSULE / "14_CORRECTION_LOG.md")
+    require("typo claim is retracted" in correction_log.lower(), "Retracted audit finding is not documented")
 
     print("PASS: corrected thesis memory capsule invariants are consistent with authoritative repository files.")
 
