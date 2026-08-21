@@ -1,0 +1,61 @@
+{
+  "capsule_version": "1.0",
+  "date": "2026-08-21",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "archive-import",
+  "sectors": ["Power", "Water", "Transportation", "Solid Waste"],
+  "chains": {
+    "I": "Physical System / Mathematical Physics",
+    "II": "Observation / Identification / Inference / Prediction",
+    "III": "Hazard / Failure / Consequence",
+    "IV": "Resilience / Viability / Recovery",
+    "V": "Design / Operation / Adaptation / Optimization",
+    "VI": "Sustainability / Equity / Decision"
+  },
+  "preferred_mse_type": "Type I — Resilience-Centered Mathematical Physics",
+  "cross_cutting": [
+    "Inverse Problems / Identification",
+    "Uncertainty Quantification",
+    "Scientific Computing"
+  ],
+  "central_objects": [
+    "dynamic interface state m_ij(t)",
+    "viability kernel V",
+    "viability boundary partial V",
+    "capture/recoverability set C"
+  ],
+  "core_chain": "D_obs -> (G_hat, theta_hat, Sigma_theta) -> F_dyn -> K_sus,eq -> V_sus,eq -> C_sus,eq",
+  "candidate_question": "How much must be known about dynamically evolving cross-infrastructure interfaces before predicted viability and recovery boundaries can be trusted?",
+  "novelty_status": "candidate; global novelty not frozen",
+  "known_precedents": {
+    "infrastructure_HJ_viability": "10.1016/j.ejcon.2026.101501",
+    "Bayesian_ici_network_reconstruction": "10.1103/vswp-h4hx",
+    "interdependency_taxonomy": "10.1109/37.969131",
+    "interdependent_infrastructure_review": "10.1016/j.ress.2013.06.040",
+    "interdependent_cascade": "10.1038/nature08932",
+    "dynamic_power_grid_cascade": "10.1038/s41467-018-04287-5",
+    "equitable_resilience": "10.1061/(ASCE)NH.1527-6996.0000401"
+  },
+  "source_hashes": {
+    "High_Rigor_Thesis_Paper_Corpus_207.csv": "e2358619b66b2609cb9af10462d38cf7f170095b11d2e6a7e6460b79c848d5a4",
+    "High_Rigor_Thesis_Literature_Corpus_207.xlsx": "b42b135396c55932d1071361f73504eecc39ffb72242d18bf6bc8ebea097f961",
+    "High_Rigor_Thesis_Literature_Corpus_207.zip": "1c72e57a38983b9b78f1e02456ee6094f49b317824474636a7898f76ea65fc8a",
+    "High_Rigor_Thesis_Journal_Landscape.csv": "2b17f676acbf61cdbc662b11d6b039136656bc14a23cc84f6761f807d346ab9a",
+    "Pasted markdown(20260820-083427).md": "ba3a674ee402300bd9591475a53eb54949bcea6363cd6b5d897a8d8d6809a80d"
+  },
+  "framework_images": {
+    "combined": "08_framework_images/combined_three_frameworks.webp",
+    "type_I": "08_framework_images/type_I_resilience_centered_mathematical_physics.webp",
+    "type_II": "08_framework_images/type_II_identification_digital_twin.webp",
+    "type_III": "08_framework_images/type_III_resilience_by_design.webp"
+  },
+  "recommended_future_chat_read_order": [
+    "README.md",
+    "MASTER_MEMORY.md",
+    "LITERATURE_ANCHORS.md",
+    "ESTABLISHED_VS_PROPOSED.md",
+    "FUTURE_CHAT_BOOTSTRAP.md",
+    "STATE.json",
+    "SOURCE_PROVENANCE.md"
+  ]
+}
