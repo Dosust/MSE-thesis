@@ -1,0 +1,51 @@
+{
+  "capsule_version": "2.0-corrected",
+  "date": "2026-08-21",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "archive-import",
+  "working_sectors": ["Power", "Water", "Transportation", "Solid Waste"],
+  "canonical_chains": {
+    "I": "Physical System / Mathematical Physics",
+    "II": "Observation / Identification / Estimation / UQ / Prediction",
+    "III": "Hazard / Damage / Failure / Cascade / Service Consequence",
+    "IV": "Resilience / Viability / Reachability / Recovery",
+    "V": "Control / Design / Operation / Adaptation / Optimization",
+    "VI": "Sustainability / Equity / Decision"
+  },
+  "type_selection": {
+    "Type_I": "ALTERNATIVE_UNDER_COMPARISON",
+    "Type_II": "ALTERNATIVE_UNDER_COMPARISON",
+    "Type_III": "ALTERNATIVE_UNDER_COMPARISON",
+    "final_type": "OPEN_DECISION"
+  },
+  "candidate_scientific_center": "dynamic-interface identification/UQ -> viability-boundary sensitivity -> recoverability/control implications",
+  "candidate_chain": "D_obs -> (G_hat, theta_hat, Sigma_theta) -> F_dyn -> K_sus,eq -> V_sus,eq -> C_sus,eq",
+  "global_novelty_status": "NOT_FROZEN",
+  "evidence_scope_207": "BOUNDED_LOCAL_CORPUS_NOT_GLOBAL_COMPLETENESS",
+  "demonstrator": "urban flooding / climate stress",
+  "demonstrator_status": "APPLICATION_CONTEXT_NOT_AUTOMATIC_NOVELTY",
+  "known_precedents": {
+    "interdependency_taxonomy": "10.1109/37.969131",
+    "interdependent_infrastructure_review": "10.1016/j.ress.2013.06.040",
+    "interdependent_cascade": "10.1038/nature08932",
+    "Bayesian_ici_network_reconstruction": "10.1103/vswp-h4hx",
+    "infrastructure_HJ_viability": "10.1016/j.ejcon.2026.101501",
+    "HJ_reachable_sets": "10.1109/TAC.2005.851439",
+    "equitable_resilience": "10.1061/(ASCE)NH.1527-6996.0000401"
+  },
+  "source_hashes": {
+    "High_Rigor_Thesis_Paper_Corpus_207.csv": "e2358619b66b2609cb9af10462d38cf7f170095b11d2e6a7e6460b79c848d5a4",
+    "High_Rigor_Thesis_Literature_Corpus_207.xlsx": "b42b135396c55932d1071361f73504eecc39ffb72242d18bf6bc8ebea097f961",
+    "High_Rigor_Thesis_Literature_Corpus_207.zip": "1c72e57a38983b9b78f1e02456ee6094f49b317824474636a7898f76ea65fc8a",
+    "High_Rigor_Thesis_Journal_Landscape.csv": "2b17f676acbf61cdbc662b11d6b039136656bc14a23cc84f6761f807d346ab9a",
+    "Pasted markdown(20260820-083427).md": "ba3a674ee402300bd9591475a53eb54949bcea6363cd6b5d897a8d8d6809a80d"
+  },
+  "framework_images": {
+    "combined": "08_framework_images/combined_three_frameworks.webp",
+    "Type_I": "08_framework_images/type_I_resilience_centered_mathematical_physics.webp",
+    "Type_II": "08_framework_images/type_II_identification_digital_twin.webp",
+    "Type_III": "08_framework_images/type_III_resilience_by_design.webp"
+  },
+  "supersedes_for_scientific_recall": "09_chat_memory/2026-08-21_six_chains_and_three_frameworks/",
+  "preserve_v1_for_provenance": true
+}
