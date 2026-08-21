@@ -164,49 +164,30 @@ Separate:
 The expanded layers could appear to replace the compact six-chain framework discussed with the user.
 
 ### v2 correction
-Preserve both:
-
-```text
-canonical compact chain
-```
-
-and
-
-```text
-expanded internal layer decomposition
-```
-
-with explicit parent-child relationship.
+Preserve both the canonical compact chain and its expanded internal layer decomposition with an explicit parent-child relationship.
 
 ---
 
-## C11 — Root README control-variable typo
+## C11 — Retracted intermediate audit impression about `\nu`
 
-### Repository audit
-The root `README.md` currently contains:
+### Intermediate audit impression
+During the v2 audit, connector-serialized text such as a JSON newline escape followed by `u` visually resembled `\nu`, which was initially interpreted as a literal LaTeX Greek-nu control variable.
 
-```text
-\nu
-\nu_t
-```
-
-in places where the intended control variable is `u` / `u_t`.
-
-### Evidence
-`project/MATHEMATICAL_FOUNDATION.md` uses `u` consistently.
+### Recheck
+A repository search did not support the claim that literal `\nu` / `\nu_t` control-variable notation was present as a source-file error. The apparent issue was a serialization/display ambiguity, not a verified scientific-document typo.
 
 ### v2 correction
-Record this as a known root-document bug. A later file update should replace those occurrences without altering the intended equations.
+**The earlier `\nu`/`\nu_t` typo claim is retracted.** Do not propagate it as a repository defect.
 
 ---
 
 ## C12 — Root README demonstrator wording
 
 ### Repository audit
-The root README uses a shorter “drainage/waste feedback mechanism” description and mentions transportation separately.
+The earlier root README used a shorter drainage/waste description and mentioned transportation separately.
 
 ### v2 correction
-For canonical memory, use the authoritative scope phrase:
+The root README was aligned with the authoritative scope phrase:
 
 **urban flooding with waste–drainage–transport feedbacks**.
 
@@ -253,11 +234,31 @@ Use:
 ```text
 authoritative source artifact
 > exact transcript/source text
+> verified bibliographic/full-text evidence
 > corrected v2 memory
 > reconstructed summary
 > v1 memory
 > unaudited recollection
 ```
+
+---
+
+## C17 — Stale root `data/` tree entry
+
+### Repository audit
+The earlier root README displayed a top-level `data/` directory in the repository tree, but the audited GitHub root did not contain that directory.
+
+### v2 correction
+The README tree was changed to reflect the actual repository structure and to direct raw-dataset/binary provenance to `provenance/ONLINE_ARCHIVE.md`, `provenance/INVENTORY.csv`, and the actual GitHub tree.
+
+---
+
+## C18 — Concurrent unrelated repository activity
+
+During the audit, another commit added material under `evidence/engineering_sustainability_integration_review/`. That concurrent repository activity is not automatically part of this chain-architecture memory capsule.
+
+### v2 rule
+Future chats must not infer that every new repository file belongs to the current thesis subproblem simply because it appears on `main`; route material by scientific relevance and source provenance.
 
 ---
 
