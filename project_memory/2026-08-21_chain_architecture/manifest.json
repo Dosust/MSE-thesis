@@ -1,0 +1,61 @@
+{
+  "memory_capsule_version": 1,
+  "snapshot_date": "2026-08-21",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "purpose": "High-recall, provenance-aware memory for future thesis chats",
+  "classification": "scientific synthesis and project-state memory; not a complete verbatim transcript",
+  "files": [
+    "README.md",
+    "00_EXECUTIVE_MEMORY.md",
+    "01_SCIENTIFIC_STATE.md",
+    "02_SIX_CHAINS_AND_LAYERS.md",
+    "03_MATHEMATICAL_OBJECTS_AND_PROPOSITIONS.md",
+    "04_TYPE_I_II_III_FRAMEWORKS.md",
+    "05_LITERATURE_ANCHORS.md",
+    "06_PRISMA_MONTE_CARLO_STATE.md",
+    "07_REPOSITORY_IMPLEMENTATION_MAP.md",
+    "08_VERBATIM_CURRENT_SEGMENT_REQUESTS.md",
+    "09_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md",
+    "10_AUTHENTICITY_AND_PROVENANCE.md",
+    "11_FUTURE_CHAT_BOOTSTRAP.md",
+    "PROJECT_MEMORY.yaml",
+    "manifest.json"
+  ],
+  "authoritative_linked_sources": {
+    "root_scientific_portal": "README.md",
+    "thesis_scope": "project/THESIS_SCOPE.md",
+    "mathematical_foundation": "project/MATHEMATICAL_FOUNDATION.md",
+    "scientific_propositions": "project/SCIENTIFIC_PROPOSITIONS.md",
+    "proposition_registry": "config/scientific_propositions.yaml",
+    "model_schema": "schemas/thesis_model.schema.json",
+    "architecture_code_python": "methods/architecture/viability_geometry.py",
+    "architecture_code_julia": "methods/architecture/CoupledInfrastructure.jl",
+    "scientific_qa": ".github/workflows/scientific-architecture-qa.yml",
+    "math_art": "assets/math-art/",
+    "framework_images": "assets/frameworks/",
+    "conversation_archive": "conversation/",
+    "provenance": "provenance/",
+    "closed_corpus_prompt": "prompts/PRISMA_Monte_Carlo_325_Single_Dataset_Master_Prompt.md",
+    "closed_corpus_final_run": "methods/monte_carlo/final_run_2026-08-20/"
+  },
+  "closed_corpus_lock": {
+    "file": "Thesis_Final_Unique_Papers_325_2026-08-20(1).csv",
+    "sha256": "047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f",
+    "records": 325,
+    "scope": "corpus-relative ranking only"
+  },
+  "frozen_conceptual_objects": [
+    "P-W-T-SW coupled state X",
+    "dynamic interface state Z",
+    "hybrid mode m",
+    "forcing xi distinct from realized hazard eta",
+    "sustainable-equitable admissible set K_R",
+    "viability kernel V_R",
+    "recovery/capture set C_R",
+    "recovery-time map tau_R",
+    "viability boundary partial V_R as central geometric object"
+  ],
+  "next_priority": "Deeply decompose Chain I sector-by-sector before freezing the coupled forward model.",
+  "integrity_rule": "Read linked authoritative artifacts before upgrading a memory statement to a verified scientific claim."
+}
