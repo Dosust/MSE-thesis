@@ -1,66 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="850" viewBox="0 0 1500 850" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 850" role="img" aria-labelledby="title desc">
 <title id="title">Dynamic Interface Operator for P-W-T-SW</title>
-<desc id="desc">Four-sector coupled operator with dynamic interfaces, climate forcing, and waste-drainage-flood feedback.</desc>
-<defs>
-  <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#071018"/><stop offset="1" stop-color="#10252d"/></linearGradient>
-  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#67e8f9"/></marker>
-  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fb7185"/></marker>
-</defs>
-<rect width="1500" height="850" rx="30" fill="url(#bg)"/>
-<text x="750" y="62" text-anchor="middle" fill="#f8fafc" font-family="Georgia,serif" font-size="36" font-weight="700">Dynamic Interface Operator</text>
-<text x="750" y="100" text-anchor="middle" fill="#a5f3fc" font-family="Arial,sans-serif" font-size="19">P–W–T–SW coupling is a mechanism, not merely an edge</text>
-
-<!-- forcing -->
-<g transform="translate(570 130)" font-family="Arial,sans-serif" text-anchor="middle">
-  <rect width="360" height="92" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
-  <text x="180" y="32" fill="#dbeafe" font-size="18" font-weight="700">CLIMATE FORCING</text>
-  <text x="180" y="62" fill="#93c5fd" font-size="20">ξ(t) → η(t)</text>
-  <text x="180" y="82" fill="#bfdbfe" font-size="13">exogenous forcing → realized local hazard</text>
-</g>
-
-<!-- sectors -->
-<g font-family="Arial,sans-serif" text-anchor="middle">
-  <g transform="translate(190 310)"><circle cx="0" cy="0" r="92" fill="#0c4a6e" stroke="#38bdf8" stroke-width="4"/><text y="-8" fill="#e0f2fe" font-size="28" font-weight="700">POWER</text><text y="25" fill="#bae6fd" font-size="22">X_P</text></g>
-  <g transform="translate(520 310)"><circle cx="0" cy="0" r="92" fill="#164e63" stroke="#22d3ee" stroke-width="4"/><text y="-8" fill="#cffafe" font-size="28" font-weight="700">WATER</text><text y="25" fill="#a5f3fc" font-size="22">X_W</text></g>
-  <g transform="translate(190 625)"><circle cx="0" cy="0" r="92" fill="#14532d" stroke="#4ade80" stroke-width="4"/><text y="-8" fill="#dcfce7" font-size="25" font-weight="700">TRANSPORT</text><text y="25" fill="#bbf7d0" font-size="22">X_T</text></g>
-  <g transform="translate(520 625)"><circle cx="0" cy="0" r="92" fill="#3f3f46" stroke="#fbbf24" stroke-width="4"/><text y="-8" fill="#fef3c7" font-size="24" font-weight="700">SOLID WASTE</text><text y="25" fill="#fde68a" font-size="22">X_SW</text></g>
-</g>
-
-<!-- interfaces -->
-<g fill="none" stroke="#67e8f9" stroke-width="3" marker-end="url(#a)">
-  <path d="M285 310 H425"/><path d="M425 337 H285"/>
-  <path d="M232 392 L472 544"/><path d="M472 560 L232 408"/>
-  <path d="M190 405 V525"/><path d="M520 405 V525"/>
-</g>
-<g font-family="Arial,sans-serif" fill="#cffafe" font-size="14">
-  <text x="350" y="291">Z_PW(t)</text><text x="350" y="365">Z_WP(t)</text>
-  <text x="320" y="455">Z_P,SW(t)</text><text x="315" y="520">Z_SW,P(t)</text>
-  <text x="205" y="475">Z_PT(t)</text><text x="535" y="475">Z_W,SW(t)</text>
-</g>
-
-<!-- central operator -->
-<g transform="translate(745 315)" font-family="Arial,sans-serif">
-  <rect width="665" height="365" rx="24" fill="#0f172a" stroke="#475569" stroke-width="2"/>
-  <text x="332" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">BLOCK COUPLING OPERATOR 𝒜(t)</text>
-  <g transform="translate(52 78)" font-family="Georgia,serif" font-size="20" fill="#e2e8f0">
-    <text x="0" y="0">[ A_PP</text><text x="105" y="0">A_PW</text><text x="210" y="0">A_PT</text><text x="315" y="0">A_P,SW ]</text>
-    <text x="0" y="46">[ A_WP</text><text x="105" y="46">A_WW</text><text x="210" y="46">A_WT</text><text x="315" y="46">A_W,SW ]</text>
-    <text x="0" y="92">[ A_TP</text><text x="105" y="92">A_TW</text><text x="210" y="92">A_TT</text><text x="315" y="92">A_T,SW ]</text>
-    <text x="0" y="138">[ A_SW,P</text><text x="105" y="138">A_SW,W</text><text x="210" y="138">A_SW,T</text><text x="315" y="138">A_SW,SW ]</text>
-  </g>
-  <line x1="45" y1="240" x2="620" y2="240" stroke="#334155"/>
-  <text x="42" y="275" fill="#86efac" font-size="18" font-weight="700">Dynamic law:</text><text x="180" y="275" fill="#bbf7d0" font-family="Georgia,serif" font-size="19">ε Ż = G(X,Z,m,η;θ)</text>
-  <text x="42" y="310" fill="#fde68a" font-size="18" font-weight="700">Timescale:</text><text x="180" y="310" fill="#fef3c7" font-family="Georgia,serif" font-size="19">ρ_ij = τ_interface,ij / τ_system</text>
-  <text x="42" y="345" fill="#c4b5fd" font-size="17">Test static approximation when ρ_ij ≪ 1, ≈ 1, or ≫ 1.</text>
-</g>
-
-<!-- feedback -->
-<path d="M610 625 C720 760 980 770 1040 700 C1095 636 1015 535 920 525" fill="none" stroke="#fb7185" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#r)"/>
-<g font-family="Arial,sans-serif" fill="#fecdd3" font-size="16">
-  <text x="735" y="760">X_SW → blockage → drainage capacity ↓ → η_flood ↑</text>
-</g>
-<path d="M750 220 C710 250 690 285 640 300" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#a)"/>
-<path d="M750 220 C780 250 825 275 880 300" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#a)"/>
-
-<text x="750" y="815" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="17">Research target: quantify how dynamic interface mechanisms deform viability and recovery geometry.</text>
+<desc id="desc">Adaptive light and dark mathematical visual of four-sector coupled infrastructure dynamics, dynamic interfaces, climate forcing, timescale regimes and waste-drainage-flood feedback.</desc>
+<style>
+:root{--bg:#ffffff;--panel:#f8fafc;--panel2:#f1f5f9;--fg:#0f172a;--muted:#475569;--border:#94a3b8;--grid:#e2e8f0;--state:#1d4ed8;--water:#0369a1;--transport:#047857;--waste:#a16207;--iface:#7e22ce;--forcing:#4338ca;--haz:#b91c1c;--unc:#b45309}
+@media(prefers-color-scheme:dark){:root{--bg:#07111f;--panel:#0e1d31;--panel2:#12243a;--fg:#eaf1f8;--muted:#9eb0c3;--border:#355a7b;--grid:#28445f;--state:#60a5fa;--water:#38bdf8;--transport:#34d399;--waste:#facc15;--iface:#c084fc;--forcing:#a5b4fc;--haz:#fb7185;--unc:#fbbf24}}
+.bg{fill:var(--bg)}.panel{fill:var(--panel);stroke:var(--border)}.panel2{fill:var(--panel2);stroke:var(--border)}.fg{fill:var(--fg)}.muted{fill:var(--muted)}.iface{stroke:var(--iface);fill:none}.haz{stroke:var(--haz);fill:none}.forcing{stroke:var(--forcing);fill:none}.grid{stroke:var(--grid);fill:none}text{font-family:Inter,Segoe UI,Arial,sans-serif}.math{font-family:Georgia,'Times New Roman',serif}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--iface)"/></marker><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--haz)"/></marker><marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--forcing)"/></marker></defs>
+<rect class="bg" width="1500" height="850" rx="30"/><g class="grid" opacity=".35"><path d="M0 85H1500M0 170H1500M0 255H1500M0 340H1500M0 425H1500M0 510H1500M0 595H1500M0 680H1500M0 765H1500"/><path d="M150 0V850M300 0V850M450 0V850M600 0V850M750 0V850M900 0V850M1050 0V850M1200 0V850M1350 0V850"/></g>
+<text x="750" y="62" text-anchor="middle" class="fg" font-size="36" font-weight="800">DYNAMIC INTERFACE OPERATOR</text><text x="750" y="100" text-anchor="middle" class="muted" font-size="19">P–W–T–SW coupling is a stateful mechanism, not merely an edge</text>
+<g transform="translate(570 130)"><rect width="360" height="92" rx="18" class="panel"/><text x="180" y="32" text-anchor="middle" fill="var(--forcing)" font-size="18" font-weight="700">CLIMATE FORCING</text><text x="180" y="62" text-anchor="middle" class="fg math" font-size="20">ξ(t) → η(t)</text><text x="180" y="82" text-anchor="middle" class="muted" font-size="13">exogenous forcing → realized local hazard</text></g>
+<g text-anchor="middle" font-weight="700"><g transform="translate(190 310)"><circle r="92" fill="var(--state)" fill-opacity=".15" stroke="var(--state)" stroke-width="4"/><text y="-8" class="fg" font-size="28">POWER</text><text y="25" fill="var(--state)" font-size="22">X_P</text></g><g transform="translate(520 310)"><circle r="92" fill="var(--water)" fill-opacity=".14" stroke="var(--water)" stroke-width="4"/><text y="-8" class="fg" font-size="28">WATER</text><text y="25" fill="var(--water)" font-size="22">X_W</text></g><g transform="translate(190 625)"><circle r="92" fill="var(--transport)" fill-opacity=".14" stroke="var(--transport)" stroke-width="4"/><text y="-8" class="fg" font-size="25">TRANSPORT</text><text y="25" fill="var(--transport)" font-size="22">X_T</text></g><g transform="translate(520 625)"><circle r="92" fill="var(--waste)" fill-opacity=".13" stroke="var(--waste)" stroke-width="4"/><text y="-8" class="fg" font-size="24">SOLID WASTE</text><text y="25" fill="var(--waste)" font-size="22">X_SW</text></g></g>
+<g class="iface" stroke-width="3" marker-end="url(#a)"><path d="M285 310H425"/><path d="M425 337H285"/><path d="M232 392L472 544"/><path d="M472 560L232 408"/><path d="M190 405V525"/><path d="M520 405V525"/></g><g fill="var(--iface)" font-size="14"><text x="350" y="291">Z_PW(t)</text><text x="350" y="365">Z_WP(t)</text><text x="320" y="455">Z_P,SW(t)</text><text x="315" y="520">Z_SW,P(t)</text><text x="205" y="475">Z_PT(t)</text><text x="535" y="475">Z_W,SW(t)</text></g>
+<g transform="translate(745 315)"><rect width="665" height="365" rx="24" class="panel"/><text x="332" y="42" text-anchor="middle" class="fg" font-size="22" font-weight="700">BLOCK COUPLING OPERATOR 𝒜(t)</text><g transform="translate(52 78)" class="fg math" font-size="20"><text x="0" y="0">[ A_PP</text><text x="105" y="0">A_PW</text><text x="210" y="0">A_PT</text><text x="315" y="0">A_P,SW ]</text><text x="0" y="46">[ A_WP</text><text x="105" y="46">A_WW</text><text x="210" y="46">A_WT</text><text x="315" y="46">A_W,SW ]</text><text x="0" y="92">[ A_TP</text><text x="105" y="92">A_TW</text><text x="210" y="92">A_TT</text><text x="315" y="92">A_T,SW ]</text><text x="0" y="138">[ A_SW,P</text><text x="105" y="138">A_SW,W</text><text x="210" y="138">A_SW,T</text><text x="315" y="138">A_SW,SW ]</text></g><line x1="45" y1="240" x2="620" y2="240" stroke="var(--border)"/><text x="42" y="275" fill="var(--transport)" font-size="18" font-weight="700">Dynamic law:</text><text x="180" y="275" class="fg math" font-size="19">ε Ż = G(X,Z,m,η;θ)</text><text x="42" y="310" fill="var(--unc)" font-size="18" font-weight="700">Timescale:</text><text x="180" y="310" class="fg math" font-size="19">ρ_ij = τ_interface,ij / τ_system</text><text x="42" y="345" fill="var(--iface)" font-size="17">Test static approximation when ρ_ij ≪ 1, ≈ 1, or ≫ 1.</text></g>
+<path d="M610 625C720 760 980 770 1040 700C1095 636 1015 535 920 525" class="haz" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#h)"/><text x="735" y="760" fill="var(--haz)" font-size="16">X_SW → blockage → drainage capacity ↓ → η_flood ↑</text><path d="M750 220C710 250 690 285 640 300" class="forcing" stroke-width="3" marker-end="url(#f)"/><path d="M750 220C780 250 825 275 880 300" class="forcing" stroke-width="3" marker-end="url(#f)"/>
+<text x="750" y="815" text-anchor="middle" class="muted" font-size="17">Research target: quantify how dynamic interface mechanisms deform viability and recovery geometry. Theme changes presentation only.</text>
 </svg>
