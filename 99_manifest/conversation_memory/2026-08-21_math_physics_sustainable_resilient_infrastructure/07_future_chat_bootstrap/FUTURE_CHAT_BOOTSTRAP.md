@@ -1,129 +1,274 @@
-# Future Chat Bootstrap
+# Future Chat Bootstrap — Corrected Verified State
 
-Use this file to restore the project state quickly and rigorously.
+Use this file to restore the project state quickly and rigorously. Before doing new research, read `08_verified_state/CORRECTION_LEDGER_2026-08-21.md` and `08_verified_state/THESIS_FROZEN_STATE_v0.5.md`.
 
-## Identity of the research program
+## 1. Research identity
 
-**Long-term destination:** *Mathematical Physics of Sustainable Infrastructure Viability*.
+**Long-term destination:** a mathematical-physics foundation for sustainable and resilient infrastructure systems across physical laws, observation, failure, recovery, engineering action and lifecycle decision-making.
 
-**System:** coupled Power–Water–Transportation–Solid-Waste infrastructure under climate and operational stress.
+**Frozen MSE title family:** *Mathematical Physics of Sustainable Infrastructure Resilience*.
 
-**Research philosophy:** use mathematics and physics from the governing-law foundation through inference, uncertainty, resilience/viability, engineering action and sustainable/equitable decision-making across the lifecycle.
+**v0.5 focus:** *Equity-Constrained Viability of Dynamic Power-Transport-Water Interfaces under Climate Stress*.
 
-## Do not regress to these weaker framings
+## 2. Binding sector scope
 
-Do **not** reduce the project to:
-- a generic resilience index;
-- a static interdependency graph;
-- a generic digital twin;
-- “apply AI to infrastructure”;
-- optimization without governing physics;
-- sustainability as only an after-the-fact score;
-- a claim that service mapping/recovery coupling/HJ viability are absent from all prior literature.
-
-## Current core model
+Executable MSE core:
 
 \[
-\dot X=F(X,Z,m,u,\eta;\theta),\qquad
-\varepsilon\dot Z=G(X,Z,m,\eta;\theta),\qquad
-m^+=\Phi(X,Z,m,\eta).
+\boxed{X(t)=[X_P(t),X_T(t),X_W(t)]^T}
 \]
 
-Observation/inverse layer:
+General extensible architecture:
 
 \[
-D_{obs}\rightarrow p(Z,\theta\mid D_{obs}).
+\boxed{X_{ext}(t)=[X_P(t),X_T(t),X_W(t),X_{SW}(t),\ldots]^T}
 \]
 
-Human/service layer:
+Solid Waste remains an extension interface unless a later explicit user-approved freeze promotes it into the executable core.
+
+## 3. Frozen contribution
+
+The MSE contribution is the formal distinction between **safe recovery reachability** and **post-recovery controlled viability** in dynamically coupled urban infrastructure, with evolving admissibility.
+
+Core objects:
 
 \[
-X\rightarrow F_{func}\rightarrow S_g\rightarrow C_g.
+K_{hard}(t)=\{\widetilde\chi:h_q(\widetilde\chi,t)\le0\},
 \]
-
-Admissibility:
 
 \[
-K_R=K_{phys}\cap K_{service}\cap K_{sus}\cap K_{eq}.
+K_R(t)=\{\widetilde\chi:g_k(\widetilde\chi,t)\le0\},
 \]
-
-Viability/recovery:
 
 \[
-\mathcal V_R=\operatorname{Viab}(K_R),\qquad
-\mathcal C_R=\{x_0:\exists u,\exists T<\infty, X(T)\in\mathcal V_R\}.
+K_R^V(t)=\operatorname{Viab}(K_R)(t),
 \]
-
-## Strongest master's-scale candidate
-
-**Dynamic Interface Identification → Viability Uncertainty**:
 
 \[
-D_{obs}\rightarrow p(Z,\theta\mid D)\rightarrow p(X)\rightarrow p(S)\rightarrow p(\mathcal V).
+B_R(t_0)=\operatorname{Capt}_{K_{hard}}(K_R^V)(t_0).
 \]
 
-The key question is how uncertainty/error in inferred cross-sector interfaces changes the geometry of sustainable/equitable service viability.
+Binding semantic distinction:
 
-## Long-term integrated program
+\[
+\boxed{K_{hard}\neq K_R,\qquad B_R\neq K_R^V.}
+\]
+
+## 4. Hybrid coupled system
+
+\[
+\chi(t)=(X(t),Z(t),m(t)),
+\]
+
+with directional interfaces
+
+\[
+Z_{ij}(t)\neq Z_{ji}(t)\quad\text{in general}.
+\]
+
+Representative dynamics:
+
+\[
+\dot X_i=F_i(X_i,u_i,\eta;\theta_i)+\sum_{j\ne i}C_{ij}(X_i,X_j,Z_{ij},\eta,u;\theta_{ij}),
+\]
+
+\[
+\dot Z_{ij}=G_{ij}(X_i,X_j,Z_{ij},\eta,u;\theta_{ij}),
+\qquad
+m^+=\Delta(m^-,X,Z,u,\eta).
+\]
+
+## 5. Observation and representation
+
+\[
+Y_i(t)=H_i(X(t),\eta(t))+\varepsilon_i(t),
+\]
+
+\[
+e_t=E_\theta(Y_{1:t},c_t),
+\]
+
+\[
+p(X_t,\eta_t\mid e_{1:t},Y_{1:t})
+\quad\text{or}\quad
+\widehat X_t=\Phi(e_{1:t},Y_{1:t}).
+\]
+
+Do not equate a learned embedding with a physical infrastructure state without a validated mapping.
+
+## 6. Human/service state
+
+\[
+S_g(t)=\Psi_g(\chi(t),d_g(t)),
+\]
+
+\[
+\dot D_g(t)=[S_g^{\min}(t)-S_g(t)]_+,
+\]
+
+\[
+\widetilde\chi(t)=(\chi(t),D_1,\ldots,D_G,C,E).
+\]
+
+This is how trajectory-history-dependent deprivation, environmental burden and cumulative cost enter admissibility.
+
+## 7. Main research question
+
+Which disturbed states of a dynamically coupled power-transport-water system can be controlled back into an evolving acceptable service region without violating hard constraints, and which recovered states can then remain viable under continued climate disturbance and uncertainty?
+
+## 8. Frozen hypotheses / experiments
+
+- H1/E1: dynamic directional interface states vs independent/static coupling.
+- H2/E2: observation and administrative delay.
+- H3/E3: usable finance/resource constraints.
+- H4/E4: aggregate vs group-specific service/equity floors.
+- H5/E5: reduced/decomposed tractability with predeclared classification/boundary tolerance.
+
+Failure of a hypothesis is acceptable and informative.
+
+## 9. Six interacting scientific chains
+
+The six chains are distinct analytical logics connected by feedback, not one causal chronology:
+
+I. Physical-System  
+II. Observation–Inference–Prediction  
+III. Hazard–Failure–Consequence  
+IV. Resilience–Viability–Recovery  
+V. Engineering Design–Operation–Adaptation  
+VI. Sustainability–Equity–Governance–Decision
+
+For theorem-quality mathematical physics, the highest-priority chains remain I + II + IV, with III supplying disturbance/failure mechanics, V engineering action, and VI admissibility/decision objectives.
+
+## 10. Mathematics taxonomy / ontology correction
+
+The user-supplied Duke 2002 page is an **educational browse taxonomy**, not MSC2020.
+
+Use:
+- Duke 2002 optionally for pedagogical/human navigation;
+- MSC2020 for canonical scholarly research classification;
+- SKOS/RDF/OWL for typed semantic relations;
+- OpenMath/OMDoc/MMT/theorem provers for mathematical semantics/formal dependencies.
+
+Never infer theorem dependency or causal direction from a taxonomy tree edge.
+
+Read `08_verified_state/MATHEMATICS_TAXONOMY_CROSSWALK_DUKE2002_MSC2020.md`.
+
+## 11. Mathematical core
 
 \[
 \boxed{
-\text{Physical Laws}
-\to
-\text{Coupled Dynamics}
+\text{Governing Dynamics}
 \to
 \text{Dynamic Interfaces}
 \to
-\text{Observation/Identification}
+\text{Observation/Inverse Inference}
 \to
-\text{Hazard/Uncertainty}
+\text{UQ}
 \to
-\text{Failure/Cascades}
+\text{Service/Admissibility}
 \to
-\text{Critical Services}
+\text{Safe Recovery Reachability}
 \to
-\text{Sustainable/Equitable Admissible Set}
+\text{Viability}
 \to
-\text{Viability/Reachability}
-\to
-\text{Recovery/Control}
-\to
-\text{Design/Operation/Maintenance}
-\to
-\text{Adaptation/Lifecycle Decision}
+\text{Minimum Intervention/Control}
 }
 \]
 
-## Visual-design state
+Core mathematics:
+- nonlinear ODE/PDE/hybrid systems;
+- network/interdependency mathematics;
+- inverse problems/identifiability;
+- probability/Bayesian UQ;
+- HJ reachability/viability;
+- control theory;
+- optimization/OR;
+- numerical analysis/verified scientific computing.
 
-The Figma page to continue is **Candidate 1 — Wolfram Fidelity Rebuild v2**, not the original boxed page.
+## 12. Seven candidate frameworks
 
-Design principle: computational mathematics should be the visible structure. Use dense graphs, multiway/causal/branchial representations, trajectories, uncertainty geometry and sparse scientific annotation rather than card-based infographic design.
+The seven candidates are alternative research centers of gravity for the wider program. They are not seven required MSE modules.
 
-Figma: `https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6`.
+Keep distinct:
+- frozen MSE contribution above;
+- dynamic-interface identification → viability uncertainty as a strong candidate subproblem;
+- Port-Hamiltonian physics as a deep alternative mathematical-physics formulation;
+- lifecycle OR as a decision layer;
+- scientific AI/digital twin as an enabling computational layer.
 
-## OR / Monte Carlo state
+## 13. AI/digital-twin positioning
 
-The exact code/results are stored under `02_or_monte_carlo/`. Preserve seed 57420260821 when reproducing the declared experiment. Treat rankings as conditional decision-analysis results, not objective truths.
+Do not reframe the thesis as an AI thesis or operational digital twin. AI/EO methods may support observation, estimation, surrogate modeling and scenario generation, but must pass:
+- physical-semantics checks;
+- conservation/residual checks;
+- OOD/domain-shift checks;
+- threshold/failure-region checks;
+- uncertainty/calibration checks;
+- decision-level validation.
 
-## Knowledge/evidence state
+Average RMSE alone is not sufficient for safety/recovery decisions.
 
-Every important graph relation should eventually have:
-- node type;
-- edge/relation type;
-- evidence class S0–S4;
-- provenance;
-- confidence;
-- source/version.
+## 14. OR / Monte Carlo state
 
-Do not equate literature co-occurrence with mathematical implication or physical causality.
+Artifacts are under `02_or_monte_carlo/`.
 
-## Immediate high-value next tasks
+Preserve the declared seed `57420260821` if reproducing that exact experiment.
 
-1. Falsify/verify the refined dynamic-interface → viability-uncertainty gap using PRISMA/Snowballing and primary literature.
-2. Specify a tractable reduced P–W–T–SW urban-flood model with explicit interface mechanisms.
-3. State well-posedness/identifiability assumptions formally.
-4. Define measurable service, sustainability and equity constraints.
-5. Develop one reduced viability/reachability computation that can be validated before adding AI.
-6. Rebuild Candidates 2–7 in the Wolfram-fidelity Figma grammar, using candidate-specific mathematical objects rather than reused decorative layouts.
-7. Upgrade OR/Monte Carlo evidence weights using the S0–S4 provenance architecture.
+Interpretation rule:
+- Monte Carlo quantifies robustness/uncertainty conditional on a decision model;
+- it is not optimization itself;
+- a large draw count does not turn assumptions into evidence;
+- "10 million Monte Carlo draws" must never be reported as "10 million website scrapes."
+
+## 15. Visual-design state
+
+Reference aesthetic: Wolfram Physics Project Visual Summary.
+
+Design rule:
+
+\[
+\boxed{\text{make the mathematics itself become the visual structure.}}
+\]
+
+Live Figma state audited 2026-08-21:
+- file: `https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6`
+- page `0:1`: `Candidate 1 — Sustainable Viability`
+- primary frame `1:2`: `Poster — Candidate 1`
+
+Ignore stale references to page `Candidate 1 — Wolfram Fidelity Rebuild v2` / node `4:3` unless the live Figma file later confirms them.
+
+## 16. Memory/provenance warning
+
+The first split Base64 exact-text archive was incomplete; missing declared parts were found. A v2 split-archive attempt was started but not completed. Do not call either a verified transcript archive.
+
+Use:
+- current-conversation file IDs and source files;
+- GitHub source artifacts;
+- internal authoritative v0.5 PDF/drawio/audit files;
+- reconstructed memory ledgers explicitly labeled as reconstructed.
+
+Never fabricate unavailable transcript turns or private model reasoning.
+
+## 17. Immediate implementation order
+
+1. Preserve/freeze notation and hypothesis ledger.
+2. PRISMA recoding and counterevidence-driven novelty audit.
+3. Build P–T–W baseline testbed and conservation/interface tests.
+4. Implement `K_hard`, `K_R`, `K_R^V`, `B_R` as separate code objects.
+5. Verify a small reachability/viability solver on an analytic/toy benchmark.
+6. Run E1–E4 before adding AI.
+7. Add reduced/surrogate methods only after decision-classification fidelity is measurable.
+8. Populate thesis results only from immutable run artifacts with claim-to-code traceability.
+
+## 18. Claim categories
+
+Every future claim must be labeled as one of:
+- SOURCE FACT
+- MODEL ASSUMPTION
+- COMPUTED RESULT
+- RESEARCH HYPOTHESIS
+- FORMAL RESULT/CERTIFICATE
+- DESIGN CHOICE
+- RECONSTRUCTED MEMORY
+
+Do not silently promote one category into another.
