@@ -25,6 +25,7 @@
     "15_USER_SUPPLIED_CHAIN_REFERENCE_VERBATIM.md",
     "16_ASSERTION_REGISTRY.csv",
     "17_CHAIN_LITERATURE_MATRIX.csv",
+    "18_FUTURE_CHAT_BOOTSTRAP.md",
     "PROJECT_MEMORY.json",
     "manifest.json",
     "validate_memory.py"
