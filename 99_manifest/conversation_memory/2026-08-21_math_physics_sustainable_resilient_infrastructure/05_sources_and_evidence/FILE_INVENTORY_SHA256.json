@@ -1,0 +1,35 @@
+{
+  "archive_root": "99_manifest/conversation_memory/2026-08-21_math_physics_sustainable_resilient_infrastructure",
+  "files": [
+    {"name":"Pasted markdown(20260820-080913).md","size_bytes":60788,"sha256":"048a20cbbf5cf92f203bf732e713ea308463a0a450935c7a547bd81f469d393d","chatgpt_file_id":"file_000000007b4081faa68a01ffcfe7a3fc","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260820-081300).md","size_bytes":13451,"sha256":"32b605735211548bcb6d02059a761d9265519657726dede8102a52268301cf8b","chatgpt_file_id":"file_00000000491081fa910365383f287df5","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260820-081900).md","size_bytes":14970,"sha256":"ba3a674ee402300bd9591475a53eb54949bcea6363cd6b5d897a8d8d6809a80d","chatgpt_file_id":"file_0000000099148211953a77d59f67725c","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260820-083550).md","size_bytes":14970,"sha256":"ba3a674ee402300bd9591475a53eb54949bcea6363cd6b5d897a8d8d6809a80d","chatgpt_file_id":"file_00000000e7808211bf6b9c61863ae54d","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260821-100132).md","size_bytes":33408,"sha256":"9906279b9041215417c403250e71301b09ef5cfb1b568f24c8ee4fead12f2fba","chatgpt_file_id":"file_00000000a1a081fa846323d70fa48c4e","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260821-104549).md","size_bytes":19969,"sha256":"71f113862a17d5e86e0c5b8ab6cc1b385fd228f3325e8e466e5aa06760733663","chatgpt_file_id":"file_00000000ec2082089b6d77e28390c6a6","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"Pasted markdown(20260821-114450).md","size_bytes":32364,"sha256":"4c5cd304e6b10d5cd17c90e05cd9781dcb383d601a37cd869a338de493c0c632","chatgpt_file_id":null,"preservation_mode":"exact_text_archive_bundle"},
+    {"name":"run_or_mc.py","size_bytes":4866,"sha256":"3910176fbba5c4b542d6a658563d8e2b091ed1be6d13525241ded7540b383e26","chatgpt_file_id":"file_00000000020081fdae57387aa2632ae6","preservation_mode":"direct_git_file+exact_text_archive_bundle"},
+    {"name":"or_mc10m_results.json","size_bytes":27176,"sha256":"e5726de0d3a3604d4c10bbed360f7959a582de18994c1491078afb4099ebdc0e","chatgpt_file_id":"file_000000009d50820ba2f09d8a9a7460b6","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"OR_infrastructure_AI_10M_results.txt","size_bytes":6237,"sha256":"0f70b3202c54437140b2f7f054f8708d022fa69fdd2f55b9bcd944737f10e495","chatgpt_file_id":"file_000000009b5c820bad75d25689b6d6fd","preservation_mode":"direct_git_file+exact_text_archive_bundle"},
+    {"name":"wolfram_infrastructure_visual_template.wl","size_bytes":10653,"sha256":"91fc7c11cadb9725d55cd48ca8984e443c264b3f3177f96f2bdadf304d56fbe3","chatgpt_file_id":"file_0000000089e082068f2c6a96e2730126","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"wolfram_inspired_editable_template.svg","size_bytes":69227,"sha256":"8f93d07607b027b48dd7deff8dd51bf27798588bee24a62a500eabed70c3a68b","chatgpt_file_id":"file_000000003ef4821183927e12af354b3c","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"wolfram_inspired_theme.json","size_bytes":1226,"sha256":"e79130b707cab1b603851136129fe0cb1e5d7654f17da636d60e51bafc851409","chatgpt_file_id":"file_0000000015948207b1b6f888f9af986b","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"README_wolfram_editable_kit.txt","size_bytes":1618,"sha256":"185198686d4cbb140a2751d8ed2e0ada9d7a8219ec36cb13bf52e9b188e75a95","chatgpt_file_id":"file_000000004c0c8211948e02541f8a948a","preservation_mode":"exact_text_archive_bundle"},
+    {"name":"88ab9eb0-fc93-4697-b667-da381efd4d7b.png","size_bytes":1739734,"sha256":"9013042dfc9603521e979e8ebe83b513031ded9b5a211f2cff8f77905a4523c4","chatgpt_file_id":"file_00000000337c81fa909f7bb0de98ae6a","preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"a_high_resolution_infographic_composite_image_with.png","size_bytes":1778875,"sha256":"df0d7c7ff9ed0a3f95577f4ace5d372cdcf0dfc36a386f2ccc7ef7808a7f3126","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"imagegen.png","size_bytes":1979895,"sha256":"e61f7d1185df8a141c20c278b074de550db9ee8280bdefd9ff254e6123114929","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"dynamic_interface_identification_infographic.png","size_bytes":1947585,"sha256":"b3aa456fbcfc20f27bb71cad4bef417df817251b2dd9ad1b2c670457a1ed1432","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"lifecycle_optimal_control_systems_map.png","size_bytes":1927041,"sha256":"dbc3e9d62b0d0d2d7823e6900ea652650cef7a2a3709f81abd0e1475bf8b53e9","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"neon_port_hamiltonian_infrastructure_infographic.png","size_bytes":1924531,"sha256":"13571a40704fe3ff6e1f31077a1e08c2fd273f996ad12a41154bddfbd78e5221","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"people_centric_sustainable_service_viability_diagr.png","size_bytes":1633471,"sha256":"4dc79cfb3c09b66fd76d2893d862a28a215ef39ffa0a242073bcf044bb522f3e","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"stochastic_hybrid_infrastructure_framework.png","size_bytes":2011810,"sha256":"00ec6db3de8c1fb2785ac6ff0473ecea1c97acca7bf07555b4432e5dfdab38a4","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"unified_sustainable_viability_theory.png","size_bytes":1979895,"sha256":"e61f7d1185df8a141c20c278b074de550db9ee8280bdefd9ff254e6123114929","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"verified_scientific_ai_infrastructure_twin.png","size_bytes":1912873,"sha256":"35dafe9dd37cf8d13cc71353ed1bb31d8607fc5dcccab358faa4a2cd5c5081f1","chatgpt_file_id":null,"preservation_mode":"inventory_only_binary_not_embedded"},
+    {"name":"course_files_export.zip","size_bytes":25690611,"sha256":"3bb8c01bc49345e6a1f9819f33e09713760fb370ef9a96408a0266e88a9be229","chatgpt_file_id":"file_0000000003dc820b9a006397dcce7e76","preservation_mode":"inventory_only_binary_not_embedded"}
+  ],
+  "notes": [
+    "The exact text-archive bundle preserves all seven pasted Markdown files, the full OR JSON, Monte Carlo code/results, and Wolfram/SVG/theme text artifacts byte-for-byte inside a tar.gz whose base64 is split across GitHub text parts.",
+    "Raster images and the 25.69 MB course ZIP are inventoried with SHA-256 but not embedded by the text-oriented GitHub connector used for this archive.",
+    "The two 2026-08-20 pasted files ending 081900 and 083550 have identical SHA-256 hashes and are therefore byte-identical duplicates; both provenance names are retained."
+  ]
+}
