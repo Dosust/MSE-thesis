@@ -1,0 +1,108 @@
+version: 1
+snapshot_date: '2026-08-21'
+repository: 'Dossiya-SE/MSE-thesis'
+branch: 'main'
+status: 'working scientific architecture; not final thesis freeze'
+
+thesis:
+  working_title: 'Mathematical Physics of Sustainable Infrastructure Resilience'
+  precise_formulation: 'Equity-Constrained Viability of Coupled Power–Water–Transportation–Solid-Waste Systems with Dynamic Interfaces under Climate Stress'
+  sectors: [power, water, transportation, solid_waste]
+  primary_demonstrator: 'urban flooding with drainage-waste feedback'
+  current_center: [dynamic_interface_identification, coupled_hybrid_multiscale_dynamics, sustainable_equitable_admissibility, viability_geometry, recovery_capture_geometry, admissible_control]
+  central_geometric_object: 'boundary of V_R'
+
+canonical_chain: [observations, interface_parameter_identification_and_uncertainty, coupled_dynamic_model, hazard_failure_service_mapping, sustainability_equity_admissibility, viability_geometry, recovery_capture_geometry, admissible_control, design_optimization_decision]
+
+symbols:
+  X: 'coupled P-W-T-SW state'
+  Z: 'dynamic interface state'
+  m: 'discrete operating/failure mode'
+  u: 'control/intervention'
+  xi: 'exogenous climate forcing'
+  eta: 'realized local hazard'
+  theta: 'uncertain model/interface parameters'
+  Y: 'observations'
+  K_R: 'physical + service + sustainability + equity admissible set'
+  V_R: 'viability kernel'
+  C_R: 'recovery/capture set'
+  tau_R: 'minimum recovery-time map'
+  d: 'design vector'
+
+six_chains:
+  I: {name: 'Physical System', question: 'What is the system and what governs it?', layers: [physical_laws, structure, interdependencies, interfaces, states_flows, dynamics, cascades], core_object: 'F / dynamic operator'}
+  II: {name: 'Observation-Inference-Prediction', question: 'What do we know and how certain are we?', layers: [observe, observability, identify, estimate, assimilate, uncertainty_quantification, predict], core_object: 'p(X,theta,Z|D)'}
+  III: {name: 'Hazard-Failure-Consequence', question: 'How does disturbance become damage, service loss and consequence?', layers: [hazard, exposure, vulnerability, damage, failure, cascade, functionality_loss, service_loss, consequence, risk], core_object: 'eta,m,S,L'}
+  IV: {name: 'Resilience-Viability-Recovery-Control', question: 'Can the system remain acceptable or recover?', layers: [admissibility, viability, reachability, service_continuity, recoverability, recovery, control], core_object: 'V_R,C_R'}
+  V: {name: 'Engineering Lifecycle', question: 'What can engineers change?', layers: [requirements, design, deploy, operate, monitor, maintain, restore, retrofit, adapt, circularize], core_object: 'u,d'}
+  VI: {name: 'Sustainability-Evaluation-Decision', question: 'Which feasible option should be chosen?', layers: [needs, alternatives, evaluate, trade_off, decide, implement, learn, revise], core_object: 'J,Pareto_set,a_star'}
+
+frameworks:
+  type_I: {name: 'Theory-First', question: 'What is mathematically possible?', mapping: '(theta,eta) -> X(t) -> V_R -> C_R -> u -> d -> decision', image: 'assets/frameworks/type_i_theory_first_framework.webp'}
+  type_II: {name: 'Digital Twin / Inference-to-Decision', question: 'What is happening, what will happen, and what should be done now?', mapping: 'D -> p(X,theta,Z|D) -> p(V_R) -> u_t -> adaptive design/decision', image: 'assets/frameworks/type_ii_digital_twin_framework.webp'}
+  type_III: {name: 'Resilience-by-Design', question: 'What should be built so acceptable behavior remains possible?', mapping: 'd -> F_d -> V_R(d) -> C_R(d) -> d_star -> decision', image: 'assets/frameworks/type_iii_resilience_by_design_framework.webp'}
+  current_mse_recommendation: 'Type-I-centered, Type-II upstream identification/UQ, limited Type-III downstream demonstration'
+
+propositions:
+  P1_H0: 'Dynamic interfaces materially alter viability/recovery geometry versus static coupling.'
+  P2_H1: 'Interface identifiability controls reliability of inferred viability.'
+  P3_H2: 'Interface/system timescale ratios govern static-coupling approximation validity.'
+  H3: 'Viability-boundary deformation defines interface criticality differently from conventional topology/flow metrics.'
+  P4_H4: 'Sustainability/equity constraints deform the viable region beyond technical constraints.'
+  P5_H5: 'Recovery/capture geometry contains information not captured by viability alone.'
+  P6_H6: 'Waste-drainage-flood feedback shifts P-W-T-SW resilience boundaries.'
+  H7: 'Optional time-varying admissible regions / nonanticipative recovery extension.'
+  P7_T1: 'Reduced models used for decisions must preserve or conservatively bound projected full-order viability geometry.'
+
+monte_carlo:
+  input: 'Thesis_Final_Unique_Papers_325_2026-08-20(1).csv'
+  sha256: '047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f'
+  records_supplied: 325
+  scientific_ranked_final_four_criterion: 322
+  protocol_support: 3
+  official_seed: 20260820
+  official_runs: 50000
+  operational_k: 140
+  epistemic_limit: 'Ranks only within the locked 325-record corpus; does not prove global novelty or global literature completeness.'
+
+literature_anchors:
+  - {key: 'Rinaldi_2001', doi: '10.1109/37.969131', role: 'critical infrastructure interdependencies'}
+  - {key: 'Ouyang_2014', doi: '10.1016/j.ress.2013.06.040', role: 'interdependent infrastructure modeling review'}
+  - {key: 'Boccaletti_2014', doi: '10.1016/j.physrep.2014.07.001', role: 'multilayer network dynamics'}
+  - {key: 'Kivela_2014', doi: '10.1093/comnet/cnu016', role: 'multilayer networks'}
+  - {key: 'Buldyrev_2010', doi: '10.1038/nature08932', role: 'interdependent cascading failures'}
+  - {key: 'Stuart_2010', doi: '10.1017/S0962492910000061', role: 'Bayesian inverse problems'}
+  - {key: 'Mitchell_Bayen_Tomlin_2005', doi: '10.1109/TAC.2005.851439', role: 'HJ reachability'}
+  - {key: 'Approximation_viability_kernel', doi: '10.1007/BF01204182', role: 'viability-kernel approximation'}
+  - {key: 'Bruneau_2003', doi: '10.1193/1.1623497', role: 'resilience performance/recovery'}
+  - {key: 'Cimellaro_2010', doi: '10.1016/j.engstruct.2010.08.008', role: 'quantitative resilience'}
+  - {key: 'Hosseini_2016', doi: '10.1016/j.ress.2015.08.006', role: 'resilience definitions/measures review'}
+  - {key: 'Nurre_2012', doi: '10.1016/j.ejor.2012.07.010', role: 'restoration/design scheduling'}
+  - {key: 'Coleman_2024', doi: '10.1038/s44304-024-00022-x', role: 'equity in infrastructure resilience'}
+  - {key: 'Transport_sustainability_recovery_2023', doi: '10.1016/j.trd.2023.103800', role: 'sustainability-climate-resilience recovery tradeoffs'}
+  - {key: 'Water_power_multitimescale_2025', doi: '10.1016/j.ress.2025.111083', role: 'multi-timescale interdependent restoration'}
+
+implemented:
+  root_portal: 'README.md'
+  thesis_scope: 'project/THESIS_SCOPE.md'
+  mathematical_foundation: 'project/MATHEMATICAL_FOUNDATION.md'
+  proposition_spec: 'project/SCIENTIFIC_PROPOSITIONS.md'
+  proposition_yaml: 'config/scientific_propositions.yaml'
+  model_schema: 'schemas/thesis_model.schema.json'
+  python_geometry: 'methods/architecture/viability_geometry.py'
+  julia_scaffold: 'methods/architecture/CoupledInfrastructure.jl'
+  qa_workflow: '.github/workflows/scientific-architecture-qa.yml'
+  math_art: 'assets/math-art/'
+  framework_images: 'assets/frameworks/'
+  conversation_archive: 'conversation/'
+  provenance: 'provenance/'
+
+next_priority:
+  task: 'Deeply decompose Chain I sector-by-sector before freezing the coupled forward model.'
+  sequence: [power_physics, water_drainage_physics, transportation_flow_physics, solid_waste_accumulation_collection_blockage_physics, cross_sector_interdependencies, interface_mechanisms, dynamic_interface_laws, timescales_and_hybrid_modes, well_posedness_stability_sensitivity, freeze_coupled_forward_model]
+
+authenticity:
+  transcript_authority: 'conversation/'
+  memory_capsule_class: 'scientific synthesis / project-state memory'
+  never_archive: [hidden_chain_of_thought, system_instructions, developer_instructions, credentials, connector_internals]
+  evidence_classes: [VERIFIED_FULL_TEXT, VERIFIED_METADATA, CORPUS_DERIVED, MATHEMATICAL_DEFINITION, PROPOSED_HYPOTHESIS, SYNTHETIC_QA, EMPIRICAL_RESULT, PENDING]
