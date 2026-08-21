@@ -1,0 +1,40 @@
+{
+  "snapshot_time": "2026-08-21T22:19:00+08:00",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "canonical_branch": "research-memory/2026-08-21-six-chain-v2-corrected",
+  "canonical_folder": "project/research_memory/2026-08-21_six_chain_mathematical_physics_review_v2",
+  "status": "corrected literature-grounded thesis/review synthesis",
+  "architecture_claim": "six interacting chains are a synthesis of recurrent fragmented layers, not a one-paper inherited taxonomy and not asserted as universally final",
+  "chains": {
+    "I": {"name": "Physical System", "question": "What is the system?"},
+    "II": {"name": "Observation & Inference", "question": "What do we know?"},
+    "III": {"name": "Stress & Consequence", "question": "What happens under stress?"},
+    "IV": {"name": "Viability & Response", "question": "Can the system survive and recover?"},
+    "V": {"name": "Engineering Lifecycle", "question": "What can engineers do?"},
+    "VI": {"name": "Societal Evaluation–Decision–Learning", "question": "What should society choose?"}
+  },
+  "frozen_distinctions": [
+    "topology != interdependency != interface mechanism",
+    "physical damage != functionality != delivered service != societal consequence",
+    "viability/reachability != resilience metric",
+    "resilience != sustainability",
+    "recovery/restoration explicit",
+    "optimization cross-cutting rather than a lifecycle stage",
+    "societal evaluation normative/institutional/behavioral rather than a physical state",
+    "mathematics cross-cutting rather than a seventh chain",
+    "citations beside generic formulas do not prove verbatim equation provenance",
+    "six interacting loops rather than one giant arrow"
+  ],
+  "provenance_classes": {
+    "A": "visible user text preserved verbatim",
+    "B": "assistant reconstruction/synthesis",
+    "C": "literature-grounded scientific synthesis",
+    "D": "generated visual/code artifact",
+    "E": "live repository/web audit evidence"
+  },
+  "supersedes_as_canonical": {
+    "branch": "research-memory/2026-08-21-six-chain-ontology",
+    "pr": 5,
+    "note": "retain as historical audit evidence; use V2 correction ledger for conflicts"
+  }
+}

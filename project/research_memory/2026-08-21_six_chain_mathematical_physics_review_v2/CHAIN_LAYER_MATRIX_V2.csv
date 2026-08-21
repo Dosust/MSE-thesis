@@ -1,0 +1,52 @@
+chain,domain,layer,core_question,principal_mathematics_physics,representative_anchors
+I,Physical System,Physical laws & constitutive foundations,What laws constrain flows and states?,Conservation laws; thermodynamics; mechanics; hydraulics; electrical/circuit and traffic-flow equations; PDEs,Garavello 2010; Akiyama 2025
+I,Physical System,Components / asset states,What physical assets and state variables exist?,State vectors; constitutive parameters; capacity constraints,Ouyang 2014
+I,Physical System,System representation & topology,How are components and connections represented?,Graph theory; incidence/Laplacian; multilayer/multiplex networks,Rinaldi et al. 2001; Boccaletti et al. 2014; Kivelä et al. 2014; Wang et al. 2024
+I,Physical System,Interdependencies & interfaces,Through what mechanisms does one infrastructure affect another?,Dependency matrices; transfer/interface functions; delays; thresholds; cross-domain constraints,Rinaldi et al. 2001; Ouyang 2014; Wang et al. 2024; Tong et al. 2025
+I,Physical System,"States, stocks, flows & capacities","What quantities evolve, conserve or saturate?",State-space; network flow; conservation; capacity constraints,Garavello 2010; Anvari & Timme 2026
+I,Physical System,Dynamics,How does the coupled system evolve?,"ODE/PDE/DAE; nonlinear, hybrid and stochastic systems",Ouyang 2014; Gao et al. 2016; Anvari & Timme 2026
+I,Physical System,Cascades,How do disruptions propagate?,Percolation; overload redistribution; critical phenomena; network dynamics,Motter & Lai 2002; Buldyrev et al. 2010; Wang et al. 2024
+II,Observation & Inference,"Measurement, sensing & monitoring",What can be observed?,Sampling; signal processing; sensor fusion; stochastic measurement models,Huang et al. 2019; Naderi & Shojaei 2023
+II,Observation & Inference,Observability & data quality,Can latent states be reconstructed from available observations?,Observability; information content; rank/identifiability conditions,Huang et al. 2019
+II,Observation & Inference,Identification / inverse problems,"Which parameters, couplings or structures explain observations?",Bayesian inverse problems; regularization; system identification,Stuart 2010; Huang et al. 2019
+II,Observation & Inference,Calibration / model updating,How should uncertain model parameters be updated?,Bayesian model updating; likelihood-based estimation,Huang et al. 2019
+II,Observation & Inference,State estimation,What is the current latent state?,Kalman/particle filtering; Bayesian state estimation,Huang et al. 2019
+II,Observation & Inference,Data assimilation / digital twin,How are models and streaming observations fused?,Filtering; variational assimilation; digital twins,Naderi & Shojaei 2023
+II,Observation & Inference,Uncertainty quantification,"How uncertain are state, parameter and structure?",Posterior distributions; covariance; sensitivity; ensembles,Stuart 2010; Ji et al. 2024
+II,Observation & Inference,Prediction,What future states and services are plausible?,Predictive distributions; simulation; surrogate/physics-informed models,Castelletti et al. 2023; Ji et al. 2024
+III,Stress & Consequence,Hazard,What stressor occurs and with what intensity/frequency?,Extreme-value theory; stochastic processes; random fields,Argyroudis et al. 2019; Akiyama 2025
+III,Stress & Consequence,Exposure,Which assets and populations encounter the hazard?,Spatial exposure; GIS/network overlays; stochastic geometry,Mühlhofer et al. 2023
+III,Stress & Consequence,Vulnerability / fragility,How does hazard intensity map to damage probability?,Fragility functions; reliability; probabilistic damage models,Argyroudis et al. 2019
+III,Stress & Consequence,Damage / failure,Which components fail and with what probability?,Limit states; probability of failure; fault/event trees,reliability theory; Mühlhofer et al. 2023
+III,Stress & Consequence,Interdependent cascade,How does component failure propagate across systems?,Percolation; load-capacity cascades; network propagation,Motter & Lai 2002; Buldyrev et al. 2010
+III,Stress & Consequence,Functional capacity loss,How does physical damage change capability?,Availability; network flow; performance mapping,Poulin & Kane 2021
+III,Stress & Consequence,Service loss,What essential service reaches users?,Service ratios; accessibility; network flow allocation; deficits,Poulin & Kane 2021; Davidson et al. 2022; Mühlhofer et al. 2023
+III,Stress & Consequence,Human / socio-technical behavior,How do operators/users adapt and alter demand?,Agent-based and behavioral models; human reliability,Magoua & Li 2023; Davidson et al. 2022
+III,Stress & Consequence,Societal consequence,"What population, economic, environmental or institutional effects occur?",Risk/consequence functions; welfare/service deficit,Davidson et al. 2022; Mühlhofer et al. 2023
+III,Stress & Consequence,Risk & criticality,Which scenarios/components dominate harm?,Risk measures; importance measures; rare-event analysis,Hosseini et al. 2016
+IV,Viability & Response,Preparedness / absorption / robustness,How much disturbance can be absorbed?,Robustness metrics; performance curves,Bruneau et al. 2003; Hosseini et al. 2016
+IV,Viability & Response,Viability,Can admissibility constraints be maintained?,Viability kernels; invariant sets; differential inclusions,Aubin 1991; Saint-Pierre 1994
+IV,Viability & Response,Reachability,Which unsafe or recovery states are reachable?,Hamilton–Jacobi reachability; differential games,Mitchell et al. 2005; Bansal et al. 2017
+IV,Viability & Response,Critical-service continuity,Can minimum essential service be maintained?,State/service constraints; service floors,Poulin & Kane 2021; Coleman et al. 2024
+IV,Viability & Response,Resilience metrics,How much performance is lost and restored?,Resilience triangle/integrals; recovery ratios,Bruneau et al. 2003; Henry & Ramírez-Márquez 2012; Hosseini et al. 2016
+IV,Viability & Response,Recovery / restoration,What restoration trajectory is feasible?,Recovery dynamics; sequencing; network repair,Ouyang & Wang 2015; Xu et al. 2026
+IV,Viability & Response,Resource allocation,How should limited restoration resources be allocated?,Scheduling; optimization; stochastic programming,Ouyang & Wang 2015; Xu et al. 2026
+IV,Viability & Response,Adaptive / feedback control,What actions keep or return states to admissible regions?,MPC; robust/stochastic/optimal control; reachability control,Lygeros et al. 1999; Castelletti et al. 2023
+V,Engineering Lifecycle,Requirements,"Which performance, safety, service and sustainability constraints govern design?",Constraint systems; requirements engineering,Bocchini et al. 2014; Kumar & Hashem Mehany 2026
+V,Engineering Lifecycle,Design & architecture,What topology/capacity/location/redundancy should be built?,MILP/MINLP; network/topology optimization; reliability-based design,D’Ambrosio et al. 2015
+V,Engineering Lifecycle,Deployment / commissioning,How does a design become a verified operational asset?,Project scheduling; systems verification; commissioning constraints,systems engineering practice
+V,Engineering Lifecycle,Operation & dispatch,How should existing assets be used safely/efficiently?,Dispatch; network flow; routing; optimal control,D’Ambrosio et al. 2015; Castelletti et al. 2023
+V,Engineering Lifecycle,Monitoring / condition assessment,How is asset/system condition tracked?,SHM; filtering; Bayesian updating,Huang et al. 2019; Naderi & Shojaei 2023
+V,Engineering Lifecycle,Deterioration / aging,How does condition evolve over years/decades?,Markov/semi-Markov; degradation processes; survival/reliability,Frangopol et al. 2004; Akiyama 2025
+V,Engineering Lifecycle,Maintenance / repair / replacement,"When should assets be inspected, maintained, repaired or replaced?",Renewal theory; MDP/POMDP; lifecycle optimization,Frangopol et al. 2004; Xu et al. 2026
+V,Engineering Lifecycle,Planning / capacity expansion / investment timing,"What should be expanded, retired or funded and when?",Stochastic programming; dynamic programming; real options,Dittrich et al. 2016
+V,Engineering Lifecycle,Adaptation / transformation,How should strategies change under nonstationarity/deep uncertainty?,Robust decision making; adaptive pathways; scenario discovery,Dittrich et al. 2016; Bonjean Stanton & Roelich 2021; Akiyama 2025
+V,Engineering Lifecycle,Decommissioning / circularity,"How are end-of-life assets/materials retired, reused or recycled?",Reverse logistics; material-flow/network optimization,Ding et al. 2023
+VI,Societal Decision,Sustainability & lifecycle impacts,"Are trajectories environmentally, economically and socially sustainable?",LCA; LCC; emissions/material/energy flows; MCDM,Bocchini et al. 2014; Akiyama 2025; Kumar & Hashem Mehany 2026
+VI,Societal Decision,Equity / accessibility / justice,Who receives services/benefits and bears risks/costs?,Accessibility; distribution metrics; welfare; fairness constraints,Coleman et al. 2024
+VI,Societal Decision,Economics / finance / value,Which investments are economically viable?,CBA; discounting; real options; portfolio/project finance,Meng et al. 2024
+VI,Societal Decision,Governance / strategic interaction,"How do owners, regulators, operators and communities coordinate?",Game theory; mechanism design; principal-agent/institutional models,Endo et al. 2023; Hausken et al. 2025
+VI,Societal Decision,Trade-offs,Which alternatives are non-dominated?,Multi-objective/Pareto optimization; MCDA,Navarro & Yepes 2019; Tong et al. 2025
+VI,Societal Decision,Decision under uncertainty,Which intervention should actually be selected?,MCDA; DMDU; robust optimization; scenario discovery,Dittrich et al. 2016; Bonjean Stanton & Roelich 2021
+VI,Societal Decision,Implementation,"How are decisions translated to policy, finance and operations?",Governance; implementation; financing/institutional models,Endo et al. 2023; Kumar & Hashem Mehany 2026
+VI,Societal Decision,Learning / updating,"How do outcomes update beliefs, models and future choices?",Bayesian/sequential learning; adaptive governance,Stuart 2010; DMDU literature

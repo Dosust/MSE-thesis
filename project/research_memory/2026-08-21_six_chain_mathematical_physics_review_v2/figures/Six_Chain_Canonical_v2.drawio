@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="six-chain-v2" name="Six Chain Canonical v2">
+    <mxGraphModel grid="1" page="1" pageWidth="4200" pageHeight="2300">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="&lt;b&gt;SIX INTERACTING SCIENTIFIC CHAINS&lt;/b&gt;&lt;br&gt;&lt;font size='12'&gt;Literature-grounded synthesis for sustainable &amp; resilient infrastructure systems&lt;/font&gt;" style="text;html=1;align=center;fontFamily=Georgia;fontSize=26;fontColor=#10243E;" parent="1" vertex="1">
+          <mxGeometry x="80" y="30" width="3900" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;Cross-cutting mathematics:&lt;/b&gt; ODE/PDE/DAE · network science · probability/UQ · inverse problems · optimization · control · viability/reachability · numerics · AI/ML · game theory · MCDA/DMDU" style="rounded=1;html=1;fillColor=#F6F8FB;strokeColor=#94A3B8;align=center;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="250" y="130" width="3550" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;&lt;font size='18'&gt;I. PHYSICAL SYSTEM&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;What is the system?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Physical Laws → Components → Topology → Interfaces/Interdependencies → States &amp;amp; Flows → Dynamics → Cascades&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#EDF5FF;strokeColor=#1F65B5;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="220" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="↕" style="text;html=1;align=center;fontSize=26;fontColor=#64748B;" parent="1" vertex="1">
+          <mxGeometry x="3820" y="300" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="&lt;b&gt;&lt;font size='18'&gt;II. OBSERVATION &amp; INFERENCE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;What do we know?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Measurement → Observability → Identification → Calibration → State Estimation → Data Assimilation → UQ → Prediction&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#EDFBFB;strokeColor=#15858E;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="540" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="↕" style="text;html=1;align=center;fontSize=26;fontColor=#64748B;" parent="1" vertex="1">
+          <mxGeometry x="3820" y="620" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="&lt;b&gt;&lt;font size='18'&gt;III. STRESS &amp; CONSEQUENCE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;What happens under stress?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Hazard → Exposure → Vulnerability → Fragility → Damage/Failure → Cascade → Functional Loss → Service Loss → Societal Consequence → Risk/Criticality&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#FFF0EF;strokeColor=#C7372F;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="860" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="↕" style="text;html=1;align=center;fontSize=26;fontColor=#64748B;" parent="1" vertex="1">
+          <mxGeometry x="3820" y="940" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;&lt;font size='18'&gt;IV. VIABILITY &amp; RESPONSE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;Can the system survive and recover?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Preparedness/Robustness → Viability → Reachability → Critical-Service Continuity → Resilience Metrics → Recovery/Restoration → Resource Allocation → Adaptive Control&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#F6F0FF;strokeColor=#6E44AD;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1180" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="↕" style="text;html=1;align=center;fontSize=26;fontColor=#64748B;" parent="1" vertex="1">
+          <mxGeometry x="3820" y="1260" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="&lt;b&gt;&lt;font size='18'&gt;V. ENGINEERING LIFECYCLE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;What can engineers do?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Requirements → Design → Deploy → Commission → Operate → Monitor → Age → Maintain → Repair/Replace → Retrofit/Expand → Plan → Adapt → Transform → Circularize&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#F0FAF2;strokeColor=#39854A;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1500" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="↕" style="text;html=1;align=center;fontSize=26;fontColor=#64748B;" parent="1" vertex="1">
+          <mxGeometry x="3820" y="1580" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;&lt;font size='18'&gt;VI. SOCIETAL DECISION&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;What should society choose?&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font size='14'&gt;Evaluate [Sustainability + Equity + Economics/Finance + Governance + Human Behaviour + Risk] → Trade Off → Decide → Implement → Observe Outcomes → Learn/Update&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=20;fillColor=#FFF8E8;strokeColor=#B77A00;strokeWidth=2;fontColor=#172033;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1820" width="3600" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;Reading rule:&lt;/b&gt; within-chain arrows = analytical progression; between-chain coupling = feedback/information/control. The six-chain architecture is a synthesis; generic formulas are not automatically verbatim source equations." style="rounded=1;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;align=left;spacing=12;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="250" y="2160" width="3550" height="80" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
