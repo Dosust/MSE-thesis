@@ -1,0 +1,76 @@
+{
+  "result": "PASS_WITH_PDF_PAGE_LOCATOR_LIMITATION",
+  "version": "1.0",
+  "schema_status": "FROZEN_UNCHANGED",
+  "calibration_paper": "BIO58",
+  "identity": {
+    "title": "Bio-inspired sustainability assessment for building product development - Concept and case study",
+    "doi": "10.3390/su10010130",
+    "controlled_corpus_id": "BIO_58",
+    "identity_status": "CONFIRMED"
+  },
+  "evidence_policy": {
+    "eligible_paper_source": "controlled bio-inspiration/construction corpus only",
+    "external_papers_used": false,
+    "focal_article_official_vor_used": true,
+    "reviewer_extracted_focal_quotes_used": true,
+    "pdf_page_numbers_fabricated": false,
+    "engineering_result_not_treated_as_sustainability_output": true,
+    "causal_linkage_fail_closed": true
+  },
+  "pdf_status": {
+    "official_pdf_locator": "https://www.mdpi.com/2071-1050/10/1/130/pdf-vor",
+    "focal_pdf_found_in_available_uploaded_sources": false,
+    "page_level_verification": "PENDING_PDF"
+  },
+  "record_counts": {
+    "assessment_tools": 3,
+    "tool_inputs": 8,
+    "engineering_performance": 3,
+    "sustainability_outcomes": 8,
+    "performance_tool_linkages": 2,
+    "validation": 2,
+    "audit_log_entries": 12
+  },
+  "strengthened_findings": {
+    "assessment_tool": "BiSA",
+    "embedded_methods": [
+      "Environmental LCA",
+      "LCC/process-immanent economic costing"
+    ],
+    "S_LCA_status": "Discussed only; not implemented",
+    "engineering_metrics": [
+      {"metric": "Residual indentation", "value": 0.14, "unit": "mm", "pdf_page": "PENDING_PDF"},
+      {"metric": "Permanent thickness change", "value": 0.02, "unit": "mm", "pdf_page": "PENDING_PDF"}
+    ],
+    "environmental_outcomes": [
+      "overall environmental burden / normalized environmental impact",
+      "GWP improvement (exact value unresolved)",
+      "recycled-versus-composted end-of-life effects (exact values unresolved)",
+      "environmental function not investigated for Bio-flexi"
+    ],
+    "economic_outcomes": [
+      "process-immanent cost model",
+      "economic burden/function",
+      "production-cost comparability"
+    ],
+    "social_outcomes": [
+      "human capability and health impacts",
+      "significant reduction in human-capability impact (exact numeric value unresolved)",
+      "social function assumed comparable to conventional reference product"
+    ],
+    "confirmed_linkage": "L2: intended building-physical function -> BiSA social-function component",
+    "metric_specific_linkage": "U: 0.14 mm and 0.02 mm are confirmed performance metrics but are not proven to enter BiSA"
+  },
+  "fail_closed_status": {
+    "direct_numeric_sustainability_output_anchored": false,
+    "M_gate": "U / PROVISIONAL HOLD",
+    "reason": "Engineering numeric outputs do not satisfy the sustainability-output gate; no direct focal numeric sustainability result is page-anchored in the accessible evidence."
+  },
+  "formula_errors_detected": 0,
+  "visual_verification": {
+    "engineering_sheet": "PASS",
+    "interpretation_sheet": "PASS"
+  },
+  "output_workbook_sha256": "443c434c8be67b62d743be0a75f43139738d7618b40b51c8a5ab5981e6abe59f"
+}

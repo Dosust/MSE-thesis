@@ -1,0 +1,48 @@
+{
+  "result": "PASS_WITH_SOURCE_LIMITATION",
+  "version": "1.0",
+  "schema_freeze": "PASS",
+  "schema_status": "FROZEN",
+  "calibration_paper": "BIO58",
+  "controlled_corpus_identity": {
+    "title": "Bio-inspired sustainability assessment for building product development - Concept and case study",
+    "doi": "10.3390/su10010130",
+    "corpus_id": "BIO_58 / raw Scopus row 282",
+    "identity_status": "CONFIRMED"
+  },
+  "content_source": {
+    "controlled_corpus": "/mnt/data/scopus_export_bio-inspiration%20AND%20%28%20framework%20OR%20evaluation%20%29%20AND%20construction%208%281%29.xlsx",
+    "official_version_of_record_html": "https://www.mdpi.com/2071-1050/10/1/130",
+    "official_version_of_record_xml": "https://www.mdpi.com/2071-1050/10/1/130/xml",
+    "requested_pdf_url": "https://www.mdpi.com/2071-1050/10/1/130/pdf-vor",
+    "focal_pdf_located_in_uploaded_sources": false
+  },
+  "pdf_page_verification": "PENDING",
+  "record_counts": {
+    "papers": 1,
+    "assessment_tools": 2,
+    "tool_inputs": 8,
+    "engineering_performance": 1,
+    "sustainability_outcomes": 6,
+    "performance_tool_linkages": 2,
+    "validation": 2,
+    "interpretation": 1,
+    "audit_log": 5
+  },
+  "frozen_findings": {
+    "primary_assessment_tool": "BiSA",
+    "embedded_environmental_method": "Environmental LCA",
+    "engineering_metric_status": "Intended building-physical function supported; specific Bio-flexi engineering test metrics pending PDF",
+    "confirmed_linkage": "L2: intended building-physical function -> BiSA social function",
+    "sustainability_architecture": "Environmental, economic and social functions and burdens",
+    "validation": "Applied/validated in six TRR 141 projects; Bio-flexi exemplar"
+  },
+  "legacy_claims_quarantined": [
+    "indentation resistance / flexible boards as confirmed author-generated engineering metrics",
+    "standalone LCC as separately implemented focal tool",
+    "standalone S-LCA as separately implemented focal tool",
+    "exact Bio-flexi numerical sustainability outcomes"
+  ],
+  "formula_error_count": 0,
+  "workbook_sha256": "7d671564f061befe686648a18ac3a3d77d1e5a23dcd3930dca8c94504771ab07"
+}
