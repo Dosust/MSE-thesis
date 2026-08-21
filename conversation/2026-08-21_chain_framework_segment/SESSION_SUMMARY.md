@@ -15,8 +15,9 @@
 11. Created an initial project-memory capsule.
 12. Re-audited that first capsule after the user reported errors.
 13. Created a corrected **v2** memory capsule instead of silently overwriting v1.
-14. Corrected the root README notation/scope/repository-tree errors discovered during the audit.
+14. Corrected the root README scope/repository-tree drift discovered during the audit.
 15. Added automated project-memory consistency validation.
+16. Retracted an intermediate false audit impression that connector-serialized newline text represented literal `\nu`/`\nu_t` LaTeX notation.
 
 ## Corrected canonical memory
 
@@ -50,8 +51,8 @@ The original `project_memory/2026-08-21_chain_architecture/` is preserved for pr
 - frozen `(1)` dataset name separated from byte-identical `(4)` high-rigor execution copy;
 - high-rigor run archive separated from the later three-model controlling/sensitivity interpretation;
 - transcript categories tightened: directly visible verbatim, archived verbatim, user-supplied reference, reconstructed assistant summary;
-- root README `\nu`/`\nu_t` control-variable errors corrected to `u`/`u_t`;
-- nonexistent root `data/` tree entry removed from README and replaced with storage/provenance guidance.
+- nonexistent root `data/` tree entry removed from README and replaced with storage/provenance guidance;
+- intermediate `\nu`/`\nu_t` audit claim **retracted** as connector newline-serialization ambiguity, not a verified source-file typo.
 
 ## Current next priority
 
