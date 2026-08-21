@@ -1,0 +1,21 @@
+chain,layer,representative_formula,provenance_class,literature_anchor,interpretation
+I,Physical laws,∂ρ/∂t+∇·J=s,CANONICAL_FORMALISM,Garavello 2010,Generic conservation-law form; not claimed verbatim from one infrastructure paper
+I,Topology,L=D−A,CANONICAL_FORMALISM,Boccaletti et al. 2014; Kivelä et al. 2014,Standard graph Laplacian
+I,Interfaces,"y_ij=g_ij(x_i,x_j;θ_ij,τ_ij,m_ij)",THESIS_SYNTHESIS_NOTATION,Rinaldi et al. 2001; Ouyang 2014,Mechanism-specific interface abstraction introduced for synthesis
+I,Coupled dynamics,"ẋ_i=f_i(x_i,u_i,η_i)+Σ_j g_ij(x_i,x_j;θ_ij)",THESIS_SYNTHESIS_NOTATION,Ouyang 2014; Gao et al. 2016,Generic coupled-system abstraction
+II,Observation,"y_k=h(x_k,θ)+ε_k",CANONICAL_FORMALISM,Stuart 2010; Huang et al. 2019,Generic state/parameter observation model
+II,Observability,rank(O)=n,CANONICAL_FORMALISM,control/estimation theory,Standard linear observability condition
+II,Bayesian inverse problem,"π(θ|y)∝p(y|θ)π_0(θ)",CANONICAL_FORMALISM,Stuart 2010,Bayes posterior structure
+III,Fragility,"P(D≥d|H=h)",CANONICAL_FORMALISM,Argyroudis et al. 2019,Generic fragility conditional probability
+III,Failure,"P_f=P[g(X,H)≤0]",CANONICAL_FORMALISM,reliability theory,Generic limit-state failure probability
+III,Service deficit,"L_s(t)=1−S(t)/S_0",THESIS_SYNTHESIS_NOTATION,Poulin & Kane 2021; Davidson et al. 2022,Normalized service-loss notation used for synthesis
+IV,Viability kernel,"Viab_K={x_0∈K:∃u, x(t)∈K ∀t}",CANONICAL_FORMALISM,Aubin 1991; Saint-Pierre 1994,Standard viability-set concept
+IV,HJI reachability,"∂_tV+min_u max_d ∇V·f=0",CANONICAL_FORMALISM,Mitchell et al. 2005,Representative HJI reachability structure; exact sign/Hamiltonian convention source-dependent
+IV,Resilience loss,"L_R=∫[1−Q(t)]dt",DIRECT_OR_EXPLICITLY_EXTRACTED,Bruneau et al. 2003,Normalized representation of extracted resilience-triangle loss; verify Q scale before direct quotation
+IV,Recovery ratio,"R(t)=[φ(t)−φ(t_d)]/[φ(t_0)−φ(t_d)]",DIRECT_OR_EXPLICITLY_EXTRACTED,Henry & Ramírez-Márquez 2012,Time-dependent recovered-performance fraction
+V,Constrained design,"x*=argmin J_d(x) s.t. g(x)≤0,h(x)=0",CANONICAL_FORMALISM,D’Ambrosio et al. 2015,Generic constrained optimization
+V,Robust adaptation,"a*=argmin_a max_ω L(a,ω)",CANONICAL_FORMALISM,Dittrich et al. 2016; Bonjean Stanton & Roelich 2021,Representative minimax robust-decision form
+VI,Pareto set,"P={a: no a' dominates a}",CANONICAL_FORMALISM,Navarro & Yepes 2019,Standard multi-objective concept
+VI,MCDA,"U(a)=Σ_m w_m u_m(a)",CANONICAL_FORMALISM,Navarro & Yepes 2019,Generic weighted value model
+VI,Equity service floor,"S_g(t)≥S_g^min",THESIS_SYNTHESIS_NOTATION,Coleman et al. 2024,Possible equity constraint; not attributed as Coleman's verbatim equation
+VI,Bayesian learning,"π_{t+1}(θ)∝L(D_{t+1}|θ)π_t(θ)",CANONICAL_FORMALISM,Stuart 2010,Sequential Bayesian update used as learning abstraction
