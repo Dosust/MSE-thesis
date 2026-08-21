@@ -1,0 +1,42 @@
+{
+  "snapshot_time": "2026-08-21T20:01:00+08:00",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "module": "2026-08-21_six_chain_mathematical_physics_review",
+  "scientific_status": "literature-grounded thesis/review synthesis; not a single-paper inherited framework",
+  "chains": {
+    "I": "Physical System",
+    "II": "Observation & Inference",
+    "III": "Stress & Consequence",
+    "IV": "Viability & Response",
+    "V": "Engineering Lifecycle",
+    "VI": "Societal Decision"
+  },
+  "frozen_distinctions": [
+    "topology != interdependency != interface mechanism",
+    "physical damage != component functionality != delivered service != societal consequence",
+    "resilience != sustainability",
+    "recovery/restoration explicit",
+    "optimization cross-cutting",
+    "societal evaluation normative/institutional rather than physical",
+    "six interacting chains, not one giant arrow"
+  ],
+  "cross_cutting_math": [
+    "ODE/PDE/DAE",
+    "dynamical systems",
+    "network science",
+    "probability",
+    "statistics",
+    "Bayesian inference",
+    "inverse problems",
+    "uncertainty quantification",
+    "optimization",
+    "control",
+    "viability/reachability",
+    "game theory",
+    "numerical analysis",
+    "AI/ML",
+    "decision theory",
+    "MCDA",
+    "DMDU"
+  ]
+}
