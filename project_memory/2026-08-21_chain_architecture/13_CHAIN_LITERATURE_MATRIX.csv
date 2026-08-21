@@ -1,0 +1,27 @@
+Chain,Layer,Mathematical_Object_or_Question,Representative_Literature_Anchor,DOI_or_Record,Current_Use,Verification_State
+I,Interdependency taxonomy,"physical/cyber/geographic/logical dependencies",Rinaldi et al. 2001,10.1109/37.969131,"foundational infrastructure interdependency taxonomy",carried_forward_from_current_literature_synthesis
+I,Interdependent infrastructure modeling,"choice of modeling paradigm and mechanism",Ouyang 2014,10.1016/j.ress.2013.06.040,"review of interdependent critical infrastructure modeling",carried_forward_from_current_literature_synthesis
+I,Multilayer representation,"multilayer/network-of-networks structure",Boccaletti et al. 2014,10.1016/j.physrep.2014.07.001,"multilayer network structure/dynamics",carried_forward_from_current_literature_synthesis
+I,Multilayer representation,"formal multilayer network notation",Kivela et al. 2014,10.1093/comnet/cnu016,"multilayer network mathematics",carried_forward_from_current_literature_synthesis
+I,Cascading interdependency,"interdependent network cascade behavior",Buldyrev et al. 2010,10.1038/nature08932,"canonical abrupt cascading-failure precedent",carried_forward_from_current_literature_synthesis
+I,Interface topology,"cross-system interface architecture as decision variable",Ouyang and Duenas-Osorio interface-topology work,VERIFY_FROM_CORPUS,"supports explicit interface design/topology",needs_exact_record_verification
+II,Bayesian inverse problems,"p(theta|Y) and posterior uncertainty",Stuart 2010,10.1017/S0962492910000061,"mathematical Bayesian inverse-problem foundation",carried_forward_from_current_literature_synthesis
+II,Inverse problem formulation,"model-data inversion regularization identifiability",Tarantola/inverse-problem foundation,VERIFY_FROM_CORPUS,"general inverse-problem foundation",needs_exact_record_verification
+II,Infrastructure inverse identification,"source/parameter/interface inference",water-network and system-identification records in corpus,VERIFY_FROM_CORPUS,"domain-specific precedent",needs_exact_record_verification
+III,Cascades,"local failure to cross-sector failure",Buldyrev et al. 2010,10.1038/nature08932,"cascade mechanism precedent",carried_forward_from_current_literature_synthesis
+III,Hazard-to-cascade framework,"hazard failure cascade risk",Muehlhofer et al. 2023,VERIFY_FROM_CORPUS,"hazard/failure/cascade linkage",needs_exact_record_verification
+III,Fragility,"P(D>=ds|IM)",sector-specific fragility literature,SECTOR_SPECIFIC,"generic lognormal fragility family only",requires_sector_hazard_specific_source
+IV,Viability theory,"Viab_K and tangent conditions",A Survey of Viability Theory,VERIFY_IDENTITY,"general viability foundation",identity_conflict_requires_reverification
+IV,Nonautonomous viability,"time-varying differential inclusion viability",Viability Problems for Nonautonomous Differential Inclusions,10.1137/0329014,"general viability foundation",carried_forward_from_current_literature_synthesis
+IV,Viability computation,"numerical viability kernel",Approximation of the viability kernel,10.1007/BF01204182,"viability-kernel numerical approximation",carried_forward_from_current_literature_synthesis
+IV,HJ reachability,"partial_t V + H(x,grad V)=0",Mitchell Bayen Tomlin 2005,10.1109/TAC.2005.851439,"time-dependent HJ reachable sets/dynamic games",carried_forward_from_current_literature_synthesis
+IV,Resilience performance,"performance loss/recovery curve",Bruneau et al. 2003,10.1193/1.1623497,"established resilience-performance framing",carried_forward_from_current_literature_synthesis
+IV,Quantitative resilience,"recovery-performance quantification",Cimellaro et al. 2010,10.1016/j.engstruct.2010.08.008,"quantitative resilience formulation",carried_forward_from_current_literature_synthesis
+IV,Resilience review,"definitions/measures",Hosseini et al. 2016,10.1016/j.ress.2015.08.006,"resilience definitions/measures synthesis",carried_forward_from_current_literature_synthesis
+V,Restoration scheduling,"network design/repair scheduling",Nurre et al. 2012,10.1016/j.ejor.2012.07.010,"restoration/design optimization precedent",carried_forward_from_current_literature_synthesis
+V,Interdependent restoration,"joint restoration under dependencies",Cavdaroglu et al. family,VERIFY_FROM_CORPUS,"restoration scheduling/resource constraints",needs_exact_record_verification
+V,Interdependent resilience/restoration,"infrastructure recovery modeling",Ouyang and Wang 2015,10.1016/j.ress.2015.03.011,"restoration/resilience precedent",title_needs_authoritative_check
+V,Multiscale restoration,"multi-timescale water-power restoration under uncertainty",Multi-timescale risk-averse restoration 2025,10.1016/j.ress.2025.111083,"strong corpus-relative timescale/restoration precedent",closed_corpus_metadata_carried_forward
+VI,Equity,"multidimensional equity in infrastructure resilience",Coleman et al. 2024,10.1038/s44304-024-00022-x,"equity dimensions and research gaps",carried_forward_from_current_literature_synthesis
+VI,Sustainability-resilience tradeoff,"sustainability climate resilience recovery tradeoffs",Transport infrastructure asset recovery 2023,10.1016/j.trd.2023.103800,"bridge sustainability climate resilience recovery",closed_corpus_metadata_carried_forward
+VI,Planning/implementation,"community resilience planning/performance goals",NIST Community Resilience Planning Guide,OFFICIAL_NIST_RECORD,"planning/implementation framework",needs_official_record_when_cited
