@@ -110,9 +110,10 @@ This broader program must not be mistaken for a claim that one MSE thesis will m
 16. [`15_USER_SUPPLIED_CHAIN_REFERENCE_VERBATIM.md`](15_USER_SUPPLIED_CHAIN_REFERENCE_VERBATIM.md)
 17. [`16_ASSERTION_REGISTRY.csv`](16_ASSERTION_REGISTRY.csv)
 18. [`17_CHAIN_LITERATURE_MATRIX.csv`](17_CHAIN_LITERATURE_MATRIX.csv)
-19. [`PROJECT_MEMORY.json`](PROJECT_MEMORY.json)
-20. [`manifest.json`](manifest.json)
-21. [`validate_memory.py`](validate_memory.py)
+19. [`18_FUTURE_CHAT_BOOTSTRAP.md`](18_FUTURE_CHAT_BOOTSTRAP.md)
+20. [`PROJECT_MEMORY.json`](PROJECT_MEMORY.json)
+21. [`manifest.json`](manifest.json)
+22. [`validate_memory.py`](validate_memory.py)
 
 ## Future-chat authority hierarchy
 
