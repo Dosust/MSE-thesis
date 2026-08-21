@@ -1,0 +1,96 @@
+{
+  "archive_date": "2026-08-21",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "archive/bioinspired-review-chat-2026-08-21",
+  "project": "bio-inspired construction sustainability review",
+  "schema": {
+    "version": "1.0",
+    "status": "FROZEN",
+    "sheets": [
+      "00_Control",
+      "01_Papers",
+      "02_Assessment_Tools",
+      "03_Tool_Inputs",
+      "04_Engineering_Performance",
+      "05_Sustainability_Outcomes",
+      "06_Performance_Tool_Linkage",
+      "07_Validation",
+      "08_Paper_Interpretation",
+      "09_Audit_Log"
+    ]
+  },
+  "controlled_corpus": {
+    "filename": "scopus_export_bio-inspiration AND ( framework OR evaluation ) AND construction 8(1).xlsx",
+    "sha256_runtime_copy": "c32a1bf178402593bbf04bf47ef8ad5ead0e3f785c131d41084a4349e7247d96",
+    "rule": "Only papers present in this controlled corpus are eligible for substantive bio-inspired review analysis."
+  },
+  "research_questions": {
+    "RQ1": "What sustainability assessment method/tool is directly implemented by the focal authors?",
+    "RQ2": "What specific inputs are supplied to that method/tool, and where do those inputs originate?",
+    "RQ3": "What engineering/functional performance metrics are measured, calculated, simulated, or tested?",
+    "RQ4": "What sustainability outcomes are generated, in which dimensions, and what specific indicators/values are reported?",
+    "RQ5": "Which engineering-performance metrics actually become tool inputs, through what transformation, and with what resulting sustainability outcome?"
+  },
+  "calibration_paper": {
+    "paper_id": "BIO58",
+    "doi": "10.3390/su10010130",
+    "title": "Bio-inspired sustainability assessment for building product development - Concept and case study",
+    "identity_status": "CONFIRMED",
+    "current_disposition": "PROVISIONAL HOLD",
+    "pdf_page_verification": "PENDING_PDF",
+    "latest_evidence_rigor": {
+      "assessment_tool": "BiSA",
+      "embedded_methods": [
+        "Environmental LCA",
+        "economic/process-immanent costing component"
+      ],
+      "s_lca_status": "Discussed only; not separately implemented",
+      "engineering_metrics": [
+        {"metric": "Residual indentation", "value": 0.14, "unit": "mm"},
+        {"metric": "Permanent thickness change", "value": 0.02, "unit": "mm"}
+      ],
+      "confirmed_linkage": "L2: intended building-physical function -> BiSA social-function component",
+      "metric_specific_linkage": "U",
+      "direct_numeric_sustainability_output_anchored": false,
+      "M_gate": "U / PROVISIONAL HOLD"
+    }
+  },
+  "latest_26_paper_stage3": {
+    "legacy_synthesis_papers_reaudited": 26,
+    "confirmed_KLM_PASS": 1,
+    "definitive_FAIL": 23,
+    "provisional_HOLD": 2,
+    "confirmed_survivor": "BIO55",
+    "priority_hold": "BIO58",
+    "full_text_hold": "BIO65"
+  },
+  "evidence_states": ["SUPPORTED", "NR", "U", "NA", "PENDING_PDF"],
+  "linkage_states": {
+    "L0": "no demonstrated connection",
+    "L1": "parallel/coexisting engineering and sustainability evidence",
+    "L2": "engineering input/modifier directly affects sustainability assessment",
+    "L3": "integrated engineering+sustainability evidence explicitly drives a decision",
+    "U": "unresolved"
+  },
+  "critical_errors_to_avoid": [
+    "Treating legacy workbook coding as focal evidence",
+    "Cross-paper contamination",
+    "Treating engineering numeric results as sustainability outputs",
+    "Treating S-LCA as implemented in BIO58 without focal evidence",
+    "Inferring engineering-to-sustainability linkage from coexistence",
+    "Calling application external validation",
+    "Fabricating PDF page numbers",
+    "Using outside web evidence against the closed-corpus rule without explicit authorization",
+    "Changing scientific rules to fit a presentation/template",
+    "Importing the earlier top-10 corpus or prior scores into the bio-inspired review"
+  ],
+  "next_actions": [
+    "Admit and hash the exact BIO58 focal PDF if available",
+    "Close exact PDF page locators for retained BIO58 claims",
+    "Anchor or definitively fail to locate a direct numeric focal sustainability output for BIO58",
+    "Re-run BIO58 M/KLM disposition without using engineering metrics as sustainability output",
+    "Use the unchanged Version 1.0 schema on contrasting calibration papers such as BIO55 and a facade/building-performance case",
+    "Run protocol stability test before scaling to the full controlled corpus",
+    "Derive synthesis matrices only from frozen evidence records"
+  ]
+}
