@@ -49,7 +49,7 @@ Base commit message:
 11. `PROVENANCE_AND_AUTHENTICITY.md`
     - initial commit: `6f429a46d12b02e1ddd2350378cc3ad38cab4190`
 12. `MANIFEST.md`
-    - this file; commit determined by GitHub after creation.
+    - initial commit: `15ac26dfa7a2f5a8b3159f6719dabebe46efa843`
 
 ## Existing repository artifacts referenced rather than duplicated
 
@@ -80,11 +80,23 @@ SHA-256 recorded in the closed-corpus ranking workflow:
 
 These are user-provided source materials. Their scientific content is preserved across the architecture/mathematics memory files. Their attachment names are retained so future chats can locate the originals in the project/file corpus when available.
 
+## PR publication wrapper
+
+Draft pull request:
+
+`https://github.com/Dossiya-SE/MSE-thesis/pull/3`
+
+Title:
+
+`Archive chain architecture chat memory for future thesis work`
+
+The PR intentionally remains unmerged. `main` advanced concurrently during archival work, so no force update or automatic merge was performed.
+
 ## Reproducibility caveat
 
 The Markdown memory package is an evidence-aware scientific reconstruction and index, not a byte-for-byte export of the entire ChatGPT UI or hidden model state. Exact binary run packages, CSVs, JSON audits, code files, and figures should be treated as authoritative for computational reproduction when available.
 
-## Verification checklist before closing archive
+## Verification checklist
 
 - [x] repository identity read back;
 - [x] base `main` commit recorded;
@@ -97,5 +109,7 @@ The Markdown memory package is an evidence-aware scientific reconstruction and i
 - [x] artifact locations indexed;
 - [x] open questions and frozen decisions archived;
 - [x] provenance/authenticity rules archived;
-- [ ] final branch directory readback;
-- [ ] draft PR creation / final publication pointer.
+- [x] final branch directory read back from GitHub;
+- [x] draft PR created;
+- [x] concurrent changes on `main` detected and preserved;
+- [x] no force update, overwrite, or automatic merge attempted.
