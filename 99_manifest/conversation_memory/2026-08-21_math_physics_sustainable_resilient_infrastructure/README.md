@@ -2,14 +2,14 @@
 
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Branch:** `main`  
-**Archive date:** 2026-08-21 (Singapore)  
-**Purpose:** preserve the scientific reasoning, candidate thesis architectures, Operations Research/Monte Carlo work, mathematical knowledge-architecture work, and Wolfram/Figma visual-design decisions from this conversation so future chats can reconstruct the state of the project without relying on informal memory.
+**Archive date:** 2026-08-21 (Asia/Singapore)  
+**Purpose:** preserve the scientific architecture, frozen MSE scope, candidate thesis directions, literature-gap logic, Operations Research/Monte Carlo work, mathematical knowledge architecture, Wolfram/Figma visual-design decisions, file provenance, and corrections from this conversation so future chats can reconstruct the project state without relying on informal memory.
 
-## 1. Non-negotiable scientific intent
+> **IMPORTANT:** This README was corrected on 2026-08-21 after auditing the archive. Read `08_verified_state/CORRECTION_LEDGER_2026-08-21.md` and `08_verified_state/THESIS_FROZEN_STATE_v0.5.md` before using older summaries.
 
-The research program is not intended to be only a resilience score, only an optimization model, only an AI application, or only one infrastructure sector. The target is a reusable **mathematics + physics foundation for sustainable and resilient infrastructure**, spanning the chain from physical foundations to engineering and societal decision-making across the lifecycle.
+## 1. Non-negotiable long-term scientific intent
 
-A compact programmatic statement is:
+The long-term program is a reusable **mathematics + physics foundation for sustainable and resilient infrastructure**, spanning physical laws, observation/inference, hazard/failure, recovery/viability, engineering action and sustainable/equitable decision-making across the lifecycle.
 
 \[
 \boxed{
@@ -27,88 +27,61 @@ A compact programmatic statement is:
 }
 \]
 
-The core coupled system is **Power–Water–Transportation–Solid-Waste (P–W–T–SW)** under climate/operational stress.
+The **general architecture is extensible** to Power–Transport–Water–Solid-Waste and other sectors. The **frozen executable MSE demonstrator is P–T–W**, with Solid Waste retained only as an extension interface unless explicitly promoted later.
 
-## 2. Current scientific spine
+## 2. Frozen MSE contribution — controlling state
 
-\[
-\boxed{
-D_{\mathrm{obs}}
-\rightarrow
-p(Z_{ij}(t),\theta_{ij}\mid D_{\mathrm{obs}})
-\rightarrow
-F_{\mathrm{physics}}(X,Z,\eta,u)
-\rightarrow
-p(X_t)
-\rightarrow
-p(S_g(t))
-\rightarrow
-\mathcal K_{\mathrm{sus,eq}}
-\rightarrow
-\operatorname{Viab}(\mathcal K_{\mathrm{sus,eq}})
-\rightarrow
-\mathcal R_{\mathrm{failure/recovery}}
-\rightarrow
-u^*_{\mathrm{safe}}
-}
-\]
-
-Interpretation:
-1. observe the real system;
-2. identify dynamic cross-sector interfaces instead of assuming them;
-3. propagate interface/parameter uncertainty through coupled physics;
-4. map physical function to human service;
-5. impose physical, service, sustainability and equity admissibility;
-6. compute viability/reachability/recovery geometry;
-7. optimize or control without violating formal safety conditions.
-
-## 3. Central unresolved bridge
-
-The current strongest candidate gap is **not** that service mapping, recovery coupling, or Hamilton–Jacobi viability have never been studied separately. Recent papers narrow those broad claims.
-
-The sharper candidate gap is:
+The authoritative v0.5 design freezes the contribution as a formal distinction between:
 
 \[
-\boxed{
-\text{observed dynamic interfaces}
-+
-\text{interface uncertainty}
-+
-\text{multi-service consequences}
-+
-\text{sustainable/equitable viability}
-+
-\text{formal recovery/control}
-+
-\text{AI-assisted scalable computation}
-}
+\boxed{\text{safe recovery reachability}\neq\text{maintainable post-recovery viability}.}
 \]
 
-A particularly important relation to falsify/establish is:
+Core objects:
 
 \[
-\boxed{
-p(\theta_{ij},Z_{ij}\mid D)\longrightarrow p(\mathcal V_{\mathrm{service}})}
+K_{hard}(t),\qquad
+K_R(t),\qquad
+K_R^V(t)=\operatorname{Viab}(K_R)(t),\qquad
+B_R(t_0)=\operatorname{Capt}_{K_{hard}}(K_R^V)(t_0).
 \]
 
-or quantitatively, the deformation/error of the viability geometry induced by interface-identification uncertainty.
+The acceptable recovery region is allowed to evolve with critical service, sustainability, equity, dynamic interfaces, institutions, finance/resources and hazards.
 
-## 4. Seven thesis candidates
+See `08_verified_state/THESIS_FROZEN_STATE_v0.5.md`.
 
-See [`01_scientific_architecture/SEVEN_THESIS_CANDIDATES.md`](01_scientific_architecture/SEVEN_THESIS_CANDIDATES.md).
+## 3. Executable and extensible state models
 
-Current interpretation:
-- **best full-program intellectual destination:** Mathematical Physics of Sustainable Infrastructure Viability;
-- **strongest thesis-sized narrow bridge:** Dynamic Interface Identification → Viability Uncertainty;
-- **deepest pure mathematical-physics option:** Port-Hamiltonian / energy-based infrastructure physics;
-- **strongest lifecycle decision option:** lifecycle optimal control / Operations Research;
-- **most future-facing AI option:** verified physics-informed scientific-AI digital twin.
+MSE core:
 
-## 5. Six interacting chains
+\[
+\boxed{X(t)=[X_P(t),X_T(t),X_W(t)]^T}
+\]
 
-See [`01_scientific_architecture/SIX_CHAINS_AND_LAYERS.md`](01_scientific_architecture/SIX_CHAINS_AND_LAYERS.md).
+General extension:
 
-The six chains are not one chronology; they represent different scientific roles:
+\[
+\boxed{X_{ext}(t)=[X_P(t),X_T(t),X_W(t),X_{SW}(t),\ldots]^T}
+\]
+
+Directional interface states satisfy, in general,
+
+\[
+Z_{ij}(t)\neq Z_{ji}(t).
+\]
+
+The hybrid coupled state is
+
+\[
+\chi(t)=(X(t),Z(t),m(t)).
+\]
+
+## 4. Six interacting scientific chains
+
+See `01_scientific_architecture/SIX_CHAINS_AND_LAYERS.md`.
+
+The chains are **six distinct analytical logics connected by explicit feedback — not one causal pipeline**:
+
 I. Physical-System  
 II. Observation–Inference–Prediction  
 III. Hazard–Failure–Consequence  
@@ -116,37 +89,93 @@ IV. Resilience–Viability–Recovery
 V. Engineering Design–Operation–Adaptation  
 VI. Sustainability–Equity–Governance–Decision
 
-Optimization, UQ, computation, AI and mathematical methods are cross-cutting, not single lifecycle stages.
+Mathematics, optimization, UQ, computation and AI are cross-cutting methods, not single lifecycle stages.
 
-## 6. Operations Research / 10-million-run analysis
+## 5. Seven thesis candidates
 
-See [`02_or_monte_carlo/README.md`](02_or_monte_carlo/README.md), plus the exact Python code and outputs preserved in that folder.
+See `01_scientific_architecture/SEVEN_THESIS_CANDIDATES.md`.
 
-Important interpretation: Monte Carlo is an **uncertainty/robustness layer around an OR decision model**, not itself optimization and not “10 million web scrapes.”
+The seven candidates are alternative centers of gravity for the wider research program. They must **not** be mistaken for seven modules required in the one-year MSE thesis.
 
-## 7. Mathematical knowledge architecture
+Current distinction:
+- **frozen MSE controlling design:** safe recovery reachability vs post-recovery controlled viability in dynamic P–T–W interfaces;
+- **strong candidate research bridge:** dynamic interface identification/uncertainty → viability uncertainty;
+- **long-term mathematical-physics destination:** a general theory of sustainable infrastructure viability/recoverability;
+- **AI/digital twin:** enabling observation/estimation/surrogate/scenario technologies, not the thesis identity.
 
-See [`03_knowledge_architecture/ONTOLOGY_PROVENANCE_EVIDENCE.md`](03_knowledge_architecture/ONTOLOGY_PROVENANCE_EVIDENCE.md).
+## 6. Mathematical knowledge architecture — corrected
 
-The project now distinguishes:
-- mathematical disciplines/taxonomy;
-- mathematical objects;
-- theories;
-- formulations;
-- algorithms;
-- computational tasks;
-- applications;
-- typed relations;
-- provenance/evidence level;
-- formal theorem relations.
+See:
+- `03_knowledge_architecture/ONTOLOGY_PROVENANCE_EVIDENCE.md`
+- `08_verified_state/MATHEMATICS_TAXONOMY_CROSSWALK_DUKE2002_MSC2020.md`
 
-This prevents ambiguous arrows such as `A -> B` from mixing taxonomy, use, dependency, empirical support, and theorem-level implication.
+The user-supplied Duke 2002 taxonomy is an **educational browse taxonomy**, not MSC2020. The project now explicitly separates:
 
-## 8. Wolfram/Figma visual system
+1. educational navigation taxonomy — Duke 2002, optional;
+2. scholarly research classification — MSC2020, canonical;
+3. typed ontology — SKOS/RDF/OWL;
+4. formal mathematical dependency — definitions/theorems/proof systems.
 
-See [`04_visual_design/WOLFRAM_FIGMA_RECONSTRUCTION.md`](04_visual_design/WOLFRAM_FIGMA_RECONSTRUCTION.md).
+Do not infer theorem dependency or physical causality from taxonomy parent-child edges.
 
-The key correction from this conversation is:
+## 7. Core mathematical-physics spine
+
+\[
+\boxed{
+\text{Governing Dynamics}
+\to
+\text{Dynamic Interfaces}
+\to
+\text{Observation / Inverse Inference}
+\to
+\text{Uncertainty}
+\to
+\text{Service / Admissibility}
+\to
+\text{Recovery Reachability}
+\to
+\text{Viability}
+\to
+\text{Minimum Intervention / Control}
+}
+\]
+
+High-value mathematics:
+- nonlinear ODE/PDE and hybrid systems;
+- network/interdependency mathematics;
+- inverse problems and identifiability;
+- probability/Bayesian inference/UQ;
+- functional analysis/operator theory where required;
+- Hamilton–Jacobi reachability and viability theory;
+- control theory;
+- optimization/Operations Research;
+- numerical analysis, scientific computing and verified computation.
+
+## 8. Gap/novelty discipline
+
+See `01_scientific_architecture/CORE_GAP_AND_PROPOSITIONS.md`.
+
+Do not claim that service mapping, recovery coupling or Hamilton–Jacobi viability are absent from prior work. Novelty should be established at the level of the **specific formal composition/relationship** and falsified systematically.
+
+The MSE design requires claim-to-code traceability and counterevidence to novelty claims.
+
+## 9. Operations Research / Monte Carlo
+
+See `02_or_monte_carlo/README.md`, the preserved code and result artifacts.
+
+Important interpretation:
+- Monte Carlo is an uncertainty/robustness layer around a decision model;
+- it is not optimization by itself;
+- "10 million Monte Carlo draws" does not mean 10 million website scrapes;
+- rankings remain conditional on model structure, priors/weights and evidence quality.
+
+The previously declared seed is retained for reproduction where that exact experiment is used: `57420260821`.
+
+## 10. Wolfram/Figma visual system — live-state correction
+
+See `04_visual_design/WOLFRAM_FIGMA_RECONSTRUCTION.md` and `08_verified_state/FIGMA_STATE_AUDIT_20260821.md`.
+
+Design principle:
 
 \[
 \boxed{\text{Do not design boxes describing mathematics.}}
@@ -158,37 +187,59 @@ Instead:
 \boxed{\text{make the mathematics itself become the visual structure.}}
 \]
 
-The reference aesthetic is the Wolfram Physics Project Visual Summary. Computational graphs, causal structures, multiway alternatives, branchial graphs, state-space/viability geometry and sparse annotations should form the poster—not conventional PowerPoint card layouts.
+Reference aesthetic: Wolfram Physics Project Visual Summary; use computational graphs, causal/multiway/branchial structures, trajectories, state-space/viability geometry and sparse scientific annotation.
 
-**Persistent Figma file:** `https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6`  
-**Use page:** `Candidate 1 — Wolfram Fidelity Rebuild v2`  
-**Primary frame:** `Candidate 1 — Computational Visual Summary` (node `4:3` at creation time).
+**Live Figma audit on 2026-08-21:**
+- file: `https://www.figma.com/design/Iss9o33vEjRmHaODdkeuc6`
+- page `0:1`: `Candidate 1 — Sustainable Viability`
+- primary frame `1:2`: `Poster — Candidate 1`
 
-## 9. Authentic source preservation
+Older references to `Candidate 1 — Wolfram Fidelity Rebuild v2` / node `4:3` are superseded.
 
-The exact current-conversation pasted Markdown attachments are concatenated without editing in [`06_authentic_thread_inputs/RAW_PASTED_ATTACHMENTS.md`](06_authentic_thread_inputs/RAW_PASTED_ATTACHMENTS.md), with original filenames and SHA-256 hashes.
+## 11. Authenticity and transcript/file preservation
 
-This archive does **not** fabricate unavailable transcript turns or hidden model reasoning. See [`00_SCOPE_AUTHENTICITY_AND_LIMITS.md`](00_SCOPE_AUTHENTICITY_AND_LIMITS.md).
+The original split Base64 "exact text archive" is **not complete as declared**. Missing pieces were found during audit. A later v2 attempt is also incomplete.
 
-## 10. Future-chat entry point
+Therefore:
+- do not claim a byte-complete conversation transcript from those split archives;
+- use the verified file-surface inventory and exact current-conversation attachments where available;
+- use the reconstructed memory ledger only as a labeled reconstruction;
+- never fabricate unavailable transcript turns or hidden model reasoning.
+
+See:
+- `08_verified_state/CORRECTION_LEDGER_2026-08-21.md`
+- `08_verified_state/FILE_SURFACE_AUDIT_20260821.md`
+- `08_verified_state/CONVERSATION_MEMORY_LEDGER.md`
+- `00_SCOPE_AUTHENTICITY_AND_LIMITS.md`
+
+## 12. Future-chat read order
 
 A future chat should read, in order:
+
 1. this README;
-2. `07_future_chat_bootstrap/FUTURE_CHAT_BOOTSTRAP.md`;
-3. the seven-candidate file;
-4. the six-chains file;
-5. the OR/Monte-Carlo README;
-6. the visual reconstruction notes;
-7. raw authentic attachments only when exact wording/history is needed.
+2. `08_verified_state/CORRECTION_LEDGER_2026-08-21.md`;
+3. `08_verified_state/THESIS_FROZEN_STATE_v0.5.md`;
+4. `07_future_chat_bootstrap/FUTURE_CHAT_BOOTSTRAP.md`;
+5. `01_scientific_architecture/SIX_CHAINS_AND_LAYERS.md`;
+6. `01_scientific_architecture/SEVEN_THESIS_CANDIDATES.md`;
+7. `03_knowledge_architecture/ONTOLOGY_PROVENANCE_EVIDENCE.md`;
+8. `08_verified_state/MATHEMATICS_TAXONOMY_CROSSWALK_DUKE2002_MSC2020.md`;
+9. OR/Monte-Carlo and visual-design files only as needed;
+10. raw/source attachments when exact wording or numerical provenance is required.
 
-## 11. Reproducibility principle
+## 13. Reproducibility principle
 
-Every future numerical or design claim should distinguish:
-- **source-derived fact**;
-- **model assumption**;
-- **computed result**;
-- **research hypothesis**;
-- **formal theorem/guarantee**;
-- **design choice**.
+Every important statement or edge should be labeled as one of:
+- **SOURCE FACT**;
+- **MODEL ASSUMPTION**;
+- **COMPUTED RESULT**;
+- **RESEARCH HYPOTHESIS**;
+- **FORMAL RESULT / CERTIFICATE**;
+- **DESIGN CHOICE**;
+- **RECONSTRUCTED MEMORY**.
 
 Do not upgrade one category into another without evidence.
+
+## 14. Binding correction precedence
+
+If an older memory file conflicts with `08_verified_state/CORRECTION_LEDGER_2026-08-21.md` or `08_verified_state/THESIS_FROZEN_STATE_v0.5.md`, the verified-state files take precedence unless a later explicit user-approved freeze supersedes them.
