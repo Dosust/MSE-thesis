@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">MSE thesis mathematical architecture V3</title>
+  <desc id="desc">A rigorous mathematical architecture for coupled Power, Water/Drainage, Transportation, and Solid-Waste infrastructure. It separates observations and inverse uncertainty, hybrid state and dynamic interface evolution, sustainable-equitable admissibility, viability, recovery, and optional control/design extensions. Differential-geometric transfer is explicitly marked as a research hypothesis unless a state-space metric is formally defined.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06101d"/><stop offset="1" stop-color="#0b2136"/></linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7899ba"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4ec9b0"/></marker>
+    <style>
+      .title{font:700 40px ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#f4f8ff}.sub{font:400 17px ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#a8bed4}.head{font:700 18px ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#f5f9ff}.body{font:400 14px ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#aec3d8}.tiny{font:500 11px ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;fill:#829db9}.math{font:600 18px Georgia,Times New Roman,serif;fill:#eef7ff}.card{fill:#0e243a;stroke:#31536f;stroke-width:1.5}.obs{fill:#2f2814;stroke:#d0aa43;stroke-width:1.5}.dyn{fill:#102a40;stroke:#4388b0;stroke-width:1.5}.viable{fill:#0e2b29;stroke:#43a481;stroke-width:1.5}.recover{fill:#102f35;stroke:#47b3b1;stroke-width:1.5}.hyp{fill:#2c1d34;stroke:#b16ad0;stroke-width:1.5;stroke-dasharray:7 6}.ext{fill:#302912;stroke:#cda83e;stroke-width:1.5;stroke-dasharray:6 5}.flow{fill:none;stroke:#7899ba;stroke-width:2;marker-end:url(#a)}.green{fill:none;stroke:#4ec9b0;stroke-width:2.4;marker-end:url(#g)}.dash{fill:none;stroke:#b16ad0;stroke-width:2;stroke-dasharray:7 7;marker-end:url(#a)}.rule{stroke:#28465f;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <text x="70" y="66" class="title">Equity-Constrained Viability of Coupled P–W–T–SW Infrastructure</text>
+  <text x="70" y="99" class="sub">Observation → identification/UQ → dynamic interfaces → admissibility → viability → recovery → bounded intervention/design</text>
+
+  <text x="70" y="154" class="head">UPSTREAM INFERENCE</text>
+  <rect x="70" y="178" width="300" height="134" rx="18" class="obs"/>
+  <text x="92" y="211" class="head">Observations</text><text x="92" y="247" class="math">Y = H(X,Z;θ) + εY</text><text x="92" y="278" class="body">partial/noisy measurements</text><text x="92" y="298" class="tiny">[M] observation model · empirical data remain separate</text>
+  <rect x="398" y="178" width="330" height="134" rx="18" class="obs"/>
+  <text x="420" y="211" class="head">Inverse problem + UQ</text><text x="420" y="247" class="math">Dobs → p(𝒢, θ, Z | Dobs)</text><text x="420" y="278" class="body">identifiability · posterior uncertainty · model error</text><text x="420" y="298" class="tiny">boundary uncertainty is propagated, not hidden</text>
+  <path d="M370 245 L398 245" class="flow"/>
+
+  <text x="770" y="154" class="head">HYBRID MULTISCALE DYNAMICS</text>
+  <rect x="770" y="178" width="760" height="134" rx="18" class="dyn"/>
+  <text x="792" y="211" class="head">Continuous sectors + evolving interfaces + discrete operating mode</text>
+  <text x="792" y="247" class="math">Ẋ = F(X,Z,m,u,η;θ)    ·    ε Ż = G(X,Z,m,η;θ)    ·    m⁺ = Φ(X,Z,m,η)</text>
+  <text x="792" y="278" class="body">X = [XP, XW, XT, XSW]ᵀ · Z = interface state · η = realized hazard · u = intervention/control</text>
+  <text x="792" y="298" class="tiny">off-diagonal coupling means specified interface mechanism, not generic adjacency</text>
+  <path d="M728 245 L770 245" class="flow"/>
+
+  <line x1="70" y1="346" x2="1530" y2="346" class="rule"/>
+  <text x="70" y="390" class="head">CONSTRAINT GEOMETRY</text>
+  <rect x="70" y="414" width="450" height="132" rx="18" class="card"/>
+  <text x="92" y="447" class="head">Sustainable-equitable admissibility</text><text x="92" y="484" class="math">KR = Kphys ∩ Kservice ∩ Ksus ∩ Keq</text><text x="92" y="516" class="body">technical recovery does not imply admissible recovery</text><text x="92" y="537" class="tiny">constraints must be operationalized as measurable conditions</text>
+
+  <rect x="548" y="414" width="450" height="132" rx="18" class="viable"/>
+  <text x="570" y="447" class="head">Viability kernel</text><text x="570" y="481" class="math">𝒱R = {x₀∈KR : ∃u(·), X(t)∈KR ∀t≥0}</text><text x="570" y="516" class="body">central object: ∂𝒱R, the viability boundary</text><text x="570" y="537" class="tiny">depends on model, controls, disturbance and uncertainty assumptions</text>
+
+  <rect x="1026" y="414" width="504" height="132" rx="18" class="recover"/>
+  <text x="1048" y="447" class="head">Capture / recovery geometry</text><text x="1048" y="481" class="math">𝒞R = {x₀ : ∃u(·), ∃T&lt;∞, X(T)∈𝒱R}</text><text x="1048" y="510" class="math">τR(x₀) = inf{T : X(T)∈𝒱R}</text><text x="1048" y="537" class="tiny">viable | recoverable but nonviable | nonrecoverable</text>
+  <path d="M520 480 L548 480" class="green"/><path d="M998 480 L1026 480" class="green"/>
+
+  <text x="70" y="608" class="head">INTERFACE AND MODEL-ERROR DIAGNOSTICS</text>
+  <rect x="70" y="632" width="458" height="122" rx="18" class="card"/>
+  <text x="92" y="664" class="head">Dynamic vs static interface representation</text><text x="92" y="699" class="math">Δ𝒱 = dH(𝒱dynamic, 𝒱static)</text><text x="92" y="729" class="body">set-distance diagnostic; not called curvature</text>
+  <rect x="556" y="632" width="424" height="122" rx="18" class="card"/>
+  <text x="578" y="664" class="head">Timescale ratio</text><text x="578" y="699" class="math">ρij = τinterface,ij / τsystem</text><text x="578" y="729" class="body">tests fast · commensurate · slow interface regimes</text>
+  <rect x="1008" y="632" width="522" height="122" rx="18" class="card"/>
+  <text x="1030" y="664" class="head">Inverse-model viability error</text><text x="1030" y="699" class="math">Einv = dH[𝒱(θ★), 𝒱(θ̂)]</text><text x="1030" y="729" class="body">quantifies decision-relevant error in inferred viability geometry</text>
+
+  <rect x="70" y="790" width="900" height="78" rx="18" class="hyp"/>
+  <text x="92" y="819" class="head">[H] Differential-geometric extension — research hypothesis, not thesis premise</text>
+  <text x="92" y="849" class="math">formal metric/action on state space? → Γ → geodesic/action path? → curvature of ∂𝒱R?</text>
+  <rect x="998" y="790" width="532" height="78" rx="18" class="ext"/>
+  <text x="1020" y="819" class="head">Structured extensions</text><text x="1020" y="849" class="math">u → viability-preserving control · d → 𝒱R(d), 𝒞R(d)</text>
+  <path d="M970 829 L998 829" class="dash"/>
+
+  <text x="800" y="890" text-anchor="middle" class="tiny">Scientific invariant: observation ≠ simulation · verification ≠ validation · viable ≠ recoverable · source geometry ≠ infrastructure geometry without a formal transfer model</text>
+</svg>
