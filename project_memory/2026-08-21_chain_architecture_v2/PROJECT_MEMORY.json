@@ -15,15 +15,7 @@
     "upstream_support": ["observation", "interface_identification", "inverse_problems", "uncertainty_quantification"],
     "downstream_extensions": ["control", "design", "optimization", "decision"]
   },
-  "core_architecture": [
-    "D_obs",
-    "G_hat_theta_hat_Sigma_theta",
-    "F_dyn",
-    "K_R",
-    "V_R",
-    "C_R",
-    "U_recovery"
-  ],
+  "core_architecture": ["D_obs", "G_hat_theta_hat_Sigma_theta", "F_dyn", "K_R", "V_R", "C_R", "U_recovery"],
   "symbols": {
     "X": "coupled P-W-T-SW state",
     "Z": "dynamic interface state",
@@ -68,21 +60,9 @@
     "T1": "closest to P7"
   },
   "frameworks": {
-    "type_I": {
-      "name": "Theory-First",
-      "question": "What is mathematically possible?",
-      "current_role": "recommended central MSE philosophy"
-    },
-    "type_II": {
-      "name": "Inference-to-Decision / Digital-Twin Direction",
-      "question": "What is happening, what will happen, and what should be done now?",
-      "current_role": "upstream identification/UQ direction; digital-twin label requires actual update/calibration loop"
-    },
-    "type_III": {
-      "name": "Resilience-by-Design",
-      "question": "What should be built so acceptable behavior remains possible?",
-      "current_role": "limited downstream design demonstration if feasible"
-    }
+    "type_I": {"name": "Theory-First", "question": "What is mathematically possible?", "current_role": "recommended central MSE philosophy"},
+    "type_II": {"name": "Inference-to-Decision / Digital-Twin Direction", "question": "What is happening, what will happen, and what should be done now?", "current_role": "upstream identification/UQ direction; digital-twin label requires actual update/calibration loop"},
+    "type_III": {"name": "Resilience-by-Design", "question": "What should be built so acceptable behavior remains possible?", "current_role": "limited downstream design demonstration if feasible"}
   },
   "monte_carlo": {
     "frozen_logical_filename": "Thesis_Final_Unique_Papers_325_2026-08-20(1).csv",
@@ -106,18 +86,11 @@
     "core MSE architecture must be distinguished from broader design/decision program",
     "P1-P7 must be distinguished from historical H0-H7/T1 labels",
     "dataset suffix (1) logical lock and suffix (4) execution copy are byte-identical by SHA256",
-    "root README contains nu/nu_t where u/u_t is intended",
+    "an intermediate audit claim of literal \\nu/\\nu_t notation was retracted after recognizing connector newline-serialization ambiguity; no such source-file defect was verified",
     "GitHub final-run folder is an index/summary rather than every raw output file",
-    "v1 verbatim provenance was too broad and is superseded by stricter v2 classification"
+    "v1 verbatim provenance was too broad and is superseded by stricter v2 classification",
+    "the earlier root README listed a top-level data directory absent from the audited repository root and was aligned with actual provenance storage"
   ],
   "next_priority": "Deeply decompose Chain I sector-by-sector before freezing the coupled forward model",
-  "authority_order": [
-    "authoritative source artifact",
-    "exact transcript/source text",
-    "verified bibliographic/full-text evidence",
-    "corrected v2 memory",
-    "reconstructed assistant summary",
-    "superseded v1 memory",
-    "unaudited recollection"
-  ]
+  "authority_order": ["authoritative source artifact", "exact transcript/source text", "verified bibliographic/full-text evidence", "corrected v2 memory", "reconstructed assistant summary", "superseded v1 memory", "unaudited recollection"]
 }
