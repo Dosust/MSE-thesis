@@ -1,0 +1,123 @@
+{
+  "version": 2,
+  "snapshot_date": "2026-08-21",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "supersedes": "project_memory/2026-08-21_chain_architecture/",
+  "status": "working scientific architecture; not final thesis freeze",
+  "thesis": {
+    "working_title": "Mathematical Physics of Sustainable Infrastructure Resilience",
+    "precise_formulation": "Equity-Constrained Viability of Coupled Power–Water–Transportation–Solid-Waste Systems with Dynamic Interfaces under Climate Stress",
+    "sectors": ["power", "water_drainage", "transportation", "solid_waste"],
+    "primary_demonstrator": "urban flooding with waste–drainage–transport feedbacks",
+    "central_geometric_object": "partial_boundary_of_V_R",
+    "core_contribution": ["dynamic_coupling", "admissibility", "viability", "recovery"],
+    "upstream_support": ["observation", "interface_identification", "inverse_problems", "uncertainty_quantification"],
+    "downstream_extensions": ["control", "design", "optimization", "decision"]
+  },
+  "core_architecture": [
+    "D_obs",
+    "G_hat_theta_hat_Sigma_theta",
+    "F_dyn",
+    "K_R",
+    "V_R",
+    "C_R",
+    "U_recovery"
+  ],
+  "symbols": {
+    "X": "coupled P-W-T-SW state",
+    "Z": "dynamic interface state",
+    "m": "discrete operating/failure mode",
+    "u": "intervention/recovery control",
+    "xi": "exogenous climate forcing",
+    "eta": "realized local hazard/stress",
+    "theta": "uncertain physical/interface parameters",
+    "Y": "partial observations",
+    "K_R": "physical-service-sustainability-equity admissible set",
+    "V_R": "viability kernel",
+    "C_R": "recovery/capture set",
+    "tau_R": "minimum recovery-time map",
+    "d": "design vector"
+  },
+  "six_chains_compact": {
+    "I": ["Physics", "Structure", "Interfaces", "Dynamics"],
+    "II": ["Observe", "Identify", "Estimate", "Predict"],
+    "III": ["Hazard", "Failure", "Service Loss", "Consequences"],
+    "IV": ["Admissibility", "Viability", "Resilience", "Recovery", "Control"],
+    "V": ["Design", "Operate", "Maintain", "Restore", "Plan", "Adapt"],
+    "VI": ["Evaluate", "Trade off", "Decide", "Implement", "Learn"]
+  },
+  "formal_propositions": {
+    "P1": "dynamic interfaces materially alter resilience/viability geometry relative to static coupling",
+    "P2": "interface identifiability materially affects reliability of inferred viability",
+    "P3": "interface/system timescale ratios govern validity of static approximations",
+    "P4": "sustainability/equity constraints deform viability beyond technical-operability constraints",
+    "P5": "recovery geometry contains information not captured by viability alone",
+    "P6": "waste–drainage–flood feedback shifts coupled P-W-T-SW resilience boundaries",
+    "P7": "reduced models for decisions must preserve or conservatively bound viability conclusions"
+  },
+  "historical_hypothesis_crosswalk": {
+    "H0": "closest to P1",
+    "H1": "closest to P2",
+    "H2": "closest to P3",
+    "H3": "separate viability-boundary interface-criticality hypothesis; no exact P1-P7 equivalent",
+    "H4": "closest to P4",
+    "H5": "closest to P5",
+    "H6": "closest to P6",
+    "H7": "optional/legacy target; no exact current P1-P7 equivalent",
+    "T1": "closest to P7"
+  },
+  "frameworks": {
+    "type_I": {
+      "name": "Theory-First",
+      "question": "What is mathematically possible?",
+      "current_role": "recommended central MSE philosophy"
+    },
+    "type_II": {
+      "name": "Inference-to-Decision / Digital-Twin Direction",
+      "question": "What is happening, what will happen, and what should be done now?",
+      "current_role": "upstream identification/UQ direction; digital-twin label requires actual update/calibration loop"
+    },
+    "type_III": {
+      "name": "Resilience-by-Design",
+      "question": "What should be built so acceptable behavior remains possible?",
+      "current_role": "limited downstream design demonstration if feasible"
+    }
+  },
+  "monte_carlo": {
+    "frozen_logical_filename": "Thesis_Final_Unique_Papers_325_2026-08-20(1).csv",
+    "sha256": "047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f",
+    "expected_rows": 325,
+    "expected_columns": 34,
+    "scientific_records_final_four_criterion": 322,
+    "protocol_support_records": 3,
+    "official_seed": 20260820,
+    "official_runs": 50000,
+    "operational_k": 140,
+    "high_rigor_execution_copy": "Thesis_Final_Unique_Papers_325_2026-08-20(4).csv",
+    "high_rigor_robust_core": 80,
+    "full_run_results_robust_core": 75,
+    "full_vs_high_rigor_core_intersection": 73,
+    "comparative_controlling_interpretation": "FULL_RUN_RESULTS is closest to the literal frozen title-architecture formula; HIGH_RIGOR_RUN is sensitivity replication; EXECUTED is alternative-model stress test",
+    "epistemic_limit": "corpus-relative ranking only; does not prove global novelty or global literature completeness"
+  },
+  "known_corrections": [
+    "demonstrator must include transport feedback in canonical scope wording",
+    "core MSE architecture must be distinguished from broader design/decision program",
+    "P1-P7 must be distinguished from historical H0-H7/T1 labels",
+    "dataset suffix (1) logical lock and suffix (4) execution copy are byte-identical by SHA256",
+    "root README contains nu/nu_t where u/u_t is intended",
+    "GitHub final-run folder is an index/summary rather than every raw output file",
+    "v1 verbatim provenance was too broad and is superseded by stricter v2 classification"
+  ],
+  "next_priority": "Deeply decompose Chain I sector-by-sector before freezing the coupled forward model",
+  "authority_order": [
+    "authoritative source artifact",
+    "exact transcript/source text",
+    "verified bibliographic/full-text evidence",
+    "corrected v2 memory",
+    "reconstructed assistant summary",
+    "superseded v1 memory",
+    "unaudited recollection"
+  ]
+}
