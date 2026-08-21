@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PaperEvidenceRecord",
+  "type": "object",
+  "required": ["paper_id", "title", "doi", "full_text_status", "r1", "r2", "r3", "r4", "linkage", "tier", "evidence_records"],
+  "properties": {
+    "paper_id": {"type": "string"},
+    "title": {"type": "string", "minLength": 1},
+    "doi": {"type": "string"},
+    "year": {"type": ["integer", "null"]},
+    "journal": {"type": ["string", "null"]},
+    "full_text_status": {"enum": ["FULL READ", "TARGETED FULL-TEXT READ", "PARTIAL READ", "UNREADABLE", "FULL PDF NOT AVAILABLE", "DUPLICATE"]},
+    "study_design": {"type": ["string", "array", "null"], "items": {"type": "string"}},
+    "construction_object": {"type": ["string", "null"]},
+    "r1": {"type": "integer", "minimum": 0, "maximum": 3},
+    "r2": {"type": "integer", "minimum": 0, "maximum": 3},
+    "r3": {"type": "integer", "minimum": 0, "maximum": 3},
+    "r4": {"type": "integer", "minimum": 0, "maximum": 3},
+    "linkage": {"type": "integer", "minimum": 0, "maximum": 3},
+    "score_caps": {"type": "array", "items": {"type": "string"}},
+    "tier": {"enum": ["A", "B1", "B2", "B3", "EXCLUDE", "UNRESOLVED"]},
+    "relevance": {
+      "type": ["object", "null"],
+      "properties": {
+        "z1": {"type": "integer", "minimum": 0, "maximum": 3},
+        "z2": {"type": "integer", "minimum": 0, "maximum": 3},
+        "z3": {"type": "integer", "minimum": 0, "maximum": 3},
+        "z4": {"type": "integer", "minimum": 0, "maximum": 3},
+        "z5": {"type": "integer", "minimum": 0, "maximum": 3},
+        "raw_score": {"type": "number", "minimum": 0, "maximum": 15},
+        "weighted_score": {"type": "number", "minimum": 0, "maximum": 3}
+      }
+    },
+    "quality_score": {"type": ["integer", "null"], "minimum": 0, "maximum": 12},
+    "evidence_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "extracted_information", "provenance", "passage", "location", "interpretation", "score_implication", "confidence"],
+        "properties": {
+          "field": {"type": "string"},
+          "extracted_information": {"type": "string"},
+          "provenance": {"type": "array", "items": {"enum": ["G", "I", "A", "V", "M", "C", "NR", "U", "NA"]}},
+          "passage": {"type": "string"},
+          "location": {"type": "string"},
+          "interpretation": {"type": "string"},
+          "score_implication": {"type": "string"},
+          "confidence": {"enum": ["High", "Medium", "Low"]}
+        }
+      }
+    },
+    "second_review_status": {"enum": ["NOT REVIEWED", "CONFIRMED", "CHANGED", "UNRESOLVED"]},
+    "final_justification": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
