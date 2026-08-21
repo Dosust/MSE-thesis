@@ -17,7 +17,9 @@ A future chat should be able to recover, in a controlled order:
 7. the implemented repository code, schemas, mathematical art and QA;
 8. the exact current-segment user requests that drove this architecture;
 9. unresolved questions and the next scientifically valid actions;
-10. authenticity/provenance rules that prevent reconstructed material from being mislabeled as verbatim evidence.
+10. authenticity/provenance rules that prevent reconstructed material from being mislabeled as verbatim evidence;
+11. an explicit decision log separating frozen choices from recommendations;
+12. a chain-by-chain literature matrix with verification state.
 
 ## Read order for future chats
 
@@ -33,8 +35,10 @@ A future chat should be able to recover, in a controlled order:
 10. [`09_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md`](09_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md)
 11. [`10_AUTHENTICITY_AND_PROVENANCE.md`](10_AUTHENTICITY_AND_PROVENANCE.md)
 12. [`11_FUTURE_CHAT_BOOTSTRAP.md`](11_FUTURE_CHAT_BOOTSTRAP.md)
-13. [`PROJECT_MEMORY.yaml`](PROJECT_MEMORY.yaml)
-14. [`manifest.json`](manifest.json)
+13. [`12_DECISION_LOG.md`](12_DECISION_LOG.md)
+14. [`13_CHAIN_LITERATURE_MATRIX.csv`](13_CHAIN_LITERATURE_MATRIX.csv)
+15. [`PROJECT_MEMORY.yaml`](PROJECT_MEMORY.yaml)
+16. [`manifest.json`](manifest.json)
 
 ## Canonical scientific spine
 
