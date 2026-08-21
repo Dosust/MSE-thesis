@@ -13,7 +13,7 @@ Current role:
 - state/interface notation;
 - hybrid multiscale model;
 - P–W–T–SW coupling operator;
-- climate forcing and waste/drainage feedback;
+- climate forcing and waste/drainage/transport feedbacks;
 - admissibility;
 - viability/recovery geometry;
 - dynamic/static interface comparison;
@@ -23,11 +23,11 @@ Current role:
 - P1–P7 propositions;
 - evidence and computational architecture.
 
-### Known root-README issue discovered in this audit
+### Audit clarification
 
-The current root README contains `\nu` / `\nu_t` in places where the intended control variable is `u` / `u_t`, including the control-set and Type-I/Type-II formulas. This is a LaTeX-symbol typo because `\nu` renders Greek nu. The authoritative mathematical-foundation file uses `u` correctly. Future repository maintenance should correct the root README without changing the mathematical meaning.
+An intermediate audit note incorrectly interpreted connector-serialized newline sequences before `u` / `u_t` as literal LaTeX `\nu` / `\nu_t`. A direct repository search did not support that interpretation. The claim of a Greek-nu control-variable typo is therefore **retracted**.
 
-The authoritative thesis scope also describes the demonstrator as **urban flooding with waste–drainage–transport feedbacks**, whereas the root README's short demonstrator wording emphasizes drainage/waste and mentions the transport effect separately. The v2 memory uses the authoritative scope wording.
+The root README has nevertheless been improved to align its demonstrator wording and core-vs-extended architecture with `project/THESIS_SCOPE.md`.
 
 ## 2. Authoritative scientific specification
 
@@ -76,6 +76,12 @@ not a calibrated or validated P–W–T–SW model.
 Current functions include code/model/schema/figure consistency checks and Julia/Python smoke tests.
 
 Passing the workflow establishes software consistency under its tests, not scientific truth of P1–P7.
+
+Memory QA:
+
+`.github/workflows/project-memory-qa.yml`
+
+checks critical consistency between the v2 memory capsule and authoritative repository files.
 
 ## 6. Mathematical art
 
@@ -171,7 +177,7 @@ Corrected canonical v2:
 
 `project_memory/2026-08-21_chain_architecture_v2/`
 
-Root memory pointer should reference v2.
+Root memory pointer references v2.
 
 ## 13. Programming-language roles
 
