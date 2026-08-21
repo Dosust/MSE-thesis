@@ -1,0 +1,50 @@
+{
+  "canvas": {
+    "width": 2900,
+    "height": 2000,
+    "aspect_ratio": "29:20"
+  },
+  "colors": {
+    "background": "#121314",
+    "panelBackground": "#17191B",
+    "text": "#F0F2F4",
+    "mutedText": "#92999F",
+    "cyan": "#159EDB",
+    "blue": "#1A73BE",
+    "orange": "#F28C0A",
+    "red": "#D92929",
+    "magenta": "#BC2E8C",
+    "green": "#50B858",
+    "frame": "#383F45",
+    "guide": "#61666B"
+  },
+  "layout": {
+    "left_column_fraction": 0.27,
+    "center_column_fraction": 0.46,
+    "right_column_fraction": 0.27,
+    "bottom_foundations_fraction": 0.17,
+    "outer_margin_px": 50,
+    "panel_gap_px": 28
+  },
+  "typography": {
+    "title": "Helvetica/Arial/System Sans, 62–72 px, bold",
+    "section": "Helvetica/Arial/System Sans, 25–30 px, semibold",
+    "body": "Helvetica/Arial/System Sans, 18–22 px",
+    "formula": "Times/serif math, 20–25 px",
+    "annotations": "Helvetica/Arial/System Sans, 15–18 px italic"
+  },
+  "editable_layers": [
+    "background",
+    "title",
+    "left_sequence",
+    "left_spatial_graph",
+    "center_master_graph",
+    "right_causal_graph",
+    "right_secondary_graph",
+    "annotations",
+    "formulas",
+    "bottom_foundations",
+    "legend"
+  ],
+  "status_note": "Session-generated starting theme. Later fidelity review preferred open-field Wolfram-style composition over boxed/card-heavy layout."
+}
