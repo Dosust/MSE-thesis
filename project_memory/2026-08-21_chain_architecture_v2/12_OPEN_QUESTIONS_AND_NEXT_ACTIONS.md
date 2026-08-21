@@ -152,14 +152,16 @@ The three compared packages should be preserved/indexed together if not already 
 
 A final comparison package should preserve ranks/overlaps and method-compliance differences without averaging raw scores across incompatible models.
 
-## 13. Root README correction task
+## 13. Root README follow-up
 
-Known notation issue:
+The root README was revised during the v2 audit to:
 
-- `\nu` should be `u` in the viability-control set and Type-I mapping;
-- `\nu_t` should be `u_t` in Type-II mapping.
+- align the core MSE architecture with `project/THESIS_SCOPE.md`;
+- use the full **waste–drainage–transport feedbacks** demonstrator wording;
+- remove the stale/nonexistent root `data/` tree entry and describe raw-artifact storage through actual provenance records;
+- add the corrected v2 project-memory pointer.
 
-Also align the short demonstrator wording with `project/THESIS_SCOPE.md`: **urban flooding with waste–drainage–transport feedbacks**.
+A suspected `\nu`/`\nu_t` control-variable issue was **retracted** after recognizing that the connector's escaped newline representation could visually resemble `\nu`; repository search did not support the claim of a literal Greek-nu typo.
 
 ## 14. Figure-development task
 
