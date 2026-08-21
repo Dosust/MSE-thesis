@@ -1,0 +1,39 @@
+name: Project memory QA
+
+on:
+  push:
+    paths:
+      - 'project_memory/**'
+      - 'project/THESIS_SCOPE.md'
+      - 'project/MATHEMATICAL_FOUNDATION.md'
+      - 'project/SCIENTIFIC_PROPOSITIONS.md'
+      - 'config/scientific_propositions.yaml'
+      - 'prompts/PRISMA_Monte_Carlo_325_Single_Dataset_Master_Prompt.md'
+      - 'methods/monte_carlo/final_run_2026-08-20/README.md'
+      - 'README.md'
+      - '.github/workflows/project-memory-qa.yml'
+  pull_request:
+    paths:
+      - 'project_memory/**'
+      - 'project/THESIS_SCOPE.md'
+      - 'project/MATHEMATICAL_FOUNDATION.md'
+      - 'project/SCIENTIFIC_PROPOSITIONS.md'
+      - 'config/scientific_propositions.yaml'
+      - 'prompts/PRISMA_Monte_Carlo_325_Single_Dataset_Master_Prompt.md'
+      - 'methods/monte_carlo/final_run_2026-08-20/README.md'
+      - 'README.md'
+
+jobs:
+  validate-memory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate corrected project memory
+        run: python project_memory/2026-08-21_chain_architecture_v2/validate_memory.py
