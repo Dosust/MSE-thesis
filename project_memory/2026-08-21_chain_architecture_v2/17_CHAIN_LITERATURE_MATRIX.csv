@@ -1,0 +1,27 @@
+Chain,Layer,Mathematical_Object_or_Question,Representative_Anchor,DOI_or_Status,Use_in_Current_Thesis,Verification_State
+I,Interdependency taxonomy,"What kinds of cross-infrastructure dependence exist?",Rinaldi et al. 2001,10.1109/37.969131,"Foundational taxonomy and dependency framing",CARRIED_FORWARD_STABLE_ANCHOR
+I,Interdependent modeling,"How should interdependent critical infrastructure be modeled?",Ouyang 2014,10.1016/j.ress.2013.06.040,"Modeling-paradigm review",CARRIED_FORWARD_STABLE_ANCHOR
+I,Multilayer structure,"How is coupled topology represented?",Boccaletti et al. 2014,10.1016/j.physrep.2014.07.001,"Multilayer/network-of-networks structure and dynamics",CARRIED_FORWARD_STABLE_ANCHOR
+I,Multilayer structure,"Formal multilayer-network terminology",Kivela et al. 2014,10.1093/comnet/cnu016,"Formal representation",CARRIED_FORWARD_STABLE_ANCHOR
+I,Cascade physics,"How can interdependency alter systemic collapse?",Buldyrev et al. 2010,10.1038/nature08932,"Canonical interdependent-cascade precedent",CARRIED_FORWARD_STABLE_ANCHOR
+I,Interface topology,"Can cross-system interface architecture be a design variable?",Ouyang/Duenas-Osorio family,VERIFY_FROM_CORPUS,"Interface-topology/design precedent",NEEDS_EXACT_RECORD
+II,Bayesian inversion,"How is uncertainty over unknown parameters represented?",Stuart 2010,10.1017/S0962492910000061,"Bayesian inverse-problem foundation",CARRIED_FORWARD_STABLE_ANCHOR
+II,General inverse problems,"How are hidden causes/parameters inferred from observations?",Tarantola/inverse-problem foundation,VERIFY_EXACT_RECORD,"General inverse-problem theory",NEEDS_EXACT_RECORD
+II,Infrastructure identification,"Can infrastructure parameters/sources/interfaces be inferred from data?",Infrastructure inverse/system-ID corpus records,VERIFY_FROM_CORPUS,"Domain-specific P2/H1 precedent",NEEDS_EXACT_RECORD_AND_EVIDENCE_ANCHOR
+III,Cascades,"How does local failure propagate through dependencies?",Buldyrev et al. 2010,10.1038/nature08932,"Cascade precedent",CARRIED_FORWARD_STABLE_ANCHOR
+III,Hazard-failure cascades,"How is natural-hazard stress linked to infrastructure cascade risk?",Muehlhofer et al. 2023 family,VERIFY_FROM_CORPUS,"Hazard-to-cascade framing",NEEDS_EXACT_RECORD
+III,Fragility,"How does hazard intensity map to damage probability?",Sector-specific fragility literature,SECTOR_HAZARD_SPECIFIC,"Generic lognormal family only until sector model is frozen",MATHEMATICAL_TEMPLATE_NEEDS_EMPIRICAL_SOURCE
+IV,Viability computation,"How is a viability kernel approximated?",Approximation of the viability kernel,10.1007/BF01204182,"Numerical viability foundation",CARRIED_FORWARD_STABLE_ANCHOR
+IV,Nonautonomous viability,"How is viability formulated for time-varying differential inclusions?",Viability Problems for Nonautonomous Differential Inclusions,10.1137/0329014,"General viability foundation",CARRIED_FORWARD_NEEDS_FINAL_METADATA_CHECK
+IV,Viability survey,"What is the general viability-theory landscape?",A Survey of Viability Theory,"IDENTITY CONFLICT: 10.1137/0328044 vs 10.1137/0328045","General viability background",IDENTITY_CONFLICT_REVERIFY
+IV,HJ reachability,"How are controlled reachable sets computed through HJ equations?",Mitchell Bayen Tomlin 2005,10.1109/TAC.2005.851439,"HJ/HJI reachability foundation",CARRIED_FORWARD_STABLE_ANCHOR
+IV,Resilience performance,"How is degradation/recovery summarized in performance space?",Bruneau et al. 2003,10.1193/1.1623497,"Classical resilience-performance framing",CARRIED_FORWARD_STABLE_ANCHOR
+IV,Quantitative resilience,"How are performance/recovery curves quantified?",Cimellaro et al. 2010,10.1016/j.engstruct.2010.08.008,"Quantitative resilience precedent",CARRIED_FORWARD_STABLE_ANCHOR
+IV,Resilience review,"What definitions/measures exist across resilience research?",Hosseini et al. 2016,10.1016/j.ress.2015.08.006,"Definitions/measures synthesis",CARRIED_FORWARD_STABLE_ANCHOR
+V,Restoration scheduling,"How are repair/design actions scheduled under constraints?",Nurre et al. 2012,10.1016/j.ejor.2012.07.010,"Restoration/design optimization precedent",CARRIED_FORWARD_STABLE_ANCHOR
+V,Interdependent restoration,"How are dependencies/resources handled in joint restoration?",Cavdaroglu et al. family,VERIFY_FROM_CORPUS,"Interdependent restoration precedent",NEEDS_EXACT_RECORD
+V,Interdependent resilience/restoration,"How is recovery modeled in interdependent infrastructures?",Ouyang and Wang 2015,10.1016/j.ress.2015.03.011,"Restoration/resilience precedent",TITLE_AND_EVIDENCE_ANCHOR_REVERIFY
+V,Multiscale restoration,"How do multiple timescales and uncertainty affect water-power restoration?",Multi-timescale risk-averse restoration 2025,10.1016/j.ress.2025.111083,"Strong H2/H5 corpus-relative precedent",CLOSED_CORPUS_STABLE_RECORD
+VI,Equity,"How is equity incorporated into infrastructure resilience?",Coleman et al. 2024,10.1038/s44304-024-00022-x,"Equity dimensions and gap framing",TITLE_METADATA_REVERIFY_BEFORE_FINAL_BIBLIOGRAPHY
+VI,Sustainability-resilience tradeoff,"How do sustainability and climate-resilience objectives interact during recovery?",Transport infrastructure asset recovery 2023,10.1016/j.trd.2023.103800,"Strong H3/H4/H6 corpus-relative bridge",CLOSED_CORPUS_STABLE_RECORD
+VI,Planning/implementation,"How are resilience goals translated into community planning?",NIST Community Resilience Planning Guide,OFFICIAL_NIST_RECORD,"Planning/implementation context",USE_OFFICIAL_RECORD
