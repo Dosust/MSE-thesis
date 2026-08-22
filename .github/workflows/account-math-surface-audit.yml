@@ -1,0 +1,39 @@
+name: Account mathematics surface audit
+
+on:
+  push:
+    branches:
+      - codex/account-wide-math-surface-audit
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit GitHub mathematics
+        run: >-
+          python .github/math-surface/math_surface.py audit .
+          --format json
+          --output math-surface-audit.json
+          --fail-on none
+      - name: Print audit summary
+        run: >-
+          python -c "import json;
+          s=json.load(open('math-surface-audit.json', encoding='utf-8'))['summary'];
+          print(json.dumps(s, indent=2));
+          raise SystemExit(1 if s['by_confidence'].get('HIGH_CONFIDENCE', 0) else 0)"
+      - name: Retain audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: account-math-surface-audit-${{ github.sha }}
+          path: math-surface-audit.json
+          if-no-files-found: error

@@ -222,7 +222,7 @@ Transportation accessibility may affect waste-removal capacity and restoration l
 
 The admissible region is defined by intersection:
 
-$$
+```math
 \boxed{
 K_R
 =
@@ -234,7 +234,7 @@ K_{\mathrm{sus}}
 \cap
 K_{\mathrm{eq}}.
 }
-$$
+```
 
 Therefore a technically functioning trajectory is not automatically acceptable:
 
@@ -254,7 +254,7 @@ The sustainability and equity terms must ultimately be operationalized as explic
 
 For admissible controls $u(\cdot)\in\mathcal U$,
 
-$$
+```math
 \boxed{
 \mathcal V_R
 =
@@ -266,7 +266,7 @@ X(t;x_0,u,\eta,\theta)\in K_R
 \;\forall t\ge0
 \right\}.
 }
-$$
+```
 
 The research problem is therefore not merely to compute a resilience score, but to determine and explain the geometry of $\mathcal V_R$ and especially $\partial\mathcal V_R$.
 
@@ -278,7 +278,7 @@ A later finite-horizon, time-varying-admissibility, stochastic or nonanticipativ
 
 Viability and recovery are distinct:
 
-$$
+```math
 \boxed{
 \mathcal C_R
 =
@@ -289,11 +289,11 @@ x_0:
 X(T;x_0,u)\in\mathcal V_R
 \right\}.
 }
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \tau_R(x_0)
 =
@@ -303,7 +303,7 @@ T:
 X(T;x_0,u)\in\mathcal V_R
 \right\}.
 }
-$$
+```
 
 This produces three scientifically different state classes:
 
@@ -339,7 +339,7 @@ $$
 
 Boundary deformation can be quantified by a declared set-distance metric, for example
 
-$$
+```math
 \boxed{
 \Delta_{\mathcal V}
 =
@@ -348,18 +348,18 @@ d_H\left(
 \mathcal V_{\mathrm{static}}
 \right).
 }
-$$
+```
 
 The nondimensional timescale ratio
 
-$$
+```math
 \boxed{
 \rho_{ij}
 =
 \frac{\tau_{\mathrm{interface},ij}}
 {\tau_{\mathrm{system}}}
 }
-$$
+```
 
 motivates explicit tests of fast, commensurate, and slow interface regimes.
 
@@ -379,7 +379,7 @@ $$
 
 A central reliability diagnostic is the change in inferred viability produced by parameter/interface estimation error:
 
-$$
+```math
 \boxed{
 E_{\mathrm{inv}}
 =
@@ -388,7 +388,7 @@ d_H\left[
 \mathcal V(\widehat\theta)
 \right].
 }
-$$
+```
 
 When uncertainty is represented probabilistically, a natural extension is
 
@@ -402,12 +402,12 @@ $$
 
 A viability-preserving control set may be represented as
 
-$$
+```math
 \mathcal U_V(x)
 =
 \left\{u:F(x,u,\eta)\in T_{K_R}(x)
 \right\}
-$$
+```
 
 where the tangent-cone representation is used only where its assumptions are satisfied.
 
