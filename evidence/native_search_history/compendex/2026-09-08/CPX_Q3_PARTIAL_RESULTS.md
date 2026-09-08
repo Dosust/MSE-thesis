@@ -1,6 +1,6 @@
 # CPX-Q3 v1.1 partial native results — 2026-09-08
 
-Status: **IN PROGRESS**
+Status: **TEMPORAL BLOCK COMPLETE / UNION PENDING**
 
 Purpose: direct Power–Transportation timescales/delays.
 
@@ -22,7 +22,7 @@ New Q3 coupling/proximity atoms completed:
 | ZN2 | `((coupl* NEAR/5 system*) WN KY) AND (2000-2026 WN YR)` | 152,603 |
 | ZN3 | `((coupl* NEAR/5 infrastructure*) WN KY) AND (2000-2026 WN YR)` | 1,317 |
 
-Temporal block progress:
+Temporal block — COMPLETE:
 
 | Atom | Exact Engineering Village query | Native count |
 |---|---|---:|
@@ -39,15 +39,22 @@ Temporal block progress:
 | Tau11 | `({spatio-temporal} WN KY) AND (2000-2026 WN YR)` | 110,053 |
 | Tau12 | `(spatiotemporal WN KY) AND (2000-2026 WN YR)` | 124,769 |
 | Tau13 | `({recovery trajector*} WN KY) AND (2000-2026 WN YR)` | 543 |
+| Tau14 | `({restoration curve*} WN KY) AND (2000-2026 WN YR)` | 42 |
+| Tau15 | `({service restoration} WN KY) AND (2000-2026 WN YR)` | 1,538 |
+| Tau16 | `({scheduling horizon} WN KY) AND (2000-2026 WN YR)` | 409 |
 
-Temporal completion: **13/16 atoms**.
+Temporal completion: **16/16 atoms**.
 
-Do not infer Search History numbers from this file. A current Search History screenshot/export is still required before building unions with session-local #IDs.
+## Next required action
 
-Next required temporal atoms, in order:
+Do **not** guess Search History numbers. Obtain a current Engineering Village **Search History screenshot or export** that maps the active searches to session-local `#IDs`.
 
-1. `({restoration curve*} WN KY) AND (2000-2026 WN YR)`
-2. `({service restoration} WN KY) AND (2000-2026 WN YR)`
-3. `({scheduling horizon} WN KY) AND (2000-2026 WN YR)`
+Then build:
 
-After all 16 temporal atoms are complete, create the Tau union and only then form final `Q3 = P ∩ T ∩ Z_Q3 ∩ R ∩ Tau` using the actual current Search History IDs.
+1. `Z_Q3 = Z0 OR ZN1 OR ZN2 OR ZN3`
+2. `Tau = Tau1 OR Tau2 OR ... OR Tau16`
+3. Final `Q3 = P AND T AND Z_Q3 AND R AND Tau`
+
+If Engineering Village rejects the 16-way Tau OR, stage it as smaller exact unions and then OR those staged unions. This remains an execution-only decomposition; do not change any frozen terms.
+
+After the final native Q3 result is obtained, record native N, export the complete detailed-record CSV, hash it, run the deterministic development/validation pilot, verify the prospective anchor `10.1016/j.ijepes.2022.108180`, calculate Wilson intervals, and make the freeze decision.
