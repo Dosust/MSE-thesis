@@ -57,6 +57,45 @@ Sustainability transformation bridge:
 ## Central causal chain
 `HAZARD -> CAUSAL EVENT -> CROSS-LAYER INTERFACE -> HYBRID MULTISCALE PROPAGATION -> INFORMATION/ORGANIZATION FEEDBACK -> CONTROL -> VIABILITY -> RESILIENCE-TO-SUSTAINABILITY TRANSLATION -> SUSTAINABLE TRANSFORMATION`
 
+## CANONICAL EMPIRICAL DATA STRATEGY
+
+Dedicated record:
+`project_memory/2026-09-09_final_framework/02_CANONICAL_DATASET_DATABASE_STRATEGY.md`
+
+**Status:** canonical data strategy from 2026-09-09 onward, subordinate to the final seven-stage framework.
+
+Preferred empirical design:
+
+`California-centered multi-source, multi-rate data fusion`
+
+Primary sources:
+- Caltrans PeMS — transportation state, incidents, closures, propagation and recovery.
+- ORNL EAGLE-I — county-level power outage and restoration trajectories.
+- CAISO OASIS — bulk-power operating context, demand and transmission outage/capacity status.
+- CEC EV-CARR + DOE/NREL AFDC — charging infrastructure and direct Power–Transportation interface evidence.
+- NOAA Storm Events + Event Footprint Catalog — disturbance `h(x,t)` and event timing/footprints.
+- DOE-417 — event-level cause, impact, response/restoration evidence.
+
+Supporting sources:
+- FEMA TEMPO/POST — cross-infrastructure impact validation.
+- OpenFEMA Public Assistance — organizational recovery/investment evidence.
+- FCC Broadband Data Collection — structural information/communications availability proxy.
+
+Sustainability translation:
+- EPA eGRID — electricity emissions/generation characteristics.
+- DOE/Argonne R&D GREET — lifecycle energy, emissions, air-pollutant and water implications of transformation pathways.
+
+Controlled benchmark:
+- 47-node transportation + modified IEEE 69-bus distribution dataset — mathematical/model verification only, not empirical validation.
+
+Data governance rules:
+1. No dataset is allowed to redefine the thesis framework.
+2. Do not merge unrelated datasets as an observed coupled system unless event, space and time overlap are demonstrated.
+3. Use asynchronous/multi-rate observation models rather than false interpolation across incompatible temporal scales.
+4. Structural/administrative proxies must not be reported as direct dynamic `I(t)` or `O(t)` states without justification.
+5. Correlation is not accepted as a cross-layer causal mechanism without temporal precedence, spatial plausibility, mechanism, lag consistency, confounder control, baseline/counterfactual comparison and robustness testing.
+6. Stages 6–7 use resilience outputs as inputs to sustainability transformation; sustainability data do not alter Stages 1–5.
+
 ## Systematic-review architecture
 PRISMA is the evidence system, not the resilience model.
 
