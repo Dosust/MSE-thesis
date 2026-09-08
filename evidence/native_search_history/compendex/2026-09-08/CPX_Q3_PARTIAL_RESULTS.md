@@ -1,6 +1,6 @@
 # CPX-Q3 v1.1 partial native results — 2026-09-08
 
-Status: **IN PROGRESS — all atomic searches complete; union/final combination pending**
+Status: **IN PROGRESS — all atomic searches complete; Z_Q3 union complete; temporal union/final combination pending**
 
 Purpose: direct Power–Transportation timescales/delays.
 
@@ -24,11 +24,17 @@ Frozen Q0 blocks:
 
 Current old Z block: `#29`.
 
-Construct:
+Executed:
 
 ```text
 #29 OR #33 OR #34 OR #35
 ```
+
+Result:
+
+`Z_Q3 = 431,898 records`
+
+This is the expanded Q3 interdependency/coupling block and is valid.
 
 ## Temporal block — complete 16/16
 
@@ -51,7 +57,7 @@ Construct:
 | Tau15 | #49 | `({service restoration} WN KY) AND (2000-2026 WN YR)` | 1,538 |
 | Tau16 | #50 | `({scheduling horizon} WN KY) AND (2000-2026 WN YR)` | 409 |
 
-Construct:
+Next construct:
 
 ```text
 #32 OR #36 OR #37 OR #38 OR #39 OR #40 OR #41 OR #42 OR #43 OR #44 OR #45 OR #46 OR #47 OR #48 OR #49 OR #50
@@ -66,7 +72,7 @@ Construct:
 The standalone Power union is no longer visible in the 50-search history and must be recreated before final Q3.
 
 ## Safe next sequence
-1. Create `Z_Q3` union.
+1. `Z_Q3` union — COMPLETE, N=431,898.
 2. Create `Tau` union.
 3. While `#4` is still active, create `T ∩ R ∩ Z_Q3 ∩ Tau`.
 4. Recreate Power union and verify N=504,675.
