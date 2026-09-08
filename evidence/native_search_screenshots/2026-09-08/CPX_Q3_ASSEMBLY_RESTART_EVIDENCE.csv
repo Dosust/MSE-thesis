@@ -1,0 +1,2 @@
+step,exact_query,native_count,original_filename,bytes,sha256,status,notes
+FreshSession_PowerGrid,"({power grid*} WN KY) AND (2000-2026 WN YR)",130964,8ad26f74-00b1-4172-ab96-e7bffc3378c7.png,414002,368cc039c345ce8759d433e7c1f23e97a884a059efa8c3ac65cd7fe3a47fc903,VERIFIED_SCREENSHOT,"Fresh Engineering Village session confirmed after stale SEARCHID failure; count matches prior frozen atom."
