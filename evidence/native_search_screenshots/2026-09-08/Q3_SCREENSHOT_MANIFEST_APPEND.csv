@@ -1,0 +1,5 @@
+sequence,original_filename,bytes,sha256,classification,run,query,result_count
+79,e3adf568-897d-4aa8-9fc4-e6f217fe2ee2.png,459920,a7ebd923618c9829b669d8789e3ce7989621d7352b873d44c676f276d92bf876,database-search screenshot,CPX-Q3 v1.1,(timescale* WN KY) AND (2000-2026 WN YR),59943
+80,6217b8d1-8915-4804-bda8-a30f83f1ba24.png,498122,7b4b55ca0928fe925a956f3fae360e03683d2408ec52a34d4438422188ab3010,database-search screenshot,CPX-Q3 v1.1,((coupl* NEAR/5 network*) WN KY) AND (2000-2026 WN YR),32465
+81,bd8d7b6d-d95b-4711-acf8-fe35bacece91.png,476807,34346c05e4228fc5e2a52002c0bb07eca608b2a81757ef55e24acc1b75f8c0ce,database-search screenshot,CPX-Q3 v1.1,((coupl* NEAR/5 system*) WN KY) AND (2000-2026 WN YR),152603
+82,fc29aa57-b7f7-43a4-b3c3-6f96fc40a537.png,498379,5795704ba10615c00e7708c7add83c3a90642b7ec4e49f7712e5472d9e947090,database-search screenshot,CPX-Q3 v1.1,((coupl* NEAR/5 infrastructure*) WN KY) AND (2000-2026 WN YR),1317
