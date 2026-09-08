@@ -1,25 +1,48 @@
-# Canonical thesis + systematic-review state — 2026-09-08
+# Canonical thesis + systematic-review state — updated 2026-09-09
 
 ## Thesis title
 **Dynamic Physical–Organizational Resilience of Interdependent Power–Transportation Systems: Causal Events, Timescales, Critical Transitions, and Viability**
 
+## FINAL CANONICAL THESIS FRAMEWORK
+
+**Status:** FINAL / CANONICAL from 2026-09-09 onward until explicitly changed by the author.
+
+| Stage | Role | Main question |
+|---|---|---|
+| **1. Multilayer Structure** | P–T–I–O architecture | **What exists?** |
+| **2. Causal Mechanisms** | Cross-layer cause-effect pathways | **Why does disruption propagate?** |
+| **3. Coupled Hybrid Multiscale Dynamics** | Coupling + continuous dynamics + discrete events + timescales | **How and when does it evolve?** |
+| **4. Feedback & Control** | Information, organization, decisions, intervention | **How does the system respond?** |
+| **5. Viability** | Survival/recoverability under constraints | **Can it survive?** |
+| **6. Resilience-to-Sustainability Transformation Interface** | Translate resilience findings into transformation requirements | **What do the resilience results imply for sustainability?** |
+| **7. Sustainable Transformation Pathways** | Technical, organizational, environmental and policy transformation | **What should be changed for long-term sustainability?** |
+
+Canonical flow:
+`Multilayer Structure -> Causal Mechanisms -> Coupled Hybrid Multiscale Dynamics -> Feedback & Control -> Viability -> Resilience-to-Sustainability Transformation Interface -> Sustainable Transformation Pathways`
+
+Governance rule: **Stages 1–5 remain the core resilience framework. Sustainability is connected downstream through Stages 6–7 and must not be inserted inside or used to rename/reorder Stages 1–5 unless the author explicitly requests a change.**
+
+Dedicated framework record:
+`project_memory/2026-09-09_final_framework/FINAL_FRAMEWORK.md`
+
 ## Scientific framing
-Resilience is treated as the existence, geometry, and control of admissible trajectories under disturbance.
+Resilience is treated as the causal, temporal, hybrid-dynamical, feedback-controlled viability of the interdependent Power–Transportation system, with information and organization represented explicitly.
 
 State:
-`Y(t) = [X(t), Z(t), I(t), O(t)]^T`
+`Y(t) = [X_P(t), X_T(t), Z(t), I(t), O(t)]^T`
 
-with physical states `X`, interdependency/interface states `Z`, information/observability `I`, and organizational capability `O`.
+with physical Power and Transportation states `X_P, X_T`, interdependency/interface states `Z`, information/observability `I`, and organizational capability `O`.
 
 Core dynamics:
-- `dX/dt = F_X(X,Z,O,u,h)`
-- `dZ/dt = F_Z(X,Z,I,O,u,h)`
-- `dI/dt = F_I(I,X,Z,h)`
-- `dO/dt = F_O(O,I,X,h)`
-- `u = pi(O, X_hat)`
+- `dY/dt = F_q(Y,u,h;theta,tau)` between events
+- `Y(t_k+) = J_{e_k}(Y(t_k-))` at discrete events
+- `u = pi(O,I,X_hat)`
 
-Event jump:
-`Y(t_k+) = J_k(Y(t_k-), e_k)`
+Causal mechanism:
+`e_i^(alpha) --[z_ij^(alpha beta), tau_ij]--> e_j^(beta)`
+
+Core feedback:
+`X -> I -> O -> u -> X`
 
 Timescale ratio:
 `Gamma = tau_response / tau_cascade`
@@ -27,13 +50,12 @@ Timescale ratio:
 Viability:
 `K = K_phys ∩ K_service ∩ K_org ∩ K_sus`
 `V = Viab(K)`
-`rho_V = d(Y, partial V)`
 
-Control:
-`max rho_V` subject to intervention budget/cost constraints.
+Sustainability transformation bridge:
+`Resilience outputs -> Phi_sus -> Sustainable transformation requirements -> Technical/organizational/environmental/policy pathways`
 
 ## Central causal chain
-`HAZARD -> INTERDEPENDENCY -> PROPAGATION -> ORGANIZATIONAL RESPONSE -> FEEDBACK -> EMERGENT STATE -> VIABILITY -> INTERVENTION`
+`HAZARD -> CAUSAL EVENT -> CROSS-LAYER INTERFACE -> HYBRID MULTISCALE PROPAGATION -> INFORMATION/ORGANIZATION FEEDBACK -> CONTROL -> VIABILITY -> RESILIENCE-TO-SUSTAINABILITY TRANSLATION -> SUSTAINABLE TRANSFORMATION`
 
 ## Systematic-review architecture
 PRISMA is the evidence system, not the resilience model.
