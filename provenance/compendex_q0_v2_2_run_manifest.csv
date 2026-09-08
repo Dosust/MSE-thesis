@@ -1,0 +1,2 @@
+run_id,database,family,version,purpose,native_mode,year_rule,native_N,export_N,canonical_unique_N,sha256,dev_result,val_result,anchor_sensitivity,decision,deviation,next_run
+CPX-Q0,Compendex / Engineering Village,Q0,v2.2,Direct Power-Transportation resilience,Expert Search / KY / Search History decomposition,2000-2026,245,245,245,2c15662b02f27a085dc39f50245d33c4f2166c63839050feb8fc2eb22f7816a8,20/30=66.7% Wilson 48.8-80.8%,16/30=53.3% Wilson 36.1-69.8%,3/3=100%,FREEZE,RD-CPX-Q0-SET-01,CPX-Q3 v1.1

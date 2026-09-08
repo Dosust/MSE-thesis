@@ -1,0 +1,52 @@
+Block,Atom,Session_Search_ID,Term,Exact_Query,Native_Count,Status,Notes
+P,P1,#1,power grid*,({power grid*} WN KY) AND (2000-2026 WN YR),130964,VALID,
+P,P2,#2,electric grid*,({electric grid*} WN KY) AND (2000-2026 WN YR),6633,VALID,
+P,P3,#3,electric power system*,({electric power system*} WN KY) AND (2000-2026 WN YR),185295,VALID,
+P,P4,#4,distribution network*,({distribution network*} WN KY) AND (2000-2026 WN YR),81872,VALID,
+P,P5,#6,power distribution system*,({power distribution system*} WN KY) AND (2000-2026 WN YR),9391,VALID,
+P,P6,#7,power system*,({power system*} WN KY) AND (2000-2026 WN YR),362863,VALID,
+P,P4-DUP,#5,distribution network*,({distribution network*} WN KY) AND (2000-2026 WN YR),81872,DUPLICATE,Duplicate diagnostic run; exclude from union.
+P,P-UNION,#8,Power union,P1 OR P2 OR P3 OR P4 OR P5 OR P6,504675,VALID_FINAL_BLOCK,Correct Power block.
+T,T1,#9,transportation system*,({transportation system*} WN KY) AND (2000-2026 WN YR),56871,VALID,
+T,T2,#10,transport system*,({transport system*} WN KY) AND (2000-2026 WN YR),26483,VALID,
+T,T3,#12,transportation network*,({transportation network*} WN KY) AND (2000-2026 WN YR),14246,VALID,
+T,T4,#13,transport network*,({transport network*} WN KY) AND (2000-2026 WN YR),11445,VALID,
+T,T5,#14,road network*,({road network*} WN KY) AND (2000-2026 WN YR),27570,VALID,
+T,T6,#15,traffic network*,({traffic network*} WN KY) AND (2000-2026 WN YR),7502,VALID,
+T,T7,#16,traffic system*,({traffic system*} WN KY) AND (2000-2026 WN YR),6653,VALID,
+T,T8,#17,rail network*,({rail network*} WN KY) AND (2000-2026 WN YR),2377,VALID,
+T,T9,#18,railway*,(railway* WN KY) AND (2000-2026 WN YR),96933,VALID,
+T,T10,#19,electric vehicle*,({electric vehicle*} WN KY) AND (2000-2026 WN YR),146388,VALID,
+T,T11,#20,EV charging,({EV charging} WN KY) AND (2000-2026 WN YR),14514,VALID,
+T,T12,#21,charging station*,({charging station*} WN KY) AND (2000-2026 WN YR),20633,VALID,
+T,T2-DUP,#11,transport system*,({transport system*} WN KY) AND (2000-2026 WN YR),26483,DUPLICATE,Duplicate diagnostic run; exclude from union.
+T,T-UNION-BAD-1,#22,Incorrect Transportation union,Duplicated transport system*; omitted charging station*,372049,INVALID_DIAGNOSTIC,Do not use.
+T,T-UNION-BAD-2,#23,Incorrect Transportation union,Duplicated transport system*; omitted charging station*,372049,INVALID_DIAGNOSTIC,Do not use.
+T,T-UNION,#24,Transportation union,T1 OR T2 OR T3 OR T4 OR T5 OR T6 OR T7 OR T8 OR T9 OR T10 OR T11 OR T12,375268,VALID_FINAL_BLOCK,All 12 unique terms exactly once.
+Z,Z1,#26,interdepend*,(interdepend* WN KY) AND (2000-2026 WN YR),46753,VALID,
+Z,Z2,#27,coupled system*,({coupled system*} WN KY) AND (2000-2026 WN YR),21399,VALID,
+Z,Z3,#28,coupled network*,({coupled network*} WN KY) AND (2000-2026 WN YR),1847,VALID,
+Z,Z4,#37,interconnected infrastructure*,({interconnected infrastructure*} WN KY) AND (2000-2026 WN YR),197,VALID,
+Z,Z5,#38,multilayer,(multilayer WN KY) AND (2000-2026 WN YR),195849,VALID,
+Z,Z6,#39,system of systems,({system of systems} WN KY) AND (2000-2026 WN YR),7240,VALID,
+Z,Z7,#40,cross-sector*,(cross-sector* WN KY) AND (2000-2026 WN YR),3333,VALID,
+Z,Z8,#41,power-transportation,({power-transportation} WN KY) AND (2000-2026 WN YR),469,VALID,
+Z,Z9,#47,power transportation,({power transportation} WN KY) AND (2000-2026 WN YR),469,VALID,
+Z,Z10,#42,power-traffic,({power-traffic} WN KY) AND (2000-2026 WN YR),144,VALID,
+Z,Z11,#43,traffic-electric power,({traffic-electric power} WN KY) AND (2000-2026 WN YR),8,VALID,
+Z,Z12,#48,transportation-electric power,({transportation-electric power} WN KY) AND (2000-2026 WN YR),64,VALID,
+Z,Z1-DUP,#25,interdepend*,(interdepend* WN KY) AND (2000-2026 WN YR),46753,DUPLICATE,Duplicate diagnostic run; exclude from union.
+Z,Z-UNION,#49,Interdependency union,Z1 OR Z2 OR Z3 OR Z4 OR Z5 OR Z6 OR Z7 OR Z8 OR Z9 OR Z10 OR Z11 OR Z12,275522,VALID_FINAL_BLOCK,Correct Z block.
+R,R1,#44,resilien*,(resilien* WN KY) AND (2000-2026 WN YR),219547,VALID,
+R,R2,#45,restoration,(restoration WN KY) AND (2000-2026 WN YR),126913,VALID,
+R,R3,#46,disaster recovery,({disaster recovery} WN KY) AND (2000-2026 WN YR),4154,VALID,
+R,R4,#29,post-disaster,({post-disaster} WN KY) AND (2000-2026 WN YR),6331,VALID,
+R,R5,#30,service recovery,({service recovery} WN KY) AND (2000-2026 WN YR),583,VALID,
+R,R6,#31,load restoration,({load restoration} WN KY) AND (2000-2026 WN YR),808,VALID,
+R,R7,#33,cascading,(cascading WN KY) AND (2000-2026 WN YR),27577,VALID,
+R,R8,#34,failure propagation,({failure propagation} WN KY) AND (2000-2026 WN YR),1312,VALID,
+R,R9,#35,disruption*,(disruption* WN KY) AND (2000-2026 WN YR),94413,VALID,
+R,R10,#36,robustness,(robustness WN KY) AND (2000-2026 WN YR),623841,VALID,
+R,R8-DUP,#32,failure propagation,({failure propagation} WN KY) AND (2000-2026 WN YR),1312,DUPLICATE,Duplicate diagnostic run; exclude from union.
+R,R-UNION,#50,Resilience union,R1 OR R2 OR R3 OR R4 OR R5 OR R6 OR R7 OR R8 OR R9 OR R10,1056435,VALID_FINAL_BLOCK,Created as staged union to avoid parser error.
+Q0,FINAL,#51*,P ∩ T ∩ Z ∩ R,#8 AND #24 AND #49 AND #50,245,FROZEN,Final native Q0 result. Search-history numbers are session-local; scientific definition is the four-block intersection.
