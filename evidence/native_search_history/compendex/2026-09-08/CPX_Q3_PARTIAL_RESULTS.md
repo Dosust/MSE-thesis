@@ -35,19 +35,19 @@ Temporal block progress:
 | Tau7 | `({restoration time*} WN KY) AND (2000-2026 WN YR)` | 1,167 |
 | Tau8 | `({propagation time*} WN KY) AND (2000-2026 WN YR)` | 3,663 |
 | Tau9 | `({recovery time*} WN KY) AND (2000-2026 WN YR)` | 25,012 |
+| Tau10 | `({travel time*} WN KY) AND (2000-2026 WN YR)` | 36,257 |
+| Tau11 | `({spatio-temporal} WN KY) AND (2000-2026 WN YR)` | 110,053 |
+| Tau12 | `(spatiotemporal WN KY) AND (2000-2026 WN YR)` | 124,769 |
+| Tau13 | `({recovery trajector*} WN KY) AND (2000-2026 WN YR)` | 543 |
 
-Temporal completion: **9/16 atoms**.
+Temporal completion: **13/16 atoms**.
 
 Do not infer Search History numbers from this file. A current Search History screenshot/export is still required before building unions with session-local #IDs.
 
 Next required temporal atoms, in order:
 
-1. `({travel time*} WN KY) AND (2000-2026 WN YR)`
-2. `({spatio-temporal} WN KY) AND (2000-2026 WN YR)`
-3. `(spatiotemporal WN KY) AND (2000-2026 WN YR)`
-4. `({recovery trajector*} WN KY) AND (2000-2026 WN YR)`
-5. `({restoration curve*} WN KY) AND (2000-2026 WN YR)`
-6. `({service restoration} WN KY) AND (2000-2026 WN YR)`
-7. `({scheduling horizon} WN KY) AND (2000-2026 WN YR)`
+1. `({restoration curve*} WN KY) AND (2000-2026 WN YR)`
+2. `({service restoration} WN KY) AND (2000-2026 WN YR)`
+3. `({scheduling horizon} WN KY) AND (2000-2026 WN YR)`
 
 After all 16 temporal atoms are complete, create the Tau union and only then form final `Q3 = P ∩ T ∩ Z_Q3 ∩ R ∩ Tau` using the actual current Search History IDs.
