@@ -1,6 +1,26 @@
 # Project Memory Entry Point
 
-For high-rigor continuation of the MSE thesis in future chats, use the **corrected canonical v2 memory capsule**:
+## Current framework authority — 2026-09-09
+
+For the **current thesis framework architecture and all framework figures**, start with:
+
+1. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
+2. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+3. [`project_memory/2026-09-09_canonical_7_stage_framework/00_CANONICAL_STATE.md`](project_memory/2026-09-09_canonical_7_stage_framework/00_CANONICAL_STATE.md)
+
+The governing representation rule is:
+
+```math
+\boxed{\textbf{CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.}}
+```
+
+These files take precedence when an older memory, figure, generated image, or repository description conflicts with the current seven-stage framework or its exact figure content.
+
+---
+
+## Historical corrected v2 memory capsule
+
+For high-rigor continuation of the earlier MSE thesis development, evidence, provenance, and historical chain architecture, use the **corrected canonical v2 memory capsule**:
 
 [`project_memory/2026-08-21_chain_architecture_v2/README.md`](project_memory/2026-08-21_chain_architecture_v2/README.md)
 
@@ -21,7 +41,7 @@ Full correction record:
 
 ## Fast future-chat recovery
 
-Start with:
+For the **current framework**, start with the 2026-09-09 files listed above. For historical evidence/provenance context, continue with:
 
 1. [`00_CANONICAL_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/00_CANONICAL_STATE.md)
 2. [`01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md`](project_memory/2026-08-21_chain_architecture_v2/01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md)
@@ -33,6 +53,6 @@ Start with:
 
 ## Authority rule
 
-Memory provides **high recall**. Scientific authority remains with the original source artifacts, exact transcript/source text, verified literature/evidence records, code, datasets, prompts and provenance files.
+Memory provides **high recall**. Scientific authority remains with the original source artifacts, exact transcript/source text, verified literature/evidence records, code, datasets, prompts and provenance files. For the **current seven-stage framework architecture and its visual representation**, the 2026-09-09 canonical framework and visual-fidelity files are the controlling specifications.
 
-The first capsule remains preserved at `project_memory/2026-08-21_chain_architecture/` for provenance but is superseded for future recall.
+The first capsule remains preserved at `project_memory/2026-08-21_chain_architecture/` for provenance but is superseded for future recall by the corrected v2 capsule, except where the later 2026-09-09 framework authority explicitly supersedes framework architecture/figure content.
