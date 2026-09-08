@@ -31,21 +31,23 @@ Temporal block progress:
 | Tau3 | `(delay* WN KY) AND (2000-2026 WN YR)` | 657,847 |
 | Tau4 | `(temporal WN KY) AND (2000-2026 WN YR)` | 674,488 |
 | Tau5 | `({response time*} WN KY) AND (2000-2026 WN YR)` | 102,263 |
+| Tau6 | `({repair time*} WN KY) AND (2000-2026 WN YR)` | 2,826 |
+| Tau7 | `({restoration time*} WN KY) AND (2000-2026 WN YR)` | 1,167 |
+| Tau8 | `({propagation time*} WN KY) AND (2000-2026 WN YR)` | 3,663 |
+| Tau9 | `({recovery time*} WN KY) AND (2000-2026 WN YR)` | 25,012 |
 
-Do not infer Search History numbers from this file. The user has not yet supplied a current Search History screenshot/export mapping these atoms to session-local #IDs.
+Temporal completion: **9/16 atoms**.
+
+Do not infer Search History numbers from this file. A current Search History screenshot/export is still required before building unions with session-local #IDs.
 
 Next required temporal atoms, in order:
 
-1. `({repair time*} WN KY) AND (2000-2026 WN YR)`
-2. `({restoration time*} WN KY) AND (2000-2026 WN YR)`
-3. `({propagation time*} WN KY) AND (2000-2026 WN YR)`
-4. `({recovery time*} WN KY) AND (2000-2026 WN YR)`
-5. `({travel time*} WN KY) AND (2000-2026 WN YR)`
-6. `({spatio-temporal} WN KY) AND (2000-2026 WN YR)`
-7. `(spatiotemporal WN KY) AND (2000-2026 WN YR)`
-8. `({recovery trajector*} WN KY) AND (2000-2026 WN YR)`
-9. `({restoration curve*} WN KY) AND (2000-2026 WN YR)`
-10. `({service restoration} WN KY) AND (2000-2026 WN YR)`
-11. `({scheduling horizon} WN KY) AND (2000-2026 WN YR)`
+1. `({travel time*} WN KY) AND (2000-2026 WN YR)`
+2. `({spatio-temporal} WN KY) AND (2000-2026 WN YR)`
+3. `(spatiotemporal WN KY) AND (2000-2026 WN YR)`
+4. `({recovery trajector*} WN KY) AND (2000-2026 WN YR)`
+5. `({restoration curve*} WN KY) AND (2000-2026 WN YR)`
+6. `({service restoration} WN KY) AND (2000-2026 WN YR)`
+7. `({scheduling horizon} WN KY) AND (2000-2026 WN YR)`
 
 After all 16 temporal atoms are complete, create the Tau union and only then form final `Q3 = P ∩ T ∩ Z_Q3 ∩ R ∩ Tau` using the actual current Search History IDs.
