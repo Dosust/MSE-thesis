@@ -1,0 +1,23 @@
+Block,Atom,Expected_Order,Exact_Query,Native_Count,Search_History_ID,Status,Notes
+Z_Q3,ZP1,1,"((coupl* NEAR/5 network*) WN KY) AND (2000-2026 WN YR)",,,PENDING,Q3-only proximity atom
+Z_Q3,ZP2,2,"((coupl* NEAR/5 system*) WN KY) AND (2000-2026 WN YR)",,,PENDING,Q3-only proximity atom
+Z_Q3,ZP3,3,"((coupl* NEAR/5 infrastructure*) WN KY) AND (2000-2026 WN YR)",,,PENDING,Q3-only proximity atom
+Z_Q3,Z-UNION,4,"Z_Q0 OR ZP1 OR ZP2 OR ZP3",,,PENDING,Reuse frozen Q0 Z block
+Tau,Tau1,5,"(timescale* WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau2,6,"({time scale*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau3,7,"(delay* WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau4,8,"(temporal WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau5,9,"({response time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau6,10,"({repair time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau7,11,"({restoration time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau8,12,"({propagation time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau9,13,"({recovery time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau10,14,"({travel time*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau11,15,"({spatio-temporal} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau12,16,"(spatiotemporal WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau13,17,"({recovery trajector*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau14,18,"({restoration curve*} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau15,19,"({service restoration} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau16,20,"({scheduling horizon} WN KY) AND (2000-2026 WN YR)",,,PENDING,
+Tau,Tau-UNION,21,"Tau1 OR Tau2 OR Tau3 OR Tau4 OR Tau5 OR Tau6 OR Tau7 OR Tau8 OR Tau9 OR Tau10 OR Tau11 OR Tau12 OR Tau13 OR Tau14 OR Tau15 OR Tau16",,,PENDING,
+Q3,FINAL,22,"P AND T AND Z_Q3 AND R AND Tau",,,PENDING,Final Compendex Q3 v1.1
