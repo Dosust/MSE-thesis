@@ -77,6 +77,20 @@ The translated requirements become actionable long-term transformation pathways 
 
 `WHAT exists? -> WHY does disruption propagate? -> HOW and WHEN does it evolve? -> HOW does the system respond? -> CAN it survive? -> WHAT do the resilience results imply for sustainability? -> WHAT should be changed for long-term sustainability?`
 
+## Canonical empirical data strategy
+
+The framework is now paired with a dedicated evidence/data architecture:
+
+`project_memory/2026-09-09_final_framework/02_CANONICAL_DATASET_DATABASE_STRATEGY.md`
+
+Core rule:
+
+`framework -> data requirements -> multi-source observations -> causal/hybrid inference -> viability outputs -> sustainability transformation`
+
+The preferred empirical design is a **California-centered, multi-source, multi-rate data-fusion case**, using PeMS, EAGLE-I, CAISO OASIS, CEC/AFDC charging data, NOAA hazards, DOE-417, FEMA/OpenFEMA, FCC BDC, and eGRID/GREET according to the construct and evidence limitations documented in the canonical data strategy.
+
+No source is allowed to redefine the seven-stage framework. No proxy is treated as a direct state without explicit justification, and no correlation is treated as a cross-layer causal mechanism without temporal, spatial, mechanistic, confounder, and robustness checks.
+
 ## Governance rule
 
 This seven-stage architecture is the authoritative thesis framework from 2026-09-09 onward. It should not be replaced, reordered, or renamed in project artifacts unless the author explicitly requests a change. Sustainability is connected downstream through Stages 6–7; it does not alter the internal architecture of Stages 1–5.
