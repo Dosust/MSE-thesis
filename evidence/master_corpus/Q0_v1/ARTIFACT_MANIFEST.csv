@@ -1,6 +1,6 @@
 filename,bytes,sha256,role,git_policy
-scopus_export.csv,unknown,cee449fe72fabd5f265dc042d6b2d85e907de1de1694b21cded3d28f04368079,Frozen Scopus Q0 raw N253,Raw database export; controlled storage
-2026-09-07_IEEE_Q0_v2_2_RAW_N0189.csv,unknown,37c66cac8015bd44455a9cbcb1ae930ff1893bc5870322cb5a27719dfbea710c,Frozen IEEE Q0 raw N189,Raw database export; controlled storage
+scopus_export.csv,3056436,cee449fe72fabd5f265dc042d6b2d85e907de1de1694b21cded3d28f04368079,Frozen Scopus Q0 raw N253,Raw database export; controlled storage
+2026-09-07_IEEE_Q0_v2_2_RAW_N0189.csv,463091,37c66cac8015bd44455a9cbcb1ae930ff1893bc5870322cb5a27719dfbea710c,Frozen IEEE Q0 raw N189,Raw database export; controlled storage
 2026-09-08_COMPENDEX_Q0_v2_2_RAW_N0245.csv,884166,2c15662b02f27a085dc39f50245d33c4f2166c63839050feb8fc2eb22f7816a8,Frozen Compendex Q0 raw N245,Raw database export; controlled storage
 Q0_Cross_Database_Master_Evidence_Corpus_v1.xlsx,1286545,f3001998927982238849d4688c2f24a1cc0180077ec75899d1e2a220826bdafe,Master review workbook,Controlled artifact; contains database-provided abstracts/metadata
 Q0_Cross_Database_Master_Corpus_v1.csv,934193,3dfb86b66bc4e9e68e4a51853f746255f14dc523ec1112c11108438ed44056fb,Canonical master corpus N404,Controlled artifact; contains database-provided abstracts/metadata
