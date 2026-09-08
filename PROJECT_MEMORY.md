@@ -1,38 +1,45 @@
 # Project Memory Entry Point
 
-For high-rigor continuation of the MSE thesis in future chats, use the **corrected canonical v2 memory capsule**:
+## Current high-rigor continuation state — 2026-09-08
+
+For the **current thesis systematic-review/native-database workflow**, start here:
+
+[`project_memory/2026-09-08_native_systematic_review/README.md`](project_memory/2026-09-08_native_systematic_review/README.md)
+
+This is the authoritative continuation capsule for:
+- the current thesis title and physical–organizational Power–Transportation framing;
+- PRISMA 2020 + PRISMA-S + PRESS evidence architecture;
+- frozen Scopus and IEEE phases;
+- Compendex Q0 v2.2 atomic/Search-History execution, audit and freeze;
+- exact search ledger, hashes, screening codebook, and reproducibility procedure;
+- the full new-chat continuation prompt;
+- the next native run: **CPX-Q3 v1.1**.
+
+Fast recovery:
+1. [`00_CANONICAL_STATE.md`](project_memory/2026-09-08_native_systematic_review/00_CANONICAL_STATE.md)
+2. [`01_FULL_HANDOFF_PROMPT.md`](project_memory/2026-09-08_native_systematic_review/01_FULL_HANDOFF_PROMPT.md)
+3. [`02_COMPENDEX_Q0_SEARCH_LEDGER.csv`](project_memory/2026-09-08_native_systematic_review/02_COMPENDEX_Q0_SEARCH_LEDGER.csv)
+4. [`03_PROCESSING_PIPELINE.md`](project_memory/2026-09-08_native_systematic_review/03_PROCESSING_PIPELINE.md)
+5. [`04_ARTIFACT_MANIFEST.csv`](project_memory/2026-09-08_native_systematic_review/04_ARTIFACT_MANIFEST.csv)
+6. [`05_SCREENING_CODEBOOK.md`](project_memory/2026-09-08_native_systematic_review/05_SCREENING_CODEBOOK.md)
+7. [`07_RELEVANT_CHAT_PROMPT_LEDGER.md`](project_memory/2026-09-08_native_systematic_review/07_RELEVANT_CHAT_PROMPT_LEDGER.md)
+
+Supporting reproducibility code:
+[`methods/native_systematic_review/native_pilot_reproduce.py`](methods/native_systematic_review/native_pilot_reproduce.py)
+
+## Earlier architecture memory — preserved for provenance
+
+The corrected 2026-08-21 architecture capsule remains available here:
 
 [`project_memory/2026-08-21_chain_architecture_v2/README.md`](project_memory/2026-08-21_chain_architecture_v2/README.md)
 
-## Why v2
-
-A second audit found and corrected several issues in the first memory capsule, including:
-
-- incomplete demonstrator wording — the authoritative scope is **urban flooding with waste–drainage–transport feedbacks**;
-- mixing the core MSE architecture with the broader design/decision research program;
-- blurring current P1–P7 propositions with historical H0–H7/T1 labels;
-- failing to distinguish the frozen `(1)` 325-dataset name from the byte-identical `(4)` execution copy;
-- insufficient separation of directly visible verbatim text, older archived requests and reconstructed summaries;
-- ambiguity between the GitHub high-rigor run index and the later three-model comparative interpretation.
+It preserves the earlier audited chain-architecture state and correction history. Use it as historical/scientific provenance where relevant, but do not let older scope wording override the newer 2026-09-08 systematic-review state.
 
 Full correction record:
-
 [`project_memory/2026-08-21_chain_architecture_v2/14_CORRECTION_LOG.md`](project_memory/2026-08-21_chain_architecture_v2/14_CORRECTION_LOG.md)
 
-## Fast future-chat recovery
-
-Start with:
-
-1. [`00_CANONICAL_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/00_CANONICAL_STATE.md)
-2. [`01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md`](project_memory/2026-08-21_chain_architecture_v2/01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md)
-3. [`03_HYPOTHESIS_PROPOSITION_CROSSWALK.md`](project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md)
-4. [`06_MONTE_CARLO_AND_PRISMA_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md)
-5. [`08_CONVERSATION_MEMORY_INDEX.md`](project_memory/2026-08-21_chain_architecture_v2/08_CONVERSATION_MEMORY_INDEX.md)
-6. [`12_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md`](project_memory/2026-08-21_chain_architecture_v2/12_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md)
-7. [`PROJECT_MEMORY.json`](project_memory/2026-08-21_chain_architecture_v2/PROJECT_MEMORY.json)
+The first capsule remains preserved at `project_memory/2026-08-21_chain_architecture/` for provenance.
 
 ## Authority rule
 
-Memory provides **high recall**. Scientific authority remains with the original source artifacts, exact transcript/source text, verified literature/evidence records, code, datasets, prompts and provenance files.
-
-The first capsule remains preserved at `project_memory/2026-08-21_chain_architecture/` for provenance but is superseded for future recall.
+Memory provides **high recall**. Scientific authority remains with the original source artifacts, exact transcript/source text, verified literature/evidence records, code, datasets, prompts, native search histories, raw-export hashes, and provenance files.

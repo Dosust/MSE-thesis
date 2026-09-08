@@ -1,0 +1,7 @@
+Filename,Bytes,SHA256,Role,Git_Policy
+2026-09-08_COMPENDEX_Q0_v2_2_RAW_N0245.csv,884166,2c15662b02f27a085dc39f50245d33c4f2166c63839050feb8fc2eb22f7816a8,Untouched native detailed-record export,Do not commit raw database-provided abstracts/metadata unless licensing is confirmed; commit manifest/checksum and derived screening decisions.
+Compendex_Q0_v2_2_Native_Translation_Validation_and_Freeze.xlsx,66559,50a348edd173b9bc4afa57debe5beda212dd0e0a4287495374a12bcafdf68ef5,Audit / validation / freeze workbook,Keep as controlled research artifact; publish only after license/content review.
+PRISMA_Native_Pilot_Controller_v6_7_CPX_Q0_Frozen.xlsx,81020,bc2261a29dbf876ddd058b089c44694ab8a738104a13d3e4778211370587aa4e,Master controller after CPX-Q0 freeze,Controlled project artifact.
+PRISMA_Frozen_Search_Database_Translation_Package_v2_7_CPX_Q0_Frozen.xlsx,35594,1d2bdc909424173bc61ea80b804f05d25d134017e3807369af7084d24c269d51,Frozen translation plan after CPX-Q0 freeze,Controlled project artifact.
+2026-09-08_COMPENDEX_Q0_v2_2_Development_Sample_seed20260907.csv,80301,0a3c1a031025f74ef9c2f01f088d4bdc5c0e316f033d88a2ffb0545334a91da7,Deterministic development sample n=30,Do not publish database-provided abstracts unless permitted.
+2026-09-08_COMPENDEX_Q0_v2_2_Validation_Sample_seed20260907.csv,72796,b7ba40bd44db4245bca4c52f619cdc21e8f8b1b2f34ca4499a3f0e72d5a5b6a4,Disjoint deterministic validation sample n=30,Do not publish database-provided abstracts unless permitted.
