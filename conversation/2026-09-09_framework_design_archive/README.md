@@ -10,7 +10,8 @@
 2. [`01_CANONICAL_FRAMEWORK.md`](01_CANONICAL_FRAMEWORK.md) - exact seven-stage framework and mathematical hierarchy.
 3. [`02_VISUAL_DESIGN_AND_FIDELITY.md`](02_VISUAL_DESIGN_AND_FIDELITY.md) - visual design rules, image audits, and deterministic figure requirements.
 4. [`03_NOTATION_AND_TITLE_DECISIONS.md`](03_NOTATION_AND_TITLE_DECISIONS.md) - thesis title and state-space notation correction.
-5. `framework_design_conversation_archive.pdf` - PDF archive version of the conversation record.
+
+A verified PDF rendering of this archive was generated in the chat workspace as `framework_design_conversation_archive.pdf`. The GitHub repository intentionally keeps the durable source content in Markdown so it remains diffable, reviewable and version-controlled.
 
 ## Authority rule
 
