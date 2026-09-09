@@ -21,7 +21,9 @@ This folder consolidates the full scientific content developed in the 2026-09-09
 2. `02_CANONICAL_STAGE1_SPECIFICATION.md` - compact canonical Stage-1 mathematical specification.
 3. `03_INTERDEPENDENCY_REGISTER_TEMPLATE.md` - auditable component-level dependency register and evidence protocol.
 4. `04_REFERENCES.md` - core scientific and technical references.
-5. `Stage1_Multilayer_Network_of_Networks_Full_Record.pdf` - local publication-style PDF artifact generated from the same record.
+5. `05_BUILD_PDF.sh` - reproducible build script that produces `Stage1_Multilayer_Network_of_Networks_Full_Record.pdf` from the archived Markdown sources using Pandoc + XeLaTeX.
+
+A publication-style PDF generated from these same sources is also attached to the ChatGPT conversation as a downloadable artifact. The GitHub folder preserves the complete editable scientific source and the exact PDF build procedure.
 
 ## Canonical Stage-1 principle
 
