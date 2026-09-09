@@ -1,0 +1,65 @@
+stage: 1
+name: Multilayer Structural Knowledge Base
+purpose: "Represent the coupled P-T-I-O system with explicit dependency status, latent relations, uncertainty, and evidence provenance."
+principles:
+  - "Network-of-networks is necessary but not sufficient"
+  - "Connectivity != Dependency != Co-exposure != Causality"
+  - "No edge != No dependency"
+  - "No relation enters the baseline model without direction, mechanism, status, and evidence"
+systems:
+  power:
+    graph: G_P
+    nodes: [bus, substation, distribution_bus]
+    links: [line, transformer, switchable_branch]
+    devices: [DER, BESS, load, critical_load]
+  transportation:
+    graph: G_T
+    nodes: [junction, origin_destination, depot, critical_access, charging_access]
+    links: [road_segment, corridor]
+    agents: [EV, repair_vehicle, emergency_vehicle]
+  information:
+    graph: G_I
+    optional_as_explicit_graph: true
+    nodes: [sensor, IED, RTU, router, gateway, SCADA, TMC, data_center]
+    links: [telemetry, communication, command]
+  organization:
+    graph: G_O
+    optional_as_explicit_graph: true
+    nodes: [utility_operator, distribution_operator, traffic_management, emergency_management, fleet_operator, repair_crew]
+    links: [authority, coordination, task_assignment, resource_transfer, information_sharing]
+interfaces:
+  - type: EVCS
+    role: "Power-transport interface asset"
+    ports: [power_port, transport_port]
+relation_status:
+  D: confirmed_dependency
+  N: scope_qualified_non_dependency
+  C: conditional_dependency
+  L: latent_candidate
+  U: unknown_unresolved
+relation_record:
+  fields:
+    - source
+    - target
+    - direction
+    - dependency_type
+    - carrier
+    - mechanism
+    - activation_condition
+    - spatial_relation
+    - status
+    - evidence
+    - provenance
+ontology: "Omega = {V_P,E_P,V_T,E_T,V_I,E_I,V_O,E_O,V_C}"
+admissible_relation_universe: "Q_adm = engineering-admissible cross-system candidate pairs"
+completeness:
+  C_audit: "(|Q_D|+|Q_N|+|Q_C|+|Q_L|+|Q_U|)/|Q_adm|"
+  target_C_audit: 1
+  C_resolved: "(|Q_D|+|Q_N|+|Q_C|)/|Q_adm|"
+  C_latent: "|Q_L|/|Q_adm|"
+  C_unknown: "|Q_U|/|Q_adm|"
+canonical_object: "M1_star = (Omega,G,Q_adm,S,R_D,R_N,R_C,R_L,R_U,E_prov,Y0,Lambda_sus)"
+sustainability:
+  stage1_role: "Store traceable metadata only"
+  metadata: [technology, energy_carrier, material_class, service_zone, ownership, resource_characteristics]
+  downstream: "Stages 1-5 resilience outputs + Lambda_sus -> Phi_sus -> Stage 6 -> Stage 7"
