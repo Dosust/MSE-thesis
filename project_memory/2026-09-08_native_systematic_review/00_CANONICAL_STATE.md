@@ -1,61 +1,76 @@
-# Canonical thesis + systematic-review state — updated 2026-09-09
+# Canonical thesis + systematic-review state — updated 2026-09-10
 
 ## Thesis title
 **Dynamic Physical–Organizational Resilience of Interdependent Power–Transportation Systems: Causal Events, Timescales, Critical Transitions, and Viability**
 
 ## FINAL CANONICAL THESIS FRAMEWORK
 
-**Status:** FINAL / CANONICAL from 2026-09-09 onward until explicitly changed by the author.
+**Status:** FINAL / CANONICAL from 2026-09-10 onward until explicitly changed by the author.
+
+Authoritative full specification:
+`project_memory/2026-09-10_canonical_framework/FINAL_CANONICAL_7_STAGE_PTIO_FRAMEWORK.md`
 
 | Stage | Role | Main question |
 |---|---|---|
-| **1. Multilayer Structure** | P–T–I–O architecture | **What exists?** |
-| **2. Causal Mechanisms** | Cross-layer cause-effect pathways | **Why does disruption propagate?** |
-| **3. Coupled Hybrid Multiscale Dynamics** | Coupling + continuous dynamics + discrete events + timescales | **How and when does it evolve?** |
-| **4. Feedback & Control** | Information, organization, decisions, intervention | **How does the system respond?** |
-| **5. Viability** | Survival/recoverability under constraints | **Can it survive?** |
-| **6. Resilience-to-Sustainability Transformation Interface** | Translate resilience findings into transformation requirements | **What do the resilience results imply for sustainability?** |
-| **7. Sustainable Transformation Pathways** | Technical, organizational, environmental and policy transformation | **What should be changed for long-term sustainability?** |
+| **1. Multilayer Structural Knowledge Base** | Evidence-qualified P–T–I–O structure, interfaces, admissible relations | **What exists, what can interact, and what is known?** |
+| **2. Causal Mechanisms** | Evidence-supported cross-layer cause-effect pathways | **Why and through which mechanism does disruption propagate?** |
+| **3. Coupled Hybrid Multiscale Dynamics** | Physical/interface plant, continuous dynamics, discrete events, heterogeneous timescales | **How and when does the coupled physical system evolve?** |
+| **4. Observation, Organization, Feedback & Control** | Measurement, information, state estimation, organizational capability, decisions, intervention | **How does the system observe, coordinate, and respond?** |
+| **5. Controlled Viability** | Finite-horizon and robust nonanticipative viability, boundary geometry, interface criticality | **Can acceptable service survive and recover?** |
+| **6. Resilience-to-Sustainability Transformation Interface** | Translate resilience diagnosis into explicit long-term sustainability requirements | **What sustainability requirements follow from the resilience results?** |
+| **7. Sustainable Transformation Pathways** | Technical, informational, organizational, environmental and policy/planning transformation | **What should be changed, where, when, and in what sequence?** |
 
 Canonical flow:
-`Multilayer Structure -> Causal Mechanisms -> Coupled Hybrid Multiscale Dynamics -> Feedback & Control -> Viability -> Resilience-to-Sustainability Transformation Interface -> Sustainable Transformation Pathways`
+`Structure -> Causality -> Hybrid Multiscale Dynamics -> Observation, Organization & Control -> Controlled Viability -> Sustainability Translation -> Transformation Pathways`
 
-Governance rule: **Stages 1–5 remain the core resilience framework. Sustainability is connected downstream through Stages 6–7 and must not be inserted inside or used to rename/reorder Stages 1–5 unless the author explicitly requests a change.**
+Canonical mathematical chain:
+`(𝔊₁,𝔈₁) -> (ℰ,𝒜cause,m,p) -> (X,Fq,J,τ) -> (y,H,Eest,X̂,I,O,π,u) -> (KR,𝒱Tᴿ,∂𝒱,ρ𝒱,C𝒱) -> (Bsus,Tsus,Φsus,Sreq) -> (a₀:H,Ψtr,𝒫trans)`
 
-Dedicated framework record:
-`project_memory/2026-09-09_final_framework/FINAL_FRAMEWORK.md`
+Canonical conceptual chain:
+`evidence-qualified structure -> causal mechanisms -> physics -> feedback -> viability -> engineering requirements -> system transformation`
+
+Governance rules:
+1. The seven-stage order is authoritative until explicitly changed by the author.
+2. Stage 1 separates structural representation from evidence qualification; no visible edge is automatically interpreted as no dependency.
+3. Stage 2 distinguishes structural dependency from causal mechanism and propagation form.
+4. Stage 3 is the physical/interface plant with `X=(XP,XT,Z)`; Stage 4 contains observation, information, organization, estimation, and control.
+5. Stage 5 begins from finite-horizon controlled viability and may use robust nonanticipative viability. `KR` is a resilience/service admissible set, not a sustainability set.
+6. CARe/Hamilton–Jacobi methods are candidate computational routes for boundary computation/certification, not the theoretical definition of viability geometry or signed distance.
+7. Sustainability translation is explicit in Stage 6 and does not redefine Stages 1–5.
+8. Stage 7 contains candidate transformation pathways; an optimal star is introduced only after a formal objective and selection rule are defined.
+9. Future literature, data, simulations, and visualizations must map into this architecture rather than silently redefining it.
+10. Any substantive framework change must be recorded as an explicit canonical amendment/version.
 
 ## Scientific framing
-Resilience is treated as the causal, temporal, hybrid-dynamical, feedback-controlled viability of the interdependent Power–Transportation system, with information and organization represented explicitly.
+Resilience is treated as the evidence-qualified, causal, hybrid-dynamical, multiscale, observed, organizationally controlled viability of an interdependent Power–Transportation system, with Information and Organization represented explicitly.
 
-State:
-`Y(t) = [X_P(t), X_T(t), Z(t), I(t), O(t)]^T`
+Plant state:
+`X(t) = [X_P(t), X_T(t), Z(t)]^T`
 
-with physical Power and Transportation states `X_P, X_T`, interdependency/interface states `Z`, information/observability `I`, and organizational capability `O`.
+Full closed-loop state:
+`Y(t) = [X(t), I(t), O(t)]^T`
 
-Core dynamics:
-- `dY/dt = F_q(Y,u,h;theta,tau)` between events
-- `Y(t_k+) = J_{e_k}(Y(t_k-))` at discrete events
-- `u = pi(O,I,X_hat)`
+Core plant dynamics:
+- `dX/dt = F_q(X,u,eta;theta)` between events
+- `X(t_k+) = J_{e_k}(X(t_k-))` at discrete events
+- hybrid DAE form `F_q(dX/dt,X,lambda,u,eta;theta)=0` when algebraic subsystem constraints require it
 
-Causal mechanism:
-`e_i^(alpha) --[z_ij^(alpha beta), tau_ij]--> e_j^(beta)`
+Observation/control:
+- `y_m(t) = H_m(X(t-tau_m)) + nu_m(t)`
+- `X_hat(t) = E_est(y_[0,t], I(t))`
+- `u(t) = pi(X_hat(t), I(t), O(t))`
 
-Core feedback:
-`X -> I -> O -> u -> X`
-
-Timescale ratio:
-`Gamma = tau_response / tau_cascade`
-
-Viability:
-`K = K_phys ∩ K_service ∩ K_org ∩ K_sus`
-`V = Viab(K)`
+Controlled viability:
+- `KR = KP ∩ KT ∩ KZ ∩ KI ∩ KO ∩ Kservice`
+- `V_T^R(KR) = {Y0 : exists pi in Pi_NA, for all eta in H, Y^{pi,eta}(t) in KR for all t in [0,T]}`
+- signed margin `rho_V(Y) = sdist(Y, partial V_T^R)`
+- normalized interface criticality `C_ij^V = - partial rho_tilde_V / partial z_tilde_ij` or a standardized finite-difference equivalent
 
 Sustainability transformation bridge:
-`Resilience outputs -> Phi_sus -> Sustainable transformation requirements -> Technical/organizational/environmental/policy pathways`
+`R_out -> Phi_sus(R_out, B_sus, T_sus) -> S_req -> candidate transformation pathways P_trans`
 
 ## Central causal chain
-`HAZARD -> CAUSAL EVENT -> CROSS-LAYER INTERFACE -> HYBRID MULTISCALE PROPAGATION -> INFORMATION/ORGANIZATION FEEDBACK -> CONTROL -> VIABILITY -> RESILIENCE-TO-SUSTAINABILITY TRANSLATION -> SUSTAINABLE TRANSFORMATION`
+`HAZARD -> EVENT -> EVIDENCE-SUPPORTED CAUSAL MECHANISM -> CROSS-LAYER INTERFACE -> HYBRID MULTISCALE PROPAGATION -> OBSERVATION/INFORMATION -> ORGANIZATION -> CONTROL -> VIABILITY -> RESILIENCE-TO-SUSTAINABILITY TRANSLATION -> SUSTAINABLE TRANSFORMATION`
 
 ## CANONICAL EMPIRICAL DATA STRATEGY
 
