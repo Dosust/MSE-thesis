@@ -5,13 +5,15 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
-![Next](https://img.shields.io/badge/next-reduced%20P--T--I--O%20demonstrator-9A6700)
+![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
+![Next](https://img.shields.io/badge/next-actual%20P--T--I--O%20demonstrator%20selection-9A6700)
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
 **Framework status:** complete seven-stage conceptual and mathematical framework frozen  
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
 **Confirmatory matrix:** current operationalization specification; exact $\Omega_H$, $\delta_i$ and final analysis procedures remain unfrozen  
+**Demonstrator methodology:** Minimal Sufficient Experimental Realization defined; actual topology/component selection remains unfrozen  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
@@ -36,6 +38,7 @@
 | [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage 7 |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules |
+| [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale, mechanism-preservation constraints and simplification stopping rule |
 | [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | notation/rendering standard |
 | [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) | mandatory framework-figure QA |
@@ -156,6 +159,30 @@ The exact 12-gate methodology is treated as a derived/proposed thesis methodolog
 
 ---
 
+## Minimal Sufficient Experimental Realization
+
+The demonstrator-selection methodology is [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md).
+
+Its central distinction is
+
+```math
+\text{Full scientific framework}\neq\text{experimental demonstrator}.
+```
+
+The governing principle is
+
+```math
+\mathcal M_D^*
+=
+\text{minimum-complexity realization preserving the discriminatory power of }H_1-H_5.
+```
+
+The demonstrator therefore reduces resolution, not scientific scope. It must preserve the layers and mechanisms required to discriminate all five primary hypotheses, while remaining identifiable, verifiable, validatable, uncertainty-quantifiable, computationally tractable and reproducible. Simplification stops when another removal would destroy a required mechanism, observable, competing explanation or critical experiment.
+
+The actual P–T–I–O demonstrator has **not** yet been frozen.
+
+---
+
 ## Repository display and mathematical QA
 
 Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V3.md`:
@@ -180,6 +207,8 @@ Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V
 
 > **PRIMARY HYPOTHESIS LOGIC $H_1$–$H_5$: FROZEN.**
 
-> **ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX: SAVED / CURRENT OPERATIONALIZATION SPECIFICATION.**
+> **ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX: CURRENT OPERATIONALIZATION SPECIFICATION.**
 
-The next rigorous step is to select the reduced P–T–I–O demonstrator and determine what physical, data and benchmark evidence is actually available. That evidence will define the defensible hypothesis/validation domains and support *a priori* choices for $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study computation, falsification and validation.
+> **MINIMAL SUFFICIENT EXPERIMENTAL REALIZATION METHODOLOGY: CURRENT; ACTUAL DEMONSTRATOR NOT YET FROZEN.**
+
+The next rigorous step is to select the actual minimal sufficient P–T–I–O demonstrator and determine what physical, data and benchmark evidence is available. That evidence will define defensible $\Omega_H$ and $\Omega_V$ and support *a priori* choices for $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study computation, falsification and validation.
