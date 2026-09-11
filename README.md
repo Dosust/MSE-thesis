@@ -131,17 +131,6 @@ $$
 \end{aligned}
 $$
 
-Equivalently,
-
-$$
-P\leftrightarrow T,\quad
-P\leftrightarrow I,\quad
-P\leftrightarrow O,\quad
-T\leftrightarrow I,\quad
-T\leftrightarrow O,\quad
-I\leftrightarrow O.
-$$
-
 Every accepted interdependency is represented by
 
 $$
@@ -200,14 +189,6 @@ $$
 | Response/viability | $\tau_R,T_{\rm exit},T_{\rm rec}$ |
 | Strategic | $\tau_A,\tau_{Tr},t_k,\Delta t_k,T_H$ |
 
-Dimensionless ratios such as
-
-$$
-\Gamma_{\alpha\beta}=\frac{\tau_\alpha}{\tau_\beta}
-$$
-
-are regime descriptors, not universal thresholds, unless derived from the dynamics or supported by evidence.
-
 ---
 
 ## 7. Stage 4 — Feedback & Control
@@ -246,7 +227,7 @@ $$
 \mathcal V_{\rm sus}^{u}=\operatorname{Viab}_{F,\mathcal U(I,O)}(K_{\rm sus}).
 $$
 
-The final finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly. Candidate diagnostics include signed distance to the viability boundary, time to viability loss, recovery time, interface criticality, and intervention feasibility.
+The exact finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly.
 
 ---
 
@@ -259,8 +240,6 @@ $$
 \rightarrow
 \underbrace{\text{Stage 7}}_{\text{sustainable transformation pathways}}.
 $$
-
-Stage 6 converts verified resilience findings into transformation requirements. Stage 7 evaluates what should change for long-term sustainability.
 
 > **Governing principle:** Resilience is analyzed inside the model; sustainability is informed by the model.
 
@@ -275,14 +254,6 @@ $$
 \xrightarrow{\text{formalization}}
 (\mathcal G,\mathfrak I,F,J,\tau,I,O,K,\mathcal V,u).
 $$
-
-For each proposed interdependency, extraction seeks
-
-$$
-(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t),
-$$
-
-plus disturbance, measured effect, model family, data source, calibration, validation, uncertainty treatment, and limitations.
 
 The thesis preserves
 
