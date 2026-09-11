@@ -210,10 +210,10 @@ Stage 4 therefore treats response as a **partially observable socio-technical fe
 ### Observation and estimation
 
 $$
-y_k(t)=H_k[X(t-\delta_k)]+\nu_k(t),
+y_k(t)=H_k[X(t-\delta_k)]+\varepsilon_k(t),
 $$
 
-where $\nu_k(t)$ is measurement noise.
+where $\varepsilon_k(t)$ is measurement noise.
 
 $$
 (\widehat X(t),\Sigma_X(t))
