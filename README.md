@@ -3,7 +3,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** Active thesis source of truth  
 **Framework status:** Seven-stage architecture frozen  
-**Research status:** Stage 1 defined; Stages 2–4 frozen; Stage 5 next  
+**Research status:** Stage 1 defined; Stages 2–5 frozen; Stage 6 next  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
@@ -52,7 +52,7 @@ Canonical system files:
 
 ## 2. Scientific objective
 
-The research determines how causal interdependencies among $P$, $T$, $I$, and $O$ shape disruption propagation, coupled system evolution, knowledge of system state, organizational response capability, controlled trajectories, viability, and long-term sustainable transformation.
+The research determines how causal interdependencies among $P$, $T$, $I$, and $O$ shape disruption propagation, coupled evolution, knowledge of system state, organizational response capability, controlled trajectories, viability, and long-term sustainable transformation.
 
 $$
 \begin{aligned}
@@ -60,8 +60,9 @@ $$
 &\rightarrow \text{Causal Mechanisms}
 \rightarrow \text{Coupled Dynamics}\\
 &\rightarrow \text{Observation and Control}
-\rightarrow \text{Viability}
-\rightarrow \text{Sustainable Transformation}.
+\rightarrow \text{Viability}\\
+&\rightarrow \text{Resilience-to-Sustainability Interface}
+\rightarrow \text{Transformation}.
 \end{aligned}
 $$
 
@@ -85,8 +86,8 @@ $$
 | **2. Causal Mechanisms** | Why and through what mechanism does one component/layer affect another? | **Frozen** |
 | **3. Coupled Hybrid Multiscale Dynamics** | How, when, and where do effects evolve and propagate? | **Frozen** |
 | **4. Observation, Organization, Feedback and Control** | How is the system observed, interpreted, coordinated, and controlled? | **Frozen** |
-| **5. Viability** | Can acceptable operation be maintained under disturbance and admissible intervention? | **Next** |
-| **6. Transformation Interface** | What do verified resilience results imply for sustainability? | Downstream |
+| **5. Viability** | Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states? | **Frozen** |
+| **6. Transformation Interface** | What do verified resilience results imply for sustainability? | **Next** |
 | **7. Sustainable Transformation Pathways** | What should change for long-term sustainability? | Downstream |
 
 Framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
@@ -138,7 +139,7 @@ E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right).
 $$
 
-The causal admissibility rule is
+A retained relation requires
 
 $$
 \alpha\xrightarrow{M_{ij}}\beta,
@@ -205,15 +206,11 @@ $$
 X\neq y\neq I\neq\widehat X\neq O\neq u.
 $$
 
-Stage 4 therefore treats response as a **partially observable socio-technical feedback-control problem**.
-
-### Observation and estimation
+Observation and estimation use
 
 $$
 y_k(t)=H_k[X(t-\delta_k)]+\varepsilon_k(t),
 $$
-
-where $\varepsilon_k(t)$ is measurement noise.
 
 $$
 (\widehat X(t),\Sigma_X(t))
@@ -227,7 +224,7 @@ $$
 b_t(x)=p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
 $$
 
-### Organizational feasibility and control
+Organizational feasibility and control are represented by
 
 $$
 \mathcal U_{\rm available}(t)=\mathcal U\!\left(z_I(t),z_O(t)\right),
@@ -238,10 +235,6 @@ u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
-
-No particular solver—MPC, MILP, dynamic programming, reinforcement learning, game theory, or otherwise—is frozen into the framework.
-
-### Response time
 
 For a sequential, non-overlapping response path,
 
@@ -255,47 +248,171 @@ $$
 
 If processes overlap, $\tau_{\rm response}$ is the completion time of the relevant critical path.
 
-The proposed timing diagnostic is
+The Stage-4 diagnostic
 
 $$
-\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}},
+\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}}
 $$
 
-with
-
-$$
-\Pi_R<1\not\Rightarrow\text{successful control}.
-$$
-
-$\Pi_R$ is a **proposed thesis diagnostic**, not an established resilience law.
-
-### Stage boundary
-
-| Stage | Responsibility |
-|---|---|
-| **3** | Generates the coupled trajectories. |
-| **4** | Observes, infers, coordinates, and controls them. |
-| **5** | Evaluates whether the controlled trajectories remain viable. |
+is a **proposed thesis diagnostic [P]**, not an established resilience law.
 
 Stage-4 authority: [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
 
 ---
 
-## 8. Stage 5 — Viability
+## 8. Stage 5 — Controlled Sustainable Viability
 
-Stage 5 is the **next formalization stage**.
+Stage 5 is **canonical and frozen** at the framework level.
+
+> **Research question:** Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states?
+
+The Stage-5 hierarchy is
 
 $$
-K_{\rm sus}=\{Y:g(Y)\le0\},
+K_{\rm sus}
+\rightarrow
+\mathcal V_{\rm sus}^{u,T}
+\rightarrow
+\partial\mathcal V
+\rightarrow
+\{\rho,T_{\mathcal V},T_K\}
+\rightarrow
+\{S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
 $$
 
+The acceptable constraint set is
+
 $$
-\mathcal V_{\rm sus}^{u}
+K_{\rm sus}(t)
 =
-\operatorname{Viab}_{F,\mathcal U(z_I,z_O)}(K_{\rm sus}).
+\{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\},
 $$
 
-The exact finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly.
+where each threshold must be independently justified. The finite-horizon controlled viability set is
+
+$$
+\mathcal V_{\rm sus}^{u,T}
+=
+\left\{
+Y_0\in K_{\rm sus}:
+\exists u(\cdot)\in\mathcal U,
+\ Y^u(t)\in K_{\rm sus}\ \forall t\in[0,T]
+\right\}.
+$$
+
+The framework preserves the distinction
+
+$$
+Y\notin\mathcal V_{\rm sus}^{u,T}
+\not\Rightarrow
+Y\notin K_{\rm sus},
+$$
+
+so the loss-of-viability boundary $\partial\mathcal V$ is not the same as the actual acceptability boundary $\partial K_{\rm sus}$.
+
+### Robust and stochastic extensions
+
+For bounded/adversarial uncertainty,
+
+$$
+\mathcal V_{\rm rob}^{T}
+=
+\left\{
+Y_0:\exists\pi\in\Pi_{\rm adm},\ \forall\xi\in\Xi,
+\ Y^{\pi,\xi}(t)\in K_{\rm sus}\ \forall t\in[0,T]
+\right\}.
+$$
+
+For probabilistic uncertainty,
+
+$$
+\mathcal V_{\varepsilon}^{T}
+=
+\left\{
+Y_0:\exists\pi,
+\ \Pr[Y^{\pi}(t)\in K_{\rm sus}\ \forall t\in[0,T]]\ge1-\varepsilon
+\right\}.
+$$
+
+Thus,
+
+$$
+\text{robust viability}\neq\text{stochastic viability}.
+$$
+
+### Geometric and temporal margins
+
+A normalized Euclidean/weighted distance is the baseline:
+
+$$
+\widetilde Y=D^{-1}(Y-Y_{\rm ref}),
+\qquad
+\rho_E=d(\widetilde Y,\partial\widetilde{\mathcal V}).
+$$
+
+The proposed state-dependent extension is
+
+$$
+\rho_g=d_{g_\psi}(Y,\partial\mathcal V),
+\qquad
+g_\psi(Y)\succ0.
+$$
+
+$\rho_g$ is explicitly a **proposed thesis construct [P]** and must outperform justified geometric baselines before any stronger claim is made.
+
+Two temporal margins are retained:
+
+$$
+T_{\mathcal V}
+=\inf\{t>0:Y(t)\notin\mathcal V_{\rm sus}^{u,T-t}\},
+$$
+
+$$
+T_K
+=\inf\{t>0:Y(t)\notin K_{\rm sus}\}.
+$$
+
+Stage 4 connects to Stage 5 through
+
+$$
+S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
+\qquad
+S_K=T_K-\tau_{\rm response},
+$$
+
+and the proposed dimensionless diagnostics
+
+$$
+\Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
+\qquad
+\Pi_K=\frac{\tau_{\rm response}}{T_K}.
+$$
+
+These timing quantities are **[P] thesis diagnostics**, not universal resilience laws.
+
+### Interface sensitivity
+
+Because viability boundaries need not be smooth, finite perturbation is the primary proposed sensitivity:
+
+$$
+S_{ij}^{\mathcal V}(\Delta\theta)
+=
+\frac{
+\mathcal M_{\mathcal V}(\theta_{ij}+\Delta\theta)
+-
+\mathcal M_{\mathcal V}(\theta_{ij})
+}{\|\Delta\theta\|},
+$$
+
+with
+
+$$
+\theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
+$$
+
+Differential sensitivity is used only where smoothness is demonstrated.
+
+Stage-5 authority: [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
 
 ---
 
@@ -347,17 +464,29 @@ $$
 
 ## 11. Current research state
 
-$$
-\begin{aligned}
-\text{Stage 1: defined}
-&\rightarrow \text{Stage 2: frozen}
-\rightarrow \text{Stage 3: frozen}\\
-&\rightarrow \text{Stage 4: frozen}
-\rightarrow \mathbf{Stage\ 5:\ next}.
-\end{aligned}
-$$
+| Stage | Status |
+|---|---|
+| **1 — Multilayer Structure** | Defined |
+| **2 — Causal Mechanisms** | Frozen |
+| **3 — Coupled Hybrid Multiscale Dynamics** | Frozen |
+| **4 — Observation, Organization, Feedback and Control** | Frozen |
+| **5 — Viability** | Frozen |
+| **6 — Resilience-to-Sustainability Transformation Interface** | **Next** |
+| **7 — Sustainable Transformation Pathways** | Downstream |
 
-The immediate framework task is to formalize Stage 5 using the controlled trajectories produced by Stages 3–4 and to define the admissible set, controlled viability object, time-to-exit logic, geometric margin, uncertainty treatment, and validation obligations without modifying the frozen upstream stages.
+The first five stages now form the mathematical chain
+
+$$
+\{P,T,I,O\}
+\rightarrow
+\mathfrak I
+\rightarrow
+\{F,\mathcal G,m\}
+\rightarrow
+\{\widehat X,\mathcal U,u,\tau_{\rm response}\}
+\rightarrow
+\{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
+$$
 
 ---
 
@@ -374,6 +503,7 @@ The immediate framework task is to formalize Stage 5 using the controlled trajec
 | [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | frozen Stage-2 specification |
 | [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | frozen Stage-3 specification |
 | [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | frozen Stage-4 specification |
+| [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | frozen Stage-5 specification |
 | [`evidence/`](evidence/) | literature and evidence artifacts |
 | [`methods/`](methods/) | mathematical, computational, review, and validation methods |
 | [`provenance/`](provenance/) | provenance and audit records |
@@ -392,16 +522,20 @@ Historical P–W–T–SW, waste–drainage, equity-centered, and other supersed
 - Distinguish structural connection from causal mechanism.
 - Distinguish event time, causal delay, and characteristic timescale.
 - Distinguish true state, measurement, information condition, estimated state, organizational capability, and executed action.
+- Distinguish acceptability $K_{\rm sus}$ from maintainability $\mathcal V_{\rm sus}^{u,T}$.
+- Keep robust and stochastic viability mathematically separate.
+- Keep HJ value functions and geometric distance conceptually separate.
+- Treat $g_\psi$, $\rho_g$, $S_{\mathcal V}$, $S_K$, $\Pi_{\mathcal V}$, $\Pi_K$, and $S_{ij}^{\mathcal V}$ as proposed constructs until validated.
 - Do not claim novelty for established concepts without systematic falsification.
 - Require equations, assumptions, units, provenance, numerical checks, uncertainty analysis, and baseline comparison before strong conclusions.
 
-> **Target standard:** clear ontology + causal evidence + mathematical rigor + physical interpretability + partially observable control + falsifiable validation + reproducibility.
+> **Target standard:** clear ontology + causal evidence + hybrid dynamics + partially observable control + viability theory + geometric/temporal diagnostics + falsifiable validation + reproducibility.
 
 ---
 
 ## 14. Thesis logic
 
-> **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how, when, and where they propagate; observation and estimation determine what can be known; organization and control determine what can be executed and whether response arrives in time; viability determines whether acceptable operation can be maintained; and verified resilience evidence informs sustainable transformation.**
+> **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how, when, and where they propagate; observation and estimation determine what can be known; organization and control determine what can be executed and whether response arrives in time; viability separates what is acceptable from what remains maintainable and measures proximity to loss; verified resilience evidence then informs sustainable transformation.**
 
 ---
 
