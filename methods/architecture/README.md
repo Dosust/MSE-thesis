@@ -1,84 +1,160 @@
 # Architecture Methods
 
-This directory contains the executable/specification layer for the thesis architecture.
+![System](https://img.shields.io/badge/system-P--T--I--O-0969DA)
+![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Role](https://img.shields.io/badge/role-software%20QA%20%26%20numerical%20scaffolds-6B7280)
 
-## Language roles
+This directory contains **small, auditable computational scaffolds** for the frozen thesis architecture. It is an implementation-support layer, not a second scientific source of truth.
 
-| Language / format | Role |
+Canonical scientific authority remains in:
+
+- [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)
+- [`../../project/CANONICAL_7_STAGE_FRAMEWORK.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK.md)
+- [`../../project/MATHEMATICAL_FOUNDATION.md`](../../project/MATHEMATICAL_FOUNDATION.md)
+- [`../../project/RESEARCH_HYPOTHESES.md`](../../project/RESEARCH_HYPOTHESES.md)
+
+---
+
+## 1. Language and format roles
+
+| Language / format | Research-engineering role |
 |---|---|
-| **Markdown + LaTeX** | Formal scientific definitions, hypotheses, and derivations |
-| **SVG** | Version-controlled mathematical art and state-space geometry |
-| **Python** | Auditable numerical baselines, geometry metrics, smoke tests, figure generation |
-| **Julia** | Compact dynamical-systems / multiscale model scaffold |
-| **YAML** | Machine-readable scientific proposition registry |
-| **JSON Schema** | Formal structural contract for model configurations |
-| **GitHub Actions YAML** | Continuous reproducibility and structural QA |
+| **Markdown + LaTeX** | exact definitions, equations, hypotheses, assumptions and audit records |
+| **Python** | transparent numerical baselines, geometry utilities, tests and repository QA |
+| **Julia** | compact dynamical-systems / multiscale implementation scaffolds |
+| **YAML** | machine-readable proposition and hypothesis registries |
+| **JSON + JSON Schema** | formal configuration contract and validation |
+| **Mermaid** | repository architecture/navigation diagrams only |
+| **SVG** | version-controlled vector figures and mathematical diagrams |
+| **GitHub Actions YAML** | continuous syntax, schema, ontology and display-quality checks |
 
-No language is included for decoration; each has a specific research-engineering function.
+Each language has a defined function. No language is included only for decoration.
 
-## Core files
+---
 
-- `viability_geometry.py` — finite-grid viability and Hausdorff-distance reference implementation for synthetic QA.
-- `CoupledInfrastructure.jl` — four-sector dynamic/interface scaffold with climate/waste feedback.
-- `../../project/MATHEMATICAL_FOUNDATION.md` — governing mathematical specification.
-- `../../project/SCIENTIFIC_PROPOSITIONS.md` — falsifiable proposition layer.
-- `../../config/scientific_propositions.yaml` — machine-readable proposition registry.
-- `../../schemas/thesis_model.schema.json` — model-configuration schema.
-- `../../assets/math-art/` — repository-native mathematical figures.
+## 2. Canonical system interface
 
-## Governing architecture
+The active thesis system is
+
+$$
+\mathcal S=\{P,T,I,O\},
+$$
+
+where $P,T$ are the physical Power and Transportation systems and $I,O$ are informational and organizational layers.
 
 ```mermaid
 flowchart LR
-    O[Observations D_obs] --> I[Interface / parameter identification]
-    I --> UQ[Uncertainty Sigma_theta]
-    UQ --> D[Dynamic coupled model F_dyn]
-    D --> K[Admissible set K_R]
-    K --> V[Viability kernel V_R]
-    V --> C[Recovery / capture geometry C_R, tau_R]
-    C --> U[Viability / recovery control]
-    U --> DES[Design variables d]
-    DES --> OPT[Optimization / decision]
+    P["P · Power\nphysical system"] <--> T["T · Transportation\nphysical system"]
+    P -. information .-> I["I · Information\nlayer"]
+    T -. information .-> I
+    I -. knowledge .-> O["O · Organization\nlayer"]
+    O -. decisions/resources .-> P
+    O -. decisions/resources .-> T
+
+    classDef power fill:#EAF0F8,stroke:#0B1F3A,color:#0B1F3A,stroke-width:2px;
+    classDef transport fill:#E6F5F3,stroke:#0F766E,color:#0B1F33,stroke-width:2px;
+    classDef info fill:#EAF2FF,stroke:#2563EB,color:#0B1F33,stroke-width:2px;
+    classDef org fill:#FFF4E5,stroke:#D97706,color:#0B1F33,stroke-width:2px;
+
+    class P power;
+    class T transport;
+    class I info;
+    class O org;
 ```
 
-## P–W–T–SW interface structure
+The diagram is a navigation aid. Formal causal admissibility remains governed by the Stage-2 object $\mathfrak I_{ij}^{\alpha\beta}$; an arrow in a diagram is not evidence by itself.
+
+---
+
+## 3. Seven-stage computational chain
 
 ```mermaid
-flowchart TB
-    XI[Climate forcing xi] --> ETA[Realized hazard eta]
-    P[Power X_P] <--> W[Water X_W]
-    P <--> T[Transport X_T]
-    W <--> SW[Solid Waste X_SW]
-    T <--> SW
-    SW --> B[Drainage blockage]
-    B --> ETA
-    ETA --> P
-    ETA --> W
-    ETA --> T
-    T --> A[Waste-removal accessibility]
-    A --> SW
+flowchart LR
+    S1["1 · Structure"] --> S2["2 · Causal mechanisms"]
+    S2 --> S3["3 · Hybrid multiscale dynamics"]
+    S3 --> S4["4 · Observation & control"]
+    S4 --> S5["5 · Viability"]
+    S5 --> S6["6 · Transformation diagnosis"]
+    S6 --> S7["7 · Transformation pathways"]
+
+    classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
+    class S1,S2,S3,S4,S5,S6,S7 frozen;
 ```
 
-The arrows in these diagrams are hypotheses/mechanisms to be specified and tested, not automatically established causal facts.
+The corresponding mathematical handoff is
 
-## Numerical QA philosophy
+$$
+\mathcal S
+\rightarrow
+\mathfrak I
+\rightarrow
+F_{\mathcal G}^{m}
+\rightarrow
+u(t)
+\rightarrow
+\mathcal V_{\rm sus}^{u,T}
+\rightarrow
+\Phi_{\rm ST}
+\rightarrow
+\mathfrak P_{\rm ST}.
+$$
 
-The Python reference implementation is deliberately conservative:
+---
 
-1. finite-dimensional;
-2. finite-horizon;
-3. deterministic;
-4. explicit about approximation;
-5. used only for unit tests and synthetic demonstrations.
+## 4. Core executable files
 
-It must not be mistaken for the final viability solver. Higher-dimensional Hamilton–Jacobi, reachability, stochastic, robust, hybrid, or set-oriented methods may later replace or augment it after the governing model and data support are fixed.
+| File | Purpose | Scientific status |
+|---|---|---|
+| `CoupledInfrastructure.jl` | transparent P–T–I–O toy dynamics for syntax/interface tests | software-QA scaffold only |
+| `viability_geometry.py` | finite-grid viability and geometric-distance reference utilities | numerical baseline / smoke test only |
+| `../../config/example_model.json` | valid P–T–I–O example configuration | illustrative configuration |
+| `../../schemas/thesis_model.schema.json` | machine-readable configuration contract | repository QA contract |
+| `../../config/scientific_propositions.yaml` | machine-readable P1–P10 registry | synchronized proposition registry |
+| `../../config/research_hypotheses.yaml` | machine-readable H1–H5 registry | synchronized hypothesis registry |
+| `../../tools/thesis_display_lint.py` | Markdown/math/ontology consistency linter | repository QA tool |
 
-## Reproducibility
+None of these toy/scaffold files constitutes empirical validation or a final case-study model.
 
-`.github/workflows/scientific-architecture-qa.yml` automatically checks:
+---
 
-- Python syntax;
-- numerical geometry smoke tests;
-- YAML proposition integrity;
-- JSON Schema validity;
-- SVG well-formedness.
+## 5. Numerical QA philosophy
+
+The current numerical helpers are deliberately conservative:
+
+1. low-dimensional and transparent;
+2. finite-horizon where applicable;
+3. explicit about approximation and synthetic parameters;
+4. easy to test independently;
+5. replaceable when the validated numerical demonstrator is specified.
+
+A toy finite-grid viability calculation, for example, does **not** establish the final high-dimensional Stage-5 viability result. It checks code paths, geometry conventions and reproducibility.
+
+---
+
+## 6. Reproducibility and continuous QA
+
+`.github/workflows/scientific-architecture-qa.yml` checks the active scientific/implementation layer for:
+
+- Python syntax and numerical smoke tests;
+- active Markdown mathematical-rendering rules;
+- stale ontology terms in active authority/configuration files;
+- proposition and hypothesis registry integrity;
+- JSON Schema validity and example-configuration compliance;
+- SVG well-formedness;
+- Julia P–T–I–O scaffold execution.
+
+Historical and provenance folders are intentionally excluded from ontology rewriting: preserving superseded material in history is different from allowing it to control the active thesis.
+
+---
+
+## 7. Implementation boundary
+
+The governing rule is
+
+$$
+\text{software scaffold}
+\neq
+\text{validated scientific model}.
+$$
+
+A computational component becomes part of the thesis evidence only after its governing equations, parameters, units, boundary conditions, verification, validation, uncertainty treatment and provenance satisfy the quantitative reporting standard in [`../APA_JARS_QUANT_ADAPTED_REPORTING_STANDARD.md`](../APA_JARS_QUANT_ADAPTED_REPORTING_STANDARD.md).
