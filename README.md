@@ -299,7 +299,7 @@ u
 X.
 $$
 
-The intervention/control action is denoted by $u(t)$ throughout the thesis. Therefore the operative loop is
+The intervention/control action is denoted consistently by $u(t)$ throughout the thesis. Therefore, the loop is written as
 
 $$
 X
@@ -315,19 +315,20 @@ O
 u
 \rightarrow
 X,
-\qquad \nu\equiv u.
+\qquad
+\nu=u.
 $$
 
-For numerical and analytical work, use
+For analytical and numerical work,
 
 $$
 y=H(X)+\varepsilon_y,
 \qquad
 \widehat X=\mathcal E(y_{[0,t]},I),
 \qquad
-u=\pi(\widehat X,I,O),
+\nu=\pi(\widehat X,I,O),
 \qquad
-u\in\mathcal U(I,O).
+\nu\in\mathcal U(I,O).
 $$
 
 The scientific question is whether sensing, communication, estimation, authority, coordination, resources, logistics, and organizational delays allow an admissible intervention to arrive before critical degradation.
