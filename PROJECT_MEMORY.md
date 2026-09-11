@@ -6,71 +6,174 @@ The sole active repository for this thesis is:
 
 [`Dossiya-SE/MSE-thesis`](https://github.com/Dossiya-SE/MSE-thesis)
 
-All future thesis updates, framework revisions, equations, figures, research notes, evidence records, validation artifacts, and canonical files must be written to **MSE-thesis** unless the user explicitly instructs otherwise.
+All active thesis updates, framework revisions, equations, figures, research notes, evidence records, validation artifacts, and canonical files must be written to **MSE-thesis** unless the user explicitly instructs otherwise.
 
-The repository [`Dossiya-SE/Optimization-for-sustainability-and-resilience`](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience) is **not the active thesis destination**. Existing files there may remain as historical/reference artifacts, but new thesis updates must not be routed there by default.
-
-The latest canonical system and Stage-2 specifications are:
-
-1. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
-2. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
-3. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+The repository [`Dossiya-SE/Optimization-for-sustainability-and-resilience`](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience) is historical/reference only and is not the default thesis destination.
 
 ---
 
-## Current framework authority — 2026-09-09
+## Current canonical authority — 2026-09-11
 
-For the **current thesis framework architecture and all framework figures**, start with:
+For the current thesis, read these files in order:
 
-1. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
-2. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
-3. [`project_memory/2026-09-09_canonical_7_stage_framework/00_CANONICAL_STATE.md`](project_memory/2026-09-09_canonical_7_stage_framework/00_CANONICAL_STATE.md)
+1. [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md)
+2. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
+3. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
+4. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
+5. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+6. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
+7. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+8. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
 
-The governing representation rule is:
+These files supersede older framework descriptions when conflicts occur.
 
-```math
+---
+
+## Current scientific state
+
+The thesis studies
+
+$$
+\boxed{\mathcal S=\{P,T,I,O\}}
+$$
+
+with
+
+$$
+P,T=\text{physical infrastructure systems},
+\qquad
+I,O=\text{informational and organizational layers}.
+$$
+
+Canonical description:
+
+> **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
+
+The framework is frozen as
+
+$$
+\text{Multilayer Structure}
+\rightarrow
+\text{Causal Mechanisms}
+\rightarrow
+\text{Coupled Hybrid Multiscale Dynamics}
+\rightarrow
+\text{Feedback \& Control}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Resilience-to-Sustainability Transformation Interface}
+\rightarrow
+\text{Sustainable Transformation Pathways}.
+$$
+
+Current completion state:
+
+$$
+\boxed{
+\text{Stage 1: defined}
+\rightarrow
+\text{Stage 2: frozen}
+\rightarrow
+\text{Stage 3: frozen}
+\rightarrow
+\text{Stage 4: next}
+}
+$$
+
+---
+
+## Frozen Stage-2 object
+
+Every accepted interdependency uses
+
+$$
+\boxed{
+\mathfrak I_{ij}^{\alpha\beta}
+=
+(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t).
+}
+$$
+
+The causal admissibility rule is
+
+$$
+\boxed{\alpha\xrightarrow{M_{ij}}\beta}
+$$
+
+and common hazard exposure alone is not an interdependency.
+
+---
+
+## Frozen Stage-3 object
+
+The canonical four-layer state remains
+
+$$
+Y(t)=[x_P,x_T,z_I,z_O]^\top,
+$$
+
+and Stage 3 adds the explicit hybrid operating mode through
+
+$$
+\boxed{\widetilde Y(t)=(Y(t),m(t)).}
+$$
+
+Stage 3 is responsible for heterogeneous native subsystem dynamics, causal delay, multiple timescales, discrete events, mode switching, dynamic topology, trajectory uncertainty, cascade-arrival time, and spatial propagation only where a spatial-front interpretation is physically meaningful.
+
+The Stage-3 boundary is strict:
+
+$$
+\boxed{
+\text{Stage 3 produces trajectories; Stage 4 observes/controls them; Stage 5 evaluates viability.}
+}
+$$
+
+The next framework task is **Stage 4 — Feedback & Control**.
+
+---
+
+## Representation rule
+
+For framework figures and diagrams:
+
+$$
 \boxed{\textbf{CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.}}
-```
+$$
 
-These files take precedence when an older memory, figure, generated image, or repository description conflicts with the current seven-stage framework or its exact figure content.
+Generated illustrations are not scientific authority. Final figures must be checked against the canonical project files.
 
 ---
 
-## Historical corrected v2 memory capsule
+## Evidence and novelty rule
 
-For high-rigor continuation of the earlier MSE thesis development, evidence, provenance, and historical chain architecture, use the **corrected canonical v2 memory capsule**:
+Scientific authority comes from original source artifacts, verified literature/evidence records, equations, data, code, numerical tests, and explicit provenance.
 
-[`project_memory/2026-08-21_chain_architecture_v2/README.md`](project_memory/2026-08-21_chain_architecture_v2/README.md)
+The thesis must distinguish:
 
-## Why v2
+$$
+\text{domain evidence}
+\neq
+\text{transferable methodology}
+\neq
+\text{mathematical theory}
+\neq
+\text{thesis-proposed synthesis}.
+$$
 
-A second audit found and corrected several issues in the first memory capsule, including:
+Novelty is not assumed because established components are combined. Candidate contributions remain subject to systematic falsification and baseline comparison.
 
-- incomplete demonstrator wording — the authoritative scope is **urban flooding with waste–drainage–transport feedbacks**;
-- mixing the core MSE architecture with the broader design/decision research program;
-- blurring current P1–P7 propositions with historical H0–H7/T1 labels;
-- failing to distinguish the frozen `(1)` 325-dataset name from the byte-identical `(4)` execution copy;
-- insufficient separation of directly visible verbatim text, older archived requests and reconstructed summaries;
-- ambiguity between the GitHub high-rigor run index and the later three-model comparative interpretation.
+---
 
-Full correction record:
+## Historical memory
 
-[`project_memory/2026-08-21_chain_architecture_v2/14_CORRECTION_LOG.md`](project_memory/2026-08-21_chain_architecture_v2/14_CORRECTION_LOG.md)
+Earlier project-memory capsules remain available for provenance, including:
+
+- [`project_memory/2026-08-21_chain_architecture_v2/`](project_memory/2026-08-21_chain_architecture_v2/)
+- [`project_memory/2026-09-09_canonical_7_stage_framework/`](project_memory/2026-09-09_canonical_7_stage_framework/)
+
+However, any P–W–T–SW, waste–drainage, equity-centered, older six-chain, or other superseded architecture inside historical memory is **not current thesis authority** unless explicitly reintroduced through a versioned change.
 
 ## Fast future-chat recovery
 
-For the **current framework**, start with the 2026-09-09 files listed above. For historical evidence/provenance context, continue with:
-
-1. [`00_CANONICAL_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/00_CANONICAL_STATE.md)
-2. [`01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md`](project_memory/2026-08-21_chain_architecture_v2/01_SIX_CHAINS_CANONICAL_AND_EXPANDED.md)
-3. [`03_HYPOTHESIS_PROPOSITION_CROSSWALK.md`](project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md)
-4. [`06_MONTE_CARLO_AND_PRISMA_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md)
-5. [`08_CONVERSATION_MEMORY_INDEX.md`](project_memory/2026-08-21_chain_architecture_v2/08_CONVERSATION_MEMORY_INDEX.md)
-6. [`12_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md`](project_memory/2026-08-21_chain_architecture_v2/12_OPEN_QUESTIONS_AND_NEXT_ACTIONS.md)
-7. [`PROJECT_MEMORY.json`](project_memory/2026-08-21_chain_architecture_v2/PROJECT_MEMORY.json)
-
-## Authority rule
-
-Memory provides **high recall**. Scientific authority remains with the original source artifacts, exact transcript/source text, verified literature/evidence records, code, datasets, prompts and provenance files. For the **current seven-stage framework architecture and its visual representation**, the 2026-09-09 canonical framework and visual-fidelity files are the controlling specifications.
-
-The first capsule remains preserved at `project_memory/2026-08-21_chain_architecture/` for provenance but is superseded for future recall by the corrected v2 capsule, except where the later 2026-09-09 framework authority explicitly supersedes framework architecture/figure content.
+For a future continuation, start with the current canonical authority list at the top of this file, then use historical memory only when provenance or evolution of the research is specifically needed.
