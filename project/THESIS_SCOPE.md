@@ -4,6 +4,7 @@
 **Effective date:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** `Dossiya-SE/MSE-thesis`  
+**Citation standard:** APA 7th edition author–date  
 **Change control:** This scope remains authoritative until explicitly revised and versioned.
 
 ---
@@ -19,13 +20,9 @@ $$
 with
 
 $$
-\boxed{P,T=\text{physical infrastructure systems}}
-$$
-
-and
-
-$$
-\boxed{I,O=\text{informational and organizational layers}.}
+P,T=\text{physical infrastructure systems},
+\qquad
+I,O=\text{informational and organizational layers}.
 $$
 
 The precise system description is:
@@ -44,7 +41,7 @@ Canonical definition: [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINI
 
 ## 2. Governing seven-stage framework
 
-The thesis follows the frozen architecture
+The frozen architecture is
 
 $$
 \text{Multilayer Structure}
@@ -53,7 +50,7 @@ $$
 \rightarrow
 \text{Coupled Hybrid Multiscale Dynamics}
 \rightarrow
-\text{Feedback \& Control}
+\text{Observation, Organization, Feedback and Control}
 \rightarrow
 \text{Viability}
 \rightarrow
@@ -108,6 +105,46 @@ $$
 
 Canonical Stage 3: [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
 
+### Stage 4 — Observation, Organization, Feedback and Control
+
+Defines how the evolving Stage-3 system is measured, inferred, interpreted, organizationally constrained, and acted upon under imperfect information.
+
+The conceptual feedback spine is
+
+$$
+X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
+$$
+
+The mathematical control architecture uses
+
+$$
+(\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I),
+\qquad
+u=\pi(\widehat X,z_I,z_O),
+\qquad
+u\in\mathcal U(z_I,z_O),
+$$
+
+where the rendered action symbol is the canonical intervention variable $u$.
+
+For sequential non-overlapping response processes,
+
+$$
+\tau_{\rm response}
+=
+\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+$$
+
+The proposed diagnostic
+
+$$
+\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}}
+$$
+
+is a thesis construct, not an established resilience law.
+
+Canonical Stage 4: [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
+
 ---
 
 ## 4. Current scientific progression
@@ -120,7 +157,7 @@ $$
 \rightarrow
 \underbrace{\{Y(t),m(t),\mathcal G(t),T_C,v_c\}}_{\text{Stage 3}}
 \rightarrow
-\underbrace{I\rightarrow O\rightarrow u}_{\text{Stage 4}}
+\underbrace{\{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}}_{\text{Stage 4}}
 \rightarrow
 \underbrace{\mathcal V_{\rm sus}^{u}}_{\text{Stage 5}}
 \rightarrow
@@ -128,7 +165,7 @@ $$
 }
 $$
 
-The next framework-formalization task is **Stage 4 — Feedback & Control**.
+The next framework-formalization task is **Stage 5 — Viability**.
 
 ---
 
@@ -136,20 +173,20 @@ The next framework-formalization task is **Stage 4 — Feedback & Control**.
 
 The thesis is framework-driven and evidence-gated. It does not assume that every subsystem requires maximal simulation detail or that every mathematical concept must be implemented at the highest available fidelity.
 
-The governing principles are:
+The governing principles are
 
 $$
-\text{maximum necessary physical fidelity}
-\neq
-\text{maximum possible model detail},
+\text{maximum necessary physical fidelity}\neq\text{maximum possible model detail},
+$$
+
+$$
+\text{correlation/common exposure}\neq\text{causal interdependency},
 $$
 
 and
 
 $$
-\text{correlation/common exposure}
-\neq
-\text{causal interdependency}.
+\text{technically desirable action}\not\Rightarrow\text{organizationally executable action}.
 $$
 
 Each mathematical layer must answer a defined research question and create a corresponding validation obligation.
@@ -172,18 +209,29 @@ $$
 \text{falsification and validation}.
 $$
 
-The thesis distinguishes:
-
-- empirical/domain evidence;
-- transferable methodological evidence;
-- mathematical theory;
-- thesis-proposed synthesis.
+The thesis distinguishes empirical/domain evidence, transferable methodological evidence, mathematical theory, derived synthesis, and thesis-proposed constructs. In-text citations and reference lists follow **APA 7th edition**.
 
 A proposed construct remains a candidate contribution until novelty and performance claims survive systematic comparison and falsification.
 
 ---
 
-## 7. Supersession rule
+## 7. Stage boundary rule
+
+$$
+\boxed{
+\text{Stage 3 produces trajectories;}
+\quad
+\text{Stage 4 observes and controls them;}
+\quad
+\text{Stage 5 evaluates their viability.}
+}
+$$
+
+Stage 4 does not redefine $z_I$ or $z_O$ dynamics and does not compute $\mathcal V_{\rm sus}^{u}$, $\rho_g$, or $T_{\rm exit}$.
+
+---
+
+## 8. Supersession rule
 
 Earlier P–W–T–SW, waste–drainage, equity-centered, or other historical architectures preserved elsewhere in Git history, project memory, archive folders, or research archives are **not the current thesis scope**.
 
