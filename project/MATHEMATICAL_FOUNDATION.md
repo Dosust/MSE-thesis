@@ -1,15 +1,16 @@
 # Mathematical Foundation
 
-**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–5  
+**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–6  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **System:** Power–Transportation–Information–Organization (P–T–I–O)  
-**Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the canonical stage files
+**Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the canonical stage files  
+**Stage 7:** deep research complete; exact mathematical scope not frozen
 
 ---
 
 ## 1. Scientific object
 
-The thesis treats infrastructure resilience as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints**.
+The thesis treats infrastructure resilience and sustainable transformation as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints and regime-adequacy requirements**.
 
 The framework-level state is
 
@@ -38,7 +39,7 @@ $$
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
-The central object is not a scalar resilience score. The thesis studies the interaction among causal interdependencies, dynamic trajectories, observation/control, and controlled viability.
+The framework does not reduce resilience or transformation to one scalar score. It preserves causal mechanisms, dynamic trajectories, observation/control, controlled viability and long-horizon regime adequacy as distinct mathematical layers.
 
 ---
 
@@ -74,7 +75,7 @@ Common hazard exposure alone does not establish an interdependency.
 
 ## 3. Stage-3 hybrid delayed multirate dynamics
 
-Partition the state into continuous/quasi-continuous states $Y_c$ and discrete states $Y_d$. A general Stage-3 representation is
+Partition the state into continuous/quasi-continuous states $Y_c$ and discrete states $Y_d$.
 
 **Equation F.1 — Coupled hybrid dynamics**
 
@@ -108,81 +109,65 @@ $$
 \text{characteristic timescale }\tau.
 $$
 
-For component $j$, cascade-arrival time may be represented as
+For component $j$,
 
 $$
 T_C(j)=\inf\{t>t_0:j\text{ enters a predefined disrupted state}\}.
 $$
 
-A spatial propagation velocity $v_c(t)$ is used only where a physically meaningful spatial-front interpretation exists.
+A spatial propagation velocity is used only where a meaningful physical spatial-front interpretation exists.
 
 ---
 
-## 4. Stage-3 native subsystem states
-
-The framework does not force all layers into one equation class.
+## 4. Native subsystem states
 
 | Layer/system | Representative state/process variables | Typical mathematical family |
 |---|---|---|
-| Power $P$ | voltage, power flow, frequency, DER/storage, charging, traction power | algebraic power flow, DistFlow, DAE, dynamic models where required |
+| Power $P$ | voltage, power flow, frequency, DER/storage, charging, traction power | power flow, DistFlow, DAE/dynamic models where needed |
 | Transportation $T$ | density, flow, speed, travel time, accessibility, EV/eBus SOC, train motion | conservation laws, CTM/DTA, routing, queueing, train-motion models |
 | Information $I$ | availability, latency, quality, freshness, loss, estimation error, synchronization | delay, stochastic, discrete-event, communication models |
 | Organization $O$ | authority, coordination, resources, workforce, decision/mobilization times | state-transition, scheduling, routing, resource-allocation, discrete-event models |
 
-The canonical information and organizational states are
+The canonical informational and organizational states are
 
 $$
-z_I=
-[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top,
+z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top,
 $$
 
-and
-
 $$
-z_O=
-[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
+z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
 $$
 
 ---
 
 ## 5. Stage-4 observation and inference
 
-The true physical state is not assumed to be directly known. A generic measurement model is
+The true physical state is not assumed to be directly known.
 
 **Equation F.2 — Measurement model**
 
 $$
-y_k(t)=H_k\!\left[X(t-\delta_k)\right]+\varepsilon_k(t),
+y_k(t)=H_k\!\left[X(t-\delta_k)\right]+\varepsilon_k(t).
 $$
 
-where $\varepsilon_k(t)$ is measurement noise/error.
-
-State estimation is represented as
+State estimation is
 
 $$
-\left(\widehat X(t),\Sigma_X(t)\right)
+(\widehat X(t),\Sigma_X(t))
 =
 \mathcal E\!\left(y_{[0,t]},z_I(t)\right).
 $$
 
-Under partial observability, a belief state may be used:
+Under partial observability,
 
 $$
-b_t(x)
-=
-p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
+b_t(x)=p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
 $$
 
-The canonical conceptual spine is
+The conceptual feedback spine is
 
 $$
-X(t)
-\rightarrow y(t)
-\rightarrow I(t)
-\rightarrow \widehat X(t)
-\rightarrow O(t)
-\rightarrow u(t)
-\rightarrow X(t).
+X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
 $$
 
 ---
@@ -197,17 +182,13 @@ $$
 \mathcal U\!\left(z_I(t),z_O(t)\right),
 $$
 
-and
-
 $$
-u(t)
-=
-\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
+u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-No specific solver is part of the framework definition. MPC, mathematical programming, dynamic programming, POMDP methods, game-theoretic methods, or learning-based control may instantiate the policy $\pi$ only when justified by the research question and validation design.
+No specific solver is part of the framework definition.
 
 For a sequential non-overlapping response process,
 
@@ -225,18 +206,13 @@ When processes overlap, $\tau_{\rm response}$ is the relevant critical-path comp
 
 ## 7. Stage-5 acceptability and controlled viability
 
-The acceptable region is defined by justified constraints:
+The acceptable region is
 
 $$
 K_{\rm sus}(t)
 =
-\left\{
-Y:g_r(Y,t)\le0,
-\quad r=1,\ldots,n_K
-\right\}.
+\{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\}.
 $$
-
-The primary finite-horizon controlled viability set is
 
 **Equation F.3 — Controlled finite-horizon viability**
 
@@ -251,7 +227,7 @@ Y_0\in K_{\rm sus}:
 \right\}.
 $$
 
-The central set distinction is
+The central distinction is
 
 $$
 Y\notin\mathcal V_{\rm sus}^{u,T}
@@ -265,91 +241,49 @@ Thus the loss-of-maintainability boundary $\partial\mathcal V$ is distinct from 
 
 ## 8. Robust and stochastic viability
 
-Worst-case robust viability and stochastic viability remain mathematically separate.
-
-For bounded/adversarial uncertainty,
-
-$$
-\mathcal V_{\rm rob}^{T}
-=
-\left\{
-Y_0:
-\exists\pi\in\Pi_{\rm adm},
-\ \forall\xi\in\Xi,
-\ Y^{\pi,\xi}(t)\in K_{\rm sus}
-\ \forall t\in[0,T]
-\right\}.
-$$
-
-For probabilistic uncertainty,
-
-$$
-\mathcal V_{\varepsilon}^{T}
-=
-\left\{
-Y_0:
-\exists\pi,
-\ \Pr\!\left[Y^{\pi}(t)\in K_{\rm sus}\ \forall t\in[0,T]\right]
-\ge1-\varepsilon
-\right\}.
-$$
-
-Therefore,
+Worst-case robust viability and stochastic viability remain mathematically separate:
 
 $$
 \text{robust viability}\neq\text{stochastic viability}.
 $$
 
+The selected uncertainty interpretation determines the appropriate quantifiers and computation.
+
 ---
 
 ## 9. Geometric and temporal proximity to viability loss
 
-A normalized Euclidean or weighted distance is the baseline geometric diagnostic. With
+With normalized state
 
 $$
 \widetilde Y=D^{-1}(Y-Y_{\rm ref}),
 $$
 
-use
+the baseline geometric diagnostic is
 
 $$
-\rho_E(Y)
-=
-d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right).
+\rho_E(Y)=d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right).
 $$
 
-The proposed thesis extension is the state-dependent Riemannian margin
+The proposed state-dependent extension is
 
 $$
-\rho_g(Y)
-=
-d_{g_\psi}\!\left(Y,\partial\mathcal V_{\rm sus}^{u,T}\right),
-\qquad
-g_\psi(Y)\succ0.
+\rho_g(Y)=d_{g_\psi}\!\left(Y,\partial\mathcal V_{\rm sus}^{u,T}\right),
+\qquad g_\psi(Y)\succ0.
 $$
-
-This is a proposed thesis construct and must be compared against justified Euclidean/weighted baselines.
 
 Two temporal quantities are retained:
 
 $$
 T_{\mathcal V}^{\pi,\xi}(Y_0)
 =
-\inf\left\{t>0:Y^{\pi,\xi}(t)\notin\mathcal V_{\rm sus}^{u,T-t}\right\},
+\inf\{t>0:Y^{\pi,\xi}(t)\notin\mathcal V_{\rm sus}^{u,T-t}\},
 $$
-
-and
 
 $$
 T_K^{\pi,\xi}(Y_0)
 =
-\inf\left\{t>0:Y^{\pi,\xi}(t)\notin K_{\rm sus}\right\}.
-$$
-
-Along trajectories where maintainability is lost before actual constraint violation,
-
-$$
-T_{\mathcal V}\le T_K.
+\inf\{t>0:Y^{\pi,\xi}(t)\notin K_{\rm sus}\}.
 $$
 
 ---
@@ -361,10 +295,10 @@ The proposed response slacks are
 $$
 S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
 \qquad
-S_K=T_K-\tau_{\rm response}.
+S_K=T_K-\tau_{\rm response},
 $$
 
-Dimensionless versions are
+with dimensionless forms
 
 $$
 \Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
@@ -372,13 +306,13 @@ $$
 \Pi_K=\frac{\tau_{\rm response}}{T_K}.
 $$
 
-These quantities are proposed diagnostics, not universal resilience laws. A positive slack or a ratio below one does not by itself guarantee successful control.
+These are proposed diagnostics; neither a positive slack nor a ratio below one is by itself sufficient for successful control.
 
 ---
 
 ## 11. Interdependency sensitivity
 
-Because viability boundaries need not be smooth, finite perturbation is the default proposed sensitivity:
+Finite perturbation is the default proposed sensitivity when smoothness is not established:
 
 $$
 S_{ij}^{\mathcal V}(\Delta\theta)
@@ -390,52 +324,144 @@ S_{ij}^{\mathcal V}(\Delta\theta)
 }{\|\Delta\theta\|},
 $$
 
-where
-
 $$
 \theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
 $$
 
-Differential sensitivity is used only where smoothness is demonstrated.
+---
+
+## 12. Reduced viability state
+
+When required,
+
+$$
+Y_V=\mathcal P_V(Y),
+$$
+
+but the projection must preserve or conservatively bound constraints, control authority, interdependencies and mechanisms that materially affect Stage-5 conclusions. Reduction is therefore a validation obligation.
 
 ---
 
-## 12. Reduced viability state and computation
+## 13. Stage-6 regime-adequacy diagnosis
 
-The full Stage-3 state may be too high-dimensional for exact viability computation. A reduced viability state may therefore be defined by
+Stage 6 asks whether **preserving the present system/decision space remains the correct objective** under longer-horizon sustainability and equity requirements.
+
+The current regime is
 
 $$
-Y_V=\mathcal P_V(Y).
+\mathfrak M_0
+=
+(\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
 $$
 
-The projection must preserve or conservatively bound the constraints, control authority, interdependencies, and mechanisms that materially affect Stage-5 conclusions. State reduction is therefore a validation obligation, not merely a computational convenience.
+The Stage-5 evidence interface is
 
-Hamilton–Jacobi, set-invariance, decomposition, control-barrier, and learned reachability methods are candidate computational or certification tools. None of them is identical to Stage-5 theory itself.
+$$
+\mathcal R_5
+=
+\{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
+$$
+
+The proposed diagnostic vector is
+
+$$
+\mathbf d_6
+=
+[d_{\mathcal V},d_{\rm limit},d_{\rm lock},d_{\rm mal},d_{\rm sus},d_{\rm eq},d_{\rm struct}]^\top.
+$$
+
+The frozen Stage-6 translation is
+
+**Equation F.4 — Resilience-to-sustainability transition**
+
+$$
+\Phi_{\rm ST}
+:
+(\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
+\mapsto
+(c_6,\mathcal D_6,\boldsymbol{\zeta}_T),
+$$
+
+where
+
+$$
+c_6\in\{R,A,T\},
+$$
+
+$$
+\mathcal D_6
+=
+\{\mathcal D_P,\mathcal D_T,\mathcal D_I,\mathcal D_O,
+\mathcal D_{\mathfrak I},\mathcal D_{\rm env},\mathcal D_{\rm eq}\},
+$$
+
+and
+
+$$
+\boldsymbol{\zeta}_T
+=
+[\zeta_{\rm depth},\zeta_{\rm scope},\zeta_{\rm scale},\zeta_{\rm pace},
+\zeta_{\rm equity},\zeta_{\rm environment}]^\top.
+$$
+
+The formal Stage-6 distinction is
+
+$$
+\underbrace{\text{viability of the current regime}}_{\text{Stage 5}}
+\neq
+\underbrace{\text{adequacy of preserving that regime}}_{\text{Stage 6}}.
+$$
+
+Stage 6 determines **why change is required, what must change and how deep the change must be**. It does not select the intervention sequence.
 
 ---
 
-## 13. Cross-stage mathematical chain
+## 14. Stage-7 handoff — candidate research only
 
-The current mathematical architecture is
+The frozen input to Stage 7 is
+
+$$
+(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
+\longrightarrow
+\text{candidate strategic interventions and pathways}.
+$$
+
+The deterministic representation
+
+$$
+\Pi=[(a_1,t_1),\ldots,(a_N,t_N)]
+$$
+
+remains a candidate representation of one realized branch. Current Stage-7 research is testing whether the fundamental object should instead be an adaptive, trigger-dependent pathway graph under deep uncertainty.
+
+No Stage-7 mathematical object is frozen in this foundation yet.
+
+---
+
+## 15. Cross-stage mathematical chain
+
+The frozen mathematical architecture through Stage 6 is
 
 $$
 \begin{aligned}
 \{P,T,I,O\}
-&\rightarrow \mathfrak I_{ij}^{\alpha\beta}
-\rightarrow \{Y,\mathcal G,m,T_C\}\\
-&\rightarrow \{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}\\
-&\rightarrow \{K_{\rm sus},\mathcal V,\partial\mathcal V,
-\rho,T_{\mathcal V},T_K\}.
+&\rightarrow\mathfrak I_{ij}^{\alpha\beta}
+\rightarrow\{Y,\mathcal G,m,T_C\}\\
+&\rightarrow\{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}\\
+&\rightarrow\{K_{\rm sus},\mathcal V,\partial\mathcal V,
+\rho,T_{\mathcal V},T_K\}\\
+&\rightarrow\Phi_{\rm ST}
+\rightarrow(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
 \end{aligned}
 $$
 
-Stages 6–7 must use only validated outputs from this chain when translating resilience evidence into sustainability-transition requirements and transformation pathways.
+Stage 7 must begin from this handoff and must not redefine the upstream frozen objects.
 
 ---
 
-## 14. Mathematical discipline
+## 16. Mathematical discipline
 
-The foundation is governed by five separations:
+The foundation is governed by the separations
 
 $$
 \begin{aligned}
@@ -443,8 +469,10 @@ $$
 \text{event time}&\neq\text{causal delay}\neq\text{timescale},\\
 X&\neq y\neq\widehat X,\\
 K_{\rm sus}&\neq\mathcal V_{\rm sus}^{u,T},\\
-V_{\rm HJ}&\neq d(\cdot,\partial\mathcal V)\quad\text{in general}.
+V_{\rm HJ}&\neq d(\cdot,\partial\mathcal V)\quad\text{in general},\\
+\text{current-regime viability}&\neq\text{long-horizon regime adequacy},\\
+u(t)&\neq a_k\quad\text{(operational control versus structural transformation action)}.
 \end{aligned}
 $$
 
-These distinctions are mandatory in equations, simulations, figures, and interpretation.
+These distinctions are mandatory in equations, simulations, figures and interpretation.
