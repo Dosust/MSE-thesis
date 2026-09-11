@@ -5,9 +5,10 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
+![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
 ![Thresholds](https://img.shields.io/badge/%CE%B41--%CE%B45-NOT%20SET-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix is now the current operationalization specification, while exact confirmatory thresholds, exact hypothesis domains and final analysis procedures remain to be defined *a priori*.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix and the Minimal Sufficient Experimental Realization methodology now govern operationalization, while the actual demonstrator topology, exact hypothesis domains, numerical thresholds and final analysis procedures remain to be fixed *a priori*.
 
 > **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
 
@@ -51,9 +52,10 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 | 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
 | 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
 | 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules | current; numerical thresholds/domains/procedures not frozen |
-| 14 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
-| 15 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
-| 16 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
+| 14 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale, preservation constraints and simplification stopping rule | current methodology; actual demonstrator not frozen |
+| 15 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
+| 16 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
+| 17 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
 The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance only and cannot override the frozen Stage-7 specification.
 
@@ -148,7 +150,31 @@ The matrix explicitly keeps $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and fin
 
 ---
 
-## 6. Stage-6 / Stage-7 boundary
+## 6. Minimal Sufficient Experimental Realization
+
+The current demonstrator-selection methodology is [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md).
+
+The framework itself is not reduced. Only the experimental realization is reduced:
+
+```math
+\text{Full scientific framework}\neq\text{experimental demonstrator}.
+```
+
+The governing principle is
+
+```math
+\mathcal M_D^*
+=
+\text{minimum-complexity realization preserving the discriminatory power of }H_1-H_5.
+```
+
+Reduction therefore targets resolution—numbers of assets, states, interfaces, hazards and interventions—while preserving $P,T,I,O$, required causal mechanisms, observation/control, viability and at least one Stage-7 transformation. Simplification stops when further removal would eliminate a hypothesis-relevant mechanism, observable, rival explanation or critical experiment.
+
+The actual demonstrator topology, component choices, hazard family, parameterization and validation domain are **not frozen** by this methodology.
+
+---
+
+## 7. Stage-6 / Stage-7 boundary
 
 ```math
 \underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
@@ -160,7 +186,7 @@ Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requ
 
 ---
 
-## 7. Repository rendering contract
+## 8. Repository rendering contract
 
 Active Markdown follows these rules:
 
@@ -180,7 +206,7 @@ See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the
 
 ---
 
-## 8. Next scientific phase
+## 9. Next scientific phase
 
 The immediate sequence is
 
@@ -191,7 +217,9 @@ The immediate sequence is
 \rightarrow
 \text{confirmatory hypothesis matrix}
 \rightarrow
-\text{reduced P--T--I--O demonstrator selection}
+\text{minimal-sufficient demonstrator methodology}
+\rightarrow
+\text{actual P--T--I--O demonstrator selection}
 \rightarrow
 \text{benchmark/data evidence audit}
 \rightarrow
@@ -204,6 +232,6 @@ The immediate sequence is
 \text{validation}.
 ```
 
-The next task is therefore to select the reduced P–T–I–O demonstrator and establish the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$ and the final confirmatory analysis procedures.
+The next task is therefore to select the actual minimal sufficient P–T–I–O demonstrator and establish the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$ and the final confirmatory analysis procedures.
 
 Historical and archived material remains provenance only unless explicitly reintroduced through a versioned revision.
