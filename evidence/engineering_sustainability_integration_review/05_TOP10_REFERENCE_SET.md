@@ -6,9 +6,9 @@ These ten papers were selected from the adjudicated perfect-score corpus as refe
 
 The working perfect vector for each selected paper is:
 
-$$
+```math
 (R_1,R_2,R_3,R_4,\lambda)=(3,3,3,3,3)
-$$
+```
 
 subject always to retained full-text evidence and the frozen definitions in this folder.
 
@@ -23,9 +23,9 @@ subject always to retained full-text evidence and the frozen definitions in this
 
 Representative analytical chain:
 
-$$
+```math
 Hazard\rightarrow Structural\ Response\rightarrow Damage\rightarrow Loss\rightarrow\{Repair\ Cost,Downtime,Energy/CO_2\}
-$$
+```
 
 This is the strongest archetype for causal engineering-state-to-sustainability consequence modelling.
 
@@ -40,9 +40,9 @@ This is the strongest archetype for causal engineering-state-to-sustainability c
 
 Reported working form used in prior extraction:
 
-$$
+```math
 P=0.05(P_m/P_{m0})+0.05(P_f/P_{f0})+0.30(P_{c0}/P_c)+0.30(P_{e0}/P_e)+0.30(P_{CO_2,0}/P_{CO_2})
-$$
+```
 
 This equation must remain tied to the exact paper evidence when used in final analysis.
 
@@ -57,9 +57,9 @@ This equation must remain tied to the exact paper evidence when used in final an
 
 Representative chain:
 
-$$
+```math
 Experimental\ Performance\rightarrow MIVES\ Indicators/Value\ Functions\rightarrow Sustainability\ Index
-$$
+```
 
 ---
 
@@ -72,9 +72,9 @@ $$
 
 Representative chain:
 
-$$
+```math
 K_s\ mechanics\rightarrow Equivalent\ foundation\ designs\rightarrow LCSA\ indicators\rightarrow NAHP\text{-}G\rightarrow ELECTRE\ IS\rightarrow Preferred\ design
-$$
+```
 
 **Taxonomy note:** this paper exposes the current classification issue between `LCSA + outranking` and the broader `Hybrid MCDM` label. Before final matrix freeze, use one unambiguous mapping rule.
 
@@ -89,9 +89,9 @@ $$
 
 Representative chain:
 
-$$
+```math
 \{Engineering,Environmental,Economic\}\rightarrow AHP+EWM\rightarrow TOPSIS\rightarrow Ranking
-$$
+```
 
 ---
 
@@ -104,9 +104,9 @@ $$
 
 Representative chain:
 
-$$
+```math
 \{Technical,Environmental,Economic,Social\}\rightarrow Normalization/Consolidation\rightarrow Integrated\ Index
-$$
+```
 
 ---
 
@@ -119,9 +119,9 @@ $$
 
 Representative architecture:
 
-$$
+```math
 SI=\text{weighted aggregation of normalized social + economic + environmental + technical sub-indices}
-$$
+```
 
 ---
 
@@ -134,9 +134,9 @@ $$
 
 Representative chain:
 
-$$
+```math
 Measured\ Serviceability\rightarrow MIVES\ Value\ Functions/Weights\rightarrow Social\ Sustainability\ Index
-$$
+```
 
 ---
 
@@ -149,9 +149,9 @@ $$
 
 Prior extracted equation example:
 
-$$
+```math
 y=-62.43x_1+181.74x_2+166.11x_3-43.13
-$$
+```
 
 Use exact equation/passage from the focal paper in final evidence tables.
 
@@ -166,9 +166,9 @@ Use exact equation/passage from the focal paper in final evidence tables.
 
 Representative chain:
 
-$$
+```math
 Criteria\rightarrow PCA\rightarrow Kriging\ Optimization\rightarrow Robust\ Solutions\rightarrow AHP\ Decision
-$$
+```
 
 ---
 
@@ -188,6 +188,6 @@ The Top 10 intentionally span different integration architectures rather than te
 
 The set should therefore be analysed as a collection of mathematical/methodological archetypes for the bridge
 
-$$
+```math
 P_{engineering}\rightarrow F_{integration}\rightarrow S_{sustainability}\rightarrow D_{decision}.
-$$
+```

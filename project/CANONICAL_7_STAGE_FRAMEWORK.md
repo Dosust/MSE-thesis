@@ -25,9 +25,9 @@
 
 The sequence is
 
-$$
+```math
 1\rightarrow2\rightarrow3\rightarrow4\rightarrow5\rightarrow6\rightarrow7.
-$$
+```
 
 ```mermaid
 flowchart LR
@@ -64,35 +64,35 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 
 ## 3. Frozen system ontology
 
-$$
+```math
 \mathcal S=\{P,T,I,O\},
-$$
+```
 
 with
 
-$$
+```math
 P,T=\text{physical infrastructure systems},
 \qquad
 I,O=\text{informational and organizational layers}.
-$$
+```
 
 The integrated state is
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \end{bmatrix},
-$$
+```
 
 and the physical state is
 
-$$
+```math
 X(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)
 \end{bmatrix}.
-$$
+```
 
 ---
 
@@ -100,21 +100,21 @@ $$
 
 Every accepted directed interdependency is represented by
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
 E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right),
-$$
+```
 
 where $\alpha,\beta\in\{P,T,I,O\}$ and $\alpha\neq\beta$.
 
 A retained relation requires an explicit causal mechanism:
 
-$$
+```math
 \alpha\xrightarrow{M_{ij}}\beta.
-$$
+```
 
 Common hazard exposure or correlation alone does not establish interdependency.
 
@@ -124,21 +124,21 @@ Common hazard exposure or correlation alone does not establish interdependency.
 
 The operating mode remains separate from the continuous/discrete system state:
 
-$$
+```math
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
-$$
+```
 
 Stage 3 owns delayed, hybrid, multirate and topology-dependent evolution through $F_{\mathcal G}^{m}$, including event logic, cascade timing and uncertainty where required.
 
 The temporal discipline is
 
-$$
+```math
 \text{event time}
 \neq
 \text{causal delay}
 \neq
 \text{characteristic timescale}.
-$$
+```
 
 ---
 
@@ -146,7 +146,7 @@ $$
 
 The feedback spine is
 
-$$
+```math
 X(t)
 \rightarrow y(t)
 \rightarrow I(t)
@@ -154,15 +154,15 @@ X(t)
 \rightarrow O(t)
 \rightarrow u(t)
 \rightarrow X(t).
-$$
+```
 
 Feasible control is constrained by the informational and organizational states:
 
-$$
+```math
 u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 Here $u(t)$ is operational control. It is not the Stage-7 strategic transformation action.
 
@@ -172,23 +172,23 @@ Here $u(t)$ is operational control. It is not the Stage-7 strategic transformati
 
 The acceptability set is distinct from the controlled viable set:
 
-$$
+```math
 K_{\rm sus}
 \supseteq
 \mathcal V_{\rm sus}^{u,T}.
-$$
+```
 
 The central implication is
 
-$$
+```math
 Y\notin\mathcal V_{\rm sus}^{u,T}
 \not\Rightarrow
 Y\notin K_{\rm sus}.
-$$
+```
 
 Stage-5 outputs include
 
-$$
+```math
 \partial\mathcal V,
 \qquad
 \rho,
@@ -198,7 +198,7 @@ T_{\mathcal V},
 T_K,
 \qquad
 S_{ij}^{\mathcal V},
-$$
+```
 
 with proposed quantities retaining `[P]` status until validated.
 
@@ -208,29 +208,29 @@ with proposed quantities retaining `[P]` status until validated.
 
 Stage 6 receives validated Stage-5 evidence and long-horizon requirements through
 
-$$
+```math
 \Phi_{\rm ST}
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
 (c_6,\mathcal D_6,\boldsymbol\zeta_T).
-$$
+```
 
 It answers
 
-$$
+```math
 \text{WHY change}
 +
 \text{WHAT must change}
 +
 \text{HOW DEEP}.
-$$
+```
 
 Its output is
 
-$$
+```math
 (c_6,\mathcal D_6,\boldsymbol\zeta_T),
-$$
+```
 
 not an intervention sequence.
 
@@ -240,7 +240,7 @@ not an intervention sequence.
 
 Stage 7 changes the regime itself. The frozen regime object is
 
-$$
+```math
 \mathfrak M_k
 =
 \left(
@@ -252,33 +252,33 @@ F_k,
 K_{{\rm sus},k},
 \mathcal U_k
 \right).
-$$
+```
 
 Operational and strategic actions are distinct:
 
-$$
+```math
 \underbrace{u(t)}_{\text{operate current regime}}
 \neq
 \underbrace{\mathbf a_k}_{\text{transform regime}}.
-$$
+```
 
 The strategic action vector is
 
-$$
+```math
 \mathbf a_k
 =
 \begin{bmatrix}
 a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathfrak I}
 \end{bmatrix},
-$$
+```
 
 and the regime transition is
 
-$$
+```math
 \mathfrak M_{k+1}
 =
 \mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k).
-$$
+```
 
 The adaptive transformation policy is denoted $\boldsymbol\pi_{\rm ST}$, with step policy $\pi_k^{\rm ST}$.
 
@@ -288,27 +288,27 @@ The adaptive transformation policy is denoted $\boldsymbol\pi_{\rm ST}$, with st
 
 The transformation meta-graph is
 
-$$
+```math
 \mathbb G_{\rm ST}
 =
 (\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
-$$
+```
 
 where
 
-$$
+```math
 v_k\equiv\mathfrak M_k
-$$
+```
 
 and each edge represents an admissible strategic transformation.
 
 A monitored trigger region $\mathcal Z_j$ produces trigger time
 
-$$
+```math
 \tau_j
 =
 \inf\{t\ge t_k:s_j(t)\in\mathcal Z_j\}.
-$$
+```
 
 The feasible action set includes technical, budget, informational, organizational, sustainability, equity and temporal constraints.
 
@@ -318,7 +318,7 @@ The feasible action set includes technical, budget, informational, organizationa
 
 The terminal framework object is
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 \left(
@@ -329,7 +329,7 @@ $$
 \mathbf J,
 \mathbb M_{\rm sus}
 \right).
-$$
+```
 
 Stage 7 is therefore interpreted as an **adaptive, viability-constrained, many-objective reachability problem over evolving P–T–I–O infrastructure regimes**.
 
@@ -337,7 +337,7 @@ Stage 7 is therefore interpreted as an **adaptive, viability-constrained, many-o
 
 ## 12. Complete frozen mathematical chain
 
-$$
+```math
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
@@ -353,7 +353,7 @@ $$
 &\rightarrow
 \underbrace{\mathfrak P_{\rm ST}}_{7}.
 \end{aligned}
-$$
+```
 
 ---
 
@@ -374,7 +374,7 @@ $$
 
 Every candidate Stage-7 transformation must be replayed through the upstream framework:
 
-$$
+```math
 \begin{aligned}
 \text{Stage-7 candidate}
 &\rightarrow\text{Stage-1 structural update}\\
@@ -385,7 +385,7 @@ $$
 &\rightarrow\text{Stage-6 adequacy diagnosis}\\
 &\rightarrow\text{Stage-7 accept / reject / refine}.
 \end{aligned}
-$$
+```
 
 The validation loop checks the stages; it does not reorder or replace them.
 

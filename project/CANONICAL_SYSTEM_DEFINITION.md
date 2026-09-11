@@ -17,11 +17,11 @@
 
 The thesis studies a **multilayer interdependent infrastructure system** with
 
-$$
+```math
 P,T=\text{physical infrastructure systems},
 \qquad
 I,O=\text{informational and organizational layers}.
-$$
+```
 
 The most precise description is:
 
@@ -29,15 +29,15 @@ The most precise description is:
 
 The canonical system object is
 
-$$
+```math
 \mathcal S=\{P,T,I,O\}.
-$$
+```
 
 When a layer-index set is needed, use
 
-$$
+```math
 \mathcal L=\{P,T,I,O\}.
-$$
+```
 
 $\mathcal S$ denotes the system object; $\mathcal L$ denotes the layer/system index set. These roles must not be silently interchanged.
 
@@ -54,27 +54,27 @@ $\mathcal S$ denotes the system object; $\mathcal L$ denotes the layer/system in
 
 The physical state is
 
-$$
+```math
 X(t)=
 \begin{bmatrix}
 x_P(t)\\
 x_T(t)
 \end{bmatrix}.
-$$
+```
 
 The informational–organizational state is
 
-$$
+```math
 Z(t)=
 \begin{bmatrix}
 z_I(t)\\
 z_O(t)
 \end{bmatrix}.
-$$
+```
 
 The integrated state is
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
@@ -82,7 +82,7 @@ x_T(t)\\
 z_I(t)\\
 z_O(t)
 \end{bmatrix}.
-$$
+```
 
 $I$ and $O$ name layers/functions; $z_I(t)$ and $z_O(t)$ are their time-varying states.
 
@@ -94,23 +94,23 @@ The thesis must not reduce the system to a purely physical P–T network when in
 
 Accordingly,
 
-$$
+```math
 R_{\rm system}\neq R(P,T)
-$$
+```
 
 in the general case studied here. The conceptual dependence is
 
-$$
+```math
 R_{\rm system}
 =
 R(P,T,I,O,\mathbb I),
-$$
+```
 
 where $\mathbb I$ denotes the set of explicitly characterized interdependency objects.
 
 The canonical Stage-2 interdependency object is
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
@@ -124,15 +124,15 @@ a_{ij},
 m,
 \mathcal H_t
 \right),
-$$
+```
 
 with
 
-$$
+```math
 \alpha,\beta\in\{P,T,I,O\},
 \qquad
 \alpha\neq\beta.
-$$
+```
 
 ---
 
@@ -154,21 +154,21 @@ $$
 
 Operational control and strategic transformation are different objects:
 
-$$
+```math
 \underbrace{u(t)}_{\text{operate the current regime}}
 \neq
 \underbrace{\mathbf a_k}_{\text{transform the regime}}.
-$$
+```
 
 The strategic action $\mathbf a_k$ is also distinct from the Stage-2 interdependency activation $a_{ij}$.
 
 The Stage-7 regime object is
 
-$$
+```math
 \mathfrak M_k
 =
 (\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
-$$
+```
 
 Thus the original system ontology remains fixed while Stage 7 may change the architecture/configuration of a candidate future regime.
 

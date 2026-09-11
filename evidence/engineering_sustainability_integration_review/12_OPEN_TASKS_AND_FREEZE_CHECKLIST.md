@@ -89,8 +89,8 @@ The text methodology and key legacy source are now in GitHub. Binary XLSX/PDF/ZI
 
 The framework is ready to freeze only when:
 
-$$
+```math
 \boxed{Definitions\ frozen + Evidence\ extracted + Interpretations\ traceable + Code\ consistent + Derived\ matrices\ deterministic}
-$$
+```
 
 The target is not “all cells filled”; the target is that every exported substantive claim is explicitly supported.

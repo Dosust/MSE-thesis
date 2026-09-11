@@ -91,9 +91,9 @@ For the Top 10, do not reduce the papers immediately to summaries/scores. Preser
 
 Preferred relation:
 
-$$
+```math
 Raw\ Evidence\rightarrow Interpretation\rightarrow Scoring\rightarrow Synthesis.
-$$
+```
 
 One paper may therefore have multiple P, F, S, and D rows.
 

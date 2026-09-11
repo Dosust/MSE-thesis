@@ -48,17 +48,17 @@ The file `project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is re
 
 ## Canonical system
 
-$$
+```math
 \mathcal S=\{P,T,I,O\},
-$$
+```
 
 where
 
-$$
+```math
 P,T=\text{physical infrastructure systems},
 \qquad
 I,O=\text{informational and organizational layers}.
-$$
+```
 
 Canonical description:
 
@@ -80,7 +80,7 @@ Canonical description:
 
 The complete frozen chain is
 
-$$
+```math
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
@@ -96,7 +96,7 @@ $$
 &\rightarrow
 \underbrace{\mathfrak P_{\rm ST}}_{7}.
 \end{aligned}
-$$
+```
 
 ---
 
@@ -104,31 +104,31 @@ $$
 
 The candidate future regime is
 
-$$
+```math
 \mathfrak M_k
 =
 (\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
-$$
+```
 
 The strategic transformation vector is
 
-$$
+```math
 \mathbf a_k
 =
 [a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}]^\top.
-$$
+```
 
 The transformation is
 
-$$
+```math
 \mathfrak M_{k+1}
 =
 \mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k).
-$$
+```
 
 The fundamental Stage-7 object is
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 \left(
@@ -139,15 +139,15 @@ $$
 \mathbf J,
 \mathbb M_{\rm sus}
 \right).
-$$
+```
 
 Operational and strategic actions are distinct:
 
-$$
+```math
 \underbrace{u(t)}_{\text{operate current regime}}
 \neq
 \underbrace{\mathbf a_k}_{\text{transform regime}}.
-$$
+```
 
 Stage-2 activation $a_{ij}$ is also distinct from $\mathbf a_k$.
 
@@ -157,9 +157,9 @@ Stage-2 activation $a_{ij}$ is also distinct from $\mathbf a_k$.
 
 The primary confirmatory set is
 
-$$
+```math
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
-$$
+```
 
 The hypothesis logic is frozen. Numerical thresholds $\delta_1,\ldots,\delta_5$, exact scenario ensembles, metrics and confirmatory decision rules remain unfrozen until specified *a priori* in the Hypothesis Specification Matrix.
 

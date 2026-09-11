@@ -40,7 +40,7 @@ A reduced figure may show only a subset of stages **only when its caption explic
 
 When the full mathematical spine is shown, use the current frozen hierarchy:
 
-$$
+```math
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
@@ -56,7 +56,7 @@ $$
 &\rightarrow
 \underbrace{\mathfrak P_{\rm ST}}_{7}.
 \end{aligned}
-$$
+```
 
 Do not replace this chain with older symbols such as $(\mathcal G,Y,Z)\rightarrow\mathcal C\rightarrow\cdots$ unless the figure is explicitly labeled **historical/superseded**.
 
@@ -136,21 +136,21 @@ Do not use unlabeled decorative arrows in a scientific figure.
 
 Stage 7 is now frozen, so the previous prohibition on Stage-7 mathematics is obsolete. A Stage-7 figure may show
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 (\mathbb G_{\rm ST},\boldsymbol\pi_{\rm ST},\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}),
-$$
+```
 
 provided the notation matches the canonical Stage-7 file.
 
 The figure must preserve
 
-$$
+```math
 \underbrace{u(t)}_{\text{operate current regime}}
 \neq
 \underbrace{\mathbf a_k}_{\text{transform regime}}.
-$$
+```
 
 A graph metric such as degree, betweenness or algebraic connectivity must never be presented as equivalent to resilience unless the thesis has explicitly validated that relation for the stated case.
 
@@ -162,30 +162,30 @@ Stage-5 geometry is allowed because it is part of the frozen scope, but evidenti
 
 The baseline is
 
-$$
+```math
 \rho_E
 =
 d(\widetilde Y,\partial\widetilde{\mathcal V}),
-$$
+```
 
 whereas the Riemannian margin
 
-$$
+```math
 \rho_g
 =
 d_{g_\psi}(Y,\partial\mathcal V)
-$$
+```
 
 remains `[P]` until validated.
 
 Likewise,
 
-$$
+```math
 |V_{\rm HJ}(Y)|
 \neq
 d(Y,\partial\mathcal V)
 \quad\text{in general}.
-$$
+```
 
 Do not use curved surfaces merely as a visual metaphor and then label them as formal Riemannian geometry.
 

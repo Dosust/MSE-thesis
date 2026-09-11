@@ -14,13 +14,13 @@
 
 The primary hypothesis set is
 
-$$
+```math
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
-$$
+```
 
 The propositions here are **not ten additional primary hypotheses**. They are subordinate falsifiable claims used to operationalize, stress-test or explain the primary hypotheses:
 
-$$
+```math
 H_{\rm SYS}
 \rightarrow
 \{H_1,\ldots,H_5\}
@@ -28,7 +28,7 @@ H_{\rm SYS}
 \{P_1,\ldots,P_{10}\}
 \rightarrow
 \text{tests / ablations / falsification}.
-$$
+```
 
 Numerical thresholds $\delta_1,\ldots,\delta_5$ remain unset until justified *a priori* in the Hypothesis Specification Matrix.
 
@@ -55,7 +55,7 @@ Numerical thresholds $\delta_1,\ldots,\delta_5$ remain unset until justified *a 
 
 When Stage-4 information/organization effects are tested independently of the primary-H2 nested models, the frozen Stage-4 variants are
 
-$$
+```math
 \mathscr M_0
 \rightarrow
 \mathscr M_1
@@ -63,7 +63,7 @@ $$
 \mathscr M_2
 \rightarrow
 \mathscr M_3,
-$$
+```
 
 where
 
@@ -82,29 +82,29 @@ The symbols $\mathscr M_k$ denote **model variants**. They are intentionally dis
 
 The normalized geometric baseline is
 
-$$
+```math
 \rho_E(Y)
 =
 d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right),
-$$
+```
 
 while the proposed extension is
 
-$$
+```math
 \rho_g(Y)
 =
 d_{g_\psi}\!\left(Y,\partial\mathcal V_{\rm sus}^{u,T}\right).
-$$
+```
 
 The extension is supported only if its added complexity produces reproducible value under a predeclared metric.
 
 Likewise,
 
-$$
+```math
 S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
 \qquad
 S_K=T_K-\tau_{\rm response}
-$$
+```
 
 must be tested as diagnostics rather than assumed to be universal resilience laws.
 
@@ -114,27 +114,27 @@ must be tested as diagnostics rather than assumed to be universal resilience law
 
 Stage 6 must not infer transformation from one Stage-5 quantity:
 
-$$
+```math
 \rho\text{ small}\not\Rightarrow\text{transform},
-$$
+```
 
-$$
+```math
 \mathcal V\text{ small}\not\Rightarrow\text{transform},
-$$
+```
 
-$$
+```math
 \text{hazard/failure occurrence}\not\Rightarrow\text{transform}.
-$$
+```
 
 The frozen translation is
 
-$$
+```math
 \Phi_{\rm ST}
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
 (c_6,\mathcal D_6,\boldsymbol\zeta_T).
-$$
+```
 
 A Stage-6 diagnosis must survive counterfactual comparisons against restoration within the current regime, feasible incremental adaptation, sensitivity to long-horizon requirements, alternative lock-in/maladaptation interpretations and uncertainty in Stage-5 evidence.
 
@@ -144,25 +144,25 @@ A Stage-6 diagnosis must survive counterfactual comparisons against restoration 
 
 The Stage-7 regime transition is
 
-$$
+```math
 \mathfrak M_{k+1}
 =
 \mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k),
-$$
+```
 
 with strategic action
 
-$$
+```math
 \mathbf a_k
 =
 \begin{bmatrix}
 a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathfrak I}
 \end{bmatrix},
-$$
+```
 
 and frozen Stage-7 object
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 \left(
@@ -173,7 +173,7 @@ $$
 \mathbf J,
 \mathbb M_{\rm sus}
 \right).
-$$
+```
 
 The principal adaptive-vs-fixed performance claim is tested by $H_5$. Stage-7 implementation must additionally verify that candidate actions:
 
@@ -206,19 +206,19 @@ A thesis construct must be rejected, simplified or qualified when its critical t
 
 Therefore,
 
-$$
+```math
 \text{more mathematical complexity}
 \not\Rightarrow
 \text{better engineering explanation},
-$$
+```
 
 and
 
-$$
+```math
 \text{framework freeze}
 \not\Rightarrow
 \text{empirical validation}.
-$$
+```
 
 ---
 

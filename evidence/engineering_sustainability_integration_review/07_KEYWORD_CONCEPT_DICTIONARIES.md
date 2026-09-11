@@ -107,12 +107,12 @@ These still require contextual verification. For example, “Smith et al. measur
 
 The operational chain is:
 
-$$
+```math
 Keyword\ Hit\not\Rightarrow Evidence.
-$$
+```
 
 Instead:
 
-$$
+```math
 \boxed{Keyword\rightarrow Candidate\ Passage\rightarrow Focal\ Author\ Action\rightarrow Extracted\ Evidence\rightarrow Interpretation\rightarrow Score.}
-$$
+```

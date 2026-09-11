@@ -56,9 +56,9 @@ The user decided to work with 10 chosen papers and asked that the algorithm, mat
 
 The user emphasized and accepted the chain:
 
-$$
+```math
 P_{engineering}\rightarrow F_{integration}\rightarrow S_{sustainability}\rightarrow D_{decision}.
-$$
+```
 
 The user then asked what keywords/concepts should be searched under each element.
 
@@ -80,9 +80,9 @@ The user then clarified: **“I prefer a lot about extracting the full content a
 
 This is the most important current preference. It changes the implementation priority from compact summary-first extraction to a full evidence dossier:
 
-$$
+```math
 Raw\ Evidence\rightarrow Interpretation\rightarrow Scoring\rightarrow Synthesis.
-$$
+```
 
 The final Top-10 database should therefore preserve full relevant source passages, locations, equations/tables/figures, and multiple P/F/S/D records per paper before reducing them to summaries.
 

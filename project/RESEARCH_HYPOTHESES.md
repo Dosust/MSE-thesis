@@ -21,7 +21,7 @@
 
 The thesis hypotheses follow
 
-$$
+```math
 \text{Theory}
 \rightarrow
 \text{Mechanism}
@@ -33,7 +33,7 @@ $$
 \text{Baseline}
 \rightarrow
 \text{Falsification}.
-$$
+```
 
 The framework uses **five primary hypotheses**, rather than one hypothesis per stage.
 
@@ -57,23 +57,23 @@ Does representing interdependencies as **dynamic causal mechanisms** materially 
 
 Stage 2 defines
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
 E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right),
-$$
+```
 
 and Stage 3 maps accepted mechanisms into coupled dynamics:
 
-$$
+```math
 \mathfrak I
 \rightarrow
 F_{\mathcal G}^{m}
 \rightarrow
 Y(t).
-$$
+```
 
 ### Hypothesis
 
@@ -83,21 +83,21 @@ $$
 
 Use hypothesis-specific model labels
 
-$$
+```math
 \mathscr C_0=\text{independent }P+T,
-$$
+```
 
-$$
+```math
 \mathscr C_1=\text{static coupled }P\text{--}T,
-$$
+```
 
-$$
+```math
 \mathscr C_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
-$$
+```
 
 Let the cascade/service outcome vector be
 
-$$
+```math
 Z_C
 =
 \begin{bmatrix}
@@ -106,24 +106,24 @@ N_{\rm fail}\\
 L_{\rm service}\\
 T_{\rm recovery}
 \end{bmatrix}.
-$$
+```
 
 For every **prespecified** baseline $b\in\{0,1\}$ included in the confirmatory test, define
 
-$$
+```math
 D_b
 =
 D\!\left(
 Z_C^{\mathscr C_2},
 Z_C^{\mathscr C_b}
 \right).
-$$
+```
 
 The confirmatory prediction is
 
-$$
+```math
 D_b\ge\delta_1,
-$$
+```
 
 where $D$ is a declared trajectory/performance difference metric and $\delta_1$ is a scientifically meaningful threshold fixed before final testing.
 
@@ -141,7 +141,7 @@ Do informational and organizational states materially change feasible response a
 
 The Stage-4 causal spine is
 
-$$
+```math
 X
 \rightarrow y
 \rightarrow I
@@ -149,13 +149,13 @@ X
 \rightarrow O
 \rightarrow u
 \rightarrow X.
-$$
+```
 
 Information degradation changes latency, freshness, availability and estimation error; organizational limitations change authority, coordination, resources and mobilization. These mechanisms restrict
 
-$$
+```math
 \mathcal U(z_I,z_O)
-$$
+```
 
 and alter response timing, action quality and the resulting physical trajectory.
 
@@ -167,63 +167,63 @@ and alter response timing, action quality and the resulting physical trajectory.
 
 Use a dedicated H2 notation:
 
-$$
+```math
 \mathscr N_0=P+T,
-$$
+```
 
-$$
+```math
 \mathscr N_1=P+T+I,
-$$
+```
 
-$$
+```math
 \mathscr N_2=P+T+I+O.
-$$
+```
 
 Then
 
-$$
+```math
 \mathscr N_1-\mathscr N_0
 =\text{information-layer effect},
-$$
+```
 
-$$
+```math
 \mathscr N_2-\mathscr N_1
 =\text{organizational-layer effect}.
-$$
+```
 
 Representative intermediate responses are
 
-$$
+```math
 \operatorname{RMSE}(\widehat X,X),
 \qquad
 \tau_{\rm response},
 \qquad
 u(t),
-$$
+```
 
 with downstream outcomes such as
 
-$$
+```math
 L_{\rm service},
 \qquad
 T_C,
 \qquad
 T_{\rm recovery}.
-$$
+```
 
 For a prespecified resilience-output vector $Z_R$,
 
-$$
+```math
 D\!\left(
 Z_R^{\mathscr N_2},
 Z_R^{\mathscr N_0}
 \right)
 \ge\delta_2.
-$$
+```
 
 For sequential non-overlapping response processes,
 
-$$
+```math
 \begin{aligned}
 \tau_{\rm response}={}&
 \tau_{\rm sense}
@@ -234,7 +234,7 @@ $$
 +\tau_{\rm mobilization}
 +\tau_{\rm act}.
 \end{aligned}
-$$
+```
 
 Overlapping processes require the corresponding critical-path completion time rather than the arithmetic sum.
 
@@ -252,25 +252,25 @@ Do Stage-5 viability quantities add decision-relevant information beyond convent
 
 Two states may have similar current service,
 
-$$
+```math
 S(Y_1)\approx S(Y_2),
-$$
+```
 
 but different future maintainability:
 
-$$
+```math
 Y_1\in\mathcal V,
 \qquad
 Y_2\notin\mathcal V.
-$$
+```
 
 Thus
 
-$$
+```math
 \text{current performance}
 \neq
 \text{future maintainability}.
-$$
+```
 
 ### Hypothesis
 
@@ -278,46 +278,46 @@ $$
 
 ### Competing predictor sets
 
-$$
+```math
 Q_{\rm conventional}
 =
 \{S(t),L_{\rm service},T_{\rm recovery}\},
-$$
+```
 
-$$
+```math
 Q_{\rm viability}
 =
 \{\rho,T_{\mathcal V},T_K,S_{\mathcal V}\}.
-$$
+```
 
 For a declared future-failure outcome
 
-$$
+```math
 Y_{\rm fail}
 =
 \mathbf 1\!\left\{Y(t+\Delta)\notin K_{\rm sus}\right\},
-$$
+```
 
 the confirmatory prediction is
 
-$$
+```math
 \operatorname{Skill}
 \!\left(Q_{\rm conventional}\cup Q_{\rm viability}\right)
 -
 \operatorname{Skill}
 \!\left(Q_{\rm conventional}\right)
 \ge\delta_3.
-$$
+```
 
 `Skill` must be defined *a priori* through a justified prediction-error, discrimination, calibration, warning-lead-time, or related metric.
 
 A matched-state test should seek $Y_a,Y_b$ satisfying
 
-$$
+```math
 S(Y_a)\approx S(Y_b),
 \qquad
 \rho(Y_a)\neq\rho(Y_b),
-$$
+```
 
 and then test whether their subsequent futures differ as predicted.
 
@@ -335,14 +335,14 @@ Can viability-sensitive interface rankings identify more valuable intervention t
 
 For Stage-2 interface parameters
 
-$$
+```math
 \theta_{ij}
 =(w_{ij},\delta_{ij},\tau_{ij},a_{ij}),
-$$
+```
 
 perturbation propagates through
 
-$$
+```math
 \theta_{ij}
 \rightarrow
 F
@@ -350,7 +350,7 @@ F
 \mathcal V
 \rightarrow
 \rho,
-$$
+```
 
 and produces the Stage-5 sensitivity $S_{ij}^{\mathcal V}$.
 
@@ -360,43 +360,43 @@ and produces the Stage-5 sensitivity $S_{ij}^{\mathcal V}$.
 
 ### Competing rankings
 
-$$
+```math
 R_1=\text{degree-based ranking},
 \qquad
 R_2=\text{betweenness-based ranking},
-$$
+```
 
-$$
+```math
 R_3=\text{flow-based ranking},
 \qquad
 R_4=S_{ij}^{\mathcal V}.
-$$
+```
 
 Because $\mathcal V$ is a set, the confirmatory comparison must use a **declared scalar viability functional** $\mathcal M_{\mathcal V}$, for example a normalized viable-set measure, a boundary margin, or another justified scalar summary.
 
 For ranking $R_r$ define
 
-$$
+```math
 \Delta\mathcal M_{\mathcal V}^{(r)}
 =
 \mathcal M_{\mathcal V}^{\rm after}(R_r)
 -
 \mathcal M_{\mathcal V}^{\rm before}.
-$$
+```
 
 Additional secondary outcomes may include
 
-$$
+```math
 \Delta\rho,
 \qquad
 \Delta T_{\mathcal V},
 \qquad
 \Delta L_{\rm service}.
-$$
+```
 
 Let $\operatorname{Agg}_{\Omega}$ denote a **prespecified scenario aggregation rule**. The confirmatory prediction is
 
-$$
+```math
 \operatorname{Agg}_{\Omega}
 \!\left[\Delta\mathcal M_{\mathcal V}^{(4)}\right]
 -
@@ -404,7 +404,7 @@ $$
 \operatorname{Agg}_{\Omega}
 \!\left[\Delta\mathcal M_{\mathcal V}^{(r)}\right]
 \ge\delta_4.
-$$
+```
 
 If scenarios have justified probabilities or weights, $\operatorname{Agg}_{\Omega}$ may be an expectation. Under deep uncertainty, it must instead be a declared nonprobabilistic robustness/satisficing statistic.
 
@@ -422,15 +422,15 @@ Under deep uncertainty, do adaptive trigger-based transformation policies produc
 
 The fixed comparator is
 
-$$
+```math
 \Pi_F
 =
 [(\mathbf a_1,t_1),\ldots,(\mathbf a_N,t_N)],
-$$
+```
 
 whereas the adaptive Stage-7 policy uses
 
-$$
+```math
 \mathbf a_k
 =
 \pi_k^{\rm ST}
@@ -441,13 +441,13 @@ z_{O,k},
 \mathfrak M_k,
 \mathcal H_k
 \right).
-$$
+```
 
 Plausible futures satisfy
 
-$$
+```math
 \omega\in\Omega.
-$$
+```
 
 ### Hypothesis
 
@@ -457,19 +457,19 @@ $$
 
 Compare
 
-$$
+```math
 \Pi_F=\text{best prespecified fixed-pathway baseline}
-$$
+```
 
 with
 
-$$
+```math
 \boldsymbol\pi_{\rm ST}=\text{adaptive trigger-based transformation policy}.
-$$
+```
 
 The Stage-7 objective vector is
 
-$$
+```math
 \mathbf J
 =
 \begin{bmatrix}
@@ -481,13 +481,13 @@ J_{\rm inequity}\\
 J_{\rm time}\\
 J_{\rm flexibility}
 \end{bmatrix}.
-$$
+```
 
 The hypothesis does **not** require adaptive policy dominance on every objective in every scenario.
 
 For a finite deep-uncertainty scenario ensemble, define a satisficing fraction
 
-$$
+```math
 R_{\rm sat}(\Pi)
 =
 \frac{1}{|\Omega|}
@@ -495,18 +495,18 @@ R_{\rm sat}(\Pi)
 \mathbf 1\!\left[
 \Pi\text{ satisfies the declared criteria in }\omega
 \right].
-$$
+```
 
 This is a scenario-coverage statistic, **not a probability**, unless scenario probabilities/weights are justified independently.
 
 A candidate confirmatory form is
 
-$$
+```math
 R_{\rm sat}(\boldsymbol\pi_{\rm ST})
 -
 R_{\rm sat}(\Pi_F)
 \ge\delta_5.
-$$
+```
 
 An alternative robustness metric may be used if it is fixed before confirmatory testing.
 
@@ -520,35 +520,35 @@ If adaptive transformation does not materially improve the prespecified robustne
 
 The hypotheses are linked rather than independent stage-by-stage statements:
 
-$$
+```math
 H_1:\quad \mathfrak I\rightarrow F,
-$$
+```
 
-$$
+```math
 H_2:\quad I,O\rightarrow\mathcal U,u\rightarrow F,
-$$
+```
 
-$$
+```math
 H_3:\quad F+\mathcal U\rightarrow\mathcal V,
-$$
+```
 
-$$
+```math
 H_4:\quad
 \mathfrak I
 \rightarrow S_{ij}^{\mathcal V}
 \rightarrow\text{intervention value},
-$$
+```
 
-$$
+```math
 H_5:\quad
 \mathcal V+\Phi_{\rm ST}
 \rightarrow\boldsymbol\pi_{\rm ST}
 \rightarrow\mathbb M_{\rm sus}.
-$$
+```
 
 Together,
 
-$$
+```math
 \mathfrak I
 \rightarrow
 F
@@ -560,7 +560,7 @@ F
 S_{ij}^{\mathcal V}
 \rightarrow
 \text{adaptive transformation}.
-$$
+```
 
 ---
 
@@ -582,9 +582,9 @@ Do not assign arbitrary values such as a 20% improvement threshold without scien
 
 For now retain
 
-$$
+```math
 \delta_1,\ldots,\delta_5.
-$$
+```
 
 Each threshold must be determined before confirmatory testing using one or more defensible sources:
 
@@ -602,21 +602,21 @@ Choosing $\delta_i$ after observing final results would undermine confirmatory r
 
 The primary hypothesis set is
 
-$$
+```math
 \mathbb H
 =
 \{H_1,H_2,H_3,H_4,H_5\}.
-$$
+```
 
 Each hypothesis will be represented by
 
-$$
+```math
 \mathscr H_i
 =
 \left(
 T_i,M_i,X_i,Y_i,B_i,\Omega_i,\delta_i,P_i,A_i,C_i,F_i,U_i
 \right).
-$$
+```
 
 The tuple fields are intentionally abstract until the Hypothesis Specification Matrix is frozen. The matrix must define them explicitly and include at least:
 

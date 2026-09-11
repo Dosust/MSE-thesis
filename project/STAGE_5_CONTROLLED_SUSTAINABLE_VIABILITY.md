@@ -23,7 +23,7 @@
 
 The Stage-5 scientific progression is
 
-$$
+```math
 K_{\rm sus}
 \rightarrow
 \mathcal V_{\rm sus}^{u,T}
@@ -33,7 +33,7 @@ K_{\rm sus}
 \{\rho,T_{\mathcal V},T_K\}
 \rightarrow
 \{S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
-$$
+```
 
 Stage 5 therefore separates five questions:
 
@@ -53,27 +53,27 @@ Viability theory defines the viability kernel as the set of initial states from 
 
 The controlled Stage-4 trajectory is written
 
-$$
+```math
 Y^u(t)=Y\!\left(t;Y_0,u,h,\mathfrak I,\mathcal G,m\right),
-$$
+```
 
 with
 
-$$
+```math
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 The Stage-5 core is therefore the controlled viability set
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,T}
 =
 \operatorname{Viab}^{T}_{F,\mathcal U}(K_{\rm sus}).
-$$
+```
 
 More explicitly,
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,T}
 =
 \left\{
@@ -81,7 +81,7 @@ Y_0\in K_{\rm sus}:
 \exists u(\cdot)\in\mathcal U,
 \ Y^u(t)\in K_{\rm sus}\ \forall t\in[0,T]
 \right\}.
-$$
+```
 
 This is established viability logic adapted to the thesis P–T–I–O state, interdependency, dynamics, and control architecture (Aubin, 1990; Aubin et al., 2011; Gajardo & Hermosilla, 2019).
 
@@ -93,19 +93,19 @@ The notation $K_{\rm sus}$ does not become sustainable merely because it is name
 
 The framework uses
 
-$$
+```math
 K_{\rm sus}(t)
 =
 \left\{
 Y:g_r(Y,t)\le0,\quad r=1,\ldots,n_K
 \right\}.
-$$
+```
 
 A useful decomposition is
 
-$$
+```math
 K_{\rm sus}=K_P\cap K_T\cap K_I\cap K_O,
-$$
+```
 
 provided each layer-specific constraint has a defensible threshold and physical meaning.
 
@@ -119,7 +119,7 @@ Finite-horizon viability is the primary Stage-5 object because the framework exp
 
 The finite-horizon set is
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,T}
 =
 \left\{
@@ -128,13 +128,13 @@ Y_0\in K_{\rm sus}:
 \ Y^u(t)\in K_{\rm sus},
 \ \forall t\in[0,T]
 \right\}.
-$$
+```
 
 The horizon $T$ must be declared explicitly and linked to the modeled disruption-response-recovery interval. Infinite-horizon viability is denoted
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,\infty}.
-$$
+```
 
 ---
 
@@ -146,7 +146,7 @@ Worst-case robust viability and stochastic viability are not interchangeable.
 
 For bounded or adversarial uncertainty,
 
-$$
+```math
 \mathcal V_{\rm rob}^{T}
 =
 \left\{
@@ -156,13 +156,13 @@ Y_0:
 \ Y^{\pi,\xi}(t)\in K_{\rm sus}
 \ \forall t\in[0,T]
 \right\}.
-$$
+```
 
 The quantifier order is essential:
 
-$$
+```math
 \exists\pi\quad\forall\xi.
-$$
+```
 
 This is consistent with robust controlled-invariance formulations under bounded perturbations (Rungger & Tabuada, 2017).
 
@@ -170,7 +170,7 @@ This is consistent with robust controlled-invariance formulations under bounded 
 
 For probabilistic uncertainty,
 
-$$
+```math
 \mathcal V_{\varepsilon}^{T}
 =
 \left\{
@@ -179,15 +179,15 @@ Y_0:
 \ \Pr\!\left[Y^{\pi}(t)\in K_{\rm sus}\ \forall t\in[0,T]\right]
 \ge1-\varepsilon
 \right\}.
-$$
+```
 
 This follows stochastic viability and target-tube reachability logic (Doyen & De Lara, 2010; Vinod & Oishi, 2021).
 
 Therefore,
 
-$$
+```math
 \text{robust viability}\neq\text{stochastic viability}.
-$$
+```
 
 The framework keeps both mathematically separate; the uncertainty interpretation must determine which one is used in a specific analysis.
 
@@ -199,27 +199,27 @@ A state may currently satisfy every acceptability constraint and still lie outsi
 
 Hence,
 
-$$
+```math
 Y\notin\mathcal V_{\rm sus}^{u,T}
 \not\Rightarrow
 Y\notin K_{\rm sus}.
-$$
+```
 
 This distinction is fundamental in viability theory (Aubin et al., 2011; Maidens et al., 2013).
 
 Stage 5 therefore preserves two boundaries:
 
-$$
+```math
 \partial\mathcal V_{\rm sus}^{u,T}
 =\text{loss-of-maintainability boundary},
-$$
+```
 
 and
 
-$$
+```math
 \partial K_{\rm sus}
 =\text{actual acceptability boundary}.
-$$
+```
 
 ---
 
@@ -229,7 +229,7 @@ Because loss of viability and actual constraint violation are different events, 
 
 ### Time to loss of viability
 
-$$
+```math
 T_{\mathcal V}^{\pi,\xi}(Y_0)
 =
 \inf\left\{
@@ -238,7 +238,7 @@ Y^{\pi,\xi}(t)
 \notin
 \mathcal V_{\rm sus}^{u,T-t}
 \right\}.
-$$
+```
 
 Interpretation:
 
@@ -246,14 +246,14 @@ Interpretation:
 
 ### Time to actual acceptability violation
 
-$$
+```math
 T_K^{\pi,\xi}(Y_0)
 =
 \inf\left\{
 t>0:
 Y^{\pi,\xi}(t)\notin K_{\rm sus}
 \right\}.
-$$
+```
 
 Interpretation:
 
@@ -261,9 +261,9 @@ Interpretation:
 
 Along trajectories where viability is lost before constraints are violated,
 
-$$
+```math
 T_{\mathcal V}\le T_K.
-$$
+```
 
 The distinction is consistent with viability-theoretic treatments of crisis time and admissible behavior (Doyen & Saint-Pierre, 1997).
 
@@ -277,39 +277,39 @@ A geometric proximity measure is retained, but its evidential status is explicit
 
 State coordinates must first be normalized or otherwise made dimensionally comparable:
 
-$$
+```math
 \widetilde Y=D^{-1}(Y-Y_{\rm ref}).
-$$
+```
 
 A baseline distance is then
 
-$$
+```math
 \rho_E(Y)
 =
 d\!\left(
 \widetilde Y,
 \partial\widetilde{\mathcal V}
 \right).
-$$
+```
 
 ### Proposed thesis extension [P]
 
 The proposed state-dependent geometric margin is
 
-$$
+```math
 \rho_g(Y)
 =
 d_{g_\psi}\!\left(
 Y,
 \partial\mathcal V_{\rm sus}^{u,T}
 \right),
-$$
+```
 
 with
 
-$$
+```math
 g_\psi(Y)\succ0.
-$$
+```
 
 The Riemannian metric $g_\psi$ is **not** treated as an established infrastructure-viability metric. Its contribution must be demonstrated against normalized Euclidean or weighted baselines.
 
@@ -321,31 +321,31 @@ Hamilton–Jacobi reachability can represent reachable or viable sets through le
 
 A representation such as
 
-$$
+```math
 \mathcal V=\{Y:V_{\rm HJ}(Y)\le0\}
-$$
+```
 
 may therefore be appropriate. However,
 
-$$
+```math
 |V_{\rm HJ}(Y)|
 \neq
 d(Y,\partial\mathcal V)
-$$
+```
 
 in general. The HJ value depends on the terminal function, dynamics, game formulation, and normalization.
 
 Stage 5 therefore keeps
 
-$$
+```math
 V_{\rm HJ}(Y)=\text{dynamic safety/reachability value}
-$$
+```
 
 separate from
 
-$$
+```math
 \rho_g(Y)=\text{geometric distance to a viability boundary}.
-$$
+```
 
 ---
 
@@ -355,11 +355,11 @@ Control barrier functions can certify forward invariance and embed safety constr
 
 However,
 
-$$
+```math
 \text{CBF certificate}
 \neq
 \text{maximal viability kernel}
-$$
+```
 
 in general.
 
@@ -380,9 +380,9 @@ No computational solver is frozen into Stage 5.
 
 Stage-3 hybrid delayed multiscale dynamics may be too high-dimensional for direct exact viability computation. Exact delays can also enlarge the effective state representation substantially. The framework therefore permits a viability projection
 
-$$
+```math
 Y_V=\mathcal P_V(Y),
-$$
+```
 
 where $Y_V$ is a reduced viability state.
 
@@ -398,11 +398,11 @@ Remaining inside an acceptable set and recovering after leaving it are different
 
 Therefore,
 
-$$
+```math
 \text{viability}
 \neq
 \text{recoverability after violation}.
-$$
+```
 
 Controlled viability remains the core Stage-5 object. Capture or recovery basins may be introduced only when the framework explicitly permits temporary excursion outside $K_{\rm sus}$ and when doing so does not blur the Stage-5/Stage-6 boundary.
 
@@ -412,15 +412,15 @@ Controlled viability remains the core Stage-5 object. Capture or recovery basins
 
 The original differential sensitivity
 
-$$
+```math
 -\frac{\partial\rho_g}{\partial w_{ij}}
-$$
+```
 
 is not adopted as the default because viability boundaries need not be smooth.
 
 The primary proposed interface sensitivity is therefore finite perturbation:
 
-$$
+```math
 S_{ij}^{\mathcal V}(\Delta\theta)
 =
 \frac{
@@ -428,18 +428,18 @@ S_{ij}^{\mathcal V}(\Delta\theta)
 -
 \mathcal M_{\mathcal V}(\theta_{ij})
 }{\|\Delta\theta\|},
-$$
+```
 
 where
 
-$$
+```math
 \theta_{ij}
 =(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
-$$
+```
 
 Possible viability functionals include
 
-$$
+```math
 \operatorname{Vol}(\mathcal V),
 \qquad
 \rho_E,
@@ -449,7 +449,7 @@ $$
 T_{\mathcal V},
 \qquad
 T_K.
-$$
+```
 
 Differentiability-based sensitivity may be used only where smoothness is demonstrated.
 
@@ -461,17 +461,17 @@ Stage 4 provides the response time $\tau_{\rm response}$. Stage 5 compares it wi
 
 Define
 
-$$
+```math
 S_{\mathcal V}
 =T_{\mathcal V}-\tau_{\rm response},
-$$
+```
 
 and
 
-$$
+```math
 S_K
 =T_K-\tau_{\rm response}.
-$$
+```
 
 Interpretation:
 
@@ -482,7 +482,7 @@ Interpretation:
 
 Dimensionless versions are
 
-$$
+```math
 \Pi_{\mathcal V}
 =
 \frac{\tau_{\rm response}}{T_{\mathcal V}},
@@ -490,7 +490,7 @@ $$
 \Pi_K
 =
 \frac{\tau_{\rm response}}{T_K}.
-$$
+```
 
 These are **proposed thesis diagnostics [P]**, not established universal resilience laws. Positive slack or a ratio below one does not by itself guarantee successful control.
 
@@ -548,25 +548,25 @@ Freezing Stage 5 freezes this **status classification**. It does not relabel pro
 
 The key mathematical relation is
 
-$$
+```math
 K_{\rm sus}
 \supseteq
 \mathcal V_{\rm sus}^{u,T}.
-$$
+```
 
 The distinction then becomes
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,T}
 \rightarrow
 \partial\mathcal V
 \rightarrow
 \{\rho,T_{\mathcal V},T_K\}.
-$$
+```
 
 The first five stages connect as
 
-$$
+```math
 \{P,T,I,O\}
 \rightarrow
 \mathfrak I
@@ -576,7 +576,7 @@ $$
 \{\widehat X,\mathcal U,u,\tau_{\rm response}\}
 \rightarrow
 \{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
-$$
+```
 
 ### Status
 

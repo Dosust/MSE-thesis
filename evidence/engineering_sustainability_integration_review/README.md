@@ -6,7 +6,7 @@ This folder preserves the current frozen understanding of the construction-susta
 
 The review is not simply asking whether a construction paper mentions sustainability. The central analytical chain is:
 
-$$
+```math
 \boxed{
 Q_{\mathrm{construction\ strategy}}
 \rightarrow
@@ -18,7 +18,7 @@ S_{\mathrm{sustainability}}
 \rightarrow
 D_{\mathrm{decision}}
 }
-$$
+```
 
 The distinctive scientific question is how focal construction/built-environment studies generate engineering/functional performance evidence, implement sustainability assessment methods, connect the two evidence streams, and use the combined evidence in a decision.
 
@@ -61,7 +61,7 @@ The Python framework previously created in chat generated the scoring/workbook i
 
 When files disagree, use this order:
 
-$$
+```math
 \boxed{
 Decision\ Log
 \rightarrow
@@ -75,7 +75,7 @@ Interpretation/Scoring
 \rightarrow
 Derived\ Workbook
 }
-$$
+```
 
 The legacy Python code is preserved for reproducibility but is superseded where the decision log documents later methodological corrections.
 
@@ -91,8 +91,8 @@ The central bridge of interest is $F_{\mathrm{integration}}$.
 
 The next implementation should build a full evidence dossier for the 10 selected papers rather than compressing them immediately into one-row summaries:
 
-$$
+```math
 \boxed{Raw\ Evidence\rightarrow Interpretation\rightarrow Scoring\rightarrow Synthesis}
-$$
+```
 
 The user should be able to read the extracted content as written in each paper and independently design/validate the interpretation.

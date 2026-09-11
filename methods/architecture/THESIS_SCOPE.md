@@ -8,15 +8,15 @@ This directory implements **small, auditable computational scaffolds** for the f
 
 ## Canonical system
 
-$$
+```math
 \mathcal S=\{P,T,I,O\},
-$$
+```
 
 where $P,T$ are the physical Power and Transportation systems and $I,O$ are the informational and organizational layers.
 
 The canonical state is
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
@@ -24,11 +24,11 @@ x_T(t)\\
 z_I(t)\\
 z_O(t)
 \end{bmatrix}.
-$$
+```
 
 The computational chain supported by this directory is
 
-$$
+```math
 \mathfrak I
 \rightarrow
 F_{\mathcal G}^{m}
@@ -40,7 +40,7 @@ u(t)
 \Phi_{\rm ST}
 \rightarrow
 \mathfrak P_{\rm ST}.
-$$
+```
 
 ## What belongs here
 

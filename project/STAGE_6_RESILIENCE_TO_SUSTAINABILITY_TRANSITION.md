@@ -25,7 +25,7 @@
 
 The essential Stage-6 transition is
 
-$$
+```math
 \underbrace{
 \{K_{\mathrm{sus}},\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}
 }_{\text{Stage-5 viability evidence}}
@@ -33,7 +33,7 @@ $$
 \underbrace{\text{regime-adequacy diagnosis}}_{\text{Stage 6}}
 \rightarrow
 \underbrace{(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)}_{\text{Stage-6 output}}.
-$$
+```
 
 Stage 6 answers three questions:
 
@@ -51,11 +51,11 @@ Stage 7, by contrast, determines **which interventions, in what order, at what t
 
 The current regime is represented by
 
-$$
+```math
 \mathfrak M_0
 =
 (\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\mathrm{sus}},\mathcal U).
-$$
+```
 
 This bundles the current system ontology, topology, causal interdependencies, dynamics, parameterization, sustainability/acceptability constraints and admissible action space. Stage 6 asks whether remaining within this regime is still defensible under validated resilience evidence and longer-horizon sustainability requirements.
 
@@ -65,33 +65,33 @@ This bundles the current system ontology, topology, causal interdependencies, dy
 
 Define
 
-$$
+```math
 \mathcal R_5
 =
 \{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
-$$
+```
 
 This is a compact Stage-6 input interface, not a redefinition of Stage 5. The detailed Stage-5 definitions remain authoritative in `STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`.
 
 Stage-5 evidence alone is not sufficient to justify long-horizon transformation. Stage 6 also requires externally justified long-term requirements
 
-$$
+```math
 \Lambda_{\mathrm{LT}}
 =
 \text{long-horizon sustainability, service, environmental, equity and governance requirements}.
-$$
+```
 
 This distinction is essential:
 
-$$
+```math
 \text{Stage 5: viability within the present decision/system space},
-$$
+```
 
 whereas
 
-$$
+```math
 \text{Stage 6: adequacy of that decision/system space itself}.
-$$
+```
 
 ---
 
@@ -99,13 +99,13 @@ $$
 
 A major disturbance or failure is not, by itself, evidence that transformation is required:
 
-$$
+```math
 \text{major hazard}\not\Rightarrow\text{transformation},
-$$
+```
 
-$$
+```math
 \text{failure}\not\Rightarrow\text{transformation}.
-$$
+```
 
 The relevant question is whether the **current regime is persistently inadequate** after considering viable recovery, adaptation capacity, long-term sustainability and justice requirements, structural causes, lock-in and maladaptation.
 
@@ -123,27 +123,27 @@ Recovery is adequate when feasible restoration within the current regime can re-
 
 Adaptation is indicated when recovery alone is inadequate but modifications of operating rules, parameters, capacities or configurations can satisfy requirements while preserving the system's essential regime identity. Conceptually,
 
-$$
+```math
 \exists\theta'\in\Theta_A:
 \mathfrak M_0(\theta')
 \text{ satisfies the required criteria}.
-$$
+```
 
 ### Transformation required
 
 Transformation is indicated when meeting the requirements requires changing fundamental attributes, topology, institutional rules, cross-sector relationships or system goals:
 
-$$
+```math
 \mathfrak M_0\rightarrow\mathfrak M_1.
-$$
+```
 
 These mathematical statements are `[P]` formalizations of established recovery/adaptation/transformability distinctions; they are not universal laws.
 
 The Stage-6 response class is
 
-$$
+```math
 c_6\in\{R,A,T\},
-$$
+```
 
 with $R$ = recovery adequate, $A$ = adaptation required and $T$ = transformation required/justified.
 
@@ -153,9 +153,9 @@ with $R$ = recovery adequate, $A$ = adaptation required and $T$ = transformation
 
 Stage 6 explicitly distinguishes
 
-$$
+```math
 L_A\in\{\mathrm{none},\mathrm{soft},\mathrm{hard}\}.
-$$
+```
 
 A **soft limit** means that a technically relevant response may exist but current financial, institutional, informational, technological, governance or capacity constraints prevent implementation. A **hard limit** means available adaptive actions cannot avoid the intolerable outcome under the defined conditions.
 
@@ -174,13 +174,13 @@ For the P–T–I–O framework, the principal mapping is:
 
 Repairing consequences is not the same as removing the mechanism that repeatedly generates vulnerability:
 
-$$
+```math
 \text{repairing consequences}\neq\text{removing structural causes}.
-$$
+```
 
 If the same critical interdependency is repeatedly restored after failure, a thesis-specific interdependency-lock-in diagnosis is possible:
 
-$$
+```math
 \text{critical dependency}
 \rightarrow
 \text{failure}
@@ -188,7 +188,7 @@ $$
 \text{recovery}
 \rightarrow
 \text{same critical dependency}.
-$$
+```
 
 This interdependency-lock-in representation is `[P]`. It links Stage-2 causal mechanisms to Stage-5 sensitivity and Stage-6 transformation diagnosis.
 
@@ -200,7 +200,7 @@ Stage 6 also retains maladaptation as a separate concern: an intervention can re
 
 A single resilience score is insufficient for the Stage-6 decision. Retain explicit sustainability gaps:
 
-$$
+```math
 \mathbf G_{\mathrm{sus}}
 =
 \begin{bmatrix}
@@ -210,7 +210,7 @@ G_{\mathrm{econ}}\\
 G_{\mathrm{eq}}\\
 G_{\mathrm{gov}}
 \end{bmatrix}.
-$$
+```
 
 The five components respectively represent technical/service, environmental, economic, equity/justice and governance/institutional gaps relative to justified long-horizon requirements. This vector is a proposed thesis synthesis `[P]`.
 
@@ -220,7 +220,7 @@ The five components respectively represent technical/service, environmental, eco
 
 Stage 6 uses a diagnostic vector rather than one arbitrary transformation score:
 
-$$
+```math
 \mathbf d_6
 =
 \begin{bmatrix}
@@ -232,7 +232,7 @@ d_{\mathrm{sus}}\\
 d_{\mathrm{eq}}\\
 d_{\mathrm{struct}}
 \end{bmatrix}.
-$$
+```
 
 | Component | Meaning |
 |---|---|
@@ -252,7 +252,7 @@ The vector is `[P]`; the literature supports the underlying dimensions, not this
 
 Transformation should not be reduced to a binary variable. Stage 6 characterizes the required transformation by
 
-$$
+```math
 \boldsymbol{\zeta}_T
 =
 \begin{bmatrix}
@@ -263,7 +263,7 @@ $$
 \zeta_{\mathrm{equity}}\\
 \zeta_{\mathrm{environment}}
 \end{bmatrix}.
-$$
+```
 
 This is a derived/proposed `[D/P]` infrastructure transformation-requirement vector. It specifies how deep, broad, large, fast, equitable and environmentally consequential the required change must be. It does **not** choose the interventions.
 
@@ -273,7 +273,7 @@ This is a derived/proposed `[D/P]` infrastructure transformation-requirement vec
 
 Stage 6 translates diagnosis back into the canonical system ontology:
 
-$$
+```math
 \mathcal D_6
 =
 \{
@@ -285,7 +285,7 @@ $$
 \mathcal D_{\mathrm{env}},
 \mathcal D_{\mathrm{eq}}
 \}.
-$$
+```
 
 | Requirement | Meaning |
 |---|---|
@@ -305,19 +305,19 @@ The exact requirement set is `[P]` and is the principal engineering bridge from 
 
 The canonical Stage-6 translation is
 
-$$
+```math
 \Phi_{\mathrm{ST}}
 :
 (\mathcal R_5,\Lambda_{\mathrm{LT}},\mathbf d_6)
 \mapsto
 (c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
-$$
+```
 
 This operator is a thesis construct `[P]`. It formalizes the transformation-interface role but does not imply that a unique closed-form algorithm has already been established.
 
 The compact scientific logic is
 
-$$
+```math
 \begin{aligned}
 &\text{Stage-5 viability evidence}
 +\text{long-horizon sustainability requirements}\\
@@ -327,7 +327,7 @@ $$
 \rightarrow\{R,A,T\}
 \rightarrow(\mathcal D_6,\boldsymbol{\zeta}_T).
 \end{aligned}
-$$
+```
 
 ---
 
@@ -362,11 +362,11 @@ Freezing Stage 6 freezes this classification; proposed constructs do not become 
 
 The frozen handoff is
 
-$$
+```math
 (c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
 \longrightarrow
 \text{Stage 7 candidate interventions and pathways}.
-$$
+```
 
 Stage 6 outputs:
 

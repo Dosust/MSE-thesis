@@ -4,35 +4,35 @@
 
 For focal paper $i$:
 
-$$
+```math
 \mathcal R_i=[K_i,SM_i,M_i,N_i,O_i,P_i,Q_i,R_i,S_i,T_i,\Omega_i,R_{1i},R_{2i},R_{3i},R_{4i},\lambda_i,\Pi_i]
-$$
+```
 
 with
 
-$$
+```math
 \Omega_i=(P_i,F_i,S_i,D_i).
-$$
+```
 
 The fundamental research chain is
 
-$$
+```math
 \boxed{Q_{\mathrm{construction}}\rightarrow P_{\mathrm{engineering}}\rightarrow F_{\mathrm{integration}}\rightarrow S_{\mathrm{sustainability}}\rightarrow D_{\mathrm{decision}}}
-$$
+```
 
 ---
 
 ## 2. Screening gate
 
-$$
+```math
 G_i^{KLM}=\mathbb{1}[K_i=1\land SM_i=1\land M_i=1]
-$$
+```
 
 For binary variables this is equivalent to
 
-$$
+```math
 G_i^{KLM}=K_iSM_iM_i.
-$$
+```
 
 ---
 
@@ -40,21 +40,21 @@ $$
 
 Do not require exact alternative-set equality. Define
 
-$$
+```math
 TA_i=\mathbb{1}[\text{engineering and sustainability evidence are traceably matched at alternative level}].
-$$
+```
 
 If $TA_i=0$ then
 
-$$
+```math
 \lambda_i=0.
-$$
+```
 
 ---
 
 ## 4. Linkage / integration score
 
-$$
+```math
 \lambda_i=
 \begin{cases}
 0,&P_i=\varnothing\lor S_i=\varnothing\lor TA_i=0\lor\text{no usable relationship},\\
@@ -62,43 +62,43 @@ $$
 2,&P_i\rightarrow S_i\text{ through a directional analytical coupling},\\
 3,&\text{author-implemented integrated decision architecture}.
 \end{cases}
-$$
+```
 
 Examples of $\lambda=2$:
 
-$$
+```math
 GWP_i^{annual}=\frac{GWP_i^{life}}{SL_i}
-$$
+```
 
 or
 
-$$
+```math
 P_i\ge P_{min}\Rightarrow i\in\mathcal A_{sustainability}.
-$$
+```
 
 Examples of $\lambda=3$:
 
-$$
+```math
 I_i=f(P_i,E_i,C_i,S_i),
-$$
+```
 
-$$
+```math
 I_i=\sum_{j=1}^{m}w_jz_{ij},
-$$
+```
 
-$$
+```math
 I_i=\sum_{j=1}^{m}w_jV_j(x_{ij}),
-$$
+```
 
-$$
+```math
 Hazard\rightarrow Response\rightarrow Damage\rightarrow Loss\rightarrow\{Cost,Downtime,CO_2\},
-$$
+```
 
 or
 
-$$
+```math
 x^*=\arg\min_x F(P(x),S(x)).
-$$
+```
 
 A reviewer-reconstructed relation cannot by itself establish $\lambda=3$.
 
@@ -108,23 +108,23 @@ A reviewer-reconstructed relation cannot by itself establish $\lambda=3$.
 
 Define
 
-$$
+```math
 \mathbf X_i=(R_{1i},R_{2i},R_{3i},R_{4i},\lambda_i).
-$$
+```
 
 Perfect status is conjunctive:
 
-$$
+```math
 \boxed{
 \Pi_i=\mathbb{1}[R_{1i}=3\land R_{2i}=3\land R_{3i}=3\land R_{4i}=3\land\lambda_i=3]
 }
-$$
+```
 
 Equivalently, with all scores bounded in $[0,3]$:
 
-$$
+```math
 \Pi_i=1\iff\mathbf X_i=(3,3,3,3,3).
-$$
+```
 
 ---
 
@@ -132,15 +132,15 @@ $$
 
 Tier A is broader than perfect status:
 
-$$
+```math
 A_i=\mathbb{1}[R_{1i}=3\land R_{2i}\ge2\land R_{3i}=3\land R_{4i}=3\land\lambda_i\ge2].
-$$
+```
 
 Therefore Tier-A vectors are
 
-$$
+```math
 (3,2,3,3,2),\;(3,2,3,3,3),\;(3,3,3,3,2),\;(3,3,3,3,3).
-$$
+```
 
 Only the final vector is perfect.
 
@@ -150,17 +150,17 @@ Only the final vector is perfect.
 
 If the broader analytical corpus is revisited, explicit non-compensatory routes are:
 
-$$
+```math
 B1_i=\mathbb{1}[R_1=3\land R_2\ge2\land R_3=3\land R_4=3\land\lambda=1],
-$$
+```
 
-$$
+```math
 B2_i=\mathbb{1}[R_1=3\land R_2\ge2\land R_3=2\land R_4=3\land\lambda\ge2],
-$$
+```
 
-$$
+```math
 B3_i=\mathbb{1}[R_1=3\land R_2\ge2\land R_3=3\land R_4=2\land\lambda\ge2].
-$$
+```
 
 Eligibility remains route-based rather than total-score based.
 
@@ -170,43 +170,43 @@ Eligibility remains route-based rather than total-score based.
 
 For method-specific applicable component $j$, define
 
-$$
+```math
 a_{ij}\in\{0,0.5,1\},
-$$
+```
 
 where 0 = not reported, 0.5 = partially reported, and 1 = adequately reported.
 
 Then
 
-$$
+```math
 RC_i=\frac{\sum_{j\in A_i}a_{ij}}{|A_i|}.
-$$
+```
 
 Important:
 
-$$
+```math
 \boxed{RC_i\text{ supports R2 but does not mechanically determine R2.}}
-$$
+```
 
 R2 is assigned using method-family essential components.
 
 Examples:
 
-$$
+```math
 E_{LCA}=\{FU,SB,INV,DataSource,ImpactMethod,Procedure\},
-$$
+```
 
-$$
+```math
 E_{MCDA}=\{Alternatives,Criteria,Weights,Normalization,Aggregation,DecisionRule\},
-$$
+```
 
-$$
+```math
 E_{OPT}=\{DecisionVariables,Objectives,Constraints,Model,Solver/Search,DecisionRule\},
-$$
+```
 
-$$
+```math
 E_{ML}=\{Dataset,Predictors,Target,Model,Training,Validation\}.
-$$
+```
 
 ---
 
@@ -214,37 +214,37 @@ $$
 
 For paper $i$ and category $j$:
 
-$$
+```math
 e_{ij}=\begin{cases}
 1,&\text{direct focal-paper implementation/generation (`**`)},\\
 0.5,&\text{mentioned/discussed/secondary (`*`)},\\
 0,&\text{not identified}.
 \end{cases}
-$$
+```
 
 Category coverage across $n$ papers:
 
-$$
+```math
 \boxed{C_j=\frac{1}{n}\sum_{i=1}^{n}e_{ij}}
-$$
+```
 
 For $n=10$:
 
-$$
+```math
 C_j=\frac{N_j^{**}+0.5N_j^*}{10}.
-$$
+```
 
 Group coverage for group $g$ with $m_g$ categories:
 
-$$
+```math
 GC_g=\frac{1}{m_g}\sum_{j\in g}C_j.
-$$
+```
 
 Coverage measures presence/provenance, not quality:
 
-$$
+```math
 e_{ij}=1\not\Rightarrow R=3.
-$$
+```
 
 ---
 
@@ -254,39 +254,39 @@ $$
 
 For performance family $p$ and mechanism $f$:
 
-$$
+```math
 M^{PF}_{pf}=\sum_{i=1}^{n}\mathbb{1}[paper_i\text{ directly implements }P_p\rightarrow F_f].
-$$
+```
 
 Normalized:
 
-$$
+```math
 \widetilde M^{PF}_{pf}=\frac{M^{PF}_{pf}}{n}.
-$$
+```
 
 ### Integration mechanism to sustainability outcome
 
-$$
+```math
 M^{FS}_{fs}=\sum_{i=1}^{n}\mathbb{1}[paper_i\text{ directly implements }F_f\rightarrow S_s].
-$$
+```
 
-$$
+```math
 \widetilde M^{FS}_{fs}=\frac{M^{FS}_{fs}}{n}.
-$$
+```
 
 ### Sustainability outcome to decision
 
 Optional third mapping:
 
-$$
+```math
 M^{SD}_{sd}=\sum_i\mathbb{1}[S_s\rightarrow D_d].
-$$
+```
 
 The full empirical architecture is therefore
 
-$$
+```math
 P\rightarrow F\rightarrow S\rightarrow D.
-$$
+```
 
 ---
 
@@ -294,9 +294,9 @@ $$
 
 Let $C$ be all substantive claims exported and $E\subseteq C$ the claims with explicit source support. The desired output invariant is
 
-$$
+```math
 \boxed{\frac{|E|}{|C|}=1}
-$$
+```
 
 meaning 100% of exported substantive paper-specific claims must be source-supported. This does not claim infallible PDF parsing; uncertainty must be retained as `U`/`NR` rather than filled by inference.
 
@@ -306,32 +306,32 @@ meaning 100% of exported substantive paper-specific claims must be source-suppor
 
 The implementation must enforce:
 
-$$
+```math
 SM=0\Rightarrow R_1\neq3,
-$$
+```
 
-$$
+```math
 M=0\Rightarrow R_4\neq3,
-$$
+```
 
-$$
+```math
 R_3=3\Rightarrow AuthorGeneratedP=True,
-$$
+```
 
-$$
+```math
 R_4=3\Rightarrow MethodGeneratedS=True,
-$$
+```
 
-$$
+```math
 \lambda>0\Rightarrow TA=1,
-$$
+```
 
-$$
+```math
 \lambda=3\Rightarrow AuthorIntegratedArchitecture=True,
-$$
+```
 
 and
 
-$$
+```math
 \Pi=1\Rightarrow\mathbf X=(3,3,3,3,3).
-$$
+```

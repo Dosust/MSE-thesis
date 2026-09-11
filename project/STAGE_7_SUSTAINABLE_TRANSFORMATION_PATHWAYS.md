@@ -23,17 +23,17 @@
 
 The Stage-6 / Stage-7 separation is
 
-$$
+```math
 \underbrace{\text{WHY change + WHAT must change + HOW DEEP}}_{\text{Stage 6}}
 \quad\longrightarrow\quad
 \underbrace{\text{WHICH intervention + ORDER + WHEN + CONDITIONS}}_{\text{Stage 7}}.
-$$
+```
 
 Stage 7 receives the frozen Stage-6 output
 
-$$
+```math
 (c_6,\mathcal D_6,\boldsymbol\zeta_T)
-$$
+```
 
 and converts those requirements into adaptive transformation pathways.
 
@@ -43,15 +43,15 @@ and converts those requirements into adaptive transformation pathways.
 
 Stage 4 operates a given infrastructure regime through $u(t)$. Stage 7 changes the regime that will subsequently be operated.
 
-$$
+```math
 \underbrace{u(t)}_{\text{Stage 4 operational control}}
 \neq
 \underbrace{\mathbf a_k}_{\text{Stage 7 strategic transformation action}}.
-$$
+```
 
 The canonical Stage-7 infrastructure-regime object is
 
-$$
+```math
 \mathfrak M_k
 =
 \left(
@@ -63,7 +63,7 @@ F_k,
 K_{{\rm sus},k},
 \mathcal U_k
 \right).
-$$
+```
 
 | Component | Meaning |
 |---|---|
@@ -87,26 +87,26 @@ Stage 7 distinguishes topology **within a layer**, topology **across layers**, a
 
 For layer or physical system $\alpha$,
 
-$$
+```math
 G_k^\alpha=(V_k^\alpha,E_k^\alpha),
 \qquad
 \alpha\in\mathcal L,
 \qquad
 \mathcal L=\{P,T,I,O\}.
-$$
+```
 
 ### Level II — multilayer P–T–I–O topology
 
 A generic representation is
 
-$$
+```math
 \mathcal G_k
 =
 \left(
 \{G_k^\alpha\}_{\alpha\in\mathcal L},
 \{E_k^{\alpha\beta}\}_{\alpha,\beta\in\mathcal L}
 \right).
-$$
+```
 
 This structural representation does not replace the Stage-2 causal object $\mathfrak I_{ij}^{\alpha\beta}$.
 
@@ -114,25 +114,25 @@ This structural representation does not replace the Stage-2 causal object $\math
 
 The Stage-7 transformation meta-graph is
 
-$$
+```math
 \mathbb G_{\rm ST}
 =
 (\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
-$$
+```
 
 with
 
-$$
+```math
 v_k\equiv\mathfrak M_k,
-$$
+```
 
 and an admissible transformation edge
 
-$$
+```math
 \mathfrak M_k
 \xrightarrow{\mathbf a_{k\ell}}
 \mathfrak M_\ell.
-$$
+```
 
 This is the thesis interpretation of a **graph of alternative multilayer infrastructure regimes**. Multilayer-network mathematics motivates the representation, but the complete meta-graph is a proposed thesis construct `[P]` (De Domenico et al., 2013).
 
@@ -142,20 +142,20 @@ This is the thesis interpretation of a **graph of alternative multilayer infrast
 
 A strategic intervention changes the infrastructure regime according to
 
-$$
+```math
 \mathfrak M_{k+1}
 =
 \mathcal T_{\mathbf a_k}
 \left(
 \mathfrak M_k,\xi_k
 \right),
-$$
+```
 
 where $\xi_k$ represents uncertainty or exogenous conditions relevant to the transformation step.
 
 A transformation may modify
 
-$$
+```math
 \mathcal G,
 \qquad
 \mathfrak I,
@@ -167,7 +167,7 @@ F,
 K_{\rm sus},
 \qquad
 \mathcal U.
-$$
+```
 
 Stage 7 is therefore stronger than graph rewiring alone: it can change structure, causal coupling, physical capability, institutional capability, future control authority, and the applicable long-horizon design constraints.
 
@@ -177,7 +177,7 @@ Stage 7 is therefore stronger than graph rewiring alone: it can change structure
 
 Use the bold vector $\mathbf a_k$ for Stage-7 actions so it cannot be confused with the Stage-2 activation variable $a_{ij}$.
 
-$$
+```math
 \mathbf a_k
 =
 \begin{bmatrix}
@@ -187,7 +187,7 @@ a_k^I\\
 a_k^O\\
 a_k^{\mathfrak I}
 \end{bmatrix}.
-$$
+```
 
 | Action family | Representative transformations |
 |---|---|
@@ -205,25 +205,25 @@ Information and organization remain genuine design spaces because coordination a
 
 Stage 2 defines
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
 E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right).
-$$
+```
 
 Stage 7 may intentionally redesign an accepted interdependency:
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 \longrightarrow
 {\mathfrak I'}_{ij}^{\alpha\beta}.
-$$
+```
 
 Possible changes include
 
-$$
+```math
 w_{ij}\rightarrow w'_{ij},
 \qquad
 \delta_{ij}\rightarrow\delta'_{ij},
@@ -231,7 +231,7 @@ w_{ij}\rightarrow w'_{ij},
 \tau_{ij}\rightarrow\tau'_{ij},
 \qquad
 a_{ij}:1\rightarrow0.
-$$
+```
 
 The objective is not universally to reduce coupling. Depending on mechanism and context, Stage 7 may weaken harmful dependence, add redundancy, introduce selective autonomy, or strengthen beneficial interdependence.
 
@@ -241,15 +241,15 @@ The objective is not universally to reduce coupling. Depending on mechanism and 
 
 A fixed schedule
 
-$$
+```math
 \Pi_F=[(\mathbf a_1,t_1),\ldots,(\mathbf a_N,t_N)]
-$$
+```
 
 is retained as a valid **realized pathway** or fixed comparator. Under deep uncertainty, however, the fundamental Stage-7 decision object is adaptive.
 
 A candidate policy is
 
-$$
+```math
 \mathbf a_k
 =
 \pi_k^{\rm ST}
@@ -260,15 +260,15 @@ $$
  \mathfrak M_k,
  \mathcal H_k
 \right),
-$$
+```
 
 with policy family
 
-$$
+```math
 \boldsymbol\pi_{\rm ST}
 =
 \{\pi_0^{\rm ST},\pi_1^{\rm ST},\ldots,\pi_N^{\rm ST}\}.
-$$
+```
 
 The superscript `ST` distinguishes the long-horizon transformation policy from the Stage-4 operational control policy $\pi$.
 
@@ -280,7 +280,7 @@ Dynamic Adaptive Policy Pathways retain future alternatives and allow switching 
 
 Let a Stage-7 signpost be
 
-$$
+```math
 s_j(t)
 =
 s_j\!\left(
@@ -290,19 +290,19 @@ z_O(t),
 \mathfrak M(t),
 \xi(t)
 \right).
-$$
+```
 
 Let $\mathcal Z_j$ denote the trigger region for signpost $j$. The corresponding trigger time is
 
-$$
+```math
 \tau_j
 =
 \inf\{t\ge t_k:s_j(t)\in\mathcal Z_j\}.
-$$
+```
 
 The long-horizon decision loop is therefore
 
-$$
+```math
 \text{observe}
 \rightarrow
 \text{update}
@@ -310,7 +310,7 @@ $$
 \text{detect trigger}
 \rightarrow
 \text{select strategic intervention}.
-$$
+```
 
 Stage 4 remains active because information and organization determine what can be observed, interpreted and implemented; Stage 7 uses those capabilities for long-horizon adaptation rather than redefining Stage 4.
 
@@ -330,30 +330,30 @@ Stage 7 distinguishes several clocks:
 
 An intervention becomes active at
 
-$$
+```math
 t_k^{\rm active}=t_k+\ell_k.
-$$
+```
 
 Stage 3 is multiscale in physical/process dynamics; Stage 7 is multiscale in strategic decision and implementation time.
 
 The future action set is path dependent:
 
-$$
+```math
 \mathcal A_{k+1}
 =
 \mathcal A\!\left(
 \mathfrak M_{k+1},
 \mathcal H_{t_{k+1}}
 \right).
-$$
+```
 
 In general, transformation order need not commute:
 
-$$
+```math
 \mathcal T_{\mathbf a_2}\circ\mathcal T_{\mathbf a_1}
 \neq
 \mathcal T_{\mathbf a_1}\circ\mathcal T_{\mathbf a_2}.
-$$
+```
 
 Thus **order matters** whenever one intervention changes the feasibility or value of later interventions.
 
@@ -363,7 +363,7 @@ Thus **order matters** whenever one intervention changes the feasibility or valu
 
 Each meta-graph edge may be represented as
 
-$$
+```math
 e_{k\ell}
 =
 \left(
@@ -375,7 +375,7 @@ R_{k\ell},
 \chi_{k\ell},
 \mathcal Z_{k\ell}
 \right).
-$$
+```
 
 | Term | Meaning |
 |---|---|
@@ -394,7 +394,7 @@ This representation captures the real-options insight that deferrable, expandabl
 
 A strategic action is admissible only if it lies in the intersection
 
-$$
+```math
 \begin{aligned}
 \mathcal A_k^{\rm feas}
 ={}&
@@ -406,31 +406,31 @@ $$
 \cap\mathcal A_k^{\rm equity}
 \cap\mathcal A_k^{\rm temporal}.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \mathbf a_k\in\mathcal A_k^{\rm feas}.
-$$
+```
 
 Representative constraints include
 
-$$
+```math
 \sum_i C_i x_{ik}\le B_k
-$$
+```
 
 for budget,
 
-$$
+```math
 x_j\le x_i
-$$
+```
 
 for precedence when intervention $j$ requires intervention $i$, and
 
-$$
+```math
 t_j\ge t_i+d_i+\ell_i
-$$
+```
 
 for a declared sequential timing relation. Organizational and information feasibility remain explicit rather than assuming unlimited implementation capacity.
 
@@ -440,15 +440,15 @@ for a declared sequential timing relation. Organizational and information feasib
 
 Each candidate future regime is reevaluated using Stage 5:
 
-$$
+```math
 \mathcal V_{\rm sus}^{u,T}(\mathfrak M_k).
-$$
+```
 
 Where continuous controlled viability is required over a declared transformation interval,
 
-$$
+```math
 Y(t)\in K_{{\rm sus},k}(t)
-$$
+```
 
 and the relevant trajectory should remain within the corresponding controlled viable set over the required horizon.
 
@@ -460,7 +460,7 @@ This does not imply that all transformation problems must forbid temporary const
 
 Stage 7 does not target one unique final state. Define the candidate sustainable-regime set
 
-$$
+```math
 \mathbb M_{\rm sus}
 =
 \left\{
@@ -470,15 +470,15 @@ $$
 \text{and feasibility conditions are satisfied}
 \end{array}
 \right\}.
-$$
+```
 
 The Stage-7 reachability question is
 
-$$
+```math
 (\mathfrak M_0,Y_0)
 \overset{\boldsymbol\pi_{\rm ST}}{\longrightarrow}
 \mathbb M_{\rm sus}.
-$$
+```
 
 This is the thesis interpretation of **reachability in infrastructure-regime space** `[P]`.
 
@@ -488,7 +488,7 @@ This is the thesis interpretation of **reachability in infrastructure-regime spa
 
 Do not hide conflicting objectives inside arbitrary weights before the trade-offs are understood. Use the objective vector
 
-$$
+```math
 \mathbf J(\Pi,\omega)
 =
 \begin{bmatrix}
@@ -502,7 +502,7 @@ J_{\rm flexibility}
 \end{bmatrix},
 \qquad
 \omega\in\Omega.
-$$
+```
 
 | Objective | Preferred direction before normalization |
 |---|---|
@@ -524,21 +524,21 @@ Under deep uncertainty, `RobustPareto` is used as a **thesis shorthand `[P]`** f
 
 Stage 7 preserves three different interpretations:
 
-$$
+```math
 \xi\sim P
-$$
+```
 
 for ordinary probabilistic uncertainty,
 
-$$
+```math
 P\in\mathcal P
-$$
+```
 
 for distributional ambiguity, and
 
-$$
+```math
 \omega\in\Omega
-$$
+```
 
 for deep uncertainty represented by plausible futures.
 
@@ -546,13 +546,13 @@ Scenario fractions under $\Omega$ must not be described as probabilities unless 
 
 The methodological combination is therefore
 
-$$
+```math
 \text{adaptive pathways}
 +
 \text{robust decision analysis}
 +
 \text{many-objective search},
-$$
+```
 
 with real-options valuation added only where monetizable flexibility assumptions are defensible.
 
@@ -562,17 +562,17 @@ with real-options valuation added only where monetizable flexibility assumptions
 
 The literature does not support a universal rule such as
 
-$$
+```math
 |E|\uparrow
 \quad\Rightarrow\quad
 \text{resilience}\uparrow.
-$$
+```
 
 Nor does maximizing one graph statistic automatically maximize infrastructure resilience. Coupling can amplify cascades, create redundancy, enable substitution or generate new dependencies depending on mechanism and dynamics (Buldyrev et al., 2010; Gates & Rocha, 2016; Kaiser et al., 2021).
 
 Every structural candidate must therefore be replayed through the physical and decision layers:
 
-$$
+```math
 \mathbf a_k
 \rightarrow
 \mathfrak M_{k+1}
@@ -584,7 +584,7 @@ Y(t)
 \mathcal V_{\rm sus}^{u,T}
 \rightarrow
 \mathbf J.
-$$
+```
 
 ---
 
@@ -592,7 +592,7 @@ $$
 
 The canonical Stage-7 object is
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 \left(
@@ -603,7 +603,7 @@ $$
 \mathbf J,
 \mathbb M_{\rm sus}
 \right).
-$$
+```
 
 | Component | Role |
 |---|---|
@@ -616,7 +616,7 @@ $$
 
 A realized pathway under policy $\boldsymbol\pi_{\rm ST}$ and future $\omega$ is
 
-$$
+```math
 \Pi_{\boldsymbol\pi_{\rm ST},\omega}
 =
 \left[
@@ -625,7 +625,7 @@ $$
 \ldots,
 \mathfrak M_N
 \right].
-$$
+```
 
 The frozen interpretation is:
 
@@ -637,7 +637,7 @@ The frozen interpretation is:
 
 A compact implementation target is
 
-$$
+```math
 \begin{aligned}
 \text{find}\quad
 &\boldsymbol\pi_{\rm ST}\\
@@ -654,7 +654,7 @@ $$
 &\text{budget, resource, precedence and lead-time constraints},\\
 &\mathfrak M_N\in\mathbb M_{\rm sus}.
 \end{aligned}
-$$
+```
 
 This formulation is `[P]`: it synthesizes established multilayer-network, viability, adaptive-pathway, robust-decision, organizational-resilience and many-objective methods into the thesis architecture.
 
@@ -678,7 +678,7 @@ This formulation is `[P]`: it synthesizes established multilayer-network, viabil
 
 A Stage-7 candidate is not accepted from topology or cost alone. It is replayed through the upstream framework:
 
-$$
+```math
 \begin{aligned}
 \text{Stage-7 candidate}
 &\rightarrow\text{Stage-1 structural update}\\
@@ -689,7 +689,7 @@ $$
 &\rightarrow\text{Stage-6 adequacy diagnosis}\\
 &\rightarrow\text{Stage-7 accept / reject / refine}.
 \end{aligned}
-$$
+```
 
 This is a validation loop around the frozen stages; it does not reorder or replace them.
 

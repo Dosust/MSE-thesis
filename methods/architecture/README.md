@@ -36,9 +36,9 @@ Each language has a defined function. No language is included only for decoratio
 
 The active thesis system is
 
-$$
+```math
 \mathcal S=\{P,T,I,O\},
-$$
+```
 
 where $P,T$ are the physical Power and Transportation systems and $I,O$ are informational and organizational layers.
 
@@ -83,7 +83,7 @@ flowchart LR
 
 The corresponding mathematical handoff is
 
-$$
+```math
 \mathcal S
 \rightarrow
 \mathfrak I
@@ -97,7 +97,7 @@ u(t)
 \Phi_{\rm ST}
 \rightarrow
 \mathfrak P_{\rm ST}.
-$$
+```
 
 ---
 
@@ -151,10 +151,10 @@ Historical and provenance folders are intentionally excluded from ontology rewri
 
 The governing rule is
 
-$$
+```math
 \text{software scaffold}
 \neq
 \text{validated scientific model}.
-$$
+```
 
 A computational component becomes part of the thesis evidence only after its governing equations, parameters, units, boundary conditions, verification, validation, uncertainty treatment and provenance satisfy the quantitative reporting standard in [`../APA_JARS_QUANT_ADAPTED_REPORTING_STANDARD.md`](../APA_JARS_QUANT_ADAPTED_REPORTING_STANDARD.md).

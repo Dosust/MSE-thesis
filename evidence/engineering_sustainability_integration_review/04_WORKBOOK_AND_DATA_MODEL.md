@@ -99,9 +99,9 @@ After evidence is frozen, derive:
 
 Source-of-truth hierarchy:
 
-$$
+```math
 Raw\ Evidence\rightarrow Interpretation\rightarrow Scoring\rightarrow Derived\ Synthesis.
-$$
+```
 
 ## 15. Visual evidence matrix
 

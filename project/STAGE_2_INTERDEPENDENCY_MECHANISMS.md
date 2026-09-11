@@ -17,17 +17,17 @@
 
 Stage 1 defines the system ontology
 
-$$
+```math
 \{P,T,I,O\}.
-$$
+```
 
 Stage 2 defines how those systems/layers **causally affect one another**. The progression is
 
-$$
+```math
 \{P,T,I,O\}
 \longrightarrow
 \mathfrak I_{ij}^{\alpha\beta}.
-$$
+```
 
 Stage 2 answers:
 
@@ -39,16 +39,16 @@ Stage 2 answers:
 
 The complete directed set is
 
-$$
+```math
 \begin{aligned}
 \mathcal I=\{&P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\\
 &T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I\}.
 \end{aligned}
-$$
+```
 
 Equivalently, Stage 2 contains six bidirectional families:
 
-$$
+```math
 \begin{aligned}
 &P\leftrightarrow T,
 \qquad P\leftrightarrow I,
@@ -57,7 +57,7 @@ $$
 \qquad T\leftrightarrow O,
 \qquad I\leftrightarrow O.
 \end{aligned}
-$$
+```
 
 This scope is broader than a single physical Power–Transportation interface.
 
@@ -86,13 +86,13 @@ This scope is broader than a single physical Power–Transportation interface.
 
 For each directed family, the interdependency set is decomposed to the component/subsystem level. For example,
 
-$$
+```math
 \mathcal I^{P\rightarrow T}
 =
 \bigcup_{p\in P}
 \bigcup_{t\in T}
 \mathcal I_{pt}^{P\rightarrow T}.
-$$
+```
 
 An edge is retained only when a real causal mechanism exists.
 
@@ -112,7 +112,7 @@ The same component-level decomposition is developed for all 12 directed relation
 
 Every accepted interdependency is represented by
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
@@ -126,15 +126,15 @@ a_{ij},
 m,
 \mathcal H_t
 \right),
-$$
+```
 
 with
 
-$$
+```math
 \alpha,\beta\in\{P,T,I,O\},
 \qquad
 \alpha\neq\beta.
-$$
+```
 
 | Element | Meaning |
 |---|---|
@@ -150,7 +150,7 @@ $$
 
 The minimum accepted causal representation is
 
-$$
+```math
 \text{Source}
 \rightarrow
 \text{Mechanism}
@@ -158,7 +158,7 @@ $$
 \text{Receiver}
 \rightarrow
 \text{Effect}.
-$$
+```
 
 An arrow alone is therefore insufficient.
 
@@ -168,9 +168,9 @@ An arrow alone is therefore insufficient.
 
 The Stage-2 timing discipline is
 
-$$
+```math
 \delta_{ij}\neq\tau_{ij}.
-$$
+```
 
 Here $\delta_{ij}$ is the lag between cause and the arrival/observation of its effect, whereas $\tau_{ij}$ characterizes the rate or duration over which the mechanism evolves.
 
@@ -184,29 +184,29 @@ Correlation, co-occurrence, co-location, or common hazard exposure does **not** 
 
 For example,
 
-$$
+```math
 h(\mathbf r,t)\rightarrow P_i,
 \qquad
 h(\mathbf r,t)\rightarrow T_j
-$$
+```
 
 does not imply
 
-$$
+```math
 P_i\rightarrow T_j.
-$$
+```
 
 A retained cross-system relation requires
 
-$$
+```math
 P_i\xrightarrow{M_{ij}}T_j,
-$$
+```
 
 or, in general,
 
-$$
+```math
 \alpha\xrightarrow{M_{ij}}\beta.
-$$
+```
 
 This is the canonical causal-admissibility rule.
 
@@ -216,7 +216,7 @@ This is the canonical causal-admissibility rule.
 
 The cross-stage interface is
 
-$$
+```math
 \begin{aligned}
 \{P,T,I,O\}
 &\rightarrow \mathfrak I_{ij}^{\alpha\beta}
@@ -224,7 +224,7 @@ $$
 &\rightarrow \{\widehat X,\mathcal U,u,\tau_{\rm response}\}
 \rightarrow \{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
 \end{aligned}
-$$
+```
 
 Stage 2 has a bounded responsibility:
 

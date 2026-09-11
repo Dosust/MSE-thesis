@@ -6,9 +6,9 @@ This algorithm is the direct specification for a modular Python implementation. 
 
 The controlling principle is:
 
-$$
+```math
 \boxed{Extract\ first\rightarrow Interpret\ second\rightarrow Score\ third}
-$$
+```
 
 No semantic score is allowed to generate its own supporting evidence retrospectively.
 
@@ -30,17 +30,17 @@ For each of the 10 selected papers, require:
 
 Before analysis assert:
 
-$$
+```math
 N_{papers}=10,
-$$
+```
 
-$$
+```math
 N_{unique\ DOI}=10,
-$$
+```
 
-$$
+```math
 N_{unique\ PaperID}=10.
-$$
+```
 
 No silent duplicate deletion.
 
@@ -68,17 +68,17 @@ A keyword hit in the Introduction or References does not prove focal implementat
 
 Retrieve candidate passages using controlled performance families. For every verified focal-author performance item create:
 
-$$
+```math
 P_{ip}=(Family,Metric,Method,Result,Unit,Alternative,Comparator,Origin,Passage,Location).
-$$
+```
 
 ### Pass S — Sustainability
 
 Retrieve implemented sustainability methods and actual quantitative outcomes. Create one record per outcome rather than compressing all sustainability evidence into one cell:
 
-$$
+```math
 S_{is}=(Method,Dimension,Indicator,Result,Unit,FunctionalBasis,Alternative,Origin,Passage,Location).
-$$
+```
 
 ### Pass F — Integration
 
@@ -86,17 +86,17 @@ Retrieve candidate passages showing normalization, weighting, thresholding, serv
 
 Create:
 
-$$
+```math
 F_{if}=(SourceVariable,Transformation,TargetVariable,TA,Formula/Chain,FormulaType,Passage,Location).
-$$
+```
 
 ### Pass D — Decision
 
 Retrieve ranking, selection, rejection, optimization, recommendation, trade-off, Pareto, robustness, and scenario-selection evidence:
 
-$$
+```math
 D_{id}=(DecisionType,Alternatives,DecisionRule,Outcome,Sensitivity/Robustness,Passage,Location).
-$$
+```
 
 ---
 
@@ -121,9 +121,9 @@ After the independent P, S, F, D passes, test whether the pieces form a valid an
 
 For each candidate chain:
 
-$$
+```math
 C_{ic}=(P_{ip},F_{if},S_{is},D_{id}).
-$$
+```
 
 Require traceable alternative correspondence and direct evidence that F links the relevant variables.
 
@@ -135,9 +135,9 @@ Use `→` only for verified analytical dependence. Use `||` for parallel coexist
 
 Compute K, SM, and M from the verified evidence layer. Then:
 
-$$
+```math
 G_i^{KLM}=K_iSM_iM_i.
-$$
+```
 
 For a generic corpus, $G_i^{KLM}=0$ stops detailed analytical extraction. For the already selected Top-10 reference set, the gate is retained as a reproducibility check rather than assumed silently.
 
@@ -192,9 +192,9 @@ Maximum score requires method-generated quantitative sustainability evidence wit
 
 After scoring:
 
-$$
+```math
 \Pi_i=\mathbb{1}[(R_1,R_2,R_3,R_4,\lambda)=(3,3,3,3,3)].
-$$
+```
 
 Do not type `PERFECT` manually; derive it from scores.
 
@@ -225,9 +225,9 @@ This keeps extraction separate from interpretation and scoring.
 
 Only after the evidence dossier is populated and validated should downstream comparative tables be created:
 
-$$
+```math
 Evidence\ layer\rightarrow Controlled\ classification\rightarrow Narrative\ synthesis\rightarrow Visual\ matrices.
-$$
+```
 
 Avoid independently recoding the same scientific fact in multiple sheets.
 
@@ -289,8 +289,8 @@ END
 
 The system is optimized for
 
-$$
+```math
 \boxed{Maximum\ supported\ information+Minimum\ unsupported\ inference}
-$$
+```
 
 not for filling every cell. If the full text does not support a field, preserve `NR` or `U` rather than inventing content.

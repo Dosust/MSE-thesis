@@ -10,21 +10,21 @@
 
 The framework-level system is
 
-$$
+```math
 \mathcal S=\{P,T,I,O\},
-$$
+```
 
 with
 
-$$
+```math
 P,T=\text{physical infrastructure systems},
 \qquad
 I,O=\text{informational and organizational layers}.
-$$
+```
 
 The complete state is
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
@@ -32,7 +32,7 @@ x_T(t)\\
 z_I(t)\\
 z_O(t)
 \end{bmatrix}.
-$$
+```
 
 > **Canonical description:** A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.
 
@@ -40,9 +40,9 @@ $$
 
 ## 1. Power infrastructure system $P$
 
-$$
+```math
 P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP}.
-$$
+```
 
 | Symbol | Subsystem | Representative content |
 |---|---|---|
@@ -55,17 +55,17 @@ $$
 
 A representative power state is
 
-$$
+```math
 x_P=[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC_B]^\top.
-$$
+```
 
 ---
 
 ## 2. Transportation infrastructure system $T$
 
-$$
+```math
 T=T_R\cup T_B\cup T_U\cup T_H\cup T_M.
-$$
+```
 
 | Symbol | Subsystem | Representative content |
 |---|---|---|
@@ -77,9 +77,9 @@ $$
 
 A representative transportation state is
 
-$$
+```math
 x_T=[q,k,v,TT,A,SOC_{EV},s_{\rm rail}]^\top,
-$$
+```
 
 where $A$ denotes accessibility and $s_{\rm rail}$ relevant rail operational states.
 
@@ -87,9 +87,9 @@ where $A$ denotes accessibility and $s_{\rm rail}$ relevant rail operational sta
 
 ## 3. Information layer $I$
 
-$$
+```math
 I=I_S\cup I_C\cup I_D\cup I_E\cup I_A\cup I_X\cup I_{\tau}.
-$$
+```
 
 | Symbol | Information function | Representative content |
 |---|---|---|
@@ -103,33 +103,33 @@ $$
 
 The canonical information state is
 
-$$
+```math
 z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
-$$
+```
 
 The conceptual shorthand is
 
-$$
+```math
 I:\quad
 \text{SENSE}
 \rightarrow\text{COMMUNICATE}
 \rightarrow\text{ESTIMATE/SIGNAL}
 \rightarrow\text{KNOW}.
-$$
+```
 
 Actual Stage-4 state estimation is represented separately by
 
-$$
+```math
 \widehat X(t)=\mathcal E\!\left(y_{[0,t]},z_I(t)\right).
-$$
+```
 
 ---
 
 ## 4. Organizational layer $O$
 
-$$
+```math
 O=O_A\cup O_G\cup O_D\cup O_C\cup O_R\cup O_W\cup O_L\cup O_M\cup O_X\cup O_K.
-$$
+```
 
 | Symbol | Organizational function | Representative content |
 |---|---|---|
@@ -146,25 +146,25 @@ $$
 
 The organizational network may be represented as
 
-$$
+```math
 \mathcal G_O(t)=\bigl(V_O,E_O(t),W_O(t)\bigr).
-$$
+```
 
 The canonical organizational state is
 
-$$
+```math
 z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^O,\tau_M]^\top.
-$$
+```
 
 The conceptual shorthand is
 
-$$
+```math
 O:\quad
 \text{DECIDE}
 \rightarrow\text{COORDINATE}
 \rightarrow\text{RESOURCE}
 \rightarrow\text{MOBILIZE}.
-$$
+```
 
 ---
 
@@ -186,7 +186,7 @@ These are examples of Stage-2 mechanisms; they do not exhaust the full 12-direct
 
 ## 6. Observation–organization–control architecture
 
-$$
+```math
 X(t)
 \rightarrow y(t)
 \rightarrow I(t)
@@ -194,22 +194,22 @@ X(t)
 \rightarrow O(t)
 \rightarrow u(t)
 \rightarrow X(t),
-$$
+```
 
 where
 
-$$
+```math
 X(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)
 \end{bmatrix}.
-$$
+```
 
 The current informational and organizational states constrain feasible operational control:
 
-$$
+```math
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 The labels $I,O$ describe layer functions; the dynamic states remain $z_I(t),z_O(t)$.
 
@@ -226,7 +226,7 @@ The labels $I,O$ describe layer functions; the dynamic states remain $z_I(t),z_O
 
 The six bidirectional layer families are
 
-$$
+```math
 \begin{aligned}
 &P\leftrightarrow T,
 \qquad P\leftrightarrow I,
@@ -235,7 +235,7 @@ $$
 \qquad T\leftrightarrow O,
 \qquad I\leftrightarrow O.
 \end{aligned}
-$$
+```
 
 ---
 
@@ -243,21 +243,21 @@ $$
 
 Stage 6 evaluates whether preserving the current regime remains adequate. The current regime is
 
-$$
+```math
 \mathfrak M_0
 =
 (\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
-$$
+```
 
 The Stage-6 translation is
 
-$$
+```math
 \Phi_{\rm ST}
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
 (c_6,\mathcal D_6,\boldsymbol\zeta_T).
-$$
+```
 
 This specifies why change is required, what must change and how deep the change must be.
 
@@ -267,45 +267,45 @@ This specifies why change is required, what must change and how deep the change 
 
 A future candidate regime uses the same object class:
 
-$$
+```math
 \mathfrak M_k
 =
 (\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
-$$
+```
 
 Stage-7 strategic transformation is
 
-$$
+```math
 \mathfrak M_{k+1}
 =
 \mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k),
-$$
+```
 
 where
 
-$$
+```math
 \mathbf a_k
 =
 [a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}]^\top.
-$$
+```
 
 The action hierarchy is mandatory:
 
-$$
+```math
 \underbrace{u(t)}_{\text{Stage-4 operational control}}
 \neq
 \underbrace{\mathbf a_k}_{\text{Stage-7 strategic transformation}}
 \neq
 \underbrace{a_{ij}}_{\text{Stage-2 interdependency activation}}.
-$$
+```
 
 The terminal Stage-7 object is
 
-$$
+```math
 \mathfrak P_{\rm ST}
 =
 (\mathbb G_{\rm ST},\boldsymbol\pi_{\rm ST},\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}).
-$$
+```
 
 ---
 

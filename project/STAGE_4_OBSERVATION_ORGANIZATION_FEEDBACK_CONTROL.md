@@ -25,7 +25,7 @@
 
 The scientific progression is
 
-$$
+```math
 \{P,T,I,O\}
 \rightarrow
 \mathfrak I_{ij}^{\alpha\beta}
@@ -33,7 +33,7 @@ $$
 \{Y(t),\mathcal G(t),m(t),T_C\}
 \rightarrow
 \{\widehat X,\Sigma_X,b_t,z_I,z_O,\mathcal U,u,\tau_{\rm response}\}.
-$$
+```
 
 The dynamic information and organizational states inherited from Stage 3 are $z_I(t)$ and $z_O(t)$. In the conceptual feedback spine, $I$ and $O$ denote the corresponding information and organizational functions.
 
@@ -58,7 +58,7 @@ Stage 3 determines how the actual coupled system evolves. Stage 4 addresses a di
 
 The backbone of Stage 4 is the separation
 
-$$
+```math
 \begin{aligned}
 \text{measurement}
 &\neq\text{information}
@@ -67,7 +67,7 @@ $$
 \neq\text{decision}
 \neq\text{executed action}.
 \end{aligned}
-$$
+```
 
 ---
 
@@ -115,7 +115,7 @@ The ranking is by direct usefulness for constructing Stage 4, not citation count
 
 The central architecture is a **closed-loop partially observable socio-technical control process**:
 
-$$
+```math
 X(t)
 \rightarrow y(t)
 \rightarrow I(t)
@@ -123,7 +123,7 @@ X(t)
 \rightarrow O(t)
 \rightarrow u(t)
 \rightarrow X(t).
-$$
+```
 
 | Symbol | Meaning |
 |---|---|
@@ -136,9 +136,9 @@ $$
 
 Thus
 
-$$
+```math
 X\neq y\neq I\neq\widehat X\neq O\neq u.
-$$
+```
 
 ---
 
@@ -146,26 +146,26 @@ $$
 
 **Equation S4.1 — Measurement model**
 
-$$
+```math
 y_k(t)
 =
 H_k\!\left[X(t-\delta_k)\right]
 +\varepsilon_k(t).
-$$
+```
 
 Here $H_k$ is the measurement function, $\delta_k$ is measurement/communication delay, and $\varepsilon_k$ is measurement error. This is consistent with state-estimation frameworks in which states are inferred from SCADA, PMU, AMI, and related measurements rather than directly observed (Cheng et al., 2024; Zhou et al., 2024).
 
 Representative measurements include
 
-$$
+```math
 y_P=\{V,P_{ij},Q_{ij},P_{\rm inj},f,SOC,P_{\rm traction},P_{\rm charge}\},
-$$
+```
 
 and
 
-$$
+```math
 y_T=\{q,k,v,TT,\text{vehicle position},SOC_{EV},\text{bus position},\text{train position/speed}\}.
-$$
+```
 
 Traffic-observability research shows that sensor placement determines which flows can be reconstructed directly and which require assumptions, prior information, or estimation (Castillo et al., 2015; Gentili & Mirchandani, 2012; Owais, 2022).
 
@@ -175,31 +175,31 @@ Traffic-observability research shows that sensor placement determines which flow
 
 For a local linear representation,
 
-$$
+```math
 x_{k+1}=Ax_k,
 \qquad
 y_k=Cx_k.
-$$
+```
 
 **Equation S4.2 — Classical local observability benchmark**
 
-$$
+```math
 \operatorname{rank}
 \begin{bmatrix}
 C\\CA\\CA^2\\\vdots\\CA^{n-1}
 \end{bmatrix}
 =n.
-$$
+```
 
 This is only a local/classical benchmark because the Stage-3 system is nonlinear, hybrid, delayed, and multilayer.
 
 A more general condition is
 
-$$
+```math
 X_1\neq X_2
 \quad\Rightarrow\quad
 \mathcal H_{\rm obs}(X_1)\neq\mathcal H_{\rm obs}(X_2)
-$$
+```
 
 over the relevant observation horizon. Power-system observability depends on measurement availability, sensor type, topology, and measurement configuration; transportation has an analogous flow-observability problem (Cheng et al., 2024; Gentili & Mirchandani, 2012).
 
@@ -209,27 +209,27 @@ over the relevant observation horizon. Power-system observability depends on mea
 
 **Equation S4.3 — State estimate**
 
-$$
+```math
 \widehat X(t)
 =
 \mathcal E\!\left(y_{[0,t]},z_I(t)\right).
-$$
+```
 
 **Equation S4.4 — Estimate with uncertainty**
 
-$$
+```math
 \left(\widehat X(t),\Sigma_X(t)\right)
 =
 \mathcal E\!\left(y_{[0,t]},z_I(t)\right).
-$$
+```
 
 Modern state-estimation literature treats measurement uncertainty, asynchronous reporting rates, correlated data sources, missing measurements, and cyber-security issues (Cheng et al., 2024; Zhou et al., 2024).
 
 The canonical information state remains
 
-$$
+```math
 z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
-$$
+```
 
 Stage 3 evolves $z_I$; Stage 4 uses the current $z_I$ to infer physical state.
 
@@ -239,9 +239,9 @@ Stage 3 evolves $z_I$; Stage 4 uses the current $z_I$ to infer physical state.
 
 **Equation S4.5 — Age of Information**
 
-$$
+```math
 \Delta_I(t)=t-U(t),
-$$
+```
 
 where $U(t)$ is the generation time of the freshest received update (Yates et al., 2021).
 
@@ -249,15 +249,15 @@ Networked-control research shows that sampling, delay, packet loss, communicatio
 
 Therefore,
 
-$$
+```math
 \text{available information}\not\Rightarrow\text{timely information},
-$$
+```
 
 and
 
-$$
+```math
 \text{timely information}\not\Rightarrow\text{accurate state estimate}.
-$$
+```
 
 ---
 
@@ -267,11 +267,11 @@ During disruption, $\widehat X(t)\neq X(t)$ may be central rather than exception
 
 **Equation S4.6 — Belief state**
 
-$$
+```math
 b_t(x)
 =
 p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
-$$
+```
 
 Stage 4 can therefore reason from $\widehat X$ or, when needed, $b_t$. POMDP is a candidate decision formalism, not the definition of Stage 4.
 
@@ -281,25 +281,25 @@ Stage 4 can therefore reason from $\widehat X$ or, when needed, $b_t$. POMDP is 
 
 Endsley (1995) conceptualizes situation awareness as
 
-$$
+```math
 \text{perception}\rightarrow\text{comprehension}\rightarrow\text{projection}.
-$$
+```
 
 Panteli and Kirschen (2015) apply situation-awareness reasoning to electric-power operation and show how incomplete or incorrect awareness can impair decisions during disturbances.
 
 Situation awareness is not a fifth layer. It is a functional bridge:
 
-$$
+```math
 I\rightarrow\widehat X\rightarrow\text{situation awareness}\rightarrow O.
-$$
+```
 
 **Equation S4.7 — Proposed situation representation [P]**
 
-$$
+```math
 \mathcal A_{\rm SA}(t)
 =
 \mathscr A\!\left[\widehat X(t),\Sigma_X(t),m(t),\mathcal G(t)\right].
-$$
+```
 
 $\mathcal A_{\rm SA}$ is a Stage-4 processing construct, not an infrastructure layer.
 
@@ -309,25 +309,25 @@ $\mathcal A_{\rm SA}$ is a Stage-4 processing construct, not an infrastructure l
 
 The canonical organizational state remains
 
-$$
+```math
 z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^O,\tau_M]^\top.
-$$
+```
 
 Organizational-resilience literature supports retaining authority, coordination, knowledge sharing, resources, and interorganizational structure because they affect infrastructure decision making and recovery (Li et al., 2019; McAlister et al., 2024; Mohebbi et al., 2020).
 
 **Equation S4.8 — Available action set**
 
-$$
+```math
 \mathcal U_{\rm available}(t)
 =
 \mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 Thus
 
-$$
+```math
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 A technically desirable action may remain organizationally infeasible because authorization, coordination, resources, workforce, or mobilization are unavailable (Damaschin et al., 2026; Li et al., 2019; Magoua et al., 2026).
 
@@ -337,13 +337,13 @@ A technically desirable action may remain organizationally infeasible because au
 
 **Equation S4.9 — Generic Stage-4 policy**
 
-$$
+```math
 u(t)
 =
 \pi\!\left[\widehat X(t),z_I(t),z_O(t)\right],
 \qquad
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
-$$
+```
 
 The policy symbol $\pi$ denotes the decision/control mapping. Stage 4 does not freeze MPC, reinforcement learning, dynamic programming, MILP, game theory, or another solver (Iloglu et al., 2025; Magoua et al., 2026; Qiu et al., 2023; Yang et al., 2024; Zhu et al., 2024).
 
@@ -353,15 +353,15 @@ The policy symbol $\pi$ denotes the decision/control mapping. Stage 4 does not f
 
 The controller acts on inferred state, not necessarily true state:
 
-$$
+```math
 X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X.
-$$
+```
 
 The executed intervention returns to Stage-3 dynamics:
 
-$$
+```math
 u(t)\rightarrow F^{m(t)}\rightarrow Y(t+\Delta t).
-$$
+```
 
 Networked-control theory explicitly treats measurement, communication, and actuation as parts of a closed feedback system and shows that communication imperfections can affect performance and stability (Liu et al., 2017; Zhang et al., 2017).
 
@@ -371,7 +371,7 @@ Networked-control theory explicitly treats measurement, communication, and actua
 
 **Equation S4.10 — Action vector**
 
-$$
+```math
 u(t)=
 \begin{bmatrix}
 u_P(t)\\
@@ -379,7 +379,7 @@ u_T(t)\\
 u_I(t)\\
 u_O(t)
 \end{bmatrix}.
-$$
+```
 
 | Action family | Examples |
 |---|---|
@@ -396,20 +396,20 @@ Collaborative restoration and mobile-resource studies show that outcome depends 
 
 The response pathway is
 
-$$
+```math
 \text{sense}\rightarrow\text{communicate}\rightarrow\text{estimate}
 \rightarrow\text{decide}\rightarrow\text{coordinate}\rightarrow\text{mobilize}\rightarrow\text{act}.
-$$
+```
 
 **Equation S4.11 — Sequential response-time decomposition [D]**
 
-$$
+```math
 \begin{aligned}
 \tau_{\rm response}={}&
 \tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}\\
 &+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
 \end{aligned}
-$$
+```
 
 If processes overlap or execute in parallel, $\tau_{\rm response}$ is the completion time of the relevant critical path rather than the arithmetic sum of all durations. This is a derived synthesis [D] of established process delays, not a metric attributed to one source (Liu et al., 2017; Panteli & Kirschen, 2015; Qiu et al., 2023).
 
@@ -423,11 +423,11 @@ Stage 3 provides a competing disruption clock, $\tau_{\rm cascade}$ or component
 
 **Equation S4.12 — Timing diagnostic**
 
-$$
+```math
 \Pi_R
 =
 \frac{\tau_{\rm response}}{\tau_{\rm cascade}}.
-$$
+```
 
 | Regime | Interpretation |
 |---|---|
@@ -437,9 +437,9 @@ $$
 
 However,
 
-$$
+```math
 \Pi_R<1\not\Rightarrow\text{successful control}.
-$$
+```
 
 Successful intervention also requires observability, estimation accuracy, authority, resources, accessibility, controllability, and appropriate action.
 
@@ -458,19 +458,19 @@ The symbols $\mathscr M_k$ denote model variants and are intentionally distinct 
 
 The intended contrasts are
 
-$$
+```math
 \mathscr M_1-\mathscr M_0=\text{information effect},
-$$
+```
 
-$$
+```math
 \mathscr M_2-\mathscr M_1=\text{organizational effect},
-$$
+```
 
 and
 
-$$
+```math
 \mathscr M_3-\mathscr M_0=\text{full coupled-response effect}.
-$$
+```
 
 ---
 
@@ -478,10 +478,10 @@ $$
 
 Stage 4 is validated across the entire inference-to-action chain:
 
-$$
+```math
 \text{measurement}\rightarrow\text{estimation}\rightarrow\text{decision}
 \rightarrow\text{action}\rightarrow\text{closed-loop consequence}.
-$$
+```
 
 | Validation family | Representative quantities/checks |
 |---|---|
@@ -503,15 +503,15 @@ $$
 
 For example,
 
-$$
+```math
 \text{Stage 3: }A_I(t)\downarrow,\ \delta_I(t)\uparrow,
-$$
+```
 
 while
 
-$$
+```math
 \text{Stage 4: }(A_I,\delta_I)\rightarrow y\rightarrow\widehat X\rightarrow u.
-$$
+```
 
 ---
 
@@ -519,7 +519,7 @@ $$
 
 Stage 4 ends at **controlled response**. It does not compute the Stage-5 objects
 
-$$
+```math
 K_{\rm sus},
 \qquad
 \mathcal V_{\rm sus}^{u,T},
@@ -527,17 +527,17 @@ K_{\rm sus},
 \rho_E,\rho_g,
 \qquad
 T_{\mathcal V},T_K.
-$$
+```
 
 The cross-stage interface is
 
-$$
+```math
 u(t)
 \longrightarrow
 Y^u(t)
 \longrightarrow
 \{K_{\rm sus},\mathcal V_{\rm sus}^{u,T},\partial\mathcal V,T_{\mathcal V},T_K\}.
-$$
+```
 
 | Stage | Output/question |
 |---|---|
@@ -553,9 +553,9 @@ The sampled literature is mature in separate areas including power state estimat
 
 The sampled work does not reveal a mature standard framework carrying the entire chain
 
-$$
+```math
 X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X
-$$
+```
 
 across a physically explicit power–multimodal-transportation system while simultaneously retaining information degradation, organizational feasibility, cross-layer interdependencies, and a cascade clock. This is a synthesis from the reviewed corpus, not a claim that no such study could exist (Cheng et al., 2024; Li et al., 2019; Mohebbi et al., 2020; Qiu et al., 2023).
 

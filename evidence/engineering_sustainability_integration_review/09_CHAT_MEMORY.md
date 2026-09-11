@@ -47,15 +47,15 @@ Core variables:
 
 The hard Tier-A gate was defined as:
 
-$$
+```math
 R_1=3\land R_2\ge2\land R_3=3\land R_4=3\land\lambda\ge2.
-$$
+```
 
 Perfect status was defined as:
 
-$$
+```math
 (3,3,3,3,3).
-$$
+```
 
 The review explicitly rejected a broad compensating total-score gate. Total score may rank papers only after route/eligibility classification.
 
@@ -89,15 +89,15 @@ See `05_TOP10_REFERENCE_SET.md` for titles/DOIs and roles.
 
 The project was reframed around:
 
-$$
+```math
 P_{engineering}\rightarrow F_{integration}\rightarrow S_{sustainability}\rightarrow D_{decision}.
-$$
+```
 
 The fuller chain includes construction strategy Q upstream:
 
-$$
+```math
 Q\rightarrow P\rightarrow F\rightarrow S\rightarrow D.
-$$
+```
 
 The key research question became: what physically/technically performs, how that performance is connected/transformed, what sustainability consequence is generated, and how that consequence affects a decision.
 
@@ -109,9 +109,9 @@ Controlled P/F/S/D dictionaries were developed. A major methodological rule was 
 
 The correct chain is:
 
-$$
+```math
 Keyword\rightarrow Candidate\ Passage\rightarrow Focal\ Author\ Action\rightarrow Equation/Procedure\rightarrow Evidence\rightarrow Interpretation\rightarrow Score.
-$$
+```
 
 ## Phase I — Important corrections
 
@@ -153,9 +153,9 @@ The current preferred direction is not to force the Top-10 papers immediately in
 
 Preferred architecture:
 
-$$
+```math
 Raw\ Evidence\rightarrow Interpretation\rightarrow Scoring\rightarrow Synthesis.
-$$
+```
 
 The user intends to read the extracted source evidence and design/validate the interpretation independently.
 

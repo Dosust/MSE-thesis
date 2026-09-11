@@ -6,9 +6,9 @@ The Python program should not attempt to fill every paper-specific field automat
 
 The substantive accuracy target is:
 
-$$
+```math
 \frac{|SourceSupportedClaims|}{|ExportedSubstantiveClaims|}=1.
-$$
+```
 
 Uncertain claims should be withheld or marked `U`/`NR`, not inferred.
 
