@@ -1,0 +1,41 @@
+name: Normalize GitHub mathematics
+
+on:
+  push:
+    paths:
+      - 'tools/normalize_github_math.py'
+      - '.github/workflows/normalize-github-math.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Normalize active Markdown math blocks
+        run: python tools/normalize_github_math.py --write
+
+      - name: Commit normalized Markdown when required
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No multiline dollar-math blocks require normalization.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md PROJECT_MEMORY.md project methods figures evidence
+          git commit -m 'Normalize active thesis math rendering for GitHub'
+          git push
