@@ -2,6 +2,7 @@
 
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
+![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
 ![QA](https://img.shields.io/badge/display%20%26%20ontology-QA%20AUTOMATED-0969DA)
 
 ## Repository authority — 2026-09-11
@@ -37,10 +38,11 @@ The thesis-wide citation standard is **APA 7th edition**. A citation must not su
 11. [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
 12. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
 13. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
-14. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
-15. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
-16. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
-17. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+14. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
+15. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
+16. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
+17. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
+18. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 
 The file `project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance and is superseded by the frozen Stage-7 specification whenever they differ.
 
@@ -161,7 +163,23 @@ The primary confirmatory set is
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 ```
 
-The hypothesis logic is frozen. Numerical thresholds $\delta_1,\ldots,\delta_5$, exact scenario ensembles, metrics and confirmatory decision rules remain unfrozen until specified *a priori* in the Hypothesis Specification Matrix.
+The hypothesis logic is frozen. Numerical thresholds $\delta_1,\ldots,\delta_5$, exact scenario ensembles, metrics and confirmatory decision rules remain unfrozen until specified *a priori*.
+
+---
+
+## Engineering Confirmatory Hypothesis Matrix
+
+The current operationalization specification is [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md).
+
+It combines confirmatory-science discipline, systems engineering, physics-based modelling and VVUQ. For each $H_i$, it stores the scientific gap, premise, mechanism, variables, estimand, baseline, strong rival, context of use, model-use domain, quantitative prediction, meaningful-effect requirement, physics/V&V gates, critical experiment, auxiliary assumptions, uncertainty architecture, decision rule and evidence/novelty status.
+
+Its qualification rule is
+
+```math
+\mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
+```
+
+The exact 12-gate formulation is a derived/proposed thesis methodology `[D/P]`, not an ISO/ASME standard. The current matrix explicitly leaves $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and final analysis procedures unfrozen until the reduced P–T–I–O demonstrator and available physical/data/benchmark evidence are established.
 
 ---
 
@@ -184,4 +202,6 @@ Historical/provenance trees are deliberately excluded from ontology rewriting. P
 
 > **PRIMARY HYPOTHESIS LOGIC $H_1$–$H_5$: FROZEN; NUMERICAL THRESHOLDS NOT YET FROZEN.**
 
-The next task is the Hypothesis Specification Matrix, followed by numerical case-study design, computation, falsification and validation.
+> **ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX: CURRENT OPERATIONALIZATION SPECIFICATION.**
+
+The next task is selecting the reduced P–T–I–O demonstrator and auditing the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study design and testing.
