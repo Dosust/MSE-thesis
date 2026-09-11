@@ -1,4 +1,6 @@
-# Full System-of-Systems Definition
+# Full P–T–I–O Framework-Level System Definition
+
+> **Filename note:** `FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md` is retained for provenance. The current ontology contains two physical infrastructure systems ($P,T$) plus informational and organizational layers ($I,O$); it must not be read as four standalone infrastructure systems.
 
 **Status:** CANONICAL FRAMEWORK-LEVEL DECOMPOSITION  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
