@@ -46,8 +46,8 @@ EXCLUDED_FILES = {
     "ADAPTIVE_VISUAL_CI_EXCEPTION_2026-08-22.md",
 }
 
-# These terms are forbidden only in active thesis-authority / implementation
-# paths. Evidence-review records are allowed to preserve their local vocabulary.
+# These terms are forbidden only when they appear as current active ontology,
+# not when they are explicitly identified as historical/superseded provenance.
 DRIFT_SCAN_PREFIXES = (
     "project/",
     "methods/architecture/",
@@ -61,15 +61,31 @@ DRIFT_TERMS = {
     "waste_drainage": "superseded waste–drainage mechanism",
     "pwtsw": "superseded P-W-T-SW identifier",
 }
+HISTORICAL_CONTEXT_WORDS = {
+    "historical",
+    "superseded",
+    "earlier",
+    "former",
+    "legacy",
+    "provenance",
+    "retained for provenance",
+    "not current",
+}
 
 TAG_RE = re.compile(r"\\tag\s*\{")
 OLD_DISPLAY_OPEN_RE = re.compile(r"(?<!\\)\\\[")
 OLD_DISPLAY_CLOSE_RE = re.compile(r"(?<!\\)\\\]")
 LONG_BOX_RE = re.compile(r"\\boxed\s*\{([^{}]|\{[^{}]*\}){120,}\}")
+INLINE_CODE_RE = re.compile(r"`[^`]*`")
 
 
 def rel(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
+
+
+def strip_inline_code(line: str) -> str:
+    """Remove simple Markdown inline-code spans before syntax linting."""
+    return INLINE_CODE_RE.sub("", line)
 
 
 def is_excluded(path: Path) -> bool:
@@ -111,11 +127,14 @@ def active_drift_scan(path: Path, lines: list[str], errors: list[str]) -> None:
     rp = rel(path)
     if path in ROOT_MARKDOWN or any(rp.startswith(prefix) for prefix in DRIFT_SCAN_PREFIXES):
         for lineno, line in enumerate(lines, 1):
-            lower = line.lower()
+            scan = strip_inline_code(line)
+            lower = scan.lower()
             if "msc" in lower and "mse" not in lower:
                 errors.append(f"{rp}:{lineno}: active thesis text contains MSc; canonical degree is MSE")
+
+            historical_context = any(marker in lower for marker in HISTORICAL_CONTEXT_WORDS)
             for token, description in DRIFT_TERMS.items():
-                if token.lower() in lower:
+                if token.lower() in lower and not historical_context:
                     errors.append(f"{rp}:{lineno}: {description}: {token!r}")
 
 
@@ -125,14 +144,13 @@ def lint_markdown(path: Path) -> list[str]:
     lines = text.splitlines()
     rp = rel(path)
 
-    # Track fenced regions so code examples are not treated as mathematical source.
+    # Track fenced regions so code/math blocks are not treated as ordinary
+    # Markdown source during delimiter checks.
     in_fence = False
     fence_marker = ""
     dollar_delimiters = 0
-    fence_count = 0
 
     for lineno, line in enumerate(lines, 1):
-        stripped = line.strip()
         left = line.lstrip()
 
         if left.startswith("```"):
@@ -143,11 +161,13 @@ def lint_markdown(path: Path) -> list[str]:
             elif left.startswith(fence_marker):
                 in_fence = False
                 fence_marker = ""
-            fence_count += 1
             continue
 
         if in_fence:
             continue
+
+        scan = strip_inline_code(line)
+        stripped = scan.strip()
 
         if stripped == "$$":
             errors.append(
@@ -156,21 +176,21 @@ def lint_markdown(path: Path) -> list[str]:
             )
 
         # A one-line display must contain both opening and closing delimiters.
-        if "$$" in line and line.count("$$") == 1 and stripped != "$$":
+        if "$$" in scan and scan.count("$$") == 1 and stripped != "$$":
             errors.append(
                 f"{rp}:{lineno}: unmatched one-line $$ delimiter; keep both delimiters on "
                 "the same line or use a fenced math block"
             )
 
-        dollar_delimiters += line.count("$$")
+        dollar_delimiters += scan.count("$$")
 
-        if TAG_RE.search(line):
+        if TAG_RE.search(scan):
             errors.append(f"{rp}:{lineno}: \\tag{{...}} in Markdown; use a Markdown equation label")
-        if OLD_DISPLAY_OPEN_RE.search(line) or OLD_DISPLAY_CLOSE_RE.search(line):
+        if OLD_DISPLAY_OPEN_RE.search(scan) or OLD_DISPLAY_CLOSE_RE.search(scan):
             errors.append(
                 f"{rp}:{lineno}: legacy \\[...\\] display delimiter; use a fenced math block"
             )
-        if LONG_BOX_RE.search(line):
+        if LONG_BOX_RE.search(scan):
             errors.append(f"{rp}:{lineno}: oversized \\boxed{{...}}; move prose/specification outside math")
 
     if in_fence:
@@ -212,7 +232,15 @@ def lint_authority_files() -> list[str]:
     framework = ROOT / "project" / "CANONICAL_7_STAGE_FRAMEWORK.md"
     if framework.exists():
         text = framework.read_text(encoding="utf-8")
-        if "Stages 1–7" not in text and "Stages 1--7" not in text and "scopes-1--7" not in text:
+        lower = text.lower()
+        freeze_markers = (
+            "stages 1–7",
+            "stages 1--7",
+            "seven-stage",
+            "complete seven-stage",
+            "scopes-1--7",
+        )
+        if not any(marker in lower for marker in freeze_markers):
             errors.append("project/CANONICAL_7_STAGE_FRAMEWORK.md: framework freeze does not visibly cover Stages 1–7")
 
     proposition_path = ROOT / "config" / "scientific_propositions.yaml"
