@@ -54,8 +54,6 @@ Canonical system files:
 
 The research determines how causal interdependencies among $P$, $T$, $I$, and $O$ shape disruption propagation, coupled system evolution, knowledge of system state, organizational response capability, controlled trajectories, viability, and long-term sustainable transformation.
 
-The governing reasoning chain is
-
 $$
 \text{Structure}
 \rightarrow
@@ -100,8 +98,6 @@ Framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICA
 
 ## 4. Stage 1 — Multilayer Structure
 
-Stage 1 defines the system ontology and framework-level decomposition:
-
 $$
 P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP},
 $$
@@ -133,20 +129,9 @@ The directed scope is
 $$
 \mathcal I=
 \{
-P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\ 
+P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,
 T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I
 \}.
-$$
-
-Equivalently, the framework contains six bidirectional families:
-
-$$
-P\leftrightarrow T,\quad
-P\leftrightarrow I,\quad
-P\leftrightarrow O,\quad
-T\leftrightarrow I,\quad
-T\leftrightarrow O,\quad
-I\leftrightarrow O.
 $$
 
 Every accepted interdependency is represented by
@@ -155,43 +140,17 @@ $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
-E_i^\alpha,
-E_j^\beta,
-M_{ij},
-w_{ij},
-\delta_{ij},
-\tau_{ij},
-a_{ij},
-m,
-\mathcal H_t
+E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right).
 $$
 
-The minimum causal structure is
+The causal admissibility rule is
 
 $$
-\text{Source}
-\rightarrow
-\text{Mechanism}
-\rightarrow
-\text{Receiver}
-\rightarrow
-\text{Effect}.
+\alpha\xrightarrow{M_{ij}}\beta,
 $$
 
-Common exposure is not sufficient:
-
-$$
-\text{same hazard affects }P\text{ and }T
-\not\Rightarrow
-P\leftrightarrow T.
-$$
-
-A retained relation requires
-
-$$
-\alpha\xrightarrow{M_{ij}}\beta.
-$$
+and common exposure alone is not an interdependency.
 
 Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
 
@@ -199,17 +158,14 @@ Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STA
 
 ## 6. Stage 3 — Coupled Hybrid Multiscale Dynamics
 
-Stage 3 is **canonical and frozen**. It translates accepted Stage-2 causal objects into heterogeneous dynamic consequences without forcing all layers into the same equation class.
+Stage 3 is **canonical and frozen**. It translates accepted Stage-2 causal objects into heterogeneous dynamic consequences.
 
 The four-layer state remains
 
 $$
 Y(t)=
 \begin{bmatrix}
-x_P(t)\\
-x_T(t)\\
-z_I(t)\\
-z_O(t)
+x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \end{bmatrix},
 $$
 
@@ -219,29 +175,7 @@ $$
 \widetilde Y(t)=\big(Y(t),m(t)\big).
 $$
 
-The canonical Stage-3 architecture is a hybrid delayed multirate dynamical system:
-
-$$
-\dot Y_c(t)
-=
-F^{m(t)}
-\!\left[
-Y_c(t),Y_d(t),Y(t-\boldsymbol\delta),h(\mathbf r,t);
-\mathcal G(t),\mathcal H_t
-\right],
-$$
-
-supplemented by algebraic constraints and event-driven updates:
-
-$$
-0=G^{m(t)}(Y_c,Y_d,h;\mathcal G),
-$$
-
-$$
-Y_d^+=R_e(\widetilde Y^-,e),\qquad
-m^+=\Delta_m(m^-,\widetilde Y^-,e),\qquad
-\mathcal G^+=\Psi(\mathcal G^-,\widetilde Y^-,e,\mathcal H_t).
-$$
+The canonical architecture is a hybrid delayed multirate dynamical system with continuous/quasi-continuous dynamics, algebraic constraints, discrete events, mode switching, dynamic topology, causal delays, and heterogeneous timescales.
 
 The temporal discipline is
 
@@ -277,7 +211,7 @@ Its research question is:
 
 > **How is the system observed, interpreted, coordinated and controlled?**
 
-The central conceptual spine is
+The conceptual spine is
 
 $$
 X(t)
@@ -295,41 +229,19 @@ u(t)
 X(t).
 $$
 
-For mathematical implementation, the intervention variable is denoted by $u(t)$:
+Here $\nu(t)$ denotes executed intervention in the conceptual display only. The canonical control variable used in the Stage-4 mathematical specification is $u(t)$:
 
 $$
-X(t)
-\rightarrow
-y(t)
-\rightarrow
-I(t)
-\rightarrow
-\widehat X(t)
-\rightarrow
-O(t)
-\rightarrow
-u(t)\equiv u(t)
-\rightarrow
-X(t).
+u(t)\equiv u(t).
 $$
 
 The critical distinction is
 
 $$
-X
-\neq
-y
-\neq
-I
-\neq
-\widehat X
-\neq
-O
-\neq
-u.
+X\neq y\neq I\neq\widehat X\neq O\neq u.
 $$
 
-Stage 4 therefore treats response as a **partially observable socio-technical feedback-control problem**, not as a direct failure-to-optimization mapping.
+Stage 4 treats response as a **partially observable socio-technical feedback-control problem**.
 
 ### Observation and estimation
 
@@ -337,15 +249,13 @@ $$
 y_k(t)=H_k[X(t-\delta_k)]+\nu_k(t),
 $$
 
-and
-
 $$
 (\widehat X(t),\Sigma_X(t))
 =
 \mathcal E\!\left(y_{[0,t]},z_I(t)\right).
 $$
 
-Under partial observability, the framework may use
+Under partial observability,
 
 $$
 b_t(x)
@@ -353,9 +263,7 @@ b_t(x)
 p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
 $$
 
-### Organizational feasibility
-
-The current information and organizational states constrain the action set:
+### Organizational feasibility and control
 
 $$
 \mathcal U_{\rm available}(t)
@@ -363,23 +271,15 @@ $$
 \mathcal U[z_I(t),z_O(t)],
 $$
 
-so
-
-$$
-u(t)\in\mathcal U[z_I(t),z_O(t)].
-$$
-
-A technically desirable intervention is not automatically organizationally executable.
-
-### Decision and control
-
-The generic policy is
-
 $$
 u(t)
 =
-\pi[\widehat X(t),z_I(t),z_O(t)].
+\pi[\widehat X(t),z_I(t),z_O(t)],
+\qquad
+u(t)\in\mathcal U[z_I(t),z_O(t)].
 $$
+
+The symbols above are interpreted as $\nu(t)\equiv u(t)$ so that the canonical control variable remains $u(t)$ throughout downstream analysis.
 
 No particular solver—MPC, MILP, dynamic programming, reinforcement learning, game theory, or otherwise—is frozen into the framework.
 
@@ -405,18 +305,17 @@ $$
 \tau_{\rm act}.
 $$
 
-If processes overlap, $\tau_{\rm response}$ is treated as the completion time of the relevant critical path.
+If processes overlap, $\tau_{\rm response}$ is the completion time of the relevant critical path.
 
-The proposed Stage-4 timing diagnostic is
+The proposed timing diagnostic is
 
 $$
 \Pi_R
 =
-\frac{\tau_{\rm response}}
-{\tau_{\rm cascade}},
+\frac{\tau_{\rm response}}{\tau_{\rm cascade}},
 $$
 
-with the explicit rule
+with
 
 $$
 \Pi_R<1
@@ -446,15 +345,11 @@ Stage-4 authority: [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.m
 
 Stage 5 is the **next formalization stage**.
 
-The admissible region will be defined from explicit engineering, service, informational, organizational, and sustainability constraints:
-
 $$
-K_{\rm sus}
-=
-\{Y:g(Y)\le0\}.
+K_{\rm sus}=\{Y:g(Y)\le0\},
 $$
 
-The corresponding controlled viability object is
+and
 
 $$
 \mathcal V_{\rm sus}^{u}
@@ -462,13 +357,11 @@ $$
 \operatorname{Viab}_{F,\mathcal U(z_I,z_O)}(K_{\rm sus}).
 $$
 
-Stage 5 will determine the exact finite-horizon, robust, stochastic, or time-varying formulation from the declared assumptions and evidence. Candidate quantities include viability-boundary distance, time to viability loss, recovery time, interface criticality, and intervention feasibility.
+The exact finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly.
 
 ---
 
 ## 9. Stages 6–7 — Resilience to Sustainable Transformation
-
-The framework deliberately separates resilience analysis from long-term transformation:
 
 $$
 \underbrace{\text{Stages 1--5}}_{\text{resilience analysis}}
@@ -478,13 +371,13 @@ $$
 \underbrace{\text{Stage 7}}_{\text{sustainable transformation pathways}}.
 $$
 
-Stage 6 translates verified resilience findings into transformation requirements. Stage 7 evaluates what should change in technical, informational, organizational, environmental, and policy architecture to improve long-term sustainability.
+Stage 6 translates verified resilience findings into transformation requirements. Stage 7 evaluates what should change for long-term sustainability.
 
 > **Governing principle:** resilience is analyzed inside the model; sustainability is informed by verified model results.
 
 ---
 
-## 10. Evidence architecture
+## 10. Evidence and validation architecture
 
 The thesis uses an evidence-gated workflow:
 
@@ -496,49 +389,21 @@ $$
 (\mathcal G,\mathfrak I,F,J,\tau,I,O,K,\mathcal V,u).
 $$
 
-The thesis preserves the distinction
+The thesis distinguishes
 
 $$
 \text{domain evidence}
 \neq
-\text{transferable methodological evidence}
+\text{transferable methodology}
 \neq
 \text{mathematical theory}
 \neq
 \text{thesis-proposed synthesis}.
 $$
 
-Evidence labels used in canonical stage files are:
+Evidence labels used in canonical stage files are `[E]` established literature, `[D]` derived synthesis, and `[P]` proposed thesis construct. All in-text citations and reference lists follow **APA 7th edition**.
 
-- `[E]` — established literature;
-- `[D]` — derived synthesis;
-- `[P]` — proposed thesis construct.
-
-All in-text citations and reference lists follow **APA 7th edition**.
-
-Evidence resources: [`evidence/`](evidence/)  
-Methods and validation controls: [`methods/`](methods/)
-
----
-
-## 11. Validation and falsification
-
-| Layer | Required validation logic |
-|---|---|
-| Structure | verify system boundary, taxonomy, and interface mapping |
-| Interdependency | require direction + source + mechanism + receiver + effect + evidence |
-| Dynamics | check dimensions, native physical laws, limiting cases, event logic, synchronization, and numerical implementation |
-| Timescales | separate causal delay from process duration and quantify uncertainty |
-| Spatial propagation | validate cascade-arrival definitions and use spatial-front quantities only where meaningful |
-| Observation | test measurement coverage and observability |
-| Estimation | quantify error, uncertainty, missing data, asynchrony, and sensitivity |
-| Information | test availability, latency, freshness, packet loss, and synchronization |
-| Organization | test authority, resources, coordination, logistics, and response delay |
-| Control | verify feasibility and compare interventions against explicit baselines |
-| Viability | verify set computation, constraints, boundary behavior, and sensitivity to model error |
-| Transformation | trace recommendations to validated resilience evidence |
-
-The thesis-wide logic is
+The validation rule is
 
 $$
 \text{Claim}
@@ -552,7 +417,7 @@ $$
 
 ---
 
-## 12. Current research state
+## 11. Current research state
 
 $$
 \boxed{
@@ -568,11 +433,11 @@ $$
 }
 $$
 
-The immediate framework program is to formalize Stage 5 using the controlled trajectories produced by Stages 3–4 and to define the admissible set, controlled viability object, time-to-exit logic, geometric margin, uncertainty treatment, and validation obligations without changing the frozen upstream stages.
+The immediate framework task is to formalize Stage 5 using the controlled trajectories produced by Stages 3–4 and to define the admissible set, controlled viability object, time-to-exit logic, geometric margin, uncertainty treatment, and validation obligations without modifying the frozen upstream stages.
 
 ---
 
-## 13. Repository authority
+## 12. Repository authority
 
 | File / directory | Role |
 |---|---|
@@ -582,21 +447,18 @@ The immediate framework program is to formalize Stage 5 using the controlled tra
 | [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md) | canonical P–T–I–O system identity |
 | [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | framework-level subsystem decomposition |
 | [`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md) | APA-7 evidence-grounded Stages 1–2 companion |
-| [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | frozen Stage-2 causal specification |
-| [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | frozen Stage-3 dynamic specification |
-| [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | frozen Stage-4 feedback/control specification |
-| [`figures/`](figures/) | thesis figures and visual specifications |
+| [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | frozen Stage-2 specification |
+| [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | frozen Stage-3 specification |
+| [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | frozen Stage-4 specification |
 | [`evidence/`](evidence/) | literature and evidence artifacts |
 | [`methods/`](methods/) | mathematical, computational, review, and validation methods |
 | [`provenance/`](provenance/) | provenance and audit records |
-| [`archive/`](archive/) | superseded/historical artifacts |
-| [`research_archive/`](research_archive/) | historical research material |
 
 Historical P–W–T–SW, waste–drainage, equity-centered, and other superseded architectures are **not the current thesis system** unless explicitly reintroduced through a versioned framework change.
 
 ---
 
-## 14. Scientific guardrails
+## 13. Scientific guardrails
 
 - Use **MSE = Master of Science in Engineering** consistently.
 - Use **APA 7th edition** for in-text citations and reference lists.
@@ -607,20 +469,19 @@ Historical P–W–T–SW, waste–drainage, equity-centered, and other supersed
 - Distinguish event time, causal delay, and characteristic timescale.
 - Distinguish true state, measurement, information condition, estimated state, organizational capability, and executed action.
 - Do not claim novelty for established concepts without systematic falsification.
-- Do not use generated figures as scientific authority.
 - Require equations, assumptions, units, provenance, numerical checks, uncertainty analysis, and baseline comparison before strong conclusions.
 
 > **Target standard:** clear ontology + causal evidence + mathematical rigor + physical interpretability + partially observable control + falsifiable validation + reproducibility.
 
 ---
 
-## 15. Thesis logic
+## 14. Thesis logic
 
 > **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how, when, and where they propagate; observation and estimation determine what can be known; organization and control determine what can be executed and whether response arrives in time; viability determines whether acceptable operation can be maintained; and verified resilience evidence informs sustainable transformation.**
 
 ---
 
-## 16. Change control
+## 15. Change control
 
 A canonical thesis object changes only when the revision is explicitly approved, committed with a clear history message, propagated to dependent equations, figures, evidence tables, and stage interfaces, and checked against the current framework.
 
