@@ -59,7 +59,7 @@ The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is researc
 
 ## 3. Frozen mathematical chain
 
-$$
+```math
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
@@ -69,28 +69,28 @@ $$
 &\rightarrow
 \underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
 &\rightarrow
-\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
+\underbrace{K_{\mathrm{sus}},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
 &\rightarrow
-\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
+\underbrace{\Phi_{\mathrm{ST}}\rightarrow(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)}_{6}\\
 &\rightarrow
-\underbrace{\mathfrak P_{\rm ST}}_{7}.
+\underbrace{\mathfrak P_{\mathrm{ST}}}_{7}.
 \end{aligned}
-$$
+```
 
 The terminal Stage-7 object is
 
-$$
-\mathfrak P_{\rm ST}
+```math
+\mathfrak P_{\mathrm{ST}}
 =
 \left(
-\mathbb G_{\rm ST},
-\boldsymbol\pi_{\rm ST},
+\mathbb G_{\mathrm{ST}},
+\boldsymbol{\pi}_{\mathrm{ST}},
 \Omega,
-\mathcal A^{\rm feas},
+\mathcal A^{\mathrm{feas}},
 \mathbf J,
-\mathbb M_{\rm sus}
+\mathbb M_{\mathrm{sus}}
 \right).
-$$
+```
 
 The Stage-7 regime is $\mathfrak M_k$ and its strategic action is $\mathbf a_k$. These are distinct from Stage-4 operational control $u(t)$ and Stage-2 activation $a_{ij}$.
 
@@ -100,9 +100,9 @@ The Stage-7 regime is $\mathfrak M_k$ and its strategic action is $\mathbf a_k$.
 
 The primary set is
 
-$$
+```math
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
-$$
+```
 
 | Hypothesis | Main stages | Core test |
 |---|---:|---|
@@ -114,7 +114,7 @@ $$
 
 The causal hierarchy is
 
-$$
+```math
 \mathfrak I
 \rightarrow
 F
@@ -126,7 +126,7 @@ F
 S_{ij}^{\mathcal V}
 \rightarrow
 \text{adaptive transformation}.
-$$
+```
 
 The scientific logic is frozen. $\delta_1,\ldots,\delta_5$ remain deliberately unset until justified before confirmatory testing.
 
@@ -134,11 +134,11 @@ The scientific logic is frozen. $\delta_1,\ldots,\delta_5$ remain deliberately u
 
 ## 5. Stage-6 / Stage-7 boundary
 
-$$
+```math
 \underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
 \quad\longrightarrow\quad
 \underbrace{\text{WHICH / ORDER / WHEN / CONDITIONS}}_{\text{Stage 7}}.
-$$
+```
 
 Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requirements to generate and test adaptive strategic transformations.
 
@@ -148,16 +148,17 @@ Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requ
 
 Active Markdown follows these rules:
 
-1. inline mathematics: `$...$`;
-2. display mathematics: `$$...$$`;
-3. no fenced ` ```math ` blocks;
-4. no `\tag{...}` inside GitHub Markdown;
-5. no paragraph-length text inside `\boxed{...}`;
-6. long specifications use tables or multiline equations;
-7. mathematical tables retain consistent columns;
-8. $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$ remain distinct;
-9. color is semantic and always duplicated by text/shape/line style;
-10. APA 7 author–date citations and canonical DOI URLs are preserved.
+1. inline mathematics uses `$...$`;
+2. multiline or structurally complex display mathematics uses fenced `math` blocks;
+3. short display mathematics may use `$$...$$` only when the complete expression and both delimiters remain on one line;
+4. standalone `$$` delimiter lines are avoided because GitHub Markdown line-break handling can expose raw LaTeX;
+5. no `\tag{...}` inside GitHub Markdown;
+6. no paragraph-length text inside `\boxed{...}`;
+7. long specifications use tables or multiline equations;
+8. mathematical tables retain consistent columns;
+9. $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$ remain distinct;
+10. color is semantic and always duplicated by text/shape/line style;
+11. APA 7 author–date citations and canonical DOI URLs are preserved.
 
 See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the complete standard and [`../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) for figure QA.
 
@@ -167,7 +168,7 @@ See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the
 
 The immediate sequence is
 
-$$
+```math
 \text{frozen framework}
 \rightarrow
 \text{frozen hypothesis logic}
@@ -181,7 +182,7 @@ $$
 \text{falsification}
 \rightarrow
 \text{validation}.
-$$
+```
 
 The Hypothesis Specification Matrix must predefine theory, mechanism, variables, baselines, boundary conditions, predictions, rival hypotheses, critical tests, uncertainty domains, falsification criteria and justified $\delta_i$ thresholds before confirmatory numerical testing.
 
