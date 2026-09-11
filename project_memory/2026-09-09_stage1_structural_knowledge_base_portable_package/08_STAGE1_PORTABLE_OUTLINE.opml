@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Stage 1 Deep-Dive — Multilayer Structural Knowledge Base</title>
+  </head>
+  <body>
+    <outline text="Stage 1 Deep-Dive — Multilayer Structural Knowledge Base">
+      <outline text="Governing principle">
+        <outline text="Network-of-networks is necessary, but not sufficient"/>
+        <outline text="Network-of-networks = structural skeleton"/>
+        <outline text="Need status + latent relations + uncertainty + evidence"/>
+      </outline>
+      <outline text="1. Structural Skeleton G">
+        <outline text="G = {GP, GT, GI, GO, E×}"/>
+        <outline text="Systems, nodes, links, interfaces"/>
+        <outline text="Known directed dependencies"/>
+        <outline text="What exists and how is it connected?"/>
+      </outline>
+      <outline text="2. Dependency-Status Layer sij">
+        <outline text="Dependency"/>
+        <outline text="Non-dependency"/>
+        <outline text="Conditional dependency"/>
+        <outline text="Hidden / latent candidate"/>
+        <outline text="Unknown / unresolved"/>
+        <outline text="Absence of evidence != evidence of absence"/>
+      </outline>
+      <outline text="3. Typed Relation Record rij">
+        <outline text="Direction"/>
+        <outline text="Dependency type"/>
+        <outline text="Mechanism"/>
+        <outline text="Status"/>
+        <outline text="Evidence / provenance"/>
+        <outline text="Conditional activation"/>
+      </outline>
+      <outline text="4. Distinguish Relation Classes">
+        <outline text="Connectivity"/>
+        <outline text="Functional dependency"/>
+        <outline text="Shared geographic exposure"/>
+        <outline text="Explicit non-dependency"/>
+        <outline text="Common-cause exposure != causal dependency"/>
+      </outline>
+      <outline text="5. Evidence Architecture E">
+        <outline text="Observed / direct"/>
+        <outline text="Literature-supported"/>
+        <outline text="Hypothesized / scenario"/>
+        <outline text="Provenance for included and excluded relations"/>
+      </outline>
+      <outline text="Canonical Stage-1 Object M1 = (G,R,U,H,E,Y0)"/>
+      <outline text="Stage 1A — Structural Identification &amp; Completeness Protocol">
+        <outline text="1. Entity Ontology Omega"/>
+        <outline text="2. Admissible Relation Universe Qadm"/>
+        <outline text="3. Relation-Status Matrix Sij"/>
+        <outline text="4. Relation Semantics rij"/>
+        <outline text="5. Hidden-Relation Discovery"/>
+        <outline text="6. Evidence Triangulation"/>
+        <outline text="7. Completeness Audit"/>
+        <outline text="Output: Frozen Stage-1 Structural Knowledge Base M1*"/>
+      </outline>
+      <outline text="Boundary to Later Stages">
+        <outline text="Stage 2 → causal mechanisms"/>
+        <outline text="Stage 3 → dynamic interfaces + delays"/>
+        <outline text="Stages 6–7 → sustainability transformation"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,6 @@
+relation_id,source_system,source_entity,source_id,target_system,target_entity,target_id,direction,dependency_type,carrier,mechanism,activation_condition,spatial_relation,status,evidence_class,evidence_source,provenance,scope_boundary,notes
+R001,P,power_bus,,T,EVCS,,P->T,physical,electricity,loss of electrical supply affects charging availability,,,D,,,,,
+R002,T,road_segment,,O,repair_crew,,T->O,physical-functional,mobility,road accessibility constrains crew travel,,,C,,,,,
+R003,I,SCADA,,O,operator,,I->O,cyber-informational,information,situational awareness supports decision making,,,D,,,,,
+R004,O,operator,,P,switch_controller,,O->P,logical-command,command,decision changes switching state,,,C,,,,,
+R005,P,substation,,T,road_segment,,none,geographic,shared exposure,co-located hazard exposure only,,,N,,,,,
