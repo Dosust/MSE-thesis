@@ -4,16 +4,16 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
-![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
-![MSER](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
-![Evidence](https://img.shields.io/badge/325--paper%20pipeline-CURRENT-0969DA)
-![FTEE](https://img.shields.io/badge/FTEE%20v1.0-PILOT--READY-9A6700)
+![Search](https://img.shields.io/badge/evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
+![FTEE](https://img.shields.io/badge/FTEE-PILOT--READY-9A6700)
+![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20AUDIT-9A6700)
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
 **Framework status:** complete seven-stage conceptual and mathematical framework frozen  
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
-**Current operational phase:** closed-corpus evidence selection → FTEE pilot/freeze → full-text evidence extraction → demonstrator synthesis  
+**Evidence-search status:** new primary evidence search must start from zero for $H_1$–$H_5$  
+**Old 325-paper corpus:** secondary coverage audit only  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
@@ -28,12 +28,12 @@
 | [`project/README.md`](project/README.md) | active mathematical/project dashboard |
 | [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md) | frozen thesis scope |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | frozen seven-stage framework |
-| [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md) | P–T–I–O identity and state ontology |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates |
 | [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction methodology |
-| [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper evidence-selection engine |
+| [`project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md) | fresh hypothesis-specific evidence search from first principles |
 | [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | full-text evidence-to-equation extraction protocol |
+| [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper secondary coverage audit only |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | GitHub math/rendering standard |
 | [`tools/thesis_display_lint.py`](tools/thesis_display_lint.py) | automated Markdown/math/ontology QA |
 
@@ -65,93 +65,162 @@ The primary confirmatory set is
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 ```
 
-The seven-stage architecture and H1–H5 scientific logic are frozen. Exact thresholds $\delta_i$, hypothesis domains $\Omega_H$, validation domains $\Omega_V$, and final analysis procedures remain to be specified *a priori* from the evidence base and selected demonstrator.
+The seven-stage architecture and H1–H5 scientific logic are frozen. Exact thresholds $\delta_i$, hypothesis domains $\Omega_H$, validation domains $\Omega_V$, and final analysis procedures remain to be specified *a priori* from the fresh evidence base and selected demonstrator.
 
 ---
 
-## Evidence-to-demonstrator operational pipeline
+## Fresh evidence-search rule
 
-The frozen 325-paper corpus is used as a closed evidence-selection engine:
-
-```math
-325\text{-paper corpus}
-\rightarrow
-\text{robust ranking}
-\rightarrow
-H_1-H_5\text{ priority evidence sets}.
-```
-
-FTEE v1.0 then governs full-text evidence extraction:
+The governing search logic is
 
 ```math
-\text{paper}
+H_i
 \rightarrow
-\text{mechanism}
+\text{mechanisms/constructs}
 \rightarrow
-\text{mathematical representation}
+\text{search concepts}
 \rightarrow
-\text{parameters}
+\text{database searches}
 \rightarrow
-\text{validation evidence}
+\text{screening}
 \rightarrow
-\text{hypothesis}
+\text{full text}
 \rightarrow
-\text{candidate model component}.
+\text{FTEE}.
 ```
 
-The end-to-end operational sequence is
+Previously known and unknown papers are treated identically during screening:
+
+```math
+P_{\rm known}\equiv P_{\rm unknown}.
+```
+
+The primary database strategy is hypothesis-specific and multi-database, using Scopus, Web of Science, Compendex, IEEE Xplore, and specialized databases where scientifically useful. The default time span is database inception to the search date unless a narrower period is scientifically justified.
+
+Searches target mechanisms rather than preferred solutions.
+
+---
+
+## Discovery, screening and eligibility
+
+The fresh discovery universe is
+
+```math
+\mathcal P_{\rm search}
+=
+\mathcal P_{\rm database}
+\cup
+\mathcal P_{\rm backward}
+\cup
+\mathcal P_{\rm forward}.
+```
+
+Database search is primary; backward and forward citation chasing begin only after the initial database search.
+
+Eligibility must be frozen before screening:
+
+```math
+I(P)=
+\begin{cases}
+1,&P\text{ eligible},\\
+0,&P\text{ excluded}.
+\end{cases}
+```
+
+PRISMA-style accounting records
+
+```math
+N_{\rm identified}
+\rightarrow
+N_{\rm deduplicated}
+\rightarrow
+N_{\rm title/abstract}
+\rightarrow
+N_{\rm fulltext}
+\rightarrow
+N_{\rm eligible}.
+```
+
+The primary eligible set is
+
+```math
+\mathcal P_{\rm eligible}^{\rm NEW}.
+```
+
+---
+
+## FTEE position
+
+Only the newly eligible set enters FTEE:
+
+```math
+\mathcal P_{\rm eligible}^{\rm NEW}
+\rightarrow
+\text{FTEE}
+\rightarrow
+\mathfrak M_{\rm required}
+\rightarrow
+\text{candidate demonstrators}.
+```
+
+FTEE extracts mechanism, equations, parameters, assumptions, domain, validation, and uncertainty. It does not determine search eligibility and it does not choose the demonstrator.
+
+---
+
+## Role of the old 325-paper corpus
+
+The frozen 325-paper corpus is no longer the primary evidence universe. It is used only after the fresh search for coverage diagnostics:
+
+```math
+\mathcal P_{\rm NEW}
+\leftrightarrow
+\mathcal P_{325}.
+```
+
+A previously known paper not recovered by the new search triggers a search-method diagnostic, not automatic inclusion.
+
+---
+
+## Current end-to-end workflow
 
 ```math
 \begin{aligned}
-&\textbf{Phase A: }325\text{-paper closed-corpus ranking}\\
+&H_1-H_5\\
 &\downarrow\\
-&\textbf{Phase B: }H_1-H_5\text{-specific evidence sets}\\
+&\textbf{fresh search protocol and frozen search codebook}\\
 &\downarrow\\
-&\textbf{Phase C1: FTEE extraction-table/codebook pilot and freeze}\\
+&\textbf{database searches from zero}\\
 &\downarrow\\
-&\textbf{Phase C2: full-text evidence-unit extraction}\\
+&\text{deduplication + screening + full-text eligibility}\\
 &\downarrow\\
-&\textbf{Phase D: candidate P--T--I--O demonstrator architectures}\\
+&\mathcal P_{\rm eligible}^{\rm NEW}\\
 &\downarrow\\
-&\textbf{Phase E: scientific sufficiency + V\&V feasibility comparison}\\
+&\textbf{FTEE pilot/freeze and evidence extraction}\\
 &\downarrow\\
-&\textbf{Phase F: freeze the minimal sufficient demonstrator }\mathcal M_D^*.
+&\mathfrak M_{\rm required}\\
+&\downarrow\\
+&\text{candidate P--T--I--O demonstrators}\\
+&\downarrow\\
+&\text{V\&V + identifiability + UQ gates}\\
+&\downarrow\\
+&\mathcal M_D^*.
 \end{aligned}
 ```
 
 ---
 
-## FTEE v1.0 status
-
-[`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) is **PILOT-READY / NOT YET FROZEN**.
-
-It enforces:
-
-- evidence-unit rather than paper-level extraction;
-- exact source-location provenance;
-- source notation before thesis canonicalization;
-- separate mechanism, mathematical-form and validation evidence;
-- units/dimensions, parameters, timescales and assumptions;
-- verification, validation, calibration, sensitivity and UQ separation;
-- validation-domain tracking;
-- explicit missingness and uncertainty handling;
-- P–T–I–O transferability and $H_1$–$H_5$ mapping;
-- no silent equation completion;
-- extraction before model synthesis;
-- explicit evidence-unit and governing-equation acceptance gates.
-
-Its boundary is
+## Governing evidence rules
 
 ```math
-\textbf{FTEE extracts and qualifies evidence; it does not yet choose the demonstrator.}
+\textbf{No paper is evidence because we remember it.}
 ```
 
-The next operational deliverable is the **Evidence-to-Equation extraction table/codebook**, followed by a deliberately heterogeneous pilot across ranked papers before FTEE is frozen for full-scale extraction.
+```math
+\textbf{No paper is evidence because it belonged to an earlier frozen corpus.}
+```
 
----
+```math
+\textbf{A paper becomes evidence only because the new reproducible search finds it and the new eligibility protocol qualifies it.}
+```
 
-## Repository rendering and QA
-
-Active Markdown follows `project/MATHEMATICAL_PRESENTATION_V3.md`: fenced `math` blocks for multiline/complex displays, inline `$...$`, no fragile `\tag{...}`, no paragraph-length boxes, consistent tables, and explicit notation separation.
-
-`tools/thesis_display_lint.py` and `.github/workflows/scientific-architecture-qa.yml` enforce the machine-checkable presentation and ontology rules.
+The immediate task is to freeze the hypothesis-specific search concepts, database-specific Boolean queries, database coverage/date rules, deduplication procedure, eligibility criteria, screening forms, citation-chasing rules, amendment procedure, and PRISMA accounting schema before any new search is executed.
