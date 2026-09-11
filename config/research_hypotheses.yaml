@@ -1,0 +1,42 @@
+version: 1
+project: MSE-thesis
+source: project/RESEARCH_HYPOTHESES.md
+status:
+  hypothesis_logic_frozen: true
+  numerical_thresholds_frozen: false
+  confirmatory_test_specifications_frozen: false
+
+hypotheses:
+  H1:
+    name: dynamic_interdependency
+    stages: [2, 3]
+    core_claim: dynamic_causal_coupling_materially_changes_cascade_and_service_trajectories
+    threshold_symbol: delta_1
+  H2:
+    name: information_organization
+    stages: [3, 4]
+    core_claim: information_and_organization_materially_change_feasible_response_and_recovery
+    threshold_symbol: delta_2
+  H3:
+    name: controlled_viability
+    stages: [4, 5]
+    core_claim: viability_quantities_add_decision_relevant_information_beyond_conventional_service_metrics
+    threshold_symbol: delta_3
+  H4:
+    name: interface_criticality
+    stages: [2, 5, 7]
+    core_claim: viability_sensitive_interface_rankings_outperform_static_structural_rankings_for_intervention_targeting
+    threshold_symbol: delta_4
+  H5:
+    name: adaptive_transformation_pathway
+    stages: [5, 6, 7]
+    core_claim: adaptive_trigger_based_pathways_improve_robust_tradeoffs_over_fixed_sequences_under_deep_uncertainty
+    threshold_symbol: delta_5
+
+confirmatory_rules:
+  thresholds_must_be_defined_a_priori: true
+  baselines_must_be_predeclared: true
+  scenario_domain_must_be_predeclared: true
+  rival_hypothesis_required: true
+  falsification_criterion_required: true
+  deep_uncertainty_must_not_be_reported_as_probability_without_justification: true
