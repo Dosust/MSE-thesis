@@ -1,318 +1,286 @@
 # Stage 3 — Coupled Hybrid Multiscale Dynamics
 
+![Stage](https://img.shields.io/badge/Stage%203-FROZEN-1A7F37)
+
 **Framework stage:** Stage 3 — Coupled Hybrid Multiscale Dynamics  
 **Status:** CANONICAL / FROZEN  
 **Frozen:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Change rule:** Do not revise this Stage-3 scope unless explicitly requested and versioned.  
-**Framework preservation rule:** This document formalizes Stage 3 only. It does **not** alter the frozen seven-stage framework, the Stage-1 system definition, or the Stage-2 interdependency object.
+**Citation standard:** APA 7th edition author–date  
+**Change rule:** Do not revise this Stage-3 scientific scope unless explicitly requested and versioned.  
+**Framework preservation rule:** This file formalizes Stage 3 only. It does not alter the seven-stage framework, Stage-1 system definition, or Stage-2 interdependency object.
+
+> **Rendering rule:** Long mathematical systems are split into readable display blocks. Equation identifiers are written as Markdown labels rather than `\tag{...}` to improve GitHub rendering.
 
 ---
 
-## Research question
+## Frozen research question
+
+> **How, when, and where do accepted interdependency mechanisms evolve and propagate through the coupled system?**
+
+The first three stages form the progression
 
 $$
-\boxed{\textbf{How do the coupled systems evolve over space and time, and how do disruptions propagate?}}
-$$
-
-The first three stages form a strict scientific progression:
-
-$$
-\boxed{
-\underbrace{\{P,T,I,O\}}_{\text{Stage 1: what exists}}
+\{P,T,I,O\}
 \rightarrow
-\underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\text{Stage 2: why / through what mechanism}}
+\mathfrak I_{ij}^{\alpha\beta}
 \rightarrow
-\underbrace{\text{dynamic evolution and propagation}}_{\text{Stage 3: how / when / where}}
-}
+\{Y(t),\mathcal G(t),m(t),T_C\}.
 $$
 
-Stage 1 establishes the entities, layers, and possible locations of interaction. Stage 2 identifies the causal mechanisms through which one component or layer affects another. Stage 3 determines how accepted mechanisms alter system states over space and time once active. Dynamic interdependency research shows that infrastructure interactions can evolve over multiple temporal horizons and that static representations are insufficient for many cascading-failure, recovery, and disequilibrium problems (Zhang & Peeta, 2014).
+Stage 1 defines what exists. Stage 2 defines why one component or layer can causally affect another. Stage 3 evolves those accepted mechanisms through time and space.
 
 ---
 
 ## 1. Scientific object of Stage 3
 
-To preserve the canonical Stage-1 notation, the four-layer system state remains
+The canonical four-layer state remains
 
 $$
-\boxed{
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
 x_T(t)\\
 z_I(t)\\
 z_O(t)
-\end{bmatrix}
-}
+\end{bmatrix}.
 $$
 
-with
+| State | Meaning |
+|---|---|
+| $x_P(t)$ | physical state of the power system |
+| $x_T(t)$ | physical state of the multimodal transportation system |
+| $z_I(t)$ | dynamic state of the information layer |
+| $z_O(t)$ | dynamic state of the organizational layer |
+
+Stage 3 keeps the hybrid operating mode separate:
 
 $$
-x_P(t)=\text{physical state of the power system},
+m(t)=\text{current operating/disruption/recovery mode},
 $$
 
-$$
-x_T(t)=\text{physical state of the multimodal transportation system},
-$$
+and therefore uses the augmented state
 
 $$
-z_I(t)=\text{dynamic state of the information layer},
+\widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
-and
+This prevents the discrete mode from being counted twice when equations already condition on $m(t)$.
 
-$$
-z_O(t)=\text{dynamic state of the organizational layer}.
-$$
+The coupled subsystems are not forced into one equation class. Power, transportation, information, and organization obey different physical or process laws and may operate at different temporal resolutions (Hardy et al., 2024; Sun et al., 2021).
 
-Stage 3 introduces an additional **hybrid operating mode**
-
-$$
-\boxed{m(t)=\text{current operating, disruption, cascading, or recovery mode}}
-$$
-
-without redefining the Stage-1 state symbol. The augmented Stage-3 state is therefore
-
-$$
-\boxed{\widetilde Y(t)=\big(Y(t),m(t)\big).}
-$$
-
-This distinction prevents mode information from being counted twice when the hybrid equations already condition on $m(t)$.
-
-The constituent systems are not forced into a single homogeneous equation class. Power and transportation obey different physical laws; information contains communication, availability, latency and estimation-related processes; organizational recovery contains state transitions, resources, schedules and discrete events. Coupled power–transport models also span different spatial and temporal resolutions (Sun et al., 2021), while multi-domain co-simulation is specifically designed to allow heterogeneous simulators to interact without removing their native dynamics (Hardy et al., 2024).
-
-Therefore,
-
-$$
-\boxed{\textbf{Coupled does not mean mathematically identical.}}
-$$
-
-Rather,
-
-$$
-\boxed{\textbf{Coupled}=\text{heterogeneous dynamical systems exchanging causal state variables}.}
-$$
+> **Coupled does not mean mathematically identical.** It means heterogeneous dynamical processes exchange causal state variables through accepted interdependencies.
 
 ---
 
-## 2. Governing Stage-3 architecture
+## 2. Governing hybrid delayed multirate architecture [P]
 
-The canonical Stage-3 architecture is a **hybrid delayed multirate dynamical system**. Partition the state variables into continuous/quasi-continuous states $Y_c$ and discrete states $Y_d$ while keeping the operating mode $m$ explicit:
+Partition the state into continuous/quasi-continuous states $Y_c$ and discrete states $Y_d$, while keeping $m$ explicit.
+
+**Equation S3.1 — Coupled hybrid architecture**
 
 $$
-\boxed{
 \begin{aligned}
 \dot Y_c(t)
 &=F^{m(t)}\!\left[
 Y_c(t),Y_d(t),Y(t-\boldsymbol\delta),h(\mathbf r,t);
 \mathcal G(t),\mathcal H_t
-\right],\\[1mm]
+\right],\\
 0
 &=G^{m(t)}\!\left[
 Y_c(t),Y_d(t),h(\mathbf r,t);\mathcal G(t)
-\right],\\[1mm]
+\right],\\
 Y_d(t_e^+)
-&=R_e\!\left[\widetilde Y(t_e^-),e\right],\\[1mm]
+&=R_e\!\left[\widetilde Y(t_e^-),e\right],\\
 m(t_e^+)
-&=\Delta_m\!\left[m(t_e^-),\widetilde Y(t_e^-),e\right],\\[1mm]
+&=\Delta_m\!\left[m(t_e^-),\widetilde Y(t_e^-),e\right],\\
 \mathcal G(t_e^+)
 &=\Psi\!\left[\mathcal G(t_e^-),\widetilde Y(t_e^-),e,\mathcal H_t\right].
 \end{aligned}
-}
-\tag{S3.1}
 $$
 
-This formulation is **proposed in this thesis**. It is a synthesis of established ideas from dynamic infrastructure interdependency modeling, temporal networks, hybrid disruption/recovery modeling, delayed cyber-physical systems, and federated co-simulation (Cimellaro et al., 2024; Goldbeck et al., 2019; Hardy et al., 2024; Zhang & Peeta, 2014).
+This is a **thesis synthesis [P]** of established dynamic-interdependency, hybrid-system, temporal-network, delayed-system, and co-simulation concepts (Cimellaro et al., 2024; Goldbeck et al., 2019; Hardy et al., 2024; Zhang & Peeta, 2014).
 
-Here,
+| Symbol | Meaning |
+|---|---|
+| $Y_c$ | continuous or quasi-continuous states |
+| $Y_d$ | discrete states |
+| $\boldsymbol\delta=\{\delta_{ij}\}$ | causal delays inherited from Stage 2 |
+| $h(\mathbf r,t)$ | spatiotemporal hazard/disturbance field |
+| $R_e$ | event-reset map |
+| $\Delta_m$ | mode-transition operator |
+| $\Psi$ | network/coupling update operator |
 
-$$
-Y_c=\text{continuous or quasi-continuous states},
-$$
-
-$$
-Y_d=\text{discrete states},
-$$
-
-$$
-\boldsymbol\delta=\{\delta_{ij}\}=\text{causal delays inherited from Stage 2},
-$$
-
-$$
-h(\mathbf r,t)=\text{spatiotemporal hazard/disturbance field},
-$$
-
-$$
-R_e=\text{event-reset map},\qquad
-\Delta_m=\text{mode-transition operator},\qquad
-\Psi=\text{network/coupling update operator}.
-$$
-
-Temporal-network research shows that event ordering can materially alter cascading outcomes, so chronology must not be erased by purely static representations (Cimellaro et al., 2024).
+Temporal-network research shows that event ordering can materially alter cascading outcomes, so chronology must not be erased by a purely static representation (Cimellaro et al., 2024).
 
 ---
 
-## 3. Native dynamics of the four-layer system
+## 3. Native dynamics of the P–T–I–O system
 
-The framework retains native model families appropriate to each subsystem.
-
-| System | Dynamic quantities in Stage 3 | Appropriate model family |
+| Layer/system | Dynamic quantities | Representative model family |
 |---|---|---|
-| Power $P$ | voltage, power flow, frequency where needed, DER, storage, charging, traction power | AC/DC power flow, DistFlow, algebraic or DAE formulations |
+| Power $P$ | voltage, power flow, frequency where needed, DER/storage, charging, traction power | AC/DC power flow, DistFlow, algebraic/DAE/dynamic models as required |
 | Road $T_R$ | density, flow, speed, congestion, accessibility | CTM, dynamic traffic assignment, microscopic simulation |
-| Electric bus $T_B$ | location, route, SOC, charging, queue | vehicle dynamics, routing, SOC and queue models |
-| Urban rail $T_U$ | metro/MRT/LRT/tram position, speed, traction demand | train-motion and traction-power models |
-| Heavy/regional rail $T_H$ | commuter/intercity rail movement and traction demand | train-motion and traction-network models |
-| Information $I$ | availability, latency, freshness, loss, information error | delay, stochastic and discrete-event models |
-| Organization $O$ | organizational state, resources, crews, coordination, mobilization, repair | state-transition, discrete-event, routing and scheduling models |
+| Electric bus $T_B$ | location, route, SOC, charging, queue | routing, SOC, queueing, vehicle/fleet models |
+| Urban rail $T_U$ | train position, speed, traction demand, service state | train-motion and traction-power models |
+| Heavy/regional rail $T_H$ | train movement and traction demand | train-motion and traction-network models |
+| Information $I$ | availability, latency, quality, freshness, loss, estimation error, synchronization | delay, stochastic, communication, discrete-event models |
+| Organization $O$ | authority, coordination, resources, workforce, mobilization, repair chronology | state-transition, discrete-event, routing, scheduling, resource-allocation models |
 
-Coupled power and transportation literature explicitly distinguishes short-, medium-, and long-term representations, demonstrating that a single temporal resolution is generally inadequate for all relevant P–T processes (Sun et al., 2021).
+A single temporal resolution is not assumed to be adequate for all P–T–I–O processes (Hardy et al., 2024; Sun et al., 2021).
 
 ---
 
 ## 4. Power-system dynamics
 
-At infrastructure-resilience timescales, full electromagnetic-transient simulation is not automatically required. Power-system feasibility may be represented through algebraic constraints,
+At infrastructure-resilience timescales, full electromagnetic-transient simulation is not automatically required. Power-system feasibility may be represented by algebraic constraints
 
 $$
-\boxed{0=G_P\!\left(x_P,x_T,z_I,h;\mathcal G_P,m\right),}
+0=G_P\!\left(x_P,x_T,z_I,h;\mathcal G_P,m\right),
 $$
 
-or, when genuinely dynamic electrical states are necessary,
+or by dynamic/DAE formulations when the research question requires them:
 
 $$
-\boxed{M_P\dot x_P=F_P\!\left(x_P,x_T,z_I,h;\mathcal G_P,m\right).}
+M_P\dot x_P
+=F_P\!\left(x_P,x_T,z_I,h;\mathcal G_P,m\right).
 $$
 
-Representative states are
+A representative power state is
 
 $$
-\boxed{x_P=[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC_B]^\top.}
+x_P=
+[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC_B]^\top.
 $$
 
-The model must permit state-changing events such as overloads, line/feeder trips, substation failures, capacity loss, switching, islanding, and restoration.
+The model must permit state-changing events such as overloads, feeder/line trips, substation failures, capacity loss, switching, islanding, and restoration.
 
-Rail transport must not be reduced to an abstract electrical load when the research question concerns interdependency and propagation. Explicit railway–traction–external-power modeling has been shown to alter vulnerability and cascading-failure conclusions (Bellè et al., 2022). Hence,
+Rail interaction retains the traction-power interface:
 
 $$
-\boxed{P_{Tr/D}\leftrightarrow P_{TP}\leftrightarrow (T_U,T_H).}
+P_{Tr/D}
+\leftrightarrow
+P_{TP}
+\leftrightarrow
+(T_U,T_H),
 $$
+
+because explicit railway–traction–power representation can change vulnerability and cascading conclusions (Bellè et al., 2022).
 
 ---
 
 ## 5. Multimodal transportation dynamics
 
-Stage 1 established
+Stage 1 defines
 
 $$
-\boxed{T=\{T_R,T_B,T_U,T_H,T_M\}.}
+T=\{T_R,T_B,T_U,T_H,T_M\}.
 $$
-
-Stage 3 therefore permits heterogeneous multimodal transportation dynamics.
 
 For road traffic, a generic conservation law is
 
 $$
-\boxed{\frac{\partial k(x,t)}{\partial t}+\frac{\partial q(x,t)}{\partial x}=s(x,t),}
+\frac{\partial k(x,t)}{\partial t}
++
+\frac{\partial q(x,t)}{\partial x}
+=s(x,t),
 $$
 
-or an equivalent discrete Cell Transmission Model / microscopic representation when required.
+or an equivalent CTM, dynamic-traffic-assignment, or microscopic representation.
 
-For EVs and electric buses, battery state may evolve as
+For EVs and electric buses, a battery-SOC model may take the form
 
 $$
-\boxed{
 \dot{SOC}_v
-=-\frac{P_v^{drive}}{E_v}
-+\eta_c\frac{P_v^{ch}}{E_v}
--\frac{P_v^{V2G}}{\eta_dE_v}.
-}
+=-\frac{P_v^{\mathrm{drive}}}{E_v}
++\eta_c\frac{P_v^{\mathrm{ch}}}{E_v}
+-\frac{P_v^{\mathrm{V2G}}}{\eta_dE_v}.
 $$
 
-Dynamic P–T studies show that departure time, route choice, charging queues, charging demand, and distribution-network states can interact dynamically rather than through a static charging-load approximation alone (Li et al., 2024).
+Dynamic P–T studies show that departure time, route choice, charging queues, charging demand, and distribution states can interact dynamically rather than through a static charging-load approximation alone (Li et al., 2024).
 
 For rail,
 
 $$
-\boxed{\dot s_r=v_r,}
+\dot s_r=v_r,
+\qquad
+M_r\dot v_r=F_r^{\mathrm{tr}}-F_r^{\mathrm{res}}-F_r^{\mathrm{br}},
 $$
 
-$$
-\boxed{M_r\dot v_r=F_r^{tr}-F_r^{res}-F_r^{br}.}
-$$
-
-Traction demand is consequently state dependent:
+with state-dependent traction demand
 
 $$
-\boxed{P_r^{tr}(t)=\mathcal P(s_r,v_r,a_r,V_{TP},\eta_r).}
+P_r^{\mathrm{tr}}(t)
+=
+\mathcal P(s_r,v_r,a_r,V_{TP},\eta_r).
 $$
 
-Therefore,
+Thus
 
 $$
-\boxed{\text{train motion}\rightleftarrows\text{traction-power state}.}
+\text{train motion}
+\rightleftarrows
+\text{traction-power state}.
 $$
-
-Explicit railway–traction–power modeling provides direct precedent for this bidirectional representation (Bellè et al., 2022).
 
 ---
 
-## 6. Information dynamics
+## 6. Information-layer dynamics
 
-Stage 3 represents the **dynamic condition of information**, not the design of the observer or feedback controller.
+Stage 3 represents the **dynamic condition of information**, not the Stage-4 estimator or controller.
 
-Use
+The canonical information state is
 
 $$
-\boxed{z_I(t)=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_I]^\top,}
+z_I(t)
+=
+[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
 $$
-
-where $A_I$ is availability, $L_I$ latency, $Q_I$ information quality, $\Delta_I$ information freshness, $p_{\rm loss}$ packet/data loss, and $e_I$ information/estimation error.
 
 A delayed measurement channel may be represented as
 
 $$
-\boxed{y_I(t)=H_I[X(t-\delta_I)]+\nu_I(t).}
+y_I(t)
+=
+H_I\!\left[X(t-\delta_I)\right]
++\varepsilon_I(t).
 $$
 
-Information freshness is distinct from communication latency. Age of Information is defined by Yates et al. (2021) as
+Information freshness remains distinct from communication latency. Age of Information is
 
 $$
-\boxed{\Delta_I(t)=t-U(t),}
+\Delta_I(t)=t-U(t),
 $$
 
-where $U(t)$ is the generation time of the newest received status update.
+where $U(t)$ is the generation time of the freshest received update (Yates et al., 2021).
 
-Communication delay can also alter physical behavior. Wang et al. (2021) showed in a DER–AGC cyber-physical co-simulation that instability risk generally increased with communication delay under the tested settings.
-
-However,
+The estimator
 
 $$
-\boxed{\widehat X(t)=\mathcal E(y,I)}
+\widehat X(t)=\mathcal E\!\left(y_{[0,t]},z_I(t)\right)
 $$
 
-is an **observer/state-estimation design** and remains in Stage 4.
+belongs to Stage 4; Stage 3 only evolves the information conditions that affect it.
 
 ---
 
-## 7. Organizational dynamics
+## 7. Organizational-layer dynamics
 
-Organizational processes must not be assigned artificial physical equations simply to make all four layers mathematically identical.
+Organizational processes are not assigned artificial physical equations merely to make all layers mathematically identical.
 
-A Stage-3 organizational state may be represented by
-
-$$
-\boxed{z_O(t)=[m_O,R_O,W_O,C_O,N_{\rm crew},\tau_D,\tau_M]^\top,}
-$$
-
-representing organizational mode, resources, workforce, coordination status, available crews, decision delay, and mobilization delay.
-
-A typical response sequence is
+The canonical organizational state is
 
 $$
-\boxed{
+z_O(t)
+=
+[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
+$$
+
+Auxiliary variables such as crew count or component-specific repair status may be introduced when a model requires them, but they do not replace the canonical state definition.
+
+A typical response chronology is
+
+$$
 \text{monitor}
 \rightarrow
 \text{assess}
@@ -324,69 +292,56 @@ $$
 \text{mobilize}
 \rightarrow
 \text{execute}.
-}
 $$
 
-Transportation accessibility creates a measurable $T\rightarrow O\rightarrow P$ dynamic mechanism. Contemporary coupled-resilience studies show that damaged/congested road networks can constrain emergency-resource deployment and affect power recovery (Lian et al., 2026; Yang & Zhang, 2026).
-
-For crew $c$ travelling to damaged component $j$,
+Transportation accessibility creates a measurable $T\rightarrow O\rightarrow P$ pathway. For crew $c$ travelling to damaged component $j$,
 
 $$
-\boxed{
-\tau_{\rm arrival}^{c,j}
-=\tau_{\rm dispatch}^{c}+TT_{r(c,j)}[x_T(t)].
-}
+\tau_{\mathrm{arrival}}^{c,j}
+=
+\tau_{\mathrm{dispatch}}^{c}
++TT_{r(c,j)}[x_T(t)],
 $$
 
-The corresponding restoration time is
+and the associated restoration time may be
 
 $$
-\boxed{t_{{\rm restore},j}=\tau_{\rm arrival}^{c,j}+\tau_{{\rm repair},j}.}
+t_{\mathrm{restore},j}
+=
+\tau_{\mathrm{arrival}}^{c,j}
++\tau_{\mathrm{repair},j}.
 $$
 
-Thus transportation dynamics alter the time at which a future restoration event occurs in the power network. Stage 3 evolves these states and event times; **the policy that chooses which crew to dispatch or which asset to prioritize belongs to Stage 4**.
+Stage 3 evolves travel, arrival, repair, and restoration times; the policy selecting crews or priorities belongs to Stage 4.
 
 ---
 
-## 8. Translation of Stage-2 interdependencies into Stage-3 dynamics
+## 8. Translating Stage-2 mechanisms into Stage-3 dynamics
 
-Stage 2 established
+Stage 2 provides
 
 $$
-\boxed{
 \mathfrak I_{ij}^{\alpha\beta}
-=\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
-}
+=
+\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
 $$
 
-Stage 3 does not replace this object. It maps each accepted causal mechanism into a dynamic transmission operator. Define
+Stage 3 maps the accepted mechanism $M_{ij}$ into a dynamic transmission map.
+
+**Equation S3.2 — Dynamic interdependency transmission**
 
 $$
-\boxed{
+\begin{aligned}
 \mathcal C_{ij}^{\alpha\beta}(t)
-=a_{ij}(t)\,w_{ij}(t)\,
-\mathcal M_{ij}^{\alpha\beta}
-\!\left[
+={}&a_{ij}(t)w_{ij}(t)\\
+&\times\mathcal M_{ij}^{\alpha\beta}\!\left[
 E_i^\alpha(t-\delta_{ij}),
-E_j^\beta(t),
-m(t),
-\mathcal H_t
-\right],
-}
-\tag{S3.2}
+E_j^\beta(t),m(t),\mathcal H_t
+\right].
+\end{aligned}
 $$
 
-where $\mathcal M_{ij}^{\alpha\beta}$ is the **dynamic transmission map induced by the Stage-2 mechanism $M_{ij}$**.
-
-Thus,
-
-$$
-\boxed{
-\text{Stage-2 causal mechanism}
-\xrightarrow{\mathcal C_{ij}^{\alpha\beta}}
-\text{Stage-3 dynamic consequence}.
-}
-$$
+Here $\mathcal M_{ij}^{\alpha\beta}$ is the dynamic transmission map induced by the Stage-2 causal mechanism $M_{ij}$. The two symbols are intentionally distinct.
 
 For EV charging,
 
@@ -394,18 +349,14 @@ $$
 P_D\rightarrow P_C\rightarrow T_R,
 $$
 
-and a supply shortage may propagate as
+and a shortage can propagate through a mechanism-specific chain such as
 
 $$
-\boxed{
-P_c(t)<P_c^{req}(t)
+P_c<P_c^{\mathrm{req}}
 \Rightarrow
-\dot{SOC}_v(t)\downarrow
+SOC_v\downarrow
 \Rightarrow
-\mathcal R_v(t)\downarrow
-\Rightarrow
-q_a(t+\tau)\text{ changes}.
-}
+\text{mobility availability}\downarrow.
 $$
 
 For transportation-dependent restoration,
@@ -414,85 +365,61 @@ $$
 T_R\rightarrow O_L\rightarrow P_D,
 $$
 
-and
+and increasing road travel time can delay crew arrival, repair, and restoration.
 
-$$
-\boxed{
-TT_{\rm road}\uparrow
-\Rightarrow
-t_{\rm crew-arrival}\uparrow
-\Rightarrow
-t_{\rm repair}\uparrow
-\Rightarrow
-P_{\rm served}(t)\downarrow.
-}
-$$
-
-The governing distinction is
-
-$$
-\boxed{
-\text{Stage 2 identifies the causal edge; Stage 3 evolves its consequence through time.}
-}
-$$
+> **Stage 2 identifies the causal edge; Stage 3 evolves its consequence through time.**
 
 ---
 
-## 9. Hybrid dynamics
+## 9. Hybrid modes and events
 
-The system contains continuous evolution and discrete changes. Dynamic infrastructure-recovery models combine changing flows with failures, repair actions, resource constraints, and restoration events (Goldbeck et al., 2019); recent P–T hazard studies similarly combine network performance with discrete damage, accessibility, deployment, and restoration states (Lian et al., 2026; Yang & Zhang, 2026).
+The system combines continuous evolution, discrete events, and mode switching.
 
-Hence,
-
-$$
-\boxed{\text{Hybrid dynamics}=\text{continuous evolution}+\text{discrete events}+\text{mode switching}.}
-$$
-
-Provisionally,
+A provisional mode set is
 
 $$
-\boxed{m(t)\in\mathcal M=\{N,D,C,R\},}
+m(t)\in\mathcal M=\{N,D,C,R\},
 $$
 
-where
+where $N$ = normal, $D$ = degraded, $C$ = cascading, and $R$ = recovery. These labels may be refined without changing the Stage-3 architecture.
+
+Interdependency activation may depend on mode, for example
 
 $$
-N=\text{normal},\quad
-D=\text{degraded},\quad
-C=\text{cascading},\quad
-R=\text{recovery}.
+a_{ij}^{N}=0,
+\qquad
+a_{ij}^{R}=1,
 $$
 
-The taxonomy remains **provisional at the mode-label level** and may be refined when the case study and event logic are calibrated; doing so does not alter the Stage-3 architecture.
+when a recovery-specific coupling is inactive during normal operation and active during restoration (Danziger & Barabási, 2022).
 
-Interdependency activation may also be mode dependent, e.g.
+The Stage-3 event set may include failures, trips, capacity reductions, road closures, communication losses, charging events, executed switching, dispatched-resource arrivals, repairs, and restorations.
+
+An event can produce
 
 $$
-a_{ij}^{N}=0,\qquad a_{ij}^{R}=1.
+(Y,m,\mathcal G,a)
+\rightarrow
+(Y^+,m^+,\mathcal G^+,a^+).
 $$
 
-Recovery-coupling research provides precedent for interdependencies that become important specifically during restoration (Danziger & Barabási, 2022).
+A dispatch **decision rule** belongs to Stage 4; Stage 3 may consume the resulting executed dispatch as an event.
 
 ---
 
-## 10. Dynamic topology and state-dependent interdependencies
+## 10. Dynamic topology and state-dependent coupling
 
-Stage 3 does not assume
-
-$$
-\mathcal G=\text{constant}.
-$$
-
-Instead,
+The effective coupled graph is not assumed constant:
 
 $$
-\boxed{\mathcal G(t)=\mathcal G[Y(t),m(t),h(t),\mathcal H_t].}
+\mathcal G(t)
+=
+\mathcal G\!\left[Y(t),m(t),h(t),\mathcal H_t\right].
 $$
 
-The feedback is
+A compact feedback representation is
 
 $$
-\boxed{
 \mathcal G(t)
 \rightarrow
 F_{\mathcal G(t)}
@@ -502,341 +429,176 @@ Y(t)
 \{a_{ij}(t),w_{ij}(t),m(t)\}
 \rightarrow
 \mathcal G(t+\Delta t).
-}
 $$
 
-Zhang and Peeta (2014) explicitly represent interdependency evolution across short and longer horizons, while Cimellaro et al. (2024) demonstrate the importance of temporal adjacency and event sequence.
-
-Therefore,
-
-$$
-\boxed{\mathcal G\rightleftarrows\text{Dynamics}.}
-$$
-
-This does not mean every physical edge continuously changes. It means that the **effective coupled structure available for propagation may change with state, mode, damage, recovery, and history**.
+The statement $\mathcal G\rightleftarrows Y$ means that the **effective structure available for propagation** may change with state, damage, mode, recovery, and history; it does not imply that every physical edge continuously changes.
 
 ---
 
 ## 11. Multiscale temporal structure
 
-Different subsystems and mechanisms operate on different characteristic timescales. Coupled P–T literature distinguishes short-, medium-, and long-term processes, while co-simulation frameworks support models with different internal clocks and synchronization requirements (Hardy et al., 2024; Sun et al., 2021).
-
-Define
+The framework does not impose one universal timescale. A representative Stage-3 set is
 
 $$
-\boxed{
 \boldsymbol\tau_{S3}
-=\{\tau_P,\tau_{T_R},\tau_{T_B},\tau_{T_U},\tau_{T_H},\tau_I,\tau_O,
-\tau_{\rm travel},\tau_{\rm repair},\tau_C\}.
-}
+=
+\{\tau_P,\tau_{T_R},\tau_{T_B},\tau_{T_U},\tau_{T_H},
+\tau_I,\tau_O,\tau_{\rm travel},\tau_{\rm repair},\tau_C\}.
 $$
 
-The framework does not impose a universal ordering. Rather,
+The governing timing distinction is
 
 $$
-\boxed{\tau_P,\tau_T,\tau_I,\tau_O\text{ need not be equal}.}
+\text{event time}
+\neq
+\delta_{ij}
+\neq
+\tau_{ij}.
 $$
 
-Stage 2 distinguishes
-
-$$
-\boxed{\delta_{ij}=\text{delay before the causal effect becomes observable}}
-$$
-
-from
-
-$$
-\boxed{\tau_{ij}=\text{characteristic time over which that mechanism evolves}.}
-$$
-
-Hence,
-
-$$
-\boxed{\delta_{ij}\neq\tau_{ij}.}
-$$
-
-This distinction is essential for delayed information, charging queues, travel-constrained repair, and organizational mobilization.
+Here $\delta_{ij}$ is the cause-to-effect lag, whereas $\tau_{ij}$ is the characteristic rate/duration of the mechanism.
 
 ---
 
 ## 12. Spatial cascade dynamics
 
-Stage 3 asks two distinct questions:
+Stage 3 distinguishes **where** disruption propagates from **when** it arrives.
+
+**Equation S3.3 — Cascade-arrival time**
 
 $$
-\boxed{\text{Where does disruption propagate?}}
+T_C(j)
+=
+\inf\{t>t_0:j\text{ enters a predefined disrupted state}\}.
 $$
 
-and
+For mechanisms with a meaningful spatial front, define $r_c(t)$ and
 
 $$
-\boxed{\text{When does it arrive?}}
+v_c(t)=\frac{dr_c(t)}{dt}.
 $$
 
-For component $j$, define the proposed cascade-arrival time
+Constant-velocity propagation is not assumed. The thesis may test
 
 $$
-\boxed{
-T_C(j)=\inf\{t>t_0:j\text{ enters a predefined disrupted state}\}.
-}
-\tag{S3.3}
+v_c=v_c(Y,\mathcal G,m,h)
 $$
 
-For propagation mechanisms with a meaningful spatial front, define an evolving cascade radius $r_c(t)$ and
-
-$$
-\boxed{v_c(t)=\frac{dr_c(t)}{dt}.}
-$$
-
-Zhao et al. (2016) found approximately radial, near-constant-velocity propagation for the specific spatially embedded overload-cascade models they studied. This motivates explicit space–time propagation analysis but **does not establish constant-velocity propagation as a universal infrastructure law**.
-
-Accordingly, the thesis may test
-
-$$
-\boxed{v_c=v_c(Y,\mathcal G,m,h),}
-\tag{S3.4}
-$$
-
-allowing propagation velocity to depend on state, topology, mode, and hazard.
+when the spatial-front interpretation is physically defensible. Zhao et al. (2016) provide precedent for space–time cascade analysis in a specific class of spatial networks, not a universal infrastructure law.
 
 ---
 
-## 13. Discrete-event scope
+## 13. Uncertainty
 
-The Stage-3 event set is restricted to events capable of modifying state, topology, capacity, interdependency activation, or recovery chronology:
-
-$$
-\boxed{
-\mathcal E_{S3}=\{
-\text{failure},
-\text{trip},
-\text{capacity reduction},
-\text{road closure},
-\text{communication loss},
-\text{charging event},
-\text{switching},
-\text{dispatch event},
-\text{crew arrival},
-\text{repair},
-\text{restoration}
-\}.
-}
-$$
-
-An event produces
+Stage 3 admits uncertainty in variables that materially alter dynamic trajectories, for example
 
 $$
-\boxed{(Y,m,\mathcal G,a)\rightarrow(Y^+,m^+,\mathcal G^+,a^+).}
+\Xi
+=
+\{h,\text{failure state},\text{demand},\text{travel time},
+\text{repair time},\delta_I,A_I\}.
 $$
 
-**Boundary rule:** a dispatch event may be consumed by Stage 3 as a discrete event, but the decision rule that generates that dispatch belongs to Stage 4.
+Scenario generation, Monte Carlo simulation, and sensitivity analysis may be used when consistent with the uncertainty model. Uncertainty is not promoted to a separate framework stage.
 
 ---
 
-## 14. Uncertainty
+## 14. Computational architecture
 
-Stage 3 admits uncertainty in quantities that materially alter the dynamic trajectory:
+The preferred integration principle is **hybrid multirate co-simulation**, allowing heterogeneous subsystem models to retain their native equations and clocks. HELICS provides an established example of federated multi-domain co-simulation (Hardy et al., 2024).
+
+The governing fidelity rule is
 
 $$
-\boxed{
-\Xi=\{h,\text{failure state},\text{demand},\text{travel time},\text{repair time},\delta_I,A_I\}.
-}
+\text{maximum necessary physical fidelity}
+\neq
+\text{maximum possible model detail}.
 $$
 
-Uncertainty is not promoted to a separate framework stage. It is used to test robustness of dynamic conclusions. Scenario generation, Monte Carlo simulation, and sensitivity analysis are appropriate where hazard damage, traffic/accessibility, resource availability, travel, repair, or restoration outcomes are uncertain (Lian et al., 2026; Yang & Zhang, 2026).
+A model resolution is justified only when it materially supports the research question and validation obligation.
 
 ---
 
-## 15. Computational architecture
+## 15. Validation and falsification
 
-The preferred computational structure is
+Stage 3 validation must test both system outcomes and the mechanisms that generate them.
 
-$$
-\boxed{\textbf{hybrid multirate co-simulation}.}
-$$
+| Validation target | Example check |
+|---|---|
+| Native subsystem behavior | physical/dimensional consistency and known limiting cases |
+| Cross-layer coupling | interface balance, sign, units, and causal direction |
+| Event chronology | event ordering and reproducibility |
+| Timing | sensitivity to delay and characteristic timescale |
+| Topology | dynamic-graph consistency under failure/recovery |
+| Numerical integration | synchronization and convergence where applicable |
+| Uncertainty | scenario/sensitivity robustness |
+| Coupling importance | ablation of selected Stage-2 mechanisms |
 
-Conceptually,
-
-$$
-\boxed{
-\begin{array}{ccc}
-P&\longleftrightarrow&T\\
-\updownarrow&&\updownarrow\\
-I&\longleftrightarrow&O
-\end{array}
-}
-$$
-
-operates through a **Hybrid Event and Synchronization Manager**.
-
-HELICS is an established federated co-simulation framework in which heterogeneous models from power, transportation, communications, and other domains can exchange variables at runtime while retaining native representations and clocks (Hardy et al., 2024).
-
-The thesis therefore follows
+A representative chronology is
 
 $$
-\boxed{\text{maximum necessary physical fidelity}\neq\text{maximum possible model detail}.}
-$$
-
-Electromagnetic-transient power simulation, packet-level communication simulation, microscopic transportation simulation, and detailed behavioral organizational simulation will not all be used simultaneously unless the research question requires those resolutions.
-
----
-
-## 16. Stage-3 validation and falsification
-
-Stage 3 must validate not only final performance but also the **mechanism through which outcomes are generated**. Validation therefore examines:
-
-- native subsystem behavior;
-- dimensional and physical consistency;
-- cross-system interface consistency;
-- event chronology;
-- coupling effects;
-- limiting cases;
-- parameter and timescale sensitivity;
-- uncertainty sensitivity;
-- system-level trajectories;
-- numerical synchronization / convergence where applicable.
-
-A representative integrated chronology is
-
-$$
-\boxed{
+\begin{aligned}
 t_{\rm failure}
-<t_{\rm detected}
+&<t_{\rm detected}
 <t_{\rm estimated}
-<t_{\rm decision}
-<t_{\rm mobilisation}
+<t_{\rm decision}\\
+&<t_{\rm mobilized}
 <t_{\rm arrival}
-<t_{\rm repair}.
-}
-\tag{S3.5}
+<t_{\rm repair},
+\end{aligned}
 $$
 
-This chronology is a **cross-stage interface chronology**: Stage 3 evolves the physical/information/organizational state and event times, while Stage 4 supplies observer and decision-policy logic where those timestamps depend on estimation or control.
+but this ordering is a **testable chronology**, not a universal law; parallel or reordered processes may occur.
 
-A key falsification technique is **coupling ablation**. For a selected Stage-2 mechanism,
-
-$$
-\boxed{\mathcal I^{\alpha\beta}\rightarrow0,}
-$$
-
-and the model is rerun under otherwise matched conditions.
-
-Use unambiguous model-variant notation, for example
+For coupling ablation, a selected mechanism is removed or neutralized while other conditions are matched. Model variants should use symbols such as
 
 $$
-\mathscr M_{PT},\qquad
-\mathscr M_{PTI},\qquad
+\mathscr M_{PT},
+\qquad
+\mathscr M_{PTI},
+\qquad
 \mathscr M_{PTIO},
 $$
 
-to avoid confusion with the Stage-2 mechanism symbol $M_{ij}$.
+to avoid collision with the Stage-2 mechanism symbol $M_{ij}$.
 
-If removing a coupling produces no meaningful and reproducible change in state trajectory, event order, cascade arrival, recovery trajectory, or later viability assessment, the explanatory importance of that coupling must be reconsidered rather than assumed.
-
----
-
-## 17. Boundary of Stage 3
-
-Stage 3 remains bounded so that it does not consume Stages 4–7.
-
-### Stage 3 does not redefine interdependencies
-
-The interdependency object remains
-
-$$
-\mathfrak I_{ij}^{\alpha\beta}.
-$$
-
-### Stage 3 does not design the observer
-
-$$
-\widehat X(t)=\mathcal E(y,I)
-$$
-
-belongs to Stage 4.
-
-### Stage 3 does not design the decision/control policy
-
-$$
-u(t)=\pi(\widehat X,I,O)
-$$
-
-belongs to Stage 4.
-
-### Stage 3 does not compute Stage-5 viability objects
-
-The sustainable viability kernel
-
-$$
-\mathcal V_{\rm sus}^{u},
-$$
-
-geometric viability margin
-
-$$
-\rho_g,
-$$
-
-and time to viability loss
-
-$$
-T_{\rm exit}
-$$
-
-remain Stage-5 quantities.
-
-Therefore,
-
-$$
-\boxed{
-\text{Stage 3 produces trajectories; Stage 4 observes and controls them; Stage 5 evaluates their viability.}
-}
-$$
+If removing a coupling produces no meaningful and reproducible change in trajectories, event order, cascade arrival, recovery, or later viability, its explanatory importance must be reconsidered.
 
 ---
 
-## Final frozen Stage-3 scope
+## 16. Boundary of Stage 3
+
+| Object/question | Stage ownership |
+|---|---|
+| $\mathfrak I_{ij}^{\alpha\beta}$ and causal admissibility | Stage 2 |
+| $Y(t)$, $m(t)$, $\mathcal G(t)$, dynamic propagation | **Stage 3** |
+| $\widehat X$, $b_t$, $\mathcal U$, policy $u=\pi(\cdot)$ | Stage 4 |
+| $K_{\rm sus}$, $\mathcal V_{\rm sus}^{u,T}$, $\rho_E$, $\rho_g$, $T_{\mathcal V}$, $T_K$ | Stage 5 |
+
+The stage boundary is therefore:
+
+> **Stage 3 produces trajectories; Stage 4 observes and controls them; Stage 5 evaluates their viability.**
+
+---
+
+## 17. Final frozen Stage-3 scope
 
 | Item | Canonical Stage-3 specification |
 |---|---|
 | **Stage** | Coupled Hybrid Multiscale Dynamics |
-| **Question** | How do the coupled systems evolve over space and time, and how do disruptions propagate? |
+| **Question** | How, when, and where do accepted interdependency mechanisms evolve and propagate? |
 | **Four-layer state** | $Y(t)=[x_P,x_T,z_I,z_O]^\top$ |
 | **Augmented hybrid state** | $\widetilde Y(t)=(Y(t),m(t))$ |
-| **Power** | power-flow/DAE, DER, storage, charging, traction |
-| **Transportation** | traffic flow, EV/eBus SOC and queues, train motion |
-| **Information** | availability, latency, freshness, information error |
-| **Organization** | resources, crews, coordination, mobilization states |
 | **Interdependency input** | $\mathfrak I_{ij}^{\alpha\beta}$ |
 | **Hybrid structure** | continuous dynamics + algebraic constraints + discrete events + mode switching |
 | **Network evolution** | $\mathcal G(t)\rightleftarrows Y(t)$ |
-| **Temporal structure** | $\delta_{ij}$ + multiple characteristic timescales |
-| **Spatial structure** | $T_C(j),r_c(t),v_c(t)$ where spatial-front interpretation is meaningful |
-| **Uncertainty** | hazard, failure, demand, travel, repair, information |
-| **Computation** | hybrid multirate co-simulation |
-| **Outputs** | $Y(t),m(t),\mathcal G(t)$, event sequence, $T_C(j)$, $v_c(t)$ where applicable, service/recovery trajectories |
+| **Temporal structure** | causal delays $\delta_{ij}$ + heterogeneous characteristic timescales $\tau$ |
+| **Spatial structure** | $T_C(j)$ and, only where meaningful, $r_c(t),v_c(t)$ |
+| **Uncertainty** | hazard, failure, demand, travel, repair, information-state uncertainty |
+| **Computation** | hybrid multirate co-simulation / equivalent validated integration strategy |
+| **Outputs** | $Y(t)$, $m(t)$, $\mathcal G(t)$, event sequence, $T_C(j)$, and service/recovery trajectories |
 
-The canonical progression is
-
-$$
-\boxed{
-\underbrace{\{P,T,I,O\}}_{\textbf{Stage 1: what exists}}
-\rightarrow
-\underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\textbf{Stage 2: why / through what mechanism}}
-\rightarrow
-\underbrace{\{Y(t),m(t),\mathcal G(t),T_C,v_c\}}_{\textbf{Stage 3: how effects evolve and propagate}}.
-}
-$$
-
-The central research opportunity is an explicit **causal–temporal bridge** joining multimodal power–transport dynamics, traction-power interactions, information delay, organizational response, dynamic interdependencies, and disruption propagation. The cited literature establishes these elements individually or in smaller combinations; the thesis must test the value of their joint P–T–I–O representation rather than presume novelty from combination alone.
-
----
-
-## Evidence-status rule
-
-The literature citations below support specific precedents used in Stage 3. They do **not** by themselves prove that the complete proposed P–T–I–O Stage-3 architecture is novel. Novelty remains a falsifiable evidence question.
-
-Principal bibliographic records and DOIs were cross-checked against publisher, institutional, or indexing records before this scope was frozen on 2026-09-11.
+The central scientific opportunity is a causal–temporal bridge joining multimodal power–transport dynamics, traction-power interactions, information degradation, organizational response conditions, dynamic interdependencies, and disruption propagation. The thesis must test the value of this joint representation rather than presume novelty from combination alone.
 
 ---
 
