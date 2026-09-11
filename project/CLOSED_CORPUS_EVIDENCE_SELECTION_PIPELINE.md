@@ -1,99 +1,135 @@
-# Closed-Corpus Evidence Selection Pipeline for Demonstrator Design
+# Closed-Corpus 325-Paper Protocol — Secondary Coverage Audit
 
-**Status:** CURRENT EVIDENCE-SELECTION METHODOLOGY  
+![Status](https://img.shields.io/badge/status-SECONDARY%20COVERAGE%20AUDIT-9A6700)
+![Primary Search](https://img.shields.io/badge/primary%20evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
+
+**Status:** SECONDARY / SUPERSEDED AS PRIMARY EVIDENCE-SELECTION METHOD  
 **Corpus:** frozen 325-paper dataset  
-**Purpose:** use the existing PRISMA-style + Monte Carlo ranking protocol as the evidence-selection engine for demonstrator design  
-**Scope rule:** ranking is restricted to the frozen 325-record corpus; full-text mechanism/equation extraction is a separate second-stage task
+**Current role:** post-search coverage audit only  
+**Primary search authority:** [`FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md)
 
-I reviewed the GitHub file. It is a **closed-corpus PRISMA-style + Monte Carlo ranking protocol** for the frozen 325-paper dataset, and it is methodologically useful for the next phase of the thesis.
+The 325-paper PRISMA-style + Monte Carlo protocol remains methodologically useful for corpus-bounded ranking, but it no longer defines the evidence universe for $H_1$–$H_5$ or the demonstrator.
 
-Its strongest features are the strict **single-dataset lock**, hash/schema checks, duplicate/identity gates, anti-leakage rules, separation of scientific relevance from evidence confidence, explicit missing-data handling, Beta uncertainty on criterion scores, and Dirichlet uncertainty on ranking weights. It also correctly limits claims to “best papers within this 325-record corpus,” rather than pretending the corpus represents all global literature.
-
-For our current work, I would use this prompt for a very specific purpose:
-
-```math
-\text{325-paper corpus}
-\rightarrow
-\text{robust evidence ranking}
-\rightarrow
-\text{best papers for }H_1-H_5
-\rightarrow
-\text{full-text evidence extraction}.
-```
-
-Then the selected full-text papers would feed the **reduced-demonstrator design**, especially the evidence-to-equation matrix:
-
-```math
-\text{paper}
-\rightarrow
-\text{mechanism}
-\rightarrow
-\text{equation}
-\rightarrow
-\text{parameter}
-\rightarrow
-\text{data/benchmark}
-\rightarrow
-\text{hypothesis}.
-```
-
-One important limitation: because this master prompt explicitly forbids using PDFs, abstracts, external databases, websites, or information outside the CSV, its Monte Carlo score can identify **which records deserve priority**, but it cannot by itself determine whether a paper contains the governing equations, parameter values, validation data, or physical assumptions required for the demonstrator. That must be a **second-stage full-text extraction** after ranking.
-
-So I would structure the research pipeline as:
-
-```math
-\begin{aligned}
-&\textbf{Phase A: }325\text{-paper closed-corpus ranking}\\
-&\downarrow\\
-&\textbf{Phase B: hypothesis-specific evidence set for }H_1-H_5\\
-&\downarrow\\
-&\textbf{Phase C: full-text mechanism/equation extraction}\\
-&\downarrow\\
-&\textbf{Phase D: candidate demonstrator architectures}\\
-&\downarrow\\
-&\textbf{Phase E: scientific-sufficiency + V\&V feasibility comparison}\\
-&\downarrow\\
-&\textbf{Phase F: freeze the minimal sufficient }P-T-I-O\text{ demonstrator.}
-\end{aligned}
-```
-
-The key point is that the existing PRISMA–Monte Carlo protocol can now become the **evidence-selection engine** for designing the demonstrator rather than starting a new literature search from zero.
-
----
-
-## Methodological boundary
-
-The closed-corpus ranking stage may support claims of the form:
+Its legitimate claim remains:
 
 > **highest-priority records within the frozen 325-paper corpus under the declared ranking model.**
 
-It must not be interpreted as proving:
-
-- that the selected records are globally the best literature;
-- that every selected record contains usable governing equations;
-- that equation-level parameterization or validation evidence has already been established;
-- that full-text scientific adequacy can be inferred from CSV-only metadata/fields.
-
-Those questions belong to the second-stage full-text evidence extraction.
+It must not be interpreted as establishing the primary thesis evidence base.
 
 ---
 
-## Thesis integration
+## 1. Why its role changed
 
-This pipeline connects the current operationalization artifacts as follows:
+The current scientific questions and demonstrator requirements require a fresh reproducible search from first principles. Therefore
 
 ```math
-\text{Confirmatory }H_1-H_5
-\rightarrow
-\text{closed-corpus evidence ranking}
-\rightarrow
-\text{full-text evidence-to-equation extraction}
-\rightarrow
-\text{candidate MSER designs}
-\rightarrow
-\text{V\&V feasibility comparison}
-\rightarrow
-\mathcal M_D^*.
+\textbf{new scientific question}
+\Rightarrow
+\textbf{new evidence search from first principles}.
 ```
 
-The pipeline therefore serves the **Minimal Sufficient Experimental Realization** methodology without changing the frozen seven-stage framework or the frozen primary-hypothesis logic.
+The old corpus cannot be allowed to preselect the papers that support the current hypotheses.
+
+The following are no longer permitted:
+
+```math
+H_i
+\rightarrow
+\text{search only inside }\mathcal P_{325},
+```
+
+or
+
+```math
+\mathcal P_{325}
+\rightarrow
+\text{preferred papers}
+\rightarrow
+\text{demonstrator}.
+```
+
+---
+
+## 2. Preserved methodological strengths
+
+The old protocol remains valuable as a bounded methodological artifact because it contains:
+
+- strict single-dataset locking;
+- file hash and schema checks;
+- duplicate/identity gates;
+- anti-leakage rules;
+- separation of scientific relevance from evidence confidence;
+- explicit missing-data treatment;
+- Beta uncertainty on criterion scores;
+- Dirichlet uncertainty on ranking weights;
+- explicit limitation of claims to the frozen corpus.
+
+These properties may inform later coverage diagnostics or sensitivity analysis, but they do not override the fresh-search protocol.
+
+---
+
+## 3. Current allowed use
+
+After the fresh evidence search produces
+
+```math
+\mathcal P_{\rm NEW},
+```
+
+compare it with the old corpus using
+
+```math
+\mathcal P_{\rm NEW}
+\cap
+\mathcal P_{325}
+```
+
+and
+
+```math
+\mathcal P_{325}
+\setminus
+\mathcal P_{\rm NEW}.
+```
+
+The first quantity measures overlap. The second identifies previously known papers not recovered by the new search.
+
+A missing paper triggers a search-diagnostics question, not automatic inclusion:
+
+> Why was this previously important record not recovered?
+
+Possible explanations include incomplete query terms, missing database coverage, indexing differences, or changed relevance to the current hypothesis.
+
+If a true search weakness is discovered, the search protocol is amended and rerun transparently. The paper is not manually inserted merely because it was previously known.
+
+---
+
+## 4. Boundary with FTEE
+
+The old 325-paper ranking does not determine the papers entering FTEE.
+
+The current primary sequence is
+
+```math
+H_1-H_5
+\rightarrow
+\text{fresh database search}
+\rightarrow
+\text{screening}
+\rightarrow
+\mathcal P_{\rm eligible}^{\rm NEW}
+\rightarrow
+\text{FTEE}.
+```
+
+Only afterward may the 325-paper corpus be used for coverage auditing.
+
+---
+
+## 5. Governing rule
+
+```math
+\textbf{No paper is evidence because it belonged to the frozen 325-paper corpus.}
+```
+
+A paper from that corpus enters the new thesis evidence base only if the fresh reproducible search finds it and the new eligibility protocol qualifies it.
