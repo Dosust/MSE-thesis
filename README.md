@@ -241,31 +241,13 @@ are regime descriptors, not universal thresholds, unless a threshold is derived 
 The observation–decision–action loop is
 
 $$
-X
-\rightarrow
-y
-\rightarrow
-I
-\rightarrow
-\widehat X
-\rightarrow
-O
-\rightarrow
-u
-\rightarrow
-X.
+X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X.
 $$
 
 For analytical and numerical work,
 
 $$
-y=H(X)+\varepsilon_y,
-\qquad
-\widehat X=\mathcal E(y_{[0,t]},I),
-\qquad
-u=\pi(\widehat X,I,O),
-\qquad
-nu\in\mathcal U(I,O).
+y=H(X)+\varepsilon_y,\qquad \widehat X=\mathcal E(y_{[0,t]},I),\qquad u=\pi(\widehat X,I,O),\qquad u\in\mathcal U(I,O).
 $$
 
 The scientific question is whether sensing, communication, estimation, authority, coordination, resources, logistics, and organizational delays allow an admissible intervention to arrive before critical degradation.
