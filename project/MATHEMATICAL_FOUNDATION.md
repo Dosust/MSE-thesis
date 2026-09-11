@@ -1,18 +1,19 @@
 # Mathematical Foundation
 
+![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![System](https://img.shields.io/badge/system-P--T--I--O-0969DA)
+
 **Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**System:** Power–Transportation–Information–Organization (P–T–I–O)  
-**Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the canonical stage files  
-**Framework status:** Complete seven-stage conceptual and mathematical framework frozen
+**Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the frozen stage-specific files.
 
 ---
 
 ## 1. Scientific object
 
-The thesis treats infrastructure resilience and sustainable transformation as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints, regime-adequacy requirements, and adaptive architecture transformation**.
+The thesis treats infrastructure resilience and sustainable transformation as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints, regime-adequacy requirements and adaptive architecture transformation**.
 
-The framework-level state is
+The integrated state is
 
 $$
 Y(t)=
@@ -39,11 +40,11 @@ $$
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
-The framework does not reduce resilience or transformation to one scalar score. It preserves causal mechanisms, dynamic trajectories, observation/control, controlled viability, regime adequacy and architecture transformation as distinct mathematical layers.
+The framework does not reduce resilience or transformation to one scalar score. It keeps causal mechanisms, dynamic trajectories, information/organization, operational control, controlled viability, regime adequacy and strategic transformation mathematically distinct.
 
 ---
 
-## 2. Stage-2 causal interdependency object
+## 2. Stage 2 — causal interdependency object
 
 Every accepted cross-layer interdependency is represented by
 
@@ -69,11 +70,11 @@ $$
 \alpha\xrightarrow{M_{ij}}\beta.
 $$
 
-Common hazard exposure alone does not establish an interdependency.
+Common hazard exposure or correlation alone does not establish an interdependency.
 
 ---
 
-## 3. Stage-3 hybrid delayed multirate dynamics
+## 3. Stage 3 — hybrid delayed multirate dynamics
 
 Partition the state into continuous/quasi-continuous states $Y_c$ and discrete states $Y_d$.
 
@@ -109,48 +110,55 @@ $$
 \text{characteristic timescale }\tau.
 $$
 
-For component $j$,
+For component $j$, cascade-arrival time may be represented by
 
 $$
 T_C(j)=\inf\{t>t_0:j\text{ enters a predefined disrupted state}\}.
 $$
 
-A spatial propagation velocity is used only where a meaningful physical spatial-front interpretation exists.
+Spatial propagation velocity is used only where a physically meaningful spatial-front interpretation exists.
 
 ---
 
-## 4. Native subsystem states
+## 4. Native P–T–I–O processes
 
-| Layer/system | Representative state/process variables | Typical mathematical family |
+| Layer/system | Representative variables | Typical mathematical family |
 |---|---|---|
-| Power $P$ | voltage, power flow, frequency, DER/storage, charging, traction power | power flow, DistFlow, DAE/dynamic models where needed |
+| Power $P$ | voltage, power flow, frequency, DER/storage, charging, traction power | power flow, DistFlow, DAE/dynamic models as required |
 | Transportation $T$ | density, flow, speed, travel time, accessibility, EV/eBus SOC, train motion | conservation laws, CTM/DTA, routing, queueing, train-motion models |
 | Information $I$ | availability, latency, quality, freshness, loss, estimation error, synchronization | delay, stochastic, discrete-event, communication models |
 | Organization $O$ | authority, coordination, resources, workforce, decision/mobilization times | state-transition, scheduling, routing, resource-allocation, discrete-event models |
 
-The canonical informational and organizational states are
+Representative informational and organizational state vectors are
 
 $$
-z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top,
+z_I
+=
+[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top,
 $$
 
 $$
-z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
+z_O
+=
+[A_O,C_O,R_O,W_O,\tau_D,\tau_C^O,\tau_M]^\top.
 $$
 
 ---
 
-## 5. Stage-4 observation and inference
+## 5. Stage 4 — observation and inference
 
 The true physical state is not assumed to be directly known.
 
 **Equation F.2 — Measurement model**
 
 $$
-y_k(t)=H_k\!\left[X(t-\delta_k)\right]+\varepsilon_k(t).
+y_k(t)
+=
+H_k\!\left[X(t-\delta_k)\right]
++\varepsilon_k(t).
 $$
 
-State estimation is
+State estimation is represented by
 
 $$
 (\widehat X(t),\Sigma_X(t))
@@ -158,23 +166,31 @@ $$
 \mathcal E\!\left(y_{[0,t]},z_I(t)\right).
 $$
 
-Under partial observability,
+Under partial observability, a belief state may be used:
 
 $$
-b_t(x)=p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
+b_t(x)
+=
+p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
 $$
 
 The conceptual feedback spine is
 
 $$
-X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
+X(t)
+\rightarrow y(t)
+\rightarrow I(t)
+\rightarrow\widehat X(t)
+\rightarrow O(t)
+\rightarrow u(t)
+\rightarrow X(t).
 $$
 
 ---
 
-## 6. Stage-4 organizational feasibility and control
+## 6. Stage 4 — organizational feasibility and operational control
 
-Current information and organizational states restrict the feasible action set:
+Information and organizational states constrain the feasible action set:
 
 $$
 \mathcal U_{\rm available}(t)
@@ -183,7 +199,9 @@ $$
 $$
 
 $$
-u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
+u(t)
+=
+\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
@@ -204,7 +222,7 @@ When processes overlap, $\tau_{\rm response}$ is the relevant critical-path comp
 
 ---
 
-## 7. Stage-5 acceptability and controlled viability
+## 7. Stage 5 — acceptability and controlled viability
 
 The acceptable region is
 
@@ -239,37 +257,44 @@ Thus the loss-of-maintainability boundary $\partial\mathcal V$ is distinct from 
 
 ---
 
-## 8. Robust and stochastic viability
+## 8. Robust and stochastic viability remain distinct
 
-Worst-case robust viability and stochastic viability remain mathematically separate:
+For bounded/adversarial uncertainty and probabilistic uncertainty, the quantifier structures differ. Therefore
 
 $$
-\text{robust viability}\neq\text{stochastic viability}.
+\text{robust viability}
+\neq
+\text{stochastic viability}.
 $$
 
-The selected uncertainty interpretation determines the appropriate quantifiers and computation.
+The selected uncertainty interpretation determines the proper mathematical form and computation.
 
 ---
 
 ## 9. Geometric and temporal proximity to viability loss
 
-With normalized state
+Normalize state variables before Euclidean distance is interpreted:
 
 $$
-\widetilde Y=D^{-1}(Y-Y_{\rm ref}),
+\widetilde Y=D^{-1}(Y-Y_{\rm ref}).
 $$
 
-the baseline geometric diagnostic is
+The geometric baseline is
 
 $$
-\rho_E(Y)=d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right).
+\rho_E(Y)
+=
+d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right).
 $$
 
 The proposed state-dependent extension is
 
 $$
-\rho_g(Y)=d_{g_\psi}\!\left(Y,\partial\mathcal V_{\rm sus}^{u,T}\right),
-\qquad g_\psi(Y)\succ0.
+\rho_g(Y)
+=
+d_{g_\psi}\!\left(Y,\partial\mathcal V_{\rm sus}^{u,T}\right),
+\qquad
+g_\psi(Y)\succ0.
 $$
 
 Two temporal quantities are retained:
@@ -288,9 +313,7 @@ $$
 
 ---
 
-## 10. Response-to-viability diagnostics
-
-The proposed response slacks are
+## 10. Response-to-viability diagnostics `[P]`
 
 $$
 S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
@@ -298,21 +321,21 @@ S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
 S_K=T_K-\tau_{\rm response},
 $$
 
-with dimensionless forms
-
 $$
-\Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
+\Pi_{\mathcal V}
+=\frac{\tau_{\rm response}}{T_{\mathcal V}},
 \qquad
-\Pi_K=\frac{\tau_{\rm response}}{T_K}.
+\Pi_K
+=\frac{\tau_{\rm response}}{T_K}.
 $$
 
-These are proposed diagnostics; neither a positive slack nor a ratio below one is by itself sufficient for successful control.
+Neither a positive slack nor a ratio below one is sufficient by itself for successful control.
 
 ---
 
-## 11. Interdependency sensitivity
+## 11. Interdependency sensitivity `[P]`
 
-Finite perturbation is the default proposed sensitivity when smoothness is not established:
+When smoothness is not established, use finite perturbation by default:
 
 $$
 S_{ij}^{\mathcal V}(\Delta\theta)
@@ -324,29 +347,31 @@ S_{ij}^{\mathcal V}(\Delta\theta)
 }{\|\Delta\theta\|},
 $$
 
+where
+
 $$
 \theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
 $$
+
+The scalar viability functional $\mathcal M_{\mathcal V}$ must be declared before use; a set $\mathcal V$ itself cannot be subtracted as a scalar outcome without a defined set metric/functional.
 
 ---
 
 ## 12. Reduced viability state
 
-When required,
+When exact viability computation is infeasible in the full Stage-3 state space, define
 
 $$
-Y_V=\mathcal P_V(Y),
+Y_V=\mathcal P_V(Y).
 $$
 
-but the projection must preserve or conservatively bound constraints, control authority, interdependencies and mechanisms that materially affect Stage-5 conclusions. Reduction is therefore a validation obligation.
+The projection must preserve or conservatively bound constraints, control authority, interdependencies and mechanisms that materially affect Stage-5 conclusions. Reduction is a validation obligation, not merely a computational convenience.
 
 ---
 
-## 13. Stage-6 regime-adequacy diagnosis
+## 13. Stage 6 — regime-adequacy diagnosis
 
-Stage 6 asks whether **preserving the present system/decision space remains the correct objective** under longer-horizon sustainability and equity requirements.
-
-The current regime is
+The current infrastructure regime is
 
 $$
 \mathfrak M_0
@@ -377,122 +402,99 @@ $$
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
-(c_6,\mathcal D_6,\boldsymbol\zeta_T),
+(c_6,\mathcal D_6,\boldsymbol\zeta_T).
 $$
 
-where
-
-$$
-c_6\in\{R,A,T\},
-$$
-
-$$
-\mathcal D_6
-=
-\{\mathcal D_P,\mathcal D_T,\mathcal D_I,\mathcal D_O,
-\mathcal D_{\mathfrak I},\mathcal D_{\rm env},\mathcal D_{\rm eq}\},
-$$
-
-and
-
-$$
-\boldsymbol\zeta_T
-=
-[\zeta_{\rm depth},\zeta_{\rm scope},\zeta_{\rm scale},\zeta_{\rm pace},
-\zeta_{\rm equity},\zeta_{\rm environment}]^\top.
-$$
-
-Stage 6 determines **why change is required, what must change and how deep the change must be**.
+Stage 6 determines **why change is required, what must change and how deep the change must be**. It does not choose the strategic pathway.
 
 ---
 
-## 14. Stage-7 infrastructure-architecture transformation
+## 14. Stage 7 — infrastructure-regime transformation
 
-The frozen Stage-7 input is
-
-$$
-\Gamma_6=(c_6,\mathcal D_6,\boldsymbol\zeta_T).
-$$
-
-The Stage-7 research question is:
-
-> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
-
-The infrastructure-regime object is
+Stage 7 receives
 
 $$
-\mathcal M_k
+(c_6,\mathcal D_6,\boldsymbol\zeta_T)
+$$
+
+and transforms candidate future regimes represented by
+
+$$
+\mathfrak M_k
 =
-(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\boldsymbol\theta_k,\mathcal U_k).
+(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
 $$
 
-Stage 4 and Stage 7 act at different levels:
+Stage-4 operational control and Stage-7 strategic transformation remain distinct:
 
 $$
-\underbrace{u(t)}_{\text{Stage 4}}
-=\text{operate the current regime},
+\underbrace{u(t)}_{\text{operate current regime}}
+\neq
+\underbrace{\mathbf a_k}_{\text{transform regime}}.
 $$
 
-$$
-\underbrace{a_k}_{\text{Stage 7}}
-=\text{transform the regime itself}.
-$$
-
-The intervention vector is
+The strategic action vector is
 
 $$
-a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}],
+\mathbf a_k
+=
+\begin{bmatrix}
+a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathfrak I}
+\end{bmatrix},
 $$
 
 and the regime transition is
 
 $$
-\mathcal M_{k+1}
+\mathfrak M_{k+1}
 =
-\mathcal T_{a_k}(\mathcal M_k,\xi_k).
+\mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k).
 $$
 
 ---
 
-## 15. Stage-7 transformation meta-graph
+## 15. Stage 7 — transformation meta-graph
 
-The transformation graph is
+The graph of alternative regimes is
 
 $$
 \mathbb G_{\rm ST}
 =(\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
 $$
 
-where
+with
 
 $$
-v_k\equiv\mathcal M_k,
+v_k\equiv\mathfrak M_k.
 $$
 
-and
-
-$$
-\mathcal M_k\xrightarrow{a_{k\ell}}\mathcal M_\ell.
-$$
-
-This is the Stage-7 **topology-of-topologies** representation: the nodes are alternative complete P–T–I–O infrastructure regimes rather than ordinary infrastructure components.
+A meta-edge represents an admissible strategic transformation rather than an ordinary component-to-component infrastructure link.
 
 ---
 
-## 16. Adaptive transformation policy, triggers and path dependence
+## 16. Stage 7 — adaptive policy, triggers and path dependence
 
-The transformation decision rule is
+The step policy is
 
 $$
-a_k
+\mathbf a_k
 =
-\pi_k(\widehat Y_k,z_{I,k},z_{O,k},\mathcal M_k,\mathcal H_k),
+\pi_k^{\rm ST}
+\!\left(
+\widehat X_k,
+z_{I,k},
+z_{O,k},
+\mathfrak M_k,
+\mathcal H_k
+\right),
 $$
 
-with policy
+with
 
 $$
-\boldsymbol\pi=\{\pi_0,\pi_1,\ldots,\pi_N\}.
+\boldsymbol\pi_{\rm ST}
+=
+\{\pi_0^{\rm ST},\pi_1^{\rm ST},\ldots,\pi_N^{\rm ST}\}.
 $$
 
 For monitored signpost
@@ -500,15 +502,15 @@ For monitored signpost
 $$
 s_j(t)
 =
-s_j(\widehat Y(t),z_I(t),z_O(t),\mathcal M(t),\xi(t)),
+s_j\!\left(\widehat X(t),z_I(t),z_O(t),\mathfrak M(t),\xi(t)\right),
 $$
 
-the trigger time is
+and trigger region $\mathcal Z_j$,
 
 $$
 \tau_j
 =
-\inf\{t:s_j(t)\in\Gamma_j\}.
+\inf\{t:s_j(t)\in\mathcal Z_j\}.
 $$
 
 Path dependence is represented by
@@ -516,75 +518,70 @@ Path dependence is represented by
 $$
 \mathcal A_{k+1}
 =
-\mathcal A(\mathcal M_{k+1},\mathcal H_{t_{k+1}}),
+\mathcal A\!\left(\mathfrak M_{k+1},\mathcal H_{t_{k+1}}\right),
 $$
 
 and in general
 
 $$
-\mathcal T_{a_2}\circ\mathcal T_{a_1}
+\mathcal T_{\mathbf a_2}\circ\mathcal T_{\mathbf a_1}
 \neq
-\mathcal T_{a_1}\circ\mathcal T_{a_2}.
+\mathcal T_{\mathbf a_1}\circ\mathcal T_{\mathbf a_2}.
 $$
-
-Therefore intervention order matters.
 
 ---
 
-## 17. Stage-7 feasibility, viability and sustainable target set
+## 17. Stage 7 — feasibility, viability and target set
 
-The feasible strategic action set is
+The feasible strategic set includes technical, budget, informational, organizational, sustainability, equity and temporal requirements:
 
 $$
+\begin{aligned}
 \mathcal A_k^{\rm feas}
-=
+={}&
 \mathcal A_k^{\rm tech}
-\cap
-\mathcal A_k^{\rm budget}
-\cap
-\mathcal A_k^{O}
-\cap
-\mathcal A_k^{\rm sus}
-\cap
-\mathcal A_k^{\rm equity}
-\cap
-\mathcal A_k^{\rm temporal}.
+\cap\mathcal A_k^{\rm budget}
+\cap\mathcal A_k^{I}
+\cap\mathcal A_k^{O}\\
+&\cap\mathcal A_k^{\rm sus}
+\cap\mathcal A_k^{\rm equity}
+\cap\mathcal A_k^{\rm temporal}.
+\end{aligned}
 $$
 
-For each candidate regime, Stage-5 viability is re-evaluated:
+Every candidate regime is reevaluated through Stage 5:
 
 $$
-\mathcal V_{\rm sus}^{u,T}(\mathcal M_k).
+\mathcal V_{\rm sus}^{u,T}(\mathfrak M_k).
 $$
 
-The sustainable viable target-regime set is
+The sustainable target-regime set is
 
 $$
 \mathbb M_{\rm sus}
 =
 \left\{
-\mathcal M:
-\mathcal V_{\rm sus}^{u}(\mathcal M)
-\text{ satisfies required resilience, sustainability and equity conditions}
+\mathfrak M:
+\text{declared resilience, sustainability, equity and feasibility criteria are satisfied}
 \right\}.
 $$
 
-Thus Stage 7 is a reachability problem in infrastructure-architecture space:
+The reachability problem is
 
 $$
-(\mathcal M_0,Y_0)
-\overset{\pi}{\longrightarrow}
+(\mathfrak M_0,Y_0)
+\overset{\boldsymbol\pi_{\rm ST}}{\longrightarrow}
 \mathbb M_{\rm sus}.
 $$
 
 ---
 
-## 18. Stage-7 objectives and uncertainty
+## 18. Stage 7 — objectives and uncertainty
 
-The frozen many-objective vector is
+The many-objective vector is
 
 $$
-\mathbf J(\Pi)
+\mathbf J(\Pi,\omega)
 =
 \begin{bmatrix}
 J_{\rm risk}\\
@@ -594,85 +591,84 @@ J_{\rm carbon}\\
 J_{\rm inequity}\\
 J_{\rm time}\\
 J_{\rm flexibility}
-\end{bmatrix}.
+\end{bmatrix},
+\qquad
+\omega\in\Omega.
 $$
 
-The framework distinguishes
+The framework keeps
 
 $$
 \xi\sim P,
 \qquad
 P\in\mathcal P,
 \qquad
-\omega\in\Omega,
+\omega\in\Omega
 $$
 
-for probabilistic uncertainty, distributional ambiguity and deep uncertainty respectively.
+separate for probabilistic uncertainty, distributional ambiguity and deep uncertainty respectively.
 
-Under deep uncertainty,
-
-$$
-\Pi^\star
-\in
-\operatorname{RobustPareto}(\mathbf J,\Omega).
-$$
+A scenario fraction under $\Omega$ is not a probability unless probabilities or justified weights have been defined.
 
 ---
 
-## 19. Frozen Stage-7 fundamental object
+## 19. Frozen Stage-7 object `[P]`
 
-The canonical Stage-7 object is
-
-**Equation F.5 — Adaptive transformation pathway object**
+**Equation F.5 — Adaptive transformation-pathway object**
 
 $$
-\boxed{
 \mathfrak P_{\rm ST}
 =
-(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus})
-}.
+\left(
+\mathbb G_{\rm ST},
+\boldsymbol\pi_{\rm ST},
+\Omega,
+\mathcal A^{\rm feas},
+\mathbf J,
+\mathbb M_{\rm sus}
+\right).
 $$
 
-This exact object is a proposed thesis construct `[P]`; its framework status is frozen, while its scientific utility remains subject to numerical validation and falsification.
+Its framework definition is frozen while its scientific utility remains subject to falsification and numerical validation.
 
-The realized pathway is
+A realized pathway is
 
 $$
-\Pi_{\pi,\omega}
+\Pi_{\boldsymbol\pi_{\rm ST},\omega}
 =
-[(\mathcal M_0,a_0,\tau_0),(\mathcal M_1,a_1,\tau_1),\ldots,\mathcal M_N].
+\left[
+(\mathfrak M_0,\mathbf a_0,\tau_0),
+(\mathfrak M_1,\mathbf a_1,\tau_1),
+\ldots,
+\mathfrak M_N
+\right].
 $$
-
-Stage 7 is therefore defined as an **adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures**.
 
 ---
 
 ## 20. Complete cross-stage mathematical chain
 
-The frozen mathematical architecture is
-
 $$
-\boxed{
+\begin{aligned}
 \underbrace{\mathcal S}_{1}
-\rightarrow
+&\rightarrow
 \underbrace{\mathfrak I}_{2}
 \rightarrow
-\underbrace{F_{\mathcal G}^{m}}_{3}
-\rightarrow
-\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
-\rightarrow
-\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
-\rightarrow
-\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
-\rightarrow
-\underbrace{\mathfrak P_{\rm ST}}_{7}
-}.
+\underbrace{F_{\mathcal G}^{m}}_{3}\\
+&\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
+&\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
+&\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
+&\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}.
+\end{aligned}
 $$
 
 Conceptually:
 
 $$
-\boxed{
 \text{ontology}
 \rightarrow
 \text{causal coupling}
@@ -685,36 +681,35 @@ $$
 \rightarrow
 \text{transformation diagnosis}
 \rightarrow
-\text{adaptive transformation pathway}
-}.
+\text{adaptive transformation pathway}.
 $$
 
 ---
 
 ## 21. Seven-stage validation loop
 
-Every candidate transformation must be replayed through Stages 1–6:
+Every candidate transformation is replayed through Stages 1–6:
 
 $$
 \begin{aligned}
-\text{Stage 7 candidate}
-&\rightarrow\text{Stage 1 structural update}\\
-&\rightarrow\text{Stage 2 mechanism update}\\
-&\rightarrow\text{Stage 3 dynamic simulation}\\
-&\rightarrow\text{Stage 4 observability/control evaluation}\\
-&\rightarrow\text{Stage 5 viability evaluation}\\
-&\rightarrow\text{Stage 6 adequacy diagnosis}\\
-&\rightarrow\text{Stage 7 accept/reject/refine}.
+\text{Stage-7 candidate}
+&\rightarrow\text{Stage-1 structural update}\\
+&\rightarrow\text{Stage-2 mechanism update}\\
+&\rightarrow\text{Stage-3 dynamic simulation}\\
+&\rightarrow\text{Stage-4 observation/control evaluation}\\
+&\rightarrow\text{Stage-5 viability evaluation}\\
+&\rightarrow\text{Stage-6 adequacy diagnosis}\\
+&\rightarrow\text{Stage-7 accept / reject / refine}.
 \end{aligned}
 $$
 
-This loop validates the stages; it does not replace or reorder them.
+The loop validates candidates; it does not replace or reorder the stages.
 
 ---
 
 ## 22. Mathematical discipline
 
-The foundation is governed by the separations
+The mandatory separations are
 
 $$
 \begin{aligned}
@@ -724,8 +719,9 @@ X&\neq y\neq\widehat X,\\
 K_{\rm sus}&\neq\mathcal V_{\rm sus}^{u,T},\\
 V_{\rm HJ}&\neq d(\cdot,\partial\mathcal V)\quad\text{in general},\\
 \text{current-regime viability}&\neq\text{long-horizon regime adequacy},\\
-u(t)&\neq a_k,\\
-\text{realized fixed sequence}&\subset\text{adaptive transformation policy}.
+u(t)&\neq\mathbf a_k,\\
+a_{ij}&\neq\mathbf a_k,\\
+\text{fixed realized pathway}&\subset\text{adaptive transformation policy}.
 \end{aligned}
 $$
 
@@ -735,10 +731,6 @@ These distinctions are mandatory in equations, simulations, figures and interpre
 
 ## 23. Final framework state
 
-$$
-\boxed{
-\textbf{STAGES 1--7: CONCEPTUAL AND MATHEMATICAL FRAMEWORK FROZEN}
-}
-$$
+> **STAGES 1–7: CONCEPTUAL AND MATHEMATICAL FRAMEWORK FROZEN.**
 
-The next phase is operationalization and numerical validation.
+The next phase is hypothesis specification, operationalization, numerical testing, falsification and validation.
