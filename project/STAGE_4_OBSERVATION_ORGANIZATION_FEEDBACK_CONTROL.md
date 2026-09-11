@@ -41,18 +41,6 @@ Stage 3 determines how the actual coupled system evolves. Stage 4 addresses a di
 
 ---
 
-<!-- CANONICAL_VISUAL:V04 -->
-
-### V04 — Observation–Organization–Feedback–Control Loop
-
-<p align="center">
-  <img src="../figures/canonical/04_observation_organization_control.svg" alt="V04 — Observation–Organization–Feedback–Control Loop" width="96%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V04 -->
-
 ## 1. What the 10 literature passes established
 
 | Pass | Scientific problem | Evidence-supported conclusion |

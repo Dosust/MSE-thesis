@@ -39,18 +39,6 @@ and converts those requirements into adaptive transformation pathways.
 
 ---
 
-<!-- CANONICAL_VISUAL:V07 -->
-
-### V07 — Sustainable Transformation Meta-Graph
-
-<p align="center">
-  <img src="../figures/canonical/07_transformation_pathways.svg" alt="V07 — Sustainable Transformation Meta-Graph" width="96%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V07 -->
-
 ## 1. State control and regime transformation are different
 
 Stage 4 operates a given infrastructure regime through $u(t)$. Stage 7 changes the regime that will subsequently be operated.

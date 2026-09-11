@@ -41,18 +41,6 @@ of the complete framework.
 
 ---
 
-<!-- CANONICAL_VISUAL:V10 -->
-
-### V10 — Minimal Sufficient Experimental Realization
-
-<p align="center">
-  <img src="../figures/canonical/10_minimal_experimental_realization.svg" alt="V10 — Minimal Sufficient Experimental Realization" width="96%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V10 -->
-
 ## 1. Scientific reason: hypotheses require controlled contrasts
 
 Our hypotheses concern specific mechanisms.

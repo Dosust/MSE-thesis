@@ -32,18 +32,6 @@ Stage 1 defines what exists. Stage 2 defines why one component or layer can caus
 
 ---
 
-<!-- CANONICAL_VISUAL:V03 -->
-
-### V03 — Coupled Hybrid Multiscale Propagation
-
-<p align="center">
-  <img src="../figures/canonical/03_hybrid_multiscale_dynamics.svg" alt="V03 — Coupled Hybrid Multiscale Propagation" width="96%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V03 -->
-
 ## 1. Scientific object of Stage 3
 
 The canonical four-layer state remains

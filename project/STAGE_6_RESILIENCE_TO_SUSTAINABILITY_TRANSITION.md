@@ -47,18 +47,6 @@ Stage 7, by contrast, determines **which interventions, in what order, at what t
 
 ---
 
-<!-- CANONICAL_VISUAL:V06 -->
-
-### V06 — Resilience-to-Sustainability Diagnostic Interface
-
-<p align="center">
-  <img src="../figures/canonical/06_resilience_sustainability_interface.svg" alt="V06 — Resilience-to-Sustainability Diagnostic Interface" width="96%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V06 -->
-
 ## 1. Current infrastructure regime
 
 The current regime is represented by

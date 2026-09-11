@@ -31,18 +31,6 @@ The increasing electrification and interdependence of urban infrastructure are c
 
 ---
 
-<!-- CANONICAL_VISUAL:V00 -->
-
-### V00 — Canonical Seven-Stage Master Thesis Architecture
-
-<p align="center">
-  <img src="figures/canonical/00_master_seven_stage_architecture.svg" alt="V00 — Canonical Seven-Stage Master Thesis Architecture" width="100%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V00 -->
-
 ## Canonical entry points
 
 | File | Role |
@@ -91,18 +79,6 @@ The primary confirmatory set is
 The seven-stage architecture and H1–H5 scientific logic are frozen. Exact thresholds $\delta_i$, hypothesis domains $\Omega_H$, validation domains $\Omega_V$, and final confirmatory procedures remain to be specified *a priori* from the fresh evidence base and selected demonstrator.
 
 ---
-
-<!-- CANONICAL_VISUAL:V08 -->
-
-### V08 — H1–H5 Scientific Test Architecture
-
-<p align="center">
-  <img src="figures/canonical/08_hypothesis_test_architecture.svg" alt="V08 — H1–H5 Scientific Test Architecture" width="100%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V08 -->
 
 ## Current evidence methodology — FTEE v2.0
 
@@ -171,18 +147,6 @@ Database search is primary; citation chasing starts only from newly eligible anc
 
 ---
 
-<!-- CANONICAL_VISUAL:V09 -->
-
-### V09 — FTEE v2.0 Evidence-to-Equation Pipeline
-
-<p align="center">
-  <img src="figures/canonical/09_FTEE_evidence_pipeline.svg" alt="V09 — FTEE v2.0 Evidence-to-Equation Pipeline" width="100%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V09 -->
-
 ## FTEE extraction discipline
 
 The evidence unit is
@@ -226,18 +190,6 @@ Its purpose is coverage diagnostics. A previously important old-only paper trigg
 ```
 
 ---
-
-<!-- CANONICAL_VISUAL:V10 -->
-
-### V10 — Minimal Sufficient Experimental Realization
-
-<p align="center">
-  <img src="figures/canonical/10_minimal_experimental_realization.svg" alt="V10 — Minimal Sufficient Experimental Realization" width="100%">
-</p>
-
-> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
-
-<!-- /CANONICAL_VISUAL:V10 -->
 
 ## Immediate next task
 
