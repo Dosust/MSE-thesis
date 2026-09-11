@@ -4,9 +4,10 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
+![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
 ![Thresholds](https://img.shields.io/badge/%CE%B41--%CE%B45-NOT%20SET-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen; exact confirmatory thresholds and test specifications remain to be defined *a priori*.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix is now the current operationalization specification, while exact confirmatory thresholds, exact hypothesis domains and final analysis procedures remain to be defined *a priori*.
 
 > **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
 
@@ -49,9 +50,10 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 | 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | frozen |
 | 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
 | 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
-| 13 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
-| 14 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
-| 15 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
+| 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules | current; numerical thresholds/domains/procedures not frozen |
+| 14 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
+| 15 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
+| 16 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
 The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance only and cannot override the frozen Stage-7 specification.
 
@@ -132,7 +134,21 @@ The scientific logic is frozen. $\delta_1,\ldots,\delta_5$ remain deliberately u
 
 ---
 
-## 5. Stage-6 / Stage-7 boundary
+## 5. Confirmatory operationalization matrix
+
+The current operationalization layer is [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md). It connects each hypothesis to its scientific gap, premise, mechanism, variables, estimand, baseline, strong rival, context of use, quantitative prediction, V&V gates, critical experiment, auxiliary assumptions, uncertainty structure and decision rule.
+
+Its governing qualification rule is
+
+```math
+\mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
+```
+
+The matrix explicitly keeps $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and final analysis procedures unfrozen until the reduced P–T–I–O demonstrator and available physical/data/benchmark evidence are selected.
+
+---
+
+## 6. Stage-6 / Stage-7 boundary
 
 ```math
 \underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
@@ -144,7 +160,7 @@ Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requ
 
 ---
 
-## 6. Repository rendering contract
+## 7. Repository rendering contract
 
 Active Markdown follows these rules:
 
@@ -164,7 +180,7 @@ See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the
 
 ---
 
-## 7. Next scientific phase
+## 8. Next scientific phase
 
 The immediate sequence is
 
@@ -173,17 +189,21 @@ The immediate sequence is
 \rightarrow
 \text{frozen hypothesis logic}
 \rightarrow
-\text{Hypothesis Specification Matrix}
+\text{confirmatory hypothesis matrix}
 \rightarrow
-\text{case-study design}
+\text{reduced P--T--I--O demonstrator selection}
 \rightarrow
-\text{computation}
+\text{benchmark/data evidence audit}
+\rightarrow
+\text{a-priori threshold and analysis specification}
+\rightarrow
+\text{case-study computation}
 \rightarrow
 \text{falsification}
 \rightarrow
 \text{validation}.
 ```
 
-The Hypothesis Specification Matrix must predefine theory, mechanism, variables, baselines, boundary conditions, predictions, rival hypotheses, critical tests, uncertainty domains, falsification criteria and justified $\delta_i$ thresholds before confirmatory numerical testing.
+The next task is therefore to select the reduced P–T–I–O demonstrator and establish the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$ and the final confirmatory analysis procedures.
 
 Historical and archived material remains provenance only unless explicitly reintroduced through a versioned revision.
