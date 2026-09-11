@@ -16,22 +16,9 @@ The repository [`Dossiya-SE/Optimization-for-sustainability-and-resilience`](htt
 
 The thesis-wide citation standard is **APA 7th edition**.
 
-Use:
+Use author–date in-text citations, narrative citations where appropriate, `et al.` for three or more authors in text, alphabetized reference lists, sentence case for article titles, italicized journal title and volume, canonical DOI URLs in the form `https://doi.org/...`, and citations attached directly to the claims they support.
 
-- author–date in-text citations, e.g. `(Ouyang, 2014)` and `(Mohebbi et al., 2020)`;
-- narrative citations where appropriate, e.g. `Zhang and Peeta (2014)`;
-- `et al.` for works with three or more authors in in-text citations;
-- alphabetized reference lists by first-author surname;
-- sentence case for article titles;
-- italicized journal title and volume in Markdown;
-- canonical DOI URLs in the form `https://doi.org/...`;
-- citations attached directly to the scientific claims they support.
-
-Do not treat a citation as evidence for a stronger claim than the cited source supports. Thesis-proposed mathematical objects must be labeled as thesis syntheses rather than attributed to individual papers unless a source explicitly defines the same object.
-
-The APA-7 evidence-grounded rendering of the first two stages is:
-
-[`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md)
+Do not treat a citation as evidence for a stronger claim than the source supports. Thesis-proposed mathematical objects must be labeled as thesis syntheses unless a source explicitly defines the same object.
 
 ---
 
@@ -43,11 +30,12 @@ For the current thesis, read these files in order:
 2. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
 3. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
 4. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
-5. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
-6. [`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md)
+5. [`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md)
+6. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
 7. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
-8. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
-9. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
+8. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
+9. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+10. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
 
 These files supersede older framework descriptions when conflicts occur.
 
@@ -58,7 +46,7 @@ These files supersede older framework descriptions when conflicts occur.
 The thesis studies
 
 $$
-\boxed{\mathcal S=\{P,T,I,O\}}
+\mathcal S=\{P,T,I,O\},
 $$
 
 with
@@ -82,7 +70,7 @@ $$
 \rightarrow
 \text{Coupled Hybrid Multiscale Dynamics}
 \rightarrow
-\text{Feedback \& Control}
+\text{Observation, Organization, Feedback and Control}
 \rightarrow
 \text{Viability}
 \rightarrow
@@ -101,7 +89,9 @@ $$
 \rightarrow
 \text{Stage 3: frozen}
 \rightarrow
-\text{Stage 4: next}
+\text{Stage 4: frozen}
+\rightarrow
+\textbf{Stage 5: next}
 }
 $$
 
@@ -112,17 +102,15 @@ $$
 Every accepted interdependency uses
 
 $$
-\boxed{
 \mathfrak I_{ij}^{\alpha\beta}
 =
 (E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t).
-}
 $$
 
-The causal admissibility rule is
+A retained relation requires
 
 $$
-\boxed{\alpha\xrightarrow{M_{ij}}\beta}
+\alpha\xrightarrow{M_{ij}}\beta,
 $$
 
 and common hazard exposure alone is not an interdependency.
@@ -137,23 +125,93 @@ $$
 Y(t)=[x_P,x_T,z_I,z_O]^\top,
 $$
 
-and Stage 3 adds the explicit hybrid operating mode through
+and Stage 3 adds the hybrid operating mode through
 
 $$
-\boxed{\widetilde Y(t)=(Y(t),m(t)).}
+\widetilde Y(t)=(Y(t),m(t)).
 $$
 
 Stage 3 is responsible for heterogeneous native subsystem dynamics, causal delay, multiple timescales, discrete events, mode switching, dynamic topology, trajectory uncertainty, cascade-arrival time, and spatial propagation only where a spatial-front interpretation is physically meaningful.
 
-The Stage-3 boundary is strict:
+---
+
+## Frozen Stage-4 object
+
+Stage 4 is a **closed-loop partially observable socio-technical control process** with conceptual spine
+
+$$
+X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
+$$
+
+The canonical mathematical objects include
+
+$$
+(\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I),
+$$
+
+$$
+b_t(x)=p(X(t)=x\mid y_{[0,t]},u_{[0,t)}),
+$$
+
+$$
+\mathcal U_{\rm available}(t)=\mathcal U[z_I(t),z_O(t)],
+$$
+
+and
+
+$$
+u(t)=\pi[\widehat X(t),z_I(t),z_O(t)],
+\qquad
+u(t)\in\mathcal U[z_I(t),z_O(t)].
+$$
+
+The action variable in the equations above is the canonical control variable $u(t)$.
+
+For a sequential, non-overlapping response pathway,
+
+$$
+\tau_{\rm response}
+=
+\tau_{\rm sense}
++
+\tau_{\rm comm}
++
+\tau_{\rm est}
++
+\tau_{\rm decision}
++
+\tau_{\rm coord}
++
+\tau_{\rm mobilization}
++
+\tau_{\rm act}.
+$$
+
+If processes overlap, $\tau_{\rm response}$ is the relevant critical-path completion time.
+
+The proposed diagnostic
+
+$$
+\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}}
+$$
+
+is explicitly a **thesis construct [P]**, not an established resilience law, and
+
+$$
+\Pi_R<1\not\Rightarrow\text{successful control}.
+$$
+
+The Stage-4 boundary is strict:
 
 $$
 \boxed{
-\text{Stage 3 produces trajectories; Stage 4 observes/controls them; Stage 5 evaluates viability.}
+\text{Stage 3 produces trajectories; Stage 4 observes and controls them; Stage 5 evaluates viability.}
 }
 $$
 
-The next framework task is **Stage 4 — Feedback & Control**.
+Stage 4 does not redefine $z_I$ or $z_O$ dynamics and does not compute $\mathcal V_{\rm sus}^{u}$, $\rho_g$, or $T_{\rm exit}$.
+
+The next framework task is **Stage 5 — Viability**.
 
 ---
 
@@ -173,7 +231,7 @@ Generated illustrations are not scientific authority. Final figures must be chec
 
 Scientific authority comes from original source artifacts, verified literature/evidence records, equations, data, code, numerical tests, and explicit provenance.
 
-The thesis must distinguish:
+The thesis distinguishes
 
 $$
 \text{domain evidence}
@@ -182,7 +240,9 @@ $$
 \neq
 \text{mathematical theory}
 \neq
-\text{thesis-proposed synthesis}.
+\text{derived synthesis}
+\neq
+\text{thesis-proposed construct}.
 $$
 
 Novelty is not assumed because established components are combined. Candidate contributions remain subject to systematic falsification and baseline comparison.
@@ -196,8 +256,8 @@ Earlier project-memory capsules remain available for provenance, including:
 - [`project_memory/2026-08-21_chain_architecture_v2/`](project_memory/2026-08-21_chain_architecture_v2/)
 - [`project_memory/2026-09-09_canonical_7_stage_framework/`](project_memory/2026-09-09_canonical_7_stage_framework/)
 
-However, any P–W–T–SW, waste–drainage, equity-centered, older six-chain, or other superseded architecture inside historical memory is **not current thesis authority** unless explicitly reintroduced through a versioned change.
+Any P–W–T–SW, waste–drainage, equity-centered, older six-chain, or other superseded architecture inside historical memory is **not current thesis authority** unless explicitly reintroduced through a versioned change.
 
 ## Fast future-chat recovery
 
-For a future continuation, start with the current canonical authority list at the top of this file, then use historical memory only when provenance or evolution of the research is specifically needed.
+Start with the current canonical authority list at the top of this file. Use historical memory only when provenance or evolution of the research is specifically needed.
