@@ -1,78 +1,190 @@
 # MSE Thesis Scope
 
-## Working title
+**Status:** CANONICAL CURRENT SCOPE  
+**Effective date:** 2026-09-11  
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**Repository:** `Dossiya-SE/MSE-thesis`  
+**Change control:** This scope remains authoritative until explicitly revised and versioned.
 
-**Mathematical Physics of Sustainable Infrastructure Resilience**
+---
 
-Current precise formulation:
+## 1. System class
 
-*Equity-Constrained Viability of Coupled Power–Water–Transportation–Solid-Waste Systems with Dynamic Interfaces under Climate Stress*
-
-## Physical system
-
-- Power (P)
-- Water / drainage (W)
-- Transportation (T)
-- Solid Waste (SW)
-
-Primary demonstrator: **urban flooding with waste–drainage–transport feedbacks**.
-
-## Central scientific object
-
-The principal object is the sustainable/equitable viability boundary
+The thesis studies a
 
 $$
-\boxed{\partial\mathcal V_R}.
+\boxed{\text{multilayer interdependent infrastructure system}}
 $$
 
-The thesis asks how dynamic interfaces, uncertainty, climate stress, sustainability/equity constraints, and admissible interventions deform this boundary and the associated recovery geometry.
+with
 
-## Governing architecture
+$$
+\boxed{P,T=\text{physical infrastructure systems}}
+$$
+
+and
+
+$$
+\boxed{I,O=\text{informational and organizational layers}.}
+$$
+
+The precise system description is:
+
+> **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
+
+The framework-level system is
+
+$$
+\mathcal S=\{P,T,I,O\}.
+$$
+
+Canonical definition: [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINITION.md)
+
+---
+
+## 2. Governing seven-stage framework
+
+The thesis follows the frozen architecture
+
+$$
+\text{Multilayer Structure}
+\rightarrow
+\text{Causal Mechanisms}
+\rightarrow
+\text{Coupled Hybrid Multiscale Dynamics}
+\rightarrow
+\text{Feedback \& Control}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Resilience-to-Sustainability Transformation Interface}
+\rightarrow
+\text{Sustainable Transformation Pathways}.
+$$
+
+Canonical framework: [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md)
+
+---
+
+## 3. Current frozen research boundary
+
+### Stage 1 — Multilayer Structure
+
+Defines the $P$–$T$–$I$–$O$ system, subsystem decomposition, states, and potential interface locations.
+
+### Stage 2 — Causal Mechanisms
+
+Defines the 12 directed interdependencies / six bidirectional families and requires a real causal transmission mechanism for every accepted relation:
+
+$$
+\alpha\xrightarrow{M_{ij}}\beta.
+$$
+
+Every accepted interdependency is represented by
+
+$$
+\mathfrak I_{ij}^{\alpha\beta}
+=
+(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t).
+$$
+
+Canonical Stage 2: [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+
+### Stage 3 — Coupled Hybrid Multiscale Dynamics
+
+Defines how accepted Stage-2 mechanisms evolve through time and space using heterogeneous native subsystem dynamics, causal delay, multiple timescales, discrete events, mode switching, dynamic topology, and uncertainty.
+
+The four-layer state remains
+
+$$
+Y(t)=[x_P(t),x_T(t),z_I(t),z_O(t)]^\top,
+$$
+
+with augmented hybrid state
+
+$$
+\widetilde Y(t)=(Y(t),m(t)).
+$$
+
+Canonical Stage 3: [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
+
+---
+
+## 4. Current scientific progression
 
 $$
 \boxed{
-\mathcal D_{obs}
+\underbrace{\{P,T,I,O\}}_{\text{Stage 1}}
 \rightarrow
-(\widehat{\mathcal G},\widehat\theta,\Sigma_\theta)
+\underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\text{Stage 2}}
 \rightarrow
-\mathcal F_{dyn}
+\underbrace{\{Y(t),m(t),\mathcal G(t),T_C,v_c\}}_{\text{Stage 3}}
 \rightarrow
-K_R
+\underbrace{I\rightarrow O\rightarrow u}_{\text{Stage 4}}
 \rightarrow
-\mathcal V_R
+\underbrace{\mathcal V_{\rm sus}^{u}}_{\text{Stage 5}}
 \rightarrow
-\mathcal C_R
-\rightarrow
-\mathcal U_{recovery}
+\underbrace{\text{Stages 6--7}}_{\text{sustainable transformation}}
 }
 $$
 
-The core scientific question is:
+The next framework-formalization task is **Stage 4 — Feedback & Control**.
 
-> How accurately must dynamic cross-infrastructure interfaces be identified and represented before sustainable/equitable viability and recovery predictions can be trusted?
+---
 
-Three derived questions structure the mathematical program:
+## 5. Scope discipline
 
-1. **What moves the viability boundary?**
-2. **How uncertain is that boundary?**
-3. **What interventions or designs move it in a favorable direction?**
+The thesis is framework-driven and evidence-gated. It does not assume that every subsystem requires maximal simulation detail or that every mathematical concept must be implemented at the highest available fidelity.
 
-## Mathematical foundation
+The governing principles are:
 
-The formal definitions, assumptions, viability/recovery geometry, inverse problem, timescale ratio, control layer, and downstream design formulation are maintained in:
+$$
+\text{maximum necessary physical fidelity}
+\neq
+\text{maximum possible model detail},
+$$
 
-- [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md)
-- [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md)
+and
 
-## Evidence strategy
+$$
+\text{correlation/common exposure}
+\neq
+\text{causal interdependency}.
+$$
 
-The thesis uses two linked but non-interchangeable tracks:
+Each mathematical layer must answer a defined research question and create a corresponding validation obligation.
 
-1. **PRISMA / evidence falsification and precedent search** — establishes what has been studied, by which methods, under which evidence limits.
-2. **Mathematical development and falsification** — identification/inverse problems, dynamic coupling, timescale regimes, viability/reachability, recovery/capture geometry, sustainability/equity constraints, uncertainty, control, and reduced-model validation.
+---
 
-Evidence has authority over the starting architecture: a direct precedent is a successful falsification result, not a failure.
+## 6. Evidence and validation discipline
 
-## Scope discipline
+The evidence workflow is
 
-The MSE thesis does not require an original contribution at every downstream layer simultaneously. The core mathematical contribution is centered on **dynamic coupling → admissibility → viability → recovery**, with identification/UQ as upstream support and control/design as structured extensions.
+$$
+\text{literature}
+\rightarrow
+\text{mechanism evidence}
+\rightarrow
+\text{formal mathematical object}
+\rightarrow
+\text{simulation/analysis}
+\rightarrow
+\text{falsification and validation}.
+$$
+
+The thesis distinguishes:
+
+- empirical/domain evidence;
+- transferable methodological evidence;
+- mathematical theory;
+- thesis-proposed synthesis.
+
+A proposed construct remains a candidate contribution until novelty and performance claims survive systematic comparison and falsification.
+
+---
+
+## 7. Supersession rule
+
+Earlier P–W–T–SW, waste–drainage, equity-centered, or other historical architectures preserved elsewhere in Git history, project memory, archive folders, or research archives are **not the current thesis scope**.
+
+They may be used only for provenance or transferable methodological insight unless explicitly reintroduced through a versioned change to the current canonical framework.
