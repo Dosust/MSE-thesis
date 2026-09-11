@@ -49,7 +49,7 @@ Computed outputs, simulations or fitted parameters must be described explicitly 
 
 The integrated state is
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
@@ -59,26 +59,26 @@ z_O(t)
 \end{bmatrix},
 \qquad
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
-$$
+```
 
 The physical state is
 
-$$
+```math
 X(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)
 \end{bmatrix}.
-$$
+```
 
 The layer labels $I$ and $O$ denote functions/layers; their time-varying states are $z_I(t)$ and $z_O(t)$.
 
 Operational and strategic actions remain distinct:
 
-$$
+```math
 \underbrace{u(t)}_{\text{Stage-4 operational control}}
 \neq
 \underbrace{\mathbf a_k}_{\text{Stage-7 strategic transformation}}.
-$$
+```
 
 Stage-2 activation $a_{ij}$ is also distinct from the Stage-7 strategic vector $\mathbf a_k$.
 
@@ -86,22 +86,23 @@ Stage-2 activation $a_{ij}$ is also distinct from the Stage-7 strategic vector $
 
 ## 5. GitHub mathematical rendering rules
 
-For active `.md` files:
+GitHub renders Markdown mathematics with MathJax. To avoid the raw-LaTeX failure visible when a multiline dollar-delimited block is parsed as ordinary Markdown, active `.md` files use the following contract:
 
-1. inline math uses `$...$`;
-2. display math uses `$$...$$`;
-3. multiline mathematics uses `aligned`, `bmatrix`, `cases`, or multiple short displays;
-4. do not use fenced ` ```math ` blocks in active Markdown;
-5. avoid paragraph-length prose inside `\boxed{...}`;
-6. avoid `\tag{...}` in Markdown; put **Equation Sx.y — description** above the display when an identifier is needed;
-7. prefer `\mathrm{...}` for short roman mathematical labels and `\text{...}` only for brief explanatory text;
-8. long taxonomies/specifications belong in Markdown tables, not arrays inside equations;
-9. do not place raw URLs or Markdown links inside equations;
-10. distinguish $u(t)$ from $\varepsilon(t)$ and $\mathbf a_k$ from $a_{ij}$;
-11. if an expression cannot fit comfortably at normal GitHub width, split it before publication;
-12. table rows must preserve the declared number of columns.
+1. inline mathematics uses `$...$`;
+2. multiline or structurally complex display mathematics uses fenced `math` blocks;
+3. short display mathematics may use `$$...$$` only when the complete expression and both delimiters stay on one line;
+4. do **not** use standalone opening and closing `$$` lines for multiline mathematics;
+5. multiline mathematics uses `aligned`, `bmatrix`, `cases`, or other MathJax-supported environments inside a fenced `math` block;
+6. avoid paragraph-length prose inside `\boxed{...}`;
+7. avoid `\tag{...}` in Markdown; put **Equation Sx.y — description** above the display when an identifier is needed;
+8. prefer `\mathrm{...}` for short roman mathematical labels and `\text{...}` only for brief explanatory text;
+9. long taxonomies/specifications belong in Markdown tables, not arrays inside equations;
+10. do not place raw URLs or Markdown links inside equations;
+11. distinguish $u(t)$ from $\varepsilon(t)$ and $\mathbf a_k$ from $a_{ij}$;
+12. if an expression cannot fit comfortably at normal GitHub width, split it before publication;
+13. table rows must preserve the declared number of columns.
 
-These rules are enforced automatically where possible by `tools/thesis_display_lint.py`.
+These rules are enforced automatically where possible by `tools/thesis_display_lint.py` and normalized by `tools/normalize_github_math.py`.
 
 ---
 
@@ -109,36 +110,36 @@ These rules are enforced automatically where possible by `tools/thesis_display_l
 
 ### Stage 1 — System state
 
-$$
-\mathcal S=\{P,T,I,O\},
-$$
+```math
+\mathcal S=\{P,T,I,O\}.
+```
 
-$$
+```math
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \end{bmatrix}.
-$$
+```
 
 ### Stage 2 — Causal interdependency
 
-$$
+```math
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
 E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
 \right).
-$$
+```
 
 ### Stage 3 — Hybrid state
 
-$$
+```math
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
-$$
+```
 
 ### Stage 4 — Feedback spine
 
-$$
+```math
 X(t)
 \rightarrow y(t)
 \rightarrow I(t)
@@ -146,44 +147,44 @@ X(t)
 \rightarrow O(t)
 \rightarrow u(t)
 \rightarrow X(t).
-$$
+```
 
 ### Stage 5 — Viability hierarchy
 
-$$
-K_{\rm sus}
+```math
+K_{\mathrm{sus}}
 \supseteq
-\mathcal V_{\rm sus}^{u,T}
+\mathcal V_{\mathrm{sus}}^{u,T}
 \rightarrow
 \partial\mathcal V
 \rightarrow
 \{\rho,T_{\mathcal V},T_K\}.
-$$
+```
 
 ### Stage 6 — Transformation diagnosis
 
-$$
-\Phi_{\rm ST}
+```math
+\Phi_{\mathrm{ST}}
 :
-(\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
+(\mathcal R_5,\Lambda_{\mathrm{LT}},\mathbf d_6)
 \mapsto
-(c_6,\mathcal D_6,\boldsymbol\zeta_T).
-$$
+(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
+```
 
 ### Stage 7 — Transformation pathway object
 
-$$
-\mathfrak P_{\rm ST}
+```math
+\mathfrak P_{\mathrm{ST}}
 =
 \left(
-\mathbb G_{\rm ST},
-\boldsymbol\pi_{\rm ST},
+\mathbb G_{\mathrm{ST}},
+\boldsymbol{\pi}_{\mathrm{ST}},
 \Omega,
-\mathcal A^{\rm feas},
+\mathcal A^{\mathrm{feas}},
 \mathbf J,
-\mathbb M_{\rm sus}
+\mathbb M_{\mathrm{sus}}
 \right).
-$$
+```
 
 The Stage-7 regime is $\mathfrak M_k$ and the strategic action is $\mathbf a_k$.
 
@@ -193,7 +194,7 @@ The Stage-7 regime is $\mathfrak M_k$ and the strategic action is $\mathbf a_k$.
 
 For a compact full-framework representation use
 
-$$
+```math
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
@@ -203,13 +204,13 @@ $$
 &\rightarrow
 \underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
 &\rightarrow
-\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
+\underbrace{K_{\mathrm{sus}},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
 &\rightarrow
-\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
+\underbrace{\Phi_{\mathrm{ST}}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
 &\rightarrow
-\underbrace{\mathfrak P_{\rm ST}}_{7}.
+\underbrace{\mathfrak P_{\mathrm{ST}}}_{7}.
 \end{aligned}
-$$
+```
 
 ---
 
@@ -297,22 +298,22 @@ Every final scientific figure should identify or link to:
 
 Differential geometry may be used only when the underlying mathematical object is actually defined:
 
-$$
+```math
 \text{geometric visual metaphor}
 \neq
 \text{formal Riemannian geometry}.
-$$
+```
 
 For Stage 5, $\rho_E$ is the baseline. The state-dependent metric $g_\psi$ and margin $\rho_g$ remain `[P]` until metric properties, regularity, physical interpretation and comparative value are demonstrated.
 
 The Hamilton–Jacobi value is not automatically a geometric distance:
 
-$$
-|V_{\rm HJ}(Y)|
+```math
+|V_{\mathrm{HJ}}(Y)|
 \neq
 d(Y,\partial\mathcal V)
 \quad\text{in general}.
-$$
+```
 
 ---
 
@@ -320,9 +321,9 @@ $$
 
 Keep probability, distributional ambiguity and deep uncertainty distinct. In particular,
 
-$$
+```math
 \omega\in\Omega
-$$
+```
 
 is a scenario/future representation and must not be described as a probability model unless probabilities/weights are independently justified.
 
