@@ -1,5 +1,23 @@
 # Project Memory Entry Point
 
+## Repository authority — 2026-09-11
+
+The sole active repository for this thesis is:
+
+[`Dossiya-SE/MSE-thesis`](https://github.com/Dossiya-SE/MSE-thesis)
+
+All future thesis updates, framework revisions, equations, figures, research notes, evidence records, validation artifacts, and canonical files must be written to **MSE-thesis** unless the user explicitly instructs otherwise.
+
+The repository [`Dossiya-SE/Optimization-for-sustainability-and-resilience`](https://github.com/Dossiya-SE/Optimization-for-sustainability-and-resilience) is **not the active thesis destination**. Existing files there may remain as historical/reference artifacts, but new thesis updates must not be routed there by default.
+
+The latest canonical system and Stage-2 specifications are:
+
+1. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
+2. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
+3. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+
+---
+
 ## Current framework authority — 2026-09-09
 
 For the **current thesis framework architecture and all framework figures**, start with:
