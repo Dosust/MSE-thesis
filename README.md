@@ -4,12 +4,14 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
-![Next](https://img.shields.io/badge/next-Hypothesis%20Specification%20Matrix-9A6700)
+![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
+![Next](https://img.shields.io/badge/next-reduced%20P--T--I--O%20demonstrator-9A6700)
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
 **Framework status:** complete seven-stage conceptual and mathematical framework frozen  
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
+**Confirmatory matrix:** current operationalization specification; exact $\Omega_H$, $\delta_i$ and final analysis procedures remain unfrozen  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
@@ -33,6 +35,7 @@
 | [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage 6 |
 | [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage 7 |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
+| [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules |
 | [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | notation/rendering standard |
 | [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) | mandatory framework-figure QA |
@@ -139,6 +142,20 @@ The hypothesis logic is frozen. Numerical thresholds $\delta_1,\ldots,\delta_5$ 
 
 ---
 
+## Engineering Confirmatory Hypothesis Matrix
+
+The current operationalization specification is [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md). It connects each primary hypothesis to the scientific gap, mechanism, estimand, baseline, strong rival, context of use, domain, quantitative prediction, physics/V&V gates, critical experiment, auxiliary assumptions, uncertainty architecture and confirmatory decision rule.
+
+Its central qualification rule is
+
+```math
+\mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
+```
+
+The exact 12-gate methodology is treated as a derived/proposed thesis methodology `[D/P]`, while its ingredients are grounded in systems engineering, M&S credibility, VVUQ and confirmatory-research principles. The matrix deliberately does **not** freeze numerical $\delta_1,\ldots,\delta_5$, exact $\Omega_H$, or final analysis procedures.
+
+---
+
 ## Repository display and mathematical QA
 
 Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V3.md`:
@@ -163,6 +180,6 @@ Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V
 
 > **PRIMARY HYPOTHESIS LOGIC $H_1$–$H_5$: FROZEN.**
 
-The next rigorous step is the **Hypothesis Specification Matrix**. It must predefine theory, mechanism, variables, baselines, boundary conditions, uncertainty domain, prediction, rival hypothesis, critical test, falsification criterion and justified $\delta_i$ before confirmatory numerical testing.
+> **ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX: SAVED / CURRENT OPERATIONALIZATION SPECIFICATION.**
 
-Only after that specification is frozen should the thesis proceed to numerical case-study design, computation, falsification and validation.
+The next rigorous step is to select the reduced P–T–I–O demonstrator and determine what physical, data and benchmark evidence is actually available. That evidence will define the defensible hypothesis/validation domains and support *a priori* choices for $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study computation, falsification and validation.
