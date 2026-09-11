@@ -3,7 +3,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** Active thesis source of truth  
 **Framework status:** Seven-stage architecture frozen  
-**Research status:** Stage 1 defined; Stage 2 frozen; Stage 3 next  
+**Research status:** Stage 1 defined; Stage 2 frozen; Stage 3 frozen; Stage 4 next  
 **Updated:** 2026-09-11
 
 > **Repository rule:** all active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical material is retained only for provenance and does not override current canonical files.
@@ -84,8 +84,8 @@ $$
 |---|---|---|
 | **1. Multilayer Structure** | What exists? | Canonical |
 | **2. Causal Mechanisms** | Why does disruption propagate? | Frozen |
-| **3. Coupled Hybrid Multiscale Dynamics** | How and when does it evolve? | Next |
-| **4. Feedback & Control** | How does the system respond? | Architecture established |
+| **3. Coupled Hybrid Multiscale Dynamics** | How, when, and where does it evolve and propagate? | Frozen |
+| **4. Feedback & Control** | How does the system observe, decide, and respond? | **Next formalization stage** |
 | **5. Viability** | Can acceptable operation be maintained? | To formalize |
 | **6. Transformation Interface** | What do resilience results imply for sustainability? | Downstream |
 | **7. Sustainable Transformation Pathways** | What should change? | Downstream |
@@ -196,16 +196,39 @@ Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STA
 
 ## 6. Stage 3 — Coupled Hybrid Multiscale Dynamics
 
-The next task is to map accepted Stage-2 objects into coupled dynamics:
+Stage 3 is now **canonical and frozen**. It maps accepted Stage-2 mechanisms into heterogeneous, delayed, hybrid, multirate evolution without forcing all four layers into one equation class.
+
+The four-layer state remains
 
 $$
-\dot Y(t)=F_m\!\left(Y(t),Y(t-\delta),u(t),\eta(t);\theta,\mathcal G(t)\right),
+Y(t)=
+\begin{bmatrix}
+x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
+\end{bmatrix},
 $$
 
-with discrete transitions
+while the Stage-3 augmented hybrid state is
 
 $$
-Y^{+}=J_e\!\left(Y^{-},e\right).
+\widetilde Y(t)=\big(Y(t),m(t)\big).
+$$
+
+A canonical Stage-3 representation is
+
+$$
+\dot Y_c(t)=F^{m(t)}\!\left[Y_c(t),Y_d(t),Y(t-\boldsymbol\delta),h(\mathbf r,t);\mathcal G(t),\mathcal H_t\right],
+$$
+
+with algebraic constraints and event-driven updates
+
+$$
+0=G^{m(t)}(Y_c,Y_d,h;\mathcal G),
+$$
+
+$$
+Y_d^+=R_e(\widetilde Y^-,e),\qquad
+m^+=\Delta_m(m^-,\widetilde Y^-,e),\qquad
+\mathcal G^+=\Psi(\mathcal G^-,\widetilde Y^-,e,\mathcal H_t).
 $$
 
 The temporal rule is
@@ -226,19 +249,27 @@ $$
 | Response/viability | $\tau_R,T_{\rm exit},T_{\rm rec}$ |
 | Strategic | $\tau_A,\tau_{Tr},t_k,\Delta t_k,T_H$ |
 
-Dimensionless ratios such as
+For spatial propagation, Stage 3 introduces component cascade-arrival time
 
 $$
-\Gamma_{\alpha\beta}=\frac{\tau_\alpha}{\tau_\beta}
+T_C(j)=\inf\{t>t_0:j\text{ enters a predefined disrupted state}\},
 $$
 
-are regime descriptors, not universal thresholds, unless a threshold is derived from the dynamics or supported by evidence.
+and, only where a spatial-front interpretation is physically meaningful,
+
+$$
+v_c(t)=\frac{dr_c(t)}{dt}.
+$$
+
+Dimensionless timescale ratios remain regime descriptors rather than universal thresholds unless critical values are derived from the coupled dynamics or supported by evidence.
+
+Stage-3 authority: [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
 
 ---
 
 ## 7. Stage 4 — Feedback & Control
 
-The observation–decision–action loop is
+Stage 4 is the **next framework formalization task**. The observation–decision–action loop is
 
 $$
 X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X.
@@ -247,8 +278,13 @@ $$
 For analytical and numerical work,
 
 $$
-y=H(X)+\varepsilon_y,\qquad \widehat X=\mathcal E(y_{[0,t]},I),\qquad u=\pi(\widehat X,I,O),\qquad u\in\mathcal U(I,O).
+y=H(X)+\varepsilon_y,\qquad
+\widehat X=\mathcal E(y_{[0,t]},I),\qquad
+u=\pi(\widehat X,I,O),\qquad
+u\in\mathcal U(I,O).
 $$
+
+Here the policy symbol is $\pi$ and the physical intervention/action variable is $u$; the final Stage-4 specification will explicitly separate policy, command generation, admissible action set, information constraints, organizational constraints, and response delay.
 
 The scientific question is whether sensing, communication, estimation, authority, coordination, resources, logistics, and organizational delays allow an admissible intervention to arrive before critical degradation.
 
@@ -329,13 +365,16 @@ Methods: [`methods/`](methods/)
 |---|---|
 | Structure | verify system boundary, taxonomy, and interface mapping |
 | Interdependency | require direction + source + mechanism + receiver + effect + evidence |
-| Dynamics | check dimensions, physical laws, limiting cases, event logic, and numerical implementation |
-| Timescales | separate delay from process duration and quantify uncertainty |
-| Information | test observability, latency, missing/noisy data, and estimation sensitivity |
-| Organization | test authority, coordination, resources, logistics, and response delay |
+| Dynamics | check dimensions, native physical laws, limiting cases, event logic, numerical implementation, and synchronization |
+| Timescales | separate causal delay from process duration and quantify uncertainty |
+| Spatial propagation | validate cascade-arrival definitions and use spatial-front quantities only where physically meaningful |
+| Information | test availability, latency, freshness, missing/noisy data, and estimation sensitivity |
+| Organization | test organizational states, resources, logistics, event timing, and response delay |
 | Control | compare interventions against explicit baselines |
 | Viability | verify set computation, boundary behavior, constraints, and sensitivity to model error |
 | Transformation | trace recommendations to verified resilience evidence |
+
+A key Stage-3 falsification method is **coupling ablation**: remove a selected Stage-2 coupling under otherwise matched conditions and test whether state trajectory, event order, propagation, recovery, or later viability conclusions change materially and reproducibly.
 
 $$
 \text{Claim}
@@ -356,9 +395,9 @@ $$
 \rightarrow
 \text{Stage 2: frozen}
 \rightarrow
-\text{Stage 3: dynamics/timescales}
+\text{Stage 3: frozen}
 \rightarrow
-\text{Stage 4: feedback/control}
+\text{Stage 4: next}
 \rightarrow
 \text{Stage 5: viability}
 \rightarrow
@@ -367,14 +406,15 @@ $$
 
 ### Immediate technical program
 
-1. Complete the component-level decomposition of all 12 Stage-2 directions.
-2. Attach evidence, mechanism, effect, delay, timescale, activation, mode, and history to each accepted relation.
-3. Map Stage-2 objects into Stage-3 hybrid multiscale equations.
-4. Quantify temporal competition between cascade propagation and information/organizational response.
-5. Close the Stage-4 observation–decision–action loop.
-6. Define and compute Stage-5 admissible and viability sets.
-7. Validate against physical-only and reduced-coupling baselines.
-8. Use only validated resilience results as inputs to Stages 6–7.
+1. Complete the component-level evidence decomposition of all 12 Stage-2 directions.
+2. Parameterize accepted Stage-2 relations with mechanism, effect, delay, timescale, activation, mode, and history.
+3. Implement and falsify the frozen Stage-3 hybrid delayed multirate dynamics under explicit subsystem assumptions.
+4. Verify event chronology, dynamic topology, cascade-arrival time, and spatial propagation quantities where applicable.
+5. Perform coupling ablation and sensitivity/uncertainty analysis for Stage-3 mechanisms.
+6. Formalize Stage 4: observation, state estimation, organizational decision processes, admissible actions, and feedback/control.
+7. Define and compute Stage-5 admissible and viability sets under declared uncertainty/control assumptions.
+8. Validate against physical-only and reduced-coupling baselines.
+9. Use only validated resilience results as inputs to Stages 6–7.
 
 ---
 
@@ -387,6 +427,7 @@ $$
 | [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md) | canonical P–T–I–O system identity |
 | [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | framework-level subsystem decomposition |
 | [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | frozen Stage-2 causal specification |
+| [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | frozen Stage-3 dynamic specification |
 | [`figures/`](figures/) | thesis figures and visual specifications |
 | [`evidence/`](evidence/) | literature and evidence artifacts |
 | [`methods/`](methods/) | mathematical, computational, review, and validation methods |
@@ -406,8 +447,9 @@ Historical P–W–T–SW, waste–drainage, equity-centered, and other supersed
 - Never infer interdependency from correlation or common exposure alone.
 - Distinguish structural connection from causal mechanism.
 - Distinguish event time, causal delay, and characteristic timescale.
-- Distinguish states, parameters, disturbances, observations, controls, and modes.
-- Do not claim novelty for established concepts without systematic falsification.
+- Distinguish four-layer state $Y$ from Stage-3 mode $m$ and augmented hybrid state $\widetilde Y$.
+- Distinguish states, parameters, disturbances, observations, policies, controls, and modes.
+- Do not claim novelty for established concepts or combinations without systematic falsification.
 - Do not use generated figures as scientific authority.
 - Require equations, assumptions, units, provenance, numerical checks, uncertainty analysis, and baseline comparison before strong conclusions.
 
@@ -417,7 +459,7 @@ Historical P–W–T–SW, waste–drainage, equity-centered, and other supersed
 
 ## 15. Thesis logic
 
-> **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how and how fast they propagate; feedback and control determine whether intervention can arrive in time; viability determines whether acceptable operation can be maintained; and verified resilience evidence informs sustainable transformation.**
+> **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how, when, and where they propagate; feedback and control determine whether intervention can arrive in time; viability determines whether acceptable operation can be maintained; and verified resilience evidence informs sustainable transformation.**
 
 ---
 
