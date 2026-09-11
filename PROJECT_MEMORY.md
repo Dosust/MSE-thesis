@@ -36,6 +36,7 @@ For the current thesis, read these files in order:
 8. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
 9. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 10. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
+11. [`provenance/2026-09-11_STAGE_4_DISPLAY_RENDERING_AUDIT.md`](provenance/2026-09-11_STAGE_4_DISPLAY_RENDERING_AUDIT.md)
 
 These files supersede older framework descriptions when conflicts occur.
 
@@ -157,7 +158,7 @@ u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-Here $u(t)$ is the intervention/control variable. The symbol $\nu_k(t)$ is reserved for measurement noise.
+Here $u(t)$ is the intervention/control variable. Measurement noise is denoted by $\varepsilon_k(t)$.
 
 For a sequential, non-overlapping response pathway,
 
