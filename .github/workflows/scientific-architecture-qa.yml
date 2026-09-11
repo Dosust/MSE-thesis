@@ -4,22 +4,31 @@ on:
   push:
     paths:
       - "README.md"
+      - "PROJECT_MEMORY.md"
       - "project/**"
-      - "methods/architecture/**"
+      - "methods/**"
+      - "figures/**"
+      - "evidence/**"
       - "config/**"
       - "schemas/**"
+      - "tools/**"
       - "assets/math-art/**"
-      - "tests/test_viability_geometry.py"
+      - "tests/**"
       - ".github/workflows/scientific-architecture-qa.yml"
   pull_request:
     paths:
       - "README.md"
+      - "PROJECT_MEMORY.md"
       - "project/**"
-      - "methods/architecture/**"
+      - "methods/**"
+      - "figures/**"
+      - "evidence/**"
       - "config/**"
       - "schemas/**"
+      - "tools/**"
       - "assets/math-art/**"
-      - "tests/test_viability_geometry.py"
+      - "tests/**"
+      - ".github/workflows/scientific-architecture-qa.yml"
 
 jobs:
   qa:
@@ -37,21 +46,36 @@ jobs:
         run: python -m pip install --upgrade pip pytest pyyaml jsonschema
 
       - name: Python syntax check
-        run: python -m py_compile methods/architecture/viability_geometry.py
+        run: |
+          python -m py_compile methods/architecture/viability_geometry.py
+          python -m py_compile tools/thesis_display_lint.py
 
-      - name: Numerical smoke tests
+      - name: Mathematical display and ontology lint
+        run: python tools/thesis_display_lint.py
+
+      - name: Numerical geometry smoke tests
         run: pytest -q tests/test_viability_geometry.py
 
-      - name: Validate proposition registry
+      - name: Validate proposition and hypothesis registries
         run: |
           python - <<'PY'
           from pathlib import Path
           import yaml
-          p = yaml.safe_load(Path('config/scientific_propositions.yaml').read_text())
-          assert p['version'] == 1
-          assert set(p['propositions']) == {f'P{i}' for i in range(1,8)}
-          assert p['inference_rules']['prohibit_global_novelty_from_literature_rank'] is True
+
+          propositions = yaml.safe_load(Path('config/scientific_propositions.yaml').read_text())
+          assert propositions['version'] == 2
+          assert set(propositions['propositions']) == {f'P{i}' for i in range(1, 11)}
+          assert propositions['inference_rules']['prohibit_global_novelty_from_literature_rank'] is True
+          assert propositions['inference_rules']['framework_freeze_does_not_imply_empirical_validation'] is True
+
+          hypotheses = yaml.safe_load(Path('config/research_hypotheses.yaml').read_text())
+          assert set(hypotheses['hypotheses']) == {f'H{i}' for i in range(1, 6)}
+          assert hypotheses['status']['hypothesis_logic_frozen'] is True
+          assert hypotheses['status']['numerical_thresholds_frozen'] is False
+          assert hypotheses['confirmatory_rules']['thresholds_must_be_defined_a_priori'] is True
+
           print('Scientific proposition registry: PASS')
+          print('Primary hypothesis registry: PASS')
           PY
 
       - name: Validate JSON schema and example model
@@ -59,12 +83,18 @@ jobs:
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
-          schema = json.load(open('schemas/thesis_model.schema.json'))
-          instance = json.load(open('config/example_model.json'))
+
+          with open('schemas/thesis_model.schema.json', encoding='utf-8') as f:
+              schema = json.load(f)
+          with open('config/example_model.json', encoding='utf-8') as f:
+              instance = json.load(f)
+
           Draft202012Validator.check_schema(schema)
           Draft202012Validator(schema).validate(instance)
+          assert instance['system']['physical_systems'] == ['power', 'transportation']
+          assert instance['system']['layers'] == ['information', 'organization']
           print('Thesis model JSON schema: PASS')
-          print('Example model instance: PASS')
+          print('Canonical P-T-I-O example model: PASS')
           PY
 
       - name: Validate SVG assets
@@ -72,6 +102,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
+
           files = sorted(Path('assets/math-art').glob('*.svg'))
           assert len(files) >= 3
           for f in files:
@@ -85,21 +116,19 @@ jobs:
         with:
           version: "1.11"
 
-      - name: Julia coupled-model smoke test
+      - name: Julia P-T-I-O scaffold smoke test
         run: |
           julia --startup-file=no -e '
             include("methods/architecture/CoupledInfrastructure.jl");
             using .CoupledInfrastructure;
             p = ModelParameters();
-            x = [0.9, 0.8, 0.7, 0.2];
-            z = [0.10, 0.10, 0.08, 0.06];
+            x = [0.9, 0.8, 0.7, 0.6];
             u = zeros(4);
             dx = zeros(4);
-            dz = zeros(4);
-            infrastructure_rhs!(dx, x, z, u, 0.5, p);
-            interface_rhs!(dz, x, z, 0.5, p);
+            ptio_rhs!(dx, x, u, 0.5, p);
             @assert all(isfinite, dx);
-            @assert all(isfinite, dz);
-            @assert realized_flood_hazard(0.5, x[4], p) >= 0;
-            println("Julia coupled-model scaffold: PASS");
+            @assert LAYER_ORDER == (:P, :T, :I, :O);
+            @assert 0.0 <= feasible_control_scale(0.7, 0.8) <= 1.0;
+            @assert isfinite(interdependency_signal(0.9, 0.5, 1.0, 0.8));
+            println("Julia P-T-I-O scaffold: PASS");
           '
