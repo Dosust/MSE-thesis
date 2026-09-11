@@ -4,9 +4,10 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/framework-7--stage%20canonical-0969DA)
 ![Frozen](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
-![Next](https://img.shields.io/badge/next-operationalization%20%26%20validation-0969DA)
+![Hypotheses](https://img.shields.io/badge/primary%20hypotheses-H1--H5%20LOGIC%20FROZEN-1A7F37)
+![Next](https://img.shields.io/badge/next-Hypothesis%20Specification%20Matrix-9A6700)
 
-This directory contains the **active mathematical and scientific specification** of the MSE thesis. The seven-stage conceptual and mathematical framework is now frozen. Historical material is retained separately for provenance and must not override the canonical files listed below.
+This directory contains the **active mathematical and scientific specification** of the MSE thesis. The seven-stage conceptual and mathematical framework is frozen. The five-primary-hypothesis logic is also frozen, while numerical thresholds and exact confirmatory test specifications remain to be fixed *a priori*.
 
 ## Current framework status
 
@@ -43,9 +44,10 @@ flowchart LR
 | 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | Frozen |
 | 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | Frozen |
 | 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | **Frozen** |
-| 12 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Active companion |
-| 13 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Falsifiable thesis propositions | Active companion |
-| 14 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | Mathematical display and visual-encoding standard | Synchronized |
+| 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | Five primary confirmatory hypotheses and falsification logic | **Logic frozen; thresholds not set** |
+| 13 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Active companion |
+| 14 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Broader falsifiable proposition registry | Active companion |
+| 15 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | Mathematical display and visual-encoding standard | Synchronized |
 
 The former [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) is retained as research provenance and does not override the frozen Stage-7 file.
 
@@ -72,14 +74,48 @@ $$
 The frozen Stage-7 fundamental object is
 
 $$
-\boxed{
 \mathfrak P_{\rm ST}
 =
-(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus})
-}.
+(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}).
 $$
 
 Stage 7 is interpreted as an **adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures**.
+
+## Primary hypothesis architecture
+
+The frozen primary hypothesis set is
+
+$$
+\mathbb H=\{H_1,H_2,H_3,H_4,H_5\},
+$$
+
+with the causal hierarchy
+
+$$
+\mathfrak I
+\rightarrow
+F
+\rightarrow
+(I,O,u)
+\rightarrow
+\mathcal V
+\rightarrow
+S_{ij}^{\mathcal V}
+\rightarrow
+\text{adaptive transformation}.
+$$
+
+The five primary tests are:
+
+| Hypothesis | Main stages | Core test |
+|---|---:|---|
+| $H_1$ | 2 → 3 | dynamic causal coupling vs. independent/static coupling |
+| $H_2$ | 3 → 4 | informational/organizational effects on feasible response and outcomes |
+| $H_3$ | 4 → 5 | viability information beyond conventional service/recovery metrics |
+| $H_4$ | 2 → 5 → 7 | viability-sensitive interface ranking vs. structural centrality |
+| $H_5$ | 5 → 6 → 7 | adaptive pathway vs. best comparable fixed pathway under deep uncertainty |
+
+The scientific logic is frozen. The thresholds $\delta_1,\ldots,\delta_5$ are deliberately **not** assigned until justified *a priori*.
 
 ## Stage-6 / Stage-7 separation
 
@@ -107,20 +143,24 @@ For GitHub-facing project files:
 
 ## Next scientific phase
 
-The conceptual framework is closed. The next phase is:
+The conceptual framework is closed, but confirmatory simulation should not begin until the hypotheses are fully specified. The immediate sequence is
 
 $$
-\boxed{
-\text{operationalization}
+\text{frozen framework}
 \rightarrow
-\text{numerical case-study design}
+\text{frozen hypothesis logic}
+\rightarrow
+\textbf{Hypothesis Specification Matrix}
+\rightarrow
+\text{case-study design}
 \rightarrow
 \text{computation}
 \rightarrow
 \text{falsification}
 \rightarrow
-\text{validation}
-}.
+\text{validation}.
 $$
+
+The Hypothesis Specification Matrix must predefine theory, mechanism, variables, baselines, boundary conditions, predictions, rival hypotheses, critical tests, falsification criteria, uncertainty domains, and justified $\delta_i$ thresholds before confirmatory numerical testing.
 
 Historical material remains provenance only unless explicitly reintroduced through a versioned revision.
