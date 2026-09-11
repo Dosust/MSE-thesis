@@ -1,16 +1,16 @@
 # Mathematical Foundation
 
-**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–6  
+**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **System:** Power–Transportation–Information–Organization (P–T–I–O)  
 **Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the canonical stage files  
-**Stage 7:** deep research complete; exact mathematical scope not frozen
+**Framework status:** Complete seven-stage conceptual and mathematical framework frozen
 
 ---
 
 ## 1. Scientific object
 
-The thesis treats infrastructure resilience and sustainable transformation as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints and regime-adequacy requirements**.
+The thesis treats infrastructure resilience and sustainable transformation as a **controlled, partially observable, hybrid multiscale dynamical-systems problem under explicit sustainability constraints, regime-adequacy requirements, and adaptive architecture transformation**.
 
 The framework-level state is
 
@@ -39,7 +39,7 @@ $$
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
-The framework does not reduce resilience or transformation to one scalar score. It preserves causal mechanisms, dynamic trajectories, observation/control, controlled viability and long-horizon regime adequacy as distinct mathematical layers.
+The framework does not reduce resilience or transformation to one scalar score. It preserves causal mechanisms, dynamic trajectories, observation/control, controlled viability, regime adequacy and architecture transformation as distinct mathematical layers.
 
 ---
 
@@ -370,8 +370,6 @@ $$
 [d_{\mathcal V},d_{\rm limit},d_{\rm lock},d_{\rm mal},d_{\rm sus},d_{\rm eq},d_{\rm struct}]^\top.
 $$
 
-The frozen Stage-6 translation is
-
 **Equation F.4 — Resilience-to-sustainability transition**
 
 $$
@@ -379,7 +377,7 @@ $$
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T),
+(c_6,\mathcal D_6,\boldsymbol\zeta_T),
 $$
 
 where
@@ -398,68 +396,323 @@ $$
 and
 
 $$
-\boldsymbol{\zeta}_T
+\boldsymbol\zeta_T
 =
 [\zeta_{\rm depth},\zeta_{\rm scope},\zeta_{\rm scale},\zeta_{\rm pace},
 \zeta_{\rm equity},\zeta_{\rm environment}]^\top.
 $$
 
-The formal Stage-6 distinction is
+Stage 6 determines **why change is required, what must change and how deep the change must be**.
+
+---
+
+## 14. Stage-7 infrastructure-architecture transformation
+
+The frozen Stage-7 input is
 
 $$
-\underbrace{\text{viability of the current regime}}_{\text{Stage 5}}
+\Gamma_6=(c_6,\mathcal D_6,\boldsymbol\zeta_T).
+$$
+
+The Stage-7 research question is:
+
+> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
+
+The infrastructure-regime object is
+
+$$
+\mathcal M_k
+=
+(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\boldsymbol\theta_k,\mathcal U_k).
+$$
+
+Stage 4 and Stage 7 act at different levels:
+
+$$
+\underbrace{u(t)}_{\text{Stage 4}}
+=\text{operate the current regime},
+$$
+
+$$
+\underbrace{a_k}_{\text{Stage 7}}
+=\text{transform the regime itself}.
+$$
+
+The intervention vector is
+
+$$
+a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}],
+$$
+
+and the regime transition is
+
+$$
+\mathcal M_{k+1}
+=
+\mathcal T_{a_k}(\mathcal M_k,\xi_k).
+$$
+
+---
+
+## 15. Stage-7 transformation meta-graph
+
+The transformation graph is
+
+$$
+\mathbb G_{\rm ST}
+=(\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
+$$
+
+where
+
+$$
+v_k\equiv\mathcal M_k,
+$$
+
+and
+
+$$
+\mathcal M_k\xrightarrow{a_{k\ell}}\mathcal M_\ell.
+$$
+
+This is the Stage-7 **topology-of-topologies** representation: the nodes are alternative complete P–T–I–O infrastructure regimes rather than ordinary infrastructure components.
+
+---
+
+## 16. Adaptive transformation policy, triggers and path dependence
+
+The transformation decision rule is
+
+$$
+a_k
+=
+\pi_k(\widehat Y_k,z_{I,k},z_{O,k},\mathcal M_k,\mathcal H_k),
+$$
+
+with policy
+
+$$
+\boldsymbol\pi=\{\pi_0,\pi_1,\ldots,\pi_N\}.
+$$
+
+For monitored signpost
+
+$$
+s_j(t)
+=
+s_j(\widehat Y(t),z_I(t),z_O(t),\mathcal M(t),\xi(t)),
+$$
+
+the trigger time is
+
+$$
+\tau_j
+=
+\inf\{t:s_j(t)\in\Gamma_j\}.
+$$
+
+Path dependence is represented by
+
+$$
+\mathcal A_{k+1}
+=
+\mathcal A(\mathcal M_{k+1},\mathcal H_{t_{k+1}}),
+$$
+
+and in general
+
+$$
+\mathcal T_{a_2}\circ\mathcal T_{a_1}
 \neq
-\underbrace{\text{adequacy of preserving that regime}}_{\text{Stage 6}}.
+\mathcal T_{a_1}\circ\mathcal T_{a_2}.
 $$
 
-Stage 6 determines **why change is required, what must change and how deep the change must be**. It does not select the intervention sequence.
+Therefore intervention order matters.
 
 ---
 
-## 14. Stage-7 handoff — candidate research only
+## 17. Stage-7 feasibility, viability and sustainable target set
 
-The frozen input to Stage 7 is
-
-$$
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
-\longrightarrow
-\text{candidate strategic interventions and pathways}.
-$$
-
-The deterministic representation
+The feasible strategic action set is
 
 $$
-\Pi=[(a_1,t_1),\ldots,(a_N,t_N)]
+\mathcal A_k^{\rm feas}
+=
+\mathcal A_k^{\rm tech}
+\cap
+\mathcal A_k^{\rm budget}
+\cap
+\mathcal A_k^{O}
+\cap
+\mathcal A_k^{\rm sus}
+\cap
+\mathcal A_k^{\rm equity}
+\cap
+\mathcal A_k^{\rm temporal}.
 $$
 
-remains a candidate representation of one realized branch. Current Stage-7 research is testing whether the fundamental object should instead be an adaptive, trigger-dependent pathway graph under deep uncertainty.
+For each candidate regime, Stage-5 viability is re-evaluated:
 
-No Stage-7 mathematical object is frozen in this foundation yet.
+$$
+\mathcal V_{\rm sus}^{u,T}(\mathcal M_k).
+$$
+
+The sustainable viable target-regime set is
+
+$$
+\mathbb M_{\rm sus}
+=
+\left\{
+\mathcal M:
+\mathcal V_{\rm sus}^{u}(\mathcal M)
+\text{ satisfies required resilience, sustainability and equity conditions}
+\right\}.
+$$
+
+Thus Stage 7 is a reachability problem in infrastructure-architecture space:
+
+$$
+(\mathcal M_0,Y_0)
+\overset{\pi}{\longrightarrow}
+\mathbb M_{\rm sus}.
+$$
 
 ---
 
-## 15. Cross-stage mathematical chain
+## 18. Stage-7 objectives and uncertainty
 
-The frozen mathematical architecture through Stage 6 is
+The frozen many-objective vector is
+
+$$
+\mathbf J(\Pi)
+=
+\begin{bmatrix}
+J_{\rm risk}\\
+J_{\rm service}\\
+J_{\rm cost}\\
+J_{\rm carbon}\\
+J_{\rm inequity}\\
+J_{\rm time}\\
+J_{\rm flexibility}
+\end{bmatrix}.
+$$
+
+The framework distinguishes
+
+$$
+\xi\sim P,
+\qquad
+P\in\mathcal P,
+\qquad
+\omega\in\Omega,
+$$
+
+for probabilistic uncertainty, distributional ambiguity and deep uncertainty respectively.
+
+Under deep uncertainty,
+
+$$
+\Pi^\star
+\in
+\operatorname{RobustPareto}(\mathbf J,\Omega).
+$$
+
+---
+
+## 19. Frozen Stage-7 fundamental object
+
+The canonical Stage-7 object is
+
+**Equation F.5 — Adaptive transformation pathway object**
+
+$$
+\boxed{
+\mathfrak P_{\rm ST}
+=
+(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus})
+}.
+$$
+
+This exact object is a proposed thesis construct `[P]`; its framework status is frozen, while its scientific utility remains subject to numerical validation and falsification.
+
+The realized pathway is
+
+$$
+\Pi_{\pi,\omega}
+=
+[(\mathcal M_0,a_0,\tau_0),(\mathcal M_1,a_1,\tau_1),\ldots,\mathcal M_N].
+$$
+
+Stage 7 is therefore defined as an **adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures**.
+
+---
+
+## 20. Complete cross-stage mathematical chain
+
+The frozen mathematical architecture is
+
+$$
+\boxed{
+\underbrace{\mathcal S}_{1}
+\rightarrow
+\underbrace{\mathfrak I}_{2}
+\rightarrow
+\underbrace{F_{\mathcal G}^{m}}_{3}
+\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
+\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
+\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
+\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}
+}.
+$$
+
+Conceptually:
+
+$$
+\boxed{
+\text{ontology}
+\rightarrow
+\text{causal coupling}
+\rightarrow
+\text{dynamics}
+\rightarrow
+\text{knowledge/control}
+\rightarrow
+\text{viability}
+\rightarrow
+\text{transformation diagnosis}
+\rightarrow
+\text{adaptive transformation pathway}
+}.
+$$
+
+---
+
+## 21. Seven-stage validation loop
+
+Every candidate transformation must be replayed through Stages 1–6:
 
 $$
 \begin{aligned}
-\{P,T,I,O\}
-&\rightarrow\mathfrak I_{ij}^{\alpha\beta}
-\rightarrow\{Y,\mathcal G,m,T_C\}\\
-&\rightarrow\{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}\\
-&\rightarrow\{K_{\rm sus},\mathcal V,\partial\mathcal V,
-\rho,T_{\mathcal V},T_K\}\\
-&\rightarrow\Phi_{\rm ST}
-\rightarrow(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
+\text{Stage 7 candidate}
+&\rightarrow\text{Stage 1 structural update}\\
+&\rightarrow\text{Stage 2 mechanism update}\\
+&\rightarrow\text{Stage 3 dynamic simulation}\\
+&\rightarrow\text{Stage 4 observability/control evaluation}\\
+&\rightarrow\text{Stage 5 viability evaluation}\\
+&\rightarrow\text{Stage 6 adequacy diagnosis}\\
+&\rightarrow\text{Stage 7 accept/reject/refine}.
 \end{aligned}
 $$
 
-Stage 7 must begin from this handoff and must not redefine the upstream frozen objects.
+This loop validates the stages; it does not replace or reorder them.
 
 ---
 
-## 16. Mathematical discipline
+## 22. Mathematical discipline
 
 The foundation is governed by the separations
 
@@ -471,8 +724,21 @@ X&\neq y\neq\widehat X,\\
 K_{\rm sus}&\neq\mathcal V_{\rm sus}^{u,T},\\
 V_{\rm HJ}&\neq d(\cdot,\partial\mathcal V)\quad\text{in general},\\
 \text{current-regime viability}&\neq\text{long-horizon regime adequacy},\\
-u(t)&\neq a_k\quad\text{(operational control versus structural transformation action)}.
+u(t)&\neq a_k,\\
+\text{realized fixed sequence}&\subset\text{adaptive transformation policy}.
 \end{aligned}
 $$
 
 These distinctions are mandatory in equations, simulations, figures and interpretation.
+
+---
+
+## 23. Final framework state
+
+$$
+\boxed{
+\textbf{STAGES 1--7: CONCEPTUAL AND MATHEMATICAL FRAMEWORK FROZEN}
+}
+$$
+
+The next phase is operationalization and numerical validation.
