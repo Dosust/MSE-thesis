@@ -1,52 +1,76 @@
-version: 1
+version: 2
 project: MSE-thesis
-scientific_object: boundary_of_sustainable_equitable_viability_kernel
-state_sectors:
-  - power
-  - water
-  - transportation
-  - solid_waste
+framework_status: stages_1_to_7_frozen
+system:
+  physical_systems:
+    - power
+    - transportation
+  layers:
+    - information
+    - organization
+
+primary_hypotheses:
+  source: project/RESEARCH_HYPOTHESES.md
+  ids: [H1, H2, H3, H4, H5]
+  numerical_thresholds_frozen: false
 
 propositions:
   P1:
-    name: dynamic_interfaces_matter
-    object: viability_boundary_deformation
-    metric: hausdorff_distance
-    comparison: dynamic_interface_vs_static_interface
+    name: ptio_representation_adds_value
+    object: physical_only_vs_ptio_model
+    comparison: PT_vs_PTIO
+    falsification: no_material_out_of_sample_improvement_after_complexity_control
   P2:
-    name: interface_identifiability_matters
-    object: inferred_viability_reliability
-    metric: posterior_boundary_uncertainty
-    comparison: true_or_benchmark_vs_inferred_parameters
+    name: dynamic_interdependencies_change_outcomes
+    object: dynamic_vs_static_coupling
+    comparison: dynamic_interdependency_vs_static_interdependency
+    falsification: trajectory_and_viability_differences_below_predeclared_tolerance
   P3:
-    name: timescale_ratio_controls_static_validity
-    object: interface_to_system_timescale_ratio
-    metric: dynamic_static_error
-    regimes:
-      - fast_interface
-      - commensurate_timescale
-      - slow_interface
+    name: information_degradation_changes_control
+    object: information_state_and_estimation
+    comparison: degraded_information_vs_full_information
+    falsification: negligible_change_in_estimation_response_or_closed_loop_outcome
   P4:
-    name: sustainability_equity_deform_viability
-    object: admissible_set_and_viability_kernel
-    metric: boundary_and_measure_change
-    comparison: technical_only_vs_sustainability_equity
+    name: organizational_constraints_change_viability
+    object: feasible_action_set_and_controlled_viability
+    comparison: realistic_organization_vs_idealized_organization
+    falsification: negligible_change_in_action_set_or_viability_outcomes
   P5:
-    name: recovery_is_not_viability
-    object: capture_basin_and_recovery_time
-    metric: recoverable_nonviable_measure
+    name: timing_diagnostics_are_decision_relevant
+    object: response_vs_cascade_and_viability_timing
+    comparison: timing_diagnostics_with_vs_without_conditioning
+    falsification: no_discrimination_of_successful_vs_failed_response
   P6:
-    name: waste_drainage_flood_feedback_matters
-    object: pwtsw_coupled_response
-    metric: boundary_service_and_recovery_change
-    comparison: feedback_on_vs_feedback_off
+    name: riemannian_margin_adds_value
+    object: viability_boundary_geometry
+    comparison: normalized_euclidean_vs_riemannian_margin
+    falsification: no_reproducible_gain_over_simpler_geometry
   P7:
-    name: reduced_models_preserve_decisions
-    object: reduced_viability_geometry
-    metric: conservative_projection_error
+    name: viability_sensitivity_identifies_critical_interfaces
+    object: interdependency_viability_sensitivity
+    comparison: viability_sensitivity_vs_structural_rankings
+    falsification: structural_rankings_equal_or_superior_under_equal_budget
+  P8:
+    name: reduced_viability_state_preserves_decisions
+    object: full_vs_reduced_viability_model
+    comparison: full_state_vs_reduced_state
+    falsification: false_safe_classifications_or_unstable_rankings
+  P9:
+    name: current_viability_does_not_imply_regime_adequacy
+    object: stage5_viability_vs_stage6_long_horizon_adequacy
+    comparison: viability_only_vs_viability_plus_long_horizon_requirements
+    falsification: stage6_diagnosis_adds_no_decision_relevant_distinction
+  P10:
+    name: persistent_interdependency_lock_in_can_require_structural_change
+    object: repeated_recovery_vs_structural_transformation
+    comparison: restore_original_dependency_vs_modify_dependency
+    falsification: structural_change_has_no_material_long_horizon_advantage
 
 inference_rules:
   require_predeclared_metric: true
+  require_predeclared_threshold_for_confirmatory_tests: true
   require_uncertainty_when_applicable: true
   require_scope_statement: true
+  require_baseline_and_ablation: true
   prohibit_global_novelty_from_literature_rank: true
+  framework_freeze_does_not_imply_empirical_validation: true
