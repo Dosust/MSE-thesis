@@ -2,11 +2,11 @@
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** Active thesis source of truth  
-**Framework status:** Seven-stage architecture frozen  
-**Research status:** Stage 1 defined; Stage 2 frozen; Stage 3 next  
+**Framework:** Canonical seven-stage architecture  
+**Current state:** Stage 1 defined; Stage 2 frozen; Stage 3 next  
 **Updated:** 2026-09-11
 
-> **Repository rule:** all active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical files are retained only for provenance and do not override current canonical files.
+> **Repository rule:** all active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical material is retained only for provenance and does not override current canonical files.
 
 ---
 
@@ -20,7 +20,7 @@ P,T=\text{physical infrastructure systems},
 I,O=\text{informational and organizational layers}.
 $$
 
-Hence
+Therefore
 
 $$
 \mathcal S=\{P,T,I,O\}.
@@ -241,8 +241,6 @@ $$
 
 The model must distinguish continuous evolution, discrete events, delays, heterogeneous timescales, state/history dependence, disturbances, and admissible controls.
 
-The temporal rule is
-
 $$
 \text{event time}
 \neq
@@ -289,7 +287,7 @@ u
 X.
 $$
 
-The intervention/control variable is $u(t)$. For all analytical and numerical work, use
+The intervention/control variable is $u(t)$. For analytical and numerical work,
 
 $$
 y=H(X)+\varepsilon_y,
@@ -298,7 +296,7 @@ y=H(X)+\varepsilon_y,
 \qquad
 u=\pi(\widehat X,I,O),
 \qquad
-u\in\mathcal U(I,O).
+nu\in\mathcal U(I,O).
 $$
 
 The scientific question is whether sensing, communication, estimation, authority, coordination, resources, logistics, and organizational delays allow an admissible intervention to arrive before critical degradation.
