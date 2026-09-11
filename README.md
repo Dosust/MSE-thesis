@@ -21,6 +21,16 @@
 
 ---
 
+## Abstract
+
+**Status:** Proposal / pre-results abstract.
+
+The increasing electrification and interdependence of urban infrastructure are creating tightly coupled power–transportation systems whose resilience depends not only on physical network structure, but also on dynamic interdependencies, information availability, organizational response, and feasible control actions. However, existing resilience studies commonly treat these dimensions separately, rely on static dependency representations, or evaluate recovery primarily through service-loss metrics, providing limited insight into whether a disrupted system remains controllably capable of satisfying critical service and sustainability constraints. To address this gap, this study develops a **multilayer dynamics and controlled-viability framework for interdependent power–transportation systems**, explicitly integrating physical, informational, and organizational mechanisms. First, a multilayer interdependency representation is formulated to map state-, time-, and mode-dependent power–transportation interactions into coupled hybrid multiscale dynamics, enabling explicit characterization of disruption propagation and cascading effects. Second, an observation–organization–control layer is introduced to represent sensing, estimation, communication, coordination, resource availability, and response delays, thereby linking system state information to feasible intervention sets. Third, controlled viability theory is used to characterize the set of states from which sustainability and service constraints can remain satisfied under admissible controls, together with viability margins, time-to-viability loss, and interface-level criticality measures. Finally, adaptive transformation pathways are formulated as viability-constrained, many-objective transitions between alternative infrastructure architectures under deep uncertainty. The framework will be evaluated through a minimal sufficient power–transportation–information–organization demonstrator using physics-based simulation, verification and validation, uncertainty quantification, competing-model comparisons, and hypothesis-driven experiments. The study aims to establish when dynamic interdependencies, information and organizational constraints, viability-based indicators, and adaptive infrastructure transformation materially improve the characterization and management of infrastructure resilience.
+
+> **Results rule:** quantitative performance claims are intentionally omitted at this stage. Numerical improvements will be added only after the confirmatory hypotheses $H_1$–$H_5$ have been tested.
+
+---
+
 ## Canonical entry points
 
 | File | Role |
