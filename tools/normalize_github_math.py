@@ -116,7 +116,13 @@ def normalize_text(text: str) -> tuple[str, int]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--write", action="store_true", help="write normalized files in place")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--write", action="store_true", help="write normalized files in place")
+    mode.add_argument(
+        "--check",
+        action="store_true",
+        help="return non-zero if active Markdown still contains normalizable multiline $$ blocks",
+    )
     args = parser.parse_args()
 
     changed: list[tuple[Path, int]] = []
@@ -128,12 +134,16 @@ def main() -> int:
             if args.write:
                 path.write_text(normalized, encoding="utf-8")
 
-    mode = "UPDATED" if args.write else "WOULD UPDATE"
+    mode_label = "UPDATED" if args.write else "WOULD UPDATE"
     for path, count in changed:
-        print(f"{mode}: {path.relative_to(ROOT)} ({count} math block(s))")
+        print(f"{mode_label}: {path.relative_to(ROOT)} ({count} math block(s))")
 
     total = sum(count for _, count in changed)
     print(f"GitHub math normalization: {len(changed)} file(s), {total} block(s)")
+
+    if args.check and changed:
+        print("FAIL: active Markdown contains fragile multiline $$ blocks")
+        return 1
     return 0
 
 
