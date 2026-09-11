@@ -55,17 +55,14 @@ Canonical system files:
 The research determines how causal interdependencies among $P$, $T$, $I$, and $O$ shape disruption propagation, coupled system evolution, knowledge of system state, organizational response capability, controlled trajectories, viability, and long-term sustainable transformation.
 
 $$
+\begin{aligned}
 \text{Structure}
-\rightarrow
-\text{Causal Mechanisms}
-\rightarrow
-\text{Coupled Dynamics}
-\rightarrow
-\text{Observation and Control}
-\rightarrow
-\text{Viability}
-\rightarrow
-\text{Sustainable Transformation}.
+&\rightarrow \text{Causal Mechanisms}
+\rightarrow \text{Coupled Dynamics}\\
+&\rightarrow \text{Observation and Control}
+\rightarrow \text{Viability}
+\rightarrow \text{Sustainable Transformation}.
+\end{aligned}
 $$
 
 > **Modeling principle:** topology alone is insufficient. Every retained cross-layer relation must have a defensible causal mechanism, a state-dependent effect, and a temporal interpretation.
@@ -125,11 +122,10 @@ Evidence-grounded Stage 1–2 companion: [`project/STAGES_1_2_APA7_EVIDENCE_GROU
 Stage 2 is **canonical and frozen**.
 
 $$
-\mathcal I=
-\{
-P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,
-T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I
-\}.
+\begin{aligned}
+\mathcal I=\{&P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\\
+&T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I\}.
+\end{aligned}
 $$
 
 Every accepted interdependency is represented by
@@ -137,7 +133,9 @@ Every accepted interdependency is represented by
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
+\left(
+E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
+\right).
 $$
 
 The causal admissibility rule is
@@ -215,6 +213,8 @@ $$
 y_k(t)=H_k[X(t-\delta_k)]+\nu_k(t),
 $$
 
+where $\nu_k(t)$ is measurement noise.
+
 $$
 (\widehat X(t),\Sigma_X(t))
 =
@@ -230,16 +230,14 @@ $$
 ### Organizational feasibility and control
 
 $$
-\mathcal U_{\rm available}(t)=\mathcal U[z_I(t),z_O(t)],
+\mathcal U_{\rm available}(t)=\mathcal U\!\left(z_I(t),z_O(t)\right),
 $$
 
 $$
-u(t)=\pi[\widehat X(t),z_I(t),z_O(t)],
+u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
-u(t)\in\mathcal U[z_I(t),z_O(t)].
+u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
-
-In the rendered equation above, the intervention symbol is the canonical control variable $u(t)$; measurement noise remains $\nu_k(t)$.
 
 No particular solver—MPC, MILP, dynamic programming, reinforcement learning, game theory, or otherwise—is frozen into the framework.
 
@@ -248,7 +246,11 @@ No particular solver—MPC, MILP, dynamic programming, reinforcement learning, g
 For a sequential, non-overlapping response path,
 
 $$
-\tau_{\rm response}=\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\begin{aligned}
+\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}
++\tau_{\rm decision}\\
+&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\end{aligned}
 $$
 
 If processes overlap, $\tau_{\rm response}$ is the completion time of the relevant critical path.
@@ -269,13 +271,11 @@ $\Pi_R$ is a **proposed thesis diagnostic**, not an established resilience law.
 
 ### Stage boundary
 
-$$
-\boxed{
-\text{Stage 3 produces trajectories;}\quad
-\text{Stage 4 observes and controls them;}\quad
-\text{Stage 5 evaluates their viability.}
-}
-$$
+| Stage | Responsibility |
+|---|---|
+| **3** | Generates the coupled trajectories. |
+| **4** | Observes, infers, coordinates, and controls them. |
+| **5** | Evaluates whether the controlled trajectories remain viable. |
 
 Stage-4 authority: [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
 
@@ -320,11 +320,13 @@ Stage 6 translates verified resilience findings into transformation requirements
 The thesis uses an evidence-gated workflow:
 
 $$
+\begin{aligned}
 \text{Literature}
-\xrightarrow{\text{systematic review / PRISMA}}
-\text{Evidence Structure}
-\xrightarrow{\text{formalization}}
+&\xrightarrow{\text{systematic review / PRISMA}}
+\text{Evidence Structure}\\
+&\xrightarrow{\text{formalization}}
 (\mathcal G,\mathfrak I,F,J,\tau,I,O,K,\mathcal V,u).
+\end{aligned}
 $$
 
 The thesis distinguishes
@@ -346,17 +348,13 @@ $$
 ## 11. Current research state
 
 $$
-\boxed{
+\begin{aligned}
 \text{Stage 1: defined}
-\rightarrow
-\text{Stage 2: frozen}
-\rightarrow
-\text{Stage 3: frozen}
-\rightarrow
-\text{Stage 4: frozen}
-\rightarrow
-\textbf{Stage 5: next}
-}
+&\rightarrow \text{Stage 2: frozen}
+\rightarrow \text{Stage 3: frozen}\\
+&\rightarrow \text{Stage 4: frozen}
+\rightarrow \mathbf{Stage\ 5:\ next}.
+\end{aligned}
 $$
 
 The immediate framework task is to formalize Stage 5 using the controlled trajectories produced by Stages 3–4 and to define the admissible set, controlled viability object, time-to-exit logic, geometric margin, uncertainty treatment, and validation obligations without modifying the frozen upstream stages.
