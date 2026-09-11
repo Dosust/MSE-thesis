@@ -1,616 +1,251 @@
-# Full System of Systems Definition
+# Full System-of-Systems Definition
 
-```math
-\boxed{ \mathcal S=\{P,T,I,O\} }
-```
+**Status:** CANONICAL FRAMEWORK-LEVEL DECOMPOSITION  
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**System:** Power–Transportation–Information–Organization (P–T–I–O)  
+**Rendering:** GitHub-compatible mathematics; long taxonomies use tables rather than oversized formulas
 
-We study a:
+The framework-level system is
 
-```math
-\boxed{\textbf{Multilayer Physical Informational Organizational Interdependent Infrastructure System}}
-```
+$$
+\mathcal S=\{P,T,I,O\},
+$$
 
-with:
+with
 
-```math
-\boxed{ \underbrace{P,T}_{\text{physical infrastructure systems}} \qquad \underbrace{I,O}_{\text{informational and organizational layers}} }
-```
+$$
+P,T=\text{physical infrastructure systems},
+\qquad
+I,O=\text{informational and organizational layers}.
+$$
 
-The complete system state is:
+The complete state is
 
-```math
-\boxed{ Y(t)= \begin{bmatrix} x_P(t)\\ x_T(t)\\ z_I(t)\\ z_O(t) \end{bmatrix} }
-```
+$$
+Y(t)=
+\begin{bmatrix}
+x_P(t)\\
+x_T(t)\\
+z_I(t)\\
+z_O(t)
+\end{bmatrix}.
+$$
 
----
-
-# 1. Power System `P`
-
-Framework-level decomposition:
-
-```math
-\boxed{ P= P_G \cup P_{Tr} \cup P_D \cup P_{DER} \cup P_C \cup P_{TP} }
-```
-
-### `P_G` — Generation
-
-- conventional generation
-- solar generation
-- wind generation
-- distributed generation
-
-### `P_{Tr}` — Transmission
-
-- high-voltage buses
-- transmission lines
-- bulk substations
-- transmission transformers
-
-### `P_D` — Distribution
-
-- distribution substations
-- feeders
-- transformers
-- buses
-- LV/MV networks
-- critical loads
-
-### `P_{DER}` — Distributed Energy Resources and Storage
-
-- battery energy storage systems
-- distributed PV
-- microgrids
-- local generation
-- flexible DERs
-
-### `P_C` — Charging Power Infrastructure
-
-- EV charging stations
-- fast chargers
-- bus depot chargers
-- opportunity chargers
-- AC/DC converters
-- bidirectional chargers
-- smart-charging infrastructure
-- V2G interfaces
-
-### `P_{TP}` — Traction Power Supply
-
-- traction substations
-- traction transformers
-- rectifiers
-- inverters
-- railway feeders
-- catenary
-- third rail
-- return circuits
-- wayside storage
-- AC traction systems
-- DC traction systems
-
-Therefore:
-
-```math
-\boxed{ P= \{\text{generation, transmission, distribution, DER/storage, charging, traction power}\} }
-```
-
-Representative physical state:
-
-```math
-\boxed{ x_P= [ V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC ]^{\top} }
-```
+> **Canonical description:** A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.
 
 ---
 
-# 2. Transportation System `T`
+## 1. Power infrastructure system $P$
 
-Framework-level decomposition:
+The framework-level decomposition is
 
-```math
-\boxed{ T= T_R \cup T_B \cup T_U \cup T_H \cup T_M }
-```
+$$
+P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP}.
+$$
 
-### `T_R` — Road Transportation
+| Symbol | Subsystem | Representative content |
+|---|---|---|
+| $P_G$ | Generation | conventional generation, solar, wind, distributed generation |
+| $P_{Tr}$ | Transmission | high-voltage buses, lines, bulk substations, transmission transformers |
+| $P_D$ | Distribution | distribution substations, feeders, transformers, buses, LV/MV networks, critical loads |
+| $P_{DER}$ | Distributed energy resources and storage | BESS, distributed PV, microgrids, local generation, flexible DERs |
+| $P_C$ | Charging power infrastructure | EV chargers, fast chargers, bus-depot/opportunity chargers, converters, bidirectional charging, smart charging, V2G interfaces |
+| $P_{TP}$ | Traction-power supply | traction substations/transformers, rectifiers, inverters, feeders, catenary, third rail, return circuits, wayside storage, AC/DC traction systems |
 
-- road links
-- intersections
-- traffic signals
-- traffic flows
-- private vehicles
-- EVs
-- taxis
-- shared mobility
-- charging access
-- critical road corridors
-- emergency routes
-- repair crew routes
+A representative power state is
 
-### `T_B` — Electric Bus Transportation
-
-- electric buses
-- bus routes
-- depots
-- terminals
-- depot charging
-- opportunity charging
-- bus scheduling
-- fleet operations
-
-### `T_U` — Urban Rail Transit
-
-```math
-\boxed{ T_U= \{ \text{Metro}, \text{MRT}, \text{Subway}, \text{LRT}, \text{Tram} \} }
-```
-
-Include:
-
-- trains
-- tracks
-- stations
-- platforms
-- signaling
-- traction interfaces
-- depots
-- passenger transfer nodes
-- operational schedules
-
-### `T_H` — Regional and Heavy Electrified Rail
-
-- commuter rail
-- suburban rail
-- regional rail
-- intercity rail
-- high-speed rail
-- electrified freight rail where relevant
-
-### `T_M` — Multimodal and Transfer System
-
-- intermodal stations
-- transfer hubs
-- road-to-rail connections
-- bus-to-rail connections
-- alternative routes
-- passenger transfers
-- emergency substitution between modes
-
-Therefore:
-
-```math
-\boxed{ T= \{\text{road EV, electric bus, urban rail, regional/heavy rail, multimodal transfer}\} }
-```
-
-Representative state:
-
-```math
-\boxed{ x_T= [ q,k,v,TT,A,SOC_{EV},s_{\rm rail} ]^{\top} }
-```
-
-where `A` captures accessibility and `s_{\rm rail}` represents relevant rail operational states.
+$$
+x_P=
+[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC_B]^\top.
+$$
 
 ---
 
-# 3. Information System `I`
+## 2. Transportation infrastructure system $T$
 
-Framework-level decomposition:
+The framework-level decomposition is
 
-```math
-\boxed{ I= I_S \cup I_C \cup I_D \cup I_E \cup I_A \cup I_X \cup I_{\tau} }
-```
+$$
+T=T_R\cup T_B\cup T_U\cup T_H\cup T_M.
+$$
 
-### `I_S` — Sensing and Measurement
+| Symbol | Subsystem | Representative content |
+|---|---|---|
+| $T_R$ | Road transportation | links, intersections, signals, traffic flows, private vehicles, EVs, shared mobility, charging access, emergency routes, repair-crew routes |
+| $T_B$ | Electric-bus transportation | buses, routes, depots, terminals, charging, scheduling, fleet operations |
+| $T_U$ | Urban rail transit | metro, MRT, subway, LRT, tram, tracks, stations, signaling, traction interfaces, depots, operating schedules |
+| $T_H$ | Regional/heavy electrified rail | commuter, suburban, regional, intercity, high-speed, and relevant electrified freight rail |
+| $T_M$ | Multimodal/transfer system | intermodal stations, transfer hubs, road–rail and bus–rail connections, alternative routes, passenger transfers, emergency modal substitution |
 
-Power:
+A representative transportation state is
 
-- SCADA measurements
-- PMUs
-- smart meters
-- IEDs
-- feeder/substation sensors
-- traction-power measurements
-- charging-station measurements
+$$
+x_T=
+[q,k,v,TT,A,SOC_{EV},s_{\rm rail}]^\top,
+$$
 
-Transportation:
-
-- traffic detectors
-- cameras
-- roadside sensors
-- vehicle telemetry
-- EV SOC telemetry
-- bus telemetry
-- train position/speed
-- track/station sensors
-
-### `I_C` — Communication and Networking
-
-Power:
-
-- utility WAN
-- SCADA communication
-- substation communication
-- PMU communication
-- AMI networks
-
-Transportation:
-
-- V2V
-- V2I
-- V2X
-- roadside units
-- cellular communication
-- ITS networks
-- train-to-wayside communication
-- rail radio/fiber networks
-
-### `I_D` — Data Acquisition and Management
-
-- SCADA databases
-- synchrophasor streams
-- AMI data
-- traffic-management data
-- vehicle/train telemetry
-- charging data
-- event logs
-- databases
-- APIs
-- data streams
-- data fusion
-
-### `I_E` — Estimation and Situational Awareness
-
-Power:
-
-- state estimation
-- load estimation
-- topology estimation
-- outage detection
-- DER/EV estimation
-
-Transportation:
-
-- traffic-state estimation
-- congestion estimation
-- accessibility estimation
-- travel-time estimation
-- train localization
-- service-state estimation
-
-Mathematically:
-
-```math
-\boxed{ \hat X(t)=\mathcal E(y_{[0,t]},I(t)) }
-```
-
-### `I_A` — Automation, Signaling and Control Logic
-
-Power:
-
-- EMS
-- DMS
-- SCADA control logic
-- protection commands
-- DER control
-- charging-control signals
-
-Road:
-
-- adaptive traffic signals
-- route guidance
-- charging scheduling
-
-Rail:
-
-- CBTC
-- ATP
-- ATO
-- ATS
-
-### `I_X` — Cross-Domain Interoperability
-
-- EV-grid communication
-- smart charging
-- V2G information exchange
-- charging platforms
-- power-transport APIs
-- traction energy management
-- energy-mobility coordination
-- edge/cloud platforms
-
-Central relation:
-
-```math
-\boxed{ P \leftrightarrow I_X \leftrightarrow T }
-```
-
-### `I_{\tau}` — Timing, Synchronization and Positioning
-
-- timestamps
-- clock synchronization
-- update timing
-- GNSS/location
-- train positioning
-- measurement synchronization
-- information freshness
-
-Key information attributes:
-
-```math
-\boxed{ z_I= [ A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync} ]^{\top} }
-```
-
-with:
-
-- availability `A_I`
-- latency `L_I`
-- data quality `Q_I`
-- information age `\Delta_I`
-- data loss `p_{\rm loss}`
-- estimation error `e_X`
-- synchronization error `\epsilon_{\rm sync}`
-
-Conceptually:
-
-```math
-\boxed{ I=\text{SENSE + COMMUNICATE + ESTIMATE + SIGNAL} }
-```
-
-or simply:
-
-```math
-\boxed{I=\textbf{KNOW}}
-```
+where $A$ denotes accessibility and $s_{\rm rail}$ denotes relevant rail operational states.
 
 ---
 
-# 4. Organizational System `O`
+## 3. Information layer $I$
 
-Framework-level decomposition:
+The framework-level decomposition is
 
-```math
-\boxed{ O= O_A \cup O_G \cup O_D \cup O_C \cup O_R \cup O_W \cup O_L \cup O_M \cup O_X \cup O_K }
-```
+$$
+I=I_S\cup I_C\cup I_D\cup I_E\cup I_A\cup I_X\cup I_{\tau}.
+$$
 
-### `O_A` — Actors and Responsibilities
+| Symbol | Information function | Representative content |
+|---|---|---|
+| $I_S$ | Sensing and measurement | SCADA, PMUs, smart meters, IEDs, traffic detectors, cameras, vehicle/bus/train telemetry, traction and charging measurements |
+| $I_C$ | Communication and networking | utility WAN, SCADA/PMU/AMI networks, V2V/V2I/V2X, cellular/ITS, train-to-wayside, rail radio/fiber |
+| $I_D$ | Data acquisition and management | databases, synchrophasor/AMI/traffic streams, charging data, telemetry, event logs, APIs, data fusion |
+| $I_E$ | Estimation support and situational information | state-estimation inputs/capability, topology/load/outage information, congestion/accessibility estimates, train localization |
+| $I_A$ | Automation, signaling and control logic | EMS, DMS, SCADA logic, protection commands, DER/charging control, adaptive signals, route guidance, CBTC, ATP, ATO, ATS |
+| $I_X$ | Cross-domain interoperability | EV-grid communication, smart charging, V2G exchange, power–transport APIs, traction energy management, energy–mobility coordination |
+| $I_{\tau}$ | Timing, synchronization and positioning | timestamps, clock synchronization, GNSS/location, update timing, train positioning, measurement synchronization, information freshness |
 
-- power utilities
-- system/grid operators
-- distribution operators
-- charging operators
-- traction-power operators
-- road authorities
-- traffic management centers
-- bus operators
-- Metro/MRT operators
-- railway infrastructure managers
-- train operators
-- telecom operators
-- emergency authorities
-- regulators
-- contractors
-- suppliers
+The canonical information state is
 
-### `O_G` — Governance and Institutional Rules
+$$
+z_I=
+[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
+$$
 
-- laws
-- regulations
-- contracts
-- policies
-- operating procedures
-- emergency plans
-- authority structures
-- restoration priorities
+The conceptual shorthand is
 
-### `O_D` — Decision Making
+$$
+I:\quad \text{SENSE}\rightarrow\text{COMMUNICATE}\rightarrow\text{ESTIMATE/SIGNAL}\rightarrow\text{KNOW}.
+$$
 
-- damage interpretation
-- prioritization
-- intervention selection
-- repair decisions
-- service prioritization
-- centralized decision making
-- decentralized decision making
-- collaborative decision making
+Actual Stage-4 state estimation is not defined by this layer decomposition; it is represented separately as
 
-### `O_C` — Coordination
-
-- intra-agency coordination
-- inter-agency coordination
-- power-transport coordination
-- emergency command
-- joint planning
-- information sharing
-- command alignment
-
-Organizational network:
-
-```math
-\boxed{ \mathcal G_O(t)= (V_O,E_O(t),W_O(t)) }
-```
-
-### `O_R` — Resource Allocation
-
-- repair crews
-- maintenance vehicles
-- equipment
-- spare parts
-- mobile generation
-- batteries
-- emergency vehicles
-- budgets
-- technical resources
-
-### `O_W` — Workforce Capability
-
-- engineers
-- operators
-- dispatchers
-- maintenance personnel
-- repair crews
-- specialists
-- training
-- expertise
-- workforce availability
-
-### `O_L` — Logistics and Mobilization
-
-- crew dispatch
-- equipment deployment
-- staging
-- spare-part delivery
-- route selection
-- mobile generator deployment
-- resource mobilization
-
-### `O_M` — Restoration Management
-
-- inspection priorities
-- repair prioritization
-- crew assignment
-- restoration sequence
-- restoration scheduling
-- critical-service priorities
-
-### `O_X` — Cross-Sector Collaboration
-
-```math
-\boxed{ O_P \leftrightarrow O_T \leftrightarrow O_I \leftrightarrow O_E }
-```
-
-including coordination among:
-
-- power operators
-- road authorities
-- rail/transit operators
-- communication operators
-- emergency organizations
-- regulators
-
-### `O_K` — Learning and Adaptation
-
-- after-action learning
-- institutional memory
-- procedure updates
-- adaptive governance
-- lessons learned
-- long-term organizational adaptation
-
-Representative organizational state:
-
-```math
-\boxed{ z_O= [ A_O,C_O,R_O,W_O, \tau_D,\tau_C^{O},\tau_M ]^{\top} }
-```
-
-representing authority, coordination, resources, workforce, decision time, coordination time, and mobilization time.
-
-Conceptually:
-
-```math
-\boxed{ O=\text{DECIDE + COORDINATE + RESOURCE + MOBILIZE} }
-```
+$$
+\widehat X(t)=\mathcal E\!\left(y_{[0,t]},z_I(t)\right).
+$$
 
 ---
 
-# 5. The Complete Physical Coupling
+## 4. Organizational layer $O$
 
-The two physical systems interact through several interfaces, not one generic `P\leftrightarrow T` arrow.
+The framework-level decomposition is
 
-### Road and EVs
+$$
+O=O_A\cup O_G\cup O_D\cup O_C\cup O_R\cup O_W\cup O_L\cup O_M\cup O_X\cup O_K.
+$$
 
-```math
-\boxed{ P_D \leftrightarrow P_C \leftrightarrow T_R }
-```
+| Symbol | Organizational function | Representative content |
+|---|---|---|
+| $O_A$ | Actors and responsibilities | utilities, grid/distribution operators, charging/traction operators, road/traffic/rail agencies, telecoms, emergency authorities, regulators, contractors, suppliers |
+| $O_G$ | Governance and institutional rules | laws, regulations, contracts, policies, procedures, emergency plans, authority structures, restoration priorities |
+| $O_D$ | Decision making | damage interpretation, prioritization, intervention selection, repair/service decisions, centralized/decentralized/collaborative decisions |
+| $O_C$ | Coordination | intra-/inter-agency coordination, power–transport coordination, emergency command, joint planning, information sharing |
+| $O_R$ | Resource allocation | crews, maintenance vehicles, equipment, spare parts, mobile generation, batteries, emergency vehicles, budgets |
+| $O_W$ | Workforce capability | engineers, operators, dispatchers, maintenance staff, specialists, training, expertise, availability |
+| $O_L$ | Logistics and mobilization | crew dispatch, equipment deployment, staging, spare-part delivery, route selection, mobile-generator deployment |
+| $O_M$ | Restoration management | inspection/repair priorities, crew assignment, restoration sequence/scheduling, critical-service priorities |
+| $O_X$ | Cross-sector collaboration | coordination among power, transportation, communication, emergency, regulatory, and contractor organizations |
+| $O_K$ | Learning and adaptation | after-action learning, institutional memory, procedure updates, adaptive governance, lessons learned |
 
-through charging, smart charging and V2G.
+The organizational network may be represented as
 
-### Electric buses
+$$
+\mathcal G_O(t)=\bigl(V_O,E_O(t),W_O(t)\bigr).
+$$
 
-```math
-\boxed{ P_D \leftrightarrow P_C \leftrightarrow T_B }
-```
+The canonical organizational state is
 
-through depot and opportunity charging.
+$$
+z_O=
+[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
+$$
 
-### Metro, MRT, Subway, LRT and Tram
+The conceptual shorthand is
 
-```math
-\boxed{ P_{Tr/D} \leftrightarrow P_{TP} \leftrightarrow T_U }
-```
-
-through traction power and regenerative braking.
-
-### Regional and Heavy Rail
-
-```math
-\boxed{ P_{Tr} \leftrightarrow P_{TP} \leftrightarrow T_H }
-```
-
-### Restoration dependency
-
-```math
-\boxed{ T \rightarrow \text{crew accessibility} \rightarrow \text{power restoration} }
-```
-
----
-
-# 6. Complete Cognitive and Control Architecture
-
-The four systems connect through:
-
-```math
-\boxed{ X \rightarrow y \rightarrow I \rightarrow \hat X \rightarrow O \rightarrow u \rightarrow X }
-```
-
-where:
-
-```math
-\boxed{ X= \begin{bmatrix} x_P\\ x_T \end{bmatrix} }
-```
-
-is physical reality,
-
-```math
-\boxed{I=\text{KNOW}}
-```
-
-constructs system knowledge,
-
-```math
-\boxed{O=\text{DECIDE, COORDINATE, MOBILIZE}}
-```
-
-determines feasible response,
-
-and:
-
-```math
-\boxed{u=\text{ACT}}
-```
-
-changes the physical system.
-
-Therefore:
-
-```math
-\boxed{ u(t)\in\mathcal U(I(t),O(t)) }
-```
+$$
+O:\quad \text{DECIDE}\rightarrow\text{COORDINATE}\rightarrow\text{RESOURCE}\rightarrow\text{MOBILIZE}.
+$$
 
 ---
 
-# 7. Full System Architecture
+## 5. Principal physical Power–Transportation couplings
 
-The most compact representation is:
+The two physical systems interact through several distinct interfaces rather than one generic $P\leftrightarrow T$ arrow.
 
-```math
-\boxed{ \mathcal S= \left\{ \begin{array}{l} P= \{P_G,P_{Tr},P_D,P_{DER},P_C,P_{TP}\}\\[1mm] T= \{T_R,T_B,T_U,T_H,T_M\}\\[1mm] I= \{I_S,I_C,I_D,I_E,I_A,I_X,I_\tau\}\\[1mm] O= \{O_A,O_G,O_D,O_C,O_R,O_W,O_L,O_M,O_X,O_K\} \end{array} \right\} }
-```
+| Physical interface | Principal mechanism |
+|---|---|
+| $P_D\leftrightarrow P_C\leftrightarrow T_R$ | EV charging, smart charging, V2G, charging availability |
+| $P_D\leftrightarrow P_C\leftrightarrow T_B$ | depot/opportunity charging and electric-bus operations |
+| $P_{Tr/D}\leftrightarrow P_{TP}\leftrightarrow T_U$ | urban-rail traction power and regenerative braking |
+| $P_{Tr}\leftrightarrow P_{TP}\leftrightarrow T_H$ | regional/heavy-rail traction power |
+| $T_R\rightarrow O_L\rightarrow P_D$ | road accessibility constraining crew and equipment movement for power restoration |
 
-with:
+These are examples of Stage-2 mechanisms; they do not exhaust the full 12-direction P–T–I–O interdependency scope.
 
-```math
-\boxed{ \begin{array}{ccc} & I &\\ \swarrow & \downarrow & \searrow\\ P & \rightleftarrows & T\\ \nwarrow & \uparrow & \nearrow\\ & O & \end{array} }
-```
+---
 
-and the global state:
+## 6. Observation–organization–control architecture
 
-```math
-\boxed{ Y(t)= [ x_P(t),x_T(t),z_I(t),z_O(t) ]^\top. }
-```
+The physical systems and the informational/organizational layers interact through the Stage-4 feedback spine
+
+$$
+X(t)
+\rightarrow y(t)
+\rightarrow I(t)
+\rightarrow \widehat X(t)
+\rightarrow O(t)
+\rightarrow u(t)
+\rightarrow X(t),
+$$
+
+where
+
+$$
+X(t)=
+\begin{bmatrix}
+x_P(t)\\x_T(t)
+\end{bmatrix}.
+$$
+
+The current informational and organizational states constrain feasible intervention:
+
+$$
+u(t)
+\in
+\mathcal U\!\left(z_I(t),z_O(t)\right).
+$$
+
+The layer labels $I$ and $O$ describe functions in the conceptual chain; their dynamic states remain $z_I(t)$ and $z_O(t)$.
+
+---
+
+## 7. Full architecture summary
+
+| Layer/system | Canonical decomposition |
+|---|---|
+| $P$ | $\{P_G,P_{Tr},P_D,P_{DER},P_C,P_{TP}\}$ |
+| $T$ | $\{T_R,T_B,T_U,T_H,T_M\}$ |
+| $I$ | $\{I_S,I_C,I_D,I_E,I_A,I_X,I_{\tau}\}$ |
+| $O$ | $\{O_A,O_G,O_D,O_C,O_R,O_W,O_L,O_M,O_X,O_K\}$ |
+
+The global state remains
+
+$$
+Y(t)=[x_P(t),x_T(t),z_I(t),z_O(t)]^\top.
+$$
+
+The six bidirectional layer families are
+
+$$
+\begin{aligned}
+&P\leftrightarrow T,
+\qquad P\leftrightarrow I,
+\qquad P\leftrightarrow O,\\
+&T\leftrightarrow I,
+\qquad T\leftrightarrow O,
+\qquad I\leftrightarrow O.
+\end{aligned}
+$$
+
+This file defines **what is contained in the system and layers**. Causal admissibility belongs to Stage 2, dynamic evolution to Stage 3, observation/control to Stage 4, and viability evaluation to Stage 5.
