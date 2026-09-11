@@ -1,73 +1,92 @@
 module CoupledInfrastructure
 
 """
-Minimal Julia scaffold for the P–W–T–SW hybrid/multiscale model.
+Minimal Julia scaffold for the canonical P–T–I–O thesis architecture.
 
-This module is a specification aid, not a calibrated thesis model. It makes the
-state/interface separation explicit and provides a compact right-hand side for
-synthetic tests.
+This module is a **software-QA toy model**, not a calibrated thesis model and not
+empirical evidence. Its purpose is to keep the current system ontology explicit:
+Power and Transportation are physical systems; Information and Organization are
+interacting layers that can modify coupled trajectories and feasible response.
 """
 
-export ModelParameters, infrastructure_rhs!, interface_rhs!, realized_flood_hazard
+export ModelParameters, LAYER_ORDER, ptio_rhs!, interdependency_signal,
+       feasible_control_scale
+
+const LAYER_ORDER = (:P, :T, :I, :O)
 
 Base.@kwdef struct ModelParameters
-    decay_power::Float64 = 0.30
-    decay_water::Float64 = 0.25
-    decay_transport::Float64 = 0.20
-    decay_waste::Float64 = 0.15
-    pw::Float64 = 0.20
-    wp::Float64 = 0.15
-    pt::Float64 = 0.10
-    tw::Float64 = 0.08
-    waste_to_drainage::Float64 = 0.25
-    flood_gain::Float64 = 0.50
-    epsilon_interface::Float64 = 0.10
-end
+    # Intrinsic relaxation/decay rates for normalized toy states [P,T,I,O].
+    decay::NTuple{4,Float64} = (0.25, 0.20, 0.30, 0.15)
 
-"""
-Map exogenous rainfall forcing ξ and waste-related blockage to realized flood
-hazard η. The clipping keeps this synthetic reference hazard non-negative.
-"""
-function realized_flood_hazard(ξ::Real, xsw::Real, p::ModelParameters)
-    blockage = max(0.0, p.waste_to_drainage * xsw)
-    return max(0.0, p.flood_gain * ξ + blockage)
-end
-
-"""
-Reference four-sector state dynamics.
-
-State order: x = [P, W, T, SW]
-Interface order: z = [zPW, zWP, zPT, zTW]
-Control order: u = [uP, uW, uT, uSW]
-"""
-function infrastructure_rhs!(dx, x, z, u, ξ, p::ModelParameters)
-    P, W, T, SW = x
-    zPW, zWP, zPT, zTW = z
-    uP, uW, uT, uSW = u
-    η = realized_flood_hazard(ξ, SW, p)
-
-    dx[1] = -p.decay_power * P + zPW * W + zPT * T + uP - 0.25 * η
-    dx[2] = -p.decay_water * W + zWP * P + uW - 0.30 * η
-    dx[3] = -p.decay_transport * T + zTW * W + uT - 0.40 * η
-    dx[4] = -p.decay_waste * SW + uSW + 0.20 * (1.0 - max(T, 0.0)) + 0.10 * η
-    return nothing
-end
-
-"""
-Reference dynamic-interface model ε ż = G(X,Z,η). The equilibrium coupling
-strength changes with sector condition and realized hazard.
-"""
-function interface_rhs!(dz, x, z, ξ, p::ModelParameters)
-    P, W, T, SW = x
-    η = realized_flood_hazard(ξ, SW, p)
-    target = [
-        p.pw * max(P, 0.0),
-        p.wp * max(W, 0.0),
-        p.pt * exp(-η),
-        p.tw * max(T, 0.0),
+    # coupling[target, source]. Diagonal terms remain zero. These coefficients
+    # are synthetic software-test values; they are not thesis estimates.
+    coupling::Matrix{Float64} = [
+        0.00  0.10  0.18  0.16;
+        0.22  0.00  0.14  0.12;
+        0.16  0.10  0.00  0.20;
+        0.12  0.18  0.15  0.00
     ]
-    for i in eachindex(z)
-        dz[i] = (target[i] - z[i]) / p.epsilon_interface
+
+    # Synthetic hazard sensitivity of the four normalized states.
+    hazard_gain::NTuple{4,Float64} = (0.35, 0.40, 0.25, 0.20)
+end
+
+"""
+Return a simple Stage-2/3 transmission signal for a toy causal edge.
+
+`strength` corresponds to an interdependency-strength parameter, `activation`
+corresponds to the Stage-2 activation state, and `delay_attenuation` is only a
+numerical placeholder for software tests. A real delayed model must implement
+history explicitly rather than interpreting this helper as a physical delay law.
+"""
+function interdependency_signal(
+    source_state::Real,
+    strength::Real,
+    activation::Real,
+    delay_attenuation::Real = 1.0,
+)
+    0.0 <= activation <= 1.0 || throw(ArgumentError("activation must lie in [0,1]"))
+    delay_attenuation >= 0.0 || throw(ArgumentError("delay_attenuation must be non-negative"))
+    return activation * strength * delay_attenuation * source_state
+end
+
+"""
+Map normalized information/organization capability to a conservative control
+availability scale in [0,1].
+
+This helper encodes only the qualitative Stage-4 statement that information and
+organization constrain feasible action. It is not the canonical control policy.
+"""
+function feasible_control_scale(zI::Real, zO::Real)
+    return clamp(min(zI, zO), 0.0, 1.0)
+end
+
+"""
+Toy coupled P–T–I–O dynamics.
+
+State order:   x = [P, T, I, O]
+Control order: u = [uP, uT, uI, uO]
+Hazard input:  h >= 0
+
+The off-diagonal coupling matrix is interpreted as source-to-target influence:
+`coupling[i,j]` maps state j into the derivative of state i. The function is
+intentionally transparent so CI can detect ontology drift and basic numerical
+failures. It does not replace the Stage-3 hybrid/delayed/multirate equations.
+"""
+function ptio_rhs!(dx, x, u, h::Real, p::ModelParameters)
+    length(x) == 4 || throw(DimensionMismatch("x must follow [P,T,I,O]"))
+    length(u) == 4 || throw(DimensionMismatch("u must follow [uP,uT,uI,uO]"))
+    length(dx) == 4 || throw(DimensionMismatch("dx must have length 4"))
+    size(p.coupling) == (4, 4) || throw(DimensionMismatch("coupling must be 4x4"))
+    h >= 0.0 || throw(ArgumentError("hazard intensity must be non-negative"))
+
+    for i in 1:4
+        coupling_term = 0.0
+        for j in 1:4
+            i == j && continue
+            coupling_term += p.coupling[i, j] * x[j]
+        end
+        dx[i] = -p.decay[i] * x[i] + coupling_term + u[i] - p.hazard_gain[i] * h
     end
     return nothing
 end
