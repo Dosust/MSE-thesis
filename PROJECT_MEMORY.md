@@ -64,36 +64,26 @@ Canonical description:
 The framework is frozen as
 
 $$
+\begin{aligned}
 \text{Multilayer Structure}
-\rightarrow
-\text{Causal Mechanisms}
-\rightarrow
-\text{Coupled Hybrid Multiscale Dynamics}
-\rightarrow
-\text{Observation, Organization, Feedback and Control}
-\rightarrow
-\text{Viability}
-\rightarrow
-\text{Resilience-to-Sustainability Transformation Interface}
-\rightarrow
-\text{Sustainable Transformation Pathways}.
+&\rightarrow \text{Causal Mechanisms}
+\rightarrow \text{Coupled Hybrid Multiscale Dynamics}\\
+&\rightarrow \text{Observation, Organization, Feedback and Control}\\
+&\rightarrow \text{Viability}
+\rightarrow \text{Resilience-to-Sustainability Transformation Interface}\\
+&\rightarrow \text{Sustainable Transformation Pathways}.
+\end{aligned}
 $$
 
 Current completion state:
 
-$$
-\boxed{
-\text{Stage 1: defined}
-\rightarrow
-\text{Stage 2: frozen}
-\rightarrow
-\text{Stage 3: frozen}
-\rightarrow
-\text{Stage 4: frozen}
-\rightarrow
-\textbf{Stage 5: next}
-}
-$$
+| Stage | Status |
+|---|---|
+| **1 — Multilayer Structure** | Defined |
+| **2 — Causal Mechanisms** | Frozen |
+| **3 — Coupled Hybrid Multiscale Dynamics** | Frozen |
+| **4 — Observation, Organization, Feedback and Control** | Frozen |
+| **5 — Viability** | **Next** |
 
 ---
 
@@ -104,7 +94,9 @@ Every accepted interdependency uses
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t).
+\left(
+E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
+\right).
 $$
 
 A retained relation requires
@@ -150,41 +142,31 @@ $$
 $$
 
 $$
-b_t(x)=p(X(t)=x\mid y_{[0,t]},u_{[0,t)}),
+b_t(x)=p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right),
 $$
 
 $$
-\mathcal U_{\rm available}(t)=\mathcal U[z_I(t),z_O(t)],
+\mathcal U_{\rm available}(t)=\mathcal U\!\left(z_I(t),z_O(t)\right),
 $$
 
 and
 
 $$
-u(t)=\pi[\widehat X(t),z_I(t),z_O(t)],
+u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 \qquad
-u(t)\in\mathcal U[z_I(t),z_O(t)].
+u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-The action variable in the equations above is the canonical control variable $u(t)$.
+Here $u(t)$ is the intervention/control variable. The symbol $\nu_k(t)$ is reserved for measurement noise.
 
 For a sequential, non-overlapping response pathway,
 
 $$
-\tau_{\rm response}
-=
-\tau_{\rm sense}
-+
-\tau_{\rm comm}
-+
-\tau_{\rm est}
-+
-\tau_{\rm decision}
-+
-\tau_{\rm coord}
-+
-\tau_{\rm mobilization}
-+
-\tau_{\rm act}.
+\begin{aligned}
+\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}
++\tau_{\rm decision}\\
+&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\end{aligned}
 $$
 
 If processes overlap, $\tau_{\rm response}$ is the relevant critical-path completion time.
@@ -201,13 +183,13 @@ $$
 \Pi_R<1\not\Rightarrow\text{successful control}.
 $$
 
-The Stage-4 boundary is strict:
+The Stage-4 boundary is:
 
-$$
-\boxed{
-\text{Stage 3 produces trajectories; Stage 4 observes and controls them; Stage 5 evaluates viability.}
-}
-$$
+| Stage | Responsibility |
+|---|---|
+| **3** | Produces the evolving trajectories. |
+| **4** | Observes, infers, coordinates, and controls them. |
+| **5** | Evaluates whether the controlled trajectories remain viable. |
 
 Stage 4 does not redefine $z_I$ or $z_O$ dynamics and does not compute $\mathcal V_{\rm sus}^{u}$, $\rho_g$, or $T_{\rm exit}$.
 
@@ -219,9 +201,7 @@ The next framework task is **Stage 5 — Viability**.
 
 For framework figures and diagrams:
 
-$$
-\boxed{\textbf{CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.}}
-$$
+> **CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.**
 
 Generated illustrations are not scientific authority. Final figures must be checked against the canonical project files.
 
@@ -234,15 +214,13 @@ Scientific authority comes from original source artifacts, verified literature/e
 The thesis distinguishes
 
 $$
+\begin{aligned}
 \text{domain evidence}
-\neq
-\text{transferable methodology}
-\neq
-\text{mathematical theory}
-\neq
-\text{derived synthesis}
-\neq
-\text{thesis-proposed construct}.
+&\neq\text{transferable methodology}
+\neq\text{mathematical theory}\\
+&\neq\text{derived synthesis}
+\neq\text{thesis-proposed construct}.
+\end{aligned}
 $$
 
 Novelty is not assumed because established components are combined. Candidate contributions remain subject to systematic falsification and baseline comparison.
@@ -257,7 +235,3 @@ Earlier project-memory capsules remain available for provenance, including:
 - [`project_memory/2026-09-09_canonical_7_stage_framework/`](project_memory/2026-09-09_canonical_7_stage_framework/)
 
 Any P–W–T–SW, waste–drainage, equity-centered, older six-chain, or other superseded architecture inside historical memory is **not current thesis authority** unless explicitly reintroduced through a versioned change.
-
-## Fast future-chat recovery
-
-Start with the current canonical authority list at the top of this file. Use historical memory only when provenance or evolution of the research is specifically needed.
