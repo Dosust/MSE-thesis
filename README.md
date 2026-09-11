@@ -4,15 +4,15 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
-![Search](https://img.shields.io/badge/evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
-![FTEE](https://img.shields.io/badge/FTEE-PILOT--READY-9A6700)
-![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20AUDIT-9A6700)
+![Evidence](https://img.shields.io/badge/evidence%20search-DE%20NOVO-1A7F37)
+![FTEE](https://img.shields.io/badge/FTEE%20v2.0-CURRENT-0969DA)
+![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-COVERAGE%20AUDIT%20ONLY-9A6700)
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
 **Framework status:** complete seven-stage conceptual and mathematical framework frozen  
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
-**Evidence-search status:** new primary evidence search must start from zero for $H_1$–$H_5$  
+**Evidence methodology:** FTEE v2.0 — fresh search from first principles followed by screening and full-text evidence-to-equation extraction  
 **Old 325-paper corpus:** secondary coverage audit only  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
@@ -31,9 +31,10 @@
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates |
 | [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction methodology |
-| [`project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md) | fresh hypothesis-specific evidence search from first principles |
-| [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | full-text evidence-to-equation extraction protocol |
-| [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper secondary coverage audit only |
+| [`project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md`](project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md) | **current de novo evidence-search + FTEE methodology** |
+| [`project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md) | focused search-governance companion |
+| [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | old 325-paper coverage-audit methodology only |
+| [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | superseded FTEE v1.0 provenance pointer |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | GitHub math/rendering standard |
 | [`tools/thesis_display_lint.py`](tools/thesis_display_lint.py) | automated Markdown/math/ontology QA |
 
@@ -65,48 +66,65 @@ The primary confirmatory set is
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 ```
 
-The seven-stage architecture and H1–H5 scientific logic are frozen. Exact thresholds $\delta_i$, hypothesis domains $\Omega_H$, validation domains $\Omega_V$, and final analysis procedures remain to be specified *a priori* from the fresh evidence base and selected demonstrator.
+The seven-stage architecture and H1–H5 scientific logic are frozen. Exact thresholds $\delta_i$, hypothesis domains $\Omega_H$, validation domains $\Omega_V$, and final confirmatory procedures remain to be specified *a priori* from the fresh evidence base and selected demonstrator.
 
 ---
 
-## Fresh evidence-search rule
+## Current evidence methodology — FTEE v2.0
 
-The governing search logic is
+The active evidence pipeline is
 
 ```math
+\begin{aligned}
 H_i
-\rightarrow
-\text{mechanisms/constructs}
-\rightarrow
-\text{search concepts}
-\rightarrow
-\text{database searches}
-\rightarrow
-\text{screening}
-\rightarrow
-\text{full text}
-\rightarrow
-\text{FTEE}.
+&\rightarrow \text{mechanism concepts}
+\rightarrow \text{fresh database search}
+\rightarrow \text{screening}\\
+&\rightarrow P_i
+\rightarrow e_{ij}
+\rightarrow M_{ij}
+\rightarrow F_{ij}\\
+&\rightarrow (X,\theta,A,\Omega)
+\rightarrow (V,U)
+\rightarrow \mathfrak M_{\rm required}\\
+&\rightarrow \text{candidate demonstrators}
+\rightarrow \text{V\&V/UQ/identifiability gates}
+\rightarrow \mathcal M_D^\star.
+\end{aligned}
 ```
 
-Previously known and unknown papers are treated identically during screening:
+The evidence corpus is an **output of the new research protocol**, not an inherited input.
+
+Previously known and unknown papers are treated identically:
 
 ```math
 P_{\rm known}\equiv P_{\rm unknown}.
 ```
 
-The primary database strategy is hypothesis-specific and multi-database, using Scopus, Web of Science, Compendex, IEEE Xplore, and specialized databases where scientifically useful. The default time span is database inception to the search date unless a narrower period is scientifically justified.
+The fresh eligible corpus is
 
-Searches target mechanisms rather than preferred solutions.
+```math
+\mathcal P_{\rm eligible}^{\rm NEW}.
+```
+
+Only this newly qualified set enters full-text FTEE extraction.
 
 ---
 
-## Discovery, screening and eligibility
+## Search design
 
-The fresh discovery universe is
+Separate hypothesis-specific search families are used:
 
 ```math
-\mathcal P_{\rm search}
+\mathcal S=\{S_{H_1},S_{H_2},S_{H_3},S_{H_4},S_{H_5}\}.
+```
+
+Core engineering databases are Scopus, Web of Science, Compendex and IEEE Xplore, supplemented where scientifically useful. The default search interval is database inception to final search date unless a narrower range is justified beforehand.
+
+The discovery universe is
+
+```math
+\mathcal P_{\rm discovered}
 =
 \mathcal P_{\rm database}
 \cup
@@ -115,97 +133,35 @@ The fresh discovery universe is
 \mathcal P_{\rm forward}.
 ```
 
-Database search is primary; backward and forward citation chasing begin only after the initial database search.
-
-Eligibility must be frozen before screening:
-
-```math
-I(P)=
-\begin{cases}
-1,&P\text{ eligible},\\
-0,&P\text{ excluded}.
-\end{cases}
-```
-
-PRISMA-style accounting records
-
-```math
-N_{\rm identified}
-\rightarrow
-N_{\rm deduplicated}
-\rightarrow
-N_{\rm title/abstract}
-\rightarrow
-N_{\rm fulltext}
-\rightarrow
-N_{\rm eligible}.
-```
-
-The primary eligible set is
-
-```math
-\mathcal P_{\rm eligible}^{\rm NEW}.
-```
+Database search is primary; citation chasing starts only from newly eligible anchors after the initial database search.
 
 ---
 
-## FTEE position
+## FTEE extraction discipline
 
-Only the newly eligible set enters FTEE:
+The evidence unit is
 
 ```math
-\mathcal P_{\rm eligible}^{\rm NEW}
-\rightarrow
-\text{FTEE}
-\rightarrow
-\mathfrak M_{\rm required}
-\rightarrow
-\text{candidate demonstrators}.
+e_{ij}
+=
+(S_i,L_{ij},C_{ij},M_{ij},F_{ij},X_{ij},\theta_{ij},A_{ij},\Omega_{ij},V_{ij},U_{ij},H_{ij}).
 ```
 
-FTEE extracts mechanism, equations, parameters, assumptions, domain, validation, and uncertainty. It does not determine search eligibility and it does not choose the demonstrator.
+FTEE v2.0 requires exact provenance, source notation before thesis mapping, mechanism-first extraction, separate mechanism/form/validation evidence, dimensional and parameter audits, explicit assumptions, VVUQ separation, validation-domain tracking, uncertainty extraction, contrary/rival evidence, explicit missingness, and no silent model completion.
+
+It **extracts and qualifies evidence; it does not choose the demonstrator**.
 
 ---
 
 ## Role of the old 325-paper corpus
 
-The frozen 325-paper corpus is no longer the primary evidence universe. It is used only after the fresh search for coverage diagnostics:
+The historical corpus is used only after the fresh corpus is frozen:
 
 ```math
-\mathcal P_{\rm NEW}
-\leftrightarrow
-\mathcal P_{325}.
+\mathcal P_{\rm NEW}\leftrightarrow\mathcal P_{325}.
 ```
 
-A previously known paper not recovered by the new search triggers a search-method diagnostic, not automatic inclusion.
-
----
-
-## Current end-to-end workflow
-
-```math
-\begin{aligned}
-&H_1-H_5\\
-&\downarrow\\
-&\textbf{fresh search protocol and frozen search codebook}\\
-&\downarrow\\
-&\textbf{database searches from zero}\\
-&\downarrow\\
-&\text{deduplication + screening + full-text eligibility}\\
-&\downarrow\\
-&\mathcal P_{\rm eligible}^{\rm NEW}\\
-&\downarrow\\
-&\textbf{FTEE pilot/freeze and evidence extraction}\\
-&\downarrow\\
-&\mathfrak M_{\rm required}\\
-&\downarrow\\
-&\text{candidate P--T--I--O demonstrators}\\
-&\downarrow\\
-&\text{V\&V + identifiability + UQ gates}\\
-&\downarrow\\
-&\mathcal M_D^*.
-\end{aligned}
-```
+Its purpose is coverage diagnostics. A previously important old-only paper triggers a search-method diagnostic. It is never automatically inserted into the fresh evidence set.
 
 ---
 
@@ -223,4 +179,8 @@ A previously known paper not recovered by the new search triggers a search-metho
 \textbf{A paper becomes evidence only because the new reproducible search finds it and the new eligibility protocol qualifies it.}
 ```
 
-The immediate task is to freeze the hypothesis-specific search concepts, database-specific Boolean queries, database coverage/date rules, deduplication procedure, eligibility criteria, screening forms, citation-chasing rules, amendment procedure, and PRISMA accounting schema before any new search is executed.
+---
+
+## Immediate next task
+
+Build and freeze the **Fresh Literature Search Protocol for $H_1$**: concept blocks, synonyms, database-specific Boolean strings, field restrictions, time/coverage rules, query-version registry, deduplication logic, inclusion/exclusion criteria, screening form, citation-chasing rules, amendment procedure and PRISMA accounting schema. Only then execute the first de novo search.
