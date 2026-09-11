@@ -3,8 +3,8 @@
 
 The linter is intentionally conservative. It does not judge scientific truth; it
 checks repository presentation contracts that can be tested deterministically:
-GitHub math delimiters, malformed tables/fences, stale active ontology tokens,
-and a few machine-readable authority invariants.
+GitHub-safe mathematical delimiters, malformed tables/fences, stale active
+ontology tokens, and machine-readable authority invariants.
 
 Historical/provenance trees are excluded so the audit preserves research history
 rather than rewriting it.
@@ -16,7 +16,6 @@ import json
 import re
 import sys
 from pathlib import Path
-from typing import Iterable
 
 try:
     import yaml
@@ -63,7 +62,6 @@ DRIFT_TERMS = {
     "pwtsw": "superseded P-W-T-SW identifier",
 }
 
-MATH_FENCE_RE = re.compile(r"^\s*```\s*math\s*$", re.IGNORECASE)
 TAG_RE = re.compile(r"\\tag\s*\{")
 OLD_DISPLAY_OPEN_RE = re.compile(r"(?<!\\)\\\[")
 OLD_DISPLAY_CLOSE_RE = re.compile(r"(?<!\\)\\\]")
@@ -127,31 +125,55 @@ def lint_markdown(path: Path) -> list[str]:
     lines = text.splitlines()
     rp = rel(path)
 
-    math_fence_lines = [i for i, line in enumerate(lines, 1) if MATH_FENCE_RE.match(line)]
-    for lineno in math_fence_lines:
-        errors.append(f"{rp}:{lineno}: fenced ```math block; use GitHub display math $$...$$")
+    # Track fenced regions so code examples are not treated as mathematical source.
+    in_fence = False
+    fence_marker = ""
+    dollar_delimiters = 0
+    fence_count = 0
 
     for lineno, line in enumerate(lines, 1):
+        stripped = line.strip()
+        left = line.lstrip()
+
+        if left.startswith("```"):
+            marker = left.split()[0]
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker[:3]
+            elif left.startswith(fence_marker):
+                in_fence = False
+                fence_marker = ""
+            fence_count += 1
+            continue
+
+        if in_fence:
+            continue
+
+        if stripped == "$$":
+            errors.append(
+                f"{rp}:{lineno}: standalone $$ delimiter is fragile in GitHub Markdown; "
+                "use a fenced math block for multiline display mathematics"
+            )
+
+        # A one-line display must contain both opening and closing delimiters.
+        if "$$" in line and line.count("$$") == 1 and stripped != "$$":
+            errors.append(
+                f"{rp}:{lineno}: unmatched one-line $$ delimiter; keep both delimiters on "
+                "the same line or use a fenced math block"
+            )
+
+        dollar_delimiters += line.count("$$")
+
         if TAG_RE.search(line):
             errors.append(f"{rp}:{lineno}: \\tag{{...}} in Markdown; use a Markdown equation label")
         if OLD_DISPLAY_OPEN_RE.search(line) or OLD_DISPLAY_CLOSE_RE.search(line):
-            errors.append(f"{rp}:{lineno}: legacy \\[...\\] display delimiter; use $$...$$")
+            errors.append(
+                f"{rp}:{lineno}: legacy \\[...\\] display delimiter; use a fenced math block"
+            )
         if LONG_BOX_RE.search(line):
             errors.append(f"{rp}:{lineno}: oversized \\boxed{{...}}; move prose/specification outside math")
 
-    # Ignore $$ appearing inside fenced code examples.
-    in_fence = False
-    dollar_delimiters = 0
-    fence_count = 0
-    for line in lines:
-        stripped = line.lstrip()
-        if stripped.startswith("```"):
-            in_fence = not in_fence
-            fence_count += 1
-            continue
-        if not in_fence:
-            dollar_delimiters += line.count("$$")
-    if fence_count % 2:
+    if in_fence:
         errors.append(f"{rp}: unbalanced triple-backtick code fences")
     if dollar_delimiters % 2:
         errors.append(f"{rp}: unbalanced $$ display-math delimiters")
@@ -161,7 +183,6 @@ def lint_markdown(path: Path) -> list[str]:
     i = 0
     while i < len(lines):
         if lines[i].lstrip().startswith("|"):
-            start = i
             block: list[tuple[int, str]] = []
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 block.append((i + 1, lines[i]))
