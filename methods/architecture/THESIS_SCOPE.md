@@ -1,52 +1,58 @@
-# Thesis Scope
+# Architecture-Methods Scope
 
-## Working research focus
+**Status:** ACTIVE COMPANION / NOT A SECOND SOURCE OF TRUTH  
+**Canonical scope:** [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)  
+**Canonical framework:** [`../../project/CANONICAL_7_STAGE_FRAMEWORK.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK.md)
 
-The thesis studies sustainable infrastructure resilience as a constrained dynamical-systems problem for coupled infrastructure systems. The working architecture centers on:
+This directory implements **small, auditable computational scaffolds** for the frozen P–T–I–O thesis framework. It does not define an alternative thesis scope.
 
-- Power
-- Transportation
-- Water
-- Solid waste
-- Dynamic cross-sector interfaces
-- Climate stress / urban flooding as a principal demonstrator
-- Recovery and control
-- Sustainability constraints
-- Equity-constrained viability
-- Network propagation, nonlinear dynamics, uncertainty, and inverse problems
+## Canonical system
 
-## Mathematical center
+$$
+\mathcal S=\{P,T,I,O\},
+$$
 
-A compact working abstraction is
+where $P,T$ are the physical Power and Transportation systems and $I,O$ are the informational and organizational layers.
 
-\[
-\dot Y = \mathcal F(Y,u,h,\theta),
-\]
+The canonical state is
 
-with an admissible region
+$$
+Y(t)=
+\begin{bmatrix}
+x_P(t)\\
+x_T(t)\\
+z_I(t)\\
+z_O(t)
+\end{bmatrix}.
+$$
 
-\[
-K=K_{\mathrm{phys}}\cap K_{\mathrm{service}}\cap K_{\mathrm{sus}}\cap K_{\mathrm{eq}},
-\]
+The computational chain supported by this directory is
 
-and the principal viability object
-
-\[
-\operatorname{Viab}_K
-=
-\{Y_0\in K:\exists u(\cdot)\text{ such that }Y(t)\in K\ \forall t\}.
-\]
-
-## Evidence workflow represented in this repository
-
-\[
-\text{deduplicated corpus}
+$$
+\mathfrak I
 \rightarrow
-\text{PRISMA-compatible eligibility}
+F_{\mathcal G}^{m}
 \rightarrow
-\text{uncertainty-aware Monte Carlo ranking}
+u(t)
 \rightarrow
-\text{robust evidence architecture}.
-\]
+\mathcal V_{\rm sus}^{u,T}
+\rightarrow
+\Phi_{\rm ST}
+\rightarrow
+\mathfrak P_{\rm ST}.
+$$
 
-The 325-paper deduplicated corpus is the authoritative literature dataset for the ranking workflow represented here.
+## What belongs here
+
+| Content | Purpose |
+|---|---|
+| Julia scaffold | transparent toy P–T–I–O coupled dynamics for software QA |
+| Python geometry utilities | finite-dimensional viability/geometry baselines and smoke tests |
+| configuration/schema files | machine-readable contracts aligned with the frozen framework |
+| CI checks | syntax, configuration, rendering and scientific-drift checks |
+
+## What does **not** belong here
+
+This folder must not reintroduce superseded P–W–T–SW, waste–drainage, or other historical architectures. Historical models remain in Git history/archive only.
+
+The toy code in this folder is **not a calibrated case study and not thesis evidence**. It exists to test software interfaces, notation, numerical plumbing and reproducibility before the validated numerical demonstrator is specified.
