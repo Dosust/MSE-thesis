@@ -1,5 +1,8 @@
 # MSE Thesis Scope
 
+![Frozen](https://img.shields.io/badge/scientific%20scopes-2--6%20FROZEN-1A7F37)
+![Research](https://img.shields.io/badge/Stage%207-DEEP%20RESEARCH-9A6700)
+
 **Status:** CANONICAL CURRENT SCOPE  
 **Effective date:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
@@ -35,7 +38,7 @@ Canonical definition: [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINI
 
 ## 2. Governing seven-stage framework
 
-The frozen architecture is
+The canonical architecture is
 
 $$
 \begin{aligned}
@@ -53,11 +56,15 @@ Canonical framework: [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEW
 
 ---
 
-## 3. Current frozen research boundary
+## 3. Current scientific boundary
 
 ### Stage 1 — Multilayer Structure
 
-Defines the $P$–$T$–$I$–$O$ system, subsystem decomposition, states, and potential interface locations.
+Defines the P–T–I–O system, subsystem decomposition, states, and potential interface locations.
+
+$$
+Y(t)=[x_P(t),x_T(t),z_I(t),z_O(t)]^\top.
+$$
 
 ### Stage 2 — Causal Mechanisms
 
@@ -79,19 +86,17 @@ Canonical Stage 2: [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPEND
 
 ### Stage 3 — Coupled Hybrid Multiscale Dynamics
 
-Defines how accepted Stage-2 mechanisms evolve through time and space using heterogeneous native subsystem dynamics, causal delay, multiple timescales, discrete events, mode switching, dynamic topology, and uncertainty.
+Defines how accepted Stage-2 mechanisms evolve through time and space using heterogeneous native subsystem dynamics, causal delays, multiple timescales, discrete events, mode switching, dynamic topology and uncertainty.
 
 $$
-Y(t)=[x_P(t),x_T(t),z_I(t),z_O(t)]^\top,
-\qquad
-\widetilde Y(t)=(Y(t),m(t)).
+\widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
 Canonical Stage 3: [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
 
 ### Stage 4 — Observation, Organization, Feedback and Control
 
-Defines how the evolving Stage-3 system is measured, inferred, interpreted, organizationally constrained, and acted upon under imperfect information.
+Defines how the evolving Stage-3 system is measured, inferred, interpreted, organizationally constrained and acted upon under imperfect information.
 
 $$
 X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
@@ -107,30 +112,17 @@ u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-For sequential non-overlapping response processes,
-
-$$
-\begin{aligned}
-\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}\\
-&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
-\end{aligned}
-$$
-
 Canonical Stage 4: [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
 
 ### Stage 5 — Controlled Sustainable Viability
 
-Stage 5 is frozen at framework level under the seven-stage label **Viability**. It distinguishes acceptable states from states that remain maintainable under admissible control.
-
-The acceptable region is
+Stage 5 distinguishes acceptable states from states that remain maintainable under admissible control.
 
 $$
 K_{\rm sus}(t)
 =
 \{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\},
 $$
-
-and the primary finite-horizon viability object is
 
 $$
 \mathcal V_{\rm sus}^{u,T}
@@ -142,32 +134,15 @@ Y_0\in K_{\rm sus}:
 \right\}.
 $$
 
-Stage 5 preserves
+The canonical distinction is
 
 $$
 Y\notin\mathcal V_{\rm sus}^{u,T}
 \not\Rightarrow
-Y\notin K_{\rm sus},
+Y\notin K_{\rm sus}.
 $$
 
-so the viability boundary $\partial\mathcal V$ and actual acceptability boundary $\partial K_{\rm sus}$ remain distinct.
-
-Robust and stochastic viability are separate mathematical extensions:
-
-$$
-\text{robust viability}\neq\text{stochastic viability}.
-$$
-
-The baseline geometric margin is $\rho_E$ after appropriate state normalization. The Riemannian margin
-
-$$
-\rho_g=d_{g_\psi}(Y,\partial\mathcal V),
-\qquad g_\psi(Y)\succ0,
-$$
-
-remains a proposed thesis construct `[P]`.
-
-The temporal distinction is
+The temporal margins remain
 
 $$
 T_{\mathcal V}=\text{time to loss of maintainability},
@@ -175,25 +150,105 @@ T_{\mathcal V}=\text{time to loss of maintainability},
 T_K=\text{time to actual acceptability violation}.
 $$
 
-Stage 4 and Stage 5 connect through
-
-$$
-S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
-\qquad
-S_K=T_K-\tau_{\rm response},
-$$
-
-with proposed dimensionless diagnostics
-
-$$
-\Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
-\qquad
-\Pi_K=\frac{\tau_{\rm response}}{T_K}.
-$$
-
-Interface criticality is treated through finite perturbation sensitivity unless smoothness is demonstrated.
-
 Canonical Stage 5: [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
+
+### Stage 6 — Resilience-to-Sustainability Transformation Interface
+
+Stage 6 is now **formally frozen** as **Resilience-to-Sustainability Transition**.
+
+Its frozen research question is:
+
+> **When is recovery insufficient, and what conditions require adaptation or transformation?**
+
+Stage 6 asks whether preserving the current infrastructure regime remains adequate under validated Stage-5 evidence and longer-horizon sustainability, equity, adaptation-limit, lock-in, maladaptation and structural evidence.
+
+The current regime is
+
+$$
+\mathfrak M_0
+=
+(\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
+$$
+
+The Stage-5 evidence interface is
+
+$$
+\mathcal R_5
+=
+\{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
+$$
+
+The diagnostic vector is
+
+$$
+\mathbf d_6
+=
+[d_{\mathcal V},d_{\rm limit},d_{\rm lock},d_{\rm mal},d_{\rm sus},d_{\rm eq},d_{\rm struct}]^\top.
+$$
+
+The frozen translation is
+
+$$
+\Phi_{\rm ST}
+:
+(\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
+\mapsto
+(c_6,\mathcal D_6,\boldsymbol{\zeta}_T),
+$$
+
+where
+
+$$
+c_6\in\{R,A,T\}
+$$
+
+classifies recovery adequacy, adaptation requirement or transformation requirement;
+
+$$
+\mathcal D_6
+=
+\{\mathcal D_P,\mathcal D_T,\mathcal D_I,\mathcal D_O,
+\mathcal D_{\mathfrak I},\mathcal D_{\rm env},\mathcal D_{\rm eq}\}
+$$
+
+contains the required system/interdependency changes; and
+
+$$
+\boldsymbol{\zeta}_T
+=
+[\zeta_{\rm depth},\zeta_{\rm scope},\zeta_{\rm scale},\zeta_{\rm pace},
+\zeta_{\rm equity},\zeta_{\rm environment}]^\top
+$$
+
+characterizes the required transformation.
+
+Canonical Stage 6: [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
+
+### Stage 7 — Sustainable Transformation Pathways
+
+Stage 7 is the active research stage and is **not frozen**.
+
+The retained research question is:
+
+> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
+
+The frozen Stage-6 handoff is
+
+$$
+(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
+\longrightarrow
+\text{Stage-7 intervention/pathway design}.
+$$
+
+Current research is testing whether the basic deterministic path
+
+$$
+\Pi=[(a_1,t_1),\ldots,(a_N,t_N)]
+$$
+
+is sufficient, or whether the primary Stage-7 object should be an adaptive, trigger-dependent pathway graph under deep uncertainty.
+
+Research file: [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md)
 
 ---
 
@@ -201,19 +256,39 @@ Canonical Stage 5: [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTR
 
 | Stage | Scientific role | Status |
 |---|---|---|
-| **1** | Define what exists and where interaction can occur. | Defined |
+| **1** | Define what exists and where interaction can occur. | Defined / canonical |
 | **2** | Define why one component/layer affects another and through what mechanism. | Frozen |
 | **3** | Evolve accepted mechanisms through space and time. | Frozen |
-| **4** | Observe, infer, coordinate, and control the evolving system. | Frozen |
+| **4** | Observe, infer, coordinate and control the evolving system. | Frozen |
 | **5** | Evaluate controlled sustainable viability and proximity to loss. | Frozen |
-| **6** | Translate verified resilience results into sustainability-transition requirements. | **Next** |
-| **7** | Define and evaluate sustainable transformation pathways. | Downstream |
+| **6** | Diagnose regime adequacy and translate resilience evidence into recovery/adaptation/transformation requirements. | **Frozen** |
+| **7** | Determine intervention sequencing and transformation pathways under feasibility and uncertainty. | **Deep research complete; scope not frozen** |
 
 ---
 
-## 5. Scope discipline
+## 5. Current mathematical progression
 
-The thesis is framework-driven and evidence-gated. The governing principles are
+The frozen progression through Stage 6 is
+
+$$
+\begin{aligned}
+\{P,T,I,O\}
+&\rightarrow\mathfrak I
+\rightarrow\{F,\mathcal G,m\}\\
+&\rightarrow\{\widehat X,\mathcal U,u,\tau_{\rm response}\}\\
+&\rightarrow\{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}\\
+&\rightarrow\Phi_{\rm ST}
+\rightarrow(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
+\end{aligned}
+$$
+
+The Stage-7 terminal object remains under research.
+
+---
+
+## 6. Scope discipline
+
+The thesis is framework-driven and evidence-gated. The governing principles include
 
 $$
 \text{maximum necessary physical fidelity}\neq\text{maximum possible model detail},
@@ -227,33 +302,17 @@ $$
 \text{technically desirable action}\not\Rightarrow\text{organizationally executable action},
 $$
 
+$$
+\text{acceptable now}\not\Rightarrow\text{maintainable over the required horizon},
+$$
+
 and
 
 $$
-\text{acceptable now}\not\Rightarrow\text{maintainable over the required horizon}.
+\text{recovery of the current regime}\not\Rightarrow\text{long-horizon regime adequacy}.
 $$
 
-Each mathematical layer must answer a defined research question and create a corresponding validation obligation.
-
----
-
-## 6. Evidence and validation discipline
-
-The evidence workflow is
-
-$$
-\begin{aligned}
-\text{Literature}
-&\rightarrow \text{Mechanism evidence}
-\rightarrow \text{Formal mathematical object}\\
-&\rightarrow \text{Simulation / analysis}
-\rightarrow \text{Falsification and validation}.
-\end{aligned}
-$$
-
-The thesis distinguishes empirical/domain evidence, transferable methodological evidence, mathematical theory, derived synthesis, and thesis-proposed constructs. In-text citations and reference lists follow **APA 7th edition**.
-
-A proposed construct remains a candidate contribution until novelty and performance claims survive systematic comparison and falsification.
+Each stage must answer a distinct research question and create a corresponding validation obligation.
 
 ---
 
@@ -262,16 +321,23 @@ A proposed construct remains a candidate contribution until novelty and performa
 | Stage | Boundary |
 |---|---|
 | **3** | Produces trajectories and evolving information/organizational states. |
-| **4** | Uses those states to constrain knowledge, feasible action, and feedback control. |
-| **5** | Evaluates acceptability, maintainability, geometric/temporal proximity to loss, and interdependency sensitivity. |
-| **6** | Uses only validated resilience evidence to formulate sustainability-transition requirements. |
+| **4** | Uses those states to constrain knowledge, feasible action and feedback control. |
+| **5** | Evaluates acceptability, maintainability, geometric/temporal proximity to loss and interdependency sensitivity. |
+| **6** | Diagnoses whether the present regime remains adequate and specifies what must change and how deep the change must be. |
+| **7** | Selects/sequences admissible strategic changes; it does not reopen the Stage-6 need-for-change diagnosis. |
 
-Stage 5 does not redefine Stage-4 control and does not prescribe Stage-6/7 transformations.
+The central Stage-6/7 separation is
+
+$$
+\underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
+\quad\rightarrow\quad
+\underbrace{\text{WHICH / ORDER / WHEN / UNDER WHAT CONDITIONS}}_{\text{Stage 7}}.
+$$
 
 ---
 
 ## 8. Supersession rule
 
-Earlier P–W–T–SW, waste–drainage, equity-centered, or other historical architectures preserved elsewhere in Git history, project memory, archive folders, or research archives are **not the current thesis scope**.
+Earlier P–W–T–SW, waste–drainage, equity-centered or other historical architectures preserved in Git history, project memory or archives are **not the current thesis scope**.
 
 They may be used only for provenance or transferable methodological insight unless explicitly reintroduced through a versioned change to the current canonical framework.
