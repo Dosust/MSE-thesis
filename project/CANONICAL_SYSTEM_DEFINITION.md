@@ -26,11 +26,19 @@ The most precise system description is:
 
 > **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
 
-The framework-level layer set is
+The canonical system object is
 
 $$
-\mathcal L=\{P,T,I,O\}.
+\mathcal S=\{P,T,I,O\}.
 $$
+
+When a layer-index set is useful, use
+
+$$
+\mathcal L=\{P,T,I,O\},
+$$
+
+so $\mathcal S$ denotes the system object and $\mathcal L$ denotes its layer index set. The two notations must not be used interchangeably without stating this distinction.
 
 ---
 
