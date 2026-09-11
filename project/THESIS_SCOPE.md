@@ -61,20 +61,18 @@ Defines the $P$–$T$–$I$–$O$ system, subsystem decomposition, states, and p
 
 ### Stage 2 — Causal Mechanisms
 
-Defines the 12 directed interdependencies / six bidirectional families and requires a real causal transmission mechanism for every accepted relation:
+Defines the 12 directed interdependencies / six bidirectional families. A retained relation requires
 
 $$
-\alpha\xrightarrow{M_{ij}}\beta.
+\alpha\xrightarrow{M_{ij}}\beta,
 $$
 
-Every accepted interdependency is represented by
+and every accepted interdependency is represented by
 
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-\left(
-E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
-\right).
+\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
 $$
 
 Canonical Stage 2: [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
@@ -83,15 +81,9 @@ Canonical Stage 2: [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPEND
 
 Defines how accepted Stage-2 mechanisms evolve through time and space using heterogeneous native subsystem dynamics, causal delay, multiple timescales, discrete events, mode switching, dynamic topology, and uncertainty.
 
-The four-layer state remains
-
 $$
 Y(t)=[x_P(t),x_T(t),z_I(t),z_O(t)]^\top,
-$$
-
-with augmented hybrid state
-
-$$
+\qquad
 \widetilde Y(t)=(Y(t),m(t)).
 $$
 
@@ -101,13 +93,9 @@ Canonical Stage 3: [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COU
 
 Defines how the evolving Stage-3 system is measured, inferred, interpreted, organizationally constrained, and acted upon under imperfect information.
 
-The conceptual feedback spine is
-
 $$
 X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
 $$
-
-The mathematical control architecture is
 
 $$
 (\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I),
@@ -119,50 +107,113 @@ u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-Here the control variable is $u(t)$. Measurement noise is denoted by $\varepsilon_k(t)$ in the Stage-4 measurement model.
-
 For sequential non-overlapping response processes,
 
 $$
 \begin{aligned}
-\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}
-+\tau_{\rm decision}\\
+\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}\\
 &+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
 \end{aligned}
 $$
 
-The proposed diagnostic
-
-$$
-\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}}
-$$
-
-is a thesis construct, not an established resilience law.
-
 Canonical Stage 4: [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
+
+### Stage 5 — Controlled Sustainable Viability
+
+Stage 5 is frozen at framework level under the seven-stage label **Viability**. It distinguishes acceptable states from states that remain maintainable under admissible control.
+
+The acceptable region is
+
+$$
+K_{\rm sus}(t)
+=
+\{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\},
+$$
+
+and the primary finite-horizon viability object is
+
+$$
+\mathcal V_{\rm sus}^{u,T}
+=
+\left\{
+Y_0\in K_{\rm sus}:
+\exists u(\cdot)\in\mathcal U,
+\ Y^u(t)\in K_{\rm sus}\ \forall t\in[0,T]
+\right\}.
+$$
+
+Stage 5 preserves
+
+$$
+Y\notin\mathcal V_{\rm sus}^{u,T}
+\not\Rightarrow
+Y\notin K_{\rm sus},
+$$
+
+so the viability boundary $\partial\mathcal V$ and actual acceptability boundary $\partial K_{\rm sus}$ remain distinct.
+
+Robust and stochastic viability are separate mathematical extensions:
+
+$$
+\text{robust viability}\neq\text{stochastic viability}.
+$$
+
+The baseline geometric margin is $\rho_E$ after appropriate state normalization. The Riemannian margin
+
+$$
+\rho_g=d_{g_\psi}(Y,\partial\mathcal V),
+\qquad g_\psi(Y)\succ0,
+$$
+
+remains a proposed thesis construct `[P]`.
+
+The temporal distinction is
+
+$$
+T_{\mathcal V}=\text{time to loss of maintainability},
+\qquad
+T_K=\text{time to actual acceptability violation}.
+$$
+
+Stage 4 and Stage 5 connect through
+
+$$
+S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
+\qquad
+S_K=T_K-\tau_{\rm response},
+$$
+
+with proposed dimensionless diagnostics
+
+$$
+\Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
+\qquad
+\Pi_K=\frac{\tau_{\rm response}}{T_K}.
+$$
+
+Interface criticality is treated through finite perturbation sensitivity unless smoothness is demonstrated.
+
+Canonical Stage 5: [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
 
 ---
 
 ## 4. Current scientific progression
 
-| Stage | Scientific role |
-|---|---|
-| **1** | Define what exists and where interaction can occur. |
-| **2** | Define why one component/layer affects another and through what mechanism. |
-| **3** | Evolve accepted mechanisms through space and time. |
-| **4** | Observe, infer, coordinate, and control the evolving system. |
-| **5** | Evaluate controlled sustainable viability. |
-| **6–7** | Translate verified resilience evidence into sustainable transformation. |
-
-The next framework-formalization task is **Stage 5 — Viability**.
+| Stage | Scientific role | Status |
+|---|---|---|
+| **1** | Define what exists and where interaction can occur. | Defined |
+| **2** | Define why one component/layer affects another and through what mechanism. | Frozen |
+| **3** | Evolve accepted mechanisms through space and time. | Frozen |
+| **4** | Observe, infer, coordinate, and control the evolving system. | Frozen |
+| **5** | Evaluate controlled sustainable viability and proximity to loss. | Frozen |
+| **6** | Translate verified resilience results into sustainability-transition requirements. | **Next** |
+| **7** | Define and evaluate sustainable transformation pathways. | Downstream |
 
 ---
 
 ## 5. Scope discipline
 
-The thesis is framework-driven and evidence-gated. It does not assume that every subsystem requires maximal simulation detail or that every mathematical concept must be implemented at the highest available fidelity.
-
-The governing principles are
+The thesis is framework-driven and evidence-gated. The governing principles are
 
 $$
 \text{maximum necessary physical fidelity}\neq\text{maximum possible model detail},
@@ -172,10 +223,14 @@ $$
 \text{correlation/common exposure}\neq\text{causal interdependency},
 $$
 
+$$
+\text{technically desirable action}\not\Rightarrow\text{organizationally executable action},
+$$
+
 and
 
 $$
-\text{technically desirable action}\not\Rightarrow\text{organizationally executable action}.
+\text{acceptable now}\not\Rightarrow\text{maintainable over the required horizon}.
 $$
 
 Each mathematical layer must answer a defined research question and create a corresponding validation obligation.
@@ -208,9 +263,10 @@ A proposed construct remains a candidate contribution until novelty and performa
 |---|---|
 | **3** | Produces trajectories and evolving information/organizational states. |
 | **4** | Uses those states to constrain knowledge, feasible action, and feedback control. |
-| **5** | Evaluates whether the resulting controlled trajectory is viable. |
+| **5** | Evaluates acceptability, maintainability, geometric/temporal proximity to loss, and interdependency sensitivity. |
+| **6** | Uses only validated resilience evidence to formulate sustainability-transition requirements. |
 
-Stage 4 does not redefine $z_I$ or $z_O$ dynamics and does not compute $\mathcal V_{\rm sus}^{u}$, $\rho_g$, or $T_{\rm exit}$.
+Stage 5 does not redefine Stage-4 control and does not prescribe Stage-6/7 transformations.
 
 ---
 
