@@ -1,5 +1,11 @@
 # MSE Thesis — Multilayer Interdependent Power–Transportation Infrastructure Resilience
 
+![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
+![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
+![Framework](https://img.shields.io/badge/framework-7--stage%20canonical-0969DA)
+![Frozen](https://img.shields.io/badge/stages%202--5-FROZEN-1A7F37)
+![Next](https://img.shields.io/badge/next-Stage%206-9A6700)
+
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** Active thesis source of truth  
 **Framework status:** Seven-stage architecture frozen  
@@ -8,6 +14,9 @@
 **Updated:** 2026-09-11
 
 > **Repository rule:** all active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical material is retained only for provenance and does not override current canonical files.
+
+> **Project mathematical dashboard:** [`project/README.md`](project/README.md)  
+> **Latest full cross-audit:** [`provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md`](provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md)
 
 ---
 
@@ -41,7 +50,7 @@ z_O(t)
 \end{bmatrix}.
 $$
 
-$P$ and $T$ are the physical infrastructure systems. $I$ represents sensing, communication, information quality, latency, synchronization, estimation support, and signaling. $O$ represents authority, coordination, decision making, resources, workforce, logistics, mobilization, and intervention capability.
+$P$ and $T$ are physical infrastructure systems. $I$ represents sensing, communication, information quality, latency, synchronization, estimation support, and signaling. $O$ represents authority, coordination, decision making, resources, workforce, logistics, mobilization, and intervention capability.
 
 Canonical system files:
 
@@ -72,14 +81,6 @@ $$
 
 ## 3. Canonical seven-stage framework
 
-1. **Multilayer Structure**
-2. **Causal Mechanisms**
-3. **Coupled Hybrid Multiscale Dynamics**
-4. **Observation, Organization, Feedback and Control**
-5. **Viability**
-6. **Resilience-to-Sustainability Transformation Interface**
-7. **Sustainable Transformation Pathways**
-
 | Stage | Main question | Status |
 |---|---|---|
 | **1. Multilayer Structure** | What exists? | Canonical |
@@ -87,7 +88,7 @@ $$
 | **3. Coupled Hybrid Multiscale Dynamics** | How, when, and where do effects evolve and propagate? | **Frozen** |
 | **4. Observation, Organization, Feedback and Control** | How is the system observed, interpreted, coordinated, and controlled? | **Frozen** |
 | **5. Viability** | Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states? | **Frozen** |
-| **6. Transformation Interface** | What do verified resilience results imply for sustainability? | **Next** |
+| **6. Resilience-to-Sustainability Transformation Interface** | What do verified resilience results imply for sustainability? | **Next** |
 | **7. Sustainable Transformation Pathways** | What should change for long-term sustainability? | Downstream |
 
 Framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
@@ -161,7 +162,7 @@ Y(t)=
 x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \end{bmatrix},
 \qquad
-\widetilde Y(t)=\big(Y(t),m(t)\big).
+\widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
 Its architecture is a hybrid delayed multirate dynamical system with continuous/quasi-continuous dynamics, algebraic constraints, discrete events, mode switching, dynamic topology, causal delays, and heterogeneous timescales.
@@ -198,12 +199,6 @@ The conceptual spine is
 
 $$
 X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
-$$
-
-The critical distinction is
-
-$$
-X\neq y\neq I\neq\widehat X\neq O\neq u.
 $$
 
 Observation and estimation use
@@ -246,8 +241,6 @@ $$
 \end{aligned}
 $$
 
-If processes overlap, $\tau_{\rm response}$ is the completion time of the relevant critical path.
-
 The Stage-4 diagnostic
 
 $$
@@ -262,7 +255,7 @@ Stage-4 authority: [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.m
 
 ## 8. Stage 5 — Controlled Sustainable Viability
 
-Stage 5 is **canonical and frozen** at the framework level.
+Stage 5 is **canonical and frozen** at framework level.
 
 > **Research question:** Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states?
 
@@ -288,7 +281,7 @@ K_{\rm sus}(t)
 \{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\},
 $$
 
-where each threshold must be independently justified. The finite-horizon controlled viability set is
+and the finite-horizon controlled viability set is
 
 $$
 \mathcal V_{\rm sus}^{u,T}
@@ -300,117 +293,33 @@ Y_0\in K_{\rm sus}:
 \right\}.
 $$
 
-The framework preserves the distinction
+The framework preserves
 
 $$
 Y\notin\mathcal V_{\rm sus}^{u,T}
 \not\Rightarrow
-Y\notin K_{\rm sus},
+Y\notin K_{\rm sus}.
 $$
 
-so the loss-of-viability boundary $\partial\mathcal V$ is not the same as the actual acceptability boundary $\partial K_{\rm sus}$.
+Thus the loss-of-viability boundary $\partial\mathcal V$ is distinct from the actual acceptability boundary $\partial K_{\rm sus}$.
 
-### Robust and stochastic extensions
+Robust and stochastic viability remain mathematically distinct. The normalized Euclidean/weighted margin $\rho_E$ is the geometric baseline; $\rho_g=d_{g_\psi}(Y,\partial\mathcal V)$ remains a proposed `[P]` extension.
 
-For bounded/adversarial uncertainty,
-
-$$
-\mathcal V_{\rm rob}^{T}
-=
-\left\{
-Y_0:\exists\pi\in\Pi_{\rm adm},\ \forall\xi\in\Xi,
-\ Y^{\pi,\xi}(t)\in K_{\rm sus}\ \forall t\in[0,T]
-\right\}.
-$$
-
-For probabilistic uncertainty,
+The two temporal quantities are
 
 $$
-\mathcal V_{\varepsilon}^{T}
-=
-\left\{
-Y_0:\exists\pi,
-\ \Pr[Y^{\pi}(t)\in K_{\rm sus}\ \forall t\in[0,T]]\ge1-\varepsilon
-\right\}.
-$$
-
-Thus,
-
-$$
-\text{robust viability}\neq\text{stochastic viability}.
-$$
-
-### Geometric and temporal margins
-
-A normalized Euclidean/weighted distance is the baseline:
-
-$$
-\widetilde Y=D^{-1}(Y-Y_{\rm ref}),
+T_{\mathcal V}=\text{time to loss of maintainability},
 \qquad
-\rho_E=d(\widetilde Y,\partial\widetilde{\mathcal V}).
+T_K=\text{time to actual acceptability violation}.
 $$
 
-The proposed state-dependent extension is
-
-$$
-\rho_g=d_{g_\psi}(Y,\partial\mathcal V),
-\qquad
-g_\psi(Y)\succ0.
-$$
-
-$\rho_g$ is explicitly a **proposed thesis construct [P]** and must outperform justified geometric baselines before any stronger claim is made.
-
-Two temporal margins are retained:
-
-$$
-T_{\mathcal V}
-=\inf\{t>0:Y(t)\notin\mathcal V_{\rm sus}^{u,T-t}\},
-$$
-
-$$
-T_K
-=\inf\{t>0:Y(t)\notin K_{\rm sus}\}.
-$$
-
-Stage 4 connects to Stage 5 through
+Stage 4 and Stage 5 connect through
 
 $$
 S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
 \qquad
-S_K=T_K-\tau_{\rm response},
+S_K=T_K-\tau_{\rm response}.
 $$
-
-and the proposed dimensionless diagnostics
-
-$$
-\Pi_{\mathcal V}=\frac{\tau_{\rm response}}{T_{\mathcal V}},
-\qquad
-\Pi_K=\frac{\tau_{\rm response}}{T_K}.
-$$
-
-These timing quantities are **[P] thesis diagnostics**, not universal resilience laws.
-
-### Interface sensitivity
-
-Because viability boundaries need not be smooth, finite perturbation is the primary proposed sensitivity:
-
-$$
-S_{ij}^{\mathcal V}(\Delta\theta)
-=
-\frac{
-\mathcal M_{\mathcal V}(\theta_{ij}+\Delta\theta)
--
-\mathcal M_{\mathcal V}(\theta_{ij})
-}{\|\Delta\theta\|},
-$$
-
-with
-
-$$
-\theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
-$$
-
-Differential sensitivity is used only where smoothness is demonstrated.
 
 Stage-5 authority: [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
 
@@ -446,12 +355,6 @@ $$
 \end{aligned}
 $$
 
-The thesis distinguishes
-
-$$
-\text{domain evidence}\neq\text{transferable methodology}\neq\text{mathematical theory}\neq\text{thesis-proposed synthesis}.
-$$
-
 Canonical stage files use `[E]` for established literature, `[D]` for derived synthesis, and `[P]` for proposed thesis constructs. All in-text citations and reference lists follow **APA 7th edition**.
 
 The validation logic is
@@ -466,26 +369,24 @@ $$
 
 | Stage | Status |
 |---|---|
-| **1 — Multilayer Structure** | Defined |
+| **1 — Multilayer Structure** | Defined / canonical |
 | **2 — Causal Mechanisms** | Frozen |
 | **3 — Coupled Hybrid Multiscale Dynamics** | Frozen |
 | **4 — Observation, Organization, Feedback and Control** | Frozen |
-| **5 — Viability** | Frozen |
+| **5 — Viability** | Frozen as Controlled Sustainable Viability |
 | **6 — Resilience-to-Sustainability Transformation Interface** | **Next** |
 | **7 — Sustainable Transformation Pathways** | Downstream |
 
-The first five stages now form the mathematical chain
+The first five stages form
 
 $$
+\begin{aligned}
 \{P,T,I,O\}
-\rightarrow
-\mathfrak I
-\rightarrow
-\{F,\mathcal G,m\}
-\rightarrow
-\{\widehat X,\mathcal U,u,\tau_{\rm response}\}
-\rightarrow
-\{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
+&\rightarrow \mathfrak I
+\rightarrow \{F,\mathcal G,m\}\\
+&\rightarrow \{\widehat X,\mathcal U,u,\tau_{\rm response}\}\\
+&\rightarrow \{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
+\end{aligned}
 $$
 
 ---
@@ -494,6 +395,7 @@ $$
 
 | File / directory | Role |
 |---|---|
+| [`project/README.md`](project/README.md) | mathematical project dashboard and rendering standard |
 | [`PROJECT_MEMORY.md`](PROJECT_MEMORY.md) | repository and framework authority |
 | [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md) | current thesis scope |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | frozen seven-stage framework |
@@ -504,6 +406,7 @@ $$
 | [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | frozen Stage-3 specification |
 | [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | frozen Stage-4 specification |
 | [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | frozen Stage-5 specification |
+| [`provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md`](provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md) | full mathematical display/content cross-audit |
 | [`evidence/`](evidence/) | literature and evidence artifacts |
 | [`methods/`](methods/) | mathematical, computational, review, and validation methods |
 | [`provenance/`](provenance/) | provenance and audit records |
@@ -525,8 +428,7 @@ Historical P–W–T–SW, waste–drainage, equity-centered, and other supersed
 - Distinguish acceptability $K_{\rm sus}$ from maintainability $\mathcal V_{\rm sus}^{u,T}$.
 - Keep robust and stochastic viability mathematically separate.
 - Keep HJ value functions and geometric distance conceptually separate.
-- Treat $g_\psi$, $\rho_g$, $S_{\mathcal V}$, $S_K$, $\Pi_{\mathcal V}$, $\Pi_K$, and $S_{ij}^{\mathcal V}$ as proposed constructs until validated.
-- Do not claim novelty for established concepts without systematic falsification.
+- Treat proposed Stage-5 diagnostics as `[P]` until validated.
 - Require equations, assumptions, units, provenance, numerical checks, uncertainty analysis, and baseline comparison before strong conclusions.
 
 > **Target standard:** clear ontology + causal evidence + hybrid dynamics + partially observable control + viability theory + geometric/temporal diagnostics + falsifiable validation + reproducibility.
