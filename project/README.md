@@ -48,7 +48,7 @@ flowchart LR
 | 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | **Frozen** |
 | 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) | Stage-7 ten-pass deep research and candidate mathematics | **Research — not frozen** |
 | 12 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Synchronized through Stage 6 |
-| 13 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Falsifiable thesis propositions | Synchronized through Stage 5 |
+| 13 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Falsifiable thesis propositions | Synchronized through Stage 6 |
 | 14 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | Mathematical display and visual-encoding standard | Synchronized |
 
 ## Canonical state and control notation
