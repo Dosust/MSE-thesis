@@ -4,6 +4,7 @@
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
 ![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
+![Evidence](https://img.shields.io/badge/325--paper%20pipeline-CURRENT-0969DA)
 ![QA](https://img.shields.io/badge/display%20%26%20ontology-QA%20AUTOMATED-0969DA)
 
 ## Repository authority — 2026-09-11
@@ -41,10 +42,11 @@ The thesis-wide citation standard is **APA 7th edition**. A citation must not su
 13. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
 14. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
 15. [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md)
-16. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
-17. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
-18. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
-19. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+16. [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md)
+17. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
+18. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
+19. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
+20. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 
 The file `project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance and is superseded by the frozen Stage-7 specification whenever they differ.
 
@@ -217,6 +219,60 @@ Reduction stops when removing another component would eliminate a hypothesis-rel
 
 ---
 
+## Closed-corpus evidence-selection methodology
+
+The current evidence-selection specification is [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md).
+
+The frozen 325-paper PRISMA-style + Monte Carlo protocol is now explicitly assigned the role of **evidence-selection engine** for demonstrator design:
+
+```math
+325\text{-paper corpus}
+\rightarrow
+\text{robust evidence ranking}
+\rightarrow
+\text{best records for }H_1-H_5
+\rightarrow
+\text{full-text evidence extraction}.
+```
+
+The ranked records then enter an evidence-to-equation extraction stage:
+
+```math
+\text{paper}
+\rightarrow
+\text{mechanism}
+\rightarrow
+\text{equation}
+\rightarrow
+\text{parameter}
+\rightarrow
+\text{data/benchmark}
+\rightarrow
+\text{hypothesis}.
+```
+
+The closed-corpus ranking may support only corpus-bounded priority claims. Because that ranking stage is restricted to the CSV and excludes PDFs, abstracts, websites and external databases, it cannot establish equation-level adequacy, parameter values, physical assumptions or validation evidence. Those require second-stage full-text extraction.
+
+The operational pipeline is:
+
+```math
+\begin{aligned}
+&\textbf{Phase A: }325\text{-paper closed-corpus ranking}\\
+&\downarrow\\
+&\textbf{Phase B: hypothesis-specific evidence set for }H_1-H_5\\
+&\downarrow\\
+&\textbf{Phase C: full-text mechanism/equation extraction}\\
+&\downarrow\\
+&\textbf{Phase D: candidate demonstrator architectures}\\
+&\downarrow\\
+&\textbf{Phase E: scientific-sufficiency + V\&V feasibility comparison}\\
+&\downarrow\\
+&\textbf{Phase F: freeze the minimal sufficient }P-T-I-O\text{ demonstrator.}
+\end{aligned}
+```
+
+---
+
 ## Automated QA
 
 Active thesis presentation/configuration is checked by:
@@ -240,4 +296,6 @@ Historical/provenance trees are deliberately excluded from ontology rewriting. P
 
 > **MINIMAL SUFFICIENT EXPERIMENTAL REALIZATION METHODOLOGY: CURRENT; ACTUAL DEMONSTRATOR NOT YET FROZEN.**
 
-The next task is selecting the actual minimal sufficient P–T–I–O demonstrator and auditing the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study design and testing.
+> **325-PAPER CLOSED-CORPUS EVIDENCE-SELECTION PIPELINE: CURRENT.**
+
+The immediate next task is **Phase A: run the frozen 325-paper closed-corpus PRISMA–Monte Carlo ranking**, then form hypothesis-specific evidence sets for $H_1$–$H_5$, followed by full-text mechanism/equation extraction. Only after that evidence chain should candidate demonstrator architectures be compared and the actual minimal sufficient P–T–I–O demonstrator frozen.
