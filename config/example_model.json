@@ -1,56 +1,94 @@
 {
-  "state": {
-    "power": ["critical_load_service", "available_generation"],
-    "water": ["pump_service", "distribution_service", "drainage_capacity"],
-    "transportation": ["network_accessibility", "critical_route_service"],
-    "solid_waste": ["uncollected_waste", "waste_removal_service"]
+  "system": {
+    "physical_systems": ["power", "transportation"],
+    "layers": ["information", "organization"]
   },
-  "interfaces": [
+  "state": {
+    "power": ["critical_load_service", "available_distribution_capacity", "storage_state_of_charge"],
+    "transportation": ["network_accessibility", "travel_time", "electrified_mobility_service"],
+    "information": ["availability", "latency", "freshness", "estimation_error"],
+    "organization": ["authority", "coordination", "resource_availability", "mobilization_time"]
+  },
+  "interdependencies": [
     {
-      "source": "power",
-      "target": "water",
-      "mechanism": "electric power required for pumping and treatment",
-      "dynamic": true,
-      "state_symbol": "Z_PW",
-      "timescale_symbol": "tau_PW"
+      "source_layer": "power",
+      "target_layer": "transportation",
+      "source_entity": "distribution_feeder",
+      "target_entity": "charging_or_traction_interface",
+      "mechanism": "electric power availability constrains electrified mobility service",
+      "strength": 0.8,
+      "delay": 0.0,
+      "timescale": 1.0,
+      "activation": 1.0,
+      "mode": "degraded",
+      "history_dependent": false
     },
     {
-      "source": "transportation",
-      "target": "solid_waste",
-      "mechanism": "road accessibility constrains waste collection and removal",
-      "dynamic": true,
-      "state_symbol": "Z_TSW",
-      "timescale_symbol": "tau_TSW"
+      "source_layer": "transportation",
+      "target_layer": "organization",
+      "source_entity": "road_network",
+      "target_entity": "repair_logistics",
+      "mechanism": "network accessibility constrains crew and equipment mobilization",
+      "strength": 0.7,
+      "delay": 0.25,
+      "timescale": 2.0,
+      "activation": 1.0,
+      "mode": "recovery",
+      "history_dependent": true
     },
     {
-      "source": "solid_waste",
-      "target": "water",
-      "mechanism": "waste blockage reduces effective drainage capacity",
-      "dynamic": true,
-      "state_symbol": "Z_SWW",
-      "timescale_symbol": "tau_SWW"
+      "source_layer": "information",
+      "target_layer": "power",
+      "source_entity": "state_estimation_and_control_information",
+      "target_entity": "distribution_operation",
+      "mechanism": "information quality and delay constrain observability and feasible control",
+      "strength": 0.6,
+      "delay": 0.1,
+      "timescale": 0.5,
+      "activation": 1.0,
+      "mode": "degraded",
+      "history_dependent": false
+    },
+    {
+      "source_layer": "organization",
+      "target_layer": "power",
+      "source_entity": "restoration_coordination",
+      "target_entity": "damaged_power_assets",
+      "mechanism": "authority, resources and crew allocation determine restoration execution",
+      "strength": 0.75,
+      "delay": 0.5,
+      "timescale": 4.0,
+      "activation": 1.0,
+      "mode": "recovery",
+      "history_dependent": true
     }
   ],
   "hazard": {
-    "forcing_symbol": "xi",
-    "realized_hazard_symbol": "eta",
-    "feedbacks": [
-      "solid_waste -> drainage_blockage -> realized_flood_hazard",
-      "transport_accessibility -> waste_removal -> solid_waste"
-    ]
+    "field_symbol": "h(r,t)",
+    "classes": ["flood", "heat"]
   },
-  "admissibility": {
-    "physical": ["sector_state_bounds", "flow_capacity_constraints"],
-    "service": ["critical_service_minima"],
-    "sustainability": ["declared_environmental_resource_constraints"],
-    "equity": ["declared_population_service_distribution_constraints"]
+  "control": {
+    "action_symbol": "u(t)",
+    "feasible_set_symbol": "U(z_I,z_O)",
+    "policy_symbol": "pi"
+  },
+  "viability": {
+    "constraint_set": "K_sus",
+    "controlled_viability_set": "V_sus^{u,T}",
+    "time_to_viability_loss": "T_V",
+    "time_to_constraint_violation": "T_K"
+  },
+  "transformation": {
+    "stage6_output": ["c_6", "D_6", "zeta_T"],
+    "regime_symbol": "frakM_k",
+    "stage7_object": "frakP_ST"
   },
   "analysis": {
-    "viability": true,
-    "recovery": true,
-    "uncertainty": true,
-    "control": true,
-    "design": true,
-    "optimization": false
+    "hybrid_dynamics": true,
+    "partial_observability": true,
+    "controlled_viability": true,
+    "regime_adequacy": true,
+    "adaptive_transformation": true,
+    "uncertainty": true
   }
 }
