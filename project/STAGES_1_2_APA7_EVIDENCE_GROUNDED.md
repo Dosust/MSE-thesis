@@ -1,14 +1,19 @@
 # Stages 1–2 — APA 7 Evidence-Grounded Canonical Specification
 
+![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
+![Scope](https://img.shields.io/badge/Stages%201--2-CANONICAL-0969DA)
+
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **System:** Power–Transportation–Information–Organization (P–T–I–O)  
 **Status:** Canonical evidence-grounded companion to Stages 1 and 2  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
-> **Scope rule:** This document preserves the current Stage-1 system ontology and the frozen Stage-2 interdependency scope. It adds literature grounding and APA 7 citations; it does not alter the seven-stage framework. The thesis remains at framework level here; no separate implementation-level subsection is included.
+> **Scope rule:** This document preserves the current Stage-1 ontology and frozen Stage-2 interdependency scope. It adds literature grounding; it does not alter the seven-stage framework.
 
 > **Evidence rule:** Citations support the specific claims to which they are attached. The complete thesis interdependency tuple is a thesis synthesis and is not attributed to any single source.
+
+> **Rendering rule:** Long verbal statements are kept outside mathematics; taxonomies use tables; equations use GitHub-compatible display math without oversized boxes.
 
 ---
 
@@ -16,48 +21,42 @@
 
 ## Research question
 
-$$
-\boxed{\textbf{What entities exist, what layers constitute the system, and where can interactions occur?}}
-$$
+> **What entities exist, what layers constitute the system, and where can interactions occur?**
 
-The System of Systems is
+The system is
 
 $$
-\boxed{\mathcal S=\{P,T,I,O\}}.
-$$
-
-We study a
-
-$$
-\boxed{\textbf{Multilayer Physical–Informational–Organizational Interdependent Infrastructure System}}
+\mathcal S=\{P,T,I,O\},
 $$
 
 with
 
 $$
-\boxed{\underbrace{P,T}_{\text{physical infrastructure systems}}\qquad\underbrace{I,O}_{\text{informational and organizational layers}}}.
+P,T=\text{physical infrastructure systems},
+\qquad
+I,O=\text{informational and organizational layers}.
 $$
 
-Critical infrastructures can be mutually dependent through physical, cyber/informational, geographic, logical, and organizational relationships; consequently, interdependent infrastructure cannot be represented adequately as isolated physical networks alone (Mohebbi et al., 2020; Ouyang, 2014; Rinaldi et al., 2001).
+Critical infrastructures can be mutually dependent through physical, cyber/informational, geographic, logical, and organizational relationships; therefore, interdependent infrastructure cannot always be represented adequately as isolated physical networks (Mohebbi et al., 2020; Ouyang, 2014; Rinaldi et al., 2001).
 
-The framework-level system state is
+The framework-level state is
 
 $$
-\boxed{
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
 x_T(t)\\
 z_I(t)\\
 z_O(t)
-\end{bmatrix}
-}.
+\end{bmatrix}.
 $$
 
-## 1. Power system $P$
+---
+
+## 1. Power infrastructure system $P$
 
 $$
-\boxed{P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP}}.
+P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP}.
 $$
 
 The scope includes conventional electricity infrastructure together with charging and traction-power interfaces because transportation electrification creates interactions across distribution networks, charging infrastructure, and railway traction-power systems (Bellè et al., 2022; Sun et al., 2021; Unterluggauer et al., 2022).
@@ -71,27 +70,29 @@ The scope includes conventional electricity infrastructure together with chargin
 | $P_C$ — Charging | EV chargers, fast chargers, bus-depot/opportunity chargers, converters, bidirectional charging, smart charging, V2G interfaces |
 | $P_{TP}$ — Traction power | traction substations/transformers, rectifiers, inverters, feeders, catenary, third rail, return circuits, wayside storage, AC/DC traction systems |
 
-Charging infrastructure forms an explicit interface between transportation demand and distribution-network operation, and its planning and operation depend jointly on transportation and electrical conditions (Unterluggauer et al., 2022). Railway–power interdependency should explicitly retain traction-power infrastructure because traction substations mediate interaction between external power networks and railway operations (Bellè et al., 2022).
+Charging infrastructure is an explicit interface between transportation demand and distribution-network operation, and its planning/operation depends jointly on transportation and electrical conditions (Unterluggauer et al., 2022). Railway–power interdependency should retain traction-power infrastructure because traction substations mediate interaction between external power networks and railway operations (Bellè et al., 2022).
 
 A representative physical state is
 
 $$
-\boxed{x_P=[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC]^{\top}}.
+x_P=[V,\theta,f,P_{ij},Q_{ij},P_G,P_L,SOC_B]^\top.
 $$
 
-## 2. Transportation system $T$
+---
+
+## 2. Transportation infrastructure system $T$
 
 $$
-\boxed{T=T_R\cup T_B\cup T_U\cup T_H\cup T_M}.
+T=T_R\cup T_B\cup T_U\cup T_H\cup T_M.
 $$
 
-The transportation layer is deliberately multimodal because power–transport interdependency is not limited to private EVs: road mobility interacts with charging and restoration logistics, while metro and railway systems interact directly with power networks through traction-power supply (Bellè et al., 2022; Sun et al., 2021).
+The transportation system is deliberately multimodal because power–transport interdependency is not limited to private EVs: road mobility interacts with charging and restoration logistics, while metro and railway systems interact directly with power networks through traction-power supply (Bellè et al., 2022; Sun et al., 2021).
 
 | Subsystem | Framework-level content |
 |---|---|
 | $T_R$ — Road | links, intersections, traffic signals/flows, vehicles, EVs, shared mobility, charging access, emergency/repair routes |
 | $T_B$ — Electric bus | buses, routes, depots, terminals, charging, schedules, fleet operations |
-| $T_U$ — Urban rail | Metro, MRT, Subway, LRT, Tram; trains, tracks, stations, signaling, traction interfaces, depots, schedules |
+| $T_U$ — Urban rail | metro, MRT, subway, LRT, tram; trains, tracks, stations, signaling, traction interfaces, depots, schedules |
 | $T_H$ — Regional/heavy electrified rail | commuter, suburban, regional, intercity, high-speed and relevant electrified freight rail |
 | $T_M$ — Multimodal transfer | intermodal stations, transfer hubs, road–rail/bus–rail connections, alternative routes, passenger transfers, emergency substitution |
 
@@ -100,25 +101,27 @@ Power-dependent traffic signals and road accessibility provide explicit physical
 A representative state is
 
 $$
-\boxed{x_T=[q,k,v,TT,A,SOC_{EV},s_{\rm rail}]^{\top}},
+x_T=[q,k,v,TT,A,SOC_{EV},s_{\rm rail}]^\top,
 $$
 
 where $A$ captures accessibility and $s_{\rm rail}$ represents relevant rail operational states.
 
+---
+
 ## 3. Information layer $I$
 
 $$
-\boxed{I=I_S\cup I_C\cup I_D\cup I_E\cup I_A\cup I_X\cup I_{\tau}}.
+I=I_S\cup I_C\cup I_D\cup I_E\cup I_A\cup I_X\cup I_{\tau}.
 $$
 
-Modern infrastructure operation increasingly combines physical infrastructure with sensing, communication, computation, monitoring, and control; cyber-physical power systems provide a well-established example of this integration (Alvarez-Alvarado et al., 2024; Rinaldi et al., 2001).
+Modern infrastructure operation combines physical assets with sensing, communication, computation, monitoring, and control; cyber-physical power systems provide a well-established example (Alvarez-Alvarado et al., 2024; Rinaldi et al., 2001).
 
 | Subsystem | Framework-level content |
 |---|---|
 | $I_S$ — Sensing | SCADA, PMUs, meters, IEDs, feeder/substation sensors, traffic detectors, cameras, vehicle/bus/train telemetry |
 | $I_C$ — Communication | utility WAN, SCADA/PMU/AMI networks, V2V/V2I/V2X, cellular/ITS, train-to-wayside and rail radio/fiber |
 | $I_D$ — Data | databases, synchrophasor/AMI/traffic data, telemetry, charging data, event logs, APIs, streams, fusion |
-| $I_E$ — Estimation | power/traffic state estimation, topology/load estimation, outage/congestion/accessibility estimation, train localization |
+| $I_E$ — Estimation support | power/traffic state information, topology/load/outage information, congestion/accessibility estimates, train localization |
 | $I_A$ — Automation/signaling | EMS, DMS, SCADA logic, protection, DER/charging control, adaptive signals, route guidance, CBTC, ATP, ATO, ATS |
 | $I_X$ — Cross-domain interoperability | EV-grid communication, smart charging, V2G exchange, power–transport APIs, traction energy management, energy–mobility coordination |
 | $I_{\tau}$ — Timing/synchronization | timestamps, clock synchronization, GNSS/location, update timing, train positioning, measurement synchronization, information freshness |
@@ -128,19 +131,22 @@ Information freshness is distinct from conventional transmission latency. Age of
 A representative information state is
 
 $$
-\boxed{z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^{\top}}.
+z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
 $$
 
 Conceptually,
 
 $$
-\boxed{I=\text{SENSE + COMMUNICATE + ESTIMATE + SIGNAL}=\textbf{KNOW}}.
+I:\quad
+\text{SENSE}\rightarrow\text{COMMUNICATE}\rightarrow\text{ESTIMATE/SIGNAL}\rightarrow\text{KNOW}.
 $$
+
+---
 
 ## 4. Organizational layer $O$
 
 $$
-\boxed{O=O_A\cup O_G\cup O_D\cup O_C\cup O_R\cup O_W\cup O_L\cup O_M\cup O_X\cup O_K}.
+O=O_A\cup O_G\cup O_D\cup O_C\cup O_R\cup O_W\cup O_L\cup O_M\cup O_X\cup O_K.
 $$
 
 Infrastructure resilience is influenced not only by physical assets but also by organizational characteristics, managerial strategies, human actors, coordination structures, and resource availability (Mohebbi et al., 2020; Rasoulkhani & Mostafavi, 2018).
@@ -163,66 +169,58 @@ Transportation accessibility can constrain movement of repair crews and mobile e
 A representative organizational state is
 
 $$
-\boxed{z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^{\top}}.
+z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^{O},\tau_M]^\top.
 $$
 
 Conceptually,
 
 $$
-\boxed{O=\text{DECIDE + COORDINATE + RESOURCE + MOBILIZE}}.
+O:\quad
+\text{DECIDE}\rightarrow\text{COORDINATE}\rightarrow\text{RESOURCE}\rightarrow\text{MOBILIZE}.
 $$
 
-## 5. Physical Power–Transportation coupling
+---
+
+## 5. Principal physical Power–Transportation couplings
 
 The two physical systems interact through several interfaces, not one generic $P\leftrightarrow T$ arrow. Explicit coupling points and linking variables are established approaches in coupled transportation–power modeling (Fotouhi et al., 2017; Unterluggauer et al., 2022).
 
-$$
-P_D\leftrightarrow P_C\leftrightarrow T_R
-$$
+| Coupling chain | Physical interpretation |
+|---|---|
+| $P_D\leftrightarrow P_C\leftrightarrow T_R$ | road-EV charging, smart charging, V2G |
+| $P_D\leftrightarrow P_C\leftrightarrow T_B$ | electric-bus charging |
+| $P_{Tr/D}\leftrightarrow P_{TP}\leftrightarrow T_U$ | urban-rail traction power and regenerative braking |
+| $P_{Tr}\leftrightarrow P_{TP}\leftrightarrow T_H$ | regional/heavy electrified rail |
+| $T_R\rightarrow O_L\rightarrow P_D$ | road accessibility affecting repair-crew/mobile-resource deployment |
 
-for road EV charging, smart charging and V2G;
+Railway–power models show that traction-power interfaces can transmit cascading consequences in both directions between railway and external power networks (Bellè et al., 2022). Transport accessibility can directly constrain repair-crew and mobile-resource deployment during distribution-system recovery (Li et al., 2022).
 
-$$
-P_D\leftrightarrow P_C\leftrightarrow T_B
-$$
+---
 
-for electric-bus charging;
+## 6. Structural observation and control interface
 
-$$
-P_{Tr/D}\leftrightarrow P_{TP}\leftrightarrow T_U
-$$
-
-for Metro/MRT/Subway/LRT/Tram traction power and regenerative braking; and
+At framework level,
 
 $$
-P_{Tr}\leftrightarrow P_{TP}\leftrightarrow T_H
-$$
-
-for regional/heavy electrified rail. Railway–power models demonstrate that traction-power interfaces can transmit cascading consequences in both directions between railway and external power networks (Bellè et al., 2022).
-
-A restoration dependency is
-
-$$
-\boxed{T\rightarrow\text{crew accessibility}\rightarrow\text{power restoration}},
-$$
-
-because transport-network accessibility can directly constrain repair-crew and mobile-resource deployment during distribution-system recovery (Li et al., 2022).
-
-## 6. Structural cognitive and control interfaces
-
-At framework level, the four layers connect through
-
-$$
-\boxed{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X},
+X
+\rightarrow y
+\rightarrow I
+\rightarrow\widehat X
+\rightarrow O
+\rightarrow u
+\rightarrow X,
 $$
 
 with
 
 $$
-X=\begin{bmatrix}x_P\\x_T\end{bmatrix},\qquad I=\textbf{KNOW},\qquad O=\textbf{DECIDE/COORDINATE/MOBILIZE},\qquad u=\textbf{ACT}.
+X=
+\begin{bmatrix}
+x_P\\x_T
+\end{bmatrix}.
 $$
 
-The separation between physical infrastructure, cyber/information functions, and human/organizational processes is consistent with cyber-physical-social infrastructure-resilience research (Alvarez-Alvarado et al., 2024; Mohebbi et al., 2020; Rinaldi et al., 2001). Observer and policy design remain Stage 4 responsibilities.
+The separation among physical infrastructure, informational functions, and human/organizational processes is consistent with cyber-physical-social infrastructure-resilience research (Alvarez-Alvarado et al., 2024; Mohebbi et al., 2020; Rinaldi et al., 2001). Estimator and policy design remain Stage-4 responsibilities.
 
 ---
 
@@ -230,48 +228,47 @@ The separation between physical infrastructure, cyber/information functions, and
 
 ## Research question
 
-$$
-\boxed{\textbf{Why and through which mechanisms do components and layers affect each other?}}
-$$
+> **Why and through which mechanisms do components and layers affect each other?**
 
-## 1. Stage role
+Stage 2 starts from the Stage-1 ontology and adds causal transmission:
 
 $$
-\boxed{\text{Stage 1 defines }P,T,I,O\quad\Longrightarrow\quad\text{Stage 2 defines how }P,T,I,O\text{ causally affect one another}}.
+\{P,T,I,O\}
+\longrightarrow
+\mathfrak I_{ij}^{\alpha\beta}.
 $$
 
-Interdependency analysis requires more than identifying coexisting infrastructure networks: it requires specifying the mechanism through which the state or operation of one infrastructure influences another (Ouyang, 2014; Rinaldi et al., 2001).
+Interdependency analysis requires more than identifying coexisting networks; it requires specifying the mechanism through which the state or operation of one infrastructure influences another (Ouyang, 2014; Rinaldi et al., 2001).
 
-## 2. Complete directed scope
+---
 
-$$
-\boxed{
-\mathcal I=\{
-P\to T,T\to P,
-P\to I,I\to P,
-P\to O,O\to P,
-T\to I,I\to T,
-T\to O,O\to T,
-I\to O,O\to I
-\}}
-$$
-
-or, equivalently, six bidirectional families:
+## 1. Complete directed scope
 
 $$
-\boxed{
-P\leftrightarrow T,\quad
-P\leftrightarrow I,\quad
-P\leftrightarrow O,\quad
-T\leftrightarrow I,\quad
-T\leftrightarrow O,\quad
-I\leftrightarrow O
-}.
+\begin{aligned}
+\mathcal I=\{&P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\\
+&T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I\}.
+\end{aligned}
 $$
 
-The inclusion of physical, informational, and organizational directions is consistent with infrastructure-interdependency frameworks that distinguish physical and cyber dependencies and with later cyber-physical-social research integrating organizational characteristics (Mohebbi et al., 2020; Rinaldi et al., 2001).
+Equivalently, the six bidirectional families are
 
-## 3. Interdependency families and measurable effects
+$$
+\begin{aligned}
+&P\leftrightarrow T,
+\qquad P\leftrightarrow I,
+\qquad P\leftrightarrow O,\\
+&T\leftrightarrow I,
+\qquad T\leftrightarrow O,
+\qquad I\leftrightarrow O.
+\end{aligned}
+$$
+
+The inclusion of physical, informational, and organizational directions is consistent with interdependency frameworks that distinguish physical/cyber dependencies and later cyber-physical-social research that integrates organizational characteristics (Mohebbi et al., 2020; Rinaldi et al., 2001).
+
+---
+
+## 2. Interdependency families and measurable effects
 
 | Direction | Interdependencies in scope | Main measurable effect |
 |---|---|---|
@@ -288,56 +285,31 @@ The inclusion of physical, informational, and organizational directions is consi
 | $I\rightarrow O$ | estimated state, alarms, forecasts, damage information, confidence, information freshness | decision quality and decision time (Mohebbi et al., 2020; Yates et al., 2021) |
 | $O\rightarrow I$ | monitoring priorities, reporting rules, information sharing, communication priorities, access authority | information availability and flow (Mohebbi et al., 2020) |
 
-The P–T mechanisms have particularly direct modeling precedents. Fotouhi et al. (2017) represented power-dependent traffic signals and coupled traffic–power resilience; Bellè et al. (2022) explicitly represented railway–traction–power dependency; and Li et al. (2022) represented road-constrained movement of repair crews and mobile energy resources during power-system restoration.
+The P–T mechanisms have particularly direct modeling precedents: Fotouhi et al. (2017) represent power-dependent traffic signals and coupled traffic–power resilience; Bellè et al. (2022) explicitly represent railway–traction–power dependency; and Li et al. (2022) represent road-constrained movement of repair crews and mobile energy resources during power-system restoration.
 
-## 4. Subsystem-level decomposition
+---
 
-For each directed family,
+## 3. Subsystem-level decomposition
 
-$$
-\boxed{\mathcal I^{P\rightarrow T}=\bigcup_{p\in P}\bigcup_{t\in T}\mathcal I_{pt}^{P\rightarrow T}}.
-$$
-
-An edge is included only when a real causal mechanism exists. Examples include
+For a directed family such as $P\rightarrow T$,
 
 $$
-P_D\rightarrow P_C\rightarrow T_R
+\mathcal I^{P\rightarrow T}
+=
+\bigcup_{p\in P}
+\bigcup_{t\in T}
+\mathcal I_{pt}^{P\rightarrow T}.
 $$
 
-for EV charging (Unterluggauer et al., 2022),
+A component-level edge is retained only when a real causal mechanism exists. The same decomposition principle is applied to all 12 directions.
 
-$$
-P_D\rightarrow P_C\rightarrow T_B
-$$
+---
 
-for electric-bus charging,
-
-$$
-P_{Tr/D}\rightarrow P_{TP}\rightarrow T_U
-$$
-
-for Metro/MRT traction (Bellè et al., 2022),
-
-$$
-P_{Tr}\rightarrow P_{TP}\rightarrow T_H
-$$
-
-for heavy/intercity rail (Bellè et al., 2022), and
-
-$$
-T_R\rightarrow O_L\rightarrow P_D
-$$
-
-for road accessibility affecting power repair (Li et al., 2022).
-
-The same subsystem-to-subsystem decomposition is to be developed for all 12 directions.
-
-## 5. Canonical interdependency object
+## 4. Canonical interdependency object
 
 Every accepted interdependency is represented by
 
 $$
-\boxed{
 \mathfrak I_{ij}^{\alpha\beta}
 =
 \left(
@@ -350,87 +322,90 @@ w_{ij},
 a_{ij},
 m,
 \mathcal H_t
-\right)
-}.
+\right).
 $$
 
-This is the **proposed canonical object of this thesis**. It synthesizes established dimensions of infrastructure interdependency with the thesis requirements for explicit causal mechanism, strength, delay, activation, mode, timescale, and history. Existing literature supports representing infrastructure dependencies as heterogeneous, directional, and state-sensitive relationships, while dynamic studies show that interdependency behavior can vary over time and across disruption and recovery conditions (Danziger & Barabási, 2022; Ouyang, 2014; Rinaldi et al., 2001; Zhang & Peeta, 2014).
+This is a **proposed canonical thesis object**. It synthesizes established dimensions of heterogeneous, directional, and state-sensitive infrastructure dependency with the thesis requirements for explicit mechanism, strength, delay, timescale, activation, mode, and history (Danziger & Barabási, 2022; Ouyang, 2014; Rinaldi et al., 2001; Zhang & Peeta, 2014).
 
-The minimum accepted causal representation is
+| Element | Meaning |
+|---|---|
+| $E_i^\alpha$ | source entity/component |
+| $E_j^\beta$ | receiving entity/component |
+| $M_{ij}$ | causal transmission mechanism |
+| $w_{ij}$ | interdependency strength |
+| $\delta_{ij}$ | cause-to-effect delay |
+| $\tau_{ij}$ | characteristic mechanism timescale |
+| $a_{ij}$ | activation state/condition |
+| $m$ | system operating mode |
+| $\mathcal H_t$ | relevant system/event history |
 
-$$
-\boxed{\text{Source}\rightarrow\text{Mechanism}\rightarrow\text{Receiver}\rightarrow\text{Effect}}.
-$$
-
-Each accepted relation must characterize its strength $w$, delay $\delta$, characteristic timescale $\tau$, activation $a$, mode $m$, and relevant history $\mathcal H_t$. The complete tuple is a thesis synthesis and is not attributed to any single cited paper.
-
-## 6. Causal admissibility rule
-
-$$
-\boxed{\text{same hazard affects }P\text{ and }T\;\not\Rightarrow\;P\leftrightarrow T}.
-$$
-
-Correlation, co-occurrence, co-location, or common exposure alone is insufficient. An accepted interdependency requires a causal transmission mechanism:
+The minimum accepted representation is
 
 $$
-\boxed{\alpha\xrightarrow{M_{ij}}\beta}.
+\text{Source}
+\rightarrow
+\text{Mechanism}
+\rightarrow
+\text{Receiver}
+\rightarrow
+\text{Effect}.
 $$
 
-This distinction is consistent with established infrastructure-interdependency taxonomies in which geographic co-location is conceptually different from a physical or cyber dependency in which the state of one system directly affects another (Ouyang, 2014; Rinaldi et al., 2001).
+---
 
-Thus,
+## 5. Causal admissibility rule
+
+Correlation, co-occurrence, co-location, or common exposure alone is insufficient. For example,
 
 $$
-h(\mathbf r,t)\rightarrow P_i,\qquad h(\mathbf r,t)\rightarrow T_j
+h(\mathbf r,t)\rightarrow P_i,
+\qquad
+h(\mathbf r,t)\rightarrow T_j
 $$
 
-does not itself establish
+does **not** by itself establish
 
 $$
 P_i\rightarrow T_j.
 $$
 
-A Stage-2 edge requires evidence for
+A retained Stage-2 edge requires evidence for a causal transmission mechanism:
 
 $$
-\boxed{P_i\xrightarrow{M_{ij}}T_j}.
+P_i\xrightarrow{M_{ij}}T_j,
 $$
 
-## 7. Position inside the seven-stage framework
+or generally
 
 $$
-\boxed{
-\underbrace{\{P,T,I,O\}}_{\text{Stage 1: system}}
-\rightarrow
-\underbrace{\mathcal I^{\alpha\beta}}_{\text{Stage 2: interdependencies}}
-\rightarrow
-\underbrace{F(Y,\ldots)}_{\text{Stage 3: dynamics}}
-\rightarrow
-\underbrace{I\rightarrow O\rightarrow u}_{\text{Stage 4}}
-\rightarrow
-\underbrace{\mathcal V_{\rm sus}^{u}}_{\text{Stage 5}}
-\rightarrow
-\underbrace{\text{Stages 6--7}}_{\text{transition and transformation}}
-}.
+\alpha\xrightarrow{M_{ij}}\beta.
 $$
 
-**Bounded scientific responsibility of Stage 2:** identify, classify, parameterize, and evidence the causal interdependencies among $P$, $T$, $I$, and $O$; do not yet solve their full coupled dynamics. This boundary is methodologically consistent with the distinction between identifying interdependency structure/mechanisms and subsequently modeling their dynamic evolution (Ouyang, 2014; Zhang & Peeta, 2014).
+This is consistent with interdependency taxonomies that distinguish common/geographic exposure from a physical or cyber dependency in which the state of one system directly affects another (Ouyang, 2014; Rinaldi et al., 2001).
 
-## 8. Freeze statement
+---
+
+## 6. Position inside the seven-stage framework
+
+The first five stages connect as
+
+$$
+\begin{aligned}
+\{P,T,I,O\}
+&\rightarrow \mathfrak I_{ij}^{\alpha\beta}
+\rightarrow \{Y,\mathcal G,m,T_C\}\\
+&\rightarrow \{\widehat X,\mathcal U,u,\tau_{\rm response}\}\\
+&\rightarrow \{K_{\rm sus},\mathcal V,\partial\mathcal V,\rho,T_{\mathcal V},T_K\}.
+\end{aligned}
+$$
+
+**Bounded Stage-2 responsibility:** identify, classify, parameterize, and evidence causal interdependencies among $P$, $T$, $I$, and $O$; do not yet solve their full coupled dynamics. This boundary is consistent with the distinction between identifying interdependency structure/mechanisms and subsequently modeling dynamic evolution (Ouyang, 2014; Zhang & Peeta, 2014).
+
+---
+
+## 7. Freeze statement
 
 Stage 2 remains frozen. Future Stage-2 diagrams, evidence tables, subsystem matrices, equations, simulations, and thesis text must remain consistent with the canonical specification unless an explicit versioned revision is approved.
-
-The first-two-stage logic is
-
-$$
-\boxed{
-\underbrace{\{P,T,I,O\}}_{\textbf{Stage 1: what exists / where interaction can occur}}
-\rightarrow
-\underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\textbf{Stage 2: why / through what mechanism an effect occurs}}
-}.
-$$
-
-Stage 3 receives these objects without redefining them.
 
 ---
 
