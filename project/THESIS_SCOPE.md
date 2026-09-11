@@ -119,7 +119,7 @@ u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
 u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
 $$
 
-Here the control variable is $u(t)$. The symbol $\nu_k(t)$ is reserved only for measurement noise in the Stage-4 measurement model.
+Here the control variable is $u(t)$. Measurement noise is denoted by $\varepsilon_k(t)$ in the Stage-4 measurement model.
 
 For sequential non-overlapping response processes,
 
