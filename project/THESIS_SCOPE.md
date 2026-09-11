@@ -11,13 +11,7 @@
 
 ## 1. System class
 
-The thesis studies a
-
-$$
-\boxed{\text{multilayer interdependent infrastructure system}}
-$$
-
-with
+The thesis studies a **multilayer interdependent infrastructure system** with
 
 $$
 P,T=\text{physical infrastructure systems},
@@ -44,19 +38,15 @@ Canonical definition: [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINI
 The frozen architecture is
 
 $$
+\begin{aligned}
 \text{Multilayer Structure}
-\rightarrow
-\text{Causal Mechanisms}
-\rightarrow
-\text{Coupled Hybrid Multiscale Dynamics}
-\rightarrow
-\text{Observation, Organization, Feedback and Control}
-\rightarrow
-\text{Viability}
-\rightarrow
-\text{Resilience-to-Sustainability Transformation Interface}
-\rightarrow
-\text{Sustainable Transformation Pathways}.
+&\rightarrow \text{Causal Mechanisms}
+\rightarrow \text{Coupled Hybrid Multiscale Dynamics}\\
+&\rightarrow \text{Observation, Organization, Feedback and Control}\\
+&\rightarrow \text{Viability}
+\rightarrow \text{Resilience-to-Sustainability Transformation Interface}\\
+&\rightarrow \text{Sustainable Transformation Pathways}.
+\end{aligned}
 $$
 
 Canonical framework: [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md)
@@ -82,7 +72,9 @@ Every accepted interdependency is represented by
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t).
+\left(
+E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
+\right).
 $$
 
 Canonical Stage 2: [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
@@ -115,24 +107,28 @@ $$
 X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
 $$
 
-The mathematical control architecture uses
+The mathematical control architecture is
 
 $$
 (\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I),
-\qquad
-u=\pi(\widehat X,z_I,z_O),
-\qquad
-u\in\mathcal U(z_I,z_O),
 $$
 
-where the rendered action symbol is the canonical intervention variable $u$.
+$$
+u(t)=\pi\!\left(\widehat X(t),z_I(t),z_O(t)\right),
+\qquad
+u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
+$$
+
+Here the control variable is $u(t)$. The symbol $\nu_k(t)$ is reserved only for measurement noise in the Stage-4 measurement model.
 
 For sequential non-overlapping response processes,
 
 $$
-\tau_{\rm response}
-=
-\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\begin{aligned}
+\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}
++\tau_{\rm decision}\\
+&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\end{aligned}
 $$
 
 The proposed diagnostic
@@ -149,21 +145,14 @@ Canonical Stage 4: [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAG
 
 ## 4. Current scientific progression
 
-$$
-\boxed{
-\underbrace{\{P,T,I,O\}}_{\text{Stage 1}}
-\rightarrow
-\underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\text{Stage 2}}
-\rightarrow
-\underbrace{\{Y(t),m(t),\mathcal G(t),T_C,v_c\}}_{\text{Stage 3}}
-\rightarrow
-\underbrace{\{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}}_{\text{Stage 4}}
-\rightarrow
-\underbrace{\mathcal V_{\rm sus}^{u}}_{\text{Stage 5}}
-\rightarrow
-\underbrace{\text{Stages 6--7}}_{\text{sustainable transformation}}
-}
-$$
+| Stage | Scientific role |
+|---|---|
+| **1** | Define what exists and where interaction can occur. |
+| **2** | Define why one component/layer affects another and through what mechanism. |
+| **3** | Evolve accepted mechanisms through space and time. |
+| **4** | Observe, infer, coordinate, and control the evolving system. |
+| **5** | Evaluate controlled sustainable viability. |
+| **6–7** | Translate verified resilience evidence into sustainable transformation. |
 
 The next framework-formalization task is **Stage 5 — Viability**.
 
@@ -198,15 +187,13 @@ Each mathematical layer must answer a defined research question and create a cor
 The evidence workflow is
 
 $$
-\text{literature}
-\rightarrow
-\text{mechanism evidence}
-\rightarrow
-\text{formal mathematical object}
-\rightarrow
-\text{simulation/analysis}
-\rightarrow
-\text{falsification and validation}.
+\begin{aligned}
+\text{Literature}
+&\rightarrow \text{Mechanism evidence}
+\rightarrow \text{Formal mathematical object}\\
+&\rightarrow \text{Simulation / analysis}
+\rightarrow \text{Falsification and validation}.
+\end{aligned}
 $$
 
 The thesis distinguishes empirical/domain evidence, transferable methodological evidence, mathematical theory, derived synthesis, and thesis-proposed constructs. In-text citations and reference lists follow **APA 7th edition**.
@@ -217,15 +204,11 @@ A proposed construct remains a candidate contribution until novelty and performa
 
 ## 7. Stage boundary rule
 
-$$
-\boxed{
-\text{Stage 3 produces trajectories;}
-\quad
-\text{Stage 4 observes and controls them;}
-\quad
-\text{Stage 5 evaluates their viability.}
-}
-$$
+| Stage | Boundary |
+|---|---|
+| **3** | Produces trajectories and evolving information/organizational states. |
+| **4** | Uses those states to constrain knowledge, feasible action, and feedback control. |
+| **5** | Evaluates whether the resulting controlled trajectory is viable. |
 
 Stage 4 does not redefine $z_I$ or $z_O$ dynamics and does not compute $\mathcal V_{\rm sus}^{u}$, $\rho_g$, or $T_{\rm exit}$.
 
