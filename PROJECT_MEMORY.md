@@ -12,6 +12,29 @@ The repository [`Dossiya-SE/Optimization-for-sustainability-and-resilience`](htt
 
 ---
 
+## Citation and reference standard — 2026-09-11
+
+The thesis-wide citation standard is **APA 7th edition**.
+
+Use:
+
+- author–date in-text citations, e.g. `(Ouyang, 2014)` and `(Mohebbi et al., 2020)`;
+- narrative citations where appropriate, e.g. `Zhang and Peeta (2014)`;
+- `et al.` for works with three or more authors in in-text citations;
+- alphabetized reference lists by first-author surname;
+- sentence case for article titles;
+- italicized journal title and volume in Markdown;
+- canonical DOI URLs in the form `https://doi.org/...`;
+- citations attached directly to the scientific claims they support.
+
+Do not treat a citation as evidence for a stronger claim than the cited source supports. Thesis-proposed mathematical objects must be labeled as thesis syntheses rather than attributed to individual papers unless a source explicitly defines the same object.
+
+The APA-7 evidence-grounded rendering of the first two stages is:
+
+[`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md)
+
+---
+
 ## Current canonical authority — 2026-09-11
 
 For the current thesis, read these files in order:
@@ -21,9 +44,10 @@ For the current thesis, read these files in order:
 3. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
 4. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
 5. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
-6. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
-7. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
-8. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
+6. [`project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](project/STAGES_1_2_APA7_EVIDENCE_GROUNDED.md)
+7. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
+8. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+9. [`provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md`](provenance/2026-09-11_STAGE_3_REFERENCE_AND_NOTATION_AUDIT.md)
 
 These files supersede older framework descriptions when conflicts occur.
 
