@@ -40,11 +40,9 @@ O(t)
 \end{bmatrix}.
 $$
 
-$P$ and $T$ are the physical systems. $I$ represents sensing, communication, estimation, information quality, latency, synchronization, and signaling. $O$ represents authority, coordination, decision-making, resources, workforce, logistics, mobilization, and intervention capability.
+$P$ and $T$ are physical systems. $I$ represents sensing, communication, estimation, information quality, latency, synchronization, and signaling. $O$ represents authority, coordination, decision-making, resources, workforce, logistics, mobilization, and intervention capability.
 
-Canonical files:
-- [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
-- [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
+Canonical files: [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md) and [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md).
 
 ---
 
@@ -90,7 +88,7 @@ $$
 | **6. Transformation Interface** | What do resilience results imply for sustainability? | Downstream |
 | **7. Sustainable Transformation Pathways** | What should change? | Downstream |
 
-Framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
+Framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md).
 
 ---
 
@@ -128,10 +126,8 @@ The directed scope is
 
 $$
 \begin{aligned}
-\mathcal I=\{&
-P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\\
-&T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I
-\}.
+\mathcal I=\{&P\to T,\ T\to P,\ P\to I,\ I\to P,\ P\to O,\ O\to P,\\
+&T\to I,\ I\to T,\ T\to O,\ O\to T,\ I\to O,\ O\to I\}.
 \end{aligned}
 $$
 
@@ -151,37 +147,19 @@ Every accepted interdependency is represented by
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-\left(
-E_i^\alpha,
-E_j^\beta,
-M_{ij},
-w_{ij},
-\delta_{ij},
-\tau_{ij},
-a_{ij},
-m,
-\mathcal H_t
-\right).
+\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
 $$
 
 The minimum causal structure is
 
 $$
-\text{Source}
-\rightarrow
-\text{Mechanism}
-\rightarrow
-\text{Receiver}
-\rightarrow
-\text{Effect}.
+\text{Source}\rightarrow\text{Mechanism}\rightarrow\text{Receiver}\rightarrow\text{Effect}.
 $$
 
 Common exposure is not sufficient:
 
 $$
-\text{same hazard affects }P\text{ and }T
-\not\Rightarrow
-P\leftrightarrow T.
+\text{same hazard affects }P\text{ and }T\not\Rightarrow P\leftrightarrow T.
 $$
 
 A retained relation requires
@@ -190,7 +168,7 @@ $$
 \alpha\xrightarrow{M_{ij}}\beta.
 $$
 
-Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md).
 
 ---
 
@@ -211,11 +189,7 @@ $$
 The temporal rule is
 
 $$
-\text{event time}
-\neq
-\text{causal delay }\delta
-\neq
-\text{characteristic timescale }\tau.
+\text{event time}\neq\text{causal delay }\delta\neq\text{characteristic timescale }\tau.
 $$
 
 | Temporal class | Representative quantities |
@@ -232,7 +206,7 @@ $$
 \Gamma_{\alpha\beta}=\frac{\tau_\alpha}{\tau_\beta}
 $$
 
-are regime descriptors, not universal thresholds, unless a threshold is derived from the dynamics or supported by evidence.
+are regime descriptors, not universal thresholds, unless derived from the dynamics or supported by evidence.
 
 ---
 
@@ -241,19 +215,7 @@ are regime descriptors, not universal thresholds, unless a threshold is derived 
 The observation–decision–action loop is
 
 $$
-X
-\rightarrow
-y
-\rightarrow
-I
-\rightarrow
-\widehat X
-\rightarrow
-O
-\rightarrow
-u
-\rightarrow
-X.
+X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X.
 $$
 
 For analytical and numerical work,
@@ -281,14 +243,10 @@ $$
 and
 
 $$
-\mathcal V_{\rm sus}^{u}
-=
-\operatorname{Viab}_{F,\mathcal U(I,O)}(K_{\rm sus}).
+\mathcal V_{\rm sus}^{u}=\operatorname{Viab}_{F,\mathcal U(I,O)}(K_{\rm sus}).
 $$
 
-The final finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly.
-
-Candidate diagnostics include signed distance to the viability boundary, time to viability loss, recovery time, interface criticality, and intervention feasibility.
+The final finite-horizon, robust, stochastic, or time-varying formulation must be selected from evidence and assumptions and documented explicitly. Candidate diagnostics include signed distance to the viability boundary, time to viability loss, recovery time, interface criticality, and intervention feasibility.
 
 ---
 
@@ -329,11 +287,7 @@ plus disturbance, measured effect, model family, data source, calibration, valid
 The thesis preserves
 
 $$
-\text{domain evidence}
-\neq
-\text{transferable methodological evidence}
-\neq
-\text{mathematical theory}.
+\text{domain evidence}\neq\text{transferable methodological evidence}\neq\text{mathematical theory}.
 $$
 
 Evidence: [`evidence/`](evidence/)  
@@ -356,13 +310,7 @@ Methods: [`methods/`](methods/)
 | Transformation | trace recommendations to verified resilience evidence |
 
 $$
-\text{Claim}
-\rightarrow
-\text{Test}
-\rightarrow
-\text{Falsification Opportunity}
-\rightarrow
-\text{Evidence-backed Conclusion}.
+\text{Claim}\rightarrow\text{Test}\rightarrow\text{Falsification Opportunity}\rightarrow\text{Evidence-backed Conclusion}.
 $$
 
 ---
@@ -370,17 +318,7 @@ $$
 ## 12. Current research state
 
 $$
-\text{Stage 1: defined}
-\rightarrow
-\text{Stage 2: frozen}
-\rightarrow
-\text{Stage 3: dynamics/timescales}
-\rightarrow
-\text{Stage 4: feedback/control}
-\rightarrow
-\text{Stage 5: viability}
-\rightarrow
-\text{Stages 6--7: transformation}.
+\text{Stage 1: defined}\rightarrow\text{Stage 2: frozen}\rightarrow\text{Stage 3: dynamics/timescales}\rightarrow\text{Stage 4: feedback/control}\rightarrow\text{Stage 5: viability}\rightarrow\text{Stages 6--7: transformation}.
 $$
 
 ### Immediate technical program
