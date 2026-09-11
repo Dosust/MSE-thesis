@@ -8,6 +8,8 @@
 
 This directory contains the **active mathematical and scientific specification** of the MSE thesis. Historical material is retained separately for provenance and must not override the canonical files listed below.
 
+> **Latest cross-audit:** [`../provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md`](../provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md)
+
 ## Current framework status
 
 ```mermaid
