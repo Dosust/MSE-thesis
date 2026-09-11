@@ -1,116 +1,142 @@
 # Canonical 7-Stage Thesis Framework
 
-**Status:** CANONICAL / AUTHORITATIVE  
+![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
+![Framework](https://img.shields.io/badge/framework-FROZEN-1A7F37)
+
 **Effective date:** 2026-09-09  
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Scope:** Thesis framework architecture and all future representations of that architecture  
-**Change control:** This specification remains authoritative until the user explicitly approves a change.  
-**Representation rule:** Visual redesign may change hierarchy, layout, typography, geometry, spacing, and graphical encoding, but it may not change the scientific content.
+**Change control:** This specification remains authoritative until an explicit, versioned framework revision is approved.  
+**Representation rule:** Visual redesign may change hierarchy, layout, typography, geometry, spacing, and graphical encoding, but it may not change scientific content.
 
 ---
 
-## 1. Canonical seven-stage sequence
+## 1. Canonical sequence
 
-```math
-\boxed{ 1\rightarrow2\rightarrow3\rightarrow4\rightarrow5\rightarrow6\rightarrow7 }
-```
+$$
+1\rightarrow2\rightarrow3\rightarrow4\rightarrow5\rightarrow6\rightarrow7.
+$$
 
 The seven stage names are:
 
 1. **Multilayer Structure**
 2. **Causal Mechanisms**
 3. **Coupled Hybrid Multiscale Dynamics**
-4. **Feedback & Control**
+4. **Observation, Organization, Feedback and Control**
 5. **Viability**
 6. **Resilience-to-Sustainability Transformation Interface**
 7. **Sustainable Transformation Pathways**
 
-The main conceptual separation is:
+The central separation is
 
-```math
-\boxed{ \underbrace{\text{Stages 1--5}}_{\text{Resilience Analysis}} \rightarrow \underbrace{\text{Stage 6}}_{\text{Translation Interface}} \rightarrow \underbrace{\text{Stage 7}}_{\text{Sustainable Transformation}} }
+$$
+\underbrace{\text{Stages 1--5}}_{\text{resilience analysis}}
+\rightarrow
+\underbrace{\text{Stage 6}}_{\text{translation interface}}
+\rightarrow
+\underbrace{\text{Stage 7}}_{\text{sustainable transformation}}.
+$$
+
+---
+
+## 2. Visual status map
+
+```mermaid
+flowchart LR
+    S1["1 · Multilayer Structure"] --> S2["2 · Causal Mechanisms"]
+    S2 --> S3["3 · Coupled Hybrid Multiscale Dynamics"]
+    S3 --> S4["4 · Observation, Organization, Feedback and Control"]
+    S4 --> S5["5 · Viability"]
+    S5 --> S6["6 · Resilience-to-Sustainability Transformation Interface"]
+    S6 --> S7["7 · Sustainable Transformation Pathways"]
+
+    classDef canonical fill:#DDF4FF,stroke:#0969DA,color:#0B1F33,stroke-width:2px;
+    classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
+    classDef next fill:#FFF8C5,stroke:#9A6700,color:#0B1F33,stroke-width:2px;
+    classDef downstream fill:#F6F8FA,stroke:#57606A,color:#24292F,stroke-width:1.5px;
+
+    class S1 canonical;
+    class S2,S3,S4,S5 frozen;
+    class S6 next;
+    class S7 downstream;
 ```
 
----
-
-## 2. Exact canonical content
-
-| Stage | Role | Main question |
-|---|---|---|
-| **1. Multilayer Structure** | P–T–I–O architecture | **What exists?** |
-| **2. Causal Mechanisms** | Cross-layer cause-effect pathways | **Why does disruption propagate?** |
-| **3. Coupled Hybrid Multiscale Dynamics** | Coupling + continuous dynamics + discrete events + timescales | **How and when does it evolve?** |
-| **4. Feedback & Control** | Information, organization, decisions, intervention | **How does the system respond?** |
-| **5. Viability** | Survival/recoverability under constraints | **Can it survive?** |
-| **6. Resilience-to-Sustainability Transformation Interface** | Translate resilience findings into transformation requirements | **What do the resilience results imply for sustainability?** |
-| **7. Sustainable Transformation Pathways** | Technical, organizational, environmental and policy transformation | **What should be changed for long-term sustainability?** |
+Blue identifies the canonical system-definition stage, green identifies frozen stages, amber identifies the next formalization stage, and gray identifies downstream work. Text labels remain authoritative; color is only a secondary visual cue.
 
 ---
 
-## 3. Canonical mathematical hierarchy
+## 3. Exact canonical content
 
-```math
-\boxed{ (\mathcal G,Y,Z) \rightarrow \mathcal C \rightarrow (Z,F,J,\tau) \rightarrow (\mathcal H_{\rm obs},\hat Y,I,O,\pi,u) \rightarrow (K,\mathcal V) \rightarrow R \xrightarrow{\mathcal T_{ST}} S }
-```
-
-This hierarchy is authoritative for the framework representation unless an explicit future change is approved.
-
----
-
-## 4. Scientific-content preservation rule
-
-```math
-\boxed{ \textbf{CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.} }
-```
-
-No new SDGs, equations, variables, applications, outputs, labels, pathway categories, or interpretations may be inserted into a representation of the canonical framework unless they are already part of this specification or are explicitly approved as a framework revision.
+| Stage | Role | Main question | Current status |
+|---|---|---|---|
+| **1. Multilayer Structure** | Define the P–T–I–O ontology, states, subsystems, and potential interface locations. | **What exists, and where can interaction occur?** | Defined / canonical |
+| **2. Causal Mechanisms** | Define directed cross-layer causal interdependencies. | **Why and through what mechanism does one component/layer affect another?** | Frozen |
+| **3. Coupled Hybrid Multiscale Dynamics** | Evolve accepted mechanisms through heterogeneous dynamics, delays, events, modes, topology, and timescales. | **How, when, and where do effects evolve and propagate?** | Frozen |
+| **4. Observation, Organization, Feedback and Control** | Reconstruct system state under imperfect information and map knowledge plus organizational capability into feasible intervention. | **How is the system observed, interpreted, coordinated, and controlled?** | Frozen |
+| **5. Viability** | Evaluate acceptable and maintainable operation under admissible control and uncertainty. | **Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states?** | Frozen as Controlled Sustainable Viability |
+| **6. Resilience-to-Sustainability Transformation Interface** | Translate only validated resilience results into sustainability-transition requirements. | **What do verified resilience results imply for sustainability?** | Next |
+| **7. Sustainable Transformation Pathways** | Evaluate long-term technical, organizational, environmental, and policy transformation pathways. | **What should change for long-term sustainability?** | Downstream |
 
 ---
 
-## 5. Audit of the previous generated illustration
+## 4. Canonical mathematical hierarchy
 
-The previous generated illustration is **illustrative only** and is **not authoritative** because it did not preserve the canonical content 100% verbatim.
+The framework-level object flow is
 
-The seven-stage sequence itself was preserved, but the illustration introduced extra material, paraphrased some wording, and added mathematical/output elements that were not explicitly part of the frozen canonical framework.
+$$
+\begin{aligned}
+\{P,T,I,O\}
+&\rightarrow \mathfrak I_{ij}^{\alpha\beta}
+\rightarrow \{Y(t),\mathcal G(t),m(t),T_C\}\\
+&\rightarrow \{\widehat X,\Sigma_X,b_t,\mathcal U,u,\tau_{\rm response}\}\\
+&\rightarrow \{K_{\rm sus},\mathcal V_{\rm sus}^{u,T},\partial\mathcal V,
+\rho,T_{\mathcal V},T_K\}\\
+&\rightarrow \text{Stage 6 translation requirements}
+\rightarrow \text{Stage 7 transformation pathways}.
+\end{aligned}
+$$
 
-| Item | Status |
+This hierarchy is a **cross-stage interface map**, not a substitute for the detailed definitions in the stage-specific files.
+
+---
+
+## 5. Frozen stage boundaries
+
+| Boundary | Meaning |
 |---|---|
-| Seven stage names | **Preserved** |
-| Stage order | **Preserved** |
-| Main questions | Mostly preserved, but some wording was reformatted |
-| Roles | Mostly preserved, but some were expanded/paraphrased |
-| Core mathematical objects | Some preserved; some extra objects were introduced |
-| Stage 6 `R\rightarrow\mathcal T_{ST}\rightarrow S` | Preserved conceptually |
-| Stage 7 pathway categories | Preserved conceptually |
-| “Downstream Thesis Outputs and Applications” | **Added — not canonical** |
-| SDG panel | **Added — not canonical** |
-| “Critical interfaces”, “recovery bottlenecks”, etc. | **Added — not canonical** |
-| Stage-7 symbols `S_T,S_O,S_E,S_P` | **Added — not frozen** |
-| Extra application examples | **Added — not canonical** |
-| Some equations/labels | Adapted rather than verbatim |
-
-Therefore, that generated illustration must never be used as the source of scientific truth for the framework.
+| Stage 1 → Stage 2 | Structure identifies possible interaction locations; Stage 2 requires causal mechanisms. |
+| Stage 2 → Stage 3 | Stage 2 identifies the causal edge; Stage 3 evolves its consequence through time and space. |
+| Stage 3 → Stage 4 | Stage 3 produces the evolving system trajectory; Stage 4 determines what can be known and controlled. |
+| Stage 4 → Stage 5 | Stage 4 produces feasible intervention and controlled trajectories; Stage 5 evaluates acceptability and maintainability. |
+| Stage 5 → Stage 6 | Only validated resilience evidence is translated into sustainability-transition requirements. |
+| Stage 6 → Stage 7 | Translation requirements constrain the transformation pathways to be evaluated. |
 
 ---
 
-## 6. Representation authority
+## 6. Scientific-content preservation rule
 
-For future figures:
+> **CHANGE THE VISUAL HIERARCHY, NOT THE SCIENTIFIC CONTENT.**
 
-1. **Scientific source of truth:** this file.
-2. **Exact-text figure construction:** Figma, TikZ/LaTeX, SVG, or another deterministic vector workflow.
-3. **Generative image outputs:** may be used only as visual inspiration or illustrative drafts unless manually audited against this file.
-4. **Any final thesis figure:** must pass the visual-fidelity protocol in [`../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md).
+A framework figure may simplify layout, but it may not silently add or remove stages, redefine a frozen mathematical object, merge distinct stage responsibilities, or promote a proposed thesis construct into established theory.
+
+Generated images are illustrative unless manually audited against this file and the stage-specific canonical specifications.
 
 ---
 
-## 7. Change-control rule
+## 7. Representation authority
 
-A future change to the framework is valid only when all of the following are true:
+For future figures and documents:
 
-- the change is explicitly requested or approved by the user;
-- the canonical stage table is updated;
-- the mathematical hierarchy is updated if affected;
-- the change is recorded in Git history with a clear commit message;
-- downstream figures are re-audited for consistency.
+1. **Scientific source of truth:** this file plus the stage-specific canonical files.
+2. **Project navigation and render standard:** [`README.md`](README.md).
+3. **Exact-text construction:** TikZ/LaTeX, Figma, SVG, or another deterministic vector workflow.
+4. **Generative outputs:** visual inspiration or draft only unless audited against canonical content.
+5. **Final thesis figures:** must pass [`../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md).
+
+---
+
+## 8. Change-control rule
+
+A future framework revision is valid only when the change is explicitly approved, the canonical stage table is updated, affected mathematical interfaces are updated, the revision is recorded in Git history, and all dependent figures and project files are re-audited.
 
 Until then, this seven-stage specification is frozen as the thesis framework authority.
