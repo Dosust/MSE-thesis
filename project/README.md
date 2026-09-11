@@ -6,9 +6,10 @@
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
 ![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
+![Evidence](https://img.shields.io/badge/325--paper%20evidence%20pipeline-CURRENT-0969DA)
 ![Thresholds](https://img.shields.io/badge/%CE%B41--%CE%B45-NOT%20SET-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix and the Minimal Sufficient Experimental Realization methodology now govern operationalization, while the actual demonstrator topology, exact hypothesis domains, numerical thresholds and final analysis procedures remain to be fixed *a priori*.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix, Minimal Sufficient Experimental Realization methodology, and 325-paper closed-corpus evidence-selection pipeline now govern operationalization. The actual demonstrator topology, exact hypothesis domains, numerical thresholds and final analysis procedures remain to be fixed *a priori*.
 
 > **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
 
@@ -53,9 +54,10 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 | 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
 | 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules | current; numerical thresholds/domains/procedures not frozen |
 | 14 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale, preservation constraints and simplification stopping rule | current methodology; actual demonstrator not frozen |
-| 15 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
-| 16 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
-| 17 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
+| 15 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | frozen-325-paper ranking → H1–H5 evidence prioritization → full-text extraction → demonstrator design | current evidence-selection methodology |
+| 16 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
+| 17 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
+| 18 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
 The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance only and cannot override the frozen Stage-7 specification.
 
@@ -174,7 +176,58 @@ The actual demonstrator topology, component choices, hazard family, parameteriza
 
 ---
 
-## 7. Stage-6 / Stage-7 boundary
+## 7. Closed-corpus evidence-selection pipeline
+
+The current evidence-selection methodology is [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md).
+
+The existing frozen 325-paper PRISMA-style + Monte Carlo protocol is now used as the evidence-selection engine for demonstrator design:
+
+```math
+325\text{-paper corpus}
+\rightarrow
+\text{robust evidence ranking}
+\rightarrow
+\text{best records for }H_1-H_5
+\rightarrow
+\text{full-text evidence extraction}.
+```
+
+The downstream evidence-to-equation chain is
+
+```math
+\text{paper}
+\rightarrow
+\text{mechanism}
+\rightarrow
+\text{equation}
+\rightarrow
+\text{parameter}
+\rightarrow
+\text{data/benchmark}
+\rightarrow
+\text{hypothesis}.
+```
+
+The closed-corpus ranking identifies **priority records within the frozen 325-paper corpus only**. It cannot, by itself, establish governing equations, parameter values, validation data or physical assumptions because those require second-stage full-text extraction.
+
+The operational research sequence is therefore:
+
+```math
+\begin{aligned}
+&\textbf{A: }325\text{-paper closed-corpus ranking}\\
+&\rightarrow \textbf{B: }H_1-H_5\text{-specific evidence sets}\\
+&\rightarrow \textbf{C: full-text mechanism/equation extraction}\\
+&\rightarrow \textbf{D: candidate demonstrator architectures}\\
+&\rightarrow \textbf{E: scientific sufficiency + V\&V feasibility comparison}\\
+&\rightarrow \textbf{F: freeze }\mathcal M_D^*.
+\end{aligned}
+```
+
+This pipeline avoids restarting literature search from zero while preserving a strict boundary between **ranking evidence priority** and **extracting equation-level scientific evidence**.
+
+---
+
+## 8. Stage-6 / Stage-7 boundary
 
 ```math
 \underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
@@ -186,7 +239,7 @@ Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requ
 
 ---
 
-## 8. Repository rendering contract
+## 9. Repository rendering contract
 
 Active Markdown follows these rules:
 
@@ -206,7 +259,7 @@ See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the
 
 ---
 
-## 9. Next scientific phase
+## 10. Next scientific phase
 
 The immediate sequence is
 
@@ -219,11 +272,19 @@ The immediate sequence is
 \rightarrow
 \text{minimal-sufficient demonstrator methodology}
 \rightarrow
-\text{actual P--T--I--O demonstrator selection}
+\textbf{325-paper closed-corpus ranking}
 \rightarrow
-\text{benchmark/data evidence audit}
+\textbf{H1--H5 evidence sets}
 \rightarrow
-\text{a-priori threshold and analysis specification}
+\textbf{full-text evidence-to-equation extraction}
+\rightarrow
+\text{candidate P--T--I--O demonstrators}
+\rightarrow
+\text{V\&V feasibility comparison}
+\rightarrow
+\text{freeze actual demonstrator}
+\rightarrow
+\text{a-priori threshold/analysis specification}
 \rightarrow
 \text{case-study computation}
 \rightarrow
@@ -231,7 +292,5 @@ The immediate sequence is
 \rightarrow
 \text{validation}.
 ```
-
-The next task is therefore to select the actual minimal sufficient P–T–I–O demonstrator and establish the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$ and the final confirmatory analysis procedures.
 
 Historical and archived material remains provenance only unless explicitly reintroduced through a versioned revision.
