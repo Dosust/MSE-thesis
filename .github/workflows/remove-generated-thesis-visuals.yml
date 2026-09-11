@@ -1,0 +1,100 @@
+name: Remove generated thesis visuals
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/remove-generated-thesis-visuals.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove generated V00-V10 visual blocks and assets
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          docs = [
+              Path('README.md'),
+              Path('project/README.md'),
+              Path('project/CANONICAL_SYSTEM_DEFINITION.md'),
+              Path('project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md'),
+              Path('project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md'),
+              Path('project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md'),
+              Path('project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md'),
+              Path('project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md'),
+              Path('project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md'),
+              Path('project/RESEARCH_HYPOTHESES.md'),
+              Path('project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md'),
+              Path('project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md'),
+          ]
+
+          block = re.compile(
+              r'\n?<!-- CANONICAL_VISUAL:V(?:0[0-9]|10) -->.*?<!-- /CANONICAL_VISUAL:V(?:0[0-9]|10) -->\n?',
+              flags=re.S,
+          )
+
+          for path in docs:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              cleaned = block.sub('\n', text)
+              cleaned = re.sub(r'\n{3,}', '\n\n', cleaned)
+              path.write_text(cleaned, encoding='utf-8')
+
+          generated_paths = [
+              Path('figures/canonical'),
+              Path('tools/integrate_canonical_visuals.py'),
+              Path('tools/canonical_visual_registry.json'),
+              Path('.github/workflows/canonical-visual-integration.yml'),
+              Path('provenance/2026-09-11_CANONICAL_VISUAL_SYSTEM_INTEGRATION.md'),
+          ]
+
+          import shutil
+          for path in generated_paths:
+              if path.is_dir():
+                  shutil.rmtree(path)
+              elif path.exists():
+                  path.unlink()
+
+          # Remove this one-time workflow too so no visual-cleanup automation remains.
+          self_path = Path('.github/workflows/remove-generated-thesis-visuals.yml')
+          if self_path.exists():
+              self_path.unlink()
+
+          # Hard verification before commit.
+          leftovers = []
+          for path in docs:
+              if path.exists():
+                  text = path.read_text(encoding='utf-8')
+                  if 'CANONICAL_VISUAL:' in text or 'figures/canonical/' in text:
+                      leftovers.append(str(path))
+          if Path('figures/canonical').exists():
+              leftovers.append('figures/canonical')
+          if leftovers:
+              raise SystemExit('Visual cleanup incomplete: ' + ', '.join(leftovers))
+          PY
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          git config user.name "Dossiya-SE thesis cleanup"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to clean."
+            exit 0
+          fi
+          git commit -m "Remove generated thesis visuals and integration hooks"
+          git push origin HEAD:main
