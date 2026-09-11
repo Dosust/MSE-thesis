@@ -4,12 +4,13 @@
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
-![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
-![MSER](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
-![Evidence](https://img.shields.io/badge/325--paper%20pipeline-CURRENT-0969DA)
-![FTEE](https://img.shields.io/badge/FTEE%20v1.0-PILOT--READY-9A6700)
+![Search](https://img.shields.io/badge/evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
+![FTEE](https://img.shields.io/badge/FTEE-PILOT--READY-9A6700)
+![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20AUDIT-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The confirmatory matrix, minimal-sufficient demonstrator methodology, closed-corpus evidence-selection pipeline, and FTEE v1.0 now define the operationalization sequence.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The current evidence phase now begins with a **fresh reproducible literature search from first principles**. Memory, previously selected papers, and the frozen 325-paper corpus do not determine inclusion.
+
+> **Governing evidence rule:** A paper becomes evidence only because the new reproducible search finds it and the new eligibility protocol qualifies it.
 
 > **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
 
@@ -23,27 +24,25 @@ This directory is the active mathematical/scientific specification of the MSE th
 | 2 | [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md) | complete seven-stage architecture and mathematics | canonical / frozen |
 | 3 | [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINITION.md) | P–T–I–O system identity and state ontology | canonical |
 | 4 | [`FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | framework-level subsystem decomposition | canonical |
-| 5 | [`STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](STAGES_1_2_APA7_EVIDENCE_GROUNDED.md) | literature-grounded Stages 1–2 companion | canonical companion |
-| 6 | [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | Stage-2 causal interdependency specification | frozen |
-| 7 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | frozen |
-| 8 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | frozen |
-| 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | frozen |
-| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 transition architecture | frozen |
-| 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
-| 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
-| 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates | current |
-| 14 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale and stopping rule | current methodology |
-| 15 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper evidence-selection engine | current methodology |
-| 16 | [`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | evidence-unit extraction, equation/parameter/VVUQ qualification, hypothesis mapping | **pilot-ready; not frozen** |
+| 5 | [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | Stage-2 causal interdependency specification | frozen |
+| 6 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | frozen |
+| 7 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | frozen |
+| 8 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | frozen |
+| 9 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 transition architecture | frozen |
+| 10 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
+| 11 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
+| 12 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates | current |
+| 13 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale and stopping rule | current methodology |
+| 14 | [`FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md) | fresh hypothesis-specific literature search, screening and eligibility governance | **current primary evidence-search methodology** |
+| 15 | [`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | evidence-unit extraction and model-credibility qualification | pilot-ready; must follow fresh eligibility |
+| 16 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | old 325-paper protocol | **secondary coverage audit only** |
 | 17 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
 | 18 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
 | 19 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
-The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is provenance only and cannot override the frozen Stage-7 specification.
-
 ---
 
-## 2. Frozen mathematical chain
+## 2. Frozen scientific chain
 
 ```math
 \begin{aligned}
@@ -71,118 +70,170 @@ The primary confirmatory set remains
 
 ---
 
-## 3. Confirmatory operationalization
+## 3. Fresh-search governance
 
-[`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) connects each $H_i$ to its scientific gap, mechanism, variables, estimand, baseline, strong rival, context of use, V&V gates, critical experiment, auxiliary assumptions, uncertainty architecture and decision rule.
-
-Its qualification rule is
+The primary evidence workflow is now
 
 ```math
-\mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
+H_i
+\rightarrow
+\text{mechanisms/constructs}
+\rightarrow
+\text{search concepts}
+\rightarrow
+\text{database searches}
+\rightarrow
+\text{screening}
+\rightarrow
+\text{full text}
+\rightarrow
+\text{FTEE}.
 ```
 
-Exact $\delta_1,\ldots,\delta_5$, $\Omega_H$, and final confirmatory procedures remain unfrozen until the demonstrator and evidence base are established.
-
----
-
-## 4. Minimal Sufficient Experimental Realization
-
-[`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) governs demonstrator reduction.
+Previously known and unknown papers are equivalent with respect to screening:
 
 ```math
-\text{Full scientific framework}\neq\text{experimental demonstrator}.
+P_{\rm known}\equiv P_{\rm unknown}.
 ```
 
-The target is
+The database search should be hypothesis-specific rather than one giant thesis query:
 
 ```math
-\mathcal M_D^*
+\mathcal S=\{S_{H1},S_{H2},S_{H3},S_{H4},S_{H5}\}.
+```
+
+Core engineering databases are Scopus, Web of Science, Compendex and IEEE Xplore, supplemented where scientifically useful. The default temporal scope is database inception to the search date unless a narrower range is justified.
+
+The discovery universe is
+
+```math
+\mathcal P_{\rm search}
 =
-\text{minimum-complexity realization preserving the discriminatory power of }H_1-H_5.
+\mathcal P_{\rm database}
+\cup
+\mathcal P_{\rm backward}
+\cup
+\mathcal P_{\rm forward}.
 ```
 
-Reduction concerns resolution, not causal scope. The actual demonstrator remains unfrozen.
+Citation chasing starts only after the initial database search.
 
 ---
 
-## 5. Closed-corpus evidence-selection engine
+## 4. Eligibility and PRISMA-style accounting
 
-[`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) assigns the frozen 325-paper PRISMA-style + Monte Carlo protocol a specific role:
+Eligibility must be frozen before screening:
 
 ```math
-325\text{-paper corpus}
-\rightarrow
-\text{robust evidence ranking}
-\rightarrow
-\text{best records for }H_1-H_5
-\rightarrow
-\text{full-text extraction}.
+I(P)=
+\begin{cases}
+1,&P\text{ eligible},\\
+0,&P\text{ excluded}.
+\end{cases}
 ```
 
-The ranking can prioritize records within the frozen corpus; it cannot establish governing equations, parameter values, physical assumptions or validation adequacy without full-text extraction.
+The fresh search records
+
+```math
+N_{\rm identified}
+\rightarrow
+N_{\rm deduplicated}
+\rightarrow
+N_{\rm title/abstract}
+\rightarrow
+N_{\rm fulltext}
+\rightarrow
+N_{\rm eligible}.
+```
+
+Every full-text exclusion receives a coded reason.
+
+The resulting primary evidence set is
+
+```math
+\mathcal P_{\rm eligible}^{\rm NEW}.
+```
 
 ---
 
-## 6. FTEE v1.0 — full-text evidence-to-equation extraction
+## 5. FTEE position
 
-[`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) is the first operational protocol after ranking.
-
-Its central transformation is
+FTEE begins only after the new search and eligibility process:
 
 ```math
-\text{paper}
+\mathcal P_{\rm eligible}^{\rm NEW}
 \rightarrow
-\text{mechanism}
+\text{FTEE}
 \rightarrow
-\text{mathematical representation}
+\mathfrak M_{\rm required}
 \rightarrow
-\text{parameters}
-\rightarrow
-\text{validation evidence}
-\rightarrow
-\text{hypothesis}
-\rightarrow
-\text{candidate model component}.
+\text{candidate demonstrators}.
 ```
 
-The evidence unit is
-
-```math
- e_{ij}=(S_i,L_{ij},C_{ij},M_{ij},F_{ij},X_{ij},\theta_{ij},A_{ij},\Omega_{ij},V_{ij},U_{ij},H_{ij}).
-```
-
-FTEE enforces exact provenance, source notation before thesis canonicalization, separate mechanism/form/validation evidence, units and dimensional checks, parameter/timescale provenance, assumptions, VVUQ separation, validation domains, uncertainty treatment, transferability, hypothesis mapping, explicit missingness, and no silent equation completion.
-
-Its methodological boundary is
-
-```math
-\textbf{FTEE extracts and qualifies evidence; it does not yet choose the demonstrator.}
-```
-
-**Status:** PILOT-READY / NOT FROZEN. The codebook must be piloted on a heterogeneous ranked-paper subset before FTEE is frozen for full-scale extraction.
+FTEE extracts and qualifies evidence; it does not select papers for eligibility and it does not choose the demonstrator.
 
 ---
 
-## 7. Evidence-to-demonstrator pipeline
+## 6. Role of the frozen 325-paper corpus
+
+The 325-paper corpus is now secondary:
+
+```math
+\mathcal P_{\rm NEW}\leftrightarrow\mathcal P_{325}
+```
+
+is used only after the fresh search as a coverage audit. A previously known paper not recovered by the fresh search triggers search diagnostics, not automatic inclusion.
+
+---
+
+## 7. Current end-to-end workflow
 
 ```math
 \begin{aligned}
-&\textbf{A: }325\text{-paper ranking}\\
-&\rightarrow\textbf{B: }H_1-H_5\text{ evidence sets}\\
-&\rightarrow\textbf{C1: FTEE codebook pilot and freeze}\\
-&\rightarrow\textbf{C2: full-text evidence-unit extraction}\\
-&\rightarrow\textbf{D: candidate demonstrator architectures}\\
-&\rightarrow\textbf{E: scientific sufficiency + V\&V feasibility comparison}\\
-&\rightarrow\textbf{F: freeze }\mathcal M_D^*.
+&H_1-H_5\\
+&\downarrow\\
+&\textbf{fresh search protocol and frozen search codebook}\\
+&\downarrow\\
+&\textbf{database searches from zero}\\
+&\downarrow\\
+&\text{deduplication + title/abstract screening + full-text eligibility}\\
+&\downarrow\\
+&\mathcal P_{\rm eligible}^{\rm NEW}\\
+&\downarrow\\
+&\textbf{FTEE pilot/freeze and full-text evidence extraction}\\
+&\downarrow\\
+&\mathfrak M_{\rm required}\\
+&\downarrow\\
+&\text{candidate demonstrators}\\
+&\downarrow\\
+&\text{V\&V + identifiability + UQ gates}\\
+&\downarrow\\
+&\mathcal M_D^*.
 \end{aligned}
 ```
 
-Only after this evidence chain should $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria, and final confirmatory analysis procedures be frozen *a priori*.
+Only after the primary evidence workflow is complete may the old 325-paper corpus be used for secondary coverage diagnostics.
 
 ---
 
-## 8. Repository rendering contract
+## 8. Governing evidence rules
 
-Active Markdown follows [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md): inline `$...$`; fenced `math` for multiline/complex display mathematics; no fragile `\tag{...}`; no paragraph-length boxes; consistent tables; and distinct notation for $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$.
+```math
+\textbf{No paper is evidence because we remember it.}
+```
+
+```math
+\textbf{No paper is evidence because it belonged to an earlier frozen corpus.}
+```
+
+```math
+\textbf{A paper becomes evidence only because the new reproducible search finds it and the new eligibility protocol qualifies it.}
+```
+
+---
+
+## 9. Immediate next step
+
+Before executing searches, freeze the hypothesis-specific search-concept decomposition, database-specific Boolean strings, search fields, search dates, database coverage rules, deduplication logic, inclusion/exclusion criteria, screening forms, citation-chasing rules, amendment procedure and PRISMA accounting schema.
 
 Historical/archive material remains provenance only unless explicitly reintroduced through a versioned revision.
