@@ -1,66 +1,138 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Dossiya-SE/MSE-thesis/schemas/thesis_model.schema.json",
-  "title": "MSE Thesis Coupled Infrastructure Model",
+  "title": "MSE Thesis P-T-I-O Model Configuration",
+  "description": "Machine-readable contract for the frozen seven-stage Power-Transportation-Information-Organization thesis framework.",
   "type": "object",
-  "required": ["state", "interfaces", "hazard", "admissibility", "analysis"],
+  "required": [
+    "system",
+    "state",
+    "interdependencies",
+    "hazard",
+    "control",
+    "viability",
+    "transformation",
+    "analysis"
+  ],
   "properties": {
-    "state": {
+    "system": {
       "type": "object",
-      "required": ["power", "water", "transportation", "solid_waste"],
+      "required": ["physical_systems", "layers"],
       "properties": {
-        "power": {"type": "array", "items": {"type": "string"}},
-        "water": {"type": "array", "items": {"type": "string"}},
-        "transportation": {"type": "array", "items": {"type": "string"}},
-        "solid_waste": {"type": "array", "items": {"type": "string"}}
+        "physical_systems": {
+          "type": "array",
+          "const": ["power", "transportation"]
+        },
+        "layers": {
+          "type": "array",
+          "const": ["information", "organization"]
+        }
       },
       "additionalProperties": false
     },
-    "interfaces": {
+    "state": {
+      "type": "object",
+      "required": ["power", "transportation", "information", "organization"],
+      "properties": {
+        "power": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "transportation": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "information": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "organization": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      },
+      "additionalProperties": false
+    },
+    "interdependencies": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["source", "target", "mechanism", "dynamic"],
+        "required": [
+          "source_layer",
+          "target_layer",
+          "source_entity",
+          "target_entity",
+          "mechanism",
+          "strength",
+          "delay",
+          "timescale",
+          "activation"
+        ],
         "properties": {
-          "source": {"enum": ["power", "water", "transportation", "solid_waste"]},
-          "target": {"enum": ["power", "water", "transportation", "solid_waste"]},
+          "source_layer": {"$ref": "#/$defs/layer"},
+          "target_layer": {"$ref": "#/$defs/layer"},
+          "source_entity": {"type": "string", "minLength": 1},
+          "target_entity": {"type": "string", "minLength": 1},
           "mechanism": {"type": "string", "minLength": 1},
-          "dynamic": {"type": "boolean"},
-          "state_symbol": {"type": "string"},
-          "timescale_symbol": {"type": "string"}
-        }
+          "strength": {"type": "number"},
+          "delay": {"type": "number", "minimum": 0},
+          "timescale": {"type": "number", "exclusiveMinimum": 0},
+          "activation": {"type": "number", "minimum": 0, "maximum": 1},
+          "mode": {"type": "string"},
+          "history_dependent": {"type": "boolean"}
+        },
+        "additionalProperties": false
       }
     },
     "hazard": {
       "type": "object",
-      "required": ["forcing_symbol", "realized_hazard_symbol"],
+      "required": ["field_symbol", "classes"],
       "properties": {
-        "forcing_symbol": {"type": "string", "const": "xi"},
-        "realized_hazard_symbol": {"type": "string", "const": "eta"},
-        "feedbacks": {"type": "array", "items": {"type": "string"}}
-      }
+        "field_symbol": {"type": "string", "const": "h(r,t)"},
+        "classes": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      },
+      "additionalProperties": false
     },
-    "admissibility": {
+    "control": {
       "type": "object",
-      "required": ["physical", "service", "sustainability", "equity"],
+      "required": ["action_symbol", "feasible_set_symbol", "policy_symbol"],
       "properties": {
-        "physical": {"type": "array", "items": {"type": "string"}},
-        "service": {"type": "array", "items": {"type": "string"}},
-        "sustainability": {"type": "array", "items": {"type": "string"}},
-        "equity": {"type": "array", "items": {"type": "string"}}
-      }
+        "action_symbol": {"type": "string", "const": "u(t)"},
+        "feasible_set_symbol": {"type": "string", "const": "U(z_I,z_O)"},
+        "policy_symbol": {"type": "string", "const": "pi"}
+      },
+      "additionalProperties": false
+    },
+    "viability": {
+      "type": "object",
+      "required": ["constraint_set", "controlled_viability_set", "time_to_viability_loss", "time_to_constraint_violation"],
+      "properties": {
+        "constraint_set": {"type": "string", "const": "K_sus"},
+        "controlled_viability_set": {"type": "string", "const": "V_sus^{u,T}"},
+        "time_to_viability_loss": {"type": "string", "const": "T_V"},
+        "time_to_constraint_violation": {"type": "string", "const": "T_K"}
+      },
+      "additionalProperties": false
+    },
+    "transformation": {
+      "type": "object",
+      "required": ["stage6_output", "regime_symbol", "stage7_object"],
+      "properties": {
+        "stage6_output": {
+          "type": "array",
+          "const": ["c_6", "D_6", "zeta_T"]
+        },
+        "regime_symbol": {"type": "string", "const": "frakM_k"},
+        "stage7_object": {"type": "string", "const": "frakP_ST"}
+      },
+      "additionalProperties": false
     },
     "analysis": {
       "type": "object",
-      "required": ["viability", "recovery", "uncertainty"],
+      "required": ["hybrid_dynamics", "partial_observability", "controlled_viability", "regime_adequacy", "adaptive_transformation", "uncertainty"],
       "properties": {
-        "viability": {"type": "boolean"},
-        "recovery": {"type": "boolean"},
-        "uncertainty": {"type": "boolean"},
-        "control": {"type": "boolean"},
-        "design": {"type": "boolean"},
-        "optimization": {"type": "boolean"}
-      }
+        "hybrid_dynamics": {"type": "boolean"},
+        "partial_observability": {"type": "boolean"},
+        "controlled_viability": {"type": "boolean"},
+        "regime_adequacy": {"type": "boolean"},
+        "adaptive_transformation": {"type": "boolean"},
+        "uncertainty": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "layer": {
+      "type": "string",
+      "enum": ["power", "transportation", "information", "organization"]
     }
   },
   "additionalProperties": false
