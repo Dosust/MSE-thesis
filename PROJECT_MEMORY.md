@@ -3,6 +3,7 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
+![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
 ![QA](https://img.shields.io/badge/display%20%26%20ontology-QA%20AUTOMATED-0969DA)
 
 ## Repository authority — 2026-09-11
@@ -39,10 +40,11 @@ The thesis-wide citation standard is **APA 7th edition**. A citation must not su
 12. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
 13. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
 14. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
-15. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
-16. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
-17. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
-18. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+15. [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md)
+16. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
+17. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
+18. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
+19. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 
 The file `project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance and is superseded by the frozen Stage-7 specification whenever they differ.
 
@@ -179,7 +181,39 @@ Its qualification rule is
 \mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
 ```
 
-The exact 12-gate formulation is a derived/proposed thesis methodology `[D/P]`, not an ISO/ASME standard. The current matrix explicitly leaves $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and final analysis procedures unfrozen until the reduced P–T–I–O demonstrator and available physical/data/benchmark evidence are established.
+The exact 12-gate formulation is a derived/proposed thesis methodology `[D/P]`, not an ISO/ASME standard. The matrix explicitly leaves $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and final analysis procedures unfrozen until the reduced P–T–I–O demonstrator and available physical/data/benchmark evidence are established.
+
+---
+
+## Minimal Sufficient Experimental Realization
+
+The current demonstrator-selection methodology is [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md).
+
+Its foundational distinction is
+
+```math
+\text{Full scientific framework}\neq\text{experimental demonstrator}.
+```
+
+The seven-stage framework remains fully intact. Reduction applies only to the bounded experimental realization used for confirmatory evaluation.
+
+The governing optimization principle is
+
+```math
+\mathcal M_D^*
+=
+\arg\min_{\mathcal M_D}C(\mathcal M_D)
+```
+
+subject to representation of $P,T,I,O$, preservation of every mechanism needed to discriminate $H_1$–$H_5$, falsifiability, $\Omega_H\subseteq\Omega_V$, sufficient identifiability, feasible V&V and UQ, and preservation of key outputs to the required accuracy.
+
+The thesis shorthand is
+
+```math
+\boxed{\textbf{Reduce complexity, not causal content.}}
+```
+
+Reduction stops when removing another component would eliminate a hypothesis-relevant mechanism, observable, competing explanation or critical experiment. The actual demonstrator topology, component selection, hazard family, parameterization and validation domain remain **unfrozen**.
 
 ---
 
@@ -204,4 +238,6 @@ Historical/provenance trees are deliberately excluded from ontology rewriting. P
 
 > **ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX: CURRENT OPERATIONALIZATION SPECIFICATION.**
 
-The next task is selecting the reduced P–T–I–O demonstrator and auditing the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study design and testing.
+> **MINIMAL SUFFICIENT EXPERIMENTAL REALIZATION METHODOLOGY: CURRENT; ACTUAL DEMONSTRATOR NOT YET FROZEN.**
+
+The next task is selecting the actual minimal sufficient P–T–I–O demonstrator and auditing the physical/data/benchmark evidence needed to justify $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study design and testing.
