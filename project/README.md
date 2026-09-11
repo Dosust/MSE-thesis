@@ -2,14 +2,17 @@
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
-![Framework](https://img.shields.io/badge/framework-7--stage%20canonical-0969DA)
-![Frozen](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
-![Hypotheses](https://img.shields.io/badge/primary%20hypotheses-H1--H5%20LOGIC%20FROZEN-1A7F37)
-![Next](https://img.shields.io/badge/next-Hypothesis%20Specification%20Matrix-9A6700)
+![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
+![Thresholds](https://img.shields.io/badge/%CE%B41--%CE%B45-NOT%20SET-9A6700)
 
-This directory contains the **active mathematical and scientific specification** of the MSE thesis. The seven-stage conceptual and mathematical framework is frozen. The five-primary-hypothesis logic is also frozen, while numerical thresholds and exact confirmatory test specifications remain to be fixed *a priori*.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen; exact confirmatory thresholds and test specifications remain to be defined *a priori*.
 
-## Current framework status
+> **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
+
+---
+
+## 1. Framework status
 
 ```mermaid
 flowchart LR
@@ -22,74 +25,94 @@ flowchart LR
 
     classDef canonical fill:#DDF4FF,stroke:#0969DA,color:#0B1F33,stroke-width:2px;
     classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
-
     class S1 canonical;
     class S2,S3,S4,S5,S6,S7 frozen;
 ```
 
-**Color semantics:** blue = canonical system definition; green = frozen scientific scope. Color is never the sole carrier of meaning.
+Blue marks the canonical ontology stage; green marks frozen scientific scopes. Text labels remain authoritative without color.
 
-## Canonical authority map
+---
+
+## 2. Authority map
 
 | Priority | File | Role | Status |
 |---:|---|---|---|
-| 1 | [`THESIS_SCOPE.md`](THESIS_SCOPE.md) | Current scientific scope and stage boundaries | Canonical / frozen |
-| 2 | [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md) | Complete seven-stage architecture and mathematics | Canonical / frozen |
-| 3 | [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINITION.md) | P–T–I–O system identity and state ontology | Canonical |
-| 4 | [`FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | Framework-level subsystem decomposition | Canonical |
-| 5 | [`STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](STAGES_1_2_APA7_EVIDENCE_GROUNDED.md) | Literature-grounded Stages 1–2 companion | Canonical companion |
-| 6 | [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | Stage-2 causal interdependency specification | Frozen |
-| 7 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | Frozen |
-| 8 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | Frozen |
-| 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | Frozen |
-| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | Frozen |
-| 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | **Frozen** |
-| 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | Five primary confirmatory hypotheses and falsification logic | **Logic frozen; thresholds not set** |
-| 13 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Active companion |
-| 14 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Broader falsifiable proposition registry | Active companion |
-| 15 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | Mathematical display and visual-encoding standard | Synchronized |
+| 1 | [`THESIS_SCOPE.md`](THESIS_SCOPE.md) | current scientific scope and stage boundaries | canonical / frozen |
+| 2 | [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md) | complete seven-stage architecture and mathematics | canonical / frozen |
+| 3 | [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINITION.md) | P–T–I–O system identity and state ontology | canonical |
+| 4 | [`FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | framework-level subsystem decomposition | canonical |
+| 5 | [`STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](STAGES_1_2_APA7_EVIDENCE_GROUNDED.md) | literature-grounded Stages 1–2 companion | canonical companion |
+| 6 | [`STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | Stage-2 causal interdependency specification | frozen |
+| 7 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | frozen |
+| 8 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | frozen |
+| 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | frozen |
+| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | frozen |
+| 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
+| 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
+| 13 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
+| 14 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
+| 15 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
-The former [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) is retained as research provenance and does not override the frozen Stage-7 file.
+The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance only and cannot override the frozen Stage-7 specification.
 
-## Frozen mathematical chain
+---
+
+## 3. Frozen mathematical chain
 
 $$
-\boxed{
+\begin{aligned}
 \underbrace{\mathcal S}_{1}
-\rightarrow
+&\rightarrow
 \underbrace{\mathfrak I}_{2}
 \rightarrow
-\underbrace{F_{\mathcal G}^{m}}_{3}
-\rightarrow
-\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
-\rightarrow
-\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
-\rightarrow
-\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
-\rightarrow
-\underbrace{\mathfrak P_{\rm ST}}_{7}
-}.
+\underbrace{F_{\mathcal G}^{m}}_{3}\\
+&\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
+&\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
+&\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
+&\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}.
+\end{aligned}
 $$
 
-The frozen Stage-7 fundamental object is
+The terminal Stage-7 object is
 
 $$
 \mathfrak P_{\rm ST}
 =
-(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}).
+\left(
+\mathbb G_{\rm ST},
+\boldsymbol\pi_{\rm ST},
+\Omega,
+\mathcal A^{\rm feas},
+\mathbf J,
+\mathbb M_{\rm sus}
+\right).
 $$
 
-Stage 7 is interpreted as an **adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures**.
+The Stage-7 regime is $\mathfrak M_k$ and its strategic action is $\mathbf a_k$. These are distinct from Stage-4 operational control $u(t)$ and Stage-2 activation $a_{ij}$.
 
-## Primary hypothesis architecture
+---
 
-The frozen primary hypothesis set is
+## 4. Primary hypothesis architecture
+
+The primary set is
 
 $$
-\mathbb H=\{H_1,H_2,H_3,H_4,H_5\},
+\mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 $$
 
-with the causal hierarchy
+| Hypothesis | Main stages | Core test |
+|---|---:|---|
+| $H_1$ | 2 → 3 | dynamic causal coupling vs. independent/static coupling |
+| $H_2$ | 3 → 4 | informational/organizational effects on feasible response and outcomes |
+| $H_3$ | 4 → 5 | viability information beyond conventional service/recovery metrics |
+| $H_4$ | 2 → 5 → 7 | viability-sensitive interface ranking vs. structural/flow baselines |
+| $H_5$ | 5 → 6 → 7 | adaptive transformation policy vs. comparable fixed pathway under deep uncertainty |
+
+The causal hierarchy is
 
 $$
 \mathfrak I
@@ -105,52 +128,51 @@ S_{ij}^{\mathcal V}
 \text{adaptive transformation}.
 $$
 
-The five primary tests are:
+The scientific logic is frozen. $\delta_1,\ldots,\delta_5$ remain deliberately unset until justified before confirmatory testing.
 
-| Hypothesis | Main stages | Core test |
-|---|---:|---|
-| $H_1$ | 2 → 3 | dynamic causal coupling vs. independent/static coupling |
-| $H_2$ | 3 → 4 | informational/organizational effects on feasible response and outcomes |
-| $H_3$ | 4 → 5 | viability information beyond conventional service/recovery metrics |
-| $H_4$ | 2 → 5 → 7 | viability-sensitive interface ranking vs. structural centrality |
-| $H_5$ | 5 → 6 → 7 | adaptive pathway vs. best comparable fixed pathway under deep uncertainty |
+---
 
-The scientific logic is frozen. The thresholds $\delta_1,\ldots,\delta_5$ are deliberately **not** assigned until justified *a priori*.
-
-## Stage-6 / Stage-7 separation
+## 5. Stage-6 / Stage-7 boundary
 
 $$
 \underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
-\quad\rightarrow\quad
-\underbrace{\text{WHICH / ORDER / WHEN / UNDER WHAT CONDITIONS}}_{\text{Stage 7}}.
+\quad\longrightarrow\quad
+\underbrace{\text{WHICH / ORDER / WHEN / CONDITIONS}}_{\text{Stage 7}}.
 $$
 
-Stage-4 operational control $u(t)$ is distinct from Stage-7 structural transformation action $a_k$.
+Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requirements to generate and test adaptive strategic transformations.
 
-## Mathematical rendering standard
+---
 
-For GitHub-facing project files:
+## 6. Repository rendering contract
 
-1. use inline math with `$...$` and display math with `$$...$$`;
-2. use `aligned`, `bmatrix`, `cases`, or short equations for multiline mathematics;
-3. avoid long prose inside mathematical boxes;
-4. use tables when a long expression is primarily a taxonomy/specification;
-5. preserve notation consistently across files;
-6. keep operational control as $u(t)$ and transformation action as $a_k$;
-7. use Mermaid only for architecture/topology;
-8. use color only with redundant textual labels;
-9. preserve APA 7 author–date citations and canonical DOI URLs.
+Active Markdown follows these rules:
 
-## Next scientific phase
+1. inline mathematics: `$...$`;
+2. display mathematics: `$$...$$`;
+3. no fenced ` ```math ` blocks;
+4. no `\tag{...}` inside GitHub Markdown;
+5. no paragraph-length text inside `\boxed{...}`;
+6. long specifications use tables or multiline equations;
+7. mathematical tables retain consistent columns;
+8. $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$ remain distinct;
+9. color is semantic and always duplicated by text/shape/line style;
+10. APA 7 author–date citations and canonical DOI URLs are preserved.
 
-The conceptual framework is closed, but confirmatory simulation should not begin until the hypotheses are fully specified. The immediate sequence is
+See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the complete standard and [`../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) for figure QA.
+
+---
+
+## 7. Next scientific phase
+
+The immediate sequence is
 
 $$
 \text{frozen framework}
 \rightarrow
 \text{frozen hypothesis logic}
 \rightarrow
-\textbf{Hypothesis Specification Matrix}
+\text{Hypothesis Specification Matrix}
 \rightarrow
 \text{case-study design}
 \rightarrow
@@ -161,6 +183,6 @@ $$
 \text{validation}.
 $$
 
-The Hypothesis Specification Matrix must predefine theory, mechanism, variables, baselines, boundary conditions, predictions, rival hypotheses, critical tests, falsification criteria, uncertainty domains, and justified $\delta_i$ thresholds before confirmatory numerical testing.
+The Hypothesis Specification Matrix must predefine theory, mechanism, variables, baselines, boundary conditions, predictions, rival hypotheses, critical tests, uncertainty domains, falsification criteria and justified $\delta_i$ thresholds before confirmatory numerical testing.
 
-Historical material remains provenance only unless explicitly reintroduced through a versioned revision.
+Historical and archived material remains provenance only unless explicitly reintroduced through a versioned revision.
