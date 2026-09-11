@@ -5,38 +5,17 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
-![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
-![Evidence](https://img.shields.io/badge/325--paper%20evidence%20pipeline-CURRENT-0969DA)
-![Thresholds](https://img.shields.io/badge/%CE%B41--%CE%B45-NOT%20SET-9A6700)
+![MSER](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
+![Evidence](https://img.shields.io/badge/325--paper%20pipeline-CURRENT-0969DA)
+![FTEE](https://img.shields.io/badge/FTEE%20v1.0-PILOT--READY-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The Engineering Confirmatory Hypothesis Matrix, Minimal Sufficient Experimental Realization methodology, and 325-paper closed-corpus evidence-selection pipeline now govern operationalization. The actual demonstrator topology, exact hypothesis domains, numerical thresholds and final analysis procedures remain to be fixed *a priori*.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The confirmatory matrix, minimal-sufficient demonstrator methodology, closed-corpus evidence-selection pipeline, and FTEE v1.0 now define the operationalization sequence.
 
 > **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
 
 ---
 
-## 1. Framework status
-
-```mermaid
-flowchart LR
-    S1["1 · Multilayer Structure"] --> S2["2 · Causal Mechanisms"]
-    S2 --> S3["3 · Coupled Hybrid Multiscale Dynamics"]
-    S3 --> S4["4 · Observation, Organization, Feedback and Control"]
-    S4 --> S5["5 · Viability"]
-    S5 --> S6["6 · Resilience-to-Sustainability Transformation Interface"]
-    S6 --> S7["7 · Sustainable Transformation Pathways"]
-
-    classDef canonical fill:#DDF4FF,stroke:#0969DA,color:#0B1F33,stroke-width:2px;
-    classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
-    class S1 canonical;
-    class S2,S3,S4,S5,S6,S7 frozen;
-```
-
-Blue marks the canonical ontology stage; green marks frozen scientific scopes. Text labels remain authoritative without color.
-
----
-
-## 2. Authority map
+## 1. Authority map
 
 | Priority | File | Role | Status |
 |---:|---|---|---|
@@ -49,21 +28,22 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 | 7 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | frozen |
 | 8 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | frozen |
 | 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | frozen |
-| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | frozen |
+| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 transition architecture | frozen |
 | 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
 | 12 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
-| 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules | current; numerical thresholds/domains/procedures not frozen |
-| 14 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale, preservation constraints and simplification stopping rule | current methodology; actual demonstrator not frozen |
-| 15 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | frozen-325-paper ranking → H1–H5 evidence prioritization → full-text extraction → demonstrator design | current evidence-selection methodology |
-| 16 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
-| 17 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
-| 18 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
+| 13 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates | current |
+| 14 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale and stopping rule | current methodology |
+| 15 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper evidence-selection engine | current methodology |
+| 16 | [`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | evidence-unit extraction, equation/parameter/VVUQ qualification, hypothesis mapping | **pilot-ready; not frozen** |
+| 17 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
+| 18 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
+| 19 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
 
-The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is research provenance only and cannot override the frozen Stage-7 specification.
+The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is provenance only and cannot override the frozen Stage-7 specification.
 
 ---
 
-## 3. Frozen mathematical chain
+## 2. Frozen mathematical chain
 
 ```math
 \begin{aligned}
@@ -83,86 +63,37 @@ The earlier `STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is researc
 \end{aligned}
 ```
 
-The terminal Stage-7 object is
-
-```math
-\mathfrak P_{\mathrm{ST}}
-=
-\left(
-\mathbb G_{\mathrm{ST}},
-\boldsymbol{\pi}_{\mathrm{ST}},
-\Omega,
-\mathcal A^{\mathrm{feas}},
-\mathbf J,
-\mathbb M_{\mathrm{sus}}
-\right).
-```
-
-The Stage-7 regime is $\mathfrak M_k$ and its strategic action is $\mathbf a_k$. These are distinct from Stage-4 operational control $u(t)$ and Stage-2 activation $a_{ij}$.
-
----
-
-## 4. Primary hypothesis architecture
-
-The primary set is
+The primary confirmatory set remains
 
 ```math
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 ```
 
-| Hypothesis | Main stages | Core test |
-|---|---:|---|
-| $H_1$ | 2 → 3 | dynamic causal coupling vs. independent/static coupling |
-| $H_2$ | 3 → 4 | informational/organizational effects on feasible response and outcomes |
-| $H_3$ | 4 → 5 | viability information beyond conventional service/recovery metrics |
-| $H_4$ | 2 → 5 → 7 | viability-sensitive interface ranking vs. structural/flow baselines |
-| $H_5$ | 5 → 6 → 7 | adaptive transformation policy vs. comparable fixed pathway under deep uncertainty |
-
-The causal hierarchy is
-
-```math
-\mathfrak I
-\rightarrow
-F
-\rightarrow
-(I,O,u)
-\rightarrow
-\mathcal V
-\rightarrow
-S_{ij}^{\mathcal V}
-\rightarrow
-\text{adaptive transformation}.
-```
-
-The scientific logic is frozen. $\delta_1,\ldots,\delta_5$ remain deliberately unset until justified before confirmatory testing.
-
 ---
 
-## 5. Confirmatory operationalization matrix
+## 3. Confirmatory operationalization
 
-The current operationalization layer is [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md). It connects each hypothesis to its scientific gap, premise, mechanism, variables, estimand, baseline, strong rival, context of use, quantitative prediction, V&V gates, critical experiment, auxiliary assumptions, uncertainty structure and decision rule.
+[`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) connects each $H_i$ to its scientific gap, mechanism, variables, estimand, baseline, strong rival, context of use, V&V gates, critical experiment, auxiliary assumptions, uncertainty architecture and decision rule.
 
-Its governing qualification rule is
+Its qualification rule is
 
 ```math
 \mathcal Q(H_i)=\bigwedge_{r=1}^{12}Q_{ir}.
 ```
 
-The matrix explicitly keeps $\delta_1,\ldots,\delta_5$, exact $\Omega_H$ and final analysis procedures unfrozen until the reduced P–T–I–O demonstrator and available physical/data/benchmark evidence are selected.
+Exact $\delta_1,\ldots,\delta_5$, $\Omega_H$, and final confirmatory procedures remain unfrozen until the demonstrator and evidence base are established.
 
 ---
 
-## 6. Minimal Sufficient Experimental Realization
+## 4. Minimal Sufficient Experimental Realization
 
-The current demonstrator-selection methodology is [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md).
-
-The framework itself is not reduced. Only the experimental realization is reduced:
+[`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) governs demonstrator reduction.
 
 ```math
 \text{Full scientific framework}\neq\text{experimental demonstrator}.
 ```
 
-The governing principle is
+The target is
 
 ```math
 \mathcal M_D^*
@@ -170,17 +101,13 @@ The governing principle is
 \text{minimum-complexity realization preserving the discriminatory power of }H_1-H_5.
 ```
 
-Reduction therefore targets resolution—numbers of assets, states, interfaces, hazards and interventions—while preserving $P,T,I,O$, required causal mechanisms, observation/control, viability and at least one Stage-7 transformation. Simplification stops when further removal would eliminate a hypothesis-relevant mechanism, observable, rival explanation or critical experiment.
-
-The actual demonstrator topology, component choices, hazard family, parameterization and validation domain are **not frozen** by this methodology.
+Reduction concerns resolution, not causal scope. The actual demonstrator remains unfrozen.
 
 ---
 
-## 7. Closed-corpus evidence-selection pipeline
+## 5. Closed-corpus evidence-selection engine
 
-The current evidence-selection methodology is [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md).
-
-The existing frozen 325-paper PRISMA-style + Monte Carlo protocol is now used as the evidence-selection engine for demonstrator design:
+[`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) assigns the frozen 325-paper PRISMA-style + Monte Carlo protocol a specific role:
 
 ```math
 325\text{-paper corpus}
@@ -189,108 +116,73 @@ The existing frozen 325-paper PRISMA-style + Monte Carlo protocol is now used as
 \rightarrow
 \text{best records for }H_1-H_5
 \rightarrow
-\text{full-text evidence extraction}.
+\text{full-text extraction}.
 ```
 
-The downstream evidence-to-equation chain is
+The ranking can prioritize records within the frozen corpus; it cannot establish governing equations, parameter values, physical assumptions or validation adequacy without full-text extraction.
+
+---
+
+## 6. FTEE v1.0 — full-text evidence-to-equation extraction
+
+[`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) is the first operational protocol after ranking.
+
+Its central transformation is
 
 ```math
 \text{paper}
 \rightarrow
 \text{mechanism}
 \rightarrow
-\text{equation}
+\text{mathematical representation}
 \rightarrow
-\text{parameter}
+\text{parameters}
 \rightarrow
-\text{data/benchmark}
+\text{validation evidence}
 \rightarrow
-\text{hypothesis}.
+\text{hypothesis}
+\rightarrow
+\text{candidate model component}.
 ```
 
-The closed-corpus ranking identifies **priority records within the frozen 325-paper corpus only**. It cannot, by itself, establish governing equations, parameter values, validation data or physical assumptions because those require second-stage full-text extraction.
+The evidence unit is
 
-The operational research sequence is therefore:
+```math
+ e_{ij}=(S_i,L_{ij},C_{ij},M_{ij},F_{ij},X_{ij},\theta_{ij},A_{ij},\Omega_{ij},V_{ij},U_{ij},H_{ij}).
+```
+
+FTEE enforces exact provenance, source notation before thesis canonicalization, separate mechanism/form/validation evidence, units and dimensional checks, parameter/timescale provenance, assumptions, VVUQ separation, validation domains, uncertainty treatment, transferability, hypothesis mapping, explicit missingness, and no silent equation completion.
+
+Its methodological boundary is
+
+```math
+\textbf{FTEE extracts and qualifies evidence; it does not yet choose the demonstrator.}
+```
+
+**Status:** PILOT-READY / NOT FROZEN. The codebook must be piloted on a heterogeneous ranked-paper subset before FTEE is frozen for full-scale extraction.
+
+---
+
+## 7. Evidence-to-demonstrator pipeline
 
 ```math
 \begin{aligned}
-&\textbf{A: }325\text{-paper closed-corpus ranking}\\
-&\rightarrow \textbf{B: }H_1-H_5\text{-specific evidence sets}\\
-&\rightarrow \textbf{C: full-text mechanism/equation extraction}\\
-&\rightarrow \textbf{D: candidate demonstrator architectures}\\
-&\rightarrow \textbf{E: scientific sufficiency + V\&V feasibility comparison}\\
-&\rightarrow \textbf{F: freeze }\mathcal M_D^*.
+&\textbf{A: }325\text{-paper ranking}\\
+&\rightarrow\textbf{B: }H_1-H_5\text{ evidence sets}\\
+&\rightarrow\textbf{C1: FTEE codebook pilot and freeze}\\
+&\rightarrow\textbf{C2: full-text evidence-unit extraction}\\
+&\rightarrow\textbf{D: candidate demonstrator architectures}\\
+&\rightarrow\textbf{E: scientific sufficiency + V\&V feasibility comparison}\\
+&\rightarrow\textbf{F: freeze }\mathcal M_D^*.
 \end{aligned}
 ```
 
-This pipeline avoids restarting literature search from zero while preserving a strict boundary between **ranking evidence priority** and **extracting equation-level scientific evidence**.
+Only after this evidence chain should $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria, and final confirmatory analysis procedures be frozen *a priori*.
 
 ---
 
-## 8. Stage-6 / Stage-7 boundary
+## 8. Repository rendering contract
 
-```math
-\underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
-\quad\longrightarrow\quad
-\underbrace{\text{WHICH / ORDER / WHEN / CONDITIONS}}_{\text{Stage 7}}.
-```
+Active Markdown follows [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md): inline `$...$`; fenced `math` for multiline/complex display mathematics; no fragile `\tag{...}`; no paragraph-length boxes; consistent tables; and distinct notation for $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$.
 
-Stage 6 outputs $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$. Stage 7 uses those requirements to generate and test adaptive strategic transformations.
-
----
-
-## 9. Repository rendering contract
-
-Active Markdown follows these rules:
-
-1. inline mathematics uses `$...$`;
-2. multiline or structurally complex display mathematics uses fenced `math` blocks;
-3. short display mathematics may use `$$...$$` only when the complete expression and both delimiters remain on one line;
-4. standalone `$$` delimiter lines are avoided because GitHub Markdown line-break handling can expose raw LaTeX;
-5. no `\tag{...}` inside GitHub Markdown;
-6. no paragraph-length text inside `\boxed{...}`;
-7. long specifications use tables or multiline equations;
-8. mathematical tables retain consistent columns;
-9. $u(t)$, $\mathbf a_k$, $a_{ij}$ and $\varepsilon$ remain distinct;
-10. color is semantic and always duplicated by text/shape/line style;
-11. APA 7 author–date citations and canonical DOI URLs are preserved.
-
-See [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) for the complete standard and [`../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) for figure QA.
-
----
-
-## 10. Next scientific phase
-
-The immediate sequence is
-
-```math
-\text{frozen framework}
-\rightarrow
-\text{frozen hypothesis logic}
-\rightarrow
-\text{confirmatory hypothesis matrix}
-\rightarrow
-\text{minimal-sufficient demonstrator methodology}
-\rightarrow
-\textbf{325-paper closed-corpus ranking}
-\rightarrow
-\textbf{H1--H5 evidence sets}
-\rightarrow
-\textbf{full-text evidence-to-equation extraction}
-\rightarrow
-\text{candidate P--T--I--O demonstrators}
-\rightarrow
-\text{V\&V feasibility comparison}
-\rightarrow
-\text{freeze actual demonstrator}
-\rightarrow
-\text{a-priori threshold/analysis specification}
-\rightarrow
-\text{case-study computation}
-\rightarrow
-\text{falsification}
-\rightarrow
-\text{validation}.
-```
-
-Historical and archived material remains provenance only unless explicitly reintroduced through a versioned revision.
+Historical/archive material remains provenance only unless explicitly reintroduced through a versioned revision.
