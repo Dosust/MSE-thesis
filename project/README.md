@@ -3,12 +3,10 @@
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/framework-7--stage%20canonical-0969DA)
-![Frozen](https://img.shields.io/badge/stages%202--6-FROZEN-1A7F37)
-![Research](https://img.shields.io/badge/Stage%207-DEEP%20RESEARCH-9A6700)
+![Frozen](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Next](https://img.shields.io/badge/next-operationalization%20%26%20validation-0969DA)
 
-This directory contains the **active mathematical and scientific specification** of the MSE thesis. Historical material is retained separately for provenance and must not override the canonical files listed below.
-
-> **Latest cross-audit:** [`../provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md`](../provenance/2026-09-11_PROJECT_MATHEMATICAL_DISPLAY_CONTENT_AUDIT.md)
+This directory contains the **active mathematical and scientific specification** of the MSE thesis. The seven-stage conceptual and mathematical framework is now frozen. Historical material is retained separately for provenance and must not override the canonical files listed below.
 
 ## Current framework status
 
@@ -23,21 +21,19 @@ flowchart LR
 
     classDef canonical fill:#DDF4FF,stroke:#0969DA,color:#0B1F33,stroke-width:2px;
     classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
-    classDef research fill:#FFF8C5,stroke:#9A6700,color:#0B1F33,stroke-width:2px;
 
     class S1 canonical;
-    class S2,S3,S4,S5,S6 frozen;
-    class S7 research;
+    class S2,S3,S4,S5,S6,S7 frozen;
 ```
 
-**Color semantics:** blue = canonical system definition; green = frozen scientific scope; amber = active research/not-yet-frozen scope. Color is never the sole carrier of meaning.
+**Color semantics:** blue = canonical system definition; green = frozen scientific scope. Color is never the sole carrier of meaning.
 
 ## Canonical authority map
 
 | Priority | File | Role | Status |
 |---:|---|---|---|
-| 1 | [`THESIS_SCOPE.md`](THESIS_SCOPE.md) | Current scientific scope and stage boundaries | Canonical |
-| 2 | [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md) | Seven-stage architecture and current status map | Canonical |
+| 1 | [`THESIS_SCOPE.md`](THESIS_SCOPE.md) | Current scientific scope and stage boundaries | Canonical / frozen |
+| 2 | [`CANONICAL_7_STAGE_FRAMEWORK.md`](CANONICAL_7_STAGE_FRAMEWORK.md) | Complete seven-stage architecture and mathematics | Canonical / frozen |
 | 3 | [`CANONICAL_SYSTEM_DEFINITION.md`](CANONICAL_SYSTEM_DEFINITION.md) | P–T–I–O system identity and state ontology | Canonical |
 | 4 | [`FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | Framework-level subsystem decomposition | Canonical |
 | 5 | [`STAGES_1_2_APA7_EVIDENCE_GROUNDED.md`](STAGES_1_2_APA7_EVIDENCE_GROUNDED.md) | Literature-grounded Stages 1–2 companion | Canonical companion |
@@ -45,72 +41,55 @@ flowchart LR
 | 7 | [`STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md) | Stage-3 dynamic architecture | Frozen |
 | 8 | [`STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md) | Stage-4 observation-to-action architecture | Frozen |
 | 9 | [`STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md) | Stage-5 viability architecture | Frozen |
-| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | **Frozen** |
-| 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) | Stage-7 ten-pass deep research and candidate mathematics | **Research — not frozen** |
-| 12 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Synchronized through Stage 6 |
-| 13 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Falsifiable thesis propositions | Synchronized through Stage 6 |
+| 10 | [`STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md) | Stage-6 regime-adequacy/translation architecture | Frozen |
+| 11 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | **Frozen** |
+| 12 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | Cross-stage mathematical foundation | Active companion |
+| 13 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | Falsifiable thesis propositions | Active companion |
 | 14 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | Mathematical display and visual-encoding standard | Synchronized |
 
-## Canonical state and control notation
+The former [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) is retained as research provenance and does not override the frozen Stage-7 file.
+
+## Frozen mathematical chain
 
 $$
-Y(t)=
-\begin{bmatrix}
-x_P(t)\\
-x_T(t)\\
-z_I(t)\\
-z_O(t)
-\end{bmatrix},
-\qquad
-\widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
-$$
-
-The physical state is
-
-$$
-X(t)=
-\begin{bmatrix}
-x_P(t)\\x_T(t)
-\end{bmatrix}.
-$$
-
-The Stage-4 feedback spine is
-
-$$
-X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
-$$
-
-The Stage-5 core is
-
-$$
-K_{\mathrm{sus}}
-\supseteq
-\mathcal V_{\mathrm{sus}}^{u,T}
+\boxed{
+\underbrace{\mathcal S}_{1}
 \rightarrow
-\partial\mathcal V
+\underbrace{\mathfrak I}_{2}
 \rightarrow
-\{\rho,T_{\mathcal V},T_K\}.
+\underbrace{F_{\mathcal G}^{m}}_{3}
+\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
+\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
+\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
+\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}
+}.
 $$
 
-The frozen Stage-6 translation is
+The frozen Stage-7 fundamental object is
 
 $$
-\Phi_{\mathrm{ST}}
-:
-(\mathcal R_5,\Lambda_{\mathrm{LT}},\mathbf d_6)
-\mapsto
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
+\boxed{
+\mathfrak P_{\rm ST}
+=
+(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus})
+}.
 $$
 
-Stage 7 begins from
+Stage 7 is interpreted as an **adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures**.
+
+## Stage-6 / Stage-7 separation
 
 $$
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
-\longrightarrow
-\text{candidate interventions and transformation pathways}.
+\underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
+\quad\rightarrow\quad
+\underbrace{\text{WHICH / ORDER / WHEN / UNDER WHAT CONDITIONS}}_{\text{Stage 7}}.
 $$
 
-Its exact terminal mathematical object remains under research and is not frozen.
+Stage-4 operational control $u(t)$ is distinct from Stage-7 structural transformation action $a_k$.
 
 ## Mathematical rendering standard
 
@@ -118,17 +97,30 @@ For GitHub-facing project files:
 
 1. use inline math with `$...$` and display math with `$$...$$`;
 2. use `aligned`, `bmatrix`, `cases`, or short equations for multiline mathematics;
-3. do not place long prose sentences inside `\boxed{...}`;
-4. avoid equation `\tag{...}` in Markdown; use a Markdown label immediately above the display when an equation ID is required;
-5. use `\widehat X`, `\mathcal V`, `\partial\mathcal V`, `\mathrm{...}`, and other notation consistently across files;
-6. keep intervention/control as $u(t)$ and measurement noise as $\varepsilon_k(t)$;
-7. use tables when a long equation is really a specification or taxonomy;
-8. use Mermaid only for architecture/topology, never as a substitute for a mathematical definition;
-9. use color only for semantic categories and always duplicate meaning with text labels;
-10. preserve APA 7 author–date citations and canonical DOI URLs.
+3. avoid long prose inside mathematical boxes;
+4. use tables when a long expression is primarily a taxonomy/specification;
+5. preserve notation consistently across files;
+6. keep operational control as $u(t)$ and transformation action as $a_k$;
+7. use Mermaid only for architecture/topology;
+8. use color only with redundant textual labels;
+9. preserve APA 7 author–date citations and canonical DOI URLs.
 
-## Historical material
+## Next scientific phase
 
-[`research_memory/`](research_memory/) and [`ADAPTIVE_VISUAL_CI_EXCEPTION_2026-08-22.md`](ADAPTIVE_VISUAL_CI_EXCEPTION_2026-08-22.md) are historical/provenance material. They may contain superseded P–W–T–SW or earlier architectures and are not current scientific authority.
+The conceptual framework is closed. The next phase is:
 
-The active project files above override historical material whenever a conflict occurs.
+$$
+\boxed{
+\text{operationalization}
+\rightarrow
+\text{numerical case-study design}
+\rightarrow
+\text{computation}
+\rightarrow
+\text{falsification}
+\rightarrow
+\text{validation}
+}.
+$$
+
+Historical material remains provenance only unless explicitly reintroduced through a versioned revision.
