@@ -1,7 +1,7 @@
 # Project Memory Entry Point
 
-![Frozen](https://img.shields.io/badge/stages%202--6-FROZEN-1A7F37)
-![Research](https://img.shields.io/badge/Stage%207-DEEP%20RESEARCH-9A6700)
+![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Phase](https://img.shields.io/badge/next-operationalization%20%26%20validation-0969DA)
 
 ## Repository authority — 2026-09-11
 
@@ -15,9 +15,9 @@ For project navigation, start with [`project/README.md`](project/README.md).
 
 ---
 
-## Citation and reference standard
+## Citation and evidence standard
 
-The thesis-wide citation standard is **APA 7th edition**. A citation must not support a stronger claim than its source establishes. Thesis-proposed mathematical objects remain labeled `[P]` unless evidence justifies a different status.
+The thesis-wide citation standard is **APA 7th edition**. A citation must not support a stronger claim than its source establishes. Thesis-proposed mathematical objects remain labeled `[P]` even after framework freeze unless external validation justifies another status.
 
 ---
 
@@ -36,13 +36,13 @@ Read the active files in this order:
 9. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
 10. [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
 11. [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
-12. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md) — research only; not canonical/frozen
+12. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
 13. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
 14. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
 15. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
 16. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 
-Frozen files override older framework descriptions whenever conflicts occur. The Stage-7 research file is evidence for the next scope decision and does **not** yet override frozen upstream definitions.
+`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS_RESEARCH.md` is retained as research provenance and is superseded by the frozen Stage-7 specification above whenever they differ.
 
 ---
 
@@ -66,17 +66,19 @@ Canonical description:
 
 > **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
 
-Current stage status:
+Current status:
 
 | Stage | Status |
 |---|---|
-| **1 — Multilayer Structure** | Defined / canonical |
+| **1 — Multilayer Structure** | Frozen / canonical |
 | **2 — Causal Mechanisms** | Frozen |
 | **3 — Coupled Hybrid Multiscale Dynamics** | Frozen |
 | **4 — Observation, Organization, Feedback and Control** | Frozen |
 | **5 — Viability** | Frozen as Controlled Sustainable Viability |
-| **6 — Resilience-to-Sustainability Transformation Interface** | **Frozen as Resilience-to-Sustainability Transition** |
-| **7 — Sustainable Transformation Pathways** | **Deep research complete; candidate scope not frozen** |
+| **6 — Resilience-to-Sustainability Transformation Interface** | Frozen as Resilience-to-Sustainability Transition |
+| **7 — Sustainable Transformation Pathways** | **Frozen** |
+
+The complete conceptual and mathematical framework is now frozen.
 
 ---
 
@@ -111,44 +113,25 @@ x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \widetilde Y(t)=\bigl(Y(t),m(t)\bigr).
 $$
 
-Stage 3 owns heterogeneous native subsystem dynamics, causal delays, multiple timescales, discrete events, mode switching, dynamic topology, trajectory uncertainty, cascade-arrival time and spatial propagation where physically meaningful.
+Stage 3 owns heterogeneous native subsystem dynamics, causal delays, multiple timescales, discrete events, mode switching, dynamic topology, trajectory uncertainty and cascade propagation.
 
 ---
 
 ## Frozen Stage-4 object
 
-Stage 4 is a closed-loop partially observable socio-technical control process:
+Stage 4 is the closed-loop partially observable socio-technical control process
 
 $$
 X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
 $$
 
-Core objects include
-
-$$
-(\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I),
-$$
-
-$$
-u(t)=\pi(\widehat X(t),z_I(t),z_O(t)),
-\qquad
-u(t)\in\mathcal U(z_I(t),z_O(t)).
-$$
-
-Measurement noise is $\varepsilon_k(t)$. For sequential non-overlapping processes,
-
-$$
-\begin{aligned}
-\tau_{\rm response}={}&\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}\\
-&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
-\end{aligned}
-$$
+The operational action is $u(t)$.
 
 ---
 
 ## Frozen Stage-5 object
 
-Stage 5 is formalized as **Controlled Sustainable Viability** under the framework label **Viability**.
+Stage 5 is **Controlled Sustainable Viability**.
 
 $$
 K_{\rm sus}(t)=\{Y:g_r(Y,t)\le0,\ r=1,\ldots,n_K\},
@@ -169,120 +152,213 @@ Y\notin\mathcal V_{\rm sus}^{u,T}
 Y\notin K_{\rm sus}.
 $$
 
-The temporal quantities are $T_{\mathcal V}$ and $T_K$; the normalized Euclidean/weighted distance $\rho_E$ is the geometric baseline; $\rho_g$, the response margins and $S_{ij}^{\mathcal V}$ remain proposed `[P]` constructs.
-
 ---
 
 ## Frozen Stage-6 object
 
-Stage 6 is frozen as **Resilience-to-Sustainability Transition** under the framework label **Resilience-to-Sustainability Transformation Interface**.
+Stage 6 is **Resilience-to-Sustainability Transition** under the framework label **Resilience-to-Sustainability Transformation Interface**.
 
-Frozen research question:
-
-> **When is recovery insufficient, and what conditions require adaptation or transformation?**
-
-The current regime is
-
-$$
-\mathfrak M_0
-=
-(\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
-$$
-
-The Stage-5 evidence interface is
-
-$$
-\mathcal R_5
-=
-\{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
-$$
-
-The diagnostic vector is
-
-$$
-\mathbf d_6
-=
-[d_{\mathcal V},d_{\rm limit},d_{\rm lock},d_{\rm mal},d_{\rm sus},d_{\rm eq},d_{\rm struct}]^\top.
-$$
-
-The frozen Stage-6 translation is
+Its frozen translation is
 
 $$
 \Phi_{\rm ST}
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T),
+(c_6,\mathcal D_6,\boldsymbol\zeta_T),
 $$
 
-where
+with
 
 $$
-c_6\in\{R,A,T\},
+c_6\in\{R,A,T\}.
 $$
 
-$$
-\mathcal D_6
-=
-\{\mathcal D_P,\mathcal D_T,\mathcal D_I,\mathcal D_O,
-\mathcal D_{\mathfrak I},\mathcal D_{\rm env},\mathcal D_{\rm eq}\},
-$$
-
-and
+Stage 6 answers:
 
 $$
-\boldsymbol{\zeta}_T
-=
-[\zeta_{\rm depth},\zeta_{\rm scope},\zeta_{\rm scale},\zeta_{\rm pace},
-\zeta_{\rm equity},\zeta_{\rm environment}]^\top.
+\text{WHY change}
++
+\text{WHAT must change}
++
+\text{HOW DEEP}.
 $$
-
-Stage 6 determines **WHY change, WHAT must change and HOW DEEP the change must be**. It does not select the intervention sequence.
 
 ---
 
-## Active Stage-7 research
+## Frozen Stage-7 object
 
 Stage 7 asks:
 
 > **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
 
-Its frozen input boundary is
+It receives
 
 $$
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)
-\longrightarrow
-\text{Stage-7 intervention/pathway research}.
+\Gamma_6=(c_6,\mathcal D_6,\boldsymbol\zeta_T)
 $$
 
-The ten-pass deep research has tested adaptive pathways, DAPP, multistage decision making, infrastructure investment timing, real options, multi-objective optimization, robust decision making, socio-technical transitions, equity/sustainability constraints and formal P–T–I–O pathway synthesis.
-
-The leading **candidate**, not-yet-frozen interpretation is that
+and answers:
 
 $$
-\Pi=[(a_1,t_1),\ldots,(a_N,t_N)]
+\text{WHICH intervention}
++
+\text{IN WHAT ORDER}
++
+\text{WHEN}
++
+\text{UNDER WHAT CONDITIONS}.
 $$
 
-is useful for one realized pathway, but the fundamental planning object may need to be an adaptive trigger-dependent pathway graph that retains alternative future branches under deep uncertainty.
+The Stage-7 infrastructure-regime object is
 
-No Stage-7 candidate equation is canonical until an explicit freeze is approved.
+$$
+\mathcal M_k
+=
+(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\boldsymbol\theta_k,\mathcal U_k).
+$$
+
+The strategic transformation is
+
+$$
+\mathcal M_{k+1}
+=
+\mathcal T_{a_k}(\mathcal M_k,\xi_k),
+$$
+
+with
+
+$$
+a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}].
+$$
+
+The Stage-4/Stage-7 distinction is frozen:
+
+$$
+\underbrace{u(t)}_{\text{operate current regime}}
+\neq
+\underbrace{a_k}_{\text{transform the regime}}.
+$$
+
+The transformation meta-graph is
+
+$$
+\mathbb G_{\rm ST}
+=(\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
+$$
+
+where each node is an infrastructure regime $\mathcal M_k$ and each edge is an admissible transformation.
+
+The adaptive decision rule is
+
+$$
+a_k
+=
+\pi_k(\widehat Y_k,z_{I,k},z_{O,k},\mathcal M_k,\mathcal H_k).
+$$
+
+The sustainable target set is
+
+$$
+\mathbb M_{\rm sus}
+=
+\{\mathcal M:\mathcal V_{\rm sus}^{u}(\mathcal M)
+\text{ satisfies required resilience, sustainability and equity conditions}\}.
+$$
+
+The frozen fundamental Stage-7 object is
+
+$$
+\boxed{
+\mathfrak P_{\rm ST}
+=
+(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus})
+}.
+$$
+
+Stage 7 is therefore:
+
+> **an adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure architectures.**
+
+The object $\mathfrak P_{\rm ST}$ is frozen as the thesis framework definition but remains a proposed thesis construct `[P]` pending numerical validation.
 
 ---
 
-## Stage-6 / Stage-7 boundary
+## Complete frozen chain
 
 $$
-\underbrace{\text{WHY / WHAT / HOW DEEP}}_{\text{Stage 6}}
-\quad\longrightarrow\quad
-\underbrace{\text{WHICH / ORDER / WHEN / UNDER WHAT CONDITIONS}}_{\text{Stage 7}}.
+\boxed{
+\underbrace{\mathcal S}_{1}
+\rightarrow
+\underbrace{\mathfrak I}_{2}
+\rightarrow
+\underbrace{F_{\mathcal G}^{m}}_{3}
+\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
+\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
+\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
+\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}
+}.
 $$
 
-The immediate framework task is to evaluate and refine the Stage-7 candidate scope, then explicitly freeze Stage 7 and only then declare the complete seven-stage conceptual/mathematical framework frozen.
+Conceptually:
+
+$$
+\boxed{
+\text{ontology}
+\rightarrow
+\text{causal coupling}
+\rightarrow
+\text{dynamics}
+\rightarrow
+\text{knowledge/control}
+\rightarrow
+\text{viability}
+\rightarrow
+\text{transformation diagnosis}
+\rightarrow
+\text{adaptive transformation pathway}
+}.
+$$
 
 ---
 
-## Mathematical rendering rule
+## Seven-stage validation loop
 
-Active project files follow [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md): readable GitHub display math, no long prose inside mathematical boxes, no fragile `\tag` dependence, semantic colors only with redundant labels, and tables for taxonomies/specifications.
+Every Stage-7 candidate must be replayed through the framework:
 
-Historical P–W–T–SW, waste–drainage, earlier six-chain or other superseded architectures remain provenance only unless explicitly reintroduced through a versioned revision.
+$$
+\begin{aligned}
+\text{Stage 7 candidate}
+&\rightarrow\text{Stage 1 structural update}\\
+&\rightarrow\text{Stage 2 mechanism update}\\
+&\rightarrow\text{Stage 3 dynamic simulation}\\
+&\rightarrow\text{Stage 4 observability/control evaluation}\\
+&\rightarrow\text{Stage 5 viability evaluation}\\
+&\rightarrow\text{Stage 6 adequacy diagnosis}\\
+&\rightarrow\text{Stage 7 accept/reject/refine}.
+\end{aligned}
+$$
+
+This validation loop does not replace or reorder the stages.
+
+---
+
+## Final framework status
+
+$$
+\boxed{
+\textbf{STAGES 1--7: CONCEPTUAL AND MATHEMATICAL FRAMEWORK FROZEN}
+}
+$$
+
+The next phase is **operationalization, numerical case-study design, computation, falsification and validation**. Do not reopen the seven-stage conceptual architecture unless an explicit versioned revision is requested.
+
+---
+
+## Historical memory
+
+Historical P–W–T–SW, waste–drainage, earlier six-chain, or superseded Stage-7 research formulations remain provenance only unless explicitly reintroduced through a versioned revision.
