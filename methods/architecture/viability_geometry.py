@@ -2,7 +2,8 @@
 
 This module is intentionally small and auditable. It does not claim to solve the
 full thesis model. It provides reproducible primitives for toy/synthetic tests,
-geometry QA, and figure generation.
+geometry QA, and figure-generation checks. Scientific hypothesis tests must use
+separately specified models, metrics, uncertainty sets, and validation evidence.
 """
 
 from __future__ import annotations
@@ -84,7 +85,8 @@ def approximate_viable_grid(
     """Approximate finite-horizon viable points for a deterministic smoke test.
 
     The full thesis viability problem is controlled, uncertain, hybrid, and
-    higher-dimensional. This finite-grid routine is only a transparent baseline.
+    higher-dimensional. This finite-grid routine is only a transparent numerical
+    baseline for software verification.
     """
     return [
         p
@@ -112,15 +114,17 @@ def hausdorff_distance(a: Iterable[Point], b: Iterable[Point]) -> float:
 
 
 def static_interface_field(zbar: float) -> Callable[[Point, float], Point]:
-    """Reference static-interface vector field with a nontrivial safe-set boundary.
+    """Reference static-interface field with a nontrivial finite-horizon boundary.
 
     The weakly unstable x1 direction is deliberate: it ensures the finite-horizon
-    admissible set is a proper subset of K, so dynamic/static interface changes can
-    produce a measurable synthetic boundary deformation.
+    admissible set is a proper subset of K so static/dynamic synthetic fields can
+    produce a measurable boundary deformation.
     """
+
     def field(x: Point, _t: float) -> Point:
         x1, x2 = x
         return (0.18 * x1 + zbar * x2, -0.12 * x2 + 0.18 * x1)
+
     return field
 
 
@@ -129,23 +133,26 @@ def dynamic_interface_field(
     amplitude: float = 0.18,
     omega: float = 1.0,
 ) -> Callable[[Point, float], Point]:
-    """Reference time-varying interface field used only for P1 synthetic QA."""
+    """Reference time-varying field for dynamic/static geometry software QA."""
+
     def field(x: Point, t: float) -> Point:
         x1, x2 = x
         z = z0 + amplitude * math.sin(omega * t)
         return (0.18 * x1 + z * x2, -0.12 * x2 + 0.18 * x1)
+
     return field
 
 
 def demo_boundary_deformation() -> dict[str, float | int]:
-    """Reproducible P1 smoke test: dynamic vs static finite-horizon viability.
+    """Reproducible smoke test: dynamic vs. static finite-horizon viability.
 
     Expected reference behavior on the default 81x81 grid:
       * both viable sets are non-empty and proper subsets of K;
       * dynamic and static approximations are not identical;
       * the grid-based Hausdorff distance is positive.
 
-    These are software/geometry checks, not empirical thesis results.
+    These are software/geometry checks, not empirical thesis results and not a
+    confirmatory test of any frozen research hypothesis.
     """
     k = Rectangle(-1.0, 1.0, -1.0, 1.0)
     v_static = approximate_viable_grid(k, static_interface_field(0.25), 5.0, 0.02)
