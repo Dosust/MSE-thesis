@@ -47,6 +47,18 @@ It may be used only **after the fresh evidence corpus has been constructed** for
 
 ---
 
+<!-- CANONICAL_VISUAL:V09 -->
+
+### V09 — Fresh-Search Evidence-to-Equation Pipeline
+
+<p align="center">
+  <img src="../figures/canonical/09_FTEE_evidence_pipeline.svg" alt="V09 — Fresh-Search Evidence-to-Equation Pipeline" width="96%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V09 -->
+
 ## 1. Complete research pipeline
 
 The revised order is:

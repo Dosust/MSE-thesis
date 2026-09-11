@@ -16,6 +16,18 @@ This directory is the active mathematical/scientific specification of the MSE th
 
 ---
 
+<!-- CANONICAL_VISUAL:V00 -->
+
+### V00 — Canonical Seven-Stage Master Thesis Architecture
+
+<p align="center">
+  <img src="../figures/canonical/00_master_seven_stage_architecture.svg" alt="V00 — Canonical Seven-Stage Master Thesis Architecture" width="100%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V00 -->
+
 ## 1. Authority map
 
 | Priority | File | Role | Status |
@@ -70,6 +82,30 @@ The primary confirmatory set remains
 ```
 
 ---
+
+<!-- CANONICAL_VISUAL:V08 -->
+
+### V08 — H1–H5 Scientific Test Architecture
+
+<p align="center">
+  <img src="../figures/canonical/08_hypothesis_test_architecture.svg" alt="V08 — H1–H5 Scientific Test Architecture" width="100%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V08 -->
+
+<!-- CANONICAL_VISUAL:V09 -->
+
+### V09 — FTEE v2.0 Evidence-to-Equation Pipeline
+
+<p align="center">
+  <img src="../figures/canonical/09_FTEE_evidence_pipeline.svg" alt="V09 — FTEE v2.0 Evidence-to-Equation Pipeline" width="100%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V09 -->
 
 ## 3. Active evidence architecture — FTEE v2.0
 
@@ -196,6 +232,6 @@ is a post hoc coverage audit after the fresh corpus is constructed. An old-only 
 
 ## 8. Immediate next step
 
-The next operational task is to build and freeze the database-specific **Fresh Literature Search Protocol for $H_1$**, including concept blocks, synonyms, Boolean strings, field restrictions, search date, coverage rules, deduplication logic, eligibility codebook, screening form, citation-chasing rule, amendment/version-control rule and PRISMA accounting schema. Only then should the first new search be executed.
+The $H_1$ search protocol is now frozen for initial execution. The next operational task is to execute the exact CORE v1 strings in Scopus, Web of Science Core Collection, Compendex and IEEE Xplore, preserve the raw exports and search metadata, construct $\mathcal P_{H_1}^{raw}$, and then perform hierarchical deduplication before title/abstract screening.
 
 Historical/archive material remains provenance only unless explicitly reintroduced through a versioned revision.

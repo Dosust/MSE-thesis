@@ -35,6 +35,18 @@ Stage 2 answers:
 
 ---
 
+<!-- CANONICAL_VISUAL:V02 -->
+
+### V02 — Causal Interdependency Object
+
+<p align="center">
+  <img src="../figures/canonical/02_causal_interdependency_object.svg" alt="V02 — Causal Interdependency Object" width="96%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V02 -->
+
 ## 2. Complete directed interdependency scope
 
 The complete directed set is

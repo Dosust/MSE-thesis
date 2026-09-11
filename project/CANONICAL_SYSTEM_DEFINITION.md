@@ -43,6 +43,18 @@ $\mathcal S$ denotes the system object; $\mathcal L$ denotes the layer/system in
 
 ---
 
+<!-- CANONICAL_VISUAL:V01 -->
+
+### V01 — P–T–I–O Multilayer System
+
+<p align="center">
+  <img src="../figures/canonical/01_multilayer_PTIO_system.svg" alt="V01 — P–T–I–O Multilayer System" width="96%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V01 -->
+
 ## 2. Layer interpretation
 
 | Symbol | Type | Principal role |

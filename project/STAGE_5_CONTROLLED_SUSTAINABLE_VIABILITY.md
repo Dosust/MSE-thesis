@@ -47,6 +47,18 @@ Stage 5 therefore separates five questions:
 
 ---
 
+<!-- CANONICAL_VISUAL:V05 -->
+
+### V05 — Controlled Sustainable Viability Geometry
+
+<p align="center">
+  <img src="../figures/canonical/05_controlled_viability_geometry.svg" alt="V05 — Controlled Sustainable Viability Geometry" width="96%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V05 -->
+
 ## 1. Core viability logic
 
 Viability theory defines the viability kernel as the set of initial states from which at least one admissible evolution or control keeps the state within the prescribed constraint set (Aubin, 1990; Aubin et al., 2011).

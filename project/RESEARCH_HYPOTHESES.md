@@ -39,6 +39,18 @@ The framework uses **five primary hypotheses**, rather than one hypothesis per s
 
 ---
 
+<!-- CANONICAL_VISUAL:V08 -->
+
+### V08 — H1–H5 Scientific Test Architecture
+
+<p align="center">
+  <img src="../figures/canonical/08_hypothesis_test_architecture.svg" alt="V08 — H1–H5 Scientific Test Architecture" width="96%">
+</p>
+
+> **Visual synopsis:** This figure compresses the scientific architecture for navigation and interpretation. The equations, definitions, evidence status, and boundary rules in the owning document remain authoritative.
+
+<!-- /CANONICAL_VISUAL:V08 -->
+
 ## 2. Overarching scientific hypothesis
 
 ### $H_{\rm SYS}$
