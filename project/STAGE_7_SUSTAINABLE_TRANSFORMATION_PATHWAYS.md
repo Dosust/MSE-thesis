@@ -1,779 +1,769 @@
-# Unified Final Result — Stage 7: Sustainable Transformation Pathways
+# Stage 7 — Sustainable Transformation Pathways
 
-Stage 7 can now be unified and frozen without changing Stages 1–6. The 50-paper review establishes that Stage 7 should not be a fixed investment schedule; it should be an **adaptive constrained transformation problem over alternative** **`P\!-\!T\!-\!I\!-\!O`** **architectures**.
+![Stage](https://img.shields.io/badge/Stage%207-FROZEN-1A7F37)
+![Evidence](https://img.shields.io/badge/evidence-50--paper%20synthesis-0969DA)
 
-## 1. Exact Stage 7 question
+**Framework stage:** Stage 7 — Sustainable Transformation Pathways  
+**Status:** CANONICAL / FROZEN  
+**Frozen:** 2026-09-11  
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**Citation standard:** APA 7th edition author–date  
+**Change rule:** Do not revise the Stage-7 scientific scope without an explicit versioned framework change.  
+**Framework preservation rule:** Stage 7 transforms candidate P–T–I–O regimes; it does not redefine the scientific responsibilities of Stages 1–6.
 
-```math
-\boxed{ \textbf{What sequence of interventions leads to a more resilient, equitable and sustainable future system?} }
-```
+> **Evidence notation:** `[E]` = established literature/theory; `[D]` = derived synthesis; `[P]` = proposed thesis construct requiring validation.
 
-Its scientific responsibility is now precise:
-
-```math
-\boxed{ \textbf{Stage 6} = \text{WHY change + WHAT must change + HOW DEEP} }
-```
-
-```math
-\boxed{ \textbf{Stage 7} = \text{WHICH intervention + IN WHAT ORDER + WHEN + UNDER WHAT CONDITIONS} }
-```
-
-Stage 7 therefore receives
-
-```math
-\boxed{ \Gamma_6 = (c_6,\mathcal D_6,\boldsymbol{\zeta}_T) }
-```
-
-from Stage 6 and converts those requirements into an adaptive transformation pathway.
+> **Rendering rule:** GitHub-facing equations use `$$...$$`; equation labels are Markdown headings; long verbal specifications use tables rather than oversized mathematical boxes.
 
 ---
 
-# 2. Fundamental distinction: state control versus system transformation
+## Frozen research question
 
-The most important relation is:
+> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
 
-```math
-\boxed{ \text{Stage 4: }Y\rightarrow Y' }
-```
+The Stage-6 / Stage-7 separation is
 
-but
+$$
+\underbrace{\text{WHY change + WHAT must change + HOW DEEP}}_{\text{Stage 6}}
+\quad\longrightarrow\quad
+\underbrace{\text{WHICH intervention + ORDER + WHEN + CONDITIONS}}_{\text{Stage 7}}.
+$$
 
-```math
-\boxed{ \text{Stage 7: }\mathcal M_k\rightarrow\mathcal M_{k+1}. }
-```
+Stage 7 receives the frozen Stage-6 output
 
-`Y(t)` is the operating state of an infrastructure regime.
+$$
+(c_6,\mathcal D_6,\boldsymbol\zeta_T)
+$$
 
-Stage 7 instead transforms the **regime itself**.
-
-Define:
-
-```math
-\boxed{ \mathcal M_k = \left( \mathcal S_k, \mathcal G_k, \mathfrak I_k, F_k, \boldsymbol{\theta}_k, \mathcal U_k \right). } \tag{S7.1}
-```
-
-where
-
-```math
-\begin{aligned} \mathcal S_k &: \text{system composition},\\ \mathcal G_k &: \text{multilayer topology},\\ \mathfrak I_k &: \text{causal interdependencies},\\ F_k &: \text{hybrid multiscale dynamics},\\ \boldsymbol\theta_k &: \text{physical/operational parameters and capacities},\\ \mathcal U_k &: \text{available operational control capabilities}. \end{aligned}
-```
-
-This distinction is essential because infrastructure transformation can change topology, dynamics, interdependencies, capacities and future control authority, rather than merely moving the current state (Geels, 2002). The research document makes this Stage 4/Stage 7 distinction explicit.
+and converts those requirements into adaptive transformation pathways.
 
 ---
 
-# 3. Three levels of topology
+## 1. State control and regime transformation are different
 
-The final framework should explicitly distinguish three topological levels.
+Stage 4 operates a given infrastructure regime through $u(t)$. Stage 7 changes the regime that will subsequently be operated.
 
-### Level I — topology inside each system
+$$
+\underbrace{u(t)}_{\text{Stage 4 operational control}}
+\neq
+\underbrace{\mathbf a_k}_{\text{Stage 7 strategic transformation action}}.
+$$
 
-```math
-\boxed{ G^\alpha=(V^\alpha,E^\alpha), \qquad \alpha\in\{P,T,I,O\}. } \tag{S7.2}
-```
+The canonical Stage-7 infrastructure-regime object is
 
-Thus:
+$$
+\mathfrak M_k
+=
+\left(
+\mathcal S_k,
+\mathcal G_k,
+\mathfrak I_k,
+F_k,
+\Theta_k,
+K_{{\rm sus},k},
+\mathcal U_k
+\right).
+$$
 
-```math
-G_P,\quad G_T,\quad G_I,\quad G_O.
-```
+| Component | Meaning |
+|---|---|
+| $\mathcal S_k$ | P–T–I–O system composition |
+| $\mathcal G_k$ | multilayer topology |
+| $\mathfrak I_k$ | causal interdependency set |
+| $F_k$ | hybrid multiscale dynamics |
+| $\Theta_k$ | parameters, capacities and configuration |
+| $K_{{\rm sus},k}$ | justified acceptability/sustainability constraints |
+| $\mathcal U_k$ | available operational-control capability |
 
-### Level II — multilayer infrastructure topology
+This notation extends the frozen Stage-6 regime object consistently rather than introducing a second regime symbol.
 
-```math
-\boxed{ \mathcal G = \left( \{G^\alpha\}_{\alpha\in\mathcal L}, \{E^{\alpha\beta}\}_{\alpha,\beta\in\mathcal L} \right) } \tag{S7.3}
-```
+---
+
+## 2. Three distinct topology levels
+
+Stage 7 distinguishes topology **within a layer**, topology **across layers**, and topology **across alternative future regimes**.
+
+### Level I — within-layer topology
+
+For layer or physical system $\alpha$,
+
+$$
+G_k^\alpha=(V_k^\alpha,E_k^\alpha),
+\qquad
+\alpha\in\mathcal L,
+\qquad
+\mathcal L=\{P,T,I,O\}.
+$$
+
+### Level II — multilayer P–T–I–O topology
+
+A generic representation is
+
+$$
+\mathcal G_k
+=
+\left(
+\{G_k^\alpha\}_{\alpha\in\mathcal L},
+\{E_k^{\alpha\beta}\}_{\alpha,\beta\in\mathcal L}
+\right).
+$$
+
+This structural representation does not replace the Stage-2 causal object $\mathfrak I_{ij}^{\alpha\beta}$.
+
+### Level III — graph of alternative infrastructure regimes `[P]`
+
+The Stage-7 transformation meta-graph is
+
+$$
+\mathbb G_{\rm ST}
+=
+(\mathbb V_{\rm ST},\mathbb E_{\rm ST}),
+$$
 
 with
 
-```math
-\mathcal L=\{P,T,I,O\}.
-```
+$$
+v_k\equiv\mathfrak M_k,
+$$
 
-The established multilayer representation remains:
+and an admissible transformation edge
 
-```math
-\boxed{ \mathcal A_{ij}^{\alpha\beta}(t). }
-```
+$$
+\mathfrak M_k
+\xrightarrow{\mathbf a_{k\ell}}
+\mathfrak M_\ell.
+$$
 
-Tensorial/supra-adjacency formulations provide a rigorous mathematical representation for multilayer systems without prematurely aggregating distinct layers (De Domenico et al., 2013).
-
-### Level III — topology of alternative system topologies
-
-Define the Stage 7 transformation meta-graph:
-
-```math
-\boxed{ \mathbb G_{\mathrm{ST}} = (\mathbb V_{\mathrm{ST}}, \mathbb E_{\mathrm{ST}}). } \tag{S7.4}
-```
-
-Every vertex is an entire infrastructure regime:
-
-```math
-\boxed{ v_k\equiv\mathcal M_k. }
-```
-
-Every edge is an admissible transformation:
-
-```math
-\boxed{ \mathcal M_k \xrightarrow{a_{k\ell}} \mathcal M_\ell. } \tag{S7.5}
-```
-
-This is the rigorous interpretation of the thesis idea of a **graph of graphs / topology of topologies**.
-
-Equation (S7.5) is **[P]**, built from established multilayer-network mathematics.
+This is the thesis interpretation of a **graph of alternative multilayer infrastructure regimes**. Multilayer-network mathematics motivates the representation, but the complete meta-graph is a proposed thesis construct `[P]` (De Domenico et al., 2013).
 
 ---
 
-# 4. Transformation operator
+## 3. Transformation operator
 
-A Stage 7 intervention is no longer simply an action label `a_k`.
+A strategic intervention changes the infrastructure regime according to
 
-Define:
+$$
+\mathfrak M_{k+1}
+=
+\mathcal T_{\mathbf a_k}
+\left(
+\mathfrak M_k,\xi_k
+\right),
+$$
 
-```math
-\boxed{ \mathcal M_{k+1} = \mathcal T_{a_k} \left( \mathcal M_k,\xi_k \right). } \tag{S7.6}
-```
+where $\xi_k$ represents uncertainty or exogenous conditions relevant to the transformation step.
 
-Therefore an intervention may change:
+A transformation may modify
 
-```math
-\boxed{ \mathcal G, \quad \mathfrak I, \quad F, \quad \boldsymbol\theta, \quad \mathcal U. }
-```
+$$
+\mathcal G,
+\qquad
+\mathfrak I,
+\qquad
+F,
+\qquad
+\Theta,
+\qquad
+K_{\rm sus},
+\qquad
+\mathcal U.
+$$
 
-This is stronger than ordinary graph rewiring.
-
-It means Stage 7 can change:
-
-```math
-\boxed{ \text{structure} + \text{coupling} + \text{physics} + \text{capacity} + \text{control capability}. }
-```
-
----
-
-# 5. Intervention space
-
-The Stage 7 intervention vector becomes
-
-```math
-\boxed{ a_k = \left[ a_k^{P}, a_k^{T}, a_k^{I}, a_k^{O}, a_k^{\mathfrak I} \right]. } \tag{S7.7}
-```
-
-| InterventionMeaning |                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| `a^P`               | DER, storage, microgrids, hardening, traction-power redundancy, grid redesign              |
-| `a^T`               | road redundancy, multimodal corridors, charging access, bus/rail alternatives              |
-| `a^I`               | sensing, communication redundancy, backup power, interoperability, distributed information |
-| `a^O`               | authority, coordination institutions, mutual aid, workforce/resource arrangements          |
-| `a^{\mathfrak I}`   | direct modification of cross-system causal dependency                                      |
-
-Information and organizational structures must remain genuine intervention spaces because organizational coordination and information exchange affect infrastructure resilience rather than merely describing the physical system (Li et al., 2019).
+Stage 7 is therefore stronger than graph rewiring alone: it can change structure, causal coupling, physical capability, institutional capability, future control authority, and the applicable long-horizon design constraints.
 
 ---
 
-# 6. Direct Stage 2 → Stage 7 relationship
+## 4. Strategic intervention space
 
-Stage 2 defined:
+Use the bold vector $\mathbf a_k$ for Stage-7 actions so it cannot be confused with the Stage-2 activation variable $a_{ij}$.
 
-```math
-\boxed{ \mathfrak I_{ij}^{\alpha\beta} = \left( E_i^\alpha,E_j^\beta,M_{ij}, w_{ij},\delta_{ij},\tau_{ij}, a_{ij},m,\mathcal H_t \right). }
-```
+$$
+\mathbf a_k
+=
+\begin{bmatrix}
+a_k^P\\
+a_k^T\\
+a_k^I\\
+a_k^O\\
+a_k^{\mathfrak I}
+\end{bmatrix}.
+$$
 
-Stage 7 may intentionally transform those parameters:
+| Action family | Representative transformations |
+|---|---|
+| $a_k^P$ | DER/storage, microgrids, hardening, traction-power redundancy, grid redesign |
+| $a_k^T$ | road redundancy, multimodal corridors, charging access, bus/rail alternatives |
+| $a_k^I$ | sensing/communication redundancy, backup power, interoperability, distributed information capability |
+| $a_k^O$ | authority redesign, coordination institutions, mutual aid, workforce/resource arrangements |
+| $a_k^{\mathfrak I}$ | intentional modification of cross-layer causal dependence |
 
-```math
-\boxed{ \mathfrak I_{ij}^{\alpha\beta} \rightarrow {\mathfrak I'}_{ij}^{\alpha\beta}. } \tag{S7.8}
-```
+Information and organization remain genuine design spaces because coordination and information exchange affect infrastructure response and recovery (Li et al., 2019).
 
-For example:
+---
 
-```math
+## 5. Direct Stage-2 → Stage-7 connection
+
+Stage 2 defines
+
+$$
+\mathfrak I_{ij}^{\alpha\beta}
+=
+\left(
+E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
+\right).
+$$
+
+Stage 7 may intentionally redesign an accepted interdependency:
+
+$$
+\mathfrak I_{ij}^{\alpha\beta}
+\longrightarrow
+{\mathfrak I'}_{ij}^{\alpha\beta}.
+$$
+
+Possible changes include
+
+$$
 w_{ij}\rightarrow w'_{ij},
-```
-
-```math
+\qquad
 \delta_{ij}\rightarrow\delta'_{ij},
-```
-
-```math
+\qquad
 \tau_{ij}\rightarrow\tau'_{ij},
-```
-
-or
-
-```math
+\qquad
 a_{ij}:1\rightarrow0.
-```
+$$
 
-Hence Stage 7 can:
-
-```math
-\boxed{ \text{weaken harmful dependencies} }
-```
-
-while simultaneously
-
-```math
-\boxed{ \text{strengthening beneficial dependencies}. }
-```
-
-This is substantially stronger than treating transformation as node addition or asset replacement.
+The objective is not universally to reduce coupling. Depending on mechanism and context, Stage 7 may weaken harmful dependence, add redundancy, introduce selective autonomy, or strengthen beneficial interdependence.
 
 ---
 
-# 7. Adaptive policy — not a fixed schedule
+## 6. Adaptive transformation policy
 
-The preliminary formulation
+A fixed schedule
 
-```math
-\Pi= [(a_1,t_1),\ldots,(a_N,t_N)]
-```
+$$
+\Pi_F=[(\mathbf a_1,t_1),\ldots,(\mathbf a_N,t_N)]
+$$
 
-is retained only as a **realized pathway**.
+is retained as a valid **realized pathway** or fixed comparator. Under deep uncertainty, however, the fundamental Stage-7 decision object is adaptive.
 
-The fundamental decision object is now:
+A candidate policy is
 
-```math
-\boxed{ a_k = \pi_k \left( \hat Y_k, z_{I,k}, z_{O,k}, \mathcal M_k, \mathcal H_k \right). } \tag{S7.9}
-```
+$$
+\mathbf a_k
+=
+\pi_k^{\rm ST}
+\left(
+\widehat X_k,
+ z_{I,k},
+ z_{O,k},
+ \mathfrak M_k,
+ \mathcal H_k
+\right),
+$$
 
-and:
+with policy family
 
-```math
-\boxed{ \boldsymbol\pi = \{\pi_0,\pi_1,\ldots,\pi_N\}. }
-```
+$$
+\boldsymbol\pi_{\rm ST}
+=
+\{\pi_0^{\rm ST},\pi_1^{\rm ST},\ldots,\pi_N^{\rm ST}\}.
+$$
 
-Dynamic Adaptive Policy Pathways explicitly preserve alternative actions and trigger switches when observed conditions make the existing pathway inadequate (Haasnoot et al., 2013). The fifty-paper review therefore concludes that conditional branches rather than fixed dates are required under deep uncertainty.
+The superscript `ST` distinguishes the long-horizon transformation policy from the Stage-4 operational control policy $\pi$.
 
-Thus:
-
-```math
-\boxed{ \text{fixed sequence} \subset \text{adaptive transformation policy}. }
-```
-
----
-
-# 8. Trigger mechanism
-
-Let
-
-```math
-s_j(t) = s_j \left( \hat Y(t), z_I(t), z_O(t), \mathcal M(t), \xi(t) \right)
-```
-
-denote a monitored signpost.
-
-Define a trigger region:
-
-```math
-\Gamma_j.
-```
-
-Then:
-
-```math
-\boxed{ \tau_j = \inf \left\{ t: s_j(t)\in\Gamma_j \right\}. } \tag{S7.10}
-```
-
-This creates:
-
-```math
-\boxed{ \text{observe} \rightarrow \text{update} \rightarrow \text{detect trigger} \rightarrow \text{select intervention}. }
-```
-
-Stage 4 therefore remains active even in long-term transformation:
-
-```math
-\boxed{ I \rightarrow \hat Y \rightarrow \tau_j \rightarrow a_j. }
-```
-
-Adaptive-pathway literature supports monitoring and triggering interventions when changing conditions invalidate existing plans (Haasnoot et al., 2013).
+Dynamic Adaptive Policy Pathways retain future alternatives and allow switching when monitored conditions invalidate the current path (Haasnoot et al., 2013).
 
 ---
 
-# 9. Temporal structure of transformation
+## 7. Monitoring and trigger conditions
 
-Stage 7 requires multiple times:
+Let a Stage-7 signpost be
 
-```math
-\boxed{ t_k,\quad \ell_k,\quad d_k,\quad \tau_k,\quad T. }
-```
+$$
+s_j(t)
+=
+s_j\!\left(
+\widehat X(t),
+z_I(t),
+z_O(t),
+\mathfrak M(t),
+\xi(t)
+\right).
+$$
 
-where:
+Let $\mathcal Z_j$ denote the trigger region for signpost $j$. The corresponding trigger time is
 
-```math
-\begin{aligned} t_k &= \text{decision/initiation time},\\ \ell_k &= \text{implementation lead time},\\ d_k &= \text{intervention duration},\\ \tau_k &= \text{trigger time},\\ T &= \text{planning horizon}. \end{aligned}
-```
+$$
+\tau_j
+=
+\inf\{t\ge t_k:s_j(t)\in\mathcal Z_j\}.
+$$
 
-An intervention becomes active at:
+The long-horizon decision loop is therefore
 
-```math
-\boxed{ t_k^{\mathrm{active}} = t_k+\ell_k. } \tag{S7.11}
-```
+$$
+\text{observe}
+\rightarrow
+\text{update}
+\rightarrow
+\text{detect trigger}
+\rightarrow
+\text{select strategic intervention}.
+$$
 
-Stage 7 is therefore a second kind of multiscale problem:
-
-```math
-\boxed{ \text{Stage 3} = \text{multiscale physical dynamics} }
-```
-
-while
-
-```math
-\boxed{ \text{Stage 7} = \text{multiscale transformation decisions}. }
-```
-
----
-
-# 10. Path dependence
-
-The available interventions at `k+1` depend on previous transformations:
-
-```math
-\boxed{ \mathcal A_{k+1} = \mathcal A \left( \mathcal M_{k+1}, \mathcal H_{t_{k+1}} \right). } \tag{S7.12}
-```
-
-Therefore intervention order can be noncommutative:
-
-```math
-\boxed{ \mathcal T_{a_2} \circ \mathcal T_{a_1} \neq \mathcal T_{a_1} \circ \mathcal T_{a_2}. } \tag{S7.13}
-```
-
-Hence:
-
-```math
-\boxed{\text{order matters}.}
-```
-
-This is the mathematical representation of **path dependence**.
+Stage 4 remains active because information and organization determine what can be observed, interpreted and implemented; Stage 7 uses those capabilities for long-horizon adaptation rather than redefining Stage 4.
 
 ---
 
-# 11. Transformation-edge object
+## 8. Transformation timing and path dependence
 
-Each edge in the transformation graph should contain:
+Stage 7 distinguishes several clocks:
 
-```math
-\boxed{ e_{k\ell} = \left( a_{k\ell}, C_{k\ell}, L_{k\ell}, D_{k\ell}, R_{k\ell}, \chi_{k\ell}, \Gamma_{k\ell} \right). } \tag{S7.14}
-```
+| Symbol | Meaning |
+|---|---|
+| $t_k$ | decision/initiation time |
+| $\ell_k$ | implementation lead time |
+| $d_k$ | implementation duration |
+| $\tau_k$ | trigger time |
+| $T_H$ | planning horizon |
 
-with:
+An intervention becomes active at
 
-```math
-\begin{aligned} C_{k\ell}&=\text{life-cycle/transition cost},\\ L_{k\ell}&=\text{lead time},\\ D_{k\ell}&=\text{implementation duration},\\ R_{k\ell}&=\text{resource requirement},\\ \chi_{k\ell}&=\text{reversibility, flexibility and lock-in information},\\ \Gamma_{k\ell}&=\text{trigger condition}. \end{aligned}
-```
+$$
+t_k^{\rm active}=t_k+\ell_k.
+$$
 
-This captures the real-options lesson that reversible, staged, expandable or deferrable interventions have different value under uncertainty than irreversible commitments (Buurman & Babovic, 2016).
+Stage 3 is multiscale in physical/process dynamics; Stage 7 is multiscale in strategic decision and implementation time.
 
----
+The future action set is path dependent:
 
-# 12. Feasibility
+$$
+\mathcal A_{k+1}
+=
+\mathcal A\!\left(
+\mathfrak M_{k+1},
+\mathcal H_{t_{k+1}}
+\right).
+$$
 
-The feasible action set is:
+In general, transformation order need not commute:
 
-```math
-\boxed{ \mathcal A_k^{\mathrm{feas}} = \mathcal A_k^{\mathrm{tech}} \cap \mathcal A_k^{\mathrm{budget}} \cap \mathcal A_k^{O} \cap \mathcal A_k^{\mathrm{sus}} \cap \mathcal A_k^{\mathrm{equity}} \cap \mathcal A_k^{\mathrm{temporal}}. } \tag{S7.15}
-```
+$$
+\mathcal T_{\mathbf a_2}\circ\mathcal T_{\mathbf a_1}
+\neq
+\mathcal T_{\mathbf a_1}\circ\mathcal T_{\mathbf a_2}.
+$$
 
-Thus:
-
-```math
-\boxed{ a_k\in\mathcal A_k^{\mathrm{feas}}. }
-```
-
-Examples include:
-
-```math
-\sum_i C_i x_{ik}\le B_k,
-```
-
-for budgets;
-
-```math
-x_j\le x_i,
-```
-
-for precedence;
-
-and
-
-```math
-t_j \ge t_i+d_i+\ell_i,
-```
-
-for sequencing.
-
-Organizational/resource constraints should be explicit rather than assuming unlimited implementation capacity (Almoghathawi et al., 2019; Li et al., 2019).
+Thus **order matters** whenever one intervention changes the feasibility or value of later interventions.
 
 ---
 
-# 13. Stage 5 viability becomes a Stage 7 pathway constraint
+## 9. Transformation-edge object `[P]`
 
-This is one of the most important inter-stage relationships.
+Each meta-graph edge may be represented as
 
-For each regime:
+$$
+e_{k\ell}
+=
+\left(
+\mathbf a_{k\ell},
+C_{k\ell},
+L_{k\ell},
+D_{k\ell},
+R_{k\ell},
+\chi_{k\ell},
+\mathcal Z_{k\ell}
+\right).
+$$
 
-```math
-\boxed{ \mathcal V_{\mathrm{sus}}^{u,T} (\mathcal M_k). }
-```
+| Term | Meaning |
+|---|---|
+| $C_{k\ell}$ | life-cycle / transition cost |
+| $L_{k\ell}$ | lead time |
+| $D_{k\ell}$ | implementation duration |
+| $R_{k\ell}$ | resource requirement |
+| $\chi_{k\ell}$ | reversibility, flexibility and lock-in information |
+| $\mathcal Z_{k\ell}$ | trigger region / activation condition |
 
-A transformation pathway should normally satisfy:
-
-```math
-\boxed{ Y(t)\in K_{\mathrm{sus}} \qquad \forall t. } \tag{S7.16}
-```
-
-More strongly:
-
-```math
-\boxed{ Y(t) \in \mathcal V_{\mathrm{sus}}^{u} (\mathcal M(t)) } \tag{S7.17}
-```
-
-whenever continuous controlled viability is required.
-
-Therefore Stage 5 does not merely evaluate the current system.
-
-It also evaluates **candidate future architectures**.
-
----
-
-# 14. Sustainable future is a target set
-
-Stage 7 should not target one exact final state `Y^\star`.
-
-Define instead:
-
-```math
-\boxed{ \mathbb M_{\mathrm{sus}} = \left\{ \mathcal M: \mathcal V_{\mathrm{sus}}^{u}(\mathcal M) \text{ satisfies required resilience, sustainability and equity conditions} \right\}. } \tag{S7.18}
-```
-
-The fundamental question becomes:
-
-```math
-\boxed{ (\mathcal M_0,Y_0) \overset{\pi}{\longrightarrow} \mathbb M_{\mathrm{sus}}. } \tag{S7.19}
-```
-
-Thus Stage 7 can be interpreted as a:
-
-```math
-\boxed{ \textbf{reachability problem in infrastructure-architecture space}. }
-```
-
-Viability and sustainability theory support using acceptable sets rather than reducing sustainability to one unconstrained scalar optimum (Béné & Doyen, 2018; Doyen & Gajardo, 2020).
+This representation captures the real-options insight that deferrable, expandable, switchable or reversible interventions can have different value from irreversible commitments under uncertainty (Buurman & Babovic, 2016).
 
 ---
 
-# 15. Many-objective formulation
+## 10. Feasible transformation set
 
-The Stage 7 objective should not initially be:
+A strategic action is admissible only if it lies in the intersection
 
-```math
-J=w_1J_1+\cdots+w_nJ_n.
-```
+$$
+\begin{aligned}
+\mathcal A_k^{\rm feas}
+={}&
+\mathcal A_k^{\rm tech}
+\cap\mathcal A_k^{\rm budget}
+\cap\mathcal A_k^{I}
+\cap\mathcal A_k^{O}\\
+&\cap\mathcal A_k^{\rm sus}
+\cap\mathcal A_k^{\rm equity}
+\cap\mathcal A_k^{\rm temporal}.
+\end{aligned}
+$$
 
-Instead define:
+Hence
 
-```math
-\boxed{ \mathbf J(\Pi) = \begin{bmatrix} J_{\mathrm{risk}}\\ J_{\mathrm{service}}\\ J_{\mathrm{cost}}\\ J_{\mathrm{carbon}}\\ J_{\mathrm{inequity}}\\ J_{\mathrm{time}}\\ J_{\mathrm{flexibility}} \end{bmatrix}. } \tag{S7.20}
-```
+$$
+\mathbf a_k\in\mathcal A_k^{\rm feas}.
+$$
 
-Then:
+Representative constraints include
 
-```math
-\boxed{ \Pi^\star \in \operatorname{Pareto} \big( \mathbf J \big). }
-```
+$$
+\sum_i C_i x_{ik}\le B_k
+$$
 
-Under deep uncertainty:
+for budget,
 
-```math
-\boxed{ \Pi^\star \in \operatorname{RobustPareto} \big( \mathbf J,\Omega \big). } \tag{S7.21}
-```
+$$
+x_j\le x_i
+$$
 
-The research specifically supports retaining multiple potentially non-substitutable objectives rather than hiding resilience, sustainability and equity trade-offs inside arbitrary weights (Doyen & Gajardo, 2020; Hadka et al., 2015).
+for precedence when intervention $j$ requires intervention $i$, and
 
----
+$$
+t_j\ge t_i+d_i+\ell_i
+$$
 
-# 16. Uncertainty
-
-Three uncertainty regimes must remain separate.
-
-```math
-\boxed{ \xi\sim P }
-```
-
-for ordinary probabilistic uncertainty;
-
-```math
-\boxed{ P\in\mathcal P }
-```
-
-for distributional ambiguity;
-
-and
-
-```math
-\boxed{ \omega\in\Omega }
-```
-
-for deep uncertainty.
-
-For the last case, Stage 7 should stress-test pathways across plausible futures rather than invent precise probabilities.
-
-This naturally connects:
-
-```math
-\boxed{ \text{DAPP} + \text{RDM} + \text{many-objective search}. }
-```
+for a declared sequential timing relation. Organizational and information feasibility remain explicit rather than assuming unlimited implementation capacity.
 
 ---
 
-# 17. Topology is not itself the objective
+## 11. Viability as a pathway constraint
 
-The 50-paper review gives a critical negative result:
+Each candidate future regime is reevaluated using Stage 5:
 
-```math
-\boxed{ \max\lambda_2 \not\Rightarrow \max\text{ resilience}. }
-```
+$$
+\mathcal V_{\rm sus}^{u,T}(\mathfrak M_k).
+$$
 
-Likewise:
+Where continuous controlled viability is required over a declared transformation interval,
 
-```math
-\boxed{ |E|\uparrow \not\Rightarrow R\uparrow. }
-```
+$$
+Y(t)\in K_{{\rm sus},k}(t)
+$$
 
-Interdependence may amplify cascading failures, but autonomy, redundant coupling, selective interconnection or intermediate coupling can improve resilience depending on the mechanism and dynamics (Buldyrev et al., 2010; Kaiser et al., 2021). The report therefore concludes that the appropriate topology is mechanism-, dynamics-, objective- and scenario-dependent.
+and the relevant trajectory should remain within the corresponding controlled viable set over the required horizon.
 
-Every structural candidate must therefore pass:
-
-```math
-\boxed{ a_k \rightarrow \mathcal M_{k+1} \rightarrow F_{\mathcal M_{k+1}} \rightarrow Y(t) \rightarrow \mathcal V_{\mathrm{sus}} \rightarrow \mathbf J. } \tag{S7.22}
-```
+This does not imply that all transformation problems must forbid temporary constraint excursion. If temporary violation is scientifically allowed, the recovery/capture formulation must be declared explicitly rather than silently replacing viability.
 
 ---
 
-# 18. Final fundamental Stage 7 object
+## 12. Sustainable future as a target set `[P]`
 
-The unified Stage 7 object is:
+Stage 7 does not target one unique final state. Define the candidate sustainable-regime set
 
-```math
-\boxed{ \mathfrak P_{\mathrm{ST}} = \left( \mathbb G_{\mathrm{ST}}, \boldsymbol\pi, \Omega, \mathcal A^{\mathrm{feas}}, \mathbf J, \mathbb M_{\mathrm{sus}} \right). } \tag{S7.23}
-```
+$$
+\mathbb M_{\rm sus}
+=
+\left\{
+\mathfrak M:
+\begin{array}{l}
+\text{declared resilience, sustainability, equity,}\\
+\text{and feasibility conditions are satisfied}
+\end{array}
+\right\}.
+$$
 
-Its meanings are:
+The Stage-7 reachability question is
 
-```math
-\boxed{ \mathbb G_{\mathrm{ST}} = \text{graph of possible }P-T-I-O\text{ regimes}, }
-```
+$$
+(\mathfrak M_0,Y_0)
+\overset{\boldsymbol\pi_{\rm ST}}{\longrightarrow}
+\mathbb M_{\rm sus}.
+$$
 
-```math
-\boxed{ \boldsymbol\pi = \text{adaptive transformation policy}, }
-```
-
-```math
-\boxed{ \Omega = \text{plausible futures}, }
-```
-
-```math
-\boxed{ \mathcal A^{\mathrm{feas}} = \text{feasible transformation actions}, }
-```
-
-```math
-\boxed{ \mathbf J = \text{many-objective evaluation}, }
-```
-
-```math
-\boxed{ \mathbb M_{\mathrm{sus}} = \text{sustainable viable future regime set}. }
-```
-
-This is now stronger than the original deterministic pathway `\Pi=[(a_1,t_1),\dots]` and should replace it as the fundamental Stage 7 representation.
+This is the thesis interpretation of **reachability in infrastructure-regime space** `[P]`.
 
 ---
 
-# 19. Unified Stage 7 dynamics
+## 13. Many-objective pathway evaluation
 
-The complete Stage 7 mathematical formulation is:
+Do not hide conflicting objectives inside arbitrary weights before the trade-offs are understood. Use the objective vector
 
-```math
-\boxed{ \begin{aligned} a_k &= \pi_k \left( \hat Y_k, z_{I,k}, z_{O,k}, \mathcal M_k, \mathcal H_k \right), \\[1mm] \mathcal M_{k+1} &= \mathcal T \left( \mathcal M_k,a_k,\xi_k \right), \\[1mm] \dot Y(t) &= F_{\mathcal M_k}^{m(t)} \left( Y, Y(t-\delta), u,h,\xi \right), \\[1mm] u(t) &\in \mathcal U \left( I,O,\mathcal M_k \right), \\[1mm] Y(t) &\in K_{\mathrm{sus}}, \\[1mm] a_k &\in \mathcal A_k^{\mathrm{feas}}, \\[1mm] \mathcal M_N &\in \mathbb M_{\mathrm{sus}}. \end{aligned} } \tag{S7.24}
-```
+$$
+\mathbf J(\Pi,\omega)
+=
+\begin{bmatrix}
+J_{\rm risk}\\
+J_{\rm service}\\
+J_{\rm cost}\\
+J_{\rm carbon}\\
+J_{\rm inequity}\\
+J_{\rm time}\\
+J_{\rm flexibility}
+\end{bmatrix},
+\qquad
+\omega\in\Omega.
+$$
 
-The realized pathway is:
+| Objective | Preferred direction before normalization |
+|---|---|
+| $J_{\rm risk}$ | minimize |
+| $J_{\rm service}$ | maximize |
+| $J_{\rm cost}$ | minimize |
+| $J_{\rm carbon}$ | minimize |
+| $J_{\rm inequity}$ | minimize |
+| $J_{\rm time}$ | minimize |
+| $J_{\rm flexibility}$ | maximize |
 
-```math
-\boxed{ \Pi_{\pi,\omega} = \left[ (\mathcal M_0,a_0,\tau_0), (\mathcal M_1,a_1,\tau_1), \ldots, \mathcal M_N \right]. } \tag{S7.25}
-```
+Any Pareto computation must normalize or orient the objectives consistently before dominance is evaluated.
 
----
-
-# 20. Final Stage 7 optimization problem
-
-```math
-\boxed{ \begin{aligned} \operatorname*{find}_{\boldsymbol\pi} \quad& \operatorname{RobustPareto}_{\omega\in\Omega} \; \mathbf J \left( \Pi_{\pi,\omega} \right) \\[1mm] \text{s.t.}\quad& \mathcal M_{k+1} = \mathcal T (\mathcal M_k,a_k,\xi_k), \\ & a_k= \pi_k (\hat Y_k,z_{I,k},z_{O,k},\mathcal M_k,\mathcal H_k), \\ & \dot Y= F_{\mathcal M_k}^{m} (Y,Y_\delta,u,h,\xi), \\ & Y(t)\in K_{\mathrm{sus}}, \\ & a_k\in\mathcal A_k^{\mathrm{feas}}, \\ & \text{budget + resource + precedence + lead-time constraints}, \\ & \mathcal M_N\in\mathbb M_{\mathrm{sus}}. \end{aligned} } \tag{S7.26}
-```
-
-This equation is **[P]**, synthesized from established multilayer-network, viability, robust-decision, adaptive-pathway, organizational-resilience and multiobjective methods.
-
----
-
-# 21. Relativity of Stage 7 to every previous stage
-
-| StageWhat it provides Stage 7Stage 7 relationship       |                                                  |                                                                                              |
-| ------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| **1 — System Ontology**                                 | `\mathcal S=\{P,T,I,O\}`                         | Stage 7 may transform subsystem architecture but does not redefine the original ontology     |
-| **2 — Interdependency Mechanisms**                      | `\mathfrak I_{ij}^{\alpha\beta}`                 | Stage 7 can redesign dependency strength, delay, activation and mechanism structure          |
-| **3 — Coupled Hybrid Dynamics**                         | `F^m,\mathcal G(t),Y(t)`                         | Every proposed future architecture must be dynamically simulated                             |
-| **4 — Observation, Organization, Feedback and Control** | `\hat X,I,O,\mathcal U,u`                        | Stage 7 uses information and organization to detect triggers and determine implementability  |
-| **5 — Controlled Sustainable Viability**                | `K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K` | Stage 7 pathways must preserve/evaluate viability and aim for improved viable future regimes |
-| **6 — Resilience-to-Sustainability Transition**         | `c_6,\mathcal D_6,\boldsymbol\zeta_T`            | Stage 6 specifies why/what/how-deep; Stage 7 chooses how/when/in-what-order                  |
-| **7 — Sustainable Transformation Pathways**             | `\mathfrak P_{\rm ST}`                           | Generates adaptive robust transformation pathways                                            |
-
-This relation table is the core integration of the framework.
+Under deep uncertainty, `RobustPareto` is used as a **thesis shorthand `[P]`** for nondominated pathways under a declared robustness rule and scenario set; it is not assumed to be a universal mathematical operator.
 
 ---
 
-# 22. The full mathematical progression
+## 14. Uncertainty regimes remain distinct
 
-The final seven-stage chain is:
+Stage 7 preserves three different interpretations:
 
-```math
-\boxed{ \underbrace{\mathcal S}_{1} \rightarrow \underbrace{\mathfrak I}_{2} \rightarrow \underbrace{F_{\mathcal G}^{m}}_{3} \rightarrow \underbrace{ X\rightarrow y\rightarrow I\rightarrow\hat X\rightarrow O\rightarrow u }_{4} \rightarrow \underbrace{ K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K }_{5} \rightarrow \underbrace{ \Phi_{\rm ST} \rightarrow (c_6,\mathcal D_6,\boldsymbol\zeta_T) }_{6} \rightarrow \underbrace{ \mathfrak P_{\rm ST} }_{7}. } \tag{S7.27}
-```
+$$
+\xi\sim P
+$$
 
-This matches the unified hierarchy already identified in the source material.
+for ordinary probabilistic uncertainty,
+
+$$
+P\in\mathcal P
+$$
+
+for distributional ambiguity, and
+
+$$
+\omega\in\Omega
+$$
+
+for deep uncertainty represented by plausible futures.
+
+Scenario fractions under $\Omega$ must not be described as probabilities unless scenario probabilities or justified weights have actually been defined.
+
+The methodological combination is therefore
+
+$$
+\text{adaptive pathways}
++
+\text{robust decision analysis}
++
+\text{many-objective search},
+$$
+
+with real-options valuation added only where monetizable flexibility assumptions are defensible.
 
 ---
 
-# 23. The deeper physical interpretation
+## 15. Topology is a design variable, not the resilience objective
 
-We now have three nested levels of dynamics:
+The literature does not support a universal rule such as
 
-```math
-\boxed{ \textbf{state dynamics} }
-```
+$$
+|E|\uparrow
+\quad\Rightarrow\quad
+\text{resilience}\uparrow.
+$$
 
-```math
+Nor does maximizing one graph statistic automatically maximize infrastructure resilience. Coupling can amplify cascades, create redundancy, enable substitution or generate new dependencies depending on mechanism and dynamics (Buldyrev et al., 2010; Gates & Rocha, 2016; Kaiser et al., 2021).
+
+Every structural candidate must therefore be replayed through the physical and decision layers:
+
+$$
+\mathbf a_k
+\rightarrow
+\mathfrak M_{k+1}
+\rightarrow
+F_{\mathfrak M_{k+1}}
+\rightarrow
 Y(t)
-```
-
-inside one architecture;
-
-```math
-\boxed{ \textbf{topology/dynamics evolution} }
-```
-
-```math
-\mathcal G(t)\rightleftarrows Y(t)
-```
-
-inside a disruption/recovery episode;
-
-and finally:
-
-```math
-\boxed{ \textbf{architecture transformation dynamics} }
-```
-
-```math
-\mathcal M_0 \rightarrow \mathcal M_1 \rightarrow \cdots \rightarrow \mathcal M_N.
-```
-
-So the thesis moves from:
-
-```math
-\boxed{ \text{dynamics on a graph} }
-```
-
-to
-
-```math
-\boxed{ \text{dynamics on interacting multilayer graphs} }
-```
-
-to
-
-```math
-\boxed{ \text{adaptive trajectories through a graph of alternative multilayer graphs}. }
-```
-
-That is the deepest meaning of the topology-of-topologies idea identified by the research.
+\rightarrow
+\mathcal V_{\rm sus}^{u,T}
+\rightarrow
+\mathbf J.
+$$
 
 ---
 
-# 24. Seven-stage validation loop
+## 16. Frozen Stage-7 fundamental object
 
-Stage 7 also creates a feedback loop around the entire framework:
+The canonical Stage-7 object is
 
-```math
-\boxed{ \begin{aligned} \text{Stage 7 candidate} &\rightarrow \text{Stage 1 structural update} \\ &\rightarrow \text{Stage 2 mechanism update} \\ &\rightarrow \text{Stage 3 dynamic simulation} \\ &\rightarrow \text{Stage 4 observability/control evaluation} \\ &\rightarrow \text{Stage 5 viability evaluation} \\ &\rightarrow \text{Stage 6 adequacy diagnosis} \\ &\rightarrow \text{Stage 7 accept/reject/refine}. \end{aligned} } \tag{S7.28}
-```
+$$
+\mathfrak P_{\rm ST}
+=
+\left(
+\mathbb G_{\rm ST},
+\boldsymbol\pi_{\rm ST},
+\Omega,
+\mathcal A^{\rm feas},
+\mathbf J,
+\mathbb M_{\rm sus}
+\right).
+$$
 
-The research explicitly recommends this validation loop because changes in coupling can create counterintuitive dynamics, so graph structure alone cannot certify resilience.
+| Component | Role |
+|---|---|
+| $\mathbb G_{\rm ST}$ | graph of possible P–T–I–O regimes |
+| $\boldsymbol\pi_{\rm ST}$ | adaptive transformation policy |
+| $\Omega$ | plausible future conditions |
+| $\mathcal A^{\rm feas}$ | feasible strategic transformation actions |
+| $\mathbf J$ | many-objective evaluation |
+| $\mathbb M_{\rm sus}$ | acceptable sustainable future-regime set |
 
-Importantly:
+A realized pathway under policy $\boldsymbol\pi_{\rm ST}$ and future $\omega$ is
 
-```math
-\boxed{ \text{this loop validates the stages;} \quad \text{it does not replace or reorder them}. }
-```
+$$
+\Pi_{\boldsymbol\pi_{\rm ST},\omega}
+=
+\left[
+(\mathfrak M_0,\mathbf a_0,\tau_0),
+(\mathfrak M_1,\mathbf a_1,\tau_1),
+\ldots,
+\mathfrak M_N
+\right].
+$$
+
+The frozen interpretation is:
+
+> **Stage 7 is an adaptive, viability-constrained, many-objective reachability problem over a graph of evolving P–T–I–O infrastructure regimes.**
 
 ---
 
-# 25. Evidence status
+## 17. Candidate optimization statement `[P]`
 
-| ObjectStatus                                                     |           |
-| ---------------------------------------------------------------- | --------- |
-| multilayer/network-of-networks representation                    | **[E]**   |
-| adaptive pathways/DAPP                                           | **[E]**   |
-| robust decision making                                           | **[E]**   |
-| many-objective optimization                                      | **[E]**   |
-| real options/flexibility                                         | **[E]**   |
-| viability constraints                                            | **[E]**   |
-| path dependence                                                  | **[E]**   |
-| topology–dynamics interaction                                    | **[E]**   |
-| `\mathcal M_k` as unified `P-T-I-O` regime object                | **[P]**   |
-| `\mathbb G_{\rm ST}` graph of alternative infrastructure regimes | **[P]**   |
-| `a^{\mathfrak I}` explicit interdependency transformation class  | **[P]**   |
-| transformation operator `\mathcal T_{a_k}`                       | **[P]**   |
-| `\mathfrak P_{\rm ST}` complete Stage 7 object                   | **[P]**   |
-| seven-stage validation loop                                      | **[D/P]** |
-| Robust-Pareto architecture-space reachability formulation        | **[P]**   |
+A compact implementation target is
+
+$$
+\begin{aligned}
+\text{find}\quad
+&\boldsymbol\pi_{\rm ST}\\
+\text{to obtain}\quad
+&\text{robustly nondominated }\mathbf J
+\text{ across }\omega\in\Omega\\
+\text{subject to}\quad
+&\mathfrak M_{k+1}
+ =\mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k),\\
+&\mathbf a_k
+ =\pi_k^{\rm ST}(\widehat X_k,z_{I,k},z_{O,k},\mathfrak M_k,\mathcal H_k),\\
+&\mathbf a_k\in\mathcal A_k^{\rm feas},\\
+&\text{declared Stage-5 viability/recovery conditions},\\
+&\text{budget, resource, precedence and lead-time constraints},\\
+&\mathfrak M_N\in\mathbb M_{\rm sus}.
+\end{aligned}
+$$
+
+This formulation is `[P]`: it synthesizes established multilayer-network, viability, adaptive-pathway, robust-decision, organizational-resilience and many-objective methods into the thesis architecture.
 
 ---
 
-# Final Stage 7 scope — frozen
+## 18. Relationship to every previous stage
 
-```math
-\boxed{ \begin{aligned} \textbf{Stage 7: }& \textbf{Sustainable Transformation Pathways} \\[1mm] \textbf{Question: }& \textbf{What sequence of interventions leads to a more resilient,} \\ & \textbf{equitable and sustainable future system?} \\[2mm] \textbf{Input: }& \Gamma_6=(c_6,\mathcal D_6,\boldsymbol\zeta_T) \\ \textbf{Current regime: }& \mathcal M_0 = (\mathcal S,\mathcal G,\mathfrak I,F,\theta,\mathcal U) \\ \textbf{Transformation graph: }& \mathbb G_{\rm ST} = (\mathbb V_{\rm ST},\mathbb E_{\rm ST}) \\ \textbf{Intervention: }& a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}] \\ \textbf{Transformation: }& \mathcal M_{k+1} = \mathcal T_{a_k}(\mathcal M_k,\xi_k) \\ \textbf{Decision rule: }& a_k= \pi_k(\hat Y_k,z_{I,k},z_{O,k},\mathcal M_k,\mathcal H_k) \\ \textbf{Trigger: }& \tau_k = \inf\{t:s_k(t)\in\Gamma_k\} \\ \textbf{Feasibility: }& a_k\in \mathcal A_k^{\rm tech} \cap \mathcal A_k^{\rm budget} \cap \mathcal A_k^{O} \cap \mathcal A_k^{\rm sus} \cap \mathcal A_k^{\rm equity} \cap \mathcal A_k^{\rm temporal} \\ \textbf{Uncertainty: }& \omega\in\Omega \\ \textbf{Viability: }& Y(t)\in K_{\rm sus}, \quad \mathcal V_{\rm sus}^{u}(\mathcal M_k) \\ \textbf{Objectives: }& \mathbf J= [J_{\rm risk},J_{\rm service},J_{\rm cost}, J_{\rm carbon},J_{\rm inequity}, J_{\rm time},J_{\rm flexibility}]^\top \\ \textbf{Target: }& \mathcal M_N\in\mathbb M_{\rm sus} \\ \textbf{Solution: }& \Pi^\star \in \operatorname{RobustPareto} (\mathbf J,\Omega) \\ \textbf{Validation: }& \text{candidate transformation replayed through Stages 1--6}. \end{aligned} } \tag{S7-F}
-```
+| Stage | Frozen input to Stage 7 | Stage-7 use |
+|---|---|---|
+| **1 — Multilayer Structure** | $\mathcal S=\{P,T,I,O\}$ | transforms subsystem/layer architecture without redefining ontology |
+| **2 — Causal Mechanisms** | $\mathfrak I_{ij}^{\alpha\beta}$ | redesigns selected dependency strength, delay, activation or mechanism |
+| **3 — Coupled Hybrid Multiscale Dynamics** | $F^m,\mathcal G(t),Y(t)$ | dynamically tests every candidate future regime |
+| **4 — Observation, Organization, Feedback and Control** | $\widehat X,z_I,z_O,\mathcal U,u$ | supplies observability, triggers and implementation feasibility |
+| **5 — Controlled Sustainable Viability** | $K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K$ | evaluates maintainability and pathway constraints |
+| **6 — Resilience-to-Sustainability Transition** | $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$ | specifies why/what/how-deep change must be |
+| **7 — Sustainable Transformation Pathways** | $\mathfrak P_{\rm ST}$ | generates and compares adaptive transformation pathways |
 
-The final unified interpretation is therefore:
+---
 
-```math
-\boxed{ \textbf{Stage 7 is an adaptive, viability-constrained, many-objective reachability problem over a graph of evolving }P-T-I-O\textbf{ infrastructure architectures.} }
-```
+## 19. Seven-stage validation loop
 
-And the complete thesis framework is now conceptually closed:
+A Stage-7 candidate is not accepted from topology or cost alone. It is replayed through the upstream framework:
 
-```math
-\boxed{ \text{ontology} \rightarrow \text{causal coupling} \rightarrow \text{dynamics} \rightarrow \text{knowledge/control} \rightarrow \text{viability} \rightarrow \text{transformation diagnosis} \rightarrow \text{adaptive transformation pathway}. }
-```
+$$
+\begin{aligned}
+\text{Stage-7 candidate}
+&\rightarrow\text{Stage-1 structural update}\\
+&\rightarrow\text{Stage-2 mechanism update}\\
+&\rightarrow\text{Stage-3 dynamic simulation}\\
+&\rightarrow\text{Stage-4 observation/control evaluation}\\
+&\rightarrow\text{Stage-5 viability evaluation}\\
+&\rightarrow\text{Stage-6 adequacy diagnosis}\\
+&\rightarrow\text{Stage-7 accept / reject / refine}.
+\end{aligned}
+$$
 
-The next scientific phase is therefore **operationalization and numerical validation**, not redesign of the seven-stage framework. The Stage 7 report reaches the same conclusion explicitly.
+This is a validation loop around the frozen stages; it does not reorder or replace them.
 
-### Core references cited here
+---
 
-Béné, C., & Doyen, L. (2018). From resistance to transformation: A generic metric of resilience through viability. *Earth’s Future, 6*(7), 979–996. [https://doi.org/10.1002/2017EF000660](https://doi.org/10.1002/2017EF000660)
+## 20. Evidence status
 
-Buurman, J., & Babovic, V. (2016). Adaptation pathways and real options analysis: An approach to deep uncertainty in climate change adaptation policies. *Policy and Society, 35*(2), 137–150. [https://doi.org/10.1016/j.polsoc.2016.05.002](https://doi.org/10.1016/j.polsoc.2016.05.002)
+| Object / concept | Status |
+|---|---|
+| Multilayer/network-of-networks representation | `[E]` |
+| Adaptive pathways / DAPP | `[E]` |
+| Robust decision making | `[E]` |
+| Many-objective optimization | `[E]` |
+| Real options / flexibility | `[E]` |
+| Viability constraints | `[E]` |
+| Path dependence | `[E]` |
+| Topology–dynamics interaction | `[E]` |
+| $\mathfrak M_k$ unified P–T–I–O regime | `[P]` |
+| $\mathbb G_{\rm ST}$ graph of alternative infrastructure regimes | `[P]` |
+| $\mathbf a_k$ explicit cross-layer transformation vector | `[P]` |
+| $\mathcal T_{\mathbf a_k}$ transformation operator | `[P]` |
+| $\mathfrak P_{\rm ST}$ complete Stage-7 object | `[P]` |
+| Seven-stage validation loop | `[D/P]` |
+| Robust-Pareto architecture-space reachability formulation | `[P]` |
 
-De Domenico, M., Solé-Ribalta, A., Cozzo, E., Kivelä, M., Moreno, Y., Porter, M. A., Gómez, S., & Arenas, A. (2013). Mathematical formulation of multilayer networks. *Physical Review X, 3*(4), 041022. [https://doi.org/10.1103/PhysRevX.3.041022](https://doi.org/10.1103/PhysRevX.3.041022)
+Freezing Stage 7 freezes these definitions and evidence labels; it does **not** convert `[P]` constructs into validated scientific results.
 
-Doyen, L., & Gajardo, P. (2020). Sustainability standards, multicriteria maximin, and viability. *Natural Resource Modeling, 33*(3), e12250. [https://doi.org/10.1111/nrm.12250](https://doi.org/10.1111/nrm.12250)
+---
 
-Gates, A. J., & Rocha, L. M. (2016). Control of complex networks requires both structure and dynamics. *Scientific Reports, 6*, 24456. [https://doi.org/10.1038/srep24456](https://doi.org/10.1038/srep24456)
+## 21. Final frozen Stage-7 scope
 
-Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013). Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world. *Global Environmental Change, 23*(2), 485–498. [https://doi.org/10.1016/j.gloenvcha.2012.12.006](https://doi.org/10.1016/j.gloenvcha.2012.12.006)
+| Item | Canonical specification |
+|---|---|
+| **Stage** | Sustainable Transformation Pathways |
+| **Question** | What sequence of interventions leads to a more resilient, equitable and sustainable future system? |
+| **Input** | $(c_6,\mathcal D_6,\boldsymbol\zeta_T)$ |
+| **Current regime** | $\mathfrak M_0$ |
+| **Transformation graph** | $\mathbb G_{\rm ST}$ |
+| **Strategic intervention** | $\mathbf a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}]^\top$ |
+| **Transformation** | $\mathfrak M_{k+1}=\mathcal T_{\mathbf a_k}(\mathfrak M_k,\xi_k)$ |
+| **Adaptive policy** | $\boldsymbol\pi_{\rm ST}$ |
+| **Trigger** | $\tau_j=\inf\{t:s_j(t)\in\mathcal Z_j\}$ |
+| **Feasibility** | technical + budget + information + organization + sustainability + equity + temporal |
+| **Uncertainty** | probability, ambiguity or deep-uncertainty scenarios kept distinct |
+| **Viability** | candidate regimes reevaluated through Stage 5 |
+| **Objectives** | risk, service, cost, carbon, inequity, time and flexibility |
+| **Target** | $\mathfrak M_N\in\mathbb M_{\rm sus}$ |
+| **Fundamental object** | $\mathfrak P_{\rm ST}$ |
+| **Validation** | every candidate replayed through Stages 1–6 |
 
-Hadka, D., Herman, J., Reed, P. M., & Keller, K. (2015). An open source framework for many-objective robust decision making. *Environmental Modelling & Software, 74*, 114–129. [https://doi.org/10.1016/j.envsoft.2015.07.014](https://doi.org/10.1016/j.envsoft.2015.07.014)
+> **STAGE 7 SCIENTIFIC SCOPE: FROZEN**
 
-Kaiser, F., Latora, V., & Witthaut, D. (2021). Network isolators inhibit failure spreading in complex networks. *Nature Communications, 12*, 3143. [https://doi.org/10.1038/s41467-021-23292-9](https://doi.org/10.1038/s41467-021-23292-9)
+The complete conceptual framework is now closed. The next scientific phase is operationalization, numerical case-study design, falsification and validation—not redesign of the seven-stage framework.
 
-Li, Q., Dong, S., & Mostafavi, A. (2019). Modeling of inter-organizational coordination dynamics in resilience planning of infrastructure systems: A multilayer network simulation framework. *PLOS ONE, 14*(11), e0224522. [https://doi.org/10.1371/journal.pone.0224522](https://doi.org/10.1371/journal.pone.0224522)
+---
+
+## Core APA 7 references
+
+Béné, C., & Doyen, L. (2018). From resistance to transformation: A generic metric of resilience through viability. *Earth's Future, 6*(7), 979–996. https://doi.org/10.1002/2017EF000660
+
+Buldyrev, S. V., Parshani, R., Paul, G., Stanley, H. E., & Havlin, S. (2010). Catastrophic cascade of failures in interdependent networks. *Nature, 464*, 1025–1028. https://doi.org/10.1038/nature08932
+
+Buurman, J., & Babovic, V. (2016). Adaptation pathways and real options analysis: An approach to deep uncertainty in climate change adaptation policies. *Policy and Society, 35*(2), 137–150. https://doi.org/10.1016/j.polsoc.2016.05.002
+
+De Domenico, M., Solé-Ribalta, A., Cozzo, E., Kivelä, M., Moreno, Y., Porter, M. A., Gómez, S., & Arenas, A. (2013). Mathematical formulation of multilayer networks. *Physical Review X, 3*(4), 041022. https://doi.org/10.1103/PhysRevX.3.041022
+
+Doyen, L., & Gajardo, P. (2020). Sustainability standards, multicriteria maximin, and viability. *Natural Resource Modeling, 33*(3), e12250. https://doi.org/10.1111/nrm.12250
+
+Gates, A. J., & Rocha, L. M. (2016). Control of complex networks requires both structure and dynamics. *Scientific Reports, 6*, 24456. https://doi.org/10.1038/srep24456
+
+Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013). Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world. *Global Environmental Change, 23*(2), 485–498. https://doi.org/10.1016/j.gloenvcha.2012.12.006
+
+Hadka, D., Herman, J., Reed, P. M., & Keller, K. (2015). An open source framework for many-objective robust decision making. *Environmental Modelling & Software, 74*, 114–129. https://doi.org/10.1016/j.envsoft.2015.07.014
+
+Kaiser, F., Latora, V., & Witthaut, D. (2021). Network isolators inhibit failure spreading in complex networks. *Nature Communications, 12*, 3143. https://doi.org/10.1038/s41467-021-23292-9
+
+Li, Q., Dong, S., & Mostafavi, A. (2019). Modeling of inter-organizational coordination dynamics in resilience planning of infrastructure systems: A multilayer network simulation framework. *PLOS ONE, 14*(11), e0224522. https://doi.org/10.1371/journal.pone.0224522
