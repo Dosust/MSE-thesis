@@ -6,42 +6,57 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Citation standard:** APA 7th edition author–date  
 **Evidence basis:** 10 analytical passes; 31 core studies  
-**Change rule:** Do not revise this Stage-4 scope unless explicitly requested and versioned.  
+**Change rule:** Do not revise this Stage-4 scientific scope unless explicitly requested and versioned.  
 **Framework preservation rule:** This document formalizes Stage 4 only. It does **not** alter the frozen seven-stage framework or redefine Stages 1–3.
 
 > **Evidence notation:** `[E]` = established literature; `[D]` = derived synthesis; `[P]` = proposed thesis construct.
 
-> **Boundary rule:** Stage 4 observes, infers, interprets, coordinates, and controls the Stage-3 system. It does not redefine Stage-3 dynamics and does not compute the Stage-5 viability objects.
+> **Boundary rule:** Stage 4 observes, infers, interprets, coordinates, and controls the Stage-3 system. It does not redefine Stage-3 dynamics and does not compute Stage-5 viability objects.
+
+> **Rendering rule:** Mathematical notation is written with GitHub-compatible display blocks. Long conceptual statements are presented as tables or multiline equations rather than oversized boxed expressions. The control variable is always $u$; measurement noise is written as $\varepsilon$ to prevent visual confusion.
 
 ---
 
 ## Frozen research question
 
-$$
-\boxed{ \textbf{How is the system observed, interpreted, coordinated and controlled?} }
-$$
+> **How is the system observed, interpreted, coordinated and controlled?**
 
-The scientific progression is
+The scientific progression is:
+
+| Stage | Scientific role |
+|---|---|
+| **1** | Define the system and its layers. |
+| **2** | Identify causal interdependency mechanisms. |
+| **3** | Evolve those mechanisms through space and time. |
+| **4** | Observe, infer, coordinate, and control the evolving system. |
+
+In compact form,
 
 $$
-\boxed{ \underbrace{\{P,T,I,O\}}_{\text{Stage 1}} \rightarrow \underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\text{Stage 2}} \rightarrow \underbrace{Y(t),\mathcal G(t),m(t),T_C}_{\text{Stage 3}} \rightarrow \underbrace{\text{observation, inference, organization, feedback and action}}_{\text{Stage 4}}. }
+\{P,T,I,O\}
+\rightarrow
+\mathfrak I_{ij}^{\alpha\beta}
+\rightarrow
+\{Y(t),\mathcal G(t),m(t),T_C\}
+\rightarrow
+\{\widehat X,z_I,z_O,u,\tau_{\rm response}\}.
 $$
 
 ### Notation bridge
 
-The dynamic information and organizational states are inherited from Stage 3 as $z_I(t)$ and $z_O(t)$. In the conceptual spine, the labels $I$ and $O$ denote the corresponding information and organizational functions. Mathematical operators in Stage 4 use $z_I$ and $z_O$ explicitly to avoid conflating a layer label with its time-varying state.
+The dynamic information and organizational states inherited from Stage 3 are $z_I(t)$ and $z_O(t)$. In the conceptual spine, $I$ and $O$ denote the corresponding information and organizational functions. Stage-4 mathematical operators use $z_I$ and $z_O$ explicitly.
 
-Stage 3 determines how the actual coupled system evolves. Stage 4 addresses a fundamentally different problem: **the true physical state is not automatically known to the decision maker**. Measurements are incomplete, asynchronous, noisy, delayed, or unavailable; the state must therefore be inferred before an intervention can be selected and executed. This distinction is fundamental in both power-system state estimation and transportation-network observability research (Castillo et al., 2015; Cheng et al., 2024; Gentili & Mirchandani, 2012).
+Stage 3 determines how the actual coupled system evolves. Stage 4 addresses a different problem: **the true physical state is not automatically known to the decision maker**. Measurements may be incomplete, asynchronous, noisy, delayed, or unavailable; the state must therefore be inferred before an intervention is selected and executed. This distinction is fundamental in power-system state estimation and transportation-network observability research (Castillo et al., 2015; Cheng et al., 2024; Gentili & Mirchandani, 2012).
 
 ---
 
-## Step 1 — What the 10 literature passes established
+## 1. What the 10 literature passes established
 
 | Pass | Scientific problem | Main evidence-supported conclusion |
 |---:|---|---|
 | **1** | Measurement | Sensors produce partial observations of reality, not the state itself (Cheng et al., 2024; Gentili & Mirchandani, 2012). |
-| **2** | Observability | State recoverability depends on measurement placement, topology, available prior information, and model structure (Castillo et al., 2015; Cheng et al., 2024). |
-| **3** | State estimation | Estimation must accommodate uncertainty, multiple reporting rates, asynchronous data, cyber failures, and changing states (Cheng et al., 2024; Zhou et al., 2024). |
+| **2** | Observability | State recoverability depends on measurement placement, topology, prior information, and model structure (Castillo et al., 2015; Cheng et al., 2024). |
+| **3** | State estimation | Estimation must accommodate uncertainty, heterogeneous reporting rates, asynchronous data, cyber failures, and changing states (Cheng et al., 2024; Zhou et al., 2024). |
 | **4** | Information quality | Delay, packet loss, sampling, and information age can materially alter closed-loop performance (Liu et al., 2017; Mena & Núñez, 2023; Yates et al., 2021; Zhang et al., 2017). |
 | **5** | Situation awareness | Measurement and estimation alone do not guarantee correct interpretation; comprehension and anticipation matter to operational decisions (Endsley, 1995; Panteli & Kirschen, 2015). |
 | **6** | Organizational decision | Authority, coordination, resources, information sharing, and organizational structure influence feasible response (Li et al., 2019; McAlister et al., 2024; Mohebbi et al., 2020). |
@@ -50,33 +65,40 @@ Stage 3 determines how the actual coupled system evolves. Stage 4 addresses a fu
 | **9** | Multi-actor coordination | Centralized, decentralized, and collaborative decision structures can produce different restoration outcomes (Iloglu et al., 2025; Magoua et al., 2026). |
 | **10** | Response versus disruption | Sensing-to-action is a timed process; effective response depends on whether information, decision, coordination, mobilization, and actuation occur fast enough relative to system evolution (Panteli & Kirschen, 2015; Prostejovsky et al., 2019; Qiu et al., 2023). |
 
-The repeated result across the ten passes is important:
+The repeated result is:
 
 $$
-\boxed{ \text{measurement} \neq \text{information} \neq \text{estimated state} \neq \text{situation awareness} \neq \text{decision} \neq \text{executed action}. }
+\begin{aligned}
+\text{measurement}
+&\neq \text{information}
+\neq \text{estimated state}\\
+&\neq \text{situation awareness}
+\neq \text{decision}
+\neq \text{executed action}.
+\end{aligned}
 $$
 
-That distinction is the backbone of Stage 4.
+This distinction is the backbone of Stage 4.
 
 ---
 
-## Step 2 — The 31-paper core evidence base
+## 2. Core evidence base
 
-The ranking below is by **direct usefulness for constructing Stage 4**, not citation count.
+The following ranking is by direct usefulness for constructing Stage 4, not citation count.
 
 | Rank | Core study | Contribution to Stage 4 |
 |---:|---|---|
 | **1** | Panteli and Kirschen (2015) | Data/ICT → situation awareness → operator decision making. |
 | **2** | Cheng et al. (2024) | Power-system measurement, observability, estimation, asynchronous data, and uncertainty. |
-| **3** | Endsley (1995) | Foundational perception → comprehension → projection structure for situation awareness. |
+| **3** | Endsley (1995) | Perception → comprehension → projection structure for situation awareness. |
 | **4** | Zhou et al. (2024) | Dynamic state estimation under cyber-physical uncertainty. |
-| **5** | Yates et al. (2021) | Rigorous information-freshness concept through Age of Information. |
+| **5** | Yates et al. (2021) | Information freshness through Age of Information. |
 | **6** | Prostejovsky et al. (2019) | Human operators and decision-support systems under increasing automation. |
 | **7** | Ding et al. (2021) | Secure estimation and feedback control under cyber-physical disruption. |
 | **8** | Liu et al. (2020) | Bidirectional power–communication dependency in monitoring and control. |
-| **9** | Zhang et al. (2017) | Networked-control treatment of sampling, delay, packet loss, quantization, and communication constraints. |
+| **9** | Zhang et al. (2017) | Sampling, delay, packet loss, quantization, and communication constraints in networked control. |
 | **10** | Liu et al. (2017) | Delay-induced degradation and compensation in communication-based power control. |
-| **11** | Mena and Núñez (2023) | Information freshness linked directly to networked-control systems. |
+| **11** | Mena and Núñez (2023) | Information freshness linked to networked-control systems. |
 | **12** | Gentili and Mirchandani (2012) | Traffic-network sensor placement and flow observability. |
 | **13** | Castillo et al. (2015) | Separation of transportation observation, estimation, and prediction. |
 | **14** | Owais (2022) | Review of traffic sensor-location and observability research. |
@@ -100,306 +122,312 @@ The ranking below is by **direct usefulness for constructing Stage 4**, not cita
 
 ---
 
-## Step 3 — What Stage 4 scientifically means
+## 3. Scientific meaning of Stage 4
 
-The evidence changes the central chain from a simple block diagram into a **closed-loop partially observable socio-technical control process**:
-
-$$
-\boxed{ X(t) \rightarrow y(t) \rightarrow I(t) \rightarrow \hat X(t) \rightarrow O(t) \rightarrow u(t) \rightarrow X(t). }
-$$
-
-This chain is the conceptual spine.
-
-Its elements mean:
+The central architecture is a **closed-loop partially observable socio-technical control process**:
 
 $$
-\boxed{ \begin{aligned} X(t)&=\text{actual physical }P-T\text{ state},\\ y(t)&=\text{available measurements},\\ I(t)&=\text{information capability and information condition},\\ \hat X(t)&=\text{estimated/believed physical state},\\ O(t)&=\text{organizational interpretation and response capability},\\ u(t)&=\text{executed intervention}. \end{aligned} }
+X(t)
+\rightarrow y(t)
+\rightarrow I(t)
+\rightarrow \widehat X(t)
+\rightarrow O(t)
+\rightarrow u(t)
+\rightarrow X(t).
 $$
 
-Power-system research clearly distinguishes the physical system state from measurements and estimated states, while traffic-network research makes the same distinction between observed flows and quantities that require estimation or prediction (Castillo et al., 2015; Cheng et al., 2024).
-
-Therefore:
-
-$$
-\boxed{ X\neq y\neq I\neq\hat X\neq O\neq u. }
-$$
-
----
-
-## Step 4 — Observation
-
-The first Stage-4 process is
-
-$$
-\boxed{ X(t)\longrightarrow y(t). }
-$$
-
-A general measurement model is
-
-$$
-\boxed{ y_k(t) = H_k \left[ X(t-\delta_k) \right] + \nu_k(t), } \tag{S4.1}
-$$
-
-where $H_k$ is the measurement function, $\delta_k$ represents measurement/communication delay, and $\nu_k$ represents measurement error.
-
-This form is consistent with established state-estimation frameworks in which system states are inferred from SCADA, PMU, AMI and related measurements rather than directly observed (Cheng et al., 2024; Zhou et al., 2024).
-
-For $P$, measurements may include
-
-$$
-\boxed{ y_P= \{ V,\, P_{ij},\, Q_{ij},\, P_{\rm inj},\, f,\, SOC,\, P_{\rm traction}, P_{\rm charge} \}. }
-$$
-
-For $T$,
-
-$$
-\boxed{ y_T= \{ q,\, k,\, v,\, TT,\, \text{vehicle position}, SOC_{EV}, \text{bus position}, \text{train position/speed} \}. }
-$$
-
-Traffic observability research shows that sensor placement determines which flows can be directly reconstructed and which require additional assumptions, prior information or estimation (Castillo et al., 2015; Gentili & Mirchandani, 2012; Owais, 2022).
-
----
-
-## Step 5 — Observability
-
-The critical question is not simply whether sensors exist, but whether available observations contain enough information to distinguish relevant states.
-
-For a local linear representation,
-
-$$
-x_{k+1}=Ax_k, \qquad y_k=Cx_k,
-$$
-
-with classical observability benchmark
-
-$$
-\boxed{ \operatorname{rank} \begin{bmatrix} C\\ CA\\ CA^2\\ \vdots\\ CA^{n-1} \end{bmatrix} =n. } \tag{S4.2}
-$$
-
-This is treated only as a **local/classical benchmark** because the Stage-3 system is nonlinear, hybrid, delayed, and multilayer.
-
-The general Stage-4 question is therefore
-
-$$
-\boxed{ X_1\neq X_2 \quad\Rightarrow\quad \mathcal H_{\rm obs}(X_1) \neq \mathcal H_{\rm obs}(X_2), }
-$$
-
-over the relevant observation horizon.
-
-Power-system state-estimation research shows that observability depends on measurement availability, sensor type, topology, and measurement configuration, while transportation research has an analogous flow-observability problem (Cheng et al., 2024; Gentili & Mirchandani, 2012).
-
----
-
-## Step 6 — Information and state estimation
-
-Observation produces $y$, but the system requires an estimate:
-
-$$
-\boxed{ \hat X(t) = \mathcal E \left( y_{[0,t]}, z_I(t) \right). } \tag{S4.3}
-$$
-
-The estimator should return not only a point estimate but an uncertainty representation:
-
-$$
-\boxed{ \left( \hat X(t), \Sigma_X(t) \right) = \mathcal E \left( y_{[0,t]}, z_I(t) \right). } \tag{S4.4}
-$$
-
-This follows modern state-estimation literature, which explicitly treats measurement uncertainty, asynchronous reporting rates, correlated data sources, missing measurements and cyber-security issues (Cheng et al., 2024; Zhou et al., 2024).
-
-The information state inherited from Stages 1–3 remains
-
-$$
-\boxed{ z_I= [ A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync} ]^\top. }
-$$
-
-Stage 4 **uses** these variables to determine what can be reliably inferred; it does not redefine their dynamics:
-
-$$
-\boxed{ \underbrace{\dot z_I}_{\text{Stage 3}} \qquad\neq\qquad \underbrace{\hat X=\mathcal E(y,z_I)}_{\text{Stage 4}}. }
-$$
-
----
-
-## Step 7 — Information freshness
-
-For dynamic resilience, having information is insufficient if it is stale. Age of Information provides
-
-$$
-\boxed{ \Delta_I(t)=t-U(t), } \tag{S4.5}
-$$
-
-where $U(t)$ is the generation time of the freshest received update (Yates et al., 2021).
-
-Networked-control research additionally shows that sampling, delays, packet dropouts, communication constraints and variable transmission behavior can degrade closed-loop performance (Liu et al., 2017; Zhang et al., 2017).
+| Symbol | Meaning |
+|---|---|
+| $X(t)$ | Actual physical $P$–$T$ state. |
+| $y(t)$ | Available measurements. |
+| $I(t)$ | Information capability/function; dynamic state represented by $z_I(t)$. |
+| $\widehat X(t)$ | Estimated or believed physical state. |
+| $O(t)$ | Organizational interpretation/response function; dynamic state represented by $z_O(t)$. |
+| $u(t)$ | Executed intervention. |
 
 Therefore,
 
 $$
-\boxed{ \text{available information} \not\Rightarrow \text{timely information}, }
+X\neq y\neq I\neq\widehat X\neq O\neq u.
+$$
+
+---
+
+## 4. Observation
+
+The first Stage-4 process is
+
+$$
+X(t)\longrightarrow y(t).
+$$
+
+**Equation S4.1 — Measurement model**
+
+$$
+y_k(t)=H_k\!\left[X(t-\delta_k)\right]+\varepsilon_k(t).
+$$
+
+Here $H_k$ is the measurement function, $\delta_k$ is measurement/communication delay, and $\varepsilon_k$ is measurement error. Using $\varepsilon$ for measurement noise keeps the intervention symbol $u$ visually unambiguous.
+
+This form is consistent with state-estimation frameworks in which system states are inferred from SCADA, PMU, AMI, and related measurements rather than directly observed (Cheng et al., 2024; Zhou et al., 2024).
+
+Representative measurements include
+
+$$
+y_P=\{V,P_{ij},Q_{ij},P_{\rm inj},f,SOC,P_{\rm traction},P_{\rm charge}\},
 $$
 
 and
 
 $$
-\boxed{ \text{timely information} \not\Rightarrow \text{accurate state estimate}. }
+y_T=\{q,k,v,TT,\text{vehicle position},SOC_{EV},\text{bus position},\text{train position/speed}\}.
 $$
 
-These remain separate concepts.
+Traffic-observability research shows that sensor placement determines which flows can be directly reconstructed and which require assumptions, prior information, or estimation (Castillo et al., 2015; Gentili & Mirchandani, 2012; Owais, 2022).
 
 ---
 
-## Step 8 — Partial observability and belief state
+## 5. Observability
 
-During disruption,
+The critical question is whether available observations contain enough information to distinguish relevant states.
 
-$$
-\boxed{ \hat X(t)\neq X(t) }
-$$
-
-is not an exceptional case; it may be central.
-
-Infrastructure-control studies increasingly formulate restoration under incomplete information through MDP/POMDP-type decision processes. Qiu et al. (2023), for example, formulate coupled transport–energy repair-crew dispatch as a decentralized partially observable Markov decision process, while Arcieri et al. (2023) combine uncertain observations and sequential infrastructure decisions.
-
-A belief-state formulation is
+For a local linear representation,
 
 $$
-\boxed{ b_t(x) = p \left( X(t)=x \mid y_{[0,t]}, u_{[0,t)} \right). } \tag{S4.6}
+x_{k+1}=Ax_k,\qquad y_k=Cx_k.
 $$
 
-Stage 4 can therefore reason from
+**Equation S4.2 — Classical local observability benchmark**
 
 $$
-\boxed{ \hat X \quad\text{or, when necessary,}\quad b_t(X) }
+\operatorname{rank}
+\begin{bmatrix}
+C\\CA\\CA^2\\\vdots\\CA^{n-1}
+\end{bmatrix}
+=n.
 $$
 
-without assuming omniscient knowledge.
+This is only a local/classical benchmark because the Stage-3 system is nonlinear, hybrid, delayed, and multilayer.
 
-Importantly,
+A more general Stage-4 condition is
 
 $$
-\boxed{ \text{POMDP is a candidate decision formalism, not Stage 4 itself}. }
+X_1\neq X_2
+\quad\Rightarrow\quad
+\mathcal H_{\rm obs}(X_1)\neq\mathcal H_{\rm obs}(X_2)
 $$
 
-Stage 4 remains method-independent.
+over the relevant observation horizon.
+
+Power-system state-estimation research shows that observability depends on measurement availability, sensor type, topology, and measurement configuration; transportation research has an analogous flow-observability problem (Cheng et al., 2024; Gentili & Mirchandani, 2012).
 
 ---
 
-## Step 9 — Situation awareness and interpretation
+## 6. Information and state estimation
 
-State estimation and situation awareness are not identical. Endsley (1995) conceptualizes situation awareness through
+Observation produces $y$, but the system requires an estimate.
 
-$$
-\boxed{ \text{perception} \rightarrow \text{comprehension} \rightarrow \text{projection}. }
-$$
-
-Panteli and Kirschen (2015) transfer situation-awareness reasoning to electric-power operation and show why incomplete or incorrect awareness can impair operational decisions during disturbances.
-
-Situation awareness does **not** become a fifth infrastructure layer. Instead,
+**Equation S4.3 — State estimator**
 
 $$
-\boxed{ I \rightarrow \hat X \rightarrow \underbrace{\text{interpretation / situation awareness}}_{\text{functional bridge}} \rightarrow O. }
+\widehat X(t)=\mathcal E\!\left(y_{[0,t]},z_I(t)\right).
 $$
 
-A proposed processing representation is
+**Equation S4.4 — State estimate with uncertainty**
 
 $$
-\boxed{ \mathcal A_{\rm SA}(t)=\mathscr A\!\left[\hat X(t),\Sigma_X(t),m(t),\mathcal G(t)\right]. } \tag{S4.7}
+\left(\widehat X(t),\Sigma_X(t)\right)
+=
+\mathcal E\!\left(y_{[0,t]},z_I(t)\right).
 $$
 
-$\mathcal A_{\rm SA}$ is a **Stage-4 processing construct [P]**, not a new infrastructure layer.
+Modern state-estimation literature explicitly treats measurement uncertainty, asynchronous reporting rates, correlated data sources, missing measurements, and cyber-security issues (Cheng et al., 2024; Zhou et al., 2024).
 
----
-
-## Step 10 — Organization
-
-Stage 1 defined the organizational layer, and Stage 3 determines how organizational states evolve. Stage 4 asks:
+The information state inherited from Stages 1–3 remains
 
 $$
-\boxed{ \text{Given available knowledge, who can decide, coordinate and authorize action?} }
+z_I=
+[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top.
 $$
 
-Organizational-resilience literature supports retaining authority, coordination, knowledge sharing, resources and interorganizational structure because these factors influence infrastructure decision making and recovery effectiveness (Li et al., 2019; McAlister et al., 2024; Mohebbi et al., 2020).
-
-The organizational state remains
+Stage 4 uses these variables to determine what can be inferred; it does not redefine their dynamics:
 
 $$
-z_O= [ A_O,C_O,R_O,W_O,\tau_D,\tau_C^O,\tau_M ]^\top.
-$$
-
-Stage 4 uses that capability to constrain action:
-
-$$
-\boxed{ \mathcal U_{\rm available}(t)=\mathcal U\!\left[z_I(t),z_O(t)\right]. } \tag{S4.8}
-$$
-
-Hence
-
-$$
-\boxed{ u(t)\in\mathcal U(z_I(t),z_O(t)). }
-$$
-
-A technically desirable action may remain organizationally infeasible because authorization, coordination, resources, workforce or mobilization are unavailable. Dynamic organizational-network research and collaborative infrastructure-restoration research provide evidence that organizational configuration changes achievable recovery outcomes (Damaschin et al., 2026; Li et al., 2019; Magoua et al., 2026).
-
-Therefore,
-
-$$
-\boxed{ \text{technically desirable action} \not\Rightarrow \text{organizationally executable action}. }
+\dot z_I\ \text{belongs to Stage 3},
+\qquad
+\widehat X=\mathcal E(y,z_I)\ \text{belongs to Stage 4}.
 $$
 
 ---
 
-## Step 11 — Decision and control
+## 7. Information freshness
 
-The Stage-4 feedback policy is represented generically as
+For dynamic resilience, information can be available yet stale.
+
+**Equation S4.5 — Age of Information**
 
 $$
-\boxed{ u(t)=\pi\!\left[\hat X(t),z_I(t),z_O(t)\right],\qquad u(t)\in\mathcal U(z_I,z_O). } \tag{S4.9}
+\Delta_I(t)=t-U(t),
 $$
 
-The thesis does **not** freeze Stage 4 to MPC, reinforcement learning, dynamic programming, MILP, game theory, or another solver. Different studies use robust optimization, POMDP/MARL, multi-agent reinforcement learning, cooperative game theory, and non-cooperative game theory for different infrastructure decision problems (Iloglu et al., 2025; Magoua et al., 2026; Qiu et al., 2023; Yang et al., 2024; Zhu et al., 2024).
+where $U(t)$ is the generation time of the freshest received update (Yates et al., 2021).
+
+Networked-control research shows that sampling, delay, packet loss, communication constraints, and variable transmission behavior can degrade closed-loop performance (Liu et al., 2017; Zhang et al., 2017).
 
 Thus,
 
 $$
-\boxed{ \pi = \text{decision/control policy}, }
+\text{available information}\not\Rightarrow\text{timely information},
 $$
 
-while the algorithm used to compute $\pi$ remains an implementation choice.
+and
+
+$$
+\text{timely information}\not\Rightarrow\text{accurate state estimate}.
+$$
 
 ---
 
-## Step 12 — Feedback closure
+## 8. Partial observability and belief state
+
+During disruption,
+
+$$
+\widehat X(t)\neq X(t)
+$$
+
+may be central rather than exceptional.
+
+Qiu et al. (2023) formulate coupled transport–energy repair-crew dispatch as a decentralized partially observable Markov decision process, while Arcieri et al. (2023) combine uncertain observations and sequential infrastructure decisions.
+
+**Equation S4.6 — Belief state**
+
+$$
+b_t(x)
+=
+p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
+$$
+
+Stage 4 can therefore reason from $\widehat X$ or, when needed, the belief state $b_t$. POMDP is a candidate decision formalism, not the definition of Stage 4 itself.
+
+---
+
+## 9. Situation awareness and interpretation
+
+State estimation and situation awareness are not identical. Endsley (1995) conceptualizes situation awareness through
+
+$$
+\text{perception}\rightarrow\text{comprehension}\rightarrow\text{projection}.
+$$
+
+Panteli and Kirschen (2015) transfer situation-awareness reasoning to electric-power operation and show why incomplete or incorrect awareness can impair operational decisions during disturbances.
+
+Situation awareness does **not** become a fifth infrastructure layer. It is a functional bridge:
+
+$$
+I\rightarrow\widehat X\rightarrow\text{situation awareness}\rightarrow O.
+$$
+
+**Equation S4.7 — Proposed situation representation [P]**
+
+$$
+\mathcal A_{\rm SA}(t)
+=
+\mathscr A\!\left[\widehat X(t),\Sigma_X(t),m(t),\mathcal G(t)\right].
+$$
+
+$\mathcal A_{\rm SA}$ is a Stage-4 processing construct, not a new infrastructure layer.
+
+---
+
+## 10. Organization
+
+Stage 1 defines the organizational layer; Stage 3 determines how organizational states evolve. Stage 4 asks:
+
+> **Given available knowledge, who can decide, coordinate, authorize, resource, and execute action?**
+
+Organizational-resilience literature supports retaining authority, coordination, knowledge sharing, resources, and interorganizational structure because these affect infrastructure decision making and recovery effectiveness (Li et al., 2019; McAlister et al., 2024; Mohebbi et al., 2020).
+
+The organizational state remains
+
+$$
+z_O=[A_O,C_O,R_O,W_O,\tau_D,\tau_C^O,\tau_M]^\top.
+$$
+
+**Equation S4.8 — Available action set**
+
+$$
+\mathcal U_{\rm available}(t)
+=
+\mathcal U\!\left(z_I(t),z_O(t)\right).
+$$
+
+Hence,
+
+$$
+u(t)\in\mathcal U\!\left(z_I(t),z_O(t)\right).
+$$
+
+A technically desirable action may remain organizationally infeasible because authorization, coordination, resources, workforce, or mobilization are unavailable. Dynamic organizational-network and collaborative restoration studies provide evidence that organizational configuration changes achievable recovery outcomes (Damaschin et al., 2026; Li et al., 2019; Magoua et al., 2026).
+
+Therefore,
+
+$$
+\text{technically desirable action}
+\not\Rightarrow
+\text{organizationally executable action}.
+$$
+
+---
+
+## 11. Decision and control
+
+**Equation S4.9 — Generic Stage-4 policy**
+
+$$
+u(t)
+=
+\pi\!\left[\widehat X(t),z_I(t),z_O(t)\right],
+\qquad
+u(t)\in\mathcal U(z_I,z_O).
+$$
+
+The thesis does **not** freeze Stage 4 to MPC, reinforcement learning, dynamic programming, MILP, game theory, or another solver. Different studies use robust optimization, POMDP/MARL, multi-agent reinforcement learning, cooperative game theory, and non-cooperative game theory for different infrastructure decision problems (Iloglu et al., 2025; Magoua et al., 2026; Qiu et al., 2023; Yang et al., 2024; Zhu et al., 2024).
+
+The policy symbol $\pi$ denotes the decision/control mapping; the algorithm used to compute $\pi$ remains a later methodological choice.
+
+---
+
+## 12. Feedback closure
 
 Stage 4 closes the loop:
 
 $$
-\boxed{ X \rightarrow y \rightarrow I \rightarrow \hat X \rightarrow O \rightarrow u \rightarrow X. }
+X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X.
 $$
 
-This is more rigorous than
+The controller acts on the inferred state $\widehat X$, not necessarily on the true state $X$. The implemented intervention returns to Stage-3 dynamics:
 
 $$
-\text{failure}\rightarrow\text{optimization}\rightarrow\text{repair}
+u(t)\rightarrow F^{m(t)}\rightarrow Y(t+\Delta t).
 $$
 
-because the controller acts on $\hat X$ rather than necessarily on $X$.
-
-The implemented intervention returns to the Stage-3 dynamics:
-
-$$
-\boxed{ u(t) \rightarrow F^{m(t)} \rightarrow Y(t+\Delta t). }
-$$
-
-Networked-control theory explicitly treats measurement, communication and actuation as parts of a closed feedback system and shows that communication imperfections can influence control-system performance and stability (Liu et al., 2017; Zhang et al., 2017).
+Networked-control theory explicitly treats measurement, communication, and actuation as parts of a closed feedback system and shows that communication imperfections can affect control-system performance and stability (Liu et al., 2017; Zhang et al., 2017).
 
 ---
 
-## Step 13 — Control actions in the P–T–I–O system
+## 13. Control actions in the P–T–I–O system
 
-The action vector may be represented as
+**Equation S4.10 — Action vector**
 
 $$
-\boxed{ u(t)= \begin{bmatrix} u_P(t)\\ u_T(t)\\ u_I(t)\\ u_O(t) \end{bmatrix}. } \tag{S4.10}
+u(t)=
+\begin{bmatrix}
+u_P(t)\\
+u_T(t)\\
+u_I(t)\\
+u_O(t)
+\end{bmatrix}.
 $$
 
 | Action family | Examples |
@@ -409,257 +437,217 @@ $$
 | $u_I$ | measurement prioritization, communication routing, sampling/update priority, information-sharing activation |
 | $u_O$ | crew assignment, resource allocation, mobilization, cross-agency coordination, restoration priority |
 
-Collaborative restoration and mobile-resource studies demonstrate that performance depends not only on physical action but also on how resources and decisions are coordinated across infrastructures (Jiang et al., 2026; Magoua et al., 2026; Qiu et al., 2023).
+Collaborative restoration and mobile-resource studies show that performance depends not only on physical action but also on how resources and decisions are coordinated across infrastructures (Jiang et al., 2026; Magoua et al., 2026; Qiu et al., 2023).
 
-Importantly,
-
-$$
-\boxed{ u_O \text{ represents organizational interventions, not physical organizational dynamics}. }
-$$
+$u_O$ represents organizational interventions, not physical organizational dynamics.
 
 ---
 
-## Step 14 — Response time
+## 14. Response time
 
-The complete response pathway is
-
-$$
-\boxed{ \text{sense} \rightarrow \text{communicate} \rightarrow \text{estimate} \rightarrow \text{decide} \rightarrow \text{coordinate} \rightarrow \text{mobilize} \rightarrow \text{act}. }
-$$
-
-For a sequential, non-overlapping response path, the thesis uses the derived decomposition
+The response pathway is
 
 $$
-\boxed{ \tau_{\rm response} = \tau_{\rm sense} + \tau_{\rm comm} + \tau_{\rm est} + \tau_{\rm decision} + \tau_{\rm coord} + \tau_{\rm mobilization} + \tau_{\rm act}. } \tag{S4.11}
+\text{sense}
+\rightarrow\text{communicate}
+\rightarrow\text{estimate}
+\rightarrow\text{decide}
+\rightarrow\text{coordinate}
+\rightarrow\text{mobilize}
+\rightarrow\text{act}.
 $$
 
-If processes overlap or execute in parallel, $\tau_{\rm response}$ is the completion time of the relevant critical path rather than the arithmetic sum of all component durations.
-
-This is a **derived synthesis [D]** of established process delays, not a metric attributed to one source. Communication/control literature establishes communication and processing delays; situation-awareness research establishes information-to-decision effects; and infrastructure-restoration research establishes decision, dispatch and resource-mobilization processes (Liu et al., 2017; Panteli & Kirschen, 2015; Qiu et al., 2023).
-
-Stage 3 provides the competing disruption clock
+**Equation S4.11 — Sequential response-time decomposition [D]**
 
 $$
-\boxed{ \tau_{\rm cascade} \quad\text{or component-specific}\quad T_C(j). }
+\begin{aligned}
+\tau_{\rm response}={}&
+\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}\\
+&+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
+\end{aligned}
 $$
 
-Therefore the central engineering question becomes
+If processes overlap or execute in parallel, $\tau_{\rm response}$ is the completion time of the relevant critical path rather than the arithmetic sum of all durations.
 
-$$
-\boxed{ \textbf{Can the system know, decide, coordinate and act before the disruption reaches the target?} }
-$$
+This is a derived synthesis [D], not a metric attributed to one source. Communication/control literature establishes communication and processing delays; situation-awareness research establishes information-to-decision effects; infrastructure-restoration research establishes decision, dispatch, and resource-mobilization processes (Liu et al., 2017; Panteli & Kirschen, 2015; Qiu et al., 2023).
+
+Stage 3 provides the competing disruption clock $\tau_{\rm cascade}$ or component-specific $T_C(j)$.
+
+The central engineering question is:
+
+> **Can the system know, decide, coordinate, and act before disruption reaches the target?**
 
 ---
 
-## Step 15 — Proposed response-to-cascade diagnostic
+## 15. Proposed response-to-cascade diagnostic
 
-Only after separating the established quantities do we propose
-
-$$
-\boxed{ \Pi_R = \frac{\tau_{\rm response}} {\tau_{\rm cascade}}. } \tag{S4.12}
-$$
-
-This is explicitly
+**Equation S4.12 — Proposed timing diagnostic [P]**
 
 $$
-\boxed{[P]\ \textbf{a thesis diagnostic, not an established resilience law}.}
+\Pi_R=
+\frac{\tau_{\rm response}}{\tau_{\rm cascade}}.
 $$
 
 Potential interpretation:
 
-- $\Pi_R<1$: nominal response completes faster than the characteristic cascade process;
-- $\Pi_R\approx1$: strong temporal competition;
-- $\Pi_R>1$: nominal response is slower.
+| Regime | Interpretation |
+|---|---|
+| $\Pi_R<1$ | Nominal response completes faster than the characteristic cascade process. |
+| $\Pi_R\approx1$ | Strong temporal competition. |
+| $\Pi_R>1$ | Nominal response is slower. |
 
 However,
 
 $$
-\boxed{ \Pi_R<1 \not\Rightarrow \text{successful control}. }
+\Pi_R<1\not\Rightarrow\text{successful control}.
 $$
 
-Successful intervention also requires observability, estimation accuracy, authority, resources, accessibility, controllability, and appropriate action. A local future quantity may compare $\tau_{\rm response}(j)$ with Stage 3's $T_C(j)$, but that remains a **candidate analysis**, not a universal definition.
+Successful intervention also requires observability, estimation accuracy, authority, resources, accessibility, controllability, and appropriate action. A local future quantity may compare $\tau_{\rm response}(j)$ with $T_C(j)$, but that remains a candidate analysis rather than a universal definition.
 
 ---
 
-## Step 16 — Partial-information control as a central test
+## 16. Partial-information control as a central test
 
-A strong nested model-comparison experiment emerging from the review is
+A strong nested comparison is:
 
-$$
-\boxed{ \mathscr M_0 = \text{perfect observation + instantaneous organization} }
-$$
+| Model variant | Assumption |
+|---|---|
+| $\mathscr M_0$ | Perfect observation + instantaneous organization. |
+| $\mathscr M_1$ | Imperfect/delayed information. |
+| $\mathscr M_2$ | Imperfect information + organizational constraints. |
+| $\mathscr M_3$ | Full closed-loop P–T–I–O system. |
 
-versus
+This design is proposed [P]. The symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$. The design is grounded in literature showing separately that imperfect information changes estimation/control and organizational coordination changes restoration outcomes (Arcieri et al., 2023; Cheng et al., 2024; Magoua et al., 2026; Qiu et al., 2023).
 
-$$
-\boxed{ \mathscr M_1 = \text{imperfect/delayed information} }
-$$
-
-versus
-
-$$
-\boxed{ \mathscr M_2 = \text{imperfect information + organizational constraints} }
-$$
-
-versus
+The intended contrasts are
 
 $$
-\boxed{ \mathscr M_3 = \text{full closed-loop }P-T-I-O. }
-$$
-
-This nested design is **proposed [P]**; the symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$. It is grounded in literature showing separately that imperfect information changes estimation/control and organizational coordination changes restoration outcomes (Arcieri et al., 2023; Cheng et al., 2024; Magoua et al., 2026; Qiu et al., 2023).
-
-It allows the contrasts
-
-$$
-\mathscr M_1-\mathscr M_0 = \text{information effect},
+\mathscr M_1-\mathscr M_0=\text{information effect},
 $$
 
 $$
-\mathscr M_2-\mathscr M_1 = \text{organizational effect},
+\mathscr M_2-\mathscr M_1=\text{organizational effect},
 $$
 
 and
 
 $$
-\mathscr M_3-\mathscr M_0 = \text{full coupled response effect}.
+\mathscr M_3-\mathscr M_0=\text{full coupled response effect}.
 $$
-
-This is a stronger thesis test than simply showing that a controller works.
 
 ---
 
-## Step 17 — Stage-4 validation
+## 17. Stage-4 validation
 
 Stage 4 is validated at the level of the entire inference-to-action chain:
 
 $$
-\boxed{ \text{measurement} \rightarrow \text{estimation} \rightarrow \text{decision} \rightarrow \text{action} \rightarrow \text{closed-loop consequence}. }
+\text{measurement}
+\rightarrow\text{estimation}
+\rightarrow\text{decision}
+\rightarrow\text{action}
+\rightarrow\text{closed-loop consequence}.
 $$
 
-Validation therefore tests sensor/measurement coverage, observability, estimation error and uncertainty, delay and information freshness, decision feasibility, resource/organizational feasibility, action execution time, and the closed-loop system trajectory.
+Validation must test:
 
-For estimation, relevant quantities include
+- sensor/measurement coverage;
+- observability;
+- estimation error and uncertainty;
+- delay and information freshness;
+- decision feasibility;
+- organizational/resource feasibility;
+- action execution time;
+- closed-loop system trajectory.
 
-$$
-RMSE(\hat X,X), \qquad \Sigma_X, \qquad P(\text{correct state classification}).
-$$
-
-For information,
-
-$$
-\delta_I,\quad \Delta_I,\quad p_{\rm loss},\quad A_I.
-$$
-
-For organization,
+Representative quantities include
 
 $$
-\tau_{\rm decision}, \quad \tau_{\rm coord}, \quad \tau_{\rm mobilization}, \quad N_{\rm crew}, \quad R_O.
+RMSE(\widehat X,X),\qquad \Sigma_X,\qquad P(\text{correct state classification}),
 $$
 
-For control,
-
 $$
-\boxed{u(t)\in\mathcal U(z_I,z_O)}
+\delta_I,\quad\Delta_I,\quad p_{\rm loss},\quad A_I,
 $$
 
-must be verified rather than assumed.
+and
+
+$$
+\tau_{\rm decision},\quad\tau_{\rm coord},\quad\tau_{\rm mobilization},\quad N_{\rm crew},\quad R_O.
+$$
+
+Control feasibility must be verified:
+
+$$
+u(t)\in\mathcal U(z_I,z_O).
+$$
 
 ---
 
-## Step 18 — Critical boundary with Stage 3
+## 18. Boundary with Stage 3
 
-Stage 3 already contains $z_I(t)$ and $z_O(t)$ because information and organizational conditions evolve dynamically. Stage 4 does **not** repeat those dynamics.
+Stage 3 contains $z_I(t)$ and $z_O(t)$ because information and organizational conditions evolve dynamically. Stage 4 does **not** repeat those dynamics.
 
-$$
-\boxed{ \begin{array}{lll} \textbf{Stage 3} && \text{How do }z_I,z_O\text{ evolve?}\\[1mm] \textbf{Stage 4} && \text{How do current }z_I,z_O \text{ constrain knowledge and intervention?} \end{array} }
-$$
+| Stage | Responsibility |
+|---|---|
+| **3** | Determine how $z_I(t)$ and $z_O(t)$ evolve. |
+| **4** | Determine how current $z_I(t)$ and $z_O(t)$ constrain knowledge and intervention. |
 
 For example,
 
 $$
-\boxed{ \text{Stage 3: } A_I(t)\downarrow,\; \delta_I(t)\uparrow }
+\text{Stage 3: }A_I(t)\downarrow,\ \delta_I(t)\uparrow,
 $$
 
-then
+while
 
 $$
-\boxed{ \text{Stage 4: } A_I,\delta_I \rightarrow y \rightarrow \hat X \rightarrow u. }
+\text{Stage 4: }(A_I,\delta_I)\rightarrow y\rightarrow\widehat X\rightarrow u.
 $$
 
-Similarly,
-
-$$
-\boxed{ \text{Stage 3: } R_O(t),C_O(t),N_{\rm crew}(t) }
-$$
-
-evolve, while
-
-$$
-\boxed{ \text{Stage 4: } (R_O,C_O,N_{\rm crew}) \rightarrow \mathcal U(z_I,z_O) }
-$$
-
-determines which interventions are feasible.
-
-This protects the architecture from duplication.
+Similarly, Stage 3 evolves $R_O(t)$, $C_O(t)$, and $N_{\rm crew}(t)$; Stage 4 maps them into the feasible action set $\mathcal U(z_I,z_O)$.
 
 ---
 
-## Step 19 — Critical boundary with Stage 5
+## 19. Boundary with Stage 5
 
 Stage 4 ends at **controlled response**. It does not determine
 
 $$
-\mathcal V_{\rm sus}^{u},\qquad \rho_g,\qquad T_{\rm exit}.
+\mathcal V_{\rm sus}^{u},\qquad\rho_g,\qquad T_{\rm exit}.
 $$
 
-Those belong to Stage 5.
+Those are Stage-5 quantities.
 
-Therefore,
+| Stage | Output / question |
+|---|---|
+| **3** | Generates the system trajectory. |
+| **4** | Closes the observation–decision–control loop and produces $u(t)$ and $Y^u(t)$. |
+| **5** | Tests whether $Y^u(t)$ remains inside the sustainable viability set. |
 
-$$
-\boxed{ \text{Stage 3 generates the trajectory} }
-$$
-
-$$
-\boxed{ \text{Stage 4 closes the observation-decision-control loop} }
-$$
+The interface is
 
 $$
-\boxed{ \text{Stage 5 asks whether that controlled trajectory remains viable}. }
-$$
-
-The precise interface is
-
-$$
-\boxed{ u(t) \longrightarrow Y^{u}(t) \longrightarrow \mathcal V_{\rm sus}^{u}. }
+u(t)\longrightarrow Y^u(t)\longrightarrow\mathcal V_{\rm sus}^{u}.
 $$
 
 ---
 
-## Step 20 — Research gap supported by the reviewed corpus
+## 20. Research gap supported by the reviewed corpus
 
-The sampled literature is mature in separate areas including power state estimation, traffic observability, networked control, information freshness, situation awareness, organizational coordination, repair-resource optimization, and POMDP/MARL restoration.
+The sampled literature is mature in separate areas: power state estimation, traffic observability, networked control, information freshness, situation awareness, organizational coordination, repair-resource optimization, and POMDP/MARL restoration.
 
 The sampled work does not reveal a mature standard framework that explicitly carries the entire causal chain
 
 $$
-\boxed{ X \rightarrow y \rightarrow I \rightarrow \hat X \rightarrow O \rightarrow u \rightarrow X }
+X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X
 $$
 
-across a physically explicit **power–multimodal-transportation system** while simultaneously retaining information degradation, organizational feasibility, cross-layer interdependencies, and the Stage-3 cascade clock. This is a synthesis from the reviewed corpus rather than a claim that no such study could exist (Cheng et al., 2024; Li et al., 2019; Mohebbi et al., 2020; Qiu et al., 2023).
+across a physically explicit power–multimodal-transportation system while simultaneously retaining information degradation, organizational feasibility, cross-layer interdependencies, and the Stage-3 cascade clock. This is a synthesis from the reviewed corpus rather than a claim that no such study could exist (Cheng et al., 2024; Li et al., 2019; Mohebbi et al., 2020; Qiu et al., 2023).
 
-The defensible research niche is therefore:
+The defensible research niche is:
 
-$$
-\boxed{ \textbf{response is not only a control problem;} }
-$$
-
-it is a
-
-$$
-\boxed{ \textbf{partial-observation + information + organization + actuation problem}. }
-$$
+> **Response is not only a control problem; it is a partial-observation + information + organization + actuation problem.**
 
 ---
 
@@ -670,44 +658,42 @@ $$
 | **Stage** | Observation, Organization, Feedback and Control |
 | **Question** | How is the system observed, interpreted, coordinated and controlled? |
 | **Physical reality** | $X(t)=[x_P(t),x_T(t)]^\top$ |
-| **Measurement** | $y(t)=H[X(t-\delta)]+\nu(t)$ |
-| **Observability** | determine whether relevant P–T states can be inferred |
+| **Measurement** | $y(t)=H[X(t-\delta)]+\varepsilon(t)$ |
+| **Observability** | Determine whether relevant P–T states can be inferred. |
 | **Information state** | $z_I=[A_I,L_I,Q_I,\Delta_I,p_{\rm loss},e_X,\epsilon_{\rm sync}]^\top$ |
-| **State estimation** | $(\hat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I)$ |
+| **State estimation** | $(\widehat X,\Sigma_X)=\mathcal E(y_{[0,t]},z_I)$ |
 | **Partial observability** | $b_t(X)=p(X_t\mid y_{[0,t]},u_{[0,t)})$ |
-| **Interpretation** | situation awareness from estimated state and uncertainty |
-| **Organization** | authority, coordination, resources, workforce, mobilization |
+| **Interpretation** | Situation awareness from estimated state and uncertainty. |
+| **Organization** | Authority, coordination, resources, workforce, mobilization. |
 | **Feasible actions** | $u(t)\in\mathcal U(z_I(t),z_O(t))$ |
-| **Control policy** | $u(t)=\pi[\hat X(t),z_I(t),z_O(t)]$ |
-| **Feedback** | $X\rightarrow y\rightarrow I\rightarrow\hat X\rightarrow O\rightarrow u\rightarrow X$ |
-| **Temporal response** | sensing + communication + estimation + decision + coordination + mobilization + actuation |
-| **Stage-3 interface** | compare $\tau_{\rm response}$ with $\tau_{\rm cascade}$ or $T_C(j)$ |
-| **Uncertainty** | measurement, estimation, communication, decision, and resource uncertainty |
-| **Validation** | observability, estimation, timing, decision feasibility, and closed-loop tests |
-| **Primary outputs** | $\hat X(t),\Sigma_X(t),b_t,\mathcal U(z_I,z_O),u(t),\tau_{\rm response},Y^u(t)$ |
+| **Control policy** | $u(t)=\pi[\widehat X(t),z_I(t),z_O(t)]$ |
+| **Feedback** | $X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u\rightarrow X$ |
+| **Temporal response** | Sensing + communication + estimation + decision + coordination + mobilization + actuation, or the corresponding critical path when processes overlap. |
+| **Stage-3 interface** | Compare $\tau_{\rm response}$ with $\tau_{\rm cascade}$ or $T_C(j)$. |
+| **Uncertainty** | Measurement, estimation, communication, decision, and resource uncertainty. |
+| **Validation** | Observability, estimation, timing, decision feasibility, and closed-loop tests. |
+| **Primary outputs** | $\widehat X(t),\Sigma_X(t),b_t,\mathcal U(z_I,z_O),u(t),\tau_{\rm response},Y^u(t)$ |
 
 The scientific essence is
 
 $$
-\boxed{ \underbrace{X}_{\text{reality}} \rightarrow \underbrace{y}_{\text{measure}} \rightarrow \underbrace{I}_{\text{know}} \rightarrow \underbrace{\hat X}_{\text{infer}} \rightarrow \underbrace{O}_{\text{interpret/coordinate}} \rightarrow \underbrace{u}_{\text{act}} \rightarrow \underbrace{X}_{\text{changed reality}}. }
-$$
-
-The first four stages therefore form
-
-$$
-\boxed{ \underbrace{\{P,T,I,O\}}_{\textbf{Stage 1: what exists}} \rightarrow \underbrace{\mathfrak I_{ij}^{\alpha\beta}}_{\textbf{Stage 2: why it affects}} \rightarrow \underbrace{Y(t),\mathcal G(t),m(t),T_C}_{\textbf{Stage 3: how it evolves}} \rightarrow \underbrace{\hat X,I,O,u,\tau_{\rm response}}_{\textbf{Stage 4: how it is known and controlled}}. }
+X_{\rm reality}
+\rightarrow y_{\rm measure}
+\rightarrow I_{\rm know}
+\rightarrow \widehat X_{\rm infer}
+\rightarrow O_{\rm coordinate}
+\rightarrow u_{\rm act}
+\rightarrow X_{\rm changed}.
 $$
 
 ### Status
 
-$$
-\boxed{\textbf{STAGE 4 SCIENTIFIC SCOPE: FROZEN}}
-$$
+> **STAGE 4 SCIENTIFIC SCOPE: FROZEN**
 
 The ratio
 
 $$
-\boxed{ \Pi_R = \frac{\tau_{\rm response}} {\tau_{\rm cascade}} }
+\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}}
 $$
 
 remains explicitly a **proposed thesis diagnostic [P]**, not an established metric and not part of the theoretical definition of resilience.
@@ -716,9 +702,9 @@ remains explicitly a **proposed thesis diagnostic [P]**, not an established metr
 
 ## Freeze statement
 
-This gives Stage 4 a literature-supported scientific boundary: **observe the Stage-3 system, reconstruct its relevant state under imperfect information, convert that knowledge through organizational capability into feasible actions, and close the feedback loop—without yet asking whether the resulting controlled trajectory lies inside the sustainable viability set.**
+Stage 4 has the following literature-supported boundary: **observe the Stage-3 system, reconstruct its relevant state under imperfect information, convert that knowledge through organizational capability into feasible actions, and close the feedback loop—without yet asking whether the resulting controlled trajectory lies inside the sustainable viability set.**
 
-The seven-stage framework remains unchanged. Stage 4 is frozen at the framework level; later method choices must instantiate this scope without redefining it.
+The seven-stage framework remains unchanged. Stage 4 is frozen at framework level; later method choices instantiate this scope without redefining it.
 
 ---
 
