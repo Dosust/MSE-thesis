@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<title id="title">V01 P-T-I-O Multilayer System</title>
+<desc id="desc">V01 P-T-I-O Multilayer System thesis figure</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#243447"/></marker><marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C23B3B"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="25" y="20" width="1350" height="76" rx="12" fill="#173F6B" stroke="#173F6B" stroke-width="0"/>
+<text x="55" y="69" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" fill="white" text-anchor="start" >V01 — P–T–I–O Multilayer System</text>
+<text x="55" y="125" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="normal" fill="#5B6573" text-anchor="start" >Canonical ontology: P,T are physical infrastructure systems; I,O are informational and organizational layers</text>
+<rect x="150" y="165" width="900" height="95" rx="8" fill="#FAFCFF" stroke="#173F6B" stroke-width="2"/>
+<text x="175" y="215" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" fill="#173F6B" text-anchor="start" >Power system P</text>
+<circle cx="430" cy="212" r="13" fill="#173F6B"/><circle cx="610" cy="212" r="13" fill="#173F6B"/><circle cx="790" cy="212" r="13" fill="#173F6B"/><circle cx="970" cy="212" r="13" fill="#173F6B"/>
+<line x1="444" y1="212" x2="596" y2="212" stroke="#173F6B" stroke-width="2"/><line x1="624" y1="212" x2="776" y2="212" stroke="#173F6B" stroke-width="2"/><line x1="804" y1="212" x2="956" y2="212" stroke="#173F6B" stroke-width="2"/>
+<rect x="150" y="295" width="900" height="95" rx="8" fill="#FAFCFF" stroke="#0F8B8D" stroke-width="2"/>
+<text x="175" y="345" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" fill="#0F8B8D" text-anchor="start" >Transportation system T</text>
+<circle cx="430" cy="342" r="13" fill="#0F8B8D"/><circle cx="610" cy="342" r="13" fill="#0F8B8D"/><circle cx="790" cy="342" r="13" fill="#0F8B8D"/><circle cx="970" cy="342" r="13" fill="#0F8B8D"/>
+<line x1="444" y1="342" x2="596" y2="342" stroke="#0F8B8D" stroke-width="2"/><line x1="624" y1="342" x2="776" y2="342" stroke="#0F8B8D" stroke-width="2"/><line x1="804" y1="342" x2="956" y2="342" stroke="#0F8B8D" stroke-width="2"/>
+<rect x="150" y="425" width="900" height="95" rx="8" fill="#FAFCFF" stroke="#2E86DE" stroke-width="2"/>
+<text x="175" y="475" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" fill="#2E86DE" text-anchor="start" >Information layer I</text>
+<circle cx="430" cy="472" r="13" fill="#2E86DE"/><circle cx="610" cy="472" r="13" fill="#2E86DE"/><circle cx="790" cy="472" r="13" fill="#2E86DE"/><circle cx="970" cy="472" r="13" fill="#2E86DE"/>
+<line x1="444" y1="472" x2="596" y2="472" stroke="#2E86DE" stroke-width="2"/><line x1="624" y1="472" x2="776" y2="472" stroke="#2E86DE" stroke-width="2"/><line x1="804" y1="472" x2="956" y2="472" stroke="#2E86DE" stroke-width="2"/>
+<rect x="150" y="555" width="900" height="95" rx="8" fill="#FAFCFF" stroke="#D99A2B" stroke-width="2"/>
+<text x="175" y="605" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" fill="#D99A2B" text-anchor="start" >Organization layer O</text>
+<circle cx="430" cy="602" r="13" fill="#D99A2B"/><circle cx="610" cy="602" r="13" fill="#D99A2B"/><circle cx="790" cy="602" r="13" fill="#D99A2B"/><circle cx="970" cy="602" r="13" fill="#D99A2B"/>
+<line x1="444" y1="602" x2="596" y2="602" stroke="#D99A2B" stroke-width="2"/><line x1="624" y1="602" x2="776" y2="602" stroke="#D99A2B" stroke-width="2"/><line x1="804" y1="602" x2="956" y2="602" stroke="#D99A2B" stroke-width="2"/>
+<line x1="500" y1="212" x2="500" y2="592" stroke="#5B6573" stroke-width="2" stroke-dasharray="7 6"/><line x1="720" y1="212" x2="720" y2="592" stroke="#5B6573" stroke-width="2" stroke-dasharray="7 6"/><line x1="900" y1="212" x2="900" y2="592" stroke="#5B6573" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="1100" y="195" width="250" height="420" rx="14" fill="#F7F9FC" stroke="#5B6573" stroke-width="2"/>
+<text x="1225" y="235" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="#173F6B" text-anchor="middle" >Canonical object</text>
+<text x="1225" y="285" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="bold" fill="#243447" text-anchor="middle" >S = {P,T,I,O}</text>
+<text x="1125" y="340" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#243447">P,T = physical systems</text>
+<text x="1125" y="385" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#243447">I = informational layer</text>
+<text x="1125" y="430" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#243447">O = organizational layer</text>
+<text x="1125" y="500" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5B6573">Solid: intra-layer</text>
+<text x="1125" y="535" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5B6573">Dashed: cross-layer coupling</text>
+<text x="1125" y="580" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5B6573">Topology may be state/mode dependent</text>
+</svg>
