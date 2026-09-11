@@ -124,8 +124,6 @@ Evidence-grounded Stage 1–2 companion: [`project/STAGES_1_2_APA7_EVIDENCE_GROU
 
 Stage 2 is **canonical and frozen**.
 
-The directed scope is
-
 $$
 \mathcal I=
 \{
@@ -139,9 +137,7 @@ Every accepted interdependency is represented by
 $$
 \mathfrak I_{ij}^{\alpha\beta}
 =
-\left(
-E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
-\right).
+\left(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t\right).
 $$
 
 The causal admissibility rule is
@@ -160,40 +156,30 @@ Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STA
 
 Stage 3 is **canonical and frozen**. It translates accepted Stage-2 causal objects into heterogeneous dynamic consequences.
 
-The four-layer state remains
-
 $$
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\x_T(t)\\z_I(t)\\z_O(t)
 \end{bmatrix},
-$$
-
-with augmented hybrid state
-
-$$
+\qquad
 \widetilde Y(t)=\big(Y(t),m(t)\big).
 $$
 
-The canonical architecture is a hybrid delayed multirate dynamical system with continuous/quasi-continuous dynamics, algebraic constraints, discrete events, mode switching, dynamic topology, causal delays, and heterogeneous timescales.
+Its architecture is a hybrid delayed multirate dynamical system with continuous/quasi-continuous dynamics, algebraic constraints, discrete events, mode switching, dynamic topology, causal delays, and heterogeneous timescales.
 
 The temporal discipline is
 
 $$
-\text{event time}
-\neq
-\text{causal delay }\delta
-\neq
-\text{characteristic timescale }\tau.
+\text{event time}\neq\text{causal delay }\delta\neq\text{characteristic timescale }\tau.
 $$
 
-For spatial propagation, Stage 3 may use
+For spatial propagation,
 
 $$
 T_C(j)=\inf\{t>t_0:j\text{ enters a predefined disrupted state}\},
 $$
 
-and, only where a physical spatial-front interpretation is meaningful,
+and, only where physically meaningful,
 
 $$
 v_c(t)=\frac{dr_c(t)}{dt}.
@@ -207,32 +193,12 @@ Stage-3 authority: [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](pro
 
 Stage 4 is **canonical and frozen**.
 
-Its research question is:
-
-> **How is the system observed, interpreted, coordinated and controlled?**
+> **Research question:** How is the system observed, interpreted, coordinated and controlled?
 
 The conceptual spine is
 
 $$
-X(t)
-\rightarrow
-y(t)
-\rightarrow
-I(t)
-\rightarrow
-\widehat X(t)
-\rightarrow
-O(t)
-\rightarrow
-u(t)
-\rightarrow
-X(t).
-$$
-
-Here $\nu(t)$ denotes executed intervention in the conceptual display only. The canonical control variable used in the Stage-4 mathematical specification is $u(t)$:
-
-$$
-u(t)\equiv u(t).
+X(t)\rightarrow y(t)\rightarrow I(t)\rightarrow\widehat X(t)\rightarrow O(t)\rightarrow u(t)\rightarrow X(t).
 $$
 
 The critical distinction is
@@ -241,7 +207,7 @@ $$
 X\neq y\neq I\neq\widehat X\neq O\neq u.
 $$
 
-Stage 4 treats response as a **partially observable socio-technical feedback-control problem**.
+Stage 4 therefore treats response as a **partially observable socio-technical feedback-control problem**.
 
 ### Observation and estimation
 
@@ -258,28 +224,22 @@ $$
 Under partial observability,
 
 $$
-b_t(x)
-=
-p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
+b_t(x)=p\!\left(X(t)=x\mid y_{[0,t]},u_{[0,t)}\right).
 $$
 
 ### Organizational feasibility and control
 
 $$
-\mathcal U_{\rm available}(t)
-=
-\mathcal U[z_I(t),z_O(t)],
+\mathcal U_{\rm available}(t)=\mathcal U[z_I(t),z_O(t)],
 $$
 
 $$
-u(t)
-=
-\pi[\widehat X(t),z_I(t),z_O(t)],
+u(t)=\pi[\widehat X(t),z_I(t),z_O(t)],
 \qquad
 u(t)\in\mathcal U[z_I(t),z_O(t)].
 $$
 
-The symbols above are interpreted as $\nu(t)\equiv u(t)$ so that the canonical control variable remains $u(t)$ throughout downstream analysis.
+In the rendered equation above, the intervention symbol is the canonical control variable $u(t)$; measurement noise remains $\nu_k(t)$.
 
 No particular solver—MPC, MILP, dynamic programming, reinforcement learning, game theory, or otherwise—is frozen into the framework.
 
@@ -288,21 +248,7 @@ No particular solver—MPC, MILP, dynamic programming, reinforcement learning, g
 For a sequential, non-overlapping response path,
 
 $$
-\tau_{\rm response}
-=
-\tau_{\rm sense}
-+
-\tau_{\rm comm}
-+
-\tau_{\rm est}
-+
-\tau_{\rm decision}
-+
-\tau_{\rm coord}
-+
-\tau_{\rm mobilization}
-+
-\tau_{\rm act}.
+\tau_{\rm response}=\tau_{\rm sense}+\tau_{\rm comm}+\tau_{\rm est}+\tau_{\rm decision}+\tau_{\rm coord}+\tau_{\rm mobilization}+\tau_{\rm act}.
 $$
 
 If processes overlap, $\tau_{\rm response}$ is the completion time of the relevant critical path.
@@ -310,17 +256,13 @@ If processes overlap, $\tau_{\rm response}$ is the completion time of the releva
 The proposed timing diagnostic is
 
 $$
-\Pi_R
-=
-\frac{\tau_{\rm response}}{\tau_{\rm cascade}},
+\Pi_R=\frac{\tau_{\rm response}}{\tau_{\rm cascade}},
 $$
 
 with
 
 $$
-\Pi_R<1
-\not\Rightarrow
-\text{successful control}.
+\Pi_R<1\not\Rightarrow\text{successful control}.
 $$
 
 $\Pi_R$ is a **proposed thesis diagnostic**, not an established resilience law.
@@ -329,10 +271,8 @@ $\Pi_R$ is a **proposed thesis diagnostic**, not an established resilience law.
 
 $$
 \boxed{
-\text{Stage 3 produces trajectories;}
-\quad
-\text{Stage 4 observes and controls them;}
-\quad
+\text{Stage 3 produces trajectories;}\quad
+\text{Stage 4 observes and controls them;}\quad
 \text{Stage 5 evaluates their viability.}
 }
 $$
@@ -348,8 +288,6 @@ Stage 5 is the **next formalization stage**.
 $$
 K_{\rm sus}=\{Y:g(Y)\le0\},
 $$
-
-and
 
 $$
 \mathcal V_{\rm sus}^{u}
@@ -392,27 +330,15 @@ $$
 The thesis distinguishes
 
 $$
-\text{domain evidence}
-\neq
-\text{transferable methodology}
-\neq
-\text{mathematical theory}
-\neq
-\text{thesis-proposed synthesis}.
+\text{domain evidence}\neq\text{transferable methodology}\neq\text{mathematical theory}\neq\text{thesis-proposed synthesis}.
 $$
 
-Evidence labels used in canonical stage files are `[E]` established literature, `[D]` derived synthesis, and `[P]` proposed thesis construct. All in-text citations and reference lists follow **APA 7th edition**.
+Canonical stage files use `[E]` for established literature, `[D]` for derived synthesis, and `[P]` for proposed thesis constructs. All in-text citations and reference lists follow **APA 7th edition**.
 
-The validation rule is
+The validation logic is
 
 $$
-\text{Claim}
-\rightarrow
-\text{Test}
-\rightarrow
-\text{Falsification Opportunity}
-\rightarrow
-\text{Evidence-backed Conclusion}.
+\text{Claim}\rightarrow\text{Test}\rightarrow\text{Falsification Opportunity}\rightarrow\text{Evidence-backed Conclusion}.
 $$
 
 ---
