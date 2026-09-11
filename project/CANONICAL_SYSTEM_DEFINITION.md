@@ -1,14 +1,15 @@
 # Canonical System Definition
 
 ![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
+![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 
 **Adopted:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Scope:** Multilayer interdependent infrastructure resilience and sustainability research  
+**Scope:** Multilayer interdependent infrastructure resilience and sustainable transformation  
 **Change rule:** Use this system description throughout the thesis unless it is explicitly revised and versioned.
 
-> **Degree nomenclature rule:** This research is an **MSE (Master of Science in Engineering)** thesis.
+> **Degree nomenclature:** This research is an **MSE (Master of Science in Engineering)** thesis.
 
 ---
 
@@ -22,7 +23,7 @@ P,T=\text{physical infrastructure systems},
 I,O=\text{informational and organizational layers}.
 $$
 
-The most precise system description is:
+The most precise description is:
 
 > **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
 
@@ -32,24 +33,24 @@ $$
 \mathcal S=\{P,T,I,O\}.
 $$
 
-When a layer-index set is useful, use
+When a layer-index set is needed, use
 
 $$
-\mathcal L=\{P,T,I,O\},
+\mathcal L=\{P,T,I,O\}.
 $$
 
-so $\mathcal S$ denotes the system object and $\mathcal L$ denotes its layer index set. The two notations must not be used interchangeably without stating this distinction.
+$\mathcal S$ denotes the system object; $\mathcal L$ denotes the layer/system index set. These roles must not be silently interchanged.
 
 ---
 
 ## 2. Layer interpretation
 
-| Symbol | Type | Role |
+| Symbol | Type | Principal role |
 |---|---|---|
-| $P$ | Physical infrastructure system | Power generation, transmission, distribution, DER/storage, charging, and traction-power supply. |
-| $T$ | Physical infrastructure system | Road, electric-bus, urban-rail, heavy/regional-rail, and multimodal transportation. |
-| $I$ | Informational layer | Sensing, communication, data availability, information quality, latency, synchronization, estimation support, and signaling. |
-| $O$ | Organizational layer | Authority, coordination, decision making, resource allocation, workforce, logistics, mobilization, and intervention capability. |
+| $P$ | Physical infrastructure system | generation, transmission, distribution, DER/storage, charging and traction-power supply |
+| $T$ | Physical infrastructure system | road, electric bus, urban rail, heavy/regional rail and multimodal transportation |
+| $I$ | Informational layer | sensing, communication, data availability/quality, latency, synchronization, estimation support and signaling |
+| $O$ | Organizational layer | authority, coordination, decision making, resources, workforce, logistics, mobilization and intervention capability |
 
 The physical state is
 
@@ -71,7 +72,7 @@ z_O(t)
 \end{bmatrix}.
 $$
 
-The integrated system state is therefore
+The integrated state is
 
 $$
 Y(t)=
@@ -83,24 +84,24 @@ z_O(t)
 \end{bmatrix}.
 $$
 
-This notation is canonical: $I$ and $O$ name the layers, whereas $z_I(t)$ and $z_O(t)$ denote their time-varying states.
+$I$ and $O$ name layers/functions; $z_I(t)$ and $z_O(t)$ are their time-varying states.
 
 ---
 
 ## 3. Modeling discipline
 
-The thesis must not reduce the system to a purely physical Power–Transportation network when informational or organizational mechanisms materially affect observation, coordination, control, propagation, recovery, or viability.
+The thesis must not reduce the system to a purely physical P–T network when information or organization materially affects observation, coordination, control, propagation, recovery, viability or transformation.
 
 Accordingly,
 
 $$
-R_{\mathrm{system}}\neq R(P,T)
+R_{\rm system}\neq R(P,T)
 $$
 
-in the general case studied here. The working dependence is
+in the general case studied here. The conceptual dependence is
 
 $$
-R_{\mathrm{system}}
+R_{\rm system}
 =
 R(P,T,I,O,\mathbb I),
 $$
@@ -137,18 +138,44 @@ $$
 
 ## 4. Canonical cross-stage interpretation
 
-| Stage | Uses the system definition to answer |
+| Stage | Use of the system definition |
 |---|---|
-| **1 — Multilayer Structure** | What exists and where interaction can occur. |
-| **2 — Causal Mechanisms** | Which cross-layer relations are truly causal and how they transmit effects. |
-| **3 — Coupled Hybrid Multiscale Dynamics** | How the state $Y(t)$ and effective topology evolve. |
-| **4 — Observation, Organization, Feedback and Control** | How the physical state is measured, inferred, organizationally interpreted, and acted upon. |
-| **5 — Viability** | Whether controlled trajectories remain acceptable and maintainable. |
+| **1 — Multilayer Structure** | define what exists and where interaction can occur |
+| **2 — Causal Mechanisms** | determine which cross-layer relations are causal and how effects are transmitted |
+| **3 — Coupled Hybrid Multiscale Dynamics** | evolve $Y(t)$, modes and effective topology across heterogeneous timescales |
+| **4 — Observation, Organization, Feedback and Control** | measure/infer the physical state and map informational/organizational capability into feasible $u(t)$ |
+| **5 — Viability** | determine whether controlled trajectories remain acceptable and maintainable |
+| **6 — Resilience-to-Sustainability Transformation Interface** | determine whether preserving the current regime remains adequate and specify required change |
+| **7 — Sustainable Transformation Pathways** | transform candidate regimes and compare adaptive pathways under feasibility and uncertainty |
 
 ---
 
-## 5. Canonical thesis statement
+## 5. Action hierarchy
 
-> **The research studies a multilayer interdependent Power–Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, and sustainable transformation.**
+Operational control and strategic transformation are different objects:
 
-This is the default system identity for the MSE thesis, presentations, literature extraction, mathematical modeling, simulation, validation, and framework design unless explicitly changed through versioned revision.
+$$
+\underbrace{u(t)}_{\text{operate the current regime}}
+\neq
+\underbrace{\mathbf a_k}_{\text{transform the regime}}.
+$$
+
+The strategic action $\mathbf a_k$ is also distinct from the Stage-2 interdependency activation $a_{ij}$.
+
+The Stage-7 regime object is
+
+$$
+\mathfrak M_k
+=
+(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
+$$
+
+Thus the original system ontology remains fixed while Stage 7 may change the architecture/configuration of a candidate future regime.
+
+---
+
+## 6. Canonical thesis statement
+
+> **The research studies a multilayer interdependent Power–Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, regime adequacy and sustainable transformation.**
+
+This is the default system identity for thesis chapters, figures, literature extraction, mathematical models, simulation, validation and transformation-pathway analysis unless changed through an explicit versioned revision.
