@@ -1,34 +1,58 @@
 # Scientific Propositions and Falsification Plan
 
-**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7  
+**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7 AND PRIMARY HYPOTHESES  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Evidence rule:** A proposition is a testable thesis claim, not a statement of truth before analysis.  
-**Framework rule:** Stage-7 objects are now frozen as framework definitions but retain `[P]` status where they are thesis constructs and must be tested numerically.
-
-The propositions below are aligned with the current P–T–I–O architecture and the frozen seven-stage mathematical framework.
-
-## 1. Proposition registry
-
-| ID | Testable proposition | Mathematical object / contrast | Primary falsification or stress test |
-|---|---|---|---|
-| **P1** | Explicit P–T–I–O representation adds explanatory or predictive value beyond a physical P–T-only model when information and organizational constraints materially affect response. | $\mathscr M_{PT}$ vs. $\mathscr M_{PTIO}$ | Hold scenario/data conditions fixed; compare out-of-sample state, timing, service and intervention outcomes. Reject/qualify if added layers do not improve justified metrics after complexity control. |
-| **P2** | Dynamic interdependencies produce materially different trajectories or viability conclusions from static coupling under some operating regimes. | $\mathcal G(t)$ / $w_{ij}(t),a_{ij}(t)$ vs. static counterparts | Freeze coupling parameters/topology and compare $Y(t)$, event order, $T_C(j)$, $\mathcal V$ and margins. Reject/qualify if differences remain below prespecified tolerances. |
-| **P3** | Information degradation can materially alter control outcome through observability, estimation error or response delay. | $z_I$, $\widehat X$, $\Sigma_X$, $\tau_{\rm response}$ | Sweep delay, loss, freshness and availability; compare estimation error and closed-loop outcomes against full-information baselines. |
-| **P4** | Organizational constraints can materially reduce the feasible action set and alter controlled viability. | $\mathcal U(z_I,z_O)$ and $\mathcal V_{\rm sus}^{u,T}$ | Compare ideal organization with realistic authority, resource, workforce, coordination and mobilization limits. Reject/qualify if viable-set/outcome differences are negligible. |
-| **P5** | Response timing relative to cascade/viability clocks contains decision-relevant information, but timing alone is not sufficient for successful control. | $\Pi_R$, $S_{\mathcal V}$, $S_K$, $\Pi_{\mathcal V}$, $\Pi_K$ | Test whether timing diagnostics discriminate successful/failed response after conditioning on observability, controllability, resource feasibility and action quality. |
-| **P6** | The proposed Riemannian viability margin provides information beyond normalized Euclidean/weighted distance. | $\rho_E$ vs. $\rho_g=d_{g_\psi}(Y,\partial\mathcal V)$ | Compare warning performance, boundary proximity, intervention ranking, robustness and out-of-sample usefulness. Reject if $\rho_g$ does not outperform justified simpler baselines. |
-| **P7** | Interdependency sensitivity can identify interfaces whose perturbation materially changes viability-related outcomes. | $S_{ij}^{\mathcal V}(\Delta\theta)$ | Perturb $\theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij})$, recompute viability functionals and test ranking stability under uncertainty and perturbation size. |
-| **P8** | Reduced viability-state models can preserve or conservatively bound conclusions of the higher-dimensional Stage-3 system. | $Y_V=\mathcal P_V(Y)$ and reduced/full viability outputs | Compare constraint violations, viable-set classification, temporal margins and interface rankings. Reject a reduction that creates unjustified false-safe classifications or unstable conclusions. |
-| **P9** | A regime can be controllably viable over the Stage-5 horizon yet remain inadequate under longer-horizon sustainability, equity, lock-in or adaptation-limit requirements. | Stage-5 $\mathcal R_5$ vs. Stage-6 $(\Lambda_{\rm LT},\mathbf d_6)$ | Construct matched cases in which Stage-5 viability is satisfactory while one or more long-horizon requirements remain materially violated. Reject/qualify if Stage-6 diagnosis adds no decision-relevant distinction beyond Stage 5. |
-| **P10** | Persistent critical interdependencies can create a regime-level lock-in that makes repeated recovery inferior to structural adaptation/transformation. | repeated $S_{ij}^{\mathcal V}$ + interdependency-lock-in cycle + $\mathcal D_{\mathfrak I}$ | Compare repeated restoration of the original mechanism against admissible structural modifications under matched hazards; test long-horizon viability, sustainability, equity, cost and new-vulnerability effects. |
-
-These ten propositions remain the current registered falsifiable claims. Freezing Stage 7 does **not** automatically create additional empirical claims. Any Stage-7-specific performance proposition must be separately registered before testing.
+**Evidence rule:** A proposition is a testable supporting claim, diagnostic, or sub-test. The five primary confirmatory hypotheses are defined separately in [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md).  
+**Framework rule:** Frozen framework objects remain `[P]` where they are thesis constructs until their scientific value is demonstrated through the prespecified hypothesis tests.
 
 ---
 
-## 2. Core model comparisons
+## 1. Relationship between hypotheses and propositions
 
-The Stage-4 nested control comparison is
+The canonical primary hypothesis set is
+
+$$
+\mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
+$$
+
+The propositions in this file are **not ten additional primary hypotheses**. They are subordinate falsifiable claims used to operationalize, stress-test, explain, or decompose the five primary hypotheses.
+
+The hierarchy is therefore
+
+$$
+\text{theoretical hypothesis }H_{\rm SYS}
+\rightarrow
+\{H_1,\ldots,H_5\}
+\rightarrow
+\{P_1,\ldots,P_{10}\}
+\rightarrow
+\text{tests / ablations / falsification}.
+$$
+
+Numerical thresholds $\delta_1,\ldots,\delta_5$ remain unset until justified *a priori* in the Hypothesis Specification Matrix.
+
+---
+
+## 2. Proposition registry
+
+| ID | Testable proposition | Primary hypothesis supported | Main mathematical object / contrast |
+|---|---|---:|---|
+| **P1** | Explicit P–T–I–O representation adds explanatory or predictive value beyond a physical P–T-only model when information and organizational constraints materially affect response. | $H_2$ | physical-only vs. full P–T–I–O models |
+| **P2** | Dynamic interdependencies produce materially different trajectories or viability conclusions from static coupling under some operating regimes. | $H_1$ | $\mathcal G(t)$, $w_{ij}(t)$, $a_{ij}(t)$ vs. static counterparts |
+| **P3** | Information degradation can materially alter control outcome through observability, estimation error, or response delay. | $H_2$ | $z_I$, $\widehat X$, $\Sigma_X$, $\tau_{\rm response}$ |
+| **P4** | Organizational constraints can materially reduce the feasible action set and alter controlled viability. | $H_2$ | $\mathcal U(z_I,z_O)$ and $\mathcal V_{\rm sus}^{u,T}$ |
+| **P5** | Response timing relative to cascade/viability clocks contains decision-relevant information, but timing alone is not sufficient for successful control. | $H_2$, $H_3$ | $\Pi_R$, $S_{\mathcal V}$, $S_K$, $\Pi_{\mathcal V}$, $\Pi_K$ |
+| **P6** | The proposed Riemannian viability margin provides information beyond normalized Euclidean/weighted distance. | $H_3$ | $\rho_E$ vs. $\rho_g$ |
+| **P7** | Interdependency sensitivity can identify interfaces whose perturbation materially changes viability-related outcomes. | $H_4$ | $S_{ij}^{\mathcal V}(\Delta\theta)$ |
+| **P8** | Reduced viability-state models can preserve or conservatively bound conclusions of the higher-dimensional Stage-3 system. | $H_3$, implementation validity | $Y_V=\mathcal P_V(Y)$ vs. full model |
+| **P9** | A regime can be controllably viable over the Stage-5 horizon yet remain inadequate under longer-horizon sustainability, equity, lock-in, or adaptation-limit requirements. | $H_5$ / Stage-6 validity | $\mathcal R_5$ vs. $(\Lambda_{\rm LT},\mathbf d_6)$ |
+| **P10** | Persistent critical interdependencies can create regime-level lock-in that makes repeated recovery inferior to structural adaptation/transformation. | $H_4$, $H_5$ | repeated $S_{ij}^{\mathcal V}$, $\mathcal D_{\mathfrak I}$, transformation alternatives |
+
+---
+
+## 3. Core model comparisons
+
+For information/organization effects, nested comparisons may use
 
 $$
 \mathscr M_0
@@ -44,10 +68,10 @@ where
 
 | Model | Assumption |
 |---|---|
-| $\mathscr M_0$ | Perfect observation + instantaneous organization |
-| $\mathscr M_1$ | Imperfect/delayed information |
-| $\mathscr M_2$ | Imperfect information + organizational constraints |
-| $\mathscr M_3$ | Full closed-loop P–T–I–O representation |
+| $\mathscr M_0$ | perfect observation + instantaneous organization |
+| $\mathscr M_1$ | imperfect/delayed information |
+| $\mathscr M_2$ | imperfect information + organizational constraints |
+| $\mathscr M_3$ | full closed-loop P–T–I–O representation |
 
 The intended contrasts are
 
@@ -63,23 +87,27 @@ $$
 \mathscr M_3-\mathscr M_0=\text{full coupled-response effect}.
 $$
 
-The symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$ and Stage-7 infrastructure-regime symbol $\mathcal M_k$.
+The symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$ and Stage-7 regime symbol $\mathcal M_k$.
 
 ---
 
-## 3. Stage-5 baseline-versus-extension tests
+## 4. Stage-5 baseline-versus-extension tests
 
 The geometric baseline and proposed extension are
 
 $$
-\rho_E(Y)=d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right),
+\rho_E(Y)
+=
+d\!\left(\widetilde Y,\partial\widetilde{\mathcal V}\right),
 $$
 
 $$
-\rho_g(Y)=d_{g_\psi}\!\left(Y,\partial\mathcal V\right).
+\rho_g(Y)
+=
+d_{g_\psi}\!\left(Y,\partial\mathcal V\right).
 $$
 
-The proposed extension is supported only if its added complexity produces reproducible value under a declared metric.
+The proposed extension is supported only if the added complexity produces reproducible value under a declared metric.
 
 Likewise,
 
@@ -89,13 +117,13 @@ S_{\mathcal V}=T_{\mathcal V}-\tau_{\rm response},
 S_K=T_K-\tau_{\rm response}
 $$
 
-must be tested as diagnostics rather than assumed to be laws of resilience.
+must be tested as diagnostics rather than assumed to be universal laws.
 
 ---
 
-## 4. Stage-6 falsification logic
+## 5. Stage-6 falsification logic
 
-Stage 6 is not allowed to infer transformation from one Stage-5 quantity alone. In particular,
+Stage 6 must not infer transformation from a single Stage-5 quantity:
 
 $$
 \rho\text{ small}\not\Rightarrow\text{transform},
@@ -119,21 +147,13 @@ $$
 (c_6,\mathcal D_6,\boldsymbol\zeta_T).
 $$
 
-A Stage-6 transformation diagnosis must survive counterfactual comparisons against restoration within the current regime, feasible incremental adaptation, sensitivity to long-horizon requirements, alternative lock-in/maladaptation interpretations, and uncertainty in Stage-5 evidence.
+A Stage-6 diagnosis must survive counterfactual comparisons against restoration within the current regime, feasible incremental adaptation, sensitivity to long-horizon requirements, alternative lock-in/maladaptation interpretations, and uncertainty in Stage-5 evidence.
 
 ---
 
-## 5. Stage-7 frozen framework objects and validation obligations
+## 6. Stage-7 validation obligations
 
-Stage 7 is now frozen around the infrastructure-regime object
-
-$$
-\mathcal M_k
-=
-(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\boldsymbol\theta_k,\mathcal U_k),
-$$
-
-and the strategic transformation
+Stage 7 is frozen around
 
 $$
 \mathcal M_{k+1}
@@ -141,13 +161,13 @@ $$
 \mathcal T_{a_k}(\mathcal M_k,\xi_k),
 $$
 
-where
+with
 
 $$
-a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}].
+a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}],
 $$
 
-The Stage-7 fundamental object is
+and
 
 $$
 \mathfrak P_{\rm ST}
@@ -155,44 +175,36 @@ $$
 (\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}).
 $$
 
-These are framework definitions. Their `[P]` status means their scientific value must still be tested. At minimum, Stage-7 implementation must check:
+The principal Stage-7 performance claim is no longer an unregistered proposition: it is explicitly tested by **$H_5$**, which compares adaptive trigger-based pathways against the best comparable fixed pathway under deep uncertainty.
 
-- whether adaptive policies outperform or materially improve upon justified fixed-sequence baselines under the tested uncertainty set;
-- whether transformation actions satisfy Stage-6 requirements rather than merely improve a topology metric;
-- whether candidate regimes remain physically/dynamically feasible after Stage-3 replay;
-- whether information and organizational constraints preserve implementability;
-- whether Stage-5 viability and Stage-6 adequacy improve without unacceptable new vulnerabilities;
-- whether robust-Pareto results are stable to objective definitions, scenario sets and uncertainty assumptions;
-- whether removing/postponing a pathway intervention changes outcomes materially in counterfactual ablation.
-
-Freezing the framework therefore fixes **what must be tested**, not the outcome of those tests.
+At minimum, Stage-7 implementation must also verify that transformation actions satisfy Stage-6 requirements, remain physically/dynamically feasible after Stage-3 replay, respect information/organizational implementation limits, improve or preserve Stage-5 viability as required, and do not create unacceptable new sustainability/equity failures.
 
 ---
 
-## 6. Decision discipline
+## 7. Decision discipline
 
-A proposition is considered **supported under the tested model, scenarios and data** only when all of the following hold:
+A hypothesis or proposition is considered **supported under the tested model, scenarios, and data** only when:
 
-1. the mathematical comparison and evaluation metric are declared before interpreting results;
-2. numerical tolerances or statistical decision rules are reported;
-3. uncertainty is propagated where it can materially change the result;
+1. the comparison and metric are declared before interpreting final results;
+2. numerical thresholds or statistical decision rules are fixed *a priori*;
+3. uncertainty is propagated where it can materially change conclusions;
 4. baseline and ablation models are calibrated fairly;
-5. sensitivity checks do not reverse the conclusion without explanation;
-6. added model complexity is justified by measurable explanatory, predictive, control, viability, transition-diagnostic or transformation-pathway value;
-7. the scope of inference is limited to the evidence actually analyzed.
+5. sensitivity checks do not reverse conclusions without explanation;
+6. added mathematical complexity is justified by measurable value;
+7. inference is limited to the analyzed evidence domain.
 
 ---
 
-## 7. Failure criteria
+## 8. Failure criteria
 
-A thesis construct must be **rejected, simplified or qualified** when its falsification test shows no material improvement, unstable rankings, non-identifiability, excessive sensitivity, violation of physical constraints or dependence on unsupported assumptions.
+A thesis construct must be **rejected, simplified, or qualified** when its critical test shows no material improvement, unstable rankings, non-identifiability, excessive sensitivity, violation of physical constraints, or dependence on unsupported assumptions.
 
-In particular,
+Therefore,
 
 $$
 \text{more mathematical complexity}
 \not\Rightarrow
-\text{better engineering explanation}.
+\text{better engineering explanation},
 $$
 
 and
@@ -205,34 +217,22 @@ $$
 
 ---
 
-## 8. Complete framework context
+## 9. Next confirmatory task
 
-The frozen chain is
+Before final simulation, construct the **Hypothesis Specification Matrix** for $H_1$–$H_5$ and freeze, for each hypothesis:
 
-$$
-\boxed{
-\underbrace{\mathcal S}_{1}
-\rightarrow
-\underbrace{\mathfrak I}_{2}
-\rightarrow
-\underbrace{F_{\mathcal G}^{m}}_{3}
-\rightarrow
-\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
-\rightarrow
-\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
-\rightarrow
-\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
-\rightarrow
-\underbrace{\mathfrak P_{\rm ST}}_{7}
-}.
-$$
+- theory;
+- causal mechanism;
+- independent/manipulated variables;
+- outcome variables;
+- baselines;
+- boundary conditions;
+- scenario/uncertainty domain;
+- prediction;
+- rival hypothesis;
+- critical test;
+- falsification criterion;
+- justified effect threshold $\delta_i$;
+- planned analysis and sensitivity checks.
 
-Every Stage-7 candidate must be replayed through Stages 1–6 before acceptance.
-
----
-
-## 9. Non-claims
-
-The thesis does not infer novelty from literature counts, repository size, visual complexity, framework freeze or the mere combination of established methods. Novelty and contribution must be demonstrated through explicit comparison, falsification and evidence.
-
-Historical P–W–T–SW or waste–drainage propositions are superseded and are not part of the current P–T–I–O proposition registry.
+This matrix is the bridge from the frozen conceptual framework to confirmatory numerical validation.
