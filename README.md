@@ -6,7 +6,8 @@
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Matrix](https://img.shields.io/badge/confirmatory%20matrix-CURRENT-0969DA)
 ![Demonstrator](https://img.shields.io/badge/minimal%20sufficient%20realization-CURRENT-0969DA)
-![Next](https://img.shields.io/badge/next-actual%20P--T--I--O%20demonstrator%20selection-9A6700)
+![Evidence](https://img.shields.io/badge/325--paper%20pipeline-CURRENT-0969DA)
+![Next](https://img.shields.io/badge/next-closed--corpus%20ranking-9A6700)
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
@@ -14,6 +15,7 @@
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
 **Confirmatory matrix:** current operationalization specification; exact $\Omega_H$, $\delta_i$ and final analysis procedures remain unfrozen  
 **Demonstrator methodology:** Minimal Sufficient Experimental Realization defined; actual topology/component selection remains unfrozen  
+**Evidence-selection methodology:** frozen 325-paper corpus → robust ranking → H1–H5 evidence sets → full-text mechanism/equation extraction  
 **Citation standard:** APA 7th edition author–date  
 **Updated:** 2026-09-11
 
@@ -39,6 +41,7 @@
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization, VVUQ gates, critical experiments, uncertainty and decision rules |
 | [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale, mechanism-preservation constraints and simplification stopping rule |
+| [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | 325-paper ranking → H1–H5 evidence prioritization → full-text extraction → demonstrator design |
 | [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | notation/rendering standard |
 | [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md) | mandatory framework-figure QA |
@@ -183,6 +186,40 @@ The actual P–T–I–O demonstrator has **not** yet been frozen.
 
 ---
 
+## Closed-corpus evidence-selection engine
+
+The existing frozen 325-paper PRISMA-style + Monte Carlo protocol now serves a specific downstream purpose documented in [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md):
+
+```math
+325\text{-paper corpus}
+\rightarrow
+\text{robust evidence ranking}
+\rightarrow
+\text{best records for }H_1-H_5
+\rightarrow
+\text{full-text evidence extraction}.
+```
+
+The next extraction chain is
+
+```math
+\text{paper}
+\rightarrow
+\text{mechanism}
+\rightarrow
+\text{equation}
+\rightarrow
+\text{parameter}
+\rightarrow
+\text{data/benchmark}
+\rightarrow
+\text{hypothesis}.
+```
+
+The closed-corpus Monte Carlo ranking identifies **which records deserve priority within the frozen 325-record dataset**. It does not establish equation-level adequacy, parameters, validation data or physical assumptions; those require full-text extraction after ranking.
+
+---
+
 ## Repository display and mathematical QA
 
 Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V3.md`:
@@ -211,4 +248,24 @@ Active thesis Markdown follows the rules in `project/MATHEMATICAL_PRESENTATION_V
 
 > **MINIMAL SUFFICIENT EXPERIMENTAL REALIZATION METHODOLOGY: CURRENT; ACTUAL DEMONSTRATOR NOT YET FROZEN.**
 
-The next rigorous step is to select the actual minimal sufficient P–T–I–O demonstrator and determine what physical, data and benchmark evidence is available. That evidence will define defensible $\Omega_H$ and $\Omega_V$ and support *a priori* choices for $\delta_i$, acceptance criteria and final confirmatory analysis procedures before numerical case-study computation, falsification and validation.
+> **325-PAPER CLOSED-CORPUS EVIDENCE-SELECTION PIPELINE: CURRENT.**
+
+The operational sequence is now
+
+```math
+\begin{aligned}
+&\textbf{Phase A: }325\text{-paper closed-corpus ranking}\\
+&\downarrow\\
+&\textbf{Phase B: hypothesis-specific evidence set for }H_1-H_5\\
+&\downarrow\\
+&\textbf{Phase C: full-text mechanism/equation extraction}\\
+&\downarrow\\
+&\textbf{Phase D: candidate demonstrator architectures}\\
+&\downarrow\\
+&\textbf{Phase E: scientific-sufficiency + V\&V feasibility comparison}\\
+&\downarrow\\
+&\textbf{Phase F: freeze the minimal sufficient }P-T-I-O\text{ demonstrator.}
+\end{aligned}
+```
+
+Only after the demonstrator and its evidence base are established should $\Omega_H$, $\Omega_V$, $\delta_i$, acceptance criteria and final confirmatory analysis procedures be frozen *a priori*.
