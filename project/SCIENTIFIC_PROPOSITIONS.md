@@ -1,11 +1,11 @@
 # Scientific Propositions and Falsification Plan
 
-**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–6  
+**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Evidence rule:** A proposition is a testable thesis claim, not a statement of truth before analysis.  
-**Stage-7 rule:** Stage-7 candidate constructs are not added to the frozen proposition registry until Stage 7 itself is explicitly frozen.
+**Framework rule:** Stage-7 objects are now frozen as framework definitions but retain `[P]` status where they are thesis constructs and must be tested numerically.
 
-The propositions below are aligned with the current P–T–I–O architecture and the frozen Stage-2 through Stage-6 mathematical objects.
+The propositions below are aligned with the current P–T–I–O architecture and the frozen seven-stage mathematical framework.
 
 ## 1. Proposition registry
 
@@ -21,6 +21,8 @@ The propositions below are aligned with the current P–T–I–O architecture a
 | **P8** | Reduced viability-state models can preserve or conservatively bound conclusions of the higher-dimensional Stage-3 system. | $Y_V=\mathcal P_V(Y)$ and reduced/full viability outputs | Compare constraint violations, viable-set classification, temporal margins and interface rankings. Reject a reduction that creates unjustified false-safe classifications or unstable conclusions. |
 | **P9** | A regime can be controllably viable over the Stage-5 horizon yet remain inadequate under longer-horizon sustainability, equity, lock-in or adaptation-limit requirements. | Stage-5 $\mathcal R_5$ vs. Stage-6 $(\Lambda_{\rm LT},\mathbf d_6)$ | Construct matched cases in which Stage-5 viability is satisfactory while one or more long-horizon requirements remain materially violated. Reject/qualify if Stage-6 diagnosis adds no decision-relevant distinction beyond Stage 5. |
 | **P10** | Persistent critical interdependencies can create a regime-level lock-in that makes repeated recovery inferior to structural adaptation/transformation. | repeated $S_{ij}^{\mathcal V}$ + interdependency-lock-in cycle + $\mathcal D_{\mathfrak I}$ | Compare repeated restoration of the original mechanism against admissible structural modifications under matched hazards; test long-horizon viability, sustainability, equity, cost and new-vulnerability effects. |
+
+These ten propositions remain the current registered falsifiable claims. Freezing Stage 7 does **not** automatically create additional empirical claims. Any Stage-7-specific performance proposition must be separately registered before testing.
 
 ---
 
@@ -61,7 +63,7 @@ $$
 \mathscr M_3-\mathscr M_0=\text{full coupled-response effect}.
 $$
 
-The symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$.
+The symbols $\mathscr M_k$ denote model variants and are intentionally distinct from the Stage-2 mechanism symbol $M_{ij}$ and Stage-7 infrastructure-regime symbol $\mathcal M_k$.
 
 ---
 
@@ -103,8 +105,6 @@ $$
 \mathcal V\text{ small}\not\Rightarrow\text{transform},
 $$
 
-and
-
 $$
 \text{hazard/failure occurrence}\not\Rightarrow\text{transform}.
 $$
@@ -116,22 +116,60 @@ $$
 :
 (\mathcal R_5,\Lambda_{\rm LT},\mathbf d_6)
 \mapsto
-(c_6,\mathcal D_6,\boldsymbol{\zeta}_T).
+(c_6,\mathcal D_6,\boldsymbol\zeta_T).
 $$
 
-A Stage-6 transformation diagnosis must therefore survive counterfactual comparisons against at least:
-
-- restoration within the current regime;
-- feasible incremental adaptation within the current regime identity;
-- sensitivity to long-horizon requirement definitions;
-- alternative treatments of lock-in/maladaptation evidence;
-- uncertainty in the Stage-5 evidence entering $\mathcal R_5$.
-
-The Stage-6 construct is useful only if it separates cases in which current-regime viability is sufficient from cases in which the regime itself remains structurally or normatively inadequate.
+A Stage-6 transformation diagnosis must survive counterfactual comparisons against restoration within the current regime, feasible incremental adaptation, sensitivity to long-horizon requirements, alternative lock-in/maladaptation interpretations, and uncertainty in Stage-5 evidence.
 
 ---
 
-## 5. Decision discipline
+## 5. Stage-7 frozen framework objects and validation obligations
+
+Stage 7 is now frozen around the infrastructure-regime object
+
+$$
+\mathcal M_k
+=
+(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\boldsymbol\theta_k,\mathcal U_k),
+$$
+
+and the strategic transformation
+
+$$
+\mathcal M_{k+1}
+=
+\mathcal T_{a_k}(\mathcal M_k,\xi_k),
+$$
+
+where
+
+$$
+a_k=[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}].
+$$
+
+The Stage-7 fundamental object is
+
+$$
+\mathfrak P_{\rm ST}
+=
+(\mathbb G_{\rm ST},\boldsymbol\pi,\Omega,\mathcal A^{\rm feas},\mathbf J,\mathbb M_{\rm sus}).
+$$
+
+These are framework definitions. Their `[P]` status means their scientific value must still be tested. At minimum, Stage-7 implementation must check:
+
+- whether adaptive policies outperform or materially improve upon justified fixed-sequence baselines under the tested uncertainty set;
+- whether transformation actions satisfy Stage-6 requirements rather than merely improve a topology metric;
+- whether candidate regimes remain physically/dynamically feasible after Stage-3 replay;
+- whether information and organizational constraints preserve implementability;
+- whether Stage-5 viability and Stage-6 adequacy improve without unacceptable new vulnerabilities;
+- whether robust-Pareto results are stable to objective definitions, scenario sets and uncertainty assumptions;
+- whether removing/postponing a pathway intervention changes outcomes materially in counterfactual ablation.
+
+Freezing the framework therefore fixes **what must be tested**, not the outcome of those tests.
+
+---
+
+## 6. Decision discipline
 
 A proposition is considered **supported under the tested model, scenarios and data** only when all of the following hold:
 
@@ -140,12 +178,12 @@ A proposition is considered **supported under the tested model, scenarios and da
 3. uncertainty is propagated where it can materially change the result;
 4. baseline and ablation models are calibrated fairly;
 5. sensitivity checks do not reverse the conclusion without explanation;
-6. added model complexity is justified by measurable explanatory, predictive, control, viability or transition-diagnostic value;
+6. added model complexity is justified by measurable explanatory, predictive, control, viability, transition-diagnostic or transformation-pathway value;
 7. the scope of inference is limited to the evidence actually analyzed.
 
 ---
 
-## 6. Failure criteria
+## 7. Failure criteria
 
 A thesis construct must be **rejected, simplified or qualified** when its falsification test shows no material improvement, unstable rankings, non-identifiability, excessive sensitivity, violation of physical constraints or dependence on unsupported assumptions.
 
@@ -157,18 +195,44 @@ $$
 \text{better engineering explanation}.
 $$
 
+and
+
+$$
+\text{framework freeze}
+\not\Rightarrow
+\text{empirical validation}.
+$$
+
 ---
 
-## 7. Stage-7 research boundary
+## 8. Complete framework context
 
-Current Stage-7 research suggests candidate objects for adaptive, trigger-dependent transformation pathways, but those constructs are **not included in this frozen proposition registry yet**.
+The frozen chain is
 
-This prevents research hypotheses about pathway graphs, robust Pareto sets, trigger regions or real-option values from being mistaken for accepted Stage-7 framework objects before the Stage-7 scope decision.
+$$
+\boxed{
+\underbrace{\mathcal S}_{1}
+\rightarrow
+\underbrace{\mathfrak I}_{2}
+\rightarrow
+\underbrace{F_{\mathcal G}^{m}}_{3}
+\rightarrow
+\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}
+\rightarrow
+\underbrace{K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}
+\rightarrow
+\underbrace{\Phi_{\rm ST}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}
+\rightarrow
+\underbrace{\mathfrak P_{\rm ST}}_{7}
+}.
+$$
+
+Every Stage-7 candidate must be replayed through Stages 1–6 before acceptance.
 
 ---
 
-## 8. Non-claims
+## 9. Non-claims
 
-The thesis does not infer novelty from literature counts, repository size, visual complexity or the mere combination of established methods. Novelty and contribution must be demonstrated through explicit comparison, falsification and evidence.
+The thesis does not infer novelty from literature counts, repository size, visual complexity, framework freeze or the mere combination of established methods. Novelty and contribution must be demonstrated through explicit comparison, falsification and evidence.
 
 Historical P–W–T–SW or waste–drainage propositions are superseded and are not part of the current P–T–I–O proposition registry.
