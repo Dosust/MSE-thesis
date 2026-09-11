@@ -1,673 +1,612 @@
-# Mathematical Physics of Sustainable Infrastructure Resilience
+# MSE Thesis — Multilayer Interdependent Power–Transportation Infrastructure Resilience
 
-### Dynamic Interfaces, Sustainable–Equitable Viability, Recovery Geometry, and Climate Stress in Coupled P–W–T–SW Systems
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**Repository status:** Active thesis repository  
+**Framework status:** Seven-stage architecture frozen; Stage 1 system definition canonical; Stage 2 interdependency mechanisms frozen  
+**Last major framework update:** 2026-09-11
 
-> **Research proposition.** Sustainable infrastructure resilience is treated here as a constrained dynamical-systems problem: determine which states of a climate-stressed, dynamically coupled infrastructure system can remain within—or be returned to—a physically feasible, service-preserving, sustainable, and equitable operating region.
-
-<p align="center">
-  <img src="assets/math-art/master_architecture.svg" alt="Master mathematical architecture" width="100%" />
-</p>
-
-> **Project-memory entry point:** [`PROJECT_MEMORY.md`](PROJECT_MEMORY.md) → corrected canonical v2 memory under [`project_memory/2026-08-21_chain_architecture_v2/`](project_memory/2026-08-21_chain_architecture_v2/).
+> **Repository rule.** This repository is the sole active GitHub source of truth for the thesis. Historical architectures may remain under archive or project-memory paths for provenance, but they do not override the current canonical framework.
 
 ---
 
-## 1. Core thesis architecture and broader research program
+## 1. Thesis system
 
-The **core MSE architecture**, consistent with [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md), is
+The thesis studies a
 
-$$
-\boxed{
-\mathcal D_{\mathrm{obs}}
-\longrightarrow
-(\widehat{\mathcal G},\widehat{\theta},\Sigma_\theta)
-\longrightarrow
-\mathcal F_{\mathrm{dyn}}
-\longrightarrow
-K_R
-\longrightarrow
-\mathcal V_R
-\longrightarrow
-\mathcal C_R
-\longrightarrow
-\mathcal U_{\mathrm{recovery}}
-}
-$$
+```math
+\boxed{\textbf{Multilayer interdependent infrastructure system}}
+```
 
-The central mathematical contribution is concentrated on
+with
 
-$$
-\boxed{
-\text{Dynamic Coupling}
-\rightarrow
-\text{Admissibility}
-\rightarrow
-\text{Viability}
-\rightarrow
-\text{Recovery}
-}
-$$
-
-with identification/inverse problems/UQ upstream and control/design as structured extensions.
-
-The **broader long-term research program** can continue through
-
-$$
-\boxed{
-\text{Observation}
-\rightarrow
-\text{Identification}
-\rightarrow
-\text{Dynamic Coupling}
-\rightarrow
-\text{Admissibility}
-\rightarrow
-\text{Viability}
-\rightarrow
-\text{Recoverability}
-\rightarrow
-\text{Control}
-\rightarrow
-\text{Design}
-\rightarrow
-\text{Optimization}
-\rightarrow
-\text{Decision}
-}
-$$
-
-without implying equal original contribution at every stage in one MSE thesis.
-
-The central geometric object is
-
-$$
-\boxed{\partial\mathcal V_R}
-$$
-
-—the boundary separating states for which admissibility can still be maintained from those for which it cannot under the declared model, disturbance set, uncertainty, and admissible controls.
-
-### Three governing questions
-
-$$
-\boxed{
-\begin{aligned}
-Q_1 &: \text{What moves the viability boundary?}\\
-Q_2 &: \text{How uncertain is that boundary?}\\
-Q_3 &: \text{What interventions or designs move it in a favorable direction?}
-\end{aligned}}
-$$
-
-The current central research question is:
-
-> **How accurately must dynamic cross-infrastructure interfaces be identified and represented before sustainable/equitable viability and recovery predictions can be trusted?**
-
-Full mathematical specification: [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
-
----
-
-## 2. Mathematical ontology
-
-| Symbol | Mathematical role | Physical meaning |
-|---|---|---|
-| $X(t)$ | coupled state vector | state of Power–Water/Drainage–Transportation–Solid-Waste infrastructure |
-| $Z(t)$ | interface state | evolving cross-sector coupling mechanisms |
-| $m(t)$ | discrete mode | operating/failure configuration |
-| $u(t)$ | control | recovery/intervention action |
-| $\xi(t)$ | exogenous forcing | climate forcing |
-| $\eta(t)$ | realized hazard | local flood/stress acting on infrastructure |
-| $\theta$ | uncertain parameters | capacities, coupling strengths, thresholds, model parameters |
-| $Y(t)$ | observation vector | partial/noisy measurements |
-| $K_R$ | admissible set | physical + service + sustainability + equity constraints |
-| $\mathcal V_R$ | viability kernel | states from which admissibility can be maintained |
-| $\mathcal C_R$ | capture/recovery set | states from which $\mathcal V_R$ can be reached in finite time |
-| $\tau_R$ | recovery-time map | minimum admissible recovery time |
-| $d$ | design vector | topology, redundancy, capacities, storage, interface hardening |
-
----
-
-## 3. Governing hybrid multiscale model
-
-A general reduced representation is
-
-$$
-\boxed{
-\begin{aligned}
-\dot X &= F(X,Z,m,u,\eta;\theta),\\
-\varepsilon\dot Z &= G(X,Z,m,\eta;\theta),\\
-m^+ &= \Phi(X,Z,m,\eta),\\
-Y &= H(X,Z;\theta)+\varepsilon_Y.
-\end{aligned}}
-$$
-
-This deliberately separates:
-
-1. **continuous sector dynamics**;
-2. **dynamic interface evolution**;
-3. **hybrid operating/failure modes**;
-4. **partial observation and identification uncertainty**.
-
-The numerical code currently committed under `methods/architecture/` is a **reference/synthetic QA layer**, not a claim that the full thesis model has already been calibrated or solved.
-
----
-
-## 4. P–W–T–SW coupled system
-
-The coupled state is
-
-$$
-X(t)=
-\begin{bmatrix}
-X_P(t)\\
-X_W(t)\\
-X_T(t)\\
-X_{SW}(t)
-\end{bmatrix}.
-$$
-
-A time-dependent coupling operator can be written as
-
-$$
-\mathcal A(t)=
-\begin{bmatrix}
-A_{PP} & A_{PW} & A_{PT} & A_{P,SW}\\
-A_{WP} & A_{WW} & A_{WT} & A_{W,SW}\\
-A_{TP} & A_{TW} & A_{TT} & A_{T,SW}\\
-A_{SW,P} & A_{SW,W} & A_{SW,T} & A_{SW,SW}
-\end{bmatrix}.
-$$
-
-The off-diagonal terms represent specified **interface mechanisms/interdependencies**, not merely graph adjacency.
-
-<p align="center">
-  <img src="assets/math-art/dynamic_interface_operator.svg" alt="Dynamic P-W-T-SW interface operator" width="94%" />
-</p>
-
----
-
-## 5. Climate forcing and waste–drainage–transport feedbacks
-
-External forcing and realized hazard are separated:
-
-$$
-\boxed{\xi(t)\longrightarrow\eta(t)}.
-$$
-
-For the primary urban-flood demonstrator:
-
-$$
-\xi_{\mathrm{rainfall}}
-\rightarrow
-\eta_{\mathrm{flood}}.
-$$
-
-A candidate endogenous feedback is
-
-$$
-\boxed{
-X_{SW}
-\rightarrow
-B_{\mathrm{drain}}
-\rightarrow
-\eta_{\mathrm{flood}}
-\rightarrow
-(X_P,X_W,X_T,X_{SW}).
-}
-$$
-
-Transportation accessibility may affect waste-removal capacity and restoration logistics, closing additional feedback loops. The authoritative scope therefore describes the demonstrator as **urban flooding with waste–drainage–transport feedbacks**. These arrows are mechanisms to be specified and tested; the diagram alone is not evidence of causal magnitude.
-
----
-
-## 6. Sustainability and equity as mathematical admissibility
-
-The admissible region is defined by intersection:
-
-$$
-\boxed{
-K_R
-=
-K_{\mathrm{phys}}
-\cap
-K_{\mathrm{service}}
-\cap
-K_{\mathrm{sus}}
-\cap
-K_{\mathrm{eq}}.
-}
-$$
-
-Therefore a technically functioning trajectory is not automatically acceptable:
-
-$$
-\boxed{
-\text{operational recovery}
-\not\Rightarrow
-\text{sustainable-equitable recovery}.
-}
-$$
-
-The sustainability and equity terms must ultimately be operationalized as explicit measurable constraints before final inference.
-
----
-
-## 7. Viability geometry
-
-For admissible controls $u(\cdot)\in\mathcal U$,
-
-$$
-\boxed{
-\mathcal V_R
-=
-\left\{
-x_0\in K_R:
-\exists u(\cdot)\in\mathcal U
-\text{ such that }
-X(t;x_0,u,\eta,\theta)\in K_R
-\;\forall t\ge0
-\right\}.
-}
-$$
-
-The research problem is therefore not merely to compute a resilience score, but to determine and explain the geometry of $\mathcal V_R$ and especially $\partial\mathcal V_R$.
-
-A later finite-horizon, time-varying-admissibility, stochastic or nonanticipative formulation must be documented as an explicit mathematical amendment rather than silently substituted for this current definition.
-
----
-
-## 8. Recovery / capture geometry
-
-Viability and recovery are distinct:
-
-$$
-\boxed{
-\mathcal C_R
-=
-\left\{
-x_0:
-\exists u(\cdot),\exists T<\infty
-\text{ such that }
-X(T;x_0,u)\in\mathcal V_R
-\right\}.
-}
-$$
+```math
+\boxed{P,T=\text{physical infrastructure systems}}
+```
 
 and
 
-$$
+```math
+\boxed{I,O=\text{informational and organizational layers}}.
+```
+
+The canonical system class is therefore:
+
+> **A multilayer physical informational organizational interdependent Power–Transportation infrastructure system.**
+
+Let
+
+```math
+\boxed{\mathcal S=\{P,T,I,O\}.}
+```
+
+The integrated state is represented at framework level by
+
+```math
 \boxed{
-\tau_R(x_0)
-=
-\inf\left\{
-T:
-\exists u(\cdot),
-X(T;x_0,u)\in\mathcal V_R
-\right\}.
+Y(t)=
+\begin{bmatrix}
+x_P(t)\\
+x_T(t)\\
+I(t)\\
+O(t)
+\end{bmatrix}.
 }
-$$
+```
 
-This produces three scientifically different state classes:
+The thesis does **not** treat Information and Organization as additional physical infrastructure sectors. Their role is to represent observation, communication, estimation, authority, coordination, decision-making, resources, mobilization, and intervention capability.
 
-$$
-\boxed{
-\text{viable}
-\;|\;
-\text{recoverable but nonviable}
-\;|\;
-\text{nonrecoverable}.
-}
-$$
-
-<p align="center">
-  <img src="assets/math-art/viability_recovery_geometry.svg" alt="Viability and recovery state-space geometry" width="92%" />
-</p>
+Canonical specification: [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)  
+Full framework-level decomposition: [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
 
 ---
 
-## 9. Dynamic-interface proposition
+## 2. Scientific objective
 
-A core comparison is
+The research objective is to establish a rigorous mathematical and engineering framework that explains how interdependencies among Power, Transportation, Information, and Organization shape disruption propagation, system evolution, response capability, viability, and long-term sustainable transformation.
 
-$$
-\mathcal V_{\mathrm{static}}=\mathcal V(\bar Z)
-$$
+The governing reasoning chain is
 
-versus
-
-$$
-\mathcal V_{\mathrm{dynamic}}=\mathcal V(Z(t)).
-$$
-
-Boundary deformation can be quantified by a declared set-distance metric, for example
-
-$$
+```math
 \boxed{
-\Delta_{\mathcal V}
-=
-d_H\left(
-\mathcal V_{\mathrm{dynamic}},
-\mathcal V_{\mathrm{static}}
-\right).
-}
-$$
-
-The nondimensional timescale ratio
-
-$$
-\boxed{
-\rho_{ij}
-=
-\frac{\tau_{\mathrm{interface},ij}}
-{\tau_{\mathrm{system}}}
-}
-$$
-
-motivates explicit tests of fast, commensurate, and slow interface regimes.
-
----
-
-## 10. Inverse problems and uncertainty quantification
-
-The architecture does not require hidden couplings to be known a priori. The upstream problem is
-
-$$
-\boxed{
-\mathcal D_{\mathrm{obs}}
-\longrightarrow
-p(\mathcal G,\theta,Z\mid\mathcal D_{\mathrm{obs}}).
-}
-$$
-
-A central reliability diagnostic is the change in inferred viability produced by parameter/interface estimation error:
-
-$$
-\boxed{
-E_{\mathrm{inv}}
-=
-d_H\left[
-\mathcal V(\theta^\star),
-\mathcal V(\widehat\theta)
-\right].
-}
-$$
-
-When uncertainty is represented probabilistically, a natural extension is
-
-$$
-P(x\in\mathcal V_R\mid\mathcal D_{\mathrm{obs}}).
-$$
-
----
-
-## 11. Control, design, and optimization
-
-A viability-preserving control set may be represented as
-
-$$
-\mathcal U_V(x)
-=
-\left\{u:F(x,u,\eta)\in T_{K_R}(x)
-\right\}
-$$
-
-where the tangent-cone representation is used only where its assumptions are satisfied.
-
-Design variables are collected in
-
-$$
-d=\{\text{capacity, topology, redundancy, storage, interface hardening}\}.
-$$
-
-Then
-
-$$
-\boxed{
-d\longrightarrow\mathcal V_R(d),\qquad d\longrightarrow\mathcal C_R(d).
-}
-$$
-
-A downstream resilience-constrained design problem can be expressed as
-
-$$
-\min_d J(d)
-$$
-
-subject to declared physical, service, sustainability, equity, recovery, and budget constraints.
-
-These are **structured extensions** of the MSE core rather than an assertion that every downstream layer must contain an independent original contribution.
-
----
-
-## 12. Three end-to-end thesis architectures
-
-The same P–W–T–SW problem can be traversed through three distinct research philosophies.
-
-### Type I — Theory-First
-
-$$
-\boxed{
-(\theta,\eta)
+\text{Structure}
 \rightarrow
-X(t)
+\text{Causal Mechanisms}
 \rightarrow
-\mathcal V_R
+\text{Dynamics}
 \rightarrow
-\mathcal C_R
+\text{Feedback and Control}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Sustainability Transformation}
+}
+```
+
+The central modeling principle is:
+
+```math
+\boxed{
+\text{Topology alone is insufficient: every retained cross-layer relation must have a causal mechanism, state dependence, and temporal interpretation.}
+}
+```
+
+The thesis therefore moves from **what exists**, to **why effects propagate**, to **how and when they evolve**, to **whether intervention can preserve acceptable system behavior**.
+
+---
+
+## 3. Canonical seven-stage framework
+
+The seven-stage architecture is frozen and must not be changed without explicit versioned approval.
+
+```math
+\boxed{
+\text{Multilayer Structure}
+\rightarrow
+\text{Causal Mechanisms}
+\rightarrow
+\text{Coupled Hybrid Multiscale Dynamics}
+\rightarrow
+\text{Feedback \& Control}
+\rightarrow
+\text{Viability}
+\rightarrow
+\text{Resilience-to-Sustainability Transformation Interface}
+\rightarrow
+\text{Sustainable Transformation Pathways}
+}
+```
+
+| Stage | Role | Main question | Current status |
+|---|---|---|---|
+| **1. Multilayer Structure** | P–T–I–O architecture | **What exists?** | **Canonical** |
+| **2. Causal Mechanisms** | Cross-layer cause–effect pathways | **Why does disruption propagate?** | **Frozen** |
+| **3. Coupled Hybrid Multiscale Dynamics** | Coupling + continuous dynamics + discrete events + timescales | **How and when does it evolve?** | Next formalization stage |
+| **4. Feedback & Control** | Information, organization, decisions, intervention | **How does the system respond?** | Architecture established; formalization follows Stage 3 |
+| **5. Viability** | Survival/recoverability under constraints | **Can it survive?** | Mathematical development planned |
+| **6. Resilience-to-Sustainability Transformation Interface** | Translate resilience findings into transformation requirements | **What do resilience results imply for sustainability?** | Downstream synthesis |
+| **7. Sustainable Transformation Pathways** | Technical, organizational, environmental and policy transformation | **What should be changed for long-term sustainability?** | Downstream synthesis |
+
+Canonical framework authority: [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
+
+---
+
+## 4. Stage 1 — Multilayer Structure
+
+Stage 1 defines the system boundary and the internal decomposition of the four interacting subsystems.
+
+### Power `P`
+
+```math
+\boxed{P=P_G\cup P_{Tr}\cup P_D\cup P_{DER}\cup P_C\cup P_{TP}}
+```
+
+representing generation, transmission, distribution, DER/storage, charging infrastructure, and traction-power supply.
+
+### Transportation `T`
+
+```math
+\boxed{T=T_R\cup T_B\cup T_U\cup T_H\cup T_M}
+```
+
+representing road transport, electric buses, urban rail, regional/heavy electrified rail, and multimodal transfer.
+
+### Information `I`
+
+```math
+\boxed{I=I_S\cup I_C\cup I_D\cup I_E\cup I_A\cup I_X\cup I_{\tau}}
+```
+
+representing sensing, communications, data, estimation, automation/signaling, cross-domain interoperability, and timing/synchronization.
+
+### Organization `O`
+
+```math
+\boxed{O=O_A\cup O_G\cup O_D\cup O_C\cup O_R\cup O_W\cup O_L\cup O_M\cup O_X\cup O_K}
+```
+
+representing actors, governance, decisions, coordination, resources, workforce, logistics, restoration management, cross-sector collaboration, and learning/adaptation.
+
+Stage 1 answers only the structural question. It does not, by itself, establish that every possible cross-layer arrow is causal.
+
+---
+
+## 5. Stage 2 — Interdependency Mechanisms
+
+Stage 2 is now **canonical and frozen**.
+
+The complete directed scope is
+
+```math
+\boxed{
+\mathcal I=
+\{
+P\!\to\!T,T\!\to\!P,
+P\!\to\!I,I\!\to\!P,
+P\!\to\!O,O\!\to\!P,
+T\!\to\!I,I\!\to\!T,
+T\!\to\!O,O\!\to\!T,
+I\!\to\!O,O\!\to\!I
+\}.
+}
+```
+
+Equivalently, six bidirectional interdependency families are audited:
+
+```math
+\boxed{
+P\leftrightarrow T,\quad
+P\leftrightarrow I,\quad
+P\leftrightarrow O,\quad
+T\leftrightarrow I,\quad
+T\leftrightarrow O,\quad
+I\leftrightarrow O.
+}
+```
+
+Every accepted component-level interdependency is represented by
+
+```math
+\boxed{
+\mathfrak I_{ij}^{\alpha\beta}
+=
+\left(
+E_i^\alpha,
+E_j^\beta,
+M_{ij},
+w_{ij},
+\delta_{ij},
+\tau_{ij},
+a_{ij},
+m,
+\mathcal H_t
+\right),
+\qquad
+\alpha,\beta\in\{P,T,I,O\},\ \alpha\neq\beta.
+}
+```
+
+where the model must identify the source entity, receiving entity, causal mechanism, strength, delay, characteristic timescale, activation condition, operating mode, and relevant history.
+
+The minimum causal chain is
+
+```math
+\boxed{
+\text{Source}
+\rightarrow
+\text{Mechanism}
+\rightarrow
+\text{Receiver}
+\rightarrow
+\text{Effect}.
+}
+```
+
+### Causal admissibility rule
+
+Correlation, co-location, simultaneous failure, or exposure to the same hazard is not sufficient evidence of interdependency:
+
+```math
+\boxed{
+\text{common exposure}\neq\text{causal interdependency}.
+}
+```
+
+A retained relation requires a defensible transmission mechanism:
+
+```math
+\boxed{\alpha\xrightarrow{M_{ij}}\beta.}
+```
+
+This rule is fundamental to the thesis because it prevents common-cause effects from being misclassified as cross-system dependence.
+
+Stage-2 authority: [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+
+---
+
+## 6. Stage 3 — Coupled Hybrid Multiscale Dynamics
+
+The next major scientific task is to transform the Stage-2 causal architecture into a dynamic model.
+
+The target framework is a coupled state evolution of the form
+
+```math
+\boxed{
+\dot Y(t)=F_m\!\left(Y(t),Y(t-\delta),u(t),\eta(t);\theta,\mathcal G(t)\right),
+\qquad
+Y^{+}=J_e\!\left(Y^{-},e\right),
+}
+```
+
+with continuous physical/informational/organizational evolution, discrete events or mode changes, delayed cross-layer effects, and heterogeneous process timescales.
+
+The temporal architecture must keep distinct:
+
+```math
+\boxed{
+\text{event time}\neq\text{causal delay }\delta\neq\text{process timescale }\tau.
+}
+```
+
+Representative time classes to be formalized and evidenced are:
+
+```math
+\boxed{
+\begin{aligned}
+\text{Intrinsic:}&\ \tau_P,\tau_T,\tau_I,\tau_O,\\
+\text{Interaction:}&\ \delta_{ij},\tau_{ij},a_{ij}(t),\mathcal H_t,\\
+\text{Disruption:}&\ \tau_H,T_{\rm exp},\tau_C,\\
+\text{Response/viability:}&\ \tau_R,T_{\rm exit},T_{\rm rec},\\
+\text{Strategic:}&\ \tau_A,\tau_{Tr},t_k,\Delta t_k,T_H.
+\end{aligned}
+}
+```
+
+Dimensionless ratios such as
+
+```math
+\Gamma_{\alpha\beta}=\frac{\tau_\alpha}{\tau_\beta}
+```
+
+will be used only as regime descriptors unless a critical threshold is derived from the coupled dynamics or supported by evidence.
+
+No universal timescale ordering or response threshold will be assumed without validation.
+
+---
+
+## 7. Stage 4 — Observation, Organization, Feedback and Control
+
+The physical system is not assumed to respond autonomously. The control architecture is
+
+```math
+\boxed{
+X
+\rightarrow
+y
+\rightarrow
+I
+\rightarrow
+\widehat X
+\rightarrow
+O
 \rightarrow
 u
+\rightarrow
+X.
 }
-$$
-
-**Core question:** What is mathematically possible?
-
-![Type I framework](assets/frameworks/type_i_theory_first_framework.webp)
-
-### Type II — Digital Twin / Inference-to-Decision
-
-$$
-\boxed{
-\mathcal D
-\rightarrow
-p(X,\theta,Z\mid\mathcal D)
-\rightarrow
-p(\mathcal V_R\mid\mathcal D)
-\rightarrow
-u_t
-}
-$$
-
-**Core question:** What is happening, what will happen, and what should we do now?
-
-The term **digital twin** should be used operationally only when an actual observation-update/calibration/validation loop is implemented.
-
-![Type II framework](assets/frameworks/type_ii_digital_twin_framework.webp)
-
-### Type III — Resilience-by-Design
-
-$$
-\boxed{
-d
-\rightarrow
-F_d
-\rightarrow
-\mathcal V_R(d)
-\rightarrow
-\mathcal C_R(d)
-\rightarrow
-d^\star
-}
-$$
-
-**Core question:** What should we build so that acceptable behavior remains possible?
-
-![Type III framework](assets/frameworks/type_iii_resilience_by_design_framework.webp)
-
-Framework archive and image hashes: [`assets/frameworks/README.md`](assets/frameworks/README.md)
-
-Current MSE recommendation: **Type-I-centered core + Type-II upstream identification/UQ + limited Type-III downstream demonstration if feasible.**
-
----
-
-## 13. Falsifiable scientific propositions
-
-The current formal proposition registry is **P1–P7**. Historical H1–H7/T1 literature-ranking labels are preserved separately and should not be silently relabeled.
-
-| ID | Proposition | Primary test |
-|---|---|---|
-| **P1** | Dynamic interfaces materially alter resilience geometry relative to static coupling. | Compare dynamic/static viability boundaries and $\Delta_{\mathcal V}$. |
-| **P2** | Interface identifiability affects reliability of inferred viability. | Propagate parameter/interface uncertainty into viability uncertainty. |
-| **P3** | Interface/system timescale ratios govern static-approximation validity. | Sweep $\rho_{ij}$ and evaluate state/boundary error. |
-| **P4** | Sustainability/equity constraints deform the viable region beyond technical constraints. | Compare $\mathcal V(K_{tech})$ and $\mathcal V(K_{sus,eq})$. |
-| **P5** | Recovery geometry contains information not captured by viability alone. | Compute $\mathcal C_R\setminus\mathcal V_R$ and $\tau_R$. |
-| **P6** | Waste–drainage–flood feedback shifts coupled P–W–T–SW resilience boundaries. | Compare otherwise identical models with feedback on/off. |
-| **P7** | Reduced models used for decisions must preserve or conservatively bound viability conclusions. | Compare $\mathcal V_r$ with projected full-order viability geometry. |
-
-Detailed protocol: [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)  
-Machine-readable registry: [`config/scientific_propositions.yaml`](config/scientific_propositions.yaml)  
-Historical-label crosswalk: [`project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md`](project_memory/2026-08-21_chain_architecture_v2/03_HYPOTHESIS_PROPOSITION_CROSSWALK.md)
-
----
-
-## 14. Primary physical demonstrator
-
-**System:** coupled Power–Water/Drainage–Transportation–Solid-Waste infrastructure.  
-**Hazard/demonstrator:** **urban flooding with waste–drainage–transport feedbacks**.
-
-The demonstrator is intended to test the mathematical architecture through a physically interpretable coupled system, not to imply that every possible P–W–T–SW interaction is represented.
-
----
-
-## 15. Evidence architecture
-
-The project maintains two distinct evidence tracks:
-
-```mermaid
-flowchart LR
-    L[PRISMA / literature evidence] --> G[Research gaps & prior methods]
-    M[Mathematical development] --> F[Model / propositions / falsification]
-    G --> I[Thesis synthesis]
-    F --> I
 ```
 
-**Evidence rule:** PRISMA provides transparent identification/screening/accounting. Monte Carlo ranks papers **within a declared eligible corpus**. Neither method proves global novelty.
+Conceptually:
+
+```math
+\boxed{
+\text{REALITY}
+\rightarrow
+\text{OBSERVE}
+\rightarrow
+\text{KNOW}
+\rightarrow
+\text{DECIDE}
+\rightarrow
+\text{ACT}.
+}
+```
+
+A generic representation is
+
+```math
+\boxed{
+y=H(X)+\nu_y,\qquad
+\widehat X=\mathcal E(y_{[0,t]},I),\qquad
+u=\pi(\widehat X,I,O),\qquad
+u\in\mathcal U(I,O).
+}
+```
+
+The scientific question is not merely whether a control exists, but whether information quality, communication latency, organizational delay, authority, resources, logistics, and coordination allow an admissible intervention to arrive before critical system degradation.
 
 ---
 
-## 16. Computational implementation
+## 8. Stage 5 — Controlled Sustainable Viability
 
-Different languages/formats are used only where they contribute a specific function:
+Stage 5 asks whether acceptable system trajectories can be maintained under disturbance and admissible intervention.
 
-| Tool | Role |
+The admissible region will be defined from explicit engineering, service, informational, organizational, and sustainability constraints:
+
+```math
+\boxed{K_{\rm sus}=\{Y:g(Y)\le0\}.}
+```
+
+The corresponding controlled viability object is
+
+```math
+\boxed{
+\mathcal V_{\rm sus}^{u}
+=\operatorname{Viab}_{F,\mathcal U(I,O)}(K_{\rm sus}).
+}
+```
+
+The exact finite-horizon, robust, stochastic, or time-varying formulation must be selected from the evidence and model assumptions and documented explicitly; it will not be changed silently between analyses.
+
+Candidate geometric diagnostics include the system's distance to the viability boundary and time to loss of viability, but their final definitions, normalization, uncertainty treatment, and computational method remain subject to formal Stage-5 development and validation.
+
+---
+
+## 9. Stages 6–7 — From Resilience Evidence to Sustainable Transformation
+
+The framework deliberately separates resilience analysis from long-term transformation.
+
+```math
+\boxed{
+\underbrace{\text{Stages 1--5}}_{\text{resilience analysis}}
+\rightarrow
+\underbrace{\text{Stage 6}}_{\text{translation interface}}
+\rightarrow
+\underbrace{\text{Stage 7}}_{\text{sustainable transformation pathways}}.
+}
+```
+
+Stage 6 translates verified resilience results—critical mechanisms, temporal bottlenecks, control limitations, and viability constraints—into transformation requirements.
+
+Stage 7 evaluates what should change in the technical, informational, organizational, environmental, or policy architecture to improve long-term system sustainability.
+
+The governing principle is:
+
+```math
+\boxed{
+\textbf{Resilience is analyzed inside the model; sustainability is informed by the model.}
+}
+```
+
+---
+
+## 10. Evidence architecture
+
+The thesis uses a systematic, evidence-gated workflow. Literature is not collected only to summarize papers; it is used to support or falsify specific mathematical objects and causal mechanisms.
+
+The evidence-to-model chain is
+
+```math
+\boxed{
+\text{Literature}
+\xrightarrow{\text{systematic review / PRISMA}}
+\text{evidence structure}
+\xrightarrow{\text{formalization}}
+(\mathcal G,\mathfrak I,F,J,\tau,I,O,K,\mathcal V,u).
+}
+```
+
+For each proposed interdependency, the evidence extraction should seek, where reported:
+
+```math
+\boxed{
+(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t)
+}
+```
+
+plus disturbance type, measured outcome, model family, data source, calibration, validation method, uncertainty treatment, and limitations.
+
+### Evidence discipline
+
+The repository must preserve the distinction
+
+```math
+\boxed{
+\text{domain evidence}
+\neq
+\text{transferable methodological evidence}
+\neq
+\text{mathematical theory}.
+}
+```
+
+A method demonstrated in another infrastructure domain may justify a modeling technique, but it is not automatically empirical evidence for Power–Transportation behavior.
+
+Evidence resources are maintained under [`evidence/`](evidence/) and methodological controls under [`methods/`](methods/).
+
+---
+
+## 11. Validation and falsification strategy
+
+Every major mathematical layer creates a corresponding validation obligation.
+
+| Layer | Required validation logic |
 |---|---|
-| **Markdown + LaTeX** | mathematical specification and derivation |
-| **Mermaid** | inspectable architecture diagrams |
-| **SVG** | version-controlled mathematical art / state-space geometry |
-| **Python** | numerical QA, finite-grid viability baselines, geometry metrics, tests, memory audit |
-| **Julia** | compact multiscale coupled-dynamics scaffold |
-| **YAML** | machine-readable proposition registry |
-| **JSON / JSON Schema** | project-memory and model-configuration contracts |
-| **GitHub Actions** | automated scientific-architecture and memory-consistency QA |
+| **Structure** | verify component/system boundary and explicit interface mapping |
+| **Interdependency** | direction + mechanism + source/receiver + evidence; reject common-cause-only relations |
+| **Dynamics** | dimensional consistency, physical laws, limiting cases, event logic, numerical verification |
+| **Timescales** | distinguish delay from characteristic process time; quantify uncertainty and context dependence |
+| **Information** | test observability, latency, missing/noisy data, estimation sensitivity |
+| **Organization** | test decision/coordination/resource constraints and response delays |
+| **Control** | compare admissible interventions against explicit baselines under common scenarios |
+| **Viability** | verify set computation, boundary behavior, constraint satisfaction, and sensitivity to model error |
+| **Transformation** | trace each recommendation back to verified resilience evidence rather than qualitative assertion |
 
-Implementation entry point: [`methods/architecture/README.md`](methods/architecture/README.md)
+The general rule is
 
-### Current executable architecture files
-
-- [`methods/architecture/viability_geometry.py`](methods/architecture/viability_geometry.py)
-- [`methods/architecture/CoupledInfrastructure.jl`](methods/architecture/CoupledInfrastructure.jl)
-- [`schemas/thesis_model.schema.json`](schemas/thesis_model.schema.json)
-- [`tests/test_viability_geometry.py`](tests/test_viability_geometry.py)
-- [`.github/workflows/scientific-architecture-qa.yml`](.github/workflows/scientific-architecture-qa.yml)
-- [`.github/workflows/project-memory-qa.yml`](.github/workflows/project-memory-qa.yml)
-
-The committed numerical examples are **synthetic reference implementations**. They verify geometry logic and software plumbing before a final calibrated thesis model is frozen.
-
----
-
-## 17. Current literature-ranking status
-
-The frozen logical closed-corpus protocol is hard-locked to:
-
-`Thesis_Final_Unique_Papers_325_2026-08-20(1).csv`
-
-SHA-256:
-
-`047e80b7348190a9da8100758c5f1201cd39059f9318e6298dcda614ecb7813f`
-
-The high-rigor archived run used a byte-identical uploaded copy named `Thesis_Final_Unique_Papers_325_2026-08-20(4).csv` with the same hash.
-
-The protocol forbids historical rank/selection variables from entering the scientific score and interprets Top-K results only **within the locked dataset**.
-
-A later three-model comparison found that the top ordering is model-sensitive enough that the two leading papers should be treated as **co-dominant primary precedents**, not as evidence of one universally dominant global paper. See [`project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md`](project_memory/2026-08-21_chain_architecture_v2/06_MONTE_CARLO_AND_PRISMA_STATE.md).
-
-The global PRISMA systematic-search layer remains methodologically separate from this closed-corpus ranking layer.
-
----
-
-## 18. Repository structure
-
-```text
-MSE-thesis/
-├── README.md
-├── PROJECT_MEMORY.md
-├── assets/
-│   ├── frameworks/                 # Type I / II / III generated framework images
-│   └── math-art/                   # repository-native SVG mathematical figures
-├── config/                         # machine-readable research configuration
-├── schemas/                        # formal model schemas
-├── project/                        # scope, mathematical foundation, propositions
-├── project_memory/                 # versioned future-chat scientific memory
-├── methods/
-│   ├── architecture/               # Python / Julia architecture implementation
-│   └── monte_carlo/                # corpus-ranking code/index/results material
-├── tests/                          # numerical architecture smoke tests
-├── prompts/                        # exact available execution prompts
-├── conversation/                   # user-visible research-development provenance
-├── provenance/                     # hashes, inventories, archive status
-├── archive/                        # session snapshots
-└── .github/workflows/              # automated reproducibility/QA
+```math
+\boxed{
+\text{Claim}\rightarrow\text{observable or mathematical test}\rightarrow\text{falsification opportunity}\rightarrow\text{evidence-backed conclusion}.
+}
 ```
 
-**Raw datasets and large binary packages are not assumed to live under a root `data/` directory.** Their current storage/identity must be verified through the actual GitHub tree and `provenance/ONLINE_ARCHIVE.md` / `provenance/INVENTORY.csv` before describing them as GitHub-committed.
+No method is considered useful merely because it is mathematically sophisticated. It must answer a defined scientific question and survive comparison with a simpler baseline where appropriate.
 
 ---
 
-## 19. Reproducibility, conversation memory, and provenance
+## 12. Current research state
 
-Historical user-visible material is preserved under `conversation/`, including the 2026-08-20 current-thread archive and the 2026-08-21 chain/framework segment.
+The current progression is:
 
-The corrected future-chat memory entry point is:
+```math
+\boxed{
+\underbrace{\text{Stage 1}}_{\text{defined}}
+\rightarrow
+\underbrace{\text{Stage 2}}_{\text{frozen}}
+\rightarrow
+\underbrace{\text{Stage 3}}_{\text{next: formalize dynamics and timescales}}
+\rightarrow
+\underbrace{\text{Stage 4}}_{\text{formalize feedback/control}}
+\rightarrow
+\underbrace{\text{Stage 5}}_{\text{compute/test viability}}
+\rightarrow
+\underbrace{\text{Stages 6--7}}_{\text{translate validated resilience evidence into transformation}}
+}
+```
 
-`project_memory/2026-08-21_chain_architecture_v2/`
+The immediate technical program is:
 
-The repository distinguishes:
-
-- exact/verbatim user requests where available;
-- user-supplied reference text;
-- reconstructed assistant-response indexes where exact wording is unavailable;
-- exact prompts/code when preserved;
-- corpus-derived results;
-- synthetic QA;
-- empirical/validated results;
-- cryptographic hashes for frozen datasets and archived artifacts.
-
-Hidden chain-of-thought, system/developer instructions, credentials, secrets, and connector internals are not part of the user-visible transcript archive.
-
-Large byte-preserving artifacts that are stored externally are registered through `provenance/ONLINE_ARCHIVE.md`, `provenance/INVENTORY.csv`, and hash records rather than being falsely represented as native GitHub files.
+1. complete the component-level decomposition of all 12 Stage-2 directional interdependencies;
+2. attach evidence, mechanism, carrier/effect, delay, timescale, activation and mode information to each accepted relation;
+3. map the accepted Stage-2 objects into the Stage-3 coupled hybrid multiscale equations;
+4. establish the temporal competition between disruption propagation and information/organizational response;
+5. close the Stage-4 observation–decision–action loop;
+6. define and compute the Stage-5 admissible and viability sets under declared uncertainty/control assumptions;
+7. validate the framework against simpler physical-only or reduced-coupling baselines;
+8. use only validated resilience results as inputs to Stages 6–7.
 
 ---
 
-## 20. Scientific scope and privacy
+## 13. Repository authority and organization
 
-This is a private research-development repository. Mathematical equations, hypotheses, synthetic code, literature-ranking outputs, and architecture diagrams are research artifacts under active falsification and refinement.
+The principal current sources of truth are:
 
-The repository distinguishes clearly among:
+| File / directory | Role |
+|---|---|
+| [`PROJECT_MEMORY.md`](PROJECT_MEMORY.md) | current repository and framework authority |
+| [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | frozen seven-stage architecture |
+| [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md) | canonical P–T–I–O system identity |
+| [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md) | framework-level subsystem decomposition |
+| [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md) | frozen Stage-2 causal scope |
+| [`figures/`](figures/) | thesis figures and visual specifications |
+| [`evidence/`](evidence/) | literature/evidence artifacts |
+| [`methods/`](methods/) | mathematical, computational, review and validation methods |
+| [`provenance/`](provenance/) | provenance and audit records |
+| [`archive/`](archive/) and [`research_archive/`](research_archive/) | superseded/historical material |
 
-- **formal definitions**;
-- **testable propositions**;
-- **mathematical templates**;
-- **synthetic demonstrations**;
-- **empirical evidence**;
-- **literature-derived evidence**;
-- **validated results**;
-- **pending claims**.
+### Authority rule
 
-No synthetic illustration or ranking result should be interpreted as empirical proof beyond its declared scope.
+When an older file conflicts with the current framework, use the following priority:
+
+```math
+\boxed{
+\text{current canonical project files}
+>
+\text{current validated evidence}
+>
+\text{historical project memory}
+>
+\text{archived figures or drafts}.
+}
+```
+
+Historical P–W–T–SW, waste–drainage, equity-centered, or other superseded architectures retained in repository history are **not the current thesis system** unless explicitly reintroduced through a versioned framework change.
+
+---
+
+## 14. Scientific guardrails
+
+This repository follows the following thesis-wide rules:
+
+- use **MSE = Master of Science in Engineering** consistently;
+- preserve the canonical seven-stage framework unless a change is explicitly approved;
+- treat `P,T` as physical infrastructure systems and `I,O` as informational/organizational layers;
+- never infer interdependency from correlation or common exposure alone;
+- distinguish structural connection from causal mechanism;
+- distinguish event time, causal delay, and characteristic timescale;
+- distinguish physical state, information state, organizational state, parameters, and controls;
+- do not claim novelty for individual established concepts without systematic falsification;
+- label proposed mathematical objects as candidate contributions until the evidence review closes the relevant novelty question;
+- do not use a generated figure as scientific authority;
+- require reproducible equations, assumptions, units, data provenance, numerical checks, uncertainty analysis, and baseline comparison before strong conclusions.
+
+The target standard is:
+
+```math
+\boxed{
+\textbf{clear system ontology}
++
+\textbf{causal evidence}
++
+\textbf{mathematical rigor}
++
+\textbf{physical interpretability}
++
+\textbf{falsifiable validation}
++
+\textbf{reproducibility}.
+}
+```
+
+---
+
+## 15. One-sentence thesis logic
+
+> **Structure tells us where coupling is possible; mechanisms explain why effects occur; dynamics reveal how and how fast they propagate; feedback and control determine whether intervention arrives effectively; viability determines whether acceptable operation can be maintained; and the resulting resilience evidence informs sustainable transformation.**
+
+---
+
+## 16. Change control
+
+A change to a canonical thesis object is valid only when it is explicitly approved, committed with a clear message, propagated to dependent files/figures, and checked for inconsistency with the current framework.
+
+Until such a change is made, this README and the linked canonical specifications define the active research direction of the **Master of Science in Engineering (MSE) thesis**.
