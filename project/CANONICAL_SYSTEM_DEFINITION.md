@@ -1,9 +1,11 @@
 # Canonical System Definition
 
-**Status:** CANONICAL THESIS DEFINITION  
+![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
+![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
+
 **Adopted:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Scope:** Multilayer interdependent infrastructure resilience and sustainability research.  
+**Scope:** Multilayer interdependent infrastructure resilience and sustainability research  
 **Change rule:** Use this system description throughout the thesis unless it is explicitly revised and versioned.
 
 > **Degree nomenclature rule:** This research is an **MSE (Master of Science in Engineering)** thesis.
@@ -12,92 +14,92 @@
 
 ## 1. Canonical system class
 
-We study a
+The thesis studies a **multilayer interdependent infrastructure system** with
 
 $$
-\boxed{\text{Multilayer interdependent infrastructure system}}
+P,T=\text{physical infrastructure systems},
+\qquad
+I,O=\text{informational and organizational layers}.
 $$
 
-with
+The most precise system description is:
 
-$$
-\boxed{P,T=\text{physical infrastructure systems}}
-$$
+> **A multilayer physical–informational–organizational interdependent Power–Transportation infrastructure system.**
 
-and
-
-$$
-\boxed{I,O=\text{informational and organizational layers}}.
-$$
-
-The most precise thesis description is:
-
-> **A multilayer physical informational organizational interdependent Power Transportation infrastructure system.**
-
----
-
-## 2. Layer interpretation
-
-Let
+The framework-level layer set is
 
 $$
 \mathcal L=\{P,T,I,O\}.
 $$
 
-The four layers have distinct roles:
+---
 
-- $P$: Power infrastructure system.
-- $T$: Transportation infrastructure system.
-- $I$: Information layer, including sensing, communication, estimation, data availability, information quality, and latency.
-- $O$: Organizational layer, including authority, coordination, decision-making, resource mobilization, workforce, and intervention capability.
+## 2. Layer interpretation
 
-The physical state may be represented as
+| Symbol | Type | Role |
+|---|---|---|
+| $P$ | Physical infrastructure system | Power generation, transmission, distribution, DER/storage, charging, and traction-power supply. |
+| $T$ | Physical infrastructure system | Road, electric-bus, urban-rail, heavy/regional-rail, and multimodal transportation. |
+| $I$ | Informational layer | Sensing, communication, data availability, information quality, latency, synchronization, estimation support, and signaling. |
+| $O$ | Organizational layer | Authority, coordination, decision making, resource allocation, workforce, logistics, mobilization, and intervention capability. |
 
-$$
-X(t)=\begin{bmatrix}x_P(t)\\x_T(t)\end{bmatrix},
-$$
-
-and the informational-organizational state as
+The physical state is
 
 $$
-Z(t)=\begin{bmatrix}I(t)\\O(t)\end{bmatrix}.
+X(t)=
+\begin{bmatrix}
+x_P(t)\\
+x_T(t)
+\end{bmatrix}.
+$$
+
+The informational–organizational state is
+
+$$
+Z(t)=
+\begin{bmatrix}
+z_I(t)\\
+z_O(t)
+\end{bmatrix}.
 $$
 
 The integrated system state is therefore
 
 $$
-\boxed{
 Y(t)=
 \begin{bmatrix}
 x_P(t)\\
 x_T(t)\\
-I(t)\\
-O(t)
-\end{bmatrix}
-}.
+z_I(t)\\
+z_O(t)
+\end{bmatrix}.
 $$
+
+This notation is canonical: $I$ and $O$ name the layers, whereas $z_I(t)$ and $z_O(t)$ denote their time-varying states.
 
 ---
 
-## 3. Thesis modeling discipline
+## 3. Modeling discipline
 
-The thesis must not reduce the system to a purely physical Power-Transportation network when information and organizational mechanisms materially affect observation, coordination, control, failure propagation, recovery, or viability.
+The thesis must not reduce the system to a purely physical Power–Transportation network when informational or organizational mechanisms materially affect observation, coordination, control, propagation, recovery, or viability.
 
 Accordingly,
 
 $$
-\boxed{R_{\mathrm{system}}\neq R(P,T)}
+R_{\mathrm{system}}\neq R(P,T)
 $$
 
-in the general case considered here. The working representation is instead
+in the general case studied here. The working dependence is
 
 $$
-\boxed{R_{\mathrm{system}}=R(P,T,I,O,\mathbb I)},
+R_{\mathrm{system}}
+=
+R(P,T,I,O,\mathbb I),
 $$
 
 where $\mathbb I$ denotes the set of explicitly characterized interdependency objects.
 
-This system definition therefore provides the system-level basis for the canonical interdependency object
+The canonical Stage-2 interdependency object is
 
 $$
 \mathfrak I_{ij}^{\alpha\beta}
@@ -118,13 +120,27 @@ $$
 with
 
 $$
-\alpha,\beta\in\{P,T,I,O\}.
+\alpha,\beta\in\{P,T,I,O\},
+\qquad
+\alpha\neq\beta.
 $$
 
 ---
 
-## 4. Canonical thesis statement
+## 4. Canonical cross-stage interpretation
 
-> **The research studies a multilayer interdependent Power-Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, and sustainable transformation.**
+| Stage | Uses the system definition to answer |
+|---|---|
+| **1 — Multilayer Structure** | What exists and where interaction can occur. |
+| **2 — Causal Mechanisms** | Which cross-layer relations are truly causal and how they transmit effects. |
+| **3 — Coupled Hybrid Multiscale Dynamics** | How the state $Y(t)$ and effective topology evolve. |
+| **4 — Observation, Organization, Feedback and Control** | How the physical state is measured, inferred, organizationally interpreted, and acted upon. |
+| **5 — Viability** | Whether controlled trajectories remain acceptable and maintainable. |
 
-This description is the default system identity for the **MSE (Master of Science in Engineering)** thesis, presentations, literature extraction, mathematical modeling, simulation, validation, and framework design unless explicitly changed.
+---
+
+## 5. Canonical thesis statement
+
+> **The research studies a multilayer interdependent Power–Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, and sustainable transformation.**
+
+This is the default system identity for the MSE thesis, presentations, literature extraction, mathematical modeling, simulation, validation, and framework design unless explicitly changed through versioned revision.
