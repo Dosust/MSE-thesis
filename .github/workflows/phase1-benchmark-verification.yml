@@ -88,12 +88,14 @@ jobs:
           pytest -q tests/phase1_benchmark | tee phase1-benchmark-evidence/pytest-benchmark.txt
 
       - name: Execute Phase-1 verification fixture suite
+        if: ${{ success() }}
         shell: bash
         run: |
           set -euo pipefail
           pytest -q tests/phase1 | tee phase1-benchmark-evidence/pytest-phase1.txt
 
       - name: Generate benchmark report twice and test deterministic equality
+        if: ${{ success() }}
         shell: bash
         run: |
           set -euo pipefail
@@ -116,9 +118,11 @@ jobs:
           cat phase1-benchmark-evidence/results/benchmark-report.json
 
       - name: Record execution identity
+        if: ${{ always() }}
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p phase1-benchmark-evidence
           cat > phase1-benchmark-evidence/execution-identity.txt <<EOF
           CODE_SHA=$(git rev-parse HEAD)
           LOCK_SHA256=${EXPECTED_LOCK_SHA256}
@@ -133,6 +137,7 @@ jobs:
           cat phase1-benchmark-evidence/execution-identity.txt
 
       - name: Upload benchmark verification evidence
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: phase1-benchmark-verification-${{ github.sha }}
