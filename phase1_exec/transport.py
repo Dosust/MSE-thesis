@@ -253,10 +253,13 @@ def conjugate_frank_wolfe_user_equilibrium(
 ) -> Tuple[Dict[Edge, float], int, float]:
     """Conjugate-direction Frank-Wolfe (CFW) for separable traffic UE.
 
-    The mathematical traffic-assignment problem, BPR costs, relative-gap
-    definition, and exact one-dimensional Beckmann line search are unchanged.
-    Only the feasible point-of-sight direction is conjugated using the local
-    diagonal Hessian, following Mitradjieva & Lindberg's CFW construction.
+    The implementation follows the CFW state recurrence: after a line search,
+    the residual prior direction at the new iterate is
+    ``(1 - tau_prev) * d_CFW_prev``.  If the previous step reaches the end of
+    its feasible segment, CFW is restarted with an ordinary FW direction so a
+    numerically vanishing prior direction is never recycled.  The traffic
+    assignment problem, BPR costs, and exact one-dimensional Beckmann line
+    search are unchanged.
     """
     if not (0.0 < conjugate_weight_max < 1.0):
         raise ValueError("conjugate_weight_max must lie strictly between 0 and 1")
@@ -264,6 +267,8 @@ def conjugate_frank_wolfe_user_equilibrium(
     free_costs = {(link.u, link.v): link.free_time for link in links}
     flow = all_or_nothing(links, free_costs, od)
     previous_sight: Optional[Dict[Edge, float]] = None
+    previous_step = 1.0
+    restart_tol = max(gap_tol, 1e-12)
 
     for iteration in range(1, max_iter + 1):
         gap = relative_gap(links, flow, od)
@@ -276,7 +281,11 @@ def conjugate_frank_wolfe_user_equilibrium(
         }
         aon = all_or_nothing(links, costs, od)
 
-        if previous_sight is None:
+        # Mitradjieva-Lindberg CFW restarts with the FW point after a nearly
+        # unit previous step.  This is essential because then the residual
+        # previous conjugate direction at the current iterate is nearly zero.
+        use_fw = previous_sight is None or previous_step > 1.0 - restart_tol
+        if use_fw:
             sight = dict(aon)
         else:
             numerator = 0.0
@@ -285,8 +294,11 @@ def conjugate_frank_wolfe_user_equilibrium(
                 edge = (link.u, link.v)
                 h = bpr_derivative(link, flow[edge])
                 prev_minus_x = previous_sight[edge] - flow[edge]
-                numerator += prev_minus_x * (aon[edge] - flow[edge]) * h
-                denominator += prev_minus_x * (aon[edge] - previous_sight[edge]) * h
+                fw_minus_x = aon[edge] - flow[edge]
+                numerator += prev_minus_x * fw_minus_x * h
+                denominator += prev_minus_x * (
+                    fw_minus_x - prev_minus_x
+                ) * h
 
             if abs(denominator) <= 1e-30:
                 weight_previous = 0.0
@@ -311,6 +323,7 @@ def conjugate_frank_wolfe_user_equilibrium(
             for edge in flow
         }
         previous_sight = sight
+        previous_step = step
 
     return flow, max_iter, relative_gap(links, flow, od)
 
