@@ -1,12 +1,12 @@
 # Phase 1C — Verification Execution Results v1
 
-![Status](https://img.shields.io/badge/status-VERIFICATION%20EXECUTED%20NOT%20CLOSED-D73A49)
+![Status](https://img.shields.io/badge/status-PUBLIC%20P%2FT%20VERIFICATION%20PASS-1A7F37)
 ![Phase](https://img.shields.io/badge/phase-1C-0969DA)
 
-**Executed:** 2026-09-12  
-**Purpose:** record what was actually run under the frozen Phase-1 verification design, including failures, corrections, unresolved blockers, and the exact boundary of permissible claims.  
-**Authority:** `PHASE1_VERIFICATION_TEST_MATRIX_V1.md`, `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md`, `PHASE1_DATA_PROVENANCE_REGISTER_V1.md`, `PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md`.  
-**Rule:** a verification failure is preserved as evidence; thresholds are not weakened after results are observed.
+**Executed/updated:** 2026-09-12  
+**Purpose:** record what was actually run under the frozen Phase-1 verification design, including failure history, audited numerical repair, current PASS evidence, unresolved ACN blocker, and the exact boundary of permissible claims.  
+**Authority:** `PHASE1_VERIFICATION_TEST_MATRIX_V1.md`, `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md`, `PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md`, `PHASE1_NUMERICAL_SOLVER_AMENDMENT_V1.md`.  
+**Rule:** verification failures remain in the audit trail; acceptance thresholds are not weakened after results are observed.
 
 ---
 
@@ -19,21 +19,13 @@
 }
 ```
 
-For this execution stage the operational chain is
+Operational chain:
 
 ```math
 \boxed{
-\text{frozen inputs}
-\rightarrow
-\text{immutable environment}
-\rightarrow
-\text{unit/limit tests}
-\rightarrow
-\text{benchmark reproduction}
-\rightarrow
-\text{numerical convergence}
-\rightarrow
-G_V.
+\text{frozen inputs}\rightarrow\text{immutable environment}\rightarrow
+\text{unit/limit tests}\rightarrow\text{benchmark reproduction}\rightarrow
+\text{numerical convergence}\rightarrow G_V.
 }
 ```
 
@@ -43,31 +35,31 @@ No calibration, validation, H1/H2 or Stage-5 viability analysis is admitted unle
 
 # 1. Canonical computational environment `[E]`
 
-Canonical environment run:
+Latest successful environment execution on the exact BFW benchmark head:
 
 ```text
-workflow            = Phase 1 environment lock and verification smoke
-run ID              = 34700099915
-job ID              = 103570219520
-executable code SHA = a11914a1e7d015d75209e32c84a2459114ba7f17
-conclusion          = SUCCESS
-Python              = 3.11.16
-H_lock              = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
-H_env               = sha256:02dcd331815e060c6f9601c9de7cfc9b9d6aa5e487bae08c6c81520b0245a716
-Docker image ID     = sha256:feab21248dbf3694ab8a4247c1bc416e08780f013041fd0b9a2fca56431c1b6b
-OCI tar SHA256      = 230918f8be9e8a7b13ad8a2a40a300c47f44c048b3e96ba465ce7101aa159942
+workflow run ID   = 34700750356
+job ID            = 103571958645
+code SHA          = d6d97c7353f6d5694dba73ab840ae3a2548dd593
+conclusion        = SUCCESS
+Python            = 3.11.16
+H_lock            = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
+H_env             = sha256:ee7469b8ec78c8bf9988fd1c33a7b85de6a49a636ade3337981c56944def50af
+Docker image ID   = sha256:9790b75c9857d473f60402a2b79192e085d559f7caa8369df8ec078f83d7b657
+OCI tar SHA256    = c13061011790320ef987578b91edb462cf7cff5c18b2fc4cb4c767060726d80c
 ```
 
-Executed evidence:
+Executed environment evidence:
 
 ```text
 hash-locked install                  PASS
 required imports                     PASS
 SALib Morris/Sobol smoke             PASS
-ACN Portal frozen-upstream tests     PASS
+ACN Portal frozen-upstream tests     95 passed, 1 warning
 Phase-1 fixtures on host             22 passed
 Phase-1 fixtures in OCI              22 passed
-container build/export               PASS
+legacy architecture fixture          5 passed
+OCI linux/amd64 build/export         PASS
 credential hygiene                   PASS
 ```
 
@@ -83,7 +75,7 @@ Boundary: `G_ENV=1` establishes executable environment consistency only.
 
 # 2. Immutable public benchmark acquisition `[E]`
 
-The benchmark workflow acquired the exact frozen upstream objects and verified each against its preregistered Git blob identity before local hashing.
+Canonical benchmark run `34700750330` verified upstream Git blob identities before hashing local materializations.
 
 ```text
 case33bw.m
@@ -102,182 +94,155 @@ SiouxFalls_trips.tntp
   bytes         = 10859
 ```
 
-Thus public power/transport raw provenance is closed. ACN provenance is not.
+Public power/transport raw provenance is closed. ACN provenance is not.
 
 ---
 
-# 3. Benchmark tests actually executed `[E]`
-
-The immutable integration suite contains four tests:
-
-1. `test_case33bw_source_schema_and_conversion`
-2. `test_case33bw_full_radial_solution_balance_and_positive_load_sign`
-3. `test_sioux_falls_source_schema_and_od_total`
-4. `test_sioux_falls_full_user_equilibrium_conservation_and_closure_limit`
-
-The first three passed on the immutable benchmark objects.
-
-Therefore the following claims are supported inside the declared benchmark domain:
+# 3. Canonical immutable benchmark execution `[E]`
 
 ```text
-MATPOWER source schema and unit conversion        PASS
-33-bus radial power solution/balance              PASS
-positive added load produces expected voltage/current direction PASS
-Sioux Falls source schema                         PASS
-Sioux Falls OD total = 360600                     PASS
-Sioux Falls BPR alpha=0.15, beta=4               PASS
+workflow             = Phase 1 immutable benchmark verification
+run ID               = 34700750330
+job ID               = 103571958582
+head/code SHA        = d6d97c7353f6d5694dba73ab840ae3a2548dd593
+started UTC          = 2026-09-12T14:56:53Z
+completed UTC        = 2026-09-12T14:57:36Z
+workflow conclusion  = SUCCESS
+benchmark tests      = 4 passed in 3.79 s
+Phase-1 fixtures     = 22 passed in 0.08 s
+artifact ID          = 10300177541
+artifact ZIP SHA256  = 3a87c5ec991e2addf7dde8d0ba896ce0d507a8aecfccba4b44b4c8ff4ef0c73f
+report SHA256        = 4f2b27af34459c7b4022813a58ed93c457eb2430cea660f88f5f5877b81f6a35
 ```
 
-The fourth test failed at its preregistered convergence criterion and therefore its later conservation/closure assertions were not admitted as executed PASS evidence.
+The report was generated twice and required byte-for-byte equality before acceptance.
 
 ---
 
-# 4. Transportation-solver failure history
-
-## 4.1 First full immutable benchmark run
+# 4. Power benchmark results `[E]`
 
 ```text
-workflow run ID = 34699942787
-head SHA        = 8ef087f637858e836bda58bef3cece98e10d15d4
-result          = 3 passed, 1 failed
-failed object   = Sioux Falls full user equilibrium
-RG observed     = 0.1696116807192524
-criterion       = RG <= 1e-6 by max_iter=5000
-verdict         = FAIL
+active branches                      = 32
+base kV                              = 12.66
+base MVA                             = 10.0
+solver iterations                    = 11
+max balance residual                 = 3.0808688933348094e-14
+minimum voltage                      = 0.9130904793611044 pu
+bus-24 base voltage                  = 0.9726811009691813 pu
+bus-24 voltage after +0.1 MW         = 0.9714126540936994 pu
+branch 23-24 base current            = 0.09581473734223377 pu
+branch 23-24 current after +0.1 MW   = 0.10532607030491578 pu
 ```
 
-This failure was interpreted as an implementation-verification failure, not as evidence against H1/H2.
-
-## 4.2 Diagnosis `[E/D]`
-
-The implementation was compared against the conjugate-direction Frank-Wolfe recurrence described by Mitradjieva & Lindberg (Transportation Science, 2013, DOI `10.1287/trsc.1120.0409`) and an independent public implementation in `UchidaMizuki/TrafficAssign.jl`.
-
-That reference implementation explicitly forms the residual previous direction after line search as
+Thus the frozen positive-load sign test passes:
 
 ```math
-\bar d=(1-\tau_{k-1})d_{k-1}^{CFW}
+\Delta P_{24}>0
+\Rightarrow
+|V_{24}|\downarrow,
+\quad
+|I_{23,24}|\uparrow.
 ```
 
-and restarts with an ordinary Frank-Wolfe direction when the prior line step is effectively at the end of the feasible segment.
+---
 
-The Phase-1 Python implementation had not encoded that restart state explicitly. This was corrected without altering:
+# 5. Transportation convergence history and final result `[E]`
+
+Earlier executions correctly remained FAIL:
 
 ```text
-Sioux Falls data;
-BPR cost law;
-Beckmann objective;
-relative-gap definition;
-preregistered gap threshold;
-preregistered max iterations;
-H1/H2 outcome definitions.
+initial full immutable RG = 0.1696116807192524
+corrected CFW RG          = 4.215612504228978e-06
+frozen criterion          = RG <= 1e-6 by max_iter=5000
 ```
 
-Correction commit:
+A versioned BFW numerical amendment was then introduced while preserving the frozen mathematical problem and acceptance criterion. See `PHASE1_NUMERICAL_SOLVER_AMENDMENT_V1.md`.
+
+Canonical BFW result:
 
 ```text
-a11914a1e7d015d75209e32c84a2459114ba7f17
+solver                        = biconjugate-frank-wolfe
+iterations                    = 645
+relative gap                  = 9.33748496131895e-07
+max node balance residual     = 6.184563972055912e-11
+scaled node balance residual  = 1.715075976720996e-16
 ```
 
-## 4.3 Rerun after implementation correction
-
-```text
-workflow run ID = 34700099913
-code SHA        = a11914a1e7d015d75209e32c84a2459114ba7f17
-result          = 3 passed, 1 failed
-RG observed     = 4.215612504228978e-06
-criterion       = RG <= 1e-6
-max_iter        = 5000
-verdict         = FAIL
-```
-
-The correction improved the residual gap by approximately four orders of magnitude, but the frozen criterion was still not met.
-
-Formally,
+Therefore
 
 ```math
-4.215612504228978\times10^{-6}>10^{-6}.
+\boxed{V\text{-}T02=\mathrm{PASS}}
 ```
 
-Therefore the test remains FAIL. The improvement is not converted into a PASS by post-hoc threshold relaxation.
+because
+
+```math
+9.33748496131895\times10^{-7}<10^{-6}
+\quad\land\quad
+645<5000.
+```
+
+The threshold and iteration cap were not relaxed.
 
 ---
 
-# 5. Failure-evidence preservation `[D/P]`
+# 6. Transportation access-limit result `[E]`
 
-The benchmark workflow was then strengthened so that execution identity and evidence artifacts are uploaded even when a mandatory verification test fails.
-
-Workflow-change commit:
+At the accepted equilibrium link costs:
 
 ```text
-df263eb254431fca3897e460b7d9483a29393414
+crew base cost   = 25.92894954231427
+crew closed cost = 27.61418250234074
 ```
 
-Preserved-evidence run:
+The frozen closure removes `(9,10)` and `(10,9)`, producing
 
-```text
-workflow run ID = 34700331684
-job ID          = 103570834519
-workflow head   = df263eb254431fca3897e460b7d9483a29393414
-executable code = unchanged from a11914a1e7d015d75209e32c84a2459114ba7f17
-result          = 3 passed, 1 failed
-RG observed     = 4.215612504228978e-06
-artifact ID     = 10300236909
-artifact digest = sha256:a688992b67de054f94dd5c7a7f13587285f36fc9c904c684ead11c1490302904
-executed UTC    = 2026-09-12T14:48:48Z
+```math
+T_{crew}^{closed}>T_{crew}^{base}.
 ```
 
-The artifact contains the raw benchmark hashes/byte counts, pytest failure record and execution identity. This converts the failed test into retained reproducibility evidence rather than ephemeral CI output.
+The reopen test returns the original shortest-path cost/path in the same fixed-cost state. Therefore the declared road-access limit behavior passes inside this benchmark configuration.
 
 ---
 
-# 6. ACN execution result `[E/U]`
+# 7. ACN execution state `[E/U]`
 
-The frozen authenticated ACN workflow was executed separately:
+The frozen authenticated ACN workflow previously reached its deliberate credential gate and stopped because repository secret `ACN_API_TOKEN` was absent.
 
 ```text
 workflow run ID = 34698786730
-head SHA        = c509d7de85627dda9f99023aa8acb5b24737cc9d
-lock install    = PASS
-credential gate = FAIL because ACN_API_TOKEN is absent
+credential gate = BLOCKED_EXTERNAL_CREDENTIAL
 API acquisition = SKIPPED
 raw ACN hash    = UNRESOLVED
 ```
 
-This is classified as
+No ACN observation was opened, substituted, altered, or used for tuning.
 
-```text
-BLOCKED_EXTERNAL_CREDENTIAL
-```
-
-rather than data/model failure. No ACN observation was opened, inspected, altered or substituted.
-
-Thus
+Thus the complete Phase-1 data gate remains open:
 
 ```math
-\boxed{G_D=0}
+\boxed{G_D=0.}
 ```
-
-for the complete Phase-1 data gate because `G_ACNraw`, `G_ACNproc` and the chronological split are not closed.
 
 ---
 
-# 7. Verification-gate assessment
+# 8. Nine-gate verification assessment
 
-The nine-gate summary is intentionally noncompensable.
+The nine-gate summary is noncompensable.
 
-| Gate | State | Evidence |
+| Gate | Current state | Evidence |
 |---|---|---|
-| `G_V1` equations/algorithms implemented as specified | `PARTIAL` | 22/22 frozen fixtures pass; power benchmark passes; full traffic solver criterion fails |
-| `G_V2` units/dimensions | `PARTIAL-PASS` | frozen unit/schema conversion fixtures pass for implemented public benchmark components; ACN path unavailable |
-| `G_V3` conservation/balance | `PARTIAL` | power balance passes; traffic accepted-solution conservation is downstream of failed convergence assertion |
-| `G_V4` limiting cases | `PARTIAL-PASS` | synthetic dependency/limit fixtures pass; complete data-dependent limits not yet executable |
-| `G_V5` numerical convergence/stability | **`FAIL`** | Sioux Falls `RG=4.215612504228978e-06 > 1e-6` at 5000 iterations |
-| `G_V6` irrelevant implementation invariance | `PARTIAL` | deterministic fixture/environment evidence exists; full benchmark report step blocked by failed preceding test |
-| `G_V7` synthetic known-answer recovery | `PASS within implemented fixture domain` | 22 host + 22 OCI verification fixtures pass |
-| `G_V8` sensitivity/parameter coherence | `NOT EXECUTED` | not authorized before numerical verification/data closure |
+| `G_V1` equations/algorithms implemented as specified | `PARTIAL-PASS` | 22/22 frozen fixtures + public P/T benchmark suite pass; ACN/coupled data path pending |
+| `G_V2` units/dimensions | `PARTIAL-PASS` | power and transport schema/unit conversions pass; ACN path pending |
+| `G_V3` conservation/balance | `PUBLIC P/T PASS` | power residual `3.08e-14`; traffic scaled node residual `1.72e-16` |
+| `G_V4` limiting cases | `PARTIAL-PASS` | synthetic dependency limits and road-closure/reopen checks pass; ACN-dependent limits pending |
+| `G_V5` numerical convergence/stability | `PUBLIC P/T PASS` | BFW `RG=9.337e-7` in 645 iterations; power solver converges in 11 iterations |
+| `G_V6` irrelevant implementation invariance | `PARTIAL-PASS` | report generated twice byte-identically; broader ACN/full-model invariance pending |
+| `G_V7` synthetic known-answer recovery | `PASS within implemented fixture domain` | 22 host + 22 OCI fixtures pass |
+| `G_V8` sensitivity/parameter coherence | `NOT FULLY EXECUTED` | UQ library smoke passes; scientific parameter-coherence tests wait for full data/model closure |
 | `G_V9` full reproducibility from complete `R*` | `BLOCKED` | ACN `H_D` unresolved |
 
-Define the closure gate conservatively as
+Define
 
 ```math
 G_V=1
@@ -285,29 +250,23 @@ G_V=1
 \forall k\in\{1,\ldots,9\},\;G_{Vk}=1.
 ```
 
-At present,
+The prior transport-convergence failure is now closed, but because ACN-dependent/full-coupled gates remain unresolved,
 
 ```math
-\boxed{G_V=0.}
+\boxed{G_V=0\;\text{(closure false, not scientific falsification)}.}
 ```
-
-Here `0` means **verification closure is false**. It does not mean the scientific hypotheses have been falsified.
 
 ---
 
-# 8. Why validation and H1/H2 were not run
+# 9. Why validation and H1/H2 remain blocked
 
 The evidence hierarchy requires
 
 ```math
-G_{ENV}=1
-\land
-G_D=1
-\land
-G_V=1
+G_{ENV}=1\land G_D=1\land G_V=1
 ```
 
-before calibration/holdout validation can become admissible.
+before calibration/holdout validation is admissible.
 
 Currently
 
@@ -323,73 +282,34 @@ Therefore
 
 ```math
 \boxed{
-G_{VAL}=0_{\text{BLOCKED}},
+G_{VAL}=\mathrm{BLOCKED},
 \qquad
-G_{H1}=0_{\text{BLOCKED}},
+G_{H1}=\mathrm{BLOCKED},
 \qquad
-G_{H2}=0_{\text{BLOCKED}}.
+G_{H2}=\mathrm{BLOCKED}.
 }
 ```
 
-No validation data were opened for result-driven tuning and no confirmatory H1/H2 result was produced.
+No confirmatory hypothesis result has been produced.
 
 ---
 
-# 9. Exact next allowed technical work
+# 10. Exact next allowed work
 
-Two independent blockers remain.
-
-## Blocker A — transportation convergence
-
-Allowed:
-
-```text
-inspect the CFW numerical recurrence;
-compare against an independent implementation/reference solution;
-add diagnostic traces that do not change the frozen acceptance criterion;
-correct a demonstrable implementation defect under version control;
-rerun the entire verification suite after each correction.
-```
-
-Not allowed merely to manufacture a PASS:
-
-```text
-weaken RG tolerance after observing the result;
-increase max_iter only because 5000 did not pass;
-remove difficult OD pairs;
-change BPR parameters;
-replace Sioux Falls;
-redefine the relative-gap metric post hoc.
-```
-
-If a different solver is introduced, it must solve the same frozen Beckmann/user-equilibrium problem and be treated as a versioned implementation amendment with independent cross-check evidence.
-
-## Blocker B — ACN credential
-
-The user must configure the authorized token externally as repository Actions secret:
-
-```text
-ACN_API_TOKEN
-```
-
-The token must never be committed or pasted into chat. After the secret exists, rerun the already-frozen acquisition workflow; accept `G_ACNraw=1` only if it records the raw SHA-256, byte count, record count, manifest hash, retrieval time and credential-hygiene PASS.
-
----
-
-# 10. Current scientifically permissible conclusion
+The previous transportation numerical blocker is closed. The active hard path is now:
 
 ```math
 \boxed{
-\text{reproducible environment closed}
-\land
-\text{public benchmark provenance closed}
-\land
-\text{power benchmark verification passes}
-\land
-\text{transport numerical convergence does not yet pass}
-\land
-\text{ACN data gate remains credential-blocked}.
+\text{configure ACN_API_TOKEN externally}
+\rightarrow
+\text{execute frozen ACN acquisition}
+\rightarrow
+\text{freeze raw/processed/split hashes}
+\rightarrow
+\text{execute remaining ACN-dependent/full coupled verification}
+\rightarrow
+G_V.
 }
 ```
 
-The correct scientific action is therefore to remain inside verification. Validation, H1/H2 and resilience/viability experiments remain blocked.
+The token must never be committed or pasted into chat. If the credential is unavailable, the scientifically correct state is `BLOCKED_EXTERNAL_CREDENTIAL`; no substitute dataset is authorized inside v1.
