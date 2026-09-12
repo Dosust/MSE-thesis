@@ -1,0 +1,111 @@
+name: Phase 1 authenticated ACN acquisition
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/phase1-acn-acquisition.yml"
+      - "project/phase1_runtime/acquire_acn.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  EXPECTED_LOCK_SHA256: "68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4"
+  PYTHONHASHSEED: "0"
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+
+jobs:
+  acquire-frozen-acn-window:
+    runs-on: ubuntu-24.04
+    env:
+      ACN_API_TOKEN: ${{ secrets.ACN_API_TOKEN }}
+
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Set up frozen Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.16"
+
+      - name: Verify canonical lock and install
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACTUAL="$(sha256sum project/requirements-phase1-v1.lock.txt | cut -d' ' -f1)"
+          echo "LOCK_SHA256=${ACTUAL}"
+          test "${ACTUAL}" = "${EXPECTED_LOCK_SHA256}"
+          python -m pip install --disable-pip-version-check "pip==24.0"
+          python -m pip install --require-hashes -r project/requirements-phase1-v1.lock.txt
+
+      - name: Assert external credential is available without printing it
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ACN_API_TOKEN:-}" ]; then
+            echo "ACN_API_TOKEN is not configured in repository Actions secrets."
+            echo "DATA_GATE=BLOCKED_EXTERNAL_CREDENTIAL"
+            exit 86
+          fi
+          echo "ACN credential presence check: PASS"
+
+      - name: Acquire immutable preregistered ACN raw object
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p phase1-acn-evidence
+          python project/phase1_runtime/acquire_acn.py | tee phase1-acn-evidence/acquisition-summary.txt
+
+      - name: Freeze acquisition provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="data/raw/acn_caltech_20191010_20191231_ts"
+          test -f "${ROOT}/sessions_canonical.jsonl"
+          test -f "${ROOT}/acquisition_manifest.json"
+          RAW_SHA="$(sha256sum "${ROOT}/sessions_canonical.jsonl" | cut -d' ' -f1)"
+          MANIFEST_SHA="$(sha256sum "${ROOT}/acquisition_manifest.json" | cut -d' ' -f1)"
+          BYTES="$(wc -c < "${ROOT}/sessions_canonical.jsonl")"
+          CODE_SHA="$(git rev-parse HEAD)"
+          ACQUIRED_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          cat > phase1-acn-evidence/acquisition-identity.txt <<EOF
+          CODE_SHA=${CODE_SHA}
+          LOCK_SHA256=${EXPECTED_LOCK_SHA256}
+          ACQUIRED_UTC=${ACQUIRED_UTC}
+          RAW_FILE=${ROOT}/sessions_canonical.jsonl
+          RAW_BYTES=${BYTES}
+          RAW_SHA256=${RAW_SHA}
+          MANIFEST_SHA256=${MANIFEST_SHA}
+          SITE=caltech
+          START_LOCAL=2019-10-10T00:00:00-07:00
+          END_LOCAL=2019-12-31T23:59:59-08:00
+          TIMESERIES=true
+          EOF
+          cat phase1-acn-evidence/acquisition-identity.txt
+          chmod -R a-w "${ROOT}"
+
+      - name: Verify credential hygiene
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -R --binary-files=without-match -F "${ACN_API_TOKEN}" data phase1-acn-evidence 2>/dev/null; then
+            echo "Credential material detected in generated evidence."
+            exit 1
+          fi
+          echo "Generated evidence contains no literal ACN token."
+
+      - name: Upload immutable raw ACN evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-acn-raw-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            data/raw/acn_caltech_20191010_20191231_ts/
+            phase1-acn-evidence/
