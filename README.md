@@ -12,10 +12,11 @@
 **Repository:** active thesis source of truth  
 **Framework status:** complete seven-stage conceptual and mathematical framework frozen  
 **Hypothesis status:** five-primary-hypothesis logic frozen; numerical thresholds/test specifications not yet frozen  
+**Reasoning protocol:** canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance discipline  
 **Evidence methodology:** FTEE v2.0 — fresh search from first principles followed by screening and full-text evidence-to-equation extraction  
 **Old 325-paper corpus:** secondary coverage audit only  
 **Citation standard:** APA 7th edition author–date  
-**Updated:** 2026-09-11
+**Updated:** 2026-09-12
 
 > **Repository rule:** active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical/archive material is provenance only and cannot override current canonical files.
 
@@ -36,6 +37,7 @@ The increasing electrification and interdependence of urban infrastructure are c
 | File | Role |
 |---|---|
 | [`project/README.md`](project/README.md) | active mathematical/project dashboard |
+| [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | **canonical thesis-wide reasoning, verification, validation, falsification and synthesis protocol** |
 | [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md) | frozen thesis scope |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | frozen seven-stage framework |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
@@ -47,6 +49,30 @@ The increasing electrification and interdependence of urban infrastructure are c
 | [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | superseded FTEE v1.0 provenance pointer |
 | [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md) | GitHub math/rendering standard |
 | [`tools/thesis_display_lint.py`](tools/thesis_display_lint.py) | automated Markdown/math/ontology QA |
+
+---
+
+## Canonical reasoning standard
+
+```math
+\text{LEARN}
+\rightarrow
+\text{VERIFY}
+\rightarrow
+\text{FORMULATE}
+\rightarrow
+\text{DERIVE}
+\rightarrow
+\text{TEST}
+\rightarrow
+\text{VALIDATE}
+\rightarrow
+\text{SYNTHESIZE}
+\rightarrow
+\text{ADVANCE}.
+```
+
+Every substantive thesis claim must expose its definition, evidence status, mechanism, mathematics, assumptions, competing test, uncertainty, validation domain, and engineering implication. The full protocol is maintained in [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md).
 
 ---
 
