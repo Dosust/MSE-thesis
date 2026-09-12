@@ -22,6 +22,12 @@ Requirement matrix: REPRESENTATION_REQUIREMENTS_MATRIX.md
 0E case metrics: PHASE0_0E_CASE_ENCODING_AND_METRICS.md
 0E requirement scores: PHASE0_0E_R1_R12_SCORE_MATRIX.md
 0E closure: PHASE0_0E_CLOSURE_MEMO.md
+0F fact sets: PHASE0_0F_DEPENDENCY_FACT_SETS.md
+0F ablation protocol: PHASE0_0F_FIELD_ABLATION_PROTOCOL.md
+0F monolithic test: PHASE0_0F_MONOLITHIC_OBJECT_TEST.md
+0F layered test: PHASE0_0F_LAYERED_OBJECT_TEST.md
+0F minimum result: PHASE0_0F_MINIMUM_SUFFICIENT_DEPENDENCY.md
+0F closure: PHASE0_0F_CLOSURE_MEMO.md
 Repository: Dossiya-SE/MSE-thesis
 Branch: main
 ```
@@ -35,8 +41,8 @@ Branch: main
 | 0C — theory benchmark | `Closed__bounded_saturation` | core benchmark + R1–R4 + closure memo | predecessor envelope stabilized sufficiently for controlled comparison; no novelty claim |
 | 0D — formalize M0/M1 | `Closed__formal_nonisomorphism` | five 0D artifacts committed under equal information/physics controls | native type systems differ mathematically; no superiority claim |
 | 0E — V1–V5 tests | `Closed__no_engineering_significance_demonstrated` | physics/fact sets + case metrics + R1–R12 matrix + closure memo | non-isomorphism produced no semantic loss, ambiguity or ad-hoc repair on frozen cases |
-| 0F — dependency-contract ablation | `Ready` | ontology-only comparison complete | minimum sufficient dependency representation may now be tested while ontology is held fixed |
-| 0G — RETAIN/REVISE/REPLACE | `Blocked_by_0F` | none | final canonical decision not yet permitted |
+| 0F — dependency-contract ablation | `Closed__hybrid_minimum_required` | six 0F artifacts committed under fixed ontology and K1–K8 capability freeze | minimum candidate is `(C_e,Sigma_e,Pi_e)` with global realization/service maps |
+| 0G — RETAIN/REVISE/REPLACE | `Ready` | 0A–0F closed | final theoretical decision is now permitted; no new framework component should be added before decision |
 
 ---
 
@@ -57,7 +63,7 @@ compositional open systems and syntax/semantics separation;
 behavioral/safety contracts on compositional architectures.
 ```
 
-The stable predecessor envelope is
+The stable predecessor envelope remains:
 
 ```math
 \mathcal P^*=\{
@@ -80,20 +86,7 @@ The stable predecessor envelope is
 
 # 0D retained mathematical result
 
-The controlled experiment fixed identical:
-
-```text
-V*;
-x_P,x_T;
-F_P,F_T;
-z_I,z_O facts;
-R_e*;
-E*;
-Q*;
-V1–V5.
-```
-
-Only the native type system differed:
+The controlled comparison fixed identical physical reality, evidence, relation payload, services and cases. Only the native type system changed:
 
 ```math
 M_0:\quad \mathcal S_0=\{P,T,I,O\},
@@ -102,20 +95,10 @@ M_0:\quad \mathcal S_0=\{P,T,I,O\},
 versus
 
 ```math
-M_1:\quad \mathcal S_1=\mathcal D\times\mathcal A,
-\qquad
-\mathcal D=\{P,T\},
-\qquad
-\mathcal A=\{Ph,In,Or\}.
+M_1:\quad \mathcal S_1=\mathcal D\times\mathcal A.
 ```
 
-The forgetful map
-
-```math
-\phi_{10}:M_1\rightarrow M_0
-```
-
-is many-to-one for informational and organizational types. A reverse map requires the evidence-conditioned attribution map `eta`.
+The forgetful map `phi_10` is many-to-one for informational/organizational domain coordinates and the reverse map requires an evidence-conditioned attribution map.
 
 Therefore
 
@@ -125,42 +108,11 @@ M_0\not\cong M_1
 
 as native type systems.
 
-This remains a formal structural result only.
+This is a formal structural result only.
 
 ---
 
-# 0E engineering-significance test — completed
-
-## E0 — external engineering basis
-
-The frozen V1–V5 fact sets were anchored to:
-
-```text
-ISO 15118 EV/EVSE energy and communication interfaces;
-NIST CPS timing/data/human aspects;
-current coupled power–transport charging models;
-transportation–crew–grid restoration models;
-ISO 9906 pump hydraulic-power relation;
-power–water interdependency literature.
-```
-
-The physical equations and dimensions were held identical across both ontologies.
-
-## E1 — exact fact-set sizes
-
-```math
-|\mathcal F_1|=10,
-\qquad
-|\mathcal F_2|=9,
-\qquad
-|\mathcal F_3|=9,
-\qquad
-|\mathcal F_4|=10,
-\qquad
-|\mathcal F_5|=10.
-```
-
-## E2 — metric result
+# 0E retained engineering-significance result
 
 For every frozen case `V_k`, `k=1,...,5`,
 
@@ -178,85 +130,59 @@ and
 N_{adhoc}(M_0,V_k)=N_{adhoc}(M_1,V_k)=0.
 ```
 
-Under the preregistered component-wise complexity vector,
-
-```math
-C(M_0,V_k)=C(M_1,V_k)
-```
-
-because entity count, relation schema, physics, physical/relation parameter classes, assumptions and external execution formalisms were controlled to be identical.
-
-## E3 — why `M_0` does not lose V2/V3 semantics
-
-`M_0` compresses domain affiliation of `I/O` entities into auxiliary actor/subsystem context, whereas `M_1` places that affiliation directly in the native type coordinate.
-
-However, the equal-information protocol preregistered that the same actor/subsystem evidence is available to both models. The global attribution map therefore reconstructs domain affiliation in V2 and V3 without a case-specific repair.
-
-Thus native explicitness does not become semantic loss under this test.
-
-## E4 — Water extension result
-
-`M_0` extends conservatively as
-
-```math
-\{P,T,I,O\}\hookrightarrow\{P,T,W,I,O\},
-```
-
-while `M_1` extends as
-
-```math
-\mathcal D\times\mathcal A
-\hookrightarrow
-(\mathcal D\cup\{W\})\times\mathcal A.
-```
-
-Both preserve old P–T semantics and retain the same relation payload. Therefore V5 does not expose a required capability unavailable to either representation.
-
-## E5 — R1–R12 scores
-
-The frozen matrix yields
+The frozen requirement matrix gives
 
 ```math
 S_{diag}(M_0)=24,
-```
-
-```math
+\qquad
 S_{diag}(M_1)=24.
 ```
 
-Both pass all five non-compensable gates `G1–G5` on V1–V5.
+Both pass G1–G5 on V1–V5.
 
-## E6 — hypothesis result
-
-The preregistered null stated that, after controlling information, `M_0` and `M_1` are representationally equivalent for the declared P–T problem unless one incurs semantic loss, ambiguity or ad-hoc repair.
-
-Observed result:
+Accepted interpretation:
 
 ```text
-H_0D — NOT REJECTED within the declared symbolic V1–V5 test domain.
-```
-
-This does not prove universal equivalence.
-
-## E7 — accepted scientific interpretation
-
-The 0D non-isomorphism is mathematically real but **engineering significance is not demonstrated** by the controlled V1–V5 representation tests.
-
-At this point the evidence supports:
-
-```text
-M1 provides more native explicitness for domain affiliation of information/organization;
-M0 stores the same recoverable meaning more compactly through global I/O plus actor/subsystem context;
+M1 provides greater native explicitness;
+M0 retains the same recoverable engineering meaning under the equal-information fixture;
 no frozen case demonstrates a necessary engineering capability unique to M1.
 ```
 
-Therefore there is currently no scientific basis for replacing the canonical ontology solely because the domain × aspect representation is more explicit.
+Hence the 0D null is not rejected within the declared symbolic test domain.
 
 ---
 
-# Transition to 0F
+# 0F dependency-representation ablation — completed
 
-The unresolved question now concerns the dependency representation itself, not the ontology.
+## F0 — capability freeze
+
+Before result interpretation, the dependency representation was required to preserve:
+
+```text
+K1 source/receiver;
+K2 direction;
+K3 causal/functional mechanism;
+K4 state/time/context dependence;
+K5 delay/latency/history where relevant;
+K6 evidence/provenance/epistemic status;
+K7 executable mathematical/model realization;
+K8 measurable service consequence trace.
+```
+
+## F1 — heterogeneous dependency truth sets
+
+0F tested:
+
+```text
+D1: P_feeder -> T_FCS;
+D2: T_EV_forecast -> P_controller;
+D3: T_road_authority -> P_crew_access;
+D4: T_EV_charging -> P_feeder_load.
+```
+
+These span physical, informational and organizational/authority mechanisms in both P->T and T->P directions.
+
+## F2 — monolithic candidate result
 
 Candidate A:
 
@@ -264,46 +190,178 @@ Candidate A:
 \mathfrak d_e=(s,r,\rho,m,q,M,z,w,\delta,c,U,\mathcal H).
 ```
 
+Guaranteed non-primitive fields under the frozen derivations are at least:
+
+```math
+\{\rho,M,w\}.
+```
+
+Therefore
+
+```math
+R_{red}^{LB}=3/12=0.25.
+```
+
+Additional conclusions:
+
+```text
+s,r are primitive;
+m is necessary semantic mechanism content but must be formalized;
+q is necessary typed interface/carrier content but need not remain a top-level field;
+z and H are conditional relation-state/memory extensions;
+delta and c are necessary information when applicable but may be mechanism parameters/guards;
+U/provenance is primitive epistemic content;
+raw m does not by itself guarantee an executable coupling operator.
+```
+
+Candidate A is sufficient on D1–D4 only with fixed realization/service maps and is not minimum as declared.
+
+## F3 — layered candidate result
+
 Candidate B:
 
 ```math
 \mathfrak D_e=(\mathcal C_e,\Sigma_e,\Pi_e,\Xi_e).
 ```
 
-0F must hold the ontology fixed and perform field/layer ablation to determine the minimum sufficient dependency representation.
-
-The test must ask, for every removed field/layer:
+Leave-one-layer-out testing gives:
 
 ```text
-Does removal destroy mechanism explanation?
-Does removal destroy identification/traceability?
-Does removal destroy state/time semantics?
-Does removal destroy evidence qualification?
-Does removal prevent executable realization?
-Does removal change an engineering decision or service interpretation?
+C_e = primitive;
+Sigma_e = primitive;
+Pi_e = primitive epistemic content;
+Xi_e = implementation realization rather than primitive relation semantics when a global realization map exists.
 ```
 
-Only fields/layers that survive these necessity tests may remain in the core contract.
+Candidate B is sufficient but not minimum as declared.
+
+## F4 — minimum sufficient candidate
+
+0F derives:
+
+```math
+\boxed{
+\mathfrak d_e^{min}
+=(\mathcal C_e,\Sigma_e,\Pi_e)
+}
+```
+
+with
+
+```math
+\mathcal C_e=(s_e,p_e^s,r_e,p_e^r,\chi_e),
+```
+
+```math
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+```math
+\Pi_e=(\mathcal P_e,V_e,\mathcal U_e).
+```
+
+`zeta_e` is optional/empty when the relation has no independent state or memory.
+
+Global maps are:
+
+```math
+\mathcal X:\Sigma_e\mapsto\Xi_e
+```
+
+and
+
+```math
+Q=G(Y).
+```
+
+Thus execution and service consequence remain traceable without being duplicated as irreducible top-level fields on every dependency.
+
+## F5 — relative minimality test
+
+With fixed global maps `X` and `G`,
+
+```math
+L_{sem}(\mathfrak d^{min},D_i)=0,
+```
+
+```math
+E_{amb}(\mathfrak d^{min},D_i)=0,
+```
+
+and
+
+```math
+N_{adhoc}(\mathfrak d^{min},D_i)=0
+```
+
+for `i=1,...,4`.
+
+Ablating:
+
+```text
+C_e -> K1/K2 fail and K8 trace is broken;
+Sigma_e -> K3/K4/K5/K7 fail;
+Pi_e -> K6 fails.
+```
+
+No fourth per-edge primitive is necessary under the declared global realization and service maps.
+
+This proves relative minimality only for the frozen Phase-0 fixture; it is not a universal theorem over all infrastructure relation classes.
+
+## F6 — original-field disposition
+
+```text
+s,r -> C_e;
+q -> typed carrier/ports in C_e;
+m -> formal causal operator Phi_e in Sigma_e;
+delta -> mechanism parameter/history-domain semantics;
+c -> guard gamma_e;
+z,H -> optional internal state/memory zeta_e;
+U/provenance -> Pi_e;
+rho -> derived classification;
+M -> derived edge-set/admissibility membership;
+w -> derived influence functional under declared metric;
+Xi -> global implementation realization;
+service consequence -> system-level G(Y).
+```
+
+## F7 — 0F verdict
+
+The preregistered result classes were:
+
+```text
+MONOLITHIC OBJECT SUFFICIENT;
+LAYERED OBJECT SUFFICIENT;
+HYBRID MINIMUM OBJECT REQUIRED.
+```
+
+Observed result:
+
+```math
+\boxed{\text{HYBRID MINIMUM OBJECT REQUIRED}.}
+```
+
+The minimum candidate is the three-part relation contract `(C_e,Sigma_e,Pi_e)`.
 
 ---
 
-## Frozen decision prohibition
+# Frozen limitations before 0G
 
-Until 0F is complete, the following claims remain prohibited:
+The gate has **not** established:
 
 ```text
-"M1 is better than M0";
-"M0 should be revised";
-"M1 should replace M0";
-"the domain × aspect ontology is canonical";
-"the Phase-0 dependency contract is novel";
-"the seven-stage framework should be changed".
+universal minimality;
+empirical identifiability or prediction accuracy;
+novelty of the three-part contract;
+permission to modify the canonical thesis automatically.
 ```
+
+0G must decide whether the evidence supports retaining, revising or replacing the current canonical representation. It must use the already frozen gate rules and may not introduce a new framework candidate simply to obtain a preferred outcome.
 
 ---
 
 ## Next release target
 
 ```text
-0F — minimum-sufficient dependency-contract ablation under fixed ontology and fixed V1–V5 engineering fixtures.
+0G — final theoretical decision: RETAIN / REVISE / REPLACE.
 ```
