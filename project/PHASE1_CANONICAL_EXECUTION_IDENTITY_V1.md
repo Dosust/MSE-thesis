@@ -1,174 +1,104 @@
 # Phase 1C — Canonical Execution Identity v1
 
-![Status](https://img.shields.io/badge/status-ENVIRONMENT%20IDENTITY%20FROZEN-1A7F37)
+![Status](https://img.shields.io/badge/status-STRENGTHENED%20ENVIRONMENT%20IDENTITY%20FROZEN-1A7F37)
 ![Phase](https://img.shields.io/badge/phase-1C-0969DA)
 
 **Frozen:** 2026-09-12  
-**Authority:** `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md` + GitHub Actions run `34697585840`  
-**Purpose:** freeze the exact software/code/environment identity produced by the first successful canonical Phase-1 environment-lock run.  
-**Boundary:** this document establishes computational reproducibility evidence only. It does **not** establish full model verification, empirical validation, or support for H1/H2.
+**Superseding environment-evidence run:** GitHub Actions `34698765300`  
+**Authority:** `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md` + committed hash-lock + successful strengthened environment workflow  
+**Boundary:** computational reproducibility/environment verification only; not full model verification, empirical validation, or H1/H2 evidence.
 
 ---
 
-## 0. Thesis method
+## 0. Governing method
 
 ```math
 \boxed{
-\text{LEARN}
-\rightarrow
-\text{VERIFY}
-\rightarrow
-\text{FORMULATE}
-\rightarrow
-\text{DERIVE}
-\rightarrow
-\text{TEST}
-\rightarrow
-\text{VALIDATE}
-\rightarrow
-\text{SYNTHESIZE}
-\rightarrow
-\text{ADVANCE}
+\text{LEARN}\rightarrow\text{VERIFY}\rightarrow\text{FORMULATE}\rightarrow\text{DERIVE}
+\rightarrow\text{TEST}\rightarrow\text{VALIDATE}\rightarrow\text{SYNTHESIZE}\rightarrow\text{ADVANCE}
 }
 ```
-
-Evidence translation rule:
 
 ```math
 \boxed{
-\text{GENERAL EVIDENCE}
-\rightarrow
-\text{SCOPE MATCH}
-\rightarrow
-\text{THESIS APPLICATION}
-\rightarrow
-\text{WHY}
-\rightarrow
-\text{CRITICAL TEST}
+\text{GENERAL EVIDENCE}\rightarrow\text{SCOPE MATCH}\rightarrow\text{THESIS APPLICATION}
+\rightarrow\text{WHY}\rightarrow\text{CRITICAL TEST}
 }
 ```
 
-Claim tags:
-
-```text
-[E] externally observed execution fact;
-[P] preregistered thesis choice;
-[D] result derived from frozen evidence;
-[A] explicit assumption;
-[U] unresolved blocker.
-```
+The earlier successful run `34697585840` remains provenance evidence, but run `34698765300` is authoritative because it adds the previously missing SALib and frozen-upstream ACN Portal execution checks without weakening any previous gate.
 
 ---
 
-# 1. Successful canonical environment run `[E]`
-
-GitHub Actions evidence:
+# 1. Canonical successful run `[E]`
 
 ```text
-workflow name       = Phase 1 environment lock and verification smoke
+workflow            = Phase 1 environment lock and verification smoke
 workflow path       = .github/workflows/phase1-environment-lock.yml
-workflow run ID     = 34697585840
-workflow run number = 2
-event                = push
-branch               = main
-status               = completed
-conclusion           = success
-run started UTC      = 2026-09-12T13:51:20Z
-run updated UTC      = 2026-09-12T13:53:41Z
-head/code SHA        = 59a0a71f7f90221a215e40389c0600e7ef3d52a5
+run ID              = 34698765300
+run number          = 3
+head/code SHA       = b8d47d6baa9e0cde51c5dd4d0e41be92e0445d7a
+status/conclusion   = completed / success
+started UTC         = 2026-09-12T14:15:40Z
+completed UTC       = 2026-09-12T14:18:03Z
+artifact ID         = 10299955441
+artifact digest     = sha256:2d138f3423e108725893b810260ce1aba17b7a67febb8054b0d28961e318dc7d
 ```
-
-Workflow evidence artifact:
-
-```text
-artifact ID          = 10299178011
-artifact name        = phase1-environment-lock-59a0a71f7f90221a215e40389c0600e7ef3d52a5
-artifact SHA-256     = 8bfefce5d766a08f6c4befa019ea7b43deabc46ff2de51da0d54391e1c323d77
-artifact created UTC = 2026-09-12T13:53:32Z
-```
-
-The artifact is an evidence carrier; its retention policy is finite, so the cryptographic identities extracted below are the canonical permanent thesis record.
 
 ---
 
 # 2. Frozen execution identity
 
-The Phase-1 reproducibility identity is
-
 ```math
 \mathcal R_0
 =
-\left(
-H_{code},
-H_{lock},
-H_{env},
-H_D,
-ID_{run},
-t_{run}
-\right).
+(H_{code},H_{lock},H_{env},H_D,ID_{run},t_{run}).
 ```
 
-For v1:
-
 ```text
-H_code = 59a0a71f7f90221a215e40389c0600e7ef3d52a5
+H_code = b8d47d6baa9e0cde51c5dd4d0e41be92e0445d7a
 H_lock = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
-H_env  = sha256:86fb03316014ff27c9141882f935e52b4a6bf2000ace0b46e2f0df74447b420f
+H_env  = sha256:88a673b827ebaaade2556338e38203b87268a6819c9ea017fcf848829bafd0e3
 H_D    = PENDING_ACN_AUTHENTICATED_ACQUISITION
-ID_run = 34697585840
-t_run  = 2026-09-12T13:51:20Z
+ID_run = 34698765300
+t_run  = 2026-09-12T14:15:40Z
 ```
 
-Auxiliary immutable environment evidence:
+Auxiliary evidence:
 
 ```text
-Docker local image ID = sha256:580030ae5ae2080c6b39ce16b36d78e691d547d0c7947a74e0389fdd72a9a066
-OCI archive SHA-256   = 417805be3b4ade3e60e299e7d6d037d869c7060c3aaed38bb0229b98c73a2a0b
+OCI archive SHA-256 = 7001ee62793dfbc604d6c09df8a6957993a2cd1846852bdcf929e8d0e0af94e9
 ```
 
-`H_env` is the OCI manifest descriptor emitted from the canonical `linux/amd64` OCI export. It is used as the environment identity rather than a mutable image tag.
+The exact resolved dependency lockfile is now permanently committed in the thesis repository as `project/requirements-phase1-v1.lock.txt`; a one-time resolver workflow reproduced the expected lock hash and committed it at `9322a451cba1118c27b6d821c4b718fd4a05ad20`.
 
 ---
 
-# 3. Runtime facts `[E]`
-
-The successful workflow recorded:
+# 3. Runtime identity `[E]`
 
 ```text
-Python = 3.11.16 (GCC 13.3.0)
-runner OS = Ubuntu 24.04.5 LTS
-runner architecture = x86_64
-IEEE-754 double width = 64 bit
-NumPy float64 width = 64 bit
-PYTHONHASHSEED = 0
-OMP_NUM_THREADS = 1
-OPENBLAS_NUM_THREADS = 1
-MKL_NUM_THREADS = 1
-NUMEXPR_NUM_THREADS = 1
+Python                  = 3.11.16 (GCC 13.3.0)
+runtime platform        = Linux x86_64 / Ubuntu 24.04 runner family
+float width             = 64 bit
+NumPy float64 width     = 64 bit
+PYTHONHASHSEED          = 0
+OMP_NUM_THREADS         = 1
+OPENBLAS_NUM_THREADS    = 1
+MKL_NUM_THREADS         = 1
+NUMEXPR_NUM_THREADS     = 1
 ```
 
-Deterministic seed fixture:
+Deterministic sub-seed evidence:
 
 ```text
-scenario-A        -> 17146681787701098982
-scenario-A repeat -> 17146681787701098982
-scenario-B        -> 15573457804683794101
+scenario-A        = 17146681787701098982
+scenario-A repeat = 17146681787701098982
+scenario-B        = 15573457804683794101
 ```
-
-This satisfies the intended deterministic sub-seed rule for the tested fixtures.
 
 ---
 
-# 4. Resolved dependency evidence `[E]`
-
-The successful resolver produced a hash-locked dependency file with
-
-```text
-requirements-phase1-v1.lock.txt
-SHA-256 = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
-```
-
-Selected resolved versions include:
+# 4. Dependency identity `[E]`
 
 ```text
 acnportal==0.3.3
@@ -184,90 +114,90 @@ pytz==2024.1
 pytest==8.2.2
 ```
 
-The complete generated lockfile is the authority; this list is descriptive only.
+The complete hash-locked file, not this descriptive subset, is authoritative.
 
 ---
 
-# 5. Verification-only fixture result `[E]`
+# 5. Strengthened environment evidence `[E]`
 
-The canonical workflow executed the current Phase-1 verification fixture suite both on the GitHub runner and inside the canonical `linux/amd64` container:
+The run executed and passed:
 
 ```text
-host fixture result      = 20 passed
-container fixture result = 20 passed
+canonical hash-lock verification/install  = PASS
+package import smoke                       = PASS
+SALib Morris smoke                         = PASS
+SALib Sobol smoke                          = PASS
+ACN Portal frozen-upstream test suite      = 95 passed, 1 deprecation warning
+Phase-1 verification fixture suite (host) = 20 passed
+Phase-1 verification fixture suite (OCI)  = 20 passed
+legacy architecture fixture                = PASS
+OCI linux/amd64 build/export               = PASS
+credential-hygiene scan                    = PASS
 ```
 
-These results show that the implemented verification fixtures execute consistently in both contexts.
+Frozen upstream ACN Portal source used for the package-behavior check:
 
-They do **not** establish that every test in `PHASE1_VERIFICATION_TEST_MATRIX_V1.md` has been executed. In particular, authenticated ACN data checks and the complete nine-gate verification closure remain pending.
+```text
+repository = zach401/acnportal
+commit     = 14e723b11339e56ca3afd2bf4969f9e4bc8c2623
+package    = acnportal 0.3.3
+```
+
+The single upstream deprecation warning concerns `pkg_resources`; it did not cause test failure and is retained as software-technical evidence rather than suppressed.
 
 ---
 
-# 6. Environment gate decomposition
+# 6. Environment gate
 
-For Phase 1C, define
+Define
 
 ```math
 G_{ENV}
 =
-G_{build}
-G_{install}
-G_{import}
-G_{fixture}
-G_{container}
-G_{identity}
-G_{secret}.
+G_{lock}G_{install}G_{import}G_{SALib}G_{ACNlib}G_{fixture}G_{container}G_{identity}G_{secret}.
 ```
 
-Evidence from run `34697585840` establishes:
-
-| Sub-gate | Result | Evidence |
-|---|---:|---|
-| `G_build` | 1 | OCI/Docker build step completed |
-| `G_install` | 1 | resolved lock/install step completed |
-| `G_import` | 1 | direct-package import smoke completed |
-| `G_fixture` | 1 | 20 Phase-1 fixtures passed on runner |
-| `G_container` | 1 | 20 Phase-1 fixtures passed in linux/amd64 container |
-| `G_identity` | 1 | code/lock/OCI identities recorded |
-| `G_secret` | 1 | tracked-file literal-token hygiene check passed |
-
-Therefore for this **bounded environment gate**:
+All terms were executed successfully in canonical run `34698765300`; therefore
 
 ```math
 \boxed{G_{ENV}=1.}
 ```
 
-This definition is intentionally narrower than the full model-verification gate `G_V`. Any additional package-specific or model-specific test remains part of verification and cannot be inferred from `G_ENV=1`.
+Scope of this conclusion:
+
+> the declared Phase-1 computational environment is internally executable under its frozen dependency identity, including the required uncertainty-analysis APIs and the frozen ACN Portal package test suite.
+
+This does **not** imply that the empirical ACN dataset has been acquired or that the full infrastructure model has been verified.
 
 ---
 
-# 7. Data hash remains unresolved `[U]`
+# 7. Data gate remains open `[U]`
 
-The environment run did not have an authorized ACN extraction. Therefore
+The authenticated ACN acquisition workflow subsequently executed under the canonical lock but stopped at its deliberate credential-presence gate because repository secret `ACN_API_TOKEN` is absent.
+
+Therefore
 
 ```text
 H_D = PENDING_ACN_AUTHENTICATED_ACQUISITION
 ```
 
-and the fully specified run identity
+and
 
 ```math
 \mathcal R^*=(H_{code},H_{lock},H_{env},H_D)
 ```
 
-cannot yet be closed.
-
-This is the next hard gate.
+is still incomplete.
 
 ---
 
-# 8. Scientific interpretation
-
-Correct implications:
+# 8. Scientific boundary
 
 ```math
 \boxed{
 G_{ENV}=1
+\not\Rightarrow
+G_D=1
 \not\Rightarrow
 G_V=1
 \not\Rightarrow
@@ -277,35 +207,34 @@ V_{empirical}=1
 }
 ```
 
-The present evidence supports only:
+Allowed claim:
 
-> The declared Phase-1 software environment can be reconstructed and can execute the current verification-only fixture suite under an immutable code/lock/environment identity.
+> The Phase-1 software environment, dependency resolution, required package behaviors, deterministic fixtures, and canonical container execution have passed their bounded reproducibility gate.
 
-It does not support:
+Not yet allowed:
 
 ```text
-- empirical validity of the P–T demonstrator;
-- correctness of every declared mathematical mechanism;
-- identifiability of all parameters;
-- predictive superiority of dynamic coupling;
-- resilience/viability conclusions;
-- support for H1 or H2.
+full model verification;
+ACN data validity;
+calibration/holdout validation;
+H1/H2 conclusions;
+resilience/viability conclusions.
 ```
 
 ---
 
-# 9. Next allowed operation
+# 9. Next hard gate
 
 ```math
 \boxed{
-\text{ACN authenticated acquisition}
+\text{configure ACN_API_TOKEN externally}
+\rightarrow
+\text{rerun frozen acquisition}
 \rightarrow
 H_D
 \rightarrow
 \mathcal R^*
 \rightarrow
-\text{full verification execution}.
+\text{ACN-dependent/full verification}.
 }
 ```
-
-Until `H_D` is frozen, validation and confirmatory H1/H2 execution remain blocked.
