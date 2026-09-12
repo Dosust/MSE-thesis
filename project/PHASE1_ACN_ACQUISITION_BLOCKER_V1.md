@@ -3,7 +3,7 @@
 **Status:** `BLOCKED_EXTERNAL_CREDENTIAL`  
 **Date:** 2026-09-12  
 **Authority:** `PHASE1_DATA_MANIFEST_V1.md` + `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md` + `PHASE1_DATA_PROVENANCE_REGISTER_V1.md`  
-**Purpose:** record both the frozen ACN acquisition protocol and the actual executed credential-gate result without fabricating or substituting data.
+**Purpose:** record both the frozen ACN acquisition protocol and the actual executed credential-gate results without fabricating or substituting data.
 
 ---
 
@@ -23,20 +23,35 @@ No source, site, interval or time-series requirement may be changed to bypass au
 
 ---
 
-## 2. Executed access test `[E]`
+## 2. Executed access tests `[E]`
 
-The acquisition workflow was actually executed:
+### Attempt 1
 
 ```text
 workflow name       = Phase 1 authenticated ACN acquisition
 run ID              = 34698786730
-run number          = 1
+run attempt         = 1
+job ID              = 103566760990
 head SHA            = c509d7de85627dda9f99023aa8acb5b24737cc9d
 status              = completed
 conclusion          = failure
 ```
 
-Step-level evidence:
+### Attempt 2 — explicit rerun after public P/T verification closure
+
+```text
+workflow name       = Phase 1 authenticated ACN acquisition
+run ID              = 34698786730
+run attempt         = 2
+job ID              = 103573035993
+head SHA            = c509d7de85627dda9f99023aa8acb5b24737cc9d
+started UTC         = 2026-09-12T15:05:06Z
+completed UTC       = 2026-09-12T15:05:37Z
+status              = completed
+conclusion          = failure
+```
+
+Attempt-2 step evidence:
 
 ```text
 checkout exact commit                     PASS
@@ -45,10 +60,11 @@ canonical lock SHA verification/install   PASS
 ACN_API_TOKEN presence gate               FAIL
 raw-data acquisition                       SKIPPED
 provenance freeze                          SKIPPED
+credential-hygiene step                    SKIPPED
 raw artifact upload                        SKIPPED
 ```
 
-Thus the workflow reached the external credential boundary under the correct frozen software environment and stopped before requesting or transforming ACN records.
+The second execution independently confirms that the repository Actions environment still lacks the required `ACN_API_TOKEN`. The workflow again stopped before any API request or ACN data transformation.
 
 Scientific interpretation:
 
@@ -62,7 +78,7 @@ Scientific interpretation:
 }
 ```
 
-It is an unresolved external-access prerequisite `[U]`.
+It remains an unresolved external-access prerequisite `[U]`.
 
 ---
 
@@ -82,7 +98,7 @@ The workflow checks only whether the secret is present; it never prints the secr
 
 ## 4. Immutable raw object
 
-On the first successful authenticated rerun, the acquisition code writes an immutable raw directory and canonical session export. It must record:
+On the first successful authenticated rerun, the acquisition code must record:
 
 ```text
 UTC acquisition timestamp;
@@ -94,16 +110,14 @@ record count;
 raw byte size;
 raw SHA-256;
 manifest SHA-256;
-page-level SHA-256 identities;
+page/object SHA-256 identities as implemented;
 credential-hygiene PASS.
 ```
 
 Define
 
 ```math
-H_D
-=
-SHA256(D_{raw}).
+H_D=SHA256(D_{raw}).
 ```
 
 Raw data are never overwritten by preprocessing.
@@ -115,13 +129,7 @@ Raw data are never overwritten by preprocessing.
 Only after `H_D` exists:
 
 ```math
-D_{raw}
-\xrightarrow{T_1}
-D_{parsed}
-\xrightarrow{T_2}
-D_{5min}
-\xrightarrow{T_3}
-(\mathcal D_{cal},\mathcal D_{val}).
+D_{raw}\xrightarrow{T_1}D_{parsed}\xrightarrow{T_2}D_{5min}\xrightarrow{T_3}(\mathcal D_{cal},\mathcal D_{val}).
 ```
 
 Each transformation must be deterministic, code-versioned and produce a separately hashed output.
@@ -132,7 +140,7 @@ The chronological split remains:
 N_{cal}=\lfloor0.70N_d\rfloor,
 ```
 
-with the earliest usable days assigned to calibration and the remaining usable days assigned to validation.
+with the earliest usable complete days assigned to calibration and the remaining usable complete days assigned to validation.
 
 ---
 
@@ -161,7 +169,7 @@ ACN source identity           LOCKED
 ACN window                    LOCKED
 ACN client                    LOCKED
 canonical software lock       PASS
-secure acquisition workflow   IMPLEMENTED + EXECUTED
+secure acquisition workflow   IMPLEMENTED + EXECUTED TWICE
 ACN_API_TOKEN                 ABSENT / EXTERNAL ACTION REQUIRED
 raw file                      NOT ACQUIRED
 H_D                           BLOCKING-PENDING
@@ -185,6 +193,22 @@ This `0` is not evidence of bad ACN data; no ACN data were accessed.
 2. Add it in GitHub repository **Settings -> Secrets and variables -> Actions -> New repository secret** with name `ACN_API_TOKEN`.
 3. Do not paste it into the thesis repository or chat.
 4. Rerun workflow **Phase 1 authenticated ACN acquisition**.
-5. Accept the data gate only if the workflow records the raw SHA-256 and uploads the immutable evidence artifact.
+5. Accept `G_ACNraw=1` only if the workflow records the required raw hash/provenance fields and uploads the immutable evidence artifact.
 
-Until this occurs, `H_D`, `\mathcal R^*`, full `G_V`, empirical validation and H1/H2 remain blocked.
+Until this occurs, `H_D`, `\mathcal R^*`, complete `G_V`, empirical validation and H1/H2 remain blocked.
+
+---
+
+## 9. Current hard boundary
+
+The transport numerical blocker has now been closed independently through the audited BFW amendment. Therefore the ACN credential is the **single external blocker** preventing the next data-provenance step.
+
+```math
+\boxed{
+\text{PUBLIC P/T VERIFICATION PASS}
+\quad\land\quad
+\text{ACN CREDENTIAL BLOCKED}
+\Rightarrow
+\text{STOP BEFORE VALIDATION/H1/H2}.
+}
+```
