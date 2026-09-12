@@ -18,6 +18,11 @@ This directory is the active mathematical/scientific specification of the MSE th
 
 ---
 
+
+## Proposed foundation work
+
+[`PHASE_0_INTERDEPENDENCY_FOUNDATIONS_v0_1.md`](PHASE_0_INTERDEPENDENCY_FOUNDATIONS_v0_1.md) provides definitions, a proposed domain–aspect ontology, dependency records, composition rules, dynamic semantics, and reproducible verification code. Twelve synthetic checks passed; empirical validation remains pending. This preparatory proposal supports the existing seven stages and does not supersede the canonical framework, interdependency tuple, or H1–H5.
+
 ## 1. Authority map
 
 | Priority | File | Role | Status |
