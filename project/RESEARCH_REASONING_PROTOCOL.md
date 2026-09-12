@@ -1,24 +1,37 @@
 # Canonical Research Reasoning Protocol
 
-**Status:** canonical cross-cutting reasoning protocol  
+**Status:** CANONICAL / CURRENT  
+**Version:** 1.1  
 **Effective date:** 2026-09-12  
-**Scope:** entire thesis — literature, mathematics, modeling, simulation, hypotheses, figures, experiments, verification, validation, synthesis, and engineering decisions
+**Scope:** entire thesis — literature, mathematics, modeling, simulation, hypotheses, experiments, verification, validation, synthesis, visualization, and sustainable-engineering decisions
 
 ---
 
 ## Governing rule
 
-```math
-\boxed{\textbf{No claim without a definition, mechanism, evidence, assumptions, test, and boundary of validity.}}
-```
+> **No claim without a definition, mechanism, evidence, assumptions, test, and boundary of validity.**
 
-For every problem, method, equation, paper, hypothesis, or proposed innovation, reasoning follows:
+For every problem, method, equation, paper, hypothesis, or proposed innovation, reasoning follows
 
 ```math
-\boxed{\text{LEARN}\rightarrow\text{VERIFY}\rightarrow\text{FORMULATE}\rightarrow\text{DERIVE}\rightarrow\text{TEST}\rightarrow\text{VALIDATE}\rightarrow\text{SYNTHESIZE}\rightarrow\text{ADVANCE}}
+\text{LEARN}
+\rightarrow
+\text{VERIFY}
+\rightarrow
+\text{FORMULATE}
+\rightarrow
+\text{DERIVE}
+\rightarrow
+\text{TEST}
+\rightarrow
+\text{VALIDATE}
+\rightarrow
+\text{SYNTHESIZE}
+\rightarrow
+\text{ADVANCE}.
 ```
 
-The purpose is not mathematical complication. The purpose is to use the minimum mathematics necessary to explain the physics correctly, solve the engineering problem, quantify uncertainty, and produce a defensible sustainable decision.
+The objective is not mathematical complication. The objective is to use the minimum mathematics necessary to explain the physics correctly, solve the engineering problem, quantify uncertainty, and produce a defensible sustainable decision.
 
 ---
 
@@ -27,62 +40,70 @@ The purpose is not mathematical complication. The purpose is to use the minimum 
 First ask:
 
 ```math
-\boxed{\text{What is it? Why was it created? What problem does it solve?}}
+\text{What is it?}
+\qquad
+\text{Why was it created?}
+\qquad
+\text{What problem does it solve?}
 ```
 
-For any method `M`, establish:
+For any method $M$, establish
 
 ```math
-M=\{\text{definition},\text{mathematical object},\text{assumptions},\text{inputs},\text{outputs},\text{limitations}\}.
+M=
+\{\text{definition},\text{ mathematical object},\text{ assumptions},\text{ inputs},\text{ outputs},\text{ limitations}\}.
 ```
 
 Example question:
 
 > Can Ricci curvature help our infrastructure thesis?
 
-We do not begin with application. We first determine the mathematical object, for example
+We do not begin with application. We first determine the precise mathematical object, for example
 
 ```math
 \kappa_{ij}=1-\frac{W_1(m_i,m_j)}{d(i,j)},
 ```
 
-and understand exactly what `\kappa_{ij}` measures before mapping it to an infrastructure problem.
+and establish exactly what $\kappa_{ij}$ measures, what $m_i,m_j$ represent, what metric $d$ is used, and which assumptions are required before mapping the quantity to an infrastructure problem.
 
 ---
 
 ## 2. VERIFY — establish what is actually known
 
-Every important statement receives an epistemic status:
+Every important statement receives an epistemic status.
 
-```math
-\boxed{
-\begin{array}{ll}
-[E] & \text{Established by evidence}\\
-[D] & \text{Derived mathematically}\\
-[H] & \text{Hypothesis}\\
-[P] & \text{Our proposal}\\
-[A] & \text{Assumption}\\
-[U] & \text{Currently uncertain}
-\end{array}}
-```
+| Label | Meaning |
+|---|---|
+| `[E]` | established by external evidence |
+| `[D]` | derived mathematically or logically from established material |
+| `[H]` | hypothesis to be tested |
+| `[P]` | thesis proposal |
+| `[A]` | assumption |
+| `[U]` | currently uncertain or unresolved |
 
 Example:
 
 - **[E]** EV charging couples transportation demand to distribution-grid loading.
-- **[D]** Therefore changes in vehicle-arrival distributions can alter electrical load trajectories.
+- **[D]** Therefore changes in vehicle-arrival distributions can alter electrical-load trajectories.
 - **[H]** Certain charging interfaces may dominate cross-system cascade propagation.
-- **[P]** We test this using dynamic interface criticality.
+- **[P]** Test this using dynamic interface criticality.
 
-These statements must never be collapsed into one.
+These statements must never be collapsed into one. The evidence status of a statement must remain visible until additional evidence or derivation justifies a change.
 
 ---
 
 ## 3. FORMULATE — turn words into mathematics
 
-Every research question should eventually become:
+Every research question should eventually become
 
 ```math
-\boxed{\text{variables}+\text{relations}+\text{constraints}+\text{objective}}
+\text{variables}
++
+\text{relations}
++
+\text{constraints}
++
+\text{objective}.
 ```
 
 Example verbal statement:
@@ -92,22 +113,26 @@ Example verbal statement:
 Define
 
 ```math
-T_i^{R}=T_i^{\mathrm{travel}}+T_i^{\mathrm{repair}}.
+T_i^{R}=T_i^{\rm travel}+T_i^{\rm repair}.
 ```
 
 Transportation condition affects
 
 ```math
-T_i^{\mathrm{travel}}=f(\mathcal G_T(t),h(t),r_i).
+T_i^{\rm travel}=f(\mathcal G_T(t),h(t),r_i).
 ```
 
 Therefore
 
 ```math
-\boxed{\mathcal G_T(t)\rightarrow T_i^{\mathrm{travel}}\rightarrow T_i^{R}.}
+\mathcal G_T(t)
+\rightarrow
+T_i^{\rm travel}
+\rightarrow
+T_i^{R}.
 ```
 
-Only after formulation can the interdependency be investigated rigorously.
+Only after this formulation can the interdependency be investigated rigorously.
 
 ---
 
@@ -116,7 +141,13 @@ Only after formulation can the interdependency be investigated rigorously.
 The engineering argument must have the form
 
 ```math
-\boxed{\text{Cause}\rightarrow\text{physical mechanism}\rightarrow\text{state change}\rightarrow\text{system consequence}.}
+\text{Cause}
+\rightarrow
+\text{physical mechanism}
+\rightarrow
+\text{state change}
+\rightarrow
+\text{system consequence}.
 ```
 
 Not merely:
@@ -134,68 +165,76 @@ h(x,t)
 \rightarrow Q_P(t)\downarrow.
 ```
 
-Each arrow should receive:
+Each arrow must eventually be associated with:
 
 1. a governing equation or explicit functional relation;
-2. empirical or theoretical evidence;
-3. assumptions;
-4. uncertainty characterization.
+2. empirical, experimental, theoretical, or authoritative engineering evidence;
+3. explicit assumptions;
+4. uncertainty and a validity domain.
+
+An arrow is therefore a reasoning obligation, not merely a graphical connector.
 
 ---
 
 ## 5. TEST — try to destroy our own argument
 
-For every proposed contribution `M_1`, define a baseline `M_0`:
+For every proposed contribution $M_1$, define at least one competing baseline $M_0$:
 
 ```math
-\boxed{M_1\quad\text{vs}\quad M_0.}
+M_1
+\quad\text{vs}\quad
+M_0.
 ```
 
-Then formulate competing hypotheses:
+Then formulate
 
 ```math
-H_0:\ M_1\text{ provides no material improvement over }M_0
+H_0:
+M_1\text{ provides no material improvement over }M_0
 ```
 
 versus
 
 ```math
-H_1:\ M_1\text{ changes explanation, prediction, or decision sufficiently}.
+H_1:
+M_1\text{ changes explanation, prediction, or decision sufficiently}.
 ```
 
 Example:
 
 ```math
-H_0:\operatorname{TopK}(C)=\operatorname{TopK}(C^{\mathcal V}).
+H_0:
+\operatorname{TopK}(C)
+=
+\operatorname{TopK}(C^{\mathcal V}).
 ```
 
-If this is true, a new viability-aware interface ranking may not be necessary. The proposed method must therefore survive an explicit falsification attempt.
+If this is supported across the prespecified domain, a new viability-aware interface ranking may not be necessary. A negative result is scientifically informative rather than a failure of the research process.
 
 ---
 
 ## 6. VALIDATE — proof has several levels
 
-Use the validation ladder:
+Use the following validation ladder:
 
 ```math
-\boxed{
-\begin{array}{c}
-\text{Logical consistency}\\
-\downarrow\\
-\text{Dimensional consistency}\\
-\downarrow\\
-\text{Mathematical consistency}\\
-\downarrow\\
-\text{Numerical verification}\\
-\downarrow\\
-\text{Sensitivity analysis}\\
-\downarrow\\
-\text{Benchmark comparison}\\
-\downarrow\\
-\text{Physical plausibility}\\
-\downarrow\\
-\text{Empirical validation}
-\end{array}}
+\begin{aligned}
+&\text{Logical consistency}\\
+&\downarrow\\
+&\text{Dimensional consistency}\\
+&\downarrow\\
+&\text{Mathematical consistency}\\
+&\downarrow\\
+&\text{Numerical verification}\\
+&\downarrow\\
+&\text{Sensitivity analysis}\\
+&\downarrow\\
+&\text{Benchmark comparison}\\
+&\downarrow\\
+&\text{Physical plausibility}\\
+&\downarrow\\
+&\text{Empirical validation}.
+\end{aligned}
 ```
 
 These levels are not interchangeable.
@@ -203,6 +242,7 @@ These levels are not interchangeable.
 - A simulation agreeing with its assumptions is not empirical validation.
 - A mathematically correct model is not automatically physically correct.
 - A physically plausible model is not necessarily decision-useful.
+- Validation at one operating point or domain does not automatically imply validity outside that domain.
 
 Verification asks whether the mathematical/computational problem was solved correctly. Validation asks whether the model is adequate for its intended real-system use.
 
@@ -212,10 +252,12 @@ Verification asks whether the mathematical/computational problem was solved corr
 
 Reading many papers is not synthesis.
 
-For each question `Q`, construct
+For each question $Q$, construct
 
 ```math
-\boxed{\mathcal E_Q=\{\text{agreement},\text{contradictions},\text{methods},\text{assumptions},\text{limitations},\text{remaining gap}\}.}
+\mathcal E_Q
+=
+\{\text{agreement},\text{ contradictions},\text{ methods},\text{ assumptions},\text{ limitations},\text{ remaining gap}\}.
 ```
 
 The synthesis must answer:
@@ -223,9 +265,9 @@ The synthesis must answer:
 1. What is already established?
 2. Where do studies disagree?
 3. Why do they disagree?
-4. What assumptions create those differences?
+4. Which assumptions create those differences?
 5. What remains unresolved?
-6. Which unresolved part matters to our engineering problem?
+6. Which unresolved part matters to the engineering problem?
 
 The final question prevents literature review from becoming bibliography accumulation.
 
@@ -242,52 +284,56 @@ The argument should have the structure
 &\text{Literature establishes }A.\\
 &\text{Engineering evidence establishes }B.\\
 &A+B&\Rightarrow\text{ unresolved problem }C.\\
-&\text{Existing method }M_0&\text{ cannot adequately resolve }C\text{ because }L.\\
-&\therefore\quad M_1&=\text{our proposed extension}.\\
-&\text{We test }M_1&\text{ against }M_0.
+&\text{Existing method }M_0&\text{ cannot adequately resolve }C\text{ because of limitation }L.\\
+&\therefore\quad M_1&=\text{ proposed extension}.\\
+&\text{Then test }M_1&\text{ against }M_0.
 \end{aligned}
 ```
 
-This is the required structure of a defensible research contribution.
+The thesis does not begin by assuming the novelty is correct. The contribution is what remains after competing explanations, assumptions, uncertainty, validation checks, and falsification attempts have been survived.
 
 ---
 
-## Canonical argument architecture
+## 9. Canonical argument architecture
 
-For every thesis statement, construct the chain
+For every important thesis statement, construct the chain
 
 ```math
-\boxed{
 \textbf{CLAIM}
-\rightarrow\textbf{EVIDENCE}
-\rightarrow\textbf{MECHANISM}
-\rightarrow\textbf{MATHEMATICS}
-\rightarrow\textbf{ASSUMPTIONS}
-\rightarrow\textbf{TEST}
-\rightarrow\textbf{RESULT}
-\rightarrow\textbf{ENGINEERING IMPLICATION}}
+\rightarrow
+\textbf{EVIDENCE}
+\rightarrow
+\textbf{MECHANISM}
+\rightarrow
+\textbf{MATHEMATICS}
+\rightarrow
+\textbf{ASSUMPTIONS}
+\rightarrow
+\textbf{TEST}
+\rightarrow
+\textbf{RESULT}
+\rightarrow
+\textbf{ENGINEERING IMPLICATION}.
 ```
 
-Every arrow is itself a reasoning obligation: it must be justified, not merely drawn or asserted.
+No element should be silently omitted when it materially affects the inference.
 
 ---
 
-## Example — controllability of critical interfaces
+## 10. Example — controllability of critical interfaces
 
 ### Claim
 
-```math
-\boxed{\text{Some highly critical interfaces cannot be protected through post-failure response.}}
-```
+> Some highly critical interfaces may not be protectable through post-failure response alone.
 
-### Evidence needed
+### Evidence requirement
 
-Literature, experiment, or incident evidence should establish quantities such as:
+The argument requires evidence concerning at least:
 
 - cascade times;
 - detection delays;
 - communication delays;
-- authority/decision delays;
+- authorization/decision delays;
 - mobilization delays;
 - actuation delays.
 
@@ -304,134 +350,124 @@ Literature, experiment, or incident evidence should establish quantities such as
 
 ### Mathematics
 
-```math
-T_{\rm response}=T_d+T_c+T_a+T_m+T_x.
-```
-
-Compare with
+A reduced response-time representation may be written as
 
 ```math
-T_{\rm cascade}.
+T_{\rm response}=T_d+T_c+T_a+T_m+T_x,
 ```
 
-Define
+and compared with a cascade timescale $T_{\rm cascade}$.
+
+If a probabilistic model for both quantities is scientifically justified, define
 
 ```math
-\boxed{P_{\rm control}=P(T_{\rm response}<T_{\rm cascade}).}
+P_{\rm control}
+=
+P\!\left(T_{\rm response}<T_{\rm cascade}\right).
 ```
+
+If probability distributions are not justified, use deterministic or interval-based timing margins instead of inventing probabilities.
 
 ### Hypothesis
 
 ```math
-H_1:\ P_{\rm control}\text{ materially changes intervention priority}.
+H:
+P_{\rm control}\text{ materially changes intervention priority}.
 ```
 
 ### Test
 
-Compare conventional criticality
+Compare a baseline criticality measure $C_i$ with
 
 ```math
-C_i
+A_i=C_iP_{{\rm control},i}
 ```
 
-with controllable criticality
+and
 
 ```math
-A_i=C_iP_{\rm control,i}
-```
-
-and hardening priority
-
-```math
-H_i=C_i(1-P_{\rm control,i}).
+H_i=C_i\left(1-P_{{\rm control},i}\right).
 ```
 
 ### Engineering implication
 
 ```math
-\boxed{
 \begin{cases}
-P_{\rm control}\approx1 &\rightarrow \text{operational intervention},\\
-P_{\rm control}\approx0 &\rightarrow \text{pre-emptive structural hardening}.
-\end{cases}}
+P_{\rm control}\approx1
+&\rightarrow\text{ operational intervention may be feasible},\\
+P_{\rm control}\approx0
+&\rightarrow\text{ pre-emptive structural hardening may be required}.
+\end{cases}
 ```
 
-This example remains a proposed argument structure until its definitions, evidence base, assumptions, statistical interpretation, and decision thresholds are separately verified and validated.
+This is a reasoning template, not an established thesis result. Its equations, probability model, thresholds, decision rules, and transferability require independent evidence and validation before adoption.
 
 ---
 
-## Continuous six-question discipline
+## 11. Six continuous research questions
 
-For almost every thesis decision ask:
+For every significant thesis decision, ask:
 
 ```math
-\boxed{
 \begin{aligned}
-1.&\quad\textbf{What do we know?}\\
-2.&\quad\textbf{How do we know it?}\\
-3.&\quad\textbf{What mechanism explains it?}\\
-4.&\quad\textbf{What remains unknown?}\\
-5.&\quad\textbf{What experiment could resolve that unknown?}\\
-6.&\quad\textbf{If our hypothesis is wrong, what result should we observe?}
-\end{aligned}}
+1.&\quad \textbf{What do we know?}\\
+2.&\quad \textbf{How do we know it?}\\
+3.&\quad \textbf{What mechanism explains it?}\\
+4.&\quad \textbf{What remains unknown?}\\
+5.&\quad \textbf{What experiment could resolve that unknown?}\\
+6.&\quad \textbf{If the hypothesis is wrong, what result should we observe?}
+\end{aligned}
 ```
 
-Question 6 is mandatory for confirmatory claims because it forces falsifiability.
+Question 6 is mandatory for confirmatory reasoning because it forces the research design to specify observable failure conditions for the hypothesis.
 
 ---
 
-## Rejected reasoning pattern
+## 12. Method-selection rule
 
 Reject arguments of the form:
 
-```math
-\boxed{\text{Paper X used method Y, therefore we should use Y.}}
-```
+> Paper X used method Y, therefore this thesis should use Y.
 
-Replace them with:
+Replace them with
 
 ```math
-\boxed{
-\begin{array}{c}
-\text{Engineering problem}\\
-\downarrow\\
-\text{Observed mechanism}\\
-\downarrow\\
-\text{Scientific evidence}\\
-\downarrow\\
-\text{Mathematical structure}\\
-\downarrow\\
-\text{Candidate methods}\\
-\downarrow\\
-\text{Assumption compatibility}\\
-\downarrow\\
-\text{Benchmark}\\
-\downarrow\\
-\text{Test/falsification}\\
-\downarrow\\
-\text{Validated contribution}
-\end{array}}
+\begin{aligned}
+&\text{Engineering problem}\\
+&\downarrow\\
+&\text{Observed mechanism}\\
+&\downarrow\\
+&\text{Scientific evidence}\\
+&\downarrow\\
+&\text{Mathematical structure}\\
+&\downarrow\\
+&\text{Candidate methods}\\
+&\downarrow\\
+&\text{Assumption compatibility}\\
+&\downarrow\\
+&\text{Benchmark comparison}\\
+&\downarrow\\
+&\text{Test / falsification}\\
+&\downarrow\\
+&\text{Validated contribution}.
+\end{aligned}
 ```
 
 A method is selected because its mathematical structure and assumptions are compatible with the engineering mechanism and decision problem, not because it appears in a relevant paper.
 
 ---
 
-## Minimum-mathematics principle
+## 13. Minimum-mathematics principle
 
-The governing optimization principle for methodological complexity is:
+> **Use the minimum mathematics necessary to explain the physics correctly, solve the engineering problem, quantify uncertainty, and produce a defensible sustainable decision.**
 
-```math
-\boxed{\textbf{Use the minimum mathematics necessary to explain the physics correctly, solve the engineering problem, quantify uncertainty, and produce a defensible sustainable decision.}}
-```
-
-Complexity has no intrinsic scientific value. Additional mathematical structure is justified only if it improves explanation, prediction, control, decision quality, uncertainty characterization, or falsifiability.
+Complexity has no intrinsic scientific value. Additional mathematical structure is justified only if it improves explanation, prediction, control, decision quality, uncertainty characterization, identifiability, or falsifiability.
 
 ---
 
-## Application to the seven-stage thesis framework
+## 14. Application to the seven-stage thesis framework
 
-This reasoning protocol is cross-cutting. It applies within and between all seven stages:
+This reasoning protocol applies within and between all seven stages:
 
 ```math
 \mathcal S
@@ -451,8 +487,37 @@ F_{\mathcal G}^{m}
 
 For every transition, ask:
 
+> **What exactly justifies this arrow?**
+
+The answer must ultimately be traceable to definitions, evidence, mechanism, mathematics, assumptions, tests, verification/validation results, uncertainty, and a stated domain of validity.
+
+---
+
+## 15. Thesis-wide source and reasoning discipline
+
+For substantial scientific claims:
+
+1. learn the governing theory before proposing an application;
+2. search reproducibly when external evidence is needed;
+3. prioritize primary theory, authoritative standards, peer-reviewed technical evidence, and validated benchmarks;
+4. cite scientific support in text adjacent to the claim it supports;
+5. separate source-derived evidence from thesis inference and proposal;
+6. record contradictory evidence rather than suppressing it;
+7. preserve the validation domain and uncertainty of every transferred model or parameter;
+8. advance a thesis claim only after the competing explanations and failure conditions are explicit.
+
+This section governs both writing and analysis: citation is not decoration; it is part of the inferential chain.
+
+---
+
+## 16. Operational research record
+
+For every new object $Q$, the working record should answer at minimum
+
 ```math
-\boxed{\text{What exactly justifies this arrow?}}
+Q
+\mapsto
+(\text{definition},\text{mechanism},\text{evidence},\text{assumptions},\text{model},\text{test},\text{validation domain},\text{uncertainty},\text{rival},\text{falsification},\text{engineering implication}).
 ```
 
-The answer must ultimately be traceable to definitions, evidence, mechanism, mathematics, assumptions, tests, verification/validation results, and a stated domain of validity.
+This is the canonical reasoning protocol for the entire thesis until explicitly revised through a versioned update.
