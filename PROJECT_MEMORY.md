@@ -3,40 +3,65 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Search](https://img.shields.io/badge/evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
-![FTEE](https://img.shields.io/badge/FTEE-PILOT--READY-9A6700)
+![FTEE](https://img.shields.io/badge/FTEE%20v2.0-CURRENT-0969DA)
 ![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20AUDIT-9A6700)
 
-## Repository authority — 2026-09-11
+## Repository authority — 2026-09-12
 
 The sole active repository is `Dossiya-SE/MSE-thesis`. `Dossiya-SE/Optimization-for-sustainability-and-resilience` is historical/reference only.
 
 The thesis-wide citation standard is **APA 7th edition**. Proposed thesis constructs remain `[P]` until validation justifies another status.
+
+The thesis-wide reasoning protocol is now [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md), governed by
+
+```math
+\text{LEARN}
+\rightarrow
+\text{VERIFY}
+\rightarrow
+\text{FORMULATE}
+\rightarrow
+\text{DERIVE}
+\rightarrow
+\text{TEST}
+\rightarrow
+\text{VALIDATE}
+\rightarrow
+\text{SYNTHESIZE}
+\rightarrow
+\text{ADVANCE}.
+```
+
+Its central rule is: **No claim without a definition, mechanism, evidence, assumptions, test, and boundary of validity.**
 
 ---
 
 ## Active authority order
 
 1. [`project/README.md`](project/README.md)
-2. [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md)
-3. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
-4. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
-5. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
-6. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
-7. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
-8. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
-9. [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
-10. [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
-11. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
-12. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
-13. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
-14. [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md)
-15. [`project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md)
-16. [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md)
-17. [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) — secondary coverage audit only
-18. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
-19. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
-20. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
-21. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
+2. [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) — canonical cross-cutting reasoning protocol
+3. [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md)
+4. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
+5. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
+6. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
+7. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
+8. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
+9. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
+10. [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
+11. [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
+12. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
+13. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
+14. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
+15. [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md)
+16. [`project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md`](project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md)
+17. [`project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md)
+18. [`project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`](project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md) — frozen H1 execution protocol
+19. [`project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](project/CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) — secondary coverage audit only
+20. [`project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](project/FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) — superseded/provenance only
+21. [`project/MATHEMATICAL_FOUNDATION.md`](project/MATHEMATICAL_FOUNDATION.md)
+22. [`project/SCIENTIFIC_PROPOSITIONS.md`](project/SCIENTIFIC_PROPOSITIONS.md)
+23. [`project/MATHEMATICAL_PRESENTATION_V3.md`](project/MATHEMATICAL_PRESENTATION_V3.md)
+24. [`figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)
 
 ---
 
@@ -55,6 +80,41 @@ The primary confirmatory set is
 ```
 
 The seven-stage framework and H1–H5 scientific logic are frozen. Numerical $\delta_i$, exact $\Omega_H$, exact $\Omega_V$, and final confirmatory procedures remain unfrozen until the new evidence base and demonstrator justify them *a priori*.
+
+---
+
+## Canonical reasoning discipline
+
+Every important claim is expected to expose, at minimum,
+
+```math
+\textbf{CLAIM}
+\rightarrow
+\textbf{EVIDENCE}
+\rightarrow
+\textbf{MECHANISM}
+\rightarrow
+\textbf{MATHEMATICS}
+\rightarrow
+\textbf{ASSUMPTIONS}
+\rightarrow
+\textbf{TEST}
+\rightarrow
+\textbf{RESULT}
+\rightarrow
+\textbf{ENGINEERING IMPLICATION}.
+```
+
+Epistemic labels are:
+
+- `[E]` established by external evidence;
+- `[D]` derived mathematically or logically;
+- `[H]` hypothesis;
+- `[P]` thesis proposal;
+- `[A]` assumption;
+- `[U]` unresolved/uncertain.
+
+Method selection must proceed from engineering problem → observed mechanism → scientific evidence → mathematical structure → candidate methods → assumption compatibility → benchmark → falsification/validation, not from “Paper X used method Y.”
 
 ---
 
@@ -182,7 +242,7 @@ A previously known paper not recovered by the fresh search triggers a search-dia
 \begin{aligned}
 &H_1-H_5\\
 &\downarrow\\
-&\textbf{fresh search protocol + frozen search codebook}\\
+&\textbf{fresh hypothesis-specific search protocols}\\
 &\downarrow\\
 &\textbf{database searches from zero}\\
 &\downarrow\\
@@ -190,7 +250,7 @@ A previously known paper not recovered by the fresh search triggers a search-dia
 &\downarrow\\
 &\mathcal P_{\rm eligible}^{\rm NEW}\\
 &\downarrow\\
-&\textbf{FTEE pilot/freeze and full-text extraction}\\
+&\textbf{FTEE full-text extraction and qualification}\\
 &\downarrow\\
 &\mathfrak M_{\rm required}\\
 &\downarrow\\
@@ -224,16 +284,4 @@ Only after this primary evidence chain may the old 325-paper corpus be used for 
 
 ## Immediate next task
 
-Before any new database search is run, freeze:
-
-- searchable construct decomposition for $H_1$–$H_5$;
-- database-specific Boolean queries and field restrictions;
-- search dates and database coverage rules;
-- deduplication/identity rules;
-- inclusion/exclusion criteria and exclusion codes;
-- title/abstract and full-text screening forms;
-- backward/forward citation-chasing rules;
-- search amendment/version-control procedure;
-- PRISMA-style accounting schema.
-
-Then execute the fresh searches and only afterward begin FTEE on $\mathcal P_{\rm eligible}^{\rm NEW}$.
+The H1 search protocol is already frozen. Execute the exact H1 CORE v1 searches in Scopus, Web of Science Core Collection, Compendex and IEEE Xplore; preserve the four raw exports and search records; construct $\mathcal P_{H_1}^{raw}$; then perform identity-preserving hierarchical deduplication before title/abstract screening.
