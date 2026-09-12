@@ -39,12 +39,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          test -z "$(git status --porcelain)"
           mkdir -p phase1-build
           python -VV | tee phase1-build/python-version.txt
           uname -a | tee phase1-build/uname.txt
           cat /etc/os-release | tee phase1-build/os-release.txt
           git rev-parse HEAD | tee phase1-build/code-sha.txt
-          test -z "$(git status --porcelain)"
 
       - name: Resolve hash-locked dependencies
         shell: bash
@@ -91,7 +91,6 @@ jobs:
           set -euo pipefail
           python - <<'PY' | tee phase1-build/runtime-facts.txt
           import platform
-          import random
           import struct
           import sys
           import numpy as np
