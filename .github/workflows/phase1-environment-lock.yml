@@ -1,0 +1,188 @@
+name: Phase 1 environment lock and verification smoke
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "phase1_exec/**"
+      - "tests/phase1/**"
+      - "project/requirements-phase1-v1.in"
+      - "project/phase1_runtime/**"
+      - ".github/workflows/phase1-environment-lock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lock-build-smoke:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONHASHSEED: "0"
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
+
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Set up frozen Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.16"
+          cache: "pip"
+          cache-dependency-path: "project/requirements-phase1-v1.in"
+
+      - name: Record bootstrap environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p phase1-build
+          python -VV | tee phase1-build/python-version.txt
+          uname -a | tee phase1-build/uname.txt
+          cat /etc/os-release | tee phase1-build/os-release.txt
+          git rev-parse HEAD | tee phase1-build/code-sha.txt
+          test -z "$(git status --porcelain)"
+
+      - name: Resolve hash-locked dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash project/phase1_runtime/resolve_lock.sh
+          sha256sum project/requirements-phase1-v1.lock.txt | tee phase1-build/lock-sha256.txt
+          python -m pip freeze --all | sort > phase1-build/pip-freeze.txt
+          echo "===PHASE1_LOCKFILE_BEGIN==="
+          cat project/requirements-phase1-v1.lock.txt
+          echo "===PHASE1_LOCKFILE_END==="
+
+      - name: Package import smoke
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import importlib
+          names = [
+              "numpy", "scipy", "pandas", "networkx", "matplotlib",
+              "sklearn", "requests", "pytz", "typing_extensions",
+              "acnportal", "SALib", "pytest"
+          ]
+          for name in names:
+              module = importlib.import_module(name)
+              print(f"{name}={getattr(module, '__version__', 'NO_VERSION_ATTR')}")
+          PY
+
+      - name: Run verification-only unit fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q tests/phase1 | tee phase1-build/pytest-phase1.txt
+
+      - name: Run legacy architecture unit fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q tests/test_viability_geometry.py | tee phase1-build/pytest-legacy.txt
+
+      - name: Record deterministic runtime facts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' | tee phase1-build/runtime-facts.txt
+          import platform
+          import random
+          import struct
+          import sys
+          import numpy as np
+          from phase1_exec.reproducibility import derive_seed
+
+          print(f"python={sys.version}")
+          print(f"platform={platform.platform()}")
+          print(f"float_bits={8 * struct.calcsize('d')}")
+          print(f"numpy_float64_bits={np.dtype(np.float64).itemsize * 8}")
+          print(f"seed_A={derive_seed('scenario-A')}")
+          print(f"seed_A_repeat={derive_seed('scenario-A')}")
+          print(f"seed_B={derive_seed('scenario-B')}")
+          assert derive_seed('scenario-A') == derive_seed('scenario-A')
+          assert derive_seed('scenario-A') != derive_seed('scenario-B')
+          PY
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build canonical linux-amd64 runtime image
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build --platform linux/amd64 \
+            -t mse-thesis-phase1:v1 \
+            -f project/phase1_runtime/Dockerfile .
+          docker image inspect mse-thesis-phase1:v1 \
+            --format '{{.Id}}' | tee phase1-build/docker-image-id.txt
+          docker run --rm --platform linux/amd64 mse-thesis-phase1:v1 \
+            pytest -q tests/phase1 | tee phase1-build/pytest-container.txt
+
+      - name: Export OCI layout and immutable descriptor
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker buildx build --platform linux/amd64 \
+            -f project/phase1_runtime/Dockerfile \
+            --output type=oci,dest=phase1-build/phase1-v1.oci.tar .
+          python - <<'PY'
+          import json
+          import pathlib
+          import tarfile
+          import tempfile
+
+          tar_path = pathlib.Path("phase1-build/phase1-v1.oci.tar")
+          with tempfile.TemporaryDirectory() as tmp:
+              with tarfile.open(tar_path, "r") as archive:
+                  archive.extractall(tmp)
+              index = json.loads(pathlib.Path(tmp, "index.json").read_text())
+              descriptor = index["manifests"][0]["digest"]
+          pathlib.Path("phase1-build/oci-descriptor.txt").write_text(descriptor + "\n")
+          print(f"OCI_DESCRIPTOR={descriptor}")
+          PY
+          sha256sum phase1-build/phase1-v1.oci.tar | tee phase1-build/oci-tar-sha256.txt
+
+      - name: Check credential hygiene
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nE 'ACN_API_TOKEN=[A-Za-z0-9._-]+' -- ':!project/PHASE1_ACN_ACQUISITION_BLOCKER_V1.md'; then
+            echo "Potential literal ACN token assignment detected."
+            exit 1
+          fi
+          echo "No literal ACN token assignment detected in tracked files."
+
+      - name: Emit environment identity summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "CODE_SHA=$(cat phase1-build/code-sha.txt)"
+          echo "LOCK_SHA256=$(cut -d' ' -f1 phase1-build/lock-sha256.txt)"
+          echo "OCI_DESCRIPTOR=$(cat phase1-build/oci-descriptor.txt)"
+          echo "OCI_TAR_SHA256=$(cut -d' ' -f1 phase1-build/oci-tar-sha256.txt)"
+
+      - name: Upload lock and environment evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-environment-lock-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            project/requirements-phase1-v1.lock.txt
+            phase1-build/lock-sha256.txt
+            phase1-build/code-sha.txt
+            phase1-build/python-version.txt
+            phase1-build/uname.txt
+            phase1-build/os-release.txt
+            phase1-build/pip-freeze.txt
+            phase1-build/runtime-facts.txt
+            phase1-build/docker-image-id.txt
+            phase1-build/oci-descriptor.txt
+            phase1-build/oci-tar-sha256.txt
+            phase1-build/pytest-phase1.txt
+            phase1-build/pytest-container.txt
