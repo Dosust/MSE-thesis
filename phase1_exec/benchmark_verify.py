@@ -7,12 +7,8 @@ from pathlib import Path
 
 from .benchmark_io import parse_case33bw, parse_sioux_falls_network, parse_sioux_falls_od
 from .power import add_real_load, branch_flow_residuals, solve_radial_bfs
-from .transport import (
-    bpr_time,
-    conjugate_frank_wolfe_user_equilibrium,
-    node_flow_residuals,
-    shortest_path,
-)
+from .transport import bpr_time, node_flow_residuals, shortest_path
+from .transport_bfw import biconjugate_frank_wolfe_user_equilibrium
 
 
 def build_report(case33bw: Path, sioux_net: Path, sioux_od: Path) -> dict:
@@ -29,12 +25,12 @@ def build_report(case33bw: Path, sioux_net: Path, sioux_od: Path) -> dict:
 
     links = parse_sioux_falls_network(sioux_net.read_text())
     od = parse_sioux_falls_od(sioux_od.read_text())
-    flows, t_iterations, gap = conjugate_frank_wolfe_user_equilibrium(
+    flows, t_iterations, gap = biconjugate_frank_wolfe_user_equilibrium(
         links, od, gap_tol=1e-6, max_iter=5000
     )
     if gap > 1e-6:
         raise RuntimeError(
-            f"Sioux Falls CFW did not satisfy frozen relative-gap criterion: {gap}"
+            f"Sioux Falls BFW did not satisfy frozen relative-gap criterion: {gap}"
         )
     t_residuals = node_flow_residuals(links, flows, od)
     costs = {
@@ -63,7 +59,7 @@ def build_report(case33bw: Path, sioux_net: Path, sioux_od: Path) -> dict:
             ),
         },
         "transport": {
-            "solver": "conjugate-frank-wolfe",
+            "solver": "biconjugate-frank-wolfe",
             "nodes": len({n for link in links for n in (link.u, link.v)}),
             "links": len(links),
             "od_total": sum(od.values()),
