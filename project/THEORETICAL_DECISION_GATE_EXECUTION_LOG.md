@@ -13,6 +13,7 @@ Requirement matrix: REPRESENTATION_REQUIREMENTS_MATRIX.md
 0C core benchmark: PHASE0_0C_THEORY_BENCHMARK_V1.md
 0C saturation R1: PHASE0_0C_SATURATION_SEARCH_ROUND1.md
 0C saturation R2: PHASE0_0C_SATURATION_SEARCH_ROUND2.md
+0C saturation R3: PHASE0_0C_SATURATION_SEARCH_ROUND3.md
 Repository: Dossiya-SE/MSE-thesis
 Branch: main
 ```
@@ -23,7 +24,7 @@ Branch: main
 |---|---|---|---|
 | 0A — definitions | `Frozen_v1.0` | definition register committed before ontology scoring | terminology and boundaries fixed |
 | 0B — requirements | `Frozen_v1.0` | R1–R12, G1–G5, V1–V5 and scoring rule committed before scoring | criteria cannot be changed to favor a result |
-| 0C — existing theory benchmark | `Active__round2_changed_taxonomy` | core benchmark + saturation R1 + saturation R2 | saturation not reached because Round 2 introduced new first-class interoperability families |
+| 0C — existing theory benchmark | `Active__round3_changed_taxonomy` | core benchmark + saturation R1–R3 | saturation not reached because Round 3 introduced compositional open-systems mathematics and a close SysML–ontology–FMI bridge |
 | 0D — formalize M0/M1 | `Blocked_by_0C_saturation` | none | fair comparison waits until 0C closes |
 | 0E — V1–V5 tests | `Not_started` | none | no representational winner allowed |
 | 0F — field ablation | `Not_started` | none | candidate dependency tuple remains provisional |
@@ -31,7 +32,7 @@ Branch: main
 
 ## 0C results retained
 
-The evidence already rejects the following as standalone novelty claims:
+The evidence rejects the following as standalone novelty claims:
 
 ```text
 - Power and Transportation are interdependent.
@@ -44,11 +45,16 @@ The evidence already rejects the following as standalone novelty claims:
 - Shared states, decisions, resources, time and organizational setups are new interdependency fields.
 - A general interoperability framework/reference architecture for heterogeneous SoSs is new.
 - Semantic/model mappings or co-simulation standards are themselves the missing infrastructure-dependency theory.
+- Making a binary relation a first-class object with attachable metadata is new.
+- Model-variable causality/dependency semantics are new.
+- Mapping SysML architecture elements to FMI simulations through semantic rules is new.
+- Separating physical phenomena from solver/simulation artefacts is new.
+- Compositional syntax separated from domain-specific mathematical semantics is new.
 ```
 
 ## Saturation Round 1 — major findings
 
-Round 1 introduced new predecessor classes:
+Round 1 introduced:
 
 ```text
 - Haberlin–Haimes shared-state infrastructure SoS;
@@ -64,21 +70,19 @@ This changed the research question from feature accumulation to minimum interope
 
 ## Saturation Round 2 — major findings
 
-Round 2 introduced additional first-class families:
+Round 2 introduced:
 
 ```text
 - heterogeneous SoS interoperability reference architectures;
-- NIST-style semantic CPS modeling/simulation environments;
-- IEEE 1516-2025 HLA distributed-simulation interoperability;
-- FMI model exchange/co-simulation/scheduled execution;
+- semantic CPS modeling/simulation environments;
+- IEEE HLA distributed-simulation interoperability;
+- FMI dynamic-model interfaces and model structure;
 - HELICS multi-domain infrastructure co-simulation;
-- ontology-driven semantic hubs and model translation/transformation pipelines;
-- current infrastructure/digital-twin semantic middleware.
+- ontology-driven semantic hubs and model transformation pipelines;
+- infrastructure/digital-twin semantic middleware.
 ```
 
-### Critical derived distinction
-
-Round 2 establishes that at least four relation classes must not be conflated:
+### Critical distinction retained
 
 ```math
 \boxed{
@@ -90,21 +94,107 @@ Round 2 establishes that at least four relation classes must not be conflated:
 \end{aligned}}
 ```
 
-Thus:
+Hence:
 
 ```math
 \boxed{\text{semantic interoperability}\neq\text{simulation interoperability}\neq\text{physical dependency}\neq\text{organizational dependency}.}
 ```
 
-HLA, FMI and HELICS are strong execution/interoperability predecessors, but they do not by themselves prove the real-world causal meaning of an exchanged variable. Shared-state SoS and semantic frameworks capture more meaning, but no Round-2 source was found that simultaneously supplies all causal, temporal, evidence-provenance, service-consequence, semantic, and executable-coupling semantics as one minimal infrastructure-independent relation object.
+## Saturation Round 3 — major findings
 
-This is **not yet an established gap** because saturation has not been reached.
+Round 3 searched specifically for a single reusable object binding relation semantics to executable coupling.
+
+New retained predecessor classes include:
+
+```text
+- SysML v2 / KerML machine-readable architecture and relationship semantics;
+- FMI 3.x variable causality and model-structure dependencies;
+- W3C PROV-O qualified Influence and relation-level provenance metadata;
+- 2026 SysML-v2 + ontology + FMI semantic integration;
+- physics-based simulation ontologies separating physical phenomena from simulation artefacts;
+- temporal/causal knowledge-graph relation models;
+- applied category theory: wiring diagrams, operads, structured/decorated cospans and open-system composition;
+- category-theoretic semantic interoperability research in systems engineering.
+```
+
+### Closest semantic-to-executable predecessor
+
+The 2026 SysML-v2 + ontology + FMI integration explicitly links architecture objects to executable FMI models through ontology-governed mappings. It substantially weakens any claim that the missing contribution is simply a semantic bridge from architecture to simulation.
+
+### Major provenance predecessor
+
+W3C PROV-O already reifies influence relations into qualified first-class objects that can carry time, roles, agents, plans and application-specific metadata. Therefore relation reification + metadata is not a standalone contribution.
+
+### Major mathematical predecessor
+
+Applied category theory supplies a rigorous compositional pattern:
+
+```math
+\boxed{\text{common compositional syntax}\xrightarrow{\text{semantic functor}}\text{domain-specific mathematics}.}
+```
+
+Wiring diagrams, operads, structured/decorated cospans and open-system categories can compose heterogeneous systems while preserving separate semantic interpretations. This is a stronger candidate mathematical backbone than an unconstrained universal tuple.
+
+### Round-3 binding result
+
+A dominating predecessor would need to make all of the following first-class:
+
+```math
+\mathcal B=\{B_1,\ldots,B_8\}
+```
+
+where:
+
+```text
+B1 typed source/receiver + system identity
+B2 real-world mechanism / causal meaning
+B3 state/time dependence
+B4 semantic representation/interchange
+B5 provenance/evidence status of the relation claim
+B6 executable/numerical coupling
+B7 compositional extension to new domains
+B8 mapping to engineering service consequence
+```
+
+No single Round-3 source was found that explicitly makes all eight first-class. This is **not yet a novelty claim** because Round 3 again changed the taxonomy.
+
+## Derived candidate architecture after Round 3 [D/P]
+
+The evidence suggests that one large primitive tuple may be conceptually inferior to a layered relation architecture:
+
+```math
+\boxed{
+\underbrace{\mathcal C_e}_{\text{compositional/interface skeleton}}
++
+\underbrace{\Sigma_e}_{\text{domain semantics/mechanism}}
++
+\underbrace{\Pi_e}_{\text{provenance/evidence}}
++
+\underbrace{\Xi_e}_{\text{executable realization}}
+}
+```
+
+with the chain:
+
+```math
+\boxed{
+\text{REALITY}
+\xrightarrow{\text{semantic assertion}}
+\text{MODEL RELATION}
+\xrightarrow{\text{mathematical semantics}}
+\text{EXECUTABLE COUPLING}
+}
+```
+
+The provenance/evidence object qualifies the assertion that the real dependency exists; it must not be confused with the physical dynamics or runtime simulation link.
+
+This architecture remains proposed and must be tested against the original dependency tuple during 0F.
 
 ## Revised candidate residual problem
 
 ```math
 \boxed{
-\text{Can a minimal typed dependency invariant bridge real-world causal meaning, semantic representation and executable model coupling while preserving sector physics, time/state dependence, evidence provenance and service consequence?}
+\text{Can established compositional-system mathematics and semantic/provenance standards be specialized into a minimal infrastructure-interdependency contract that preserves evidence-supported causal mechanism while translating consistently into heterogeneous executable P--T--I--O models and measurable service consequences?}
 }
 ```
 
@@ -112,7 +202,7 @@ Status: `candidate / unresolved`.
 
 ## Saturation state
 
-Because Round 2 introduced new first-class representation families:
+Because Round 3 introduced a new first-class mathematical predecessor family and a close semantic-to-executable bridge:
 
 ```math
 \boxed{\text{SATURATION NOT REACHED}.}
@@ -120,31 +210,29 @@ Because Round 2 introduced new first-class representation families:
 
 0D remains blocked.
 
-## Round 3 required search
+## Round 4 required search
 
-Round 3 must search directly for existing formalisms that bind **relation semantics to executable coupling**.
+Round 4 now focuses narrowly on whether compositional open-system mathematics can absorb the remaining Phase-0 needs so completely that a separate dependency contract is unnecessary.
 
-Priority clusters:
-
-1. typed relation / relation ontology / causal semantics for system interfaces;
-2. SysML/MBSE dependency and interface metamodels;
-3. semantic annotations/extensions for HLA/FMI/co-simulation;
-4. FMI variable-dependency and causality semantics;
-5. causal knowledge graphs for cyber-physical/infrastructure systems;
-6. provenance/evidence standards for relation assertions;
-7. ontology-to-equation / ontology-to-simulation mappings;
-8. compositional/category-theoretic systems engineering where engineering-operational;
-9. 2025–2026 reviews comparing semantic, causal and executable coupling.
-
-### Round-3 falsification question
+### Frozen Round-4 question
 
 ```math
 \boxed{
-\text{Does an existing formalism already bind }\{\text{typed relation semantics},\text{causal mechanism},\text{evidence provenance},\text{state/time dependence},\text{executable coupling}\}\text{ into a reusable infrastructure-independent object?}
+\text{Can a compositional open-system formalism be extended/decorated with causal evidence and infrastructure service semantics so completely that a separate Phase-0 dependency contract is unnecessary?}
 }
 ```
 
-If yes, Phase 0 must adopt/extend that formalism. If no and additional targeted search stops changing the taxonomy, 0C becomes eligible for closure.
+Priority targets:
+
+```text
+- category-theoretic hybrid/control/port-Hamiltonian/open physical systems;
+- functorial mappings among architecture, ontology and dynamical models;
+- structured/decorated cospans carrying provenance or typed domain semantics;
+- causal/evidence annotations on compositional morphisms;
+- infrastructure/cyber-physical applications of wiring diagrams/operads;
+- mappings from compositional structures into FMI/Modelica/HELICS/co-simulation;
+- service/performance/resilience semantics on compositional open systems.
+```
 
 ## Frozen decision prohibition
 
@@ -161,5 +249,5 @@ Until 0C saturation and 0D–0F are complete, the following claims remain prohib
 ## Next release target
 
 ```math
-\boxed{\text{0C saturation search — Round 3: causal-semantic-to-executable relation formalisms}.}
+\boxed{\text{0C saturation search — Round 4: compositional open systems vs separate dependency contract}.}
 ```
