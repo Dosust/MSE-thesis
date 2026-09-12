@@ -6,6 +6,12 @@ on:
     paths:
       - ".github/workflows/phase1-acn-acquisition.yml"
       - "project/phase1_runtime/acquire_acn.py"
+      - "project/phase1_runtime/process_acn.py"
+      - "project/phase1_runtime/process_information.py"
+      - "phase1_exec/acn_processing.py"
+      - "phase1_exec/information_processing.py"
+      - "project/PHASE1_ACN_PROCESSING_PROTOCOL_V1.md"
+      - "project/PHASE1_INFORMATION_PROCESSING_PROTOCOL_V1.md"
   workflow_dispatch:
 
 permissions:
@@ -44,6 +50,13 @@ jobs:
           python -m pip install --disable-pip-version-check "pip==24.0"
           python -m pip install --require-hashes -r project/requirements-phase1-v1.lock.txt
 
+      - name: Execute synthetic ACN and information verification fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q tests/phase1/test_acn_processing.py tests/phase1/test_information_processing.py \
+            | tee phase1-preacn-fixtures.txt
+
       - name: Assert external credential is available without printing it
         shell: bash
         run: |
@@ -72,6 +85,7 @@ jobs:
           RAW_SHA="$(sha256sum "${ROOT}/sessions_canonical.jsonl" | cut -d' ' -f1)"
           MANIFEST_SHA="$(sha256sum "${ROOT}/acquisition_manifest.json" | cut -d' ' -f1)"
           BYTES="$(wc -c < "${ROOT}/sessions_canonical.jsonl")"
+          RECORDS="$(wc -l < "${ROOT}/sessions_canonical.jsonl")"
           CODE_SHA="$(git rev-parse HEAD)"
           ACQUIRED_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           cat > phase1-acn-evidence/acquisition-identity.txt <<EOF
@@ -80,6 +94,7 @@ jobs:
           ACQUIRED_UTC=${ACQUIRED_UTC}
           RAW_FILE=${ROOT}/sessions_canonical.jsonl
           RAW_BYTES=${BYTES}
+          RAW_RECORDS=${RECORDS}
           RAW_SHA256=${RAW_SHA}
           MANIFEST_SHA256=${MANIFEST_SHA}
           SITE=caltech
@@ -90,22 +105,79 @@ jobs:
           cat phase1-acn-evidence/acquisition-identity.txt
           chmod -R a-w "${ROOT}"
 
-      - name: Verify credential hygiene
+      - name: Execute preregistered ACN raw-to-processed transformation
         shell: bash
         run: |
           set -euo pipefail
-          if grep -R --binary-files=without-match -F "${ACN_API_TOKEN}" data phase1-acn-evidence 2>/dev/null; then
-            echo "Credential material detected in generated evidence."
-            exit 1
+          ROOT="data/raw/acn_caltech_20191010_20191231_ts"
+          PROC="phase1-acn-evidence/processed-acn"
+          python project/phase1_runtime/process_acn.py \
+            --raw-jsonl "${ROOT}/sessions_canonical.jsonl" \
+            --out "${PROC}" \
+            | tee phase1-acn-evidence/acn-processing-summary.txt
+          sha256sum "${PROC}/processing_manifest.json" \
+            | tee phase1-acn-evidence/acn-processing-manifest-sha256.txt
+
+      - name: Execute preregistered information processing
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROC="phase1-acn-evidence/processed-acn"
+          INFO="phase1-acn-evidence/information"
+          python project/phase1_runtime/process_information.py \
+            --processed-acn "${PROC}" \
+            --out "${INFO}" \
+            | tee phase1-acn-evidence/information-processing-summary.txt
+          sha256sum "${INFO}/information_manifest.json" \
+            | tee phase1-acn-evidence/information-manifest-sha256.txt
+
+      - name: Evaluate frozen ACN and information verification subgates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' | tee phase1-acn-evidence/subgate-status.txt
+          import json
+          from pathlib import Path
+
+          acn = json.loads(Path(
+              "phase1-acn-evidence/processed-acn/processing_manifest.json"
+          ).read_text())
+          info = json.loads(Path(
+              "phase1-acn-evidence/information/information_verification.json"
+          ).read_text())
+
+          vd06 = acn["energy_reconstruction"]["V_D06_state"]
+          vi04 = info["V_I04_state"]
+          print(f"V_D06={vd06}")
+          print(f"V_I04={vi04}")
+          if vd06 != "PASS":
+              raise SystemExit("V-D06 did not satisfy the frozen <=1% median rule")
+          if vi04 != "PASS":
+              raise SystemExit("V-I04 did not satisfy seasonal-slot <= persistence RMSE")
+          print("ACN_INFORMATION_SUBGATES=PASS")
+          PY
+
+      - name: Verify credential hygiene
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${ACN_API_TOKEN:-}" ]; then
+            if grep -R --binary-files=without-match -F "${ACN_API_TOKEN}" data phase1-acn-evidence 2>/dev/null; then
+              echo "Credential material detected in generated evidence."
+              exit 1
+            fi
           fi
           echo "Generated evidence contains no literal ACN token."
 
-      - name: Upload immutable raw ACN evidence
+      - name: Upload ACN acquisition and processing evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: phase1-acn-raw-${{ github.sha }}
-          if-no-files-found: error
+          name: phase1-acn-evidence-${{ github.sha }}
+          if-no-files-found: warn
           retention-days: 90
           path: |
             data/raw/acn_caltech_20191010_20191231_ts/
             phase1-acn-evidence/
+            phase1-preacn-fixtures.txt
