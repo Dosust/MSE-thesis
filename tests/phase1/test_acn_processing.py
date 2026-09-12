@@ -1,9 +1,14 @@
 from datetime import date
 
-import numpy as np
 import pytest
 
-from phase1_exec.acn_processing import (
+# The repository's generic Python matrix intentionally does not install the
+# Phase-1 scientific lock. These tests are authoritative only in the canonical
+# Phase-1 environment, where NumPy is hash-locked. Skip collection elsewhere
+# rather than silently installing a second scientific environment.
+np = pytest.importorskip("numpy")
+
+from phase1_exec.acn_processing import (  # noqa: E402
     ACNProcessingError,
     aggregate_day_power_kw,
     chronological_split,
