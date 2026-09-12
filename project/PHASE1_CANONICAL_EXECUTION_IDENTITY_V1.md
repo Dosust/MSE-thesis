@@ -1,13 +1,13 @@
 # Phase 1C — Canonical Execution Identity v1
 
-![Status](https://img.shields.io/badge/status-ENVIRONMENT%20IDENTITY%20CLOSED-1A7F37)
+![Status](https://img.shields.io/badge/status-ENVIRONMENT%20%2B%20PUBLIC%20P%2FT%20CLOSED-1A7F37)
 ![Phase](https://img.shields.io/badge/phase-1C-0969DA)
 
-**Frozen/updated:** 2026-09-12  
-**Canonical environment run:** GitHub Actions `34700099915`  
-**Executable code SHA:** `a11914a1e7d015d75209e32c84a2459114ba7f17`  
-**Authority:** `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md` + committed hash-lock + successful canonical environment workflow  
-**Boundary:** computational reproducibility/environment verification only; not full model verification, empirical validation, or H1/H2 evidence.
+**Updated:** 2026-09-12  
+**Canonical BFW benchmark run:** GitHub Actions `34700750330`  
+**Canonical environment run:** GitHub Actions `34700750356`  
+**Executable code SHA:** `d6d97c7353f6d5694dba73ab840ae3a2548dd593`  
+**Boundary:** computational reproducibility plus public power/transport verification only; ACN-dependent full verification, empirical validation and H1/H2 remain blocked.
 
 ---
 
@@ -27,55 +27,69 @@
 }
 ```
 
-This revision supersedes the earlier environment identity at code SHA `b8d47d6baa9e0cde51c5dd4d0e41be92e0445d7a` because the transportation verification implementation was subsequently corrected and committed at `a11914a1e7d015d75209e32c84a2459114ba7f17`. The new environment run verifies the exact corrected executable state.
-
 ---
 
-# 1. Canonical successful environment run `[E]`
+# 1. Canonical execution pair `[E]`
+
+## 1.1 Environment identity
 
 ```text
-workflow            = Phase 1 environment lock and verification smoke
-run ID              = 34700099915
-job ID              = 103570219520
-head/code SHA       = a11914a1e7d015d75209e32c84a2459114ba7f17
-status/conclusion   = completed / success
-runner              = Ubuntu 24.04 / linux-amd64
-Python              = CPython 3.11.16
-artifact ID         = 10300396362
-artifact name       = phase1-environment-lock-a11914a1e7d015d75209e32c84a2459114ba7f17
-artifact digest     = sha256:0b65f641b875b35e52db015c8c7c3520f31b562f65c664628a3716da4a795f35
+workflow          = Phase 1 environment lock and verification smoke
+run ID            = 34700750356
+job ID            = 103571958645
+head/code SHA     = d6d97c7353f6d5694dba73ab840ae3a2548dd593
+conclusion        = SUCCESS
+runner image      = Ubuntu 24.04.5 LTS / ubuntu-24.04 image 20260907.300.1
+Python            = CPython 3.11.16
 ```
 
-Artifact retention is workflow-controlled. The hashes below, not artifact availability, are the enduring execution identities.
+## 1.2 Public benchmark verification identity
+
+```text
+workflow          = Phase 1 immutable benchmark verification
+run ID            = 34700750330
+job ID            = 103571958582
+head/code SHA     = d6d97c7353f6d5694dba73ab840ae3a2548dd593
+conclusion        = SUCCESS
+executed UTC      = 2026-09-12T14:57:33Z
+artifact ID       = 10300177541
+artifact digest   = sha256:3a87c5ec991e2addf7dde8d0ba896ce0d507a8aecfccba4b44b4c8ff4ef0c73f
+```
 
 ---
 
 # 2. Frozen execution identity
 
+For the current executable state,
+
 ```math
-\mathcal R_0
-=
-(H_{code},H_{lock},H_{env},H_D,ID_{run},t_{run}).
+\mathcal R_0=(H_{code},H_{lock},H_{env},H_D,ID_{run},t_{run}).
 ```
 
 ```text
-H_code = a11914a1e7d015d75209e32c84a2459114ba7f17
+H_code = d6d97c7353f6d5694dba73ab840ae3a2548dd593
 H_lock = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
-H_env  = sha256:02dcd331815e060c6f9601c9de7cfc9b9d6aa5e487bae08c6c81520b0245a716
+H_env  = sha256:ee7469b8ec78c8bf9988fd1c33a7b85de6a49a636ade3337981c56944def50af
 H_D    = PENDING_ACN_AUTHENTICATED_ACQUISITION
-ID_run = 34700099915
-t_run  = 2026-09-12T14:43Z canonical workflow execution window
+ID_run = 34700750330
+T_run  = 2026-09-12T14:57:33Z benchmark report identity
 ```
 
-Additional immutable environment evidence:
+Additional environment identities:
 
 ```text
-Docker image ID       = sha256:feab21248dbf3694ab8a4247c1bc416e08780f013041fd0b9a2fca56431c1b6b
-OCI archive SHA-256   = 230918f8be9e8a7b13ad8a2a40a300c47f44c048b3e96ba465ce7101aa159942
-OCI descriptor digest= sha256:02dcd331815e060c6f9601c9de7cfc9b9d6aa5e487bae08c6c81520b0245a716
+Docker image ID      = sha256:9790b75c9857d473f60402a2b79192e085d559f7caa8369df8ec078f83d7b657
+OCI descriptor       = sha256:ee7469b8ec78c8bf9988fd1c33a7b85de6a49a636ade3337981c56944def50af
+OCI archive SHA-256  = c13061011790320ef987578b91edb462cf7cff5c18b2fc4cb4c767060726d80c
 ```
 
-The exact resolved dependency lockfile remains `project/requirements-phase1-v1.lock.txt`; its SHA-256 is `H_lock` above.
+Because `H_D` for ACN is unresolved, the complete experiment identity
+
+```math
+\mathcal R^*=(H_{code},H_{lock},H_{env},H_D)
+```
+
+is not yet closed.
 
 ---
 
@@ -108,118 +122,123 @@ pytz==2024.1
 pytest==8.2.2
 ```
 
-The complete hash-locked dependency file, not this descriptive subset, is authoritative.
+The complete hash-locked dependency file `project/requirements-phase1-v1.lock.txt` is authoritative.
 
 ---
 
-# 4. Executed environment evidence `[E]`
+# 4. Environment closure `[E]`
 
-Canonical run `34700099915` passed every declared environment step, including:
-
-```text
-canonical hash-lock verification/install  = PASS
-package import smoke                       = PASS
-SALib Morris smoke                         = PASS
-SALib Sobol smoke                          = PASS
-ACN Portal frozen-upstream test suite      = PASS
-Phase-1 verification fixtures (host)       = 22 passed
-Phase-1 verification fixtures (OCI)        = 22 passed
-legacy architecture fixture                = PASS
-OCI linux/amd64 build/export               = PASS
-credential-hygiene scan                    = PASS
-```
-
-Frozen upstream ACN Portal source used for package-behavior evidence:
+Environment run `34700750356` passed:
 
 ```text
-repository = zach401/acnportal
-commit     = 14e723b11339e56ca3afd2bf4969f9e4bc8c2623
-package    = acnportal 0.3.3
+hash-lock verification/install       PASS
+required imports                     PASS
+SALib Morris/Sobol smoke             PASS
+ACN Portal upstream suite            95 passed, 1 warning
+Phase-1 host fixtures                22 passed
+Phase-1 OCI fixtures                 22 passed
+legacy architecture fixtures         5 passed
+OCI build/export                     PASS
+credential-hygiene scan              PASS
 ```
 
----
-
-# 5. Environment gate
-
-Define
-
-```math
-G_{ENV}
-=
-G_{lock}G_{install}G_{import}G_{SALib}G_{ACNlib}G_{fixture}G_{container}G_{identity}G_{secret}.
-```
-
-All terms were executed successfully in canonical run `34700099915`; therefore
+Therefore
 
 ```math
 \boxed{G_{ENV}=1.}
 ```
 
-Allowed claim:
-
-> The declared Phase-1 computational environment for code SHA `a11914a...` is internally executable under the frozen dependency identity, required package APIs, verification fixtures, and canonical linux/amd64 container.
-
-This claim does **not** establish correctness of the full coupled infrastructure model.
+This establishes environment executability only.
 
 ---
 
-# 6. Public benchmark materialization `[E]`
-
-The immutable benchmark workflow independently materialized the locked upstream objects and verified their Git blob identities. Their local SHA-256 identities are:
+# 5. Public benchmark materialization `[E]`
 
 ```text
 MATPOWER case33bw.m
-  SHA256 = b40831eeb444669ae876e2996f0dda9f05cd83e81b314b8dfca51e4890cca95d
-  bytes  = 4866
+  upstream commit = 2e0ef79a6c4526858ee923491d92781ad4507fb7
+  Git blob        = 97e510bee25c543de0453959672fe86b40a999c8
+  SHA256          = b40831eeb444669ae876e2996f0dda9f05cd83e81b314b8dfca51e4890cca95d
+  bytes           = 4866
 
 SiouxFalls_net.tntp
-  SHA256 = ace99b24cec69c273ff0cf3d6d074110177f0cc0ae24b0c7a9f4f4cb5e27635c
-  bytes  = 3136
+  upstream commit = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
+  Git blob        = 66d0eca4ddcfb82f861bea040060deab7a741b2f
+  SHA256          = ace99b24cec69c273ff0cf3d6d074110177f0cc0ae24b0c7a9f4f4cb5e27635c
+  bytes           = 3136
 
 SiouxFalls_trips.tntp
-  SHA256 = 56f9566857f3f66730fd5c4232258d7ee3ac2931a476526331afd062f4958de7
-  bytes  = 10859
+  upstream commit = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
+  Git blob        = db70eda57738877811e9ac07c25a567973d3b6a0
+  SHA256          = 56f9566857f3f66730fd5c4232258d7ee3ac2931a476526331afd062f4958de7
+  bytes           = 10859
 ```
 
-These hashes close the local materialization identity for the public power/transport benchmark objects. They do not close the ACN data gate.
+These close local public P/T data identity only.
+
+---
+
+# 6. Public benchmark verification identity `[E]`
+
+Canonical report:
+
+```text
+report SHA256 = 4f2b27af34459c7b4022813a58ed93c457eb2430cea660f88f5f5877b81f6a35
+```
+
+Power:
+
+```text
+max balance residual = 3.0808688933348094e-14
+solver iterations    = 11
+```
+
+Transportation:
+
+```text
+solver                = biconjugate-frank-wolfe
+iterations            = 645
+relative gap          = 9.33748496131895e-07
+scaled node residual  = 1.715075976720996e-16
+```
+
+The frozen transport criterion was
+
+```math
+RG\le10^{-6},\qquad N_{it}\le5000,
+```
+
+therefore the public transport convergence blocker is closed.
 
 ---
 
 # 7. ACN data gate remains open `[U]`
 
-The authenticated ACN workflow previously reached its deliberate credential-presence gate and stopped because repository secret `ACN_API_TOKEN` is absent. No ACN record was requested or transformed.
-
-Therefore
+The authenticated ACN workflow previously stopped at the credential-presence gate because GitHub Actions secret `ACN_API_TOKEN` was absent. No ACN record was requested or transformed.
 
 ```text
 H_D = PENDING_ACN_AUTHENTICATED_ACQUISITION
 ```
 
-and the complete experiment identity
-
-```math
-\mathcal R^*=(H_{code},H_{lock},H_{env},H_D)
-```
-
-is not yet closed.
+The token must be configured externally as a repository secret and must never be committed or pasted into chat.
 
 ---
 
-# 8. Verification status is separate from environment status
+# 8. Verification status is distinct from public benchmark success
 
-A successful environment does not compensate for a failed numerical verification test. In particular, the immutable Sioux Falls full user-equilibrium verification on the corrected code reached
-
-```math
-RG=4.215612504228978\times10^{-6}
-```
-
-after the maximum preregistered `5000` iterations, while the frozen acceptance criterion is
+The public P/T benchmark now passes its implemented numerical and conservation checks, but the complete Phase-1 verification gate includes ACN-dependent/full-coupled requirements. Therefore
 
 ```math
-RG\le10^{-6}.
+\boxed{
+G_{ENV}=1,
+\qquad
+G_D=0,
+\qquad
+G_V=0\text{ (closure not yet complete)}.
+}
 ```
 
-Therefore the transportation convergence test remains **FAIL** and full `G_V` is not closed.
+`G_V=0` here means only that the noncompensable complete verification closure condition is false; it is not evidence against H1 or H2.
 
 ---
 
@@ -242,27 +261,27 @@ V_{empirical}=1
 Not yet allowed:
 
 ```text
-full model verification;
-ACN data validity;
 calibration/holdout validation;
 H1/H2 conclusions;
-resilience/viability conclusions.
+full coupled-model validity claims;
+Stage-5 resilience/viability conclusions.
 ```
 
 ---
 
-# 10. Next hard gates
+# 10. Next hard gate
 
 ```math
 \boxed{
-\begin{array}{c}
-\text{resolve the remaining transportation convergence defect without weakening the frozen test}\\
-+\\
-\text{configure ACN_API_TOKEN externally and materialize/hash the frozen ACN request}
-\end{array}
+\text{ACN_API_TOKEN configured externally}
 \rightarrow
-G_V\text{ re-execution}.
+\text{frozen ACN acquisition}
+\rightarrow
+\text{raw/processed/split hashes}
+\rightarrow
+\text{remaining full verification}
+\rightarrow G_V.
 }
 ```
 
-No validation or H1/H2 execution is authorized until all mandatory verification tests applicable to the confirmatory model pass.
+No substitute ACN dataset or weakened verification criterion is authorized inside Phase-1 v1.
