@@ -1,7 +1,7 @@
 """Deterministic transportation/access mechanics for Phase-1 verification."""
 from dataclasses import dataclass
 import heapq
-from math import inf
+from math import inf, isfinite
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 
@@ -26,6 +26,25 @@ def bpr_time(link: RoadLink, flow: float) -> float:
     return link.free_time * (1.0 + link.alpha * (flow / link.capacity) ** link.beta)
 
 
+def bpr_derivative(link: RoadLink, flow: float) -> float:
+    """Derivative dt_a/dx_a of the separable BPR link cost."""
+    if link.capacity <= 0.0:
+        raise ValueError("capacity must be positive")
+    if flow < 0.0:
+        raise ValueError("flow must be nonnegative")
+    if link.beta <= 0.0 or link.alpha == 0.0:
+        return 0.0
+    if flow == 0.0 and link.beta > 1.0:
+        return 0.0
+    return (
+        link.free_time
+        * link.alpha
+        * link.beta
+        * flow ** (link.beta - 1.0)
+        / link.capacity ** link.beta
+    )
+
+
 def _adjacency(
     links: Sequence[RoadLink], closed: Optional[Iterable[Edge]] = None
 ) -> Dict[int, List[RoadLink]]:
@@ -46,12 +65,7 @@ def _single_source_predecessors(
     source: int,
     closed: Optional[Iterable[Edge]] = None,
 ) -> Tuple[Dict[int, float], Dict[int, Tuple[int, Edge]]]:
-    """Deterministic Dijkstra tree for one origin.
-
-    This is algorithmically equivalent to calling ``shortest_path`` for each
-    destination at fixed link costs, but avoids recomputing the same origin
-    tree for every OD pair.
-    """
+    """Deterministic Dijkstra tree for one origin."""
     adj = _adjacency(links, closed)
     dist: Dict[int, float] = {source: 0.0}
     prev: Dict[int, Tuple[int, Edge]] = {}
@@ -110,12 +124,11 @@ def all_or_nothing(
     od: Mapping[Tuple[int, int], float],
     closed: Optional[Iterable[Edge]] = None,
 ) -> Dict[Edge, float]:
-    """Assign each OD demand to a deterministic shortest path.
+    """Assign each OD demand to deterministic shortest paths.
 
     OD pairs are grouped by origin so one shortest-path tree is computed per
-    origin. This preserves the mathematical all-or-nothing assignment while
-    reducing redundant shortest-path work from O(number of OD pairs) trees to
-    O(number of active origins) trees per call.
+    origin. This is mathematically identical to separate shortest-path calls
+    at the same fixed link costs and only removes redundant computation.
     """
     flows: Dict[Edge, float] = {(link.u, link.v): 0.0 for link in links}
     grouped: Dict[int, List[Tuple[int, float]]] = {}
@@ -174,6 +187,20 @@ def _golden_section(
     return 0.5 * (a + b)
 
 
+def _line_search_to_target(
+    links: Sequence[RoadLink],
+    flow: Mapping[Edge, float],
+    target: Mapping[Edge, float],
+) -> float:
+    direction = {edge: target[edge] - flow[edge] for edge in flow}
+
+    def objective(step: float) -> float:
+        trial = {edge: flow[edge] + step * direction[edge] for edge in flow}
+        return beckmann_objective(links, trial)
+
+    return _golden_section(objective)
+
+
 def relative_gap(
     links: Sequence[RoadLink],
     flows: Mapping[Edge, float],
@@ -197,6 +224,7 @@ def frank_wolfe_user_equilibrium(
     gap_tol: float = 1e-8,
     max_iter: int = 5000,
 ) -> Tuple[Dict[Edge, float], int, float]:
+    """Classical Frank-Wolfe retained as a diagnostic/reference solver."""
     free_costs = {(link.u, link.v): link.free_time for link in links}
     flow = all_or_nothing(links, free_costs, od)
     for iteration in range(1, max_iter + 1):
@@ -208,14 +236,82 @@ def frank_wolfe_user_equilibrium(
             for link in links
         }
         aon = all_or_nothing(links, costs, od)
-        direction = {edge: aon[edge] - flow[edge] for edge in flow}
+        step = _line_search_to_target(links, flow, aon)
+        flow = {
+            edge: flow[edge] + step * (aon[edge] - flow[edge])
+            for edge in flow
+        }
+    return flow, max_iter, relative_gap(links, flow, od)
 
-        def objective(step: float) -> float:
-            trial = {edge: flow[edge] + step * direction[edge] for edge in flow}
-            return beckmann_objective(links, trial)
 
-        step = _golden_section(objective)
-        flow = {edge: flow[edge] + step * direction[edge] for edge in flow}
+def conjugate_frank_wolfe_user_equilibrium(
+    links: Sequence[RoadLink],
+    od: Mapping[Tuple[int, int], float],
+    gap_tol: float = 1e-8,
+    max_iter: int = 5000,
+    conjugate_weight_max: float = 0.99999,
+) -> Tuple[Dict[Edge, float], int, float]:
+    """Conjugate-direction Frank-Wolfe (CFW) for separable traffic UE.
+
+    The mathematical traffic-assignment problem, BPR costs, relative-gap
+    definition, and exact one-dimensional Beckmann line search are unchanged.
+    Only the feasible point-of-sight direction is conjugated using the local
+    diagonal Hessian, following Mitradjieva & Lindberg's CFW construction.
+    """
+    if not (0.0 < conjugate_weight_max < 1.0):
+        raise ValueError("conjugate_weight_max must lie strictly between 0 and 1")
+
+    free_costs = {(link.u, link.v): link.free_time for link in links}
+    flow = all_or_nothing(links, free_costs, od)
+    previous_sight: Optional[Dict[Edge, float]] = None
+
+    for iteration in range(1, max_iter + 1):
+        gap = relative_gap(links, flow, od)
+        if gap <= gap_tol:
+            return flow, iteration, gap
+
+        costs = {
+            (link.u, link.v): bpr_time(link, flow[(link.u, link.v)])
+            for link in links
+        }
+        aon = all_or_nothing(links, costs, od)
+
+        if previous_sight is None:
+            sight = dict(aon)
+        else:
+            numerator = 0.0
+            denominator = 0.0
+            for link in links:
+                edge = (link.u, link.v)
+                h = bpr_derivative(link, flow[edge])
+                prev_minus_x = previous_sight[edge] - flow[edge]
+                numerator += prev_minus_x * (aon[edge] - flow[edge]) * h
+                denominator += prev_minus_x * (aon[edge] - previous_sight[edge]) * h
+
+            if abs(denominator) <= 1e-30:
+                weight_previous = 0.0
+            else:
+                weight_previous = numerator / denominator
+                if not isfinite(weight_previous):
+                    weight_previous = 0.0
+                weight_previous = min(
+                    conjugate_weight_max, max(0.0, weight_previous)
+                )
+
+            sight = {
+                edge: weight_previous * previous_sight[edge]
+                + (1.0 - weight_previous) * aon[edge]
+                for edge in flow
+            }
+
+        # Convex combinations of feasible link-flow points remain feasible.
+        step = _line_search_to_target(links, flow, sight)
+        flow = {
+            edge: flow[edge] + step * (sight[edge] - flow[edge])
+            for edge in flow
+        }
+        previous_sight = sight
+
     return flow, max_iter, relative_gap(links, flow, od)
 
 
