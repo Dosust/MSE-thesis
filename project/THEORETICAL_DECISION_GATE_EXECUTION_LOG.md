@@ -10,7 +10,8 @@ Protocol: THEORETICAL_DECISION_GATE_PROTOCOL_V1.md
 Definition register: INTERDEPENDENCY_DEFINITION_REGISTER.md
 Requirement matrix: REPRESENTATION_REQUIREMENTS_MATRIX.md
 0C source register: PHASE0_0C_SOURCE_REGISTER.md
-0C benchmark: PHASE0_0C_THEORY_BENCHMARK_V1.md
+0C core benchmark: PHASE0_0C_THEORY_BENCHMARK_V1.md
+0C saturation R1: PHASE0_0C_SATURATION_SEARCH_ROUND1.md
 Repository: Dossiya-SE/MSE-thesis
 Branch: main
 ```
@@ -21,31 +22,15 @@ Branch: main
 |---|---|---|---|
 | 0A — definitions | `Frozen_v1.0` | definition register committed before ontology scoring | terminology and boundaries fixed for this gate version |
 | 0B — requirements | `Frozen_v1.0` | R1–R12, G1–G5, V1–V5 and scoring rule committed before scoring | comparison criteria cannot be changed to favor a result |
-| 0C — existing theory benchmark | `Core_pass_complete__saturation_open` | source-level register and R1–R12 benchmark matrix committed | major predecessor families identified; no saturation/novelty claim yet |
+| 0C — existing theory benchmark | `Active__round1_changed_taxonomy` | core source register + matrix + adversarial saturation Round 1 | saturation not reached because new first-class predecessor families were discovered |
 | 0D — formalize M0/M1 | `Blocked_by_0C_saturation` | none | fair comparison waits until contrary/dominating predecessor search is closed |
 | 0E — V1–V5 tests | `Not_started` | none | no representational winner allowed |
 | 0F — field ablation | `Not_started` | none | candidate dependency tuple remains provisional |
 | 0G — decision | `Blocked` | 0C saturation + 0D–0F incomplete | RETAIN/REVISE/REPLACE cannot yet be issued |
 
-## 0C core-pass evidence retained
-
-The core benchmark currently includes:
-
-- Maier system-of-systems architecting;
-- Rinaldi–Peerenboom–Kelly critical-infrastructure interdependency framework;
-- Johansson–Hassel structural + functional interdependency model;
-- Kivelä et al. multilayer networks;
-- Nan–Sansavini multilayer hybrid physical/control/human-organizational infrastructure model;
-- ontology-based critical-infrastructure interdependency approaches;
-- NIST Cyber-Physical Systems framework;
-- ISO/IEC/IEEE 42010:2022 architecture-description framework;
-- temporal-network infrastructure interdependency/cascade modeling;
-- dynamic coupled Power–Transportation equilibrium models;
-- current 2025–2026 review evidence on interdependency, dynamics and uncertainty.
-
 ## 0C core scientific result
 
-The current evidence rejects the following as standalone novelty claims:
+The evidence rejects the following as standalone novelty claims:
 
 ```text
 - Power and Transportation are interdependent.
@@ -56,41 +41,125 @@ The current evidence rejects the following as standalone novelty claims:
 - Ontologies/architecture descriptions can support cross-domain interoperability.
 ```
 
-The current candidate residual problem is narrower:
+## Saturation Round 1 result
+
+Round 1 deliberately searched for contrary/dominating frameworks and **changed the taxonomy**.
+
+Newly retained predecessor classes include:
+
+```text
+- Haberlin–Haimes shared-state infrastructure SoS model;
+- Eusgeld–Nan–Dietz SoS + HLA/federated simulation architecture;
+- heterogeneous SoS interoperability reference architectures;
+- uncertainty-aware semantic reasoning for critical infrastructure;
+- physical/functional multi-domain service ontologies;
+- logical/Boolean interdependency models;
+- CI management knowledge graphs with relation prediction and cross-time knowledge;
+- established uncertainty taxonomies for interdependent infrastructure.
+```
+
+### Major contrary finding
+
+Haberlin–Haimes already represent critical interdependencies through:
+
+```math
+\text{shared/common states}
++
+\text{decisions}
++
+\text{decision makers}
++
+\text{stakeholders}
++
+\text{resources}
++
+\text{time frame}
++
+\text{organizational setups}.
+```
+
+Therefore the thesis cannot claim novelty merely from adding state, decisions, resources, time, or organization to an interdependency object.
+
+### Additional contrary findings
+
+Existing literature also already contains:
+
+- federated/coupled low-level infrastructure models through SoS/HLA approaches;
+- multi-domain energy/transport/water/telecom ontologies with physical + functional descriptions and service-delivery models;
+- cross-domain uncertainty-aware semantic reasoning that includes CPS and human activity;
+- logical dependency formalisms beyond simple binary edges;
+- knowledge-graph approaches addressing cross-industry/cross-time information and relation prediction.
+
+## Revised candidate residual problem
+
+The research question has narrowed from **feature accumulation** to **minimal interoperable semantics**:
 
 ```math
 \boxed{
-\text{Can a minimal typed dependency contract serve as an interoperable semantic bridge across structural, domain-physics, informational/control, organizational, temporal, uncertainty/evidence and service models without replacing the specialized models that already solve those individual concerns?}
+\text{What is the minimum common invariant that permits loss-controlled translation among heterogeneous interdependency representations?}
+}
+```
+
+Expanded candidate statement:
+
+```math
+\boxed{
+\text{Is there a minimum relation-level contract that can map among shared-state SoS, multilayer hybrid physical/control/human models, physical-functional service ontologies, logical dependency models, federated simulation, uncertainty-aware semantic reasoning and high-fidelity sector models while preserving mechanism, state/time semantics, evidence provenance and measurable service consequence?}
 }
 ```
 
 Status: `candidate / unresolved`, not established novelty.
 
-## Strongest predecessor challenge
+## Strongest predecessor challenge set
 
-The Nan–Sansavini multilayer hybrid framework is currently the strongest direct challenge because it already combines:
-
-```text
-physical/process + operational control + human-organizational + hybrid dynamics + subsystem-specific models + performance/resilience evaluation.
+```math
+\boxed{
+\begin{aligned}
+P_1&=\text{Nan--Sansavini multilayer hybrid model},\\
+P_2&=\text{Haberlin--Haimes shared-state SoS model},\\
+P_3&=\text{Trucco et al. physical/functional service ontology},\\
+P_4&=\text{NIST CPS cross-domain aspects},\\
+P_5&=\text{uncertainty-aware CI semantic reasoning},\\
+P_6&=\text{Eusgeld--Nan--Dietz HLA/federated SoS},\\
+P_7&=\text{dynamic high-fidelity P--T model},\\
+P_8&=\text{logical dependency models}.
+\end{aligned}}
 ```
 
-Any Phase-0 proposal must demonstrate added value relative to this class, not only relative to a binary graph.
+Any Phase-0 proposal must demonstrate added value relative to this combined predecessor envelope, not relative to a binary graph.
 
-## 0C saturation work still required
+## Saturation state
 
-Before 0C can be closed, search specifically for:
+Because Round 1 introduced new first-class representation families:
 
-1. shared-state system-of-systems models;
-2. infrastructure reference architectures/interoperability frameworks;
-3. typed dependency / dependency grammar formalisms;
-4. temporal/uncertainty-aware knowledge graphs and semantic dependency models;
-5. federated co-simulation frameworks and standards for heterogeneous infrastructures;
-6. models integrating physical + cyber/information + organization + service + uncertainty;
-7. contrary frameworks from 2025–2026 reviews that could dominate or subsume the candidate contract.
+```math
+\boxed{\text{SATURATION NOT REACHED}.}
+```
 
-### Saturation rule
+0D remains blocked.
 
-0C closes only when additional targeted search no longer introduces a new representation family that changes the R1–R12 taxonomy **or** when a dominating predecessor is identified and the proposed grammar is abandoned/reframed.
+## Round 2 required search
+
+Round 2 must determine whether a common relation invariant/translation contract already exists.
+
+Priority targets:
+
+1. papers citing Haberlin–Haimes shared-state infrastructure SoS;
+2. infrastructure/SoS semantic interoperability and model transformation;
+3. HLA/FMI/HELICS/federated model interface semantics for infrastructure co-simulation;
+4. semantic-web/provenance standards for relation-level evidence annotation;
+5. typed property-graph / ontology patterns for stateful and temporal relations;
+6. recent 2025–2026 critical-infrastructure reference architectures and knowledge graphs;
+7. explicit mappings between architecture/ontology objects and governing physical simulation models.
+
+### Round-2 stopping rule
+
+Round 2 closes 0C only if new eligible sources no longer introduce a new first-class representation family and either:
+
+```text
+(a) no existing common relation invariant is identified; or
+(b) an existing invariant is identified and Phase 0 is reframed around adoption/extension rather than invention.
+```
 
 ## Frozen decision prohibition
 
@@ -118,7 +187,7 @@ Permitted language:
 ## Next release target
 
 ```math
-\boxed{\text{0C saturation / contrary-framework search}.}
+\boxed{\text{0C saturation search — Round 2}.}
 ```
 
-Only after this closes may 0D formally compare the frozen `M0={P,T,I,O}` ontology with the candidate domain × aspect ontology.
+Only after Round 2 satisfies the stopping rule may 0D formally compare the frozen `M0={P,T,I,O}` ontology with the candidate domain × aspect ontology.
