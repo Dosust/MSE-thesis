@@ -1,18 +1,16 @@
 # Phase 1C — Verification Execution Matrix v1
 
-![Status](https://img.shields.io/badge/status-EXECUTION%20MATRIX%20ACTIVE-0969DA)
-![Phase](https://img.shields.io/badge/phase-1C-1A7F37)
+![Status](https://img.shields.io/badge/status-G_V%20NOT%20CLOSED-D73A49)
+![Phase](https://img.shields.io/badge/phase-1C-0969DA)
 
 **Initialized:** 2026-09-12  
-**Authority:** `PHASE1_VERIFICATION_TEST_MATRIX_V1.md` + `PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md` + `PHASE1_DATA_PROVENANCE_REGISTER_V1.md`  
-**Purpose:** collapse the detailed preregistered verification tests into nine noncompensable execution gates without weakening any original test.  
-**Rule:** a gate is `PASS` only from executed evidence. `BLOCKED` and `NOT YET EXECUTED` are not failures of the scientific hypothesis, but neither counts as a pass.
+**Execution update:** 2026-09-12  
+**Authority:** `PHASE1_VERIFICATION_TEST_MATRIX_V1.md` + `PHASE1_VERIFICATION_EXECUTION_RESULTS_V1.md` + `PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md` + `PHASE1_DATA_PROVENANCE_REGISTER_V1.md`  
+**Purpose:** aggregate the detailed preregistered verification tests into nine noncompensable execution gates without weakening any original test.
 
 ---
 
 ## 0. Gate logic
-
-Define
 
 ```math
 G_V
@@ -22,389 +20,212 @@ G_V
 G_{Vk}\in\{0,1\}.
 ```
 
+A gate maps to `1` only when all mandatory tests assigned to it have executed and passed. `FAIL`, `PARTIAL`, `BLOCKED`, and `NOT_EXECUTED` all prevent closure.
+
+```math
+\boxed{G_V=1\iff \forall k,\;G_{Vk}=1.}
+```
+
+No averaging or compensatory score is allowed.
+
+Execution vocabulary:
+
+```text
+PASS         executed and acceptance condition satisfied
+FAIL         executed and acceptance condition violated
+PARTIAL      some subordinate evidence passes but gate is not complete
+BLOCKED      prerequisite unavailable
+NOT_EXECUTED deliberately withheld pending upstream gates
+```
+
+---
+
+# 1. Current gate matrix
+
+| Gate | Question | Executed state | Binary closure |
+|---|---|---|---:|
+| `G_V1` | Are equations/algorithms implemented as specified? | `PARTIAL` — 22 host + 22 OCI verification fixtures pass; power benchmark passes; full traffic convergence test fails | 0 |
+| `G_V2` | Are units/dimensions/source schemas consistent? | `PARTIAL-PASS` — MATPOWER and Sioux Falls ingestion/conversion tests pass; ACN path unavailable | 0 |
+| `G_V3` | Are conservation/balance relations respected? | `PARTIAL` — radial power balance passes; full accepted-solution traffic conservation is not admitted because V-T02 convergence fails first | 0 |
+| `G_V4` | Do limiting cases behave correctly? | `PARTIAL-PASS` — synthetic dependency/guard/closure limits pass; complete ACN-dependent limits unavailable | 0 |
+| `G_V5` | Are numerical solutions convergent/stable? | **`FAIL`** — Sioux Falls full OD `RG=4.215612504228978e-06 > 1e-6` at frozen `5000` iterations | **0** |
+| `G_V6` | Are outputs invariant to irrelevant implementation choices? | `PARTIAL` — deterministic host/OCI fixture evidence exists; full benchmark deterministic-report stage is blocked by V-T02 | 0 |
+| `G_V7` | Do known-answer synthetic cases recover expected answers? | `PASS within frozen implemented fixture domain` — 22 host + 22 OCI fixtures pass | 1 |
+| `G_V8` | Are parameter/sensitivity perturbations physically coherent? | `NOT_EXECUTED` — withheld pending solver/data verification closure | 0 |
+| `G_V9` | Can the complete experiment be reproduced from immutable `R*`? | `BLOCKED_EXTERNAL_CREDENTIAL` — ACN `H_D` unresolved | 0 |
+
 Therefore
 
 ```math
-\boxed{
-G_V=1
-\iff
-G_{V1}=G_{V2}=\cdots=G_{V9}=1.
-}
+\boxed{G_V=0\quad\text{for closure}.}
 ```
 
-No averaging or compensatory score is allowed. A failed or unresolved critical gate cannot be offset by strong performance elsewhere.
-
-Execution-state vocabulary:
-
-```text
-PASS                 executed and acceptance condition satisfied;
-FAIL                 executed and acceptance condition violated;
-BLOCKED              prerequisite unavailable;
-NOT_YET_EXECUTED     executable but evidence not yet generated;
-PARTIAL              some subordinate tests pass, full gate not closed.
-```
-
-For the multiplicative equation, only `PASS` maps to `1`; all other states keep the gate open and therefore prevent `G_V=1`.
+This `0` means **the complete verification gate is not satisfied**. It is not a statement that H1/H2 are false.
 
 ---
 
-# 1. G_V1 — Equations and algorithms implemented as specified
-
-Question:
-
-> Does the code implement the declared constituent equations, coupling operators, guards, event logic and algorithms without hidden substitutions?
-
-Maps to detailed tests including:
+# 2. Environment/provenance facts feeding the matrix
 
 ```text
-V-P01..V-P05
-V-T01..V-T06
-V-I01..V-I05
-V-O01..V-O04
-V-C01..V-C06
-V-M01
+G_ENV               = 1
+canonical env run   = 34700099915
+H_code              = a11914a1e7d015d75209e32c84a2459114ba7f17
+H_lock              = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
+H_env               = sha256:02dcd331815e060c6f9601c9de7cfc9b9d6aa5e487bae08c6c81520b0245a716
+host fixtures       = 22 passed
+OCI fixtures        = 22 passed
 ```
 
-Evidence already executed:
+Public benchmark raw identities:
 
 ```text
-- radial power synthetic branch-flow residual fixture: PASS;
-- added-load voltage-direction fixture: PASS;
-- BPR monotonicity fixture: PASS;
-- simple Frank-Wolfe equilibrium fixture: PASS;
-- road-closure shortest-path monotonicity fixture: PASS;
-- canonical dependency/guard/event unit fixtures: PASS within current 20-test suite.
+case33bw.m        SHA256 b40831eeb444669ae876e2996f0dda9f05cd83e81b314b8dfca51e4890cca95d
+SiouxFalls_net    SHA256 ace99b24cec69c273ff0cf3d6d074110177f0cc0ae24b0c7a9f4f4cb5e27635c
+SiouxFalls_trips  SHA256 56f9566857f3f66730fd5c4232258d7ee3ac2931a476526331afd062f4958de7
 ```
 
-Current state:
-
-```text
-G_V1 = PARTIAL
-```
-
-Reason: not every detailed benchmark/data-backed test has yet been executed against the frozen real benchmark inputs.
-
----
-
-# 2. G_V2 — Units, dimensions and schema consistency
-
-Question:
-
-> Do quantities preserve declared dimensions and source schemas across P, T, I and O interfaces?
-
-Required evidence:
-
-```text
-- MATPOWER source conversion/schema test;
-- Sioux Falls schema/unit test;
-- ACN timezone/power/replay schema tests;
-- cross-interface unit conversions;
-- dimensional audit of restoration times and charging injection.
-```
-
-Current state:
-
-```text
-G_V2 = PARTIAL / ACN-DEPENDENT PORTION BLOCKED
-```
-
----
-
-# 3. G_V3 — Conservation and balance
-
-Question:
-
-> Do implemented solutions satisfy the constituent physical/network balance laws within preregistered numerical tolerances?
-
-Evidence already executed:
-
-```text
-power branch-flow residual synthetic test = PASS (<1e-10 fixture tolerance);
-transport node-flow conservation synthetic test = PASS (<1e-10 fixture tolerance).
-```
-
-Still required:
-
-```text
-full IEEE-33 benchmark residual execution;
-full Sioux Falls assignment conservation execution;
-ACN energy reconstruction V-D06.
-```
-
-Current state:
-
-```text
-G_V3 = PARTIAL
-```
-
----
-
-# 4. G_V4 — Mathematical/physical limiting cases
-
-Question:
-
-> When a mechanism is removed or a parameter approaches a declared limit, does the code recover the analytically expected reduced model?
-
-Required limits include
+Complete data gate:
 
 ```math
-\Phi_e=0,
+\boxed{G_D=0}
+```
+
+because ACN raw acquisition, processed trajectory and chronological split hashes are not yet available.
+
+---
+
+# 3. Public benchmark execution
+
+Four immutable benchmark integration tests were run.
+
+Passed:
+
+```text
+V-D01 / case33bw source schema and conversion
+power benchmark radial balance + positive-load sign
+V-D02/V-D03 / Sioux Falls source schema and OD total
+```
+
+Failed:
+
+```text
+V-T02 / full Sioux Falls user-equilibrium convergence
+```
+
+Observed after the CFW restart-state implementation correction:
+
+```math
+RG_{obs}=4.215612504228978\times10^{-6},
 \qquad
-\gamma_e=0,
+RG_{max}=10^{-6}.
+```
+
+Thus
+
+```math
+RG_{obs}>RG_{max}.
+```
+
+The threshold and frozen `5000`-iteration ceiling were not changed after observing the result.
+
+---
+
+# 4. Reproducible failure evidence
+
+The failed benchmark state is retained as an artifact rather than discarded:
+
+```text
+preserved workflow run = 34700331684
+job                   = 103570834519
+workflow head         = df263eb254431fca3897e460b7d9483a29393414
+underlying exec code  = a11914a1e7d015d75209e32c84a2459114ba7f17
+result                = 3 passed, 1 failed
+artifact ID           = 10300236909
+artifact digest       = sha256:a688992b67de054f94dd5c7a7f13587285f36fc9c904c684ead11c1490302904
+execution UTC         = 2026-09-12T14:48:48Z
+```
+
+The workflow records benchmark raw hashes, byte counts, pytest output and execution identity even on failure.
+
+---
+
+# 5. ACN gate
+
+```text
+workflow run ID      = 34698786730
+state                = BLOCKED_EXTERNAL_CREDENTIAL
+missing prerequisite = repository Actions secret ACN_API_TOKEN
+API request          = not executed
+raw ACN SHA256       = unresolved
+```
+
+No replacement data source was introduced.
+
+---
+
+# 6. Noncompensability
+
+The environment and synthetic fixtures cannot compensate for failure of numerical convergence or missing complete data identity:
+
+```math
+G_{ENV}=1
+\not\Rightarrow
+G_V=1.
+```
+
+Likewise
+
+```math
+G_{V7}=1
+\quad\text{but}\quad
+G_{V5}=0
+\Rightarrow
+G_V=0.
+```
+
+---
+
+# 7. Validation unlock condition
+
+Validation becomes admissible only when
+
+```math
+\boxed{G_D=1\land G_V=1.}
+```
+
+At present:
+
+```math
+G_{ENV}=1,
 \qquad
-\delta_I=0,
+G_D=0,
 \qquad
-P_{ch}=0,
+G_V=0.
 ```
 
-plus road reopen/closure and zero organizational-delay limits.
-
-Current evidence:
+Therefore
 
 ```text
-multiple synthetic coupling/availability/delay/restoration fixtures = PASS within current test suite.
-```
-
-Current state:
-
-```text
-G_V4 = PARTIAL
-```
-
-Full benchmark-backed ablation equivalence remains to be run.
-
----
-
-# 5. G_V5 — Numerical convergence and stability
-
-Question:
-
-> Are accepted numerical solutions converged and stable under preregistered solver/time-step criteria?
-
-Frozen criteria include:
-
-```math
-\epsilon_P\le10^{-8},
-\qquad
-RG\le10^{-6},
-\qquad
-\epsilon_{\Delta t}\le10^{-3}.
-```
-
-Current evidence:
-
-```text
-simple radial solver convergence fixture = PASS;
-simple Frank-Wolfe convergence fixture = PASS.
-```
-
-Still required:
-
-```text
-IEEE-33 benchmark convergence;
-Sioux Falls full-OD convergence;
-5-min vs 2.5-min designated refinement test after ACN trajectory exists.
-```
-
-Current state:
-
-```text
-G_V5 = PARTIAL
+calibration/holdout validation = BLOCKED
+H1 confirmatory execution      = BLOCKED
+H2 confirmatory execution      = BLOCKED
+Stage-5 viability/resilience   = BLOCKED
 ```
 
 ---
 
-# 6. G_V6 — Invariance to irrelevant implementation choices
+# 8. Reopening rule
 
-Question:
+A failed or blocked gate may be reevaluated only after version-controlled evidence addresses its cause. Existing PASS evidence may be reused only where the relevant code/data dependency has not changed.
 
-> Do results remain unchanged under changes that should not alter the declared mathematics?
-
-Required evidence:
+Permitted next work:
 
 ```text
-- deterministic ordering independent of hash/container iteration;
-- host vs canonical-container fixture agreement;
-- configuration ablations modify only declared I/O fields;
-- no hidden duplicate charging injection;
-- no silent solver-failure deletion.
+1. diagnose/correct the traffic solver while preserving the frozen Beckmann problem,
+   RG threshold, OD matrix, BPR parameters and max_iter criterion;
+2. configure ACN_API_TOKEN externally;
+3. execute and hash the frozen ACN request/processing chain;
+4. rerun every mandatory verification test affected by those changes.
 ```
 
-Executed evidence:
-
-```text
-20 Phase-1 fixtures passed on host;
-20 Phase-1 fixtures passed in canonical linux/amd64 container;
-PYTHONHASHSEED/thread policy fixed;
-deterministic seed derivation repeated identically.
-```
-
-Current state:
-
-```text
-G_V6 = PARTIAL
-```
-
-Reason: full benchmark/state-vector invariance has not yet been exercised.
-
----
-
-# 7. G_V7 — Synthetic known-answer recovery
-
-Question:
-
-> Does the implementation recover cases whose correct behavior is known analytically or by construction?
-
-Executed examples:
-
-```text
-zero-load radial feeder -> flat 1.0 p.u. voltage and zero current: PASS;
-two-path symmetric traffic network -> 5/5 equilibrium split: PASS;
-BPR zero-flow -> free-flow time: PASS;
-fixed-cost path-set reduction cannot reduce shortest-path cost: PASS;
-restoration/additive-event synthetic fixtures: PASS in current suite.
-```
-
-Current state:
-
-```text
-G_V7 = PASS for the currently declared synthetic known-answer fixture set.
-```
-
-Any future addition of a mandatory synthetic fixture reopens this gate until executed.
-
----
-
-# 8. G_V8 — Physically coherent perturbation/sensitivity behavior
-
-Question:
-
-> Do controlled input perturbations produce changes with the mechanism sign/direction implied by the declared model in its bounded operating domain?
-
-Executed examples:
-
-```text
-added positive load in simple radial case lowers receiving voltage: PASS;
-BPR travel time increases with nonnegative flow: PASS;
-road closure with fixed remaining costs does not reduce shortest-path cost: PASS.
-```
-
-Still required:
-
-```text
-benchmark-level charging-load sign check;
-organizational-delay monotonicity over registered parameter ranges;
-information latency/error perturbation checks;
-parameter-screening coherence once calibrated ACN objects exist.
-```
-
-Current state:
-
-```text
-G_V8 = PARTIAL
-```
-
----
-
-# 9. G_V9 — Complete reproducibility from R*
-
-Question:
-
-> Can the complete verification execution be reproduced from the immutable code, dependency, environment and data identities?
-
-Required object:
-
-```math
-\mathcal R^*
-=
-(H_{code},H_{lock},H_{env},H_D).
-```
-
-Known identities:
-
-```text
-H_lock = 68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4
-H_env  = immutable OCI descriptor recorded in PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md
-H_D    = unresolved because ACN credential is absent
-```
-
-The ACN acquisition workflow run `34698786730` verified the canonical lock installation but failed at the explicit external-credential presence gate before any download.
-
-Current state:
-
-```text
-G_V9 = BLOCKED_EXTERNAL_CREDENTIAL
-```
-
----
-
-# 10. Current gate vector
-
-```math
-\mathbf G_V
-=
-[
-P,
-P,
-P,
-P,
-P,
-P,
-1,
-P,
-B
-],
-```
-
-where `P=PARTIAL` and `B=BLOCKED` are execution-state symbols rather than numeric successes.
-
-Thus the only valid binary scientific conclusion is
-
-```math
-\boxed{G_V\neq1\text{ at present}.}
-```
-
-It would be incorrect to report `G_V=0` as a mathematical/model failure because several gates have not yet been fully executable; the precise status is **verification not yet closed**.
-
----
-
-# 11. Validation unlock condition
-
-Validation is authorized only when
-
-```math
-\boxed{
-G_{V1}=G_{V2}=\cdots=G_{V9}=1.
-}
-```
-
-Until then:
-
-```text
-calibration beyond preregistered preparation = BLOCKED;
-holdout validation = BLOCKED;
-H1/H2 confirmatory comparisons = BLOCKED;
-Stage-5 viability/resilience claims = BLOCKED.
-```
-
----
-
-# 12. Next execution order
-
-```math
-\boxed{
-\text{close environment hardening run}
-\rightarrow
-\text{execute all non-ACN benchmark tests}
-\rightarrow
-\text{configure ACN secret externally}
-\rightarrow
-H_D
-\rightarrow
-\text{execute ACN-dependent tests}
-\rightarrow
-G_V.
-}
-```
-
-No hypothesis result is admissible before this sequence closes.
+No acceptance criterion may be weakened merely because its first execution failed.
