@@ -1,188 +1,190 @@
-# Phase 1B — ACN Acquisition Blocker and Resolution Protocol v1
+# Phase 1C — ACN Acquisition Blocker and Executed Resolution Protocol v1
 
 **Status:** `BLOCKED_EXTERNAL_CREDENTIAL`  
 **Date:** 2026-09-12  
-**Authority:** `PHASE1_DATA_MANIFEST_V1.md` + `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md`  
-**Purpose:** make the unresolved ACN raw-data hash scientifically explicit rather than fabricating or substituting data.
+**Authority:** `PHASE1_DATA_MANIFEST_V1.md` + `PHASE1_SOFTWARE_ENVIRONMENT_LOCK_V1.md` + `PHASE1_DATA_PROVENANCE_REGISTER_V1.md`  
+**Purpose:** record both the frozen ACN acquisition protocol and the actual executed credential-gate result without fabricating or substituting data.
 
 ---
 
-## 1. Verified external constraint `[E]`
-
-The ACN-Data portal states that users must register to obtain an access token for the REST API. The Python `DataClient` likewise requires an API token. The `/ts` endpoint is required when time-series current/pilot information is needed.
-
-Therefore the frozen Caltech extraction cannot be completed reproducibly in the current automated environment without an authorized ACN token.
-
-This is an **external access constraint**, not a scientific failure of the experiment.
-
----
-
-## 2. Frozen request `[P]`
-
-The acquisition target remains unchanged:
+## 1. Frozen acquisition target `[P]`
 
 ```text
-site      = caltech
-start     = 2019-10-10 00:00:00 America/Los_Angeles
-end       = 2019-12-31 23:59:59 America/Los_Angeles
-timeseries= true where required by replay/reconstruction
-client    = acnportal 0.3.3
+site       = caltech
+start      = 2019-10-10 00:00:00 America/Los_Angeles
+end        = 2019-12-31 23:59:59 America/Los_Angeles
+timeseries = true
+client     = acnportal==0.3.3
+script     = project/phase1_runtime/acquire_acn.py
+workflow   = .github/workflows/phase1-acn-acquisition.yml
 ```
 
-The source/window may not be altered to bypass authentication.
+No source, site, interval or time-series requirement may be changed to bypass authentication.
+
+---
+
+## 2. Executed access test `[E]`
+
+The acquisition workflow was actually executed:
+
+```text
+workflow name       = Phase 1 authenticated ACN acquisition
+run ID              = 34698786730
+run number          = 1
+head SHA            = c509d7de85627dda9f99023aa8acb5b24737cc9d
+status              = completed
+conclusion          = failure
+```
+
+Step-level evidence:
+
+```text
+checkout exact commit                     PASS
+Python 3.11.16 setup                       PASS
+canonical lock SHA verification/install   PASS
+ACN_API_TOKEN presence gate               FAIL
+raw-data acquisition                       SKIPPED
+provenance freeze                          SKIPPED
+raw artifact upload                        SKIPPED
+```
+
+Thus the workflow reached the external credential boundary under the correct frozen software environment and stopped before requesting or transforming ACN records.
+
+Scientific interpretation:
+
+```math
+\boxed{
+\text{credential absence}
+\neq
+\text{data invalidity}
+\neq
+\text{model failure}.
+}
+```
+
+It is an unresolved external-access prerequisite `[U]`.
 
 ---
 
 ## 3. Secure credential rule
 
-The token must be supplied only at execution time through
+The authorized ACN token must be configured as GitHub Actions repository secret:
 
 ```text
 ACN_API_TOKEN
 ```
 
-as an environment variable or equivalent secret store.
+It must **not** be pasted into Markdown, source files, notebooks, workflow YAML, committed shell history, CI output, JSON evidence or container layers.
 
-It must never appear in:
-
-```text
-Git commits;
-Markdown manifests;
-notebooks;
-command history committed to the repository;
-CI logs;
-JSON result files;
-container image layers.
-```
-
-No user credential should be pasted into thesis source files.
+The workflow checks only whether the secret is present; it never prints the secret.
 
 ---
 
-## 4. Required acquisition artifact
+## 4. Immutable raw object
 
-The acquisition script must write an immutable raw object, for example
-
-```text
-data/raw/acn/caltech_2019-10-10_2019-12-31_ts.jsonl
-```
-
-without subsequent in-place edits.
-
-Immediately record:
+On the first successful authenticated rerun, the acquisition code writes an immutable raw directory and canonical session export. It must record:
 
 ```text
 UTC acquisition timestamp;
-API base URL;
-site;
-exact query interval;
+API/source identity;
+site and exact frozen query interval;
 timeseries flag;
-client version;
-client/source commit;
+client/software identity;
 record count;
-file byte size;
-SHA-256;
-schema/field snapshot.
+raw byte size;
+raw SHA-256;
+manifest SHA-256;
+page-level SHA-256 identities;
+credential-hygiene PASS.
 ```
 
-Then compute
+Define
 
 ```math
-h_{raw}=SHA256(D_{raw}).
+H_D
+=
+SHA256(D_{raw}).
 ```
+
+Raw data are never overwritten by preprocessing.
 
 ---
 
-## 5. Processed artifact
+## 5. Processing chain
 
-Using only the frozen QC and transformation rules, generate the 5-minute processed charging artifact and compute
+Only after `H_D` exists:
 
 ```math
-h_{processed}=SHA256(D_{processed}).
+D_{raw}
+\xrightarrow{T_1}
+D_{parsed}
+\xrightarrow{T_2}
+D_{5min}
+\xrightarrow{T_3}
+(\mathcal D_{cal},\mathcal D_{val}).
 ```
 
-Also freeze:
+Each transformation must be deterministic, code-versioned and produce a separately hashed output.
 
-```text
-usable-day list;
-excluded-day list + reason;
-70/30 chronological split;
-calibration-date list;
-validation-date list;
-processing-code Git SHA.
+The chronological split remains:
+
+```math
+N_{cal}=\lfloor0.70N_d\rfloor,
 ```
 
-Each list/file receives its own SHA-256.
+with the earliest usable days assigned to calibration and the remaining usable days assigned to validation.
 
 ---
 
 ## 6. Failure policy
 
-If authenticated acquisition of the frozen source/window fails:
+If the token is configured but authenticated acquisition still fails, permitted actions are limited to diagnosing and retrying the **same frozen request**.
+
+Not permitted inside Phase-1 v1:
 
 ```text
-STATUS = PHASE1 DATA ACQUISITION FAILED / EXECUTION BLOCKED.
+change Caltech to another site;
+change the date window;
+replace ACN with synthetic sessions;
+omit required time-series information;
+select another charging dataset because it is easier to obtain.
 ```
 
-Permitted actions:
-
-```text
-- diagnose API/client/network failure;
-- retry the same frozen request;
-- update only software/transport mechanics through a versioned environment amendment if required.
-```
-
-Not permitted inside v1:
-
-```text
-- change site;
-- change date window;
-- switch to JPL/Office1;
-- use synthetic charging sessions instead;
-- use a different dataset because it is easier to download;
-- omit time series if the frozen replay requires them.
-```
-
-A scientifically justified data-source change requires
-
-```text
-PHASE1_DATA_MANIFEST_V2.md
-```
-
-and a corresponding experiment amendment before results are inspected.
+A source change requires a versioned experiment/data-manifest amendment before results are inspected.
 
 ---
 
-## 7. Gate state
+## 7. Current gate state
 
 ```text
-ACN SOURCE IDENTITY        LOCKED
-ACN WINDOW                 LOCKED
-ACN CLIENT VERSION         LOCKED
-AUTHORIZATION TOKEN        REQUIRED EXTERNALLY
-RAW ACN FILE               NOT YET ACQUIRED
-RAW SHA-256                BLOCKING-PENDING
-PROCESSED FILE             BLOCKING-PENDING
-PROCESSED SHA-256          BLOCKING-PENDING
-CAL/VAL DATE HASHES        BLOCKING-PENDING
+ACN source identity           LOCKED
+ACN window                    LOCKED
+ACN client                    LOCKED
+canonical software lock       PASS
+secure acquisition workflow   IMPLEMENTED + EXECUTED
+ACN_API_TOKEN                 ABSENT / EXTERNAL ACTION REQUIRED
+raw file                      NOT ACQUIRED
+H_D                           BLOCKING-PENDING
+processed charging trajectory BLOCKING-PENDING
+calibration/validation hashes BLOCKING-PENDING
 ```
 
-Therefore:
+Therefore
 
 ```math
-\boxed{
-\text{Phase 1B can freeze methodology while}
-\quad
-\text{Phase 1 execution remains blocked.}
-}
+\boxed{G_{ACNraw}=0\text{ (gate open; credential blocked).}}
 ```
 
-This is the correct outcome under the thesis rule: **never invent evidence to satisfy a workflow gate.**
+This `0` is not evidence of bad ACN data; no ACN data were accessed.
 
 ---
 
-## 8. External evidence anchors
+## 8. Exact unblock operation
 
-- ACN-Data portal: API authentication requires registration/access token; API and Python client access are documented by Caltech.
-- ACN Research Portal `DataClient(api_token, ...)`: token is a required constructor argument.
-- ACN-Sim tutorials: data-generated events require an API key/token.
+1. Obtain/retain an authorized ACN API token through Caltech's ACN access process.
+2. Add it in GitHub repository **Settings -> Secrets and variables -> Actions -> New repository secret** with name `ACN_API_TOKEN`.
+3. Do not paste it into the thesis repository or chat.
+4. Rerun workflow **Phase 1 authenticated ACN acquisition**.
+5. Accept the data gate only if the workflow records the raw SHA-256 and uploads the immutable evidence artifact.
+
+Until this occurs, `H_D`, `\mathcal R^*`, full `G_V`, empirical validation and H1/H2 remain blocked.
