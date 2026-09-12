@@ -1,0 +1,137 @@
+name: Phase 1 immutable benchmark verification
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "phase1_exec/benchmark_io.py"
+      - "phase1_exec/benchmark_verify.py"
+      - "phase1_exec/power.py"
+      - "phase1_exec/transport.py"
+      - "tests/phase1_benchmark/**"
+      - ".github/workflows/phase1-benchmark-verification.yml"
+      - "project/requirements-phase1-v1.lock.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  EXPECTED_LOCK_SHA256: "68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4"
+  MATPOWER_COMMIT: "2e0ef79a6c4526858ee923491d92781ad4507fb7"
+  MATPOWER_BLOB: "97e510bee25c543de0453959672fe86b40a999c8"
+  SIOUX_COMMIT: "d1639b4ef218c17928ba573e806ddf8ba5e7ae6d"
+  SIOUX_NET_BLOB: "66d0eca4ddcfb82f861bea040060deab7a741b2f"
+  SIOUX_OD_BLOB: "db70eda57738877811e9ac07c25a567973d3b6a0"
+  PYTHONHASHSEED: "0"
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+
+jobs:
+  verify-benchmarks:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact thesis commit
+        uses: actions/checkout@v4
+
+      - name: Set up frozen Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.16"
+
+      - name: Verify dependency identity and install
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACTUAL="$(sha256sum project/requirements-phase1-v1.lock.txt | cut -d' ' -f1)"
+          echo "LOCK_SHA256=${ACTUAL}"
+          test "${ACTUAL}" = "${EXPECTED_LOCK_SHA256}"
+          python -m pip install --disable-pip-version-check "pip==24.0"
+          python -m pip install --require-hashes -r project/requirements-phase1-v1.lock.txt
+
+      - name: Acquire exact immutable public benchmark objects
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p phase1-benchmark-evidence/raw phase1-benchmark-evidence/results
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/MATPOWER/matpower/${MATPOWER_COMMIT}/data/case33bw.m" \
+            -o phase1-benchmark-evidence/raw/case33bw.m
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/bstabler/TransportationNetworks/${SIOUX_COMMIT}/SiouxFalls/SiouxFalls_net.tntp" \
+            -o phase1-benchmark-evidence/raw/SiouxFalls_net.tntp
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/bstabler/TransportationNetworks/${SIOUX_COMMIT}/SiouxFalls/SiouxFalls_trips.tntp" \
+            -o phase1-benchmark-evidence/raw/SiouxFalls_trips.tntp
+
+      - name: Verify upstream Git blob identities and freeze local SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          PWR="phase1-benchmark-evidence/raw/case33bw.m"
+          NET="phase1-benchmark-evidence/raw/SiouxFalls_net.tntp"
+          OD="phase1-benchmark-evidence/raw/SiouxFalls_trips.tntp"
+          test "$(git hash-object "${PWR}")" = "${MATPOWER_BLOB}"
+          test "$(git hash-object "${NET}")" = "${SIOUX_NET_BLOB}"
+          test "$(git hash-object "${OD}")" = "${SIOUX_OD_BLOB}"
+          sha256sum "${PWR}" "${NET}" "${OD}" | tee phase1-benchmark-evidence/raw-sha256.txt
+          wc -c "${PWR}" "${NET}" "${OD}" | tee phase1-benchmark-evidence/raw-bytes.txt
+
+      - name: Execute immutable benchmark verification tests
+        env:
+          PHASE1_CASE33BW: phase1-benchmark-evidence/raw/case33bw.m
+          PHASE1_SIOUX_NET: phase1-benchmark-evidence/raw/SiouxFalls_net.tntp
+          PHASE1_SIOUX_OD: phase1-benchmark-evidence/raw/SiouxFalls_trips.tntp
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q tests/phase1_benchmark | tee phase1-benchmark-evidence/pytest-benchmark.txt
+
+      - name: Generate benchmark report twice and test deterministic equality
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m phase1_exec.benchmark_verify \
+            --case33bw phase1-benchmark-evidence/raw/case33bw.m \
+            --sioux-net phase1-benchmark-evidence/raw/SiouxFalls_net.tntp \
+            --sioux-od phase1-benchmark-evidence/raw/SiouxFalls_trips.tntp \
+            --output phase1-benchmark-evidence/results/report-a.json
+          python -m phase1_exec.benchmark_verify \
+            --case33bw phase1-benchmark-evidence/raw/case33bw.m \
+            --sioux-net phase1-benchmark-evidence/raw/SiouxFalls_net.tntp \
+            --sioux-od phase1-benchmark-evidence/raw/SiouxFalls_trips.tntp \
+            --output phase1-benchmark-evidence/results/report-b.json
+          cmp phase1-benchmark-evidence/results/report-a.json \
+              phase1-benchmark-evidence/results/report-b.json
+          cp phase1-benchmark-evidence/results/report-a.json \
+             phase1-benchmark-evidence/results/benchmark-report.json
+          sha256sum phase1-benchmark-evidence/results/benchmark-report.json \
+            | tee phase1-benchmark-evidence/benchmark-report-sha256.txt
+          cat phase1-benchmark-evidence/results/benchmark-report.json
+
+      - name: Record execution identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > phase1-benchmark-evidence/execution-identity.txt <<EOF
+          CODE_SHA=$(git rev-parse HEAD)
+          LOCK_SHA256=${EXPECTED_LOCK_SHA256}
+          MATPOWER_COMMIT=${MATPOWER_COMMIT}
+          MATPOWER_BLOB=${MATPOWER_BLOB}
+          SIOUX_COMMIT=${SIOUX_COMMIT}
+          SIOUX_NET_BLOB=${SIOUX_NET_BLOB}
+          SIOUX_OD_BLOB=${SIOUX_OD_BLOB}
+          PYTHON=$(python -VV 2>&1)
+          EXECUTED_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          EOF
+          cat phase1-benchmark-evidence/execution-identity.txt
+
+      - name: Upload benchmark verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-benchmark-verification-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 90
+          path: phase1-benchmark-evidence/
