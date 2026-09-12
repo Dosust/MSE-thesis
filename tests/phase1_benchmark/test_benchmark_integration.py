@@ -12,10 +12,10 @@ from phase1_exec.benchmark_io import (
 from phase1_exec.power import add_real_load, branch_flow_residuals, solve_radial_bfs
 from phase1_exec.transport import (
     bpr_time,
-    conjugate_frank_wolfe_user_equilibrium,
     node_flow_residuals,
     shortest_path,
 )
+from phase1_exec.transport_bfw import biconjugate_frank_wolfe_user_equilibrium
 
 
 def _required_path(env_name: str) -> Path:
@@ -36,7 +36,6 @@ def test_case33bw_source_schema_and_conversion():
     assert len(case.branches) == 32
     assert math.isclose(case.bus_mw_mvar[24].real, 0.420, rel_tol=0, abs_tol=1e-12)
     assert math.isclose(case.bus_mw_mvar[24].imag, 0.200, rel_tol=0, abs_tol=1e-12)
-    # V-D01 was preregistered at <= 1e-12 absolute tolerance for converted floats.
     assert math.isclose(case.loads_pu[24].real, 0.042, rel_tol=0, abs_tol=1e-12)
     assert math.isclose(case.loads_pu[24].imag, 0.020, rel_tol=0, abs_tol=1e-12)
     branch_2324 = next(br for br in case.branches if (br.parent, br.child) == (23, 24))
@@ -52,7 +51,6 @@ def test_case33bw_full_radial_solution_balance_and_positive_load_sign():
     residual = branch_flow_residuals(case.branches, case.loads_pu, base)
     assert residual["max"] <= 1e-8
 
-    # Controlled verification perturbation: +0.100 MW at bus 24 = 0.01 p.u. on 10 MVA base.
     perturbed_loads = add_real_load(case.loads_pu, 24, 0.01)
     perturbed = solve_radial_bfs(case.branches, perturbed_loads, tol=1e-12, max_iter=1000)
     assert perturbed.converged
@@ -77,7 +75,10 @@ def test_sioux_falls_full_user_equilibrium_conservation_and_closure_limit():
     links = parse_sioux_falls_network(_required_path("PHASE1_SIOUX_NET").read_text())
     od = parse_sioux_falls_od(_required_path("PHASE1_SIOUX_OD").read_text())
 
-    flows, iterations, gap = conjugate_frank_wolfe_user_equilibrium(
+    # V-T02 remains exactly RG <= 1e-6 by max_iter=5000.  The BFW numerical
+    # amendment changes only the acceleration direction, not the frozen
+    # Beckmann problem, BPR costs, OD matrix, relative-gap definition, or cap.
+    flows, iterations, gap = biconjugate_frank_wolfe_user_equilibrium(
         links,
         od,
         gap_tol=1e-6,
