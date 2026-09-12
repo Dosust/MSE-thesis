@@ -9,6 +9,8 @@
 Protocol: THEORETICAL_DECISION_GATE_PROTOCOL_V1.md
 Definition register: INTERDEPENDENCY_DEFINITION_REGISTER.md
 Requirement matrix: REPRESENTATION_REQUIREMENTS_MATRIX.md
+0C source register: PHASE0_0C_SOURCE_REGISTER.md
+0C benchmark: PHASE0_0C_THEORY_BENCHMARK_V1.md
 Repository: Dossiya-SE/MSE-thesis
 Branch: main
 ```
@@ -19,31 +21,80 @@ Branch: main
 |---|---|---|---|
 | 0A — definitions | `Frozen_v1.0` | definition register committed before ontology scoring | terminology and boundaries fixed for this gate version |
 | 0B — requirements | `Frozen_v1.0` | R1–R12, G1–G5, V1–V5 and scoring rule committed before scoring | comparison criteria cannot be changed to favor a result |
-| 0C — existing theory benchmark | `Preregistered` | six search families, source hierarchy, extraction object and score rule defined | systematic evidence acquisition still required |
-| 0D — formalize M0/M1 | `Not_started` | none | no comparative claim allowed |
+| 0C — existing theory benchmark | `Core_pass_complete__saturation_open` | source-level register and R1–R12 benchmark matrix committed | major predecessor families identified; no saturation/novelty claim yet |
+| 0D — formalize M0/M1 | `Blocked_by_0C_saturation` | none | fair comparison waits until contrary/dominating predecessor search is closed |
 | 0E — V1–V5 tests | `Not_started` | none | no representational winner allowed |
 | 0F — field ablation | `Not_started` | none | candidate dependency tuple remains provisional |
-| 0G — decision | `Blocked` | 0C–0F incomplete | RETAIN/REVISE/REPLACE cannot yet be issued |
+| 0G — decision | `Blocked` | 0C saturation + 0D–0F incomplete | RETAIN/REVISE/REPLACE cannot yet be issued |
 
-## Completed source-orientation work
+## 0C core-pass evidence retained
 
-Initial authoritative/foundational anchors have been checked for terminology and scope:
+The core benchmark currently includes:
 
-- SEBoK / ISO/IEC/IEEE system definition;
-- Maier system-of-systems operational and managerial independence;
-- SEBoK/ISO interface definition;
-- Rinaldi dependency/interdependency definitions;
-- Johansson–Hassel interdependent-infrastructure modeling;
-- Kivelä multilayer-network framework;
-- NIST CPS cross-domain physical/logical/human component framework;
-- ISO/IEC/IEEE 42010:2022 architecture descriptions/viewpoints/model kinds;
-- Zhao et al. failure-dependence/cascade terminology synthesis.
+- Maier system-of-systems architecting;
+- Rinaldi–Peerenboom–Kelly critical-infrastructure interdependency framework;
+- Johansson–Hassel structural + functional interdependency model;
+- Kivelä et al. multilayer networks;
+- Nan–Sansavini multilayer hybrid physical/control/human-organizational infrastructure model;
+- ontology-based critical-infrastructure interdependency approaches;
+- NIST Cyber-Physical Systems framework;
+- ISO/IEC/IEEE 42010:2022 architecture-description framework;
+- temporal-network infrastructure interdependency/cascade modeling;
+- dynamic coupled Power–Transportation equilibrium models;
+- current 2025–2026 review evidence on interdependency, dynamics and uncertainty.
 
-These sources are anchors only. They do not constitute a completed 0C systematic benchmark.
+## 0C core scientific result
+
+The current evidence rejects the following as standalone novelty claims:
+
+```text
+- Power and Transportation are interdependent.
+- P–T should be represented as multilayer networks.
+- Physical + information/control + human/organization should be included.
+- Infrastructure interdependencies should be dynamic/time-aware.
+- P and T should retain distinct domain physics while being coupled.
+- Ontologies/architecture descriptions can support cross-domain interoperability.
+```
+
+The current candidate residual problem is narrower:
+
+```math
+\boxed{
+\text{Can a minimal typed dependency contract serve as an interoperable semantic bridge across structural, domain-physics, informational/control, organizational, temporal, uncertainty/evidence and service models without replacing the specialized models that already solve those individual concerns?}
+}
+```
+
+Status: `candidate / unresolved`, not established novelty.
+
+## Strongest predecessor challenge
+
+The Nan–Sansavini multilayer hybrid framework is currently the strongest direct challenge because it already combines:
+
+```text
+physical/process + operational control + human-organizational + hybrid dynamics + subsystem-specific models + performance/resilience evaluation.
+```
+
+Any Phase-0 proposal must demonstrate added value relative to this class, not only relative to a binary graph.
+
+## 0C saturation work still required
+
+Before 0C can be closed, search specifically for:
+
+1. shared-state system-of-systems models;
+2. infrastructure reference architectures/interoperability frameworks;
+3. typed dependency / dependency grammar formalisms;
+4. temporal/uncertainty-aware knowledge graphs and semantic dependency models;
+5. federated co-simulation frameworks and standards for heterogeneous infrastructures;
+6. models integrating physical + cyber/information + organization + service + uncertainty;
+7. contrary frameworks from 2025–2026 reviews that could dominate or subsume the candidate contract.
+
+### Saturation rule
+
+0C closes only when additional targeted search no longer introduces a new representation family that changes the R1–R12 taxonomy **or** when a dominating predecessor is identified and the proposed grammar is abandoned/reframed.
 
 ## Frozen decision prohibition
 
-Until 0C–0F are complete, the following claims are prohibited:
+Until 0C saturation and 0D–0F are complete, the following claims are prohibited:
 
 ```text
 - "M1 is better than M0"
@@ -67,7 +118,7 @@ Permitted language:
 ## Next release target
 
 ```math
-\boxed{\text{0C: existing-representation theory benchmark with source-level extraction against }R_1\text{--}R_{12}.}
+\boxed{\text{0C saturation / contrary-framework search}.}
 ```
 
-0C is complete only when every scored representation has traceable source evidence and contradictory/closing evidence has been retained.
+Only after this closes may 0D formally compare the frozen `M0={P,T,I,O}` ontology with the candidate domain × aspect ontology.
