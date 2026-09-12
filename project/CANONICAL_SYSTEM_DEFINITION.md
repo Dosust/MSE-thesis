@@ -3,8 +3,10 @@
 ![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
+![Dependency](https://img.shields.io/badge/dependency%20contract-v1.0-1A7F37)
 
 **Adopted:** 2026-09-11  
+**Dependency-contract revision:** 2026-09-12  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Scope:** Multilayer interdependent infrastructure resilience and sustainable transformation  
 **Change rule:** Use this system description throughout the thesis unless it is explicitly revised and versioned.
@@ -106,33 +108,79 @@ R_{\rm system}
 R(P,T,I,O,\mathbb I),
 ```
 
-where $\mathbb I$ denotes the set of explicitly characterized interdependency objects.
+where $\mathbb I$ denotes the set of explicitly characterized directed dependencies/interdependencies.
 
-The canonical Stage-2 interdependency object is
+The canonical Stage-2 directed dependency object is
 
 ```math
-\mathfrak I_{ij}^{\alpha\beta}
+\boxed{
+\mathfrak d_e
 =
-\left(
-E_i^\alpha,
-E_j^\beta,
-M_{ij},
-w_{ij},
-\delta_{ij},
-\tau_{ij},
-a_{ij},
-m,
-\mathcal H_t
-\right),
+(\mathcal C_e,\Sigma_e,\Pi_e)
+}
 ```
 
 with
 
 ```math
-\alpha,\beta\in\{P,T,I,O\},
-\qquad
-\alpha\neq\beta.
+\mathcal C_e
+=
+(s_e,p_e^s,r_e,p_e^r,\chi_e),
 ```
+
+```math
+\Sigma_e
+=
+(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+```math
+\Pi_e
+=
+(\mathcal P_e,V_e,\mathcal U_e).
+```
+
+Interpretation:
+
+```text
+C_e = typed source/receiver, interaction points and exchanged carrier/signal/authority;
+Sigma_e = explicit causal mechanism, activation/context, parameters and optional internal relation state/memory;
+Pi_e = provenance, validation/evidence status and epistemic/parameter uncertainty.
+```
+
+The dependency set is
+
+```math
+\mathbb I(t)
+=
+\{\mathfrak d_e(t):e\in\mathcal E(t)\}.
+```
+
+Executable realization and service consequence are governed separately:
+
+```math
+\mathcal X:\Sigma_e\mapsto\Xi_e,
+```
+
+```math
+Q(t)=G(Y(t)).
+```
+
+The required engineering trace is
+
+```math
+\Delta\mathfrak d_e
+\rightarrow
+\Delta\dot X
+\rightarrow
+\Delta X
+\rightarrow
+\Delta Q.
+```
+
+Relation class, structural-existence indicator and influence strength are derived/reporting quantities rather than universal primitive fields unless a later versioned gate establishes otherwise.
+
+> **Legacy note:** the former flat object $\mathfrak I_{ij}^{\alpha\beta}=(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t)$ is retained only for provenance in Phase-0 files. The active canonical definition is `CANONICAL_DEPENDENCY_CONTRACT_V1.md`.
 
 ---
 
@@ -141,8 +189,8 @@ with
 | Stage | Use of the system definition |
 |---|---|
 | **1 — Multilayer Structure** | define what exists and where interaction can occur |
-| **2 — Causal Mechanisms** | determine which cross-layer relations are causal and how effects are transmitted |
-| **3 — Coupled Hybrid Multiscale Dynamics** | evolve $Y(t)$, modes and effective topology across heterogeneous timescales |
+| **2 — Causal Mechanisms** | determine which cross-layer relations are causal and encode accepted dependencies through $(\mathcal C_e,\Sigma_e,\Pi_e)$ |
+| **3 — Coupled Hybrid Multiscale Dynamics** | evolve $Y(t)$, modes and effective topology across heterogeneous timescales using validated causal operators |
 | **4 — Observation, Organization, Feedback and Control** | measure/infer the physical state and map informational/organizational capability into feasible $u(t)$ |
 | **5 — Viability** | determine whether controlled trajectories remain acceptable and maintainable |
 | **6 — Resilience-to-Sustainability Transformation Interface** | determine whether preserving the current regime remains adequate and specify required change |
@@ -160,22 +208,22 @@ Operational control and strategic transformation are different objects:
 \underbrace{\mathbf a_k}_{\text{transform the regime}}.
 ```
 
-The strategic action $\mathbf a_k$ is also distinct from the Stage-2 interdependency activation $a_{ij}$.
+The strategic action $\mathbf a_k$ is also distinct from the Stage-2 dependency guard/context $\gamma_e$.
 
 The Stage-7 regime object is
 
 ```math
 \mathfrak M_k
 =
-(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
+(\mathcal S_k,\mathcal G_k,\mathbb I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
 ```
 
-Thus the original system ontology remains fixed while Stage 7 may change the architecture/configuration of a candidate future regime.
+Thus the original system ontology remains fixed while Stage 7 may change the architecture/configuration of a candidate future regime and its dependency set $\mathbb I_k$.
 
 ---
 
 ## 6. Canonical thesis statement
 
-> **The research studies a multilayer interdependent Power–Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, regime adequacy and sustainable transformation.**
+> **The research studies a multilayer interdependent Power–Transportation infrastructure system in which Power and Transportation form the physical infrastructure systems, while Information and Organization form interacting informational and organizational layers that shape observation, coordination, control, propagation, recovery, viability, regime adequacy and sustainable transformation. Directed dependencies are represented by a typed compositional/interface object, an explicit causal-semantic object and a separate epistemic/provenance object, while executable realization and service consequence remain system-level mappings.**
 
-This is the default system identity for thesis chapters, figures, literature extraction, mathematical models, simulation, validation and transformation-pathway analysis unless changed through an explicit versioned revision.
+This is the default system identity and Stage-2 dependency representation for thesis chapters, figures, literature extraction, mathematical models, simulation, validation and transformation-pathway analysis unless changed through an explicit versioned revision.
