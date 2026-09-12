@@ -4,6 +4,7 @@
 ![Phase](https://img.shields.io/badge/phase-1C-1A7F37)
 
 **Frozen/initialized:** 2026-09-12  
+**Updated:** 2026-09-12 after immutable benchmark materialization  
 **Authority:** `PHASE1_DATA_MANIFEST_V1.md` + `PHASE1_CANONICAL_EXECUTION_IDENTITY_V1.md`  
 **Purpose:** provide one auditable chain from each external source to every Phase-1 executable input.  
 **Rule:** unavailable evidence is recorded as `[U]`; it is never inferred, fabricated, or replaced.
@@ -81,12 +82,16 @@ source              = MATPOWER/matpower
 upstream commit     = 2e0ef79a6c4526858ee923491d92781ad4507fb7
 path                = data/case33bw.m
 Git blob SHA        = 97e510bee25c543de0453959672fe86b40a999c8
+local raw SHA-256   = b40831eeb444669ae876e2996f0dda9f05cd83e81b314b8dfca51e4890cca95d
+local raw bytes     = 4866
 role                = immutable electrical benchmark
 model mapping       = bus/branch data -> radial power model
 charging interface  = bus 24 [P]
 fault branch        = 23 -> 24 [P]
-state               = SOURCE_LOCKED
+state               = RAW_HASHED
 ```
+
+Execution evidence: immutable benchmark workflow verified the downloaded object against the frozen upstream Git blob before calculating the local SHA-256. The benchmark integration tests also passed the frozen `case33bw` schema/conversion test and the full radial-solution balance/positive-load-sign test.
 
 No electrical parameter is calibrated against Phase-1 coupled outcomes.
 
@@ -101,11 +106,13 @@ source              = bstabler/TransportationNetworks
 upstream commit     = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
 path                = SiouxFalls/SiouxFalls_net.tntp
 Git blob SHA        = 66d0eca4ddcfb82f861bea040060deab7a741b2f
+local raw SHA-256   = ace99b24cec69c273ff0cf3d6d074110177f0cc0ae24b0c7a9f4f4cb5e27635c
+local raw bytes     = 3136
 role                = immutable transportation-network benchmark
 depot node          = 1 [P]
 repair/FCS node     = 10 [P]
 closure             = 9->10 and 10->9 [P]
-state               = SOURCE_LOCKED
+state               = RAW_HASHED
 ```
 
 ## D-TRN-02 — OD demand
@@ -115,10 +122,27 @@ source              = bstabler/TransportationNetworks
 upstream commit     = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
 path                = SiouxFalls/SiouxFalls_trips.tntp
 Git blob SHA        = db70eda57738877811e9ac07c25a567973d3b6a0
+local raw SHA-256   = 56f9566857f3f66730fd5c4232258d7ee3ac2931a476526331afd062f4958de7
+local raw bytes     = 10859
 published total OD  = 360600
 role                = immutable demand benchmark
-state               = SOURCE_LOCKED
+state               = RAW_HASHED
 ```
+
+The immutable benchmark integration test passed the source schema/OD-total checks:
+
+```text
+nodes          = 24
+links          = 76
+OD zones       = 24
+OD total       = 360600
+BPR alpha      = 0.15
+BPR beta       = 4
+9->10 present  = yes
+10->9 present  = yes
+```
+
+However, the full Sioux Falls user-equilibrium solver verification remains open because the current corrected CFW implementation reached `RG = 4.215612504228978e-06` at the preregistered maximum `5000` iterations, above the frozen acceptance threshold `1e-6`. This is a **solver verification result**, not a provenance defect.
 
 The entire OD table is admissible; no OD pair is removed in response to model outputs.
 
@@ -241,9 +265,9 @@ Current status:
 
 | Gate | State |
 |---|---|
-| `G_PWR` | `1 / SOURCE_LOCKED` |
-| `G_TRNnet` | `1 / SOURCE_LOCKED` |
-| `G_TRNod` | `1 / SOURCE_LOCKED` |
+| `G_PWR` | `1 / RAW_HASHED` |
+| `G_TRNnet` | `1 / RAW_HASHED` |
+| `G_TRNod` | `1 / RAW_HASHED` |
 | `G_ACNraw` | `0 / BLOCKED_EXTERNAL_CREDENTIAL` |
 | `G_ACNproc` | `0 / NOT GENERATED` |
 | `G_split` | `0 / NOT GENERATED` |
@@ -254,11 +278,11 @@ Therefore
 \boxed{G_D=0\quad\text{at present}.}
 ```
 
-Here `0` means **gate not closed**, not “dataset invalid”.
+Here `0` means **the complete Phase-1 data gate is not closed**. It does not mean that the public benchmark objects or the unavailable ACN dataset are invalid.
 
 ---
 
-# 7. Exact unblock condition
+# 7. Exact ACN unblock condition
 
 The ACN raw-data gate closes only when a successful execution of the frozen acquisition workflow records:
 
@@ -273,7 +297,7 @@ canonical lock SHA;
 credential-hygiene PASS.
 ```
 
-The credential must be supplied through GitHub Actions secret `ACN_API_TOKEN`; it must never be committed or pasted into a thesis artifact.
+The credential must be supplied through GitHub Actions secret `ACN_API_TOKEN`; it must never be committed or pasted into a thesis artifact or chat.
 
 ---
 
@@ -281,7 +305,7 @@ The credential must be supplied through GitHub Actions secret `ACN_API_TOKEN`; i
 
 ```math
 \boxed{
-\text{Power/transport source provenance closed}
+\text{Power/transport source provenance and local materialization identity closed}
 \quad\land\quad
 \text{ACN source identity fixed}
 \quad\land\quad
@@ -289,4 +313,4 @@ The credential must be supplied through GitHub Actions secret `ACN_API_TOKEN`; i
 }
 ```
 
-No empirical validation, H1/H2, or Stage-5 claim can be based on ACN data until `G_D=1`.
+No empirical validation, H1/H2, or Stage-5 claim can be based on ACN data until the complete data gate closes.
