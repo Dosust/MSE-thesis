@@ -244,6 +244,45 @@ def frank_wolfe_user_equilibrium(
     return flow, max_iter, relative_gap(links, flow, od)
 
 
+def _cfw_target(
+    links: Sequence[RoadLink],
+    flow: Mapping[Edge, float],
+    fw_target: Mapping[Edge, float],
+    previous_target: Mapping[Edge, float],
+    conjugate_weight_max: float,
+) -> Dict[Edge, float]:
+    """Form the CFW sight point at the current iterate.
+
+    ``previous_target - flow`` is exactly the residual prior conjugate
+    direction ``(1-tau_prev)d_prev`` at the current iterate.  The coefficient
+    is the diagonal-Hessian conjugacy coefficient of Mitradjieva-Lindberg,
+    clipped to preserve a convex combination of feasible assignment points.
+    """
+    numerator = 0.0
+    denominator = 0.0
+    for link in links:
+        edge = (link.u, link.v)
+        h = bpr_derivative(link, flow[edge])
+        bar = previous_target[edge] - flow[edge]
+        d_fw = fw_target[edge] - flow[edge]
+        numerator += bar * d_fw * h
+        denominator += bar * (d_fw - bar) * h
+
+    if abs(denominator) <= 1e-30:
+        weight_previous = 0.0
+    else:
+        weight_previous = numerator / denominator
+        if not isfinite(weight_previous):
+            weight_previous = 0.0
+        weight_previous = min(conjugate_weight_max, max(0.0, weight_previous))
+
+    return {
+        edge: weight_previous * previous_target[edge]
+        + (1.0 - weight_previous) * fw_target[edge]
+        for edge in flow
+    }
+
+
 def conjugate_frank_wolfe_user_equilibrium(
     links: Sequence[RoadLink],
     od: Mapping[Tuple[int, int], float],
@@ -251,22 +290,13 @@ def conjugate_frank_wolfe_user_equilibrium(
     max_iter: int = 5000,
     conjugate_weight_max: float = 0.99999,
 ) -> Tuple[Dict[Edge, float], int, float]:
-    """Conjugate-direction Frank-Wolfe (CFW) for separable traffic UE.
-
-    The implementation follows the CFW state recurrence: after a line search,
-    the residual prior direction at the new iterate is
-    ``(1 - tau_prev) * d_CFW_prev``.  If the previous step reaches the end of
-    its feasible segment, CFW is restarted with an ordinary FW direction so a
-    numerically vanishing prior direction is never recycled.  The traffic
-    assignment problem, BPR costs, and exact one-dimensional Beckmann line
-    search are unchanged.
-    """
+    """Conjugate-direction Frank-Wolfe (CFW) for separable traffic UE."""
     if not (0.0 < conjugate_weight_max < 1.0):
         raise ValueError("conjugate_weight_max must lie strictly between 0 and 1")
 
     free_costs = {(link.u, link.v): link.free_time for link in links}
     flow = all_or_nothing(links, free_costs, od)
-    previous_sight: Optional[Dict[Edge, float]] = None
+    previous_target: Optional[Dict[Edge, float]] = None
     previous_step = 1.0
     restart_tol = max(gap_tol, 1e-12)
 
@@ -279,51 +309,183 @@ def conjugate_frank_wolfe_user_equilibrium(
             (link.u, link.v): bpr_time(link, flow[(link.u, link.v)])
             for link in links
         }
-        aon = all_or_nothing(links, costs, od)
+        fw_target = all_or_nothing(links, costs, od)
 
-        # Mitradjieva-Lindberg CFW restarts with the FW point after a nearly
-        # unit previous step.  This is essential because then the residual
-        # previous conjugate direction at the current iterate is nearly zero.
-        use_fw = previous_sight is None or previous_step > 1.0 - restart_tol
+        use_fw = previous_target is None or previous_step > 1.0 - restart_tol
         if use_fw:
-            sight = dict(aon)
+            target = dict(fw_target)
         else:
-            numerator = 0.0
-            denominator = 0.0
-            for link in links:
-                edge = (link.u, link.v)
-                h = bpr_derivative(link, flow[edge])
-                prev_minus_x = previous_sight[edge] - flow[edge]
-                fw_minus_x = aon[edge] - flow[edge]
-                numerator += prev_minus_x * fw_minus_x * h
-                denominator += prev_minus_x * (
-                    fw_minus_x - prev_minus_x
-                ) * h
+            target = _cfw_target(
+                links,
+                flow,
+                fw_target,
+                previous_target,
+                conjugate_weight_max,
+            )
 
-            if abs(denominator) <= 1e-30:
-                weight_previous = 0.0
-            else:
-                weight_previous = numerator / denominator
-                if not isfinite(weight_previous):
-                    weight_previous = 0.0
-                weight_previous = min(
-                    conjugate_weight_max, max(0.0, weight_previous)
-                )
-
-            sight = {
-                edge: weight_previous * previous_sight[edge]
-                + (1.0 - weight_previous) * aon[edge]
-                for edge in flow
-            }
-
-        # Convex combinations of feasible link-flow points remain feasible.
-        step = _line_search_to_target(links, flow, sight)
+        step = _line_search_to_target(links, flow, target)
         flow = {
-            edge: flow[edge] + step * (sight[edge] - flow[edge])
+            edge: flow[edge] + step * (target[edge] - flow[edge])
             for edge in flow
         }
-        previous_sight = sight
+        previous_target = target
         previous_step = step
+
+    return flow, max_iter, relative_gap(links, flow, od)
+
+
+def biconjugate_frank_wolfe_user_equilibrium(
+    links: Sequence[RoadLink],
+    od: Mapping[Tuple[int, int], float],
+    gap_tol: float = 1e-8,
+    max_iter: int = 5000,
+    conjugate_weight_max: float = 0.999999,
+) -> Tuple[Dict[Edge, float], int, float]:
+    """Biconjugate Frank-Wolfe (BFW) for separable traffic user equilibrium.
+
+    This is a direct deterministic translation of the Mitradjieva-Lindberg
+    biconjugate recurrence as independently implemented by TrafficAssign.jl.
+    It solves the same frozen Beckmann problem, uses the same all-or-nothing
+    oracle and exact Beckmann line search, and changes only the acceleration
+    direction.  A nearly unit previous line step triggers an FW restart.
+    """
+    if not (0.0 < conjugate_weight_max < 1.0):
+        raise ValueError("conjugate_weight_max must lie strictly between 0 and 1")
+
+    free_costs = {(link.u, link.v): link.free_time for link in links}
+    flow = all_or_nothing(links, free_costs, od)
+
+    previous_target: Optional[Dict[Edge, float]] = None
+    previous_previous_target: Optional[Dict[Edge, float]] = None
+    previous_direction: Optional[Dict[Edge, float]] = None
+    previous_previous_direction: Optional[Dict[Edge, float]] = None
+    previous_step = 1.0
+    previous_previous_step = 1.0
+    stage = "FW"
+    restart_tol = max(gap_tol, 1e-12)
+
+    for iteration in range(1, max_iter + 1):
+        gap = relative_gap(links, flow, od)
+        if gap <= gap_tol:
+            return flow, iteration, gap
+
+        costs = {
+            (link.u, link.v): bpr_time(link, flow[(link.u, link.v)])
+            for link in links
+        }
+        fw_target = all_or_nothing(links, costs, od)
+        fw_direction = {edge: fw_target[edge] - flow[edge] for edge in flow}
+
+        if stage == "FW" or previous_target is None or previous_direction is None:
+            target = dict(fw_target)
+            direction = dict(fw_direction)
+            next_stage = "CFW"
+        elif stage == "CFW":
+            old_target = previous_target
+            old_direction = previous_direction
+            target = _cfw_target(
+                links,
+                flow,
+                fw_target,
+                old_target,
+                conjugate_weight_max,
+            )
+            direction = {edge: target[edge] - flow[edge] for edge in flow}
+            previous_previous_target = old_target
+            previous_previous_direction = old_direction
+            next_stage = "BFW"
+        else:
+            if (
+                previous_previous_target is None
+                or previous_previous_direction is None
+                or previous_target is None
+                or previous_direction is None
+                or previous_step >= 1.0 - restart_tol
+                or previous_previous_step >= 1.0 - restart_tol
+            ):
+                target = dict(fw_target)
+                direction = dict(fw_direction)
+                next_stage = "CFW"
+            else:
+                hessian = {
+                    (link.u, link.v): bpr_derivative(
+                        link, flow[(link.u, link.v)]
+                    )
+                    for link in links
+                }
+                bar = {
+                    edge: (1.0 - previous_step) * previous_direction[edge]
+                    for edge in flow
+                }
+                bar_bar = {
+                    edge: (1.0 - previous_step)
+                    * (1.0 - previous_previous_step)
+                    * previous_previous_direction[edge]
+                    for edge in flow
+                }
+
+                mu_num = -sum(
+                    bar_bar[edge] * hessian[edge] * fw_direction[edge]
+                    for edge in flow
+                )
+                mu_den = sum(
+                    bar_bar[edge]
+                    * hessian[edge]
+                    * (previous_previous_target[edge] - previous_target[edge])
+                    for edge in flow
+                )
+                if abs(mu_den) <= 1e-30:
+                    mu = 0.0
+                else:
+                    mu = mu_num / mu_den
+                    if not isfinite(mu):
+                        mu = 0.0
+                mu = max(0.0, mu)
+
+                nu_den = sum(
+                    bar[edge] * hessian[edge] * bar[edge]
+                    for edge in flow
+                )
+                if abs(nu_den) <= 1e-30:
+                    nu = 0.0
+                else:
+                    nu = -sum(
+                        bar[edge] * hessian[edge] * fw_direction[edge]
+                        for edge in flow
+                    ) / nu_den
+                    nu += mu * previous_step / max(1.0 - previous_step, 1e-30)
+                    if not isfinite(nu):
+                        nu = 0.0
+                nu = max(0.0, nu)
+
+                beta_fw = 1.0 / (1.0 + mu + nu)
+                beta_prev = nu * beta_fw
+                beta_prevprev = mu * beta_fw
+                target = {
+                    edge: beta_fw * fw_target[edge]
+                    + beta_prev * previous_target[edge]
+                    + beta_prevprev * previous_previous_target[edge]
+                    for edge in flow
+                }
+                direction = {edge: target[edge] - flow[edge] for edge in flow}
+                next_stage = "BFW"
+
+        step = _line_search_to_target(links, flow, target)
+        new_flow = {
+            edge: flow[edge] + step * direction[edge]
+            for edge in flow
+        }
+
+        previous_previous_step = previous_step
+        previous_step = step
+        previous_target = target
+        previous_direction = direction
+        flow = new_flow
+
+        if step > 1.0 - restart_tol:
+            stage = "FW"
+        else:
+            stage = next_stage
 
     return flow, max_iter, relative_gap(links, flow, od)
 
