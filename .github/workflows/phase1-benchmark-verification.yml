@@ -4,10 +4,8 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "phase1_exec/benchmark_io.py"
-      - "phase1_exec/benchmark_verify.py"
-      - "phase1_exec/power.py"
-      - "phase1_exec/transport.py"
+      - "phase1_exec/**"
+      - "tests/phase1/**"
       - "tests/phase1_benchmark/**"
       - ".github/workflows/phase1-benchmark-verification.yml"
       - "project/requirements-phase1-v1.lock.txt"
@@ -88,6 +86,12 @@ jobs:
         run: |
           set -euo pipefail
           pytest -q tests/phase1_benchmark | tee phase1-benchmark-evidence/pytest-benchmark.txt
+
+      - name: Execute Phase-1 verification fixture suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q tests/phase1 | tee phase1-benchmark-evidence/pytest-phase1.txt
 
       - name: Generate benchmark report twice and test deterministic equality
         shell: bash
