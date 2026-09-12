@@ -3,13 +3,17 @@
 ![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
+![Dependency](https://img.shields.io/badge/dependency%20contract-v1.0-1A7F37)
 
 **Effective date:** 2026-09-09  
 **Final framework freeze:** 2026-09-11  
+**Dependency-contract synchronization:** 2026-09-12  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Scope:** Complete conceptual and mathematical thesis framework  
 **Change control:** Any scientific revision requires explicit approval, versioning, Git history and re-audit of dependent files/figures.  
 **Representation rule:** Visual redesign may change hierarchy, layout, typography, geometry and color; it may not change scientific content.
+
+> **Synchronization rule:** The seven-stage sequence and responsibilities remain frozen. The 2026-09-12 update changes only the canonical Stage-2 dependency representation in accordance with Phase-0 Gate v1.0.
 
 ---
 
@@ -53,7 +57,7 @@ Blue marks the canonical ontology stage; green marks frozen scientific scopes. T
 | Stage | Main responsibility | Frozen question |
 |---|---|---|
 | **1 — Multilayer Structure** | define P–T–I–O ontology, states, subsystems and possible interaction locations | **What exists, and where can interaction occur?** |
-| **2 — Causal Mechanisms** | define directed cross-layer causal interdependencies | **Why and through what mechanism does one component/layer affect another?** |
+| **2 — Causal Mechanisms** | define directed cross-layer causal dependencies/interdependencies through the canonical dependency contract | **Why and through what mechanism does one component/layer affect another?** |
 | **3 — Coupled Hybrid Multiscale Dynamics** | evolve accepted mechanisms through heterogeneous dynamics, delays, events, modes, topology and timescales | **How, when and where do effects evolve and propagate?** |
 | **4 — Observation, Organization, Feedback and Control** | reconstruct system state and map information/organization into feasible operational action | **How is the system observed, interpreted, coordinated and controlled?** |
 | **5 — Viability** | evaluate acceptability, maintainability and proximity to loss | **Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states?** |
@@ -96,27 +100,93 @@ x_P(t)\\x_T(t)
 
 ---
 
-## 4. Stage 2 — causal interdependency object
+## 4. Stage 2 — canonical causal dependency contract
 
-Every accepted directed interdependency is represented by
+Every accepted directed dependency is represented by
 
 ```math
-\mathfrak I_{ij}^{\alpha\beta}
+\boxed{
+\mathfrak d_e
 =
-\left(
-E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
-\right),
+(\mathcal C_e,\Sigma_e,\Pi_e)
+}
 ```
 
-where $\alpha,\beta\in\{P,T,I,O\}$ and $\alpha\neq\beta$.
-
-A retained relation requires an explicit causal mechanism:
+with
 
 ```math
-\alpha\xrightarrow{M_{ij}}\beta.
+\mathcal C_e
+=
+(s_e,p_e^s,r_e,p_e^r,\chi_e),
 ```
 
-Common hazard exposure or correlation alone does not establish interdependency.
+```math
+\Sigma_e
+=
+(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+```math
+\Pi_e
+=
+(\mathcal P_e,V_e,\mathcal U_e).
+```
+
+Interpretation:
+
+```text
+C_e = typed source/receiver, interface points and exchanged carrier/signal/authority;
+Sigma_e = explicit causal mechanism, activation/context, parameters and optional relation state/memory;
+Pi_e = provenance, validation/evidence state and epistemic/parameter uncertainty.
+```
+
+The active dependency/interdependency set is
+
+```math
+\mathbb I(t)
+=
+\{\mathfrak d_e(t):e\in\mathcal E(t)\}.
+```
+
+A retained relation requires an explicit causal mechanism. Common hazard exposure or correlation alone does not establish a directed dependency.
+
+The causal semantics must preserve the receiving domain physics. For a continuous receiving system,
+
+```math
+\dot x_r
+=
+F_r(x_r,u_r,h_r;\vartheta_r)
++
+\gamma_e\Phi_e(x_s,x_r,\zeta_e,\nu;\theta_e).
+```
+
+For event-driven/organizational mechanisms, use a declared hybrid transition under the corresponding guard.
+
+Executable realization and service consequence remain separate:
+
+```math
+\mathcal X:\Sigma_e\mapsto\Xi_e,
+```
+
+```math
+Q=G(Y).
+```
+
+The required engineering trace is
+
+```math
+\Delta\mathfrak d_e
+\rightarrow
+\Delta\dot X
+\rightarrow
+\Delta X
+\rightarrow
+\Delta Q.
+```
+
+Relation class, structural-existence indicator and influence strength are derived/reporting quantities unless a future versioned gate establishes otherwise.
+
+> **Legacy provenance:** the former flat object $\mathfrak I_{ij}^{\alpha\beta}=(E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t)$ is superseded for active canonical use. See `CANONICAL_DEPENDENCY_CONTRACT_V1.md` for the migration table.
 
 ---
 
@@ -139,6 +209,8 @@ The temporal discipline is
 \neq
 \text{characteristic timescale}.
 ```
+
+Stage-2 mechanism parameters and guards supply causal semantics; Stage 3 owns their evolution inside the coupled system dynamics.
 
 ---
 
@@ -197,10 +269,12 @@ T_{\mathcal V},
 \qquad
 T_K,
 \qquad
-S_{ij}^{\mathcal V},
+S_{e}^{\mathcal V},
 ```
 
 with proposed quantities retaining `[P]` status until validated.
+
+Dependency sensitivity must be defined with respect to declared mechanism parameters or perturbations in the canonical dependency contract rather than assuming a universal primitive edge weight.
 
 ---
 
@@ -246,13 +320,15 @@ Stage 7 changes the regime itself. The frozen regime object is
 \left(
 \mathcal S_k,
 \mathcal G_k,
-\mathfrak I_k,
+\mathbb I_k,
 F_k,
 \Theta_k,
 K_{{\rm sus},k},
 \mathcal U_k
 \right).
 ```
+
+Here $\mathbb I_k$ is the regime-specific set of canonical dependency objects.
 
 Operational and strategic actions are distinct:
 
@@ -268,7 +344,7 @@ The strategic action vector is
 \mathbf a_k
 =
 \begin{bmatrix}
-a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathfrak I}
+a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathbb I}
 \end{bmatrix},
 ```
 
@@ -341,7 +417,7 @@ Stage 7 is therefore interpreted as an **adaptive, viability-constrained, many-o
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
-\underbrace{\mathfrak I}_{2}
+\underbrace{\mathbb I=\{\mathfrak d_e\}}_{2}
 \rightarrow
 \underbrace{F_{\mathcal G}^{m}}_{3}\\
 &\rightarrow
@@ -361,8 +437,8 @@ Stage 7 is therefore interpreted as an **adaptive, viability-constrained, many-o
 
 | Boundary | Scientific meaning |
 |---|---|
-| Stage 1 → 2 | possible structural relation becomes a retained interdependency only after causal admissibility |
-| Stage 2 → 3 | accepted mechanism is evolved through state, time, mode and topology |
+| Stage 1 → 2 | possible structural relation becomes a retained dependency only after causal admissibility and evidence qualification |
+| Stage 2 → 3 | accepted causal semantics are realized inside state, time, mode and topology evolution |
 | Stage 3 → 4 | evolving trajectory becomes partially observed and operationally controllable |
 | Stage 4 → 5 | feasible control is evaluated against acceptability and maintainability |
 | Stage 5 → 6 | resilience/viability evidence is translated into regime-adequacy requirements |
@@ -378,7 +454,7 @@ Every candidate Stage-7 transformation must be replayed through the upstream fra
 \begin{aligned}
 \text{Stage-7 candidate}
 &\rightarrow\text{Stage-1 structural update}\\
-&\rightarrow\text{Stage-2 causal-mechanism update}\\
+&\rightarrow\text{Stage-2 causal-mechanism/dependency update}\\
 &\rightarrow\text{Stage-3 dynamic simulation}\\
 &\rightarrow\text{Stage-4 observation/control evaluation}\\
 &\rightarrow\text{Stage-5 viability evaluation}\\
@@ -395,10 +471,10 @@ The validation loop checks the stages; it does not reorder or replace them.
 
 For final figures and documents:
 
-1. scientific source of truth: this file plus frozen stage-specific files;
+1. scientific source of truth: this file, `CANONICAL_SYSTEM_DEFINITION.md`, `CANONICAL_DEPENDENCY_CONTRACT_V1.md`, plus frozen stage-specific files;
 2. notation/rendering source: `MATHEMATICAL_PRESENTATION_V3.md`;
 3. exact mathematical production: LaTeX/TikZ, Figma/SVG or another deterministic vector workflow;
 4. computed figures: Python or Julia with source code and provenance;
 5. framework visuals: must pass `../figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`.
 
-> **COMPLETE SEVEN-STAGE CONCEPTUAL AND MATHEMATICAL FRAMEWORK: FROZEN.**
+> **COMPLETE SEVEN-STAGE CONCEPTUAL AND MATHEMATICAL FRAMEWORK: FROZEN; STAGE-2 DEPENDENCY CONTRACT SYNCHRONIZED TO v1.0.**
