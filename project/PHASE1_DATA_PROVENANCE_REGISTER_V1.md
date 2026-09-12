@@ -97,7 +97,7 @@ No electrical parameter is calibrated against Phase-1 coupled outcomes.
 ## D-TRN-01 — network
 
 ```text
-source              = bsstabler/TransportationNetworks (canonical source recorded in data manifest as bsstabler/TransportationNetworks)
+source              = bstabler/TransportationNetworks
 upstream commit     = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
 path                = SiouxFalls/SiouxFalls_net.tntp
 Git blob SHA        = 66d0eca4ddcfb82f861bea040060deab7a741b2f
@@ -108,12 +108,10 @@ closure             = 9->10 and 10->9 [P]
 state               = SOURCE_LOCKED
 ```
 
-**Normalization note:** the repository owner string is `bstabler`; any typographical rendering elsewhere must resolve to the exact immutable commit/blob pair above before execution.
-
 ## D-TRN-02 — OD demand
 
 ```text
-source              = bsstabler/TransportationNetworks canonical repository
+source              = bstabler/TransportationNetworks
 upstream commit     = d1639b4ef218c17928ba573e806ddf8ba5e7ae6d
 path                = SiouxFalls/SiouxFalls_trips.tntp
 Git blob SHA        = db70eda57738877811e9ac07c25a567973d3b6a0
