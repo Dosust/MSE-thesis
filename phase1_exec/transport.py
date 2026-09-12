@@ -40,13 +40,18 @@ def _adjacency(
     return adj
 
 
-def shortest_path(
+def _single_source_predecessors(
     links: Sequence[RoadLink],
     costs: Mapping[Edge, float],
     source: int,
-    target: int,
     closed: Optional[Iterable[Edge]] = None,
-) -> Tuple[float, Tuple[Edge, ...]]:
+) -> Tuple[Dict[int, float], Dict[int, Tuple[int, Edge]]]:
+    """Deterministic Dijkstra tree for one origin.
+
+    This is algorithmically equivalent to calling ``shortest_path`` for each
+    destination at fixed link costs, but avoids recomputing the same origin
+    tree for every OD pair.
+    """
     adj = _adjacency(links, closed)
     dist: Dict[int, float] = {source: 0.0}
     prev: Dict[int, Tuple[int, Edge]] = {}
@@ -55,8 +60,6 @@ def shortest_path(
         distance, u = heapq.heappop(heap)
         if distance != dist.get(u):
             continue
-        if u == target:
-            break
         for link in adj.get(u, []):
             edge = (link.u, link.v)
             new_distance = distance + costs[edge]
@@ -65,16 +68,40 @@ def shortest_path(
                 dist[link.v] = new_distance
                 prev[link.v] = (u, edge)
                 heapq.heappush(heap, (new_distance, link.v))
+    return dist, prev
+
+
+def _path_from_predecessors(
+    source: int,
+    target: int,
+    dist: Mapping[int, float],
+    prev: Mapping[int, Tuple[int, Edge]],
+) -> Tuple[float, Tuple[Edge, ...]]:
+    if source == target:
+        return 0.0, tuple()
     if target not in dist:
         return inf, tuple()
     path: List[Edge] = []
     node = target
     while node != source:
+        if node not in prev:
+            return inf, tuple()
         parent, edge = prev[node]
         path.append(edge)
         node = parent
     path.reverse()
     return dist[target], tuple(path)
+
+
+def shortest_path(
+    links: Sequence[RoadLink],
+    costs: Mapping[Edge, float],
+    source: int,
+    target: int,
+    closed: Optional[Iterable[Edge]] = None,
+) -> Tuple[float, Tuple[Edge, ...]]:
+    dist, prev = _single_source_predecessors(links, costs, source, closed)
+    return _path_from_predecessors(source, target, dist, prev)
 
 
 def all_or_nothing(
@@ -83,17 +110,30 @@ def all_or_nothing(
     od: Mapping[Tuple[int, int], float],
     closed: Optional[Iterable[Edge]] = None,
 ) -> Dict[Edge, float]:
+    """Assign each OD demand to a deterministic shortest path.
+
+    OD pairs are grouped by origin so one shortest-path tree is computed per
+    origin. This preserves the mathematical all-or-nothing assignment while
+    reducing redundant shortest-path work from O(number of OD pairs) trees to
+    O(number of active origins) trees per call.
+    """
     flows: Dict[Edge, float] = {(link.u, link.v): 0.0 for link in links}
+    grouped: Dict[int, List[Tuple[int, float]]] = {}
     for (origin, destination), demand in sorted(od.items()):
         if demand < 0.0:
             raise ValueError("OD demand must be nonnegative")
         if demand == 0.0 or origin == destination:
             continue
-        _, path = shortest_path(links, costs, origin, destination, closed)
-        if not path:
-            raise ValueError("positive OD demand is disconnected")
-        for edge in path:
-            flows[edge] += demand
+        grouped.setdefault(origin, []).append((destination, demand))
+
+    for origin in sorted(grouped):
+        dist, prev = _single_source_predecessors(links, costs, origin, closed)
+        for destination, demand in grouped[origin]:
+            _, path = _path_from_predecessors(origin, destination, dist, prev)
+            if not path:
+                raise ValueError("positive OD demand is disconnected")
+            for edge in path:
+                flows[edge] += demand
     return flows
 
 
@@ -171,17 +211,11 @@ def frank_wolfe_user_equilibrium(
         direction = {edge: aon[edge] - flow[edge] for edge in flow}
 
         def objective(step: float) -> float:
-            trial = {
-                edge: flow[edge] + step * direction[edge]
-                for edge in flow
-            }
+            trial = {edge: flow[edge] + step * direction[edge] for edge in flow}
             return beckmann_objective(links, trial)
 
         step = _golden_section(objective)
-        flow = {
-            edge: flow[edge] + step * direction[edge]
-            for edge in flow
-        }
+        flow = {edge: flow[edge] + step * direction[edge] for edge in flow}
     return flow, max_iter, relative_gap(links, flow, od)
 
 
