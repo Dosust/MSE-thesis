@@ -30,6 +30,7 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       ACN_API_TOKEN: ${{ secrets.ACN_API_TOKEN }}
+      PYTHONPATH: ${{ github.workspace }}
 
     steps:
       - name: Checkout exact commit
