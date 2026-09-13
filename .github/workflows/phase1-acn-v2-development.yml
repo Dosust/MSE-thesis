@@ -1,0 +1,169 @@
+name: Phase 1 ACN v2 development freeze
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/phase1-acn-v2-development.yml"
+      - "project/PHASE1_ACN_PROCESSING_AMENDMENT_V2.md"
+      - "phase1_exec/acn_processing_v2.py"
+      - "project/phase1_runtime/process_acn_v2_development.py"
+      - "project/phase1_runtime/process_information_v2_development.py"
+      - "tests/phase1/test_acn_processing_v2.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  EXPECTED_LOCK_SHA256: "68c37973b974af1fbf7214bf28a0a7473d4454f98a1678cf2fae703208d12fd4"
+  EXPECTED_V1_RAW_SHA256: "ac6d9b237d4e6752dd990f42b569f0de90af125455a8ffdff20b53a7f30e35fd"
+  PYTHONHASHSEED: "0"
+  PYTHONPATH: ${{ github.workspace }}
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+
+jobs:
+  freeze-v2-development:
+    runs-on: ubuntu-24.04
+    env:
+      ACN_API_TOKEN: ${{ secrets.ACN_API_TOKEN }}
+
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Set up frozen Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.16"
+
+      - name: Verify canonical lock and install
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACTUAL="$(sha256sum project/requirements-phase1-v1.lock.txt | cut -d' ' -f1)"
+          echo "LOCK_SHA256=${ACTUAL}"
+          test "${ACTUAL}" = "${EXPECTED_LOCK_SHA256}"
+          python -m pip install --disable-pip-version-check "pip==24.0"
+          python -m pip install --require-hashes -r project/requirements-phase1-v1.lock.txt
+
+      - name: Execute v2 and retained v1 synthetic fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q \
+            tests/phase1/test_acn_processing.py \
+            tests/phase1/test_information_processing.py \
+            tests/phase1/test_acn_processing_v2.py \
+            | tee phase1-v2-development-fixtures.txt
+
+      - name: Assert ACN credential presence
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ACN_API_TOKEN:-}" ]; then
+            echo "ACN_API_TOKEN missing."
+            exit 86
+          fi
+          echo "ACN credential presence check: PASS"
+
+      - name: Reacquire immutable 2019 development raw object
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p phase1-acn-v2-development-evidence
+          python project/phase1_runtime/acquire_acn.py \
+            | tee phase1-acn-v2-development-evidence/acquisition-summary.txt
+
+      - name: Verify raw identity equals preserved v1 object
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="data/raw/acn_caltech_20191010_20191231_ts"
+          ACTUAL="$(sha256sum "${ROOT}/sessions_canonical.jsonl" | cut -d' ' -f1)"
+          echo "RAW_SHA256=${ACTUAL}"
+          test "${ACTUAL}" = "${EXPECTED_V1_RAW_SHA256}"
+          echo "V2_DEVELOPMENT_RAW_IDENTITY=PASS"
+
+      - name: Execute preregistered v2 development processing
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="data/raw/acn_caltech_20191010_20191231_ts"
+          DEV="phase1-acn-v2-development-evidence/development-acn"
+          python project/phase1_runtime/process_acn_v2_development.py \
+            --raw-jsonl "${ROOT}/sessions_canonical.jsonl" \
+            --out "${DEV}" \
+            | tee phase1-acn-v2-development-evidence/development-processing-summary.txt
+
+      - name: Execute v2 information development processing
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEV="phase1-acn-v2-development-evidence/development-acn"
+          INFO="phase1-acn-v2-development-evidence/information-development"
+          python project/phase1_runtime/process_information_v2_development.py \
+            --development-acn "${DEV}" \
+            --out "${INFO}" \
+            | tee phase1-acn-v2-development-evidence/information-development-summary.txt
+
+      - name: Freeze v2 development identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' | tee phase1-acn-v2-development-evidence/development-identity.txt
+          import json
+          import hashlib
+          from pathlib import Path
+
+          def sha(path):
+              h = hashlib.sha256()
+              with Path(path).open('rb') as f:
+                  for block in iter(lambda: f.read(1024 * 1024), b''):
+                      h.update(block)
+              return h.hexdigest()
+
+          dev = Path('phase1-acn-v2-development-evidence/development-acn')
+          info = Path('phase1-acn-v2-development-evidence/information-development')
+          cal = json.loads((dev / 'v2_calibration.json').read_text())
+          manifest = json.loads((dev / 'development_manifest_v2.json').read_text())
+          params = json.loads((info / 'information_parameters_v2.json').read_text())
+          print(f"V_EFF_HAT_V={cal['V_eff_hat_v']}")
+          print(f"V_EFF_ELIGIBLE_SESSIONS={cal['V_eff_eligible_session_count']}")
+          print(f"ACCEPTED_SESSIONS={manifest['accepted_session_count']}")
+          print(f"REJECTED_SESSIONS={manifest['rejected_session_count']}")
+          print(f"DEVELOPMENT_DAYS={manifest['development_day_count']}")
+          print(f"P_REF_KW={params['P_ref_kw']}")
+          print(f"DEVELOPMENT_MANIFEST_SHA256={sha(dev / 'development_manifest_v2.json')}")
+          print(f"V2_CALIBRATION_SHA256={sha(dev / 'v2_calibration.json')}")
+          print(f"INFORMATION_DEVELOPMENT_MANIFEST_SHA256={sha(info / 'information_development_manifest_v2.json')}")
+          print("G_DEV_V2=PASS")
+          PY
+
+      - name: Verify credential hygiene
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${ACN_API_TOKEN:-}" ]; then
+            if grep -R --binary-files=without-match -F "${ACN_API_TOKEN}" \
+              phase1-acn-v2-development-evidence 2>/dev/null; then
+              echo "Credential material detected in v2 evidence."
+              exit 1
+            fi
+          fi
+          echo "Generated v2 development evidence contains no literal ACN token."
+
+      - name: Upload v2 development evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-acn-v2-development-${{ github.sha }}
+          if-no-files-found: warn
+          retention-days: 90
+          path: |
+            phase1-acn-v2-development-evidence/
+            phase1-v2-development-fixtures.txt
