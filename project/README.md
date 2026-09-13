@@ -7,24 +7,16 @@
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Search](https://img.shields.io/badge/evidence%20search-DE%20NOVO-1A7F37)
 ![FTEE](https://img.shields.io/badge/FTEE%20v2.0-CURRENT-0969DA)
-![H1](https://img.shields.io/badge/M0-VERIFIED-1A7F37)
+![H1](https://img.shields.io/badge/M0%20%26%20M1-VERIFIED-1A7F37)
 ![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-COVERAGE%20AUDIT%20ONLY-9A6700)
 
-This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The named thesis execution method is now **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**. FTEE v2.0 remains the evidence-to-equation protocol inside EGMIV.
+This directory is the active mathematical/scientific specification of the MSE thesis. The seven-stage framework and five-primary-hypothesis logic are frozen. The named thesis execution method is **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**. FTEE v2.0 remains the evidence-to-equation protocol inside EGMIV.
 
 > **Canonical reasoning protocol:** [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) governs how every claim, method, equation, simulation, hypothesis, figure, and engineering recommendation is learned, verified, formalized, tested, validated, synthesized, and advanced.
 
 > **Canonical execution method:** [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md) governs the evidence → mechanism → interdependency → mathematical-model → validation chain.
 
 > **Governing evidence rule:** a paper becomes primary thesis evidence only because the reproducible search finds it and the eligibility protocol qualifies it. Public-support branches may aid method development but never silently replace the formal confirmatory corpus.
-
-> **Automated presentation QA:** [`../tools/thesis_display_lint.py`](../tools/thesis_display_lint.py) checks active Markdown display rules, table/fence integrity, ontology drift, and machine-readable authority registries.
-
----
-
-## Proposed foundation work
-
-[`PHASE_0_INTERDEPENDENCY_FOUNDATIONS_v0_1.md`](PHASE_0_INTERDEPENDENCY_FOUNDATIONS_v0_1.md) provides definitions, a proposed domain–aspect ontology, dependency records, composition rules, dynamic semantics, and reproducible verification code. Twelve synthetic checks passed; empirical validation remains pending. This preparatory proposal supports the existing seven stages and does not supersede the canonical framework, interdependency tuple, or H1–H5.
 
 ---
 
@@ -46,126 +38,31 @@ This directory is the active mathematical/scientific specification of the MSE th
 | 12 | [`STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md) | Stage-7 adaptive transformation architecture | frozen |
 | 13 | [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses | logic frozen; thresholds unset |
 | 14 | [`ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md) | confirmatory operationalization and VVUQ gates | current |
-| 15 | [`H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md) | H1 physical M0/M1/M2 competing-model specification | **current / frozen structure** |
-| 16 | [`H1_PROGRESS_SNAPSHOT_2026-09-13.md`](H1_PROGRESS_SNAPSHOT_2026-09-13.md) | H1 execution-state snapshot | **current** |
+| 15 | [`H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md) | H1 physical M0/M1/M2 competing-model specification | current / frozen structure |
+| 16 | [`H1_PROGRESS_SNAPSHOT_2026-09-13.md`](H1_PROGRESS_SNAPSHOT_2026-09-13.md) | H1 execution-state snapshot | current |
 | 17 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | demonstrator-reduction rationale and stopping rule | current methodology |
 | 18 | [`FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md`](FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md) | de novo search + screening + evidence-to-equation extraction + model qualification | current primary evidence protocol |
-| 19 | [`FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md`](FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md) | focused search-governance companion | current companion; subordinate to FTEE v2.0 if conflict |
-| 20 | [`H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`](H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md) | H1 formal-search execution protocol | frozen; authenticated execution pending |
-| 21 | [`CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md`](CLOSED_CORPUS_EVIDENCE_SELECTION_PIPELINE.md) | historical 325-paper protocol | secondary coverage audit only |
-| 22 | [`FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md`](FULL_TEXT_EVIDENCE_TO_EQUATION_EXTRACTION_PROTOCOL_FTEE_V1.md) | earlier extraction protocol | superseded / provenance only |
-| 23 | [`MATHEMATICAL_FOUNDATION.md`](MATHEMATICAL_FOUNDATION.md) | cross-stage mathematical foundation | active companion |
-| 24 | [`SCIENTIFIC_PROPOSITIONS.md`](SCIENTIFIC_PROPOSITIONS.md) | broader proposition/falsification registry | active companion |
-| 25 | [`MATHEMATICAL_PRESENTATION_V3.md`](MATHEMATICAL_PRESENTATION_V3.md) | notation, display, color and rendering contract | current |
+| 19 | [`H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`](H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md) | H1 formal-search execution protocol | frozen; authenticated execution pending |
 
 ---
 
 ## 2. Canonical reasoning and EGMIV chains
 
-The thesis-wide reasoning chain remains
-
 ```math
-\text{LEARN}
-\rightarrow
-\text{VERIFY}
-\rightarrow
-\text{FORMULATE}
-\rightarrow
-\text{DERIVE}
-\rightarrow
-\text{TEST}
-\rightarrow
-\text{VALIDATE}
-\rightarrow
-\text{SYNTHESIZE}
-\rightarrow
-\text{ADVANCE}.
+\text{LEARN}\rightarrow\text{VERIFY}\rightarrow\text{FORMULATE}\rightarrow\text{DERIVE}\rightarrow\text{TEST}\rightarrow\text{VALIDATE}\rightarrow\text{SYNTHESIZE}\rightarrow\text{ADVANCE}.
 ```
 
-EGMIV supplies the evidence-to-model execution chain:
-
 ```math
-\text{Evidence}
-\rightarrow
-\text{Mechanism}
-\rightarrow
-\text{Interdependency}
-\rightarrow
-\text{Mathematical Model}
-\rightarrow
-\text{Validation}.
+\text{Evidence}\rightarrow\text{Mechanism}\rightarrow\text{Interdependency}\rightarrow\text{Mathematical Model}\rightarrow\text{Validation}.
 ```
 
-Its governing rule is:
+EGMIV governing rule:
 
 > **No interdependency without direction + mechanism + mapping + type + evidence.**
 
-The full operational rules are in [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md).
-
 ---
 
-## 3. Frozen scientific chain
-
-```math
-\begin{aligned}
-\underbrace{\mathcal S}_{1}
-&\rightarrow
-\underbrace{\mathfrak I}_{2}
-\rightarrow
-\underbrace{F_{\mathcal G}^{m}}_{3}\\
-&\rightarrow
-\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
-&\rightarrow
-\underbrace{K_{\mathrm{sus}},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
-&\rightarrow
-\underbrace{\Phi_{\mathrm{ST}}\rightarrow(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)}_{6}\\
-&\rightarrow
-\underbrace{\mathfrak P_{\mathrm{ST}}}_{7}.
-\end{aligned}
-```
-
-The primary confirmatory set remains
-
-```math
-\mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
-```
-
----
-
-## 4. Active evidence architecture — FTEE v2.0 inside EGMIV
-
-The evidence path remains
-
-```math
-\begin{aligned}
-H_i
-&\rightarrow \text{mechanism concepts}
-\rightarrow \text{fresh database search}
-\rightarrow \text{screening}\\
-&\rightarrow P_i
-\rightarrow e_{ij}
-\rightarrow M_{ij}
-\rightarrow F_{ij}\\
-&\rightarrow (X,\theta,A,\Omega)
-\rightarrow (V,U)
-\rightarrow \mathfrak M_{\rm required}\\
-&\rightarrow \text{candidate demonstrators}
-\rightarrow \text{V\&V/UQ/identifiability gates}
-\rightarrow \mathcal M_D^\star.
-\end{aligned}
-```
-
-Previously known and unknown papers are equivalent for primary discovery and qualification:
-
-```math
-P_{\rm known}\equiv P_{\rm unknown}.
-```
-
-The old 325-paper corpus remains secondary coverage-audit material only.
-
----
-
-## 5. H1 current physical experiment
+## 3. H1 current physical experiment
 
 The H1 physical demonstrator boundary is frozen as
 
@@ -173,85 +70,92 @@ The H1 physical demonstrator boundary is frozen as
 \mathcal G_{H1}=\mathcal G_P\cup\mathcal G_T\cup\mathcal C.
 ```
 
-Information and organization are intentionally deferred to H2 so H1 can identify physical Power–Transportation coupling without attribution confounding.
+Information and organization remain deferred to H2 so H1 can identify physical Power–Transportation coupling without attribution confounding.
 
 The competing representations are
 
 ```math
-\boxed{
-M_0=\text{independent},\qquad
-M_1=\text{static/algebraic coupling},\qquad
-M_2=\text{dynamic causal coupling}.
-}
+\boxed{M_0=\text{independent},\qquad M_1=\text{static/algebraic coupling},\qquad M_2=\text{dynamic causal coupling}.}
 ```
 
-The currently instantiated interfaces are:
+The instantiated physical interfaces remain:
 
 - $P\rightarrow T$: grid power limits charging service;
 - $T\rightarrow P$: EV charging demand becomes nodal electrical load;
-- $T\rightarrow P$: road access/travel time delays power-repair resources.
-
-See [`H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md).
+- $T\rightarrow P$: road access/travel time constrains power-repair resources.
 
 ---
 
-## 6. H1 M0 executable verification state
+## 4. H1 executable verification state
 
-The readable executable package is stored at [`../models/H1/M0/`](../models/H1/M0/).
+### M0
 
-Current result:
+Package: [`../models/H1/M0/`](../models/H1/M0/)  
+Status: **verified — 13 passed, 0 failed**.
 
-```text
-13 tests passed, 0 failed
-```
+### M1
 
-The verified baseline includes independent radial LinDistFlow power and multi-commodity CTM transportation with topology, CFL, conservation, physical-bound and cross-system invariance checks.
+Package: [`../models/H1/M1/`](../models/H1/M1/)  
+Status: **verified — 13 M1-specific tests passed, 0 failed**.
 
-Benchmark residuals:
-
-```text
-max power-balance residual = 0
-max traffic-conservation residual = 3.553e-15 vehicles
-voltage violations = 0
-thermal violations = 0
-```
-
-The deterministic finite-horizon traffic accounting is
+M1 preserves the verified M0 radial LinDistFlow and multi-commodity CTM solvers. It adds only memoryless same-step interface maps:
 
 ```math
-720=700+20,
+p_{c,\mathrm{req}}(k)=\min\!\left(\bar p_c,\frac{E_c}{\eta_c}\lambda_c(k)\right),
 ```
-
-where the remaining 20 vehicles are terminal in-network inventory, not lost mass.
-
-All M0 numerical values remain `BENCHMARK_TEST_HARNESS_ONLY`. This verification permits progression to M1 but does not confirm H1 or calibrate the final case study.
-
----
-
-## 7. Formal H1 evidence status
-
-The H1 formal CORE search remains frozen and pending authenticated execution in Scopus, Web of Science Core Collection, Compendex and IEEE Xplore. Public evidence used during method development is supportive/provisional only and cannot replace the confirmatory corpus.
-
-Evidence/audit state and workbook hashes are recorded under [`../evidence/H1/`](../evidence/H1/).
-
----
-
-## 8. Immediate next step
-
-The current executable progression is
 
 ```math
-\boxed{
-M_0\;\checkmark
-\rightarrow
-\text{verification}\;\checkmark
-\rightarrow
-\mathbf{M_1}
-\rightarrow
-M_2.
-}
+p_c^{ch}(k)=p_{c,\mathrm{req}}(k)g_{b(c)}(k),
 ```
 
-Therefore the next model-development task is **M1 static/algebraic coupling**. M1 may introduce instantaneous Power–Transportation coupling but must contain **no charger queue memory and no evolving repair-delay state**. It must pass dimensional, conservation, physical-admissibility and nested/decoupling tests before M2 is implemented.
+```math
+\mu_c(k)=\frac{\eta_cp_c^{ch}(k)}{E_c}.
+```
 
-The authenticated four-database H1 search remains a parallel evidence-completion obligation before any final confirmatory H1 conclusion.
+There is **no** charger queue state, evolving interface state or dynamic repair delay in M1.
+
+The EGMIV verification caught and corrected an accounting error before freeze: requested EV electrical demand must remain in the power-service denominator even when the charger bus is de-energized. In the benchmark outage case the valid minimum $S_P$ is therefore `0.4736842105`, not `0.60`.
+
+M1 passed dimensional identity, exact load mapping, monotonicity, zero-demand and sufficient-capacity limits, static repair-access logic, time-step refinement, no-double-counting, outage-demand accounting, strict memorylessness, and the nested decoupling condition
+
+```math
+\boxed{M_1\rightarrow M_0\quad\text{when interface maps are removed}.}
+```
+
+Matched scenarios S0/S1/S2/S6 are stored under `models/H1/M1/reports/`. They are benchmark verification only; no engineering-materiality threshold has been applied and H1 is not confirmed.
+
+---
+
+## 5. Formal H1 evidence status
+
+The exact H1 CORE search remains frozen and still requires authenticated execution in Scopus, Web of Science Core Collection, Compendex and IEEE Xplore. Public evidence remains supportive/provisional only.
+
+---
+
+## 6. Immediate next step
+
+The current EGMIV progression is
+
+```math
+\boxed{M_0\;\checkmark\rightarrow M_1\;\checkmark\rightarrow\mathbf{M_2}.}
+```
+
+M2 is now authorized to add the dynamic objects deliberately excluded from M1:
+
+```math
+q_c(k+1)=q_c(k)+\Delta t[\lambda_c(k)-\mu_c(k)],
+```
+
+state/time-dependent road travel delay, delayed repair-resource transport, repair-progress state, and
+
+```math
+z_{ij}(k+1)=H_{ij}(Y_{k-\ell_{ij}},z_{ij}(k),m_k).
+```
+
+The first mandatory M2 falsification gate is
+
+```math
+\boxed{M_2\rightarrow M_1\quad\text{when queue memory and dynamic delay are removed}.}
+```
+
+No final H1 conclusion is permitted until M2, matched M0/M1/M2 experiments, identifiability/UQ/physical-admissibility gates, and the formal confirmatory evidence corpus are complete.
