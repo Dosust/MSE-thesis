@@ -1,0 +1,48 @@
+{
+  "method": "EGMIV",
+  "hypothesis": "H1",
+  "model": "M0_INDEPENDENT",
+  "verification_status": "PASS",
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "scientific_scope": "Independent radial LinDistFlow power + independent multi-commodity CTM transportation; no P↔T coupling.",
+  "parameter_status": "BENCHMARK_TEST_HARNESS_ONLY",
+  "gates": {
+    "radial_topology_validation": "PASS",
+    "power_balance": "PASS",
+    "voltage_thermal_reporting": "PASS",
+    "ctm_cfl": "PASS",
+    "traffic_conservation_global": "PASS",
+    "traffic_conservation_per_commodity": "PASS",
+    "nonnegative_state": "PASS",
+    "m0_power_invariant_to_transport_input": "PASS",
+    "m0_transport_invariant_to_power_input": "PASS",
+    "exogenous_power_outage_does_not_change_transport": "PASS",
+    "stepwise_transport_service_definition": "PASS",
+    "time_step_refinement_test_harness": "PASS"
+  },
+  "benchmark_result": {
+    "power_service_min": 1.0,
+    "transport_service_final": 1.0,
+    "cumulative_power_service_loss_h": 0.0,
+    "cumulative_transport_service_loss_h": 0.03333333333333335,
+    "completed_trips": 700.0,
+    "requested_trips": 720.0,
+    "max_power_balance_residual_pu": 0.0,
+    "max_traffic_conservation_residual_veh": 3.552713678800501e-15,
+    "max_voltage_violation_pu": 0.0,
+    "max_thermal_violation_pu": 0.0
+  },
+  "time_step_refinement": [
+    {"dt_h":0.01,"steps":120,"power_service_min":1.0,"transport_service_final":1.0,"completed_trips":700.0,"requested_trips":720.0,"cumulative_transport_service_loss_h":0.03333333333333335,"max_power_balance_residual_pu":0.0,"max_traffic_conservation_residual_veh":3.552713678800501e-15},
+    {"dt_h":0.005,"steps":240,"power_service_min":1.0,"transport_service_final":0.9999999999999997,"completed_trips":700.0,"requested_trips":720.0,"cumulative_transport_service_loss_h":0.03333333333333355,"max_power_balance_residual_pu":0.0,"max_traffic_conservation_residual_veh":3.552713678800501e-15},
+    {"dt_h":0.0025,"steps":480,"power_service_min":1.0,"transport_service_final":0.9999999999999989,"completed_trips":700.0,"requested_trips":720.0,"cumulative_transport_service_loss_h":0.033333333333333985,"max_power_balance_residual_pu":0.0,"max_traffic_conservation_residual_veh":3.552713678800501e-15},
+    {"dt_h":0.00125,"steps":960,"power_service_min":1.0,"transport_service_final":0.9999999999999978,"completed_trips":700.0000000000005,"requested_trips":720.0,"cumulative_transport_service_loss_h":0.033333333333334665,"max_power_balance_residual_pu":0.0,"max_traffic_conservation_residual_veh":3.552713678800501e-15}
+  ],
+  "interpretation": [
+    "The 20-trip difference between requested and completed trips is the physical in-network inventory at the end of the finite horizon, not a conservation error.",
+    "Stepwise mobility service reaches 1.0 after the travel-time transient; cumulative service loss records the transient delay.",
+    "No benchmark numerical value is admissible as thesis calibration until its provenance is upgraded in the EGMIV parameter ledger.",
+    "M1 implementation is permitted only because all M0 verification gates passed."
+  ]
+}

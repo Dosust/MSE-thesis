@@ -1,0 +1,14 @@
+{
+  "model": "M0_INDEPENDENT",
+  "parameter_status": "BENCHMARK_TEST_HARNESS_ONLY",
+  "power_service_min": 1.0,
+  "transport_service_final": 1.0,
+  "cumulative_power_service_loss_h": 0.0,
+  "cumulative_transport_service_loss_h": 0.03333333333333335,
+  "max_power_balance_residual_pu": 0.0,
+  "max_traffic_conservation_residual_veh": 3.552713678800501e-15,
+  "max_voltage_violation_pu": 0.0,
+  "max_thermal_violation_pu": 0.0,
+  "completed_trips_by_commodity": [700.0],
+  "requested_trips_by_commodity": [720.0]
+}

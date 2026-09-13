@@ -1,0 +1,15 @@
+{
+  "method": "EGMIV",
+  "hypothesis": "H1",
+  "model": "M0",
+  "required_gates": [
+    "power_balance",
+    "traffic_conservation",
+    "ctm_cfl",
+    "physical_bounds",
+    "power_invariant_to_transport_inputs",
+    "traffic_invariant_to_power_inputs",
+    "outage_does_not_cross_system_boundary"
+  ],
+  "parameter_policy": "BENCHMARK_TEST_HARNESS_ONLY_UNLESS_PROVENANCE_LEDGER_SAYS_OTHERWISE"
+}
