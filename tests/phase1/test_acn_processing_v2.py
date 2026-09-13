@@ -65,38 +65,37 @@ def test_gap_threshold_is_not_relaxed_after_duplicate_collapse():
 
 
 def test_done_charging_time_truncates_active_interval():
+    # The synthetic trace intentionally respects the unchanged <=5-minute
+    # sample-gap rule. Active charging ends at 00:05, while a non-zero idle
+    # floor remains until disconnect at 00:10.
     session = {
         "sessionID": "s1",
         "spaceID": "CA-X",
         "connectionTime": "2019-10-10T00:00:00+00:00",
-        "doneChargingTime": "2019-10-10T01:00:00+00:00",
-        "disconnectTime": "2019-10-10T02:00:00+00:00",
-        "kWhDelivered": 2.0,
+        "doneChargingTime": "2019-10-10T00:05:00+00:00",
+        "disconnectTime": "2019-10-10T00:10:00+00:00",
+        "kWhDelivered": 1.0 / 6.0,
         "timezone": "America/Los_Angeles",
         "chargingCurrent": {
             "timestamps": [
                 "2019-10-10T00:00:00+00:00",
                 "2019-10-10T00:05:00+00:00",
-                "2019-10-10T01:00:00+00:00",
-                "2019-10-10T01:05:00+00:00",
-                "2019-10-10T02:00:00+00:00",
+                "2019-10-10T00:10:00+00:00",
             ],
-            "current": [10.0, 10.0, 10.0, 1.0, 1.0],
+            "current": [10.0, 10.0, 1.0],
         },
         "pilotSignal": {
             "timestamps": [
                 "2019-10-10T00:00:00+00:00",
                 "2019-10-10T00:05:00+00:00",
-                "2019-10-10T01:00:00+00:00",
-                "2019-10-10T01:05:00+00:00",
-                "2019-10-10T02:00:00+00:00",
+                "2019-10-10T00:10:00+00:00",
             ],
-            "pilot": [10.0, 10.0, 10.0, 0.0, 0.0],
+            "pilot": [10.0, 10.0, 0.0],
         },
     }
     trace = session_trace_v2(session)
-    assert active_amp_seconds(trace) == pytest.approx(10.0 * 3600.0)
-    assert reconstructed_active_energy_kwh(trace, 200.0) == pytest.approx(2.0)
+    assert active_amp_seconds(trace) == pytest.approx(10.0 * 300.0)
+    assert reconstructed_active_energy_kwh(trace, 200.0) == pytest.approx(1.0 / 6.0)
 
 
 def test_global_effective_voltage_is_median_of_session_implied_values():
