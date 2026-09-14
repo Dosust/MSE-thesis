@@ -4,46 +4,40 @@
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![Prereg](https://img.shields.io/badge/H1%20confirmatory%20design-FROZEN-1A7F37)
-![Thresholds](https://img.shields.io/badge/provenance-PARTIALLY%20FROZEN-9A6700)
+![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
+![H1b](https://img.shields.io/badge/full%20public%20H1b-BLOCKED-B42318)
 
 ## Repository authority — updated 2026-09-14
 
-The sole active repository is `Dossiya-SE/MSE-thesis`. The thesis-wide citation standard is APA 7. The canonical reasoning protocol is `project/RESEARCH_REASONING_PROTOCOL.md`; the named evidence-to-model execution method is `project/EGMIV_METHOD_V1.md`.
+The sole active repository is `Dossiya-SE/MSE-thesis`. Thesis-wide citation standard: APA 7. Canonical reasoning protocol: `project/RESEARCH_REASONING_PROTOCOL.md`. Canonical execution method: `project/EGMIV_METHOD_V1.md`.
 
 ## Active H1 authority
 
 1. `project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`
 2. `project/H1_CONFIRMATORY_PREREGISTRATION_V1.md`
-3. `project/H1_THRESHOLD_PROVENANCE_V1.md` — **current threshold authority**
-4. `models/H1/M0/`, `models/H1/M1/`, `models/H1/M2/`
-5. `evidence/H1/07_audit/`
-6. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
+3. `project/H1_THRESHOLD_PROVENANCE_V1.md`
+4. `project/H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`
+5. `project/H1_DEMONSTRATOR_QUALIFICATION_V1.md` — **current demonstrator authority**
+6. `models/H1/M0/`, `models/H1/M1/`, `models/H1/M2/`
+7. `evidence/H1/08_demonstrator/`
+8. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
 
-## Canonical scientific state
-
-```math
-\mathcal S=\{P,T,I,O\},
-```
-
-with H1 confined to the physical Power–Transportation boundary
+## Canonical H1 model state
 
 ```math
-\mathcal G_{H1}=\mathcal G_P\cup\mathcal G_T\cup\mathcal C.
+\mathcal G_{H1}=\mathcal G_P\cup\mathcal G_T\cup\mathcal C,
 ```
-
-The competing H1 representations are
 
 ```math
 \boxed{M_0=\text{independent},\qquad M_1=\text{static/algebraic coupling},\qquad M_2=\text{dynamic causal coupling}.}
 ```
 
-Verification state:
-
+Verification:
 - M0: 13/13 passed.
 - M1: 13/13 M1-specific passed.
 - M2: 29/29 full M1+M2 regression passed.
 
-Nested limits pass:
+Nested limits:
 
 ```math
 M_1\rightarrow M_0,
@@ -53,11 +47,9 @@ M_2\rightarrow M_1.
 
 All benchmark effect sizes remain verification-only and `BENCHMARK_TEST_HARNESS_ONLY`.
 
-## H1 confirmatory pre-registration — frozen v1.0
+## H1 confirmatory design — frozen
 
-Primary comparison: **M2 vs M1**. M2 vs M0 is secondary.
-
-Scenario universe:
+Primary H1a comparison: **M2 vs M1**. M2 vs M0 is secondary.
 
 ```math
 \Omega_H=\Omega_0\cup\Omega_C\cup\Omega_O\cup\Omega_R\cup\Omega_J\cup\Omega_D.
@@ -75,90 +67,127 @@ D_{PT}^{2,1}(\omega)=\frac1T\int_0^T\left[\left(\frac{S_P^{M_2}-S_P^{M_1}}{\epsi
 
 Thresholds may not be selected from observed M2−M1 effects.
 
-## Threshold provenance — executed v1.0
+## Threshold provenance
 
-The threshold study follows
-
-```math
-\text{evidence}\rightarrow\text{native quantity}\rightarrow\text{mapping}\rightarrow\text{uncertainty}\rightarrow\text{admissibility}\rightarrow\epsilon.
-```
-
-### Numerical uncertainty — frozen for minimal demonstrator v1
-
-Using M2 refinement from `Delta t=0.00125 h` to `0.000625 h`, with an additional finer check at `0.0003125 h`:
+Frozen numerical floors for minimal-demonstrator v1:
 
 ```math
-\boxed{u_{num,P}=0.000416667}
+\boxed{u_{num,P}=0.000416667,\qquad u_{num,T}=0.001281963}
 ```
 
-```math
-\boxed{u_{num,T}=0.001281963}
-```
-
-corresponding to approximately `0.0417%` and `0.1282%` of full service scale.
-
-The current H1 minimal-demonstrator confirmatory time step is therefore frozen at
+at
 
 ```math
 \boxed{\Delta t=0.00125\;\mathrm{h}=4.5\;\mathrm{s}}.
 ```
 
-If topology, CTM cell size, event discretization or solver changes materially, rerun this numerical provenance.
-
-### Power observation uncertainty — not frozen
-
-IEC meter accuracy classes provide instrument-performance evidence only. They do not capture the full uncertainty of
+Observation and engineering thresholds remain case/data dependent:
 
 ```math
-S_P(t)=\frac{\sum_i\omega_i p_i^{srv}(t)}{\sum_i\omega_i p_i^d(t)},
+\boxed{\epsilon_P\;\text{NOT YET FROZEN},\quad\epsilon_T\;\text{NOT YET FROZEN},\quad\epsilon_{pred}\;\text{NOT YET COMPUTABLE}.}
 ```
 
-because outage-period demand contains a counterfactual component.
+## Validation-observation architecture — frozen structure
 
-Required structure:
+Power service must be reconstructed from interval served energy and independently validated counterfactual requested demand. Transportation service must use completed OD flow and independently validated requested OD demand. Missing telemetry is never silently equivalent to physical zero.
+
+A common observation clock must satisfy
 
 ```math
-u_{obs,P}=\mathcal U(u_{meter},u_{counterfactual\ demand},u_{aggregation},u_{temporal},\Sigma_P).
+\Delta_{val}\ge\max(\Delta_P^{obs},\Delta_T^{obs}).
 ```
 
-Conditional instrument-only examples are recorded in the evidence ledger; they are not final thresholds.
+No model value may be compared to field data before applying the same temporal/spatial observation operator.
 
-### Transportation observation uncertainty — not frozen
+## Demonstrator qualification — current
 
-FHWA detector accuracy/QA evidence does not directly equal uncertainty in
+The public H1 demonstrator is now
 
 ```math
-S_T=\frac{\text{weighted completed OD flow}}{\text{weighted requested OD flow}}.
+\boxed{\mathcal D_{H1}^{public}=\mathcal D_{NYC}\cup\mathcal D_{ACN}}
 ```
 
-Required structure:
+with qualification
 
 ```math
-u_{obs,T}=\mathcal U(u_{count},u_{OD},u_{coverage},u_{trajectory\ matching},u_{temporal},\Sigma_T).
+\boxed{\textbf{PARTIAL PASS}}.
 ```
 
-### Engineering significance — not universal
+### NYC system arm
 
-Power-resilience evidence does not support a universal `u_eng,P`; transportation performance guidance does not support a universal `u_eng,T` for our service ratio. Both must be tied to the selected demonstrator's service requirements.
+Audited sources:
+- NYISO P-58B Real-Time Actual Load;
+- EAGLE-I county outage trajectories;
+- NYC TLC trip records;
+- NYC DOT Traffic Speeds;
+- NYC 311;
+- Con Edison / NY DPS storm and restoration evidence.
 
-Therefore:
+For Tropical Storm Isaias the structural temporal-overlap gate passes. Candidate validation clock: 15 minutes, pending raw timestamp inspection.
+
+The arm is admissible for aggregate event/load/outage/restoration validation, TLC-subsystem completed OD behavior, road-state dynamics, obstruction evidence and restoration milestones.
+
+The following full-H1b gaps remain:
+1. no verified public geolocated crew/job trajectory dataset;
+2. NYISO Zone J aggregate is not exactly coextensive with fine TLC/DOT geography and parts of the upper Bronx lie in Zone I;
+3. EAGLE customer-outage fraction is not identical to demand-weighted `S_P`;
+4. public TLC trip data do not directly enumerate all latent/unserved/cancelled mobility requests.
+
+Thus microscopic road→crew→repair validation and exact fine-scale P–T co-validation are not supported by the audited public data.
+
+### ACN charging arm
+
+ACN-Data is **PASS for component validation**, subject to registration/token access. It provides charging-session timing, delivered energy, measured-current/pilot time series and optional user-request information.
+
+It may validate charging-interface physics/parameters but is not a NYC same-event system dataset:
 
 ```math
-\boxed{\epsilon_P\;\text{NOT YET FROZEN},\qquad\epsilon_T\;\text{NOT YET FROZEN},\qquad\epsilon_{pred}\;\text{NOT YET COMPUTABLE}.}
+\boxed{\text{ACN}\not\Rightarrow\text{system-level H1b validation}.}
 ```
 
-This restriction prevents borrowing incompatible voltage, SAIDI/SAIFI, LOTTR/TTI or arbitrary round-number thresholds.
+## Candidate event family
 
-## Formal H1 evidence status
+Current wind/tree mechanism candidates:
+- E0 — Tropical Storm Fay, 2020-07-10;
+- E1 — Tropical Storm Isaias, 2020-08-04 to 2020-08-12;
+- E2 — Dec 2022 wind/rain storm;
+- E3 — Dec 2023 wind/rain storm;
+- E4 — Apr 2024 coastal wind/rain storm.
 
-Authenticated execution of the frozen Scopus, Web of Science Core Collection, Compendex and IEEE Xplore H1 CORE searches remains pending. Public evidence remains supportive/provisional only. Final H1 confirmation is prohibited until the formal corpus is completed and reconciled.
+Train/test membership is **not frozen**. It must be determined only after raw completeness, missingness and observation coverage are quantified for E0–E4.
 
-## Immediate next task — current
-
-The admissible progression is now
+Required rule:
 
 ```math
-\boxed{M_0,M_1,M_2\;\checkmark\rightarrow\text{pre-registration}\;\checkmark\rightarrow\text{numerical threshold provenance}\;\checkmark\rightarrow\mathbf{observation\ architecture+service\ requirements}\rightarrow\epsilon_P,\epsilon_T\rightarrow\text{confirmatory UQ}.}
+D_{train}\cap D_{test}=\varnothing,
 ```
 
-The next task is to define the **actual validation observation architecture** for Power and Transportation and the **case-specific engineering service requirements**. Only then can `u_obs,P`, `u_obs,T`, `u_eng,P`, `u_eng,T`, `epsilon_P`, `epsilon_T`, and later `epsilon_pred` be frozen. Do not run final H1a confirmatory comparisons before this gate is complete.
+with at least two independent held-out validation events for each mechanism class claimed confirmatory.
+
+## Full H1b status
+
+```math
+\boxed{\textbf{BLOCKED WITH PUBLIC DATA AT THE STRONGEST PRE-REGISTERED LEVEL}}.
+```
+
+This does not block H1a matched representation testing, aggregate/event validation, road-state validation or charging-component validation.
+
+To upgrade H1b, seek restricted/partner data for:
+- geolocated repair-job/crew logs with timestamps;
+- finer power-service/outage observations coextensive with the transport domain;
+- mobility request/completion truth;
+- event-linked EV charging data if charging is claimed at system-event scale.
+
+## Formal evidence status
+
+Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the frozen H1 CORE search remains pending. Public evidence remains supportive/provisional and cannot replace the formal corpus.
+
+## Immediate next task
+
+The next EGMIV gate is
+
+```math
+\boxed{E0\ldots E4\rightarrow\textbf{raw completeness audit}\rightarrow\textbf{freeze train/test split}\rightarrow\mathcal O_P,\mathcal O_T\rightarrow u_{obs}\rightarrow\epsilon\rightarrow\text{H1a/UQ}.}
+```
+
+Parallel H1b data escalation should proceed, but final H1b support is prohibited unless the missing independent truth is actually obtained.
