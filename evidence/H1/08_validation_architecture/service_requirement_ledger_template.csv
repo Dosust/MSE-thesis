@@ -1,0 +1,7 @@
+sector,authority,native_metric,unit,target,tolerance,time_window,hazard_domain,mapping_to_S,status
+Power,,critical_load_service_fraction,fraction,,,,,,PENDING
+Power,,maximum_interruption_duration,time,,,,,,PENDING
+Power,,restoration_priority,ordinal/time,,,,,,PENDING
+Transport,,critical_OD_completion_fraction,fraction,,,,,,PENDING
+Transport,,maximum_critical_corridor_delay,time,,,,,,PENDING
+Transport,,minimum_emergency_corridor_throughput,veh/time,,,,,,PENDING

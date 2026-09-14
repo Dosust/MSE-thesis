@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "date": "2026-09-14",
+  "method": "EGMIV",
+  "status": "STRUCTURE_FROZEN_DATA_CASE_PENDING",
+  "power_observation_operator": "weighted served interval energy / weighted counterfactual requested interval energy",
+  "transport_observation_operator": "min(1, weighted completed OD trips / weighted counterfactual requested OD trips)",
+  "common_validation_clock": "Delta_val >= max(native power interval, native transport interval); no false upsampling",
+  "counterfactual_demand_required": {
+    "power": true,
+    "transport": true
+  },
+  "missing_zero_equivalence": false,
+  "heldout_event_refit_prohibited": true,
+  "u_obs_definition": "Q95(abs(reconstructed service - reference service)) after measurement+inference+temporal uncertainty propagation",
+  "u_eng_rule": {
+    "same_metric_with_documented_tolerance": "admissible",
+    "validated_monotone_transform": "conditionally admissible",
+    "different_metric_without_transform": "separate requirement-compliance gate; not u_eng"
+  },
+  "h1b_minimum_preferred_tiers": {
+    "power": [
+      "P-A",
+      "P-B"
+    ],
+    "transport": [
+      "T-A",
+      "T-B"
+    ]
+  },
+  "next_gate": "demonstrator_and_validation_data_selection"
+}

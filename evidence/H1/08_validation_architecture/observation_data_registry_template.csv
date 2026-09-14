@@ -1,0 +1,9 @@
+sector,id,quantity,preferred_source,unit,native_resolution,spatial_support,tier,role
+Power,P1,served_energy,AMI/revenue interval meter,kWh per interval,,,P-A,required
+Power,P2,topology_status,OMS/SCADA breaker/switch state,binary/event,,,P-A,required
+Power,P3,counterfactual_demand_covariates,weather/calendar/operations,mixed,,,P-A,required
+Power,P4,criticality_weights,operator/critical-load registry,dimensionless,,,P-A,required
+Transport,T1,boundary_volume,continuous/short-duration count,veh/interval,,,T-A/T-B,required
+Transport,T2,OD_sample,trajectory/re-identification/probe OD,trips/OD/interval,,,T-A/T-B,required
+Transport,T3,completed_OD,exit/arrival/trajectory match,trips/OD/interval,,,T-A,required
+Transport,T4,travel_time_state,probe/detector travel time or speed,s or km/h,,,state-validation,required

@@ -1,0 +1,9 @@
+sector,component,meaning,estimation_method,status
+Power,meter,served-energy measurement error,instrument/type-test + field chain,PENDING
+Power,baseline,counterfactual-demand predictive error,masked-window validation,PENDING
+Power,aggregation,spatial/criticality aggregation,data mapping audit,PENDING
+Power,temporal,interval/time alignment,observation operator audit,PENDING
+Transportation,count,boundary/count measurement error,sensor QA,PENDING
+Transportation,OD,OD sampling/expansion error,field/probe validation,PENDING
+Transportation,coverage,probe/spatial coverage,coverage audit,PENDING
+Transportation,temporal,time aggregation/alignment,observation operator audit,PENDING

@@ -1,0 +1,10 @@
+source,architecture_role,supported_use
+IEC 62053-22:2020,Power measurement,meter accuracy classes/type-test scope
+DOE FEMP M&V Guidelines v5.0,Power baseline,baseline definition and operating/weather adjustments
+DOE EMIS Capabilities,Power baseline/missingness,expected-usage models; gap backfilling tagged as modeled
+FHWA Traffic Monitoring Guide 2022,Transportation observation,"separate volume, travel-time and OD data programs"
+FHWA DTA Guidebook,Transportation demand,OD sampled/estimated; congested throughput is not necessarily demand
+FHWA NPMRDS guidance,Transportation state,"probe travel time/speed, 5-min minimum temporal resolution"
+FHWA TPM target-setting guidance,Transport requirements,targets evidence/data driven and tied to agency goals
+PNNL Critical Load Prioritization,Power requirements,critical-load weighting is case/operator specific
+ASME VVUQ,Validation methodology,"separate verification, validation and UQ"
