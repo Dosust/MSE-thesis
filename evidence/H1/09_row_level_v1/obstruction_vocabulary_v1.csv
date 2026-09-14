@@ -1,0 +1,10 @@
+field,case_insensitive_substring,evidence_role
+complaint_type,Tree,supporting
+complaint_type,Dead/Dying Tree,supporting
+complaint_type,Damaged Tree,supporting
+complaint_type,Street Condition,supporting
+descriptor,Tree,supporting
+descriptor,Downed,supporting
+descriptor,Blocked,supporting
+descriptor,Obstruction,supporting
+descriptor,Wire,supporting

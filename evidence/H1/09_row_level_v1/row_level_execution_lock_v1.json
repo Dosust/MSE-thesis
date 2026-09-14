@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "status": "ACQUISITION_PLAN_FROZEN_CODE_VERIFIED_RAW_RETRIEVAL_PENDING",
+  "candidate_train": [
+    "E0",
+    "E2"
+  ],
+  "candidate_test": [
+    "E1",
+    "E3",
+    "E4"
+  ],
+  "internet_retrieval_in_current_runtime": "blocked_for_large/raw_bodies",
+  "code_verification": "4/4_OFFLINE_TESTS_PASSED",
+  "activation_condition": "all required event/source roles pass frozen R1-R8 row-level gates",
+  "prohibitions": [
+    "no absent EAGLE-I row -> zero conversion",
+    "no TLC completed trips -> full requested demand substitution",
+    "no train/test change based on model performance",
+    "no confirmatory calibration before row-level gate"
+  ]
+}
