@@ -1,0 +1,11 @@
+gate,requirement,nyc_system_arm,acn_charging_arm
+G1,Authoritative access,PASS,PASS_CONDITIONAL
+G2,Temporal/event coverage,PASS,N/A
+G3,Exact spatial compatibility,PARTIAL_FAIL_FINE_SCALE,N/A
+G4,Semantic state mapping,PARTIAL_PASS,PASS_COMPONENT
+G5,Disturbance/restoration truth,PASS_AGGREGATE,N/A
+G6,Uncertainty quantifiable,PASS_IN_PRINCIPLE,PASS_IN_PRINCIPLE
+G7,Independent event family,PASS_CANDIDATE,SESSION_LEVEL_ONLY
+G8,Microscopic road-crew-repair truth,FAIL_PUBLIC,N/A
+G9,Dynamic charging truth,N/A,PASS
+G10,Direct full H1b S_P/S_T truth,FAIL_PARTIAL,FAIL_SYSTEM_LEVEL
