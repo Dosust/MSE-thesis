@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "date": "2026-09-14",
+  "method": "EGMIV",
+  "status": "DEMONSTRATOR_QUALIFIED_PARTIAL_PASS",
+  "public_demonstrator": {
+    "system_arm": "NYC multi-source event family",
+    "charging_arm": "ACN-Data",
+    "qualification": "PARTIAL_PASS"
+  },
+  "candidate_validation_clock_min": 15,
+  "validation_clock_unit": "minutes",
+  "system_event_candidates": [
+    "E0_Fay_2020",
+    "E1_Isaias_2020",
+    "E2_Dec2022_wind",
+    "E3_Dec2023_wind",
+    "E4_Apr2024_coastal"
+  ],
+  "train_test_split": "NOT_FROZEN_PENDING_RAW_COMPLETENESS_AUDIT",
+  "full_h1b_status": "BLOCKED_WITH_PUBLIC_DATA",
+  "blocking_gaps": [
+    "no verified public geolocated crew/job trajectory dataset",
+    "NYISO Zone J aggregate does not exactly match fine transport geography",
+    "EAGLE customer-outage metric is not identical to demand-weighted S_P",
+    "public TLC trip data do not fully observe latent/cancelled requested mobility",
+    "ACN charging data are component-level and not same-event NYC system truth"
+  ],
+  "allowed_claims": [
+    "H1a matched representation test",
+    "aggregate/event validation",
+    "road-state validation",
+    "charging component validation"
+  ],
+  "prohibited_claims": [
+    "fully observed microscopic crew-delay validation",
+    "full system-level H1b support from public NYC+ACN alone"
+  ],
+  "next_gate": "raw completeness audit of E0-E4 and freeze train/test split"
+}
