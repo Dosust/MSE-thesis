@@ -6,37 +6,29 @@
 ![Search](https://img.shields.io/badge/evidence%20search-FRESH%20FROM%20ZERO-1A7F37)
 ![FTEE](https://img.shields.io/badge/FTEE%20v2.0-CURRENT-0969DA)
 ![H1](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
-![325 Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20AUDIT-9A6700)
+![Prereg](https://img.shields.io/badge/H1%20confirmatory%20design-FROZEN-1A7F37)
 
 ## Repository authority — updated 2026-09-14
 
-The sole active repository is `Dossiya-SE/MSE-thesis`. `Dossiya-SE/Optimization-for-sustainability-and-resilience` is historical/reference only.
-
-The thesis-wide citation standard is **APA 7th edition**. Proposed thesis constructs remain `[P]` until validation justifies another status.
-
-The thesis-wide reasoning protocol remains [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md), and the named evidence-to-model execution method is [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md): **Evidence-Grounded Mechanistic Interdependency and Validation (EGMIV)**.
+The sole active repository is `Dossiya-SE/MSE-thesis`. The thesis-wide citation standard is APA 7. The reasoning protocol is `project/RESEARCH_REASONING_PROTOCOL.md`; the named evidence-to-model execution method is `project/EGMIV_METHOD_V1.md`.
 
 ## Active authority order
 
-1. [`project/README.md`](project/README.md)
-2. [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md)
-3. [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md)
-4. [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md)
-5. [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md)
-6. [`project/CANONICAL_SYSTEM_DEFINITION.md`](project/CANONICAL_SYSTEM_DEFINITION.md)
-7. [`project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`](project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md)
-8. [`project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md`](project/STAGE_2_INTERDEPENDENCY_MECHANISMS.md)
-9. [`project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`](project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md)
-10. [`project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md`](project/STAGE_4_OBSERVATION_ORGANIZATION_FEEDBACK_CONTROL.md)
-11. [`project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md`](project/STAGE_5_CONTROLLED_SUSTAINABLE_VIABILITY.md)
-12. [`project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md`](project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md)
-13. [`project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md`](project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md)
-14. [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md)
-15. [`project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`](project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md)
-16. [`project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md)
-17. [`project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md)
-18. [`project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md`](project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md)
-19. [`project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`](project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md)
+1. `project/README.md`
+2. `project/RESEARCH_REASONING_PROTOCOL.md`
+3. `project/EGMIV_METHOD_V1.md`
+4. `project/THESIS_SCOPE.md`
+5. `project/CANONICAL_7_STAGE_FRAMEWORK.md`
+6. `project/CANONICAL_SYSTEM_DEFINITION.md`
+7. `project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`
+8. stage-specific frozen specifications
+9. `project/RESEARCH_HYPOTHESES.md`
+10. `project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md`
+11. `project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`
+12. `project/H1_CONFIRMATORY_PREREGISTRATION_V1.md` — **current confirmatory design authority**
+13. `project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`
+14. `project/FRESH_SEARCH_FULL_TEXT_EVIDENCE_TO_EQUATION_PROTOCOL_FTEE_V2.md`
+15. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
 
 ## Canonical scientific state
 
@@ -44,12 +36,10 @@ The thesis-wide reasoning protocol remains [`project/RESEARCH_REASONING_PROTOCOL
 \mathcal S=\{P,T,I,O\},
 ```
 
-with $P,T$ as physical infrastructure systems and $I,O$ as informational and organizational layers.
-
-The primary confirmatory set remains
+with P,T as physical infrastructures and I,O as informational and organizational layers. H1 remains confined to the physical P–T boundary
 
 ```math
-\mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
+\mathcal G_{H1}=\mathcal G_P\cup\mathcal G_T\cup\mathcal C.
 ```
 
 The canonical interdependency object remains
@@ -62,115 +52,162 @@ The canonical interdependency object remains
 
 ## H1 formal evidence status
 
-The frozen H1 formal CORE search remains
+The frozen formal search remains
 
 ```math
-Q_{H_1}^{\rm CORE}=B_P\land B_T\land B_I,
+Q_{H_1}^{CORE}=B_P\land B_T\land B_I,
 ```
 
-with $B_D$ diagnostic only. Authenticated execution in Scopus, Web of Science Core Collection, Compendex and IEEE Xplore is still pending. Public evidence remains supportive/provisional and does not replace the confirmatory corpus.
+with the dynamic block diagnostic only. Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution remains pending. Public evidence is supportive/provisional only.
 
-## H1 competing-model state
+## H1 model state
 
-The physical boundary remains
-
-```math
-\mathcal G_{H1}=\mathcal G_P\cup\mathcal G_T\cup\mathcal C.
-```
-
-The three competing representations are now all implemented and verification-frozen:
+All three competing representations are implemented and verification-frozen:
 
 ```math
 \boxed{M_0=\text{independent},\qquad M_1=\text{static/algebraic coupling},\qquad M_2=\text{dynamic causal coupling}.}
 ```
 
-### M0
+- `models/H1/M0/`: verified 13/13.
+- `models/H1/M1/`: verified 13/13 M1-specific gates.
+- `models/H1/M2/`: verified full M1+M2 regression 29/29.
 
-Package: [`models/H1/M0/`](models/H1/M0/)  
-Status: **verified — 13 passed, 0 failed**.
-
-### M1
-
-Package: [`models/H1/M1/`](models/H1/M1/)  
-Status: **verified — 13 M1-specific tests passed, 0 failed**.
-
-M1 is memoryless. Requested EV charging power maps exactly once into electrical demand; bus energization limits same-step served power; no charger queue or dynamic repair state exists. The nested limit satisfies
+Nested limits pass:
 
 ```math
 M_1\rightarrow M_0
 ```
 
-when interface maps are removed.
+when interface maps are removed, and
 
-### M2
+```math
+\boxed{M_2\rightarrow M_1}
+```
 
-Scientific record: [`models/H1/M2/`](models/H1/M2/)  
-Status: **verified — full M1+M2 regression 29 passed, 0 failed**.
+when charger memory is suppressed and dynamic repair is disabled.
 
-M2 adds only the dynamic states necessary to test temporal coupling beyond M1:
+M2 contains only the dynamic objects necessary for H1:
 
 ```math
 q_c(k),\qquad d_j(k),\qquad r_j(k),
 ```
 
-for charger backlog, repair-crew path progress and repair progress.
+representing charging backlog, crew-path progress and repair progress. Benchmark analytical checks remain verification only and are `BENCHMARK_TEST_HARNESS_ONLY`.
 
-Physical charger memory is
+## H1 confirmatory pre-registration — frozen v1.0
 
-```math
-q_c(k+1)=\max\{0,q_c(k)+\Delta t[\lambda_c(k)-\mu_c(k)]\}.
-```
+Canonical file: `project/H1_CONFIRMATORY_PREREGISTRATION_V1.md`.
 
-The mandatory nesting condition passes:
+Machine-readable records: `evidence/H1/08_preregistration/`.
 
-```math
-\boxed{M_2\rightarrow M_1\quad\text{when charger memory is suppressed and dynamic repair is disabled}.}
-```
+The decisive H1a comparison is M2 vs M1. M2 vs M0 is secondary context.
 
-Dynamic repair also reduces exactly to the M1 static free-flow travel delay when road occupancy is zero and all path cells are available.
-
-### Analytical M2 checks
-
-Persistent-overload benchmark:
+The matched scenario universe is frozen as
 
 ```math
-\lambda=900\;\mathrm{veh/h},\qquad \mu_{max}=720\;\mathrm{veh/h},
+\Omega_H=
+\Omega_0\cup\Omega_C\cup\Omega_O\cup\Omega_R\cup\Omega_J\cup\Omega_D,
 ```
 
-so queue growth is analytically `180 veh/h`. Over `1.8 h`, predicted backlog is `324 vehicles`; simulation gives `324.0000000000011`.
+covering intact/null, charging stress, feeder outage, road-to-repair stress, joint disruption and decoupling/zero-memory controls.
 
-Temporary-outage benchmark: a `0.2 h` outage at `600 veh/h` creates `120 vehicles` of backlog. Post-restoration spare service capacity is `120 veh/h`, so the closed-form clearance time is `1.0 h`; simulation clears from `t=0.6 h` to `t=1.6 h` exactly.
+For every scenario, M0/M1/M2 receive identical initial state, external disturbance, demand, shared parameter draw, horizon and time step. Common random numbers are mandatory for stochastic comparisons.
 
-Dynamic repair benchmark S3R: static free-flow restoration is `0.14 h`; state-dependent repair under initially congested roads is `0.19 h` with unchanged power network and repair productivity.
+### Primary H1a endpoint
 
-These are verification/analytical-consistency results only. They are **not** confirmatory H1 effect sizes and remain `BENCHMARK_TEST_HARNESS_ONLY`.
+For independently derived service-resolution thresholds \(\epsilon_P,\epsilon_T\),
 
-## Deliberate M2 boundary
+```math
+D_{PT}^{2,1}(\omega)=
+\frac1T\int_0^T
+\left[
+\left(\frac{S_P^{M_2}-S_P^{M_1}}{\epsilon_P}\right)^2+
+\left(\frac{S_T^{M_2}-S_T^{M_1}}{\epsilon_T}\right)^2
+\right]^{1/2}dt,
+```
 
-The minimal M2 keeps the CTM state identical to M1 and lets charger backlog modify mobility service through FCFS current-arrival fulfillment. This isolates interface memory from additional route-choice/rerouting behavior. Richer queue spillback, route choice, price response, multi-crew allocation and informational/organizational dynamics remain deferred unless evidence and H1 validation require them.
+with population statistic
+
+```math
+\Theta_{repr}=\mathbb E_{\omega\sim\Omega_H}[D_{PT}^{2,1}(\omega)].
+```
+
+### Threshold rule
+
+For service s,
+
+```math
+\epsilon_s^{det}=\max(u_{obs,s},u_{num,s}).
+```
+
+If an externally defensible engineering tolerance exists,
+
+```math
+\boxed{\epsilon_s=\max(u_{eng,s},u_{obs,s},u_{num,s}).}
+```
+
+If no defensible \(u_{eng,s}\) exists, H1a may support only **representation-distinguishable**, not **engineering-material**.
+
+No threshold may be chosen from observed M2–M1 effect sizes.
+
+### UQ/statistics lock
+
+- Tier A/B parameters may enter confirmatory UQ/calibration; Tier C remains sensitivity-only.
+- Same uncertain draw supplied to M0/M1/M2.
+- Sampling precision stops only when the 95% Monte Carlo interval half-width for the primary statistic is no larger than `0.1 × frozen decision scale`.
+- Global variance-based sensitivity is allowed only after input-dependence audit.
+- Paired bootstrap default: 5,000 resamples; 95% intervals.
+- P-values are secondary to effect size + uncertainty + threshold comparison.
+
+### H1a gates
+
+A0 verification/physics; A1 independent threshold validity; A2 95% paired interval for \(\Theta_{repr}\) wholly above 1; A3 UQ robustness; A4 no M2 advantage from greater physical violation.
+
+Adjudication:
+
+- **SUPPORTED** only if A0–A4 pass and engineering tolerances are independently available.
+- **REPRESENTATION-DISTINGUISHABLE** if A0–A4 pass but only detectability thresholds exist.
+- **PARTIAL** if the effect is confined to a predeclared mechanism stratum.
+- **NOT SUPPORTED** otherwise.
+
+### H1b shell
+
+H1b requires independent event/case truth. Synthetic self-generated truth alone cannot confirm it. The primary held-out error is
+
+```math
+E_{PT}(M)=\frac1T\int_0^T\|\widehat S_M(t)-S_{obs}(t)\|_Wdt.
+```
+
+M2 must beat the best M0/M1 held-out error beyond an independently frozen \(\epsilon_{pred}\), while preserving physics, uncertainty calibration, identifiability and no test-data refitting. If independent truth is unavailable, H1b is **NOT YET TESTABLE**.
+
+## Anti-bias lock
+
+After preregistration:
+
+1. no primary outcome may be changed because another metric produces a stronger result;
+2. no threshold may change after viewing confirmatory model differences;
+3. no scenario may be removed because it weakens H1;
+4. no M2 state/parameter may be added using held-out performance;
+5. substantive protocol changes create v2.0 while v1.0 remains archived;
+6. benchmark tests remain verification only;
+7. final H1 confirmation still requires the authenticated four-database evidence branch.
 
 ## Immediate next task — current
 
-The executable model-construction sequence is complete:
-
-```math
-\boxed{M_0\;\checkmark\rightarrow M_1\;\checkmark\rightarrow M_2\;\checkmark.}
-```
-
-The next EGMIV operation is **H1a pre-registration before confirmatory comparison**:
+The model and confirmatory-design stages are complete:
 
 ```math
 \boxed{
-M_0,M_1,M_2
+M_0,M_1,M_2\;\checkmark
 \rightarrow
-\Omega_H\text{ matched scenario set}
+\text{pre-registration}\;\checkmark
 \rightarrow
-\varepsilon_{repr},\varepsilon_{pred}\text{ predeclaration}
+\mathbf{threshold\ provenance\ acquisition}
 \rightarrow
-\text{parameter/UQ plan}
+\text{scenario/parameter registry freeze}
 \rightarrow
-\text{held-out validation design}.
+\text{confirmatory UQ execution}.
 }
 ```
 
-We must freeze the scenario universe, primary outcomes, engineering-resolution thresholds, uncertainty distributions, sensitivity method, stopping rules, and validation split **before** examining confirmatory M0/M1/M2 results. No final H1 conclusion is permitted until these gates and the authenticated four-database evidence corpus are complete.
+The next admissible work is to populate `evidence/H1/08_preregistration/threshold_provenance_template.csv` with independent sources for \(u_{obs,P},u_{num,P},u_{eng,P},u_{obs,T},u_{num,T},u_{eng,T}\) and the H1b noise floor. **Do not run final H1a confirmatory comparisons before those fields are frozen.**
