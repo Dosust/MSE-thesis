@@ -1,0 +1,7 @@
+family,scenario_id,role,factor_rule,scientific_use
+Omega0,S0,Null/intact control,No active dynamic state,M2=M1 within numerical tolerance
+OmegaC,S1,Charging-demand stress,rho=lambda/mu_max; values from evidence/data,Queue activation and T→P demand
+OmegaO,S2,Charger-feeder outage,duration from independent event/range source,P→T outage + backlog/hysteresis
+OmegaR,S3R,Road-to-repair stress,occupancy/access from independent data/ranges,state-dependent crew delay
+OmegaJ,S4,Joint disruption,predeclared combination of charging+repair factors,interaction of dynamic interfaces
+OmegaD,S6,Decoupling/zero-memory,interfaces/memory removed,nested-model falsification control

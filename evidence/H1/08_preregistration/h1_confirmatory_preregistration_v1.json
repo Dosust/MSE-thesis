@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "date": "2026-09-14",
+  "method": "EGMIV",
+  "status": "FROZEN_DESIGN_NOT_EXECUTED",
+  "primary_comparison": "M2_vs_M1",
+  "secondary_comparison": "M2_vs_M0",
+  "models": {
+    "M0": "independent",
+    "M1": "static_algebraic",
+    "M2": "dynamic_causal"
+  },
+  "scenario_families": [
+    "Omega0",
+    "OmegaC",
+    "OmegaO",
+    "OmegaR",
+    "OmegaJ",
+    "OmegaD"
+  ],
+  "primary_endpoint": "Theta_repr = E[D_PT_2_1]",
+  "thresholds": {
+    "epsilon_service": "max(u_eng,u_obs,u_num); if u_eng unavailable use max(u_obs,u_num) and prohibit engineering-material claim",
+    "epsilon_pred": "Q95(abs(noise_only_predictive_error))",
+    "effect_size_tuning_prohibited": true
+  },
+  "statistics": {
+    "paired": true,
+    "bootstrap_resamples": 5000,
+    "confidence": 0.95
+  },
+  "uq_stop_rule": "MC interval half-width <= 0.1 * frozen decision scale",
+  "h1a_decision": "A0-A4; 95% interval for Theta_repr wholly > 1",
+  "h1b_decision": "95% interval for DeltaE wholly below -epsilon_pred plus physics/calibration/identifiability/no-refit",
+  "next_gate": "populate threshold provenance and freeze scenario/parameter registry"
+}

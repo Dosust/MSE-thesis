@@ -1,0 +1,9 @@
+gate,name,pre_registered_rule,status
+A0,Verification/physics,"All numerical, conservation, nesting and physical-admissibility gates pass",required
+A1,Threshold validity,epsilon_P and epsilon_T frozen independently of model differences,required
+A2,Primary effect,95% paired interval for Theta_repr lies wholly above 1,required
+A3,Robustness,Conclusion survives predeclared UQ and is not a post-hoc scenario artifact,required
+A4,Physical admissibility,No apparent M2 advantage from increased constraint violation,required
+B1,Held-out truth,Independent event/case validation data exist,required_for_H1b
+B2,Predictive gain,95% paired interval for DeltaE lies wholly below -epsilon_pred,required_for_H1b
+B3,Identifiability,M2-specific parameters identifiable or meaningfully bounded,required_for_H1b

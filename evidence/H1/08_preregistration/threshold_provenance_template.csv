@@ -1,0 +1,8 @@
+domain,decision_threshold,component,value,source/provenance,status
+Power service,epsilon_P,u_obs_P,,,PENDING
+Power service,epsilon_P,u_num_P,,,PENDING
+Power service,epsilon_P,u_eng_P,,,PENDING
+Transport service,epsilon_T,u_obs_T,,,PENDING
+Transport service,epsilon_T,u_num_T,,,PENDING
+Transport service,epsilon_T,u_eng_T,,,PENDING
+Held-out prediction,epsilon_pred,noise-floor Q95,,,PENDING
