@@ -5,6 +5,8 @@
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![Prereg](https://img.shields.io/badge/H1%20confirmatory%20design-FROZEN-1A7F37)
 ![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
+![Raw Completeness](https://img.shields.io/badge/raw%20completeness-STRUCTURAL%20PASS-9A6700)
+![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
 ![H1b](https://img.shields.io/badge/full%20public%20H1b-BLOCKED-B42318)
 
 ## Repository authority — updated 2026-09-14
@@ -17,10 +19,11 @@ The sole active repository is `Dossiya-SE/MSE-thesis`. Thesis-wide citation stan
 2. `project/H1_CONFIRMATORY_PREREGISTRATION_V1.md`
 3. `project/H1_THRESHOLD_PROVENANCE_V1.md`
 4. `project/H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`
-5. `project/H1_DEMONSTRATOR_QUALIFICATION_V1.md` — **current demonstrator authority**
-6. `models/H1/M0/`, `models/H1/M1/`, `models/H1/M2/`
-7. `evidence/H1/08_demonstrator/`
-8. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
+5. `project/H1_DEMONSTRATOR_QUALIFICATION_V1.md`
+6. `project/H1_RAW_COMPLETENESS_AUDIT_V1.md` — **current public-data gate**
+7. `models/H1/M0/`, `models/H1/M1/`, `models/H1/M2/`
+8. `evidence/H1/08_demonstrator/`
+9. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
 
 ## Canonical H1 model state
 
@@ -91,23 +94,19 @@ Observation and engineering thresholds remain case/data dependent:
 
 Power service must be reconstructed from interval served energy and independently validated counterfactual requested demand. Transportation service must use completed OD flow and independently validated requested OD demand. Missing telemetry is never silently equivalent to physical zero.
 
-A common observation clock must satisfy
-
 ```math
 \Delta_{val}\ge\max(\Delta_P^{obs},\Delta_T^{obs}).
 ```
 
 No model value may be compared to field data before applying the same temporal/spatial observation operator.
 
-## Demonstrator qualification — current
-
-The public H1 demonstrator is now
+## Demonstrator qualification
 
 ```math
 \boxed{\mathcal D_{H1}^{public}=\mathcal D_{NYC}\cup\mathcal D_{ACN}}
 ```
 
-with qualification
+with
 
 ```math
 \boxed{\textbf{PARTIAL PASS}}.
@@ -121,25 +120,15 @@ Audited sources:
 - NYC TLC trip records;
 - NYC DOT Traffic Speeds;
 - NYC 311;
-- Con Edison / NY DPS storm and restoration evidence.
+- Con Edison / NY DPS event/restoration evidence.
 
-For Tropical Storm Isaias the structural temporal-overlap gate passes. Candidate validation clock: 15 minutes, pending raw timestamp inspection.
+This arm supports aggregate event/load/outage/restoration validation, TLC-subsystem completed OD behavior, road-state dynamics, obstruction evidence and restoration milestones.
 
-The arm is admissible for aggregate event/load/outage/restoration validation, TLC-subsystem completed OD behavior, road-state dynamics, obstruction evidence and restoration milestones.
-
-The following full-H1b gaps remain:
-1. no verified public geolocated crew/job trajectory dataset;
-2. NYISO Zone J aggregate is not exactly coextensive with fine TLC/DOT geography and parts of the upper Bronx lie in Zone I;
-3. EAGLE customer-outage fraction is not identical to demand-weighted `S_P`;
-4. public TLC trip data do not directly enumerate all latent/unserved/cancelled mobility requests.
-
-Thus microscopic road→crew→repair validation and exact fine-scale P–T co-validation are not supported by the audited public data.
+Full-H1b gaps remain: no public geolocated crew/job trajectories; aggregate NYISO Zone-J geography does not exactly match fine TLC/DOT geography; EAGLE customer-outage fraction is not identical to demand-weighted `S_P`; and public trip records do not enumerate all latent/unserved mobility requests.
 
 ### ACN charging arm
 
-ACN-Data is **PASS for component validation**, subject to registration/token access. It provides charging-session timing, delivered energy, measured-current/pilot time series and optional user-request information.
-
-It may validate charging-interface physics/parameters but is not a NYC same-event system dataset:
+ACN-Data is **PASS for component validation** subject to access-token registration, but is not NYC same-event system truth:
 
 ```math
 \boxed{\text{ACN}\not\Rightarrow\text{system-level H1b validation}.}
@@ -147,22 +136,52 @@ It may validate charging-interface physics/parameters but is not a NYC same-even
 
 ## Candidate event family
 
-Current wind/tree mechanism candidates:
 - E0 — Tropical Storm Fay, 2020-07-10;
-- E1 — Tropical Storm Isaias, 2020-08-04 to 2020-08-12;
+- E1 — Tropical Storm Isaias, 2020-08-04 onward;
 - E2 — Dec 2022 wind/rain storm;
 - E3 — Dec 2023 wind/rain storm;
 - E4 — Apr 2024 coastal wind/rain storm.
 
-Train/test membership is **not frozen**. It must be determined only after raw completeness, missingness and observation coverage are quantified for E0–E4.
+## Raw-completeness audit — current
 
-Required rule:
+The source-level audit confirms event-period archives/schemas but also identifies intrinsic missingness limitations.
+
+Key findings:
+
+1. NYISO monthly archives exist for all candidate event months.
+2. TLC publishes event-month HVFHV data, but TLC does not guarantee submitted-record completeness and gives a specific 2020 COVID-era submission caveat.
+3. DOT Traffic Speeds supplies link-level speed/travel-time state, not OD demand.
+4. NYC 311 is reporting-driven and cannot be treated as a complete obstruction inventory.
+5. EAGLE-I omits zero-outage rows and explicitly does not distinguish true zero outage from a collection gap when a county-time row is absent.
+6. EAGLE-I public data extend through 2024, but the peer-reviewed technical-validation characterization used here covers the 2014–2022 release; E3/E4 therefore retain an additional quality-provenance flag.
+7. Official Con Edison/DPS reports provide strong event/restoration truth but not individual crew-route/job trajectories.
+
+Therefore:
 
 ```math
-D_{train}\cap D_{test}=\varnothing,
+\boxed{\textbf{RAW COMPLETENESS = PARTIAL / STRUCTURAL PASS}}
 ```
 
-with at least two independent held-out validation events for each mechanism class claimed confirmatory.
+and the train/test split remains **unfrozen**.
+
+A non-adaptive candidate split, recorded before model-result inspection, is:
+
+```math
+\boxed{D_{train}^{cand}=\{E0,E2\},\qquad D_{test}^{cand}=\{E1,E3,E4\}.}
+```
+
+This candidate activates only if event-window data pass the frozen R1–R8 row-level gates. Held-out events cannot move to training or be replaced because of model performance.
+
+### Row-level R1–R8 gates
+
+- R1 timestamp integrity and timezone;
+- R2 pre-event/impact/recovery support;
+- R3 missingness interpretability;
+- R4 declared spatial support;
+- R5 native quantity/units validity;
+- R6 no held-out repair using model residuals;
+- R7 publisher quality flags retained in uncertainty;
+- R8 non-adaptive exclusion.
 
 ## Full H1b status
 
@@ -172,11 +191,7 @@ with at least two independent held-out validation events for each mechanism clas
 
 This does not block H1a matched representation testing, aggregate/event validation, road-state validation or charging-component validation.
 
-To upgrade H1b, seek restricted/partner data for:
-- geolocated repair-job/crew logs with timestamps;
-- finer power-service/outage observations coextensive with the transport domain;
-- mobility request/completion truth;
-- event-linked EV charging data if charging is claimed at system-event scale.
+To upgrade H1b, seek restricted/partner data for geolocated repair-job/crew logs, finer power-service/outage observations coextensive with transport geography, mobility request/completion truth and ideally event-linked EV charging observations.
 
 ## Formal evidence status
 
@@ -184,10 +199,8 @@ Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore 
 
 ## Immediate next task
 
-The next EGMIV gate is
-
 ```math
-\boxed{E0\ldots E4\rightarrow\textbf{raw completeness audit}\rightarrow\textbf{freeze train/test split}\rightarrow\mathcal O_P,\mathcal O_T\rightarrow u_{obs}\rightarrow\epsilon\rightarrow\text{H1a/UQ}.}
+\boxed{\text{event-window row-level extraction}\rightarrow(N,t_{min},t_{max},\Delta t,\text{nulls},\text{duplicates},\text{spatial coverage})\rightarrow R1{:}R8\rightarrow\textbf{freeze or reject split}.}
 ```
 
-Parallel H1b data escalation should proceed, but final H1b support is prohibited unless the missing independent truth is actually obtained.
+No calibration or confirmatory H1 run is authorized before this gate passes.
