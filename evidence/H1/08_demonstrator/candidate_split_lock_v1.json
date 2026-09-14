@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "date": "2026-09-14",
+  "status": "CANDIDATE_NOT_FROZEN",
+  "candidate_train": ["E0", "E2"],
+  "candidate_test": ["E1", "E3", "E4"],
+  "activation_condition": "all event/source pairs required for the claimed validation role pass row-level R1-R8",
+  "anti_adaptation_rule": "held-out events cannot move to training or be replaced because of model performance",
+  "known_blockers": [
+    "EAGLE-I absence of a row conflates true zero outage with collection gap",
+    "TLC 2020 publisher completeness caveat",
+    "311 is reporting-driven rather than a complete physical inventory",
+    "EAGLE-I 2023/2024 extension quality provenance must be carried separately",
+    "no public individual crew/job trajectory truth"
+  ],
+  "next_gate": "event-window row-level extraction and immutable completeness metrics"
+}
