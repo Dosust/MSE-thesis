@@ -1,0 +1,1 @@
+event_id,source,file_or_endpoint,retrieval_hash,event_start,event_end,timezone,n_rows,t_min,t_max,median_dt_s,p95_dt_s,max_gap_s,required_field_null_rate,duplicate_rate,spatial_coverage_metric,publisher_quality_flag,R1,R2,R3,R4,R5,R6,R7,R8,final_status
