@@ -1,0 +1,6 @@
+event_id,event,date_window,mechanism_class,severity_role,public_event_truth,split_status
+E0,Tropical Storm Fay,2020-07-10,wind/tree,lower,126 outage jobs reported,candidate
+E1,Tropical Storm Isaias,2020-08-04/2020-08-12,wind/tree,extreme,thousands of outage jobs and prolonged restoration,candidate
+E2,Dec 2022 wind/rain,2022-12-23,wind/tree,moderate,~13k restored and ongoing outages,candidate
+E3,Dec 2023 wind/rain,2023-12-18,wind/tree,moderate-high,~40k affected/restored and eight road closures reported,candidate
+E4,Apr 2024 coastal storm,2024-04-03/2024-04-04,wind/tree,moderate-high,tens of thousands affected and regional milestones,candidate
