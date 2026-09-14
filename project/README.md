@@ -7,7 +7,8 @@
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
 ![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
-![Raw Completeness](https://img.shields.io/badge/raw%20completeness-STRUCTURAL%20PASS-9A6700)
+![Row Audit](https://img.shields.io/badge/executor-VERIFIED%204%2F4-1A7F37)
+![Raw Retrieval](https://img.shields.io/badge/event%20rows-PENDING-B42318)
 ![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
 
 This directory is the active scientific/mathematical specification of the MSE thesis. The seven-stage framework and H1–H5 logic are frozen. The named execution method is **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
@@ -24,20 +25,21 @@ This directory is the active scientific/mathematical specification of the MSE th
 | 2 | [`H1_CONFIRMATORY_PREREGISTRATION_V1.md`](H1_CONFIRMATORY_PREREGISTRATION_V1.md) | H1a/H1b design, UQ and decision gates | frozen |
 | 3 | [`H1_THRESHOLD_PROVENANCE_V1.md`](H1_THRESHOLD_PROVENANCE_V1.md) | threshold provenance | partially frozen |
 | 4 | [`H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`](H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md) | observation/service requirement architecture | frozen structure |
-| 5 | [`H1_DEMONSTRATOR_QUALIFICATION_V1.md`](H1_DEMONSTRATOR_QUALIFICATION_V1.md) | public demonstrator hard-gate qualification | frozen v1 |
-| 6 | [`H1_RAW_COMPLETENESS_AUDIT_V1.md`](H1_RAW_COMPLETENESS_AUDIT_V1.md) | event-family source completeness + split gate | **current** |
-| 7 | [`../models/H1/M0/`](../models/H1/M0/) | independent baseline | verified 13/13 |
-| 8 | [`../models/H1/M1/`](../models/H1/M1/) | static/algebraic comparator | verified |
-| 9 | [`../models/H1/M2/`](../models/H1/M2/) | dynamic causal comparator | verified full 29/29 regression |
-| 10 | [`../evidence/H1/08_demonstrator/`](../evidence/H1/08_demonstrator/) | machine-readable data gates | current |
+| 5 | [`H1_DEMONSTRATOR_QUALIFICATION_V1.md`](H1_DEMONSTRATOR_QUALIFICATION_V1.md) | public demonstrator qualification | frozen v1 |
+| 6 | [`H1_RAW_COMPLETENESS_AUDIT_V1.md`](H1_RAW_COMPLETENESS_AUDIT_V1.md) | source-level event-family completeness | structural pass |
+| 7 | [`H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md`](H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md) | current raw-data execution state | **current gate** |
+| 8 | [`../evidence/H1/09_row_level_v1/`](../evidence/H1/09_row_level_v1/) | frozen row-level acquisition/audit executor | code verified 4/4; raw retrieval pending |
+| 9 | [`../models/H1/M0/`](../models/H1/M0/) | independent baseline | verified 13/13 |
+| 10 | [`../models/H1/M1/`](../models/H1/M1/) | static/algebraic comparator | verified |
+| 11 | [`../models/H1/M2/`](../models/H1/M2/) | dynamic causal comparator | verified full 29/29 regression |
 
-## H1 model state
+## H1 model and confirmatory state
 
 ```math
 \boxed{M_0=\text{independent},\quad M_1=\text{static/algebraic coupling},\quad M_2=\text{dynamic causal coupling}.}
 ```
 
-Nested limits pass:
+with verified nested limits
 
 ```math
 M_1\rightarrow M_0,
@@ -45,19 +47,13 @@ M_1\rightarrow M_0,
 M_2\rightarrow M_1.
 ```
 
-All benchmark effects remain verification-only.
-
-## Confirmatory design
-
-Primary H1a comparison is M2 vs M1:
+The primary H1a comparison remains M2 vs M1:
 
 ```math
 \Theta_{repr}=\mathbb E_{\omega\sim\Omega_H}[D_{PT}^{2,1}(\omega)].
 ```
 
-Thresholds cannot be selected from observed M2−M1 effects.
-
-Frozen numerical floors:
+Frozen numerical floors are
 
 ```math
 \boxed{u_{num,P}=0.000416667,\qquad u_{num,T}=0.001281963}
@@ -71,23 +67,15 @@ at
 
 `epsilon_P`, `epsilon_T` and `epsilon_pred` remain unfrozen pending real observation uncertainty and service requirements.
 
-## Qualified public demonstrator
+## Public demonstrator and event family
 
 ```math
 \boxed{\mathcal D_{H1}^{public}=\mathcal D_{NYC}\cup\mathcal D_{ACN}}
 ```
 
-with status
+is a **PARTIAL PASS**. NYC supports aggregate/event, power-outage, completed-TLC-OD and road-state validation. ACN supports charging-component validation only. Full system-level H1b remains blocked with current public data.
 
-```math
-\boxed{\textbf{PARTIAL PASS}}.
-```
-
-NYC sources: NYISO P-58B, EAGLE-I, TLC HVFHV, DOT Traffic Speeds, NYC 311 and Con Edison/NY DPS event records. ACN is restricted to charging-component validation and is not same-event NYC system truth.
-
-Full public H1b remains blocked by absence of job-level crew trajectories, fine-scale coextensive P–T electrical truth and complete requested-mobility truth.
-
-## Candidate event family
+Candidate events:
 
 ```text
 E0  Tropical Storm Fay — 2020-07-10
@@ -97,58 +85,57 @@ E3  Dec-2023 wind/rain storm
 E4  Apr-2024 coastal wind/rain storm
 ```
 
-## Raw completeness — current gate
-
-The source-level audit confirms that the relevant NYISO/TLC/DOT/311/event-report periods exist, but identifies intrinsic data limitations:
-
-- EAGLE-I omits zero-outage rows and cannot distinguish an absent true-zero record from a collection gap;
-- TLC does not guarantee provider-submitted record completeness and 2020 carries a specific COVID-era submission caveat;
-- 311 is reporting driven;
-- DOT speeds are link-state measurements, not requested OD truth;
-- 2023/2024 EAGLE-I public extension requires an additional quality-provenance flag relative to the peer-reviewed 2014–2022 technical-validation period.
-
-Hence:
-
-```math
-\boxed{\textbf{RAW COMPLETENESS = PARTIAL / STRUCTURAL PASS}.}
-```
-
-The train/test split is **not frozen**.
-
-A non-adaptive candidate, registered before model-result inspection, is:
+Non-adaptive candidate split:
 
 ```math
 \boxed{D_{train}^{cand}=\{E0,E2\},\qquad D_{test}^{cand}=\{E1,E3,E4\}.}
 ```
 
-Activation requires row-level R1–R8 data-quality gates. No held-out event may be moved into training because the model predicts it poorly.
+This split is **not frozen**.
 
-## Row-level R1–R8 gate
+## Current gate: row-level data qualification
 
-The next audit must record, by event and source:
+The executor at `evidence/H1/09_row_level_v1/` freezes:
 
-```math
-N_{rows},\ t_{min},\ t_{max},\Delta t\text{ distribution},\text{ null rate},\text{ duplicate rate},\text{ spatial coverage}.
+- event windows and candidate roles;
+- official source endpoints/files;
+- required fields and timezone handling;
+- EAGLE-I NYC FIPS filter;
+- 311 obstruction vocabulary;
+- row-count/timestamp/gap/null/duplicate metrics;
+- raw-file provenance hashes;
+- missingness and non-adaptation rules.
+
+Offline verification reports:
+
+```text
+4/4 offline audit tests passed
 ```
 
-and verify timestamp integrity, event support, missingness interpretation, spatial support, native quantity validity, held-out independence, publisher-quality flags and non-adaptive exclusion.
+The tests cover timestamp/gap computation, duplicate detection, missing-required-field failure and the EAGLE-I rule that an absent record is not automatically zero outage.
 
-## H1b status
+Actual event-window row counts/null rates are **not yet claimed** because the current chat runtime cannot retrieve the required large ZIP/Parquet/raw bodies. This is an acquisition block, not a PASS.
+
+Therefore:
 
 ```math
-\boxed{\textbf{BLOCKED WITH PUBLIC DATA AT THE STRONGEST PRE-REGISTERED LEVEL}}.
+\boxed{\text{ACQUISITION PLAN FROZEN}}
 ```
 
-This does not block H1a matched representation testing, aggregate/event validation, road-state validation or charging-component validation.
+```math
+\boxed{\text{AUDIT CODE VERIFIED OFFLINE}}
+```
 
-## Formal literature evidence
+```math
+\boxed{\text{RAW ROW-LEVEL GATE PENDING}}
+```
 
-Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the frozen H1 CORE search remains pending. Final H1 confirmation remains prohibited until the formal corpus is completed and reconciled.
+No train/test freeze, calibration, UQ, H1a confirmatory run or H1b adjudication is authorized until the required event/source roles pass R1–R8.
 
 ## Immediate next step
 
 ```math
-\boxed{\text{row-level event/source extraction}\rightarrow R1{:}R8\rightarrow\textbf{freeze or reject candidate split}\rightarrow\mathcal O_P,\mathcal O_T\rightarrow u_{obs}\rightarrow\epsilon\rightarrow\text{H1a/UQ}.}
+\boxed{\text{execute frozen acquisition}\rightarrow(N,t_{min},t_{max},\Delta t,\text{nulls},\text{duplicates},\text{coverage})\rightarrow R1{:}R8\rightarrow\textbf{freeze or reject split}.}
 ```
 
-No calibration or confirmatory H1 run is authorized before the row-level gate passes.
+Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the formal H1 evidence search also remains pending before final H1 confirmation.
