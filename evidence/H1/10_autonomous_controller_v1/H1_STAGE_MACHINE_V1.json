@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "stages": [
+    {"id":"S00","name":"M0 verified","status":"PASS","requires":[]},
+    {"id":"S01","name":"M1 verified","status":"PASS","requires":["S00"]},
+    {"id":"S02","name":"M2 verified","status":"PASS","requires":["S01"]},
+    {"id":"S03","name":"H1 confirmatory preregistration","status":"PASS","requires":["S02"]},
+    {"id":"S04","name":"Numerical threshold provenance","status":"PASS_PARTIAL","requires":["S03"]},
+    {"id":"S05","name":"Validation observation/service architecture","status":"PASS","requires":["S04"]},
+    {"id":"S06","name":"Demonstrator qualification","status":"PARTIAL_PASS","requires":["S05"]},
+    {"id":"S07","name":"Source-level raw completeness audit","status":"PASS_PARTIAL","requires":["S06"]},
+    {"id":"S08","name":"Raw byte acquisition","status":"BLOCKED_EXTERNAL","requires":["S07"]},
+    {"id":"S09","name":"R1-R8 row-level qualification","status":"LOCKED_WAITING_S08","requires":["S08"]},
+    {"id":"S10","name":"Freeze train/test events","status":"LOCKED_WAITING_S09","requires":["S09"]},
+    {"id":"S11","name":"Build observed service operators","status":"LOCKED_WAITING_S10","requires":["S10"]},
+    {"id":"S12","name":"Estimate u_obs,P and u_obs,T","status":"LOCKED_WAITING_S11","requires":["S11"]},
+    {"id":"S13","name":"Extract case-specific service requirements","status":"LOCKED_WAITING_S10","requires":["S10"]},
+    {"id":"S14","name":"Freeze epsilon_P, epsilon_T, epsilon_pred","status":"LOCKED_WAITING_S12_S13","requires":["S12","S13"]},
+    {"id":"S15","name":"Freeze scenario/parameter registry","status":"LOCKED_WAITING_S14","requires":["S14"]},
+    {"id":"S16","name":"Calibration on D_train only","status":"LOCKED_WAITING_S15","requires":["S15"]},
+    {"id":"S17","name":"UQ convergence","status":"LOCKED_WAITING_S16","requires":["S16"]},
+    {"id":"S18","name":"Global sensitivity","status":"LOCKED_WAITING_S17","requires":["S17"]},
+    {"id":"S19","name":"Confirmatory H1a","status":"LOCKED_WAITING_S18","requires":["S18"]},
+    {"id":"S20","name":"Held-out H1b","status":"LOCKED_WAITING_S19","requires":["S19"]},
+    {"id":"S21","name":"Final H1 adjudication","status":"LOCKED_WAITING_S20","requires":["S20"]}
+  ]
+}

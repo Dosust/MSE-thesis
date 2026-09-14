@@ -1,0 +1,12 @@
+{
+  "controller_exit_code": 2,
+  "expected_status": "S08_BLOCKED_RAW_BYTES",
+  "observed_status": "S08_BLOCKED_RAW_BYTES",
+  "missing_core_binary_count": 14,
+  "assertions": {
+    "blocked_without_raw_bytes": true,
+    "refuses_R1_R8_progression": true,
+    "no_raw_data_fabricated": true
+  },
+  "status": "PASS"
+}

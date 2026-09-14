@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-14",
+  "gate": "S08_RAW_BYTE_ACQUISITION",
+  "status": "BLOCKED_EXTERNAL_RUNTIME",
+  "checks": [
+    "NYISO exact official ZIP URLs verified",
+    "web binary materialization failed",
+    "container.download failed",
+    "runtime DNS/network failed",
+    "ChatGPT Library raw-file search negative",
+    "thesis Library folder raw-file search negative",
+    "visible Google Drive inspection negative"
+  ],
+  "scientific_consequence": "R1-R8 cannot be executed honestly; train/test remains unfrozen",
+  "no_fabrication": true
+}
