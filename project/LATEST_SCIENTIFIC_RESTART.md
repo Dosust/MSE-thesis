@@ -15,7 +15,7 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V2.md`
 12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
 13. `H3_PREREGISTRATION_V1.md`
 14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
@@ -82,13 +82,15 @@ This is an internal scope-control target, not an ASU page-count requirement. Com
 \rightarrow
 s_P^{\min}\text{ structurally qualified}
 \rightarrow
-s_T^{\min}\text{ evidence qualification next}.
+s_T^{\min}\text{ structurally qualified}
+\rightarrow
+s_{P,\rm rec}\text{ evidence qualification next}.
 }
 ```
 
 ## `s_P^{min}` qualification result
 
-The evidence record is stored in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`.
+The complete evidence record is preserved in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md` and summarized in v2.
 
 ```math
 \boxed{
@@ -101,16 +103,38 @@ The evidence record is stored in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`.
 }
 ```
 
-The accepted mathematical mapping is case-specific:
+## `s_T^{min}` qualification result
+
+The evidence record is stored in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V2.md`.
 
 ```math
-s_{P,m}^{\min}
-=
-\frac{\sum_i\omega_i E_{i,m}^{req}}
-{\sum_i\omega_i\widehat E_{i,m}^{d}},
+\boxed{
+\begin{aligned}
+\text{definition/provenance of }s_T^{\min} &: \text{SUPPORTED},\\
+\text{universal numerical value} &: \text{REJECTED},\\
+\text{case-specific numerical value} &: \text{OPEN},\\
+\text{confirmatory-code admission} &: \text{BLOCKED UNTIL CASE EVIDENCE IS FROZEN}.
+\end{aligned}
+}
 ```
 
-when the documented critical-energy requirement is expressed on the same spatial, temporal, and weighting support as the frozen `S_P` metric. Non-substitutable critical functions additionally require native per-entity constraints.
+The admissible case-specific mapping is
+
+```math
+s_{T,m}^{\min}
+=
+\frac{\sum_w\omega_w N_{w,m}^{min}}
+{\sum_w\omega_w\widehat N_{w,m}^{req}},
+```
+
+only when the authoritative minimum critical-trip requirement is defined on the same OD/service-class, temporal, population, and weighting support as the frozen `S_T` metric. Non-substitutable critical OD/service classes additionally require
+
+```math
+N_{w,m}^{comp}\ge N_{w,m}^{min},
+\qquad w\in\mathcal W_{hard}.
+```
+
+LOS, travel time, delay, route-open status, evacuation deadline, transit on-time performance, or another native transportation metric is not converted into `s_T^{min}` without a validated mapping.
 
 ## Current preferred model-family backbone
 
@@ -137,7 +161,7 @@ This is subordinate to the canonical seven-stage framework; it does not rename o
 ## Immediate next task
 
 ```math
-\boxed{s_T^{\min}}
+\boxed{s_{P,\rm rec}}
 ```
 
 Routing under EGMIV–TSP:
@@ -146,8 +170,8 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Object:        minimum acceptable transportation service
-Output:        qualified evidence record mapped to the frozen completed/requested weighted OD-trip service metric
+Object:        sufficiently recovered power-service target
+Output:        qualified evidence record for G_rec mapped to the frozen S_P service metric and any non-substitutable critical-load constraints
 Stop when:     the object is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
 ```
 
@@ -155,8 +179,6 @@ The remaining H3 qualification order is
 
 ```math
 \boxed{
-s_T^{\min}
-\rightarrow
 s_{P,\rm rec}
 \rightarrow
 s_{T,\rm rec}
