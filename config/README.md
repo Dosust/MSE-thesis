@@ -9,6 +9,7 @@ This directory contains machine-readable configuration aligned with the frozen s
 | `example_model.json` | valid illustrative P–T–I–O model configuration | validated against `schemas/thesis_model.schema.json` |
 | `h3_houston_power_source_v1.json` | frozen H3 Houston SMART-DS source/version/year/scenario contract and geographic-selection gates | `project/H3_SMARTDS_YEAR_QUALIFICATION_V1.md` + `project/H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md` |
 | `h3_houston_transport_source_v1.json` | frozen H3 H-GAC transport source family/base-year contract and Houston-selection gates | `project/H3_HGAC_TRANSPORT_SOURCE_AND_BASEYEAR_QUALIFICATION_V1.md` |
+| `h3_houston_signal_source_v1.json` | frozen City of Houston traffic-signal source, P→T interface role, materialization and mapping gates | `project/H3_HOUSTON_TRAFFIC_SIGNAL_SOURCE_AND_MATERIALIZATION_V1.md` |
 
 These files are contracts for software/reproducibility. They do not replace the human-readable canonical stage specifications.
 
@@ -22,5 +23,6 @@ These files are contracts for software/reproducibility. They do not replace the 
 - Historical P–W–T–SW/waste–drainage configuration must not reappear in active contracts.
 - `h3_houston_power_source_v1.json` freezes SMART-DS v0.9 / 2016 / Full_Texas / base_timeseries as the primary semisynthetic H3 power-source contract, but it does not authorize Houston asset labeling until `G_{\Omega,QA}=1`.
 - `h3_houston_transport_source_v1.json` freezes H-GAC 2025 Transportation Conformity with model base year 2023 as the primary semisynthetic H3 transportation source contract, but it does not authorize Houston link selection until `G_{\Omega,QA}=1` and raw C.1/C.3/C.4 bytes are inspected.
+- `h3_houston_signal_source_v1.json` freezes City of Houston Public Works `Traffic Signal` layer 26 as the location source for the P→T interface. It does not assert real utility feeder assignments, feature-level backup power, or Houston-core membership until the respective gates close.
 
 The GitHub scientific-architecture workflow validates these invariants automatically where implemented.
