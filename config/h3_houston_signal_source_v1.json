@@ -1,0 +1,60 @@
+{
+  "case_id": "H3-HOU-FLOOD-V1",
+  "config_version": "1.0",
+  "status": "SIGNAL_SOURCE_QUALIFIED_RAW_MATERIALIZATION_OPEN",
+  "signal_source": {
+    "authority": "City of Houston Public Works",
+    "service": "TDO/Traffic_Management_gx",
+    "layer_name": "Traffic Signal",
+    "layer_id": 26,
+    "layer_url": "https://geogimsms.houstontx.gov/arcgis/rest/services/TDO/Traffic_Management_gx/MapServer/26",
+    "parent_service_url": "https://geogimsms.houstontx.gov/arcgis/rest/services/TDO/Traffic_Management_gx/MapServer",
+    "native_spatial_reference": "EPSG:2278 / ArcGIS WKID 102740",
+    "geometry_expected": "esriGeometryPoint",
+    "supported_query_formats": ["JSON", "GeoJSON", "PBF"],
+    "max_record_count_reported": 2000
+  },
+  "scientific_role": {
+    "interface_direction": "P->T",
+    "mechanism": "power availability -> traffic-signal operation -> transport performance",
+    "location_data_only": true,
+    "actual_utility_feeder_observed": false,
+    "backup_power_observed_from_this_layer": false
+  },
+  "qualification": {
+    "source_gate": true,
+    "prep_gate": true,
+    "raw_materialization_gate": false,
+    "boundary_qa_gate": false,
+    "houston_core_gate": false,
+    "signal_to_road_mapping_gate": false,
+    "signal_to_power_mapping_gate": false,
+    "interface_qa_gate": false
+  },
+  "materialization": {
+    "script": "methods/h3/materialize_houston_traffic_signals.py",
+    "raw_page_preservation": true,
+    "pagination_required": true,
+    "wgs84_processed_derivative": true,
+    "required_next_command": "python methods/h3/materialize_houston_traffic_signals.py --root data/H3-HOU-FLOOD-V1"
+  },
+  "mapping_rules": {
+    "houston_core_selection": "signal j admitted to primary H3 set only if coordinate lies in frozen Omega_core after G_Omega_QA=1",
+    "signal_to_road": "freeze rule and maximum admissible distance before H3 outcome inspection",
+    "signal_to_power": "nearest eligible synthetic power node or superior feeder/service-area mapping if SMART-DS geometry supports it",
+    "mapped_pair_is_real_utility_assignment": false
+  },
+  "prohibitions": [
+    "Do not claim actual CenterPoint feeder assignments",
+    "Do not infer backup-power state from signal location alone",
+    "Do not use open traffic-signal maintenance requests as the canonical signal inventory",
+    "Do not clip to Houston before G_Omega_QA=1",
+    "Do not select mapping-distance thresholds after H3 outcome inspection",
+    "Do not invent signal counts or mapping coverage"
+  ],
+  "authority_files": [
+    "project/H3_HOUSTON_TRAFFIC_SIGNAL_SOURCE_AND_MATERIALIZATION_V1.md",
+    "project/H3_DEMONSTRATOR_FREEZE_V1.md",
+    "project/H3_HOUSTON_BOUNDARY_FREEZE_V1.md"
+  ]
+}
