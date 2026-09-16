@@ -17,6 +17,18 @@ This directory is the active scientific/mathematical specification of the MSE th
 > Execution method: [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md)  
 > Evidence rule: public-support evidence may develop the method but cannot replace the formal confirmatory corpus.
 
+## Cross-cutting canonical requirements
+
+| File | Role | Status |
+|---|---|---|
+| [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory temporal–geospatial realization rule for spatially dependent P–T cascades, recovery and intervention | **FROZEN v1.0** |
+
+The spatiotemporal requirement supplements the frozen seven-stage framework without changing its sequence or the canonical dependency primitive. Its governing rule is:
+
+```math
+\boxed{\text{Every modeled Power--Transportation cascade must preserve both time and location whenever the physical mechanism is spatially dependent.}}
+```
+
 ## H1 authority map
 
 | Priority | File | Role | Status |
