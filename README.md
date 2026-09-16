@@ -199,23 +199,11 @@ The simplest scientific interpretation is
 
 ```math
 \boxed{
-\textbf{
-Need
-\rightarrow
-Structure
-\rightarrow
-Causality
-\rightarrow
-Dynamics
-\rightarrow
-Knowledge\;\&\;Action
-\rightarrow
-Remain/Return/Confidence
-\rightarrow
-Intervention\;\&\;Consequences
-\rightarrow
-Decision
-}
+\begin{gathered}
+\text{Need} \rightarrow \text{Structure} \rightarrow \text{Causality} \rightarrow \text{Dynamics} \\
+\rightarrow \text{Knowledge \& Action} \rightarrow \text{Remain / Return / Confidence} \\
+\rightarrow \text{Intervention \& Consequences} \rightarrow \text{Decision}
+\end{gathered}
 }
 ```
 
