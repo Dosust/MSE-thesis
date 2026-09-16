@@ -43,7 +43,7 @@ The broad novelty narrative has been falsified and narrowed. Current work is con
 | `../evidence/novelty/ASU_PRIOR_WORK_FTEE_EGMIV_AUDIT_V1.md` | substantial ASU audit; some full-text access still blocked |
 | `../evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V1.md` | provenance: first public falsification pass |
 | `../evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V2.md` | active public-falsification interpretation using canonical notation |
-| `../evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_DEPENDENCY_SEMANTICS_V1.md` | targeted audit showing direction, typing, ontology grounding, provenance-preserving dependency graphs, interface contracts and composability are prior art |
+| `../evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_DEPENDENCY_SEMANTICS_V1.md` | targeted audit showing direction, typing, ontology/provenance, interface contracts, composability and ontology-to-federated-simulation bridges are prior art |
 | `../evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_INFRASTRUCTURE_VIABILITY_V1.md` | targeted audit showing viability already applied to codependent infrastructure, power, transportation and resilience/investment contexts |
 | `../evidence/novelty/CANONICAL_NOTATION_RECONCILIATION_2026-09-16.md` | precedence rule correcting legacy novelty notation |
 | `../evidence/novelty/FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` | frozen database query logic/translations; authenticated execution pending |
@@ -79,6 +79,8 @@ ontology-grounded cross-domain infrastructure relationships;
 evidence-linked / provenance-preserving dependency graphs;
 contract-based validation of SoS interfaces;
 composable multi-infrastructure models;
+semantic dependency models connected to federated infrastructure simulation;
+dynamic binding of heterogeneous infrastructure simulators;
 partial-observation safety/belief-space control;
 stochastic viability;
 applying viability theory to engineered/codependent infrastructure;
@@ -96,15 +98,14 @@ dynamic criticality in the organizational sense.
 ```math
 \boxed{
 \begin{aligned}
-N_1'' &: \text{evidence-supported dependency claim}\to(\Phi_e,\gamma_e,\theta_e,\zeta_e)\to\Xi_e\to F_{\mathcal G}^{m}\to\Delta Q\\
-&\qquad\text{with matched empirical/decision ablation in heterogeneous }P\!\!-\!T\!\!-\!I\!\!-\!O,\\
+N_1^* &: \text{qualified evidence}\to\mathfrak d_e\to\Xi_e\to F_{\mathcal G}^{m}\to\Delta Q\to\{M_0,M_1,M_2\}\text{ matched empirical/decision value},\\
 N_2' &: \text{infrastructure-specific observation uncertainty}\to\text{coupled dynamics}\to\text{organizational control}\to\text{sustainable-viability decision value},\\
 N_3' &: \text{canonical dependency perturbation}\to\Delta\mathcal M_{\mathcal V}\to\text{validated interface ranking}.
 \end{aligned}
 }
 ```
 
-These are **integration-and-validation questions**, not assertions that their constituent ideas are unprecedented. All remain `UNRESOLVED_GLOBAL` until authenticated database execution and later empirical validation.
+`N_1^*` is now treated primarily as an **implementation/validation contribution question**, not a claim that evidence-grounded semantic dependency models or semantics-to-simulation integration are unprecedented. All residuals remain `UNRESOLVED_GLOBAL` until authenticated database execution and later empirical validation.
 
 ## Current hard gates
 
