@@ -1,0 +1,76 @@
+name: H3 Houston boundary materialization
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/h3-houston-boundary-materialization.yml"
+      - "methods/h3/materialize_houston_boundary.py"
+      - "project/H3_HOUSTON_BOUNDARY_FREEZE_V1.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: "0"
+
+jobs:
+  materialize-boundary:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned spatial QA dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check "pip==24.2"
+          python -m pip install "shapely==2.0.6" "pyproj==3.7.0"
+
+      - name: Materialize authoritative Houston boundary and run QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python methods/h3/materialize_houston_boundary.py \
+            --root data/H3-HOU-FLOOD-V1 \
+            | tee h3-houston-boundary-run.txt
+
+      - name: Freeze code and output identities
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p h3-houston-boundary-evidence
+          CODE_SHA="$(git rev-parse HEAD)"
+          SCRIPT_SHA="$(sha256sum methods/h3/materialize_houston_boundary.py | cut -d' ' -f1)"
+          {
+            echo "CODE_SHA=${CODE_SHA}"
+            echo "SCRIPT_SHA256=${SCRIPT_SHA}"
+            echo "RUN_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            if [ -f data/H3-HOU-FLOOD-V1/qa/boundary/houston_boundary_summary.txt ]; then
+              cat data/H3-HOU-FLOOD-V1/qa/boundary/houston_boundary_summary.txt
+            fi
+          } | tee h3-houston-boundary-evidence/execution-identity.txt
+
+      - name: Upload immutable boundary evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h3-houston-boundary-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            data/H3-HOU-FLOOD-V1/raw/boundary/
+            data/H3-HOU-FLOOD-V1/processed/boundary/
+            data/H3-HOU-FLOOD-V1/qa/boundary/
+            data/H3-HOU-FLOOD-V1/qa/manifests/coh_city_limits_manifest.json
+            h3-houston-boundary-evidence/
+            h3-houston-boundary-run.txt
