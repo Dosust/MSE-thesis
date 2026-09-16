@@ -1,15 +1,16 @@
 # Canonical Research Reasoning Protocol
 
 **Status:** CANONICAL / CURRENT  
-**Version:** 1.1  
-**Effective date:** 2026-09-12  
-**Scope:** entire thesis — literature, mathematics, modeling, simulation, hypotheses, experiments, verification, validation, synthesis, visualization, and sustainable-engineering decisions
+**Version:** 1.2  
+**Effective date:** 2026-09-16  
+**Scope:** entire thesis — literature, mathematics, modeling, simulation, hypotheses, experiments, verification, validation, synthesis, visualization, and sustainable-engineering decisions  
+**Citation standard:** APA 7th edition author–date for thesis scientific writing, subject to ASU Graduate College/chair precedence in the final submitted document
 
 ---
 
 ## Governing rule
 
-> **No claim without a definition, mechanism, evidence, assumptions, test, and boundary of validity.**
+> **No claim without a definition, mechanism, evidence, assumptions, test, boundary of validity, and — when the claim depends on external knowledge — an adjacent verified APA 7 in-text citation.**
 
 For every problem, method, equation, paper, hypothesis, or proposed innovation, reasoning follows
 
@@ -58,13 +59,7 @@ Example question:
 
 > Can Ricci curvature help our infrastructure thesis?
 
-We do not begin with application. We first determine the precise mathematical object, for example
-
-```math
-\kappa_{ij}=1-\frac{W_1(m_i,m_j)}{d(i,j)},
-```
-
-and establish exactly what $\kappa_{ij}$ measures, what $m_i,m_j$ represent, what metric $d$ is used, and which assumptions are required before mapping the quantity to an infrastructure problem.
+We do not begin with application. We first determine the precise mathematical object, establish exactly what it measures, define its mathematical inputs and assumptions, verify the primary theoretical source, and only then evaluate whether its structure matches an infrastructure mechanism.
 
 ---
 
@@ -86,9 +81,11 @@ Example:
 - **[E]** EV charging couples transportation demand to distribution-grid loading.
 - **[D]** Therefore changes in vehicle-arrival distributions can alter electrical-load trajectories.
 - **[H]** Certain charging interfaces may dominate cross-system cascade propagation.
-- **[P]** Test this using dynamic interface criticality.
+- **[P]** Test this using a declared interface-criticality diagnostic.
 
 These statements must never be collapsed into one. The evidence status of a statement must remain visible until additional evidence or derivation justifies a change.
+
+Every `[E]` statement in thesis prose must carry an adjacent APA 7 in-text citation to a source that actually supports that statement.
 
 ---
 
@@ -132,7 +129,7 @@ T_i^{\rm travel}
 T_i^{R}.
 ```
 
-Only after this formulation can the interdependency be investigated rigorously.
+Only after this formulation can the interdependency be investigated rigorously. If an equation, constitutive law, algorithm, metric, threshold, or modeling assumption is adopted or adapted from external work, its source must be cited immediately before or after the equation in APA 7 author–date form.
 
 ---
 
@@ -168,7 +165,7 @@ h(x,t)
 Each arrow must eventually be associated with:
 
 1. a governing equation or explicit functional relation;
-2. empirical, experimental, theoretical, or authoritative engineering evidence;
+2. empirical, experimental, theoretical, or authoritative engineering evidence with an adjacent verified citation when externally sourced;
 3. explicit assumptions;
 4. uncertainty and a validity domain.
 
@@ -200,16 +197,7 @@ H_1:
 M_1\text{ changes explanation, prediction, or decision sufficiently}.
 ```
 
-Example:
-
-```math
-H_0:
-\operatorname{TopK}(C)
-=
-\operatorname{TopK}(C^{\mathcal V}).
-```
-
-If this is supported across the prespecified domain, a new viability-aware interface ranking may not be necessary. A negative result is scientifically informative rather than a failure of the research process.
+A negative result is scientifically informative rather than a failure of the research process. Thresholds and decision rules must be justified and fixed before confirmatory execution where the design requires preregistration.
 
 ---
 
@@ -269,7 +257,7 @@ The synthesis must answer:
 5. What remains unresolved?
 6. Which unresolved part matters to the engineering problem?
 
-The final question prevents literature review from becoming bibliography accumulation.
+Reviews may support field-level synthesis, but method definitions, equations, numerical parameters, and specific empirical claims should be traced to primary sources whenever feasible. Citation quantity cannot substitute for source relevance or evidentiary quality.
 
 ---
 
@@ -316,7 +304,7 @@ For every important thesis statement, construct the chain
 \textbf{ENGINEERING IMPLICATION}.
 ```
 
-No element should be silently omitted when it materially affects the inference.
+No element should be silently omitted when it materially affects the inference. External evidence in this chain must be recoverable through the corresponding APA 7 in-text citation and reference-list entry.
 
 ---
 
@@ -373,20 +361,6 @@ If probability distributions are not justified, use deterministic or interval-ba
 ```math
 H:
 P_{\rm control}\text{ materially changes intervention priority}.
-```
-
-### Test
-
-Compare a baseline criticality measure $C_i$ with
-
-```math
-A_i=C_iP_{{\rm control},i}
-```
-
-and
-
-```math
-H_i=C_i\left(1-P_{{\rm control},i}\right).
 ```
 
 ### Engineering implication
@@ -465,59 +439,178 @@ Complexity has no intrinsic scientific value. Additional mathematical structure 
 
 ---
 
-## 14. Application to the seven-stage thesis framework
+## 14. Application to the seven-stage thesis framework v2.0
 
 This reasoning protocol applies within and between all seven stages:
 
 ```math
-\mathcal S
-\rightarrow
-\mathfrak I
-\rightarrow
-F_{\mathcal G}^{m}
-\rightarrow
-(X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u)
-\rightarrow
-(K_{\rm sus},\mathcal V,\rho,T_{\mathcal V},T_K)
-\rightarrow
-\Phi_{\rm ST}
-\rightarrow
-\mathfrak P_{\rm ST}.
+\begin{aligned}
+K(t)
+&\rightarrow (\mathcal S,\mathcal G,X)\\
+&\rightarrow \mathbb I(x,t,Y,m)\\
+&\rightarrow F_{\mathcal G}^{m}\\
+&\rightarrow Y(x,t)\\
+&\rightarrow y_t\rightarrow\mathcal I_t\rightarrow p(Y_t\mid\mathcal I_t)\rightarrow\mathcal U(z_I,z_O)\rightarrow u_t\\
+&\rightarrow \mathfrak R_T\\
+&\rightarrow \mathcal D_R\rightarrow a_k\rightarrow Y^{a_k}\rightarrow(\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})\\
+&\rightarrow \mathcal A_{R,S}^{\star}.
+\end{aligned}
+```
+
+with the Stage-5 resilience object
+
+```math
+\mathfrak R_T
+=
+\left(
+\mathcal V_{\alpha,T},
+\mathcal R_{\beta,T},
+\rho_{\mathcal V},
+T_{\mathcal V},
+T_{\rm rec},
+P_{\rm viable},
+P_{\rm recover}
+\right).
 ```
 
 For every transition, ask:
 
 > **What exactly justifies this arrow?**
 
-The answer must ultimately be traceable to definitions, evidence, mechanism, mathematics, assumptions, tests, verification/validation results, uncertainty, and a stated domain of validity.
+The answer must ultimately be traceable to definitions, evidence, mechanism, mathematics, assumptions, tests, verification/validation results, uncertainty, a stated domain of validity, and APA 7 citations for externally sourced claims.
 
 ---
 
-## 15. Thesis-wide source and reasoning discipline
+## 15. Mandatory APA 7 in-text citation discipline
+
+### 15.1 Non-negotiable rule
+
+> **No externally sourced scientific claim enters the thesis without an adjacent, verified APA 7 author–date in-text citation.**
+
+Citation is part of the evidence chain, not decoration.
+
+An adjacent citation is required for externally sourced:
+
+- scientific facts and empirical findings;
+- theoretical or methodological claims;
+- definitions attributed to prior scholarship;
+- equations, algorithms, metrics, models, taxonomies, or frameworks adopted or adapted from prior work;
+- numerical parameters, thresholds, coefficients, datasets, and benchmark values;
+- standards, regulations, official requirements, and authoritative engineering guidance;
+- literature-based statements about research gaps, consensus, limitations, trends, or novelty boundaries.
+
+A citation is **not** fabricated for:
+
+- a thesis-defined notation;
+- a new thesis hypothesis;
+- a transparent mathematical derivation performed from already cited premises;
+- a thesis design decision;
+- a result generated by this thesis.
+
+These must instead be labeled `[D]`, `[H]`, `[P]`, `[A]`, or as thesis results, with the supporting premises/evidence cited where applicable.
+
+### 15.2 APA 7 author–date forms
+
+Use narrative citation when the author is part of the sentence:
+
+```text
+Tong et al. (2025) identify temporal–geographic performance evolution as a future research direction.
+```
+
+Use parenthetical citation when the source supports the preceding claim:
+
+```text
+Performance/recovery curves remain a widely used infrastructure-resilience representation (Poulin & Kane, 2021).
+```
+
+For three or more authors, use `et al.` from the first in-text citation. For two authors, cite both surnames. Multiple works in one parenthesis follow APA ordering and are separated by semicolons.
+
+Direct quotations require the APA 7 locator, normally page number or paragraph number where page numbers are unavailable:
+
+```text
+(Author, Year, p. xx)
+```
+
+Direct quotation should be exceptional; technical synthesis and precise paraphrase are preferred.
+
+### 15.3 Equation and model attribution
+
+When mathematics is adopted or adapted from prior work, citation must be adjacent to the equation and the status must be explicit:
+
+```text
+Following the stochastic target-tube formulation of Vinod and Oishi (2021), ...
+```
+
+or
+
+```text
+Adapted from Vinod and Oishi (2021).
+```
+
+A source that merely uses a method is not sufficient authority for the method's definition when a primary theoretical source is available.
+
+### 15.4 Citation-quality gate
+
+Every citation must pass:
+
+```math
+\boxed{
+\text{Identity}
++\text{Relevance}
++\text{Claim support}
++\text{Source quality}
++\text{Metadata verification}
++\text{Validity domain}
+}
+```
+
+Specifically:
+
+1. verify author(s), year, title, venue, DOI/official identifier where available;
+2. verify that the cited source supports the exact clause, number, equation, or interpretation;
+3. prefer primary theoretical/empirical sources for specific claims and use reviews for synthesis;
+4. do not cite a review as if it directly generated evidence reported in an underlying primary study;
+5. preserve the population, infrastructure domain, hazard, scale, time period, and model assumptions of the cited evidence;
+6. record contradictory evidence when material;
+7. never use citation count, journal prestige, or institutional affiliation as a substitute for evidentiary relevance.
+
+### 15.5 Tables, figures, and captions
+
+Scientific claims inside tables, figure captions, diagrams, and framework annotations are subject to the same citation rule. A citation placed elsewhere in the chapter does not automatically support an uncited quantitative or theoretical statement inside a figure or table.
+
+### 15.6 Reference-list integrity
+
+Every in-text citation must resolve to exactly one verified reference-list entry, and every reference-list entry should be cited in the thesis unless the selected style guide or document purpose explicitly justifies otherwise.
+
+Reference metadata must be checked against the publisher, DOI record, standard-setting body, government source, or other authoritative record before final submission.
+
+---
+
+## 16. Thesis-wide source and reasoning discipline
 
 For substantial scientific claims:
 
 1. learn the governing theory before proposing an application;
 2. search reproducibly when external evidence is needed;
 3. prioritize primary theory, authoritative standards, peer-reviewed technical evidence, and validated benchmarks;
-4. cite scientific support in text adjacent to the claim it supports;
-5. separate source-derived evidence from thesis inference and proposal;
+4. cite scientific support in APA 7 author–date form immediately adjacent to the claim it supports;
+5. separate source-derived evidence from thesis inference, assumption, hypothesis, proposal, and result;
 6. record contradictory evidence rather than suppressing it;
 7. preserve the validation domain and uncertainty of every transferred model or parameter;
-8. advance a thesis claim only after the competing explanations and failure conditions are explicit.
-
-This section governs both writing and analysis: citation is not decoration; it is part of the inferential chain.
+8. advance a thesis claim only after competing explanations and failure conditions are explicit;
+9. verify reference metadata and source-to-claim correspondence before release;
+10. treat a missing, weak, or mismatched citation as an evidence-chain defect.
 
 ---
 
-## 16. Operational research record
+## 17. Operational research record
 
 For every new object $Q$, the working record should answer at minimum
 
 ```math
 Q
 \mapsto
-(\text{definition},\text{mechanism},\text{evidence},\text{assumptions},\text{model},\text{test},\text{validation domain},\text{uncertainty},\text{rival},\text{falsification},\text{engineering implication}).
+(\text{definition},\text{mechanism},\text{evidence},\text{citations},\text{assumptions},\text{model},\text{test},\text{validation domain},\text{uncertainty},\text{rival},\text{falsification},\text{engineering implication}).
 ```
 
 This is the canonical reasoning protocol for the entire thesis until explicitly revised through a versioned update.
