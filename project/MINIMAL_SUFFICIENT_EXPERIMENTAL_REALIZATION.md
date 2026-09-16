@@ -6,6 +6,7 @@ SOURCE: user-supplied Pasted markdown(20260911-043555).md
 SOURCE_SHA256: ebfe4dc7b3404fa817ddcaf137832e6ee372fb4cfeca0a57fa6aa5cc5bb2c9e3
 PRESERVATION RULE: scientific reasoning, equations, H1-H5 preservation logic, V&V/UQ arguments, and demonstrator-selection principles are preserved from the supplied source.
 DISPLAY-ONLY NORMALIZATION: heading hierarchy standardized; malformed Markdown table repaired; Equation RD reformatted to GitHub-safe multiline mathematics; fragile LaTeX tag removed and replaced with a Markdown equation label.
+NOTATION SYNCHRONIZATION: 2026-09-16; Stage-2 notation follows CANONICAL_DEPENDENCY_CONTRACT_V1.md without changing demonstrator-selection logic.
 FREEZE BOUNDARY: this document defines the demonstrator-selection methodology and governing principle; it does not freeze the actual demonstrator topology, parameterization, hazard family, or numerical thresholds.
 -->
 
@@ -20,7 +21,15 @@ The distinction is:
 The full framework remains
 
 ```math
-\boxed{ P,T,I,O \rightarrow \mathfrak I \rightarrow F_{\mathcal G}^{m} \rightarrow (I,\hat X,O,u) \rightarrow \mathcal V \rightarrow \Phi_{\rm ST} \rightarrow \mathfrak P_{\rm ST}. }
+\boxed{ P,T,I,O \rightarrow \mathbb I \rightarrow F_{\mathcal G}^{m} \rightarrow (I,\hat X,O,u) \rightarrow \mathcal V \rightarrow \Phi_{\rm ST} \rightarrow \mathfrak P_{\rm ST}. }
+```
+
+where the Stage-2 active dependency set is
+
+```math
+\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\},
+\qquad
+\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e).
 ```
 
 The demonstrator is a deliberately controlled subset:
@@ -48,7 +57,7 @@ Our hypotheses concern specific mechanisms.
 For example:
 
 ```math
-H_1: \mathfrak I \rightarrow F_{\mathcal G}
+H_1: \mathbb I \rightarrow F_{\mathcal G}
 ```
 
 tests whether dynamic interdependencies matter.
@@ -373,7 +382,7 @@ Ablation is essential for our thesis.
 Suppose the full model is:
 
 ```math
-M_{\rm full} = P+T+I+O+\mathfrak I.
+M_{\rm full} = P+T+I+O+\mathbb I.
 ```
 
 We need experiments such as:
@@ -387,8 +396,16 @@ M_{\rm full}-O,
 ```
 
 ```math
-M_{\rm full}-\delta_{ij},
+M_{\rm full}-\mathfrak d_e,
 ```
+
+or a prespecified mechanism-parameter/activation contrast
+
+```math
+(\theta_e,\gamma_e)\rightarrow(\theta_e^{(0)},\gamma_e^{(0)}),
+```
+
+as well as
 
 ```math
 M_{\rm dynamic}-M_{\rm static}.
@@ -538,10 +555,10 @@ The demonstrator must retain:
 F_P,\qquad F_T.
 ```
 
-### Causal interdependency
+### Causal dependency/interdependency semantics
 
 ```math
-\mathfrak I^{PT}.
+\mathfrak d_e^{PT},\qquad \mathfrak d_{e'}^{TP},\qquad \mathbb I^{PT}(t).
 ```
 
 ### Information dynamics
@@ -571,7 +588,7 @@ u=\pi(\hat X,I,O).
 ### Transformation
 
 ```math
-\mathcal M_k\rightarrow\mathcal M_{k+1}.
+\mathfrak M_k\rightarrow\mathfrak M_{k+1}.
 ```
 
 So the correct objective is:
@@ -671,7 +688,7 @@ This gives us a rigorous **stopping rule for simplification**.
 | Organization | governance + decision + coordination + workforce + logistics + learning | retain decision/resource/mobilization mechanisms |
 | Hazards | multi-hazard | one primary disturbance family |
 | Geography | potentially regional/national | controlled network/city-scale case |
-| Transformation actions | large intervention library | small representative `P,T,I,O,\mathfrak I` library |
+| Transformation actions | large intervention library | small representative `P,T,I,O,\mathbb I` library |
 | State dimension | full physical state | full simulation state + separate reduced viability state |
 
 Notice:
@@ -693,7 +710,7 @@ The following are non-negotiable because they form the thesis logic:
 ```
 
 ```math
-\boxed{ \mathfrak I }
+\boxed{ \mathbb I=\{\mathfrak d_e\} }
 ```
 
 ```math
@@ -711,7 +728,7 @@ The following are non-negotiable because they form the thesis logic:
 and at least one:
 
 ```math
-\boxed{ \mathcal M_0 \rightarrow \mathcal M_1 }
+\boxed{ \mathfrak M_0 \rightarrow \mathfrak M_1 }
 ```
 
 Stage-7 transformation.
