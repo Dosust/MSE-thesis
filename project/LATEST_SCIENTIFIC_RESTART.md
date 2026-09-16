@@ -1,19 +1,67 @@
 # Latest Scientific Restart Pointer
 
 **Updated:** 2026-09-16  
-**Purpose:** single live pointer to the latest immutable checkpoint and immediate next admissible task.  
+**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, document controls, and immediate next admissible task.
 
 ## Read first
 
 1. `SCIENTIFIC_CHECKPOINT_2026-09-16_MODEL_FAMILY_V1.md`
 2. `AUTONOMOUS_EXECUTION_STATUS.md`
-3. `STAGE_MODEL_FAMILY_SELECTION_GATE_V1.md`
-4. `CANONICAL_7_STAGE_FRAMEWORK_V2.md`
-5. `CANONICAL_RQ_SO_HYPOTHESES_V2.md`
-6. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-7. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-8. `H3_PREREGISTRATION_V1.md`
-9. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+3. `EGMIV_TSP_THESIS_OPERATING_PROTOCOL_V1.md`
+4. `STAGE_MODEL_FAMILY_SELECTION_GATE_V1.md`
+5. `CANONICAL_7_STAGE_FRAMEWORK_V2.md`
+6. `CANONICAL_RQ_SO_HYPOTHESES_V2.md`
+7. `RESEARCH_REASONING_PROTOCOL.md`
+8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
+9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
+10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
+11. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+12. `H3_PREREGISTRATION_V1.md`
+13. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+
+## Thesis-only execution rule
+
+All future thesis work is governed operationally by `EGMIV_TSP_THESIS_OPERATING_PROTOCOL_V1.md`:
+
+```math
+\boxed{
+\text{Prompt}
+\rightarrow
+\text{Thesis destination}
+\rightarrow
+\text{Scientific question}
+\rightarrow
+\text{Evidence}
+\rightarrow
+\text{Mathematics}
+\rightarrow
+\text{Test}
+\rightarrow
+\text{Citation}
+\rightarrow
+\text{Thesis-ready output}.
+}
+```
+
+```math
+\boxed{\text{No thesis purpose}\Rightarrow\text{No research action}.}
+```
+
+Online research must be targeted to a declared evidence deficit and must stop when that thesis object is qualified or its evidence boundary is documented. External scientific claims require adjacent verified APA 7 author–date citations under the canonical reasoning protocol.
+
+## Document-control rule
+
+The working submitted-manuscript cap is controlled by `THESIS_PAGE_BUDGET_160_V1.md`:
+
+```math
+\boxed{P_{\rm total}=160\ \text{pages}.}
+```
+
+This is an internal scope-control target, not an ASU page-count requirement. Compression follows:
+
+```math
+\boxed{\text{Remove repetition, not science}.}
+```
 
 ## Current scientific endpoint
 
@@ -24,6 +72,10 @@
 \text{RQ/SO/H v2 closed}
 \rightarrow
 \text{stage model-family gate saved}
+\rightarrow
+\text{EGMIV--TSP activated}
+\rightarrow
+\text{160-page architecture frozen}
 \rightarrow
 \text{H3 semantic/preregistration architecture closed}
 \rightarrow
@@ -70,6 +122,16 @@ T_R
 }
 ```
 
+Routing under EGMIV–TSP:
+
+```text
+Chapter:       3 and 4
+Stage:         5
+RQ/H:          RQ3 / H3
+Output:        qualified threshold-and-horizon evidence registry
+Stop when:     every required quantity is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
+```
+
 For every candidate value record:
 
 ```text
@@ -101,6 +163,8 @@ Then continue:
 }
 ```
 
+Parallel work is limited to already-authorized H1/H2 qualification tasks.
+
 ## Hard prohibition
 
-Do not return to framework redesign, freeze SCM/POMDP/HJ/MPC/DRO by preference, invent numerical thresholds/probability levels, or run H3 confirmatorily until the existing evidence, model, algorithm, metric and data gates close.
+Do not return to framework redesign, browse without a thesis evidence need, collect papers without extraction purpose, freeze SCM/POMDP/HJ/MPC/DRO by preference, introduce AI/ML by fashion, invent numerical thresholds/probability levels, use unchecked citations, or run H3 confirmatorily until the existing evidence, model, algorithm, metric, and data gates close.
