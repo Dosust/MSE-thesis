@@ -1,7 +1,7 @@
 # Latest Scientific Restart Pointer
 
 **Updated:** 2026-09-17  
-**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, document controls, H3 demonstrator, and immediate next admissible task.
+**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, document controls, H3 demonstrator, data-materialization state, and immediate next admissible task.
 
 ## Read first
 
@@ -17,9 +17,10 @@
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
 11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`
 12. `H3_DEMONSTRATOR_FREEZE_V1.md`
-13. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-14. `H3_PREREGISTRATION_V1.md`
-15. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+13. `H3_HOUSTON_DATA_MATERIALIZATION_QA_V1.md`
+14. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+15. `H3_PREREGISTRATION_V1.md`
+16. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
 
 ## Thesis-only execution rule
 
@@ -79,7 +80,9 @@ This is an internal scope-control target, not an ASU page-count requirement.
 \rightarrow
 \{s_P^{\min},s_T^{\min},s_{P,rec},s_{T,rec},F,T_V,T_R\}\text{ structurally qualified}
 \rightarrow
-\boxed{\mathcal C_{H3}^{HOU}\text{ demonstrator frozen}}.
+\mathcal C_{H3}^{HOU}\text{ demonstrator frozen}
+\rightarrow
+\boxed{\text{source families qualified; raw-byte materialization blocked}}.
 }
 ```
 
@@ -95,8 +98,6 @@ The primary H3 case is controlled by `H3_DEMONSTRATOR_FREEZE_V1.md`.
 }
 ```
 
-### Fixed case identity
-
 ```text
 Geographic domain: City of Houston, Texas, plus only required boundary connectors.
 Case type: geographically grounded semisynthetic mechanism-validation demonstrator.
@@ -105,94 +106,103 @@ Transport: H-GAC roadway/model/traffic data, Houston subset.
 P→T: traffic-signal electricity dependency.
 T→P: repair-crew accessibility/travel-time dependency.
 Hazard: observed USGS/FEMA Hurricane Harvey flood-depth/inundation field used as spatial stress.
-Recovery origin: declared post-impact damage-assessment epoch.
 Primary claim type: mechanism/decision-value, NOT historical 2017 reconstruction.
 ```
 
 The common flood field is not treated as a P↔T causal dependency. Actual utility feeder-to-signal/facility connections are not claimed; cross-layer mappings are reproducible demonstrator constructions and must be validated/sensitivity-tested.
 
-### Primary-H3 exclusions
+## Data-materialization state
 
-The primary H3 demonstrator excludes EV/V2G, rail traction coupling, fuel coupling, MEPS/mobile storage, full telecom-network failure, full hydrodynamic replay, actual CenterPoint topology, and AI/GNN forecasting unless later evidence shows one is necessary to answer H3.
+`H3_HOUSTON_DATA_MATERIALIZATION_QA_V1.md` qualifies and freezes the source families and QA protocol.
+
+Qualified sources:
+
+```text
+D_P: Texas combined T&D / SMART-DS v0.9 public OEDI S3 data;
+D_T: H-GAC 2025 Transportation Conformity roadway-network/link files and traffic data;
+D_S: City of Houston Public Works Traffic Signal GIS layer;
+D_F: USGS/FEMA Harvey flood-inundation/depth data, San Jacinto first;
+D_Omega: authoritative Houston municipal boundary still to be fixed.
+```
+
+Current source gate:
+
+```math
+\boxed{
+G_{source,P}=G_{source,T}=G_{source,S}=G_{source,F}=1.
+}
+```
+
+Current raw-byte/materialization gate:
+
+```math
+\boxed{G_{bytes}=0.}
+```
+
+The current runtime cannot reliably retrieve the large/public external data archives: direct H-GAC materialization failed and unrestricted external DNS/network access is unavailable to the local execution container. Therefore no file hash, byte count, geometry count, network dimension, CRS, coverage ratio, or cross-layer mapping statistic is claimed yet.
+
+This is a data-access/materialization blocker, not H3 falsification.
 
 ## Gate state
 
 ```math
 \boxed{
 G_{case}=1,
-\qquad
+\quad
+G_{source}=1,
+\quad
+G_{bytes}=0,
+\quad
+G_{QA}=0,
+\quad
 G_K=0,
-\qquad
+\quad
 G_U=0,
-\qquad
+\quad
 G_{\Pi}=0,
-\qquad
+\quad
 G_{alg}=0.
 }
 ```
 
-`G_case=1` means the demonstrator architecture and source families are frozen. It does **not** authorize confirmatory H3 execution.
-
-The case-specific realizations of
-
-```math
-\{s_P^{\min},s_T^{\min},s_{P,rec},s_{T,rec},F,T_V,T_R\}
-```
-
-remain OPEN until source files, cross-layer mappings, thresholds, uncertainty, and validity metadata are materialized and frozen.
+H3 confirmatory execution remains NOT AUTHORIZED.
 
 ## Immediate next task
 
 ```math
 \boxed{
-\text{Houston data materialization + QA}
+D_{\Omega}
 \rightarrow
-\text{case-specific numerical registry}
+D_P
 \rightarrow
-\text{uncertainty qualification}.
+D_T
+\rightarrow
+D_S
+\rightarrow
+D_F
+\rightarrow
+\text{SHA256 + CRS + geometry/network QA}.
 }
 ```
 
-Required order:
+Exact order:
 
 ```text
-1. acquire/materialize SMART-DS/Texas T&D Houston data;
-2. acquire/materialize H-GAC roadway/traffic/OD data;
-3. acquire City of Houston traffic-signal data;
-4. acquire USGS/FEMA Harvey flood-depth/inundation data;
-5. record source versions, licenses, CRS, file hashes, and download dates;
-6. clip/reproject using the frozen Houston-domain rules;
-7. verify P and T network closure/connectivity;
-8. construct and QA reproducible P→T signal mappings;
-9. construct and QA T→P repair-access mappings;
-10. report network/interface counts and spatial coverage;
-11. populate the seven-object H3 case-specific threshold/recovery registry;
-12. qualify uncertainty representations under H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md.
+1. materialize and freeze an authoritative City of Houston municipal boundary;
+2. enumerate SMART-DS coordinate metadata and select only Houston-intersecting substations/circuits plus necessary boundary circuits;
+3. materialize those OpenDSS/time-series/geographic objects and hash them;
+4. materialize H-GAC Appendix C.4 roadway-network files plus link/capacity/validation support files;
+5. materialize City traffic-signal point features with pagination and record field/CRS metadata;
+6. materialize USGS San Jacinto flood-depth raster, inundation polygon, and metadata; add adjacent Harvey basins only if Houston coverage is incomplete;
+7. freeze raw-file SHA-256, byte counts, licenses, versions, access dates, native CRS and temporal support;
+8. clip/reproject into one justified common analysis CRS;
+9. run power-flow/network-topology QA and transport-topology/service QA;
+10. construct and audit P→T signal-supply and T→P repair-access demonstrator mappings;
+11. report N_P, M_P, N_T, M_T, N_S, interface counts, match-rate distributions and Harvey coverage;
+12. only then populate the numerical H3 registry and advance uncertainty qualification.
 ```
 
-Stop if the data/interface coverage is scientifically inadequate. Do not manually invent interfaces or thresholds to force `G_K=1`.
-
-Then continue:
-
-```math
-\boxed{
-\text{data/case registry closure}
-\rightarrow
-\text{uncertainty qualification}
-\rightarrow
-\Pi_{\rm adm}
-\rightarrow
-\text{solver selection and verification}
-\rightarrow
-\text{metric}+\delta_3
-\rightarrow
-\text{development/test data freeze}
-\rightarrow
-\text{H3 execution}.
-}
-```
-
-Parallel work remains limited to already-authorized H1/H2 qualification tasks.
+Stop if materialized data or interface coverage is scientifically inadequate. Do not fabricate substitute raw data, network counts, mappings, thresholds, or probability models.
 
 ## Hard prohibition
 
