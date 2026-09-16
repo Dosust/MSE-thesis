@@ -15,7 +15,7 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V5.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V6.md`
 12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
 13. `H3_PREREGISTRATION_V1.md`
 14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
@@ -48,11 +48,9 @@ All future thesis work is governed operationally by `EGMIV_TSP_THESIS_OPERATING_
 \boxed{\text{No thesis purpose}\Rightarrow\text{No research action}.}
 ```
 
-Online research must be targeted to a declared evidence deficit and stop when the thesis object is qualified or its evidence boundary is documented. External scientific claims require adjacent verified APA 7 author–date citations under the canonical reasoning protocol.
+Online research must be targeted to a declared evidence deficit and stop when the thesis object is qualified or its evidence boundary is documented. External scientific claims require adjacent verified APA 7 author–date citations.
 
 ## Document-control rule
-
-The working submitted-manuscript cap remains
 
 ```math
 \boxed{P_{\rm total}=160\ \text{pages}.}
@@ -90,13 +88,15 @@ s_{T,\rm rec}\checkmark
 \rightarrow
 F\checkmark
 \rightarrow
-T_V\text{ next}.
+T_V\checkmark
+\rightarrow
+T_R\text{ next}.
 }
 ```
 
-## Qualified H3 state/service objects
+## Qualified H3 objects
 
-Current evidence registry: `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V5.md`.
+Current evidence registry: `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V6.md`.
 
 ```math
 \boxed{
@@ -106,47 +106,71 @@ s_P^{\min}&\text{SUPPORTED}&\text{OPEN}\\
 s_T^{\min}&\text{SUPPORTED}&\text{OPEN}\\
 s_{P,\rm rec}&\text{SUPPORTED}&\text{OPEN}\\
 s_{T,\rm rec}&\text{SUPPORTED}&\text{OPEN}\\
-F&\text{SUPPORTED AS PROVENANCE-CONSTRAINED CONSTRUCTION}&\text{OPEN}
+F&\text{SUPPORTED AS PROVENANCE-CONSTRAINED CONSTRUCTION}&\text{OPEN}\\
+T_V&\text{SUPPORTED AS PROVENANCE-CONSTRAINED FINITE HORIZON}&\text{OPEN}
 \end{array}
 }
 ```
 
 All remain blocked from confirmatory code until the selected case authority/data freeze supplies admissible numerical values/criteria with uncertainty and validity metadata.
 
-## `F` qualification result
+## `T_V` qualification result
 
-The hard-failure / avoid set is specified by case-qualified forbidden criteria:
+`T_V` is the finite duration over which acceptable coupled operation must be maintainable:
 
 ```math
 \boxed{
-F(t)=\bigcup_{r\in R_F}\{Y:h_r(Y,t;\kappa_r)>0\}.
+\Pr^{\pi}
+\left[
+Y_\tau\in K(\tau),\ \forall\tau\in[t,t+T_V]
+\mid\mathcal I_t
+\right]
+\ge\alpha.
 }
 ```
 
-The following are frozen rules:
+The evidence-supported provenance hierarchy is:
+
+```text
+Tier V-A: direct authority/service-continuity duration;
+Tier V-B: authority-defined disruption/outage scenario requiring service throughout;
+Tier V-C: evidence-bounded explicit thesis assumption with preregistered sensitivity analysis.
+```
+
+No universal `T_V` is admitted. A value such as 12 h, 24 h, 72 h, 7 d, 14 d, or 30 d cannot be transferred from another organization, paper, tutorial, or software default without matching authority and validity domain.
+
+The following distinctions are frozen:
 
 ```math
-\boxed{K(t)\cap F(t)=\varnothing,}
+\boxed{\Delta t_{sim}\neq T_V,}
 ```
 
 ```math
-\boxed{D(t)=K(t)^c\setminus F(t),}
+\boxed{\Delta t_{obs}\neq T_V,}
 ```
-
-and, for the intended degraded-recovery H3 problem,
 
 ```math
-\boxed{F(t)\subsetneq K(t)^c,\qquad D(t)\neq\varnothing.}
+\boxed{T_{sim}\neq T_V\ \text{in general},}
 ```
 
-`F=K^c` is rejected. Service below `s_P^{min}` or `s_T^{min}`, a component outage, or a recoverable operating-limit excursion is not automatically hard failure. Power-side candidate hard states require case-authority support for instability, uncontrolled separation, cascading, protection/safety or another non-admissible emergency criterion. Transportation-side candidate hard states require case-authority support for unsafe use or non-negotiable life-safety/critical-access failure. Coupled P–T hard criteria may be added only when genuine joint forbidden-state evidence exists.
+```math
+\boxed{T_H\neq T_V\ \text{in general},}
+```
 
-`F` must be defined independently of the reachability result; using solver non-recoverability to define `F` is circular and prohibited.
+```math
+\boxed{\Delta t_{plan}\neq T_V,}
+```
+
+```math
+\boxed{T_R\neq T_V\ \text{in general}.}
+```
+
+A single computational horizon may cover different sector-specific continuity requirements only if the time-varying `K(τ)` preserves each requirement's actual temporal support.
 
 ## Immediate next task
 
 ```math
-\boxed{T_V}
+\boxed{T_R}
 ```
 
 Routing under EGMIV–TSP:
@@ -155,18 +179,12 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Object:        viability / maintainability horizon
-Output:        qualified engineering basis for T_V with units, provenance, uncertainty, validity domain, and explicit separation from simulation horizon, observation interval, hazard duration, and T_R
-Stop when:     T_V is evidence-supported, explicit assumption, rejected, or documented open
+Object:        recovery deadline / horizon
+Output:        qualified engineering basis for T_R with units, provenance, uncertainty, validity domain, and explicit separation from T_V, hazard duration, simulation duration, recovery-service threshold, and dwell time
+Stop when:     T_R is evidence-supported, explicit assumption, rejected, or documented open
 ```
 
-The remaining H3 qualification order is
-
-```math
-\boxed{T_V\rightarrow T_R.}
-```
-
-Then continue:
+Once `T_R` is qualified, the H3 service/state-set evidence-qualification sequence is structurally complete and the workflow advances to
 
 ```math
 \boxed{
@@ -186,4 +204,4 @@ Parallel work remains limited to already-authorized H1/H2 qualification tasks.
 
 ## Hard prohibition
 
-Do not return to framework redesign, browse without a thesis evidence need, collect papers without extraction purpose, freeze SCM/POMDP/HJ/MPC/DRO by preference, introduce AI/ML by fashion, invent numerical thresholds/probability levels, use unchecked citations, define `F` from preliminary solver outputs, or run H3 confirmatorily until the existing evidence, model, algorithm, metric, and data gates close.
+Do not return to framework redesign, browse without a thesis evidence need, collect papers without extraction purpose, freeze SCM/POMDP/HJ/MPC/DRO by preference, introduce AI/ML by fashion, invent numerical thresholds/probability levels/horizons, use unchecked citations, define `F` from preliminary solver outputs, or run H3 confirmatorily until the existing evidence, model, algorithm, metric, and data gates close.
