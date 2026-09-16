@@ -19,16 +19,19 @@
 12. `H3_SMARTDS_YEAR_QUALIFICATION_V1.md`
 13. `H3_SMARTDS_ELECTRICAL_CLOSURE_AND_OPENDSS_QA_V1.md`
 14. `H3_HGAC_TRANSPORT_SOURCE_AND_BASEYEAR_QUALIFICATION_V1.md`
-15. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-16. `H3_PREREGISTRATION_V1.md`
-17. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
-18. `../methods/h3/materialize_houston_boundary.py`
-19. `../methods/h3/inventory_smartds_houston.py`
-20. `../methods/h3/materialize_smartds_houston_power.py`
-21. `../methods/h3/qa_smartds_power_layer.py`
-22. `../methods/h3/materialize_hgac_transport.py`
-23. `../config/h3_houston_power_source_v1.json`
-24. `../config/h3_houston_transport_source_v1.json`
+15. `H3_HOUSTON_TRAFFIC_SIGNAL_SOURCE_AND_MATERIALIZATION_V1.md`
+16. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+17. `H3_PREREGISTRATION_V1.md`
+18. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+19. `../methods/h3/materialize_houston_boundary.py`
+20. `../methods/h3/inventory_smartds_houston.py`
+21. `../methods/h3/materialize_smartds_houston_power.py`
+22. `../methods/h3/qa_smartds_power_layer.py`
+23. `../methods/h3/materialize_hgac_transport.py`
+24. `../methods/h3/materialize_houston_traffic_signals.py`
+25. `../config/h3_houston_power_source_v1.json`
+26. `../config/h3_houston_transport_source_v1.json`
+27. `../config/h3_houston_signal_source_v1.json`
 
 ## Thesis-only execution rule
 
@@ -62,19 +65,15 @@ Blocked execution may be bypassed only by scientifically independent preparation
 
 ```math
 \boxed{
-\text{Framework/RQ/H closed}
-\rightarrow
 \mathcal C_{H3}^{HOU}\text{ frozen}
 \rightarrow
-D_{\Omega}\text{ source/semantics frozen}
+D_{\Omega}\text{ source/semantics frozen but byte QA blocked}
 \rightarrow
-\text{boundary execution externally blocked}
+Y_P^{H3}=2016\text{ SMART-DS qualified}
 \rightarrow
-Y_P^{H3}=2016\text{ qualified}
+Y_T^{H3}=2023\text{ H-GAC qualified}
 \rightarrow
-\text{SMART-DS materialization/OpenDSS QA prepared}
-\rightarrow
-\boxed{Y_T^{H3}=2023\text{ H-GAC transport source/base year qualified + raw acquisition prepared}}.
+\boxed{D_S\text{ City traffic-signal source qualified + materializer prepared}}.
 }
 ```
 
@@ -88,22 +87,21 @@ Y_P^{H3}=2016\text{ qualified}
 }
 ```
 
-Primary claim type: geographically grounded semisynthetic mechanism/decision-value experiment, **not** historical reconstruction of Houston's actual 2017 grid, road state, outage chronology or restoration chronology.
+Primary claim type remains a geographically grounded **semisynthetic mechanism/decision-value experiment**, not reconstruction of Houston's actual 2017 grid, road state, outage chronology or restoration chronology.
 
-Primary service domain:
+Primary spatial support:
 
 ```math
 \boxed{
-\Omega_{HOU}:=\Omega_{core}
-=\operatorname{dissolve}(SERVICE\_TY=FULL).
+\Omega_{HOU}:=\Omega_{core}=\operatorname{dissolve}(SERVICE\_TY=FULL).
 }
 ```
 
-`Omega_limited` remains a separate sensitivity/context domain. Exterior electrical/road elements may be retained only when physically required for model/network closure and are excluded from service denominators unless independently justified.
+`Omega_limited` remains separate. Exterior P/T elements may be retained only when required for physical/network closure and are excluded from service denominators unless independently justified.
 
 ## Boundary gate
 
-The City of Houston source and FULL/LIMITED semantics are frozen, but two GitHub-hosted execution attempts ended before usable runner steps were executed. No raw boundary artifact was produced.
+City source and FULL/LIMITED semantics are frozen, but successful raw-byte/geometry execution remains unavailable:
 
 ```math
 \boxed{
@@ -117,36 +115,11 @@ G_{\Omega,QA}=0.
 
 Boundary byte/geometry QA is **NOT TESTED**, not scientifically failed.
 
-## SMART-DS power branch
-
-Frozen primary power source:
+## Power branch
 
 ```text
-SMART-DS version: v0.9
-Year:             2016
-Dataset:          Full_Texas
-Scenario:         base_timeseries
+SMART-DS v0.9 / 2016 / Full_Texas / base_timeseries
 ```
-
-```math
-\boxed{Y_P^{H3}=2016.}
-```
-
-Prepared sequence:
-
-```math
-G_{\Omega,QA}=1
-\rightarrow
-\text{Houston candidate substations}
-\rightarrow
-\text{candidate raw materialization}
-\rightarrow
-\text{OpenDSS compile/solve QA}
-\rightarrow
-N_P,M_P.
-```
-
-Current power gate:
 
 ```math
 \boxed{
@@ -164,62 +137,30 @@ G_{P,QA}=0.
 }
 ```
 
+Prepared chain:
+
+```math
+G_{\Omega,QA}=1
+\rightarrow
+\text{Houston candidate substations}
+\rightarrow
+\text{raw SMART-DS freeze}
+\rightarrow
+\text{OpenDSS compile/solve QA}
+\rightarrow
+N_P,M_P.
+```
+
 No Houston power asset IDs, graph dimensions, service denominator or convergence result are claimed yet.
 
-## H-GAC transportation branch
-
-Primary source family:
+## Transportation branch
 
 ```text
-Houston-Galveston Area Council (H-GAC)
-2025 Transportation Conformity
-C.4 Roadway Network Files
-C.3 Link Listing and Capacity Staging
-C.1 Travel Model Validation
+H-GAC 2025 Transportation Conformity
+Model base year: 2023
+Primary network: C.4 Roadway Network Files
+Support: C.3 Link Listing and Capacity Staging; C.1 Travel Model Validation
 ```
-
-The H-GAC conformity modeling system identifies the Travel Demand Model base year as 2023 and forecast years as 2026, 2030, 2040 and 2045. The primary H3 transport vintage is therefore frozen as
-
-```math
-\boxed{Y_T^{H3}=2023.}
-```
-
-This is a reproducibility/current-base-model choice for the semisynthetic demonstrator, not a claim that the 2023 network is historical Houston during Harvey.
-
-H-GAC regional context (not Houston graph dimensions):
-
-```text
-8-county model region;
-Cube Voyager environment;
-four-step demand modeling;
-5,263 TAZs total;
-5,217 internal TAZs;
-46 external zones/stations.
-```
-
-Prepared raw acquisition utility:
-
-```text
-methods/h3/materialize_hgac_transport.py
-```
-
-It preserves C.1/C.3/C.4 source bytes, records resolved URL/HTTP metadata/byte size/SHA-256, rejects HTML/error payloads, safely inventories ZIP archives, and preserves extracted members in `interim/` rather than modifying `raw/`.
-
-Regional raw acquisition does not require Houston boundary QA. Final Houston link/node selection does.
-
-The transport simulation and service graphs are kept distinct:
-
-```math
-\boxed{
-\mathcal G_{T,sim}^{HOU}
-\supseteq
-\mathcal G_{T,svc}^{HOU}.
-}
-```
-
-External/centroid/boundary connectors may be required for route continuity but are not automatically admitted to the `S_T` service denominator.
-
-Current transport gate:
 
 ```math
 \boxed{
@@ -237,7 +178,78 @@ G_{T,QA}=0.
 }
 ```
 
-No C.4 archive contents, CRS, network fields, Houston link IDs, `N_T`, `M_T`, OD matrix or service denominator are claimed yet.
+Prepared raw acquisition:
+
+```text
+methods/h3/materialize_hgac_transport.py
+```
+
+Raw regional acquisition may occur before `G_Omega_QA=1`; final Houston link/node selection may not.
+
+## Traffic-signal / P→T interface branch
+
+Primary source:
+
+```text
+City of Houston Public Works
+TDO/Traffic_Management_gx
+Traffic Signal — MapServer layer 26
+https://geogimsms.houstontx.gov/arcgis/rest/services/TDO/Traffic_Management_gx/MapServer/26
+```
+
+The parent service identifies layer 26 as `Traffic Signal`, reports City of Houston Public Works copyright, spatial reference 102740 / EPSG:2278, query support for JSON/GeoJSON/PBF, and `MaxRecordCount=2000`.
+
+The frozen mechanism remains
+
+```math
+\boxed{
+\text{power availability}
+\rightarrow
+\text{traffic-signal operation}
+\rightarrow
+\text{transport performance}.
+}
+```
+
+Signal locations do **not** reveal actual CenterPoint feeder assignments or feature-level backup-power states.
+
+Prepared materializer:
+
+```text
+methods/h3/materialize_houston_traffic_signals.py
+```
+
+It freezes layer metadata and count query, paginates the complete feature set, preserves every raw GeoJSON page, records byte sizes/SHA-256, verifies unique object IDs and point coordinates, and writes a processed WGS84 derivative. It does not clip to `Omega_core` or perform P/T mappings.
+
+Current signal gate:
+
+```math
+\boxed{
+G_{S,source}=1,
+\quad
+G_{S,prep}=1,
+\quad
+G_{S,raw}=0,
+\quad
+G_{S,core}=0,
+\quad
+G_{S,roadmap}=0,
+\quad
+G_{S,powermap}=0,
+\quad
+G_{S,QA}=0.
+}
+```
+
+After boundary closure:
+
+```math
+\mathcal S_{sig}^{HOU}
+=
+\{j:x_j\in\Omega_{core}\}.
+```
+
+Then freeze signal-to-road and signal-to-synthetic-power mappings before inspecting H3 outcomes. Mapping proximity is a demonstrator construction, not an observed utility service assignment.
 
 ## Current overall gate state
 
@@ -253,6 +265,8 @@ G_{P,prep}=1,
 \quad
 G_{T,prep}=1,
 \quad
+G_{S,prep}=1,
+\quad
 G_K=0,
 \quad
 G_U=0,
@@ -267,42 +281,42 @@ H3 confirmatory execution remains **NOT AUTHORIZED**.
 
 ## Immediate next admissible task
 
-Because the Houston boundary gate blocks final geographic selection but not independent raw source acquisition, the next admissible task is:
+The next independent source required by the frozen demonstrator is the observed Harvey flood field:
 
 ```math
 \boxed{
-\text{materialize H-GAC C.1/C.3/C.4 raw bytes}
+D_F\text{ source qualification + materialization preparation}
 \rightarrow
-\text{SHA256 + archive inventory}
+\text{depth/inundation provenance}
 \rightarrow
-\text{freeze actual file/field semantics}.
+\text{raw hash/CRS/raster-polygon QA}.
 }
 ```
 
-Execute when a network-enabled runtime can reach H-GAC:
+This can be prepared without changing the still-open P/T/signal geographic-selection gates.
 
-```bash
-python methods/h3/materialize_hgac_transport.py \
-  --root data/H3-HOU-FLOOD-V1 \
-  --source all
-```
-
-In parallel, a successful network-enabled Houston boundary run remains required before any final Houston P/T geographic selection.
-
-After `G_Omega_QA=1` and raw P/T materialization:
+When network-enabled execution becomes available, the pending raw tasks are:
 
 ```text
-1. complete SMART-DS Houston candidate inventory and OpenDSS QA;
-2. inspect H-GAC C.4/C.3 field semantics and construct the Houston roadway graph;
-3. materialize City traffic signals;
-4. materialize Harvey flood raster/polygon;
-5. construct and QA P→T and T→P mappings;
-6. report actual P/T/interface dimensions;
-7. populate the seven-object H3 case registry;
-8. qualify uncertainty;
-9. only then select/verify the H3 solver.
+1. Houston boundary bytes + geometry QA;
+2. H-GAC C.1/C.3/C.4 raw bytes + archive inventory;
+3. City traffic-signal raw pages + signal QA;
+4. 2016 SMART-DS Houston candidate inventory/materialization after boundary QA.
+```
+
+After `G_Omega_QA=1` and all raw layers are frozen:
+
+```text
+1. construct Houston power and road graphs;
+2. select Houston-core signals;
+3. overlay Harvey hazard;
+4. construct/QA P→T and T→P mappings;
+5. report actual P/T/signal/interface dimensions;
+6. populate the seven-object H3 case registry;
+7. qualify uncertainty;
+8. only then select/verify the H3 solver.
 ```
 
 ## Hard prohibition
 
-Do not construct Houston geometry from published extents; do not substitute third-party P/T data solely for convenience; do not infer actual CenterPoint topology from SMART-DS; do not treat H-GAC regional TAZ counts as Houston network counts; do not infer C.4 field semantics before raw inspection; do not treat traffic counts as `S_T` without an evidence-matched mapping; do not invent network dimensions or thresholds; and do not execute confirmatory H3 until every required gate closes.
+Do not invent geometry, counts, backup-power states, actual signal feeders, network dimensions, hazard probabilities, thresholds or mapping coverage; do not use maintenance requests as the canonical signal inventory; and do not execute confirmatory H3 until every required gate closes.
