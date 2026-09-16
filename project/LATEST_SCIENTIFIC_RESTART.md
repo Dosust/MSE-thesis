@@ -1,7 +1,7 @@
 # Latest Scientific Restart Pointer
 
 **Updated:** 2026-09-17  
-**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, H3 demonstrator, data-materialization state, repeated boundary execution blocker, and the prepared SMART-DS Houston extraction gate.
+**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, H3 demonstrator, data-materialization state, repeated boundary execution blocker, and qualified SMART-DS power-network vintage.
 
 ## Read first
 
@@ -22,11 +22,13 @@
 15. `H3_HOUSTON_BOUNDARY_EXECUTION_ATTEMPT_2026-09-17_V1.md`
 16. `H3_HOUSTON_BOUNDARY_EXECUTION_ATTEMPT_2026-09-17_V2.md`
 17. `H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md`
-18. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-19. `H3_PREREGISTRATION_V1.md`
-20. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
-21. `../methods/h3/materialize_houston_boundary.py`
-22. `../methods/h3/inventory_smartds_houston.py`
+18. `H3_SMARTDS_YEAR_QUALIFICATION_V1.md`
+19. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+20. `H3_PREREGISTRATION_V1.md`
+21. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+22. `../methods/h3/materialize_houston_boundary.py`
+23. `../methods/h3/inventory_smartds_houston.py`
+24. `../config/h3_houston_power_source_v1.json`
 
 ## Thesis-only execution rule
 
@@ -68,7 +70,9 @@ D_{\Omega}\text{ source/semantics frozen}
 \rightarrow
 \text{boundary execution attempted twice and externally blocked}
 \rightarrow
-\boxed{\text{SMART-DS Houston extraction machinery prepared but not executed}}.
+\text{SMART-DS Houston extraction machinery prepared}
+\rightarrow
+\boxed{Y_P^{H3}=2016\text{ power-network vintage qualified}}.
 }
 ```
 
@@ -112,11 +116,36 @@ G_{\Omega,QA}=0.
 
 The boundary is **NOT TESTED at byte/geometry level**, not failed scientifically.
 
-## SMART-DS power preparation
+## SMART-DS power source and year qualification
 
 Qualified source family: Texas combined T&D / OEDI SMART-DS v0.9.
 
-Official source evidence establishes that the Texas case is synthetic, contains OpenDSS distribution data, load time series and geographic coordinates, and that SMART-DS `Buscoords.dss` provides node longitude/latitude. The OEDI v0.9 viewer exposes year roots `2016/`, `2017/`, and `2018/`; which year(s) contain the required `Full_Texas` realization and which year will be used for H3 remain evidence-qualification questions rather than assumptions.
+The official OEDI v0.9 root exposes year namespaces `2016/`, `2017/`, and `2018/`. The authoritative Texas A&M combined T&D page directly documents the path family
+
+```text
+SMART-DS/v0.9/2016/Full_Texas/P1U/scenarios/base_timeseries/opendss/...
+```
+
+and states that the source contains OpenDSS distribution data, time-series load profiles, and geographic coordinates. The combined Texas T&D literature establishes that the dataset is synthetic, geolocated and publicly available.
+
+The primary H3 power-network vintage is therefore frozen as
+
+```math
+\boxed{Y_P^{H3}=2016}
+```
+
+with
+
+```text
+SMART-DS version: v0.9
+Dataset:          Full_Texas
+Scenario family: base_timeseries
+Primary prefix:  SMART-DS/v0.9/2016/Full_Texas/
+```
+
+This is a reproducibility/source-traceability decision for a semisynthetic experiment. It is **not** a claim that the 2016 synthetic network reconstructs Houston in 2016 or Harvey in 2017.
+
+The existence of 2017/2018 top-level namespaces is supported, but their `Full_Texas` realizations are not currently frozen or rejected. Any future switch requires explicit change control and a material scientific reason.
 
 Prepared utility:
 
@@ -124,14 +153,7 @@ Prepared utility:
 methods/h3/inventory_smartds_houston.py
 ```
 
-It has two gated modes:
-
-```text
---discover : public SMART-DS v0.9 year/dataset structure only; no Houston selection;
---year ... : Houston candidate inventory; hard-requires boundary QA status PASS and Omega_core.
-```
-
-Candidate selection is defined by
+Candidate selection remains
 
 ```math
 \boxed{
@@ -148,6 +170,8 @@ Current power gate:
 ```math
 \boxed{
 G_{P,source}=1,
+\qquad
+G_{P,year}=1,
 \qquad
 G_{P,prep}=1,
 \qquad
@@ -169,6 +193,8 @@ G_{source}=1,
 \quad
 G_{\Omega,QA}=0,
 \quad
+G_{P,year}=1,
+\quad
 G_{P,prep}=1,
 \quad
 G_{P,inventory}=0,
@@ -187,23 +213,30 @@ H3 confirmatory execution remains **NOT AUTHORIZED**.
 
 ## Immediate next executable transition
 
-Primary route:
-
 ```math
 \boxed{
-\text{successful network-enabled boundary run}
+\text{successful network-enabled Houston-boundary run}
 \rightarrow
 G_{\Omega,QA}=1
 \rightarrow
-\text{SMART-DS year/Full_Texas qualification}
+\text{2016 Full_Texas Houston candidate inventory}
 \rightarrow
-\text{Houston candidate power inventory}
+\text{minimum electrical closure}
 \rightarrow
-\text{electrical closure + OpenDSS QA}.
+\text{OpenDSS compile/power-flow QA}.
 }
 ```
 
-If the GitHub-hosted runner remains unavailable, the committed boundary runner may be executed unchanged in another network-enabled environment and its raw/QA outputs returned unchanged. While that blocker persists, only independent source-structure discovery/preparation is admissible; final Houston clipping/selection is not.
+Once the boundary gate passes, execute exactly:
+
+```bash
+python methods/h3/inventory_smartds_houston.py \
+  --root data/H3-HOU-FLOOD-V1 \
+  --year 2016 \
+  --scenario base_timeseries
+```
+
+If the GitHub-hosted runner remains unavailable, the committed boundary runner may be executed unchanged in another network-enabled environment and its outputs returned unchanged. While that blocker persists, only independent source-structure preparation is admissible; final Houston clipping/selection is not.
 
 After power QA:
 
@@ -220,4 +253,4 @@ After power QA:
 
 ## Hard prohibition
 
-Do not construct Houston geometry from published extents; do not treat a SMART-DS example substation as Houston; do not freeze a SMART-DS year from convenience; do not claim candidate substations before `G_Omega_QA=1`; do not claim the synthetic network is the actual Houston grid; do not invent thresholds, probabilities, horizons, interfaces or network counts; and do not run confirmatory H3 until all required gates close.
+Do not construct Houston geometry from published extents; do not treat a SMART-DS example substation as Houston; do not claim candidate substations before `G_Omega_QA=1`; do not claim the synthetic network is the actual Houston grid; do not treat the 2016 network vintage as a historical Harvey reconstruction; do not invent thresholds, probabilities, horizons, interfaces or network counts; and do not run confirmatory H3 until all required gates close.
