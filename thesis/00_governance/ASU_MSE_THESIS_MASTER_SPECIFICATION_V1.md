@@ -1,9 +1,12 @@
-# ASU MSE Thesis Master Specification v1.0
+# ASU MSE Thesis Master Specification v1.1
 
 **Status:** CURRENT THESIS CONTROL SPECIFICATION  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **School:** School of Sustainable Engineering and the Built Environment (SSEBE)  
 **Method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
+**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Reasoning authority:** `../../project/RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Verification date for ASU requirements:** 2026-09-16
 
 ## 1. Purpose
@@ -80,33 +83,123 @@ The Graduate College controls thesis/dissertation formatting. Current verified r
 \boxed{\mathcal A_{science}\neq\mathcal A_{document}.}
 ```
 
-The scientific architecture is the frozen seven-stage framework plus EGMIV execution logic. The document architecture is the seven-chapter thesis argument.
+The scientific architecture is the canonical seven-stage framework v2.0 plus the frozen v2 RQ–SO–H logic and EGMIV execution method. The document architecture is the seven-chapter thesis argument.
 
-### Scientific architecture
+### Scientific architecture v2.0
 
 ```math
-\text{Structure}
-\rightarrow\text{Causal Interdependency}
-\rightarrow\text{Dynamics}
-\rightarrow\text{Observation/Organization/Control}
-\rightarrow\text{Viability}
-\rightarrow\text{Transformation Diagnosis}
-\rightarrow\text{Transformation Pathways}.
+\boxed{
+\text{Critical Service Requirements}
+\rightarrow
+\text{Spatiotemporal SoS Structure}
+\rightarrow
+\text{Causal Interdependencies}
+\rightarrow
+\text{Hybrid Multiscale Dynamics}
+\rightarrow
+\text{Observation / Estimation / Organization / Control}
+\rightarrow
+\text{Viability + Reachability + Probability}
+\rightarrow
+\text{Intervention + Sustainability Consequences}
+\rightarrow
+\text{Engineering Decision}.
+}
 ```
+
+The Stage-5 resilience object is
+
+```math
+\boxed{
+\mathfrak R_T(t)
+=
+\left(
+\mathcal V_{\alpha,T},
+\mathcal R_{\beta,T},
+\rho_{\mathcal V},
+T_{\mathcal V},
+T_{\rm rec},
+P_{\rm viable},
+P_{\rm recover}
+\right).
+}
+```
+
+Conventional performance/recovery curves remain a comparator, not a discarded method. The thesis tests whether `\mathfrak R_T` adds incremental decision or predictive information.
 
 ### Document architecture
 
 ```math
 \text{Introduction}
-\rightarrow\text{Literature/Theory}
-\rightarrow\text{Framework}
-\rightarrow\text{Methodology}
-\rightarrow\text{Results}
-\rightarrow\text{Discussion}
-\rightarrow\text{Conclusion}.
+\rightarrow
+\text{Literature/Theory}
+\rightarrow
+\text{Framework}
+\rightarrow
+\text{Methodology}
+\rightarrow
+\text{Results}
+\rightarrow
+\text{Discussion}
+\rightarrow
+\text{Conclusion}.
 ```
 
-## 6. EGMIV thesis-control rule
+## 6. Canonical research logic and traceability
+
+The v2 primary research logic is frozen in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md` and mirrored in `RQ_SO_H_TRACEABILITY_V2.md`.
+
+```math
+\boxed{
+RQ_i
+\rightarrow
+SO_i
+\rightarrow
+H_i
+\rightarrow
+\text{mechanism}
+\rightarrow
+\text{metric}
+\rightarrow
+\text{baseline}
+\rightarrow
+\text{experiment}
+\rightarrow
+\text{uncertainty}
+\rightarrow
+\text{falsification}
+\rightarrow
+\text{result}
+\rightarrow
+\text{engineering conclusion}.
+}
+```
+
+The five primary tests are:
+
+```math
+H_1:\quad M_2\ \text{vs}\ M_1\ \text{vs}\ M_0,
+```
+
+```math
+H_2:\quad P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O,
+```
+
+```math
+H_3:\quad R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T,
+```
+
+```math
+H_4:\quad a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right),
+```
+
+```math
+H_5:\quad \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
+```
+
+Interface criticality is a Stage-6 supporting diagnostic. Adaptive transformation pathways are a Stage-7 supporting extension. They are not the primary H4/H5 claims under v2.0.
+
+## 7. EGMIV thesis-control rule
 
 The thesis skeleton itself is treated as an engineered research artifact.
 
@@ -114,7 +207,9 @@ For every important thesis object `i`:
 
 ```math
 \boxed{
-\mathfrak T_i=(R_i,Q_i,H_i,E_i,M_i,\Phi_i,S_i,A_i,V_i,\sigma_i)
+\mathfrak T_i
+=
+(R_i,Q_i,O_i,H_i,E_i,M_i,\Phi_i,S_i,A_i,V_i,\sigma_i)
 }
 ```
 
@@ -122,6 +217,7 @@ where:
 
 - `R_i`: university/program requirement when applicable;
 - `Q_i`: research question;
+- `O_i`: specific objective;
 - `H_i`: hypothesis/proposition;
 - `E_i`: admissible evidence/data;
 - `M_i`: method/model;
@@ -133,25 +229,48 @@ where:
 
 A broken traceability chain is a thesis defect.
 
-## 7. Proposal as controlled release
+## 8. Evidence and citation-control rule
+
+Scientific literature is used to justify why a question, mechanism, mathematical object, comparator, or engineering outcome is legitimate. It is not automatically evidence of novelty.
+
+```math
+\boxed{
+\text{scientific support}
+\neq
+\text{novelty proof}.
+}
+```
+
+Under `RESEARCH_REASONING_PROTOCOL.md` v1.2:
+
+- every externally sourced scientific claim must carry an adjacent verified APA 7 author–date citation;
+- externally adopted/adapted equations, algorithms, parameter values, thresholds, datasets, and standards require adjacent source attribution;
+- thesis-derived claims are marked as derivation, hypothesis, proposal, or assumption rather than decorated with irrelevant citations;
+- novelty/gap claims require a separate reproducible search and boundary audit.
+
+The canonical RQ–SO–H file records literature foundations for all five primary research questions and hypotheses. Key foundation classes include interdependency/cascade modeling (Rinaldi et al., 2001; Ouyang, 2014; Tong et al., 2025), information/governance effects (Helmrich et al., 2021; Rydén Sonesson et al., 2021), resilience curves and stochastic viability/reachability (Doyen & De Lara, 2010; Poulin & Kane, 2021; Vinod & Oishi, 2021), and resilience–sustainability engineering decision trade-offs (Liu et al., 2024; Sánchez-Silva et al., 2025; Zhu & Zhang, 2026).
+
+## 9. Proposal as controlled release
 
 The proposal should be treated as:
 
 ```math
-\boxed{\text{Thesis Architecture Release v1.0}}
+\boxed{\text{Thesis Architecture Release v2.0}}
 ```
 
 containing:
 
-- Chapter 1 logic: problem, significance, scope, RQs, objectives, hypotheses;
-- condensed Chapter 2: qualified evidence and gap;
-- Chapter 3: proposed theoretical/mathematical architecture;
-- planned Chapter 4: methodology, experiments, V&V, UQ, falsification;
+- Chapter 1 logic: problem, significance, scope, RQ0/RQ1–RQ5, general objective, SO1–SO5, H1–H5;
+- condensed Chapter 2: qualified evidence and theoretical foundations;
+- Chapter 3: canonical seven-stage v2 mathematical architecture;
+- planned Chapter 4: H1–H5 methodology, experiments, V&V, UQ, and falsification;
 - expected contribution clearly labeled as proposed rather than demonstrated.
 
-Any later change to system boundary, hypothesis logic, confirmatory baselines, or major methodology must be versioned and justified rather than silently rewritten.
+Any later change to system boundary, hypothesis logic, confirmatory baselines, primary metrics, or major methodology must be versioned and justified rather than silently rewritten.
 
-## 8. Current H1 thesis gate
+## 10. Confirmatory execution gates
+
+### H1
 
 Current repository authority indicates:
 
@@ -161,28 +280,60 @@ Current repository authority indicates:
 
 The H1 model implementations and confirmatory design are substantially advanced. However, the row-level raw-data retrieval and qualification gate remains blocking. No calibration or confirmatory H1 execution is authorized until the predeclared acquisition/qualification gates are passed.
 
-## 9. Governing thesis principle
+### H3–H5
+
+H3–H5 scientific logic is frozen, but confirmatory execution remains blocked until hypothesis-specific preregistration fixes the following:
+
+```text
+H3: K, G_rec, F, T, alpha, beta, uncertainty model, primary Skill metric, delta_3
+H4: intervention set, resilience-effective criterion, sustainability accounting boundary, D_J, delta_4
+H5: A_R*, A_R,S*, uncertainty treatment, set/regret metric, delta_5
+```
+
+Probability distributions may be used only when evidentiary support is adequate. Otherwise, deterministic, interval-based, scenario-based, or nonprobabilistic robustness methods must be used instead of invented probabilities.
+
+## 11. Governing thesis principle
 
 ```math
 \boxed{
-\textbf{Verified evidence}
+\text{Verified evidence}
 \rightarrow
-\textbf{mathematical representation}
+\text{mathematical representation}
 \rightarrow
-\textbf{frozen experiment}
+\text{frozen experiment}
 \rightarrow
-\textbf{result}
+\text{result}
 \rightarrow
-\textbf{qualified conclusion}.
+\text{qualified conclusion}.
 }
 ```
 
 The reverse direction — conclusion first, evidence afterward — is prohibited.
 
-## 10. Official sources
+## 12. Current synchronization status
+
+```math
+\boxed{
+\text{Framework v2}
+\rightarrow
+\text{RQ--SO--H v2 frozen}
+\rightarrow
+\text{master outline synchronized}
+\rightarrow
+\text{master specification synchronized}
+\rightarrow
+\text{root abstract / entry-point synchronization}
+\rightarrow
+\text{H3--H5 preregistration}.
+}
+```
+
+## 13. Official sources
 
 - ASU Graduate College Format Manual: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation/asu-graduate-college
 - Formatting process / Format Wizard / submission: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation
 - Format Checklist: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation/format-checklist
 - SSEBE Sustainable Engineering MSE Handbook 2026–2027: https://ssebe.engineering.asu.edu/wp-content/uploads/sites/28/2026/07/MSE-Sustainable-Engineering-Handbook-2026-2027.pdf
 - SSEBE Graduate Advising / defense procedures: https://ssebe.engineering.asu.edu/advising/graduate/
+
+Full APA 7 references for the scientific evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
