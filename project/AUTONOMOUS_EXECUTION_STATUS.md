@@ -2,7 +2,7 @@
 
 **Mode:** autonomous within active tool-enabled sessions  
 **Protocol:** `AUTONOMOUS_EXECUTION_PROTOCOL_V1.md`  
-**Current phase:** maximum autonomous non-evidence endpoint reached; explicit H1–H5 traceability completed; hard evidence/data/threshold gates remain  
+**Current phase:** purpose-driven resilience–sustainability bridge specified through Step 6; H1 raw-data, authenticated literature and threshold gates remain hard blockers  
 **Last updated:** 2026-09-16
 
 ## 1. Current queue
@@ -32,73 +32,114 @@
 | 16 | Migrate supporting files from legacy Stage-2 notation | **PASS** | direct synchronization completed in four active files; `LEGACY_DEPENDENCY_NOTATION_MIGRATION_AUDIT_V3.md` records post-write verification; translation layer retained for provenance compatibility |
 | 17 | Build ASU MSE thesis master specification and traceability shell | **PASS** | `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` maps ASU shell, chapters, hypotheses, figures/equations, appendices and scientific gates |
 | 18 | Instantiate thesis-wide H1–H5 traceability and result firewall | **PASS_CONTROLLED_TRACEABILITY** | `THESIS_TRACEABILITY_REGISTER_V1.md` maps every primary hypothesis to evidence, model, metric, chapter, artifact, V&V, current block and next closure condition; no scientific gate upgraded |
+| 19 | Freeze purpose-driven causal spine `D -> I -> F_G -> R -> Phi_RS -> Delta J_sus -> a*` | **PASS** | `THESIS_PURPOSE_AND_CAUSAL_SPINE_V1.md`; does not rewrite canonical H1–H5 |
+| 20 | Build resilience–sustainability causal translation matrix `T_RS` | **PASS_WORKING_EVIDENCE_GATE** | `RESILIENCE_SUSTAINABILITY_CAUSAL_TRANSLATION_MATRIX_V1.md` plus machine-readable CSV; six causal pathways retained with evidence/uncertainty/validation status |
+| 21 | Prune sustainability outcome set by definition/unit/mechanism/time/validation gate | **PASS_SCOPE_CONTROL** | minimal working core is `J_access`, `J_energy`, `J_carbon`; cost secondary/budget, equity conditional, material/resource burden deferred |
+| 22 | Specify retained sustainability quantities, units, horizons, equations and data routes | **PASS_SPECIFICATION** | `SUSTAINABILITY_OUTCOME_SPECIFICATION_V1.md`; `RS_OUTCOME_DATA_REGISTRY_V1.csv`; numerical results not claimed |
+| 23 | Freeze minimal thesis-wide P–T–I–O mechanism set | **PASS** | `MINIMAL_PTIO_MECHANISM_SET_V1.md`; H1 subset remains deliberately smaller and frozen |
+| 24 | Execute resilience–sustainability bridge downstream experiments | `DEFERRED_DEPENDENCY` | requires H1 row-level qualification, empirical M0/M1/M2 validation, resilience diagnostics, admissible interventions, and outcome-specific data/models |
 
-No remaining task is both scientifically admissible and independent of the hard evidence/data/threshold gates.
+No blocked empirical/evidence gate has been converted into PASS. The latest admissible independent specification work is recorded in `RESILIENCE_SUSTAINABILITY_EXECUTION_STATUS_V1.md`.
 
-## 2. Outputs produced during the autonomous novelty/foundation run
+## 2. Purpose-driven scientific spine
 
-### ASU and prior-art audit
+The active top-level scientific contract is
 
-1. `evidence/novelty/ASU_PRIOR_WORK_FTEE_EGMIV_AUDIT_V1.md`
-2. `evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V1.md` — provenance
-3. `evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V2.md` — canonical second pass
-4. `evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_DEPENDENCY_SEMANTICS_V1.md`
-5. `evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_INFRASTRUCTURE_VIABILITY_V1.md`
-6. `evidence/novelty/CANONICAL_NOTATION_RECONCILIATION_2026-09-16.md`
-7. `evidence/novelty/FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` — database query logic/translations frozen; authenticated execution pending
-
-### Hypothesis/change-control and document-control artifacts
-
-8. `project/HYPOTHESIS_REFINEMENT_AFTER_ASU_AUDIT_V1.md` — provenance
-9. `project/HYPOTHESIS_REFINEMENT_AFTER_ASU_AUDIT_V2.md` — active working amendment
-10. `project/LEGACY_DEPENDENCY_NOTATION_MIGRATION_AUDIT_V2.md` — pre-migration audit
-11. `project/LEGACY_DEPENDENCY_NOTATION_MIGRATION_AUDIT_V3.md` — completed direct migration and verification
-12. `project/NOVELTY_FOUNDATION_INDEX.md`
-13. `project/CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` — compatibility/provenance control layer
-14. `project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` — active document/scientific traceability shell
-15. `project/THESIS_TRACEABILITY_REGISTER_V1.md` — explicit H1–H5 traceability objects, chapter mirror, result firewall, blocking-state and next-gate register
-
-### Directly synchronized active support files
-
-16. `project/MATHEMATICAL_FOUNDATION.md`
-17. `project/RESEARCH_HYPOTHESES.md`
-18. `project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`
-19. `project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`
-
-### Mathematical specifications added without claiming empirical success
-
-20. `project/PARTIAL_OBSERVATION_TO_VIABILITY_SPECIFICATION_V1.md`
-21. `project/ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`
-22. `project/SUSTAINABLE_VIABILITY_CONSTRAINT_PROTOCOL_V1.md`
-23. `project/VIABILITY_INTERFACE_SENSITIVITY_SPECIFICATION_V1.md`
-
-## 3. Deepened prior-art subtraction
-
-Public evidence now shows that the thesis must not claim novelty for:
-
-```text
-directed infrastructure dependency edges;
-dependency vs interdependency distinction;
-mediated reciprocal dependencies;
-typed dependency classes;
-ontology-grounded cross-domain relations;
-evidence-linked and provenance-preserving infrastructure dependency graphs;
-contract-based validation of System-of-Systems interfaces;
-composable multi-infrastructure model integration;
-semantic dependency representations connected to federated infrastructure simulation;
-dynamic binding/interoperability of heterogeneous infrastructure simulators;
-dynamic infrastructure interdependency/cascades;
-partial-observation safety and belief-space control;
-stochastic viability;
-applying viability to codependent infrastructure, power, or vehicle/transport systems;
-viability-kernel width/size as a generic resilience expression;
-viability-informed generic policy/investment;
-distance-to-viability-boundary and generic viability-kernel sensitivity.
+```math
+\boxed{
+\mathcal D
+\rightarrow
+\mathbb I
+\rightarrow
+F_{\mathcal G}^{m}
+\rightarrow
+\mathbf R
+\rightarrow
+\Phi_{RS}
+\rightarrow
+\Delta\mathbf J_{\rm sus}^{core}
+\rightarrow
+\mathbf a^\star
+}
 ```
 
-A particularly close 2026 dependency-modeling paper explicitly separates source evidence, ontology grounding, endpoint resolution, validation, provenance and human review before projecting validated dependencies into a dependency graph. Earlier DIESIS/IRRIIS work further connects ontology-based infrastructure dependency semantics to federated simulation. The N1 claim is therefore no longer treated as a standalone representation novelty claim.
+with current minimal sustainability vector
 
-## 4. Current admissible residual questions
+```math
+\boxed{
+\mathbf J_{\rm sus}^{core}
+=
+[J_{access},J_{energy},J_{carbon}]^\top.
+}
+```
+
+The core scientific rule is
+
+```math
+\boxed{
+\Delta\mathbf R>0\not\Rightarrow\Delta\mathbf J_{\rm sus}>0.
+}
+```
+
+Therefore resilience diagnosis and sustainability consequence remain distinct mathematical levels. Stage 6 uses an intervention-mediated mapping rather than a direct score-to-score relation:
+
+```math
+\boxed{
+\Delta\mathbf J_{\rm sus}^{core}
+=
+\Phi_{RS}(\mathbf R,\mathbf a,\mathfrak M,\omega,T_L).
+}
+```
+
+## 3. Current minimal P–T–I–O mechanism set
+
+Thesis-wide working set:
+
+```math
+\boxed{
+\mathbb I_{min}
+=
+\{M_{PT1},M_{PT2},M_{TP1},M_{TP2},M_{I1},M_{O1}\}.
+}
+```
+
+where:
+
+```text
+M_PT1: power -> charging/traction service;
+M_PT2: power -> traffic-control service;
+M_TP1: transportation -> power restoration through crew access;
+M_TP2: EV charging/V2G -> power loading/flexibility;
+M_I1: information -> belief/state knowledge -> control;
+M_O1: organization -> feasible response set/timing.
+```
+
+For H1-v1, the comparator remains deliberately restricted to
+
+```math
+\boxed{\mathbb I_{H1}=\{M_{PT1},M_{TP1}\}}
+```
+
+so later sustainability mechanisms cannot contaminate the frozen H1 causal test.
+
+## 4. Current resilience–sustainability pathway state
+
+The working matrix `T_RS` retains six pathways:
+
+```text
+RS-01 power -> charging failure/backlog -> mobility/accessibility;
+RS-02 power -> signal/control failure -> road performance/accessibility;
+RS-03 road state -> crew access -> power restoration -> service burden;
+RS-04 EV charging/V2G -> grid state -> operational energy/carbon;
+RS-05 information -> state/control quality -> resilience (sustainability conditional through physical pathways);
+RS-06 organization -> feasible control/resources -> recovery (sustainability conditional through physical pathways).
+```
+
+The matrix exposes weak arrows rather than filling them by assumption.
+
+## 5. Current admissible residual novelty/contribution questions
+
+The previously frozen public-falsification residuals remain active:
 
 ```math
 \boxed{
@@ -114,132 +155,86 @@ N_3' &: \text{canonical dependency perturbation}\rightarrow
 }
 ```
 
-`N_1^*` is primarily an implementation/validation contribution question. None of these residuals is asserted as globally novel.
-
-## 5. Canonical notation state
-
-The active Stage-2 object is
+The resilience–sustainability bridge adds a purpose-driven validation question, not a certified novelty claim:
 
 ```math
-\boxed{\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)}
+\boxed{
+N_4^{work}:
+\text{validated P–T–I–O resilience diagnosis}
+\rightarrow
+\text{intervention-mediated }\Phi_{RS}
+\rightarrow
+\text{measurable sustainability consequences}
+\rightarrow
+\text{matched multiobjective decision value}.
+}
 ```
 
-with
+`N_4^{work}` remains a working integration/validation question until formal novelty closure.
+
+## 6. Hard empirical gate now
+
+The next numbered execution step is the existing H1 raw-data gate:
 
 ```math
-\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e),
-\qquad
-\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}.
+\boxed{
+\text{raw event/source bytes}
+\rightarrow
+R1\text{–}R8
+\rightarrow
+D_{train},D_{test}\text{ freeze}
+\rightarrow
+u_{obs,P},\nu_{obs,T}
+\rightarrow
+\epsilon_P,\epsilon_T
+\rightarrow
+M_0/M_1/M_2\text{ held-out test}.
+}
 ```
 
-For smooth declared mechanism-parameter directions,
-
-```math
-S_{e,v}^{\mathcal V}(Y)
-=-D_{\theta_e}\rho_g(Y;\Theta)[v]
-```
-
-is a local diagnostic; nonsmooth/hybrid relations use finite perturbation or actual intervention contrasts.
-
-The four active supporting files have now been directly synchronized to this notation. `CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` remains useful for historical/provenance files that are intentionally not retroactively rewritten.
-
-## 6. ASU thesis-control state
-
-The active document-control artifacts are:
-
-```text
-project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md
-project/THESIS_TRACEABILITY_REGISTER_V1.md
-```
-
-They fix the separation between:
-
-```math
-\text{seven-stage scientific architecture}
-\neq
-\text{seven-chapter thesis-document architecture}.
-```
-
-Every future thesis-critical object must have a traceable destination through the tuple
-
-```math
-\mathfrak T_i=(R_i,Q_i,H_i,E_i,M_i,\Phi_i,S_i,A_i,V_i,\sigma_i).
-```
-
-H1–H5 are now individually instantiated in the traceability register, with explicit evidence/data requirements, comparator models, metrics/decision rules, chapter destinations, implementation artifacts, V&V gates, blocking states and next closure conditions.
-
-The active chapter architecture is:
-
-```text
-Ch.1 Introduction
-Ch.2 Literature Review and Theoretical Foundations
-Ch.3 Conceptual and Mathematical Framework
-Ch.4 Research Methodology and Experimental Design
-Ch.5 Results
-Ch.6 Discussion and Sustainable Engineering Implications
-Ch.7 Conclusions and Future Research
-```
-
-The result firewall prevents a hypothesis from being promoted to a confirmatory result before its evidence/data, model, metric/threshold, context-of-use and V&V requirements are auditable.
-
-## 7. Existing independent block — H1 row-level acquisition
-
-The current H1 authority remains
+The authority remains
 
 ```math
 \boxed{\text{RAW ROW-LEVEL GATE PENDING}.}
 ```
 
-The frozen source/event registry remains available, but this runtime still cannot materialize the required large raw ZIP/Parquet/annual bodies. No H1 calibration, final train/test freeze, UQ, confirmatory H1a run or H1b adjudication is authorized until R1–R8 pass.
+No H1 calibration, final train/test freeze, UQ, confirmatory H1a run or H1b adjudication is authorized until R1–R8 pass.
 
-## 8. Existing independent block — authenticated literature execution
+## 7. Authenticated literature gate
 
-The exact F0/F1/F2 Scopus, Web of Science Core Collection, Compendex and IEEE Xplore query logic has been frozen in `FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` using current documented field syntax. Authenticated database execution remains unavailable in this runtime.
+The exact F0/F1/F2 Scopus, Web of Science Core Collection, Compendex and IEEE Xplore query logic remains frozen in `FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md`. Public web/peer-reviewed screening can falsify broad claims but cannot certify global novelty.
 
-Public web search has been used aggressively to **falsify** broad claims; it has not been promoted to novelty certification.
+## 8. Threshold/viability gate
 
-## 9. Existing independent block — threshold evidence
+`K_sus` architecture is specified, but final service/sustainability thresholds are not frozen. Sustainability quantities may remain objectives rather than hard viability constraints unless an actual requirement with independently documented provenance exists. Final controlled viability, H4 ranking and H5 conclusions therefore remain deferred.
 
-Demonstrator-specific service, sustainability, uncertainty and decision thresholds remain unfrozen. `K_{\rm sus}` architecture may be specified, but final threshold values may not be invented or tuned from confirmatory outcomes. Until qualified provenance closes this gate, final controlled viability and downstream H4/H5 claims remain deferred.
-
-## 10. Current maximum scientifically valid endpoint
-
-The autonomous run has advanced to:
+## 9. Current scientifically valid endpoint
 
 ```math
 \boxed{
-\text{ASU prior-work subtraction}
+\text{ASU/prior-art subtraction}
 \rightarrow
-\text{global public falsification}
+\text{canonical P–T–I–O dependency architecture}
 \rightarrow
-\text{canonical representation reconciliation}
+\text{verified H1 comparator mechanics}
 \rightarrow
-\text{partial-observation specification}
+\text{purpose-driven }\mathbb I\to\mathbf R\to\mathbf J_{sus}\text{ bridge specification}
 \rightarrow
-\text{organizational feasible-control specification}
+\text{minimal mechanism/outcome pruning}
 \rightarrow
-\text{viability-constraint protocol}
-\rightarrow
-\text{interface-sensitivity/intervention protocol}
-\rightarrow
-\text{direct active-file notation migration}
-\rightarrow
-\text{ASU thesis traceability shell}
-\rightarrow
-\text{explicit H1--H5 traceability + result firewall}
-\rightarrow
-\color{#B42318}{\text{AUTHENTICATED EVIDENCE + RAW DATA + THRESHOLD GATES}}.
+\color{#B42318}{\text{RAW DATA + AUTHENTICATED EVIDENCE + THRESHOLD/OUTCOME DATA GATES}}.
 }
 ```
 
-It would now be scientifically invalid to compute/freeze the final `V_sus`, claim H4 ranking superiority, certify global novelty, or execute final confirmatory H1–H5 conclusions before those gates close.
+It remains scientifically invalid to claim H1 empirical confirmation, final `V_sus`, H4 superiority, final H5 resilience–sustainability trade-offs, or certified global novelty before those gates close.
 
-## 11. Restart rule
+## 10. Restart rule
 
 On each active run:
 
 1. read this status file;
-2. retry externally blocked evidence/data tasks when new access is available;
-3. otherwise execute the next independent admissible specification, verification, traceability or controlled migration task;
-4. update provenance and status without requesting routine continuation decisions;
-5. never convert a blocked gate into an assumed PASS.
+2. read `RESILIENCE_SUSTAINABILITY_EXECUTION_STATUS_V1.md` when working on the purpose-driven bridge;
+3. retry externally blocked evidence/data tasks when new access is available;
+4. otherwise execute the next independent admissible specification, verification, traceability or controlled migration task;
+5. update provenance/status without requesting routine continuation decisions;
+6. never convert a blocked gate into an assumed PASS.
