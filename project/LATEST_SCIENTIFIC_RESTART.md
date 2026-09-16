@@ -15,7 +15,7 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V3.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V4.md`
 12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
 13. `H3_PREREGISTRATION_V1.md`
 14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
@@ -86,13 +86,15 @@ s_T^{\min}\text{ structurally qualified}
 \rightarrow
 s_{P,\rm rec}\text{ structurally qualified}
 \rightarrow
-s_{T,\rm rec}\text{ evidence qualification next}.
+s_{T,\rm rec}\text{ structurally qualified}
+\rightarrow
+F\text{ evidence qualification next}.
 }
 ```
 
 ## Qualified H3 service objects
 
-The current evidence registry is `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V3.md`.
+The current evidence registry is `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V4.md`.
 
 ```math
 \boxed{
@@ -100,33 +102,34 @@ The current evidence registry is `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V3.md`.
 \text{Object}&\text{Definition/provenance}&\text{Universal numeric value}&\text{Case-specific value}\\\hline
 s_P^{\min}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}\\
 s_T^{\min}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}\\
-s_{P,\rm rec}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}
+s_{P,\rm rec}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}\\
+s_{T,\rm rec}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}
 \end{array}
 }
 ```
 
-All three objects remain blocked from confirmatory code until the selected case authority/data freeze supplies admissible numerical values with uncertainty and validity metadata.
+All four objects remain blocked from confirmatory code until the selected case authority/data freeze supplies admissible numerical values with uncertainty and validity metadata.
 
-## `s_{P,rec}` qualification result
+## `s_{T,rec}` qualification result
 
-The admissible case-specific mapping is
+The admissible matched-support mapping is
 
 ```math
-s_{P,\rm rec,m}
+s_{T,\rm rec,m}
 =
-\frac{\sum_i\omega_i E_{i,m}^{rec}}
-{\sum_i\omega_i\widehat E_{i,m}^{d}},
+\frac{\sum_w\omega_w N_{w,m}^{rec}}
+{\sum_w\omega_w\widehat N_{w,m}^{req}},
 ```
 
-when the recovery target is defined on the same spatial, temporal, demand, and weighting support as the frozen `S_P` metric.
+when the authority-defined recovery target is expressed on the same OD/service-class, population, temporal, spatial, and weighting support as the frozen `S_T` metric.
 
 The structural consistency condition is
 
 ```math
-\boxed{s_P^{\min}(t)\le s_{P,\rm rec}(t)\le1,}
+\boxed{s_T^{\min}(t)\le s_{T,\rm rec}(t)\le1,}
 ```
 
-but `s_{P,rec}=1` is **not** a universal requirement. Non-substitutable critical functions additionally require native per-entity recovery constraints. When transient threshold crossing is insufficient, the existing H3 dwell semantics may be activated, but the dwell duration remains evidence-open.
+but `s_{T,rec}=1` is **not** a universal requirement. Non-substitutable critical mobility additionally requires native OD/service constraints. Authoritative recovery requirements that are not naturally equivalent to completed-trip fraction remain separate native constraints inside `G_rec`. Functional recovery is not equated to exact pre-event network state or full physical restoration.
 
 ## Current preferred model-family backbone
 
@@ -153,7 +156,7 @@ This is subordinate to the canonical seven-stage framework; it does not rename o
 ## Immediate next task
 
 ```math
-\boxed{s_{T,\rm rec}}
+\boxed{F}
 ```
 
 Routing under EGMIV–TSP:
@@ -162,23 +165,33 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Object:        sufficiently recovered transportation-service target
-Output:        qualified evidence record for G_rec mapped to the frozen S_T metric and any non-substitutable critical-mobility constraints
-Stop when:     the object is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
+Object:        hard-failure / avoid set
+Output:        qualified failure-set criteria with units, provenance, uncertainty, validity domain, and explicit distinction from degraded-but-recoverable states
+Stop when:     each candidate failure criterion is evidence-supported, explicit assumption, rejected, or documented open
 ```
 
 The remaining H3 qualification order is
 
 ```math
 \boxed{
-s_{T,\rm rec}
-\rightarrow
 F
 \rightarrow
 T_V
 \rightarrow
 T_R.
 }
+```
+
+The failure-set qualification must preserve
+
+```math
+\boxed{K(t)\cap F(t)=\varnothing,}
+```
+
+and, when degraded recovery is part of the intended H3 domain,
+
+```math
+\boxed{D(t)=K(t)^c\setminus F(t)\neq\varnothing.}
 ```
 
 Then continue:
