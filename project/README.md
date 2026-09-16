@@ -6,44 +6,22 @@
 ![Reasoning](https://img.shields.io/badge/reasoning-v1.2-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
 ![Traceability](https://img.shields.io/badge/RQ--SO--H-v2.0%20FROZEN-1A7F37)
-![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
-![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
-![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
-![Row Audit](https://img.shields.io/badge/executor-VERIFIED%204%2F4-1A7F37)
-![Raw Retrieval](https://img.shields.io/badge/event%20rows-PENDING-B42318)
-![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
+![H1](https://img.shields.io/badge/H1-RAW%20DATA%20GATE-B42318)
+![H2](https://img.shields.io/badge/H2-EMPIRICAL%20QUALIFICATION%20OPEN-9A6700)
+![H3](https://img.shields.io/badge/H3-PREREG%20PREPARATION-9A6700)
 
-This directory is the active scientific/mathematical specification of the MSE thesis. **Framework v2.0** is the current framework authority. The complete v2 research logic — RQ0, general objective, SO1–SO5, RQ1–RQ5, and H1–H5 — is now frozen in `CANONICAL_RQ_SO_HYPOTHESES_V2.md`. The named execution method remains **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
+This directory is the active scientific and mathematical source of truth for the MSE thesis.
 
-> Reasoning protocol: [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) — **v1.2; mandatory adjacent APA 7 author–date citation for externally sourced scientific claims**  
-> Framework authority: [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
-> RQ–SO–H authority: [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) — **v2.0 scientific logic frozen**  
-> Thesis traceability control: [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md)  
-> v2 traceability audit: [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md)  
-> Execution method: [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md)  
-> Evidence rule: literature support justifies scientific relevance, mechanisms, mathematical choices and comparators; **novelty is a separate reproducible gate**.
+**Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
+**Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
+**Citation rule:** externally sourced scientific claims require adjacent verified APA 7 author–date citations  
+**Novelty rule:** literature support justifies relevance, mechanisms, mathematics and comparators; novelty is tested separately  
 
-The earlier `RESEARCH_HYPOTHESES.md` is retained as provenance for the v1 hypothesis architecture. Active v2 interpretation is controlled by `CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
+---
 
-## Current governance state
-
-```math
-\boxed{
-\text{Framework v2.0}
-\rightarrow
-\text{traceability audit complete}
-\rightarrow
-\text{RQ--SO--H v2.0 logic frozen}
-\rightarrow
-\text{outline / master-specification / abstract synchronization}
-\rightarrow
-\text{H3--H5 preregistration}
-\rightarrow
-\text{confirmatory execution}.
-}
-```
-
-The frozen v2 traceability requirement is
+## 1. Frozen scientific chain
 
 ```math
 \boxed{
@@ -71,26 +49,33 @@ H_i
 }
 ```
 
-H3–H5 scientific logic is now frozen, but their numerical thresholds, exact metrics, scenario domains, probability models, and final decision rules remain blocked until hypothesis-specific preregistration closes. Existing H1 execution controls are unchanged.
-
-## Cross-cutting canonical requirements
-
-| File | Role | Status |
-|---|---|---|
-| [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md) | active seven-stage scientific framework | **CANONICAL v2.0** |
-| [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) | RQ0 + general objective + SO1–SO5 + RQ1–RQ5 + H1–H5 + evidence justification | **CANONICAL v2.0 / LOGIC FROZEN** |
-| [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory temporal–geospatial realization rule for spatially dependent P–T cascades, recovery and intervention | **FROZEN v1.0** |
-| [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance protocol; includes citation-quality gate | **CURRENT v1.2** |
-| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | thesis-facing RQ → objective → hypothesis → metric → experiment → chapter control | **CURRENT v2.0** |
-| [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md) | provenance audit that identified the v1→v2 synchronization defects | **AUDIT COMPLETE** |
-
-The spatiotemporal requirement remains mandatory:
+The five primary hypothesis contrasts are
 
 ```math
-\boxed{\text{Every modeled Power--Transportation cascade must preserve both time and location whenever the physical mechanism is spatially dependent.}}
+\boxed{H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0}
 ```
 
-The v2 resilience core is
+```math
+\boxed{H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O}
+```
+
+```math
+\boxed{H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T}
+```
+
+```math
+\boxed{H_4:\ a_k\rightarrow(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k})}
+```
+
+```math
+\boxed{H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}}
+```
+
+Interface criticality is a Stage-6 supporting diagnostic. Adaptive transformation pathways are a Stage-7 supporting extension unless separately promoted through preregistration.
+
+---
+
+## 2. Stage-5 resilience core
 
 ```math
 \boxed{
@@ -100,173 +85,247 @@ The v2 resilience core is
 +
 \underbrace{\text{return to acceptable operation}}_{\text{reachability}}
 +
-\underbrace{\text{quantify confidence}}_{\text{probability}},
+\underbrace{\text{quantify confidence}}_{\text{probability}}
 }
 ```
 
-where the plus signs denote conceptual composition, not scalar addition. Performance/recovery curves remain a benchmark; incremental engineering value must be tested rather than assumed.
+where `+` denotes conceptual composition rather than scalar addition.
 
-## Frozen v2 primary hypothesis logic
+The active H3 resilience object is
 
 ```math
 \boxed{
-H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0
+\mathfrak R_T
+=
+\left(
+\mathcal V_{\alpha,T_V},
+\mathcal R_{\beta,T_R},
+\rho_{\mathcal V},
+T_{\mathcal V},
+T_{\rm rec},
+P_{\rm viable},
+P_{\rm recover}
+\right).
 }
 ```
+
+Conventional performance/recovery curves remain the H3 benchmark. Incremental value must be tested rather than assumed.
+
+---
+
+## 3. Current execution architecture
+
+The project now proceeds on two controlled tracks:
 
 ```math
 \boxed{
-H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O
+\begin{array}{lll}
+\text{Track A} &:& \text{H1/H2 empirical and model qualification}\\
+\text{Track B} &:& \text{H3 mathematical specification and preregistration readiness}
+\end{array}
 }
 ```
+
+Track B may develop H3 definitions and algorithms, but may not execute H3 confirmatorily until upstream and H3-specific gates close.
+
+### Track A — H1/H2
+
+H1 remains governed by
 
 ```math
 \boxed{
-H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T
-}
-```
-
-```math
-\boxed{
-H_4:\ a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right)
-}
-```
-
-```math
-\boxed{
-H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}
-}
-```
-
-Interface criticality is retained as a Stage-6 supporting diagnostic. Adaptive transformation pathways are retained as a Stage-7 supporting extension. Neither is the primary H4/H5 claim in v2.0.
-
-## H1 authority map
-
-| Priority | File | Role | Status |
-|---:|---|---|---|
-| 1 | [`H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md) | M0/M1/M2 physical specification | frozen |
-| 2 | [`H1_CONFIRMATORY_PREREGISTRATION_V1.md`](H1_CONFIRMATORY_PREREGISTRATION_V1.md) | H1a/H1b design, UQ and decision gates | frozen |
-| 3 | [`H1_THRESHOLD_PROVENANCE_V1.md`](H1_THRESHOLD_PROVENANCE_V1.md) | threshold provenance | partially frozen |
-| 4 | [`H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`](H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md) | observation/service requirement architecture | frozen structure |
-| 5 | [`H1_DEMONSTRATOR_QUALIFICATION_V1.md`](H1_DEMONSTRATOR_QUALIFICATION_V1.md) | public demonstrator qualification | frozen v1 |
-| 6 | [`H1_RAW_COMPLETENESS_AUDIT_V1.md`](H1_RAW_COMPLETENESS_AUDIT_V1.md) | source-level event-family completeness | structural pass |
-| 7 | [`H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md`](H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md) | current raw-data execution state | **current gate** |
-| 8 | [`../evidence/H1/09_row_level_v1/`](../evidence/H1/09_row_level_v1/) | frozen row-level acquisition/audit executor | code verified 4/4; raw retrieval pending |
-| 9 | [`../models/H1/M0/`](../models/H1/M0/) | independent baseline | verified 13/13 |
-| 10 | [`../models/H1/M1/`](../models/H1/M1/) | static/algebraic comparator | verified |
-| 11 | [`../models/H1/M2/`](../models/H1/M2/) | dynamic causal comparator | verified full 29/29 regression |
-
-## H1 model and confirmatory state
-
-```math
-\boxed{M_0=\text{independent},\quad M_1=\text{static/algebraic coupling},\quad M_2=\text{dynamic causal coupling}.}
-```
-
-with verified nested limits
-
-```math
-M_1\rightarrow M_0,
+M_0=\text{independent},
 \qquad
-M_2\rightarrow M_1.
-```
-
-The primary H1a comparison remains M2 vs M1:
-
-```math
-\Theta_{repr}=\mathbb E_{\omega\sim\Omega_H}[D_{PT}^{2,1}(\omega)].
-```
-
-Frozen numerical floors are
-
-```math
-\boxed{u_{num,P}=0.000416667,\qquad u_{num,T}=0.001281963}
-```
-
-at
-
-```math
-\boxed{\Delta t=0.00125\;\mathrm{h}=4.5\;\mathrm{s}}.
-```
-
-`epsilon_P`, `epsilon_T` and `epsilon_pred` remain unfrozen pending real observation uncertainty and service requirements.
-
-## Public demonstrator and event family
-
-```math
-\boxed{\mathcal D_{H1}^{public}=\mathcal D_{NYC}\cup\mathcal D_{ACN}}
-```
-
-is a **PARTIAL PASS**. NYC supports aggregate/event, power-outage, completed-TLC-OD and road-state validation. ACN supports charging-component validation only. Full system-level H1b remains blocked with current public data.
-
-Candidate events:
-
-```text
-E0  Tropical Storm Fay — 2020-07-10
-E1  Tropical Storm Isaias — 2020-08-04 onward
-E2  Dec-2022 wind/rain storm
-E3  Dec-2023 wind/rain storm
-E4  Apr-2024 coastal wind/rain storm
-```
-
-Non-adaptive candidate split:
-
-```math
-\boxed{D_{train}^{cand}=\{E0,E2\},\qquad D_{test}^{cand}=\{E1,E3,E4\}.}
-```
-
-This split is **not frozen**.
-
-## Current gate: row-level data qualification
-
-The executor at `evidence/H1/09_row_level_v1/` freezes:
-
-- event windows and candidate roles;
-- official source endpoints/files;
-- required fields and timezone handling;
-- EAGLE-I NYC FIPS filter;
-- 311 obstruction vocabulary;
-- row-count/timestamp/gap/null/duplicate metrics;
-- raw-file provenance hashes;
-- missingness and non-adaptation rules.
-
-Offline verification reports:
-
-```text
-4/4 offline audit tests passed
-```
-
-Actual event-window row counts/null rates are **not yet claimed** because the required raw bodies have not completed the qualification gate. This is an acquisition block, not a PASS.
-
-Therefore:
-
-```math
-\boxed{\text{ACQUISITION PLAN FROZEN}}
-```
-
-```math
-\boxed{\text{AUDIT CODE VERIFIED OFFLINE}}
-```
-
-```math
-\boxed{\text{RAW ROW-LEVEL GATE PENDING}}
-```
-
-No train/test freeze, calibration, UQ, H1a confirmatory run or H1b adjudication is authorized until the required event/source roles pass R1–R8.
-
-## Immediate next governance task
-
-The RQ–SO–H logic gate is closed. The next synchronization sequence is
-
-```math
-\boxed{
-\text{master outline synchronization}
-\rightarrow
-\text{ASU master-specification synchronization}
-\rightarrow
-\text{abstract synchronization}
-\rightarrow
-\text{H3--H5 preregistration}.
+M_1=\text{static/algebraic coupling},
+\qquad
+M_2=\text{dynamic causal coupling}.
 }
 ```
 
-The H1 row-level acquisition/qualification process continues independently under its frozen controls. Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the formal H1 evidence search also remains pending before final H1 confirmation.
+Current H1 state:
+
+```text
+M0 implementation:                  VERIFIED
+M1 implementation:                  VERIFIED
+M2 implementation/regression:       VERIFIED
+row-level acquisition plan:         FROZEN
+offline acquisition/audit tests:    4/4 PASS
+raw row-level qualification R1–R8:  PENDING
+candidate train/test split:          NOT FROZEN
+confirmatory H1 execution:           NOT AUTHORIZED before data gates
+```
+
+H2 has a structured organization-to-feasible-control model and partial-observation/state-estimation bridge, but empirical organizational/information qualification remains incomplete. Phase-1 H2 execution remains gated.
+
+### Track B — H3
+
+The H3 readiness audit found substantial reusable v1 theory but no complete v2 H3 package. The following files now control H3 preparation:
+
+| File | Role | Status |
+|---|---|---|
+| [`H3_READINESS_AUDIT_V1.md`](H3_READINESS_AUDIT_V1.md) | audit of existing Stage-5/service/control/uncertainty assets and v2 corrections | **AUDIT COMPLETE** |
+| [`H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`](H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md) | semantics of `K`, `G_rec`, `F`, degraded states, `T_V/T_R`, threshold provenance | **STRUCTURE FROZEN / VALUES OPEN** |
+| [`H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`](H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md) | uncertainty taxonomy, probability admissibility, `P_viable`, `P_recover`, alpha/beta semantics | **STRUCTURE FROZEN / MODELS OPEN** |
+| [`H3_PREREGISTRATION_V1.md`](H3_PREREGISTRATION_V1.md) | paired comparator, candidate outcomes, pre-data metric rule, falsification and execution gates | **DRAFT PREREG / METRIC OPEN** |
+| [`H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`](H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md) | solver eligibility, state reduction, reference problems, convergence and verification | **SELECTION GATE FROZEN / SOLVER OPEN** |
+| [`RESILIENCE_SUSTAINABILITY_EXECUTION_STATUS_V1.md`](RESILIENCE_SUSTAINABILITY_EXECUTION_STATUS_V1.md) | current cross-stage execution dashboard | **CURRENT v1.1** |
+
+---
+
+## 4. H3 acceptability-set correction under framework v2
+
+The active H3 default is
+
+```math
+\boxed{
+K(t)
+=
+K_{\rm phys}(t)
+\cap
+K_{\rm svc}(t)
+\cap
+K_{\rm op}(t).
+}
+```
+
+Sustainability outcomes are not inserted into `K(t)` merely because they matter to the thesis. Unless independently justified as hard admissibility requirements, they remain Stage-6 consequences.
+
+The degraded region is
+
+```math
+\boxed{D(t)=K(t)^c\setminus F(t)}
+```
+
+and the recovery target satisfies
+
+```math
+\boxed{G_{\rm rec}(t)\subseteq K(t).}
+```
+
+The maintainability and recovery horizons are kept semantically distinct:
+
+```math
+\boxed{
+T_V=\text{maintainability horizon},
+\qquad
+T_R=\text{recovery horizon}.
+}
+```
+
+No numerical service threshold, `T_V`, `T_R`, `alpha`, `beta`, or `delta_3` is frozen without evidence/provenance.
+
+---
+
+## 5. H3 execution gate
+
+```math
+\boxed{
+G_{H3}
+=
+G_{H1/2}
+\land
+G_K
+\land
+G_U
+\land
+G_{\Pi}
+\land
+G_{alg}
+\land
+G_{metric}
+\land
+G_{\delta_3}
+\land
+G_{data}.
+}
+```
+
+Current state:
+
+```text
+G_H1/2   = 0
+G_K      = 0
+G_U      = 0
+G_Pi     = 0
+G_alg    = 0
+G_metric = 0
+G_delta3 = 0
+G_data   = 0
+
+H3 CONFIRMATORY EXECUTION = NOT AUTHORIZED
+```
+
+A failed prerequisite gate produces `H3 = NOT TESTED`, not scientific falsification.
+
+---
+
+## 6. H3 algorithm rule
+
+No solver is currently selected.
+
+Candidate families include dynamic programming, Hamilton–Jacobi reachability, Lagrangian/set-propagation methods, Monte Carlo/scenario evaluation under fixed policies, sampling/optimization methods, and verified surrogates.
+
+Selection must follow the frozen H3 computational signature:
+
+```math
+\boxed{
+\mathcal C_{H3}
+=
+(n_x,n_u,n_m,\mathsf{dyn},\mathsf{set},\mathsf{unc},\mathsf{obs},\mathsf{guar},\mathsf{budget}).
+}
+```
+
+A solver is eligible only after its mathematical assumptions, uncertainty semantics, geometry, hybrid/delay handling, scalability, guarantee, verification, reproducibility, and validation gates pass.
+
+---
+
+## 7. Cross-cutting authorities
+
+| File | Role | Status |
+|---|---|---|
+| [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md) | seven-stage scientific framework | **CANONICAL v2.0** |
+| [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) | RQ0 + general objective + SO1–SO5 + RQ1–RQ5 + H1–H5 | **CANONICAL v2.0** |
+| [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | reasoning, citation, falsification and evidence discipline | **CURRENT v1.2** |
+| [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory time + location preservation for spatial mechanisms | **FROZEN v1.0** |
+| [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | reduced-demonstrator and state-reduction rationale | **CURRENT METHODOLOGICAL RATIONALE** |
+| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | thesis-facing traceability | **CURRENT v2.0** |
+
+Legacy v1 Stage-5 files remain useful theoretical/provenance resources but do not override framework v2.0 or the H3 package.
+
+---
+
+## 8. Immediate next executable work
+
+### Track A
+
+```math
+\boxed{
+\text{retrieve raw H1 event/source data}
+\rightarrow
+R1{:}R8
+\rightarrow
+\text{freeze/reject split}
+\rightarrow
+\text{H1 verification/validation}.
+}
+```
+
+### Track B
+
+```math
+\boxed{
+\text{qualify threshold/horizon evidence}
+\rightarrow
+(K,G_{\rm rec},F,T_V,T_R)
+\rightarrow
+\text{qualify uncertainty models}
+\rightarrow
+\Pi_{\rm adm}
+\rightarrow
+\mathcal C_{H3}
+\rightarrow
+\text{select + verify solver}.
+}
+```
+
+Do not revise the conceptual framework, choose familiar probability levels, or select a reachability solver merely by popularity. The next progress comes from closing evidence and computation gates.
