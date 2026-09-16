@@ -2,7 +2,7 @@
 
 **Mode:** autonomous within active tool-enabled sessions  
 **Protocol:** `AUTONOMOUS_EXECUTION_PROTOCOL_V1.md`  
-**Current phase:** maximum autonomous non-evidence endpoint reached; hard evidence/data gates remain  
+**Current phase:** maximum autonomous non-evidence endpoint reached; explicit H1–H5 traceability completed; hard evidence/data/threshold gates remain  
 **Last updated:** 2026-09-16
 
 ## 1. Current queue
@@ -31,8 +31,9 @@
 | 15 | Matched confirmatory experiments/VVUQ | `DEFERRED_DEPENDENCY` | H1 raw-data and formal evidence gates remain open; later H2–H5 data/threshold gates also open |
 | 16 | Migrate supporting files from legacy Stage-2 notation | **PASS** | direct synchronization completed in four active files; `LEGACY_DEPENDENCY_NOTATION_MIGRATION_AUDIT_V3.md` records post-write verification; translation layer retained for provenance compatibility |
 | 17 | Build ASU MSE thesis master specification and traceability shell | **PASS** | `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` maps ASU shell, chapters, hypotheses, figures/equations, appendices and scientific gates |
+| 18 | Instantiate thesis-wide H1–H5 traceability and result firewall | **PASS_CONTROLLED_TRACEABILITY** | `THESIS_TRACEABILITY_REGISTER_V1.md` maps every primary hypothesis to evidence, model, metric, chapter, artifact, V&V, current block and next closure condition; no scientific gate upgraded |
 
-No remaining task is both scientifically admissible and independent of the hard evidence/data gates.
+No remaining task is both scientifically admissible and independent of the hard evidence/data/threshold gates.
 
 ## 2. Outputs produced during the autonomous novelty/foundation run
 
@@ -55,20 +56,21 @@ No remaining task is both scientifically admissible and independent of the hard 
 12. `project/NOVELTY_FOUNDATION_INDEX.md`
 13. `project/CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` — compatibility/provenance control layer
 14. `project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` — active document/scientific traceability shell
+15. `project/THESIS_TRACEABILITY_REGISTER_V1.md` — explicit H1–H5 traceability objects, chapter mirror, result firewall, blocking-state and next-gate register
 
 ### Directly synchronized active support files
 
-15. `project/MATHEMATICAL_FOUNDATION.md`
-16. `project/RESEARCH_HYPOTHESES.md`
-17. `project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`
-18. `project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`
+16. `project/MATHEMATICAL_FOUNDATION.md`
+17. `project/RESEARCH_HYPOTHESES.md`
+18. `project/MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`
+19. `project/FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`
 
 ### Mathematical specifications added without claiming empirical success
 
-19. `project/PARTIAL_OBSERVATION_TO_VIABILITY_SPECIFICATION_V1.md`
-20. `project/ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`
-21. `project/SUSTAINABLE_VIABILITY_CONSTRAINT_PROTOCOL_V1.md`
-22. `project/VIABILITY_INTERFACE_SENSITIVITY_SPECIFICATION_V1.md`
+20. `project/PARTIAL_OBSERVATION_TO_VIABILITY_SPECIFICATION_V1.md`
+21. `project/ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`
+22. `project/SUSTAINABLE_VIABILITY_CONSTRAINT_PROTOCOL_V1.md`
+23. `project/VIABILITY_INTERFACE_SENSITIVITY_SPECIFICATION_V1.md`
 
 ## 3. Deepened prior-art subtraction
 
@@ -143,13 +145,14 @@ The four active supporting files have now been directly synchronized to this not
 
 ## 6. ASU thesis-control state
 
-The active document-control artifact is:
+The active document-control artifacts are:
 
 ```text
 project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md
+project/THESIS_TRACEABILITY_REGISTER_V1.md
 ```
 
-It fixes the separation between:
+They fix the separation between:
 
 ```math
 \text{seven-stage scientific architecture}
@@ -163,6 +166,8 @@ Every future thesis-critical object must have a traceable destination through th
 \mathfrak T_i=(R_i,Q_i,H_i,E_i,M_i,\Phi_i,S_i,A_i,V_i,\sigma_i).
 ```
 
+H1–H5 are now individually instantiated in the traceability register, with explicit evidence/data requirements, comparator models, metrics/decision rules, chapter destinations, implementation artifacts, V&V gates, blocking states and next closure conditions.
+
 The active chapter architecture is:
 
 ```text
@@ -174,6 +179,8 @@ Ch.5 Results
 Ch.6 Discussion and Sustainable Engineering Implications
 Ch.7 Conclusions and Future Research
 ```
+
+The result firewall prevents a hypothesis from being promoted to a confirmatory result before its evidence/data, model, metric/threshold, context-of-use and V&V requirements are auditable.
 
 ## 7. Existing independent block — H1 row-level acquisition
 
@@ -218,6 +225,8 @@ The autonomous run has advanced to:
 \text{direct active-file notation migration}
 \rightarrow
 \text{ASU thesis traceability shell}
+\rightarrow
+\text{explicit H1--H5 traceability + result firewall}
 \rightarrow
 \color{#B42318}{\text{AUTHENTICATED EVIDENCE + RAW DATA + THRESHOLD GATES}}.
 }
