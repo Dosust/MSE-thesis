@@ -1,9 +1,11 @@
 # Project Mathematical Architecture
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
-![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
-![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Citation](https://img.shields.io/badge/citations-APA%207%20MANDATORY-8250DF)
+![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
+![Reasoning](https://img.shields.io/badge/reasoning-v1.2-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
+![Traceability](https://img.shields.io/badge/v2%20audit-SYNC%20REQUIRED-9A6700)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
 ![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
@@ -11,23 +13,81 @@
 ![Raw Retrieval](https://img.shields.io/badge/event%20rows-PENDING-B42318)
 ![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
 
-This directory is the active scientific/mathematical specification of the MSE thesis. The seven-stage framework and H1–H5 logic are frozen. The named execution method is **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
+This directory is the active scientific/mathematical specification of the MSE thesis. **Framework v2.0** is the current framework authority. H1 and H2 remain compatible with v2.0; H3–H5 require explicit versioned synchronization before new v2 confirmatory execution. The named execution method remains **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
 
-> Reasoning protocol: [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md)  
+> Reasoning protocol: [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) — **v1.2; mandatory adjacent APA 7 author–date citation for externally sourced scientific claims**  
+> Framework authority: [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
+> v2 traceability audit: [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md)  
 > Execution method: [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md)  
 > Evidence rule: public-support evidence may develop the method but cannot replace the formal confirmatory corpus.
+
+## Current governance state
+
+```math
+\boxed{
+\text{Framework v2.0}
+\rightarrow
+\text{traceability audit complete}
+\rightarrow
+\text{H3--H5 / outline / specification synchronization required}
+\rightarrow
+\text{preregistration}
+\rightarrow
+\text{confirmatory execution}.
+}
+```
+
+The v2 audit requires one-to-one traceability:
+
+```math
+\boxed{
+RQ_i
+\rightarrow
+SO_i
+\rightarrow
+H_i
+\rightarrow
+\text{metric}
+\rightarrow
+\text{experiment}
+\rightarrow
+\text{result}
+\rightarrow
+\text{engineering conclusion}.
+}
+```
+
+No new H3–H5 confirmatory execution is authorized until the synchronization gate closes. Existing H1 execution controls are unchanged.
 
 ## Cross-cutting canonical requirements
 
 | File | Role | Status |
 |---|---|---|
 | [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory temporal–geospatial realization rule for spatially dependent P–T cascades, recovery and intervention | **FROZEN v1.0** |
+| [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance protocol; includes citation-quality gate | **CURRENT v1.2** |
+| [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md) | RQ → objective → hypothesis → Stage-5 metric → experiment → chapter audit | **AUDIT COMPLETE / SYNC REQUIRED** |
 
-The spatiotemporal requirement supplements the frozen seven-stage framework without changing its sequence or the canonical dependency primitive. Its governing rule is:
+The spatiotemporal requirement remains mandatory:
 
 ```math
 \boxed{\text{Every modeled Power--Transportation cascade must preserve both time and location whenever the physical mechanism is spatially dependent.}}
 ```
+
+The v2 resilience core is
+
+```math
+\boxed{
+\text{Resilience}
+=
+\underbrace{\text{remain acceptable}}_{\text{viability}}
++
+\underbrace{\text{return to acceptable operation}}_{\text{reachability}}
++
+\underbrace{\text{quantify confidence}}_{\text{probability}},
+}
+```
+
+where the plus signs denote conceptual composition, not scalar addition. Performance/recovery curves remain a benchmark; incremental engineering value must be tested rather than assumed.
 
 ## H1 authority map
 
@@ -124,9 +184,7 @@ Offline verification reports:
 4/4 offline audit tests passed
 ```
 
-The tests cover timestamp/gap computation, duplicate detection, missing-required-field failure and the EAGLE-I rule that an absent record is not automatically zero outage.
-
-Actual event-window row counts/null rates are **not yet claimed** because the current chat runtime cannot retrieve the required large ZIP/Parquet/raw bodies. This is an acquisition block, not a PASS.
+Actual event-window row counts/null rates are **not yet claimed** because the required raw bodies have not completed the qualification gate. This is an acquisition block, not a PASS.
 
 Therefore:
 
@@ -144,10 +202,22 @@ Therefore:
 
 No train/test freeze, calibration, UQ, H1a confirmatory run or H1b adjudication is authorized until the required event/source roles pass R1–R8.
 
-## Immediate next step
+## Immediate next governance task
+
+Close the v2 synchronization gate in this order:
 
 ```math
-\boxed{\text{execute frozen acquisition}\rightarrow(N,t_{min},t_{max},\Delta t,\text{nulls},\text{duplicates},\text{coverage})\rightarrow R1{:}R8\rightarrow\textbf{freeze or reject split}.}
+\boxed{
+\text{version H3--H5}
+\rightarrow
+\text{v2 RQ--SO--H traceability}
+\rightarrow
+\text{outline/specification synchronization}
+\rightarrow
+\text{abstract synchronization}
+\rightarrow
+\text{H3--H5 preregistration}.
+}
 ```
 
-Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the formal H1 evidence search also remains pending before final H1 confirmation.
+The H1 row-level acquisition/qualification process continues independently under its frozen controls. Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the formal H1 evidence search also remains pending before final H1 confirmation.
