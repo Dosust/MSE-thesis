@@ -15,9 +15,10 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-12. `H3_PREREGISTRATION_V1.md`
-13. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`
+12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+13. `H3_PREREGISTRATION_V1.md`
+14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
 
 ## Thesis-only execution rule
 
@@ -79,9 +80,37 @@ This is an internal scope-control target, not an ASU page-count requirement. Com
 \rightarrow
 \text{H3 semantic/preregistration architecture closed}
 \rightarrow
-\text{H3 evidence qualification open}.
+s_P^{\min}\text{ structurally qualified}
+\rightarrow
+s_T^{\min}\text{ evidence qualification next}.
 }
 ```
+
+## `s_P^{min}` qualification result
+
+The evidence record is stored in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`.
+
+```math
+\boxed{
+\begin{aligned}
+\text{definition/provenance of }s_P^{\min} &: \text{SUPPORTED},\\
+\text{universal numerical value} &: \text{REJECTED},\\
+\text{case-specific numerical value} &: \text{OPEN},\\
+\text{confirmatory-code admission} &: \text{BLOCKED UNTIL CASE EVIDENCE IS FROZEN}.
+\end{aligned}
+}
+```
+
+The accepted mathematical mapping is case-specific:
+
+```math
+s_{P,m}^{\min}
+=
+\frac{\sum_i\omega_i E_{i,m}^{req}}
+{\sum_i\omega_i\widehat E_{i,m}^{d}},
+```
+
+when the documented critical-energy requirement is expressed on the same spatial, temporal, and weighting support as the frozen `S_P` metric. Non-substitutable critical functions additionally require native per-entity constraints.
 
 ## Current preferred model-family backbone
 
@@ -108,18 +137,7 @@ This is subordinate to the canonical seven-stage framework; it does not rename o
 ## Immediate next task
 
 ```math
-\boxed{
-\text{qualify evidence for }
-\left\{
-s_P^{\min},
-s_T^{\min},
-s_{P,\rm rec},
-s_{T,\rm rec},
-F,
-T_V,
-T_R
-\right\}.
-}
+\boxed{s_T^{\min}}
 ```
 
 Routing under EGMIV–TSP:
@@ -128,23 +146,27 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Output:        qualified threshold-and-horizon evidence registry
-Stop when:     every required quantity is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
+Object:        minimum acceptable transportation service
+Output:        qualified evidence record mapped to the frozen completed/requested weighted OD-trip service metric
+Stop when:     the object is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
 ```
 
-For every candidate value record:
+The remaining H3 qualification order is
 
-```text
-mathematical role;
-physical/service meaning;
-units;
-source/authority;
-adjacent verified APA 7 citation when externally sourced;
-time aggregation;
-spatial aggregation;
-uncertainty;
-validity domain;
-status = evidence-supported / assumption / rejected / open.
+```math
+\boxed{
+s_T^{\min}
+\rightarrow
+s_{P,\rm rec}
+\rightarrow
+s_{T,\rm rec}
+\rightarrow
+F
+\rightarrow
+T_V
+\rightarrow
+T_R.
+}
 ```
 
 Then continue:
