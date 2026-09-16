@@ -1,6 +1,6 @@
 # Latest Scientific Restart Pointer
 
-**Updated:** 2026-09-16  
+**Updated:** 2026-09-17  
 **Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, document controls, and immediate next admissible task.
 
 ## Read first
@@ -15,7 +15,7 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V6.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`
 12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
 13. `H3_PREREGISTRATION_V1.md`
 14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
@@ -90,87 +90,77 @@ F\checkmark
 \rightarrow
 T_V\checkmark
 \rightarrow
-T_R\text{ next}.
+T_R\checkmark.
 }
 ```
 
-## Qualified H3 objects
+## H3 threshold/state/time qualification status
 
-Current evidence registry: `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V6.md`.
+Current evidence registry: `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`.
 
 ```math
 \boxed{
 \begin{array}{c|c|c}
-\text{Object}&\text{Definition/provenance}&\text{Case-specific numeric realization}\\\hline
+\text{Object}&\text{Definition/provenance}&\text{Case-specific realization}\\\hline
 s_P^{\min}&\text{SUPPORTED}&\text{OPEN}\\
 s_T^{\min}&\text{SUPPORTED}&\text{OPEN}\\
 s_{P,\rm rec}&\text{SUPPORTED}&\text{OPEN}\\
 s_{T,\rm rec}&\text{SUPPORTED}&\text{OPEN}\\
 F&\text{SUPPORTED AS PROVENANCE-CONSTRAINED CONSTRUCTION}&\text{OPEN}\\
-T_V&\text{SUPPORTED AS PROVENANCE-CONSTRAINED FINITE HORIZON}&\text{OPEN}
+T_V&\text{SUPPORTED AS PROVENANCE-CONSTRAINED FINITE HORIZON}&\text{OPEN}\\
+T_R&\text{SUPPORTED AS PROVENANCE-CONSTRAINED RECOVERY DEADLINE}&\text{OPEN}
 \end{array}
 }
 ```
 
-All remain blocked from confirmatory code until the selected case authority/data freeze supplies admissible numerical values/criteria with uncertainty and validity metadata.
+The seven-object qualification sequence is **structurally complete but numerically open**. No placeholder value may enter confirmatory code.
 
-## `T_V` qualification result
+## `T_R` qualification result
 
-`T_V` is the finite duration over which acceptable coupled operation must be maintainable:
+`T_R` is the case-qualified maximum admissible duration from a declared recovery-clock origin `t_R^0` to first admissible entry into `G_rec` while avoiding `F`:
 
 ```math
 \boxed{
-\Pr^{\pi}
-\left[
-Y_\tau\in K(\tau),\ \forall\tau\in[t,t+T_V]
-\mid\mathcal I_t
-\right]
-\ge\alpha.
+T_{\rm rec}^{\pi}(\omega)
+=
+\tau_{G_{\rm rec}}(\omega;\pi)-t_R^0,
+\qquad
+T_{\rm rec}^{\pi}(\omega)\le T_R.
 }
 ```
-
-The evidence-supported provenance hierarchy is:
-
-```text
-Tier V-A: direct authority/service-continuity duration;
-Tier V-B: authority-defined disruption/outage scenario requiring service throughout;
-Tier V-C: evidence-bounded explicit thesis assumption with preregistered sensitivity analysis.
-```
-
-No universal `T_V` is admitted. A value such as 12 h, 24 h, 72 h, 7 d, 14 d, or 30 d cannot be transferred from another organization, paper, tutorial, or software default without matching authority and validity domain.
 
 The following distinctions are frozen:
 
 ```math
-\boxed{\Delta t_{sim}\neq T_V,}
+\boxed{T_R\neq T_{\rm rec},}
 ```
 
 ```math
-\boxed{\Delta t_{obs}\neq T_V,}
+\boxed{T_R\neq T_V\ \text{in general},}
 ```
 
 ```math
-\boxed{T_{sim}\neq T_V\ \text{in general},}
+\boxed{T_R\neq T_H\ \text{in general},}
 ```
 
 ```math
-\boxed{T_H\neq T_V\ \text{in general},}
+\boxed{T_R\neq T_{sim},}
 ```
 
 ```math
-\boxed{\Delta t_{plan}\neq T_V,}
+\boxed{T_R\neq\tau_{\rm dwell}.}
 ```
 
-```math
-\boxed{T_R\neq T_V\ \text{in general}.}
-```
-
-A single computational horizon may cover different sector-specific continuity requirements only if the time-varying `K(τ)` preserves each requirement's actual temporal support.
+A numerical `T_R` is incomplete without an explicit time origin, service/recovery target, criticality/user class, authority, hazard/scenario domain, uncertainty, and validity domain. Multiple P/T service deadlines must not be averaged; if one outer computational horizon is required, earlier qualified deadlines remain explicit constraints.
 
 ## Immediate next task
 
 ```math
-\boxed{T_R}
+\boxed{
+\text{case-specific H3 registry closure}
+\rightarrow
+\text{uncertainty qualification}.
+}
 ```
 
 Routing under EGMIV–TSP:
@@ -179,16 +169,18 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Object:        recovery deadline / horizon
-Output:        qualified engineering basis for T_R with units, provenance, uncertainty, validity domain, and explicit separation from T_V, hazard duration, simulation duration, recovery-service threshold, and dwell time
-Stop when:     T_R is evidence-supported, explicit assumption, rejected, or documented open
+Objects:       s_P^min, s_T^min, s_P,rec, s_T,rec, F, T_V, T_R
+Output:        case-specific numerical/criterion registry with source authority, units, time origin/support, uncertainty, and validity domain
+Stop when:     each object is frozen as evidence-supported or explicit assumption, or remains formally OPEN/BLOCKED because no admissible case evidence exists
 ```
 
-Once `T_R` is qualified, the H3 service/state-set evidence-qualification sequence is structurally complete and the workflow advances to
+The already-frozen uncertainty architecture in `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md` governs the next step. Probability is not authorized merely because a quantity is uncertain; every proposed stochastic model must pass the probability-admissibility gate. If case evidence supports only intervals, sets, or scenarios, retain those nonprobabilistic representations.
+
+Then continue:
 
 ```math
 \boxed{
-(K,G_{\rm rec},F,T_V,T_R)
+\text{case-specific registry closure}
 \rightarrow
 \text{uncertainty qualification}
 \rightarrow
@@ -196,7 +188,13 @@ Once `T_R` is qualified, the H3 service/state-set evidence-qualification sequenc
 \rightarrow
 \mathcal C_{H3}
 \rightarrow
-\text{solver selection and verification}.
+\text{solver selection and verification}
+\rightarrow
+\text{metric}+\delta_3
+\rightarrow
+\text{data freeze}
+\rightarrow
+\text{H3 execution}.
 }
 ```
 
@@ -204,4 +202,4 @@ Parallel work remains limited to already-authorized H1/H2 qualification tasks.
 
 ## Hard prohibition
 
-Do not return to framework redesign, browse without a thesis evidence need, collect papers without extraction purpose, freeze SCM/POMDP/HJ/MPC/DRO by preference, introduce AI/ML by fashion, invent numerical thresholds/probability levels/horizons, use unchecked citations, define `F` from preliminary solver outputs, or run H3 confirmatorily until the existing evidence, model, algorithm, metric, and data gates close.
+Do not return to framework redesign, browse without a thesis evidence need, collect papers without extraction purpose, freeze SCM/POMDP/HJ/MPC/DRO by preference, introduce AI/ML by fashion, invent numerical thresholds/probability levels/horizons, use unchecked citations, average incompatible sectoral deadlines, choose a recovery clock after inspecting outcomes, or run H3 confirmatorily until all required evidence, model, uncertainty, algorithm, metric, and data gates close.
