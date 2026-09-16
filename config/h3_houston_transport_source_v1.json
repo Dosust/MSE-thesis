@@ -1,0 +1,53 @@
+{
+  "case_id": "H3-HOU-FLOOD-V1",
+  "config_version": "1.0",
+  "status": "TRANSPORT_SOURCE_BASEYEAR_QUALIFIED_RAW_MATERIALIZATION_OPEN",
+  "transport_source": {
+    "authority": "Houston-Galveston Area Council (H-GAC)",
+    "source_family": "2025 Transportation Conformity",
+    "model": "H-GAC Travel Demand Model",
+    "environment": "Cube Voyager",
+    "base_year": 2023,
+    "forecast_years": [2026, 2030, 2040, 2045],
+    "primary_network_source": "Appendix C.4 Roadway Network Files",
+    "support_sources": [
+      "Appendix C.3 Link Listing and Capacity Staging",
+      "Appendix C.1 Travel Model Validation"
+    ],
+    "historical_harvey_transport_claim": false
+  },
+  "source_urls": {
+    "landing_page": "https://www.h-gac.com/transportation-conformity/2025",
+    "C1": "https://www.h-gac.com/getmedia/26d3529a-3e1b-4211-83b5-a55515a06589/C1_Travel_Model_Variation",
+    "C3": "https://www.h-gac.com/getmedia/6faf4b9d-d6e7-4c7c-830b-7110663b0e52/C3_Link_Listing_and_Capacity_Staging",
+    "C4": "https://www.h-gac.com/getmedia/e1498b1d-470d-4df9-92bb-2d55b749f524/C4_Roadway-Network-Files"
+  },
+  "regional_model_context": {
+    "taz_total": 5263,
+    "taz_internal": 5217,
+    "external_zones_or_stations": 46,
+    "regional_counts_are_not_houston_graph_dimensions": true
+  },
+  "qualification": {
+    "source_family_gate": true,
+    "base_year_gate": true,
+    "raw_materialization_gate": false,
+    "boundary_qa_gate": false,
+    "houston_inventory_gate": false,
+    "transport_qa_gate": false
+  },
+  "graph_accounting_rule": "G_T_sim may include boundary/connectivity support outside Omega_core; G_T_svc excludes such support unless independently justified",
+  "required_next_command": "python methods/h3/materialize_hgac_transport.py --root data/H3-HOU-FLOOD-V1 --source all",
+  "prohibitions": [
+    "Do not treat regional TAZ counts as Houston graph dimensions",
+    "Do not clip links to Houston before G_Omega_QA=1",
+    "Do not assume archive member formats or field semantics before byte inspection",
+    "Do not use traffic counts as S_T denominator without evidence-matched mapping",
+    "Do not treat the 2023 network as a historical 2017 Harvey reconstruction"
+  ],
+  "authority_files": [
+    "project/H3_HGAC_TRANSPORT_SOURCE_AND_BASEYEAR_QUALIFICATION_V1.md",
+    "project/H3_HOUSTON_BOUNDARY_FREEZE_V1.md",
+    "project/H3_DEMONSTRATOR_FREEZE_V1.md"
+  ]
+}
