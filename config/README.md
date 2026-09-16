@@ -7,6 +7,7 @@ This directory contains machine-readable configuration aligned with the frozen s
 | `scientific_propositions.yaml` | P1–P10 supporting proposition registry | synchronized with `project/SCIENTIFIC_PROPOSITIONS.md` |
 | `research_hypotheses.yaml` | H1–H5 primary hypothesis registry | synchronized with `project/RESEARCH_HYPOTHESES.md` |
 | `example_model.json` | valid illustrative P–T–I–O model configuration | validated against `schemas/thesis_model.schema.json` |
+| `h3_houston_power_source_v1.json` | frozen H3 Houston SMART-DS source/version/year/scenario contract and geographic-selection gates | `project/H3_SMARTDS_YEAR_QUALIFICATION_V1.md` + `project/H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md` |
 
 These files are contracts for software/reproducibility. They do not replace the human-readable canonical stage specifications.
 
@@ -18,5 +19,6 @@ These files are contracts for software/reproducibility. They do not replace the 
 - Stage-4 operational control uses $u(t)$.
 - Stage-7 strategic transformation uses $\mathbf a_k$ and regime $\mathfrak M_k$.
 - Historical P–W–T–SW/waste–drainage configuration must not reappear in active contracts.
+- `h3_houston_power_source_v1.json` freezes SMART-DS v0.9 / 2016 / Full_Texas / base_timeseries as the primary semisynthetic H3 power-source contract, but it does not authorize Houston asset labeling until `G_{\Omega,QA}=1`.
 
-The GitHub scientific-architecture workflow validates these invariants automatically.
+The GitHub scientific-architecture workflow validates these invariants automatically where implemented.
