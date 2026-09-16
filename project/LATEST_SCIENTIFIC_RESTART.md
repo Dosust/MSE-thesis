@@ -15,7 +15,7 @@
 8. `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`
 9. `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 10. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
-11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V2.md`
+11. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V3.md`
 12. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
 13. `H3_PREREGISTRATION_V1.md`
 14. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
@@ -84,57 +84,49 @@ s_P^{\min}\text{ structurally qualified}
 \rightarrow
 s_T^{\min}\text{ structurally qualified}
 \rightarrow
-s_{P,\rm rec}\text{ evidence qualification next}.
+s_{P,\rm rec}\text{ structurally qualified}
+\rightarrow
+s_{T,\rm rec}\text{ evidence qualification next}.
 }
 ```
 
-## `s_P^{min}` qualification result
+## Qualified H3 service objects
 
-The complete evidence record is preserved in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md` and summarized in v2.
+The current evidence registry is `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V3.md`.
 
 ```math
 \boxed{
-\begin{aligned}
-\text{definition/provenance of }s_P^{\min} &: \text{SUPPORTED},\\
-\text{universal numerical value} &: \text{REJECTED},\\
-\text{case-specific numerical value} &: \text{OPEN},\\
-\text{confirmatory-code admission} &: \text{BLOCKED UNTIL CASE EVIDENCE IS FROZEN}.
-\end{aligned}
+\begin{array}{c|c|c|c}
+\text{Object}&\text{Definition/provenance}&\text{Universal numeric value}&\text{Case-specific value}\\\hline
+s_P^{\min}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}\\
+s_T^{\min}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}\\
+s_{P,\rm rec}&\text{SUPPORTED}&\text{REJECTED}&\text{OPEN}
+\end{array}
 }
 ```
 
-## `s_T^{min}` qualification result
+All three objects remain blocked from confirmatory code until the selected case authority/data freeze supplies admissible numerical values with uncertainty and validity metadata.
 
-The evidence record is stored in `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V2.md`.
-
-```math
-\boxed{
-\begin{aligned}
-\text{definition/provenance of }s_T^{\min} &: \text{SUPPORTED},\\
-\text{universal numerical value} &: \text{REJECTED},\\
-\text{case-specific numerical value} &: \text{OPEN},\\
-\text{confirmatory-code admission} &: \text{BLOCKED UNTIL CASE EVIDENCE IS FROZEN}.
-\end{aligned}
-}
-```
+## `s_{P,rec}` qualification result
 
 The admissible case-specific mapping is
 
 ```math
-s_{T,m}^{\min}
+s_{P,\rm rec,m}
 =
-\frac{\sum_w\omega_w N_{w,m}^{min}}
-{\sum_w\omega_w\widehat N_{w,m}^{req}},
+\frac{\sum_i\omega_i E_{i,m}^{rec}}
+{\sum_i\omega_i\widehat E_{i,m}^{d}},
 ```
 
-only when the authoritative minimum critical-trip requirement is defined on the same OD/service-class, temporal, population, and weighting support as the frozen `S_T` metric. Non-substitutable critical OD/service classes additionally require
+when the recovery target is defined on the same spatial, temporal, demand, and weighting support as the frozen `S_P` metric.
+
+The structural consistency condition is
 
 ```math
-N_{w,m}^{comp}\ge N_{w,m}^{min},
-\qquad w\in\mathcal W_{hard}.
+\boxed{s_P^{\min}(t)\le s_{P,\rm rec}(t)\le1,}
 ```
 
-LOS, travel time, delay, route-open status, evacuation deadline, transit on-time performance, or another native transportation metric is not converted into `s_T^{min}` without a validated mapping.
+but `s_{P,rec}=1` is **not** a universal requirement. Non-substitutable critical functions additionally require native per-entity recovery constraints. When transient threshold crossing is insufficient, the existing H3 dwell semantics may be activated, but the dwell duration remains evidence-open.
 
 ## Current preferred model-family backbone
 
@@ -161,7 +153,7 @@ This is subordinate to the canonical seven-stage framework; it does not rename o
 ## Immediate next task
 
 ```math
-\boxed{s_{P,\rm rec}}
+\boxed{s_{T,\rm rec}}
 ```
 
 Routing under EGMIV–TSP:
@@ -170,8 +162,8 @@ Routing under EGMIV–TSP:
 Chapter:       3 and 4
 Stage:         5
 RQ/H:          RQ3 / H3
-Object:        sufficiently recovered power-service target
-Output:        qualified evidence record for G_rec mapped to the frozen S_P service metric and any non-substitutable critical-load constraints
+Object:        sufficiently recovered transportation-service target
+Output:        qualified evidence record for G_rec mapped to the frozen S_T metric and any non-substitutable critical-mobility constraints
 Stop when:     the object is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
 ```
 
@@ -179,8 +171,6 @@ The remaining H3 qualification order is
 
 ```math
 \boxed{
-s_{P,\rm rec}
-\rightarrow
 s_{T,\rm rec}
 \rightarrow
 F
