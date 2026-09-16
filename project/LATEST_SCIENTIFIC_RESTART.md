@@ -18,14 +18,17 @@
 11. `H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md`
 12. `H3_SMARTDS_YEAR_QUALIFICATION_V1.md`
 13. `H3_SMARTDS_ELECTRICAL_CLOSURE_AND_OPENDSS_QA_V1.md`
-14. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-15. `H3_PREREGISTRATION_V1.md`
-16. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
-17. `../methods/h3/materialize_houston_boundary.py`
-18. `../methods/h3/inventory_smartds_houston.py`
-19. `../methods/h3/materialize_smartds_houston_power.py`
-20. `../methods/h3/qa_smartds_power_layer.py`
-21. `../config/h3_houston_power_source_v1.json`
+14. `H3_HGAC_TRANSPORT_SOURCE_AND_BASEYEAR_QUALIFICATION_V1.md`
+15. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+16. `H3_PREREGISTRATION_V1.md`
+17. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+18. `../methods/h3/materialize_houston_boundary.py`
+19. `../methods/h3/inventory_smartds_houston.py`
+20. `../methods/h3/materialize_smartds_houston_power.py`
+21. `../methods/h3/qa_smartds_power_layer.py`
+22. `../methods/h3/materialize_hgac_transport.py`
+23. `../config/h3_houston_power_source_v1.json`
+24. `../config/h3_houston_transport_source_v1.json`
 
 ## Thesis-only execution rule
 
@@ -69,7 +72,9 @@ D_{\Omega}\text{ source/semantics frozen}
 \rightarrow
 Y_P^{H3}=2016\text{ qualified}
 \rightarrow
-\boxed{\text{SMART-DS materialization + electrical/OpenDSS QA machinery prepared}}.
+\text{SMART-DS materialization/OpenDSS QA prepared}
+\rightarrow
+\boxed{Y_T^{H3}=2023\text{ H-GAC transport source/base year qualified + raw acquisition prepared}}.
 }
 ```
 
@@ -83,7 +88,7 @@ Y_P^{H3}=2016\text{ qualified}
 }
 ```
 
-Primary claim type: geographically grounded semisynthetic mechanism/decision-value experiment, **not** historical reconstruction of Houston's actual 2017 grid, outage chronology or restoration chronology.
+Primary claim type: geographically grounded semisynthetic mechanism/decision-value experiment, **not** historical reconstruction of Houston's actual 2017 grid, road state, outage chronology or restoration chronology.
 
 Primary service domain:
 
@@ -112,7 +117,7 @@ G_{\Omega,QA}=0.
 
 Boundary byte/geometry QA is **NOT TESTED**, not scientifically failed.
 
-## SMART-DS power source
+## SMART-DS power branch
 
 Frozen primary power source:
 
@@ -121,100 +126,27 @@ SMART-DS version: v0.9
 Year:             2016
 Dataset:          Full_Texas
 Scenario:         base_timeseries
-Prefix family:    SMART-DS/v0.9/2016/Full_Texas/
 ```
 
 ```math
 \boxed{Y_P^{H3}=2016.}
 ```
 
-This is a reproducibility/source-traceability choice for the semisynthetic demonstrator, not a claim that the synthetic 2016 network is historical Houston.
-
-Candidate selection remains:
+Prepared sequence:
 
 ```math
-\boxed{
-I_s
-=
-\mathbf 1\{\exists v\in\mathcal V_s:\operatorname{coord}(v)\in\Omega_{core}\}.
-}
+G_{\Omega,QA}=1
+\rightarrow
+\text{Houston candidate substations}
+\rightarrow
+\text{candidate raw materialization}
+\rightarrow
+\text{OpenDSS compile/solve QA}
+\rightarrow
+N_P,M_P.
 ```
 
-A candidate substation is not yet a final H3 power subsystem.
-
-## Prepared power realization pipeline
-
-### 1. Houston geographic candidate inventory
-
-```text
-methods/h3/inventory_smartds_houston.py
-```
-
-Hard-requires `G_Omega_QA=1` for final Houston selection.
-
-### 2. Candidate raw materialization
-
-```text
-methods/h3/materialize_smartds_houston_power.py
-```
-
-It freezes source object keys, byte sizes, ETags/last-modified metadata, preserved relative paths and SHA-256 identities for the complete source-provided candidate-substation OpenDSS packages.
-
-### 3. Electrical closure and OpenDSS QA
-
-Scientific protocol:
-
-```text
-project/H3_SMARTDS_ELECTRICAL_CLOSURE_AND_OPENDSS_QA_V1.md
-```
-
-Executable QA:
-
-```text
-methods/h3/qa_smartds_power_layer.py
-```
-
-The simulation graph and service domain are explicitly separated:
-
-```math
-\boxed{
-\mathcal G_{P,sim}^{HOU}
-\supseteq
-\mathcal G_{P,svc}^{HOU}.
-}
-```
-
-The station-level closure rule preserves complete source-provided OpenDSS packages and adds only documented external dependencies needed for `Master.dss` resolution. Exterior support elements are not automatically included in Houston service accounting.
-
-Baseline QA reports/validates:
-
-```text
-Master.dss resolution;
-OpenDSS compile;
-baseline solve convergence;
-nonempty buses and PD elements;
-finite voltage outputs where available;
-bus/node/circuit-element/PD-element counts;
-line/transformer/load counts;
-isolated branches/loads and loop counts where supported;
-OpenDSSDirect and engine versions.
-```
-
-Voltage extrema are diagnostic only; no arbitrary voltage threshold is introduced by this QA step.
-
-Simulation-layer dimensions are frozen only after successful execution:
-
-```math
-\boxed{
-N_P^{sim}=\sum_s N_{bus,s},
-\qquad
-M_P^{sim}=\sum_s N_{PD,s}.
-}
-```
-
-They do **not** yet define the `S_P` service denominator.
-
-## Current power gate
+Current power gate:
 
 ```math
 \boxed{
@@ -232,7 +164,82 @@ G_{P,QA}=0.
 }
 ```
 
-Overall:
+No Houston power asset IDs, graph dimensions, service denominator or convergence result are claimed yet.
+
+## H-GAC transportation branch
+
+Primary source family:
+
+```text
+Houston-Galveston Area Council (H-GAC)
+2025 Transportation Conformity
+C.4 Roadway Network Files
+C.3 Link Listing and Capacity Staging
+C.1 Travel Model Validation
+```
+
+The H-GAC conformity modeling system identifies the Travel Demand Model base year as 2023 and forecast years as 2026, 2030, 2040 and 2045. The primary H3 transport vintage is therefore frozen as
+
+```math
+\boxed{Y_T^{H3}=2023.}
+```
+
+This is a reproducibility/current-base-model choice for the semisynthetic demonstrator, not a claim that the 2023 network is historical Houston during Harvey.
+
+H-GAC regional context (not Houston graph dimensions):
+
+```text
+8-county model region;
+Cube Voyager environment;
+four-step demand modeling;
+5,263 TAZs total;
+5,217 internal TAZs;
+46 external zones/stations.
+```
+
+Prepared raw acquisition utility:
+
+```text
+methods/h3/materialize_hgac_transport.py
+```
+
+It preserves C.1/C.3/C.4 source bytes, records resolved URL/HTTP metadata/byte size/SHA-256, rejects HTML/error payloads, safely inventories ZIP archives, and preserves extracted members in `interim/` rather than modifying `raw/`.
+
+Regional raw acquisition does not require Houston boundary QA. Final Houston link/node selection does.
+
+The transport simulation and service graphs are kept distinct:
+
+```math
+\boxed{
+\mathcal G_{T,sim}^{HOU}
+\supseteq
+\mathcal G_{T,svc}^{HOU}.
+}
+```
+
+External/centroid/boundary connectors may be required for route continuity but are not automatically admitted to the `S_T` service denominator.
+
+Current transport gate:
+
+```math
+\boxed{
+G_{T,source}=1,
+\quad
+G_{T,year}=1,
+\quad
+G_{T,prep}=1,
+\quad
+G_{T,raw}=0,
+\quad
+G_{T,inventory}=0,
+\quad
+G_{T,QA}=0.
+}
+```
+
+No C.4 archive contents, CRS, network fields, Houston link IDs, `N_T`, `M_T`, OD matrix or service denominator are claimed yet.
+
+## Current overall gate state
 
 ```math
 \boxed{
@@ -241,6 +248,10 @@ G_{case}=1,
 G_{source}=1,
 \quad
 G_{\Omega,QA}=0,
+\quad
+G_{P,prep}=1,
+\quad
+G_{T,prep}=1,
 \quad
 G_K=0,
 \quad
@@ -254,45 +265,44 @@ G_{alg}=0.
 
 H3 confirmatory execution remains **NOT AUTHORIZED**.
 
-## Immediate next executable transition
+## Immediate next admissible task
+
+Because the Houston boundary gate blocks final geographic selection but not independent raw source acquisition, the next admissible task is:
 
 ```math
 \boxed{
-\text{successful Houston-boundary materialization}
+\text{materialize H-GAC C.1/C.3/C.4 raw bytes}
 \rightarrow
-G_{\Omega,QA}=1
+\text{SHA256 + archive inventory}
 \rightarrow
-\text{2016 Houston candidate inventory}
-\rightarrow
-\text{candidate raw materialization}
-\rightarrow
-\text{electrical closure + OpenDSS QA}.
+\text{freeze actual file/field semantics}.
 }
 ```
 
-Exact commands after the boundary gate closes:
+Execute when a network-enabled runtime can reach H-GAC:
 
 ```bash
-python methods/h3/inventory_smartds_houston.py \
+python methods/h3/materialize_hgac_transport.py \
   --root data/H3-HOU-FLOOD-V1 \
-  --year 2016 \
-  --scenario base_timeseries
-
-python methods/h3/materialize_smartds_houston_power.py \
-  --root data/H3-HOU-FLOOD-V1 \
-  --year 2016 \
-  --scenario base_timeseries
-
-python methods/h3/qa_smartds_power_layer.py \
-  --root data/H3-HOU-FLOOD-V1 \
-  --year 2016 \
-  --scenario base_timeseries
+  --source all
 ```
 
-If the boundary runner remains externally blocked, only scientifically independent preparation may continue. Do not label any SMART-DS substation as Houston until `G_Omega_QA=1`.
+In parallel, a successful network-enabled Houston boundary run remains required before any final Houston P/T geographic selection.
 
-After `G_P_QA=1`, proceed to H-GAC transportation materialization, City traffic-signal materialization, Harvey flood materialization, P↔T interface QA, case-specific H3 registry closure, uncertainty qualification, then H3 solver verification.
+After `G_Omega_QA=1` and raw P/T materialization:
+
+```text
+1. complete SMART-DS Houston candidate inventory and OpenDSS QA;
+2. inspect H-GAC C.4/C.3 field semantics and construct the Houston roadway graph;
+3. materialize City traffic signals;
+4. materialize Harvey flood raster/polygon;
+5. construct and QA P→T and T→P mappings;
+6. report actual P/T/interface dimensions;
+7. populate the seven-object H3 case registry;
+8. qualify uncertainty;
+9. only then select/verify the H3 solver.
+```
 
 ## Hard prohibition
 
-Do not construct Houston geometry from published extents; do not substitute a third-party boundary for convenience; do not infer actual CenterPoint topology from SMART-DS; do not silently repair OpenDSS source models; do not introduce arbitrary voltage/service thresholds; do not invent network dimensions; and do not execute confirmatory H3 until every required gate closes.
+Do not construct Houston geometry from published extents; do not substitute third-party P/T data solely for convenience; do not infer actual CenterPoint topology from SMART-DS; do not treat H-GAC regional TAZ counts as Houston network counts; do not infer C.4 field semantics before raw inspection; do not treat traffic counts as `S_T` without an evidence-matched mapping; do not invent network dimensions or thresholds; and do not execute confirmatory H3 until every required gate closes.
