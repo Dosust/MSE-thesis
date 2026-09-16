@@ -2,7 +2,8 @@
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
-![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
+![Resilience](https://img.shields.io/badge/core-viability%20%2B%20reachability%20%2B%20probability-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
@@ -12,7 +13,8 @@
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** active thesis source of truth  
-**Framework status:** complete seven-stage conceptual and mathematical framework frozen  
+**Framework status:** canonical seven-stage framework v2.0; v1 retained as provenance  
+**Resilience core:** uncertainty-aware viability + reachability + probability  
 **Hypothesis status:** five-primary-hypothesis logic frozen; H1 confirmatory design frozen; later hypothesis-specific numerical specifications remain subject to their preregistration gates  
 **Reasoning protocol:** canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance discipline  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
@@ -33,7 +35,7 @@ The increasing electrification of transportation is making the continuity of ele
 
 The study addresses how evidence-supported power–transportation interdependencies, together with information availability, organizational constraints, and feasible controls, shape disruption propagation, cascading effects, service degradation, and recovery. An evidence-grounded mathematical framework maps directional interdependencies into a **coupled hybrid multiscale dynamical model**. Observation and organizational mechanisms—including sensing, state estimation, communication, coordination, resource availability, authority, and response delays—determine what system states can be known, which actions are feasible, and how quickly those actions can be implemented.
 
-Resilience is characterized through service loss, recovery, cascading behavior, and **controlled viability**. Controlled viability determines whether a disrupted system can remain within acceptable service and operational conditions under admissible controls, while **viability margins and time-to-viability loss** quantify proximity to loss of maintainability. Resilience analysis identifies consequential vulnerabilities and interfaces that motivate candidate engineering interventions. Each intervention modifies the coupled-system architecture or dynamics and produces new trajectories from which changes in resilience and sustainability are evaluated.
+Resilience is characterized through service loss, recovery, cascading behavior, and an **uncertainty-aware viability–reachability formulation**. Viability represents the ability to maintain acceptable service under feasible controls; reachability represents the ability to return to acceptable operation after degradation; probability quantifies confidence in these capabilities under uncertainty. Viability margins, time-to-viability loss, recovery time, and associated maintainability/recovery probabilities provide complementary resilience information. Conventional performance/recovery curves are retained as a benchmark, and the thesis tests rather than assumes whether the proposed formulation adds engineering value.
 
 Sustainability is treated as an **emergent consequence of how the coupled system operates, fails, recovers, and is redesigned** rather than as an independent score. Evaluation focuses on **accessibility, operational energy use, carbon emissions, cost**, and additional outcomes only where causal mechanisms and data support their inclusion. The framework is tested using a minimal coupled **power–transportation demonstrator with explicit information and organizational layers**, physics-based simulation, competing independent, static-coupling, and dynamic-causal models, hypothesis-driven experiments, and **verification, validation, and uncertainty quantification**. The intended contribution is a defensible engineering decision framework that identifies consequential interdependencies, explains resilience loss, evaluates intervention effects, and makes **resilience–sustainability synergies, trade-offs, and burden shifting explicit under uncertainty**.
 
@@ -48,10 +50,12 @@ Sustainability is treated as an **emergent consequence of how the coupled system
 | [`thesis/README.md`](thesis/README.md) | **ASU-facing thesis document architecture and control entry point** |
 | [`thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`](thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md) | ASU/SSEBE + scientific thesis master specification |
 | [`project/README.md`](project/README.md) | active mathematical/project dashboard |
+| [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | **current canonical seven-stage framework v2.0** |
+| [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | v1 framework retained for provenance only |
+| [`project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | frozen spatiotemporal propagation requirement |
 | [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | canonical thesis-wide reasoning, verification, validation, falsification and synthesis protocol |
 | [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md) | canonical evidence-grounded model-construction/validation method |
 | [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md) | frozen thesis scope |
-| [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | frozen seven-stage framework |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md) | H1 M0/M1/M2 physical specification |
 | [`project/H1_CONFIRMATORY_PREREGISTRATION_V1.md`](project/H1_CONFIRMATORY_PREREGISTRATION_V1.md) | H1 confirmatory design |
@@ -86,33 +90,136 @@ Every substantive thesis claim must expose its definition, evidence status, mech
 
 ---
 
-## Frozen scientific framework
+## Canonical scientific framework v2.0
+
+The seven-stage architecture is retained, but Stage 5 is revised from controlled viability alone to an uncertainty-aware viability–reachability resilience core.
+
+| Stage | Scientific role | Main question |
+|---|---|---|
+| **1. Spatiotemporal Multilayer SoS Structure** | Define systems, components, layers and geography | What exists and where? |
+| **2. Evidence-Grounded Causal Interdependencies** | Define directional causal mechanisms | Why and through what mechanism are systems coupled? |
+| **3. Physics-Based Hybrid Multiscale Dynamics** | Propagate mechanisms through time and space | How, where and how fast do effects propagate? |
+| **4. Observation, State Estimation, Organization and Control** | Determine system knowledge and feasible actions | What do operators know and what can they do? |
+| **5. Uncertainty-Aware Viability and Reachability Resilience** | Quantify remain + return + confidence | Can service remain or recover acceptably, and with what probability? |
+| **6. Resilience Diagnosis, Intervention and Sustainability Consequences** | Convert diagnosis into interventions and consequences | What should be changed and what consequences follow? |
+| **7. Engineering Decision and Adaptive Transformation** | Select defensible interventions under uncertainty | Which intervention/pathway should be implemented, where and when? |
+
+The resilience core is
 
 ```math
+\boxed{
+\textbf{Resilience}
+=
+\underbrace{\text{maintain acceptable service}}_{\text{viability}}
++
+\underbrace{\text{recover acceptable service}}_{\text{reachability}}
++
+\underbrace{\text{quantify confidence}}_{\text{probability}}
+}
+```
+
+where `+` denotes conceptual composition rather than scalar addition.
+
+The formal Stage-5 object is
+
+```math
+\boxed{
+\mathfrak R_T(t)
+=
+\left(
+\mathcal V_{\alpha,T},
+\mathcal R_{\beta,T},
+\rho_{\mathcal V},
+T_{\mathcal V},
+T_{\rm rec},
+P_{\rm viable},
+P_{\rm recover}
+\right).
+}
+```
+
+Conventional performance/recovery assessment remains an explicit comparator:
+
+```math
+\boxed{
+R_{\rm curve}
+\quad\text{versus}\quad
+\mathfrak R_T.
+}
+```
+
+No superiority is assumed; incremental predictive or decision value must be demonstrated experimentally.
+
+### Complete mathematical chain
+
+```math
+\boxed{
 \begin{aligned}
-\underbrace{\mathcal S}_{1}
+K(t)
 &\rightarrow
-\underbrace{\mathfrak I}_{2}
-\rightarrow
+\underbrace{(\mathcal S,\mathcal G,X)}_{1}\\
+&\rightarrow
+\underbrace{\mathbb I(x,t,Y,m)}_{2}\\
+&\rightarrow
 \underbrace{F_{\mathcal G}^{m}}_{3}\\
 &\rightarrow
-\underbrace{X\rightarrow y\rightarrow I\rightarrow\widehat X\rightarrow O\rightarrow u}_{4}\\
+Y(x,t)\\
 &\rightarrow
-\underbrace{K_{\mathrm{sus}},\mathcal V,\rho,T_{\mathcal V},T_K}_{5}\\
+\underbrace{
+y_t
+\rightarrow\mathcal I_t
+\rightarrow p(Y_t\mid\mathcal I_t)
+\rightarrow\mathcal U(z_I,z_O)
+\rightarrow u_t
+}_{4}\\
 &\rightarrow
-\underbrace{\Phi_{\mathrm{ST}}\rightarrow(c_6,\mathcal D_6,\boldsymbol\zeta_T)}_{6}\\
+\underbrace{
+\left(
+\mathcal V_{\alpha,T},
+\mathcal R_{\beta,T},
+P_{\rm viable},
+P_{\rm recover}
+\right)
+}_{5}\\
 &\rightarrow
-\underbrace{\mathfrak P_{\mathrm{ST}}}_{7}.
+\underbrace{
+\mathcal D_R
+\rightarrow a_k
+\rightarrow Y^{a_k}
+\rightarrow
+(\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
+}_{6}\\
+&\rightarrow
+\underbrace{\mathcal A_{R,S}^{\star}}_{7}.
 \end{aligned}
+}
 ```
 
-The primary confirmatory set is
+The simplest scientific interpretation is
 
 ```math
-\mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
+\boxed{
+\textbf{
+Need
+\rightarrow
+Structure
+\rightarrow
+Causality
+\rightarrow
+Dynamics
+\rightarrow
+Knowledge\;\&\;Action
+\rightarrow
+Remain/Return/Confidence
+\rightarrow
+Intervention\;\&\;Consequences
+\rightarrow
+Decision
+}
+}
 ```
 
-The seven-stage architecture and H1–H5 scientific logic are frozen. Hypothesis-specific thresholds, scenario domains and decision rules are fixed only through their declared preregistration/evidence gates.
+Full definitions, stage boundaries, validation guardrails and mathematical details are maintained in [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md).
 
 ---
 
@@ -138,6 +245,40 @@ FTEE remains the evidence-to-equation extraction protocol inside EGMIV.
 
 ---
 
+## Cross-cutting VVUQ and falsification
+
+Verification, validation and uncertainty quantification are not a separate framework stage. They apply across Stages 1–7:
+
+```math
+\boxed{
+\text{Stages }1\text{--}7
+\subset
+\text{VVUQ + falsification}.
+}
+```
+
+Every proposed mechanism or model must expose its assumptions, parameters, evidence, uncertainty, verification tests and validation domain.
+
+The principal model-comparison architecture remains
+
+```math
+\boxed{
+M_0=\text{independent systems},
+\qquad
+M_1=\text{static coupling},
+\qquad
+M_2=\text{dynamic causal coupling}.
+}
+```
+
+The primary comparison remains falsifiable:
+
+```math
+\boxed{M_2\overset{?}{>}M_1.}
+```
+
+---
+
 ## ASU thesis control architecture
 
 ```math
@@ -152,7 +293,7 @@ FTEE remains the evidence-to-equation extraction protocol inside EGMIV.
 }
 ```
 
-The `thesis/` directory now contains the ASU requirements matrix, master outline, claim/evidence ledger, RQ–H traceability, model/experiment/validation matrix, artifact registry, completion gates, proposal workspace, chapter workspaces and appendices.
+The `thesis/` directory contains the ASU requirements matrix, master outline, claim/evidence ledger, RQ–H traceability, model/experiment/validation matrix, artifact registry, completion gates, proposal workspace, chapter workspaces and appendices.
 
 ---
 
@@ -163,6 +304,8 @@ The `thesis/` directory now contains the ASU requirements matrix, master outline
 ```
 
 Current project authority records the model implementations and H1 confirmatory design as verified/frozen as applicable. The active blocking gate is **row-level raw-data retrieval and qualification**. The candidate train/test split cannot be activated until the predeclared R1–R8 data gates pass; no H1 calibration or confirmatory execution is authorized before that activation.
+
+The v2.0 framework revision does not itself modify the frozen H1 M0/M1/M2 experiment. Any downstream change to H1 or H2–H5 requires an explicit traceability audit and versioned amendment.
 
 Authenticated database evidence completion remains a separate evidence task and is not replaced by public discovery or model-development evidence.
 
@@ -190,4 +333,4 @@ Authenticated database evidence completion remains a separate evidence task and 
 
 ## Immediate next task
 
-Complete the H1 row-level raw-data retrieval and run the frozen qualification executor through the R1–R8 gates. Only after the data roles and split are activated may calibration and the preregistered H1 confirmatory comparison proceed.
+Complete the H1 row-level raw-data retrieval and run the frozen qualification executor through the R1–R8 gates. In parallel, perform the required **v2.0 traceability audit** to identify which research questions, hypotheses, Stage-5 metrics, experiments and thesis sections require versioned synchronization with the viability–reachability resilience core. No downstream file should be silently overwritten.
