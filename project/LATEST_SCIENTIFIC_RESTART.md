@@ -1,7 +1,7 @@
 # Latest Scientific Restart Pointer
 
 **Updated:** 2026-09-17  
-**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, document controls, H3 demonstrator, data-materialization state, boundary freeze, and immediate next admissible task.
+**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, H3 demonstrator, data-materialization state, boundary execution attempt, and immediate next admissible task.
 
 ## Read first
 
@@ -19,10 +19,13 @@
 12. `H3_DEMONSTRATOR_FREEZE_V1.md`
 13. `H3_HOUSTON_DATA_MATERIALIZATION_QA_V1.md`
 14. `H3_HOUSTON_BOUNDARY_FREEZE_V1.md`
-15. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-16. `H3_PREREGISTRATION_V1.md`
-17. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
-18. `../methods/h3/fetch_houston_boundary.py`
+15. `H3_HOUSTON_BOUNDARY_EXECUTION_ATTEMPT_2026-09-17_V1.md`
+16. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+17. `H3_PREREGISTRATION_V1.md`
+18. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+19. `../methods/h3/fetch_houston_boundary.py`
+20. `../methods/h3/materialize_houston_boundary.py`
+21. `../.github/workflows/h3-houston-boundary-materialization.yml`
 
 ## Thesis-only execution rule
 
@@ -78,7 +81,9 @@ This is an internal scope-control target, not an ASU page-count requirement.
 \rightarrow
 \text{P/T/signal/flood source families qualified}
 \rightarrow
-\boxed{D_{\Omega}\text{ source + domain semantics frozen}}.
+D_{\Omega}\text{ source + domain semantics frozen}
+\rightarrow
+\boxed{\text{boundary materialization execution attempted but externally blocked}}.
 }
 ```
 
@@ -110,29 +115,7 @@ Primary claim type: mechanism/decision-value, not historical 2017 reconstruction
 
 The common flood field is not treated as a P↔T causal dependency. Actual utility feeder-to-signal/facility connections are not claimed; cross-layer mappings are reproducible demonstrator constructions and must be validated/sensitivity-tested.
 
-## Data-materialization state
-
-`H3_HOUSTON_DATA_MATERIALIZATION_QA_V1.md` qualifies the source families and freezes the QA protocol.
-
-```text
-D_P: Texas combined T&D / SMART-DS v0.9 public OEDI data;
-D_T: H-GAC 2025 roadway/model/link/traffic source family;
-D_S: City of Houston Traffic Signal GIS layer;
-D_F: USGS/FEMA Harvey flood-depth/inundation data;
-D_Omega: City of Houston city-limit source and semantics now frozen.
-```
-
-Current general source gate:
-
-```math
-\boxed{
-G_{source,P}=G_{source,T}=G_{source,S}=G_{source,F}=1.
-}
-```
-
-## Houston boundary freeze
-
-`H3_HOUSTON_BOUNDARY_FREEZE_V1.md` closes the source/semantic deficit for `D_Omega`.
+## Houston boundary semantics
 
 Primary authoritative source:
 
@@ -142,7 +125,7 @@ HoustonMap/Administrative_Boundary/MapServer/0
 Layer: Houston City Limit
 ```
 
-The City layer distinguishes `SERVICE_TY=FULL` and `SERVICE_TY=LIMITED`. Because limited-purpose annexations do not carry the same general-purpose municipal service regime, the H3 spatial support is now explicitly separated:
+The H3 study support remains:
 
 ```math
 \boxed{
@@ -164,33 +147,37 @@ The City layer distinguishes `SERVICE_TY=FULL` and `SERVICE_TY=LIMITED`. Because
 }
 ```
 
-`Omega_core` is the primary H3 service-analysis/clipping domain. `Omega_limited` remains a separate contextual/sensitivity domain. Exterior electrical/road nodes may be retained only when needed for network closure and are excluded from service denominators unless independently justified.
+`Omega_core` is the primary H3 service-analysis/clipping domain. `Omega_limited` remains a separate contextual/sensitivity domain. Exterior electrical/road nodes may be retained only when required for network closure and are excluded from service denominators unless independently justified.
 
-A deterministic acquisition/checksum utility is now committed:
+## Boundary execution attempt
+
+Two executable routes are now committed:
 
 ```text
 methods/h3/fetch_houston_boundary.py
+methods/h3/materialize_houston_boundary.py
+.github/workflows/h3-houston-boundary-materialization.yml
 ```
 
-It is designed to download the untouched ArcGIS JSON in native spatial reference, compute SHA-256, validate polygon/schema requirements, enumerate `SERVICE_TY` counts, and create a manifest. It intentionally does not reproject, dissolve, repair, or alter raw geometry.
+The materialization runner is designed to preserve the untouched City ArcGIS FeatureSet JSON, compute SHA-256/byte size, verify `SERVICE_TY`, reject null/empty/invalid geometries without silent repair, construct `Omega_core`, `Omega_limited`, and `Omega_legal` only as processed derivatives, calculate areas in EPSG:2278, and cross-check against the independent City-hosted `COH City Limits` layer.
 
-Current boundary gate:
+GitHub Actions execution identity:
 
-```math
-\boxed{
-G_{\Omega,source}=1,
-\qquad
-G_{\Omega,bytes}=0,
-\qquad
-G_{\Omega,QA}=0.
-}
+```text
+workflow commit: c72354809e1132779fd7173fbe958dad7ba450e0
+workflow run:    35150698128
+workflow job:    104977978792
+status:          completed
+conclusion:      failure
+runner_id:       0
+steps:           []
 ```
 
-The present execution container cannot resolve the City of Houston host through direct external DNS. Browser research exposes authoritative metadata but not a local raw geometry payload. Therefore no byte size, SHA-256, raw feature count, FULL/LIMITED feature count, polygon area, multipart count, invalid-geometry rate, or final clipped geometry is claimed.
+The job terminated before any step was assigned/executed. The repository's existing `Python package` workflow on the same commit also failed in the same interval. Therefore this is treated as an external execution/runner blocker, not as a boundary-code failure or scientific failure.
 
-This is a data-access/materialization blocker, not H3 falsification.
+No raw geometry artifact or scientific QA result was produced by that run.
 
-## Gate state
+## Current gate state
 
 ```math
 \boxed{
@@ -200,9 +187,9 @@ G_{source}=1,
 \quad
 G_{\Omega,source}=1,
 \quad
-G_{bytes}=0,
+G_{\Omega,bytes}=0,
 \quad
-G_{QA}=0,
+G_{\Omega,QA}=0,
 \quad
 G_K=0,
 \quad
@@ -214,33 +201,59 @@ G_{alg}=0.
 }
 ```
 
+The correct execution status is:
+
+```text
+BOUNDARY MATERIALIZATION = NOT EXECUTED
+H3 = NOT TESTED
+```
+
 H3 confirmatory execution remains **NOT AUTHORIZED**.
 
 ## Immediate next task
 
 ```math
 \boxed{
+\text{obtain one successful network-enabled execution of the frozen boundary runner}
+\rightarrow
 D_{\Omega}\text{ raw bytes}
 \rightarrow
-\text{SHA256 + native CRS + geometry QA}
+\text{SHA256 + CRS + geometry QA}
 \rightarrow
 G_{\Omega,QA}=1.
 }
 ```
 
-Exact restart order:
+Accepted execution routes:
 
 ```text
-1. run methods/h3/fetch_houston_boundary.py in a network-enabled environment;
-2. freeze raw byte size, SHA-256, access timestamp, source query and native CRS;
-3. verify polygon geometry, SERVICE_TY classes and null/invalid geometry rate;
-4. construct Omega_legal, Omega_core and Omega_limited only as processed derivatives;
-5. cross-check geometry/attributes against the secondary City-hosted COH City Limits layer;
-6. freeze boundary feature counts, areas and multipart-component counts;
-7. only then enumerate SMART-DS geographic metadata and materialize D_P for Houston;
-8. then materialize D_T, D_S and D_F;
-9. run network/interface QA;
-10. populate the case-specific numerical H3 registry and advance uncertainty qualification.
+A. GitHub Actions can assign a runner to the committed workflow; or
+B. methods/h3/materialize_houston_boundary.py is executed in another network-enabled environment and its outputs are returned unchanged.
+```
+
+Required outputs before continuation:
+
+```text
+coh_city_limits_primary_raw.json
+coh_city_limits_manifest.json
+houston_boundary_qa.json
+houston_boundary_summary.txt
+houston_core_full_service.geojson
+houston_legal_full_plus_limited.geojson
+houston_limited_service.geojson (when LIMITED exists)
+```
+
+Only after `G_Omega_QA=1` continue in this order:
+
+```text
+1. enumerate SMART-DS/Texas geographic metadata;
+2. identify Houston-intersecting substations/circuits plus minimum electrical boundary components;
+3. materialize and hash the corresponding OpenDSS/time-series/geographic objects;
+4. run baseline power-network/OpenDSS QA;
+5. then materialize D_T, D_S and D_F;
+6. run network/interface QA;
+7. populate the case-specific numerical H3 registry;
+8. advance uncertainty qualification.
 ```
 
 Do not fabricate geometry from published extents or renderer metadata. Do not replace the City source with an arbitrary third-party polygon merely because it is easier to download.
