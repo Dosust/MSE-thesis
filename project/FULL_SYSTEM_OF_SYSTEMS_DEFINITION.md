@@ -3,6 +3,7 @@
 > **Filename note:** `FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md` is retained for provenance. The current ontology contains two physical infrastructure systems ($P,T$) plus informational and organizational layers ($I,O$); it must not be read as four standalone infrastructure systems.
 
 **Status:** CANONICAL FRAMEWORK-LEVEL DECOMPOSITION  
+**Notation synchronization:** 2026-09-16  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **System:** Power–Transportation–Information–Organization (P–T–I–O)  
 **Framework:** frozen Stages 1–7  
@@ -180,7 +181,19 @@ The two physical systems interact through several distinct interfaces rather tha
 | $P_{Tr}\leftrightarrow P_{TP}\leftrightarrow T_H$ | regional/heavy-rail traction power |
 | $T_R\rightarrow O_L\rightarrow P_D$ | road accessibility constraining crew/equipment movement for power restoration |
 
-These are examples of Stage-2 mechanisms; they do not exhaust the full 12-direction P–T–I–O interdependency scope.
+These are examples of Stage-2 mechanisms; they do not exhaust the full 12-direction P–T–I–O interdependency scope. Each accepted directed relation is encoded by
+
+```math
+\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e),
+\qquad
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+and the active set is
+
+```math
+\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}.
+```
 
 ---
 
@@ -246,7 +259,7 @@ Stage 6 evaluates whether preserving the current regime remains adequate. The cu
 ```math
 \mathfrak M_0
 =
-(\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
+(\mathcal S,\mathcal G,\mathbb I,F,\Theta,K_{\rm sus},\mathcal U).
 ```
 
 The Stage-6 translation is
@@ -270,7 +283,7 @@ A future candidate regime uses the same object class:
 ```math
 \mathfrak M_k
 =
-(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
+(\mathcal S_k,\mathcal G_k,\mathbb I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
 ```
 
 Stage-7 strategic transformation is
@@ -286,7 +299,7 @@ where
 ```math
 \mathbf a_k
 =
-[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathfrak I}]^\top.
+[a_k^P,a_k^T,a_k^I,a_k^O,a_k^{\mathbb I}]^\top.
 ```
 
 The action hierarchy is mandatory:
@@ -296,7 +309,7 @@ The action hierarchy is mandatory:
 \neq
 \underbrace{\mathbf a_k}_{\text{Stage-7 strategic transformation}}
 \neq
-\underbrace{a_{ij}}_{\text{Stage-2 interdependency activation}}.
+\underbrace{\gamma_e}_{\text{Stage-2 dependency activation guard}}.
 ```
 
 The terminal Stage-7 object is
