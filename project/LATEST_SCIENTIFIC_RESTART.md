@@ -1,7 +1,7 @@
 # Latest Scientific Restart Pointer
 
 **Updated:** 2026-09-17  
-**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, H3 demonstrator, data-materialization state, boundary execution attempt, and immediate next admissible task.
+**Purpose:** single live pointer to the latest immutable checkpoint, thesis-only operating protocol, H3 demonstrator, data-materialization state, repeated boundary execution blocker, and the prepared SMART-DS Houston extraction gate.
 
 ## Read first
 
@@ -20,12 +20,13 @@
 13. `H3_HOUSTON_DATA_MATERIALIZATION_QA_V1.md`
 14. `H3_HOUSTON_BOUNDARY_FREEZE_V1.md`
 15. `H3_HOUSTON_BOUNDARY_EXECUTION_ATTEMPT_2026-09-17_V1.md`
-16. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
-17. `H3_PREREGISTRATION_V1.md`
-18. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
-19. `../methods/h3/fetch_houston_boundary.py`
-20. `../methods/h3/materialize_houston_boundary.py`
-21. `../.github/workflows/h3-houston-boundary-materialization.yml`
+16. `H3_HOUSTON_BOUNDARY_EXECUTION_ATTEMPT_2026-09-17_V2.md`
+17. `H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md`
+18. `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`
+19. `H3_PREREGISTRATION_V1.md`
+20. `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`
+21. `../methods/h3/materialize_houston_boundary.py`
+22. `../methods/h3/inventory_smartds_houston.py`
 
 ## Thesis-only execution rule
 
@@ -53,19 +54,7 @@
 \boxed{\text{No thesis purpose}\Rightarrow\text{No research action}.}
 ```
 
-Online research must be targeted to a declared thesis evidence deficit and stop when the object is qualified or its evidence boundary is documented. External scientific claims require adjacent verified APA 7 author–date citations.
-
-## Document-control rule
-
-```math
-\boxed{P_{\rm total}=160\ \text{pages}.}
-```
-
-This is an internal scope-control target, not an ASU page-count requirement.
-
-```math
-\boxed{\text{Remove repetition, not science}.}
-```
+Blocked execution may be bypassed only by scientifically independent preparation. Missing raw evidence must never be replaced by fabricated geometry, counts, thresholds, or model outputs.
 
 ## Current scientific endpoint
 
@@ -73,27 +62,17 @@ This is an internal scope-control target, not an ASU page-count requirement.
 \boxed{
 \text{Framework/RQ/H closed}
 \rightarrow
-\text{EGMIV--TSP active}
+\mathcal C_{H3}^{HOU}\text{ frozen}
 \rightarrow
-\text{H3 service/state/time semantics structurally qualified}
+D_{\Omega}\text{ source/semantics frozen}
 \rightarrow
-\mathcal C_{H3}^{HOU}\text{ demonstrator frozen}
+\text{boundary execution attempted twice and externally blocked}
 \rightarrow
-\text{P/T/signal/flood source families qualified}
-\rightarrow
-D_{\Omega}\text{ source + domain semantics frozen}
-\rightarrow
-\boxed{\text{boundary materialization execution attempted but externally blocked}}.
+\boxed{\text{SMART-DS Houston extraction machinery prepared but not executed}}.
 }
 ```
 
-The seven H3 threshold/state/time objects remain structurally qualified but case-specific numeric realizations remain open:
-
-```math
-\{s_P^{\min},s_T^{\min},s_{P,rec},s_{T,rec},F,T_V,T_R\}.
-```
-
-## Frozen H3 demonstrator
+## H3 demonstrator
 
 ```math
 \boxed{
@@ -103,81 +82,84 @@ The seven H3 threshold/state/time objects remain structurally qualified but case
 }
 ```
 
-```text
-Case type: geographically grounded semisynthetic mechanism-validation demonstrator.
-Power: Texas combined T&D / SMART-DS Houston subset.
-Transport: H-GAC roadway/model/traffic Houston subset.
-P→T: traffic-signal electricity dependency.
-T→P: repair-crew accessibility/travel-time dependency.
-Hazard: USGS/FEMA Hurricane Harvey flood-depth/inundation stress field.
-Primary claim type: mechanism/decision-value, not historical 2017 reconstruction.
-```
+Primary claim type remains mechanism/decision-value for a geographically grounded semisynthetic system, not historical reconstruction of Houston's actual 2017 grid or restoration chronology.
 
-The common flood field is not treated as a P↔T causal dependency. Actual utility feeder-to-signal/facility connections are not claimed; cross-layer mappings are reproducible demonstrator constructions and must be validated/sensitivity-tested.
+## Houston boundary gate
 
-## Houston boundary semantics
-
-Primary authoritative source:
-
-```text
-City of Houston / MyCity Houston
-HoustonMap/Administrative_Boundary/MapServer/0
-Layer: Houston City Limit
-```
-
-The H3 study support remains:
+Primary H3 service domain remains
 
 ```math
 \boxed{
-\Omega_{legal}=\operatorname{dissolve}(FULL\cup LIMITED),
+\Omega_{HOU}:=\Omega_{core}=\operatorname{dissolve}(SERVICE\_TY=FULL).
 }
 ```
 
+`Omega_limited` remains a separate sensitivity/context domain. Exterior electrical/road nodes may be retained only when required for network closure and are excluded from service denominators unless independently justified.
+
+The boundary materialization workflow was executed once and explicitly retried once. Both attempts ended before usable GitHub-hosted step execution. The retry created job `104979621178`; no boundary evidence artifact was produced.
+
+Therefore:
+
 ```math
 \boxed{
-\Omega_{core}=\operatorname{dissolve}(FULL),
+G_{\Omega,source}=1,
 \qquad
-\Omega_{HOU}:=\Omega_{core},
+G_{\Omega,bytes}=0,
+\qquad
+G_{\Omega,QA}=0.
 }
 ```
+
+The boundary is **NOT TESTED at byte/geometry level**, not failed scientifically.
+
+## SMART-DS power preparation
+
+Qualified source family: Texas combined T&D / OEDI SMART-DS v0.9.
+
+Official source evidence establishes that the Texas case is synthetic, contains OpenDSS distribution data, load time series and geographic coordinates, and that SMART-DS `Buscoords.dss` provides node longitude/latitude. The OEDI v0.9 viewer exposes year roots `2016/`, `2017/`, and `2018/`; which year(s) contain the required `Full_Texas` realization and which year will be used for H3 remain evidence-qualification questions rather than assumptions.
+
+Prepared utility:
+
+```text
+methods/h3/inventory_smartds_houston.py
+```
+
+It has two gated modes:
+
+```text
+--discover : public SMART-DS v0.9 year/dataset structure only; no Houston selection;
+--year ... : Houston candidate inventory; hard-requires boundary QA status PASS and Omega_core.
+```
+
+Candidate selection is defined by
 
 ```math
 \boxed{
-\Omega_{limited}=\operatorname{dissolve}(LIMITED).
+I_s
+=
+\mathbf 1\{\exists v\in\mathcal V_s:\operatorname{coord}(v)\in\Omega_{core}\}.
 }
 ```
 
-`Omega_core` is the primary H3 service-analysis/clipping domain. `Omega_limited` remains a separate contextual/sensitivity domain. Exterior electrical/road nodes may be retained only when required for network closure and are excluded from service denominators unless independently justified.
+A candidate is not yet a final retained subsystem. Final selection requires minimum electrical closure plus OpenDSS compile/power-flow QA.
 
-## Boundary execution attempt
+Current power gate:
 
-Two executable routes are now committed:
-
-```text
-methods/h3/fetch_houston_boundary.py
-methods/h3/materialize_houston_boundary.py
-.github/workflows/h3-houston-boundary-materialization.yml
+```math
+\boxed{
+G_{P,source}=1,
+\qquad
+G_{P,prep}=1,
+\qquad
+G_{P,inventory}=0,
+\qquad
+G_{P,QA}=0.
+}
 ```
 
-The materialization runner is designed to preserve the untouched City ArcGIS FeatureSet JSON, compute SHA-256/byte size, verify `SERVICE_TY`, reject null/empty/invalid geometries without silent repair, construct `Omega_core`, `Omega_limited`, and `Omega_legal` only as processed derivatives, calculate areas in EPSG:2278, and cross-check against the independent City-hosted `COH City Limits` layer.
+No Houston substation IDs, feeder IDs, `N_P`, `M_P`, load denominator, convergence result or electrical boundary set are claimed yet.
 
-GitHub Actions execution identity:
-
-```text
-workflow commit: c72354809e1132779fd7173fbe958dad7ba450e0
-workflow run:    35150698128
-workflow job:    104977978792
-status:          completed
-conclusion:      failure
-runner_id:       0
-steps:           []
-```
-
-The job terminated before any step was assigned/executed. The repository's existing `Python package` workflow on the same commit also failed in the same interval. Therefore this is treated as an external execution/runner blocker, not as a boundary-code failure or scientific failure.
-
-No raw geometry artifact or scientific QA result was produced by that run.
-
-## Current gate state
+## Current overall gate state
 
 ```math
 \boxed{
@@ -185,11 +167,11 @@ G_{case}=1,
 \quad
 G_{source}=1,
 \quad
-G_{\Omega,source}=1,
-\quad
-G_{\Omega,bytes}=0,
-\quad
 G_{\Omega,QA}=0,
+\quad
+G_{P,prep}=1,
+\quad
+G_{P,inventory}=0,
 \quad
 G_K=0,
 \quad
@@ -201,63 +183,41 @@ G_{alg}=0.
 }
 ```
 
-The correct execution status is:
-
-```text
-BOUNDARY MATERIALIZATION = NOT EXECUTED
-H3 = NOT TESTED
-```
-
 H3 confirmatory execution remains **NOT AUTHORIZED**.
 
-## Immediate next task
+## Immediate next executable transition
+
+Primary route:
 
 ```math
 \boxed{
-\text{obtain one successful network-enabled execution of the frozen boundary runner}
+\text{successful network-enabled boundary run}
 \rightarrow
-D_{\Omega}\text{ raw bytes}
+G_{\Omega,QA}=1
 \rightarrow
-\text{SHA256 + CRS + geometry QA}
+\text{SMART-DS year/Full_Texas qualification}
 \rightarrow
-G_{\Omega,QA}=1.
+\text{Houston candidate power inventory}
+\rightarrow
+\text{electrical closure + OpenDSS QA}.
 }
 ```
 
-Accepted execution routes:
+If the GitHub-hosted runner remains unavailable, the committed boundary runner may be executed unchanged in another network-enabled environment and its raw/QA outputs returned unchanged. While that blocker persists, only independent source-structure discovery/preparation is admissible; final Houston clipping/selection is not.
+
+After power QA:
 
 ```text
-A. GitHub Actions can assign a runner to the committed workflow; or
-B. methods/h3/materialize_houston_boundary.py is executed in another network-enabled environment and its outputs are returned unchanged.
+1. materialize H-GAC road/model data;
+2. materialize City traffic signals;
+3. materialize Harvey flood raster/polygon;
+4. construct/QA P→T and T→P mappings;
+5. report actual network/interface dimensions;
+6. populate the seven-object H3 case registry;
+7. qualify uncertainty;
+8. only then select/verify the H3 solver.
 ```
-
-Required outputs before continuation:
-
-```text
-coh_city_limits_primary_raw.json
-coh_city_limits_manifest.json
-houston_boundary_qa.json
-houston_boundary_summary.txt
-houston_core_full_service.geojson
-houston_legal_full_plus_limited.geojson
-houston_limited_service.geojson (when LIMITED exists)
-```
-
-Only after `G_Omega_QA=1` continue in this order:
-
-```text
-1. enumerate SMART-DS/Texas geographic metadata;
-2. identify Houston-intersecting substations/circuits plus minimum electrical boundary components;
-3. materialize and hash the corresponding OpenDSS/time-series/geographic objects;
-4. run baseline power-network/OpenDSS QA;
-5. then materialize D_T, D_S and D_F;
-6. run network/interface QA;
-7. populate the case-specific numerical H3 registry;
-8. advance uncertainty qualification.
-```
-
-Do not fabricate geometry from published extents or renderer metadata. Do not replace the City source with an arbitrary third-party polygon merely because it is easier to download.
 
 ## Hard prohibition
 
-Do not redesign the framework, browse without a declared thesis evidence need, collect papers without extraction purpose, replace the frozen Houston demonstrator casually, claim the synthetic power network is the actual Houston grid, treat the Harvey stress test as a historical reconstruction, merge FULL and LIMITED service regimes into one H3 service denominator without explicit change control, invent numerical thresholds/probabilities/horizons, infer P↔T causality from common flood exposure, choose a solver before dimensions/uncertainty close, or run confirmatory H3 until all required gates equal 1.
+Do not construct Houston geometry from published extents; do not treat a SMART-DS example substation as Houston; do not freeze a SMART-DS year from convenience; do not claim candidate substations before `G_Omega_QA=1`; do not claim the synthetic network is the actual Houston grid; do not invent thresholds, probabilities, horizons, interfaces or network counts; and do not run confirmatory H3 until all required gates close.
