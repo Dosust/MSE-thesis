@@ -5,7 +5,7 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
 ![Reasoning](https://img.shields.io/badge/reasoning-v1.2-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
-![Traceability](https://img.shields.io/badge/v2%20audit-SYNC%20REQUIRED-9A6700)
+![Traceability](https://img.shields.io/badge/RQ--SO--H-v2.0%20FROZEN-1A7F37)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
 ![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
@@ -13,13 +13,17 @@
 ![Raw Retrieval](https://img.shields.io/badge/event%20rows-PENDING-B42318)
 ![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
 
-This directory is the active scientific/mathematical specification of the MSE thesis. **Framework v2.0** is the current framework authority. H1 and H2 remain compatible with v2.0; H3–H5 require explicit versioned synchronization before new v2 confirmatory execution. The named execution method remains **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
+This directory is the active scientific/mathematical specification of the MSE thesis. **Framework v2.0** is the current framework authority. The complete v2 research logic — RQ0, general objective, SO1–SO5, RQ1–RQ5, and H1–H5 — is now frozen in `CANONICAL_RQ_SO_HYPOTHESES_V2.md`. The named execution method remains **EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method**.
 
 > Reasoning protocol: [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) — **v1.2; mandatory adjacent APA 7 author–date citation for externally sourced scientific claims**  
 > Framework authority: [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
+> RQ–SO–H authority: [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) — **v2.0 scientific logic frozen**  
+> Thesis traceability control: [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md)  
 > v2 traceability audit: [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md)  
 > Execution method: [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md)  
-> Evidence rule: public-support evidence may develop the method but cannot replace the formal confirmatory corpus.
+> Evidence rule: literature support justifies scientific relevance, mechanisms, mathematical choices and comparators; **novelty is a separate reproducible gate**.
+
+The earlier `RESEARCH_HYPOTHESES.md` is retained as provenance for the v1 hypothesis architecture. Active v2 interpretation is controlled by `CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
 
 ## Current governance state
 
@@ -29,15 +33,17 @@ This directory is the active scientific/mathematical specification of the MSE th
 \rightarrow
 \text{traceability audit complete}
 \rightarrow
-\text{H3--H5 / outline / specification synchronization required}
+\text{RQ--SO--H v2.0 logic frozen}
 \rightarrow
-\text{preregistration}
+\text{outline / master-specification / abstract synchronization}
+\rightarrow
+\text{H3--H5 preregistration}
 \rightarrow
 \text{confirmatory execution}.
 }
 ```
 
-The v2 audit requires one-to-one traceability:
+The frozen v2 traceability requirement is
 
 ```math
 \boxed{
@@ -47,9 +53,17 @@ SO_i
 \rightarrow
 H_i
 \rightarrow
+\text{mechanism}
+\rightarrow
 \text{metric}
 \rightarrow
+\text{baseline}
+\rightarrow
 \text{experiment}
+\rightarrow
+\text{uncertainty}
+\rightarrow
+\text{falsification}
 \rightarrow
 \text{result}
 \rightarrow
@@ -57,15 +71,18 @@ H_i
 }
 ```
 
-No new H3–H5 confirmatory execution is authorized until the synchronization gate closes. Existing H1 execution controls are unchanged.
+H3–H5 scientific logic is now frozen, but their numerical thresholds, exact metrics, scenario domains, probability models, and final decision rules remain blocked until hypothesis-specific preregistration closes. Existing H1 execution controls are unchanged.
 
 ## Cross-cutting canonical requirements
 
 | File | Role | Status |
 |---|---|---|
+| [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md) | active seven-stage scientific framework | **CANONICAL v2.0** |
+| [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) | RQ0 + general objective + SO1–SO5 + RQ1–RQ5 + H1–H5 + evidence justification | **CANONICAL v2.0 / LOGIC FROZEN** |
 | [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory temporal–geospatial realization rule for spatially dependent P–T cascades, recovery and intervention | **FROZEN v1.0** |
 | [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance protocol; includes citation-quality gate | **CURRENT v1.2** |
-| [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md) | RQ → objective → hypothesis → Stage-5 metric → experiment → chapter audit | **AUDIT COMPLETE / SYNC REQUIRED** |
+| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | thesis-facing RQ → objective → hypothesis → metric → experiment → chapter control | **CURRENT v2.0** |
+| [`../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md`](../thesis/00_governance/V2_TRACEABILITY_AUDIT_2026-09-16.md) | provenance audit that identified the v1→v2 synchronization defects | **AUDIT COMPLETE** |
 
 The spatiotemporal requirement remains mandatory:
 
@@ -88,6 +105,40 @@ The v2 resilience core is
 ```
 
 where the plus signs denote conceptual composition, not scalar addition. Performance/recovery curves remain a benchmark; incremental engineering value must be tested rather than assumed.
+
+## Frozen v2 primary hypothesis logic
+
+```math
+\boxed{
+H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0
+}
+```
+
+```math
+\boxed{
+H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O
+}
+```
+
+```math
+\boxed{
+H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T
+}
+```
+
+```math
+\boxed{
+H_4:\ a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right)
+}
+```
+
+```math
+\boxed{
+H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}
+}
+```
+
+Interface criticality is retained as a Stage-6 supporting diagnostic. Adaptive transformation pathways are retained as a Stage-7 supporting extension. Neither is the primary H4/H5 claim in v2.0.
 
 ## H1 authority map
 
@@ -204,15 +255,13 @@ No train/test freeze, calibration, UQ, H1a confirmatory run or H1b adjudication 
 
 ## Immediate next governance task
 
-Close the v2 synchronization gate in this order:
+The RQ–SO–H logic gate is closed. The next synchronization sequence is
 
 ```math
 \boxed{
-\text{version H3--H5}
+\text{master outline synchronization}
 \rightarrow
-\text{v2 RQ--SO--H traceability}
-\rightarrow
-\text{outline/specification synchronization}
+\text{ASU master-specification synchronization}
 \rightarrow
 \text{abstract synchronization}
 \rightarrow
