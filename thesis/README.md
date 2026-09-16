@@ -51,6 +51,8 @@ Internal conventions never override ASU, SSEBE, or committee requirements.
 ```text
 thesis/
 ├── README.md
+├── 00_front_matter/
+│   └── README.md
 ├── 00_governance/
 │   ├── README.md
 │   ├── ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md
@@ -61,15 +63,40 @@ thesis/
 │   ├── MODEL_EXPERIMENT_VALIDATION_MATRIX.md
 │   ├── FIGURE_TABLE_EQUATION_REGISTER.md
 │   └── THESIS_COMPLETION_GATES.md
+├── proposal/
+│   ├── README.md
+│   └── PROPOSAL_RELEASE_CHECKLIST.md
 ├── 01_introduction/
+│   └── README.md
 ├── 02_literature_theory/
+│   └── README.md
 ├── 03_framework/
+│   └── README.md
 ├── 04_methodology/
+│   └── README.md
 ├── 05_results/
+│   └── README.md
 ├── 06_discussion/
+│   └── README.md
 ├── 07_conclusion/
+│   └── README.md
 └── appendices/
+    └── README.md
 ```
+
+## Control entry points
+
+| File | Role |
+|---|---|
+| [`00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`](00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md) | master ASU + scientific control specification |
+| [`00_governance/ASU_REQUIREMENTS_MATRIX.md`](00_governance/ASU_REQUIREMENTS_MATRIX.md) | verified ASU/SSEBE requirements vs chair/internal decisions |
+| [`00_governance/THESIS_MASTER_OUTLINE.md`](00_governance/THESIS_MASTER_OUTLINE.md) | chapter architecture and chapter gates |
+| [`00_governance/CLAIM_EVIDENCE_REGISTER.md`](00_governance/CLAIM_EVIDENCE_REGISTER.md) | claim/evidence/epistemic ledger |
+| [`00_governance/RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md`](00_governance/RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md) | RQ → H → method → result → conclusion traceability |
+| [`00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`](00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md) | model/baseline/data/V&V/UQ/falsification control |
+| [`00_governance/FIGURE_TABLE_EQUATION_REGISTER.md`](00_governance/FIGURE_TABLE_EQUATION_REGISTER.md) | artifact purpose/provenance registry |
+| [`00_governance/THESIS_COMPLETION_GATES.md`](00_governance/THESIS_COMPLETION_GATES.md) | scientific completion/freeze criteria |
+| [`proposal/PROPOSAL_RELEASE_CHECKLIST.md`](proposal/PROPOSAL_RELEASE_CHECKLIST.md) | first-release proposal qualification checklist |
 
 ## Thesis chapter architecture
 
@@ -116,6 +143,8 @@ The H1 scientific implementation is governed by `../project/` authority files. C
 - ASU Graduate College Format Manual: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation/asu-graduate-college
 - ASU thesis/dissertation formatting process: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation
 - ASU Format Checklist: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation/format-checklist
+- ASU defense process: https://graduate.asu.edu/current-students/completing-your-degree/about-your-defense
 - SSEBE Sustainable Engineering MSE Handbook 2026–2027: https://ssebe.engineering.asu.edu/wp-content/uploads/sites/28/2026/07/MSE-Sustainable-Engineering-Handbook-2026-2027.pdf
+- SSEBE graduate advising: https://ssebe.engineering.asu.edu/advising/graduate/
 
 **Verification date:** 2026-09-16
