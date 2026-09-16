@@ -4,6 +4,7 @@
 ![System](https://img.shields.io/badge/system-P--T--I--O-0969DA)
 
 **Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7  
+**Notation synchronization:** 2026-09-16  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Purpose:** Compact cross-stage mathematical foundation; detailed authority remains in the frozen stage-specific files.
 
@@ -44,33 +45,39 @@ The framework does not reduce resilience or transformation to one scalar score. 
 
 ---
 
-## 2. Stage 2 — causal interdependency object
+## 2. Stage 2 — canonical causal dependency contract
 
-Every accepted cross-layer interdependency is represented by
+Every accepted directed cross-layer dependency is represented by
 
 ```math
-\mathfrak I_{ij}^{\alpha\beta}
-=
-\left(
-E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
-\right),
+\boxed{\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)},
 ```
 
-where
+with
 
 ```math
-\alpha,\beta\in\{P,T,I,O\},
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+where $\mathcal C_e$ identifies the typed source/receiver contract, $\Sigma_e$ carries mechanism semantics, activation and mechanism-relevant parameters, and $\Pi_e$ carries evidence/provenance information according to `CANONICAL_DEPENDENCY_CONTRACT_V1.md`.
+
+The represented active dependency set is
+
+```math
+\boxed{\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}}.
+```
+
+A retained relation requires an explicit causal mechanism/operator:
+
+```math
+\alpha\xrightarrow{\Phi_e}\beta,
 \qquad
+\alpha,\beta\in\{P,T,I,O\},
+\quad
 \alpha\neq\beta.
 ```
 
-A retained relation requires an explicit causal mechanism:
-
-```math
-\alpha\xrightarrow{M_{ij}}\beta.
-```
-
-Common hazard exposure or correlation alone does not establish an interdependency.
+Common hazard exposure or correlation alone does not establish a dependency. Interdependency is obtained through declared reciprocal or mediated compositions of directed dependencies; it is not a separate flat primitive.
 
 ---
 
@@ -85,11 +92,11 @@ Partition the state into continuous/quasi-continuous states $Y_c$ and discrete s
 \dot Y_c(t)
 &=F^{m(t)}\!\left[
 Y_c(t),Y_d(t),Y(t-\boldsymbol\delta),h(\mathbf r,t);
-\mathcal G(t),\mathcal H_t
+\mathcal G(t),\mathbb I(t),\mathcal H_t
 \right],\\
 0
 &=G^{m(t)}\!\left[
-Y_c(t),Y_d(t),h(\mathbf r,t);\mathcal G(t)
+Y_c(t),Y_d(t),h(\mathbf r,t);\mathcal G(t),\mathbb I(t)
 \right],\\
 Y_d(t_e^+)
 &=R_e\!\left[\widetilde Y(t_e^-),e\right],\\
@@ -109,6 +116,8 @@ The temporal discipline is
 \neq
 \text{characteristic timescale }\tau.
 ```
+
+Delay is mechanism-specific: it belongs in the operator/history semantics or in $\theta_e$ only when physically relevant; it is not a universal coordinate of every dependency.
 
 For component $j$, cascade-arrival time may be represented by
 
@@ -333,27 +342,34 @@ Neither a positive slack nor a ratio below one is sufficient by itself for succe
 
 ---
 
-## 11. Interdependency sensitivity `[P]`
+## 11. Canonical dependency-to-viability sensitivity `[P]`
 
-When smoothness is not established, use finite perturbation by default:
+A universal interface vector such as $(w,\delta,\tau,a)$ is not assumed. For dependency $e$, only mechanism-relevant parameters belong in $\theta_e$ within
 
 ```math
-S_{ij}^{\mathcal V}(\Delta\theta)
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e).
+```
+
+For a smooth declared mechanism-parameter direction $v$,
+
+```math
+S_{e,v}^{\mathcal V}(Y)
+=-D_{\theta_e}\rho_g(Y;\Theta)[v].
+```
+
+For nonsmooth, hybrid, topological, activation or discrete dependency changes, use a declared finite perturbation/intervention contrast, for example
+
+```math
+S_{e}^{\mathcal V}(\Delta\mathfrak d_e)
 =
 \frac{
-\mathcal M_{\mathcal V}(\theta_{ij}+\Delta\theta)
+\mathcal M_{\mathcal V}(\Theta\oplus\Delta\mathfrak d_e)
 -
-\mathcal M_{\mathcal V}(\theta_{ij})
-}{\|\Delta\theta\|},
+\mathcal M_{\mathcal V}(\Theta)
+}{\|\Delta\mathfrak d_e\|_*},
 ```
 
-where
-
-```math
-\theta_{ij}=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}).
-```
-
-The scalar viability functional $\mathcal M_{\mathcal V}$ must be declared before use; a set $\mathcal V$ itself cannot be subtracted as a scalar outcome without a defined set metric/functional.
+where $\|\cdot\|_*$ is a declared perturbation normalization appropriate to the intervention class. The scalar viability functional $\mathcal M_{\mathcal V}$ must be declared before use; a set $\mathcal V$ itself cannot be subtracted as a scalar outcome without a defined set metric/functional.
 
 ---
 
@@ -365,7 +381,7 @@ When exact viability computation is infeasible in the full Stage-3 state space, 
 Y_V=\mathcal P_V(Y).
 ```
 
-The projection must preserve or conservatively bound constraints, control authority, interdependencies and mechanisms that materially affect Stage-5 conclusions. Reduction is a validation obligation, not merely a computational convenience.
+The projection must preserve or conservatively bound constraints, control authority, dependencies and mechanisms that materially affect Stage-5 conclusions. Reduction is a validation obligation, not merely a computational convenience.
 
 ---
 
@@ -376,7 +392,7 @@ The current infrastructure regime is
 ```math
 \mathfrak M_0
 =
-(\mathcal S,\mathcal G,\mathfrak I,F,\Theta,K_{\rm sus},\mathcal U).
+(\mathcal S,\mathcal G,\mathbb I,F,\Theta,K_{\rm sus},\mathcal U).
 ```
 
 The Stage-5 evidence interface is
@@ -384,7 +400,7 @@ The Stage-5 evidence interface is
 ```math
 \mathcal R_5
 =
-\{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{ij}^{\mathcal V}\}.
+\{\mathcal V,\rho,T_{\mathcal V},T_K,S_{\mathcal V},S_K,S_{e}^{\mathcal V}\}.
 ```
 
 The proposed diagnostic vector is
@@ -422,7 +438,7 @@ and transforms candidate future regimes represented by
 ```math
 \mathfrak M_k
 =
-(\mathcal S_k,\mathcal G_k,\mathfrak I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
+(\mathcal S_k,\mathcal G_k,\mathbb I_k,F_k,\Theta_k,K_{{\rm sus},k},\mathcal U_k).
 ```
 
 Stage-4 operational control and Stage-7 strategic transformation remain distinct:
@@ -439,7 +455,7 @@ The strategic action vector is
 \mathbf a_k
 =
 \begin{bmatrix}
-a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathfrak I}
+a_k^P\\a_k^T\\a_k^I\\a_k^O\\a_k^{\mathbb I}
 \end{bmatrix},
 ```
 
@@ -652,7 +668,7 @@ A realized pathway is
 \begin{aligned}
 \underbrace{\mathcal S}_{1}
 &\rightarrow
-\underbrace{\mathfrak I}_{2}
+\underbrace{\mathbb I}_{2}
 \rightarrow
 \underbrace{F_{\mathcal G}^{m}}_{3}\\
 &\rightarrow
@@ -720,7 +736,7 @@ K_{\rm sus}&\neq\mathcal V_{\rm sus}^{u,T},\\
 V_{\rm HJ}&\neq d(\cdot,\partial\mathcal V)\quad\text{in general},\\
 \text{current-regime viability}&\neq\text{long-horizon regime adequacy},\\
 u(t)&\neq\mathbf a_k,\\
-a_{ij}&\neq\mathbf a_k,\\
+\gamma_e&\neq\mathbf a_k,\\
 \text{fixed realized pathway}&\subset\text{adaptive transformation policy}.
 \end{aligned}
 ```
