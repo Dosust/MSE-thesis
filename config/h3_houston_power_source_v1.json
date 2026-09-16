@@ -1,0 +1,39 @@
+{
+  "case_id": "H3-HOU-FLOOD-V1",
+  "config_version": "1.0",
+  "status": "POWER_SOURCE_VINTAGE_QUALIFIED_GEOGRAPHIC_INVENTORY_BLOCKED",
+  "power_source": {
+    "family": "SMART-DS",
+    "version": "v0.9",
+    "year": 2016,
+    "dataset": "Full_Texas",
+    "scenario": "base_timeseries",
+    "root_prefix": "SMART-DS/v0.9/2016/Full_Texas/",
+    "bucket": "oedi-data-lake",
+    "network_format": "OpenDSS",
+    "synthetic": true,
+    "historical_houston_grid_claim": false
+  },
+  "qualification": {
+    "source_family_gate": true,
+    "year_gate": true,
+    "boundary_qa_gate": false,
+    "houston_inventory_gate": false,
+    "power_qa_gate": false
+  },
+  "geographic_selection_rule": "candidate substation iff at least one documented SMART-DS bus coordinate lies inside frozen Omega_core after G_Omega_QA=1",
+  "final_selection_rule": "candidate substations plus only minimum documented electrical boundary components required for valid network/OpenDSS closure",
+  "service_denominator_rule": "exterior boundary components excluded unless independently justified",
+  "required_next_command": "python methods/h3/inventory_smartds_houston.py --root data/H3-HOU-FLOOD-V1 --year 2016 --scenario base_timeseries",
+  "prohibitions": [
+    "Do not claim actual CenterPoint topology",
+    "Do not label any SMART-DS asset as Houston before boundary QA passes",
+    "Do not infer Houston node or feeder counts before geographic inventory",
+    "Do not treat 2016 network vintage as a 2017 Harvey reconstruction"
+  ],
+  "authority": [
+    "project/H3_SMARTDS_YEAR_QUALIFICATION_V1.md",
+    "project/H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md",
+    "project/H3_HOUSTON_BOUNDARY_FREEZE_V1.md"
+  ]
+}
