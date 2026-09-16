@@ -2,7 +2,7 @@
 
 **Mode:** autonomous within active tool-enabled sessions  
 **Protocol:** `AUTONOMOUS_EXECUTION_PROTOCOL_V1.md`  
-**Current phase:** novelty-and-mathematical-foundation / maximum public-evidence specification endpoint reached  
+**Current phase:** ASU thesis-control layer + notation-control migration completed; hard evidence/data gates remain  
 **Last updated:** 2026-09-16
 
 ## 1. Current queue
@@ -29,7 +29,8 @@
 | 14a | Preserve operational-recovery vs structural-transformation separation | **PASS** | canonical Stage-6/7 boundary retained: `u(t) != a_k` |
 | 14b | Validate viability-conditioned transformation trigger/pathway | `DEFERRED_DEPENDENCY` | requires Stage-5 diagnostics and H5 experiment design/data |
 | 15 | Matched confirmatory experiments/VVUQ | `DEFERRED_DEPENDENCY` | H1 raw-data and formal evidence gates remain open; later H2–H5 data/threshold gates also open |
-| 16 | Migrate supporting files from legacy Stage-2 notation | `PENDING_CONTROLLED_MIGRATION` | audit completed; migration must preserve frozen H1–H5 logic and seven-stage responsibilities |
+| 16 | Migrate supporting files from legacy Stage-2 notation | **PASS_CONTROLLED_TRANSLATION** | `CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` now governs active interpretation; historical/frozen files retained as provenance rather than silently rewritten |
+| 17 | Build ASU MSE thesis master specification and traceability shell | **PASS** | `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` maps ASU shell, chapters, hypotheses, figures/equations, appendices and scientific gates |
 
 ## 2. Outputs produced during the autonomous novelty/foundation run
 
@@ -49,13 +50,15 @@
 9. `project/HYPOTHESIS_REFINEMENT_AFTER_ASU_AUDIT_V2.md` — active working amendment
 10. `project/LEGACY_DEPENDENCY_NOTATION_MIGRATION_AUDIT_V2.md`
 11. `project/NOVELTY_FOUNDATION_INDEX.md`
+12. `project/CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` — active notation migration/control layer
+13. `project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` — active document/scientific traceability shell
 
 ### Mathematical specifications added without claiming empirical success
 
-12. `project/PARTIAL_OBSERVATION_TO_VIABILITY_SPECIFICATION_V1.md`
-13. `project/ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`
-14. `project/SUSTAINABLE_VIABILITY_CONSTRAINT_PROTOCOL_V1.md`
-15. `project/VIABILITY_INTERFACE_SENSITIVITY_SPECIFICATION_V1.md`
+14. `project/PARTIAL_OBSERVATION_TO_VIABILITY_SPECIFICATION_V1.md`
+15. `project/ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`
+16. `project/SUSTAINABLE_VIABILITY_CONSTRAINT_PROTOCOL_V1.md`
+17. `project/VIABILITY_INTERFACE_SENSITIVITY_SPECIFICATION_V1.md`
 
 ## 3. Deepened prior-art subtraction
 
@@ -120,9 +123,43 @@ S_{e,v}^{\mathcal V}(Y)
 
 is a local diagnostic; nonsmooth/hybrid relations use finite perturbation or actual intervention contrasts.
 
-A supporting-file migration audit found legacy notation still present in `MATHEMATICAL_FOUNDATION.md`, `RESEARCH_HYPOTHESES.md`, `MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`, and `FULL_SYSTEM_OF_SYSTEMS_DEFINITION.md`. Canonical files govern until a controlled notation-only migration is completed.
+`CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` now makes this migration operational while preserving historical source files. Final thesis prose, figures, equations and code must compile through that authority layer.
 
-## 6. Existing independent block — H1 row-level acquisition
+## 6. ASU thesis-control state
+
+The active document-control artifact is:
+
+```text
+project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md
+```
+
+It fixes the separation between:
+
+```math
+\text{seven-stage scientific architecture}
+\neq
+\text{seven-chapter thesis-document architecture}.
+```
+
+Every future thesis-critical object must have a traceable destination through the tuple
+
+```math
+\mathfrak T_i=(R_i,Q_i,H_i,E_i,M_i,\Phi_i,S_i,A_i,V_i,\sigma_i).
+```
+
+The active chapter architecture is:
+
+```text
+Ch.1 Introduction
+Ch.2 Literature Review and Theoretical Foundations
+Ch.3 Conceptual and Mathematical Framework
+Ch.4 Research Methodology and Experimental Design
+Ch.5 Results
+Ch.6 Discussion and Sustainable Engineering Implications
+Ch.7 Conclusions and Future Research
+```
+
+## 7. Existing independent block — H1 row-level acquisition
 
 The current H1 authority remains
 
@@ -132,13 +169,13 @@ The current H1 authority remains
 
 The frozen source/event registry remains available, but this runtime still cannot materialize the required large raw ZIP/Parquet/annual bodies. No H1 calibration, final train/test freeze, UQ, confirmatory H1a run or H1b adjudication is authorized until R1–R8 pass.
 
-## 7. Existing independent block — authenticated literature execution
+## 8. Existing independent block — authenticated literature execution
 
 The exact F0/F1/F2 Scopus, Web of Science Core Collection, Compendex and IEEE Xplore query logic has been frozen in `FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` using current documented field syntax. Authenticated database execution remains unavailable in this runtime.
 
 Public web search has been used aggressively to **falsify** broad claims; it has not been promoted to novelty certification.
 
-## 8. Current maximum scientifically valid endpoint
+## 9. Current maximum scientifically valid endpoint
 
 The autonomous run has advanced to:
 
@@ -158,18 +195,22 @@ The autonomous run has advanced to:
 \rightarrow
 \text{interface-sensitivity/intervention protocol}
 \rightarrow
+\text{canonical notation translation control}
+\rightarrow
+\text{ASU thesis traceability shell}
+\rightarrow
 \color{#B42318}{\text{AUTHENTICATED EVIDENCE + RAW DATA + THRESHOLD GATES}}.
 }
 ```
 
 It would now be scientifically invalid to compute/freeze the final `V_sus`, claim H4 ranking superiority, certify global novelty, or execute final confirmatory H1–H5 conclusions before those gates close.
 
-## 9. Restart rule
+## 10. Restart rule
 
 On each active run:
 
 1. read this status file;
 2. retry externally blocked evidence/data tasks when new access is available;
-3. otherwise execute the next independent admissible specification/verification or controlled migration task;
+3. otherwise execute the next independent admissible specification, verification, traceability or controlled migration task;
 4. update provenance and status without requesting routine continuation decisions;
 5. never convert a blocked gate into an assumed PASS.
