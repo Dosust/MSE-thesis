@@ -5,7 +5,7 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
 ![Resilience](https://img.shields.io/badge/core-viability%20%2B%20reachability%20%2B%20probability-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
-![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
+![Hypotheses](https://img.shields.io/badge/RQ--SO--H%20v2-FROZEN-1A7F37)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
 ![H1 Data](https://img.shields.io/badge/raw%20row%20retrieval-PENDING-B42318)
@@ -15,7 +15,7 @@
 **Repository:** active thesis source of truth  
 **Framework status:** canonical seven-stage framework v2.0; v1 retained as provenance  
 **Resilience core:** uncertainty-aware viability + reachability + probability  
-**Hypothesis status:** five-primary-hypothesis logic frozen; H1 confirmatory design frozen; later hypothesis-specific numerical specifications remain subject to their preregistration gates  
+**Research logic status:** RQ0, general objective, SO1–SO5, RQ1–RQ5, and H1–H5 frozen in canonical v2.0; hypothesis-specific numerical specifications remain subject to preregistration gates  
 **Reasoning protocol:** canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance discipline  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Evidence methodology:** de novo search + FTEE evidence-to-equation extraction inside EGMIV  
@@ -24,6 +24,8 @@
 **Updated:** 2026-09-16
 
 > **Repository rule:** active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical/archive material is provenance only and cannot override current canonical files.
+
+> **Evidence-use rule:** scientific literature is used to justify questions, mechanisms, mathematics, comparators, and engineering relevance. Literature support is **not** treated as proof of novelty; novelty remains a separate reproducible search/audit gate.
 
 ---
 
@@ -48,15 +50,18 @@ Sustainability is treated as an **emergent consequence of how the coupled system
 | File | Role |
 |---|---|
 | [`thesis/README.md`](thesis/README.md) | **ASU-facing thesis document architecture and control entry point** |
-| [`thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`](thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md) | ASU/SSEBE + scientific thesis master specification |
+| [`thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`](thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md) | ASU/SSEBE + scientific thesis master specification v1.1 |
+| [`thesis/00_governance/THESIS_MASTER_OUTLINE.md`](thesis/00_governance/THESIS_MASTER_OUTLINE.md) | v2-synchronized seven-chapter thesis outline |
+| [`thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | **current thesis-facing RQ → SO → H → metric → experiment → chapter control** |
 | [`project/README.md`](project/README.md) | active mathematical/project dashboard |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | **current canonical seven-stage framework v2.0** |
+| [`project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V2.md) | **current canonical RQ0 + objectives + RQ1–RQ5 + H1–H5 with literature justification** |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | v1 framework retained for provenance only |
+| [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | v1 hypothesis architecture retained for provenance only |
 | [`project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | frozen spatiotemporal propagation requirement |
-| [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | canonical thesis-wide reasoning, verification, validation, falsification and synthesis protocol |
+| [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | canonical thesis-wide reasoning, APA-7 evidence, verification, validation, falsification and synthesis protocol |
 | [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md) | canonical evidence-grounded model-construction/validation method |
 | [`project/THESIS_SCOPE.md`](project/THESIS_SCOPE.md) | frozen thesis scope |
-| [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | five primary confirmatory hypotheses |
 | [`project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`](project/H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md) | H1 M0/M1/M2 physical specification |
 | [`project/H1_CONFIRMATORY_PREREGISTRATION_V1.md`](project/H1_CONFIRMATORY_PREREGISTRATION_V1.md) | H1 confirmatory design |
 | [`project/H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md`](project/H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md) | current H1 raw-data execution gate |
@@ -86,7 +91,7 @@ Sustainability is treated as an **emergent consequence of how the coupled system
 \text{ADVANCE}.
 ```
 
-Every substantive thesis claim must expose its definition, evidence status, mechanism, mathematics, assumptions, competing test, uncertainty, validation domain, and engineering implication.
+Every substantive thesis claim must expose its definition, evidence status, mechanism, mathematics, assumptions, competing test, uncertainty, validation domain, and engineering implication. Every externally sourced scientific claim must have adjacent verified APA 7 support unless document conventions explicitly preclude citations, in which case the supporting source must remain traceable in the evidence ledger.
 
 ---
 
@@ -211,6 +216,60 @@ Full definitions, stage boundaries, validation guardrails and mathematical detai
 
 ---
 
+## Canonical RQ–SO–H v2 logic
+
+```math
+\boxed{
+RQ_i
+\rightarrow
+SO_i
+\rightarrow
+H_i
+\rightarrow
+\text{mechanism}
+\rightarrow
+\text{metric}
+\rightarrow
+\text{baseline}
+\rightarrow
+\text{experiment}
+\rightarrow
+\text{uncertainty}
+\rightarrow
+\text{falsification}
+\rightarrow
+\text{result}
+\rightarrow
+\text{engineering conclusion}.
+}
+```
+
+Primary tests:
+
+```math
+H_1:\quad M_2\ \text{vs}\ M_1\ \text{vs}\ M_0,
+```
+
+```math
+H_2:\quad P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O,
+```
+
+```math
+H_3:\quad R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T,
+```
+
+```math
+H_4:\quad a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right),
+```
+
+```math
+H_5:\quad \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
+```
+
+The full questions, objectives, evidence justification, metrics, experiments and falsification conditions are maintained in [`project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V2.md).
+
+---
+
 ## EGMIV execution discipline
 
 ```math
@@ -281,7 +340,7 @@ The primary comparison remains falsifiable:
 }
 ```
 
-The `thesis/` directory contains the ASU requirements matrix, master outline, claim/evidence ledger, RQ–H traceability, model/experiment/validation matrix, artifact registry, completion gates, proposal workspace, chapter workspaces and appendices.
+The `thesis/` directory contains the ASU requirements matrix, master outline, claim/evidence ledger, RQ–SO–H traceability, model/experiment/validation matrix, artifact registry, completion gates, proposal workspace, chapter workspaces and appendices.
 
 ---
 
@@ -293,9 +352,21 @@ The `thesis/` directory contains the ASU requirements matrix, master outline, cl
 
 Current project authority records the model implementations and H1 confirmatory design as verified/frozen as applicable. The active blocking gate is **row-level raw-data retrieval and qualification**. The candidate train/test split cannot be activated until the predeclared R1–R8 data gates pass; no H1 calibration or confirmatory execution is authorized before that activation.
 
-The v2.0 framework revision does not itself modify the frozen H1 M0/M1/M2 experiment. Any downstream change to H1 or H2–H5 requires an explicit traceability audit and versioned amendment.
+The v2.0 framework and RQ–SO–H revision do not themselves modify the frozen H1 M0/M1/M2 experiment. Authenticated database evidence completion remains a separate evidence task and is not replaced by public discovery or model-development evidence.
 
-Authenticated database evidence completion remains a separate evidence task and is not replaced by public discovery or model-development evidence.
+---
+
+## H3–H5 execution gate
+
+The H3–H5 scientific logic is frozen, but confirmatory execution is not yet authorized. The next preregistration must define:
+
+```text
+H3: K, G_rec, F, T, alpha, beta, uncertainty model, primary Skill metric, delta_3
+H4: intervention set, resilience-effective criterion, sustainability accounting boundary, D_J, delta_4
+H5: A_R*, A_R,S*, uncertainty treatment, set/regret metric, delta_5
+```
+
+Probability distributions may be used only where their evidentiary basis is defensible. Otherwise use deterministic, interval, scenario-based, or nonprobabilistic robustness methods.
 
 ---
 
@@ -317,8 +388,26 @@ Authenticated database evidence completion remains a separate evidence task and 
 \textbf{No thesis conclusion is stronger than its evidence, experiment and validation domain.}
 ```
 
+```math
+\textbf{Scientific support does not equal novelty proof.}
+```
+
 ---
 
 ## Immediate next task
 
-Complete the H1 row-level raw-data retrieval and run the frozen qualification executor through the R1–R8 gates. In parallel, perform the required **v2.0 traceability audit** to identify which research questions, hypotheses, Stage-5 metrics, experiments and thesis sections require versioned synchronization with the viability–reachability resilience core. No downstream file should be silently overwritten.
+The v2 framework, RQ–SO–H logic, thesis outline, and master specification are now synchronized. The next controlled scientific task is:
+
+```math
+\boxed{
+\text{H3 service/constraint definitions}
+\rightarrow
+\text{H3 metric + uncertainty preregistration}
+\rightarrow
+\text{H4 intervention/accounting preregistration}
+\rightarrow
+\text{H5 decision-set preregistration}.
+}
+```
+
+The H1 row-level acquisition/qualification process continues independently under its existing frozen controls.
