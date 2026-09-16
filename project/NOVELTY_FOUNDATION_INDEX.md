@@ -43,8 +43,9 @@ The broad novelty narrative has been falsified and narrowed. Current work is con
 | `../evidence/novelty/ASU_PRIOR_WORK_FTEE_EGMIV_AUDIT_V1.md` | substantial ASU audit; some full-text access still blocked |
 | `../evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V1.md` | provenance: first public falsification pass |
 | `../evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V2.md` | active public-falsification interpretation using canonical notation |
+| `../evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_INFRASTRUCTURE_VIABILITY_V1.md` | targeted audit showing viability already applied to codependent infrastructure, power, transportation and resilience/investment contexts |
 | `../evidence/novelty/CANONICAL_NOTATION_RECONCILIATION_2026-09-16.md` | precedence rule correcting legacy novelty notation |
-| `../evidence/novelty/FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` | frozen query logic; authenticated execution pending |
+| `../evidence/novelty/FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` | frozen database query logic/translations; authenticated execution pending |
 
 ## Working amendment
 
@@ -71,6 +72,11 @@ dynamic infrastructure interdependency;
 cascading failure modeling;
 partial-observation safety/belief-space control;
 stochastic viability;
+applying viability theory to engineered/codependent infrastructure;
+using viability/safe operating regions in power systems;
+using viability kernels in transportation control;
+using viability-kernel width/size as a generic resilience measure;
+using viability information to motivate generic investment/policy;
 distance to viability-kernel boundary;
 generic viability-kernel sensitivity;
 dynamic criticality in the organizational sense.
@@ -82,7 +88,7 @@ dynamic criticality in the organizational sense.
 \boxed{
 \begin{aligned}
 N_1' &: \text{validated evidence-grounded canonical dependency composition in heterogeneous }P\!\!-\!T\!\!-\!I\!\!-\!O,\\
-N_2' &: \text{infrastructure-specific observation uncertainty}\to\text{coupled dynamics}\to\text{organizational control}\to\text{viability decision value},\\
+N_2' &: \text{infrastructure-specific observation uncertainty}\to\text{coupled dynamics}\to\text{organizational control}\to\text{sustainable-viability decision value},\\
 N_3' &: \text{canonical dependency perturbation}\to\Delta\mathcal M_{\mathcal V}\to\text{validated interface ranking}.
 \end{aligned}
 }
