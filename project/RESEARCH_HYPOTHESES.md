@@ -6,6 +6,7 @@
 
 **Status:** CANONICAL HYPOTHESIS ARCHITECTURE / LOGIC FROZEN  
 **Date:** 2026-09-11  
+**Notation synchronization:** 2026-09-16  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Framework:** complete frozen seven-stage P–T–I–O thesis framework  
 **Citation standard:** APA 7th edition author–date  
@@ -13,7 +14,7 @@
 
 > **Authority rule:** This file defines the five primary confirmatory hypotheses. `SCIENTIFIC_PROPOSITIONS.md` remains the broader proposition/falsification registry; its entries are subordinate tests, mechanisms, diagnostics, or supporting claims.
 
-> **Notation rule:** Hypothesis-specific model variants use dedicated script symbols so they cannot be confused with the Stage-2 causal mechanism $M_{ij}$, the Stage-4 model variants $\mathscr M_k$, or the Stage-7 infrastructure regime $\mathfrak M_k$.
+> **Notation rule:** Stage-2 dependency notation follows `CANONICAL_DEPENDENCY_CONTRACT_V1.md`: one directed dependency is $\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)$ and the represented active dependency set is $\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}$. Hypothesis-specific model variants use dedicated script symbols so they cannot be confused with the Stage-2 mechanism operator $\Phi_e$, the Stage-4 model variants $\mathscr M_k$, or the Stage-7 infrastructure regime $\mathfrak M_k$.
 
 ---
 
@@ -55,20 +56,28 @@ $H_{\rm SYS}$ is a theoretical organizing hypothesis. It is not accepted or reje
 
 Does representing interdependencies as **dynamic causal mechanisms** materially change predicted disruption propagation relative to independent or static-coupling representations?
 
-Stage 2 defines
+Stage 2 represents each directed cross-layer dependency as
 
 ```math
-\mathfrak I_{ij}^{\alpha\beta}
-=
-\left(
-E_i^\alpha,E_j^\beta,M_{ij},w_{ij},\delta_{ij},\tau_{ij},a_{ij},m,\mathcal H_t
-\right),
+\boxed{\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)},
 ```
 
-and Stage 3 maps accepted mechanisms into coupled dynamics:
+with mechanism semantics
 
 ```math
-\mathfrak I
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e),
+```
+
+and active dependency set
+
+```math
+\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}.
+```
+
+Stage 3 maps the accepted active dependencies into coupled dynamics:
+
+```math
+\mathbb I
 \rightarrow
 F_{\mathcal G}^{m}
 \rightarrow
@@ -333,26 +342,32 @@ If viability quantities fail to improve the prespecified predictive/decision met
 
 Can viability-sensitive interface rankings identify more valuable intervention targets than static structural rankings?
 
-For Stage-2 interface parameters
+For a Stage-2 dependency $e$, only mechanism-relevant parameters belong in $\theta_e$ within
 
 ```math
-\theta_{ij}
-=(w_{ij},\delta_{ij},\tau_{ij},a_{ij}),
+\Sigma_e=(\Phi_e,\gamma_e,\theta_e,\zeta_e).
 ```
 
-perturbation propagates through
+A declared canonical dependency perturbation propagates through
 
 ```math
-\theta_{ij}
+\Delta\mathfrak d_e
 \rightarrow
-F
+\Delta F
 \rightarrow
-\mathcal V
+\Delta\mathcal V
 \rightarrow
-\rho,
+\Delta\rho.
 ```
 
-and produces the Stage-5 sensitivity $S_{ij}^{\mathcal V}$.
+For a smooth declared mechanism-parameter direction $v$,
+
+```math
+S_{e,v}^{\mathcal V}(Y)
+=-D_{\theta_e}\rho_g(Y;\Theta)[v].
+```
+
+For nonsmooth or hybrid dependencies, the corresponding criticality diagnostic is defined by a prespecified finite perturbation or actual intervention contrast rather than a universal derivative.
 
 ### Hypothesis
 
@@ -369,7 +384,7 @@ R_2=\text{betweenness-based ranking},
 ```math
 R_3=\text{flow-based ranking},
 \qquad
-R_4=S_{ij}^{\mathcal V}.
+R_4=\text{canonical viability-sensitivity ranking}.
 ```
 
 Because $\mathcal V$ is a set, the confirmatory comparison must use a **declared scalar viability functional** $\mathcal M_{\mathcal V}$, for example a normalized viable-set measure, a boundary margin, or another justified scalar summary.
@@ -410,7 +425,7 @@ If scenarios have justified probabilities or weights, $\operatorname{Agg}_{\Omeg
 
 ### Falsification criterion
 
-If structural or flow-based rankings perform equally well or better under equal intervention budgets according to the prespecified viability functional and scenario rule, $S_{ij}^{\mathcal V}$ has not demonstrated additional targeting value.
+If structural or flow-based rankings perform equally well or better under equal intervention budgets according to the prespecified viability functional and scenario rule, the canonical viability-sensitivity ranking has not demonstrated additional targeting value.
 
 ---
 
@@ -521,7 +536,7 @@ If adaptive transformation does not materially improve the prespecified robustne
 The hypotheses are linked rather than independent stage-by-stage statements:
 
 ```math
-H_1:\quad \mathfrak I\rightarrow F,
+H_1:\quad \mathbb I\rightarrow F,
 ```
 
 ```math
@@ -534,8 +549,8 @@ H_3:\quad F+\mathcal U\rightarrow\mathcal V,
 
 ```math
 H_4:\quad
-\mathfrak I
-\rightarrow S_{ij}^{\mathcal V}
+\mathbb I
+\rightarrow S_{e}^{\mathcal V}
 \rightarrow\text{intervention value},
 ```
 
@@ -549,7 +564,7 @@ H_5:\quad
 Together,
 
 ```math
-\mathfrak I
+\mathbb I
 \rightarrow
 F
 \rightarrow
@@ -557,7 +572,7 @@ F
 \rightarrow
 \mathcal V
 \rightarrow
-S_{ij}^{\mathcal V}
+S_{e}^{\mathcal V}
 \rightarrow
 \text{adaptive transformation}.
 ```
