@@ -11,7 +11,7 @@
 |---:|---|---|---|
 | 0 | Install autonomous execution controls | **PASS** | protocol and status register created |
 | 1 | FTEE/EGMIV ASU prior-work corpus | `BLOCKED_EXTERNAL_ACCESS` | substantial evidence-qualified ASU audit completed; publisher/full dissertation bytes remain incomplete for some priority works |
-| 2 | Global novelty search F0: mechanistic/dynamic dependency representation | `BLOCKED_EXTERNAL_ACCESS` | repeated public falsification narrowed the claim further: direction, typing, ontology grounding, provenance-preserving dependency graphs, interface contracts and multi-infrastructure composability are prior art; authenticated database closure still required |
+| 2 | Global novelty search F0: mechanistic/dynamic dependency representation | `BLOCKED_EXTERNAL_ACCESS` | repeated public falsification shows direction, typing, ontology/provenance, interface contracts, composability and semantic dependency-to-federated-simulation integration are prior art; authenticated database closure still required |
 | 3 | Global novelty search F1: partial observation / uncertainty to viability | `BLOCKED_EXTERNAL_ACCESS` | stochastic viability, estimator-aware safety and belief-space safety are prior art; exact infrastructure-specific residual remains unresolved until formal search |
 | 4 | Global novelty search F2: viability geometry / interface criticality | `BLOCKED_EXTERNAL_ACCESS` | viability applied to infrastructure/power/transport, boundary distance, geometric robustness, generic kernel sensitivity and viability-guided investment are prior art; exact dependency-mechanism ranking residual remains unresolved until formal search |
 | 5 | Freeze global novelty boundary | `BLOCKED_EXTERNAL_ACCESS` | final novelty cannot be certified; current residuals are integration/validation questions only |
@@ -38,7 +38,7 @@
 1. `evidence/novelty/ASU_PRIOR_WORK_FTEE_EGMIV_AUDIT_V1.md`
 2. `evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V1.md` — provenance
 3. `evidence/novelty/PUBLIC_NOVELTY_FALSIFICATION_F0_F1_F2_V2.md` — canonical second pass
-4. `evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_DEPENDENCY_SEMANTICS_V1.md`
+4. `evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_DEPENDENCY_SEMANTICS_V1.md` — deepened to include ontology-to-federated-simulation prior art
 5. `evidence/novelty/PUBLIC_NOVELTY_ADDENDUM_INFRASTRUCTURE_VIABILITY_V1.md`
 6. `evidence/novelty/CANONICAL_NOTATION_RECONCILIATION_2026-09-16.md`
 7. `evidence/novelty/FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` — database query logic/translations frozen; authenticated execution pending
@@ -70,6 +70,8 @@ ontology-grounded cross-domain relations;
 evidence-linked and provenance-preserving infrastructure dependency graphs;
 contract-based validation of System-of-Systems interfaces;
 composable multi-infrastructure model integration;
+semantic dependency representations connected to federated infrastructure simulation;
+dynamic binding/interoperability of heterogeneous infrastructure simulators;
 dynamic infrastructure interdependency/cascades;
 partial-observation safety and belief-space control;
 stochastic viability;
@@ -79,19 +81,14 @@ viability-informed generic policy/investment;
 distance-to-viability-boundary and generic viability-kernel sensitivity.
 ```
 
-A particularly close 2026 prior-art item is an evidence-first critical-infrastructure dependency framework that explicitly separates source evidence, ontology grounding, endpoint resolution, validation, provenance and human review before projecting validated dependencies into an infrastructure dependency graph. This further narrows rather than supports a broad N1 novelty narrative.
+A particularly close 2026 dependency-modeling paper explicitly separates source evidence, ontology grounding, endpoint resolution, validation, provenance and human review before projecting validated dependencies into a dependency graph. Earlier DIESIS/IRRIIS work further connects ontology-based infrastructure dependency semantics to federated simulation. The N1 claim is therefore no longer treated as a standalone representation novelty claim.
 
 ## 4. Current admissible residual questions
 
 ```math
 \boxed{
 \begin{aligned}
-N_1'' &: \text{evidence-supported dependency assertion}
-\rightarrow(\Phi_e,\gamma_e,\theta_e,\zeta_e)
-\rightarrow\Xi_e
-\rightarrow F_{\mathcal G}^{m}
-\rightarrow\Delta Q\\
-&\quad\text{with matched empirical/decision ablation in heterogeneous }P\!\!-\!T\!\!-\!I\!\!-\!O,\\
+N_1^* &: \text{qualified evidence}\rightarrow\mathfrak d_e\rightarrow\Xi_e\rightarrow F_{\mathcal G}^{m}\rightarrow\Delta Q\rightarrow\{M_0,M_1,M_2\}\text{ matched empirical/decision value},\\
 N_2' &: \text{heterogeneous observations}\rightarrow b_t(Y)\rightarrow
 F_{\mathcal G}^{m}\rightarrow\mathcal U(z_I,z_O)\rightarrow
 K_{\rm sus}\rightarrow\mathcal V_{\rm sus}\rightarrow\text{decision value},\\
@@ -102,7 +99,7 @@ N_3' &: \text{canonical dependency perturbation}\rightarrow
 }
 ```
 
-These are not asserted as globally novel. They are the remaining questions to be falsified and tested.
+`N_1^*` is primarily an implementation/validation contribution question. None of these residuals is asserted as globally novel.
 
 ## 5. Canonical notation state
 
@@ -137,7 +134,7 @@ The frozen source/event registry remains available, but this runtime still canno
 
 ## 7. Existing independent block — authenticated literature execution
 
-The exact F0/F1/F2 Scopus, Web of Science Core Collection, Compendex and IEEE Xplore query logic has now been frozen in `FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` using current documented field syntax. Authenticated database execution remains unavailable in this runtime.
+The exact F0/F1/F2 Scopus, Web of Science Core Collection, Compendex and IEEE Xplore query logic has been frozen in `FORMAL_NOVELTY_SEARCH_PROTOCOL_F0_F1_F2_V1.md` using current documented field syntax. Authenticated database execution remains unavailable in this runtime.
 
 Public web search has been used aggressively to **falsify** broad claims; it has not been promoted to novelty certification.
 
