@@ -1,77 +1,176 @@
-# Resilience–Sustainability Bridge Execution Status v1.0
+# Resilience–Sustainability Execution Status v1.1
 
 **Date:** 2026-09-16  
 **Method:** EGMIV  
-**Purpose:** track execution of the purpose-driven chain `D -> I -> F_G -> R -> Phi_RS -> Delta J_sus -> a*`.
+**Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Purpose:** track the controlled progression from validated P–T–I–O dynamics through Stage-5 resilience to Stage-6/7 intervention and sustainability decisions.
 
-## Current status
+---
 
-| Step | Task | Status | Artifact / gate |
-|---:|---|---|---|
-| 1 | Freeze thesis purpose and causal spine | **PASS** | `THESIS_PURPOSE_AND_CAUSAL_SPINE_V1.md` |
-| 2 | Build candidate `T_RS` | **PASS** | `RESILIENCE_SUSTAINABILITY_CAUSAL_TRANSLATION_MATRIX_V1.md`; machine-readable CSV |
-| 3 | Audit evidence for `d_e -> R_i -> J_j` | **PASS_PUBLIC/PEER_REVIEWED_SCREENING** | six retained pathways; weakest arrows exposed; formal DB closure not implied |
-| 4 | Prune unsupported sustainability outcomes | **PASS_SCOPE_CONTROL** | core = access + operational energy + operational carbon; cost secondary/budget; equity conditional; resource deferred |
-| 5 | Define units/equations/horizons/data for retained outcomes | **PASS_SPECIFICATION / DATA GATES OPEN** | `SUSTAINABILITY_OUTCOME_SPECIFICATION_V1.md`; `RS_OUTCOME_DATA_REGISTRY_V1.csv` |
-| 6 | Freeze minimal P–T–I–O mechanism set | **PASS** | `MINIMAL_PTIO_MECHANISM_SET_V1.md` |
-| 7 | Finish H1 raw-data qualification | **BLOCKED_RAW_DATA** | existing R1–R8 gate remains authoritative |
-| 8 | Validate `M0,M1,M2` empirically | **DEFERRED_DEPENDENCY** | requires Step 7 and frozen observation thresholds |
-| 9 | Compute evidence-supported resilience findings | **DEFERRED_DEPENDENCY** | requires validated dynamics/data |
-| 10 | Test when operational recovery becomes structurally inadequate | **DEFERRED_DEPENDENCY** | requires Stage-5 controlled viability and thresholds |
-| 11 | Freeze admissible structural interventions `a` | **PARTIAL_SPECIFICATION** | candidate actions exist by pathway; final intervention set requires validated mechanism/technology evidence and matched budget |
-| 12 | Derive/validate `Phi_RS` | **PARTIAL_SPECIFICATION** | admissible intervention-mediated form defined; parameterization and validation pending |
-| 13 | Run matched intervention experiments | **DEFERRED_DEPENDENCY** | requires Steps 8–12 |
-| 14 | Compute resilience–sustainability Pareto set | **DEFERRED_DEPENDENCY** | requires matched validated outcomes |
-| 15 | VVUQ + held-out validation | **DEFERRED_DEPENDENCY** | requires qualified data/models |
-| 16 | State surviving contributions | **DEFERRED_DEPENDENCY** | result firewall applies |
+## 1. Current two-track execution state
 
-## Core scientific spine now active
+The project now has two legitimate parallel workstreams:
 
 ```math
 \boxed{
-\mathcal D
-\rightarrow
+\begin{array}{lll}
+\text{Track A} &:& \text{H1/H2 empirical and model qualification}\\
+\text{Track B} &:& \text{H3 mathematical specification and preregistration readiness}
+\end{array}
+}
+```
+
+Track B may prepare H3 mathematics, evidence, state-set semantics, uncertainty rules, and algorithm-selection tests. It may **not** execute H3 confirmatorily until the upstream Track-A and H3-specific gates close.
+
+---
+
+## 2. Status table
+
+| Step | Task | Status | Authority / artifact |
+|---:|---|---|---|
+| 1 | Freeze thesis purpose and causal spine | **PASS** | framework v2 + canonical RQ/SO/H v2 |
+| 2 | Freeze H1 dynamic-coupling logic | **PASS** | H1 M0/M1/M2 files |
+| 3 | Qualify H1 row-level data | **BLOCKED_RAW_DATA** | R1–R8 gate remains authoritative |
+| 4 | Execute/close bounded H1 physical-coupling test | **DEFERRED** | requires Step 3 + verification gates |
+| 5 | Qualify H2 information/organization mechanisms | **PARTIAL / EXECUTION BLOCKED** | Stage-4 specs exist; empirical I/O qualification incomplete |
+| 6 | Audit pre-existing Stage-5/H3 assets | **PASS** | `H3_READINESS_AUDIT_V1.md` |
+| 7 | Freeze H3 `K`, `G_rec`, `F`, `T_V/T_R` semantics | **PASS_STRUCTURE / VALUES OPEN** | `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md` |
+| 8 | Freeze H3 uncertainty/probability semantics | **PASS_STRUCTURE / MODELS OPEN** | `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md` |
+| 9 | Freeze H3 comparison/preregistration architecture | **PASS_DRAFT / METRIC OPEN** | `H3_PREREGISTRATION_V1.md` |
+| 10 | Freeze H3 algorithm-selection/verification gate | **PASS_GATE / SOLVER OPEN** | `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md` |
+| 11 | Close numerical thresholds, horizons, alpha/beta, policy family, primary skill metric, delta3 | **OPEN / EVIDENCE+DATA GATES** | H3 package |
+| 12 | Select and verify H3 solver on reference problems | **DEFERRED** | requires H3 computational signature |
+| 13 | Freeze H3 development/test data and labels | **DEFERRED** | requires upstream model/data closure |
+| 14 | Run H3 confirmatory comparison | **NOT AUTHORIZED** | requires `G_H3=1` |
+| 15 | Freeze qualified Stage-6 interventions | **DEFERRED** | requires validated H3/resilience diagnosis |
+| 16 | Run H4 matched intervention/consequence experiments | **DEFERRED** | requires Step 15 |
+| 17 | Run H5 resilience-only vs joint resilience–sustainability decision experiment | **DEFERRED** | requires H4 outcomes + decision preregistration |
+| 18 | Cross-stage VVUQ + held-out validation | **CONTINUOUS / FINAL GATE DEFERRED** | all hypothesis packages |
+| 19 | State surviving contributions | **DEFERRED** | result firewall applies |
+
+---
+
+## 3. H3 gate
+
+H3 confirmatory execution is authorized only if
+
+```math
+\boxed{
+G_{H3}
+=
+G_{H1/2}
+\land
+G_K
+\land
+G_U
+\land
+G_{\Pi}
+\land
+G_{alg}
+\land
+G_{metric}
+\land
+G_{\delta_3}
+\land
+G_{data}
+=1.
+}
+```
+
+Current state:
+
+```text
+G_H1/2   = 0
+G_K      = 0   # structure frozen; numerical thresholds/horizons open
+G_U      = 0   # uncertainty semantics frozen; final probability models open
+G_Pi     = 0   # Stage-4 control structure exists; H3 policy family not frozen
+G_alg    = 0   # selection gate frozen; solver not selected
+G_metric = 0   # pre-data decision rule frozen; primary metric not selected
+G_delta3 = 0   # provenance rule frozen; numerical threshold open
+G_data   = 0   # H3 development/test roles not frozen
+
+H3 CONFIRMATORY EXECUTION = NOT AUTHORIZED
+```
+
+---
+
+## 4. Active scientific chain
+
+```math
+\boxed{
 \mathbb I
 \rightarrow
 F_{\mathcal G}^{m}
 \rightarrow
-\mathbf R
+(\widehat Y,\mathcal U,u)
 \rightarrow
-\Phi_{RS}
+\mathfrak R_T
 \rightarrow
-\Delta\mathbf J_{\rm sus}^{core}
+a_k
 \rightarrow
-\mathbf a^\star
+\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right)
+\rightarrow
+\mathcal A_{R,S}^{\star}.
 }
 ```
 
-with
+The Stage-5 object is
 
 ```math
 \boxed{
-\mathbf J_{\rm sus}^{core}
-=[J_{access},J_{energy},J_{carbon}]^\top.
+\mathfrak R_T
+=
+\left(
+\mathcal V_{\alpha,T_V},
+\mathcal R_{\beta,T_R},
+\rho_{\mathcal V},
+T_{\mathcal V},
+T_{\rm rec},
+P_{\rm viable},
+P_{\rm recover}
+\right).
 }
 ```
 
-## Hard gate now
+Sustainability is evaluated downstream as a consequence of intervention trajectories. It is not silently embedded in H3 `K(t)` unless a quantity is independently justified as a hard admissibility requirement.
 
-The next numbered step is not another framework task. It is the existing H1 empirical gate:
+---
+
+## 5. Immediate executable tasks
+
+### Track A
 
 ```math
 \boxed{
-\text{raw event/source bytes}
+\text{raw H1 event/source bytes}
 \rightarrow
-R1\text{–}R8
+R1{:}R8
 \rightarrow
-D_{train},D_{test}\text{ freeze}
+\text{freeze/reject split}
 \rightarrow
-u_{obs,P},\nu_{obs,T}
+\text{H1 verification/validation}
 \rightarrow
-\epsilon_P,\epsilon_T
-\rightarrow
-M_0/M_1/M_2\text{ held-out test}.
+\text{bounded H1 result}.
 }
 ```
 
-No downstream resilience-to-sustainability result may be promoted before that causal foundation is validated.
+### Track B
+
+```math
+\boxed{
+\text{threshold/horizon evidence}
+\rightarrow
+(K,G_{\rm rec},F,T_V,T_R)
+\rightarrow
+\text{uncertainty qualification}
+\rightarrow
+\Pi_{\rm adm}
+\rightarrow
+\text{H3 computational signature}
+\rightarrow
+\text{solver verification}.
+}
+```
+
+Track B stops before confirmatory H3 execution until Track A and all H3-specific gates pass.
