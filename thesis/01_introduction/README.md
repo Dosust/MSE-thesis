@@ -4,7 +4,10 @@
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Stage-6/7 sustainability authority:** `../00_governance/SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md`  
-**Live sustainability register:** `../00_governance/SUSTAINABILITY_DIMENSION_REGISTER_V1.md`
+**Sustainability status register:** `../00_governance/SUSTAINABILITY_DIMENSION_REGISTER_V1.md`  
+**Metric cards:** `../00_governance/SUSTAINABILITY_METRIC_CARDS_V1.md`  
+**Case/data feasibility audit:** `../00_governance/SUSTAINABILITY_CASE_DATA_FEASIBILITY_AUDIT_V1.md`  
+**Current admission freeze:** `../00_governance/SUSTAINABILITY_ADMISSION_FREEZE_V1.md`
 
 ## Purpose
 
@@ -36,9 +39,11 @@ Sections **1.1–1.4 now have one source of truth in this directory**. The repos
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
 - 1.3 states the engineering problem concisely and removes detailed experimental/VVUQ material that belongs later.
 - 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
-- **Section 1.5 is the next Chapter-I writing task, but it must be written only after the evidence audit and Sustainability-Dimension Admission Matrix are consulted.**
+- **Section 1.5 is now authorized for drafting from the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.**
 
-Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may use only evidence-supported quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current admission status is recorded in `SUSTAINABILITY_DIMENSION_REGISTER_V1.md`.
+Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
+
+At the current freeze, direct cost, operational electrical energy and carbon/GHG are **planned core consequence families but remain confirmatory-CONDITIONAL** because the Austin candidate case, final intervention set, metric-specific data/boundaries and VVUQ are not all frozen. Distributional accessibility/equity and crew-hours are conditional extensions. Full LCA, water, biodiversity, public-health, broad social-sustainability and macroeconomic modeling are outside the current quantitative core.
 
 ## Governing logic
 
@@ -132,8 +137,10 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 - externally sourced claims use adjacent verified APA 7 author–date citations;
 - exact claim strength must not exceed evidence or validation domain;
 - sustainability claims must distinguish direct P–T evidence from adjacent transferable evidence;
-- cost, budget, energy, carbon, accessibility, resource use and transformation descriptors must not be collapsed into one generic sustainability category without role typing and admission.
+- cost, budget, energy, carbon, accessibility, resource use and transformation descriptors must not be collapsed into one generic sustainability category without role typing and admission;
+- a `CONDITIONAL` metric may be described as planned/qualified but not as a measured or confirmatory-ready quantity;
+- Section 1.5 significance language must not imply that carbon-aware P–T resilience, low-carbon planning or persistent P–T infrastructure transformation is absent from prior research.
 
 ## Exit gate
 
-See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Section 1.5 additionally requires the sustainability admission standard and live register to be internally consistent with Section 1.6 scope and the H4/H5 experiment plan.
+See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Section 1.5 must remain consistent with the current sustainability admission freeze, while Section 1.6 must state the quantitative exclusions and conditional-data boundaries explicitly.
