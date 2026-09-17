@@ -73,10 +73,15 @@ jobs:
           assert propositions['inference_rules']['framework_freeze_does_not_imply_empirical_validation'] is True
 
           hypotheses = yaml.safe_load(Path('config/research_hypotheses.yaml').read_text())
+          assert hypotheses['version'] == 2
+          assert hypotheses['source'] == 'project/CANONICAL_RQ_SO_HYPOTHESES_V3.md'
           assert set(hypotheses['hypotheses']) == {f'H{i}' for i in range(1, 6)}
           assert hypotheses['status']['hypothesis_logic_frozen'] is True
           assert hypotheses['status']['numerical_thresholds_frozen'] is False
+          assert hypotheses['hypotheses']['H4']['name'] == 'intervention_resilience_sustainability_consequences'
+          assert hypotheses['hypotheses']['H5']['name'] == 'joint_resilience_sustainability_decision'
           assert hypotheses['confirmatory_rules']['thresholds_must_be_defined_a_priori'] is True
+          assert hypotheses['confirmatory_rules']['no_hypothesis_support_from_verification_only'] is True
 
           print('Scientific proposition registry: PASS')
           print('Primary hypothesis registry: PASS')
