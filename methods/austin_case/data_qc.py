@@ -44,7 +44,11 @@ def _validate_record(name: str, record: Mapping[str, Any], root: Path | None) ->
     _require(isinstance(record.get("bytes"), int) and record["bytes"] > 0, f"{name}: positive byte count required")
     digest = record.get("sha256")
     _require(isinstance(digest, str) and len(digest) == 64, f"{name}: SHA-256 required")
-    _require(isinstance(record.get("source_url"), str) and record["source_url"], f"{name}: source URL required")
+    # Direct-download records use `source_url`; ArcGIS merged records preserve
+    # the authoritative service endpoint under `layer`. Both are explicit
+    # provenance URLs and neither may be absent.
+    source = record.get("source_url") or record.get("layer")
+    _require(isinstance(source, str) and source, f"{name}: source URL/layer endpoint required")
 
     if root is not None:
         path = Path(str(record.get("path", "")))
