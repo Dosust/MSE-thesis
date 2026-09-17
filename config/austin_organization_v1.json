@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "case_id": "AUS-P5U-2018-V1",
+  "status": "ORGANIZATIONAL_SOURCE_QUALIFIED_COORDINATES_OPEN",
+  "authority": "Austin Energy public field-service and design-criteria information",
+  "dispatch_centers": [
+    {
+      "id": "AE_ST_ELMO",
+      "name": "St. Elmo Service Center",
+      "documented_role": "dispatches for South Austin; outage restoration and equipment repair",
+      "address": "4411-B Meinardus Drive, Austin, TX",
+      "coordinate": null,
+      "coordinate_source": "OPEN_GEOCODING_QA",
+      "road_snap": "OPEN"
+    },
+    {
+      "id": "AE_KRAMER",
+      "name": "Kramer Lane Service Center",
+      "documented_role": "dispatches for North Austin; outage restoration and equipment repair",
+      "address": "2526 Kramer Lane, Bldg C, Austin, TX",
+      "coordinate": null,
+      "coordinate_source": "OPEN_GEOCODING_QA",
+      "road_snap": "OPEN"
+    }
+  ],
+  "priority_semantics": {
+    "phase_1": "critical life-safety services and transmission/substation/main distribution backbone",
+    "phase_2": "outages affecting largest customer groups",
+    "phase_3": "remaining smaller outages",
+    "critical_load_examples": ["hospitals", "public safety", "water", "communications"]
+  },
+  "prohibitions": [
+    "Do not infer actual crew counts from public dispatch-center information.",
+    "Do not invent dispatch times or onsite repair-time distributions.",
+    "Do not treat service-center address as a road-graph node until geocoding and snap QA pass.",
+    "Do not assume all repairs originate from the nearest center if the organizational policy is not documented."
+  ]
+}
