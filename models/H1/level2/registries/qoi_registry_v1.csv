@@ -1,0 +1,16 @@
+qoi_id,family,role,definition,reference_required,metric_status,decision_use,notes
+E_cascade,cascade,PRIMARY_H1,"d_cascade(y_model,y_reference)",YES,OPEN_PENDING_REFERENCE,"Delta_E21_cascade = E_M1-E_M2",Exact event/cascade distance must be frozen before confirmatory execution
+E_service_loss,service_loss,PRIMARY_H1,"d_service(y_model,y_reference)",YES,OPEN_PENDING_REFERENCE,"Delta_E21_service = E_M1-E_M2",Reference and weighting must be independent and preregistered
+E_spatial,spatial_propagation,PRIMARY_H1,"d_spatial(y_model,y_reference)",YES,OPEN_PENDING_REFERENCE,"Delta_E21_spatial = E_M1-E_M2",Spatial support and metric must be frozen before results
+E_recovery,recovery,PRIMARY_H1,"d_recovery(y_model,y_reference)",YES,OPEN_PENDING_REFERENCE,"Delta_E21_recovery = E_M1-E_M2",Recovery horizon and event alignment must be frozen
+J_P,service_loss,SECONDARY_PHYSICAL,"integral_0^T(1-S_P(t))dt",NO,FROZEN_DEFINITION,describe power service consequence,Not a direct model-accuracy score
+J_T,service_loss,SECONDARY_PHYSICAL,"integral_0^T(1-S_T(t))dt",NO,FROZEN_DEFINITION,describe transport service consequence,Not a direct model-accuracy score
+ENS,service_loss,SECONDARY_PHYSICAL,"integrated unserved electrical energy",NO,DEFINITION_REQUIRES_UNIT_BINDING,engineering consequence,Bind exact load units to selected SMART-DS case
+T95_P,recovery,SECONDARY_PHYSICAL,"first sustained time power service reaches 0.95 after disturbance",NO,OPEN_HORIZON_RULE,engineering recovery consequence,Sustained-window rule must be frozen
+T95_T,recovery,SECONDARY_PHYSICAL,"first sustained time transport service reaches 0.95 after disturbance",NO,OPEN_HORIZON_RULE,engineering recovery consequence,Sustained-window rule must be frozen
+Q_max,interface_memory,MECHANISM_DIAGNOSTIC,"max_t q_EV(t)",NO,FROZEN_DEFINITION,verify M2 memory activation,Not sufficient for H1 confirmation
+A_Q,interface_memory,MECHANISM_DIAGNOSTIC,"integral_0^T q_EV(t)dt",NO,FROZEN_DEFINITION,quantify charging-memory burden,Not sufficient for H1 confirmation
+T_access,repair_access,MECHANISM_DIAGNOSTIC,"crew dispatch-to-arrival travel time on current road state",NO,FROZEN_CONCEPT,verify T-to-P mechanism,Exact aggregation across jobs must be frozen
+D_T,transport_delay,SECONDARY_PHYSICAL,"total or weighted excess travel time relative to declared baseline",NO,OPEN_AGGREGATION_RULE,transport consequence,Baseline and weights must be frozen
+Delta_Q21,model_divergence,DIAGNOSTIC,"Q(M2)-Q(M1)",NO,FROZEN_DEFINITION,measure omitted-dynamics effect,Do not interpret as predictive superiority
+rho_g,viability_geometry,DEFERRED_STAGE5,"d_g(Y,partial V)",YES,DEFERRED,Stage-5 viability/reachability geometry,Explicitly excluded from Level-2 primary model selection
