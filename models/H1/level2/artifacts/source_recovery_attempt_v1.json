@@ -1,0 +1,56 @@
+{
+  "artifact_id": "H1_LEVEL2_SOURCE_RECOVERY_ATTEMPT_V1",
+  "audit_date": "2026-09-18",
+  "greenEVT_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+  "attempts": [
+    {
+      "route": "GitHub textual contents/raw access",
+      "result": "LFS_POINTER_ONLY",
+      "interpretation": "Confirms intended object identity but not payload materialization."
+    },
+    {
+      "route": "GitHub LFS media host from current runtime",
+      "result": "EXECUTION_ENVIRONMENT_DNS_BLOCK",
+      "interpretation": "No inference about upstream object availability or integrity."
+    },
+    {
+      "route": "GreenEVT maintainer ZIP fallback documented in upstream README",
+      "result": "EXECUTION_ENVIRONMENT_DOWNLOAD_BLOCK",
+      "interpretation": "Fallback is documented upstream but payload was not retrieved in this runtime."
+    },
+    {
+      "route": "GitHub Actions materialization workflow",
+      "result": "RUNNER_DID_NOT_START_STEPS",
+      "interpretation": "Repository execution-environment failure; not classified as GreenEVT/LFS failure."
+    }
+  ],
+  "frozen_original_objects": {
+    "UDS.db": {
+      "path": "data/UDS.db",
+      "oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "size_bytes": 107778048,
+      "materialized": false
+    },
+    "greensboro.net.xml": {
+      "path": "data/sumo_network/greensboro.net.xml",
+      "oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "size_bytes": 351967227,
+      "materialized": false
+    }
+  },
+  "recovery_method": {
+    "protocol": "TRANSPORT_SOURCE_RECOVERY_V1.md",
+    "validator": "validate_transport_candidate.py",
+    "status": "METHOD_FROZEN_NOT_EXECUTED",
+    "maximum_classification_without_original_bytes": "GREENEVT_BENCHMARK_MATCH_CANDIDATE"
+  },
+  "nfhl_selection_exposure": {
+    "protocol": "NFHL_SELECTION_EXPOSURE_V1.md",
+    "acquisition_script": "fetch_nfhl_sfha.py",
+    "status": "SOURCE_METHOD_FROZEN_DATA_OPEN"
+  },
+  "selection_status": "BLOCKED",
+  "development_feeder_id": null,
+  "heldout_feeder_id": null,
+  "claim_boundary": "No source-recovery attempt authorizes feeder selection, model execution, or H1 claims until its own evidence gates close."
+}
