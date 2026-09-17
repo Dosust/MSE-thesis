@@ -24,13 +24,18 @@ This folder converts the ASU MSE thesis into a traceable scientific system rathe
 | `CLAIM_EVIDENCE_REGISTER.md` | claim status, source, mechanism, assumptions, uncertainty, experiment/result and thesis-location ledger |
 | `MODEL_EXPERIMENT_VALIDATION_MATRIX.md` | model, baseline, held constants, treatment, data, V&V, UQ, thresholds and falsification control |
 | `SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md` | thesis-wide Stage-6/7 authority for admitting, typing, bounding, comparing and validating sustainability/resource dimensions |
-| `SUSTAINABILITY_DIMENSION_REGISTER_V1.md` | live admission matrix and status register for every proposed resilience/resource/sustainability/transformation quantity |
+| `SUSTAINABILITY_DIMENSION_REGISTER_V1.md` | current frozen pre-H4/H5 status register for every proposed resilience/resource/sustainability/transformation quantity |
+| `SUSTAINABILITY_METRIC_CARDS_V1.md` | reproducible definitions, units, boundaries, data routes, VVUQ and promotion conditions for retained Stage-6/7 metrics |
+| `SUSTAINABILITY_CASE_DATA_FEASIBILITY_AUDIT_V1.md` | Austin-case feasibility audit separating source existence, case compatibility, QC and confirmatory readiness |
+| `SUSTAINABILITY_ADMISSION_FREEZE_V1.md` | current pre-result IN/CONDITIONAL/OUT and ROLE-ONLY/CONTEXT freeze controlling H4/H5 scope |
 | `FIGURE_TABLE_EQUATION_REGISTER.md` | scientific purpose and provenance registry for formal artifacts |
 | `THESIS_COMPLETION_GATES.md` | formal conditions for declaring sections scientifically complete/frozen |
 
 `RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md` and `RQ_SO_H_TRACEABILITY_V2.md` are superseded provenance stubs. They must not override `RQ_SO_H_TRACEABILITY_V3.md`.
 
-For all Stage-6/7 work and any thesis use of the terms **sustainability**, **sustainable transformation**, **resource efficiency**, **carbon**, **energy consequence**, **accessibility consequence**, **economic consequence**, or **joint resilience–sustainability decision**, the sustainability admission standard and live register are mandatory controls. No new sustainability dimension may enter confirmatory H4/H5 analysis outside that governance chain.
+For all Stage-6/7 work and any thesis use of the terms **sustainability**, **sustainable transformation**, **resource efficiency**, **carbon**, **energy consequence**, **accessibility consequence**, **economic consequence**, or **joint resilience–sustainability decision**, the sustainability admission standard, metric cards, feasibility audit, register and current admission freeze are mandatory controls. No new sustainability dimension may enter confirmatory H4/H5 analysis outside that governance chain.
+
+The current admission freeze is deliberately pre-result. A `CONDITIONAL` dimension can become confirmatory `IN` only after upstream case admissibility, intervention-set/reference freeze, metric-specific data/QC, accounting-boundary freeze and VVUQ pass. Promotion after relevant H4/H5 outcomes are observed is not preregistration.
 
 ## External scientific authorities
 
