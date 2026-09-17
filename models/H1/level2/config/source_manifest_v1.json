@@ -1,5 +1,5 @@
 {
-  "manifest_id": "H1_LEVEL2_SOURCE_MANIFEST_V1_2",
+  "manifest_id": "H1_LEVEL2_SOURCE_MANIFEST_V1_3",
   "access_date": "2026-09-18",
   "sources": [
     {
@@ -11,12 +11,33 @@
     },
     {
       "id": "GREENEVT",
-      "authority": "GreenEVT authors/public repository",
+      "authority": "GreenEVT authors/public repository and peer-reviewed paper",
       "url": "https://github.com/GreenEVT/GreenEVT",
       "paper": "https://arxiv.org/abs/2305.12722",
+      "doi": "https://doi.org/10.1109/JSYST.2023.3343692",
       "pinned_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
-      "role": "Greensboro OpenDSS/SUMO coupling and spatial crosswalk methods",
+      "role": "Greensboro OpenDSS/SUMO coupling, spatial crosswalk methods, and published transport-network validation invariants",
       "epistemic_status": "SOURCE_TESTBED_METHODS_LINEAGE",
+      "published_transport_bounds_wgs84": {
+        "south": 35.894145,
+        "west": -80.198958,
+        "north": 36.410277,
+        "east": -79.157255
+      },
+      "published_transport_invariants": {
+        "sumo_nodes": 50109,
+        "sumo_edges": 118289,
+        "signalized_junctions": 914,
+        "road_length_km_as_published": 28216,
+        "lane_length_km_as_published": 30625
+      },
+      "published_power_invariants": {
+        "substations": 21,
+        "feeders": 61,
+        "buses": 154241,
+        "total_devices": 218166,
+        "urban_suburban_active_peak_load_MW": 612.7
+      },
       "critical_lfs_objects": [
         {
           "path": "data/UDS.db",
@@ -35,14 +56,18 @@
       ],
       "lfs_rule": "Pointer identity alone is insufficient. Materialized bytes must match frozen SHA-256 and size before feature extraction or simulation.",
       "upstream_archive_fallback": "https://gustavnilsson.name/files/GreenEVT.zip",
-      "archive_rule": "Fallback archive is not presumed commit-equivalent; it must pass the same frozen file-identity audits before use."
+      "archive_rule": "Fallback archive is not presumed commit-equivalent; it must pass the same frozen file-identity audits before use.",
+      "reconstruction_rule": "If original transport bytes remain unavailable, any network regenerated from the published OSM/osmWebWizard method is a separately labeled reconstructed candidate governed by TRANSPORT_SOURCE_RECOVERY_V1.md; aggregate invariant agreement does not establish byte equivalence."
     },
     {
       "id": "FEMA_NFHL_EFFECTIVE",
       "authority": "Federal Emergency Management Agency",
-      "url": "https://www.fema.gov/flood-maps/national-flood-hazard-layer",
+      "landing_url": "https://www.fema.gov/flood-maps/national-flood-hazard-layer",
+      "rest_service": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer",
+      "flood_hazard_zone_layer": 28,
       "role": "effective Special Flood Hazard Area geometry used only for the preregistered static feeder-selection exposure descriptor E_H",
       "epistemic_status": "AUTHORITATIVE_EFFECTIVE_FLOOD_HAZARD_MAPPING",
+      "classifier": "SFHA_TF='T'",
       "boundary": "NFHL E_H is a case-selection descriptor; it is not the Level-2 pluvial HEC-RAS forcing, not a fragility function, and unmapped/unknown coverage is not zero exposure."
     },
     {
