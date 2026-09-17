@@ -1,0 +1,24 @@
+{
+  "amendment_id": "H1_LEVEL2_SOURCE_MANIFEST_V1_4_AMENDMENT",
+  "date": "2026-09-18",
+  "amends": "config/source_manifest_v1.json",
+  "reason": "The national FEMA NFHL service remained inaccessible from the execution runtime. A current Guilford County GIS implementation of FEMA's effective flood-hazard determinations was independently resolved for the Greensboro study area. The amendment changes only the operational retrieval route for static feeder-selection exposure; FEMA remains the semantic provenance authority.",
+  "added_source": {
+    "id": "GUILFORD_FEMA_EFFECTIVE_2026",
+    "authority": "Guilford County GIS; FEMA final flood-hazard determinations",
+    "layer_name": "Flood Zones Effective 06-10-2026",
+    "service_url": "https://gcgis.guilfordcountync.gov/arcgis/rest/services/GISDV/Watershed_Management/MapServer/12",
+    "effective_date": "2026-06-10",
+    "geometry_type": "esriGeometryPolygon",
+    "supported_query_formats": ["JSON", "geoJSON", "PBF"],
+    "role": "operational effective flood-hazard geometry for preregistered static feeder-selection descriptor E_H inside documented Guilford County coverage",
+    "epistemic_status": "AUTHORITATIVE_LOCAL_IMPLEMENTATION_OF_FEMA_EFFECTIVE_DETERMINATIONS",
+    "provenance_parent": "FEMA_NFHL_EFFECTIVE",
+    "classifier_rule": "Use SFHA_TF after metadata introspection. Accept only string T/F or numeric 1/0 encodings.",
+    "boundary": "This source does not replace FEMA as provenance authority, does not define the HEC-RAS dynamic hazard, and cannot map missing/noncovered feeder ROIs to E_H=0."
+  },
+  "related_protocol": "NFHL_SELECTION_EXPOSURE_V1_1.md",
+  "related_acquisition_code": "fetch_nfhl_sfha.py",
+  "source_payload_materialized": false,
+  "selection_authorized": false
+}
