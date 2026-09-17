@@ -1,0 +1,14 @@
+{
+  "artifact_id": "H1_LEVEL2_SOURCE_FEATURE_MATRIX_V1_1",
+  "specification": "FEEDER_FEATURE_SPECIFICATION_V1_1.md",
+  "feeder_count": 61,
+  "feature_csv_sha256": "2c5225e74097b532999194c1b42a8e3720b8fe815409cbe7f6bb93cc1cf69ee8",
+  "source_features_complete": true,
+  "hazard_complete": false,
+  "selection_authorized": false,
+  "C_geo_true": 61,
+  "C_road_true": 61,
+  "C_interface_true": 60,
+  "C_interface_false_feeders": ["uhs11_1247--p1umv22"],
+  "claim_boundary": "Source-only pre-simulation descriptors. E_H is intentionally blank; no feeder selection is authorized."
+}
