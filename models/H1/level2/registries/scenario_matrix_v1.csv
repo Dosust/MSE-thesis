@@ -1,0 +1,17 @@
+scenario_id,experiment_class,hazard_level,model,active_interfaces,common_random_group,development_or_holdout,purpose,status
+H0_M0,MATCHED_MAIN,H0,M0,NONE,CRN_H0,development,baseline independent model,DEFINED
+H0_M1,MATCHED_MAIN,H0,M1,STATIC_COUPLING,CRN_H0,development,baseline static-coupling model,DEFINED
+H0_M2,MATCHED_MAIN,H0,M2,FULL_DYNAMIC,CRN_H0,development,baseline dynamic model,DEFINED
+HM_M0,MATCHED_MAIN,H_moderate,M0,NONE,CRN_HM,development,moderate matched independent model,DEFINED
+HM_M1,MATCHED_MAIN,H_moderate,M1,STATIC_COUPLING,CRN_HM,development,moderate matched static model,DEFINED
+HM_M2,MATCHED_MAIN,H_moderate,M2,FULL_DYNAMIC,CRN_HM,development,moderate matched dynamic model,DEFINED
+HS_M0,MATCHED_MAIN,H_severe,M0,NONE,CRN_HS,development,severe matched independent model,DEFINED
+HS_M1,MATCHED_MAIN,H_severe,M1,STATIC_COUPLING,CRN_HS,development,severe matched static model,DEFINED
+HS_M2,MATCHED_MAIN,H_severe,M2,FULL_DYNAMIC,CRN_HS,development,severe matched dynamic model,DEFINED
+A_EV,ABLATION,H_severe,M2,EV_T_to_P+EV_P_to_T,CRN_ABLATION_HS,development,isolate EV coupling contribution,DEFINED
+A_SIGNAL,ABLATION,H_severe,M2,SIGNAL_P_to_T,CRN_ABLATION_HS,development,isolate signal-power contribution,DEFINED
+A_REPAIR,ABLATION,H_severe,M2,REPAIR_T_to_P,CRN_ABLATION_HS,development,isolate repair-access contribution,DEFINED
+A_FULL,ABLATION,H_severe,M2,FULL_DYNAMIC,CRN_ABLATION_HS,development,full dynamic reference for ablations,DEFINED
+HOLDOUT_M0,HOLDOUT,TBD,M0,NONE,CRN_HOLDOUT,heldout,locked spatial generalization test,NOT_FROZEN
+HOLDOUT_M1,HOLDOUT,TBD,M1,STATIC_COUPLING,CRN_HOLDOUT,heldout,locked spatial generalization test,NOT_FROZEN
+HOLDOUT_M2,HOLDOUT,TBD,M2,FULL_DYNAMIC,CRN_HOLDOUT,heldout,locked spatial generalization test,NOT_FROZEN
