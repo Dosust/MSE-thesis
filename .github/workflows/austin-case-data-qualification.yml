@@ -18,6 +18,7 @@ permissions:
 
 env:
   PYTHONHASHSEED: "0"
+  PYTHONPATH: "."
 
 jobs:
   qualify-public-data:
