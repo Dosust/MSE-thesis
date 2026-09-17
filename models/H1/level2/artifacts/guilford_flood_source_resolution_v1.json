@@ -1,0 +1,39 @@
+{
+  "artifact_id": "H1_LEVEL2_GUILFORD_FLOOD_SOURCE_RESOLUTION_V1",
+  "audit_date": "2026-09-18",
+  "protocol": "NFHL_SELECTION_EXPOSURE_V1_1.md",
+  "provenance_authority": {
+    "organization": "Federal Emergency Management Agency",
+    "dataset": "National Flood Hazard Layer / effective FIRM flood-hazard determinations",
+    "role": "semantic provenance authority"
+  },
+  "operational_source": {
+    "organization": "Guilford County GIS",
+    "layer_name": "Flood Zones Effective 06-10-2026",
+    "service_url": "https://gcgis.guilfordcountync.gov/arcgis/rest/services/GISDV/Watershed_Management/MapServer/12",
+    "effective_date": "2026-06-10",
+    "geometry_type": "polygon",
+    "supported_query_formats": ["JSON", "geoJSON", "PBF"],
+    "source_role": "FEMA_PROVENANCE_GUILFORD_OPERATIONAL_IMPLEMENTATION"
+  },
+  "independent_schema_confirmation": {
+    "related_guilford_feature_layer": "https://gcgis.guilfordcountync.gov/arcgis/rest/services/EnerGov/EnerGov_Main/FeatureServer/15",
+    "sfha_field": "SFHA_TF",
+    "sfha_field_type": "esriFieldTypeSmallInteger",
+    "note": "Operational acquisition code therefore introspects field type and uses numeric 1/0 or string T/F only; it never infers SFHA from rendered zone labels when SFHA_TF exists."
+  },
+  "greenEVT_selection_bounds_wgs84": {
+    "south": 35.894145,
+    "west": -80.198958,
+    "north": 36.410277,
+    "east": -79.157255
+  },
+  "runtime_acquisition_attempt": {
+    "result": "EXECUTION_ENVIRONMENT_DNS_BLOCK",
+    "interpretation": "The service is externally discoverable and query-capable, but the current container could not resolve the host. This is not classified as source-data failure."
+  },
+  "payload_materialized": false,
+  "all_61_feeder_coverage_determined": false,
+  "selection_authorized": false,
+  "claim_boundary": "This source can support only static outcome-blind feeder exposure E_H. It is not the HEC-RAS dynamic hazard and does not authorize feeder selection until payload, coverage and SHA-256 gates close."
+}
