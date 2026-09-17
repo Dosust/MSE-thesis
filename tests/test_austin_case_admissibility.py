@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import copy
 import json
 from pathlib import Path
 
@@ -56,7 +55,7 @@ def test_missing_mandatory_source_is_rejected():
         validate_contract(data)
 
 
-def test_final_pass_requires_traffic_overlap_and_interface_computability():
+def test_final_pass_requires_full_spatial_network_and_interface_closure():
     data = _contract()
     for gate in REQUIRED_GATE_IDS:
         data["gates"][gate] = "PASS"
@@ -65,11 +64,14 @@ def test_final_pass_requires_traffic_overlap_and_interface_computability():
     data["final_case_admissibility"] = True
 
     for row in data["required_data_families"]:
-        if row["id"] in {"boundary", "road", "signals", "flood"}:
+        if row["id"] in {"boundary", "power", "road", "signals", "flood"}:
             row["spatial_overlap_verified"] = True
         if row["id"] == "power":
             row["raw_materialized"] = True
-            row["spatial_overlap_verified"] = True
+        if row["id"] == "road":
+            row["network_qa_pass"] = True
+        if row["id"] == "signals":
+            row["synthetic_power_mapping_verified"] = True
 
     with pytest.raises(AustinAdmissibilityError, match="traffic-observation"):
         validate_contract(data)
