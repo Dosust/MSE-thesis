@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "case_id": "AUS-P5U-2018-V1",
+  "status": "SOURCE_FROZEN_RAW_QA_OPEN",
+  "primary": {
+    "name": "City of Austin full purpose boundary",
+    "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/City_of_Austin_full_purpose_boundary/FeatureServer/0",
+    "item_id": "46a37551e8b64f098f29a2f991df5e9d",
+    "geometry": "polygon",
+    "native_crs": "EPSG:3857",
+    "data_last_edit": "2019-04-04T03:13:39Z",
+    "role": "PRIMARY_SEMISYNTHETIC_2018_ERA_SPATIAL_SUPPORT",
+    "raw_materialized": false,
+    "qa_pass": false
+  },
+  "crosschecks": [
+    {
+      "name": "Current City of Austin jurisdictions",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/BOUNDARIES_jurisdictions/FeatureServer/0",
+      "filter": "JURISDICTION_TYPE='FULL'",
+      "native_crs": "EPSG:2277",
+      "role": "CURRENT_BOUNDARY_SENSITIVITY"
+    },
+    {
+      "name": "Austin Energy service area",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/UTILITIESCOMMUNICATION_austin_energy_service_area/FeatureServer/0",
+      "item_id": "fda30e1a33af449fa9e75e28ad36643e",
+      "native_crs": "EPSG:2277",
+      "role": "UTILITY_GEOGRAPHIC_CROSSCHECK_ONLY",
+      "claims_feeder_topology": false
+    }
+  ],
+  "rules": [
+    "Primary boundary is chosen by semantics and vintage before H1-H5 outcomes.",
+    "The 2019 boundary does not make the case an exact 2018 historical reconstruction.",
+    "Boundary sensitivity must be reported using symmetric-difference area and asset-membership changes.",
+    "Area calculations must use an appropriate projected CRS.",
+    "A municipal boundary is not an electric service territory."
+  ]
+}
