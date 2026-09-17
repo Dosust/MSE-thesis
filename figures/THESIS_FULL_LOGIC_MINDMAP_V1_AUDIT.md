@@ -5,7 +5,7 @@
 **Editable source:** `figures/THESIS_FULL_LOGIC_MINDMAP_V1.mmd`  
 **Audit date:** 2026-09-17  
 **Scientific authority:** `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ/SO/H authority:** `project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ/SO/H authority:** `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Protocol:** `figures/FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`  
 
 ## Audit result
@@ -76,3 +76,4 @@ Reason: scientific-content audit passes, but GitHub-rendered geometry/legibility
 ```
 
 Promotion to `CANONICAL-VERIFIED` requires final rendered QA and confirmation that no Mermaid rendering issue changes hierarchy or semantics.
+

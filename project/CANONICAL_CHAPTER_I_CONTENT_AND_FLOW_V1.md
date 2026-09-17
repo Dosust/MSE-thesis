@@ -40,7 +40,7 @@ The required Chapter-I flow is:
 
 The chapter must remain compact. Detailed mathematical derivations belong primarily in Chapter III, while experimental design, VVUQ, baselines, and confirmatory testing belong primarily in Chapter IV.
 
-This file **supersedes older Chapter-I wording or numbering that uses the prior RQ0–RQ5 introduction architecture**. It does not silently overwrite the scientific framework files themselves; future consolidation must be versioned and auditable.
+This file controls the seven-question Chapter-I architecture. The user-authorized consolidation dated 2026-09-17 is recorded in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, which supplies exact RQ0/RQ1–RQ7 wording, SO1–SO7 and the H1–H5 mapping.
 
 No silent modification is permitted. Any change must state whether it is a **WORDING UPDATE**, **MODEL UPDATE**, **SCOPE UPDATE**, or **PAGE-ALLOCATION UPDATE**.
 
@@ -496,7 +496,7 @@ RQ7 &: \text{What should be changed, where, when and in what sequence?}
 }
 ```
 
-The exact RQ wording must be controlled by the current RQ authority once consolidated; no future Chapter-I draft may silently revert to the older RQ0–RQ5 architecture.
+Use the exact RQ wording in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`; the seven-question architecture is now consolidated. RQ0 remains overarching, and RQ1–RQ7 map to SO1–SO7.
 
 ---
 
@@ -691,3 +691,9 @@ Before finalizing any Chapter-I output, verify:
 10. **Contribution language:** contributions remain proposed until supported by results.
 
 If a later request conflicts with this file, the conflict must be stated and the requested change must be treated as an explicit amendment rather than a silent rewrite.
+
+
+
+## Versioned amendment — seven-question consolidation, 2026-09-17
+
+**Change type:** WORDING AND TRACEABILITY UPDATE, explicitly requested by the user. Exact question/objective wording is now in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs. The framework v2 viability–reachability–probability core, intervention amendment v2.1, 160-page ceiling and 16–18-page Chapter-I target remain controlling.

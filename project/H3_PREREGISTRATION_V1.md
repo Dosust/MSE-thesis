@@ -7,7 +7,7 @@
 
 **Date:** 2026-09-16  
 **Hypothesis:** H3 — Viability–Reachability Incremental-Information Hypothesis  
-**Authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Set specification:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Uncertainty specification:** `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`  
 **Algorithm gate:** `H3_ALGORITHM_SELECTION_AND_VERIFICATION_V1.md`  
@@ -18,7 +18,11 @@
 
 ## 1. Canonical question and hypothesis
 
-### RQ3
+### RQ5 — thesis question
+
+> **Under what conditions can critical coupled services remain acceptable or recover under feasible controls and uncertainty, and what additional engineering information do viability and reachability provide?**
+
+### H3-specific incremental-information test question
 
 > **Do uncertainty-aware viability and reach–avoid measures provide incremental decision-relevant information beyond conventional performance/recovery curves, and with what probabilistic confidence?**
 
@@ -439,3 +443,4 @@ The preregistration becomes **CONFIRMATORY-FROZEN** only after all open entries 
 Gneiting, T., & Raftery, A. E. (2007). Strictly proper scoring rules, prediction, and estimation. *Journal of the American Statistical Association, 102*(477), 359–378. https://doi.org/10.1198/016214506000001437
 
 Poulin, C., & Kane, M. B. (2021). Infrastructure resilience curves: Performance measures and summary metrics. *Reliability Engineering & System Safety, 216*, 107926. https://doi.org/10.1016/j.ress.2021.107926
+

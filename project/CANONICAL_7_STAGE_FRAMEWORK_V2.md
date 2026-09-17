@@ -969,3 +969,18 @@ This framework **does not yet establish**:
 These require preregistered experiments, VVUQ, and evidence-qualified data.
 
 > **CANONICAL v2.0:** The seven-stage thesis architecture is retained. Stage 5 is revised from controlled viability alone to uncertainty-aware viability + reachability + probability; Stages 1–4 and 6–7 are correspondingly clarified without changing the System-of-Systems → dynamics → resilience → intervention → sustainability → decision logic.
+
+
+## Question/objective consolidation — v3, 2026-09-17
+
+**Change type:** user-authorized wording and traceability amendment. The seven scientific stages are unchanged. Use `CANONICAL_RQ_SO_HYPOTHESES_V3.md` for exact RQ0/RQ1–RQ7 and SO1–SO7 wording.
+
+| Stage | Question / objective | Evidence or hypothesis mapping |
+|---|---|---|
+| 1 | RQ1 / SO1 | Developmental qualification supporting H1 |
+| 2 | RQ2 / SO2 | Developmental qualification supporting H1 |
+| 3 | RQ3 / SO3 | H1 |
+| 4 | RQ4 / SO4 | H2 |
+| 5 | RQ5 / SO5 | H3 |
+| 6 | RQ6 / SO6 | H4 |
+| 7 | RQ7 / SO7 | H5 |

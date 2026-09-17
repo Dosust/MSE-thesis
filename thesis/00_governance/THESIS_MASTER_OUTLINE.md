@@ -1,10 +1,10 @@
 # Thesis Master Outline
 
-**Status:** CURRENT DOCUMENT ARCHITECTURE / v2 SCIENTIFIC LOGIC SYNCHRONIZED  
+**Status:** CURRENT DOCUMENT ARCHITECTURE / SEVEN-QUESTION LOGIC SYNCHRONIZED  
 **Degree:** MSE Sustainable Engineering  
 **Scientific method:** EGMIV  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Citation rule:** adjacent APA 7 author–date citation for externally sourced scientific claims
 
 ## Governing principle
@@ -37,7 +37,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -78,86 +78,40 @@ The literature used to motivate this architecture establishes interdependent-inf
 
 # Chapter 1 — Introduction
 
-## 1.1 Background and engineering context
-- infrastructure interdependence;
-- coupled Power–Transportation systems;
-- role of information and organization;
-- spatiotemporal cascade and recovery;
-- resilience and sustainability motivation.
+**Authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V1.md`. Target: 16–18 pages within the 160-page ceiling.
 
-Every externally sourced statement in this section must carry adjacent APA 7 support. Foundational anchors include Rinaldi et al. (2001), Ouyang (2014), Tong et al. (2025), Wang et al. (2026), and Wen et al. (2025).
+## 1.1 Background and Engineering Context
 
-## 1.2 Problem statement
-State the unresolved engineering/scientific problem without turning literature support into an unverified novelty claim.
+## 1.2 Coupled P–T–I–O System Context
 
-## 1.3 Significance to sustainable engineering
-Connect technical behavior to service continuity, recovery, accessibility, energy, carbon, cost, and engineering decisions under uncertainty. Resilience and sustainability may interact through synergies and trade-offs, so both require explicit evaluation rather than assumed alignment (Sánchez-Silva et al., 2025; Liu et al., 2024; Zhu & Zhang, 2026).
+## 1.3 Problem Statement
 
-## 1.4 Scope and system boundary
-Declare included/excluded infrastructure domains, physical/informational/organizational layers, hazards, timescales, controls, spatial domain, service requirements, and validity limits.
+## 1.4 Research Gap
 
-## 1.5 General objective
-Use the canonical v2 general objective without silent paraphrase that changes scope.
+## 1.5 Sustainable Engineering Significance
 
-## 1.6 Research questions
-Introduce `RQ0` and `RQ1–RQ5` exactly from `CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
+## 1.6 Scope, Boundaries, and Assumptions
 
-## 1.7 Specific objectives
-Introduce `SO1–SO5` and preserve one-to-one traceability with `RQ1–RQ5`.
+## 1.7 Research Framework and Logic
 
-## 1.8 Hypotheses
-Introduce `H1–H5` as testable claims, not results.
+## 1.8 General Research Objective
 
-Primary logic:
+## 1.9 Research Questions
+Introduce RQ0 and the exact RQ1–RQ7 from `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
 
-```math
-H_1:\quad M_2\ \text{vs}\ M_1\ \text{vs}\ M_0,
-```
+## 1.10 Specific Research Objectives
+Introduce SO1–SO7 with one corresponding objective for each question.
 
-```math
-H_2:\quad P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O,
-```
+## 1.11 Research Hypotheses and Test Logic
+Retain H1–H5. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
 
-```math
-H_3:\quad R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T,
-```
+## 1.12 Proposed Contributions
 
-```math
-H_4:\quad a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right),
-```
-
-```math
-H_5:\quad \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
-```
-
-## 1.9 Proposed contributions
-Label as proposed/expected until supported by results. Do not use literature citations as proof that a contribution is novel; novelty requires its separate audit.
-
-## 1.10 Thesis organization
-Explain chapter logic.
+## 1.13 Thesis Organization
 
 ### Chapter 1 gate
 
-```math
-\boxed{
-\text{Problem}
-\rightarrow
-\text{Evidence-supported rationale}
-\rightarrow
-RQ_i
-\rightarrow
-SO_i
-\rightarrow
-H_i.
-}
-```
-
-Pass only if:
-- every important external claim has adjacent verified APA 7 support;
-- every RQ has one specific objective;
-- every objective has a primary hypothesis or explicitly declared developmental test;
-- every hypothesis has a mechanism, baseline, future metric and falsification path;
-- no novelty claim is inferred merely from the existence of supporting literature.
+Every question must have its objective, evidence or test, and chapter destination. RQ1/RQ2 require developmental qualification; RQ3–RQ7 map to H1–H5. Preserve claim-level citations, proposed contribution status, and all preregistration gates.
 
 ---
 
@@ -195,11 +149,11 @@ with supporting evidence, contrary evidence, assumptions, methods, validation ev
 
 ### Evidence anchors by thesis question
 
-- **RQ1/H1:** Rinaldi et al. (2001); Ouyang (2014); Tong et al. (2025); Wang et al. (2026); Wen et al. (2025).
-- **RQ2/H2:** Helmrich et al. (2021); Rydén Sonesson et al. (2021); Islam et al. (2023).
-- **RQ3/H3:** Doyen and De Lara (2010); Poulin and Kane (2021); Vinod and Oishi (2021).
-- **RQ4/H4:** Liu et al. (2024); Sánchez-Silva et al. (2025); Wen et al. (2025); Zhu and Zhang (2026).
-- **RQ5/H5:** Liu et al. (2024); Sánchez-Silva et al. (2025); Wen et al. (2025); Zhu and Zhang (2026).
+- **RQ1–RQ3 / H1:** Rinaldi et al. (2001); Ouyang (2014); Tong et al. (2025); Wang et al. (2026); Wen et al. (2025).
+- **RQ4/H2:** Helmrich et al. (2021); Rydén Sonesson et al. (2021); Islam et al. (2023).
+- **RQ5/H3:** Doyen and De Lara (2010); Poulin and Kane (2021); Vinod and Oishi (2021).
+- **RQ6/H4:** Liu et al. (2024); Sánchez-Silva et al. (2025); Wen et al. (2025); Zhu and Zhang (2026).
+- **RQ7/H5:** Liu et al. (2024); Sánchez-Silva et al. (2025); Wen et al. (2025); Zhu and Zhang (2026).
 
 These are foundation anchors, not a complete Chapter-2 corpus.
 
@@ -445,7 +399,7 @@ Every comparison with prior research must carry adjacent APA 7 citations.
 # Chapter 7 — Conclusions and Future Work
 
 ## 7.1 Answer to RQ0
-## 7.2 Answers to RQ1–RQ5
+## 7.2 Answers to RQ1–RQ7
 ## 7.3 Supported/not-supported H1–H5
 ## 7.4 Theoretical contribution
 ## 7.5 Methodological contribution
@@ -478,4 +432,7 @@ Recommended appendices include:
 - code/data provenance;
 - approvals/permissions if applicable.
 
-Full APA 7 source details for the v2 RQ–SO–H evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
+Full APA 7 source details for the v3 RQ–SO–H evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

@@ -3,7 +3,7 @@
 **Date:** 2026-09-16  
 **Method:** EGMIV  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Purpose:** track the controlled progression from validated P–T–I–O dynamics through Stage-5 resilience to Stage-6/7 intervention and sustainability decisions.
 
 ---
@@ -29,7 +29,7 @@ Track B may prepare H3 mathematics, evidence, state-set semantics, uncertainty r
 
 | Step | Task | Status | Authority / artifact |
 |---:|---|---|---|
-| 1 | Freeze thesis purpose and causal spine | **PASS** | framework v2 + canonical RQ/SO/H v2 |
+| 1 | Freeze thesis purpose and causal spine | **PASS** | framework v2 + canonical RQ/SO/H v3 |
 | 2 | Freeze H1 dynamic-coupling logic | **PASS** | H1 M0/M1/M2 files |
 | 3 | Qualify H1 row-level data | **BLOCKED_RAW_DATA** | R1–R8 gate remains authoritative |
 | 4 | Execute/close bounded H1 physical-coupling test | **DEFERRED** | requires Step 3 + verification gates |
@@ -174,3 +174,4 @@ R1{:}R8
 ```
 
 Track B stops before confirmatory H3 execution until Track A and all H3-specific gates pass.
+

@@ -19,9 +19,15 @@
 
 ---
 
-## Frozen research question
+## RQ6 / SO6 — current canonical question
 
-> **When is recovery insufficient, and what conditions require adaptation or transformation?**
+> **What sustainability requirements follow from resilience diagnosis and from the effectiveness, resource efficiency, and sustainability consequences of candidate interventions?**
+
+**Specific objective:** Derive evidence-qualified sustainability requirements from resilience diagnosis and intervention consequences, distinguishing effectiveness, resource efficiency, accessibility, energy, carbon and cost within declared accounting boundaries.
+
+**Interpretation boundary:** Framework v2 and intervention-performance amendment v2.1 supersede conflicting legacy mathematics or scope below. The current RQ heading does not validate or promote legacy constructions.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The essential Stage-6 transition is
 
@@ -448,3 +454,4 @@ Termeer, C. J. A. M., Dewulf, A., & Biesbroek, R. (2024). Three archetypical gov
 Walker, B., Holling, C. S., Carpenter, S. R., & Kinzig, A. (2004). Resilience, adaptability and transformability in social-ecological systems. *Ecology and Society, 9*(2), Article 5. https://doi.org/10.5751/ES-00650-090205
 
 Werners, S. E., van Slobbe, E., Bölscher, T., Oost, A., Pfenninger, S., Trombi, G., Bindi, M., & Moriondo, M. (2015). Turning points in climate change adaptation. *Ecology and Society, 20*(4), Article 3. https://doi.org/10.5751/ES-07403-200403
+

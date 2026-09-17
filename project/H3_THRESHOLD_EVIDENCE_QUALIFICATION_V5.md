@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification records:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md` through `V4.md`  
@@ -485,3 +485,4 @@ North American Electric Reliability Corporation. (2021/2025). *TOP-001-6: Transm
 Summers, S., & Lygeros, J. (2010). Verification of discrete time stochastic hybrid systems: A stochastic reach-avoid decision problem. *Automatica, 46*(12), 1951–1961. https://doi.org/10.1016/j.automatica.2010.08.006
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

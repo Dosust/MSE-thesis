@@ -8,7 +8,7 @@
 **Date:** 2026-09-16  
 **Purpose:** determine what Stage-5/H3 mathematics, service definitions, uncertainty semantics, control semantics, and computational rules already exist before creating any new H3 specification.  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
 
@@ -61,7 +61,7 @@ No superiority is assumed.
 | Existing object | What is already scientifically usable | v2.0 decision |
 |---|---|---|
 | `CANONICAL_7_STAGE_FRAMEWORK_V2.md` | final remain + return + confidence Stage-5 concept | **AUTHORITATIVE / REUSE** |
-| `CANONICAL_RQ_SO_HYPOTHESES_V2.md` | SO3/RQ3/H3, benchmark logic, unresolved H3 quantities | **AUTHORITATIVE / REUSE** |
+| `CANONICAL_RQ_SO_HYPOTHESES_V3.md` | SO5/RQ5/H3, benchmark logic, unresolved H3 quantities | **AUTHORITATIVE / REUSE** |
 | `H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md` | physical P–T state equations and service maps | **REUSE; do not modify H1** |
 | `H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md` | case-specific service-requirement structure and threshold-provenance rule | **REUSE as input to H3 `K(t)`** |
 | `H1_THRESHOLD_PROVENANCE_V1.md` | explicit prohibition on arbitrary engineering thresholds; only numerical solver floors currently frozen | **REUSE provenance discipline** |
@@ -314,3 +314,4 @@ Maidens, J. N., Kaynama, S., Mitchell, I. M., Oishi, M. M. K., & Dumont, G. A. (
 Poulin, C., & Kane, M. B. (2021). Infrastructure resilience curves: Performance measures and summary metrics. *Reliability Engineering & System Safety, 216*, 107926. https://doi.org/10.1016/j.ress.2021.107926
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

@@ -5,7 +5,7 @@
 **Research method:** EGMIV  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Document architecture:** `../thesis/00_governance/THESIS_MASTER_OUTLINE.md`  
 **Page-control authority:** `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
 
@@ -31,7 +31,7 @@ Every substantive request must map to:
 
 ```math
 \boxed{
-\text{Chapter}\rightarrow\text{Section}\rightarrow\text{Stage}\rightarrow RQ_i\rightarrow SO_i\rightarrow H_i\rightarrow\text{scientific object}\rightarrow\text{output}.
+\text{Chapter}\rightarrow\text{Section}\rightarrow\text{Stage}\rightarrow RQ_i\rightarrow SO_i\rightarrow \mathcal H(i)\rightarrow\text{scientific object}\rightarrow\text{output}.
 }
 ```
 
@@ -264,7 +264,7 @@ Routing:
 ```text
 Chapter:   3 and 4
 Stage:     5
-RQ/H:      RQ3 / H3
+RQ/H:      RQ5 / H3
 Output:    qualified threshold-and-horizon evidence registry
 Stop when: each required quantity is evidence-supported, explicit assumption, rejected, or documented open with uncertainty and validity metadata
 ```
@@ -292,3 +292,7 @@ are explicit and internally consistent.
 ```math
 \boxed{\textbf{No thesis purpose = no research action.}}
 ```
+
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

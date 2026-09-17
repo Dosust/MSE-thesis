@@ -1,5 +1,8 @@
 # ASU MSE Thesis Document Architecture
 
+> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+
+
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository role:** document-facing thesis architecture  
 **Status:** CURRENT CONTROL STRUCTURE / content evolves under scientific gates  
@@ -148,3 +151,4 @@ The H1 scientific implementation is governed by `../project/` authority files. C
 - SSEBE graduate advising: https://ssebe.engineering.asu.edu/advising/graduate/
 
 **Verification date:** 2026-09-16
+

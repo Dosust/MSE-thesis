@@ -7,7 +7,7 @@
 
 **Date:** 2026-09-16  
 **Hypothesis:** H3  
-**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Mathematical inputs:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`, `H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md`  
 
 > **Method rule:** no algorithm is selected because it is fashionable, mathematically elegant, or used in a nearby paper. The selected algorithm must match the actual H3 dynamics, state dimension, set geometry, uncertainty semantics, control authority, and guarantee required.
@@ -485,3 +485,4 @@ Gleason, J. D., Vinod, A. P., & Oishi, M. M. K. (2021). Lagrangian approximation
 Maidens, J. N., Kaynama, S., Mitchell, I. M., Oishi, M. M. K., & Dumont, G. A. (2013). Lagrangian methods for approximating the viability kernel in high-dimensional systems. *Automatica, 49*(7), 2017–2029. https://doi.org/10.1016/j.automatica.2013.03.020
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

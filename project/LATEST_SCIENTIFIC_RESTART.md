@@ -1,5 +1,8 @@
 # Latest Scientific Restart Pointer
 
+> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+
+
 **Updated:** 2026-09-17  
 **Purpose:** live pointer to the latest H3 scientific endpoint and immediate admissible task.
 
@@ -8,7 +11,7 @@
 1. `SCIENTIFIC_CHECKPOINT_2026-09-16_MODEL_FAMILY_V1.md`
 2. `EGMIV_TSP_THESIS_OPERATING_PROTOCOL_V1.md`
 3. `CANONICAL_7_STAGE_FRAMEWORK_V2.md`
-4. `CANONICAL_RQ_SO_HYPOTHESES_V2.md`
+4. `CANONICAL_RQ_SO_HYPOTHESES_V3.md`
 5. `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`
 6. `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`
 7. `H3_DEMONSTRATOR_FREEZE_V1.md`
@@ -320,3 +323,4 @@ After `G_Omega_QA=1` and all raw layers are frozen:
 ## Hard prohibition
 
 Do not invent geometry, counts, backup-power states, actual signal feeders, network dimensions, hazard probabilities, thresholds or mapping coverage; do not use maintenance requests as the canonical signal inventory; and do not execute confirmatory H3 until every required gate closes.
+

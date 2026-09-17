@@ -8,7 +8,7 @@
 **Date:** 2026-09-16  
 **Hypothesis:** H3 — viability–reachability incremental-information hypothesis  
 **Framework stage:** 5 — Uncertainty-Aware Viability and Reachability Resilience  
-**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Upstream inputs:** `H1_MATHEMATICAL_MODEL_SPECIFICATION_V1.md`, `H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`, `H1_THRESHOLD_PROVENANCE_V1.md`, `ORGANIZATION_TO_FEASIBLE_CONTROL_SPECIFICATION_V1.md`  
 
 > **Freeze boundary:** this file freezes the mathematical semantics of `K(t)`, `G_rec(t)`, `F(t)`, degraded states, and horizon roles. It does **not** freeze numerical service thresholds, horizon lengths, or case-specific recovery criteria.
@@ -398,3 +398,4 @@ Doyen, L., & De Lara, M. (2010). Stochastic viability and dynamic programming. *
 Poulin, C., & Kane, M. B. (2021). Infrastructure resilience curves: Performance measures and summary metrics. *Reliability Engineering & System Safety, 216*, 107926. https://doi.org/10.1016/j.ress.2021.107926
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

@@ -36,21 +36,23 @@ The scientific objective is not to obtain the most complex coupled simulation. I
 
 ---
 
-## 2. Phase-1 research questions
+## 2. Phase-1 local research questions
 
-### `RQ1-P1` — Physical dependency validity
+`P1-Q1–P1-Q4` are local protocol questions, not thesis RQ identifiers. They support RQ2–RQ4 as appropriate under `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+
+### `P1-Q1` — Physical dependency validity
 
 Can a feeder-to-fast-charging-station dependency be parameterized so that the coupled model predicts charging-power/availability and mobility consequences more accurately than uncoupled or static-coupling baselines over the declared validation domain?
 
-### `RQ1-P2` — Information-mediated dependency validity
+### `P1-Q2` — Information-mediated dependency validity
 
 Does adding measured/declared forecast quality and latency improve prediction of the power-side control trajectory relative to models that omit or idealize the information pathway?
 
-### `RQ1-P3` — Organizational/restoration dependency validity
+### `P1-Q3` — Organizational/restoration dependency validity
 
 Can road accessibility, authority/resource state and crew-routing constraints explain and predict restoration timing sufficiently to distinguish an organizational/restoration dependency from a purely physical network model?
 
-### `RQ1-P4` — Contract adequacy
+### `P1-Q4` — Contract adequacy
 
 Across the three dependency classes, can
 
@@ -920,3 +922,4 @@ The next technical artifact should be a bounded experiment specification contain
 ```
 
 No simulation results should be treated as confirmatory until that experiment specification is committed.
+

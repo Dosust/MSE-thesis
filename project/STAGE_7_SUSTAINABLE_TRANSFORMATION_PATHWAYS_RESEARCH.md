@@ -18,9 +18,15 @@
 
 ---
 
-## Research question retained for Stage 7
+## RQ7 / SO7 — current canonical question
 
-> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
+> **What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty?**
+
+**Specific objective:** Evaluate candidate infrastructure transformations and, where justified, intervention sequences using effectiveness, efficiency, sustainability, feasibility and uncertainty to support engineering decisions.
+
+**Interpretation boundary:** Framework v2 and intervention-performance amendment v2.1 supersede conflicting legacy mathematics or scope below. The current RQ heading does not validate or promote legacy constructions.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The Stage-6 → Stage-7 handoff is
 
@@ -407,7 +413,7 @@ Higher-order/simplicial representations should remain optional. They are justifi
 | Item | Candidate specification |
 |---|---|
 | **Stage** | Sustainable Transformation Pathways |
-| **Research question** | What sequence of interventions leads to a more resilient, equitable and sustainable future system? |
+| **Research question** | What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty? |
 | **Primary Stage-6 input** | $(c_6,\mathcal D_6,\boldsymbol{\zeta}_T)$ |
 | **Current regime** | $\mathfrak M_0$ |
 | **Candidate actions** | $\mathcal A_7=\mathcal A_P\cup\mathcal A_T\cup\mathcal A_I\cup\mathcal A_O\cup\mathcal A_{\mathfrak I}$ |

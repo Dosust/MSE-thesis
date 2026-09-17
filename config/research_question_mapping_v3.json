@@ -1,0 +1,88 @@
+{
+  "version": "3.0",
+  "effective_date": "2026-09-17",
+  "authority": "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+  "overarching": "RQ0",
+  "questions": [
+    {
+      "id": "RQ1",
+      "objective_id": "SO1",
+      "stage": 1,
+      "question": "What entities exist, what layers constitute the system, and where can interactions occur?",
+      "objective": "Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.",
+      "primary_hypothesis": null,
+      "developmental": true,
+      "supporting_hypotheses": [
+        "H1"
+      ]
+    },
+    {
+      "id": "RQ2",
+      "objective_id": "SO2",
+      "stage": 2,
+      "question": "Why and through which mechanisms do components and layers affect each other?",
+      "objective": "Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.",
+      "primary_hypothesis": null,
+      "developmental": true,
+      "supporting_hypotheses": [
+        "H1"
+      ]
+    },
+    {
+      "id": "RQ3",
+      "objective_id": "SO3",
+      "stage": 3,
+      "question": "How, when, and where do accepted interdependency mechanisms evolve and propagate through the coupled system?",
+      "objective": "Develop and verify a physics-based hybrid multiscale dynamic model and test its incremental explanatory or predictive value against independent and static-coupling representations.",
+      "primary_hypothesis": "H1",
+      "developmental": false
+    },
+    {
+      "id": "RQ4",
+      "objective_id": "SO4",
+      "stage": 4,
+      "question": "How is the system observed, interpreted, coordinated and controlled?",
+      "objective": "Evaluate how observation, state estimation, information availability, organizational constraints and feasible control affect response timing, service trajectories and recovery.",
+      "primary_hypothesis": "H2",
+      "developmental": false
+    },
+    {
+      "id": "RQ5",
+      "objective_id": "SO5",
+      "stage": 5,
+      "question": "Under what conditions can critical coupled services remain acceptable or recover under feasible controls and uncertainty, and what additional engineering information do viability and reachability provide?",
+      "objective": "Determine uncertainty-aware service viability and recovery reachability, evaluate incremental value beyond conventional performance/recovery curves, and characterize interface criticality as a supporting diagnostic.",
+      "primary_hypothesis": "H3",
+      "developmental": false
+    },
+    {
+      "id": "RQ6",
+      "objective_id": "SO6",
+      "stage": 6,
+      "question": "What sustainability requirements follow from resilience diagnosis and from the effectiveness, resource efficiency, and sustainability consequences of candidate interventions?",
+      "objective": "Derive evidence-qualified sustainability requirements from resilience diagnosis and intervention consequences, distinguishing effectiveness, resource efficiency, accessibility, energy, carbon and cost within declared accounting boundaries.",
+      "primary_hypothesis": "H4",
+      "developmental": false
+    },
+    {
+      "id": "RQ7",
+      "objective_id": "SO7",
+      "stage": 7,
+      "question": "What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty?",
+      "objective": "Evaluate candidate infrastructure transformations and, where justified, intervention sequences using effectiveness, efficiency, sustainability, feasibility and uncertainty to support engineering decisions.",
+      "primary_hypothesis": "H5",
+      "developmental": false,
+      "supporting_hypotheses": [
+        "H4"
+      ]
+    }
+  ],
+  "hypothesis_ids": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5"
+  ],
+  "hypotheses_renumbered": false
+}

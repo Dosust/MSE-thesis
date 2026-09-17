@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Page-control authority:** `../thesis/00_governance/THESIS_PAGE_BUDGET_160_V1.md`
@@ -285,3 +285,4 @@ National Renewable Energy Laboratory. (n.d.). *REopt Lite tutorial: Resilience i
 Pacific Northwest National Laboratory. (2021). *Calculating energy and water loads for resilience planning* (PNNL-SA-165444). U.S. Department of Energy, Federal Energy Management Program. https://www.energy.gov/sites/default/files/2022-04/trn-calculating-energy-water-loads.pdf
 
 U.S. Department of Energy, Federal Energy Management Program. (2006). *Performing energy security assessments: A how-to guide for federal facility managers.* Oak Ridge National Laboratory. https://www1.eere.energy.gov/femp/pdfs/energy_security_guide.pdf
+

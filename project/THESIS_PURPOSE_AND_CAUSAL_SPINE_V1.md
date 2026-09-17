@@ -135,25 +135,19 @@ Representative prior-art anchors:
 - Mitoulis, Bompa & Argyroudis, *Sustainability and climate resilience metrics and trade-offs in transport infrastructure asset recovery*, DOI `10.1016/j.trd.2023.103800`.
 - Zhu & Zhang, *Lifecycle resilience and sustainability trade-offs for underground infrastructure under multi-hazard scenarios*, DOI `10.1016/j.ress.2025.111797`.
 
-## 6. Working top-level research questions
+## 6. Canonical seven research questions
 
-```math
-\boxed{RQ_1:\ \text{What evidence-supported P–T–I–O interdependencies govern coupled behavior?}}
-```
+| RQ / SO | Stage | Research question | Specific objective | Test / evidence obligation |
+|---|---:|---|---|---|
+| RQ1 / SO1 | 1 | What entities exist, what layers constitute the system, and where can interactions occur? | Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains. | Developmental verification; supports H1 |
+| RQ2 / SO2 | 2 | Why and through which mechanisms do components and layers affect each other? | Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers. | Mechanism/evidence qualification; supports H1 |
+| RQ3 / SO3 | 3 | How, when, and where do accepted interdependency mechanisms evolve and propagate through the coupled system? | Develop and verify a physics-based hybrid multiscale dynamic model and test its incremental explanatory or predictive value against independent and static-coupling representations. | H1 |
+| RQ4 / SO4 | 4 | How is the system observed, interpreted, coordinated and controlled? | Evaluate how observation, state estimation, information availability, organizational constraints and feasible control affect response timing, service trajectories and recovery. | H2 |
+| RQ5 / SO5 | 5 | Under what conditions can critical coupled services remain acceptable or recover under feasible controls and uncertainty, and what additional engineering information do viability and reachability provide? | Determine uncertainty-aware service viability and recovery reachability, evaluate incremental value beyond conventional performance/recovery curves, and characterize interface criticality as a supporting diagnostic. | H3; separately qualified interface diagnostic |
+| RQ6 / SO6 | 6 | What sustainability requirements follow from resilience diagnosis and from the effectiveness, resource efficiency, and sustainability consequences of candidate interventions? | Derive evidence-qualified sustainability requirements from resilience diagnosis and intervention consequences, distinguishing effectiveness, resource efficiency, accessibility, energy, carbon and cost within declared accounting boundaries. | H4; requirements derivation |
+| RQ7 / SO7 | 7 | What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty? | Evaluate candidate infrastructure transformations and, where justified, intervention sequences using effectiveness, efficiency, sustainability, feasibility and uncertainty to support engineering decisions. | H5; H4 intervention-performance inputs |
 
-```math
-\boxed{RQ_2:\ \text{How do those mechanisms quantitatively determine propagation, service loss, recovery and viability?}}
-```
-
-```math
-\boxed{RQ_3:\ \text{Which resilience findings diagnose structural limitations of the current regime?}}
-```
-
-```math
-\boxed{RQ_4:\ \text{How can those findings be translated into transformations that improve measurable sustainability outcomes?}}
-```
-
-These are purpose-level questions. They do not silently replace the frozen H1–H5 confirmatory logic.
+Exact wording and H1–H5 mapping are controlled by `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. These replace the prior four working purpose-level questions.
 
 ## 7. Immediate execution object
 
@@ -172,3 +166,4 @@ Every row must contain a defensible dependency mechanism, resilience consequence
 ## 8. Change-control rule
 
 This file sharpens purpose and execution priority only. `RESEARCH_HYPOTHESES.md` and the canonical seven-stage architecture remain unchanged until the relevant evidence and formal change-control gates are closed.
+

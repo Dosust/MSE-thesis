@@ -452,8 +452,8 @@ Use explicit closure:
 ```math
 \boxed{
 RQ_i
-\rightarrow
-H_i
+\leftrightarrow SO_i
+\rightarrow \mathcal H(i)
 \rightarrow
 \text{evidence}
 \rightarrow
@@ -673,3 +673,7 @@ From this point forward, every new equation, literature extraction, figure, simu
 +\text{no unsupported conclusion}.
 }
 ```
+
+
+
+**Question numbering amendment (2026-09-17):** Use RQ0 plus RQ1–RQ7 and SO1–SO7 from `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. H1–H5 retain separate identifiers: RQ1/RQ2 are developmental inputs to H1; RQ3→H1, RQ4→H2, RQ5→H3, RQ6→H4, RQ7→H5. Any record index shared by Q/SO/H is a traceability-row key, not an assertion of equal scientific identifiers.

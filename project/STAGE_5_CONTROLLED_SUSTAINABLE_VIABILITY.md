@@ -17,9 +17,15 @@
 
 ---
 
-## Frozen research question
+## RQ5 / SO5 — current canonical question
 
-> **Under what conditions can acceptable functions be maintained, and how far and how long is the system from unacceptable states?**
+> **Under what conditions can critical coupled services remain acceptable or recover under feasible controls and uncertainty, and what additional engineering information do viability and reachability provide?**
+
+**Specific objective:** Determine uncertainty-aware service viability and recovery reachability, evaluate incremental value beyond conventional performance/recovery curves, and characterize interface criticality as a supporting diagnostic.
+
+**Interpretation boundary:** Framework v2 and intervention-performance amendment v2.1 supersede conflicting legacy mathematics or scope below. The current RQ heading does not validate or promote legacy constructions.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The Stage-5 scientific progression is
 
@@ -642,3 +648,4 @@ Saint-Pierre, P. (1994). Approximation of the viability kernel. *Applied Mathema
 Solanki, P., Vertovec, N., Schnitzer, Y., van Beers, J., de Visser, C., & Abate, A. (2025). Certified Approximate Reachability (CARe): Formal error bounds on deep learning of reachable sets. In *2025 IEEE Conference on Decision and Control*. https://doi.org/10.1109/CDC57313.2025.11312709
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

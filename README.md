@@ -1,11 +1,14 @@
 # MSE Thesis — Multilayer Interdependent Power–Transportation Infrastructure Resilience
 
+> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+
+
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
 ![Resilience](https://img.shields.io/badge/core-viability%20%2B%20reachability%20%2B%20probability-0969DA)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
-![Hypotheses](https://img.shields.io/badge/RQ--SO--H%20v2-FROZEN-1A7F37)
+![Hypotheses](https://img.shields.io/badge/RQ--SO--H%20v3-FROZEN-1A7F37)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![H1 Prereg](https://img.shields.io/badge/confirmatory%20design-FROZEN-1A7F37)
 ![H1 Data](https://img.shields.io/badge/raw%20row%20retrieval-PENDING-B42318)
@@ -15,7 +18,7 @@
 **Repository:** active thesis source of truth  
 **Framework status:** canonical seven-stage framework v2.0; v1 retained as provenance  
 **Resilience core:** uncertainty-aware viability + reachability + probability  
-**Research logic status:** RQ0, general objective, SO1–SO5, RQ1–RQ5, and H1–H5 frozen in canonical v2.0; hypothesis-specific numerical specifications remain subject to preregistration gates  
+**Research logic status:** RQ0, general objective, SO1–SO7, RQ1–RQ7, and H1–H5 consolidated in canonical v3.0; hypothesis-specific numerical specifications remain subject to preregistration gates  
 **Reasoning protocol:** canonical Learn → Verify → Formulate → Derive → Test → Validate → Synthesize → Advance discipline  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Evidence methodology:** de novo search + FTEE evidence-to-equation extraction inside EGMIV  
@@ -52,10 +55,10 @@ Sustainability is treated as an **emergent consequence of how the coupled system
 | [`thesis/README.md`](thesis/README.md) | **ASU-facing thesis document architecture and control entry point** |
 | [`thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`](thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md) | ASU/SSEBE + scientific thesis master specification v1.1 |
 | [`thesis/00_governance/THESIS_MASTER_OUTLINE.md`](thesis/00_governance/THESIS_MASTER_OUTLINE.md) | v2-synchronized seven-chapter thesis outline |
-| [`thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | **current thesis-facing RQ → SO → H → metric → experiment → chapter control** |
+| [`thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`](thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md) | **current thesis-facing RQ → SO → H → metric → experiment → chapter control** |
 | [`project/README.md`](project/README.md) | active mathematical/project dashboard |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | **current canonical seven-stage framework v2.0** |
-| [`project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V2.md) | **current canonical RQ0 + objectives + RQ1–RQ5 + H1–H5 with literature justification** |
+| [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | **current canonical RQ0 + objectives + RQ1–RQ7 + H1–H5 with literature justification** |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK.md`](project/CANONICAL_7_STAGE_FRAMEWORK.md) | v1 framework retained for provenance only |
 | [`project/RESEARCH_HYPOTHESES.md`](project/RESEARCH_HYPOTHESES.md) | v1 hypothesis architecture retained for provenance only |
 | [`project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](project/CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | frozen spatiotemporal propagation requirement |
@@ -216,7 +219,7 @@ Full definitions, stage boundaries, validation guardrails and mathematical detai
 
 ---
 
-## Canonical RQ–SO–H v2 logic
+## Canonical RQ–SO–H v3 logic
 
 ```math
 \boxed{
@@ -224,7 +227,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -266,7 +269,7 @@ H_4:\quad a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^
 H_5:\quad \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
 ```
 
-The full questions, objectives, evidence justification, metrics, experiments and falsification conditions are maintained in [`project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V2.md).
+The full questions, objectives, evidence justification, metrics, experiments and falsification conditions are maintained in [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md).
 
 ---
 
@@ -411,3 +414,6 @@ The v2 framework, RQ–SO–H logic, thesis outline, and master specification ar
 ```
 
 The H1 row-level acquisition/qualification process continues independently under its existing frozen controls.
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

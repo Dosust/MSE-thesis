@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification record:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`  
@@ -444,3 +444,4 @@ Grant, M., Bauer, J., Plaskon, T., & Mason, J. (2010). *Advancing metropolitan p
 Sinclair, C., & Schaefer, R. (2019). *Multimodal system performance measures research and application: Innovation and research plan* (FHWA-HOP-18-085). Federal Highway Administration. https://ops.fhwa.dot.gov/publications/fhwahop18085/
 
 U.S. Department of Transportation. (2017). *Level of service case studies: Evolving use of level of service metrics in transportation analysis*. https://www.transportation.gov/office-policy/transportation-policy/level-service-case-studies
+

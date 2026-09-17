@@ -19,9 +19,13 @@
 
 ---
 
-## Frozen research question
+## RQ4 / SO4 — current canonical question
 
 > **How is the system observed, interpreted, coordinated and controlled?**
+
+**Specific objective:** Evaluate how observation, state estimation, information availability, organizational constraints and feasible control affect response timing, service trajectories and recovery.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The scientific progression is
 
@@ -650,3 +654,4 @@ Zhang, D., Shi, P., Wang, Q.-G., & Yu, L. (2017). Analysis and synthesis of netw
 Zhou, Z., Zhang, X., Zhang, J., & Taylor, G. (2024). Comprehensive review on dynamic state estimation techniques with cybersecurity applications. *IET Smart Grid, 7*(4), 370–385. https://doi.org/10.1049/stg2.12168
 
 Zhu, H., Xie, H., Tang, L., Fu, W., & Gao, J. (2024). Robust post-disaster repair crew dispatch for distribution systems considering the uncertainty of switches. *International Journal of Electrical Power & Energy Systems, 155*, 109550. https://doi.org/10.1016/j.ijepes.2023.109550
+

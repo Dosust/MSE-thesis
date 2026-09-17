@@ -7,7 +7,7 @@
 
 **Date:** 2026-09-16  
 **Hypothesis:** H3  
-**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V2.md`, `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
+**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 
 > **Governing rule:** probability is used only when a defensible stochastic model exists. Unsupported uncertainty is represented by intervals, sets, scenarios, sensitivity analysis, or other nonprobabilistic forms rather than by invented distributions.
@@ -406,3 +406,4 @@ Doyen, L., & De Lara, M. (2010). Stochastic viability and dynamic programming. *
 Gneiting, T., & Raftery, A. E. (2007). Strictly proper scoring rules, prediction, and estimation. *Journal of the American Statistical Association, 102*(477), 359–378. https://doi.org/10.1198/016214506000001437
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

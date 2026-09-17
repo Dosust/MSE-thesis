@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-17  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification records:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md` through `V6.md`  
@@ -526,3 +526,4 @@ Federal Emergency Management Agency. (2025). *Response and recovery federal inte
 Federal Highway Administration. (2024). *Improving transportation infrastructure resilience: Guidelines for assessing current practices and prioritizing candidate projects*. U.S. Department of Transportation.
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

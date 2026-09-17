@@ -42,3 +42,8 @@ effectiveness ≠ efficiency ≠ sustainability
 10. Keep detailed mathematical derivations primarily in Chapter III and detailed experiments/VVUQ primarily in Chapter IV.
 11. If any older repository file conflicts with the Chapter-I authority, state the conflict and use `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V1.md` for Chapter-I work until formal consolidation.
 12. Never silently rewrite the Chapter-I authority. Record material changes as an explicit versioned amendment.
+
+
+## Thesis-wide research-question authority
+
+For any research-question, objective, hypothesis-mapping, outline, figure, or conclusion task, load `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` and `thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`. Use RQ0 + RQ1–RQ7, SO1–SO7 and H1–H5. RQ1/RQ2 have developmental evidence obligations; RQ3–RQ7 map to H1–H5 respectively. Do not equate question and hypothesis indices or revert to superseded five-question files or immutable historical checkpoints. Preserve hypothesis-specific preregistration and validation gates.

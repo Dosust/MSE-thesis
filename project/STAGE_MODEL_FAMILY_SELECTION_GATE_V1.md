@@ -3,7 +3,7 @@
 **Status:** CURRENT SUPPORTING SPECIFICATION  
 **Date:** 2026-09-16  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
 
@@ -741,3 +741,4 @@ Peters, J., Janzing, D., & Schölkopf, B. (2017). *Elements of causal inference:
 Tong, W., Li, H. X., Nasirzadeh, F., Yao, F., & Ji, Y. (2025). Resilience of interdependent infrastructure networks: Review and future directions. *International Journal of Critical Infrastructure Protection, 51*, 100793. https://doi.org/10.1016/j.ijcip.2025.100793
 
 Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
+

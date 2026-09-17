@@ -8,7 +8,7 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Status:** CANONICAL AMENDMENT v2.1  
 **Base framework:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**Base RQ–SO–H specification:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**Current RQ–SO–H specification:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Change type:** clarification and extension of intervention-performance evaluation; no change to the Stage-5 resilience core.  
 
 > **Authority rule:** Until a consolidated v2.1 framework file is issued, this amendment supersedes the Stage-6/Stage-7 passages of v2.0 only where they concern the sequence from engineering intervention to sustainability and final decision. All unaffected v2.0 definitions remain authoritative.
@@ -414,17 +414,17 @@ In question form:
 
 # 8. RQ/SO/H dependency impact
 
-This amendment does **not** silently rewrite the frozen v2.0 hypotheses. It establishes the conceptual correction that the next consolidated RQ–SO–H revision must propagate.
+The user-authorized seven-question consolidation is now recorded in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. RQ6/SO6 and RQ7/SO7 carry this amendment’s intervention-performance obligations. H1–H5 claim text is retained; exact effectiveness/efficiency metrics and any extended confirmatory contrasts remain preregistration obligations.
 
-Required v2.1 re-audit:
+Consolidated question mapping and remaining v2.1 operationalization:
 
 1. **RQ0 / General Objective** — add explicit intervention effectiveness and efficiency between resilience evaluation and sustainability consequences.
-2. **SO4 / RQ4 / H4** — distinguish intervention target attainment (**effectiveness**) from resource-performance (**efficiency**) and from sustainability-consequence heterogeneity.
-3. **SO5 / RQ5 / H5** — final decision logic must consider resilience, effectiveness, efficiency, sustainability, feasibility, and uncertainty rather than resilience and sustainability alone.
+2. **SO6 / RQ6 / H4** — distinguish intervention target attainment (**effectiveness**) from resource-performance (**efficiency**) and from sustainability-consequence heterogeneity.
+3. **SO7 / RQ7 / H5** — final decision logic must consider resilience, effectiveness, efficiency, sustainability, feasibility, and uncertainty rather than resilience and sustainability alone.
 4. **Traceability matrix** — add explicit effectiveness and efficiency metrics/decision objects before H4/H5 preregistration closes.
 5. **Figures, mind maps, thesis prose, and experiments** — remove any direct conceptual jump from intervention to sustainability where intervention performance is being evaluated.
 
-Until those dependent documents are consolidated, this amendment is the controlling interpretation for Stages 6–7.
+The v3 question authority and traceability matrix consolidate the question mapping. This amendment remains the controlling scientific interpretation for Stages 6–7; quantitative operationalization is still required.
 
 ---
 

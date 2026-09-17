@@ -19,9 +19,13 @@
 
 # Stage 1 — System Ontology and Multilayer Structure
 
-## Research question
+## RQ1 / SO1 — current canonical question
 
 > **What entities exist, what layers constitute the system, and where can interactions occur?**
+
+**Specific objective:** Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The system is
 
@@ -226,9 +230,13 @@ The separation among physical infrastructure, informational functions, and human
 
 # Stage 2 — Interdependency Mechanisms
 
-## Research question
+## RQ2 / SO2 — current canonical question
 
 > **Why and through which mechanisms do components and layers affect each other?**
+
+**Specific objective:** Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 Stage 2 starts from the Stage-1 ontology and adds causal transmission:
 
@@ -438,3 +446,4 @@ Unterluggauer, T., Rich, J., Andersen, P. B., & Hashemi, S. (2022). Electric veh
 Yates, R. D., Sun, Y., Brown, D. R., Kaul, S. K., Modiano, E., & Ulukus, S. (2021). Age of information: An introduction and survey. *IEEE Journal on Selected Areas in Communications, 39*(5), 1183–1210. https://doi.org/10.1109/JSAC.2021.3065072
 
 Zhang, P., & Peeta, S. (2014). Dynamic and disequilibrium analysis of interdependent infrastructure systems. *Transportation Research Part B: Methodological, 67*, 357–381. https://doi.org/10.1016/j.trb.2014.04.008
+

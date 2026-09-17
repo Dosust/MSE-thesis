@@ -6,7 +6,7 @@
 **University:** Arizona State University  
 **Scientific method:** EGMIV  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **ASU control specification:** `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`  
 **Master outline:** `THESIS_MASTER_OUTLINE.md`
 
@@ -123,7 +123,7 @@ The following must **not** be removed to save pages:
 
 - Merge general infrastructure background with coupled Power–Transportation context.
 - Merge problem statement and research gap while preserving the distinction between an engineering problem and a literature-derived gap.
-- Present `RQ0–RQ5` and `SO1–SO5` in one traceability table rather than separate mini-sections.
+- Present `RQ0 + RQ1–RQ7` and `SO1–SO7` in one traceability table rather than separate mini-sections.
 - Present `H1–H5` in one compact hypothesis table with comparator, primary metric family, and falsification path.
 - Keep contributions explicitly **proposed** until validated.
 
@@ -137,7 +137,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i.
+\mathcal H(i).
 }
 ```
 
@@ -551,7 +551,7 @@ This file freezes the current **160-page manuscript planning architecture**.
 It does **not** alter:
 
 - the canonical seven-stage scientific framework;
-- the canonical RQ/SO/H v2 specification;
+- the canonical RQ/SO/H v3 specification;
 - EGMIV;
 - H1–H5 mathematical or falsification logic;
 - any immutable scientific checkpoint.
@@ -587,3 +587,10 @@ The governing thesis-writing rule is therefore
 \textbf{Maximum scientific information per page, minimum repetition, full validation discipline.}
 }
 ```
+
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.
+
+
+**Question numbering amendment (2026-09-17):** Use RQ0 plus RQ1–RQ7 and SO1–SO7 from `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. H1–H5 retain separate identifiers: RQ1/RQ2 are developmental inputs to H1; RQ3→H1, RQ4→H2, RQ5→H3, RQ6→H4, RQ7→H5. Any record index shared by Q/SO/H is a traceability-row key, not an assertion of equal scientific identifiers.

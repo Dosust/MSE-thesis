@@ -1,5 +1,8 @@
 # Project Mathematical Architecture
 
+> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+
+
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207%20MANDATORY-8250DF)
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
@@ -13,7 +16,7 @@
 This directory is the active scientific and mathematical source of truth for the MSE thesis.
 
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
 **Citation rule:** externally sourced scientific claims require adjacent verified APA 7 author–date citations  
@@ -29,7 +32,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -284,11 +287,11 @@ A solver is eligible only after its mathematical assumptions, uncertainty semant
 | File | Role | Status |
 |---|---|---|
 | [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md) | seven-stage scientific framework | **CANONICAL v2.0** |
-| [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md) | RQ0 + general objective + SO1–SO5 + RQ1–RQ5 + H1–H5 | **CANONICAL v2.0** |
+| [`CANONICAL_RQ_SO_HYPOTHESES_V3.md`](CANONICAL_RQ_SO_HYPOTHESES_V3.md) | RQ0 + general objective + SO1–SO7 + RQ1–RQ7 + H1–H5 | **CANONICAL v3.0** |
 | [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | reasoning, citation, falsification and evidence discipline | **CURRENT v1.2** |
 | [`CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md`](CANONICAL_SPATIOTEMPORAL_PROPAGATION_REQUIREMENT_V1.md) | mandatory time + location preservation for spatial mechanisms | **FROZEN v1.0** |
 | [`MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md`](MINIMAL_SUFFICIENT_EXPERIMENTAL_REALIZATION.md) | reduced-demonstrator and state-reduction rationale | **CURRENT METHODOLOGICAL RATIONALE** |
-| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V2.md) | thesis-facing traceability | **CURRENT v2.0** |
+| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md) | thesis-facing traceability | **CURRENT v3.0** |
 
 Legacy v1 Stage-5 files remain useful theoretical/provenance resources but do not override framework v2.0 or the H3 package.
 
@@ -329,3 +332,7 @@ R1{:}R8
 ```
 
 Do not revise the conceptual framework, choose familiar probability levels, or select a reachability solver merely by popularity. The next progress comes from closing evidence and computation gates.
+
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

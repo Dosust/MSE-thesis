@@ -17,9 +17,15 @@
 
 ---
 
-## Frozen research question
+## RQ7 / SO7 — current canonical question
 
-> **What sequence of interventions leads to a more resilient, equitable and sustainable future system?**
+> **What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty?**
+
+**Specific objective:** Evaluate candidate infrastructure transformations and, where justified, intervention sequences using effectiveness, efficiency, sustainability, feasibility and uncertainty to support engineering decisions.
+
+**Interpretation boundary:** Framework v2 and intervention-performance amendment v2.1 supersede conflicting legacy mathematics or scope below. The current RQ heading does not validate or promote legacy constructions.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The Stage-6 / Stage-7 separation is
 
@@ -767,3 +773,4 @@ Hadka, D., Herman, J., Reed, P. M., & Keller, K. (2015). An open source framewor
 Kaiser, F., Latora, V., & Witthaut, D. (2021). Network isolators inhibit failure spreading in complex networks. *Nature Communications, 12*, 3143. https://doi.org/10.1038/s41467-021-23292-9
 
 Li, Q., Dong, S., & Mostafavi, A. (2019). Modeling of inter-organizational coordination dynamics in resilience planning of infrastructure systems: A multilayer network simulation framework. *PLOS ONE, 14*(11), e0224522. https://doi.org/10.1371/journal.pone.0224522
+

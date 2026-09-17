@@ -1,9 +1,12 @@
 # Autonomous Thesis Execution Status
 
+> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+
+
 **Mode:** autonomous within active tool-enabled sessions  
 **Protocol:** `AUTONOMOUS_EXECUTION_PROTOCOL_V1.md`  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
 **Current phase:** H1/H2 empirical qualification in parallel with H3 preregistration preparation  
@@ -23,7 +26,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -363,7 +366,7 @@ Formal novelty closure remains separate and still requires the frozen authentica
 ```math
 \boxed{
 \begin{aligned}
-&\text{Framework v2 + RQ/SO/H v2 closed}\\
+&\text{Framework v2 + RQ/SO/H v3 consolidated}\\
 &\rightarrow \text{H1 mathematical comparators verified}\\
 &\rightarrow \text{H2 information/organization structures specified}\\
 &\rightarrow \text{H3 set/uncertainty/preregistration/algorithm gates specified}\\
@@ -437,3 +440,7 @@ On every future active run:
 8. preserve APA 7 adjacent citation discipline for externally sourced scientific claims;
 9. preserve frozen-file/change-control rules;
 10. update this status register after every material scientific or execution-state change.
+
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

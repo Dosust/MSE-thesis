@@ -8,7 +8,7 @@
 **Status:** `DRAFT-UNVERIFIED`  
 **Evidence state:** `[D]` derived synthesis of frozen thesis objects  
 **Canonical scientific authority:** [`../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
-**RQ/SO/H authority:** [`../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`](../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md)  
+**RQ/SO/H authority:** [`../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md)  
 **Visual QA authority:** [`FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md`](FRAMEWORK_VISUAL_FIDELITY_PROTOCOL.md)  
 
 > **Guardrail:** this mind map organizes thesis content. It does **not** create 14 new framework stages. The canonical scientific spine remains the frozen seven-stage framework.
@@ -365,7 +365,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -515,7 +515,7 @@ Coupled Power–Transportation Infrastructure Resilience
 |---|---|
 | Figure ID | `FIG-MINDMAP-THESIS-LOGIC-V1` |
 | Scientific authority | `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md` |
-| RQ/H authority | `project/CANONICAL_RQ_SO_HYPOTHESES_V2.md` |
+| RQ/H authority | `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` |
 | Evidence state | `[D]` |
 | Data status | conceptual architecture |
 | Render | GitHub Mermaid |
@@ -535,3 +535,6 @@ Hazard semantics:      PASS required
 RQ/H traceability:     PASS required
 No silent additions:   PASS required
 ```
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

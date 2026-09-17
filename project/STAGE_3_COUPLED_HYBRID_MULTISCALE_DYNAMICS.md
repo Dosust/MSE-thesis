@@ -14,9 +14,13 @@
 
 ---
 
-## Frozen research question
+## RQ3 / SO3 — current canonical question
 
 > **How, when, and where do accepted interdependency mechanisms evolve and propagate through the coupled system?**
+
+**Specific objective:** Develop and verify a physics-based hybrid multiscale dynamic model and test its incremental explanatory or predictive value against independent and static-coupling representations.
+
+**Question authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. This 2026-09-17 wording amendment aligns the question with Chapter I; technical results and validation status are unchanged.
 
 The first three stages form the progression
 
@@ -629,3 +633,4 @@ Yates, R. D., Sun, Y., Brown, D. R., Kaul, S. K., Modiano, E., & Ulukus, S. (202
 Zhang, P., & Peeta, S. (2014). Dynamic and disequilibrium analysis of interdependent infrastructure systems. *Transportation Research Part B: Methodological, 67*, 357–381. https://doi.org/10.1016/j.trb.2014.04.008
 
 Zhao, J., Li, D., Sanhedrai, H., Cohen, R., & Havlin, S. (2016). Spatio-temporal propagation of cascading overload failures in spatially embedded networks. *Nature Communications, 7*, Article 10094. https://doi.org/10.1038/ncomms10094
+

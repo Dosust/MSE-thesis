@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification records:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`, `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V2.md`  
@@ -377,3 +377,4 @@ Poulin, C., & Kane, M. B. (2021). Infrastructure resilience curves: Performance 
 Yao, Y., Liu, W., & Jain, R. (2022). *Power system resilience evaluation framework and metric review: Preprint* (NREL/CP-5D00-80817). Presented at the IEEE PES Innovative Smart Grid Technologies Conference (ISGT NA). https://www.nrel.gov/docs/fy22osti/80817.pdf
 
 Zhang, X., Eseye, A., Reynolds, M., Knueven, B., & Jones, W. (2021). Restoring critical loads in resilient distribution systems using a curriculum learned controller. Paper presented at the 2021 IEEE Power & Energy Society General Meeting (PESGM). https://doi.org/10.1109/PESGM46819.2021.9637834
+

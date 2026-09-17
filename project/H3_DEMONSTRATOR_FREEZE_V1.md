@@ -3,8 +3,8 @@
 **Status:** DEMONSTRATOR ARCHITECTURE FROZEN / NUMERICAL REGISTRY OPEN  
 **Date:** 2026-09-17  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
-**Scientific authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V2.md`, `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`, `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
+**Scientific authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`, `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V7.md`  
 **Execution state:** H3 confirmatory execution remains BLOCKED.
 
 > This file freezes one concrete, reproducible H3 demonstrator so that the remaining thresholds, uncertainty models, admissible controls, algorithms, metrics, and data roles can be qualified against one declared system instead of an abstract Power–Transportation problem.
@@ -581,3 +581,4 @@ Pan, S., & Boyles, S. (2026). Optimising repair sequences for interdependent inf
 Texas A&M University Electric Grid Test Case Repository. (n.d.). *Texas Combined Transmission-Distribution Test Case*. https://electricgrids.engr.tamu.edu/texas7k-td/
 
 U.S. Geological Survey. (2018). *Data used to characterize peak streamflows and flood inundation resulting from Hurricane Harvey of selected areas in southeastern Texas and southwestern Louisiana, August–September 2017*. https://www.usgs.gov/data/data-used-characterize-peak-streamflows-and-flood-inundation-resulting-hurricane-harvey
+

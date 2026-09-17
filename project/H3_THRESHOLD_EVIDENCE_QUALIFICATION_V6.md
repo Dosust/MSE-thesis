@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification records:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md` through `V5.md`  
@@ -476,3 +476,4 @@ National Renewable Energy Laboratory. (2020b). *REopt Lite tutorial: Resilience 
 U.S. Department of Energy. (2018). *Small modular reactors: Adding to resilience at federal facilities*. https://www.energy.gov/sites/prod/files/2018/01/f47/Small%20Modular%20Reactors%20-%20Adding%20to%20Resilience%20at%20Federal%20Facilities%20.pdf
 
 U.S. Department of Energy, Federal Energy Management Program. (n.d.). *Distributed energy resources for resilience*. https://www.energy.gov/cmei/femp/distributed-energy-resources-resilience
+

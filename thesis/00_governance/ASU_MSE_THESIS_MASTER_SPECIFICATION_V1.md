@@ -5,7 +5,7 @@
 **School:** School of Sustainable Engineering and the Built Environment (SSEBE)  
 **Method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Reasoning authority:** `../../project/RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Verification date for ASU requirements:** 2026-09-16
 
@@ -83,7 +83,7 @@ The Graduate College controls thesis/dissertation formatting. Current verified r
 \boxed{\mathcal A_{science}\neq\mathcal A_{document}.}
 ```
 
-The scientific architecture is the canonical seven-stage framework v2.0 plus the frozen v2 RQ–SO–H logic and EGMIV execution method. The document architecture is the seven-chapter thesis argument.
+The scientific architecture is the canonical seven-stage framework v2.0 plus the consolidated v3 RQ–SO–H logic and EGMIV execution method. The document architecture is the seven-chapter thesis argument.
 
 ### Scientific architecture v2.0
 
@@ -147,7 +147,7 @@ Conventional performance/recovery curves remain a comparator, not a discarded me
 
 ## 6. Canonical research logic and traceability
 
-The v2 primary research logic is frozen in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md` and mirrored in `RQ_SO_H_TRACEABILITY_V2.md`.
+The v3 primary research logic is frozen in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` and mirrored in `RQ_SO_H_TRACEABILITY_V3.md`.
 
 ```math
 \boxed{
@@ -155,7 +155,7 @@ RQ_i
 \rightarrow
 SO_i
 \rightarrow
-H_i
+\mathcal H(i)
 \rightarrow
 \text{mechanism}
 \rightarrow
@@ -260,7 +260,7 @@ The proposal should be treated as:
 
 containing:
 
-- Chapter 1 logic: problem, significance, scope, RQ0/RQ1–RQ5, general objective, SO1–SO5, H1–H5;
+- Chapter 1 logic: problem, significance, scope, RQ0/RQ1–RQ7, general objective, SO1–SO7, H1–H5;
 - condensed Chapter 2: qualified evidence and theoretical foundations;
 - Chapter 3: canonical seven-stage v2 mathematical architecture;
 - planned Chapter 4: H1–H5 methodology, experiments, V&V, UQ, and falsification;
@@ -336,4 +336,7 @@ The reverse direction — conclusion first, evidence afterward — is prohibited
 - SSEBE Sustainable Engineering MSE Handbook 2026–2027: https://ssebe.engineering.asu.edu/wp-content/uploads/sites/28/2026/07/MSE-Sustainable-Engineering-Handbook-2026-2027.pdf
 - SSEBE Graduate Advising / defense procedures: https://ssebe.engineering.asu.edu/advising/graduate/
 
-Full APA 7 references for the scientific evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V2.md`.
+Full APA 7 references for the scientific evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+
+
+**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.

@@ -3,7 +3,7 @@
 **Status:** ACTIVE EVIDENCE QUALIFICATION  
 **Date:** 2026-09-16  
 **Protocol:** EGMIV–TSP  
-**Thesis destination:** Chapter 3 → Stage 5 → RQ3/H3 → Chapter 4 H3 experiment  
+**Thesis destination:** Chapter 3 → Stage 5 → RQ5/H3 → Chapter 4 H3 experiment  
 **Structural authority:** `H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Prior qualification records:** `H3_THRESHOLD_EVIDENCE_QUALIFICATION_V1.md`, `V2.md`, `V3.md`  
@@ -404,3 +404,4 @@ Federal Emergency Management Agency. (2016). *Emergency Support Function #1—Tr
 Federal Emergency Management Agency. (2023). *Community Lifelines Toolkit* (Version 2.1). U.S. Department of Homeland Security.
 
 Kourkoulis, R., Gelagoti, F., Chedid, M., Antoniou, M., Alvertos, A. E., Nikolaou, S., & Hung, C. J. (2024). *Improving transportation infrastructure resilience through post-event damage inspection (PDI) and post-event engineering investigation (PEI)* (FHWA-HIF-24-042). Federal Highway Administration.
+

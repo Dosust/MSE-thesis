@@ -8,7 +8,7 @@
 **Status:** `DRAFT-SPECIFICATION`  
 **Role:** authoritative working specification for identification, classification, auditing, visualization, and later mathematical instantiation of thesis interdependencies  
 **Scientific authority:** [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
-**RQ/SO/H authority:** [`CANONICAL_RQ_SO_HYPOTHESES_V2.md`](CANONICAL_RQ_SO_HYPOTHESES_V2.md)  
+**RQ/SO/H authority:** [`CANONICAL_RQ_SO_HYPOTHESES_V3.md`](CANONICAL_RQ_SO_HYPOTHESES_V3.md)  
 **Derived visual:** [`../figures/THESIS_FULL_LOGIC_MINDMAP_V1.md`](../figures/THESIS_FULL_LOGIC_MINDMAP_V1.md)  
 
 > **Authority guardrail.** This document does **not** add a new thesis stage and does **not** imply that every possible P–T–I–O relationship exists empirically. It defines the complete directed dependency universe that must be audited. A dependency enters the implemented model only after passing the mechanism, component-mapping, scope, and evidence gates defined below.
@@ -1116,3 +1116,4 @@ and the core scientific discipline:
 ```
 
 Any later change to the domain set, canonical tuple, Houston active mechanisms, or evidence protocol must be made explicitly and versioned rather than silently modified.
+
