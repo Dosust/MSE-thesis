@@ -1,6 +1,6 @@
 {
   "protocol_id": "H1_LEVEL2_PROTOCOL_V1",
-  "status": "METHOD_FEATURE_AND_RECOVERY_SEMANTICS_FROZEN_SOURCE_DATA_OPEN",
+  "status": "METHOD_FEATURE_RECOVERY_AND_LOCAL_FLOOD_SOURCE_FROZEN_PAYLOADS_OPEN",
   "structural_gates": {
     "S_authority": true,
     "S_hypothesis": true,
@@ -24,7 +24,8 @@
     "S_feature_matrix_qualification_gate_implemented": true,
     "S_selector_requires_qualified_hashed_matrix": true,
     "S_transport_source_recovery_protocol_frozen": true,
-    "S_nfhl_selection_exposure_protocol_frozen": true
+    "S_static_flood_selection_protocol_v1_1_frozen": true,
+    "S_guilford_effective_fema_operational_source_resolved": true
   },
   "registry_gates": {
     "R_dependency_mechanisms_present": true,
@@ -49,9 +50,10 @@
     "A_SUMO_topology_audited": false,
     "A_reconstructed_transport_candidate_generated": false,
     "A_reconstructed_transport_candidate_validated": false,
-    "A_FEMA_NFHL_acquisition_method_frozen": true,
-    "A_FEMA_NFHL_snapshot_materialized": false,
-    "A_FEMA_NFHL_coverage_determined_for_all_61": false,
+    "A_FEMA_semantic_provenance_resolved": true,
+    "A_Guilford_effective_2026_operational_layer_resolved": true,
+    "A_Guilford_effective_2026_payload_materialized": false,
+    "A_static_flood_coverage_determined_for_all_61": false,
     "A_complete_feeder_feature_matrix": false,
     "A_feature_matrix_qualified_and_hashed": false,
     "A_outcome_blind_feeder_selection_executed": false
@@ -94,8 +96,18 @@
       "lane_length_km_as_published": 30625
     }
   },
+  "static_flood_selection_source": {
+    "protocol": "NFHL_SELECTION_EXPOSURE_V1_1.md",
+    "provenance_authority": "FEMA National Flood Hazard Layer / effective FIRM data",
+    "operational_source": "Guilford County GIS Flood Zones Effective 06-10-2026",
+    "service": "https://gcgis.guilfordcountync.gov/arcgis/rest/services/GISDV/Watershed_Management/MapServer/12",
+    "sfha_rule": "metadata-introspected SFHA_TF: numeric 1/0 or string T/F only",
+    "payload_materialized": false,
+    "runtime_result": "EXECUTION_ENVIRONMENT_DNS_BLOCK",
+    "claim_boundary": "Operational local layer supports static E_H only inside documented coverage; noncoverage is not zero exposure."
+  },
   "source_block": {
-    "code": "BLOCKED_PENDING_GREENEVT_LFS_OR_QUALIFIED_RECOVERY_PLUS_NFHL_EXPOSURE",
+    "code": "BLOCKED_PENDING_GREENEVT_LFS_OR_QUALIFIED_RECOVERY_PLUS_GUILFORD_FLOOD_PAYLOAD",
     "UDS_db": {
       "oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
       "size_bytes": 107778048
@@ -104,9 +116,9 @@
       "oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
       "size_bytes": 351967227
     },
-    "execution_environment": "Current runtime cannot resolve the binary upstream hosts. GitHub textual routes expose only LFS pointers. No GreenEVT data failure is inferred."
+    "execution_environment": "Current container runtime cannot resolve the external binary/GIS hosts. Web-index discovery confirms the Guilford effective layer and GreenEVT source identities. No source-data failure is inferred."
   },
   "spatial_case_frozen": false,
   "confirmatory_ready": false,
-  "claim_boundary": "Method, feature semantics, transport-source recovery semantics, and NFHL selection-exposure semantics are frozen. No feeder is selected. Exact GreenEVT bytes remain preferred; a reconstructed transport object is a separately labeled candidate and cannot become byte-equivalent by aggregate matching. All 61 feeders still require explicit NFHL coverage and a cryptographically qualified feature matrix before outcome-blind selection can execute."
+  "claim_boundary": "Method, feature semantics, source-recovery semantics, and the local effective flood-selection source are frozen. No feeder is selected. Exact GreenEVT bytes remain preferred. All 61 feeders still require explicit static-flood coverage and a cryptographically qualified feature matrix before outcome-blind selection can execute."
 }
