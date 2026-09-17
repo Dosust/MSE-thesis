@@ -1,0 +1,79 @@
+{
+  "artifact_id": "H1_LEVEL2_UPLOADED_GREENEVT_SOURCE_AUDIT_V1",
+  "audit_date": "2026-09-18",
+  "uploaded_archive": {
+    "name": "GreenEVT.zip",
+    "size_bytes": 205091557,
+    "sha256": "643a0f3aab5b61d6396131ede3633741e1d1b34a921761edf3f780a1510c410e"
+  },
+  "critical_objects": {
+    "data/UDS.db": {
+      "size_bytes": 107778048,
+      "expected_size_bytes": 107778048,
+      "sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "expected_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "pass": true
+    },
+    "data/sumo_network/greensboro.net.xml": {
+      "size_bytes": 351967227,
+      "expected_size_bytes": 351967227,
+      "sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "expected_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "pass": true
+    }
+  },
+  "ordinary_git_blob_checks": {
+    "data/open_dss/Master.dss": {"git_blob_sha1":"5f021e607224715decd7ff7530c941e0bf3756f5","expected":"5f021e607224715decd7ff7530c941e0bf3756f5","pass":true},
+    "data/open_dss/bus_info.csv": {"git_blob_sha1":"2cdddc52ea01b827e708aa8ef64f400fe6eb2e81","expected":"2cdddc52ea01b827e708aa8ef64f400fe6eb2e81","pass":true},
+    "data/open_dss/Long_lat_buscoords.txt": {"git_blob_sha1":"1c7e237fa4e918058492ff9c05d2b2f9470e03da","expected":"1c7e237fa4e918058492ff9c05d2b2f9470e03da","pass":true},
+    "data/sumo_network/greensboro.sumocfg": {"git_blob_sha1":"8be54a63f47875d903cb134cd55d182c0ca0504b","expected":"8be54a63f47875d903cb134cd55d182c0ca0504b","pass":true}
+  },
+  "database_audit": {
+    "buses_rows": 163591,
+    "parcels_rows": 214242,
+    "required_crosswalk_columns_present": true,
+    "max_real_power_present": false,
+    "active_load_present": true,
+    "bus_name_duplicates": 0
+  },
+  "sumo_audit": {
+    "noninternal_edges": 118289,
+    "tlLogic_count": 914,
+    "road_length_km": 28216.377819999645,
+    "lane_length_km": 30625.436389999548,
+    "published_invariants_match": true,
+    "note": "Traffic-light-controlled junction elements=940; the published GreenEVT traffic-light invariant 914 matches tlLogic controller count."
+  },
+  "feeder_inventory": {
+    "substations": 21,
+    "feeders": 61,
+    "feeder_bus_rows": 153850,
+    "feeder_bus_unique": 153850,
+    "uds_match_count": 153850
+  },
+  "feature_spec_source_discoveries": {
+    "P_max_issue": "UDS.db.buses has no max_real_power column; silent substitution is forbidden.",
+    "baseline_active_load_validation": {
+      "feeders_checked": 61,
+      "feeders_exact_within_1e-6_kW": 61,
+      "max_abs_difference_kW": 4.9112713895738125e-11,
+      "sum_UDS_active_load_kW": 627267.32913,
+      "sum_Loads_original_kW": 627267.3291300002,
+      "interpretation": "UDS.buses.active_load is source-consistent baseline feeder active load in kW and is admissible only through a versioned feature-spec amendment."
+    },
+    "bus_identity_issue": "Feeder Long_lat_buscoords identifiers are bus names, not integer buses.id values.",
+    "bus_identity_validation": {
+      "bus_names_globally_unique": true,
+      "61_feeder_bus_names": 153850,
+      "matched_to_UDS_buses_bus": 153850,
+      "canonical_parcel_join": "Long_lat bus name -> buses.bus -> buses.id -> parcels.bus_id -> parcels.sumo_edge"
+    }
+  },
+  "conclusion": {
+    "critical_source_materialization_gate": "PASS",
+    "greenEVT_exact_critical_objects_materialized": true,
+    "source_schema_requires_feature_spec_amendment": true,
+    "feeder_selection_authorized": false,
+    "reason_selection_still_blocked": "Versioned v1.1 feature semantics and complete E_H coverage must be frozen/qualified before selection."
+  }
+}
