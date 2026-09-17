@@ -1,0 +1,19 @@
+{
+  "attempt_id": "H1-L2-CI-SOURCE-MATERIALIZATION-ATTEMPT-V1",
+  "date": "2026-09-18",
+  "workflow": ".github/workflows/h1-level2-source-audit.yml",
+  "trigger_commit": "33b438c4e9b5f039c9b857fff80f944aeeb1b2ae",
+  "workflow_run_id": 35248755309,
+  "workflow_run_status": "completed",
+  "workflow_run_conclusion": "failure",
+  "job_id": 105295531595,
+  "runner_id": 0,
+  "reported_steps": [],
+  "data_steps_executed": false,
+  "lfs_materialization_attempt_reached": false,
+  "interpretation": "The GitHub Actions job failed before a runner or workflow step was reported. Therefore this run provides no evidence for or against GreenEVT LFS accessibility, source integrity, schema validity, or topology validity.",
+  "control_observation": "The repository's pre-existing Python package workflow on the same push also completed with failure, runner_id=0, and no reported steps across its matrix jobs.",
+  "scientific_status": "EXECUTION_ENVIRONMENT_BLOCK_ONLY",
+  "hypothesis_status": "NOT_TESTED",
+  "selection_status": "NOT_AUTHORIZED"
+}
