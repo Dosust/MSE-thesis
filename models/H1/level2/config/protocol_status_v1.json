@@ -1,0 +1,50 @@
+{
+  "protocol_id": "H1_LEVEL2_PROTOCOL_V1",
+  "status": "METHOD_FROZEN_INPUTS_OPEN",
+  "structural_gates": {
+    "S_authority": true,
+    "S_hypothesis": true,
+    "S_spatial_case": true,
+    "S_interfaces": true,
+    "S_hazard": true,
+    "S_scenario_design": true,
+    "S_parameters": true,
+    "S_reference": true,
+    "S_qoi": true,
+    "S_validation": true,
+    "S_uq": true,
+    "S_execution_gates": true,
+    "S_H1": true,
+    "S_models": true,
+    "S_outcome_blind": true,
+    "S_rho_deferred": true,
+    "S_authorization_boolean": true
+  },
+  "registry_gates": {
+    "R_dependency_mechanisms_present": true,
+    "R_dependency_provenance_present": true,
+    "R_parameter_uncertainty_typed": true,
+    "R_parameter_source_level_present": true,
+    "R_primary_qoi_families_present": true,
+    "R_rho_not_primary": true,
+    "R_main_models_present": true,
+    "R_common_random_group_present": true
+  },
+  "freeze_gates": {
+    "F_development_feeder": false,
+    "F_heldout_feeder": false,
+    "F_feeders_distinct": false,
+    "F_hazard_values": false,
+    "F_seed_manifest": false,
+    "F_parameters": false,
+    "F_reference": false,
+    "F_primary_metrics": false,
+    "F_validation_thresholds": false,
+    "F_R1_R8": false,
+    "F_split": false,
+    "F_uq_convergence": false,
+    "F_confirmatory_authorization": false
+  },
+  "confirmatory_ready": false,
+  "claim_boundary": "A passed structural protocol does not authorize H1 confirmation. Confirmatory claims require every freeze gate and the repository-level authorization gate."
+}
