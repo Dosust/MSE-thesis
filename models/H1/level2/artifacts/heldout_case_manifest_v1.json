@@ -1,0 +1,17 @@
+{
+  "manifest_version": "1.0",
+  "case_role": "held_out",
+  "status": "NOT_FROZEN",
+  "selection_status": "BLOCKED_PENDING_COMPLETE_FEATURE_MATRIX",
+  "source_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+  "feeder_id": null,
+  "substation_id": null,
+  "power_bus_ids": [],
+  "sumo_edge_ids": [],
+  "dependency_ids": [],
+  "source_audit_sha256": "25cba960bb9d4cee1afde42ae95070ff728e2165ecd5c291446d35cac4137780",
+  "feeder_feature_register_sha256": "6ff1c5565c4b82a50f435bc72f7e558d75fbb525f10e5f076342e51200d890bb",
+  "feeder_selection_sha256": "3f3b29317744d4589dda9a7d541eb7fd921708f71a88a9b37e707ee7dc8ceb05",
+  "execution_authorized": false,
+  "block_reason": "Case identity cannot be frozen before complete source-qualified outcome-blind feeder selection."
+}
