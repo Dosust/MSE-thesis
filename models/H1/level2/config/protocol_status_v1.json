@@ -1,6 +1,6 @@
 {
   "protocol_id": "H1_LEVEL2_PROTOCOL_V1",
-  "status": "METHOD_FEATURE_RECOVERY_AND_LOCAL_FLOOD_SOURCE_FROZEN_PAYLOADS_OPEN",
+  "status": "GREENEVT_EXACT_SOURCE_MATERIALIZED_V1_1_SOURCE_FEATURES_COMPLETE_FLOOD_PAYLOAD_OPEN",
   "structural_gates": {
     "S_authority": true,
     "S_hypothesis": true,
@@ -19,10 +19,11 @@
     "S_outcome_blind": true,
     "S_rho_deferred": true,
     "S_authorization_boolean": true,
-    "S_feeder_feature_semantics_frozen": true,
-    "S_feature_extractor_implemented": true,
+    "S_feeder_feature_semantics_v1_1_frozen": true,
+    "S_feature_extractor_v1_1_aligned": true,
     "S_feature_matrix_qualification_gate_implemented": true,
-    "S_selector_requires_qualified_hashed_matrix": true,
+    "S_qualifier_v1_1_aligned": true,
+    "S_selector_v1_1_aligned": true,
     "S_transport_source_recovery_protocol_frozen": true,
     "S_static_flood_selection_protocol_v1_1_frozen": true,
     "S_guilford_effective_fema_operational_source_resolved": true
@@ -44,12 +45,13 @@
     "A_21_substations_61_feeders_inventoried": true,
     "A_greenEVT_published_transport_bounds_recorded": true,
     "A_greenEVT_published_transport_invariants_recorded": true,
-    "A_UDS_lfs_materialized": false,
-    "A_SUMO_lfs_materialized": false,
-    "A_UDS_schema_crosswalk_audited": false,
-    "A_SUMO_topology_audited": false,
-    "A_reconstructed_transport_candidate_generated": false,
-    "A_reconstructed_transport_candidate_validated": false,
+    "A_UDS_lfs_materialized": true,
+    "A_SUMO_lfs_materialized": true,
+    "A_UDS_schema_crosswalk_audited": true,
+    "A_SUMO_topology_audited": true,
+    "A_exact_ordinary_git_blob_checks_pass": true,
+    "A_feature_spec_v1_1_source_schema_amendment_frozen": true,
+    "A_source_only_feature_matrix_complete": true,
     "A_FEMA_semantic_provenance_resolved": true,
     "A_Guilford_effective_2026_operational_layer_resolved": true,
     "A_Guilford_effective_2026_payload_materialized": false,
@@ -73,28 +75,48 @@
     "F_uq_convergence": false,
     "F_confirmatory_authorization": false
   },
+  "greenEVT_materialization": {
+    "source": "user-uploaded GreenEVT.zip",
+    "archive_sha256": "643a0f3aab5b61d6396131ede3633741e1d1b34a921761edf3f780a1510c410e",
+    "UDS_db": {
+      "sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "size_bytes": 107778048,
+      "exact_identity_pass": true
+    },
+    "greensboro_net_xml": {
+      "sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "size_bytes": 351967227,
+      "exact_identity_pass": true
+    },
+    "sumo_published_invariants": {
+      "noninternal_edges": 118289,
+      "tlLogic_controllers": 914,
+      "road_length_km": 28216.377819999645,
+      "lane_length_km": 30625.436389999548,
+      "pass": true
+    },
+    "audit_artifact": "artifacts/uploaded_source_audit_v1.json"
+  },
+  "feature_spec_v1_1": {
+    "vector": ["N_P", "N_T", "N_I", "P_0", "L_T", "R_T", "E_H"],
+    "P_0_semantics": "sum UDS.db.buses.active_load for exact feeder bus-name matches; kW; validated 61/61 against Loads_original.dss",
+    "bus_identity_rule": "Long_lat bus name -> buses.bus -> buses.id -> parcels.bus_id",
+    "source_matrix": "artifacts/feeder_features_source_v1_1.csv",
+    "source_matrix_sha256": "2c5225e74097b532999194c1b42a8e3720b8fe815409cbe7f6bb93cc1cf69ee8",
+    "source_features_complete": true,
+    "interface_gate_pass_count": 60,
+    "interface_gate_fail_feeders": ["uhs11_1247--p1umv22"]
+  },
   "source_recovery": {
     "preferred": "EXACT_GREENEVT_LFS_BYTES",
-    "fallback_status": "METHOD_FROZEN_NOT_EXECUTED",
+    "preferred_status": "ACHIEVED",
+    "fallback_status": "NOT_NEEDED",
     "fallback_classification_ceiling": "GREENEVT_BENCHMARK_MATCH_CANDIDATE",
     "fallback_never_implies": [
       "BYTE_EQUIVALENT_GREENEVT",
       "OBSERVED_GREENSBORO_NETWORK",
       "CONFIRMATORY_H1_AUTHORIZATION"
-    ],
-    "published_transport_bounds_wgs84": {
-      "south": 35.894145,
-      "west": -80.198958,
-      "north": 36.410277,
-      "east": -79.157255
-    },
-    "published_transport_invariants": {
-      "sumo_nodes": 50109,
-      "sumo_edges": 118289,
-      "signalized_junctions": 914,
-      "road_length_km_as_published": 28216,
-      "lane_length_km_as_published": 30625
-    }
+    ]
   },
   "static_flood_selection_source": {
     "protocol": "NFHL_SELECTION_EXPOSURE_V1_1.md",
@@ -107,18 +129,11 @@
     "claim_boundary": "Operational local layer supports static E_H only inside documented coverage; noncoverage is not zero exposure."
   },
   "source_block": {
-    "code": "BLOCKED_PENDING_GREENEVT_LFS_OR_QUALIFIED_RECOVERY_PLUS_GUILFORD_FLOOD_PAYLOAD",
-    "UDS_db": {
-      "oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
-      "size_bytes": 107778048
-    },
-    "greensboro_net_xml": {
-      "oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
-      "size_bytes": 351967227
-    },
-    "execution_environment": "Current container runtime cannot resolve the external binary/GIS hosts. Web-index discovery confirms the Guilford effective layer and GreenEVT source identities. No source-data failure is inferred."
+    "code": "BLOCKED_PENDING_STATIC_FLOOD_E_H_COVERAGE_AND_FEATURE_QUALIFICATION",
+    "execution_environment": "Exact GreenEVT data are now materialized and audited from the uploaded archive. Current runtime still cannot resolve the Guilford/FEMA binary GIS endpoint, so E_H remains open.",
+    "next_required_object": "Effective SFHA polygon payload sufficient to determine explicit coverage/e_P/e_T/E_H for all 61 feeder candidates."
   },
   "spatial_case_frozen": false,
   "confirmatory_ready": false,
-  "claim_boundary": "Method, feature semantics, source-recovery semantics, and the local effective flood-selection source are frozen. No feeder is selected. Exact GreenEVT bytes remain preferred. All 61 feeders still require explicit static-flood coverage and a cryptographically qualified feature matrix before outcome-blind selection can execute."
+  "claim_boundary": "Exact GreenEVT source and all source-only feeder descriptors are now audited. No feeder is selected. Static flood coverage E_H must be completed for all 61 candidates, the full v1.1 matrix must pass cryptographic qualification, and only then may outcome-blind development/held-out selection execute."
 }
