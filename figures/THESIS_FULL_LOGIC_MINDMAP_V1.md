@@ -46,6 +46,7 @@ Critical-service requirements are an **input**, not an eighth stage.
 # 1. Master mind map
 
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"16px","lineColor":"#475569"}}}%%
 flowchart LR
     ROOT["COUPLED POWER–TRANSPORTATION\nINFRASTRUCTURE RESILIENCE"]
 
@@ -147,14 +148,15 @@ flowchart LR
     HOU --> HR["T→P repair access"]
     HOU --> HB["Demonstrator ≠ full theory domain"]
 
+    classDef default fill:#FFFFFF,color:#111827,stroke:#4B5563,stroke-width:1.5px;
     classDef root fill:#111827,color:#FFFFFF,stroke:#111827,stroke-width:3px;
-    classDef power fill:#E5E7EB,color:#0B1F3A,stroke:#0B1F3A,stroke-width:2px;
-    classDef transport fill:#ECFDF5,color:#0F766E,stroke:#0F766E,stroke-width:2px;
-    classDef info fill:#EFF6FF,color:#2563EB,stroke:#2563EB,stroke-width:2px;
-    classDef org fill:#FFFBEB,color:#92400E,stroke:#D97706,stroke-width:2px;
-    classDef hazard fill:#FEF2F2,color:#991B1B,stroke:#B91C1C,stroke-width:2px;
-    classDef stage fill:#F9FAFB,color:#111827,stroke:#374151,stroke-width:2px;
-    classDef derived fill:#FAF5FF,color:#6B21A8,stroke:#7E22CE,stroke-width:2px;
+    classDef power fill:#E2E8F0,color:#0F172A,stroke:#0F172A,stroke-width:2px;
+    classDef transport fill:#D1FAE5,color:#064E3B,stroke:#047857,stroke-width:2px;
+    classDef info fill:#DBEAFE,color:#1E3A8A,stroke:#1D4ED8,stroke-width:2px;
+    classDef org fill:#FEF3C7,color:#78350F,stroke:#B45309,stroke-width:2px;
+    classDef hazard fill:#FEE2E2,color:#7F1D1D,stroke:#B91C1C,stroke-width:2px;
+    classDef stage fill:#F8FAFC,color:#111827,stroke:#334155,stroke-width:2.5px;
+    classDef derived fill:#EDE9FE,color:#2E1065,stroke:#6D28D9,stroke-width:2px;
 
     class ROOT root;
     class GP,HP power;
@@ -164,6 +166,8 @@ flowchart LR
     class HAZ,HF hazard;
     class S1,S2,S3,S4,S5,S6,S7 stage;
     class FND,INP,VVUQ,RH,HOU,MESO,INT,ROBJ derived;
+
+    linkStyle default stroke:#475569,stroke-width:1.5px;
 ```
 
 ---
