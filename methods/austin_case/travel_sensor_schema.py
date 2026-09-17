@@ -10,6 +10,9 @@ class TravelSensorSchemaError(ValueError):
     """Raised when Travel Sensors schema provenance is incomplete or contradictory."""
 
 
+SCHEMA_METADATA_ENDPOINT = "https://data.austintexas.gov/api/views/6yd9-yz29/columns.json"
+
+
 def _require(condition: bool, message: str) -> None:
     if not condition:
         raise TravelSensorSchemaError(message)
@@ -55,6 +58,10 @@ def validate_registry(registry: Mapping[str, Any]) -> str:
     _require(isinstance(dataset, Mapping), "dataset object required")
     _require(dataset.get("dataset_id") == "6yd9-yz29", "Travel Sensors dataset ID drift")
     _require(
+        dataset.get("schema_metadata_endpoint") == SCHEMA_METADATA_ENDPOINT,
+        "Travel Sensors official schema metadata endpoint drift",
+    )
+    _require(
         dataset.get("temporal_role") == "RETROSPECTIVE_LOCATION_METADATA",
         "Travel Sensors temporal role drift",
     )
@@ -62,9 +69,11 @@ def validate_registry(registry: Mapping[str, Any]) -> str:
 
     status = registry.get("status")
     _require(status in {"OPEN", "FROZEN"}, "schema status must be OPEN or FROZEN")
+    metadata = registry.get("metadata_evidence")
     raw = registry.get("raw_evidence")
     mapping = registry.get("field_mapping")
     verification = registry.get("verification")
+    _require(isinstance(metadata, Mapping), "metadata_evidence object required")
     _require(isinstance(raw, Mapping), "raw_evidence object required")
     _require(isinstance(mapping, Mapping), "field_mapping object required")
     _require(isinstance(verification, Mapping), "verification object required")
@@ -73,15 +82,20 @@ def validate_registry(registry: Mapping[str, Any]) -> str:
     _require(isinstance(observed_keys, list), "observed_keys must be a list")
 
     if status == "OPEN":
-        # OPEN is scientifically valid only if it does not pretend the field
-        # mapping has already been verified.
         _require(
             verification.get("selected_fields_observed") is False,
             "OPEN schema cannot claim selected fields observed",
         )
         return "OPEN"
 
-    # FROZEN requires immutable raw evidence and a complete, observed mapping.
+    metadata_digest = metadata.get("columns_metadata_sha256")
+    column_count = metadata.get("column_count")
+    _require(
+        isinstance(metadata_digest, str) and len(metadata_digest) == 64,
+        "FROZEN schema requires official column-metadata SHA-256",
+    )
+    _require(isinstance(column_count, int) and column_count > 0, "FROZEN schema requires positive metadata column count")
+
     digest = raw.get("raw_data_sha256")
     keys_digest = raw.get("observed_keys_sha256")
     row_count = raw.get("raw_row_count")
@@ -110,6 +124,7 @@ def validate_registry(registry: Mapping[str, Any]) -> str:
     )
 
     required_checks = (
+        "official_metadata_mapping_unique",
         "selected_fields_observed",
         "kits_values_valid",
         "kits_unique_or_resolution_versioned",
