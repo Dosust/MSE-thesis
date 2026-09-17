@@ -1,0 +1,186 @@
+{
+  "version": "2.0",
+  "date": "2026-09-18",
+  "protocol": "EGMIV",
+  "authority": [
+    "project/CANONICAL_7_STAGE_FRAMEWORK_V2.md",
+    "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+    "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md",
+    "project/AUSTIN_BOUNDARY_VINTAGE_PROTOCOL_V1.md",
+    "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md"
+  ],
+  "case_id": "AUS-P5U-2018-V1",
+  "status": "CANDIDATE_NOT_YET_ADMISSIBLE",
+  "selection": {
+    "city": "Austin, Texas",
+    "smartds_version": "v1.0",
+    "smartds_year": 2018,
+    "smartds_city_code": "AUS",
+    "candidate_subregion": "P5U",
+    "scenario": "base_timeseries",
+    "candidate_is_frozen": false,
+    "selection_uses_hypothesis_results": false,
+    "fallback_rule": "If P5U fails an objective pre-result admissibility gate, evaluate remaining AUS urban subregions under the same frozen gates without inspecting H1-H5 outcomes."
+  },
+  "required_data_families": [
+    {
+      "id": "boundary",
+      "name": "City of Austin Full Purpose boundary, 2019-era source",
+      "source": "City of Austin",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/City_of_Austin_full_purpose_boundary/FeatureServer/0",
+      "native_crs": "EPSG:3857",
+      "known_data_last_edit": "2019-04-04T03:13:39Z",
+      "source_qualified": true,
+      "spatial_overlap_verified": false,
+      "mandatory": true
+    },
+    {
+      "id": "power",
+      "name": "SMART-DS AUS P5U OpenDSS + load profiles",
+      "source": "NREL/OEDI SMART-DS",
+      "endpoint": "s3://oedi-data-lake/SMART-DS/v1.0/2018/AUS/P5U/",
+      "native_crs": "DOCUMENTED GEOGRAPHIC COORDINATES; VERIFY RAW",
+      "temporal_resolution": "15 min load profiles",
+      "source_qualified": true,
+      "raw_materialized": false,
+      "spatial_overlap_verified": false,
+      "mandatory": true
+    },
+    {
+      "id": "road",
+      "name": "TxDOT Roadway Inventory 2018",
+      "source": "Texas Department of Transportation",
+      "endpoint": "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/ArcGIS/rest/services/TxDOT_Roadway_Inventory_2018/FeatureServer/0",
+      "inventory_year": 2018,
+      "native_crs": "EPSG:4269",
+      "strict_2018_snapshot": true,
+      "source_qualified": true,
+      "network_qa_pass": false,
+      "spatial_overlap_verified": false,
+      "mandatory": true
+    },
+    {
+      "id": "road_ctn_sensitivity",
+      "name": "City Comprehensive Transportation Network",
+      "source": "City of Austin",
+      "endpoint": "https://maps.austintexas.gov/arcgis/rest/services/Shared/Transportation_1/MapServer/22",
+      "source_origin": "created 2017-2018",
+      "state": "CURRENT_LIVE_UPDATED_REGULARLY",
+      "strict_2018_snapshot": false,
+      "source_qualified": true,
+      "mandatory": false
+    },
+    {
+      "id": "road_city_current_sensitivity",
+      "name": "City Street Centerline",
+      "source": "City of Austin",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/TRANSPORTATION_street_segment/FeatureServer/0",
+      "strict_2018_snapshot": false,
+      "source_qualified": true,
+      "mandatory": false
+    },
+    {
+      "id": "traffic_camera",
+      "name": "Camera Traffic Counts",
+      "source": "City of Austin",
+      "endpoint": "https://data.austintexas.gov/api/v3/views/sh59-i6y9/query.json",
+      "temporal_resolution": "15 min",
+      "source_qualified": true,
+      "historical": true,
+      "known_limitation": "GRIDSMART devices retired; automated counts not fully validated; speed calibration uncertain",
+      "spatial_overlap_verified": false,
+      "mandatory": false
+    },
+    {
+      "id": "traffic_radar",
+      "name": "Radar Traffic Counts",
+      "source": "City of Austin",
+      "endpoint": "https://data.austintexas.gov/api/v3/views/i626-g7ub/query.json",
+      "temporal_resolution": "15 min",
+      "coverage": "2017-12-16 through 2021-09-09",
+      "confirmatory_candidate_window": "2018 only until chronology/event-block split is frozen",
+      "source_qualified": true,
+      "historical": true,
+      "spatial_overlap_verified": false,
+      "mandatory": false
+    },
+    {
+      "id": "signals",
+      "name": "Traffic and Pedestrian Signals",
+      "source": "City of Austin Transportation and Public Works",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/ArcGIS/rest/services/TRANSPORTATION_signals2/FeatureServer/0",
+      "native_crs": "EPSG:2277",
+      "update_frequency": "daily",
+      "source_qualified": true,
+      "spatial_overlap_verified": false,
+      "synthetic_power_mapping_verified": false,
+      "mandatory": true
+    },
+    {
+      "id": "flood",
+      "name": "FEMA Floodplain",
+      "source": "City of Austin / FEMA-derived",
+      "endpoint": "https://maps.austintexas.gov/gis/rest/Shared/Floodplain/MapServer/1",
+      "native_crs": "EPSG:2277",
+      "source_qualified": true,
+      "spatial_overlap_verified": false,
+      "dynamic_hazard": false,
+      "mandatory": true
+    },
+    {
+      "id": "austin_energy_service_area",
+      "name": "Austin Energy service area",
+      "source": "Austin Energy / City of Austin",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/UTILITIESCOMMUNICATION_austin_energy_service_area/FeatureServer/0",
+      "native_crs": "EPSG:2277",
+      "source_qualified": true,
+      "spatial_overlap_verified": false,
+      "crosscheck_only": true,
+      "mandatory": false
+    },
+    {
+      "id": "chargers",
+      "name": "Austin Energy public charging network",
+      "source": "Austin Energy; independent AFDC inventory candidate",
+      "endpoint": "https://austinenergy.com/green-power/plug-in-austin/EVerything-Charging",
+      "source_qualified": true,
+      "primary_h1_h3_required": false,
+      "mandatory": false
+    }
+  ],
+  "derived_objects": [
+    {
+      "id": "repair_access",
+      "definition": "road-graph access from declared crew origin to damaged synthetic power components under separately qualified hazard-dependent passability",
+      "computable": false,
+      "requires": ["power", "road", "flood"]
+    },
+    {
+      "id": "p_to_t_signal_power_mapping",
+      "definition": "reproducible semisynthetic mapping of retained City traffic-signal points to eligible synthetic SMART-DS power components",
+      "computable": false,
+      "requires": ["power", "signals"]
+    }
+  ],
+  "gates": {
+    "G0_canonical_consistency": "PASS",
+    "G1_power_materialization": "OPEN",
+    "G2_common_spatial_support": "OPEN",
+    "G3_transport_topology": "SOURCE_QUALIFIED_TXDOT_2018_MATERIALIZATION_OPEN",
+    "G4_traffic_observations": "SOURCE_QUALIFIED_2018_SPATIAL_OVERLAP_OPEN",
+    "G5_p_to_t_mapping": "SOURCE_QUALIFIED_MAPPING_OPEN",
+    "G6_t_to_p_repair_access": "OPEN",
+    "G7_flood_exposure": "SOURCE_QUALIFIED_INTERSECTION_OPEN",
+    "G8_qc_provenance": "OPEN"
+  },
+  "final_case_admissibility": false,
+  "prohibitions": [
+    "Do not claim SMART-DS is actual Austin Energy topology.",
+    "Do not claim a City traffic signal's actual supplying feeder from semisynthetic mapping.",
+    "Do not convert floodplain class into event-time flood depth without a qualified model.",
+    "Do not estimate w_ij, delta_ij, tau_ij, thresholds, probability laws, travel times, or repair durations from metadata or geometry alone.",
+    "Do not inspect H1-H5 outcomes to choose the Austin subregion.",
+    "Do not call the live CTN or current City centerline a frozen 2018 road network.",
+    "Do not replace the currently frozen demonstrator until final_case_admissibility=true or a separately versioned scientific decision is recorded."
+  ]
+}
