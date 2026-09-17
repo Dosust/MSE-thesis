@@ -12,7 +12,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 
 1. **1.1 Background and Engineering Context**
 2. **1.2 Coupled P–T–I–O System Context**
-3. **1.3 Problem Statement**
+3. **[1.3 Problem Statement](01_03_problem_statement.md)**
 4. **1.4 Research Gap**
 5. **1.5 Sustainable Engineering Significance**
 6. **1.6 Scope, Boundaries, and Assumptions**
@@ -25,6 +25,12 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 13. **1.13 Thesis Organization**
 
 Target length: **16–18 pages** within the 160-page thesis ceiling unless explicitly amended.
+
+## Current drafted prose
+
+- Sections 1.1 and 1.2 are currently integrated in the repository root `README.md`.
+- Section 1.3 is maintained in [`01_03_problem_statement.md`](01_03_problem_statement.md) and is governed by the same Chapter-I and writing/inference authorities.
+- Section 1.4 remains the next evidence-synthesis task and must not convert an engineering problem into a novelty claim without the explicit gap/novelty audit.
 
 ## Governing logic
 
