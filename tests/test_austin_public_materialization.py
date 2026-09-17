@@ -8,9 +8,12 @@ import pytest
 
 from methods.austin_case.materialize_public_data import (
     MaterializationError,
+    arcgis_ids_url,
     arcgis_query_url,
     bounds,
+    chunked,
     json_count,
+    parse_arcgis_ids,
     parse_buscoords,
     parse_s3_listing,
     s3_list_url,
@@ -32,10 +35,12 @@ def test_s3_listing_parser_and_url_are_deterministic():
         "SMART-DS/v1.0/2018/AUS/P5U/scenarios/base_timeseries/opendss/p5uhs0/"
     ]
     url = s3_list_url(
-        "SMART-DS/v1.0/2018/AUS/P5U/scenarios/base_timeseries/opendss/"
+        "SMART-DS/v1.0/2018/AUS/P5U/scenarios/base_timeseries/opendss/",
+        delimiter="/",
     )
     assert "list-type=2" in url
     assert "prefix=SMART-DS%2Fv1.0%2F2018%2FAUS%2FP5U%2F" in url
+    assert "delimiter=%2F" in url
 
 
 def test_buscoords_parser_rejects_non_geographic_coordinates():
@@ -48,17 +53,44 @@ def test_buscoords_parser_rejects_non_geographic_coordinates():
         parse_buscoords(b"bus1 3000000 10000000\n")
 
 
-def test_arcgis_query_freezes_wgs84_bbox_and_geojson():
-    url = arcgis_query_url(
+def test_arcgis_id_first_query_and_page_query_are_explicit():
+    bbox = (-97.8, 30.2, -97.7, 30.3)
+    ids_url = arcgis_ids_url("https://example.org/FeatureServer/0", bbox)
+    assert "returnIdsOnly=true" in ids_url
+    assert "returnGeometry=false" in ids_url
+    assert "inSR=4326" in ids_url
+
+    page_url = arcgis_query_url(
         "https://example.org/FeatureServer/0",
-        (-97.8, 30.2, -97.7, 30.3),
+        bbox,
+        object_ids=[3, 5, 7],
     )
-    assert url.startswith("https://example.org/FeatureServer/0/query?")
-    assert "geometry=-97.8%2C30.2%2C-97.7%2C30.3" in url
-    assert "geometryType=esriGeometryEnvelope" in url
-    assert "inSR=4326" in url
-    assert "outSR=4326" in url
-    assert "f=geojson" in url
+    assert page_url.startswith("https://example.org/FeatureServer/0/query?")
+    assert "geometry=-97.8%2C30.2%2C-97.7%2C30.3" in page_url
+    assert "geometryType=esriGeometryEnvelope" in page_url
+    assert "inSR=4326" in page_url
+    assert "outSR=4326" in page_url
+    assert "objectIds=3%2C5%2C7" in page_url
+    assert "f=geojson" in page_url
+
+
+def test_arcgis_id_parser_deduplicates_sorts_and_chunking_is_complete():
+    payload = json.dumps(
+        {"objectIdFieldName": "OBJECTID", "objectIds": [5, 1, 5, 3, 2, 4]}
+    ).encode()
+    field, ids = parse_arcgis_ids(payload)
+    assert field == "OBJECTID"
+    assert ids == [1, 2, 3, 4, 5]
+    assert chunked(ids, 2) == [[1, 2], [3, 4], [5]]
+    assert [value for page in chunked(ids, 2) for value in page] == ids
+
+    with pytest.raises(ValueError, match="positive"):
+        chunked(ids, 0)
+
+
+def test_arcgis_error_payload_fails_closed():
+    with pytest.raises(MaterializationError, match="ArcGIS ID query error"):
+        parse_arcgis_ids(json.dumps({"error": {"code": 400}}).encode())
 
 
 def test_socrata_location_export_uses_public_resource_endpoint():
