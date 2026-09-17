@@ -1,0 +1,56 @@
+name: Assemble physical network visual
+
+on:
+  push:
+    branches:
+      - tmp-physical-network-upload
+    paths:
+      - figures/.tmp_physical_network/TRIGGER
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Assemble canonical visual
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat figures/.tmp_physical_network/part-* > /tmp/physical-network.b64
+          base64 -d /tmp/physical-network.b64 > figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.md')
+          s = p.read_text()
+          old = "**Intended image asset name:** `Spatiotemporal Physical Power-Transportation Network.png`  "
+          new = "**Canonical visual asset:** `figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp`  "
+          s = s.replace(old, new)
+          old_hash = "**Source image SHA-256:** `b2f0d9c2b37e869bd41f3a4aac7b0d26145d8a787aebfae21da9d5023af7bba5`"
+          new_hash = "**Canonical visual SHA-256:** `f85848a029ca706e601c47c97ea1bf55f95bfc01af552a78bfc1012bc95da1fb`"
+          s = s.replace(old_hash, new_hash)
+          image_line = "![Spatiotemporal Physical Power-Transportation Network](./SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp)"
+          if image_line not in s:
+              marker = new_hash + "\n"
+              s = s.replace(marker, marker + "\n" + image_line + "\n")
+          p.write_text(s)
+          PY
+          rm -rf figures/.tmp_physical_network
+
+      - name: Commit visual
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp
+          git add figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.md
+          git add -u figures/.tmp_physical_network || true
+          git commit -m "figures: add canonical physical network visual"
+          git push
