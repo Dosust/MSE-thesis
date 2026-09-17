@@ -20,6 +20,20 @@ the condition of the road network can influence power-system recovery because re
 
 These relationships become especially important under disruptive conditions. A disturbance that initially affects one infrastructure can modify another through an active dependency mechanism, creating indirect service losses or cascading effects. Rinaldi et al. (2001) established a foundational framework for identifying and analyzing critical-infrastructure interdependencies, while Ouyang (2014) reviewed multiple approaches for representing interdependent infrastructure behavior and cascading consequences. For the present research, **simultaneous exposure to the same hazard is not, by itself, sufficient to establish a dependency or interdependency**. A causal claim requires an identifiable relationship through which the state or service of a source affects a receiver.
 
+The thesis adopts a **systems-thinking diagnostic lens** in which observable disruption events are treated as surface manifestations of deeper recurrent patterns, system structures, and governing causal or decision mechanisms. Accordingly, an outage, congestion episode, or delayed restoration is not interpreted as a complete explanation of system behavior; the analysis proceeds from the observed event to the pattern it forms, the coupled structure that permits that pattern, and the mechanisms and rules that generate it:
+
+```math
+\boxed{
+\text{Event}
+\rightarrow
+\text{Pattern}
+\rightarrow
+\text{Structure}
+\rightarrow
+\text{Mechanism / Rule}.
+}
+```
+
 The resulting engineering problem has both an **architectural** and a **behavioral** dimension. Systems-of-systems research emphasizes that constituent systems can retain operational and managerial characteristics while participating in a larger architecture whose behavior depends on their interactions (Maier, 1998). Infrastructure-interdependency research, in turn, emphasizes that coupled infrastructures can exhibit system-level behavior that cannot be inferred solely from isolated constituent networks (Rinaldi et al., 2001; Ouyang, 2014). Accordingly, this thesis uses the complementary modeling convention
 
 ```math
