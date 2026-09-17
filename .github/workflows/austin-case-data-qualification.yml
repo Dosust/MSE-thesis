@@ -9,12 +9,15 @@ on:
       - "methods/austin_case/**"
       - "config/austin_case_admissibility_v1.json"
       - "config/austin_case_admissibility_v2.json"
+      - "config/austin_case_admissibility_v3.json"
       - "config/austin_preconfirmatory_registry_v1.json"
       - "config/austin_road_vintage_v1.json"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md"
+      - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md"
       - "project/AUSTIN_DATA_QC_AND_GATE_PROTOCOL_V1.md"
       - "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md"
+      - "project/AUSTIN_TEMPORAL_EVIDENCE_PROTOCOL_V1.md"
       - "tests/test_austin_*.py"
 
 permissions:
@@ -45,25 +48,26 @@ jobs:
         run: |
           pytest -q tests/test_austin_*.py
 
-      - name: Validate active Austin v2 case contract
+      - name: Validate active Austin v3 case contract
         run: |
           python - <<'PY'
           from methods.austin_case.admissibility import load_contract
-          contract = load_contract('config/austin_case_admissibility_v2.json')
+          contract = load_contract('config/austin_case_admissibility_v3.json')
           assert contract['final_case_admissibility'] is False
           assert contract['gates']['G0_canonical_consistency'] == 'PASS'
-          print('ACTIVE_CONTRACT_VALID_OPEN')
+          assert contract['temporal_evidence']['G_time'] == 'OPEN'
+          print('ACTIVE_V3_CONTRACT_VALID_OPEN')
           PY
 
-      - name: Materialize public Austin core inputs with frozen boundary and road vintages
+      - name: Materialize public Austin core inputs with frozen spatial and temporal provenance
         run: |
           set -euo pipefail
-          python methods/austin_case/materialize_public_data_v3.py --root data/AUS-P5U-2018-V1 \
-            | tee austin-materialization-v3.txt
+          python methods/austin_case/materialize_public_data_v4.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-materialization-v4.txt
           python methods/austin_case/materialize_service_area.py --root data/AUS-P5U-2018-V1 \
             | tee austin-service-area.txt
 
-      - name: Execute immutable raw-manifest and road-vintage QC
+      - name: Execute immutable raw, road-vintage, and temporal-semantics QC
         run: |
           set -euo pipefail
           python - <<'PY' | tee austin-raw-qc.txt
@@ -71,11 +75,23 @@ jobs:
           from pathlib import Path
           from methods.austin_case.data_qc import validate_raw_manifest
           from methods.austin_case.road_vintage import validate_road_vintage_manifest
+          from methods.austin_case.temporal_evidence import (
+              validate_flood_summary,
+              validate_signal_summary,
+          )
 
-          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest_v3.json')
+          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest_v4.json')
           manifest = json.loads(manifest_path.read_text())
           print(json.dumps(validate_raw_manifest(manifest, root=Path('.')), indent=2, sort_keys=True))
           print(json.dumps(validate_road_vintage_manifest(manifest), indent=2, sort_keys=True))
+
+          signal_summary = manifest['objects']['traffic_signals_retrospective_2018']
+          flood_summary = manifest['objects']['fema_floodplain']
+          validate_signal_summary(signal_summary)
+          validate_flood_summary(flood_summary)
+          if manifest['temporal_gate']['signal_retrospective_extraction'] != 'PASS':
+              raise RuntimeError('retrospective signal subset is empty; G5 cannot proceed')
+          print(json.dumps(manifest['temporal_gate'], indent=2, sort_keys=True))
           PY
 
       - name: Freeze execution identity
@@ -88,16 +104,21 @@ jobs:
             echo "RUN_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
             sha256sum config/austin_case_admissibility_v1.json
             sha256sum config/austin_case_admissibility_v2.json
+            sha256sum config/austin_case_admissibility_v3.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
             sha256sum config/austin_road_vintage_v1.json
-            sha256sum project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md
+            sha256sum project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md
             sha256sum project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md
+            sha256sum project/AUSTIN_TEMPORAL_EVIDENCE_PROTOCOL_V1.md
             sha256sum methods/austin_case/materialize_public_data.py
             sha256sum methods/austin_case/materialize_public_data_v2.py
             sha256sum methods/austin_case/materialize_public_data_v3.py
+            sha256sum methods/austin_case/materialize_public_data_v4.py
             sha256sum methods/austin_case/materialize_service_area.py
             sha256sum methods/austin_case/data_qc.py
             sha256sum methods/austin_case/road_vintage.py
+            sha256sum methods/austin_case/temporal_evidence.py
+            sha256sum methods/austin_case/admissibility.py
           } | tee austin-case-evidence/execution-identity.txt
 
       - name: Upload immutable Austin qualification evidence
@@ -110,6 +131,6 @@ jobs:
           path: |
             data/AUS-P5U-2018-V1/
             austin-case-evidence/
-            austin-materialization-v3.txt
+            austin-materialization-v4.txt
             austin-service-area.txt
             austin-raw-qc.txt
