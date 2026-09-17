@@ -5,7 +5,7 @@ This directory contains machine-readable configuration aligned with the frozen s
 | File | Purpose | Authority |
 |---|---|---|
 | `scientific_propositions.yaml` | P1–P10 supporting proposition registry | synchronized with `project/SCIENTIFIC_PROPOSITIONS.md` |
-| `research_hypotheses.yaml` | H1–H5 primary hypothesis registry | synchronized with `project/RESEARCH_HYPOTHESES.md` |
+| `research_hypotheses.yaml` | H1–H5 primary hypothesis registry | synchronized with `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` |
 | `example_model.json` | valid illustrative P–T–I–O model configuration | validated against `schemas/thesis_model.schema.json` |
 | `h3_houston_power_source_v1.json` | frozen H3 Houston SMART-DS source/version/year/scenario contract and geographic-selection gates | `project/H3_SMARTDS_YEAR_QUALIFICATION_V1.md` + `project/H3_SMARTDS_HOUSTON_PREEXTRACTION_V1.md` |
 | `h3_houston_transport_source_v1.json` | frozen H3 H-GAC transport source family/base-year contract and Houston-selection gates | `project/H3_HGAC_TRANSPORT_SOURCE_AND_BASEYEAR_QUALIFICATION_V1.md` |
@@ -16,7 +16,10 @@ These files are contracts for software/reproducibility. They do not replace the 
 ## Synchronization rules
 
 - $P,T$ remain physical systems; $I,O$ remain informational/organizational layers.
+- RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7 under `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
 - Primary hypothesis logic $H_1$–$H_5$ is frozen; numerical thresholds are not yet frozen.
+- H4 is the intervention resilience–sustainability consequence test; interface criticality is a supporting diagnostic, not H4 itself.
+- H5 is the joint resilience–sustainability decision test; adaptive transformation pathways are a supporting extension unless separately preregistered.
 - The proposition registry contains $P_1$–$P_{10}$ as subordinate falsifiable claims.
 - Stage-4 operational control uses $u(t)$.
 - Stage-7 strategic transformation uses $\mathbf a_k$ and regime $\mathfrak M_k$.
