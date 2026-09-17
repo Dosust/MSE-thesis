@@ -2,8 +2,8 @@
 """Qualify an extracted Level-2 feeder feature matrix for outcome-blind selection.
 
 This step cryptographically binds the CSV produced by extract_feeder_features.py
-to its extraction audit.  It does not compute features and it does not select a
-feeder.  Its only role is to decide whether the frozen selection algorithm is
+to its extraction audit. It does not compute features and it does not select a
+feeder. Its only role is to decide whether the frozen selection algorithm is
 allowed to read the matrix.
 """
 from __future__ import annotations
@@ -62,7 +62,7 @@ def main() -> None:
     if not rows:
         reasons.append("feature CSV is empty")
     if not required_cols.issubset(cols):
-        reasons.append(f"feature CSV missing columns: {sorted(required_cols - cols)}")
+        reasons.append(f"feature CSV missing required columns: {sorted(required_cols - cols)}")
     if len(rows) != EXPECTED_FEEDER_COUNT:
         reasons.append(f"expected {EXPECTED_FEEDER_COUNT} feeder rows, found {len(rows)}")
     if any(not x for x in ids) or len(ids) != len(set(ids)):
@@ -82,6 +82,22 @@ def main() -> None:
         reasons.append("frozen SUMO topology gate did not pass")
     if extraction.get("hazard_table_supplied") is not True:
         reasons.append("qualified FEMA-NFHL exposure table was not supplied")
+
+    # Missing hazard rows cannot silently remove candidate feeders from the
+    # selection population. All 61 source feeders need an explicit coverage
+    # determination, even if some are subsequently declared C_hazard=FALSE.
+    feeder_audits = extraction.get("feeders", {})
+    if set(feeder_audits) != set(ids):
+        reasons.append("extraction-audit feeder keys do not exactly match the feature CSV")
+    missing_hazard_determinations = []
+    for fid in ids:
+        hz = feeder_audits.get(fid, {}).get("hazard_exposure", {})
+        if not hz or hz.get("status") == "MISSING_NOT_ZERO":
+            missing_hazard_determinations.append(fid)
+    if missing_hazard_determinations:
+        reasons.append(
+            f"{len(missing_hazard_determinations)} feeder(s) lack an explicit FEMA-NFHL coverage determination"
+        )
 
     evaluated_rows = 0
     eligible: list[str] = []
@@ -131,6 +147,7 @@ def main() -> None:
         "status": "QUALIFIED_FOR_OUTCOME_BLIND_SELECTION" if authorized else "BLOCKED",
         "block_reasons": reasons,
         "row_errors": row_errors,
+        "missing_hazard_determinations": missing_hazard_determinations,
         "claim_boundary": "Qualification authorizes only the preregistered feeder selector. It does not authorize M0/M1/M2 execution or H1 claims.",
     }
     Path(args.out).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
