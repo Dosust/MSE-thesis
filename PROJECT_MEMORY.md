@@ -1,23 +1,75 @@
 # Project Memory Entry Point
 
-> **Current question authority (2026-09-17):** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md). RQ0 is overarching; RQ1–RQ7 correspond to SO1–SO7. H1–H5 retain their identifiers. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5, with H4 intervention-performance inputs.
+> **Current scientific authorities (2026-09-17):**  
+> Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+> RQ–SO–H: `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+> Chapter I: `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
+> Writing/inference: `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
-
-![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
+![Framework](https://img.shields.io/badge/stages%201--7-v2.0%20CURRENT-1A7F37)
+![Traceability](https://img.shields.io/badge/RQ--SO--H-v3.0%20CURRENT-1A7F37)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![Prereg](https://img.shields.io/badge/H1%20confirmatory%20design-FROZEN-1A7F37)
-![Validation](https://img.shields.io/badge/NYC%2FACN-PARTIAL%20PASS-9A6700)
-![Raw Completeness](https://img.shields.io/badge/raw%20completeness-STRUCTURAL%20PASS-9A6700)
-![Row Audit](https://img.shields.io/badge/acquisition%20plan-FROZEN-0969DA)
-![Audit Code](https://img.shields.io/badge/offline%20tests-4%2F4%20PASS-1A7F37)
-![Raw Retrieval](https://img.shields.io/badge/event%20rows-PENDING-B42318)
-![Split](https://img.shields.io/badge/train%2Ftest-CANDIDATE%20ONLY-B42318)
-![H1b](https://img.shields.io/badge/full%20public%20H1b-BLOCKED-B42318)
+![Raw Retrieval](https://img.shields.io/badge/H1%20event%20rows-PENDING-B42318)
+![H2](https://img.shields.io/badge/H2-EMPIRICAL%20QUALIFICATION%20OPEN-9A6700)
+![H3](https://img.shields.io/badge/H3-PREREG%20OPEN-9A6700)
+![H4](https://img.shields.io/badge/H4-ACCOUNTING%20PREREG%20OPEN-9A6700)
+![H5](https://img.shields.io/badge/H5-DECISION%20PREREG%20OPEN-9A6700)
 
-## Repository authority — updated 2026-09-14
+## Repository authority — updated 2026-09-17
 
-The sole active repository is `Dossiya-SE/MSE-thesis`. Thesis-wide citation standard: APA 7. Canonical reasoning protocol: `project/RESEARCH_REASONING_PROTOCOL.md`. Canonical execution method: `project/EGMIV_METHOD_V1.md`.
+The sole active repository is `Dossiya-SE/MSE-thesis`. Historical/archive material is provenance only. Thesis-wide citation standard is APA 7 internally, subject to chair approval and ASU precedence. Canonical reasoning protocol: `project/RESEARCH_REASONING_PROTOCOL.md`. Canonical execution method: `project/EGMIV_METHOD_V1.md`.
+
+## Thesis-wide state
+
+| Object | Current authority/state |
+|---|---|
+| Scientific framework | seven-stage framework v2.0 |
+| Research questions/objectives | RQ0 + RQ1–RQ7; SO1–SO7 |
+| Primary hypotheses | H1–H5 |
+| Chapter I | v2 authority; 1.1–1.13; 16–18 page internal target |
+| Stage 5 | viability + reachability + probability/confidence |
+| H4 | intervention effectiveness/efficiency/sustainability consequences |
+| H5 | resilience-only vs joint resilience–sustainability decision set |
+| Interface criticality | supporting diagnostic unless separately preregistered |
+| Adaptive/sequential pathways | supporting Stage-7 extension unless separately activated |
+| Writing/inference | scientific writing standard v1.0 |
+| ASU requirements | verified matrix dated 2026-09-17; internal rules kept separate |
+
+## RQ–SO–H mapping
+
+- RQ1/SO1 — developmental system-structure qualification; supports H1.
+- RQ2/SO2 — developmental mechanism/evidence qualification; supports H1.
+- RQ3/SO3 → H1.
+- RQ4/SO4 → H2.
+- RQ5/SO5 → H3.
+- RQ6/SO6 → H4.
+- RQ7/SO7 → H5.
+
+Seven research questions do not imply seven hypotheses.
+
+## Primary hypothesis semantics
+
+```math
+\boxed{H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0}
+```
+
+```math
+\boxed{H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O}
+```
+
+```math
+\boxed{H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T}
+```
+
+```math
+\boxed{H_4:\ a_k\rightarrow(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k})}
+```
+
+```math
+\boxed{H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}}
+```
 
 ## Active H1 authority
 
@@ -27,7 +79,7 @@ The sole active repository is `Dossiya-SE/MSE-thesis`. Thesis-wide citation stan
 4. `project/H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md`
 5. `project/H1_DEMONSTRATOR_QUALIFICATION_V1.md`
 6. `project/H1_RAW_COMPLETENESS_AUDIT_V1.md`
-7. `project/H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md` — **current data gate**
+7. `project/H1_ROW_LEVEL_DATA_QUALIFICATION_STATUS_V1.md` — current data gate
 8. `evidence/H1/09_row_level_v1/` — frozen executable acquisition/audit protocol
 9. `models/H1/M0/`, `models/H1/M1/`, `models/H1/M2/`
 10. `project/H1_FRESH_EVIDENCE_SEARCH_PROTOCOL_V1.md`
@@ -115,7 +167,7 @@ This split is **not frozen**.
 
 ## Raw-completeness audit
 
-The source-level audit is a PARTIAL / STRUCTURAL PASS. Key safeguards remain:
+The source-level audit is a PARTIAL / STRUCTURAL PASS. Safeguards remain:
 
 1. absent EAGLE-I county-time rows are never equated with zero outage;
 2. TLC completed HVFHV trips are never equated with the entire requested-demand population;
@@ -124,27 +176,17 @@ The source-level audit is a PARTIAL / STRUCTURAL PASS. Key safeguards remain:
 5. publisher quality caveats remain part of uncertainty;
 6. public Con Edison/DPS reports provide event/restoration truth but not individual crew-route/job trajectories.
 
-## Row-level acquisition/audit executor — current gate
+## Row-level acquisition/audit executor — current H1 gate
 
-Executable package:
+Executable package: `evidence/H1/09_row_level_v1/`.
 
-`evidence/H1/09_row_level_v1/`
-
-Frozen items:
-- E0–E4 audit windows and candidate roles;
-- source endpoint/file templates;
-- required native fields and timezone rules;
-- NYC EAGLE-I county FIPS set;
-- frozen 311 obstruction vocabulary;
-- deterministic row-level metrics;
-- missingness interpretation rules;
-- provenance hashing.
+Frozen items include E0–E4 audit windows/roles, source templates, native fields/timezone rules, EAGLE-I county set, 311 vocabulary, deterministic row metrics, missingness interpretation and provenance hashing.
 
 The executor computes, where raw data are retrievable:
 
 ```math
 N_{rows},\quad t_{min},\quad t_{max},\quad
-\Delta t_{median},\quad \Delta t_{95},\quad \Delta t_{max},\quad
+\Delta t_{median},\quad\Delta t_{95},\quad\Delta t_{max},\quad
 r_{null},\quad r_{dup}
 ```
 
@@ -156,13 +198,9 @@ Offline audit-code verification:
 4/4 offline audit tests passed
 ```
 
-The tests cover timestamp/gap computation, duplicate detection, required-field failure and the EAGLE-I `missing != zero` gate.
-
 ### Retrieval state
 
-Actual event-window row counts/null rates are **not yet claimed**. The current chat runtime cannot retrieve the large ZIP/Parquet/raw bodies required for the full audit. This is an acquisition block, not a scientific PASS.
-
-Therefore:
+Actual event-window row counts/null rates are not yet claimed. Therefore:
 
 ```math
 \boxed{\text{ACQUISITION PLAN = FROZEN}}
@@ -184,7 +222,7 @@ and
 
 ## R1–R8 activation rule
 
-The candidate split may activate only when every required event/source role passes the predeclared row-level gates:
+The candidate split may activate only when every required event/source role passes:
 - R1 timestamp/timezone integrity;
 - R2 pre-event/impact/recovery support;
 - R3 missingness interpretability;
@@ -204,14 +242,38 @@ No held-out event may move into training because model performance is poor.
 
 This does not block H1a matched representation testing, aggregate/event validation, road-state validation or charging-component validation once the data gates are passed.
 
+## H2–H5 live obligations
+
+### H2
+Empirical information/organizational mechanisms, test domain, response metrics, threshold and VVUQ remain to be frozen.
+
+### H3
+Freeze service/acceptability/recovery sets, horizons, uncertainty/probability semantics, policy/control assumptions, solver/algorithm, Skill metric, threshold and data domain.
+
+### H4
+Freeze intervention set, resilience-effectiveness criterion, efficiency resource denominator/accounting boundary, sustainability consequence vector, materiality metric and threshold.
+
+### H5
+Freeze candidate actions, uncertainty/scenario domain, resilience-only and joint decision formulations, set/regret metric and threshold.
+
 ## Formal evidence status
 
-Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of the frozen H1 CORE search remains pending. Public evidence remains supportive/provisional and cannot replace the formal corpus.
+Authenticated Scopus, Web of Science Core Collection, Compendex and IEEE Xplore execution of frozen searches remains a distinct evidence task where specified. Public evidence cannot silently replace a required formal corpus.
 
-## Immediate next task
+## Immediate next controlled work
 
 ```math
-\boxed{\text{execute frozen raw-data acquisition}\rightarrow\text{row metrics}\rightarrow R1{:}R8\rightarrow\textbf{freeze or reject candidate split}.}
+\boxed{
+\text{H1 raw-data qualification}
+\parallel
+\text{H2 empirical qualification}
+\parallel
+\text{H3 preregistration closure}
+\rightarrow
+\text{H4 intervention/accounting preregistration}
+\rightarrow
+\text{H5 joint-decision preregistration}.
+}
 ```
 
-No calibration, UQ or confirmatory H1 run is authorized before this gate passes.
+No confirmatory execution is authorized before its declared prerequisite gates pass.
