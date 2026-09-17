@@ -29,7 +29,7 @@ where `V_P` denotes relevant buses or assets and `E_P` denotes electrical connec
 \mathcal G_T=(V_T,E_T),
 ```
 
-where `V_T` contains transportation nodes and `E_T` admissible road links or other physical connections. These graphs define structure only; they do not by themselves specify electrical physics, traffic dynamics, failure propagation, or recovery behavior.
+where `V_T` contains transportation nodes and `E_T` admissible road links or other physical connections. These graphs define structure only; they do not by themselves specify electrical physics, traffic dynamics, failure propagation, or recovery behavior. In the reasoning architecture of the thesis, the **System-of-Systems representation operationalizes this structural level of the systems analysis**: it establishes what constituent systems exist, what functions they perform, where interfaces can occur, and which relationships require subsequent causal qualification.
 
 The physical coupling between `P` and `T` is represented through **directional dependency mechanisms**. In the power-to-transportation direction,
 
