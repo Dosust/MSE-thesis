@@ -12,12 +12,14 @@ on:
       - "config/austin_case_admissibility_v3.json"
       - "config/austin_preconfirmatory_registry_v1.json"
       - "config/austin_road_vintage_v1.json"
+      - "config/austin_travel_sensor_schema_v1.json"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md"
       - "project/AUSTIN_DATA_QC_AND_GATE_PROTOCOL_V1.md"
       - "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md"
       - "project/AUSTIN_TEMPORAL_EVIDENCE_PROTOCOL_V1.md"
+      - "project/AUSTIN_TRAVEL_SENSOR_SCHEMA_PROTOCOL_V1.md"
       - "tests/test_austin_*.py"
 
 permissions:
@@ -48,15 +50,22 @@ jobs:
         run: |
           pytest -q tests/test_austin_*.py
 
-      - name: Validate active Austin v3 case contract
+      - name: Validate active Austin v3 case and open Travel Sensors schema contracts
         run: |
           python - <<'PY'
+          import json
           from methods.austin_case.admissibility import load_contract
+          from methods.austin_case.travel_sensor_schema import validate_registry
+
           contract = load_contract('config/austin_case_admissibility_v3.json')
           assert contract['final_case_admissibility'] is False
           assert contract['gates']['G0_canonical_consistency'] == 'PASS'
           assert contract['temporal_evidence']['G_time'] == 'OPEN'
+
+          schema = json.load(open('config/austin_travel_sensor_schema_v1.json'))
+          assert validate_registry(schema) == 'OPEN'
           print('ACTIVE_V3_CONTRACT_VALID_OPEN')
+          print('TRAVEL_SENSOR_SCHEMA_VALID_OPEN')
           PY
 
       - name: Materialize public Austin core inputs with frozen spatial and temporal provenance
@@ -94,6 +103,23 @@ jobs:
           print(json.dumps(manifest['temporal_gate'], indent=2, sort_keys=True))
           PY
 
+      - name: Materialize and validate compact 2018 radar prejoin evidence
+        run: |
+          set -euo pipefail
+          python methods/austin_case/materialize_radar_inventory.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-radar-prejoin.txt
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path('data/AUS-P5U-2018-V1/qa/radar_2018_prejoin_manifest.json').read_text())
+          assert result['gates']['radar_2018_inventory'] == 'PASS'
+          assert result['gates']['travel_sensor_raw_schema_observed'] == 'PASS'
+          assert result['gates']['travel_sensor_field_mapping'] == 'OPEN'
+          assert result['gates']['radar_2018_location_join'] == 'OPEN'
+          assert result['gates']['G4_traffic_observations'] == 'OPEN'
+          print('RADAR_PREJOIN_EVIDENCE_PASS_MAPPING_OPEN')
+          PY
+
       - name: Freeze execution identity
         if: always()
         run: |
@@ -107,17 +133,22 @@ jobs:
             sha256sum config/austin_case_admissibility_v3.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
             sha256sum config/austin_road_vintage_v1.json
+            sha256sum config/austin_travel_sensor_schema_v1.json
             sha256sum project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md
             sha256sum project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md
             sha256sum project/AUSTIN_TEMPORAL_EVIDENCE_PROTOCOL_V1.md
+            sha256sum project/AUSTIN_TRAVEL_SENSOR_SCHEMA_PROTOCOL_V1.md
             sha256sum methods/austin_case/materialize_public_data.py
             sha256sum methods/austin_case/materialize_public_data_v2.py
             sha256sum methods/austin_case/materialize_public_data_v3.py
             sha256sum methods/austin_case/materialize_public_data_v4.py
+            sha256sum methods/austin_case/materialize_radar_inventory.py
             sha256sum methods/austin_case/materialize_service_area.py
             sha256sum methods/austin_case/data_qc.py
             sha256sum methods/austin_case/road_vintage.py
             sha256sum methods/austin_case/temporal_evidence.py
+            sha256sum methods/austin_case/travel_sensor_schema.py
+            sha256sum methods/austin_case/radar_2018.py
             sha256sum methods/austin_case/admissibility.py
           } | tee austin-case-evidence/execution-identity.txt
 
@@ -134,3 +165,4 @@ jobs:
             austin-materialization-v4.txt
             austin-service-area.txt
             austin-raw-qc.txt
+            austin-radar-prejoin.txt
