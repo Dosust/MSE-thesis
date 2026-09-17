@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "date": "2026-09-18",
+  "case_id": "AUS-P5U-2018-V1",
+  "status": "SOURCE_HIERARCHY_FROZEN_EXECUTION_OPEN",
+  "primary": {
+    "id": "txdot_roadway_inventory_2018",
+    "name": "TxDOT Roadway Inventory 2018",
+    "endpoint": "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/ArcGIS/rest/services/TxDOT_Roadway_Inventory_2018/FeatureServer/0",
+    "inventory_year": 2018,
+    "geometry": "polyline",
+    "native_crs": "EPSG:4269",
+    "source_family": "TxDOT Geospatial Roadway Inventory Database (GRID)",
+    "role": "PRIMARY_EXACT_2018_ANNUAL_INVENTORY",
+    "source_qualified": true,
+    "raw_materialized": false,
+    "spatial_overlap_verified": false,
+    "topology_qa_pass": false,
+    "repair_access_pass": false
+  },
+  "sensitivity": [
+    {
+      "id": "austin_ctn_current",
+      "name": "City of Austin Comprehensive Transportation Network",
+      "endpoint": "https://maps.austintexas.gov/arcgis/rest/services/Shared/Transportation_1/MapServer/22",
+      "native_crs": "EPSG:2277",
+      "source_origin": "created 2017-2018",
+      "state": "CURRENT_LIVE_UPDATED_REGULARLY",
+      "role": "CURRENT_SEMANTIC_TOPOLOGY_SENSITIVITY",
+      "strict_2018_snapshot": false
+    },
+    {
+      "id": "austin_current_street_centerline",
+      "name": "City of Austin Street Centerline",
+      "endpoint": "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/TRANSPORTATION_street_segment/FeatureServer/0",
+      "role": "CURRENT_GEOMETRY_SENSITIVITY",
+      "strict_2018_snapshot": false
+    }
+  ],
+  "gates": {
+    "R0_source_qualification": "PASS",
+    "R1_primary_materialization": "OPEN",
+    "R2_p5u_spatial_overlap": "OPEN",
+    "R3_topology_qa": "OPEN",
+    "R4_repair_access": "OPEN",
+    "R5_current_source_sensitivity": "OPEN"
+  },
+  "final_road_admissibility": false,
+  "prohibitions": [
+    "Do not call live CTN a frozen 2018 network.",
+    "Do not derive travel time from geometric distance alone.",
+    "Do not infer passability, capacity, repair delay, or speed without qualified evidence.",
+    "Do not select the road source after inspecting H1-H5 outcomes."
+  ]
+}
