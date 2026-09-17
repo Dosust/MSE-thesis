@@ -1,8 +1,11 @@
 # Chapter 2 — Literature Review and Theoretical Foundations
 
+**Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
+**Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
+
 ## Purpose
 
-Determine what is established, contradictory, limited, unvalidated and unresolved before proposing the thesis framework.
+Determine what is established, contradictory, limited, unvalidated and unresolved before proposing the thesis framework. Chapter 2 provides the evidence and theoretical foundation for Chapter 1 gap claims and Chapter 3 constructs.
 
 ## Core review blocks
 
@@ -14,11 +17,14 @@ Determine what is established, contradictory, limited, unvalidated and unresolve
 - power–transportation coupling;
 - informational/cyber dependencies;
 - organizational/institutional dependencies;
-- dynamic/cascading/recovery models;
+- dynamic/cascading/recovery and spatiotemporal propagation;
 - observation/estimation/control;
-- viability/invariance/reachability;
-- resilience and sustainability;
-- adaptive transformation pathways;
+- viability/invariance/reachability and uncertainty;
+- conventional resilience curves/metrics;
+- intervention effectiveness and resource efficiency;
+- resilience–sustainability consequences and accounting boundaries;
+- robust/multiobjective engineering decision under uncertainty;
+- adaptive/sequential transformation as a conditional extension;
 - intersection-gap synthesis.
 
 ## Evidence object
@@ -27,12 +33,51 @@ Determine what is established, contradictory, limited, unvalidated and unresolve
 \boxed{\mathcal E_Q=(E_Q^+,E_Q^-,A_Q,M_Q,V_Q,U_Q,G_Q)}
 ```
 
-The chapter is not a bibliography accumulation. Each subsection must end with established knowledge, methods, assumptions, validation evidence, limitations/contradictions and the remaining question.
+where each review block retains supporting evidence, contrary/rival evidence, assumptions, methods, validation evidence, uncertainty/limitations and the unresolved engineering question.
+
+The chapter is not a bibliography accumulation. Each subsection must end with:
+
+```math
+\boxed{
+\text{established knowledge}
+\rightarrow\text{definitions}
+\rightarrow\text{methods/assumptions}
+\rightarrow\text{validation limits}
+\rightarrow\text{contradictions}
+\rightarrow\text{remaining question}.
+}
+```
+
+## Concept definition and operationalization register
+
+For every thesis-critical concept, maintain:
+
+```math
+\boxed{
+\text{literature definitions}
+\rightarrow\text{disagreements/boundaries}
+\rightarrow\text{adopted thesis definition}
+\rightarrow\text{operational/mathematical representation}.
+}
+```
+
+Mandatory concepts include dependency, interdependency, interface, service requirement, resilience, viability, reachability/recovery, probability/confidence, criticality, effectiveness, efficiency, sustainability, feasibility and transformation.
+
+A concept must not be treated as measured/modelled until its operational representation and validity boundary are declared.
 
 ## Search discipline
 
 Primary evidence enters through the active de novo search/FTEE/EGMIV protocols. Historical corpora may audit coverage but may not bypass current eligibility rules.
 
+Novelty remains a separate reproducible audit. Absence from a selected review corpus is not proof of absence from the field.
+
+## Citation and inference discipline
+
+- externally sourced scientific claims require adjacent verified APA 7 support;
+- source-derived equations, parameters, algorithms and thresholds require adjacent attribution;
+- source evidence, thesis derivation, hypothesis and assumption remain distinct;
+- evidence quality, system/population, method, geography/time and validity domain must match the claim being supported.
+
 ## Exit gate
 
-No gap is considered verified until the declared search and evidence-qualification process supports it. See `../00_governance/THESIS_COMPLETION_GATES.md`.
+No gap is considered verified until the declared search and evidence-qualification process supports it. No Chapter-3 construct is considered evidence-grounded unless its conceptual definition, mechanism and applicable literature foundation are traceable. See `../00_governance/THESIS_COMPLETION_GATES.md`.
