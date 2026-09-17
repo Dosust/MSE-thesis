@@ -57,8 +57,7 @@ Information, communication, institutional constraints, and human–infrastructur
 The unresolved engineering question is whether, **under the same physical disturbance**, differences in observation quality, state estimation, information availability, authority, coordination, personnel, equipment, or response delay materially change the feasible action set and resulting service trajectories. In the thesis this is represented conceptually as
 
 ```math
-\boxed{
-u(t)=\pi\!\left(\hat X(t),I(t),O(t)\right),}
+\boxed{u(t)=\pi\!\left(\hat X(t),I(t),O(t)\right),}
 ```
 
 so that physical state `X(t)` alone does not determine realized response. The matched comparison is
