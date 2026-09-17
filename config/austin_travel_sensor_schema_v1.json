@@ -7,11 +7,17 @@
     "name": "Travel Sensors",
     "dataset_id": "6yd9-yz29",
     "endpoint": "https://data.austintexas.gov/resource/6yd9-yz29.json",
+    "schema_metadata_endpoint": "https://data.austintexas.gov/api/views/6yd9-yz29/columns.json",
+    "schema_metadata_provenance": "Data.gov harvested distribution describedBy endpoint",
     "temporal_role": "RETROSPECTIVE_LOCATION_METADATA",
     "exact_2018_snapshot": false,
     "semantic_join": "Radar Traffic Counts int_id is City KITS ID and joins to the Travel Sensors KITS-ID field"
   },
   "status": "OPEN",
+  "metadata_evidence": {
+    "columns_metadata_sha256": null,
+    "column_count": null
+  },
   "raw_evidence": {
     "raw_data_sha256": null,
     "raw_row_count": null,
@@ -26,6 +32,7 @@
   },
   "mapping_evidence_basis": null,
   "verification": {
+    "official_metadata_mapping_unique": false,
     "selected_fields_observed": false,
     "kits_values_valid": false,
     "kits_unique_or_resolution_versioned": false,
@@ -35,7 +42,7 @@
     "road_overlap_verified": false
   },
   "prohibitions": [
-    "Do not guess API field names from display labels.",
+    "Do not guess API field names from display labels alone; an official metadata fieldName/type and raw observed key are required.",
     "Do not infer the KITS field from numeric type alone.",
     "Do not infer coordinates from arbitrary numeric pairs.",
     "Do not impute missing locations.",
