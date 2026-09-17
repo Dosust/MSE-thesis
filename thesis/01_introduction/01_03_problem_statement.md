@@ -4,6 +4,28 @@ The `P–T–I–O` system defined in Section 1.2 presents an engineering proble
 
 A first difficulty is that **structure, causal dependency, and dynamics are different scientific objects**. A multilayer representation can identify components and candidate cross-system relations, but an interlayer edge does not by itself establish why a receiver changes state, under what conditions the effect becomes active, how large the effect is, or how it evolves through time. Reviews of interdependent-infrastructure resilience continue to identify limitations associated with interdependency representation, performance evolution, high-resolution observations, and uncertainty (Wang et al., 2024; Ghasemkhani et al., 2026). The engineering requirement is therefore to move from a candidate structural relation to an evidence-qualified directional dependency mechanism and then to a physical dynamic representation whose assumptions and validity domain are explicit.
 
+This requirement follows an explicit systems-thinking progression from visible symptoms toward generative structure and mechanism:
+
+```math
+\boxed{
+\begin{aligned}
+\text{Observed event}
+&\rightarrow
+\text{recurrent spatiotemporal pattern}\\
+&\rightarrow
+\text{underlying SoS structure}\\
+&\rightarrow
+\text{causal dependency mechanism}\\
+&\rightarrow
+\text{dynamic consequence}\\
+&\rightarrow
+\text{feasible engineering action}.
+\end{aligned}
+}
+```
+
+This progression prevents observable consequences—such as outages, congestion, or delayed recovery—from being mistaken for their underlying causes and provides the reasoning bridge from System-of-Systems architecture to complex-system dynamics.
+
 A second difficulty is that **physical state does not uniquely determine feasible response**. Infrastructure operators act through measurements, state estimates, information availability, organizational authority, coordination, personnel, equipment, and other resource constraints. Infrastructure-resilience research increasingly recognizes that engineered assets, institutions, and human actors jointly shape response and adaptation (Rasoulkhani & Mostafavi, 2018; Chester et al., 2021). Consequently, two physically similar disruption states may admit different responses if what can be observed, authorized, coordinated, or executed differs. The thesis therefore preserves the distinction
 
 ```math
