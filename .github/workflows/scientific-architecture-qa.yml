@@ -48,6 +48,7 @@ jobs:
       - name: Python syntax check
         run: |
           python -m py_compile methods/architecture/viability_geometry.py
+          python -m py_compile methods/austin_case/admissibility.py
           python -m py_compile tools/thesis_display_lint.py
           python -m py_compile tools/normalize_github_math.py
 
@@ -59,6 +60,9 @@ jobs:
 
       - name: Numerical geometry smoke tests
         run: pytest -q tests/test_viability_geometry.py
+
+      - name: Austin case-study admissibility regression tests
+        run: pytest -q tests/test_austin_case_admissibility.py
 
       - name: Validate proposition and hypothesis registries
         run: |
