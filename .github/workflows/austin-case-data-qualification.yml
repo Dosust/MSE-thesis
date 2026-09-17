@@ -1,0 +1,95 @@
+name: Austin case data qualification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/austin-case-data-qualification.yml"
+      - "methods/austin_case/**"
+      - "config/austin_case_admissibility_v1.json"
+      - "config/austin_preconfirmatory_registry_v1.json"
+      - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"
+      - "project/AUSTIN_DATA_QC_AND_GATE_PROTOCOL_V1.md"
+      - "tests/test_austin_*.py"
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: "0"
+
+jobs:
+  qualify-public-data:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deterministic QA dependencies
+        run: |
+          python -m pip install --disable-pip-version-check "pip==24.2"
+          python -m pip install "pytest==8.3.5" "shapely==2.0.6" "pyproj==3.7.0" "networkx==3.4.2"
+
+      - name: Run Austin pre-data regression tests
+        run: |
+          pytest -q \
+            tests/test_austin_case_admissibility.py \
+            tests/test_austin_public_materialization.py \
+            tests/test_austin_service_area_source.py \
+            tests/test_austin_preconfirmatory.py \
+            tests/test_austin_data_qc.py \
+            tests/test_austin_radar_2018.py
+
+      - name: Materialize public Austin core inputs
+        run: |
+          set -euo pipefail
+          python methods/austin_case/materialize_public_data.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-materialization.txt
+          python methods/austin_case/materialize_service_area.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-service-area.txt
+
+      - name: Execute immutable raw-manifest QC
+        run: |
+          set -euo pipefail
+          python - <<'PY' | tee austin-raw-qc.txt
+          import json
+          from pathlib import Path
+          from methods.austin_case.data_qc import validate_raw_manifest
+          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest.json')
+          manifest = json.loads(manifest_path.read_text())
+          print(json.dumps(validate_raw_manifest(manifest, root=Path('.')), indent=2, sort_keys=True))
+          PY
+
+      - name: Freeze execution identity
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p austin-case-evidence
+          {
+            echo "CODE_SHA=$(git rev-parse HEAD)"
+            echo "RUN_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            sha256sum config/austin_case_admissibility_v1.json
+            sha256sum config/austin_preconfirmatory_registry_v1.json
+            sha256sum methods/austin_case/materialize_public_data.py
+            sha256sum methods/austin_case/data_qc.py
+          } | tee austin-case-evidence/execution-identity.txt
+
+      - name: Upload immutable Austin qualification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: austin-case-qualification-${{ github.sha }}
+          if-no-files-found: warn
+          retention-days: 90
+          path: |
+            data/AUS-P5U-2018-V1/
+            austin-case-evidence/
+            austin-materialization.txt
+            austin-service-area.txt
+            austin-raw-qc.txt
