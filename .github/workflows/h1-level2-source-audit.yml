@@ -1,0 +1,80 @@
+name: H1 Level2 Frozen Source Audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/h1-level2-source-audit.yml'
+      - 'models/H1/level2/audit_inputs.py'
+
+permissions:
+  contents: read
+
+jobs:
+  audit-frozen-greenevt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GREENEVT_COMMIT: 6aff1cac48869ccfa0183643979f5f04b04e1124
+      UDS_SHA256: 74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724
+      UDS_SIZE: '107778048'
+      SUMO_SHA256: f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06
+      SUMO_SIZE: '351967227'
+
+    steps:
+      - name: Checkout thesis repository
+        uses: actions/checkout@v4
+
+      - name: Install Git LFS
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y git-lfs
+          git lfs install
+
+      - name: Clone frozen GreenEVT without automatic LFS smudge
+        env:
+          GIT_LFS_SKIP_SMUDGE: '1'
+        run: |
+          git clone https://github.com/GreenEVT/GreenEVT.git external/GreenEVT
+          cd external/GreenEVT
+          git checkout --detach "$GREENEVT_COMMIT"
+          test "$(git rev-parse HEAD)" = "$GREENEVT_COMMIT"
+
+      - name: Materialize only required GreenEVT LFS objects
+        working-directory: external/GreenEVT
+        run: |
+          git lfs pull --include='data/UDS.db,data/sumo_network/greensboro.net.xml' --exclude=''
+
+      - name: Verify exact LFS bytes before parsing
+        working-directory: external/GreenEVT
+        run: |
+          uds_hash="$(sha256sum data/UDS.db | awk '{print $1}')"
+          uds_size="$(stat -c '%s' data/UDS.db)"
+          sumo_hash="$(sha256sum data/sumo_network/greensboro.net.xml | awk '{print $1}')"
+          sumo_size="$(stat -c '%s' data/sumo_network/greensboro.net.xml)"
+          test "$uds_hash" = "$UDS_SHA256"
+          test "$uds_size" = "$UDS_SIZE"
+          test "$sumo_hash" = "$SUMO_SHA256"
+          test "$sumo_size" = "$SUMO_SIZE"
+          printf 'UDS.db %s %s\n' "$uds_hash" "$uds_size"
+          printf 'greensboro.net.xml %s %s\n' "$sumo_hash" "$sumo_size"
+
+      - name: Run Level-2 source/schema/topology audit
+        run: |
+          mkdir -p ci_artifacts
+          python models/H1/level2/audit_inputs.py \
+            --greenevt external/GreenEVT \
+            --out ci_artifacts/input_audit_ci.json
+
+      - name: Record frozen source commit
+        run: |
+          git -C external/GreenEVT rev-parse HEAD > ci_artifacts/greenevt_commit.txt
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-level2-source-audit
+          path: ci_artifacts/
+          if-no-files-found: warn
+          retention-days: 30
