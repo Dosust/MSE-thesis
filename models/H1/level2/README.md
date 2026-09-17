@@ -24,6 +24,7 @@ SMART-DS is realistic synthetic infrastructure, not the actual Greensboro utilit
 source acquisition/audit
 -> pre-simulation feeder features
 -> outcome-blind development/held-out selection
+-> frozen case manifest
 -> canonical dependency registry
 -> coherent flood field + hazard-response maps
 -> parameter freeze
@@ -40,6 +41,7 @@ source acquisition/audit
 - `config/protocol_v1.json` — machine-readable gate state.
 - `config/source_manifest_v1.json` — authoritative data/method provenance.
 - `config/protocol_status_v1.json` — generated current gate audit.
+- `config/case_manifest_template.json` — non-executable template that becomes the sole authority for realistic case geometry after feeder selection.
 - `registries/dependency_registry_v1.csv` — directed Level-2 dependencies under the canonical thesis dependency contract.
 - `registries/parameter_registry_v1.csv` — parameter provenance/uncertainty registry.
 - `registries/scenario_matrix_v1.csv` — matched comparison and ablation design.
@@ -47,8 +49,9 @@ source acquisition/audit
 - `registries/feeder_features_template.csv` — required inputs to outcome-blind feeder selection.
 - `select_feeders.py` — deterministic pre-result feeder selector.
 - `validate_protocol.py` — structural/freeze/authorization guard.
-- `acquire_level2.py`, `audit_inputs.py`, `build_reduced_case.py`, `render_level2_map.py` — source acquisition, audit and spatial-case tooling.
-- `run_level2.py` — preview fixture and realistic-run gate.
+- `acquire_level2.py`, `audit_inputs.py`, `render_level2_map.py` — source acquisition, audit and visualization tooling.
+- `build_reduced_case.py` — validates and materializes only a previously frozen case manifest; it no longer ranks/selects buses internally.
+- `run_level2.py` — preview fixture and protocol-bound realistic-run gate.
 
 ## Commands
 
@@ -56,8 +59,9 @@ source acquisition/audit
 python acquire_level2.py --dest external/GreenEVT
 python audit_inputs.py --greenevt external/GreenEVT --out input_audit.json
 python select_feeders.py --features registries/feeder_features.csv --out feeder_selection.json
+# after feeder selection + audited bus/road extraction, freeze a copy of config/case_manifest_template.json
+python build_reduced_case.py --greenevt external/GreenEVT --case-manifest config/case_manifest_development.json --protocol config/protocol_v1.json --out case_bundle.json
 python validate_protocol.py --protocol config/protocol_v1.json --root . --out config/protocol_status_v1.json
-python build_reduced_case.py --greenevt external/GreenEVT --out case_bundle.json
 python run_level2.py --case case_bundle.json --protocol config/protocol_v1.json --out results.json
 ```
 
