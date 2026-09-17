@@ -1,0 +1,28 @@
+{
+  "selection_id": "H1-L2-FEEDER-SELECTION-V1",
+  "protocol": "models/H1/level2/PROTOCOL_V1.md",
+  "algorithm": "models/H1/level2/select_feeders.py",
+  "source_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+  "required_feature_vector": [
+    "N_P",
+    "N_T",
+    "N_I",
+    "P_max",
+    "L_T",
+    "R_T",
+    "E_H"
+  ],
+  "candidate_inventory_count": 61,
+  "complete_feature_rows": 0,
+  "selection_status": "BLOCKED_PENDING_COMPLETE_FEATURE_MATRIX",
+  "development_feeder_id": null,
+  "heldout_feeder_id": null,
+  "selection_authorized": false,
+  "reason": [
+    "UDS.db LFS object is not materialized; interface crosswalks and N_I cannot be qualified.",
+    "greensboro.net.xml LFS object is not materialized; N_T, L_T, R_T and SUMO-edge validation cannot be computed.",
+    "E_H requires the preregistered pre-simulation hazard exposure layer and has not yet been computed."
+  ],
+  "anti_bias_rule": "Do not choose feeder IDs manually or using M0/M1/M2 outputs. Run the frozen selector only after every eligible row has complete source-qualified pre-simulation features.",
+  "scientific_interpretation": "Data-access/qualification block; not H1 falsification and not an experimental result."
+}
