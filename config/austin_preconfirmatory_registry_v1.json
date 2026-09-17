@@ -1,0 +1,270 @@
+{
+  "version": "1.0",
+  "date": "2026-09-18",
+  "case_id": "AUS-P5U-2018-V1",
+  "authority": [
+    "project/CANONICAL_7_STAGE_FRAMEWORK_V2.md",
+    "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+    "config/austin_case_admissibility_v1.json",
+    "project/H1_THRESHOLD_PROVENANCE_V1.md",
+    "project/H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md",
+    "project/H3_UNCERTAINTY_AND_PROBABILITY_SPECIFICATION_V1.md",
+    "project/H3_PREREGISTRATION_V1.md"
+  ],
+  "status": "PRECONFIRMATORY_STRUCTURE_FROZEN_VALUES_OPEN",
+  "interdependencies": [
+    {
+      "id": "PT_SIGNAL_POWER",
+      "direction": "P->T",
+      "source_entity": "synthetic SMART-DS supplying power component",
+      "receiver_entity": "City of Austin traffic signal",
+      "mechanism": "loss or degradation of electric supply changes signal operability and therefore intersection service",
+      "carrier": "electric power",
+      "mapping": "reproducible synthetic spatial/service mapping; never interpreted as observed Austin Energy feeder assignment",
+      "activation": "power component unavailable or below declared signal-supply requirement",
+      "w_ij": "OPEN_CALIBRATION",
+      "delta_ij": "OPEN_EVIDENCE",
+      "tau_ij": "OPEN_EVIDENCE",
+      "a_ij": "OPEN_STATE_MODEL",
+      "mode": "OPEN_HYBRID_MODE_SET",
+      "history": "OPEN_IF_MEMORY_REQUIRED",
+      "evidence_level": "E2_MECHANISTIC_PEER_REVIEWED_PLUS_LOCAL_SIGNAL_LOCATIONS",
+      "evidence": [
+        "https://doi.org/10.1080/10286608.2025.2602872",
+        "https://doi.org/10.1007/s40565-019-0516-7",
+        "https://www.sciencedirect.com/science/article/pii/S0951832016300710"
+      ],
+      "status": "MECHANISM_ACCEPTED_MAPPING_AND_PARAMETERS_OPEN"
+    },
+    {
+      "id": "TP_REPAIR_ACCESS",
+      "direction": "T->P",
+      "source_entity": "road network accessibility/travel state",
+      "receiver_entity": "damaged synthetic power component restoration process",
+      "mechanism": "road state changes repair-crew travel time and reachability, changing restoration timing",
+      "carrier": "crew/resource mobility",
+      "mapping": "road-graph route from declared crew origin to damaged synthetic power asset",
+      "activation": "power restoration requires mobile repair resource",
+      "w_ij": "DERIVED_FROM_TRAVEL_AND_RESTORATION_MODEL_NOT_FREE_SCALAR",
+      "delta_ij": "TRAVEL_TIME_DERIVED_FROM_QUALIFIED_ROAD_MODEL",
+      "tau_ij": "OPEN_REPAIR_PROCESS_EVIDENCE",
+      "a_ij": "ROAD_PATH_ACCESSIBILITY_STATE",
+      "mode": "OPEN_HYBRID_MODE_SET",
+      "history": "OPEN_IF_CONGESTION_OR_REPAIR_MEMORY_REQUIRED",
+      "evidence_level": "E2_MECHANISTIC_PEER_REVIEWED_PLUS_PUBLIC_ROAD_NETWORK",
+      "evidence": [
+        "https://doi.org/10.1007/s40565-019-0524-7",
+        "https://doi.org/10.1080/10286608.2025.2602872",
+        "https://www.sciencedirect.com/science/article/pii/S0951832016300710"
+      ],
+      "status": "MECHANISM_ACCEPTED_MAPPING_AND_PARAMETERS_OPEN"
+    }
+  ],
+  "common_cause_pathways": [
+    {
+      "id": "FLOOD_COMMON_CAUSE",
+      "path": "flood -> {power exposure, road exposure}",
+      "is_interdependency": false,
+      "hazard_source": "City/FEMA floodplain layer for spatial exposure only",
+      "prohibition": "floodplain membership must not be converted to event-time flood depth or failure probability without a qualified hazard/fragility model",
+      "status": "SOURCE_QUALIFIED_MODEL_OPEN"
+    }
+  ],
+  "parameter_registry": [
+    {
+      "id": "P_SIGNAL_MAP_DISTANCE",
+      "symbol": "d_map",
+      "meaning": "distance or service-area criterion for synthetic power-to-signal mapping",
+      "unit": "m",
+      "source_class": "case_spatial_QA",
+      "estimation": "derive from retained geometries before labels/results",
+      "range": "OPEN",
+      "uncertainty": "OPEN",
+      "identifiability": "must reject mappings outside preregistered admissible rule",
+      "hypotheses": ["H1", "H3"],
+      "status": "OPEN"
+    },
+    {
+      "id": "T_REPAIR_TRAVEL",
+      "symbol": "delta_repair",
+      "meaning": "road-network travel time from crew origin to damaged power asset",
+      "unit": "time",
+      "source_class": "transport_network_plus_traffic_observations",
+      "estimation": "network travel-time model calibrated only on development data",
+      "range": "OPEN",
+      "uncertainty": "OPEN",
+      "identifiability": "route and travel-time support must exist",
+      "hypotheses": ["H1", "H3", "H4"],
+      "status": "OPEN"
+    },
+    {
+      "id": "P_REPAIR_ONSITE",
+      "symbol": "tau_repair",
+      "meaning": "onsite component repair duration after crew arrival",
+      "unit": "time",
+      "source_class": "empirical_or_literature_transferability_required",
+      "estimation": "no distribution until probability-admissibility gate passes",
+      "range": "OPEN",
+      "uncertainty": "OPEN",
+      "identifiability": "separate travel from onsite repair",
+      "hypotheses": ["H1", "H3", "H4"],
+      "status": "OPEN"
+    }
+  ],
+  "threshold_registry": [
+    {
+      "id": "K_POWER_PHYSICAL",
+      "object": "K_phys",
+      "quantity": "power-system operating limits",
+      "value": "OPEN_MODEL_NATIVE",
+      "unit": "model-native",
+      "provenance_required": "SMART-DS/OpenDSS equipment/model specification or applicable engineering authority",
+      "rule": "do not substitute service-loss thresholds for equipment limits",
+      "status": "OPEN"
+    },
+    {
+      "id": "K_SP",
+      "object": "K_svc",
+      "quantity": "minimum acceptable power service S_P",
+      "value": "OPEN_CASE_REQUIREMENT",
+      "unit": "fraction",
+      "provenance_required": "same-quantity case service requirement or explicit preregistered assumption",
+      "rule": "no universal percent threshold",
+      "status": "OPEN"
+    },
+    {
+      "id": "K_ST",
+      "object": "K_svc",
+      "quantity": "minimum acceptable transportation service S_T",
+      "value": "OPEN_CASE_REQUIREMENT",
+      "unit": "fraction",
+      "provenance_required": "same-quantity case service requirement or explicit preregistered assumption",
+      "rule": "LOTTR/TTI/count accuracy may not be copied directly into S_T",
+      "status": "OPEN"
+    },
+    {
+      "id": "G_REC",
+      "object": "G_rec",
+      "quantity": "recovered service target and optional dwell",
+      "value": "OPEN_CASE_REQUIREMENT",
+      "unit": "fraction/time",
+      "provenance_required": "declared recovery requirement",
+      "rule": "G_rec must remain subset of K",
+      "status": "OPEN"
+    },
+    {
+      "id": "TV_TR",
+      "object": "T_V,T_R",
+      "quantity": "maintainability and recovery horizons",
+      "value": "OPEN_DECISION_HORIZON",
+      "unit": "time",
+      "provenance_required": "hazard/response/decision use",
+      "rule": "T_V and T_R need not be equal",
+      "status": "OPEN"
+    }
+  ],
+  "uncertainty_registry": [
+    {
+      "id": "U_HAZARD",
+      "source": "hazard",
+      "quantity": "flood exposure/severity",
+      "probability_law": "NONE_UNTIL_QUALIFIED",
+      "fallback": "scenario_or_bounded_uncertainty",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_TRAFFIC",
+      "source": "demand",
+      "quantity": "traffic demand/travel time",
+      "probability_law": "NONE_UNTIL_QUALIFIED",
+      "fallback": "empirical_scenarios_or_bounds",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_REPAIR",
+      "source": "repair",
+      "quantity": "onsite repair duration/resource availability",
+      "probability_law": "NONE_UNTIL_QUALIFIED",
+      "fallback": "interval_or_scenario",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_COUPLING",
+      "source": "interdependency",
+      "quantity": "signal-power and repair-access mapping/model discrepancy",
+      "probability_law": "NONE_UNTIL_QUALIFIED",
+      "fallback": "mapping_sensitivity",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_OBSERVATION",
+      "source": "observation",
+      "quantity": "traffic and power service observation error",
+      "probability_law": "NONE_UNTIL_QUALIFIED",
+      "fallback": "bounded_observation_error",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_MODEL_FORM",
+      "source": "model_form",
+      "quantity": "structural discrepancy among admissible model families",
+      "probability_law": "NONE",
+      "fallback": "conditional_model_set_reporting",
+      "status": "OPEN"
+    },
+    {
+      "id": "U_NUMERICAL",
+      "source": "numerical",
+      "quantity": "time-step/grid/solver approximation error",
+      "probability_law": "NONE",
+      "fallback": "convergence_bound",
+      "status": "VERIFY_PER_FINAL_MODEL"
+    }
+  ],
+  "preregistration": {
+    "H1": {
+      "contrast": "M2 dynamic causal coupling vs M1 static coupling; M0 independent reference",
+      "primary_metric": "OPEN_BEFORE_CONFIRMATORY_RESULTS",
+      "delta": "OPEN_PROVENANCE",
+      "matched_inputs_required": true,
+      "heldout_validation_required_for_predictive_claim": true,
+      "status": "NOT_AUTHORIZED"
+    },
+    "H2": {
+      "contrast": "P+T vs P+T+I vs P+T+I+O under matched physical conditions",
+      "primary_metric": "OPEN_OR_IN_EXISTING_PHASE1_PREREGISTRATION",
+      "delta": "OPEN_PROVENANCE",
+      "matched_inputs_required": true,
+      "status": "NOT_AUTHORIZED"
+    },
+    "H3": {
+      "contrast": "Q_conv vs Q_conv union viability-reachability information",
+      "primary_metric": "OPEN_BY_FROZEN_OUTCOME_TYPE_GATE",
+      "delta": "OPEN_PROVENANCE",
+      "matched_inputs_required": true,
+      "status": "NOT_AUTHORIZED"
+    },
+    "H4": {
+      "contrast": "resilience-effective interventions compared by [accessibility, energy, carbon, cost] consequence vectors",
+      "primary_metric": "PRESPECIFIED_VECTOR_DIFFERENCE_RULE_OPEN",
+      "delta": "OPEN_PROVENANCE",
+      "matched_inputs_required": true,
+      "status": "DEFERRED_UPSTREAM"
+    },
+    "H5": {
+      "contrast": "resilience-only admissible/nondominated set vs joint resilience-sustainability set or decision regret",
+      "primary_metric": "SET_CHANGE_OR_REGRET_RULE_OPEN",
+      "delta": "OPEN_PROVENANCE",
+      "matched_inputs_required": true,
+      "status": "DEFERRED_H4"
+    }
+  },
+  "global_rules": [
+    "No OPEN value may be replaced using confirmatory outcomes.",
+    "No probability distribution is admissible without measurement/sample/support/dependence/calibration gates.",
+    "Common hazard exposure is not P<->T causal interdependency.",
+    "Synthetic power-to-signal spatial mapping is a demonstrator construct, not an observed utility feeder relationship.",
+    "Verification PASS does not imply hypothesis support.",
+    "If empirical/validation evidence remains unavailable, the relevant hypothesis status is NOT TESTED or NOT YET TESTABLE."
+  ]
+}
