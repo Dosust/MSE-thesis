@@ -37,21 +37,15 @@ jobs:
           python -m pip install --disable-pip-version-check "pip==24.2"
           python -m pip install "pytest==8.3.5" "shapely==2.0.6" "pyproj==3.7.0" "networkx==3.4.2"
 
-      - name: Run Austin pre-data regression tests
+      - name: Run complete Austin pre-data regression suite
         run: |
-          pytest -q \
-            tests/test_austin_case_admissibility.py \
-            tests/test_austin_public_materialization.py \
-            tests/test_austin_service_area_source.py \
-            tests/test_austin_preconfirmatory.py \
-            tests/test_austin_data_qc.py \
-            tests/test_austin_radar_2018.py
+          pytest -q tests/test_austin_*.py
 
-      - name: Materialize public Austin core inputs
+      - name: Materialize public Austin core inputs with frozen boundary vintage
         run: |
           set -euo pipefail
-          python methods/austin_case/materialize_public_data.py --root data/AUS-P5U-2018-V1 \
-            | tee austin-materialization.txt
+          python methods/austin_case/materialize_public_data_v2.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-materialization-v2.txt
           python methods/austin_case/materialize_service_area.py --root data/AUS-P5U-2018-V1 \
             | tee austin-service-area.txt
 
@@ -62,7 +56,7 @@ jobs:
           import json
           from pathlib import Path
           from methods.austin_case.data_qc import validate_raw_manifest
-          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest.json')
+          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest_v2.json')
           manifest = json.loads(manifest_path.read_text())
           print(json.dumps(validate_raw_manifest(manifest, root=Path('.')), indent=2, sort_keys=True))
           PY
@@ -78,6 +72,8 @@ jobs:
             sha256sum config/austin_case_admissibility_v1.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
             sha256sum methods/austin_case/materialize_public_data.py
+            sha256sum methods/austin_case/materialize_public_data_v2.py
+            sha256sum methods/austin_case/materialize_service_area.py
             sha256sum methods/austin_case/data_qc.py
           } | tee austin-case-evidence/execution-identity.txt
 
@@ -91,6 +87,6 @@ jobs:
           path: |
             data/AUS-P5U-2018-V1/
             austin-case-evidence/
-            austin-materialization.txt
+            austin-materialization-v2.txt
             austin-service-area.txt
             austin-raw-qc.txt
