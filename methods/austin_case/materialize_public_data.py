@@ -11,7 +11,7 @@ Order of operations
 1. acquire SMART-DS P5U Buscoords from public OEDI S3;
 2. derive a query envelope from documented bus coordinates;
 3. acquire City of Austin boundary/road/signal/flood features intersecting the
-   envelope using ArcGIS REST;
+   envelope using ArcGIS REST with ID-first pagination;
 4. acquire traffic-detector and travel-sensor location tables from Socrata;
 5. freeze raw bytes + SHA-256 + source URLs + row/feature counts in a manifest.
 
@@ -30,7 +30,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
-from typing import Any, Iterable, Mapping
+from typing import Any, Iterable, Mapping, Sequence
 
 CASE_ID = "AUS-P5U-2018-V1"
 USER_AGENT = "MSE-thesis-Austin-admissibility/1.0"
@@ -58,6 +58,7 @@ FLOOD_LAYER = "https://maps.austintexas.gov/gis/rest/Shared/Floodplain/MapServer
 CAMERA_DETECTOR_LOCATIONS = "qpuw-8eeb"
 RADAR_SENSOR_LOCATIONS = "6yd9-yz29"
 SOCRATA_DOMAIN = "https://data.austintexas.gov"
+ARCGIS_PAGE_SIZE = 500
 
 
 class MaterializationError(RuntimeError):
@@ -160,11 +161,42 @@ def bounds(coords: Iterable[tuple[str, float, float]]) -> tuple[float, float, fl
     return min(xs), min(ys), max(xs), max(ys)
 
 
+def _spatial_params(
+    bbox: tuple[float, float, float, float] | None,
+) -> dict[str, str]:
+    if bbox is None:
+        return {}
+    xmin, ymin, xmax, ymax = bbox
+    return {
+        "geometry": f"{xmin},{ymin},{xmax},{ymax}",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": "4326",
+        "spatialRel": "esriSpatialRelIntersects",
+    }
+
+
+def arcgis_ids_url(
+    layer: str,
+    bbox: tuple[float, float, float, float] | None = None,
+    *,
+    where: str = "1=1",
+) -> str:
+    params = {
+        "where": where,
+        "returnIdsOnly": "true",
+        "returnGeometry": "false",
+        "f": "json",
+        **_spatial_params(bbox),
+    }
+    return layer.rstrip("/") + "/query?" + urllib.parse.urlencode(params)
+
+
 def arcgis_query_url(
     layer: str,
     bbox: tuple[float, float, float, float] | None = None,
     *,
     where: str = "1=1",
+    object_ids: Sequence[int] | None = None,
 ) -> str:
     params: dict[str, str] = {
         "where": where,
@@ -173,22 +205,38 @@ def arcgis_query_url(
         "outSR": "4326",
         "f": "geojson",
     }
-    if bbox is not None:
-        xmin, ymin, xmax, ymax = bbox
-        params.update(
-            {
-                "geometry": f"{xmin},{ymin},{xmax},{ymax}",
-                "geometryType": "esriGeometryEnvelope",
-                "inSR": "4326",
-                "spatialRel": "esriSpatialRelIntersects",
-            }
-        )
+    if object_ids is not None:
+        params["objectIds"] = ",".join(str(int(x)) for x in object_ids)
+    params.update(_spatial_params(bbox))
     return layer.rstrip("/") + "/query?" + urllib.parse.urlencode(params)
 
 
+def chunked(values: Sequence[int], size: int = ARCGIS_PAGE_SIZE) -> list[list[int]]:
+    if size <= 0:
+        raise ValueError("chunk size must be positive")
+    return [list(values[i : i + size]) for i in range(0, len(values), size)]
+
+
+def parse_arcgis_ids(payload: bytes) -> tuple[str, list[int]]:
+    obj = json.loads(payload)
+    if not isinstance(obj, Mapping):
+        raise MaterializationError("ArcGIS ID response must be an object")
+    if "error" in obj:
+        raise MaterializationError(f"ArcGIS ID query error: {obj['error']}")
+    oid_field = obj.get("objectIdFieldName") or obj.get("objectIdField")
+    ids = obj.get("objectIds")
+    if not isinstance(oid_field, str) or not oid_field:
+        raise MaterializationError("ArcGIS ID response missing object-ID field name")
+    if ids is None:
+        ids = []
+    if not isinstance(ids, list) or not all(isinstance(value, int) for value in ids):
+        raise MaterializationError("ArcGIS objectIds must be a list of integers")
+    return oid_field, sorted(set(ids))
+
+
 def socrata_export_url(dataset_id: str) -> str:
-    # v2 resource endpoint remains suitable for immutable read-only bulk JSON of
-    # the small detector-location tables and does not require an app token.
+    # The public v2 resource endpoint is used for small location tables; raw
+    # traffic-count observations are not bulk-downloaded at this gate.
     return f"{SOCRATA_DOMAIN}/resource/{dataset_id}.json?$limit=50000"
 
 
@@ -208,11 +256,71 @@ def _find_buscoords_key(listing: bytes) -> str:
         raise MaterializationError(
             f"no Buscoords.dss found under {SMARTDS_OPENDSS_PREFIX}"
         )
-    # A subregion-level Buscoords file is expected directly below opendss/. If
-    # multiple files are returned, choose the shallowest only; the full key is
-    # frozen in the manifest and later QA rejects ambiguity if needed.
     exact.sort(key=lambda key: (key.count("/"), key))
     return exact[0]
+
+
+def acquire_arcgis_layer(
+    layer: str,
+    bbox: tuple[float, float, float, float] | None,
+    raw_dir: pathlib.Path,
+    name: str,
+    *,
+    where: str = "1=1",
+) -> tuple[bytes, dict[str, Any]]:
+    """Acquire every ArcGIS feature via an ID-first paginated contract."""
+    ids_url = arcgis_ids_url(layer, bbox, where=where)
+    ids_payload = fetch(ids_url)
+    ids_record = write_immutable(raw_dir / f"{name}_ids.json", ids_payload)
+    oid_field, object_ids = parse_arcgis_ids(ids_payload)
+
+    pages: list[dict[str, Any]] = []
+    features: list[Any] = []
+    for index, id_page in enumerate(chunked(object_ids)):
+        page_url = arcgis_query_url(layer, bbox, where=where, object_ids=id_page)
+        page_payload = fetch(page_url)
+        page_obj = json.loads(page_payload)
+        if not isinstance(page_obj, Mapping) or not isinstance(page_obj.get("features"), list):
+            raise MaterializationError(f"ArcGIS page is not GeoJSON FeatureCollection: {name} page {index}")
+        page_features = page_obj["features"]
+        if len(page_features) != len(id_page):
+            raise MaterializationError(
+                f"ArcGIS pagination count mismatch for {name} page {index}: "
+                f"requested {len(id_page)}, received {len(page_features)}"
+            )
+        page_record = write_immutable(
+            raw_dir / f"{name}_page_{index:04d}.geojson", page_payload
+        )
+        page_record.update(
+            {
+                "source_url": page_url,
+                "requested_ids": id_page,
+                "feature_count": len(page_features),
+            }
+        )
+        pages.append(page_record)
+        features.extend(page_features)
+
+    merged = {
+        "type": "FeatureCollection",
+        "features": features,
+    }
+    merged_payload = (json.dumps(merged, separators=(",", ":"), sort_keys=True) + "\n").encode()
+    if len(features) != len(object_ids):
+        raise MaterializationError(
+            f"ArcGIS merged count mismatch for {name}: ids={len(object_ids)}, features={len(features)}"
+        )
+    metadata = {
+        "layer": layer,
+        "ids_query_url": ids_url,
+        "ids_sha256": ids_record["sha256"],
+        "object_id_field": oid_field,
+        "object_id_count": len(object_ids),
+        "page_count": len(pages),
+        "pages": pages,
+        "feature_count": len(features),
+    }
+    return merged_payload, metadata
 
 
 def acquire(root: pathlib.Path) -> dict[str, Any]:
@@ -233,7 +341,9 @@ def acquire(root: pathlib.Path) -> dict[str, Any]:
         ],
     }
 
-    listing_url = s3_list_url(SMARTDS_OPENDSS_PREFIX)
+    # Delimiter='/' keeps the listing at the subregion OpenDSS root and avoids
+    # accidental recursive truncation by S3's 1000-key listing limit.
+    listing_url = s3_list_url(SMARTDS_OPENDSS_PREFIX, delimiter="/")
     listing = fetch(listing_url)
     record = write_immutable(raw / "power" / "opendss_listing.xml", listing)
     record["source_url"] = listing_url
@@ -262,11 +372,12 @@ def acquire(root: pathlib.Path) -> dict[str, Any]:
         "fema_floodplain": (FLOOD_LAYER, query_bbox, "1=1"),
     }
     for name, (layer, bbox, where) in geo_sources.items():
-        url = arcgis_query_url(layer, bbox, where=where)
-        payload = fetch(url)
-        record = write_immutable(raw / "gis" / f"{name}.geojson", payload)
-        record.update({"source_url": url, "feature_count": json_count(payload)})
-        manifest["objects"][name] = record
+        payload, metadata = acquire_arcgis_layer(
+            layer, bbox, raw / "gis" / name, name, where=where
+        )
+        merged_record = write_immutable(raw / "gis" / f"{name}.geojson", payload)
+        merged_record.update(metadata)
+        manifest["objects"][name] = merged_record
 
     traffic_sources = {
         "camera_detector_locations": CAMERA_DETECTOR_LOCATIONS,
