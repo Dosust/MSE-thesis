@@ -19,7 +19,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 2. **[1.2 Coupled P–T–I–O System Context](01_02_coupled_ptio_system_context.md)**
 3. **[1.3 Problem Statement](01_03_problem_statement.md)**
 4. **[1.4 Research Gap](01_04_research_gap.md)**
-5. **1.5 Sustainable Engineering Significance**
+5. **[1.5 Sustainable Engineering Significance](01_05_sustainable_engineering_significance.md)**
 6. **1.6 Scope, Boundaries, and Assumptions**
 7. **1.7 Research Framework and Logic**
 8. **1.8 General Research Objective**
@@ -33,13 +33,14 @@ Target length: **16–18 pages** within the 160-page thesis ceiling unless expli
 
 ## Current drafted prose
 
-Sections **1.1–1.4 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
+Sections **1.1–1.5 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
 
 - 1.1 fixes the dependency/interdependency terminology and establishes the engineering context.
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
 - 1.3 states the engineering problem concisely and removes detailed experimental/VVUQ material that belongs later.
 - 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
-- **Section 1.5 is now authorized for drafting from the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.**
+- 1.5 establishes the Sustainable Engineering significance without conflating resilience, resource efficiency and sustainability; it uses the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.
+- **Section 1.6 is the next Chapter-I drafting task and must formalize the system, hazard, intervention, accounting, uncertainty and exclusion boundaries consistently with the current sustainability admission freeze.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
