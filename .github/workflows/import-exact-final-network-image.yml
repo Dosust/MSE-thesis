@@ -13,21 +13,17 @@ jobs:
   import-image:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Download exact approved PNG and verify bytes
+      - name: Import exact approved PNG
         shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
           mkdir -p figures
           curl -L --fail --retry 3 'https://d2jqrm6oza8nb6.cloudfront.net/datasets/8b5f83eb-d832-41c9-b28c-2592edd64f6c.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiN2FlNjdmY2I0MjY4ZDE5OCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTc2NjM0N30.mgAHR9Ybe-77up1MN0tR8NPUUqRraoW5BGK_jdqUtgw' -o figures/AUGMENTED_PHYSICAL_SUPPORT_MULTILAYER_POWER_TRANSPORTATION_NETWORK_FINAL.png
           echo 'eaa9cb6b0c0d3fd4a6dacf87d1ceaceeaac2d03741e637c1d08688c77ce8e9a9  figures/AUGMENTED_PHYSICAL_SUPPORT_MULTILAYER_POWER_TRANSPORTATION_NETWORK_FINAL.png' | sha256sum -c -
-
-      - name: Commit exact image if changed
-        shell: bash
-        run: |
-          set -euo pipefail
           git config user.name 'Dossiya Dakou'
           git config user.email 'ddakou@asu.edu'
           git add figures/AUGMENTED_PHYSICAL_SUPPORT_MULTILAYER_POWER_TRANSPORTATION_NETWORK_FINAL.png
@@ -36,4 +32,4 @@ jobs:
             exit 0
           fi
           git commit -m 'figures: replace canonical network with exact approved image'
-          git push
+          git push origin HEAD:main
