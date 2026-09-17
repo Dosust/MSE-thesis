@@ -1,10 +1,10 @@
-import copy
 import hashlib
 import json
 
 import pytest
 
 from methods.austin_case.travel_sensor_schema import (
+    SCHEMA_METADATA_ENDPOINT,
     TravelSensorSchemaError,
     observe_schema,
     validate_registry,
@@ -17,10 +17,15 @@ def open_registry():
         "case_id": "AUS-P5U-2018-V1",
         "dataset": {
             "dataset_id": "6yd9-yz29",
+            "schema_metadata_endpoint": SCHEMA_METADATA_ENDPOINT,
             "temporal_role": "RETROSPECTIVE_LOCATION_METADATA",
             "exact_2018_snapshot": False,
         },
         "status": "OPEN",
+        "metadata_evidence": {
+            "columns_metadata_sha256": None,
+            "column_count": None,
+        },
         "raw_evidence": {
             "raw_data_sha256": None,
             "raw_row_count": None,
@@ -35,6 +40,7 @@ def open_registry():
         },
         "mapping_evidence_basis": None,
         "verification": {
+            "official_metadata_mapping_unique": False,
             "selected_fields_observed": False,
             "kits_values_valid": False,
             "kits_unique_or_resolution_versioned": False,
@@ -71,7 +77,11 @@ def frozen_registry():
     keys_digest = hashlib.sha256(
         json.dumps(keys, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
     ).hexdigest()
-    reg.update({"status": "FROZEN", "mapping_evidence_basis": "raw schema + City semantic relationship"})
+    reg.update({"status": "FROZEN", "mapping_evidence_basis": "official City column metadata + raw observed schema + verified 2018 KITS join"})
+    reg["metadata_evidence"] = {
+        "columns_metadata_sha256": "b" * 64,
+        "column_count": 4,
+    }
     reg["raw_evidence"] = {
         "raw_data_sha256": "a" * 64,
         "raw_row_count": 2,
@@ -85,6 +95,7 @@ def frozen_registry():
         "longitude_key": "lon",
     }
     for key in (
+        "official_metadata_mapping_unique",
         "selected_fields_observed",
         "kits_values_valid",
         "kits_unique_or_resolution_versioned",
@@ -100,6 +111,13 @@ def test_complete_frozen_mapping_passes_without_requiring_road_overlap():
     reg = frozen_registry()
     assert reg["verification"]["road_overlap_verified"] is False
     assert validate_registry(reg) == "FROZEN"
+
+
+def test_frozen_mapping_requires_official_metadata_hash():
+    reg = frozen_registry()
+    reg["metadata_evidence"]["columns_metadata_sha256"] = None
+    with pytest.raises(TravelSensorSchemaError, match="column-metadata SHA-256"):
+        validate_registry(reg)
 
 
 def test_frozen_mapping_rejects_unobserved_field_name():
