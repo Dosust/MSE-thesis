@@ -4,6 +4,10 @@ import argparse
 import json
 from pathlib import Path
 
+from validate_protocol import evaluate_protocol
+
+ROOT = Path(__file__).resolve().parent
+
 
 def clamp01(x: float) -> float:
     return max(0.0, min(1.0, x))
@@ -41,7 +45,7 @@ def run_preview(case: dict) -> dict:
         p1 = 1.0 if t >= restore_m1_h or not failed else 0.75
         p2 = 1.0 if t >= restore_m2_h or not failed else 0.75
 
-        # M0 ignores charging feedback; M1 same-step; M2 carries queue memory.
+        # M0 ignores charging feedback; M1 is same-step; M2 carries queue memory.
         phi1 = 1.0 if charger_power_on else 0.0
         mu2 = mu_max if charger_power_on else 0.0
         q = max(0.0, q + dt * (lam - mu2))
@@ -92,37 +96,57 @@ def run_preview(case: dict) -> dict:
     }
 
 
-def validate_realistic(case: dict) -> dict:
+def validate_realistic(case: dict, protocol_status: dict) -> dict:
     buses = case.get("power_buses", [])
     roads = case.get("road_edges", [])
     road_ids = {str(r["id"]) for r in roads}
     missing = [b["id"] for b in buses if str(b.get("sumo_edge_id")) not in road_ids]
-    gates = {
+    geometry_gates = {
         "R1_mode_realistic": case.get("mode") == "realistic",
         "R2_nonempty_power_subset": len(buses) > 0,
         "R3_nonempty_road_subset": len(roads) > 0,
         "R4_bus_edges_present_in_reduced_road_set": len(missing) == 0,
         "R5_missing_inputs_explicitly_declared": bool(case.get("synthetic_inputs_required_before_run")),
     }
+    geometry_ok = all(geometry_gates.values())
+    protocol_ok = protocol_status.get("status") != "STRUCTURAL_PROTOCOL_FAILURE"
+
+    if not geometry_ok:
+        execution_status = "BLOCKED_GEOMETRY_OR_CROSSWALK"
+    elif not protocol_ok:
+        execution_status = "BLOCKED_PROTOCOL_STRUCTURE"
+    elif protocol_status.get("confirmatory_ready"):
+        execution_status = "READY_FOR_CONFIRMATORY_ENGINE_BINDING"
+    else:
+        execution_status = "METHOD_FROZEN_INPUTS_OPEN"
+
     return {
         "level": 2,
         "mode": "realistic",
-        "execution_status": "BLOCKED_PENDING_FROZEN_EXPERIMENT_INPUTS" if all(gates.values()) else "BLOCKED_GEOMETRY_OR_CROSSWALK",
-        "gates": gates,
+        "execution_status": execution_status,
+        "admissible_for_confirmatory_H1": bool(geometry_ok and protocol_status.get("confirmatory_ready")),
+        "geometry_gates": geometry_gates,
+        "protocol_status": protocol_status,
         "missing_bus_edge_crosswalks": missing,
         "next_required_inputs": case.get("synthetic_inputs_required_before_run", []),
         "claim_boundary": case.get("claim_boundary"),
-        "note": "This runner intentionally refuses to invent disturbance/charger/repair parameters for the realistic case. Populate those from frozen evidence or declared sensitivity designs, then bind to OpenDSS/SUMO and the verified M0/M1/M2 engines.",
+        "note": "Realistic execution remains blocked until protocol freeze gates close. Unknown disturbance, hazard, repair, charging, validation, reference, and UQ values must remain explicit rather than being invented to make the run proceed.",
     }
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--case", required=True)
+    ap.add_argument("--protocol", default=str(ROOT / "config" / "protocol_v1.json"))
     ap.add_argument("--out", default="results.json")
     args = ap.parse_args()
     case = json.loads(Path(args.case).read_text())
-    result = run_preview(case) if case.get("mode") == "preview" else validate_realistic(case)
+    if case.get("mode") == "preview":
+        result = run_preview(case)
+    else:
+        ppath = Path(args.protocol)
+        protocol_status = evaluate_protocol(ppath, root=ppath.parent.parent)
+        result = validate_realistic(case, protocol_status)
     Path(args.out).write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({"written": args.out, "mode": result["mode"], "status": result.get("execution_status", "PREVIEW_COMPLETE")}, indent=2))
 
