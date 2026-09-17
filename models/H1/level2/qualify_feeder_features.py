@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Qualify an extracted Level-2 feeder feature matrix for outcome-blind selection.
 
-This step cryptographically binds the CSV produced by extract_feeder_features.py
+This step cryptographically binds the CSV produced by the v1.1 feeder extractor
 to its extraction audit. It does not compute features and it does not select a
 feeder. Its only role is to decide whether the frozen selection algorithm is
 allowed to read the matrix.
@@ -16,8 +16,8 @@ import math
 from pathlib import Path
 
 PREDICATES = ("C_geo", "C_road", "C_interface", "C_hazard", "C_computable")
-FEATURES = ("N_P", "N_T", "N_I", "P_max", "L_T", "R_T", "E_H")
-EXPECTED_SPEC = "FEEDER_FEATURE_SPECIFICATION_V1.md"
+FEATURES = ("N_P", "N_T", "N_I", "P_0", "L_T", "R_T", "E_H")
+EXPECTED_SPEC = "FEEDER_FEATURE_SPECIFICATION_V1_1.md"
 EXPECTED_COMMIT = "6aff1cac48869ccfa0183643979f5f04b04e1124"
 EXPECTED_FEEDER_COUNT = 61
 
@@ -81,11 +81,8 @@ def main() -> None:
     if not bool(source.get("sumo", {}).get("ok")):
         reasons.append("frozen SUMO topology gate did not pass")
     if extraction.get("hazard_table_supplied") is not True:
-        reasons.append("qualified FEMA-NFHL exposure table was not supplied")
+        reasons.append("qualified static flood-exposure table was not supplied")
 
-    # Missing hazard rows cannot silently remove candidate feeders from the
-    # selection population. All 61 source feeders need an explicit coverage
-    # determination, even if some are subsequently declared C_hazard=FALSE.
     feeder_audits = extraction.get("feeders", {})
     if set(feeder_audits) != set(ids):
         reasons.append("extraction-audit feeder keys do not exactly match the feature CSV")
@@ -96,7 +93,7 @@ def main() -> None:
             missing_hazard_determinations.append(fid)
     if missing_hazard_determinations:
         reasons.append(
-            f"{len(missing_hazard_determinations)} feeder(s) lack an explicit FEMA-NFHL coverage determination"
+            f"{len(missing_hazard_determinations)} feeder(s) lack an explicit static-flood coverage determination"
         )
 
     evaluated_rows = 0
