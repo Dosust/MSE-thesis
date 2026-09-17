@@ -1,0 +1,102 @@
+{
+  "audit_id": "H1-L2-INPUT-AUDIT-V1",
+  "audit_date": "2026-09-18",
+  "upstream": {
+    "repository": "GreenEVT/GreenEVT",
+    "commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+    "commit_status": "FROZEN"
+  },
+  "audit_scope": "remote source identity, feeder inventory, and materialization readiness",
+  "scientific_role": "pre-simulation source qualification; not H1 evidence",
+  "environment": {
+    "github_text_metadata_access": true,
+    "container_git_network_access": false,
+    "git_lfs_materialization_available": false,
+    "note": "Current execution environment cannot resolve github.com for git clone and the GitHub connector exposes LFS pointer text rather than LFS object bytes."
+  },
+  "required_files": [
+    {
+      "path": "data/open_dss/Master.dss",
+      "storage": "git",
+      "git_blob_sha": "5f021e607224715decd7ff7530c941e0bf3756f5",
+      "remote_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "reason": "Text content inspected through frozen GitHub commit; local materialization unavailable."
+    },
+    {
+      "path": "data/open_dss/bus_info.csv",
+      "storage": "git",
+      "git_blob_sha": "2cdddc52ea01b827e708aa8ef64f400fe6eb2e81",
+      "remote_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "reason": "Frozen Git blob identified; complete local byte materialization unavailable."
+    },
+    {
+      "path": "data/open_dss/Long_lat_buscoords.txt",
+      "storage": "git",
+      "git_blob_sha": "1c7e237fa4e918058492ff9c05d2b2f9470e03da",
+      "remote_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "reason": "Frozen Git blob identified; complete local byte materialization unavailable."
+    },
+    {
+      "path": "data/sumo_network/greensboro.sumocfg",
+      "storage": "git",
+      "git_blob_sha": "8be54a63f47875d903cb134cd55d182c0ca0504b",
+      "remote_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "reason": "Configuration text inspected; it references greensboro.net.xml."
+    },
+    {
+      "path": "data/UDS.db",
+      "storage": "git-lfs",
+      "git_pointer_blob_sha": "308297230cd4050f7599c69b8d55b24f48d2ba1e",
+      "lfs_oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "lfs_size_bytes": 107778048,
+      "pointer_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "blocking_role": [
+        "bus-road crosswalk",
+        "parcel-bus crosswalk",
+        "parcel-road crosswalk",
+        "interface-count feature N_I"
+      ]
+    },
+    {
+      "path": "data/sumo_network/greensboro.net.xml",
+      "storage": "git-lfs",
+      "git_pointer_blob_sha": "df22c5fb34022e773e9d2d858df5b410d3d2e997",
+      "lfs_oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "lfs_size_bytes": 351967227,
+      "pointer_identity_verified": true,
+      "materialized_bytes_verified": false,
+      "blocking_role": [
+        "transport topology",
+        "road length L_T",
+        "road redundancy R_T",
+        "transport element count N_T",
+        "SUMO edge existence validation"
+      ]
+    }
+  ],
+  "feeder_inventory": {
+    "substation_count": 21,
+    "feeder_count": 61,
+    "inventory_source": "data/open_dss/Master.dss redirect paths at frozen commit",
+    "inventory_complete_against_GreenEVT_reported_count": true
+  },
+  "gates": {
+    "A1_upstream_commit_frozen": "PASS",
+    "A2_required_source_identities_recorded": "PASS",
+    "A3_feeder_inventory_61_identified": "PASS",
+    "A4_UDS_lfs_materialized": "BLOCKED",
+    "A5_SUMO_lfs_materialized": "BLOCKED",
+    "A6_UDS_schema_and_crosswalk_audit": "NOT_RUN",
+    "A7_SUMO_parse_and_topology_audit": "NOT_RUN",
+    "A8_complete_feeder_feature_matrix": "NOT_RUN",
+    "A9_outcome_blind_selection": "NOT_AUTHORIZED"
+  },
+  "status": "BLOCKED_PENDING_GREENEVT_LFS_MATERIALIZATION",
+  "selection_authorized": false,
+  "claim_boundary": "No feeder is selected and no case manifest is frozen until all preregistered selection features are computed from qualified inputs."
+}
