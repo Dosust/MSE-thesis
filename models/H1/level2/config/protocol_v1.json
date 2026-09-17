@@ -1,0 +1,117 @@
+{
+  "protocol_id": "H1_LEVEL2_PROTOCOL_V1",
+  "version": "1.0",
+  "frozen_on": "2026-09-18",
+  "status": "METHOD_FROZEN_INPUTS_OPEN",
+  "confirmatory_execution_authorized": false,
+  "authority": {
+    "rq_so_h": "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+    "dependency_contract": "project/CANONICAL_DEPENDENCY_CONTRACT_V1.md",
+    "execution_status": "project/AUTONOMOUS_EXECUTION_STATUS.md",
+    "inference_standard": "thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md"
+  },
+  "hypothesis": {
+    "id": "H1",
+    "primary_claim": "Under matched Power-Transportation disturbances and initial conditions, M2 must be tested for incremental explanatory or predictive information relative to M1 and M0; superiority is not assumed.",
+    "models": ["M0", "M1", "M2"]
+  },
+  "spatial_case": {
+    "system": "Greensboro realistic synthetic power-transportation twin",
+    "selection_rule": "outcome_blind_medoid_of_eligible_feeders",
+    "eligibility_predicates": ["C_geo", "C_road", "C_interface", "C_hazard", "C_computable"],
+    "selection_features": ["N_P", "N_T", "N_I", "P_max", "L_T", "R_T", "E_H"],
+    "feature_standardization": "robust_z_score_before_medoid_distance",
+    "distance": "euclidean_on_standardized_presimulation_features",
+    "development_feeder_id": null,
+    "heldout_feeder_id": null,
+    "selection_outcome_blind": true,
+    "heldout_locked_before_model_comparison": true
+  },
+  "interfaces": {
+    "canonical_representation": "mathfrak_d_e=(C_e,Sigma_e,Pi_e)",
+    "registry": "registries/dependency_registry_v1.csv",
+    "required_directed_mechanisms": ["EV_T_to_P", "EV_P_to_T", "SIGNAL_P_to_T", "REPAIR_T_to_P"],
+    "allowed_evidence_states": ["EVIDENCE_SUPPORTED", "MEASURED", "CALIBRATED", "HYPOTHESIZED", "INFERRED_PENDING_VERIFICATION", "REJECTED", "UNKNOWN_UNOBSERVED"]
+  },
+  "hazard": {
+    "type": "pluvial_flood",
+    "primary_precipitation_standard": "NOAA_Atlas_14_current_standard_until_formal_Atlas_15_supersession",
+    "atlas15_use": "sensitivity_only_until_authoritative_release_and_versioned_protocol_amendment",
+    "hydraulic_model": "HEC_RAS_2D_rain_on_grid",
+    "terrain": "USGS_3DEP_1m_DEM",
+    "soil": "USDA_NRCS_SSURGO",
+    "land_cover": "USGS_NLCD_2021_v2_2026",
+    "state_field": ["water_depth_h_m", "water_velocity_v_mps"],
+    "candidate_durations_h": [1, 6, 24],
+    "duration_selection": "hazard_only_max_predeclared_infrastructure_exposure_before_M0_M1_M2_results",
+    "aep_primary": 0.01,
+    "rainfall_depth_values_frozen": false,
+    "hydraulic_geometry_frozen": false,
+    "road_rule": "continuous_depth_speed_capacity_then_safety_closure_with_validity_domain",
+    "power_rule": "direct_inundation_only_for_evidence_supported_ground_level_equipment; overhead_line_failure_requires_separate_mechanism"
+  },
+  "scenario_design": {
+    "matrix": "registries/scenario_matrix_v1.csv",
+    "hazard_levels": ["H0", "H_moderate", "H_severe"],
+    "common_random_numbers": true,
+    "matched_inputs": ["hazard_field", "demand", "EV_trips", "component_vulnerability_draws", "repair_duration_draws", "initial_state", "random_seed"],
+    "ablations": ["A_EV", "A_SIGNAL", "A_REPAIR", "A_FULL"],
+    "seed_manifest_frozen": false
+  },
+  "parameters": {
+    "registry": "registries/parameter_registry_v1.csv",
+    "source_hierarchy": ["DATASET", "AUTHORITATIVE_EXTERNAL", "PEER_REVIEWED_CALIBRATION", "UNCERTAIN_PRIOR", "EXPLICIT_ASSUMPTION"],
+    "required_parameter_rows_frozen": false
+  },
+  "reference": {
+    "hierarchy": ["INDEPENDENT_EMPIRICAL_OBSERVATION", "INDEPENDENT_HIGHER_FIDELITY_REFERENCE", "ANALYTICAL_OR_SYNTHETIC_TRUTH_FOR_VERIFICATION_ONLY"],
+    "qualified_reference_id": null,
+    "rule": "If no independent qualified reference exists, report model divergence/omitted-dynamics effects only; do not claim predictive superiority."
+  },
+  "qoi": {
+    "registry": "registries/qoi_registry_v1.csv",
+    "primary_H1_families": ["cascade", "service_loss", "spatial_propagation", "recovery"],
+    "primary_comparison": "Delta_E21_q=E_q_M1-E_q_M2",
+    "secondary_divergence": "Delta_Q21=Q_M2-Q_M1",
+    "rho_g_status": "DEFERRED_TO_STAGE5_AFTER_LEVEL2_TRAJECTORY_QUALIFICATION",
+    "exact_primary_metrics_frozen": false
+  },
+  "validation": {
+    "levels": ["code_verification", "solution_verification", "submodel_validation", "coupled_prediction_assessment"],
+    "numerical_thresholds_frozen": false,
+    "acceptance_rule": "QOI_specific_and_reference_uncertainty_aware; no arbitrary universal percentage",
+    "data_qualification_R1_R8": "PENDING",
+    "candidate_train_test_split": "NOT_FROZEN"
+  },
+  "uq": {
+    "sequence": ["uncertainty_registry", "screening", "global_sensitivity", "propagation"],
+    "separate_aleatory_epistemic": true,
+    "screening_method": "Morris_if_dimension_is_large",
+    "global_method": "scrambled_Sobol",
+    "sobol_calc_second_order": false,
+    "sobol_base_N_sequence": [256, 512, 1024, 2048, 4096],
+    "sample_count_rule": "N_times_D_plus_2_for_first_total_order_when_calc_second_order_false",
+    "convergence_rule_frozen": false,
+    "spatial_hazard_sampling_rule": "one_coherent_hydraulic_field_per_realization_never_independent_edge_depth_draws"
+  },
+  "execution_gates": {
+    "developmental_realistic": [
+      "input_provenance_audit_pass",
+      "spatial_case_selected_outcome_blind",
+      "dependency_registry_complete_for_active_mechanisms",
+      "hazard_source_manifest_frozen",
+      "parameter_registry_has_no_undeclared_assumptions"
+    ],
+    "confirmatory": [
+      "confirmatory_execution_authorized",
+      "data_qualification_R1_R8_pass",
+      "development_and_heldout_feeders_frozen_and_distinct",
+      "reference_qualified",
+      "primary_QOI_metrics_and_falsification_rules_frozen",
+      "numerical_validation_acceptance_rules_frozen",
+      "UQ_convergence_rule_frozen",
+      "common_random_seed_manifest_frozen",
+      "all_required_parameter_rows_frozen"
+    ]
+  }
+}
