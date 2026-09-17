@@ -23,10 +23,14 @@ This folder converts the ASU MSE thesis into a traceable scientific system rathe
 | `SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md` | thesis-wide evidence, definition, assumption, mathematical-writing, inference and validity-domain standard |
 | `CLAIM_EVIDENCE_REGISTER.md` | claim status, source, mechanism, assumptions, uncertainty, experiment/result and thesis-location ledger |
 | `MODEL_EXPERIMENT_VALIDATION_MATRIX.md` | model, baseline, held constants, treatment, data, V&V, UQ, thresholds and falsification control |
+| `SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md` | thesis-wide Stage-6/7 authority for admitting, typing, bounding, comparing and validating sustainability/resource dimensions |
+| `SUSTAINABILITY_DIMENSION_REGISTER_V1.md` | live admission matrix and status register for every proposed resilience/resource/sustainability/transformation quantity |
 | `FIGURE_TABLE_EQUATION_REGISTER.md` | scientific purpose and provenance registry for formal artifacts |
 | `THESIS_COMPLETION_GATES.md` | formal conditions for declaring sections scientifically complete/frozen |
 
 `RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md` and `RQ_SO_H_TRACEABILITY_V2.md` are superseded provenance stubs. They must not override `RQ_SO_H_TRACEABILITY_V3.md`.
+
+For all Stage-6/7 work and any thesis use of the terms **sustainability**, **sustainable transformation**, **resource efficiency**, **carbon**, **energy consequence**, **accessibility consequence**, **economic consequence**, or **joint resilience–sustainability decision**, the sustainability admission standard and live register are mandatory controls. No new sustainability dimension may enter confirmatory H4/H5 analysis outside that governance chain.
 
 ## External scientific authorities
 
@@ -72,6 +76,18 @@ where:
 - `V`: validity domain stated.
 
 Only when all required gates pass may a section be marked scientifically frozen.
+
+For an admitted sustainability dimension `j`, the additional non-compensatory gate is:
+
+```math
+\boxed{
+G_{\rm sus}(j)
+=
+M_j\land Q_j\land X_j\land D_j\land U_j\land B_j\land K_j\land V_j\land S_j.
+}
+```
+
+All applicable terms must pass before the dimension enters confirmatory H4/H5 inference.
 
 ## Current hypothesis semantics
 
