@@ -33,7 +33,7 @@ jobs:
           new = "**Canonical visual asset:** `figures/SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp`  "
           s = s.replace(old, new)
           old_hash = "**Source image SHA-256:** `b2f0d9c2b37e869bd41f3a4aac7b0d26145d8a787aebfae21da9d5023af7bba5`"
-          new_hash = "**Canonical visual SHA-256:** `f85848a029ca706e601c47c97ea1bf55f95bfc01af552a78bfc1012bc95da1fb`"
+          new_hash = "**Canonical visual SHA-256:** `378d8eaa4d9efcfcb9e803043cf246cccbd4389068b1dd8c691cbcc5f6fc5e79`"
           s = s.replace(old_hash, new_hash)
           image_line = "![Spatiotemporal Physical Power-Transportation Network](./SPATIOTEMPORAL_PHYSICAL_POWER_TRANSPORTATION_NETWORK.webp)"
           if image_line not in s:
