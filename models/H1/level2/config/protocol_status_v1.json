@@ -1,6 +1,6 @@
 {
   "protocol_id": "H1_LEVEL2_PROTOCOL_V1",
-  "status": "METHOD_FROZEN_SOURCE_MATERIALIZATION_BLOCKED",
+  "status": "METHOD_AND_FEATURE_SEMANTICS_FROZEN_SOURCE_MATERIALIZATION_BLOCKED",
   "structural_gates": {
     "S_authority": true,
     "S_hypothesis": true,
@@ -18,7 +18,11 @@
     "S_models": true,
     "S_outcome_blind": true,
     "S_rho_deferred": true,
-    "S_authorization_boolean": true
+    "S_authorization_boolean": true,
+    "S_feeder_feature_semantics_frozen": true,
+    "S_feature_extractor_implemented": true,
+    "S_feature_matrix_qualification_gate_implemented": true,
+    "S_selector_requires_qualified_hashed_matrix": true
   },
   "registry_gates": {
     "R_dependency_mechanisms_present": true,
@@ -28,17 +32,20 @@
     "R_primary_qoi_families_present": true,
     "R_rho_not_primary": true,
     "R_main_models_present": true,
-    "R_common_random_group_present": true
+    "R_common_random_group_present": true,
+    "R_static_hazard_exposure_schema_present": true
   },
   "acquisition_gates": {
     "A_upstream_commit_frozen": true,
     "A_required_source_identities_recorded": true,
-    "A_61_feeders_inventoried": true,
+    "A_21_substations_61_feeders_inventoried": true,
     "A_UDS_lfs_materialized": false,
     "A_SUMO_lfs_materialized": false,
     "A_UDS_schema_crosswalk_audited": false,
     "A_SUMO_topology_audited": false,
+    "A_FEMA_NFHL_coverage_determined_for_all_61": false,
     "A_complete_feeder_feature_matrix": false,
+    "A_feature_matrix_qualified_and_hashed": false,
     "A_outcome_blind_feeder_selection_executed": false
   },
   "freeze_gates": {
@@ -57,7 +64,7 @@
     "F_confirmatory_authorization": false
   },
   "source_block": {
-    "code": "BLOCKED_PENDING_GREENEVT_LFS_MATERIALIZATION",
+    "code": "BLOCKED_PENDING_GREENEVT_LFS_MATERIALIZATION_AND_NFHL_EXPOSURE_QUALIFICATION",
     "UDS_db": {
       "oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
       "size_bytes": 107778048
@@ -65,9 +72,10 @@
     "greensboro_net_xml": {
       "oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
       "size_bytes": 351967227
-    }
+    },
+    "execution_environment": "Current local runtime cannot resolve the upstream download hosts; GitHub Actions attempt failed before runner/steps, so no data-source failure is inferred."
   },
   "spatial_case_frozen": false,
   "confirmatory_ready": false,
-  "claim_boundary": "A passed structural protocol does not authorize spatial case selection or H1 confirmation. The source LFS objects must materialize and pass schema/topology/crosswalk audit before outcome-blind feeder selection can execute."
+  "claim_boundary": "Method and feature semantics are frozen, but no feeder is selected. Source LFS objects must materialize and pass exact-byte/schema/topology/crosswalk audit; all 61 feeders must receive explicit NFHL coverage determinations; the resulting matrix must pass cryptographic qualification before outcome-blind selection can execute."
 }
