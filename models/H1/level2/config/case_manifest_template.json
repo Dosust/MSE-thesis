@@ -1,0 +1,12 @@
+{
+  "case_manifest_id": "H1_LEVEL2_CASE_TBD",
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "role": "development",
+  "feeder_id": null,
+  "power_bus_ids": [],
+  "road_edge_ids": [],
+  "selection_artifact_sha256": null,
+  "source_audit_sha256": null,
+  "construction_rule": "Populate only from frozen outcome-blind feeder selection and audited GreenEVT/SMART-DS crosswalk extraction; never by ranking M0/M1/M2 outputs.",
+  "notes": []
+}
