@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "date": "2026-09-18",
+  "case_id": "AUS-P5U-2018-V1",
+  "dataset": {
+    "organization": "City of Austin",
+    "name": "Travel Sensors",
+    "dataset_id": "6yd9-yz29",
+    "endpoint": "https://data.austintexas.gov/resource/6yd9-yz29.json",
+    "temporal_role": "RETROSPECTIVE_LOCATION_METADATA",
+    "exact_2018_snapshot": false,
+    "semantic_join": "Radar Traffic Counts int_id is City KITS ID and joins to the Travel Sensors KITS-ID field"
+  },
+  "status": "OPEN",
+  "raw_evidence": {
+    "raw_data_sha256": null,
+    "raw_row_count": null,
+    "observed_keys_sha256": null,
+    "observed_keys": []
+  },
+  "field_mapping": {
+    "kits_id_key": null,
+    "point_key": null,
+    "latitude_key": null,
+    "longitude_key": null
+  },
+  "mapping_evidence_basis": null,
+  "verification": {
+    "selected_fields_observed": false,
+    "kits_values_valid": false,
+    "kits_unique_or_resolution_versioned": false,
+    "coordinates_valid": false,
+    "at_least_one_2018_radar_join": false,
+    "missing_joins_reported": false,
+    "road_overlap_verified": false
+  },
+  "prohibitions": [
+    "Do not guess API field names from display labels.",
+    "Do not infer the KITS field from numeric type alone.",
+    "Do not infer coordinates from arbitrary numeric pairs.",
+    "Do not impute missing locations.",
+    "Do not claim exact 2018 sensor-location snapshot status.",
+    "Do not promote G4 from schema observation alone."
+  ]
+}
