@@ -10,8 +10,8 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 
 ## Required sections
 
-1. **1.1 Background and Engineering Context**
-2. **1.2 Coupled P–T–I–O System Context**
+1. **[1.1 Background and Engineering Context](01_01_background_and_engineering_context.md)**
+2. **[1.2 Coupled P–T–I–O System Context](01_02_coupled_ptio_system_context.md)**
 3. **[1.3 Problem Statement](01_03_problem_statement.md)**
 4. **[1.4 Research Gap](01_04_research_gap.md)**
 5. **1.5 Sustainable Engineering Significance**
@@ -28,10 +28,13 @@ Target length: **16–18 pages** within the 160-page thesis ceiling unless expli
 
 ## Current drafted prose
 
-- Sections 1.1 and 1.2 are currently integrated in the repository root `README.md`.
-- Section 1.3 is maintained in [`01_03_problem_statement.md`](01_03_problem_statement.md) and is governed by the same Chapter-I and writing/inference authorities.
-- Section 1.4 is maintained in [`01_04_research_gap.md`](01_04_research_gap.md). It uses bounded, counterevidence-aware gap claims and explicitly separates evidence-supported research gaps from global novelty claims.
-- Section 1.5 is the next Chapter-I writing task.
+Sections **1.1–1.4 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
+
+- 1.1 fixes the dependency/interdependency terminology and establishes the engineering context.
+- 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
+- 1.3 states the engineering problem concisely and removes detailed experimental/VVUQ material that belongs later.
+- 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
+- **Section 1.5 is the next Chapter-I writing task.**
 
 ## Governing logic
 
@@ -63,18 +66,32 @@ Scientific stage meaning remains controlled by framework v2:
 }
 ```
 
+## Terminology rule
+
+Use the following distinction consistently in Chapter 1:
+
+```math
+\boxed{
+\begin{aligned}
+\text{directional dependency mechanism:}&\quad P\rightarrow T\ \text{or}\ T\rightarrow P,\\
+\text{interdependency:}&\quad \text{coupled condition with reciprocal directional dependencies}.
+\end{aligned}}
+```
+
+Common hazard exposure and spatial co-location do not by themselves establish a causal dependency.
+
 ## Traceability rule
 
 - RQ0 is overarching.
 - RQ1–RQ7 correspond one-to-one with SO1–SO7.
-- RQ1/SO1 and RQ2/SO2 carry developmental/evidence obligations supporting H1.
-- RQ3/SO3 → H1.
-- RQ4/SO4 → H2.
-- RQ5/SO5 → H3.
-- RQ6/SO6 → H4.
-- RQ7/SO7 → H5.
+- G1 supports RQ1/RQ2 and SO1/SO2; these carry developmental/evidence obligations supporting H1.
+- G2 → RQ3/SO3 → H1.
+- G3 → RQ4/SO4 → H2.
+- G4 → RQ5/SO5 → H3.
+- G5 → RQ6/SO6 → H4.
+- G6 → RQ7/SO7 → H5.
 
-Seven questions do **not** imply seven hypotheses.
+Six gaps therefore support seven specific questions; seven questions do **not** imply seven hypotheses.
 
 ## Intervention-performance rule
 
