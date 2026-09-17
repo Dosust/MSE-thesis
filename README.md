@@ -104,6 +104,164 @@ where the presence of a layer or relation does not automatically imply causal si
 
 ---
 
+## 1.2 Coupled Power–Transportation–Information–Organization System Context
+
+The engineering context established in Section 1.1 motivates a more precise definition of the system studied in this thesis. The research does not treat all critical infrastructures as a single undifferentiated network. Instead, it focuses on a bounded coupled system whose **physical infrastructure core** consists of electric power and transportation, while information and organizational capabilities are represented explicitly because they influence what is known about the physical system and what actions can be implemented during disruption and recovery. The resulting study context is denoted conceptually as
+
+```math
+\boxed{
+\mathcal S=\{P,T,I,O\},
+}
+```
+
+where
+
+```math
+P=\text{Power},\qquad
+T=\text{Transportation},\qquad
+I=\text{Information},\qquad
+O=\text{Organization}.
+```
+
+This notation does not imply that the four domains are physically equivalent infrastructure networks. In this thesis, `P` and `T` are the two principal **physical infrastructure systems**, whereas `I` and `O` are supporting domains through which system conditions are observed, interpreted, communicated, coordinated, and acted upon. This distinction is deliberate. Multilayer-network theory provides a general framework for systems containing multiple subsystems and multiple types of relationships, but the existence of a layer or interlayer edge is a structural representation rather than evidence of a causal mechanism (Kivelä et al., 2014).
+
+The **Power domain `P`** represents the physical assets and network relationships required to generate, transmit, distribute, and deliver electricity to infrastructure loads relevant to the coupled system. At the structural level it may be represented by a graph
+
+```math
+\mathcal G_P=(V_P,E_P),
+```
+
+where `V_P` denotes relevant power-system assets or buses and `E_P` denotes electrical connections. The **Transportation domain `T`** represents the physical mobility network through which travelers, repair crews, emergency resources, and other relevant flows move. Its structural representation may similarly be written as
+
+```math
+\mathcal G_T=(V_T,E_T),
+```
+
+where `V_T` contains transportation nodes such as intersections or relevant facilities and `E_T` contains road links or other admissible physical connections. These graph representations define **system structure**; they do not by themselves specify power-flow physics, traffic-flow dynamics, failure propagation, or recovery behavior. Those mechanisms are introduced only after their physical and causal meaning has been established.
+
+The physical coupling between `P` and `T` is represented directionally rather than by treating the two networks as generically “connected.” In the power-to-transportation direction,
+
+```math
+\boxed{P\rightarrow T},
+```
+
+electricity can support transportation functions such as traffic-control devices and electric-vehicle charging infrastructure. Coupled traffic–power studies have represented such relationships through explicit linking variables and logical constraints, while the broader transportation-electrification literature models interactions among charging demand, road-network behavior, and power-distribution operating constraints (Fotouhi et al., 2017; Wei et al., 2019; Unterluggauer et al., 2022).
+
+The reciprocal transportation-to-power direction is conceptually distinct:
+
+```math
+\boxed{T\rightarrow P}.
+```
+
+Here, transportation conditions influence activities required for power-system operation or restoration. A particularly important recovery mechanism is **physical accessibility**: damaged roads, congestion, or unavailable routes can affect when repair crews and mobile emergency resources reach failed electrical assets. Fan et al. (2024), for example, explicitly couple road states to repair-crew routing in coordinated infrastructure restoration. Such restoration models confirm that `T→P` is not merely a topological relationship but can operate through identifiable logistical mechanisms.
+
+These two directions must not be collapsed into a single undifferentiated `P↔T` edge. A reciprocal interdependency exists only when the corresponding directional mechanisms are actually present under the conditions being studied. This follows the broader infrastructure-interdependency literature, which distinguishes the state dependence of one infrastructure on another and emphasizes physical, cyber/informational, geographic, and logical dimensions of interdependency (Rinaldi et al., 2001). Accordingly, this thesis adopts the stricter engineering rule
+
+```math
+\boxed{
+\text{candidate relation}
+\neq
+\text{accepted causal dependency}.
+}
+```
+
+A cross-system relation enters the model only after its **source, receiver, mechanism, component mapping, evidence basis, and validity conditions** are identified.
+
+The **Information domain `I`** is introduced for a different purpose. It represents the information available for understanding the physical system rather than another physical infrastructure by default. Depending on the specific experiment, this can include measurements, sensor availability, communication status, delays, missing observations, state-estimation outputs, and other information used to infer the condition of `P` and `T`. The distinction matters because modern power and transportation operation increasingly depend on sensing and communication, and power-grid, ICT, and e-mobility interactions can create additional pathways through which disturbances or information losses affect system operation (Mohamed, 2019). In this thesis, however, an ICT network is not automatically promoted to a third physical infrastructure layer merely because information is important. Such a network is modeled explicitly only when its physical components and connectivity are necessary to answer the research question.
+
+The **Organizational domain `O`** represents the human and institutional capabilities that determine how information is converted into action. Relevant organizational properties can include decision authority, coordination arrangements, repair priorities, personnel and equipment availability, resource allocation, operating procedures, and response delays. This distinction is supported by infrastructure-resilience research showing that physical assets alone do not determine adaptive capacity: institutions allocate responsibilities and rights, establish constraints and incentives, and shape how infrastructure actors interpret and respond to changing conditions (Chester et al., 2021). Helmrich et al. (2021) similarly show that infrastructure resilience has both network and governance dimensions and identify information as an important mediator between them. Human–infrastructure modeling further demonstrates that resilience behavior may emerge from interaction between engineered systems and human actors rather than from physical topology alone (Rasoulkhani & Mostafavi, 2018).
+
+The four-domain representation therefore separates several relationships that would otherwise be hidden inside a single coupled-network model. Measurements of power and transportation conditions can be represented schematically as
+
+```math
+P,T\rightarrow I,
+```
+
+information used for situational awareness and decision formation as
+
+```math
+I\rightarrow O,
+```
+
+and authorized interventions as
+
+```math
+O\rightarrow P,T.
+```
+
+These arrows represent **different engineering functions**. Observation is not control; information is not authority; authority is not physical capability; and the existence of a communication path does not guarantee that an intervention can be executed. The purpose of distinguishing `I` and `O` is therefore not to increase the number of layers, but to prevent sensing, estimation, decision-making, resource availability, and physical action from being mathematically conflated.
+
+This produces an important ontological separation for the thesis:
+
+```math
+\boxed{
+\text{physical topology}
+\neq
+\text{dependency}
+\neq
+\text{observation}
+\neq
+\text{decision}
+\neq
+\text{control action}.
+}
+```
+
+Similarly, a common external hazard is not automatically an interdependency. If a flood simultaneously damages a power asset and a road segment, both components may share a common exposure without either component causing the state change of the other. Only an identifiable cross-system mechanism—such as loss of electricity disabling a transportation asset or loss of road accessibility delaying electrical repair—is represented as a directional dependency. This safeguard prevents spatial co-location and common-cause failure from being misinterpreted as causal coupling.
+
+The study is also **service-oriented rather than purely topological**. The physical networks matter because they provide critical services: `P` supports electricity delivery and `T` supports mobility and accessibility. Consequently, a component or interface is not considered important solely because it possesses a high graph-theoretic centrality. Its engineering significance ultimately depends on how its condition affects service trajectories, feasible response, and recovery. This is consistent with coupled P–T research in which explicit interdependencies alter transportation performance and restoration feasibility rather than merely changing network connectivity (Fotouhi et al., 2017; Fan et al., 2024).
+
+Coupled power–transportation modeling is already an established research area. Prior work has quantified resilience in traffic–electric-power systems, reviewed joint transportation–distribution-system models, examined EV charging as an explicit cross-system coupling mechanism, and represented transportation accessibility in post-disaster restoration (Fotouhi et al., 2017; Wei et al., 2019; Unterluggauer et al., 2022; Fan et al., 2024). Therefore, the scientific premise of this thesis is **not** that power and transportation have never been modeled jointly. Instead, the thesis begins from an evidence-qualified `P–T` physical core and makes `I` and `O` explicit so that subsequent chapters can distinguish **what exists, why a dependency operates, how it evolves, what can be observed, and what actions are physically and organizationally feasible**.
+
+Accordingly, the system context established in this section can be summarized as
+
+```math
+\boxed{
+\underbrace{P+T}_{\text{physical infrastructure}}
+\quad
+\overset{\text{observation, information, authority and resources}}{\longleftrightarrow}
+\quad
+\underbrace{I+O}_{\text{supporting decision domains}},
+}
+```
+
+with every cross-domain relation subject to evidence and mechanism qualification. This bounded system definition provides the foundation for Section 1.3, which moves from **what constitutes the study system** to the specific engineering problem created by the need to connect structure, causal mechanisms, dynamic propagation, observation, feasible action, and service recovery without treating these distinct concepts as interchangeable.
+
+### References cited in Section 1.2
+
+- Chester, M., Underwood, B. S., Allenby, B., Garcia, M., Samaras, C., Markolf, S., Sanders, K., Preston, B., & Miller, T. R. (2021). Infrastructure resilience to navigate increasingly uncertain and complex conditions in the Anthropocene. *npj Urban Sustainability, 1*, Article 4. https://doi.org/10.1038/s42949-021-00016-y
+- Fan, J., He, P., Li, C., Zhao, C., & Ji, Y. (2024). A post-disaster restoration model for power-gas-transportation distribution networks considering spatial interdependency and energy hubs. *Electric Power Systems Research, 233*, 110505. https://doi.org/10.1016/j.epsr.2024.110505
+- Fotouhi, H., Moryadee, S., & Miller-Hooks, E. (2017). Quantifying the resilience of an urban traffic-electric power coupled system. *Reliability Engineering & System Safety, 163*, 79–94. https://doi.org/10.1016/j.ress.2017.01.026
+- Helmrich, A., Markolf, S., Li, R., Carvalhaes, T., Kim, Y., Bondank, E., Natarajan, M., Ahmad, N., & Chester, M. (2021). Centralization and decentralization for resilient infrastructure and complexity. *Environmental Research: Infrastructure and Sustainability, 1*(2), 021001. https://doi.org/10.1088/2634-4505/ac0a4f
+- Kivelä, M., Arenas, A., Barthelemy, M., Gleeson, J. P., Moreno, Y., & Porter, M. A. (2014). Multilayer networks. *Journal of Complex Networks, 2*(3), 203–271. https://doi.org/10.1093/comnet/cnu016
+- Mohamed, A. A. A. (2019). On the rising interdependency between the power grid, ICT network, and e-mobility: Modeling and analysis. *Energies, 12*(10), 1874. https://doi.org/10.3390/en12101874
+- Rasoulkhani, K., & Mostafavi, A. (2018). Resilience as an emergent property of human-infrastructure dynamics: A multi-agent simulation model for characterizing regime shifts and tipping point behaviors in infrastructure systems. *PLOS ONE, 13*(11), e0207674. https://doi.org/10.1371/journal.pone.0207674
+- Rinaldi, S. M., Peerenboom, J. P., & Kelly, T. K. (2001). Identifying, understanding, and analyzing critical infrastructure interdependencies. *IEEE Control Systems Magazine, 21*(6), 11–25. https://doi.org/10.1109/37.969131
+- Unterluggauer, T., Rich, J., Andersen, P. B., & Hashemi, S. (2022). Electric vehicle charging infrastructure planning for integrated transportation and power distribution networks: A review. *eTransportation, 12*, 100163. https://doi.org/10.1016/j.etran.2022.100163
+- Wei, W., Wu, D., Wu, Q., Shafie-khah, M., & Catalão, J. P. S. (2019). Interdependence between transportation system and power distribution system: A comprehensive review on models and applications. *Journal of Modern Power Systems and Clean Energy, 7*, 433–448. https://doi.org/10.1007/s40565-019-0516-7
+
+### Scientific boundary of Section 1.2
+
+This section establishes only
+
+```math
+\boxed{
+\text{system boundary}
+\rightarrow
+\text{domain roles}
+\rightarrow
+\text{directional relations}
+\rightarrow
+\text{service meaning}
+\rightarrow
+\text{causal safeguards}.
+}
+```
+
+It does **not** claim a literature gap, novelty, model superiority, or validated benefit of the `P–T–I–O` representation. Those claims belong to Sections 1.3–1.4 and later hypothesis testing.
+
+---
+
 ## Canonical entry points
 
 | File | Role |
