@@ -22,6 +22,12 @@
       "route": "GitHub Actions materialization workflow",
       "result": "RUNNER_DID_NOT_START_STEPS",
       "interpretation": "Repository execution-environment failure; not classified as GreenEVT/LFS failure."
+    },
+    {
+      "route": "Official FEMA NFHL ArcGIS REST layer metadata from current local runtime",
+      "url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28?f=pjson",
+      "result": "EXECUTION_ENVIRONMENT_DNS_BLOCK",
+      "interpretation": "NFHL acquisition method is frozen but no FEMA payload was retrieved in the local runtime."
     }
   ],
   "frozen_original_objects": {
@@ -47,7 +53,8 @@
   "nfhl_selection_exposure": {
     "protocol": "NFHL_SELECTION_EXPOSURE_V1.md",
     "acquisition_script": "fetch_nfhl_sfha.py",
-    "status": "SOURCE_METHOD_FROZEN_DATA_OPEN"
+    "source_service": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28",
+    "status": "SOURCE_METHOD_FROZEN_RUNTIME_ACCESS_BLOCKED"
   },
   "selection_status": "BLOCKED",
   "development_feeder_id": null,
