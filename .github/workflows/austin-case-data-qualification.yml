@@ -8,9 +8,11 @@ on:
       - ".github/workflows/austin-case-data-qualification.yml"
       - "methods/austin_case/**"
       - "config/austin_case_admissibility_v1.json"
+      - "config/austin_case_admissibility_v2.json"
       - "config/austin_preconfirmatory_registry_v1.json"
       - "config/austin_road_vintage_v1.json"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"
+      - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md"
       - "project/AUSTIN_DATA_QC_AND_GATE_PROTOCOL_V1.md"
       - "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md"
       - "tests/test_austin_*.py"
@@ -42,6 +44,16 @@ jobs:
       - name: Run complete Austin pre-data regression suite
         run: |
           pytest -q tests/test_austin_*.py
+
+      - name: Validate active Austin v2 case contract
+        run: |
+          python - <<'PY'
+          from methods.austin_case.admissibility import load_contract
+          contract = load_contract('config/austin_case_admissibility_v2.json')
+          assert contract['final_case_admissibility'] is False
+          assert contract['gates']['G0_canonical_consistency'] == 'PASS'
+          print('ACTIVE_CONTRACT_VALID_OPEN')
+          PY
 
       - name: Materialize public Austin core inputs with frozen boundary and road vintages
         run: |
@@ -75,8 +87,11 @@ jobs:
             echo "CODE_SHA=$(git rev-parse HEAD)"
             echo "RUN_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
             sha256sum config/austin_case_admissibility_v1.json
+            sha256sum config/austin_case_admissibility_v2.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
             sha256sum config/austin_road_vintage_v1.json
+            sha256sum project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md
+            sha256sum project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md
             sha256sum methods/austin_case/materialize_public_data.py
             sha256sum methods/austin_case/materialize_public_data_v2.py
             sha256sum methods/austin_case/materialize_public_data_v3.py
