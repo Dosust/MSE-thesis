@@ -1,6 +1,6 @@
-version: 1
+version: 2
 project: MSE-thesis
-source: project/RESEARCH_HYPOTHESES.md
+source: project/CANONICAL_RQ_SO_HYPOTHESES_V3.md
 status:
   hypothesis_logic_frozen: true
   numerical_thresholds_frozen: false
@@ -8,29 +8,40 @@ status:
 
 hypotheses:
   H1:
-    name: dynamic_interdependency
-    stages: [2, 3]
-    core_claim: dynamic_causal_coupling_materially_changes_cascade_and_service_trajectories
+    name: dynamic_causal_interdependency
+    rq_so: RQ3/SO3
+    developmental_inputs: [RQ1/SO1, RQ2/SO2]
+    stages: [1, 2, 3]
+    core_claim: dynamic_causal_coupling_provides_measurable_incremental_explanatory_or_predictive_information_relative_to_static_coupling_and_independent_system_representations
+    comparator: M2_vs_M1_with_M0_reference
     threshold_symbol: delta_1
   H2:
-    name: information_organization
-    stages: [3, 4]
-    core_claim: information_and_organization_materially_change_feasible_response_and_recovery
+    name: information_organization_and_feasible_control
+    rq_so: RQ4/SO4
+    stages: [4]
+    core_claim: information_availability_and_organizational_conditions_materially_change_state_estimation_feasible_actions_response_timing_recovery_and_stage5_resilience_outcomes_under_matched_physical_conditions
+    comparator: PT_vs_PTI_vs_PTIO
     threshold_symbol: delta_2
   H3:
-    name: controlled_viability
-    stages: [4, 5]
-    core_claim: viability_quantities_add_decision_relevant_information_beyond_conventional_service_metrics
+    name: viability_reachability_incremental_information
+    rq_so: RQ5/SO5
+    stages: [5]
+    core_claim: uncertainty_aware_viability_and_reachability_quantities_add_decision_relevant_information_beyond_conventional_service_loss_and_recovery_metrics
+    comparator: conventional_resilience_vs_conventional_plus_viability_reachability
     threshold_symbol: delta_3
   H4:
-    name: interface_criticality
-    stages: [2, 5, 7]
-    core_claim: viability_sensitive_interface_rankings_outperform_static_structural_rankings_for_intervention_targeting
+    name: intervention_resilience_sustainability_consequences
+    rq_so: RQ6/SO6
+    stages: [6]
+    core_claim: resilience_effective_interventions_are_not_equivalent_in_their_sustainability_consequence_vectors_and_at_least_two_produce_materially_different_accessibility_energy_carbon_or_cost_consequences_under_the_declared_comparison_rule
+    comparator: matched_resilience_effective_interventions
     threshold_symbol: delta_4
   H5:
-    name: adaptive_transformation_pathway
-    stages: [5, 6, 7]
-    core_claim: adaptive_trigger_based_pathways_improve_robust_tradeoffs_over_fixed_sequences_under_deep_uncertainty
+    name: joint_resilience_sustainability_decision
+    rq_so: RQ7/SO7
+    stages: [7]
+    core_claim: incorporating_sustainability_consequences_into_resilience_based_engineering_evaluation_materially_changes_the_admissible_or_nondominated_intervention_set_or_decision_regret_under_the_declared_uncertainty_domain
+    comparator: resilience_only_vs_joint_resilience_sustainability_decision_set
     threshold_symbol: delta_5
 
 confirmatory_rules:
@@ -40,3 +51,6 @@ confirmatory_rules:
   rival_hypothesis_required: true
   falsification_criterion_required: true
   deep_uncertainty_must_not_be_reported_as_probability_without_justification: true
+  matched_conditions_required_for_causal_contrasts: true
+  empirical_validation_required_for_predictive_claims: true
+  no_hypothesis_support_from_verification_only: true
