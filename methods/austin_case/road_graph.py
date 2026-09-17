@@ -1,8 +1,10 @@
 """Road-graph and repair-access QA for the Austin case.
 
-The default graph uses City centerline geometry and geodesic distance only.
-Travel time is not fabricated from distance: a speed/travel-time field or a
-separately calibrated traffic model must be supplied before time-based H1/H3 use.
+The structural graph consumes a qualified WGS84 polyline clip. For the active
+Austin v2 package, the primary road evidence is the TxDOT 2018 annual inventory;
+current City CTN/street layers are sensitivity sources. This module deliberately
+uses geodesic distance only. Direction, speed, capacity, travel time, traffic
+state and hazard-dependent passability remain separate evidence/model gates.
 """
 from __future__ import annotations
 
@@ -39,8 +41,9 @@ def geodesic_m(a: tuple[float, float], b: tuple[float, float]) -> float:
 def build_distance_graph(roads_fc: Mapping[str, Any]) -> nx.Graph:
     """Build exact-coordinate undirected graph for structural routing QA.
 
-    A directed/one-way travel graph is a later model gate because the exact City
-    attribute mapping must be inspected from raw source fields first.
+    A directed/one-way travel graph is a later gate. The raw source's direction,
+    speed and intersection semantics must be audited before they can alter model
+    dynamics or repair travel time.
     """
     features = roads_fc.get("features")
     if not isinstance(features, list):
@@ -75,6 +78,7 @@ def build_distance_graph(roads_fc: Mapping[str, Any]) -> nx.Graph:
         raise RoadGraphError("road graph contains no usable edge")
     graph.graph["rejected_null_features"] = rejected
     graph.graph["weight_semantics"] = "GEODESIC_DISTANCE_ONLY"
+    graph.graph["dynamic_semantics"] = "DIRECTION_SPEED_CAPACITY_TRAVEL_TIME_PASSABILITY_NOT_YET_APPLIED"
     return graph
 
 
