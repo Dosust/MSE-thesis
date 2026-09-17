@@ -1,4 +1,4 @@
-# ASU MSE Thesis Master Specification v1.1
+# ASU MSE Thesis Master Specification v1.2
 
 **Status:** CURRENT THESIS CONTROL SPECIFICATION  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
@@ -6,12 +6,14 @@
 **Method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
 **Reasoning authority:** `../../project/RESEARCH_REASONING_PROTOCOL.md` v1.2  
-**Verification date for ASU requirements:** 2026-09-16
+**Writing/inference authority:** `SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
+**Verification date for ASU requirements:** 2026-09-17
 
 ## 1. Purpose
 
-This specification connects formal ASU/SSEBE requirements to the thesis scientific method, chapter architecture, evidence system, mathematical framework, experiments, validation, and final document.
+This specification connects formal ASU/SSEBE requirements to the thesis scientific method, chapter architecture, evidence system, mathematical framework, experiments, validation, writing/inference controls and final document.
 
 ```math
 \boxed{
@@ -47,43 +49,45 @@ This specification connects formal ASU/SSEBE requirements to the thesis scientif
 }
 ```
 
-If two requirements conflict, the higher authority controls. Internal repository conventions are never treated as university requirements.
+If requirements conflict, the higher authority controls. Internal repository conventions are never presented as university requirements.
 
 ## 3. Verified program-level requirements
 
-From the 2026–2027 Sustainable Engineering MSE Handbook:
+From the 2026–2027 Sustainable Engineering MSE Handbook, the repository currently tracks:
 
 - Thesis culminating experience: `CEE 599 Thesis`, 6 credit hours.
-- Students initially enter a non-thesis option and must secure an eligible faculty advisor/chair before thesis enrollment.
-- The Graduate Supervisory Committee contains at least three faculty members including the chair; at least two must be tenured or tenure-track SSEBE faculty.
-- The thesis culminates in an open oral defense.
-- Research is expected to be of sufficient breadth/depth to be publishable in a concentration-related journal.
-- Thesis research should reflect approximately 750 hours of thoughtful work.
-- Research must follow the scientific method, be objective and reproducible, demonstrate independent/original/creative inquiry, and use predefined measurable hypotheses or developmental goals/objectives.
+- Eligible thesis advisor/chair required before thesis enrollment.
+- Graduate Supervisory Committee of at least three faculty including the chair; at least two tenured/tenure-track SSEBE faculty.
+- Open oral defense.
+- Research of sufficient breadth/depth to be publishable in a concentration-related journal.
+- Approximately 750 hours of thoughtful thesis work as a planning benchmark.
+- Scientific-method, objectivity and reproducibility expectations.
+- Independent/original/creative inquiry.
+- Predefined measurable/testable hypotheses or developmental goals/objectives.
 
 These are compliance requirements, not optional internal preferences.
 
 ## 4. Verified Graduate College document requirements
 
-The Graduate College controls thesis/dissertation formatting. Current verified requirements include:
+Current Graduate College requirements tracked in this repository include:
 
-- ASU Format Wizard required for documents going through Graduate College format review.
-- Graduate College Format Manual supersedes the selected style guide when they conflict.
-- 1.25-inch left/right margins; 1-inch top/bottom margins.
-- Consistent approved TrueType font and size throughout, subject to limited stated exceptions.
-- Main body generally double-spaced; specified exceptions may be single-spaced.
-- Abstract maximum: 350 words; no first-person plural `we`, `our`, or `us`.
-- Preliminary matter follows ASU sequence; main text begins page 1.
-- Complete defense-ready document uploaded through iPOS at least 10 business days before defense.
-- Defense must be scheduled through iPOS at least 10 business days before the defense date.
+- ASU Format Wizard required for documents undergoing Graduate College format review.
+- Graduate College Format Manual supersedes conflicting style-guide rules.
+- 1.25-inch left/right margins and 1-inch top/bottom margins.
+- One approved TrueType font/size used consistently, subject to stated exceptions.
+- Main body generally double-spaced, with specified exceptions.
+- Abstract maximum 350 words; no first-person plural `we`, `our`, `us`.
+- Preliminary matter follows ASU sequence; main text begins on Arabic page 1.
+- Complete defense-ready document uploaded through iPOS on the required timeline.
+- Defense scheduling follows current iPOS/Graduate College deadlines.
+
+The detailed control matrix is maintained in `ASU_REQUIREMENTS_MATRIX.md`.
 
 ## 5. Scientific architecture versus document architecture
 
 ```math
 \boxed{\mathcal A_{science}\neq\mathcal A_{document}.}
 ```
-
-The scientific architecture is the canonical seven-stage framework v2.0 plus the consolidated v3 RQ–SO–H logic and EGMIV execution method. The document architecture is the seven-chapter thesis argument.
 
 ### Scientific architecture v2.0
 
@@ -93,9 +97,9 @@ The scientific architecture is the canonical seven-stage framework v2.0 plus the
 \rightarrow
 \text{Spatiotemporal SoS Structure}
 \rightarrow
-\text{Causal Interdependencies}
+\text{Evidence-Grounded Causal Interdependencies}
 \rightarrow
-\text{Hybrid Multiscale Dynamics}
+\text{Physics-Based Hybrid Multiscale Dynamics}
 \rightarrow
 \text{Observation / Estimation / Organization / Control}
 \rightarrow
@@ -103,7 +107,7 @@ The scientific architecture is the canonical seven-stage framework v2.0 plus the
 \rightarrow
 \text{Intervention + Sustainability Consequences}
 \rightarrow
-\text{Engineering Decision}.
+\text{Engineering Decision / Transformation}.
 }
 ```
 
@@ -111,11 +115,11 @@ The Stage-5 resilience object is
 
 ```math
 \boxed{
-\mathfrak R_T(t)
+\mathfrak R_T
 =
 \left(
-\mathcal V_{\alpha,T},
-\mathcal R_{\beta,T},
+\mathcal V_{\alpha,T_V},
+\mathcal R_{\beta,T_R},
 \rho_{\mathcal V},
 T_{\mathcal V},
 T_{\rm rec},
@@ -125,11 +129,12 @@ P_{\rm recover}
 }
 ```
 
-Conventional performance/recovery curves remain a comparator, not a discarded method. The thesis tests whether `\mathfrak R_T` adds incremental decision or predictive information.
+Conventional performance/recovery curves remain a comparator. Incremental value is tested rather than assumed.
 
 ### Document architecture
 
 ```math
+\boxed{
 \text{Introduction}
 \rightarrow
 \text{Literature/Theory}
@@ -143,11 +148,12 @@ Conventional performance/recovery curves remain a comparator, not a discarded me
 \text{Discussion}
 \rightarrow
 \text{Conclusion}.
+}
 ```
 
-## 6. Canonical research logic and traceability
+The seven scientific stages are primarily derived in Chapter 3 and operationalized in Chapter 4; they are not the chapter structure.
 
-The v3 primary research logic is frozen in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` and mirrored in `RQ_SO_H_TRACEABILITY_V3.md`.
+## 6. Canonical research logic and traceability
 
 ```math
 \boxed{
@@ -175,33 +181,79 @@ SO_i
 }
 ```
 
-The five primary tests are:
+RQ0 is overarching. RQ1–RQ7 correspond to SO1–SO7. RQ1/RQ2 carry developmental/evidence obligations supporting H1; RQ3→H1, RQ4→H2, RQ5→H3, RQ6→H4, RQ7→H5.
+
+Primary tests:
 
 ```math
-H_1:\quad M_2\ \text{vs}\ M_1\ \text{vs}\ M_0,
+H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0,
 ```
 
 ```math
-H_2:\quad P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O,
+H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O,
 ```
 
 ```math
-H_3:\quad R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T,
+H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T,
 ```
 
 ```math
-H_4:\quad a_k\rightarrow\left(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}\right),
+H_4:\ a_k\rightarrow(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k}),
 ```
 
 ```math
-H_5:\quad \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
+H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
 ```
 
-Interface criticality is a Stage-6 supporting diagnostic. Adaptive transformation pathways are a Stage-7 supporting extension. They are not the primary H4/H5 claims under v2.0.
+Interface criticality is a supporting diagnostic. Adaptive/sequential transformation is a supporting Stage-7 extension unless separately activated and preregistered.
 
-## 7. EGMIV thesis-control rule
+## 7. Chapter-I control
 
-The thesis skeleton itself is treated as an engineered research artifact.
+Chapter I follows `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md` and targets 16–18 pages within the project 160-page ceiling unless amended by the user/chair/GSC.
+
+The controlling Chapter-I flow is:
+
+```math
+\boxed{
+\text{Context}
+\rightarrow\text{Problem}
+\rightarrow\text{Gap}
+\rightarrow\text{Scope}
+\rightarrow\text{Framework}
+\rightarrow\text{Questions}
+\rightarrow\text{Objectives}
+\rightarrow\text{Hypotheses}
+\rightarrow\text{Proposed contribution}.
+}
+```
+
+The 160-page ceiling and Chapter-I 16–18-page allocation are internal project controls, not ASU Graduate College requirements unless separately confirmed by chair/GSC.
+
+## 8. Scientific writing and inference control
+
+The thesis-writing chain is:
+
+```math
+\boxed{
+\text{Question}
+\rightarrow\text{Objective}
+\rightarrow\text{Object}
+\rightarrow\text{Assumptions}
+\rightarrow\text{Method}
+\rightarrow\text{Comparator}
+\rightarrow\text{Evidence}
+\rightarrow\text{Uncertainty}
+\rightarrow\text{Result}
+\rightarrow\text{Inference}
+\rightarrow\text{Validity domain}.
+}
+```
+
+Developmental epistemic labels are `[E]`, `[D]`, `[H]`, `[P]`, `[A]`, `[U]`, `[R]`. Final prose need not display these labels but must preserve their meaning.
+
+No externally sourced scientific claim enters the thesis without qualified support. No derived/proposed/hypothesized object is presented as established evidence. No conclusion exceeds its experiment and validation domain.
+
+## 9. EGMIV thesis-control rule
 
 For every important thesis object `i`:
 
@@ -213,86 +265,58 @@ For every important thesis object `i`:
 }
 ```
 
-where:
-
-- `R_i`: university/program requirement when applicable;
-- `Q_i`: research question;
-- `O_i`: specific objective;
-- `H_i`: hypothesis/proposition;
-- `E_i`: admissible evidence/data;
-- `M_i`: method/model;
-- `\Phi_i`: decision metric;
-- `S_i`: thesis section;
-- `A_i`: artifact (figure/table/equation/code/data);
-- `V_i`: verification/validation method;
-- `\sigma_i`: status.
+where `R_i` is an institutional requirement when applicable, `Q_i` research question, `O_i` objective, `H_i` hypothesis/proposition, `E_i` evidence/data, `M_i` method/model, `\Phi_i` decision metric, `S_i` thesis section, `A_i` artifact, `V_i` verification/validation method and `\sigma_i` status.
 
 A broken traceability chain is a thesis defect.
 
-## 8. Evidence and citation-control rule
-
-Scientific literature is used to justify why a question, mechanism, mathematical object, comparator, or engineering outcome is legitimate. It is not automatically evidence of novelty.
+## 10. Evidence, citation and novelty control
 
 ```math
-\boxed{
-\text{scientific support}
-\neq
-\text{novelty proof}.
-}
+\boxed{\text{scientific support}\neq\text{novelty proof}.}
 ```
 
-Under `RESEARCH_REASONING_PROTOCOL.md` v1.2:
-
-- every externally sourced scientific claim must carry an adjacent verified APA 7 author–date citation;
-- externally adopted/adapted equations, algorithms, parameter values, thresholds, datasets, and standards require adjacent source attribution;
-- thesis-derived claims are marked as derivation, hypothesis, proposal, or assumption rather than decorated with irrelevant citations;
+- externally sourced scientific claims require adjacent verified APA 7 author–date citations;
+- externally adopted/adapted equations, algorithms, parameters, thresholds, datasets and standards require attribution;
+- thesis-derived objects are identified as derivation/hypothesis/proposal/assumption rather than decorated with irrelevant citations;
 - novelty/gap claims require a separate reproducible search and boundary audit.
 
-The canonical RQ–SO–H file records literature foundations for all five primary research questions and hypotheses. Key foundation classes include interdependency/cascade modeling (Rinaldi et al., 2001; Ouyang, 2014; Tong et al., 2025), information/governance effects (Helmrich et al., 2021; Rydén Sonesson et al., 2021), resilience curves and stochastic viability/reachability (Doyen & De Lara, 2010; Poulin & Kane, 2021; Vinod & Oishi, 2021), and resilience–sustainability engineering decision trade-offs (Liu et al., 2024; Sánchez-Silva et al., 2025; Zhu & Zhang, 2026).
+## 11. Proposal as controlled release
 
-## 9. Proposal as controlled release
+The proposal is treated as a controlled architecture release containing:
 
-The proposal should be treated as:
+- Chapter 1 research contract under Chapter-I v2;
+- condensed Chapter 2 evidence/theory;
+- Chapter 3 framework v2;
+- planned Chapter 4 H1–H5 experiments, V&V, UQ and falsification;
+- proposed contributions explicitly labeled as proposed.
 
-```math
-\boxed{\text{Thesis Architecture Release v2.0}}
-```
+Any later change to system boundary, hypothesis logic, confirmatory baselines, primary metrics, accounting boundaries or major methodology must be versioned and justified.
 
-containing:
-
-- Chapter 1 logic: problem, significance, scope, RQ0/RQ1–RQ7, general objective, SO1–SO7, H1–H5;
-- condensed Chapter 2: qualified evidence and theoretical foundations;
-- Chapter 3: canonical seven-stage v2 mathematical architecture;
-- planned Chapter 4: H1–H5 methodology, experiments, V&V, UQ, and falsification;
-- expected contribution clearly labeled as proposed rather than demonstrated.
-
-Any later change to system boundary, hypothesis logic, confirmatory baselines, primary metrics, or major methodology must be versioned and justified rather than silently rewritten.
-
-## 10. Confirmatory execution gates
+## 12. Confirmatory execution gates
 
 ### H1
 
-Current repository authority indicates:
+M0/M1/M2 implementations and confirmatory design are advanced/frozen as applicable. Row-level raw-data retrieval and qualification remain blocking. No calibration or confirmatory H1 execution is authorized until the predeclared data gates pass.
 
-```math
-\boxed{M_0=\text{independent},\quad M_1=\text{static/algebraic},\quad M_2=\text{dynamic causal}.}
-```
+### H2
 
-The H1 model implementations and confirmatory design are substantially advanced. However, the row-level raw-data retrieval and qualification gate remains blocking. No calibration or confirmatory H1 execution is authorized until the predeclared acquisition/qualification gates are passed.
+Empirical qualification of information/organizational mechanisms, domains, primary responses, thresholds and VVUQ remains open.
 
-### H3–H5
+### H3
 
-H3–H5 scientific logic is frozen, but confirmatory execution remains blocked until hypothesis-specific preregistration fixes the following:
+Before confirmatory execution, freeze `K`, `G_rec`, `F`, `T_V`, `T_R`, `alpha`, `beta`, uncertainty/probability semantics, admissible policy/control assumptions, solver/algorithm, primary Skill metric, `delta_3` and data domain.
 
-```text
-H3: K, G_rec, F, T, alpha, beta, uncertainty model, primary Skill metric, delta_3
-H4: intervention set, resilience-effective criterion, sustainability accounting boundary, D_J, delta_4
-H5: A_R*, A_R,S*, uncertainty treatment, set/regret metric, delta_5
-```
+### H4
 
-Probability distributions may be used only when evidentiary support is adequate. Otherwise, deterministic, interval-based, scenario-based, or nonprobabilistic robustness methods must be used instead of invented probabilities.
+Before confirmatory execution, freeze intervention set, resilience-effectiveness criterion, efficiency definition/resource denominator, sustainability accounting boundaries, consequence vector, distance/materiality metric and `delta_4`.
 
-## 11. Governing thesis principle
+### H5
+
+Before confirmatory execution, freeze candidate decision set, uncertainty/scenario domain, resilience-only and joint decision rules, set/regret metric and `delta_5`.
+
+Probability distributions may be used only when evidentiary support is adequate; otherwise use deterministic, interval, scenario-based or other defensible nonprobabilistic methods.
+
+## 13. Governing thesis principle
 
 ```math
 \boxed{
@@ -310,25 +334,27 @@ Probability distributions may be used only when evidentiary support is adequate.
 
 The reverse direction — conclusion first, evidence afterward — is prohibited.
 
-## 12. Current synchronization status
+## 14. Current synchronization status
 
 ```math
 \boxed{
+\text{ASU/SSEBE controls}
+\rightarrow
 \text{Framework v2}
 \rightarrow
-\text{RQ--SO--H v2 frozen}
+\text{RQ--SO--H v3}
 \rightarrow
-\text{master outline synchronized}
+\text{Chapter-I v2}
 \rightarrow
-\text{master specification synchronized}
+\text{writing/inference v1}
 \rightarrow
-\text{root abstract / entry-point synchronization}
+\text{chapter READMEs/governance synchronized}
 \rightarrow
-\text{H3--H5 preregistration}.
+\text{hypothesis-specific preregistration closure}.
 }
 ```
 
-## 13. Official sources
+## 15. Official sources
 
 - ASU Graduate College Format Manual: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation/asu-graduate-college
 - Formatting process / Format Wizard / submission: https://graduate.asu.edu/current-students/completing-your-degree/formatting-your-thesis-or-dissertation
@@ -336,7 +362,4 @@ The reverse direction — conclusion first, evidence afterward — is prohibited
 - SSEBE Sustainable Engineering MSE Handbook 2026–2027: https://ssebe.engineering.asu.edu/wp-content/uploads/sites/28/2026/07/MSE-Sustainable-Engineering-Handbook-2026-2027.pdf
 - SSEBE Graduate Advising / defense procedures: https://ssebe.engineering.asu.edu/advising/graduate/
 
-Full APA 7 references for the scientific evidence anchors are maintained in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
-
-
-**Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.
+Full APA 7 source details for scientific evidence anchors remain in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` and the evidence system.

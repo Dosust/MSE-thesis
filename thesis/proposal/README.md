@@ -2,38 +2,72 @@
 
 ## Role
 
-The proposal is treated as the first controlled release of the thesis architecture, not as a temporary essay.
+The proposal is the first controlled release of the thesis architecture, not a temporary essay.
 
 ```math
-\boxed{\text{Proposal v1.0}\rightarrow\text{approved research architecture}\rightarrow\text{Thesis v2.x}}
+\boxed{\text{Proposal release}\rightarrow\text{approved research architecture}\rightarrow\text{controlled thesis development}}
 ```
+
+## Current authorities
+
+- `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
+- `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
+- `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`
+- `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Recommended content
 
-1. Background and problem statement
-2. Significance to sustainable engineering
+1. Background and engineering problem
+2. Sustainable-engineering significance
 3. Condensed literature/theoretical foundation
-4. Verified/qualified research gap
-5. Research aim, questions and objectives
-6. H_SYS and H1–H5
-7. Proposed conceptual/mathematical framework
-8. Methodology and experimental design
-9. Verification, validation and uncertainty plan
-10. Expected/proposed contribution
-11. Completion criteria and timeline
-12. References
+4. Evidence-qualified research gap
+5. Scope, system boundary and assumptions
+6. General objective, RQ0, RQ1–RQ7 and SO1–SO7
+7. H1–H5 and developmental/evidence obligations for RQ1/RQ2
+8. Proposed seven-stage conceptual/mathematical framework v2
+9. Methodology and experimental design
+10. Verification, validation, uncertainty and falsification plan
+11. Proposed contributions, clearly labeled as proposed
+12. Completion criteria and timeline
+13. References
+
+## Scientific semantics
+
+Preserve:
+
+```math
+\boxed{
+\text{Stage 5}=	ext{viability + reachability + probability/confidence}
+}
+```
+
+```math
+\boxed{
+H_4=\text{intervention effectiveness/efficiency/sustainability consequences}
+}
+```
+
+```math
+\boxed{
+H_5=\text{resilience-only vs joint resilience–sustainability engineering decision}
+}
+```
+
+Interface criticality is a supporting diagnostic. Adaptive/sequential pathways are a supporting extension unless separately activated.
 
 ## Important compliance distinction
 
-No universal Sustainable Engineering MSE proposal page length is frozen here because no current program-wide 5–10 page requirement has been verified in the 2026–2027 MSE handbook. Any advisor/GSC proposal-length instruction should be recorded as a `CHAIR/GSC` decision in `../00_governance/ASU_REQUIREMENTS_MATRIX.md`.
+No universal Sustainable Engineering MSE proposal page length is frozen here because no current program-wide proposal-length requirement has been verified in the 2026–2027 MSE handbook. Any advisor/GSC proposal-length instruction should be recorded as a `CHAIR/GSC` decision in `../00_governance/ASU_REQUIREMENTS_MATRIX.md`.
 
 ## Change control
 
 After proposal approval, changes to the following require an amendment record rather than silent rewriting:
 
 - research scope/system boundary;
-- primary hypotheses;
+- primary hypotheses or question/objective mapping;
 - confirmatory model baselines;
 - primary data domains/splits;
-- primary decision metrics/thresholds;
-- validation strategy.
+- primary response/decision metrics and thresholds;
+- sustainability accounting boundaries;
+- validation strategy;
+- activation of supporting interface-ranking or adaptive-pathway claims as confirmatory tests.
