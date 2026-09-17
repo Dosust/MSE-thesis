@@ -1,84 +1,75 @@
 # H1 Level 2 — Realistic Synthetic Spatial Twin
 
-**Status:** `LEVEL2_REALISTIC_SYNTHETIC_TWIN`  
-**Scientific role:** spatially realistic mechanism testbed for H1; not observational validation.  
-**System:** coupled electric power + road transportation, Greensboro, North Carolina lineage.
+**Protocol:** `PROTOCOL_V1.md`  
+**Machine contract:** `config/protocol_v1.json`  
+**Current status:** `METHOD_FROZEN_INPUTS_OPEN`  
+**Confirmatory H1 execution:** `NOT AUTHORIZED`  
+**System lineage:** SMART-DS/OpenDSS Greensboro + GreenEVT OSM/SUMO.
 
-## Scientific contract
+## Purpose
 
-Level 2 binds the verified H1 comparators to a realistic synthetic spatial lineage:
+Level 2 binds the verified H1 comparators to a spatially realistic synthetic Power–Transportation testbed. Its scientific target is **incremental explanatory/predictive information**, not whether the dynamic model produces numerically better system performance.
 
-\[
-\text{SMART-DS/OpenDSS (GSO)} + \text{OSM/SUMO (Greensboro)}
-\rightarrow \text{GreenEVT crosswalk}
-\rightarrow \{M_0,M_1,M_2\}.
-\]
-
-The public SMART-DS data are synthetic distribution networks designed for realistic testing. GreenEVT couples the Greensboro SMART-DS distribution system to an OpenStreetMap-derived SUMO network through parcel/bus/road associations. Therefore this level supports computational and mechanistic claims on a realistic synthetic infrastructure, but it does **not** establish predictive superiority against observations or describe the actual Greensboro utility network.
-
-## Comparator definitions
-
-- **M0 — independent:** power and transportation are solved with no P↔T feedback.
-- **M1 — static/algebraic:** charger demand maps T→P and same-step charger availability maps P→T, but the interface has no memory.
-- **M2 — dynamic causal:** charger backlog and state-dependent repair-access progress are explicit states.
-
-The admissible comparison is matched:
-
-\[
-\Omega_H,\;Y_0,\;u,\;\eta,\;\theta_{shared}
-\quad\text{held fixed across}\quad M_0,M_1,M_2.
-\]
-
-## Data lineage
-
-The realistic mode expects a checked-out GreenEVT repository with Git-LFS materialized. Required artifacts are:
-
-- `data/open_dss/Master.dss`
-- `data/open_dss/bus_info.csv`
-- `data/open_dss/Long_lat_buscoords.txt`
-- `data/sumo_network/greensboro.net.xml`
-- `data/sumo_network/greensboro.sumocfg`
-- `data/UDS.db`
-
-`UDS.db` must expose the GreenEVT crosswalk fields used by the upstream project, including `buses(id,long,lat,sumo_edge,...)` and `parcels(...,bus_id,sumo_edge,...)`.
-
-## Workflow
-
-```text
-Acquire -> Audit -> Crosswalk audit -> Reduced spatial case -> M0/M1/M2 -> gates -> UQ/sensitivity
+```math
+M_0=\text{independent},\qquad
+M_1=\text{static coupling},\qquad
+M_2=\text{dynamic causal coupling}.
 ```
 
-Commands:
+SMART-DS is realistic synthetic infrastructure, not the actual Greensboro utility network. A held-out SMART-DS feeder tests spatial generalization inside the synthetic testbed; it is not observational validation.
+
+## Controlled workflow
+
+```text
+source acquisition/audit
+-> pre-simulation feeder features
+-> outcome-blind development/held-out selection
+-> canonical dependency registry
+-> coherent flood field + hazard-response maps
+-> parameter freeze
+-> matched M0/M1/M2 + ablations
+-> V&V
+-> UQ/sensitivity
+-> independent-reference model-error test
+-> later Stage-5 viability geometry
+```
+
+## Files
+
+- `PROTOCOL_V1.md` — human-readable frozen scientific protocol.
+- `config/protocol_v1.json` — machine-readable gate state.
+- `config/source_manifest_v1.json` — authoritative data/method provenance.
+- `config/protocol_status_v1.json` — generated current gate audit.
+- `registries/dependency_registry_v1.csv` — directed Level-2 dependencies under the canonical thesis dependency contract.
+- `registries/parameter_registry_v1.csv` — parameter provenance/uncertainty registry.
+- `registries/scenario_matrix_v1.csv` — matched comparison and ablation design.
+- `registries/qoi_registry_v1.csv` — H1 primary families, secondary outcomes, and deferred `rho_g`.
+- `registries/feeder_features_template.csv` — required inputs to outcome-blind feeder selection.
+- `select_feeders.py` — deterministic pre-result feeder selector.
+- `validate_protocol.py` — structural/freeze/authorization guard.
+- `acquire_level2.py`, `audit_inputs.py`, `build_reduced_case.py`, `render_level2_map.py` — source acquisition, audit and spatial-case tooling.
+- `run_level2.py` — preview fixture and realistic-run gate.
+
+## Commands
 
 ```bash
 python acquire_level2.py --dest external/GreenEVT
 python audit_inputs.py --greenevt external/GreenEVT --out input_audit.json
+python select_feeders.py --features registries/feeder_features.csv --out feeder_selection.json
+python validate_protocol.py --protocol config/protocol_v1.json --root . --out config/protocol_status_v1.json
 python build_reduced_case.py --greenevt external/GreenEVT --out case_bundle.json
-python run_level2.py --case case_bundle.json --out results.json
+python run_level2.py --case case_bundle.json --protocol config/protocol_v1.json --out results.json
 ```
 
-A deterministic `--preview` mode exists only to verify the Level-2 plumbing without the large Git-LFS data:
+The deterministic preview remains available only for software verification:
 
 ```bash
 python build_reduced_case.py --preview --out preview_case.json
 python run_level2.py --case preview_case.json --out preview_results.json
 ```
 
-`preview` is a software verification fixture, **not** a thesis result.
+Preview outputs are **not thesis evidence**.
 
-## Mandatory gates
+## Hard claim boundary
 
-A realistic run is admissible only if all gates pass:
-
-1. provenance files exist and Git-LFS pointers are fully materialized;
-2. `UDS.db` contains buses and parcels with the expected crosswalk fields;
-3. no selected bus has a missing road-edge crosswalk;
-4. no selected parcel has a missing bus or road-edge crosswalk;
-5. selected SUMO edges exist in the Greensboro network;
-6. every model uses the same reduced case, disturbance realization, time grid and shared parameters;
-7. M2 reduces to M1 when memory and dynamic repair are disabled;
-8. outputs label all non-source hazard, repair, charging and uncertainty values as synthetic/sensitivity inputs.
-
-## Interpretation boundary
-
-Level 2 may establish that a mechanism produces reproducible differences among M0/M1/M2 on realistic synthetic spatial infrastructure. It cannot establish H1b predictive superiority against observed events. That requires Level 3 observational/held-out validation.
+A realistic synthetic run may establish reproducible model/mechanism differences. It may not establish H1 predictive superiority unless an independent qualified reference, exact primary metrics, V&V acceptance rules, UQ design, data qualification and repository authorization have all been frozen before result inspection.
