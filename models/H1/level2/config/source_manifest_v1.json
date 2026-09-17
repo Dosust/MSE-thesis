@@ -1,0 +1,79 @@
+{
+  "manifest_id": "H1_LEVEL2_SOURCE_MANIFEST_V1",
+  "access_date": "2026-09-18",
+  "sources": [
+    {
+      "id": "SMART_DS_GSO",
+      "authority": "NREL/OEDI",
+      "url": "https://data.openei.org/submissions/2981",
+      "role": "realistic synthetic Greensboro electrical distribution topology, OpenDSS models and load-profile lineage",
+      "epistemic_status": "SOURCE_DATA_SYNTHETIC_NOT_OBSERVED_UTILITY_TOPOLOGY"
+    },
+    {
+      "id": "GREENEVT",
+      "authority": "GreenEVT authors/public repository",
+      "url": "https://github.com/GreenEVT/GreenEVT",
+      "paper": "https://arxiv.org/abs/2305.12722",
+      "pinned_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+      "role": "Greensboro OpenDSS/SUMO coupling and spatial crosswalk methods",
+      "epistemic_status": "SOURCE_TESTBED_METHODS_LINEAGE"
+    },
+    {
+      "id": "NOAA_ATLAS15_STATUS",
+      "authority": "NOAA/NWS Office of Water Prediction",
+      "url": "https://water.noaa.gov/about/atlas15",
+      "role": "precipitation-frequency standard status",
+      "epistemic_status": "AT_AUDIT_DATE_PAGE_IDENTIFIES_ATLAS14_AS_CURRENT_STANDARD_AND_ATLAS15_AS_UNDER_DEVELOPMENT"
+    },
+    {
+      "id": "HEC_RAS_2D_66",
+      "authority": "USACE Hydrologic Engineering Center",
+      "url": "https://www.hec.usace.army.mil/software/hec-ras/documentation.aspx",
+      "role": "2D hydraulic/rainfall modeling method",
+      "epistemic_status": "AUTHORITATIVE_METHOD_DOCUMENTATION"
+    },
+    {
+      "id": "USGS_3DEP",
+      "authority": "USGS",
+      "url": "https://data.usgs.gov/datacatalog/data/USGS:77ae0551-c61e-4979-aedd-d797abdcde0e",
+      "role": "terrain elevation",
+      "epistemic_status": "AUTHORITATIVE_GEOSPATIAL_DATA"
+    },
+    {
+      "id": "USDA_SSURGO",
+      "authority": "USDA NRCS",
+      "url": "https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo",
+      "role": "soil/infiltration evidence",
+      "epistemic_status": "AUTHORITATIVE_GEOSPATIAL_DATA"
+    },
+    {
+      "id": "USGS_NLCD_2021_V2_2026",
+      "authority": "USGS",
+      "url": "https://www.usgs.gov/data/national-land-cover-database-nlcd-2021-products-ver-20-june-2026",
+      "role": "land-cover/imperviousness evidence",
+      "epistemic_status": "AUTHORITATIVE_GEOSPATIAL_DATA"
+    },
+    {
+      "id": "NASA_HDBK_7009B",
+      "authority": "NASA",
+      "url": "https://standards.nasa.gov/standard/NASA/NASA-HDBK-7009",
+      "document_date": "2026-02-03",
+      "role": "modeling/simulation credibility and V&V practice",
+      "epistemic_status": "ACTIVE_AUTHORITATIVE_GUIDANCE"
+    },
+    {
+      "id": "JCGM_101_2008",
+      "authority": "JCGM/BIPM",
+      "url": "https://www.bipm.org/en/doi/10.59161/jcgm101-2008",
+      "role": "Monte Carlo uncertainty propagation",
+      "epistemic_status": "AUTHORITATIVE_METROLOGY_GUIDANCE"
+    },
+    {
+      "id": "SALIB_SOBOL",
+      "authority": "SALib documentation",
+      "url": "https://salib.readthedocs.io/en/main/api/SALib.sample.html",
+      "role": "implementation rule for scrambled Sobol sampling and run count",
+      "epistemic_status": "SOFTWARE_METHOD_DOCUMENTATION"
+    }
+  ]
+}
