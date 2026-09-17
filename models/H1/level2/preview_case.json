@@ -1,0 +1,32 @@
+{
+  "level": 2,
+  "mode": "preview",
+  "admissible_for_thesis_results": false,
+  "lineage": "deterministic software fixture only",
+  "dt_h": 0.08333333333333333,
+  "horizon_steps": 24,
+  "power_buses": [
+    {"id": "P0", "lon": -79.9, "lat": 36.08, "base_load_pu": 0.18},
+    {"id": "P1", "lon": -79.86, "lat": 36.07, "base_load_pu": 0.16},
+    {"id": "P2", "lon": -79.82, "lat": 36.05, "base_load_pu": 0.14},
+    {"id": "P3", "lon": -79.78, "lat": 36.03, "base_load_pu": 0.12}
+  ],
+  "road_edges": [
+    {"id": "R0", "from": "T0", "to": "T1", "length_km": 2.0, "free_speed_kph": 50.0},
+    {"id": "R1", "from": "T1", "to": "T2", "length_km": 2.2, "free_speed_kph": 45.0},
+    {"id": "R2", "from": "T2", "to": "T3", "length_km": 2.4, "free_speed_kph": 40.0}
+  ],
+  "chargers": [
+    {"id": "C0", "bus_id": "P2", "road_edge_id": "R1", "arrival_vph": 600.0, "capacity_vph": 720.0}
+  ],
+  "repair_jobs": [
+    {"id": "J0", "bus_id": "P3", "road_path": ["R0", "R1", "R2"], "repair_time_h": 0.25}
+  ],
+  "disturbance": {
+    "failed_bus_id": "P3",
+    "start_step": 5,
+    "charger_outage_steps": 3,
+    "road_congestion_factor": 1.35
+  },
+  "provenance": {"all_values_below": "synthetic software verification fixture"}
+}
