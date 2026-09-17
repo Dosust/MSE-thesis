@@ -2,7 +2,9 @@
 
 **Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+**Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
+**Stage-6/7 sustainability authority:** `../00_governance/SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md`  
+**Live sustainability register:** `../00_governance/SUSTAINABILITY_DIMENSION_REGISTER_V1.md`
 
 ## Purpose
 
@@ -34,7 +36,9 @@ Sections **1.1–1.4 now have one source of truth in this directory**. The repos
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
 - 1.3 states the engineering problem concisely and removes detailed experimental/VVUQ material that belongs later.
 - 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
-- **Section 1.5 is the next Chapter-I writing task.**
+- **Section 1.5 is the next Chapter-I writing task, but it must be written only after the evidence audit and Sustainability-Dimension Admission Matrix are consulted.**
+
+Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may use only evidence-supported quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current admission status is recorded in `SUSTAINABILITY_DIMENSION_REGISTER_V1.md`.
 
 ## Governing logic
 
@@ -101,6 +105,22 @@ Preserve:
 \boxed{\text{effectiveness}\neq\text{efficiency}\neq\text{sustainability}}.
 ```
 
+For Stage 6–7 work, also preserve the typed consequence record:
+
+```math
+\boxed{
+\mathcal C(a_k)
+=
+\left(
+\Delta\mathfrak R^{a_k},
+\mathbf r^{a_k},
+\Delta\mathbf J_{\rm sus}^{a_k},
+\mathcal F^{a_k},
+\mathbf U^{a_k}
+\right).
+}
+```
+
 Interface criticality is a supporting diagnostic. Adaptive/sequential transformation is a supporting Stage-7 extension unless separately activated and preregistered.
 
 ## Evidence discipline
@@ -110,8 +130,10 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 - `[H]`, `[P]` and `[A]` statements must not be written as established facts;
 - proposal-stage results language is prohibited unless an already executed verification/method result is explicitly identified and bounded;
 - externally sourced claims use adjacent verified APA 7 author–date citations;
-- exact claim strength must not exceed evidence or validation domain.
+- exact claim strength must not exceed evidence or validation domain;
+- sustainability claims must distinguish direct P–T evidence from adjacent transferable evidence;
+- cost, budget, energy, carbon, accessibility, resource use and transformation descriptors must not be collapsed into one generic sustainability category without role typing and admission.
 
 ## Exit gate
 
-See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized.
+See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Section 1.5 additionally requires the sustainability admission standard and live register to be internally consistent with Section 1.6 scope and the H4/H5 experiment plan.
