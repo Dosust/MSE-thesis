@@ -6,6 +6,8 @@ import sqlite3
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+ROOT = Path(__file__).resolve().parent
+
 
 def preview_case() -> dict:
     # Deterministic plumbing fixture. Coordinates lie inside the GreenEVT published bounding box,
@@ -30,20 +32,16 @@ def preview_case() -> dict:
         "horizon_steps": 24,
         "power_buses": buses,
         "road_edges": roads,
-        "chargers": [
-            {"id": "C0", "bus_id": "P2", "road_edge_id": "R1", "arrival_vph": 600.0, "capacity_vph": 720.0},
-        ],
-        "repair_jobs": [
-            {"id": "J0", "bus_id": "P3", "road_path": ["R0", "R1", "R2"], "repair_time_h": 0.25},
-        ],
+        "chargers": [{"id": "C0", "bus_id": "P2", "road_edge_id": "R1", "arrival_vph": 600.0, "capacity_vph": 720.0}],
+        "repair_jobs": [{"id": "J0", "bus_id": "P3", "road_path": ["R0", "R1", "R2"], "repair_time_h": 0.25}],
         "disturbance": {"failed_bus_id": "P3", "start_step": 5, "charger_outage_steps": 3, "road_congestion_factor": 1.35},
         "provenance": {"all_values_below": "synthetic software verification fixture"},
     }
 
 
 def sumo_edges(net_path: Path) -> dict[str, dict]:
-    out = {}
-    for event, elem in ET.iterparse(net_path, events=("end",)):
+    out: dict[str, dict] = {}
+    for _, elem in ET.iterparse(net_path, events=("end",)):
         if elem.tag == "edge":
             eid = elem.attrib.get("id", "")
             if eid and not eid.startswith(":"):
@@ -62,66 +60,94 @@ def sumo_edges(net_path: Path) -> dict[str, dict]:
     return out
 
 
-def realistic_case(root: Path, max_buses: int, max_edges: int) -> dict:
+def _require_frozen_manifest(manifest: dict, protocol: dict) -> None:
+    if manifest.get("status") != "FROZEN":
+        raise SystemExit("Case manifest is not FROZEN; outcome-blind case selection must close first")
+    role = manifest.get("role")
+    if role not in {"development", "heldout"}:
+        raise SystemExit("Case manifest role must be development or heldout")
+    feeder_id = manifest.get("feeder_id")
+    expected = protocol.get("spatial_case", {}).get("development_feeder_id" if role == "development" else "heldout_feeder_id")
+    if not expected or feeder_id != expected:
+        raise SystemExit(f"Case feeder {feeder_id!r} does not match frozen protocol {role} feeder {expected!r}")
+    if not manifest.get("power_bus_ids") or not manifest.get("road_edge_ids"):
+        raise SystemExit("Frozen case manifest requires nonempty power_bus_ids and road_edge_ids")
+    if not manifest.get("selection_artifact_sha256") or not manifest.get("source_audit_sha256"):
+        raise SystemExit("Frozen case manifest requires selection and source-audit SHA-256 provenance")
+
+
+def realistic_case(root: Path, manifest_path: Path, protocol_path: Path) -> dict:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
+    _require_frozen_manifest(manifest, protocol)
+
     db_path = root / "data/UDS.db"
     net_path = root / "data/sumo_network/greensboro.net.xml"
     if not db_path.exists() or not net_path.exists():
         raise SystemExit("Required GreenEVT files are missing; run audit_inputs.py first")
     edges = sumo_edges(net_path)
+
+    requested_buses = [str(x) for x in manifest["power_bus_ids"]]
+    requested_roads = [str(x) for x in manifest["road_edge_ids"]]
+    if len(set(requested_buses)) != len(requested_buses) or len(set(requested_roads)) != len(requested_roads):
+        raise SystemExit("Case manifest contains duplicate bus or road IDs")
+    missing_roads = [eid for eid in requested_roads if eid not in edges]
+    if missing_roads:
+        raise SystemExit(f"Road IDs absent from audited SUMO network: {missing_roads[:10]}")
+
     with sqlite3.connect(db_path) as conn:
         conn.row_factory = sqlite3.Row
         bus_cols = {r[1] for r in conn.execute("PRAGMA table_info(buses)")}
         active_expr = "active_load" if "active_load" in bus_cols else "0.0"
+        placeholders = ",".join("?" for _ in requested_buses)
         rows = conn.execute(
-            f"SELECT id,long,lat,sumo_edge,{active_expr} AS active_load FROM buses "
-            "WHERE sumo_edge IS NOT NULL AND CAST(sumo_edge AS TEXT) NOT IN ('0','-2','') "
-            "ORDER BY active_load DESC LIMIT ?",
-            (max_buses,),
+            f"SELECT id,long,lat,sumo_edge,{active_expr} AS active_load FROM buses WHERE CAST(id AS TEXT) IN ({placeholders})",
+            requested_buses,
         ).fetchall()
+        by_id = {str(r["id"]): r for r in rows}
+        missing_buses = [bid for bid in requested_buses if bid not in by_id]
+        if missing_buses:
+            raise SystemExit(f"Bus IDs absent from audited GreenEVT database: {missing_buses[:10]}")
+
+        road_set = set(requested_roads)
         buses = []
-        selected_edges = []
-        for r in rows:
+        for bid in requested_buses:
+            r = by_id[bid]
             sid = str(r["sumo_edge"])
             if sid not in edges:
-                continue
+                raise SystemExit(f"Bus {bid} has no valid SUMO edge in audited network")
+            if sid not in road_set:
+                raise SystemExit(f"Frozen road subnetwork omits mapped SUMO edge {sid} for bus {bid}")
             buses.append({
-                "id": str(r["id"]),
+                "id": bid,
                 "lon": float(r["long"]),
                 "lat": float(r["lat"]),
                 "base_load_native": float(r["active_load"] or 0.0),
                 "sumo_edge_id": sid,
             })
-            selected_edges.append(sid)
-        # Expand one-hop topological neighborhood without inventing geometry.
-        selected = set(selected_edges)
-        endpoint_nodes = set()
-        for eid in list(selected):
-            e = edges[eid]
-            endpoint_nodes.update([e.get("from"), e.get("to")])
-        for eid, e in edges.items():
-            if len(selected) >= max_edges:
-                break
-            if e.get("from") in endpoint_nodes or e.get("to") in endpoint_nodes:
-                selected.add(eid)
-        ordered = list(dict.fromkeys(selected_edges + sorted(selected - set(selected_edges))))
-        roads = [edges[eid] for eid in ordered[:max_edges]]
-        placeholders = ",".join("?" for _ in [b["id"] for b in buses])
+
         parcel_count = 0
         valid_crosswalks = 0
-        if buses:
-            q = f"SELECT bus_id,sumo_edge FROM parcels WHERE CAST(bus_id AS TEXT) IN ({placeholders})"
-            for pr in conn.execute(q, [b["id"] for b in buses]):
-                parcel_count += 1
-                if pr[1] is not None and str(pr[1]) in edges:
-                    valid_crosswalks += 1
-    if not buses:
-        raise SystemExit("No valid bus↔SUMO-edge crosswalks found in the selected GreenEVT subset")
+        q = f"SELECT bus_id,sumo_edge FROM parcels WHERE CAST(bus_id AS TEXT) IN ({placeholders})"
+        for pr in conn.execute(q, requested_buses):
+            parcel_count += 1
+            if pr[1] is not None and str(pr[1]) in edges:
+                valid_crosswalks += 1
+
+    roads = [edges[eid] for eid in requested_roads]
     return {
         "level": 2,
         "mode": "realistic",
         "admissible_for_thesis_results": False,
-        "admissibility_status": "BLOCKED_PENDING_FROZEN_EXPERIMENT_INPUTS",
+        "admissibility_status": "METHOD_FROZEN_INPUTS_OPEN",
         "lineage": "GreenEVT/SMART-DS Greensboro + OSM/SUMO",
+        "case_manifest": {
+            "id": manifest.get("case_manifest_id"),
+            "role": manifest.get("role"),
+            "feeder_id": manifest.get("feeder_id"),
+            "selection_artifact_sha256": manifest.get("selection_artifact_sha256"),
+            "source_audit_sha256": manifest.get("source_audit_sha256"),
+        },
         "power_buses": buses,
         "road_edges": roads,
         "crosswalk_audit": {
@@ -131,29 +157,31 @@ def realistic_case(root: Path, max_buses: int, max_edges: int) -> dict:
             "parcel_rows_with_valid_road_edge": valid_crosswalks,
         },
         "synthetic_inputs_required_before_run": [
-            "disturbance realization",
+            "hazard realization from frozen hydraulic manifest",
             "charger placement/capacity unless directly sourced",
             "repair jobs/crew productivity",
             "uncertainty distributions",
+            "common-random-number seed manifest",
+            "qualified H1 reference and exact primary metrics"
         ],
-        "claim_boundary": "realistic synthetic spatial mechanism test; not observed-event prediction",
+        "claim_boundary": "realistic synthetic spatial mechanism test; not observed-event prediction"
     }
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--greenevt")
+    ap.add_argument("--case-manifest")
+    ap.add_argument("--protocol", default=str(ROOT / "config" / "protocol_v1.json"))
     ap.add_argument("--preview", action="store_true")
-    ap.add_argument("--max-buses", type=int, default=50)
-    ap.add_argument("--max-edges", type=int, default=300)
     ap.add_argument("--out", default="case_bundle.json")
     args = ap.parse_args()
     if args.preview:
         case = preview_case()
     else:
-        if not args.greenevt:
-            raise SystemExit("--greenevt is required unless --preview is used")
-        case = realistic_case(Path(args.greenevt), args.max_buses, args.max_edges)
+        if not args.greenevt or not args.case_manifest:
+            raise SystemExit("--greenevt and --case-manifest are required unless --preview is used")
+        case = realistic_case(Path(args.greenevt), Path(args.case_manifest), Path(args.protocol))
     Path(args.out).write_text(json.dumps(case, indent=2) + "\n")
     print(json.dumps({"written": args.out, "mode": case["mode"], "power_buses": len(case["power_buses"]), "road_edges": len(case["road_edges"])}, indent=2))
 
