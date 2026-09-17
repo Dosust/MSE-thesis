@@ -1,6 +1,6 @@
-"""Fail-closed validation for the Austin case-study admissibility contract.
+"""Fail-closed validation for versioned Austin case-study admissibility contracts.
 
-This module validates *research-control state*. It does not download data,
+This module validates research-control state. It does not download data,
 compute scientific parameters, or adjudicate H1--H5. Its purpose is to prevent
 an Austin candidate case from being marked admissible before every frozen
 pre-result data and mechanism gate has passed.
@@ -16,10 +16,19 @@ class AustinAdmissibilityError(ValueError):
     """Raised when the Austin admissibility contract violates a frozen rule."""
 
 
-REQUIRED_AUTHORITIES = {
+BASE_AUTHORITIES = {
     "project/CANONICAL_7_STAGE_FRAMEWORK_V2.md",
     "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
-    "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md",
+}
+VERSION_AUTHORITIES = {
+    "1.0": BASE_AUTHORITIES
+    | {"project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"},
+    "2.0": BASE_AUTHORITIES
+    | {
+        "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V2.md",
+        "project/AUSTIN_BOUNDARY_VINTAGE_PROTOCOL_V1.md",
+        "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md",
+    },
 }
 
 REQUIRED_GATE_IDS = (
@@ -37,6 +46,10 @@ REQUIRED_GATE_IDS = (
 MANDATORY_DATA_IDS = {"boundary", "power", "road", "signals", "flood"}
 TRAFFIC_DATA_IDS = {"traffic_camera", "traffic_radar"}
 DERIVED_IDS = {"repair_access", "p_to_t_signal_power_mapping"}
+TXDOT_2018_ROAD = (
+    "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/ArcGIS/rest/services/"
+    "TxDOT_Roadway_Inventory_2018/FeatureServer/0"
+)
 
 
 def load_contract(path: str | Path) -> dict[str, Any]:
@@ -67,16 +80,40 @@ def _index_unique(
     return out
 
 
+def _validate_v2_road_contract(families: Mapping[str, Mapping[str, Any]]) -> None:
+    road = families["road"]
+    _require(
+        road.get("endpoint") == TXDOT_2018_ROAD,
+        "v2 primary road source must remain TxDOT Roadway Inventory 2018",
+    )
+    _require(road.get("inventory_year") == 2018, "v2 primary road year must remain 2018")
+    _require(
+        road.get("strict_2018_snapshot") is True,
+        "v2 primary road must be marked exact annual 2018 inventory",
+    )
+    for item_id in ("road_ctn_sensitivity", "road_city_current_sensitivity"):
+        _require(item_id in families, f"v2 missing required road sensitivity family: {item_id}")
+        _require(
+            families[item_id].get("strict_2018_snapshot") is False,
+            f"{item_id} must not be labeled a frozen 2018 snapshot",
+        )
+        _require(
+            families[item_id].get("mandatory") is False,
+            f"{item_id} is sensitivity evidence and must remain nonmandatory",
+        )
+
+
 def validate_contract(data: Mapping[str, Any]) -> None:
     """Validate structural and scientific-control invariants.
 
     The validator deliberately does not infer PASS from source availability.
     Every gate must be explicitly closed by upstream materialization/QC.
     """
-    _require(data.get("version") == "1.0", "expected Austin contract version 1.0")
+    version = data.get("version")
+    _require(version in VERSION_AUTHORITIES, "unsupported Austin contract version")
     _require(data.get("case_id") == "AUS-P5U-2018-V1", "unexpected Austin case_id")
     _require(
-        set(data.get("authority", [])) >= REQUIRED_AUTHORITIES,
+        set(data.get("authority", [])) >= VERSION_AUTHORITIES[str(version)],
         "Austin contract is missing canonical authority files",
     )
 
@@ -120,6 +157,9 @@ def validate_contract(data: Mapping[str, Any]) -> None:
             families[item_id].get("mandatory") is True,
             f"{item_id} must remain mandatory",
         )
+
+    if version == "2.0":
+        _validate_v2_road_contract(families)
 
     derived_raw = data.get("derived_objects")
     _require(isinstance(derived_raw, list), "derived_objects must be a list")
