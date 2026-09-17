@@ -9,8 +9,10 @@ on:
       - "methods/austin_case/**"
       - "config/austin_case_admissibility_v1.json"
       - "config/austin_preconfirmatory_registry_v1.json"
+      - "config/austin_road_vintage_v1.json"
       - "project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V1.md"
       - "project/AUSTIN_DATA_QC_AND_GATE_PROTOCOL_V1.md"
+      - "project/AUSTIN_ROAD_VINTAGE_PROTOCOL_V1.md"
       - "tests/test_austin_*.py"
 
 permissions:
@@ -41,24 +43,27 @@ jobs:
         run: |
           pytest -q tests/test_austin_*.py
 
-      - name: Materialize public Austin core inputs with frozen boundary vintage
+      - name: Materialize public Austin core inputs with frozen boundary and road vintages
         run: |
           set -euo pipefail
-          python methods/austin_case/materialize_public_data_v2.py --root data/AUS-P5U-2018-V1 \
-            | tee austin-materialization-v2.txt
+          python methods/austin_case/materialize_public_data_v3.py --root data/AUS-P5U-2018-V1 \
+            | tee austin-materialization-v3.txt
           python methods/austin_case/materialize_service_area.py --root data/AUS-P5U-2018-V1 \
             | tee austin-service-area.txt
 
-      - name: Execute immutable raw-manifest QC
+      - name: Execute immutable raw-manifest and road-vintage QC
         run: |
           set -euo pipefail
           python - <<'PY' | tee austin-raw-qc.txt
           import json
           from pathlib import Path
           from methods.austin_case.data_qc import validate_raw_manifest
-          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest_v2.json')
+          from methods.austin_case.road_vintage import validate_road_vintage_manifest
+
+          manifest_path = Path('data/AUS-P5U-2018-V1/qa/raw_materialization_manifest_v3.json')
           manifest = json.loads(manifest_path.read_text())
           print(json.dumps(validate_raw_manifest(manifest, root=Path('.')), indent=2, sort_keys=True))
+          print(json.dumps(validate_road_vintage_manifest(manifest), indent=2, sort_keys=True))
           PY
 
       - name: Freeze execution identity
@@ -71,10 +76,13 @@ jobs:
             echo "RUN_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
             sha256sum config/austin_case_admissibility_v1.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
+            sha256sum config/austin_road_vintage_v1.json
             sha256sum methods/austin_case/materialize_public_data.py
             sha256sum methods/austin_case/materialize_public_data_v2.py
+            sha256sum methods/austin_case/materialize_public_data_v3.py
             sha256sum methods/austin_case/materialize_service_area.py
             sha256sum methods/austin_case/data_qc.py
+            sha256sum methods/austin_case/road_vintage.py
           } | tee austin-case-evidence/execution-identity.txt
 
       - name: Upload immutable Austin qualification evidence
@@ -87,6 +95,6 @@ jobs:
           path: |
             data/AUS-P5U-2018-V1/
             austin-case-evidence/
-            austin-materialization-v2.txt
+            austin-materialization-v3.txt
             austin-service-area.txt
             austin-raw-qc.txt
