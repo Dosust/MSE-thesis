@@ -1,5 +1,5 @@
 {
-  "manifest_id": "H1_LEVEL2_SOURCE_MANIFEST_V1",
+  "manifest_id": "H1_LEVEL2_SOURCE_MANIFEST_V1_2",
   "access_date": "2026-09-18",
   "sources": [
     {
@@ -16,7 +16,34 @@
       "paper": "https://arxiv.org/abs/2305.12722",
       "pinned_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
       "role": "Greensboro OpenDSS/SUMO coupling and spatial crosswalk methods",
-      "epistemic_status": "SOURCE_TESTBED_METHODS_LINEAGE"
+      "epistemic_status": "SOURCE_TESTBED_METHODS_LINEAGE",
+      "critical_lfs_objects": [
+        {
+          "path": "data/UDS.db",
+          "pointer_git_blob_sha": "308297230cd4050f7599c69b8d55b24f48d2ba1e",
+          "materialized_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+          "materialized_size_bytes": 107778048,
+          "role": "bus/parcel/power-road crosswalk database and max_real_power source"
+        },
+        {
+          "path": "data/sumo_network/greensboro.net.xml",
+          "pointer_git_blob_sha": "df22c5fb34022e773e9d2d858df5b410d3d2e997",
+          "materialized_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+          "materialized_size_bytes": 351967227,
+          "role": "frozen SUMO topology and coordinate transform"
+        }
+      ],
+      "lfs_rule": "Pointer identity alone is insufficient. Materialized bytes must match frozen SHA-256 and size before feature extraction or simulation.",
+      "upstream_archive_fallback": "https://gustavnilsson.name/files/GreenEVT.zip",
+      "archive_rule": "Fallback archive is not presumed commit-equivalent; it must pass the same frozen file-identity audits before use."
+    },
+    {
+      "id": "FEMA_NFHL_EFFECTIVE",
+      "authority": "Federal Emergency Management Agency",
+      "url": "https://www.fema.gov/flood-maps/national-flood-hazard-layer",
+      "role": "effective Special Flood Hazard Area geometry used only for the preregistered static feeder-selection exposure descriptor E_H",
+      "epistemic_status": "AUTHORITATIVE_EFFECTIVE_FLOOD_HAZARD_MAPPING",
+      "boundary": "NFHL E_H is a case-selection descriptor; it is not the Level-2 pluvial HEC-RAS forcing, not a fragility function, and unmapped/unknown coverage is not zero exposure."
     },
     {
       "id": "NOAA_ATLAS15_STATUS",
@@ -27,7 +54,7 @@
     },
     {
       "id": "HEC_RAS_2D_66",
-      "authority": "USACE Hydrologic Engineering Center",
+      "authority": "U.S. Army Corps of Engineers, Hydrologic Engineering Center",
       "url": "https://www.hec.usace.army.mil/software/hec-ras/documentation.aspx",
       "role": "2D hydraulic/rainfall modeling method",
       "epistemic_status": "AUTHORITATIVE_METHOD_DOCUMENTATION"
@@ -52,6 +79,21 @@
       "url": "https://www.usgs.gov/data/national-land-cover-database-nlcd-2021-products-ver-20-june-2026",
       "role": "land-cover/imperviousness evidence",
       "epistemic_status": "AUTHORITATIVE_GEOSPATIAL_DATA"
+    },
+    {
+      "id": "PREGNOLATO_2017_ROAD_FLOOD",
+      "authority": "peer-reviewed literature",
+      "doi": "https://doi.org/10.1016/j.trd.2017.06.020",
+      "role": "candidate road flood depth-disruption relation within documented validity domain",
+      "epistemic_status": "PEER_REVIEWED_CALIBRATION_EVIDENCE"
+    },
+    {
+      "id": "FEMA_HAZUS_ELECTRICAL",
+      "authority": "Federal Emergency Management Agency",
+      "url": "https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus",
+      "role": "starting evidence for flood vulnerability/functionality of relevant ground-level electrical facilities",
+      "epistemic_status": "AUTHORITATIVE_HAZARD_METHOD_SOURCE",
+      "boundary": "Flood depth alone is not an admissible overhead-line failure mechanism."
     },
     {
       "id": "NASA_HDBK_7009B",
