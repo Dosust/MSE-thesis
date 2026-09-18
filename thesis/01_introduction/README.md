@@ -22,6 +22,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 5. **[1.5 Sustainable Engineering Significance](01_05_sustainable_engineering_significance.md)**
 6. **[1.6 Scope, Boundaries, and Assumptions](01_06_scope_boundaries_and_assumptions.md)**
 7. **[1.7 Research Framework and Logic](01_07_research_architecture_and_scientific_logic.md)**
+8. **[1.8 General Research Objective](01_08_general_research_objective.md)**
 8. **1.8 General Research Objective**
 9. **1.9 Research Questions** — RQ0 + exact RQ1–RQ7
 10. **1.10 Specific Research Objectives** — exact SO1–SO7
