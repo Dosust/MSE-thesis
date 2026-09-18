@@ -207,6 +207,85 @@ class Stage1FrameworkVerification(unittest.TestCase):
             for authority_id in relation.get("normative_authority_ids", []):
                 self.assertIn(authority_id, authority_ids)
 
+    def test_19_entity_semantics_are_required(self):
+        broken = copy.deepcopy(self.structure)
+        broken["entities"][0].pop("engineering_functions")
+        with self.assertRaises(ValidationError):
+            self.structure_validator.validate(broken)
+
+    def test_20_relation_exchange_semantics_are_required(self):
+        broken = copy.deepcopy(self.structure)
+        broken["candidate_relations"][0].pop("exchange_semantics")
+        with self.assertRaises(ValidationError):
+            self.structure_validator.validate(broken)
+
+    def test_21_stage1_strength_estimation_is_rejected_by_schema(self):
+        broken = copy.deepcopy(self.structure)
+        broken["candidate_relations"][0]["strength_status"] = "ESTIMATED"
+        with self.assertRaises(ValidationError):
+            self.structure_validator.validate(broken)
+
+    def test_22_runtime_rejects_stage1_strength_estimation(self):
+        relation = copy.deepcopy(self.structure["candidate_relations"][0])
+        relation["strength_status"] = "ESTIMATED"
+        bundle = adapter_contract.CanonicalBundle(candidate_relations=[relation])
+        with self.assertRaises(ValueError):
+            adapter_contract.assert_stage1_relation_semantics(bundle)
+
+    def test_23_numeric_evidence_confidence_requires_method(self):
+        broken = copy.deepcopy(self.structure)
+        broken["candidate_relations"][0]["evidence_confidence"] = {
+            "confidence_class": "HIGH",
+            "score": 0.9,
+            "method": None,
+        }
+        with self.assertRaises(ValidationError):
+            self.structure_validator.validate(broken)
+
+    def test_24_prior_or_normative_evidence_alone_cannot_verify_case_connection(self):
+        relation = copy.deepcopy(self.structure["candidate_relations"][0])
+        relation["structural_evidence"] = {
+            "asset_crosswalk": False,
+            "interface_hardware": True,
+            "spatial_relation": False,
+            "access_geometry": False,
+            "geographic_coexposure": False,
+        }
+        relation["admission_basis"] = ["PRIOR_LITERATURE", "NORMATIVE_INTERFACE"]
+        relation["case_connection_status"] = "VERIFIED_STRUCTURAL"
+        bundle = adapter_contract.CanonicalBundle(candidate_relations=[relation])
+        with self.assertRaises(ValueError):
+            adapter_contract.assert_stage1_relation_semantics(bundle)
+
+    def test_25_entity_function_resolution_and_evidence_runtime_guard(self):
+        entity = copy.deepcopy(self.structure["entities"][0])
+        bundle = adapter_contract.CanonicalBundle(entities=[entity])
+        adapter_contract.assert_stage1_entity_semantics(bundle)
+        for missing in ("engineering_functions", "resolution_level", "evidence_refs"):
+            broken_entity = copy.deepcopy(entity)
+            broken_entity.pop(missing)
+            broken_bundle = adapter_contract.CanonicalBundle(entities=[broken_entity])
+            with self.assertRaises(ValueError):
+                adapter_contract.assert_stage1_entity_semantics(broken_bundle)
+
+    def test_26_cross_layer_semantics_are_heterogeneous_and_strength_free(self):
+        exchanges = {
+            r["relation_id"]: r["exchange_semantics"]
+            for r in self.structure["candidate_relations"]
+        }
+        self.assertEqual(
+            exchanges["rel:p1-t1"], "electrical power/service availability"
+        )
+        self.assertEqual(
+            exchanges["rel:t2-p2"], "crew accessibility / travel-time service"
+        )
+        for relation in self.structure["candidate_relations"]:
+            self.assertEqual(
+                relation["strength_status"], "NOT_ESTIMATED_STAGE1"
+            )
+            self.assertTrue(relation["resolution_level"])
+            self.assertTrue(relation["evidence_refs"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
