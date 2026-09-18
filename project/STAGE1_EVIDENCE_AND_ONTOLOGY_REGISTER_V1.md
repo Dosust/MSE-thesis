@@ -1,3 +1,6 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active Stage-1 authority is `stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md`.
+> Do not use this file for new Stage-1 scientific, mathematical, schema, or freeze decisions.
 # Stage 1 Evidence and Ontology Register v1.0
 
 **Status:** ACTIVE FREEZE AUTHORITY — literature-to-mathematics bridge  
