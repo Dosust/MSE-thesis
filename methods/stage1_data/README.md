@@ -1,6 +1,6 @@
 # Stage 1 Generic Data Processing Layer
 
-**Status:** PASS — SYNCHRONIZED TO STAGE-1 v2 FREEZE CANDIDATE  
+**Status:** **PASS — FROZEN UNDER STAGE-1 v2 AUTHORITY**  
 **Authority:** `../../project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V2.md`  
 **Mathematical contract:** `../../project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md`  
 **Evidence/ontology authority:** `../../project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md`
