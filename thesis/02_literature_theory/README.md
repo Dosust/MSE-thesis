@@ -5,6 +5,8 @@
 
 ## Controlled evidence register
 
+- **[Stage-1 Exit-Gate Audit](../../project/STAGE1_EXIT_GATE_AUDIT_2026-09-18.md)** — high-rigor closure audit separating conceptual/literature completion from case-specific structural execution; current decision: **NOT YET FROZEN**.
+
 - **[Stage-1 arXiv-to-Journal Critical Evidence Audit](02_00e_arxiv_stage1_critical_verification.md)** — verifies the structural/SoS/spatial foundations of Stage 1, corrects the proximity-versus-dependency guardrail, and labels each Stage-1 object as established basis, thesis ontology, structural object, implementation object, or open research issue.
 
 - **[Accepted Core Evidence v1.0](02_00c_accepted_core_evidence.md)** — sources already admissible for bounded Chapter-2 claims; each entry records what it supports and what it must not be used to claim.
