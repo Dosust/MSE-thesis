@@ -28,6 +28,7 @@ The following case-independent rules are frozen and govern every Power–Transpo
 
 - `STAGE2_CASE_INDEPENDENT_CAUSAL_GOVERNANCE_CONTRACT_V1.md` — normative causal-governance contract;
 - `../../thesis/00_governance/STAGE2_FRAMEWORK_FREEZE_2026-09-19.md` — formal freeze boundary and amendment rule;
+- `STAGE2_FRAMEWORK_FREEZE_AUDIT_2026-09-19.md` — 20/20 consistency audit of the freeze;
 - `STAGE2_QUALIFIED_MECHANISM_UNIVERSE_FREEZE_2026-09-19.md` — frozen parent mechanism taxonomy.
 
 The rules are invariant across cases:
