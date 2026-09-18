@@ -1,5 +1,8 @@
 # Chapter 1 — Introduction
 
+**Status:** PASS — FROZEN  
+**Freeze:** [`CHAPTER_I_FREEZE_2026-09-18.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-18.md)
+
 **Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
@@ -49,7 +52,7 @@ Sections **1.1–1.13 now have one source of truth in this directory**. The repo
 - 1.12 states six candidate contribution categories in conditional proposal language, maps each to its RQ/SO/H evidence chain, distinguishes supported contribution from novelty, and prohibits promotion to a supported claim before the corresponding model/test/VVUQ/result chain closes.
 - 1.13 explains the canonical seven-chapter scientific argument from research contract through evidence, formal framework, experimental testing, results, interpretation, and final RQ/hypothesis closure; it also distinguishes chapter-dependency notation from the contribution labels used in Section 1.12.
 - **Sections 1.9–1.13 were repository-audited on 2026-09-18 for canonical exactness, GitHub Markdown/MathJax rendering, notation consistency, and Chapter-I writing discipline. The audit confirms 8/8 exact RQs, 7/7 exact SOs, 5/5 exact hypotheses, and no malformed control-character LaTeX in these files.**
-- **Chapter I is now drafted through Section 1.13. The next task is the full Chapter-I exit-gate audit across Sections 1.1–1.13: authority synchronization, evidence/inference discipline, scope consistency, cross-section duplication, Stage-5/6/7 semantics, and 16–18 page allocation.**
+- **Chapter I passed the scientific exit gate on 2026-09-18 and is PASS — FROZEN. The frozen baseline is recorded in `../00_governance/CHAPTER_I_FREEZE_2026-09-18.md`.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
