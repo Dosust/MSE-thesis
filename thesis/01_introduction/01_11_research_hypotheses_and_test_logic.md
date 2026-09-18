@@ -16,10 +16,10 @@ M_1=\text{static/algebraic }P\text{--}T\text{ coupling},\qquad
 M_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
 \`\`\`
 
-**Comparator:** primary \(M_2\) versus \(M_1\), with \(M_0\) as the uncoupled reference.  
+**Comparator:** primary $M_2$ versus $M_1$, with $M_0$ as the uncoupled reference.  
 **Response:** preregistered cascade, service-loss, spatial-propagation, and recovery quantities.  
 **Uncertainty:** matched hazard realizations, initial states, service requirements, and exogenous conditions across all comparators.  
-**Non-support:** H1 is not supported if \(M_2\) fails to provide the preregistered meaningful incremental information relative to \(M_1\) within the declared validity domain.
+**Non-support:** H1 is not supported if $M_2$ fails to provide the preregistered meaningful incremental information relative to $M_1$ within the declared validity domain.
 
 ## H2 — Information, organization, and feasible control
 
@@ -33,7 +33,7 @@ M_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
 \mathscr N_2=P+T+I+O.
 \`\`\`
 
-**Comparator:** \(\mathscr N_1-\mathscr N_0\) isolates the modeled information effect; \(\mathscr N_2-\mathscr N_1\) isolates the modeled organizational effect.  
+**Comparator:** $\mathscr N_1-\mathscr N_0$ isolates the modeled information effect; $\mathscr N_2-\mathscr N_1$ isolates the modeled organizational effect.  
 **Response:** state-estimation quality, feasible-control change, response timing, service trajectory, recovery, and Stage-5 resilience quantities.  
 **Uncertainty:** physical state and disturbance are matched while only declared information/organizational conditions are perturbed.  
 **Non-support:** H2 is not supported if the preregistered information/organization contrasts do not produce the minimum declared effect in the specified intermediate and downstream outcomes.
@@ -67,10 +67,10 @@ P_{\mathrm{recover}}
 
 so Stage 5 represents **remain + return + confidence**, not viability alone.
 
-**Comparator:** prespecified conventional performance/recovery-curve information versus the same benchmark augmented by \(\mathfrak R_T\).  
+**Comparator:** prespecified conventional performance/recovery-curve information versus the same benchmark augmented by $\mathfrak R_T$.  
 **Response:** preregistered incremental predictive or decision-relevant skill.  
 **Uncertainty:** viability/reachability are evaluated under the declared uncertainty model and feasible-control set; probability is used only when probabilistically justified.  
-**Non-support:** H3 is not supported if adding \(\mathfrak R_T\) fails to improve the preregistered predictive or decision metric by the declared meaningful amount. Interface criticality remains a supporting diagnostic, not the primary H3 claim.
+**Non-support:** H3 is not supported if adding $\mathfrak R_T$ fails to improve the preregistered predictive or decision metric by the declared meaningful amount. Interface criticality remains a supporting diagnostic, not the primary H3 claim.
 
 ## H4 — Engineering intervention and sustainability consequences
 
