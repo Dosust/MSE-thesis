@@ -20,7 +20,7 @@
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.1"
+      "const": "1.2"
     },
     "system_boundary": {
       "type": "object",
@@ -124,7 +124,10 @@
           "state_schema",
           "service_roles",
           "provenance_status",
-          "inclusion_rule"
+          "inclusion_rule",
+          "engineering_functions",
+          "resolution_level",
+          "evidence_refs"
         ],
         "properties": {
           "entity_id": {
@@ -211,6 +214,28 @@
               "string",
               "null"
             ]
+          },
+          "engineering_functions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "resolution_level": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
           }
         },
         "additionalProperties": false
@@ -274,7 +299,19 @@
           "structural_predicate_pass",
           "structural_evidence",
           "provenance_status",
-          "normative_admissibility"
+          "normative_admissibility",
+          "interface_semantics",
+          "exchange_semantics",
+          "direction",
+          "candidate_mechanism_class",
+          "candidate_mechanism_status",
+          "candidate_operating_context",
+          "admission_basis",
+          "case_connection_status",
+          "resolution_level",
+          "evidence_refs",
+          "evidence_confidence",
+          "strength_status"
         ],
         "properties": {
           "relation_id": {
@@ -298,7 +335,9 @@
           "status_class": {
             "enum": [
               "PRIOR_DOCUMENTED",
-              "STRUCTURAL_CANDIDATE"
+              "STRUCTURAL_CANDIDATE",
+              "UNRESOLVED",
+              "EXCLUDED"
             ]
           },
           "structural_predicate_pass": {
@@ -351,9 +390,202 @@
               "type": "string"
             },
             "uniqueItems": true
+          },
+          "interface_semantics": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exchange_semantics": {
+            "type": "string",
+            "minLength": 1
+          },
+          "direction": {
+            "enum": [
+              "SOURCE_TO_TARGET",
+              "UNDIRECTED_SCREENING"
+            ]
+          },
+          "candidate_mechanism_class": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "candidate_mechanism_status": {
+            "type": "string",
+            "const": "CANDIDATE_ONLY"
+          },
+          "candidate_operating_context": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "admission_basis": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "ASSET_CROSSWALK",
+                "INTERFACE_HARDWARE",
+                "SPATIAL_RELATION",
+                "ACCESS_GEOMETRY",
+                "GEOGRAPHIC_COEXPOSURE",
+                "PRIOR_LITERATURE",
+                "EMPIRICAL_ASSOCIATION",
+                "NORMATIVE_INTERFACE",
+                "OPERATOR_DOCUMENTATION",
+                "OTHER"
+              ]
+            }
+          },
+          "case_connection_status": {
+            "enum": [
+              "CANDIDATE",
+              "VERIFIED_STRUCTURAL",
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "resolution_level": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "evidence_confidence": {
+            "type": "object",
+            "required": [
+              "confidence_class",
+              "score",
+              "method"
+            ],
+            "properties": {
+              "confidence_class": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  "UNSCORED"
+                ]
+              },
+              "score": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 1
+              },
+              "method": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "score": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "score"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "method": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "additionalProperties": false
+          },
+          "strength_status": {
+            "type": "string",
+            "const": "NOT_ESTIMATED_STAGE1"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "case_connection_status": {
+                  "const": "VERIFIED_STRUCTURAL"
+                }
+              },
+              "required": [
+                "case_connection_status"
+              ]
+            },
+            "then": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "structural_evidence": {
+                      "properties": {
+                        "asset_crosswalk": {
+                          "const": true
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "properties": {
+                    "structural_evidence": {
+                      "properties": {
+                        "spatial_relation": {
+                          "const": true
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "properties": {
+                    "structural_evidence": {
+                      "properties": {
+                        "access_geometry": {
+                          "const": true
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "properties": {
+                    "structural_evidence": {
+                      "properties": {
+                        "geographic_coexposure": {
+                          "const": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "service_traceability": {
