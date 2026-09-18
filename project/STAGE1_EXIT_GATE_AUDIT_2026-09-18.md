@@ -3,317 +3,245 @@
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
 **Canonical RQ1:** What entities exist, what layers constitute the system, and where can interactions occur?  
 **Canonical SO1:** Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.  
-**Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Audit status:** **PASS — STAGE-1 FRAMEWORK READY FOR FREEZE; CASE INSTANTIATIONS REMAIN SEPARATE**
+**Canonical authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Stage-1 evidence authority:** `STAGE1_EVIDENCE_AND_ONTOLOGY_REGISTER_V1.md`  
+**Audit status:** **PASS — STAGE-1 GENERIC FRAMEWORK READY FOR FREEZE; CASE INSTANTIATIONS REMAIN SEPARATE**
 
-## 1. Executive conclusion
+## 1. Executive decision
 
-Stage 1 is separated into a **case-independent framework gate** and a **case-specific instantiation gate**. The framework gate now passes; Austin and all other cases remain independent downstream instantiations.
-
-The literature, systems-engineering basis, multilayer/SoS ontology, Stage-1/Stage-2 separation, and the corrected spatial-proximity guardrail are sufficiently strong for continued thesis development. However, Stage 1 cannot be scientifically frozen because the candidate Austin case has not yet produced a verified case-specific structural handoff.
-
-The current correct state is:
+Stage 1 now has two explicitly separate gates:
 
 ```math
 \boxed{
-\text{Stage-1 science/mathematics}=\mathrm{PASS},\qquad
-\text{generic data framework}=\mathrm{PASS},\qquad
-\text{generic fixture verification}=\mathrm{PASS},\qquad
-\text{Austin case}=\mathrm{OPEN\ (SEPARATE)}
+G_1^{\rm framework}
+\neq
+G_1^{\rm case}(c).
 }
 ```
 
-and therefore:
+The generic framework gate is complete and passes. Austin, Greensboro, Singapore, synthetic benchmarks and future P–T cases instantiate the framework downstream and may independently return `PASS`, `FAIL`, `BLOCKED`, or `OPEN` without changing the framework result.
 
 ```math
 \boxed{
-\text{Stage-1 framework gate}=\mathrm{PASS\ —\ READY\ FOR\ FREEZE}
+G_1^{\rm framework}
+=
+\mathrm{PASS\ —\ READY\ FOR\ FREEZE}.
 }
 ```
 
-This is not an Austin-data blocker. The remaining framework work is case-independent verification of the generic ingestion/cleaning contracts. Austin remains a downstream case-admissibility exercise.
+## 2. Final Stage-1 scientific boundary
 
-## 2. Gate-by-gate audit
+Stage 1 establishes:
 
-| ID | Requirement | Status | Evidence / reason | Required closure action |
-|---|---|---|---|---|
-| S1-G01 | RQ1/SO1 exact canonical synchronization | **PASS** | Canonical v3 wording is synchronized with Stage 1 | none |
-| S1-G02 | Stage-1 purpose: structure before causal qualification | **PASS** | Supported by multilayer/SoS literature and frozen Stage-2 causal role | none |
-| S1-G03 | Physical/supporting-domain distinction `P+T` vs `I+O` | **PASS** | Canonical v2 + Chapter-I freeze | none |
-| S1-G04 | System-context / boundary ontology | **PASS-CONCEPTUAL** | `Omega_sys` semantics are defined; Austin boundary-vintage protocol exists | execute geometry/materialization QA |
-| S1-G05 | Constituent entity taxonomy | **PARTIAL** | entity classes are conceptually defined; final retained case inventory is not frozen | materialize and freeze retained P/T entity inventory with IDs/types |
-| S1-G06 | Intra-layer topology semantics | **PASS-CONCEPTUAL / OPEN-CASE** | electrical and road edges are kept semantically distinct | finish power materialization and road topology QA |
-| S1-G07 | Spatial embedding and CRS discipline | **PASS-CONCEPTUAL / OPEN-CASE** | spatial ontology and QA code exist | close common spatial-support gate G2 with explicit CRS/projection record |
-| S1-G08 | Proximity vs dependency guardrail | **PASS — CORRECTED** | `proximity alone != functional/causal dependency`; geographic co-exposure retained separately | propagate corrected wording into future Stage-1 prose |
-| S1-G09 | Structural cross-layer candidate object | **PASS** | frozen in `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md`; machine-readable enforcement in `schemas/stage1_structure.schema.json` | none |
-| S1-G10 | Prior / structural-candidate / accepted-causal relation classes | **PASS** | `R_prior`, `C_struct`, and Stage-2-only `I_acc` are frozen; schema prohibits Stage-1 causal acceptance | none |
-| S1-G11 | Coordinate/state notation discipline | **PASS** | Stage-1 contract freezes `r_i` for location and `X_P,X_T,z_I,z_O,Y` for states | propagate notation into future Stage-1 prose and implementation |
-| S1-G12 | Service-requirement trace schema | **PASS-SCHEMA / OPEN-CASE** | entity-to-service traceability schema is frozen in contract/schema | populate with retained Austin entities after materialization |
-| S1-G13 | Stage-1 literature foundation | **PASS** | accepted SoS, multilayer, interdependency, spatial and direct P–T structural sources are saved | continue systematic database expansion, but no conceptual blocker |
-| S1-C01 | Austin SMART-DS P5U materialization | **OPEN — CASE GATE** | Austin matrix: G1 OPEN | does not block framework freeze; required only for Austin case admissibility |
-| S1-C02 | Austin common spatial support | **OPEN — CASE GATE** | Austin matrix: G2 OPEN | case-specific |
-| S1-C03 | Austin transport topology | **OPEN — CASE GATE** | source qualified, materialization/topology OPEN | case-specific |
-| S1-C04 | Austin P→T signal-power crosswalk | **OPEN — CASE GATE** | retrospective extraction + mapping OPEN | case-specific |
-| S1-C05 | Austin T→P repair-access relation | **OPEN — CASE GATE** | Austin matrix: G6 OPEN | case-specific |
-| S1-C06 | Austin temporal/vintage consistency | **OPEN — CASE GATE** | temporal-semantics protocol exists; case execution OPEN | case-specific |
-| S1-C07 | Austin QC/provenance completeness | **OPEN — CASE GATE** | Austin matrix: G8 OPEN | case-specific |
-| S1-C08 | Austin case-specific `Z1_impl` | **OPEN — CASE GATE** | not yet emitted | case-specific |
-| S1-C09 | Austin developmental verification | **OPEN — CASE GATE** | requires Austin structural package | case-specific; supports later H1 experiment readiness |
+```math
+\boxed{
+\text{entities}
++
+\text{typed layers}
++
+\text{topology semantics}
++
+\text{spatial/temporal context}
++
+\text{interface semantics}
++
+\text{candidate cross-layer relations}
++
+\text{service/requirement traceability}
++
+\text{normative context}
++
+\text{provenance}.
+}
+```
 
-## 2A. Case-independent framework gates
+Stage 1 does not establish accepted causal dependency, functional coupling magnitude, dynamic propagation, cascade outcome, or H1 result.
 
-| ID | Framework requirement | Status | Closure condition |
+```math
+\boxed{
+\text{Stage 1 = structural possibility}
+\qquad
+\text{Stage 2 = causal qualification}.
+}
+```
+
+## 3. Gate-by-gate framework audit
+
+| ID | Requirement | Final status | Closure evidence |
 |---|---|---|---|
-| S1-F01 | Stage-1 mathematical/ontology contract | **PASS** | frozen in `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` |
-| S1-F02 | Canonical intermediate representation | **PASS** | CIR-1 through CIR-10 frozen, including authority/requirements register |
-| S1-F03 | Generic source manifest | **PASS** | source schema validates heterogeneous and normative/authority sources |
-| S1-F04 | Stage-1 structural handoff schema | **PASS** | structural schema v1.1 includes jurisdiction, normative register, requirement traceability and causal guardrail |
-| S1-F05 | Generic adapter interface | **PASS** | adapter contract includes canonical bundle, authority records and noncausal runtime guards |
-| S1-F06 | Cleaning/normalization rules | **PASS** | immutable raw, explicit CRS/units/time/null/topology/geometry rules frozen and fixture-tested |
-| S1-F07 | Provenance/QA contract | **PASS** | SHA-256, source manifest, transformation trace, QA ledger and normative provenance defined |
-| S1-F08 | Case-independent fixture tests | **PASS** | 18/18 tests passed; see `STAGE1_GENERIC_FIXTURE_VERIFICATION_REPORT_2026-09-18.md` |
-| S1-F09 | Framework freeze readiness | **PASS — READY FOR FREEZE** | all framework-level gates closed; case gates remain independent |
-## 3. What is already complete
+| S1-F01 | exact RQ1/SO1 synchronization | **PASS** | canonical v3 wording preserved |
+| S1-F02 | P,T physical; I,O supporting | **PASS** | canonical Stage-1 ontology |
+| S1-F03 | explicit system boundary | **PASS** | `Omega_sys+` includes geography, time, infrastructure, service, mode and jurisdiction |
+| S1-F04 | typed constituent graphs | **PASS** | P/T intralayer edges retain physical semantics |
+| S1-F05 | coordinate/state distinction | **PASS** | `r_i` geometry separated from `X_P,X_T,z_I,z_O,Y(t)` |
+| S1-F06 | semantic entity object | **PASS** | `E_i^alpha` includes function, state schema, ownership/authority, resolution and evidence |
+| S1-F07 | structural-admissibility predicate | **PASS** | `Gamma_ij^str` frozen as non-causal admission predicate |
+| S1-F08 | structural candidate set | **PASS** | `C_ab^(1)={(i,j):Gamma_ij^str=1}` |
+| S1-F09 | relation-status ontology | **PASS** | prior, structural-candidate and Stage-2 accepted-causal classes separated |
+| S1-F10 | typed Stage-1 relation object | **PASS** | `mathfrak R_ij^(1)` includes interface/exchange/context/evidence/resolution/normative semantics |
+| S1-F11 | interface semantic heterogeneity | **PASS** | electrical service and repair-access service retained as different exchange semantics |
+| S1-F12 | existence-strength-confidence separation | **PASS** | Stage 1 fixes `strength_status=NOT_ESTIMATED_STAGE1` |
+| S1-F13 | proximity/common-exposure guardrail | **PASS** | proximity alone cannot establish functional/causal dependency |
+| S1-F14 | correlation/causality guardrail | **PASS** | association may nominate evidence only |
+| S1-F15 | standardized-interface/case-connection separation | **PASS** | prior/normative interface evidence alone cannot verify case connection |
+| S1-F16 | case-connection/causal-mechanism separation | **PASS** | only Stage 2 may accept causal dependency |
+| S1-F17 | service and requirement provenance | **PASS** | entity/service/requirement traceability schema frozen |
+| S1-F18 | normative/jurisdictional admissibility | **PASS** | `N_1` and `chi_ij^norm` separated from causality |
+| S1-F19 | assumption register | **PASS** | explicit statement/reason/evidence/consequence/sensitivity structure |
+| S1-F20 | generic heterogeneous-data architecture | **PASS** | RAW→STAGING→CANONICAL→DERIVED→RELEASE |
+| S1-F21 | canonical intermediate representation | **PASS** | CIR-1 through CIR-10 frozen |
+| S1-F22 | generic source-adapter contract | **PASS** | inspect/validate/parse/map/normalize/emit/provenance/quality interface |
+| S1-F23 | cleaning and normalization discipline | **PASS** | no silent imputation, unit/CRS/geometry/topology/temporal transformations |
+| S1-F24 | machine-readable source schema | **PASS** | heterogeneous and normative source manifests supported |
+| S1-F25 | machine-readable structural schema | **PASS** | schema v1.2 encodes entity/relation semantics and causal/strength guards |
+| S1-F26 | case-independent verification | **PASS** | 42/42 repository invariants + 19/19 behavioral checks |
+| S1-F27 | Python verification suite expansion | **PASS-SOURCE** | 26 test cases present; GitHub-hosted runner currently BLOCKED-ENVIRONMENT |
+| S1-F28 | literature-to-mathematics traceability | **PASS** | `STAGE1_EVIDENCE_AND_ONTOLOGY_REGISTER_V1.md` |
+| S1-F29 | final Stage-1 handoff | **PASS** | `Z_1^(impl+)` includes `mathfrak R_1` relation register |
+| S1-F30 | framework/case separation | **PASS** | `G_1^framework != G_1^case(c)` |
 
-The following Stage-1 scientific foundations do **not** need to be reinvented:
+## 4. New-evidence integration audit
 
-1. canonical RQ1/SO1 wording;
-2. Stage 1 = structural possibility / Stage 2 = causal qualification;
-3. Power and Transportation as physical constituent systems;
-4. Information and Organization as supporting domains;
-5. multilayer graph representation;
-6. layer-specific edge semantics;
-7. spatial embedding as a required structural attribute;
-8. corrected distinction between proximity, geographic co-exposure and causal dependency;
-9. literature-supported SoS/multilayer foundation;
-10. explicit prohibition against treating topology or spatial coincidence as sufficient causal evidence.
+The new literature synthesis materially strengthened Stage 1 in five places:
 
-## 4. What still prevents Stage-1 freeze
+### 4.1 Entity semantics
 
-### 4.1 Structural-admissibility rule is not yet frozen
-
-The thesis currently has the candidate-set concept:
-
-```math
-\mathcal C_{\alpha\beta}^{(1)}
-\subseteq
-V_\alpha\times V_\beta.
-```
-
-But Stage 1 still needs an explicit non-causal admission predicate:
-
-```math
-\Gamma_{ij}^{\mathrm{str}}
-=
-\Gamma(
-\text{asset identity},
-\text{interface metadata},
-\text{spatial relation},
-\text{access geometry},
-\text{co-exposure},
-\text{provenance}
-).
-```
-
-Then:
-
-```math
-\mathcal C_{\alpha\beta}^{(1)}
-=
-\{(i,j):\Gamma_{ij}^{\mathrm{str}}=1\}.
-```
-
-`Gamma^str` must not contain Stage-2 causal-mechanism conclusions.
-
-### 4.2 Relation evidence classes need formalization
-
-Freeze three distinct relation classes:
-
-```math
-\mathcal R_{\mathrm{prior}}
-\quad
-\mathcal C_{\mathrm{struct}}
-\quad
-\mathbb I_{\mathrm{acc}}.
-```
-
-with:
+Stage-1 entities are no longer treated as anonymous vertices:
 
 ```math
 \boxed{
-\mathcal R_{\mathrm{prior}}
-\not\Rightarrow
-\mathbb I_{\mathrm{acc}}
-}
-```
-
-and Stage 2 alone is allowed to populate `I_acc` as accepted causal dependencies.
-
-### 4.3 State and coordinate notation needs one final type freeze
-
-Recommended typing:
-
-```text
-r_i or xi_i : immutable/slow spatial coordinate of entity i
-Y_i          : component state schema/value
-Y(t)         : integrated dynamic state
-```
-
-Any final choice is acceptable if consistently typed and synchronized with the canonical framework.
-
-### 4.4 Case-specific entity and service traceability is missing
-
-For every retained entity class, Stage 1 should record:
-
-```text
-entity type
-source dataset
-unique identifier
-layer
-location/geometry
-intralayer-edge semantics
-state variables required later
-service(s) affected
-data-quality/provenance state
-inclusion/exclusion rule
-```
-
-Without this table, the phrase 'what entities exist' is not yet operationally closed.
-
-### 4.5 The candidate Austin structural package is not yet admissible
-
-The controlling case matrix currently states:
-
-```text
-G0 = PASS
-G1 = OPEN
-G2 = OPEN
-G3 = SOURCE QUALIFIED / MATERIALIZATION + TOPOLOGY OPEN
-G4 = SOURCE/TEMPORAL SEMANTICS QUALIFIED / 2018 JOIN + OVERLAP OPEN
-G5 = SOURCE/TEMPORAL SEMANTICS QUALIFIED / RETROSPECTIVE EXTRACTION + MAPPING OPEN
-G6 = OPEN
-G7 = SOURCE/TEMPORAL SEMANTICS QUALIFIED / INTERSECTION OPEN
-G8 = OPEN
-G_time = OPEN
-FINAL = NOT YET PASS
-```
-
-Therefore no scientifically valid Stage-1 freeze can yet claim that the final case architecture has been instantiated.
-
-## 5. Required final Stage-1 handoff
-
-Do not replace the frozen canonical output `S,G,X,Y`. Use an implementation package that extends it:
-
-```math
-\boxed{
-Z_1^{\mathrm{impl}}
+E_i^\alpha
 =
-(
-\mathcal S,
-\mathcal G,
-X,
-Y;
-\Omega_{\mathrm{sys}},
-\mathcal C_{\mathrm{cross}},
-\Pi_1
-)
+(id_i,type_i,layer_i,r_i,f_i,\mathcal Y_i,o_i,a_i,\ell_i,\mathcal D_i).
 }
 ```
 
-where `Pi_1` contains provenance, entity typing, CRS, topology QA, source/vintage identity, inclusion/exclusion decisions, and structural-admissibility status.
+### 4.2 Typed cross-layer relation
 
-Minimum required outputs:
-
-```text
-1. frozen system boundary
-2. retained P entity inventory
-3. retained T entity inventory
-4. P intralayer topology
-5. T intralayer topology
-6. spatial embedding + CRS provenance
-7. service/entity traceability
-8. candidate cross-layer relation register
-9. prior/candidate/accepted relation-status field
-10. topology and geometry QA report
-11. immutable data/source provenance
-12. Stage-1 gate decision
-```
-
-## 6. Final Stage-1 acceptance rule
-
-Stage 1 may be frozen only when:
+Stage 1 now carries a semantic pre-causal relation object rather than only a pair of nodes:
 
 ```math
 \boxed{
-\begin{gathered}
-\text{boundary explicit}
-\land
-\text{entities typed and retained}
-\land
-\text{intralayer topology verified}
-\\
-\land
-\text{spatial support verified}
-\land
-\text{candidate relations reproducible}
-\land
-\text{provenance complete}
-\\
-\land
-\text{no causal promotion performed in Stage 1}
-\end{gathered}
+\mathfrak R_{ij}^{\alpha\beta,(1)}
+=
+(E_i^\alpha,E_j^\beta,\Gamma_{ij}^{\rm str},\gamma_{ij},\Phi_{ij},d_{ij},m_{ij}^{\rm cand},c_{ij}^{\rm cand},b_{ij},s_{ij},\mathcal E_{ij},q_{ij}^{\rm evid},\ell_{ij},\chi_{ij}^{\rm norm}).
 }
 ```
 
-and the resulting `Z1_impl` is versioned and reproducible.
+### 4.3 Existence, strength and confidence
 
-## 7. Audit decision
+```math
+\boxed{
+\text{existence/status}
+\neq
+\text{coupling strength}
+\neq
+\text{evidence confidence}.
+}
+```
+
+Stage 1 does not estimate `w_ij`.
+
+### 4.4 Modeling resolution
+
+Entity and relation resolution are explicit so microscopic, component, facility, network and aggregate representations are not silently mixed.
+
+### 4.5 Interface heterogeneity
+
+P→T electrical service and T→P repair accessibility are represented with different exchange semantics. A generic interlayer edge is therefore insufficient.
+
+## 5. Final hard guardrails
 
 ```math
 \boxed{
 \begin{aligned}
-\text{Canonical Stage-1 definition} &= \mathrm{PASS},\\
-\text{Literature/theory basis} &= \mathrm{PASS},\\
-\text{Ontology/mathematical contract} &= \mathrm{PASS},\\
-\text{Generic data-framework design} &= \mathrm{PASS},\\
-\text{Normative/jurisdictional integration} &= \mathrm{PASS},\\
-\text{Generic fixture verification} &= \mathrm{PASS},\\
-\text{Stage-1 framework gate} &= \mathrm{PASS\ —\ READY\ FOR\ FREEZE},\\
-\text{Austin case instantiation} &= \mathrm{OPEN\ (SEPARATE)}.
+\text{topology} &\neq \text{function},\\
+\text{proximity} &\neq \text{dependency},\\
+\text{correlation} &\neq \text{causality},\\
+\text{standardized interface} &\neq \text{case-specific connection},\\
+\text{case connection} &\neq \text{causal mechanism},\\
+\text{dependency existence} &\neq \text{dependency strength},\\
+\text{dependency strength} &\neq \text{evidence confidence}.
 \end{aligned}
 }
 ```
 
-### Interpretation
+## 6. Final implementation handoff
 
-Stage 1 requires no further conceptual, mathematical, ontology, normative, data-contract, or generic-verification work before framework freeze. Austin structural execution remains a separate Chapter-4/case-admissibility activity.
-
-## 8. Deterministic closure sequence
-
-```text
-1. create case-independent synthetic fixtures for each supported source class
-2. validate source-manifest schema
-3. validate canonical entity/edge/geometry/service/candidate-relation outputs
-4. verify identifier stability and provenance round-trip
-5. verify CRS and unit normalization
-6. verify missingness preservation and no silent imputation
-7. verify geometry/topology repair logging
-8. verify temporal-role preservation
-9. verify the Stage-1 causal guardrail
-10. freeze the generic Stage-1 framework
-
-Austin then executes separately against the frozen framework:
-A1. materialize Austin sources
-A2. apply adapters/configuration
-A3. close Austin spatial/topology/crosswalk/provenance gates
-A4. emit Austin `Z1_impl`
-A5. declare Austin case PASS / FAIL / BLOCKED
+```math
+\boxed{
+Z_1^{\rm impl+}
+=
+(
+\mathcal S,
+\mathcal G^{(1)},
+R,
+\mathcal Y;
+\Omega_{\rm sys}^{+},
+\mathcal C_{\rm cross},
+\mathfrak R_1,
+\mathcal T_{\rm svc},
+\mathcal A_1,
+\mathcal N_1,
+\Pi_1
+).
+}
 ```
 
-## 10. Final closure artifacts
+Stage 2 receives the candidate relation register `mathfrak R_1` and performs mechanism/evidence/activation/falsification qualification. Stage 1 does not pass an already accepted causal graph.
 
-- `project/STAGE1_FINAL_FRAMEWORK_V1.md` — consolidated final Stage-1 framework specification; status PASS — READY FOR FREEZE.
-- `project/STAGE1_GENERIC_FIXTURE_VERIFICATION_REPORT_2026-09-18.md` — 18/18 case-independent verification tests PASS.
-- `.github/workflows/stage1-framework-verification.yml` — remote CI mirror; first hosted run classified BLOCKED-ENVIRONMENT because zero steps executed and no job log was produced.
+## 7. Verification decision
 
-The remaining Austin/Greensboro/etc. work belongs to `G_1^{case}(c)` and is not a framework-freeze blocker.
+Reverification after the new evidence integration produced:
+
+```math
+\boxed{
+42/42\ \text{exact repository invariant checks}=\mathrm{PASS}
+}
+```
+
+and:
+
+```math
+\boxed{
+19/19\ \text{controlled behavioral checks}=\mathrm{PASS}.
+}
+```
+
+The repository Python suite now contains 26 tests. GitHub-hosted Actions is still `BLOCKED-ENVIRONMENT` because the job receives runner ID `0` and executes zero steps; this is not classified as a failed scientific test.
+
+## 8. Case gates — explicitly outside framework freeze
+
+| Case gate | Framework effect |
+|---|---|
+| source materialization | none until case execution |
+| case entity inventory | none until case execution |
+| spatial overlap/CRS QA | case admissibility only |
+| road/power topology QA | case admissibility only |
+| signal-power crosswalk | case structural relation only |
+| repair-access crosswalk | case structural relation only |
+| temporal/vintage compatibility | case admissibility only |
+| case provenance/QC | case admissibility only |
+| case `Z_1^(impl+)` | case output only |
+
+Thus:
+
+```math
+\boxed{
+G_1^{\rm case}(c)=\mathrm{BLOCKED}
+\not\Rightarrow
+G_1^{\rm framework}=\mathrm{FAIL}.
+}
+```
+
+## 9. Final exit-gate decision
+
+All generic Stage-1 scientific, mathematical, ontology, normative, data-contract and reverification obligations are closed.
+
+```math
+\boxed{
+\textbf{STAGE 1 GENERIC FRAMEWORK = PASS — READY FOR FREEZE}.
+}
+```
+
+The next action may be formal freeze. No additional broad Stage-1 conceptual redesign is required unless new evidence demonstrates a genuinely missing semantic class or invalidates one of the frozen distinctions.
