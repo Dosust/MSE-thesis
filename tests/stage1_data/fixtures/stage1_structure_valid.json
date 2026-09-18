@@ -1,0 +1,168 @@
+{
+  "version": "1.1",
+  "system_boundary": {
+    "geographic_support": "synthetic unit-square test domain",
+    "temporal_support": "synthetic fixture epoch",
+    "infrastructure_scope": [
+      "power",
+      "transportation"
+    ],
+    "service_scope": [
+      "electricity_service",
+      "mobility_service"
+    ],
+    "operating_modes": [
+      "normal",
+      "disrupted"
+    ],
+    "jurisdiction_context": {
+      "case_jurisdiction": "TEST-JURISDICTION",
+      "authority_scope": [
+        "Synthetic Stage-1 Fixture Standard"
+      ]
+    }
+  },
+  "layers": {
+    "physical": [
+      "power",
+      "transportation"
+    ],
+    "supporting": [
+      "information",
+      "organization"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "power:bus:001",
+      "entity_type": "bus",
+      "layer": "power",
+      "source_dataset": "power-1",
+      "geometry_ref": "geom:p1",
+      "state_schema": [
+        "voltage",
+        "served_load"
+      ],
+      "service_roles": [
+        "electricity_service"
+      ],
+      "provenance_status": "PASS",
+      "inclusion_rule": "fixture retained power node",
+      "exclusion_rule": null,
+      "owner": "Synthetic Utility",
+      "operator": "Synthetic Utility",
+      "regulator": "Synthetic Regulator",
+      "electrical_supplier": "Synthetic Utility",
+      "transport_authority": null,
+      "jurisdiction": "TEST-JURISDICTION"
+    },
+    {
+      "entity_id": "transport:signal:001",
+      "entity_type": "traffic_signal",
+      "layer": "transportation",
+      "source_dataset": "transport-1",
+      "geometry_ref": "geom:t1",
+      "state_schema": [
+        "signal_availability"
+      ],
+      "service_roles": [
+        "mobility_service"
+      ],
+      "provenance_status": "PASS",
+      "inclusion_rule": "fixture retained transport signal",
+      "exclusion_rule": null,
+      "owner": "Synthetic City",
+      "operator": "Synthetic DOT",
+      "regulator": "Synthetic Regulator",
+      "electrical_supplier": "Synthetic Utility",
+      "transport_authority": "Synthetic DOT",
+      "jurisdiction": "TEST-JURISDICTION"
+    }
+  ],
+  "intralayer_edges": [],
+  "candidate_relations": [
+    {
+      "relation_id": "rel:p1-t1",
+      "source_layer": "power",
+      "target_layer": "transportation",
+      "source_entity": "power:bus:001",
+      "target_entity": "transport:signal:001",
+      "status_class": "STRUCTURAL_CANDIDATE",
+      "structural_predicate_pass": true,
+      "structural_evidence": {
+        "asset_crosswalk": true,
+        "interface_hardware": true,
+        "spatial_relation": true,
+        "access_geometry": false,
+        "geographic_coexposure": false
+      },
+      "provenance_status": "PASS",
+      "causal_dependency_accepted": false,
+      "normative_admissibility": "PASS",
+      "normative_authority_ids": [
+        "AUTH-FIX-001"
+      ]
+    }
+  ],
+  "service_traceability": [
+    {
+      "entity_id": "power:bus:001",
+      "service_id": "electricity_service",
+      "structural_role": "supplies retained electrical service",
+      "requirement_ids": [
+        "REQ-FIX-001"
+      ]
+    },
+    {
+      "entity_id": "transport:signal:001",
+      "service_id": "mobility_service",
+      "structural_role": "supports intersection control",
+      "requirement_ids": [
+        "REQ-FIX-001"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "A1-FIX-001",
+      "statement": "Synthetic fixture geometry uses declared CRS exactly.",
+      "reason": "case-independent framework verification",
+      "evidence": "fixture construction",
+      "consequence": "none outside test scope",
+      "sensitivity_test": "not applicable to deterministic fixture"
+    }
+  ],
+  "normative_register": [
+    {
+      "authority_id": "AUTH-FIX-001",
+      "authority_type": "standard",
+      "authority_name": "Synthetic Stage-1 Fixture Standard",
+      "jurisdiction": "TEST-JURISDICTION",
+      "document_id": "FIX-STD-001",
+      "edition_or_version": "1.0",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "status": "current",
+      "clause_or_locator": "§1",
+      "applicability": "APPLICABLE",
+      "affected_entity_type": "traffic_signal",
+      "affected_interface_type": "power-to-signal structural interface",
+      "requirement_id": "REQ-FIX-001",
+      "service_id": "mobility_service",
+      "requirement_type": "fixture_requirement",
+      "measure": "availability",
+      "unit": "dimensionless",
+      "threshold_or_rule": 1,
+      "verification_status": "PASS",
+      "source_id": "norm-1"
+    }
+  ],
+  "provenance": {
+    "crs": "EPSG:4326",
+    "source_vintage": "fixture",
+    "hashes_complete": true,
+    "topology_qa": "PASS",
+    "spatial_qa": "PASS"
+  },
+  "stage1_status": "PASS"
+}
