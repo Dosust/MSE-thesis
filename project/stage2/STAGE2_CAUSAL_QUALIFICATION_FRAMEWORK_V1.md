@@ -1,6 +1,7 @@
 # Stage 2 Causal Qualification Framework v1
 
-**Status:** WORKING SCIENTIFIC FRAMEWORK — NOT FROZEN  
+**Status:** **SUBORDINATE IMPLEMENTATION RECORD — GOVERNED BY FROZEN STAGE-2 CONTRACT**  
+**Normative authority:** `STAGE2_CASE_INDEPENDENT_CAUSAL_GOVERNANCE_CONTRACT_V1.md`  
 **Date:** 2026-09-18
 
 ## 1. Scientific question
