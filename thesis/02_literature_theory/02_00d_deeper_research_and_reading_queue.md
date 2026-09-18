@@ -59,6 +59,30 @@ Mathematical foundations are strong, but direct coupled-infrastructure use remai
 
 **Research needed:** viability kernels in power systems; reachability in energy systems; reach-avoid infrastructure safety; viability/reachability in transportation; coupled-infrastructure applications.
 
+### P0-7 — Stage-1 candidate-relation admission criteria
+
+Need a reproducible rule for when a cross-layer pair enters the structural candidate set before causal qualification.
+
+**Research needed:** infrastructure interface identification; cross-layer asset mapping; geographic co-exposure; service-interface metadata; graph matching/link prediction only as discovery, not causality.
+
+### P0-8 — Geographic co-exposure versus causal dependency
+
+The original shorthand `spatial proximity != interdependency` is too absolute because geographic interdependency/co-exposure is recognized in the Rinaldi tradition.
+
+**Research needed:** formal criteria distinguishing proximity, common-cause geographic exposure, functional dependency, and causal dependency.
+
+### P1-10 — Stage-1 state-schema and coordinate notation
+
+Need to prevent ambiguity between spatial coordinate `x_i`, state variables, and integrated state `Y(t)`.
+
+**Research needed:** graph-with-attributes notation; spatial network notation; entity-state schema; typed graph/ontology conventions.
+
+### P1-11 — Known/prior versus candidate versus accepted relation classes
+
+Need a controlled evidence ontology for `prior documented relation`, `structural candidate`, and `Stage-2 accepted causal dependency` without prejudging causality.
+
+**Research needed:** provenance-aware knowledge graphs; infrastructure ontology/interface registers; evidence qualification schemes.
+
 ## 3. P1 — Important for mathematical/model design
 
 ### P1-1 — Temporal ontology
