@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "authority": "project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md",
+  "record_level": {
+    "MECHANISM_TEMPLATE": "Literature-supported reusable mechanism/interface template; not a case relation.",
+    "CASE_RELATION": "Instantiated relation among entities in a declared case."
+  },
+  "scope": {
+    "INTRA": "Within one infrastructure/supporting layer.",
+    "INTER": "Across infrastructure/supporting layers.",
+    "CONTEXT": "Common-cause/environmental contextual relation; not itself cross-infrastructure causality."
+  },
+  "path": {
+    "DIRECT": "No explicit mediator is represented.",
+    "MEDIATED": "One or more intermediate entities/layers are explicitly represented.",
+    "N/A": "Path concept does not apply."
+  },
+  "arity": {
+    "PAIRWISE": "Exactly two participants.",
+    "HIGHER_ORDER": "At least three participants; pairwise decomposition would lose mechanism meaning.",
+    "HIGHER_ORDER_POSSIBLE": "Template may require higher-order representation at finer resolution."
+  },
+  "evidence_status": {
+    "K": "Case-known / verified structural evidence.",
+    "C_N": "Normative/code/standard-supported candidate.",
+    "C_U": "Utility/operator-documented candidate.",
+    "C_L": "Literature-supported candidate/mechanism family.",
+    "C_S": "Structural/spatial candidate.",
+    "C_E": "Empirically observed/associated candidate.",
+    "G": "Geographic/common-exposure context.",
+    "U": "Unresolved evidence state.",
+    "X": "Excluded relation."
+  },
+  "structural_existence": {
+    "TEMPLATE_ONLY": "Mechanism template not evaluated in a specific case.",
+    "CANDIDATE": "Structurally plausible/admissible candidate.",
+    "VERIFIED_STRUCTURAL": "Case-specific structural connection verified.",
+    "UNRESOLVED": "Evidence insufficient to decide structural existence.",
+    "EXCLUDED": "Structural relation rejected/excluded."
+  },
+  "case_connection_status": {
+    "NOT_CASE_EVALUATED": "Template or non-case object.",
+    "CANDIDATE": "Case candidate not structurally verified.",
+    "VERIFIED_STRUCTURAL": "Case mapping/connection structurally verified; not causal acceptance.",
+    "UNKNOWN": "Case status unknown.",
+    "NOT_APPLICABLE": "Case-connection concept does not apply."
+  },
+  "strength_status": {
+    "NOT_ESTIMATED_STAGE1": "Functional coupling magnitude is intentionally not estimated in Stage 1."
+  },
+  "confidence_class": {
+    "UNSCORED": "No calibrated numerical confidence assigned.",
+    "HIGH": "High epistemic confidence under a declared method.",
+    "MEDIUM": "Moderate epistemic confidence under a declared method.",
+    "LOW": "Low epistemic confidence under a declared method."
+  },
+  "mechanism_status": {
+    "PRIOR_DOCUMENTED_FAMILY": "Transferable mechanism family established in prior evidence.",
+    "CANDIDATE_ONLY": "Candidate mechanism for a case relation; Stage 2 must qualify/falsify.",
+    "INTRA_STRUCTURAL_SEMANTICS": "Same-layer structural meaning only.",
+    "CONTEXT_ONLY": "Environmental/common-cause context rather than P↔T dependency."
+  },
+  "normative_admissibility": {
+    "PASS": "Applicable and satisfied for the declared structural use; does not imply causality.",
+    "CONDITIONAL": "Applicability/satisfaction conditional.",
+    "BLOCKED": "Required applicability evidence unavailable.",
+    "N/A": "Normative test not applicable.",
+    "N/A_TEMPLATE": "Template has no case-specific normative evaluation."
+  }
+}
