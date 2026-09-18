@@ -53,16 +53,16 @@ The specific research objectives operationalize the general objective in Section
 
 The required one-to-one correspondence is
 
-\`\`\`math
+```math
 \boxed{
 RQ_k \Longleftrightarrow SO_k,
 \qquad k=1,\ldots,7
 }.
-\`\`\`
+```
 
 The corresponding evidence/test mapping is
 
-\`\`\`math
+```math
 \boxed{
 \begin{aligned}
 RQ_1/SO_1,\;RQ_2/SO_2
@@ -75,6 +75,6 @@ RQ_6/SO_6 &\rightarrow H_4,\\
 RQ_7/SO_7 &\rightarrow H_5.
 \end{aligned}
 }
-\`\`\`
+```
 
 Thus seven specific objectives do not imply seven hypotheses. SO1–SO2 establish qualified structure and causal-mechanism evidence; SO3–SO7 carry the five primary hypothesis-bearing comparisons stated in Section 1.11.
