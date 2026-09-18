@@ -1,6 +1,6 @@
-# Stage 1 Mathematical and Ontology Contract v1.0
+# Stage 1 Mathematical and Ontology Contract v1.1
 
-**Status:** FROZEN METHODOLOGICAL CONTRACT  
+**Status:** FINAL METHODOLOGICAL CONTRACT — READY FOR STAGE-1 FRAMEWORK FREEZE  
 **Date:** 2026-09-18  
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
 **Canonical authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`
@@ -52,12 +52,12 @@ Stage 1 answers only structural/spatial questions. It does not promote a structu
 `[THESIS]`
 
 ```math
-\Omega_{\rm sys}
+\Omega_{\rm sys}^{+}
 =
-(\Omega_x,\Omega_t,\Omega_{\rm infra},\Omega_{\rm service},\Omega_{\rm mode}).
+(\Omega_x,\Omega_t,\Omega_{\rm infra},\Omega_{\rm service},\Omega_{\rm mode},\Omega_{\rm jur}).
 ```
 
-where the factors specify geographic support, temporal support/vintage, retained infrastructure scope, service scope, and admitted operating modes.
+where the factors specify geographic support, temporal support/vintage, retained infrastructure scope, service scope, admitted operating modes, and jurisdictional/normative applicability.
 
 Boundary membership is a modeling decision and must be provenance-controlled.
 
@@ -240,7 +240,139 @@ Every retained Stage-1 entity type must have a traceability row with:
 
 The service-role field is structural traceability only. It does not assert causal effect magnitude.
 
-## 12. Stage-1 assumptions
+## 12. Normative and jurisdictional admissibility
+
+`[THESIS]`
+
+Standards, codes, statutes, regulations, utility procedures, and local engineering rules constrain what is permissible, required, or conformant, but they do not establish scientific causality.
+
+```math
+\boxed{
+\text{standard/regulatory requirement}
+\neq
+\text{scientific mechanism}
+\neq
+\text{thesis mathematical contribution}.
+}
+```
+
+Define the normative register
+
+```math
+\boxed{
+\mathcal N_1
+=
+\{N_k\}_{k=1}^{n_N},
+}
+```
+
+with
+
+```math
+N_k
+=
+(
+ID_k,
+A_k^{\rm auth},
+J_k,
+V_k^{\rm ed},
+S_k^{\rm status},
+T_k^{\rm eff},
+C_k^{\rm clause},
+\chi_k^{\rm app},
+O_k^{\rm affected}
+).
+```
+
+where the fields identify the authority/document, jurisdiction, edition/version, publication/status state, effective period, clause or requirement locator, applicability decision, and affected Stage-1 object.
+
+Normative admissibility for a structural relation is kept distinct from structural admissibility:
+
+```math
+\chi_{ij}^{\rm norm}
+\in
+\{
+\mathrm{PASS},
+\mathrm{CONDITIONAL},
+\mathrm{BLOCKED},
+\mathrm{N/A}
+\}.
+```
+
+Therefore:
+
+```math
+\boxed{
+\Gamma_{ij}^{\rm str}=1
+\not\Rightarrow
+\chi_{ij}^{\rm norm}=\mathrm{PASS}
+}
+```
+
+and:
+
+```math
+\boxed{
+\chi_{ij}^{\rm norm}=\mathrm{PASS}
+\not\Rightarrow
+i\rightarrow j.
+}
+```
+
+The first rule separates structural compatibility from legal/standards applicability. The second prevents normative conformity from being misrepresented as a causal mechanism.
+
+Entity records may also distinguish, where relevant:
+
+```text
+owner
+operator
+regulator
+electrical_supplier
+transport_authority
+jurisdiction
+```
+
+because ownership, operating authority, regulatory authority, and physical/electrical supply roles are not assumed identical.
+
+## 13. Requirement provenance
+
+`[THESIS]`
+
+Service requirements may originate from engineering needs, standards, regulations, utility procedures, agency requirements, or thesis-declared analytical thresholds. Stage 1 records the provenance without deciding Stage-5 viability.
+
+Each requirement trace should contain:
+
+```text
+requirement_id
+service_id
+requirement_source
+authority_id
+authority_level
+measure
+unit
+threshold_or_rule
+effective_period
+applicability
+verification_status
+```
+
+This establishes the trace:
+
+```math
+\boxed{
+\text{Need}
+\rightarrow
+\text{Requirement}
+\rightarrow
+\text{Measure}
+\rightarrow
+\text{Threshold/Rule}.
+}
+```
+
+A requirement may constrain later service or intervention definitions, but Stage 1 does not infer dynamic performance from the requirement itself.
+
+## 14. Stage-1 assumptions
 
 `[ASSUMP]`
 
@@ -254,7 +386,7 @@ A_k^{(1)}
 
 At minimum, the case must explicitly state assumptions concerning boundary vintage, coordinate consistency, asset persistence through the study period, semisynthetic crosswalks, road-network cleaning/snap tolerances, and any retrospective signal/sensor filtering.
 
-## 13. Stage-1 implementation handoff
+## 15. Stage-1 implementation handoff
 
 `[THESIS]`
 
@@ -262,17 +394,18 @@ The canonical Stage-1 output remains `S,G,X,Y` in the framework authority. The i
 
 ```math
 \boxed{
-Z_1^{\rm impl}
+Z_1^{\rm impl+}
 =
 (
 \mathcal S,
 \mathcal G^{(1)},
 R,
 \mathcal Y;
-\Omega_{\rm sys},
+\Omega_{\rm sys}^{+},
 \mathcal C_{\rm cross},
 \mathcal T_{\rm svc},
 \mathcal A_1,
+\mathcal N_1,
 \Pi_1
 ).
 }
@@ -285,9 +418,10 @@ where:
 - `C_cross` = structural candidate relation register;
 - `T_svc` = entity-to-service traceability table;
 - `A_1` = Stage-1 assumption register;
+- `N_1` = normative/authority and requirement-provenance register;
 - `Pi_1` = provenance/QC bundle.
 
-## 14. Stage-1 verification obligations
+## 16. Stage-1 verification obligations
 
 `[THESIS/METHODOLOGY]`
 
@@ -308,6 +442,8 @@ Stage 1 passes only if:
 \text{candidate relations reproducible}
 \land
 \text{service traceability complete}
+\land
+\text{normative applicability resolved where relevant}
 \\
 \land
 \text{provenance complete}
@@ -319,14 +455,12 @@ Stage 1 passes only if:
 
 The gate is developmental verification supporting H1; it is not itself H1.
 
-## 15. What literature must and need not justify
+## 17. What literature must and need not justify
 
 Literature is required for the scientific legitimacy of SoS reasoning, multilayer/network representation, infrastructure dependency concepts, spatial/geographic relations, and domain-specific entity/interface semantics.
 
 Literature is **not** required to contain the exact thesis notation `Gamma^str`, `C_struct`, `T_svc`, `Z1_impl`, or the PASS/FAIL/BLOCKED packaging. These are thesis-defined methodological objects and are valid if internally coherent, physically interpretable, explicitly declared, and verified against case data.
 
-## 16. Freeze state
+## 18. Freeze state
 
-The **Stage-1 mathematical/ontology contract is frozen** by this file.
-
-This does not freeze the case-specific Stage-1 instantiation. The case remains OPEN until the required Austin structural-data and provenance gates pass.
+The **Stage-1 mathematical/ontology contract is final and ready for framework freeze**, subject only to successful generic fixture verification of the machine/data contracts. Case-specific instantiations remain governed by separate `G_1^{case}` gates and do not control framework validity.
