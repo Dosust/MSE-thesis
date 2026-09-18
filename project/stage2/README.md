@@ -33,6 +33,23 @@ Stage 2 must never infer causality from topology, proximity, correlation, common
 - `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V2.md` — **active paper × mechanism evidence-role matrix**.
 - `evidence/` — mechanism-specific dossiers.
 
+## Qualified mechanism-universe authority
+
+- `STAGE2_MECHANISM_QUALIFICATION_AUDIT_V1_2026-09-19.md` — normalization and qualification of the full discovery universe using literature, primary mechanism evidence, industrial/standards evidence, falsifiers, substitutes and RQ0 boundary logic.
+- `STAGE2_QUALIFIED_MECHANISM_UNIVERSE_FREEZE_2026-09-19.md` — freezes the **parent mechanism taxonomy only**.
+
+The frozen literature/industry-qualified parent universe is:
+
+~~~math
+\boxed{
+\mathcal M_{PT}^{Q1}
+=
+\{Q01,Q02,Q03,Q04,Q05,Q06,Q07,Q08,Q09,Q10,Q11,Q12,Q13\}
+}
+~~~
+
+This taxonomy freeze does **not** freeze Stage 2 and does **not** constitute case-specific causal acceptance. Case-specific relations still require `G_2(e)=PASS`.
+
 ## P0 causal-evidence focus
 
 ~~~math
@@ -81,7 +98,7 @@ The following remain in the repository for provenance but are superseded for act
 
 No Stage-2 relation is accepted merely because it appears in this directory. Acceptance requires an explicit `G2(e)=PASS` record.
 
-At the current P0 evidence state:
+At the current evidence state:
 
 ~~~math
 \boxed{\mathbb I_{acc}=\varnothing}
