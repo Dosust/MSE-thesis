@@ -5,7 +5,9 @@
 
 ## Controlled evidence register
 
-- **[Stage-1 Exit-Gate Audit](../../project/STAGE1_EXIT_GATE_AUDIT_2026-09-18.md)** — high-rigor closure audit separating conceptual/literature completion from case-specific structural execution; current decision: **NOT YET FROZEN**.
+- **[Stage-1 Evidence and Ontology Register v2 — FINAL](../../project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md)** — active frozen Stage-1 literature-to-ontology authority; defines the semantic entity object, core relation object, secondary metadata, controlled evidence statuses, six G1 gates, and Stage-1/Stage-2 boundary.
+
+- **[Stage-1 v2 Exit-Gate Audit](../../project/STAGE1_EXIT_GATE_AUDIT_V2_2026-09-18.md)** — final pre-Stage-2 audit; **64/64 direct synchronization/machine-contract checks PASS; generic Stage-1 framework PASS — FROZEN**. Case-specific gates remain separate.
 
 - **[Stage-1 arXiv-to-Journal Critical Evidence Audit](02_00e_arxiv_stage1_critical_verification.md)** — verifies the structural/SoS/spatial foundations of Stage 1, corrects the proximity-versus-dependency guardrail, and labels each Stage-1 object as established basis, thesis ontology, structural object, implementation object, or open research issue.
 
