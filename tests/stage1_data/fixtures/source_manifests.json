@@ -1,0 +1,304 @@
+[
+  {
+    "source_id": "vector-1",
+    "source_type": "vector_geospatial",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://vector-1",
+    "native_format": "GeoJSON",
+    "native_crs": "EPSG:4326",
+    "native_units": null,
+    "temporal_semantics": "retrospective",
+    "source_vintage": "2018",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "raster-1",
+    "source_type": "raster_geospatial",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://raster-1",
+    "native_format": "GeoTIFF",
+    "native_crs": "EPSG:4326",
+    "native_units": null,
+    "temporal_semantics": "retrospective",
+    "source_vintage": "2018",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "tabular-1",
+    "source_type": "tabular",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://tabular-1",
+    "native_format": "CSV",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "persistent_static",
+    "source_vintage": "2020",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "graph-1",
+    "source_type": "graph_network",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://graph-1",
+    "native_format": "GraphML",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "synthetic",
+    "source_vintage": "fixture",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "power-1",
+    "source_type": "power_system_model",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://power-1",
+    "native_format": "OpenDSS",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "synthetic",
+    "source_vintage": "fixture",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "transport-1",
+    "source_type": "transport_network",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://transport-1",
+    "native_format": "SUMO-net",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "synthetic",
+    "source_vintage": "fixture",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "time-1",
+    "source_type": "time_indexed_records",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://time-1",
+    "native_format": "Parquet",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "contemporaneous",
+    "source_vintage": "2026",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "api-1",
+    "source_type": "api_snapshot",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://api-1",
+    "native_format": "JSON",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "retrospective",
+    "source_vintage": "2025",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "doc-1",
+    "source_type": "document_metadata",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://doc-1",
+    "native_format": "PDF",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "persistent_static",
+    "source_vintage": "2024",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS"
+  },
+  {
+    "source_id": "norm-1",
+    "source_type": "normative_authority",
+    "provider": "synthetic_fixture_provider",
+    "retrieval_reference": "fixture://norm-1",
+    "native_format": "PDF",
+    "native_crs": null,
+    "native_units": null,
+    "temporal_semantics": "persistent_static",
+    "source_vintage": "2026",
+    "valid_from": null,
+    "valid_to": null,
+    "license_or_access": "fixture-only",
+    "adapter": {
+      "adapter_id": "fixture_adapter",
+      "adapter_version": "1.0",
+      "field_mapping": {},
+      "unit_mapping": {},
+      "configuration_ref": "tests/stage1_data/fixtures"
+    },
+    "provenance": {
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "retrieved_at": "2026-09-18T00:00:00Z",
+      "raw_immutable": true,
+      "retrieval_tool": "fixture_generator",
+      "notes": "case-independent synthetic fixture"
+    },
+    "quality_status": "PASS",
+    "authority_metadata": {
+      "authority_type": "standard",
+      "authority_name": "Synthetic Stage-1 Fixture Standard",
+      "jurisdiction": "TEST-JURISDICTION",
+      "document_id": "FIX-STD-001",
+      "edition_or_version": "1.0",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "status": "current",
+      "clause_or_locator": "§1",
+      "applicability": "APPLICABLE"
+    }
+  }
+]
