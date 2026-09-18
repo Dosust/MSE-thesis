@@ -4,7 +4,9 @@
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 ![Phase](https://img.shields.io/badge/next-hypothesis%20specification%20%26%20validation-0969DA)
 
-**Status:** CANONICAL CURRENT SCOPE  
+**Status:** SUPERSEDED FOR ACTIVE FRAMEWORK INTERPRETATION — retained for provenance
+
+> **Current authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` and `CANONICAL_RQ_SO_HYPOTHESES_V3.md` supersede the stage semantics, RQ/SO/H mapping, resilience core, and Stage-6/7 interpretation in this file. Do not use this file as active authority where it conflicts with v2/v3.  
 **Effective date:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Repository:** `Dossiya-SE/MSE-thesis`  
