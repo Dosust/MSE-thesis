@@ -5,6 +5,9 @@
 
 ## Controlled evidence register
 
+- **[Accepted Core Evidence v1.0](02_00c_accepted_core_evidence.md)** — sources already admissible for bounded Chapter-2 claims; each entry records what it supports and what it must not be used to claim.
+- **[Deeper Research and Reading Queue v1.0](02_00d_deeper_research_and_reading_queue.md)** — P0/P1/P2 open questions, under-sourced mathematical constructs, direct-evidence gaps, and arXiv items requiring deeper reading or publication verification.
+
 - **[Chapter 2 Literature Classification and Ontology Register v1.0](02_00_literature_classification_ontology_register.md)** — controlled classification authority for evidence type, system role, network representation, dependency direction, mechanism, dynamics, model family, information/organization, resilience, uncertainty, intervention, sustainability consequence, validation maturity, and RQ/SO/H traceability. It contains the current verified core reference set and a separately labelled arXiv discovery lane.
 
 ## Purpose
