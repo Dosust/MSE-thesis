@@ -23,8 +23,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 6. **[1.6 Scope, Boundaries, and Assumptions](01_06_scope_boundaries_and_assumptions.md)**
 7. **[1.7 Research Framework and Logic](01_07_research_architecture_and_scientific_logic.md)**
 8. **[1.8 General Research Objective](01_08_general_research_objective.md)**
-8. **1.8 General Research Objective**
-9. **1.9 Research Questions** — RQ0 + exact RQ1–RQ7
+9. **[1.9 Research Questions](01_09_research_questions.md)** — RQ0 + exact RQ1–RQ7
 10. **1.10 Specific Research Objectives** — exact SO1–SO7
 11. **1.11 Research Hypotheses and Test Logic** — H1–H5
 12. **1.12 Proposed Contributions**
@@ -34,7 +33,7 @@ Target length: **16–18 pages** within the 160-page thesis ceiling unless expli
 
 ## Current drafted prose
 
-Sections **1.1–1.7 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
+Sections **1.1–1.9 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
 
 - 1.1 fixes the dependency/interdependency terminology and establishes the engineering context.
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
@@ -43,7 +42,9 @@ Sections **1.1–1.7 now have one source of truth in this directory**. The repos
 - 1.5 establishes the Sustainable Engineering significance without conflating resilience, resource efficiency and sustainability; it uses the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.
 - 1.6 defines the fit-for-purpose P–T–I–O research domain; separates common exposure from causal dependency; freezes spatial, temporal and hazard semantics; distinguishes state, operational control and persistent transformation; states the sustainability/accounting boundary; and makes assumptions, uncertainty classes, exclusions and validity limits explicit.
 - 1.7 is synchronized and compressed to the canonical seven-stage framework: it defines the compact stage contract, seven-row stage specification, Stage-5 remain–return–confidence semantics, Stage-6 intervention/consequence/sustainability-requirement logic, Stage-7 decision/transformation logic, PASS/FAIL/BLOCKED handoffs, bidirectional traceability, controlled iteration, and cross-cutting V&V/UQ/reproducibility without duplicating Chapters 3–4.
-- **Section 1.8 General Research Objective is the next Chapter-I drafting task and must state the single overarching objective consistent with RQ0 and the seven-stage architecture without introducing new scope.**
+- 1.8 states the exact canonical general objective, clarifies Stage-5 viability/reachability/confidence semantics, and preserves the P–T physical core with I–O supporting-domain scope.
+- 1.9 reproduces the exact canonical RQ0 and RQ1–RQ7 wording, preserves the ordered RQ1→RQ7 scientific dependency, and defers SO/H detail to Sections 1.10–1.11.
+- **Section 1.10 Specific Research Objectives is the next Chapter-I drafting task and must reproduce exact SO1–SO7 with one-to-one RQ↔SO traceability.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
