@@ -4,7 +4,7 @@
 **Canonical RQ1:** What entities exist, what layers constitute the system, and where can interactions occur?  
 **Canonical SO1:** Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.  
 **Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Audit status:** **NOT YET FROZEN — CONCEPTUAL/LITERATURE BASIS PASS; CASE EXECUTION OPEN**
+**Audit status:** **NOT YET FROZEN — CONCEPTUAL/LITERATURE/MATHEMATICAL CONTRACT PASS; CASE EXECUTION OPEN**
 
 ## 1. Executive conclusion
 
@@ -16,7 +16,7 @@ The current correct state is:
 
 ```math
 \boxed{
-\text{Stage-1 theory/evidence}=\mathrm{PASS}
+\text{Stage-1 theory/evidence/mathematics}=\mathrm{PASS}
 \qquad
 \text{Stage-1 case instantiation}=\mathrm{OPEN}
 }
@@ -44,10 +44,10 @@ This is not a failure. It means the remaining work is execution and formalizatio
 | S1-G06 | Intra-layer topology semantics | **PASS-CONCEPTUAL / OPEN-CASE** | electrical and road edges are kept semantically distinct | finish power materialization and road topology QA |
 | S1-G07 | Spatial embedding and CRS discipline | **PASS-CONCEPTUAL / OPEN-CASE** | spatial ontology and QA code exist | close common spatial-support gate G2 with explicit CRS/projection record |
 | S1-G08 | Proximity vs dependency guardrail | **PASS — CORRECTED** | `proximity alone != functional/causal dependency`; geographic co-exposure retained separately | propagate corrected wording into future Stage-1 prose |
-| S1-G09 | Structural cross-layer candidate object | **PARTIAL** | `C_ab^(1) subseteq V_a x V_b` is defined conceptually | freeze structural-admissibility predicate `Gamma_ij^str` and allowed evidence fields |
-| S1-G10 | Prior / structural-candidate / accepted-causal relation classes | **PARTIAL** | distinction is scientifically useful but not yet encoded as a formal schema/register | formalize `R_prior`, `C_struct`, `I_acc` in ontology/schema |
-| S1-G11 | Coordinate/state notation discipline | **PARTIAL** | `x_i` is used for location while dynamic states also use x-symbols in parts of repository | freeze typed notation: coordinate vs component state vs integrated state |
-| S1-G12 | Service-requirement trace to retained entities | **PARTIAL** | `K(t)` is globally defined but Stage-1 case entities are not yet explicitly mapped to service requirements | define service/entity traceability table for retained case |
+| S1-G09 | Structural cross-layer candidate object | **PASS** | frozen in `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md`; machine-readable enforcement in `schemas/stage1_structure.schema.json` | none |
+| S1-G10 | Prior / structural-candidate / accepted-causal relation classes | **PASS** | `R_prior`, `C_struct`, and Stage-2-only `I_acc` are frozen; schema prohibits Stage-1 causal acceptance | none |
+| S1-G11 | Coordinate/state notation discipline | **PASS** | Stage-1 contract freezes `r_i` for location and `X_P,X_T,z_I,z_O,Y` for states | propagate notation into future Stage-1 prose and implementation |
+| S1-G12 | Service-requirement trace schema | **PASS-SCHEMA / OPEN-CASE** | entity-to-service traceability schema is frozen in contract/schema | populate with retained Austin entities after materialization |
 | S1-G13 | Stage-1 literature foundation | **PASS** | accepted SoS, multilayer, interdependency, spatial and direct P–T structural sources are saved | continue systematic database expansion, but no conceptual blocker |
 | S1-G14 | SMART-DS P5U power materialization | **OPEN** | Austin matrix: G1 OPEN | materialize, hash, parse, connectivity/simulability QA |
 | S1-G15 | Common spatial support | **OPEN** | Austin matrix: G2 OPEN | verify nonempty overlap for retained power, roads, signals, traffic sensors and boundary support |
@@ -260,7 +260,7 @@ and the resulting `Z1_impl` is versioned and reproducible.
 \begin{aligned}
 \text{Canonical Stage-1 definition} &= \mathrm{PASS},\\
 \text{Literature/theory basis} &= \mathrm{PASS},\\
-\text{Ontology/mathematical contract} &= \mathrm{PARTIAL},\\
+\text{Ontology/mathematical contract} &= \mathrm{PASS},\\
 \text{Case-specific structural execution} &= \mathrm{OPEN},\\
 \text{Stage-1 final freeze} &= \mathrm{NOT\ YET\ PASS}.
 \end{aligned}
@@ -269,24 +269,21 @@ and the resulting `Z1_impl` is versioned and reproducible.
 
 ### Interpretation
 
-Stage 1 does **not** require more conceptual expansion before proceeding. It requires closure of a small number of precise formalization items plus completion of the Austin structural-data gates. The next work should therefore be execution-oriented rather than another broad redesign.
+Stage 1 does **not** require further conceptual or mathematical expansion before proceeding. The remaining work is case-specific structural execution, population of the frozen schemas, and closure of the Austin structural-data/provenance gates.
 
 ## 8. Deterministic closure sequence
 
 ```text
-1. freeze structural-admissibility predicate
-2. freeze prior/candidate/accepted relation ontology
-3. resolve coordinate/state notation
-4. freeze entity-to-service traceability schema
-5. materialize P5U power
-6. close common spatial support
-7. materialize/QA TxDOT 2018 topology
-8. generate retrospective signal subset
-9. generate semisynthetic P→T structural crosswalk
-10. verify T→P structural repair access
-11. close temporal/vintage subgates
-12. close QC/provenance
-13. emit `Z1_impl`
-14. run Stage-1 developmental verification
-15. freeze Stage 1
+1. materialize P5U power
+2. close common spatial support
+3. materialize/QA TxDOT 2018 topology
+4. generate retrospective signal subset
+5. populate the frozen Stage-1 entity/service schema
+6. generate semisynthetic P→T structural crosswalk
+7. verify T→P structural repair access
+8. close temporal/vintage subgates
+9. close QC/provenance
+10. emit and validate `Z1_impl`
+11. run Stage-1 developmental verification
+12. freeze Stage 1
 ```
