@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE COMPANION / NOT A SECOND SOURCE OF TRUTH  
 **Canonical scope:** [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)  
-**Canonical framework:** [`../../project/CANONICAL_7_STAGE_FRAMEWORK.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK.md)
+**Canonical framework:** [`../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)
 
 This directory implements **small, auditable computational scaffolds** for the frozen P–T–I–O thesis framework. It does not define an alternative thesis scope.
 
@@ -29,17 +29,17 @@ z_O(t)
 The computational chain supported by this directory is
 
 ```math
-\mathfrak I
+\mathbb I
 \rightarrow
 F_{\mathcal G}^{m}
 \rightarrow
-u(t)
+(\widehat Y,\mathcal U,u)
 \rightarrow
-\mathcal V_{\rm sus}^{u,T}
+\mathfrak R_T
 \rightarrow
-\Phi_{\rm ST}
+(a_k,\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
 \rightarrow
-\mathfrak P_{\rm ST}.
+\mathcal A_{R,S}^{\star}.
 ```
 
 ## What belongs here
