@@ -22,7 +22,7 @@ If supported by H2, the thesis is intended to contribute an explicit representat
 
 The thesis is intended to contribute an engineering evaluation that preserves
 
-\`\`\`math
+```math
 \boxed{
 \text{effectiveness}
 \neq
@@ -30,7 +30,7 @@ The thesis is intended to contribute an engineering evaluation that preserves
 \neq
 \text{sustainability consequence}.
 }
-\`\`\`
+```
 
 If the Stage-6 admission and H4 gates close successfully, resilience improvement will be linked to admitted consequence quantities such as qualified cost, operational energy, carbon/GHG, accessibility, or other approved metrics within declared accounting boundaries. Conditional metrics are not promoted to confirmed contributions before their data and VVUQ gates pass.
 
@@ -40,7 +40,7 @@ If supported by H5, the thesis is intended to contribute a decision formulation 
 
 The contribution traceability is
 
-\`\`\`math
+```math
 \boxed{
 \begin{aligned}
 C_1 &\leftarrow RQ_1/SO_1,\\
@@ -51,11 +51,11 @@ C_5 &\leftarrow RQ_6/SO_6/H_4,\\
 C_6 &\leftarrow RQ_7/SO_7/H_5.
 \end{aligned}
 }
-\`\`\`
+```
 
 A final contribution claim requires the corresponding chain to close:
 
-\`\`\`math
+```math
 \boxed{
 \text{qualified construct}
 \rightarrow
@@ -67,6 +67,6 @@ A final contribution claim requires the corresponding chain to close:
 \rightarrow
 \text{supported contribution}.
 }
-\`\`\`
+```
 
 Novelty is evaluated separately. A supported contribution is not automatically novel, and literature silence is not evidence of novelty.
