@@ -27,6 +27,7 @@ Stage 2 must never infer causality from topology, proximity, correlation, common
 - `STAGE2_MECHANISM_ONTOLOGY_V1.md` — mechanism classes and controlled semantics.
 - `STAGE2_EVIDENCE_REGISTER_V1.md` — candidate P↔T mechanism register.
 - `STAGE2_RESEARCH_QUEUE.md` — ordered evidence work.
+- `STAGE2_INITIALIZATION_AUDIT_2026-09-18.md` — 32/32 initialization/consistency audit.
 - `supporting_evidence/STAGE2_CLAIM_LEVEL_EVIDENCE_LEDGER_V1.md` — source-level causal-evidence ledger.
 - `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V1.md` — paper × mechanism evidence matrix.
 - `evidence/` — mechanism-specific dossiers.
