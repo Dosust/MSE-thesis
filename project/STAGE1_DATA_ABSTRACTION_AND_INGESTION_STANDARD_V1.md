@@ -1,9 +1,9 @@
 # Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.2
 
-**Status:** REVISED FINAL CANDIDATE — EVIDENCE-BASED ONTOLOGY INTEGRATED; REVERIFICATION REQUIRED  
+**Status:** FINAL METHODOLOGICAL STANDARD — EVIDENCE-BASED REVERIFICATION PASS; READY FOR FREEZE  
 **Date:** 2026-09-18  
 **Scope:** case-independent Stage-1 structural data processing for coupled Power–Transportation infrastructure  
-**Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md`
+**Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` + `STAGE1_EVIDENCE_AND_ONTOLOGY_REGISTER_V1.md`
 
 ## 1. Governing principle
 
@@ -152,7 +152,7 @@ layer
 entity_type
 source_id
 geometry_id
-engineering_function
+engineering_functions
 state_schema
 service_roles
 resolution_level
