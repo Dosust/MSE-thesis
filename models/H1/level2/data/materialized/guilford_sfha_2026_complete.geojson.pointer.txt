@@ -1,0 +1,24 @@
+GUILFORD_SFHA_EFFECTIVE_2026
+================================
+Raw merged GeoJSON is intentionally not stored as an ordinary Git blob because it is ~140 MB and exceeds GitHub's normal 100 MB per-file limit.
+
+Canonical local filename:
+guilford_sfha_2026_complete.geojson
+
+SHA-256:
+1a564d32961f5fc78f7a6ded2139a1471ba11e3a269acdac881790597e590665
+
+Features:
+3692
+
+Source:
+https://gcgis.guilfordcountync.gov/arcgis/rest/services/GISDV/Watershed_Management/MapServer/12
+
+Filter:
+SFHA_TF = 1
+
+The exact acquisition/pagination details are frozen in:
+guilford_sfha_2026_manifest.json
+
+The exact validation result is frozen in:
+guilford_sfha_2026_audit.json
