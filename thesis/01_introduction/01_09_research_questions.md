@@ -36,7 +36,7 @@ The general objective in Section 1.8 and the overarching research question RQ0 e
 
 The scientific dependency among the seven specific questions is
 
-\`\`\`math
+```math
 \boxed{
 RQ_1
 \rightarrow
@@ -52,6 +52,6 @@ RQ_6
 \rightarrow
 RQ_7
 }.
-\`\`\`
+```
 
 The arrows denote dependency of the scientific argument: downstream questions rely on qualified outputs from upstream questions. They do **not** imply that the physical infrastructure itself evolves through seven discrete stages. Each RQ1–RQ7 is paired one-to-one with SO1–SO7 in Section 1.10; hypothesis-bearing comparisons are defined separately in Section 1.11.
