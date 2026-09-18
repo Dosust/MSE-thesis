@@ -1,3 +1,6 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active Stage-1 authority is `STAGE1_FREEZE_MANIFEST_V2_2026-09-18.md`.
+> Do not use this file for new Stage-1 scientific, mathematical, schema, or freeze decisions.
 # Stage 1 Freeze-Candidate Manifest — 2026-09-18
 
 **Status:** READY FOR FREEZE — NEW EVIDENCE INTEGRATED — NOT YET FROZEN  
