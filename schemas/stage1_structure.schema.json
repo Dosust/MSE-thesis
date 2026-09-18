@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Dossiya-SE/MSE-thesis/schemas/stage1_structure.schema.json",
-  "title": "Stage 1 Structural Handoff Contract",
-  "description": "Machine-readable contract for the Stage-1 structural/spatial handoff. This schema does not admit causal dependencies; Stage-2 qualification is separate.",
+  "title": "Stage 1 Structural Handoff Contract v2",
+  "description": "Machine-readable Stage-1 contract synchronized to the final v2 evidence/ontology register. Stage 1 represents structural possibility only and cannot accept causal dependencies or estimate coupling strength.",
   "type": "object",
   "required": [
     "version",
@@ -20,7 +20,7 @@
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.2"
+      "const": "2.0"
     },
     "system_boundary": {
       "type": "object",
@@ -291,105 +291,135 @@
         "type": "object",
         "required": [
           "relation_id",
-          "source_layer",
-          "target_layer",
-          "source_entity",
-          "target_entity",
-          "status_class",
-          "structural_predicate_pass",
-          "structural_evidence",
-          "provenance_status",
-          "normative_admissibility",
+          "record_level",
+          "participants",
+          "layer_pair",
+          "scope",
+          "structural_admissibility",
           "interface_semantics",
           "exchange_semantics",
           "direction",
-          "candidate_mechanism_class",
-          "candidate_mechanism_status",
-          "candidate_operating_context",
-          "admission_basis",
-          "case_connection_status",
-          "resolution_level",
+          "candidate_mechanism",
+          "mechanism_status",
+          "activation_context",
+          "evidence_status",
           "evidence_refs",
-          "evidence_confidence",
-          "strength_status"
+          "structural_existence",
+          "case_connection_status",
+          "strength_status",
+          "causal_dependency_accepted",
+          "metadata",
+          "provenance_status"
         ],
         "properties": {
           "relation_id": {
             "type": "string",
             "minLength": 1
           },
-          "source_layer": {
-            "$ref": "#/$defs/layer"
-          },
-          "target_layer": {
-            "$ref": "#/$defs/layer"
-          },
-          "source_entity": {
-            "type": "string",
-            "minLength": 1
-          },
-          "target_entity": {
-            "type": "string",
-            "minLength": 1
-          },
-          "status_class": {
+          "record_level": {
             "enum": [
-              "PRIOR_DOCUMENTED",
-              "STRUCTURAL_CANDIDATE",
-              "UNRESOLVED",
-              "EXCLUDED"
+              "MECHANISM_TEMPLATE",
+              "CASE_RELATION"
             ]
           },
-          "structural_predicate_pass": {
-            "type": "boolean"
+          "participants": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "required": [
+                "entity_id",
+                "layer",
+                "role"
+              ],
+              "properties": {
+                "entity_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "layer": {
+                  "enum": [
+                    "power",
+                    "transportation",
+                    "information",
+                    "organization",
+                    "context"
+                  ]
+                },
+                "role": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
           },
-          "structural_evidence": {
+          "layer_pair": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "enum": [
+              "INTRA",
+              "INTER",
+              "CONTEXT"
+            ]
+          },
+          "structural_admissibility": {
             "type": "object",
+            "required": [
+              "status",
+              "predicate_pass",
+              "evidence"
+            ],
             "properties": {
-              "asset_crosswalk": {
-                "type": "boolean"
+              "status": {
+                "enum": [
+                  "N/A_TEMPLATE",
+                  "CANDIDATE",
+                  "PASS",
+                  "FAIL",
+                  "BLOCKED",
+                  "UNRESOLVED"
+                ]
               },
-              "interface_hardware": {
-                "type": "boolean"
+              "predicate_pass": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
               },
-              "spatial_relation": {
-                "type": "boolean"
-              },
-              "access_geometry": {
-                "type": "boolean"
-              },
-              "geographic_coexposure": {
-                "type": "boolean"
+              "evidence": {
+                "type": "object",
+                "required": [
+                  "asset_crosswalk",
+                  "interface_hardware",
+                  "spatial_relation",
+                  "access_geometry",
+                  "geographic_coexposure"
+                ],
+                "properties": {
+                  "asset_crosswalk": {
+                    "type": "boolean"
+                  },
+                  "interface_hardware": {
+                    "type": "boolean"
+                  },
+                  "spatial_relation": {
+                    "type": "boolean"
+                  },
+                  "access_geometry": {
+                    "type": "boolean"
+                  },
+                  "geographic_coexposure": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
               }
             },
             "additionalProperties": false
-          },
-          "provenance_status": {
-            "enum": [
-              "PASS",
-              "CONDITIONAL",
-              "BLOCKED",
-              "OPEN"
-            ]
-          },
-          "causal_dependency_accepted": {
-            "type": "boolean",
-            "const": false
-          },
-          "normative_admissibility": {
-            "enum": [
-              "PASS",
-              "CONDITIONAL",
-              "BLOCKED",
-              "N/A"
-            ]
-          },
-          "normative_authority_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "uniqueItems": true
           },
           "interface_semantics": {
             "type": "string",
@@ -402,20 +432,27 @@
           "direction": {
             "enum": [
               "SOURCE_TO_TARGET",
-              "UNDIRECTED_SCREENING"
+              "TARGET_TO_SOURCE",
+              "BIDIRECTIONAL",
+              "UNDIRECTED_SCREENING",
+              "CONTEXT_TO_SYSTEM"
             ]
           },
-          "candidate_mechanism_class": {
+          "candidate_mechanism": {
             "type": [
               "string",
               "null"
             ]
           },
-          "candidate_mechanism_status": {
-            "type": "string",
-            "const": "CANDIDATE_ONLY"
+          "mechanism_status": {
+            "enum": [
+              "PRIOR_DOCUMENTED_FAMILY",
+              "CANDIDATE_ONLY",
+              "INTRA_STRUCTURAL_SEMANTICS",
+              "CONTEXT_ONLY"
+            ]
           },
-          "candidate_operating_context": {
+          "activation_context": {
             "type": "array",
             "items": {
               "type": "string",
@@ -423,36 +460,18 @@
             },
             "uniqueItems": true
           },
-          "admission_basis": {
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-              "enum": [
-                "ASSET_CROSSWALK",
-                "INTERFACE_HARDWARE",
-                "SPATIAL_RELATION",
-                "ACCESS_GEOMETRY",
-                "GEOGRAPHIC_COEXPOSURE",
-                "PRIOR_LITERATURE",
-                "EMPIRICAL_ASSOCIATION",
-                "NORMATIVE_INTERFACE",
-                "OPERATOR_DOCUMENTATION",
-                "OTHER"
-              ]
-            }
-          },
-          "case_connection_status": {
+          "evidence_status": {
             "enum": [
-              "CANDIDATE",
-              "VERIFIED_STRUCTURAL",
-              "UNKNOWN",
-              "NOT_APPLICABLE"
+              "K",
+              "C_N",
+              "C_U",
+              "C_L",
+              "C_S",
+              "C_E",
+              "G",
+              "U",
+              "X"
             ]
-          },
-          "resolution_level": {
-            "type": "string",
-            "minLength": 1
           },
           "evidence_refs": {
             "type": "array",
@@ -463,129 +482,342 @@
             "minItems": 1,
             "uniqueItems": true
           },
-          "evidence_confidence": {
+          "structural_existence": {
+            "enum": [
+              "TEMPLATE_ONLY",
+              "CANDIDATE",
+              "VERIFIED_STRUCTURAL",
+              "UNRESOLVED",
+              "EXCLUDED"
+            ]
+          },
+          "case_connection_status": {
+            "enum": [
+              "NOT_CASE_EVALUATED",
+              "CANDIDATE",
+              "VERIFIED_STRUCTURAL",
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "strength_status": {
+            "const": "NOT_ESTIMATED_STAGE1"
+          },
+          "causal_dependency_accepted": {
+            "const": false
+          },
+          "metadata": {
             "type": "object",
             "required": [
-              "confidence_class",
-              "score",
-              "method"
+              "hierarchy_orientation",
+              "path",
+              "mediator_path",
+              "arity",
+              "resolution_level",
+              "admission_basis",
+              "evidence_confidence",
+              "normative_admissibility"
             ],
             "properties": {
-              "confidence_class": {
+              "hierarchy_orientation": {
                 "enum": [
-                  "HIGH",
-                  "MEDIUM",
-                  "LOW",
-                  "UNSCORED"
+                  "HORIZONTAL",
+                  "CROSS_SCALE",
+                  "N/A"
                 ]
               },
-              "score": {
-                "type": [
-                  "number",
-                  "null"
-                ],
-                "minimum": 0,
-                "maximum": 1
+              "path": {
+                "enum": [
+                  "DIRECT",
+                  "MEDIATED",
+                  "N/A"
+                ]
               },
-              "method": {
-                "type": [
-                  "string",
-                  "null"
+              "mediator_path": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "arity": {
+                "enum": [
+                  "PAIRWISE",
+                  "HIGHER_ORDER",
+                  "HIGHER_ORDER_POSSIBLE"
+                ]
+              },
+              "resolution_level": {
+                "type": "string",
+                "minLength": 1
+              },
+              "admission_basis": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "enum": [
+                    "ASSET_CROSSWALK",
+                    "INTERFACE_HARDWARE",
+                    "SPATIAL_RELATION",
+                    "ACCESS_GEOMETRY",
+                    "GEOGRAPHIC_COEXPOSURE",
+                    "PRIOR_LITERATURE",
+                    "EMPIRICAL_ASSOCIATION",
+                    "NORMATIVE_INTERFACE",
+                    "OPERATOR_DOCUMENTATION",
+                    "OTHER"
+                  ]
+                }
+              },
+              "evidence_confidence": {
+                "type": "object",
+                "required": [
+                  "confidence_class",
+                  "score",
+                  "method"
+                ],
+                "properties": {
+                  "confidence_class": {
+                    "enum": [
+                      "HIGH",
+                      "MEDIUM",
+                      "LOW",
+                      "UNSCORED"
+                    ]
+                  },
+                  "score": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "method": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "score": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "score"
+                      ]
+                    },
+                    "then": {
+                      "properties": {
+                        "method": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                ],
+                "additionalProperties": false
+              },
+              "normative_admissibility": {
+                "enum": [
+                  "PASS",
+                  "CONDITIONAL",
+                  "BLOCKED",
+                  "N/A",
+                  "N/A_TEMPLATE"
                 ]
               }
             },
-            "allOf": [
-              {
-                "if": {
-                  "properties": {
-                    "score": {
-                      "type": "number"
-                    }
-                  },
-                  "required": [
-                    "score"
-                  ]
-                },
-                "then": {
-                  "properties": {
-                    "method": {
-                      "type": "string",
-                      "minLength": 1
-                    }
-                  }
-                }
-              }
-            ],
             "additionalProperties": false
           },
-          "strength_status": {
-            "type": "string",
-            "const": "NOT_ESTIMATED_STAGE1"
+          "normative_authority_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "provenance_status": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "OPEN",
+              "EXCLUDED"
+            ]
           }
         },
-        "additionalProperties": false,
         "allOf": [
           {
             "if": {
               "properties": {
+                "record_level": {
+                  "const": "MECHANISM_TEMPLATE"
+                }
+              },
+              "required": [
+                "record_level"
+              ]
+            },
+            "then": {
+              "properties": {
+                "structural_existence": {
+                  "const": "TEMPLATE_ONLY"
+                },
                 "case_connection_status": {
+                  "const": "NOT_CASE_EVALUATED"
+                },
+                "structural_admissibility": {
+                  "properties": {
+                    "status": {
+                      "const": "N/A_TEMPLATE"
+                    },
+                    "predicate_pass": {
+                      "type": "null"
+                    }
+                  }
+                },
+                "metadata": {
+                  "properties": {
+                    "normative_admissibility": {
+                      "const": "N/A_TEMPLATE"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "record_level": {
+                  "const": "CASE_RELATION"
+                }
+              },
+              "required": [
+                "record_level"
+              ]
+            },
+            "then": {
+              "not": {
+                "properties": {
+                  "structural_existence": {
+                    "const": "TEMPLATE_ONLY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "structural_existence": {
                   "const": "VERIFIED_STRUCTURAL"
                 }
               },
               "required": [
-                "case_connection_status"
+                "structural_existence"
               ]
             },
             "then": {
-              "anyOf": [
-                {
-                  "properties": {
-                    "structural_evidence": {
-                      "properties": {
-                        "asset_crosswalk": {
-                          "const": true
-                        }
-                      }
-                    }
-                  }
+              "properties": {
+                "record_level": {
+                  "const": "CASE_RELATION"
                 },
-                {
+                "case_connection_status": {
+                  "const": "VERIFIED_STRUCTURAL"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "metadata": {
                   "properties": {
-                    "structural_evidence": {
-                      "properties": {
-                        "spatial_relation": {
-                          "const": true
-                        }
-                      }
+                    "path": {
+                      "const": "MEDIATED"
                     }
-                  }
-                },
-                {
+                  },
+                  "required": [
+                    "path"
+                  ]
+                }
+              },
+              "required": [
+                "metadata"
+              ]
+            },
+            "then": {
+              "properties": {
+                "metadata": {
                   "properties": {
-                    "structural_evidence": {
-                      "properties": {
-                        "access_geometry": {
-                          "const": true
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "properties": {
-                    "structural_evidence": {
-                      "properties": {
-                        "geographic_coexposure": {
-                          "const": true
-                        }
-                      }
+                    "mediator_path": {
+                      "minItems": 1
                     }
                   }
                 }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "metadata": {
+                  "properties": {
+                    "arity": {
+                      "const": "PAIRWISE"
+                    }
+                  },
+                  "required": [
+                    "arity"
+                  ]
+                }
+              },
+              "required": [
+                "metadata"
               ]
+            },
+            "then": {
+              "properties": {
+                "participants": {
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "scope": {
+                  "const": "CONTEXT"
+                }
+              },
+              "required": [
+                "scope"
+              ]
+            },
+            "then": {
+              "properties": {
+                "mechanism_status": {
+                  "const": "CONTEXT_ONLY"
+                },
+                "causal_dependency_accepted": {
+                  "const": false
+                }
+              }
             }
           }
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "service_traceability": {
