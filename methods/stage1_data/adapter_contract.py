@@ -25,6 +25,7 @@ class SourceManifest:
     native_crs: Optional[str] = None
     retrieval_reference: Optional[str] = None
     license_or_access: Optional[str] = None
+    authority_metadata: Optional[Mapping[str, Any]] = None
     metadata: Mapping[str, Any] = field(default_factory=dict)
 
 
@@ -55,6 +56,7 @@ class CanonicalBundle:
     service_traceability: List[Dict[str, Any]] = field(default_factory=list)
     candidate_relations: List[Dict[str, Any]] = field(default_factory=list)
     assumptions: List[Dict[str, Any]] = field(default_factory=list)
+    normative_authorities: List[Dict[str, Any]] = field(default_factory=list)
     qa: List[QARecord] = field(default_factory=list)
 
 
@@ -107,3 +109,32 @@ def assert_stage1_noncausal(bundle: CanonicalBundle) -> None:
             raise ValueError(
                 "Stage 1 cannot promote a structural relation to an accepted causal dependency."
             )
+
+
+def assert_normative_noncausal(bundle: CanonicalBundle) -> None:
+    """Ensure normative conformity is never promoted to scientific causality."""
+    for rel in bundle.candidate_relations:
+        if rel.get("normative_admissibility") in {"PASS", "CONDITIONAL"} and rel.get(
+            "causal_dependency_accepted"
+        ) is True:
+            raise ValueError(
+                "Normative admissibility cannot establish an accepted causal dependency."
+            )
+
+
+def assert_authority_scope(authority: Mapping[str, Any]) -> None:
+    """Validate minimum authority metadata required by Stage 1."""
+    required = {
+        "authority_id",
+        "authority_type",
+        "authority_name",
+        "jurisdiction",
+        "document_id",
+        "edition_or_version",
+        "status",
+        "applicability",
+        "verification_status",
+    }
+    missing = sorted(required.difference(authority))
+    if missing:
+        raise ValueError(f"Authority record missing required fields: {missing}")
