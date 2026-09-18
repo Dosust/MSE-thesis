@@ -4,22 +4,22 @@
 **Chapter:** 1 — Introduction  
 **Freeze date:** 2026-09-18  
 **Scope:** scientific content and research-contract logic of Sections 1.1–1.13  
-**Chapter-I authority:** \`../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md\`  
-**RQ–SO–H authority:** \`../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md\`  
-**Framework authority:** \`../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md\`  
-**Completion authority:** \`THESIS_COMPLETION_GATES.md\`
+**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**Completion authority:** `THESIS_COMPLETION_GATES.md`
 
 ## Freeze statement
 
 Chapter I has passed its scientific exit gate and is frozen as the thesis research contract.
 
-\`\`\`math
+```math
 \boxed{
 \text{Chapter I}
 =
 \text{PASS — FROZEN}
 }
-\`\`\`
+```
 
 The frozen chapter preserves:
 
@@ -65,19 +65,19 @@ The frozen chapter preserves:
 
 | Section | File | Frozen blob SHA |
 |---|---|---|
-| 1.1 | \`01_01_background_and_engineering_context.md\` | \`88af8036e5774f7b85d2407c18a1133babce640d\` |
-| 1.2 | \`01_02_coupled_ptio_system_context.md\` | \`46e521e47803f6b373c284a0da80affa49538d6e\` |
-| 1.3 | \`01_03_problem_statement.md\` | \`105b1d9190bd22d017a9fa0d71c58f841efe3e89\` |
-| 1.4 | \`01_04_research_gap.md\` | \`95e370d022cef2bec5b61e9165053c379c6cc8b8\` |
-| 1.5 | \`01_05_sustainable_engineering_significance.md\` | \`9efa1e76c18cc903f03f5cc0cc0f3a5a03c2421d\` |
-| 1.6 | \`01_06_scope_boundaries_and_assumptions.md\` | \`a6ddbf5c4b3259e6ad7ba28e28f206504b73dd61\` |
-| 1.7 | \`01_07_research_architecture_and_scientific_logic.md\` | \`e7f5fa673f64c4f5b88f9b881627cc10fe506891\` |
-| 1.8 | \`01_08_general_research_objective.md\` | \`6337c4f8d6c75cddc6b0090477df53c433e47890\` |
-| 1.9 | \`01_09_research_questions.md\` | \`dec3ad285ccedf806b296f8e5f1b85f1a2a377fe\` |
-| 1.10 | \`01_10_specific_research_objectives.md\` | \`e2b2ec9ca7457031d38593e810f6cd4aa050e7c6\` |
-| 1.11 | \`01_11_research_hypotheses_and_test_logic.md\` | \`6919c9cba497fdf5ba3f79c62c752684f577c5c8\` |
-| 1.12 | \`01_12_proposed_contributions.md\` | \`35f79ce63eeabe645e59cd0e8ea75855c75cd247\` |
-| 1.13 | \`01_13_thesis_organization.md\` | \`97c9a629efd47c555d74f219f008f98e35d44ed7\` |
+| 1.1 | `01_01_background_and_engineering_context.md` | `88af8036e5774f7b85d2407c18a1133babce640d` |
+| 1.2 | `01_02_coupled_ptio_system_context.md` | `46e521e47803f6b373c284a0da80affa49538d6e` |
+| 1.3 | `01_03_problem_statement.md` | `105b1d9190bd22d017a9fa0d71c58f841efe3e89` |
+| 1.4 | `01_04_research_gap.md` | `95e370d022cef2bec5b61e9165053c379c6cc8b8` |
+| 1.5 | `01_05_sustainable_engineering_significance.md` | `9efa1e76c18cc903f03f5cc0cc0f3a5a03c2421d` |
+| 1.6 | `01_06_scope_boundaries_and_assumptions.md` | `a6ddbf5c4b3259e6ad7ba28e28f206504b73dd61` |
+| 1.7 | `01_07_research_architecture_and_scientific_logic.md` | `e7f5fa673f64c4f5b88f9b881627cc10fe506891` |
+| 1.8 | `01_08_general_research_objective.md` | `6337c4f8d6c75cddc6b0090477df53c433e47890` |
+| 1.9 | `01_09_research_questions.md` | `dec3ad285ccedf806b296f8e5f1b85f1a2a377fe` |
+| 1.10 | `01_10_specific_research_objectives.md` | `e2b2ec9ca7457031d38593e810f6cd4aa050e7c6` |
+| 1.11 | `01_11_research_hypotheses_and_test_logic.md` | `6919c9cba497fdf5ba3f79c62c752684f577c5c8` |
+| 1.12 | `01_12_proposed_contributions.md` | `35f79ce63eeabe645e59cd0e8ea75855c75cd247` |
+| 1.13 | `01_13_thesis_organization.md` | `97c9a629efd47c555d74f219f008f98e35d44ed7` |
 
 These blob SHAs define the scientific freeze baseline.
 
