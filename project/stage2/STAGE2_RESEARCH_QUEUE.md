@@ -1,7 +1,29 @@
 # Stage 2 Research Queue
 
 **Status:** ACTIVE — ordered causal-evidence work  
+**Framework state:** **GENERIC CASE-INDEPENDENT CAUSAL-GOVERNANCE FRAMEWORK FROZEN**  
+**Normative authority:** `STAGE2_CASE_INDEPENDENT_CAUSAL_GOVERNANCE_CONTRACT_V1.md`  
 **Last synchronization:** 2026-09-19
+
+## Governance state
+
+The following generic items are complete and frozen:
+
+~~~text
+Power–Transportation scope
+causal interpretation criterion
+causal-status ontology
+non-causality invariants
+G2 promotion gates and aggregate logic
+evidence-governance rules
+uncertainty-governance rules
+causal existence vs activation vs strength distinction
+case-level output schema
+Stage-2→3 boundary rule
+Stage-2 definition of done
+~~~
+
+No queue item may alter those rules merely because of a case result. Remaining work is case execution under the frozen framework.
 
 ## Priority logic
 
