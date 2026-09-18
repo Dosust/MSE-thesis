@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md"
-      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md"
+      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md"
+      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V2.md"
+      - "project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md"
       - "schemas/stage1_structure.schema.json"
       - "schemas/stage1_source_manifest.schema.json"
       - "methods/stage1_data/**"
@@ -13,8 +14,9 @@ on:
       - ".github/workflows/stage1-framework-verification.yml"
   pull_request:
     paths:
-      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md"
-      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md"
+      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md"
+      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V2.md"
+      - "project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md"
       - "schemas/stage1_structure.schema.json"
       - "schemas/stage1_source_manifest.schema.json"
       - "methods/stage1_data/**"
