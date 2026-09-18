@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "system_boundary": {
     "geographic_support": "synthetic unit-square test domain",
     "temporal_support": "synthetic fixture epoch",
@@ -54,7 +54,17 @@
       "regulator": "Synthetic Regulator",
       "electrical_supplier": "Synthetic Utility",
       "transport_authority": null,
-      "jurisdiction": "TEST-JURISDICTION"
+      "jurisdiction": "TEST-JURISDICTION",
+      "engineering_functions": [
+        "electrical connectivity",
+        "electricity service support"
+      ],
+      "resolution_level": "component",
+      "evidence_refs": [
+        "E03",
+        "E04",
+        "fixture:power-1"
+      ]
     },
     {
       "entity_id": "transport:signal:001",
@@ -76,6 +86,80 @@
       "regulator": "Synthetic Regulator",
       "electrical_supplier": "Synthetic Utility",
       "transport_authority": "Synthetic DOT",
+      "jurisdiction": "TEST-JURISDICTION",
+      "engineering_functions": [
+        "intersection traffic control"
+      ],
+      "resolution_level": "component",
+      "evidence_refs": [
+        "E03",
+        "E09",
+        "fixture:transport-1"
+      ]
+    },
+    {
+      "entity_id": "power:transformer:002",
+      "entity_type": "transformer",
+      "layer": "power",
+      "source_dataset": "power-1",
+      "geometry_ref": "geom:p2",
+      "engineering_functions": [
+        "voltage transformation",
+        "repairable power asset"
+      ],
+      "state_schema": [
+        "availability"
+      ],
+      "service_roles": [
+        "electricity_service"
+      ],
+      "resolution_level": "component",
+      "evidence_refs": [
+        "E03",
+        "E10",
+        "fixture:power-1"
+      ],
+      "provenance_status": "PASS",
+      "inclusion_rule": "fixture repairable power component",
+      "exclusion_rule": null,
+      "owner": "Synthetic Utility",
+      "operator": "Synthetic Utility",
+      "regulator": "Synthetic Regulator",
+      "electrical_supplier": "Synthetic Utility",
+      "transport_authority": null,
+      "jurisdiction": "TEST-JURISDICTION"
+    },
+    {
+      "entity_id": "transport:roadnode:002",
+      "entity_type": "road_access_node",
+      "layer": "transportation",
+      "source_dataset": "transport-1",
+      "geometry_ref": "geom:t2",
+      "engineering_functions": [
+        "road accessibility",
+        "repair crew access support"
+      ],
+      "state_schema": [
+        "accessibility"
+      ],
+      "service_roles": [
+        "mobility_service",
+        "repair_access_service"
+      ],
+      "resolution_level": "component",
+      "evidence_refs": [
+        "E03",
+        "E10",
+        "fixture:transport-1"
+      ],
+      "provenance_status": "PASS",
+      "inclusion_rule": "fixture road access node for repair-access relation",
+      "exclusion_rule": null,
+      "owner": "Synthetic City",
+      "operator": "Synthetic DOT",
+      "regulator": "Synthetic Regulator",
+      "electrical_supplier": null,
+      "transport_authority": "Synthetic DOT",
       "jurisdiction": "TEST-JURISDICTION"
     }
   ],
@@ -96,12 +180,81 @@
         "access_geometry": false,
         "geographic_coexposure": false
       },
+      "interface_semantics": "electrical supply interface to traffic-control equipment",
+      "exchange_semantics": "electrical power/service availability",
+      "direction": "SOURCE_TO_TARGET",
+      "candidate_mechanism_class": "signal_power_dependency",
+      "candidate_mechanism_status": "CANDIDATE_ONLY",
+      "candidate_operating_context": [
+        "traffic signal requires external electrical supply"
+      ],
+      "admission_basis": [
+        "PRIOR_LITERATURE",
+        "ASSET_CROSSWALK",
+        "INTERFACE_HARDWARE"
+      ],
+      "case_connection_status": "VERIFIED_STRUCTURAL",
+      "resolution_level": "component-to-component",
+      "evidence_refs": [
+        "E09",
+        "fixture:crosswalk:p1-t1"
+      ],
+      "evidence_confidence": {
+        "confidence_class": "UNSCORED",
+        "score": null,
+        "method": "qualitative evidence class; no numeric calibration applied"
+      },
+      "strength_status": "NOT_ESTIMATED_STAGE1",
       "provenance_status": "PASS",
       "causal_dependency_accepted": false,
       "normative_admissibility": "PASS",
       "normative_authority_ids": [
         "AUTH-FIX-001"
       ]
+    },
+    {
+      "relation_id": "rel:t2-p2",
+      "source_layer": "transportation",
+      "target_layer": "power",
+      "source_entity": "transport:roadnode:002",
+      "target_entity": "power:transformer:002",
+      "status_class": "STRUCTURAL_CANDIDATE",
+      "structural_predicate_pass": true,
+      "structural_evidence": {
+        "asset_crosswalk": false,
+        "interface_hardware": false,
+        "spatial_relation": true,
+        "access_geometry": true,
+        "geographic_coexposure": false
+      },
+      "interface_semantics": "repair access pathway",
+      "exchange_semantics": "crew accessibility / travel-time service",
+      "direction": "SOURCE_TO_TARGET",
+      "candidate_mechanism_class": "repair_access_dependency",
+      "candidate_mechanism_status": "CANDIDATE_ONLY",
+      "candidate_operating_context": [
+        "power component requires field repair"
+      ],
+      "admission_basis": [
+        "PRIOR_LITERATURE",
+        "ACCESS_GEOMETRY"
+      ],
+      "case_connection_status": "VERIFIED_STRUCTURAL",
+      "resolution_level": "access-node-to-component",
+      "evidence_refs": [
+        "E10",
+        "fixture:access:t2-p2"
+      ],
+      "evidence_confidence": {
+        "confidence_class": "UNSCORED",
+        "score": null,
+        "method": "qualitative evidence class; no numeric calibration applied"
+      },
+      "strength_status": "NOT_ESTIMATED_STAGE1",
+      "provenance_status": "PASS",
+      "causal_dependency_accepted": false,
+      "normative_admissibility": "N/A",
+      "normative_authority_ids": []
     }
   ],
   "service_traceability": [
@@ -120,6 +273,18 @@
       "requirement_ids": [
         "REQ-FIX-001"
       ]
+    },
+    {
+      "entity_id": "power:transformer:002",
+      "service_id": "electricity_service",
+      "structural_role": "supports electrical service transformation/distribution",
+      "requirement_ids": []
+    },
+    {
+      "entity_id": "transport:roadnode:002",
+      "service_id": "repair_access_service",
+      "structural_role": "supports physical access to repairable infrastructure",
+      "requirement_ids": []
     }
   ],
   "assumptions": [
