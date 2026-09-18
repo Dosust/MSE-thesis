@@ -4,7 +4,7 @@ The contributions of this thesis are stated as **candidate scientific and engine
 
 ## C1 — Evidence-qualified P–T–I–O representation
 
-The thesis is intended to contribute a bounded representation of coupled **Power–Transportation** infrastructure that distinguishes the physical \(P+T\) core from the supporting Information and Organization domains while keeping system boundaries, interfaces, states, service requirements, and admissible interactions explicit. This contribution depends on successful RQ1/SO1 qualification.
+The thesis is intended to contribute a bounded representation of coupled **Power–Transportation** infrastructure that distinguishes the physical $P+T$ core from the supporting Information and Organization domains while keeping system boundaries, interfaces, states, service requirements, and admissible interactions explicit. This contribution depends on successful RQ1/SO1 qualification.
 
 ## C2 — Causal dynamic Power–Transportation interdependency representation
 
