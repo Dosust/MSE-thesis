@@ -1,3 +1,6 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active Stage-1 authority is `STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V2.md`.
+> Do not use this file for new Stage-1 scientific, mathematical, schema, or freeze decisions.
 # Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.2
 
 **Status:** FINAL METHODOLOGICAL STANDARD — EVIDENCE-BASED REVERIFICATION PASS; READY FOR FREEZE  
