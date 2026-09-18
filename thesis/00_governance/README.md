@@ -117,3 +117,8 @@ H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}.
 ```
 
 Interface criticality is a supporting diagnostic. Adaptive/sequential transformation is a supporting Stage-7 extension unless separately activated and preregistered.
+
+
+## Chapter I freeze
+
+- [`CHAPTER_I_FREEZE_2026-09-18.md`](CHAPTER_I_FREEZE_2026-09-18.md) — **PASS — FROZEN** scientific baseline for Sections 1.1–1.13.
