@@ -1,6 +1,6 @@
 # 1.9 Research Questions
 
-The general objective in Section 1.8 and the overarching research question (RQ_0) express the same research destination in declarative and interrogative form, respectively. The exact canonical wording below is reproduced from `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` without modification. (RQ_1)–(RQ_7) decompose the overarching problem into the ordered scientific questions required by the seven-stage research architecture.
+The general objective in Section 1.8 and the overarching research question RQ0 express the same thesis-level research destination in declarative and interrogative form, respectively. The wording below is reproduced from \`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md\` without modification. RQ1–RQ7 decompose RQ0 into the ordered scientific questions required by the seven-stage research architecture.
 
 ## RQ0 — Overarching research question
 
@@ -34,9 +34,9 @@ The general objective in Section 1.8 and the overarching research question (RQ_0
 
 > **What should be changed, where, when and in what sequence to achieve effective, efficient and sustainable infrastructure transformation under feasibility constraints and uncertainty?**
 
-The scientific dependency among the seven specific questions is:
+The scientific dependency among the seven specific questions is
 
-```math
+\`\`\`math
 \boxed{
 RQ_1
 \rightarrow
@@ -51,7 +51,7 @@ RQ_5
 RQ_6
 \rightarrow
 RQ_7
-}
-```
+}.
+\`\`\`
 
-This ordering is a dependency of scientific knowledge rather than a claim that the physical system itself evolves through seven discrete stages. Each (RQ_k) is paired one-to-one with (SO_k) in Section 1.10. The hypothesis-bearing comparisons are defined separately in Section 1.11; therefore, the seven research questions do not imply seven hypotheses.
+The arrows denote dependency of the scientific argument: downstream questions rely on qualified outputs from upstream questions. They do **not** imply that the physical infrastructure itself evolves through seven discrete stages. Each RQ1–RQ7 is paired one-to-one with SO1–SO7 in Section 1.10; hypothesis-bearing comparisons are defined separately in Section 1.11.
