@@ -21,7 +21,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 4. **[1.4 Research Gap](01_04_research_gap.md)**
 5. **[1.5 Sustainable Engineering Significance](01_05_sustainable_engineering_significance.md)**
 6. **[1.6 Scope, Boundaries, and Assumptions](01_06_scope_boundaries_and_assumptions.md)**
-7. **[1.7 Research Architecture and Scientific Logic](01_07_research_architecture_and_scientific_logic.md)**
+7. **[1.7 Research Framework and Logic](01_07_research_architecture_and_scientific_logic.md)**
 8. **1.8 General Research Objective**
 9. **1.9 Research Questions** — RQ0 + exact RQ1–RQ7
 10. **1.10 Specific Research Objectives** — exact SO1–SO7
@@ -41,7 +41,7 @@ Sections **1.1–1.7 now have one source of truth in this directory**. The repos
 - 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
 - 1.5 establishes the Sustainable Engineering significance without conflating resilience, resource efficiency and sustainability; it uses the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.
 - 1.6 defines the fit-for-purpose P–T–I–O research domain; separates common exposure from causal dependency; freezes spatial, temporal and hazard semantics; distinguishes state, operational control and persistent transformation; states the sustainability/accounting boundary; and makes assumptions, uncertainty classes, exclusions and validity limits explicit.
-- 1.7 defines the reader-facing research architecture and scientific logic: systems-thinking and systems-engineering roles, four analytical viewpoints, seven stage contracts, scientific handoffs, bidirectional traceability, controlled iteration, and recognized methodological controls for evidence synthesis, DOE, V&V, UQ, statistical inference, and reproducibility. It explicitly avoids treating a thesis-specific protocol as a substitute for established scientific and engineering methods.
+- 1.7 is synchronized and compressed to the canonical seven-stage framework: it defines the compact stage contract, seven-row stage specification, Stage-5 remain–return–confidence semantics, Stage-6 intervention/consequence/sustainability-requirement logic, Stage-7 decision/transformation logic, PASS/FAIL/BLOCKED handoffs, bidirectional traceability, controlled iteration, and cross-cutting V&V/UQ/reproducibility without duplicating Chapters 3–4.
 - **Section 1.8 General Research Objective is the next Chapter-I drafting task and must state the single overarching objective consistent with RQ0 and the seven-stage architecture without introducing new scope.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
