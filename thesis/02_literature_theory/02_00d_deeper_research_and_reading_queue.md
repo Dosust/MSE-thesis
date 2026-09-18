@@ -59,29 +59,21 @@ Mathematical foundations are strong, but direct coupled-infrastructure use remai
 
 **Research needed:** viability kernels in power systems; reachability in energy systems; reach-avoid infrastructure safety; viability/reachability in transportation; coupled-infrastructure applications.
 
-### P0-7 — Stage-1 candidate-relation admission criteria
+### P0-7 — Stage-1 candidate-relation admission criteria — **CLOSED**
 
-Need a reproducible rule for when a cross-layer pair enters the structural candidate set before causal qualification.
+Resolved methodologically in `project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` through the frozen non-causal structural predicate `Gamma_ij^str` and `C_ab^(1)`. Future literature may refine case-specific evidence fields but no longer blocks Stage-1 mathematics.
 
-**Research needed:** infrastructure interface identification; cross-layer asset mapping; geographic co-exposure; service-interface metadata; graph matching/link prediction only as discovery, not causality.
+### P0-8 — Geographic co-exposure versus causal dependency — **CLOSED**
 
-### P0-8 — Geographic co-exposure versus causal dependency
+Resolved by the frozen rule `spatial proximity alone != functional/causal dependency`, while shared local hazard pathways are retained as geographic co-exposure candidates. Stage 2 alone performs causal promotion.
 
-The original shorthand `spatial proximity != interdependency` is too absolute because geographic interdependency/co-exposure is recognized in the Rinaldi tradition.
+### P1-10 — Stage-1 state-schema and coordinate notation — **CLOSED**
 
-**Research needed:** formal criteria distinguishing proximity, common-cause geographic exposure, functional dependency, and causal dependency.
+Resolved in the Stage-1 contract: `r_i` denotes spatial location/geometry; `X_P,X_T,z_I,z_O` are state blocks; `Y(t)` is the integrated state.
 
-### P1-10 — Stage-1 state-schema and coordinate notation
+### P1-11 — Known/prior versus candidate versus accepted relation classes — **CLOSED**
 
-Need to prevent ambiguity between spatial coordinate `x_i`, state variables, and integrated state `Y(t)`.
-
-**Research needed:** graph-with-attributes notation; spatial network notation; entity-state schema; typed graph/ontology conventions.
-
-### P1-11 — Known/prior versus candidate versus accepted relation classes
-
-Need a controlled evidence ontology for `prior documented relation`, `structural candidate`, and `Stage-2 accepted causal dependency` without prejudging causality.
-
-**Research needed:** provenance-aware knowledge graphs; infrastructure ontology/interface registers; evidence qualification schemes.
+Resolved in the Stage-1 contract through `R_prior`, `C_struct`, and Stage-2-only `I_acc`, with explicit non-implication rules.
 
 ## 3. P1 — Important for mathematical/model design
 
