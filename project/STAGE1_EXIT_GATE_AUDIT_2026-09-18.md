@@ -4,11 +4,11 @@
 **Canonical RQ1:** What entities exist, what layers constitute the system, and where can interactions occur?  
 **Canonical SO1:** Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.  
 **Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Audit status:** **NOT YET FROZEN — CONCEPTUAL/LITERATURE/MATHEMATICAL CONTRACT PASS; CASE EXECUTION OPEN**
+**Audit status:** **FRAMEWORK NOT YET FROZEN — SCIENTIFIC/MATHEMATICAL DESIGN PASS; GENERIC DATA-FRAMEWORK VERIFICATION OPEN; AUSTIN CASE SEPARATE/OPEN**
 
 ## 1. Executive conclusion
 
-Stage 1 is **not yet fully complete**.
+Stage 1 must be separated into a **case-independent framework gate** and a **case-specific instantiation gate**. Austin is not allowed to determine whether the Stage-1 framework itself is complete.
 
 The literature, systems-engineering basis, multilayer/SoS ontology, Stage-1/Stage-2 separation, and the corrected spatial-proximity guardrail are sufficiently strong for continued thesis development. However, Stage 1 cannot be scientifically frozen because the candidate Austin case has not yet produced a verified case-specific structural handoff.
 
@@ -16,9 +16,9 @@ The current correct state is:
 
 ```math
 \boxed{
-\text{Stage-1 theory/evidence/mathematics}=\mathrm{PASS}
-\qquad
-\text{Stage-1 case instantiation}=\mathrm{OPEN}
+\text{Stage-1 science/mathematics}=\mathrm{PASS},\qquad
+\text{generic data framework}=\mathrm{OPEN\text{-}VERIFY},\qquad
+\text{Austin case}=\mathrm{OPEN}
 }
 ```
 
@@ -26,11 +26,11 @@ and therefore:
 
 ```math
 \boxed{
-\text{Final Stage-1 exit gate}=\mathrm{NOT\ YET\ PASS}
+\text{Stage-1 framework freeze}=\mathrm{NOT\ YET\ PASS}\;\text{only because generic fixture verification remains open}
 }
 ```
 
-This is not a failure. It means the remaining work is execution and formalization, not a conceptual redesign.
+This is not an Austin-data blocker. The remaining framework work is case-independent verification of the generic ingestion/cleaning contracts. Austin remains a downstream case-admissibility exercise.
 
 ## 2. Gate-by-gate audit
 
@@ -49,16 +49,29 @@ This is not a failure. It means the remaining work is execution and formalizatio
 | S1-G11 | Coordinate/state notation discipline | **PASS** | Stage-1 contract freezes `r_i` for location and `X_P,X_T,z_I,z_O,Y` for states | propagate notation into future Stage-1 prose and implementation |
 | S1-G12 | Service-requirement trace schema | **PASS-SCHEMA / OPEN-CASE** | entity-to-service traceability schema is frozen in contract/schema | populate with retained Austin entities after materialization |
 | S1-G13 | Stage-1 literature foundation | **PASS** | accepted SoS, multilayer, interdependency, spatial and direct P–T structural sources are saved | continue systematic database expansion, but no conceptual blocker |
-| S1-G14 | SMART-DS P5U power materialization | **OPEN** | Austin matrix: G1 OPEN | materialize, hash, parse, connectivity/simulability QA |
-| S1-G15 | Common spatial support | **OPEN** | Austin matrix: G2 OPEN | verify nonempty overlap for retained power, roads, signals, traffic sensors and boundary support |
-| S1-G16 | Transport topology | **OPEN** | Austin matrix: G3 source qualified, materialization/topology OPEN | materialize TxDOT 2018 clip; topology cleaning/snap QA |
-| S1-G17 | P→T structural signal-power crosswalk | **OPEN** | Austin matrix: G5 retrospective extraction + mapping OPEN | generate reproducible semisynthetic signal-power mapping; retain non-observed-feeder label |
-| S1-G18 | T→P structural repair-access relation | **OPEN** | Austin matrix: G6 OPEN; repair access not yet computable | prove structural road access to at least one repairable synthetic power component |
-| S1-G19 | Temporal/vintage consistency | **PARTIAL** | temporal semantics protocol is frozen; signal/radar/flood execution remains OPEN | close `G_time` subgates |
-| S1-G20 | QC/provenance completeness | **OPEN** | Austin matrix: G8 OPEN | freeze hashes, counts, CRS, missingness, temporal role, license/access, code/commit |
-| S1-G21 | Generated case-specific Stage-1 handoff | **OPEN** | no final verified `Z1_impl` exists yet | emit and version the final structural package |
-| S1-G22 | Developmental verification supporting H1 | **OPEN** | cannot close until retained architecture and crosswalks pass QA | verify structural completeness without using H1 outcomes |
+| S1-C01 | Austin SMART-DS P5U materialization | **OPEN — CASE GATE** | Austin matrix: G1 OPEN | does not block framework freeze; required only for Austin case admissibility |
+| S1-C02 | Austin common spatial support | **OPEN — CASE GATE** | Austin matrix: G2 OPEN | case-specific |
+| S1-C03 | Austin transport topology | **OPEN — CASE GATE** | source qualified, materialization/topology OPEN | case-specific |
+| S1-C04 | Austin P→T signal-power crosswalk | **OPEN — CASE GATE** | retrospective extraction + mapping OPEN | case-specific |
+| S1-C05 | Austin T→P repair-access relation | **OPEN — CASE GATE** | Austin matrix: G6 OPEN | case-specific |
+| S1-C06 | Austin temporal/vintage consistency | **OPEN — CASE GATE** | temporal-semantics protocol exists; case execution OPEN | case-specific |
+| S1-C07 | Austin QC/provenance completeness | **OPEN — CASE GATE** | Austin matrix: G8 OPEN | case-specific |
+| S1-C08 | Austin case-specific `Z1_impl` | **OPEN — CASE GATE** | not yet emitted | case-specific |
+| S1-C09 | Austin developmental verification | **OPEN — CASE GATE** | requires Austin structural package | case-specific; supports later H1 experiment readiness |
 
+## 2A. Case-independent framework gates
+
+| ID | Framework requirement | Status | Closure condition |
+|---|---|---|---|
+| S1-F01 | Stage-1 mathematical/ontology contract | **PASS** | frozen in `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` |
+| S1-F02 | Canonical intermediate representation | **PASS-DESIGN** | frozen in `STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md` |
+| S1-F03 | Generic source manifest | **PASS-DESIGN** | `schemas/stage1_source_manifest.schema.json` |
+| S1-F04 | Stage-1 structural handoff schema | **PASS-DESIGN** | `schemas/stage1_structure.schema.json` |
+| S1-F05 | Generic adapter interface | **PASS-DESIGN** | `methods/stage1_data/adapter_contract.py` |
+| S1-F06 | Cleaning/normalization rules | **PASS-DESIGN** | immutable raw, explicit CRS/units/time/null/topology/geometry rules frozen |
+| S1-F07 | Provenance/QA contract | **PASS-DESIGN** | source hashes + QA ledger + transformation trace defined |
+| S1-F08 | Case-independent fixture tests | **OPEN** | synthetic fixtures must verify schema, provenance, IDs, CRS, units, nulls, topology, temporal roles, and Stage-1 causal guardrail |
+| S1-F09 | Framework freeze | **BLOCKED ONLY BY F08** | may PASS without Austin once F08 passes |
 ## 3. What is already complete
 
 The following Stage-1 scientific foundations do **not** need to be reinvented:
@@ -261,29 +274,36 @@ and the resulting `Z1_impl` is versioned and reproducible.
 \text{Canonical Stage-1 definition} &= \mathrm{PASS},\\
 \text{Literature/theory basis} &= \mathrm{PASS},\\
 \text{Ontology/mathematical contract} &= \mathrm{PASS},\\
-\text{Case-specific structural execution} &= \mathrm{OPEN},\\
-\text{Stage-1 final freeze} &= \mathrm{NOT\ YET\ PASS}.
+\text{Generic data-framework design} &= \mathrm{PASS\text{-}DESIGN},\\
+\text{Generic fixture verification} &= \mathrm{OPEN},\\
+\text{Stage-1 framework freeze} &= \mathrm{BLOCKED\ ONLY\ BY\ GENERIC\ VERIFICATION},\\
+\text{Austin case instantiation} &= \mathrm{OPEN\ (SEPARATE)}.
 \end{aligned}
 }
 ```
 
 ### Interpretation
 
-Stage 1 does **not** require further conceptual or mathematical expansion before proceeding. The remaining work is case-specific structural execution, population of the frozen schemas, and closure of the Austin structural-data/provenance gates.
+Stage 1 does **not** require further conceptual or mathematical expansion. Framework closure now requires only case-independent fixture verification of the generic ingestion/cleaning architecture. Austin structural execution is a separate Chapter-4/case-admissibility activity.
 
 ## 8. Deterministic closure sequence
 
 ```text
-1. materialize P5U power
-2. close common spatial support
-3. materialize/QA TxDOT 2018 topology
-4. generate retrospective signal subset
-5. populate the frozen Stage-1 entity/service schema
-6. generate semisynthetic P→T structural crosswalk
-7. verify T→P structural repair access
-8. close temporal/vintage subgates
-9. close QC/provenance
-10. emit and validate `Z1_impl`
-11. run Stage-1 developmental verification
-12. freeze Stage 1
+1. create case-independent synthetic fixtures for each supported source class
+2. validate source-manifest schema
+3. validate canonical entity/edge/geometry/service/candidate-relation outputs
+4. verify identifier stability and provenance round-trip
+5. verify CRS and unit normalization
+6. verify missingness preservation and no silent imputation
+7. verify geometry/topology repair logging
+8. verify temporal-role preservation
+9. verify the Stage-1 causal guardrail
+10. freeze the generic Stage-1 framework
+
+Austin then executes separately against the frozen framework:
+A1. materialize Austin sources
+A2. apply adapters/configuration
+A3. close Austin spatial/topology/crosswalk/provenance gates
+A4. emit Austin `Z1_impl`
+A5. declare Austin case PASS / FAIL / BLOCKED
 ```
