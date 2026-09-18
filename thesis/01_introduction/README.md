@@ -26,14 +26,14 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 9. **[1.9 Research Questions](01_09_research_questions.md)** — RQ0 + exact RQ1–RQ7
 10. **[1.10 Specific Research Objectives](01_10_specific_research_objectives.md)** — exact SO1–SO7
 11. **[1.11 Research Hypotheses and Test Logic](01_11_research_hypotheses_and_test_logic.md)** — H1–H5
-12. **1.12 Proposed Contributions**
+12. **[1.12 Proposed Contributions](01_12_proposed_contributions.md)**
 13. **1.13 Thesis Organization**
 
 Target length: **16–18 pages** within the 160-page thesis ceiling unless explicitly amended.
 
 ## Current drafted prose
 
-Sections **1.1–1.11 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
+Sections **1.1–1.12 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
 
 - 1.1 fixes the dependency/interdependency terminology and establishes the engineering context.
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
@@ -46,7 +46,8 @@ Sections **1.1–1.11 now have one source of truth in this directory**. The repo
 - 1.9 reproduces the exact canonical RQ0 and RQ1–RQ7 wording, preserves the ordered RQ1→RQ7 scientific dependency, and defers SO/H detail to Sections 1.10–1.11.
 - 1.10 reproduces the exact canonical SO1–SO7 wording, preserves one-to-one `RQ_k↔SO_k` traceability, distinguishes the developmental/evidence obligations of SO1–SO2 from the five hypothesis-bearing objectives, and defers comparator/test detail to Section 1.11.
 - 1.11 retains the exact canonical H1–H5 wording and defines, for each hypothesis, the comparator architecture, response class, uncertainty treatment, and non-support/BLOCKED logic without importing detailed Chapter-4 derivations. It preserves H4/H5 sustainability-admission conditions, Stage-5 remain–return–confidence semantics, interface criticality as a supporting diagnostic, and adaptive transformation as a conditional extension.
-- **Section 1.12 Proposed Contributions is the next Chapter-I drafting task and must use conditional proposal language only; no contribution may be written as demonstrated until the relevant evidence, validation, novelty, and hypothesis chain closes.**
+- 1.12 states six candidate contribution categories in conditional proposal language, maps each to its RQ/SO/H evidence chain, distinguishes supported contribution from novelty, and prohibits promotion to a supported claim before the corresponding model/test/VVUQ/result chain closes.
+- **Section 1.13 Thesis Organization is the next Chapter-I drafting task and must explain the seven-chapter argument without duplicating detailed chapter contents.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
