@@ -1,0 +1,27 @@
+{
+  "source": "Guilford County GIS Flood Zones Effective 06-10-2026, Layer 12",
+  "filter": "SFHA_TF = 1",
+  "part1": {
+    "file": "part1.geojson",
+    "feature_count": 2000,
+    "sha256": "4da5175e749a339475b69600fa4f8deafcf9b330e3fe8edbd431a5ada609d1c5"
+  },
+  "part2": {
+    "file": "query.geojson",
+    "feature_count": 1692,
+    "sha256": "eff2295acf60afb54143f4c296738aa15bd8725900311a7e6274389feca8cb16"
+  },
+  "combined": {
+    "file": "guilford_sfha_2026_complete.geojson",
+    "feature_count": 3692,
+    "unique_ids": 3692,
+    "duplicate_ids": 0,
+    "sfha_values": [1],
+    "polygon_count": 3688,
+    "multipolygon_count": 4,
+    "sha256": "1a564d32961f5fc78f7a6ded2139a1471ba11e3a269acdac881790597e590665",
+    "size_bytes": 146800000
+  },
+  "status": "COMPLETE_QUERY_PAGINATION_AUDIT_PASS",
+  "next_gate": "spatial coverage audit against all 61 feeder ROIs before E_H computation"
+}
