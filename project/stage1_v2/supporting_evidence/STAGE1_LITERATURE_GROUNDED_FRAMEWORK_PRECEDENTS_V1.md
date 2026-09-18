@@ -1,3 +1,7 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active supporting-evidence authority is `STAGE1_LITERATURE_GROUNDED_FRAMEWORK_PRECEDENTS_V2.md`.
+> Do not use this v1 file for new evidence-traceability decisions.
+
 # Stage 1 Literature-Grounded Framework Precedents v1.0
 
 **Status:** SUPPORTING EVIDENCE — DOES NOT AMEND THE FROZEN STAGE-1 FRAMEWORK  
