@@ -101,6 +101,12 @@ F_{\mathcal G}^{m}
 
 ---
 
+## 4. Generic Stage-1 data architecture
+
+Case-independent Stage-1 ingestion, normalization, cleaning, provenance, and source-adapter contracts are defined in [`../stage1_data/README.md`](../stage1_data/README.md) under `project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md`.
+
+Austin-specific routines in `../austin_case/` must consume that generic contract and may not redefine Stage-1 ontology, cleaning semantics, or causal-admission rules.
+
 ## 4. Core executable files
 
 | File | Purpose | Scientific status |
