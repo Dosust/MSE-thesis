@@ -1,10 +1,12 @@
 # Stage 2 — Evidence-Grounded Causal Interdependencies
 
-**Status:** **ACTIVE / WORKING — NOT FROZEN**  
+**Status:** **ACTIVE EXECUTION / GENERIC FRAMEWORK FROZEN — STAGE NOT CLOSED**  
 **Canonical RQ2:** Why and through which mechanisms do components and layers affect each other?  
 **Canonical SO2:** Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.  
 **Input authority:** frozen Stage-1 relation register `mathfrak r_e^(1)` plus the locked Stage-1 supporting-evidence traceability layer.  
-**Formal activation authority:** `../../thesis/00_governance/STAGE1_TO_STAGE2_FORMAL_TRANSITION_2026-09-19.md`.
+**Formal activation authority:** `../../thesis/00_governance/STAGE1_TO_STAGE2_FORMAL_TRANSITION_2026-09-19.md`.  
+**Frozen generic framework authority:** `STAGE2_CASE_INDEPENDENT_CAUSAL_GOVERNANCE_CONTRACT_V1.md`.  
+**Framework freeze governance:** `../../thesis/00_governance/STAGE2_FRAMEWORK_FREEZE_2026-09-19.md`.
 
 ## Thesis-level statement
 
@@ -12,13 +14,37 @@
 
 ## Stage-2 responsibility
 
-Stage 2 converts a **structural relation candidate** into a **causally qualified interdependency** only when mechanism, case connection, exchange semantics, activation, evidence, validity and falsifiability are all defensible.
+Stage 2 converts a **structural Power–Transportation relation candidate** into a **causally qualified interdependency** only when the frozen case-independent causal rules are satisfied by the evidence available for the declared case.
 
 ~~~math
 \boxed{\mathfrak r_e^{(1)}\xrightarrow{G_2}\mathfrak I_e}
 ~~~
 
 Stage 2 must never infer causality from topology, proximity, correlation, common exposure, standards conformity, or a literature mechanism family alone.
+
+## Frozen generic Stage-2 authority
+
+The following case-independent rules are frozen and govern every Power–Transportation case application:
+
+- `STAGE2_CASE_INDEPENDENT_CAUSAL_GOVERNANCE_CONTRACT_V1.md` — normative causal-governance contract;
+- `../../thesis/00_governance/STAGE2_FRAMEWORK_FREEZE_2026-09-19.md` — formal freeze boundary and amendment rule;
+- `STAGE2_QUALIFIED_MECHANISM_UNIVERSE_FREEZE_2026-09-19.md` — frozen parent mechanism taxonomy.
+
+The rules are invariant across cases:
+
+~~~math
+\boxed{
+\mathcal R_{G_2}^{(1)}
+=
+\mathcal R_{G_2}^{(2)}
+=
+\cdots
+=
+\mathcal R_{G_2}
+}
+~~~
+
+Case data and case-specific classifications may change without redefining Stage 2.
 
 ## Active working files
 
