@@ -1,6 +1,6 @@
-# Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.1
+# Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.2
 
-**Status:** FINAL METHODOLOGICAL STANDARD — READY FOR STAGE-1 FRAMEWORK FREEZE  
+**Status:** REVISED FINAL CANDIDATE — EVIDENCE-BASED ONTOLOGY INTEGRATED; REVERIFICATION REQUIRED  
 **Date:** 2026-09-18  
 **Scope:** case-independent Stage-1 structural data processing for coupled Power–Transportation infrastructure  
 **Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md`
@@ -152,8 +152,11 @@ layer
 entity_type
 source_id
 geometry_id
+engineering_function
 state_schema
 service_roles
+resolution_level
+evidence_refs
 valid_from
 valid_to
 quality_status
@@ -214,16 +217,35 @@ evidence_status
 relation_id
 source_entity
 target_entity
+source_layer
+target_layer
 relation_status
+interface_semantics
+exchange_semantics
+direction
+candidate_mechanism_class
+candidate_operating_context
+admission_basis
 asset_crosswalk
 interface_hardware
 spatial_relation
 access_geometry
 geographic_coexposure
+case_connection_status
+resolution_level
+evidence_refs
+evidence_confidence_class
+evidence_confidence_score
+evidence_confidence_method
+strength_status=NOT_ESTIMATED_STAGE1
 structural_predicate_pass
+normative_admissibility
+normative_authority_ids
 provenance_status
 causal_dependency_accepted=false
 ```
+
+CIR-7 deliberately keeps **existence/status**, **coupling strength**, and **evidence confidence** as distinct fields. Stage 1 may describe candidate mechanism/interface semantics, but it may not estimate functional coupling strength or promote a candidate relation to accepted causality.
 
 ### CIR-8 — Assumption register
 
@@ -360,6 +382,22 @@ Thus:
 - normative conformity cannot set `causal_dependency_accepted=true`;
 - superseded requirements remain traceable but cannot be treated as current without an explicit historical-use justification.
 
+### 7.11 Relation-semantic separation
+- topology is not treated as engineering function;
+- proximity may nominate a candidate but cannot establish dependency;
+- correlation/association may nominate evidence but cannot establish causality;
+- a standardized/known interface does not establish a case-specific connection;
+- a verified case connection does not establish a causal mechanism;
+- same entity type does not imply identical function or coupling;
+- dependency existence/status, coupling strength, and evidence confidence are stored separately;
+- Stage 1 fixes `strength_status=NOT_ESTIMATED_STAGE1`.
+
+### 7.12 Modeling resolution
+- every retained entity declares a modeling resolution level;
+- every cross-layer candidate relation declares the resolution at which the relation is represented;
+- source adapters may aggregate/disaggregate only through explicit, provenance-controlled transformations;
+- a change in resolution that may alter interface semantics requires a new derived object and QA record.
+
 ## 8. Domain-specific adapter families
 
 ### 8.1 Power adapter
@@ -417,6 +455,11 @@ The generic framework must pass synthetic/fixture tests independent of Austin:
 | authority metadata | jurisdiction, edition/status, effective period and applicability survive ingestion |
 | authority applicability | a nonapplicable requirement does not become a model constraint |
 | normative/causal separation | standards conformity cannot create a causal dependency |
+| entity semantics | engineering function, evidence references and resolution are retained |
+| relation semantics | interface, exchanged function/service/resource, direction and candidate context are retained |
+| existence-strength-confidence separation | Stage 1 cannot estimate `w_ij`; confidence remains separate from existence/status |
+| resolution preservation | entity/relation resolution survives canonicalization |
+| standardized-interface guardrail | standard/interface evidence alone cannot be labeled as verified case connection |
 | causal guardrail | Stage-1 schema cannot set `causal_dependency_accepted=true` |
 
 These tests define framework readiness independently of any case-study dataset.
@@ -453,6 +496,8 @@ Therefore Austin, Greensboro, Singapore, a synthetic benchmark, or another P–T
 ```math
 \boxed{
 \begin{gathered}
+\text{evidence/ontology register frozen}
+\land
 \text{ontology frozen}
 \land
 \text{CIR frozen}
@@ -494,3 +539,7 @@ Any Austin-specific failure then means:
 ```
 
 If a new data source cannot map into the CIR because the source reveals a genuinely missing semantic class, the framework must be versioned and amended explicitly rather than patched silently.
+
+## 14. Evidence-based ontology refinement
+
+The Stage-1 relation object is explicitly richer than a generic cross-layer edge. It records interface semantics, exchanged function/service/resource, candidate mechanism/context, admission basis, evidence/provenance, confidence representation, modeling resolution, and normative admissibility while leaving coupling strength unestimated until later causal/dynamic stages.
