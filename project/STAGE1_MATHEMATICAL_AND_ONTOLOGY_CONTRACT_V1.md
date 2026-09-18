@@ -1,6 +1,6 @@
 # Stage 1 Mathematical and Ontology Contract v1.2
 
-**Status:** REVISED FINAL CANDIDATE — NEW EVIDENCE INTEGRATED; REVERIFICATION REQUIRED  
+**Status:** FINAL METHODOLOGICAL CONTRACT — NEW EVIDENCE INTEGRATED; REVERIFICATION PASS; READY FOR FREEZE  
 **Date:** 2026-09-18  
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
 **Canonical authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`
@@ -606,4 +606,4 @@ Literature is **not** required to contain the exact thesis notation `Gamma^str`,
 
 ## 20. Freeze state
 
-The **Stage-1 mathematical/ontology contract has been revised using the Stage-1 Evidence and Ontology Register**. Framework freeze requires successful re-verification of the revised machine/data contracts and fixtures. Case-specific instantiations remain governed by separate `G_1^{case}` gates and do not control framework validity.
+The **Stage-1 mathematical/ontology contract has been revised using the Stage-1 Evidence and Ontology Register and has passed evidence-based re-verification**. It is ready for inclusion in the Stage-1 framework freeze; case-specific instantiations remain governed by separate `G_1^{case}` gates. Case-specific instantiations remain governed by separate `G_1^{case}` gates and do not control framework validity.
