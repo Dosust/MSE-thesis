@@ -34,6 +34,24 @@ A section is scientifically frozen only when all required gates pass.
 - `PASS — FROZEN`
 - `FAIL / REVISE`
 
+## Stage 1 generic framework gate
+
+**Current status:** **PASS — FROZEN (2026-09-18)**  
+**Freeze record:** `STAGE1_FRAMEWORK_FREEZE_2026-09-18.md`
+
+The generic Stage-1 framework passes when:
+- RQ1/SO1 remain synchronized with canonical v3;
+- semantic entities use `r_i` for geometry and preserve function/state/ownership/authority/resolution/provenance;
+- the core relation object `mathfrak r_e^(1)` and secondary metadata `a_e` are synchronized with Evidence/Ontology Register v2;
+- structural existence, coupling strength and evidence confidence remain distinct;
+- `w_e=NOT_ESTIMATED_STAGE1`;
+- common cause, topology, proximity, correlation, standards conformity and case connection are not promoted to causal dependency;
+- six G1 gates B/E/I/R/P/C pass;
+- machine schema/runtime/fixture verification passes;
+- case-specific admissibility remains separate through `G_1^framework != G_1^case(c)`.
+
+Case-specific Stage-1 execution may continue under the frozen framework without reopening it.
+
 ## Preliminary matter gate
 
 Pass when:
