@@ -1,10 +1,11 @@
-# Stage 1 Final Framework v1.0 — Ready for Freeze
+# Stage 1 Final Framework v1.1 — Ready for Freeze
 
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
-**Status:** **PASS — READY FOR FREEZE**  
+**Status:** **PASS — READY FOR FREEZE AFTER NEW-EVIDENCE INTEGRATION**  
 **Date:** 2026-09-18  
 **Canonical RQ:** **RQ1: What entities exist, what layers constitute the system, and where can interactions occur?**  
-**Canonical SO:** **SO1: Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.**
+**Canonical SO:** **SO1: Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.**  
+**Evidence/ontology authority:** `STAGE1_EVIDENCE_AND_ONTOLOGY_REGISTER_V1.md`
 
 ## 1. Stage-1 scientific responsibility
 
@@ -137,7 +138,34 @@ z_O(t)
 
 `r_i` denotes location/geometry; `X_P,X_T,z_I,z_O` denote state blocks; `Y(t)` is the integrated system state used by later stages. Stage 1 declares state schemas, not Stage-3 trajectories.
 
-## 7. Structural admissibility
+## 7. Semantic entity representation
+
+The Stage-1 entity is not an anonymous graph vertex. The thesis-defined semantic entity object is:
+
+```math
+\boxed{
+E_i^\alpha
+=
+(
+id_i,
+type_i,
+layer_i,
+r_i,
+f_i,
+\mathcal Y_i,
+o_i,
+a_i,
+\ell_i,
+\mathcal D_i
+).
+}
+```
+
+It records identity/type, layer, geometry, engineering function/service roles, state schema, ownership/operator roles, authority roles, modeling resolution, and evidence/provenance.
+
+The exact tuple is a thesis synthesis grounded in ontology/GIS, functional-dependency, multilayer-network and infrastructure-interface literature; it is not represented as a published standard formula.
+
+## 8. Structural admissibility
 
 A cross-layer pair enters Stage 1 only through the non-causal structural predicate:
 
@@ -163,7 +191,7 @@ i\rightarrow j.
 }
 ```
 
-## 8. Structural candidate set
+## 9. Structural candidate set
 
 ```math
 \boxed{
@@ -178,7 +206,7 @@ i\rightarrow j.
 
 This is the domain handed to Stage 2 for causal qualification.
 
-## 9. Geographic guardrail
+## 10. Geographic guardrail
 
 ```math
 \boxed{
@@ -190,7 +218,7 @@ This is the domain handed to Stage 2 for causal qualification.
 
 Shared local hazard exposure may justify geographic co-exposure status, but common exposure remains distinct from causal dependency.
 
-## 10. Relation-status ontology
+## 11. Relation-status ontology
 
 ```math
 \boxed{
@@ -212,7 +240,74 @@ Shared local hazard exposure may justify geographic co-exposure status, but comm
 
 Stage 1 may record prior-documented and structural-candidate relations. Only Stage 2 may populate accepted causal dependencies `I_acc`.
 
-## 11. Normative and jurisdictional admissibility
+## 12. Typed Stage-1 relation object
+
+The structural candidate pair is represented by a richer pre-causal object:
+
+```math
+\boxed{
+\mathfrak R_{ij}^{\alpha\beta,(1)}
+=
+(
+E_i^\alpha,
+E_j^\beta,
+\Gamma_{ij}^{\rm str},
+\gamma_{ij},
+\Phi_{ij},
+d_{ij},
+m_{ij}^{\rm cand},
+c_{ij}^{\rm cand},
+b_{ij},
+s_{ij},
+\mathcal E_{ij},
+q_{ij}^{\rm evid},
+\ell_{ij},
+\chi_{ij}^{\rm norm}
+).
+}
+```
+
+Here `gamma_ij` identifies interface semantics, `Phi_ij` identifies the exchanged function/service/resource/information, `d_ij` records direction, `m_ij^cand` and `c_ij^cand` are candidate mechanism/context descriptors, `b_ij` records the admission basis, `E_ij` records evidence/provenance, `q_ij^evid` records evidence confidence, and `ell_ij` records relation resolution.
+
+```math
+\boxed{
+\text{existence status}
+\neq
+\text{coupling strength}
+\neq
+\text{evidence confidence}.
+}
+```
+
+Stage 1 does not estimate functional coupling strength:
+
+```math
+\boxed{
+w_{ij}=\mathrm{NOT\ ESTIMATED\ IN\ STAGE\ 1}.
+}
+```
+
+Evidence confidence may be numeric only under a declared auditable scoring/calibration method; otherwise it remains categorical.
+
+## 12A. Hard scientific separation rules
+
+```math
+\boxed{
+\begin{aligned}
+\text{topology} &\neq \text{function},\\
+\text{proximity} &\neq \text{dependency},\\
+\text{correlation} &\neq \text{causality},\\
+\text{standardized interface} &\neq \text{case-specific connection},\\
+\text{case connection} &\neq \text{causal mechanism},\\
+\text{dependency existence} &\neq \text{dependency strength},\\
+\text{dependency strength} &\neq \text{evidence confidence}.
+\end{aligned}
+}
+```
+
+These are mandatory Stage-1 guardrails.
+
+## 13. Normative and jurisdictional admissibility
 
 ```math
 \boxed{
@@ -250,7 +345,7 @@ i\rightarrow j.
 }
 ```
 
-## 12. Entity and service traceability
+## 14. Entity and service traceability
 
 Every retained entity must be traceable through:
 
@@ -262,6 +357,10 @@ Every retained entity must be traceable through:
 \rightarrow
 \text{geometry/topology}
 \rightarrow
+\text{engineering function}
+\rightarrow
+\text{resolution}
+\rightarrow
 \text{state schema}
 \rightarrow
 \text{service role}
@@ -272,7 +371,7 @@ Every retained entity must be traceable through:
 
 Ownership, operation, regulation, electrical supply, transport authority, and jurisdiction are distinct optional roles and are not assumed identical.
 
-## 13. Requirement provenance
+## 15. Requirement provenance
 
 ```math
 \boxed{
@@ -288,7 +387,7 @@ Ownership, operation, regulation, electrical supply, transport authority, and ju
 
 Stage 1 records provenance and applicability of requirements. Stage 5 later determines viability/reachability relative to accepted service constraints.
 
-## 14. Stage-1 assumptions
+## 16. Stage-1 assumptions
 
 ```math
 \boxed{
@@ -300,7 +399,7 @@ A_k^{(1)}
 
 No assumption may remain hidden in code, cleaning, crosswalk construction, temporal alignment, or topology repair.
 
-## 15. Case-independent data architecture
+## 17. Case-independent data architecture
 
 ```math
 \boxed{
@@ -326,7 +425,7 @@ RAW -> STAGING -> CANONICAL -> DERIVED -> RELEASE
 
 RAW data are immutable. No silent imputation, unit conversion, CRS transformation, geometry repair, topology repair, deduplication, temporal reinterpretation, or crosswalk construction is permitted.
 
-## 16. Canonical intermediate representation
+## 18. Canonical intermediate representation
 
 The CIR comprises:
 
@@ -337,13 +436,13 @@ CIR-3  Intralayer edge table
 CIR-4  Geometry table
 CIR-5  Attribute/value table
 CIR-6  Service traceability
-CIR-7  Structural candidate relations
+CIR-7  Typed structural candidate relations (interface/exchange/context/evidence/resolution; no strength estimate)
 CIR-8  Assumption register
 CIR-9  QA ledger
 CIR-10 Authority and requirements register
 ```
 
-## 17. Generic source-adapter contract
+## 19. Generic source-adapter contract
 
 Every source adapter exposes:
 
@@ -360,7 +459,7 @@ report_quality
 
 Source-specific semantics stop at the CIR boundary.
 
-## 18. Complete Stage-1 handoff
+## 20. Complete Stage-1 handoff
 
 ```math
 \boxed{
@@ -373,6 +472,7 @@ R,
 \mathcal Y;
 \Omega_{\rm sys}^{+},
 \mathcal C_{\rm cross},
+\mathfrak R_1,
 \mathcal T_{\rm svc},
 \mathcal A_1,
 \mathcal N_1,
@@ -381,9 +481,9 @@ R,
 }
 ```
 
-`Pi_1` contains immutable source provenance, transforms, QA results, topology/spatial checks, temporal role, data-quality state, and release status.
+`R_1` is the typed Stage-1 relation-object register. `Pi_1` contains immutable source provenance, transforms, QA results, topology/spatial checks, temporal role, data-quality state, and release status.
 
-## 19. Framework versus case
+## 21. Framework versus case
 
 ```math
 \boxed{
@@ -395,19 +495,33 @@ G_1^{\rm case}(c).
 
 Austin, Greensboro, Singapore, synthetic benchmarks, or future P–T cases instantiate the same framework through adapters and configuration. A blocked case does not invalidate the framework.
 
-## 20. Verification result
+## 22. Verification result
 
-The case-independent fixture suite covers manifest/schema conformance, all supported source classes, normative metadata, deterministic identifiers, SHA-256 provenance, CRS conversion, unit conversion, missingness, geometry repair, directed topology, temporal semantics, jurisdictional applicability, normative/causal separation, and authority-reference integrity.
+The revised evidence-based framework was re-audited after introducing semantic entities, typed relation objects, modeling resolution, and separation of existence, strength, and evidence confidence.
+
+Two verification layers passed:
 
 ```math
 \boxed{
-18/18\ \text{generic fixture tests}=\mathrm{PASS}.
+42/42\ \text{exact main-branch contract/invariant checks}=\mathrm{PASS},
 }
 ```
 
-The GitHub-hosted mirror workflow is present but its first run executed zero steps and produced no job log; it is therefore recorded as `BLOCKED-ENVIRONMENT`, not as a failed scientific test.
+and:
 
-## 21. Final Stage-1 framework gate
+```math
+\boxed{
+19/19\ \text{controlled behavioral checks}=\mathrm{PASS}.
+}
+```
+
+The exact repository checks cover schema versioning, semantic entity requirements, relation semantics, no Stage-1 strength estimation, no causal promotion, candidate-only mechanism labels, evidence-confidence discipline, verified-case structural evidence, P→T and T→P semantic heterogeneity, source classes, normative metadata, runtime guards, missingness, CRS, geometry repair and authority applicability.
+
+The controlled behavioral checks execute the corresponding deterministic normalization and runtime-guard logic under Python 3.13.5 with the required scientific Python dependencies available.
+
+The repository Python unit suite has also been expanded from 18 to 26 tests. GitHub-hosted Actions continues to return runner ID 0 with zero executed steps; that mirror remains classified `BLOCKED-ENVIRONMENT`, not as a scientific failure.
+
+## 23. Final Stage-1 framework gate
 
 ```math
 \boxed{
@@ -422,7 +536,13 @@ The GitHub-hosted mirror workflow is present but its first run executed zero ste
 \text{spatial/temporal provenance explicit}
 \land
 \text{structural candidates reproducible}
+\land
+\text{interface/exchange semantics explicit}
+\land
+\text{resolution explicit}
 \\
+\land
+\text{existence/strength/confidence separated}
 \land
 \text{service/requirement traceability defined}
 \land
@@ -446,9 +566,9 @@ G_1^{\rm framework}
 }
 ```
 
-## 22. Freeze boundary
+## 24. Freeze boundary
 
-Freezing this framework will freeze the Stage-1 scientific/mathematical/data contract, not any particular case dataset.
+Freezing this framework will freeze the Stage-1 scientific/mathematical/data contract, not any particular case dataset. The Stage-1 Evidence and Ontology Register is part of the freeze authority and provides the literature-to-mathematics traceability for the semantic entity and relation objects.
 
 Post-freeze case activities remain allowed under `G_1^{case}(c)` so long as they instantiate the frozen contract without silently redefining it.
 
