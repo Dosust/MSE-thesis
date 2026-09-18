@@ -1,3 +1,6 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active Stage-1 authority is `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md`.
+> Do not use this file for new Stage-1 scientific, mathematical, schema, or freeze decisions.
 # Stage 1 Mathematical and Ontology Contract v1.2
 
 **Status:** FINAL METHODOLOGICAL CONTRACT — NEW EVIDENCE INTEGRATED; REVERIFICATION PASS; READY FOR FREEZE  
