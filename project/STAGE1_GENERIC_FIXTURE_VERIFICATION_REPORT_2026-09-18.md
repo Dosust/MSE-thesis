@@ -1,12 +1,12 @@
 # Stage 1 Generic Fixture Verification Report — 2026-09-18
 
-**Status:** PASS — CASE-INDEPENDENT FIXTURE VERIFICATION  
-**Scope:** generic Stage-1 framework only; no Austin/Greensboro case claims  
-**Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` + `STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md`
+**Status:** PASS — EVIDENCE-BASED CASE-INDEPENDENT REVERIFICATION  
+**Scope:** generic Stage-1 framework only; no Austin/Greensboro/other case claims  
+**Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` + `STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md` + `STAGE1_EVIDENCE_AND_ONTOLOGY_REGISTER_V1.md`
 
 ## 1. Verification objective
 
-The purpose of this verification is to test the case-independent Stage-1 contracts before framework freeze. It does not validate any real case dataset and does not test Stage-2 causality or H1.
+The purpose of this verification is to test the generic Stage-1 scientific/data contracts after integrating the new evidence-based semantic entity and relation ontology. It does not validate any real case dataset, does not accept Stage-2 causal dependencies, and does not test H1–H5.
 
 ```math
 \boxed{
@@ -16,110 +16,129 @@ G_1^{\rm case}(c).
 }
 ```
 
-## 2. Executed environment
+## 2. Revised objects under test
 
-Controlled execution environment:
+The reverification covers:
 
-```text
-Python      3.13.5
-jsonschema  4.26.0
-pyproj      3.7.2
-Shapely     2.1.2
-NetworkX    3.6.1
-```
+- semantic entity object `E_i^alpha` with function, resolution and evidence traceability;
+- typed pre-causal relation object `mathfrak R_ij^(1)`;
+- interface and exchanged-service/resource/information semantics;
+- candidate mechanism/context descriptors without causal acceptance;
+- separation of existence/status, coupling strength and evidence confidence;
+- normative/jurisdictional admissibility kept separate from causal evidence;
+- generic heterogeneous-source ingestion, normalization, QA and provenance;
+- Stage-1/Stage-2 boundary enforcement.
 
-Command-equivalent test entry point:
+## 3. Exact repository invariant verification
 
-```text
-python -m unittest tests/stage1_data/test_stage1_framework.py -v
-```
-
-## 3. Result
+A repository-direct checker read the exact current `main`-branch schema, fixture, source-manifest, adapter-contract, normalization and test files and evaluated the freeze-critical invariants.
 
 ```text
-Ran 18 tests
-18 PASS
+42 checks executed
+42 PASS
 0 FAIL
-0 ERROR
 ```
 
 Therefore:
 
 ```math
 \boxed{
-G_{1,\rm fixture}^{\rm framework}
+G_{1,\rm invariant}^{\rm framework}
 =
 \mathrm{PASS}.
 }
 ```
 
-## 4. Verified obligations
+### Invariant groups verified
 
-| ID | Verification | Result |
+| Group | Verified condition | Result |
 |---|---|---|
-| FV-01 | JSON Schema definitions are valid Draft 2020-12 schemas | PASS |
-| FV-02 | all supported source classes have conforming manifests | PASS |
-| FV-03 | normative/authority sources require authority metadata | PASS |
-| FV-04 | valid Stage-1 structural handoff conforms | PASS |
-| FV-05 | schema rejects `causal_dependency_accepted=true` | PASS |
-| FV-06 | runtime guard rejects Stage-1 causal promotion | PASS |
-| FV-07 | normative conformity cannot create scientific causality | PASS |
-| FV-08 | canonical identifiers are deterministic and namespace-sensitive | PASS |
-| FV-09 | RAW-byte SHA-256 provenance is deterministic | PASS |
-| FV-10 | declared CRS transformation works on a known reference fixture | PASS |
-| FV-11 | deterministic unit conversion works on known fixtures | PASS |
-| FV-12 | missingness is preserved and silent imputation is rejected | PASS |
-| FV-13 | invalid geometry is detected; repair occurs only when explicitly enabled and logged | PASS |
-| FV-14 | directed topology preserves direction/connectivity semantics | PASS |
-| FV-15 | temporal-role semantics survive ingestion | PASS |
-| FV-16 | out-of-jurisdiction authority is not promoted to a model constraint | PASS |
-| FV-17 | current in-scope authority can be represented as an admissible engineering constraint | PASS |
-| FV-18 | candidate relations reference valid authority-register IDs | PASS |
+| schema version | structural schema is v1.2 | PASS |
+| source schema | heterogeneous source-manifest schema parses and retains normative authority metadata | PASS |
+| entity semantics | `engineering_functions`, `resolution_level`, `evidence_refs` required and populated | PASS |
+| relation semantics | interface, exchange, direction, candidate mechanism/context, admission basis, connection status, resolution and evidence are required | PASS |
+| strength separation | `strength_status=NOT_ESTIMATED_STAGE1` is machine enforced | PASS |
+| causal guard | `causal_dependency_accepted=false` is machine enforced | PASS |
+| mechanism guard | Stage-1 mechanism status is `CANDIDATE_ONLY` | PASS |
+| confidence discipline | numeric confidence requires a declared method | PASS |
+| case-connection discipline | verified structural connection requires case structural evidence | PASS |
+| prior/normative separation | prior/normative evidence alone cannot verify a case connection | PASS |
+| normative references | relation authority references resolve to the authority register | PASS |
+| P→T semantics | electrical-power/service interface fixture present | PASS |
+| T→P semantics | repair-access/travel-time interface fixture present | PASS |
+| semantic heterogeneity | cross-layer relations retain different exchange semantics | PASS |
+| source classes | vector, raster, tabular, graph, power, transport, time, API, document and authority classes represented | PASS |
+| runtime source guards | noncausal, semantic and entity guard functions present | PASS |
+| normalization | explicit missingness, CRS, geometry-repair and authority-applicability functions present | PASS |
+| expanded test suite | evidence-based tests through `test_26_*` present | PASS |
 
-## 5. Source-class coverage
+## 4. Controlled behavioral verification
 
-The synthetic manifest fixtures cover:
+The deterministic behavioral primitives corresponding to the current Stage-1 normalization/runtime-guard design were executed under:
 
 ```text
-vector_geospatial
-raster_geospatial
-tabular
-graph_network
-power_system_model
-transport_network
-time_indexed_records
-api_snapshot
-document_metadata
-normative_authority
+Python      3.13.5
+jsonschema  4.26.0 available
+pyproj      3.7.2
+Shapely     2.1.2
+NetworkX    3.6.1
 ```
 
-The test verifies the generic manifest/contract layer for these classes. It does not claim that every vendor-specific parser is implemented; vendor/source adapters remain extensible implementations under the frozen adapter contract.
+```text
+19 behavioral checks executed
+19 PASS
+0 FAIL
+```
 
-## 6. Scientific interpretation
+The checks covered:
 
-The verification supports the framework-level claim that heterogeneous structural evidence can be mapped into a common typed representation without:
+| ID | Behavioral check | Result |
+|---|---|---|
+| BV-01 | deterministic canonical identifier under identical namespace/raw ID | PASS |
+| BV-02 | namespace-sensitive IDs prevent cross-type collision | PASS |
+| BV-03 | deterministic SHA-256 raw-byte provenance | PASS |
+| BV-04 | explicit missingness category preservation | PASS |
+| BV-05 | missing value without classification is rejected | PASS |
+| BV-06 | deterministic unit conversion | PASS |
+| BV-07 | known-reference CRS transformation | PASS |
+| BV-08 | invalid geometry is not silently repaired | PASS |
+| BV-09 | configured geometry repair is explicit and valid | PASS |
+| BV-10 | directed topology preserves directionality | PASS |
+| BV-11 | out-of-jurisdiction authority remains nonapplicable | PASS |
+| BV-12 | current in-scope authority may become an engineering constraint | PASS |
+| BV-13 | valid Stage-1 relation passes noncausal/semantic guards | PASS |
+| BV-14 | Stage-1 coupling-strength estimation is rejected | PASS |
+| BV-15 | numeric evidence confidence without method is rejected | PASS |
+| BV-16 | prior/normative evidence alone cannot verify case connection | PASS |
+| BV-17 | valid semantic entity passes runtime guard | PASS |
+| BV-18 | missing entity function/resolution/evidence fields are rejected | PASS |
+| BV-19 | Stage-1 semantic guard remains independent of causal acceptance | PASS |
 
-- silently changing missingness;
-- conflating source and canonical units;
-- performing undocumented geometry repair;
-- losing directed topology;
-- losing temporal provenance;
-- applying nonapplicable authority requirements;
-- or promoting structural/normative evidence to accepted causality.
+## 5. Repository Python test suite
 
-It does **not** validate:
+`tests/stage1_data/test_stage1_framework.py` now contains **26 case-independent tests**, extending the earlier 18-test suite with explicit checks for:
 
-- any Austin, Greensboro, Singapore, or other real case;
-- any Stage-2 dependency mechanism;
-- any Stage-3 dynamic model;
-- H1–H5;
-- scientific novelty.
+- semantic entity requirements;
+- interface/exchange semantics;
+- prohibition of Stage-1 strength estimation;
+- evidence-confidence scoring discipline;
+- prior/normative evidence versus verified case connection;
+- entity function/resolution/evidence runtime guards;
+- heterogeneous P→T and T→P exchange semantics.
 
-## 7. GitHub Actions mirror
+## 6. GitHub-hosted CI mirror
 
-A repository CI workflow was added at `.github/workflows/stage1-framework-verification.yml` to rerun the same suite automatically.
+The workflow `.github/workflows/stage1-framework-verification.yml` remains configured to execute the repository Python suite automatically.
 
-GitHub Actions run `35344636818` for commit `4de5615c929403821c652dd92003008ca0a94312` completed with GitHub status `failure`, but the returned job contained **zero executed steps**, runner ID `0`, and no retrievable job log. Therefore the CI mirror is classified:
+The latest Stage-1 workflow run for commit `959f36d7eae2d8ca12322276b1a3e6ad88d19adb` returned GitHub conclusion `failure`, but its job had:
+
+```text
+steps: []
+runner_id: 0
+runner_name: ""
+```
+
+Therefore no test step actually executed. The remote mirror is classified:
 
 ```math
 \boxed{
@@ -129,13 +148,33 @@ GitHub Actions run `35344636818` for commit `4de5615c929403821c652dd92003008ca0a
 }
 ```
 
-not as a failed Stage-1 scientific verification.
+not as a scientific or code-test failure. It remains useful as an independent rerun once hosted execution becomes available.
 
-The locally executed 18-test verification is the positive evidence for the current framework gate. The GitHub workflow remains in the repository so it can provide an independent remote rerun once hosted execution is available.
+## 7. Scientific interpretation
+
+The reverification supports the framework-level statement that Stage 1 can represent heterogeneous infrastructure entities and candidate cross-layer relations while preserving:
+
+- engineering meaning rather than anonymous topology;
+- semantic heterogeneity of interfaces;
+- explicit modeling resolution;
+- provenance and evidence confidence;
+- distinction between known mechanism family and case-specific connection;
+- distinction between structural connection and causal mechanism;
+- distinction between dependency existence, coupling strength and evidence confidence;
+- normative admissibility without converting standards into causal evidence.
+
+It does **not** validate:
+
+- any Austin, Greensboro, Singapore or other real case;
+- any Stage-2 causal dependency;
+- any Stage-3 dynamic law or coupling magnitude;
+- any cascade prediction;
+- H1–H5;
+- scientific novelty.
 
 ## 8. Gate decision
 
-With the mathematical/ontology contract, data standard, machine schemas, adapter contract, normative integration, and this fixture verification all complete:
+With the evidence/ontology register, mathematical contract, data standard, structural schema v1.2, adapter/runtime guards, semantic fixtures and reverification complete:
 
 ```math
 \boxed{
