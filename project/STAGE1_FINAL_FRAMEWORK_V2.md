@@ -1,7 +1,7 @@
 # Stage 1 Final Framework v2.0 — Frozen Candidate
 
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
-**Status:** PASS — PRE-FREEZE SYNCHRONIZED TO EVIDENCE/ONTOLOGY v2  
+**Status:** **PASS — FROZEN**  
 **Date:** 2026-09-18  
 **Canonical architecture authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 **Canonical RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
@@ -189,6 +189,14 @@ Machine/schema/runtime checks are subordinate verification evidence under these 
 
 Stage 1 identifies what deserves causal investigation. Stage 2 determines whether a candidate relation is a genuine causal dependency and, if so, under what conditions and validity limits.
 
-## 18. Freeze condition
+## 18. Freeze state
 
-Stage 1 may be frozen only after the v2 evidence register, this framework, the mathematical contract, machine schema, fixtures/runtime guards and exact repository manifest agree on the same relation architecture; all six G1 gates pass; and exact blob SHAs are recorded.
+Stage 1 satisfies the v2 evidence-register, mathematical-contract, machine-schema, fixture/runtime-guard, six-gate, and exact-repository-audit requirements.
+
+~~~math
+\boxed{G_1^{\rm framework}=\mathrm{PASS\ —\ FROZEN}.}
+~~~
+
+Formal governance record: `thesis/00_governance/STAGE1_FRAMEWORK_FREEZE_2026-09-18.md`.
+
+Case-specific work remains permitted under `G_1^{case}(c)` and does not reopen this generic framework unless an explicit amendment/unfreeze is approved.
