@@ -10,11 +10,11 @@ Each hypothesis is controlled by four elements: **comparator**, **response**, **
 
 **Mapping:** RQ3/SO3, with RQ1/SO1 and RQ2/SO2 as developmental inputs.
 
-\`\`\`math
+```math
 M_0=\text{independent }P+T,\qquad
 M_1=\text{static/algebraic }P\text{--}T\text{ coupling},\qquad
 M_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
-\`\`\`
+```
 
 **Comparator:** primary $M_2$ versus $M_1$, with $M_0$ as the uncoupled reference.  
 **Response:** preregistered cascade, service-loss, spatial-propagation, and recovery quantities.  
@@ -27,11 +27,11 @@ M_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
 
 **Mapping:** RQ4/SO4.
 
-\`\`\`math
+```math
 \mathscr N_0=P+T,\qquad
 \mathscr N_1=P+T+I,\qquad
 \mathscr N_2=P+T+I+O.
-\`\`\`
+```
 
 **Comparator:** $\mathscr N_1-\mathscr N_0$ isolates the modeled information effect; $\mathscr N_2-\mathscr N_1$ isolates the modeled organizational effect.  
 **Response:** state-estimation quality, feasible-control change, response timing, service trajectory, recovery, and Stage-5 resilience quantities.  
@@ -44,15 +44,15 @@ M_2=\text{dynamic causal }P\text{--}T\text{ coupling}.
 
 **Mapping:** RQ5/SO5.
 
-\`\`\`math
+```math
 R_{\mathrm{curve}}
 \quad\text{versus}\quad
 R_{\mathrm{curve}}+\mathfrak R_T.
-\`\`\`
+```
 
 The Stage-5 object preserves
 
-\`\`\`math
+```math
 \mathfrak R_T=
 \left(
 \mathcal V_{\alpha,T},
@@ -63,7 +63,7 @@ T_{\mathrm{rec}},
 P_{\mathrm{viable}},
 P_{\mathrm{recover}}
 \right),
-\`\`\`
+```
 
 so Stage 5 represents **remain + return + confidence**, not viability alone.
 
@@ -78,14 +78,14 @@ so Stage 5 represents **remain + return + confidence**, not viability alone.
 
 **Mapping:** RQ6/SO6.
 
-\`\`\`math
+```math
 a_k
 \rightarrow
 \left(
 \Delta\mathfrak R^{a_k},
 \Delta\mathbf J_{\mathrm{sus}}^{a_k}
 \right).
-\`\`\`
+```
 
 **Comparator:** qualified resilience-effective interventions compared under the same admitted sustainability-consequence rule.  
 **Response:** differences in admitted cost, operational-energy, carbon/GHG, accessibility, or other qualified consequence quantities within declared accounting boundaries.  
@@ -98,11 +98,11 @@ a_k
 
 **Mapping:** RQ7/SO7.
 
-\`\`\`math
+```math
 \mathcal A_R^{\star}
 \quad\text{versus}\quad
 \mathcal A_{R,S}^{\star}.
-\`\`\`
+```
 
 **Comparator:** resilience-only engineering evaluation versus joint resilience–sustainability evaluation.  
 **Response:** preregistered change in admissible/nondominated sets, dominance relations, or decision regret.  
@@ -111,7 +111,7 @@ a_k
 
 ## Hypothesis traceability and status rule
 
-\`\`\`math
+```math
 \boxed{
 \begin{aligned}
 RQ_1/SO_1,\;RQ_2/SO_2
@@ -124,12 +124,12 @@ RQ_6/SO_6 &\rightarrow H_4,\\
 RQ_7/SO_7 &\rightarrow H_5.
 \end{aligned}
 }
-\`\`\`
+```
 
-\`\`\`math
+```math
 \boxed{
 7\ \text{research questions}\not\Rightarrow 7\ \text{hypotheses}.
 }
-\`\`\`
+```
 
 Confirmatory execution requires the relevant comparator, response definition, meaningful-effect threshold or decision rule, uncertainty/scenario domain, aggregation rule, and validity domain to be frozen before the confirmatory run. Numerical thresholds and final H3–H5 decision metrics remain open until their evidence and data-qualification gates close. This preserves the PASS/FAIL/BLOCKED distinction established in Section 1.7 without importing Chapter-4 derivations into Chapter 1.
