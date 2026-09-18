@@ -20,7 +20,7 @@
     "polygon_count": 3688,
     "multipolygon_count": 4,
     "sha256": "1a564d32961f5fc78f7a6ded2139a1471ba11e3a269acdac881790597e590665",
-    "size_bytes": 146800000
+    "size_bytes": 146332681
   },
   "status": "COMPLETE_QUERY_PAGINATION_AUDIT_PASS",
   "next_gate": "spatial coverage audit against all 61 feeder ROIs before E_H computation"
