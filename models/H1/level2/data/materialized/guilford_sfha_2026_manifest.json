@@ -1,0 +1,39 @@
+{
+  "dataset_id": "GUILFORD_SFHA_EFFECTIVE_2026",
+  "authority": "Guilford County GIS / FEMA effective flood-hazard determinations",
+  "layer_name": "Flood Zones Effective 06-10-2026",
+  "layer_id": 12,
+  "service_url": "https://gcgis.guilfordcountync.gov/arcgis/rest/services/GISDV/Watershed_Management/MapServer/12",
+  "effective_date": "2026-06-10",
+  "query_filter": "SFHA_TF = 1",
+  "crs_output": "EPSG:4326",
+  "expected_total_features": 3692,
+  "pagination": [
+    {
+      "resultOffset": 0,
+      "resultRecordCount": 2000,
+      "expected_features": 2000,
+      "sha256": "4da5175e749a339475b69600fa4f8deafcf9b330e3fe8edbd431a5ada609d1c5"
+    },
+    {
+      "resultOffset": 2000,
+      "resultRecordCount": 2000,
+      "expected_features": 1692,
+      "sha256": "eff2295acf60afb54143f4c296738aa15bd8725900311a7e6274389feca8cb16"
+    }
+  ],
+  "combined": {
+    "filename": "guilford_sfha_2026_complete.geojson",
+    "feature_count": 3692,
+    "unique_objectids": 3692,
+    "duplicate_objectids": 0,
+    "polygon_count": 3688,
+    "multipolygon_count": 4,
+    "sfha_values": [1],
+    "sha256": "1a564d32961f5fc78f7a6ded2139a1471ba11e3a269acdac881790597e590665",
+    "ordinary_git_storage": "NOT_PERMITTED_FILE_EXCEEDS_100_MB_LIMIT"
+  },
+  "reconstruction_rule": "Re-download both paginated GeoJSON responses with the frozen query, verify each part SHA-256 and count, concatenate FeatureCollection features in OBJECTID ASC order, verify 3692 unique OBJECTIDs and combined SHA-256.",
+  "thesis_role": "STATIC CASE-SELECTION DATA for e_P, e_T, E_H only; not dynamic pluvial forcing",
+  "status": "SOURCE_BYTES_LOCALLY_MATERIALIZED_AND_HASH_FROZEN"
+}
