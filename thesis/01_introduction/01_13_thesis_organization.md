@@ -2,7 +2,7 @@
 
 The thesis is organized as a seven-chapter scientific argument:
 
-\`\`\`math
+```math
 \boxed{
 \text{Research Contract}
 \rightarrow
@@ -18,7 +18,7 @@ The thesis is organized as a seven-chapter scientific argument:
 \rightarrow
 \text{Closure}.
 }
-\`\`\`
+```
 
 **Chapter 1 — Introduction** establishes the research contract: engineering context, problem, evidence-qualified gaps, scope, seven-stage research architecture, general objective, RQ0/RQ1–RQ7, SO1–SO7, H1–H5, and proposed contributions.
 
@@ -36,7 +36,7 @@ The thesis is organized as a seven-chapter scientific argument:
 
 The dependency of the argument is therefore
 
-\`\`\`math
+```math
 \boxed{
 \mathrm{Ch}_1
 \rightarrow
@@ -52,6 +52,6 @@ The dependency of the argument is therefore
 \rightarrow
 \mathrm{Ch}_7.
 }
-\`\`\`
+```
 
 The arrows denote scientific dependency, not chronological independence of research activities. Material changes to upstream evidence, assumptions, models, or validity boundaries require reevaluation of affected downstream claims. This closes Chapter 1 subject to the Chapter-I exit-gate audit.
