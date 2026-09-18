@@ -133,6 +133,8 @@ Current official Graduate College guidance requires use of the ASU Format Wizard
 
 ## Current execution state
 
+Chapter 1 scientific content is **PASS — FROZEN** as of 2026-09-18 under [`00_governance/CHAPTER_I_FREEZE_2026-09-18.md`](00_governance/CHAPTER_I_FREEZE_2026-09-18.md). Any scientific change to Sections 1.1–1.13 requires explicit unfreeze or a versioned amendment; formatting/rendering and lossless editorial corrections remain controlled exceptions.
+
 The H1 scientific implementation is governed by `../project/` authority files. M0/M1/M2 implementations and the H1 confirmatory design are advanced/frozen as applicable, while row-level raw-data retrieval/qualification remains the active blocking gate before calibration or confirmatory execution. H2–H5 remain subject to their hypothesis-specific evidence, metric, accounting-boundary, VVUQ and preregistration gates.
 
 ## Official ASU sources tracked
