@@ -28,6 +28,11 @@ Stage 2 must never infer causality from topology, proximity, correlation, common
 - `STAGE2_MECHANISM_ONTOLOGY_V1.md` — mechanism classes and controlled semantics.
 - `STAGE2_EVIDENCE_REGISTER_V2.md` — **active P↔T causal-evidence register** with P0 mechanism, activation, uncertainty, validity and falsification architecture.
 - `STAGE2_RESEARCH_QUEUE.md` — ordered evidence work.
+- `STAGE2_CASE_PRESENCE_AUDIT_V1_2026-09-19.md` — Q01–Q13 case-presence audit against the GreenEVT/SMART-DS Greensboro realization.
+- `STAGE2_CASE_CONNECTION_REGISTER_V1.md` — source/interface/receiver case-connection decisions for Q01/Q03/Q05/Q06.
+- `STAGE2_CASE_ACTIVATION_REGISTER_V1.md` — case activation predicates and evidence status.
+- `STAGE2_CASE_UNCERTAINTY_REGISTER_V1.md` — disaggregated case uncertainty by mechanism.
+- `STAGE2_CASE_G2_AUDIT_V1_2026-09-19.md` — first component-wise case-specific G2 audit.
 - `STAGE2_INITIALIZATION_AUDIT_2026-09-18.md` — initialization/consistency audit.
 - `supporting_evidence/STAGE2_CLAIM_LEVEL_EVIDENCE_LEDGER_V2.md` — **active claim-level causal-evidence ledger** with `[LIT]/[ADAPT]/[THESIS]`, access depth, exact/section locators and transfer boundaries.
 - `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V2.md` — **active paper × mechanism evidence-role matrix**.
@@ -98,8 +103,30 @@ The following remain in the repository for provenance but are superseded for act
 
 No Stage-2 relation is accepted merely because it appears in this directory. Acceptance requires an explicit `G2(e)=PASS` record.
 
-At the current evidence state:
+At the current case-specific evidence state:
 
 ~~~math
-\boxed{\mathbb I_{acc}=\varnothing}
+\boxed{
+\mathbb I_{acc}^{case}
+=
+\{\mathfrak I_{EV,T\to P}\}
+}
 ~~~
+
+where the accepted relation is the GreenEVT synthetic-case EV charging-demand mechanism \(T\to P\). Its validity is restricted to the declared GreenEVT/SMART-DS synthetic case and does not imply observed Greensboro utility-service wiring.
+
+The currently instantiated blocked case relations are:
+
+~~~math
+\boxed{
+\mathbb I_{blocked}^{case}
+=
+\{
+SIGNAL_{P\to T},
+EV_{P\to T},
+REPAIR_{T\to P}
+\}
+}
+~~~
+
+Causal acceptance and Stage-3 readiness remain separate. The accepted EV charging-demand relation still requires parameter/status and \(G_{2\to3}\) readiness qualification before confirmatory Stage-3 use.
