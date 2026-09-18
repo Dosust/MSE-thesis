@@ -1,6 +1,6 @@
 # Stage 1 Mathematical and Ontology Contract v2.0
 
-**Status:** PRE-FREEZE SYNCHRONIZED CONTRACT  
+**Status:** **PASS — FROZEN**  
 **Date:** 2026-09-18  
 **Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md` + `stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md`
 
@@ -130,3 +130,11 @@ G1-C causal restraint
 ~~~
 
 G2 requires mechanism evidence, activation qualification, parameter/uncertainty treatment, validity boundaries and falsification logic.
+
+## 17. Freeze state
+
+~~~math
+\boxed{G_1^{\rm framework}=\mathrm{PASS\ —\ FROZEN}.}
+~~~
+
+This contract is frozen by `thesis/00_governance/STAGE1_FRAMEWORK_FREEZE_2026-09-18.md`. Semantic changes require an explicit Stage-1 amendment or unfreeze.
