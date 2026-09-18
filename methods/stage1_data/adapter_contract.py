@@ -138,3 +138,58 @@ def assert_authority_scope(authority: Mapping[str, Any]) -> None:
     missing = sorted(required.difference(authority))
     if missing:
         raise ValueError(f"Authority record missing required fields: {missing}")
+
+
+def assert_stage1_relation_semantics(bundle: CanonicalBundle) -> None:
+    """Enforce semantic separation inside Stage-1 candidate relations."""
+    structural_keys = {
+        "asset_crosswalk",
+        "spatial_relation",
+        "access_geometry",
+        "geographic_coexposure",
+    }
+
+    for rel in bundle.candidate_relations:
+        if rel.get("strength_status") != "NOT_ESTIMATED_STAGE1":
+            raise ValueError(
+                "Stage 1 cannot estimate functional coupling strength."
+            )
+
+        if rel.get("candidate_mechanism_status") != "CANDIDATE_ONLY":
+            raise ValueError(
+                "Stage 1 mechanism labels must remain candidate-only."
+            )
+
+        confidence = rel.get("evidence_confidence", {})
+        score = confidence.get("score")
+        method = confidence.get("method")
+        if score is not None and not method:
+            raise ValueError(
+                "Numeric evidence confidence requires an explicit scoring/calibration method."
+            )
+
+        if rel.get("case_connection_status") == "VERIFIED_STRUCTURAL":
+            evidence = rel.get("structural_evidence", {})
+            if not any(bool(evidence.get(k)) for k in structural_keys):
+                raise ValueError(
+                    "A verified structural case connection requires case structural evidence."
+                )
+
+            admission = set(rel.get("admission_basis", []))
+            if admission and admission.issubset(
+                {"PRIOR_LITERATURE", "NORMATIVE_INTERFACE", "OPERATOR_DOCUMENTATION"}
+            ):
+                raise ValueError(
+                    "Prior/normative/documentary evidence alone cannot establish a verified case connection."
+                )
+
+
+def assert_stage1_entity_semantics(bundle: CanonicalBundle) -> None:
+    """Require explicit function, resolution, and evidence traceability."""
+    for entity in bundle.entities:
+        if not entity.get("engineering_functions"):
+            raise ValueError("Stage-1 entity requires engineering_functions.")
+        if not entity.get("resolution_level"):
+            raise ValueError("Stage-1 entity requires resolution_level.")
+        if not entity.get("evidence_refs"):
+            raise ValueError("Stage-1 entity requires evidence_refs.")
