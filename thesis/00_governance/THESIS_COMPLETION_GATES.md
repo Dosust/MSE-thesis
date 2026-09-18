@@ -45,6 +45,9 @@ Pass when:
 
 ## Chapter 1 gate — Introduction
 
+**Current status:** PASS — FROZEN (2026-09-18)  
+**Freeze record:** `CHAPTER_I_FREEZE_2026-09-18.md`
+
 Pass when:
 - Chapter-I v2 sequence and 1.1–1.13 structure are preserved;
 - problem is clearly defined;
