@@ -306,7 +306,11 @@ The following sources are the verified core references used in the current Chapt
 | LIT-020 | [Salgado, Günther, & Mechtcherine (2025)](https://doi.org/10.1080/23789689.2025.2471119) | [SR][ADJ] | integrated resilience–sustainability assessment | adjacent civil infrastructure | 2.8; H4/H5 |
 | LIT-021 | [Oladigbolu et al. (2025)](https://doi.org/10.1016/j.est.2025.118419) | [CR][DIR-PT] | coupled P–T planning/operation, EV/DER/mobile energy | direct P–T | 2.3, 2.8; H1/H4 |
 | LIT-022 | [Kumar & Hashem Mehany (2026)](https://doi.org/10.1007/s43621-026-02973-9) | [CR][ADJ] | infrastructure sustainability/resilience definitions | infrastructure-general | 2.8 |
-| LIT-023 | [Vinod & Oishi (arXiv v3; accepted in Automatica)](https://arxiv.org/abs/1810.05217) | [MATH][ARX-J] | target-tube reachability; viability/reach-avoid relation | mathematical | 2.7; H3 |
+| LIT-023 | [Vinod & Oishi (2021)](https://doi.org/10.1016/j.automatica.2020.109458) | [MATH][ARX-J] | stochastic target-tube reachability; viability/reach-avoid relation | mathematical | 2.7; H3 |
+| LIT-024 | [Qian et al. (2025)](https://doi.org/10.1109/TSG.2025.3560976) | [DIR-PT][SIM][ARX-J] | microscopic P–T/V2G co-simulation; spatiotemporal EV charging load; charging-station fault sensing | direct P–T | 2.3, 2.5, 2.6; H1/H2 |
+| LIT-025 | [Li et al. (2024)](https://doi.org/10.17775/CSEEJPES.2022.04810) | [DIR-PT][SIM][ARX-J] | dynamic traffic assignment, EV queuing, voltage-quality feedback, uncertain travel demand | direct P–T | 2.3, 2.5; H1 |
+| LIT-026 | [Wang et al. (2022)](https://doi.org/10.1111/mice.12736) | [DIR-PT][SIM] | dynamic traffic assignment under stochastic charging-station failure/recovery | direct P–T | 2.3, 2.5, 2.7; H1/H3 |
+| LIT-027 | [Zhu et al. (2021)](https://doi.org/10.1155/2021/5599073) | [DIR-PT][SIM] | power-outage → traffic-signal loss → transportation-capacity degradation/cascade | direct P→T | 2.3, 2.5; H1 |
 
 ## 12. arXiv discovery lane
 
@@ -315,7 +319,7 @@ These records inform discovery but are not promoted to peer-reviewed evidence un
 | ID | Preprint | Label | Relevance | Status |
 |---|---|---|---|---|
 | ARX-001 | [Qiu, Thompson, Youcef-Toumi, & Farid (2025)](https://arxiv.org/abs/2510.10914) | [ARX-P][DIR-PT] | dynamic multimodal P–T coordination, charging, queuing, V2G | discovery only |
-| ARX-002 | [Qian, Fang, Hu, Shao, & Zheng (2024)](https://arxiv.org/abs/2412.09808) | [ARX-P][DIR-PT] | microscopic SUMO + distribution-grid V2G co-simulation | discovery only |
+| ARX-002 | [Qian, Fang, Hu, Shao, & Zheng (2024 arXiv; 2025 journal)](https://arxiv.org/abs/2412.09808) | [ARX-J][DIR-PT] | open preprint of LIT-024; microscopic P–T/V2G co-simulation | do not count separately |
 | ARX-003 | [Ghose, Sivaranjani, & Qin (2025)](https://arxiv.org/abs/2511.00941) | [ARX-P][DIR-PT] | traffic-aware dynamic wireless charging and grid planning | discovery only |
 | ARX-004 | [Poulin & Kane (2021)](https://arxiv.org/abs/2102.01009) | [ARX-J] | open version of LIT-014 | do not count separately |
 | ARX-005 | [Vinod & Oishi](https://arxiv.org/abs/1810.05217) | [ARX-J] | open/accepted version of LIT-023 | do not count separately |
@@ -405,6 +409,16 @@ Salgado, I. de P., Günther, E., & Mechtcherine, V. (2025). Integrated sustainab
 Wang, Y., Zhao, O., & Zhang, L. (2024). Multiplex networks in resilience modeling of critical infrastructure systems: A systematic review. *Reliability Engineering & System Safety, 250*, 110300. https://doi.org/10.1016/j.ress.2024.110300
 
 Zou, Q., & Chen, S. (2019). Enhancing resilience of interdependent traffic-electric power system. *Reliability Engineering & System Safety, 191*, 106557. https://doi.org/10.1016/j.ress.2019.106557
+
+Qian, T., Fang, M., Hu, Q., Shao, C., & Zheng, J. (2025). V2Sim: An open-source microscopic V2G simulation platform in urban power and transportation network. *IEEE Transactions on Smart Grid, 16*(4), 3167–3178. https://doi.org/10.1109/TSG.2025.3560976
+
+Li, J., Xu, X., Yan, Z., Wang, H., & Chen, Y. (2024). Dynamic flow equilibrium of transportation and power distribution networks considering flexible traveling choices and voltage quality improvement. *CSEE Journal of Power and Energy Systems*. https://doi.org/10.17775/CSEEJPES.2022.04810
+
+Wang, H., Abdin, A. F., Fang, Y.-P., & Zio, E. (2022). Resilience assessment of electrified road networks subject to charging station failures. *Computer-Aided Civil and Infrastructure Engineering, 37*(3), 300–316. https://doi.org/10.1111/mice.12736
+
+Zhu, Y., Ozbay, K., Yang, H., Zuo, F., Sha, D., & Ghosh, I. (2021). Modeling and simulation of cascading failures in transportation systems during hurricane evacuations. *Journal of Advanced Transportation, 2021*, 5599073. https://doi.org/10.1155/2021/5599073
+
+Vinod, A. P., & Oishi, M. M. K. (2021). Stochastic reachability of a target tube: Theory and computation. *Automatica, 125*, 109458. https://doi.org/10.1016/j.automatica.2020.109458
 
 ### arXiv discovery references
 
