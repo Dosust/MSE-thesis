@@ -21,6 +21,7 @@ This directory is the active scientific and mathematical source of truth for the
 **Chapter-I authority:** `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
+**Mathematical foundations:** `MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md`  
 **Writing/inference authority:** `../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Citation rule:** externally sourced scientific claims require adjacent verified APA 7 author–date citations  
 **Novelty rule:** literature support justifies relevance, mechanisms, mathematics and comparators; novelty is tested separately
@@ -221,6 +222,7 @@ H5 concerns the effect of joint resilience–sustainability evaluation on the fe
 | [`CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`](CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md) | Chapter-I authority | **CANONICAL v2.0** |
 | [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | reasoning/citation/falsification discipline | **CURRENT v1.2** |
 | [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md) | evidence-grounded model construction/validation | **CURRENT v1.0** |
+| [`MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md`](MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md) | mathematical foundations, roles, status and activation rules | **CURRENT WORKING** |
 | [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md) | thesis-facing traceability | **CURRENT v3.0** |
 | [`../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`](../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md) | scientific writing/inference control | **CURRENT v1.0** |
 | [`../thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`](../thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md) | experiment/VVUQ/falsification matrix | **CURRENT** |
