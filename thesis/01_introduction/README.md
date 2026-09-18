@@ -20,7 +20,7 @@ Establish the research contract: engineering context, problem, evidence-qualifie
 3. **[1.3 Problem Statement](01_03_problem_statement.md)**
 4. **[1.4 Research Gap](01_04_research_gap.md)**
 5. **[1.5 Sustainable Engineering Significance](01_05_sustainable_engineering_significance.md)**
-6. **1.6 Scope, Boundaries, and Assumptions**
+6. **[1.6 Scope, Boundaries, and Assumptions](01_06_scope_boundaries_and_assumptions.md)**
 7. **1.7 Research Framework and Logic**
 8. **1.8 General Research Objective**
 9. **1.9 Research Questions** — RQ0 + exact RQ1–RQ7
@@ -33,14 +33,15 @@ Target length: **16–18 pages** within the 160-page thesis ceiling unless expli
 
 ## Current drafted prose
 
-Sections **1.1–1.5 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
+Sections **1.1–1.6 now have one source of truth in this directory**. The repository root `README.md` is a project dashboard and links here rather than duplicating thesis prose.
 
 - 1.1 fixes the dependency/interdependency terminology and establishes the engineering context.
 - 1.2 defines the P–T physical core and I–O supporting domains and uses an observation–decision–action loop rather than implying that I/O are physical infrastructure layers.
 - 1.3 states the engineering problem concisely and removes detailed experimental/VVUQ material that belongs later.
 - 1.4 presents six bounded, counterevidence-aware gaps, explicitly explains why six gaps map to seven specific RQs, and separates research-gap evidence from global novelty.
 - 1.5 establishes the Sustainable Engineering significance without conflating resilience, resource efficiency and sustainability; it uses the completed evidence audit, metric cards, case/data feasibility audit and current admission freeze.
-- **Section 1.6 is the next Chapter-I drafting task and must formalize the system, hazard, intervention, accounting, uncertainty and exclusion boundaries consistently with the current sustainability admission freeze.**
+- 1.6 defines the fit-for-purpose P–T–I–O research domain; separates common exposure from causal dependency; freezes spatial, temporal and hazard semantics; distinguishes state, operational control and persistent transformation; states the sustainability/accounting boundary; and makes assumptions, uncertainty classes, exclusions and validity limits explicit.
+- **Section 1.7 is the next Chapter-I drafting task and must translate the bounded domain into the seven-stage research framework and scientific handoffs without duplicating Chapter 3 derivations.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
@@ -144,4 +145,4 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 
 ## Exit gate
 
-See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Section 1.5 must remain consistent with the current sustainability admission freeze, while Section 1.6 must state the quantitative exclusions and conditional-data boundaries explicitly.
+See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Sections 1.5 and 1.6 must remain consistent with the current sustainability admission freeze and Austin case-admissibility state; Section 1.7 must preserve the seven-stage conceptual architecture while deferring detailed mathematics to Chapter 3.
