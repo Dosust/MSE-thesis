@@ -3,7 +3,7 @@
 **Status:** **OPEN / WORKING — NOT FROZEN**  
 **Canonical RQ2:** Why and through which mechanisms do components and layers affect each other?  
 **Canonical SO2:** Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.  
-**Input authority:** frozen Stage-1 relation register `mathfrak r_e^(1)`.
+**Input authority:** frozen Stage-1 relation register `mathfrak r_e^(1)` plus the locked Stage-1 supporting-evidence traceability layer.
 
 ## Thesis-level statement
 
@@ -25,12 +25,52 @@ Stage 2 must never infer causality from topology, proximity, correlation, common
 - `STAGE2_CAUSAL_OBJECT_CONTRACT_V1.md` — mathematical causal-evidence object.
 - `STAGE2_G2_GATE_SPECIFICATION_V1.md` — PASS / FAIL / BLOCKED logic.
 - `STAGE2_MECHANISM_ONTOLOGY_V1.md` — mechanism classes and controlled semantics.
-- `STAGE2_EVIDENCE_REGISTER_V1.md` — candidate P↔T mechanism register.
+- `STAGE2_EVIDENCE_REGISTER_V2.md` — **active P↔T causal-evidence register** with P0 mechanism, activation, uncertainty, validity and falsification architecture.
 - `STAGE2_RESEARCH_QUEUE.md` — ordered evidence work.
-- `STAGE2_INITIALIZATION_AUDIT_2026-09-18.md` — 32/32 initialization/consistency audit.
-- `supporting_evidence/STAGE2_CLAIM_LEVEL_EVIDENCE_LEDGER_V1.md` — source-level causal-evidence ledger.
-- `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V1.md` — paper × mechanism evidence matrix.
+- `STAGE2_INITIALIZATION_AUDIT_2026-09-18.md` — initialization/consistency audit.
+- `supporting_evidence/STAGE2_CLAIM_LEVEL_EVIDENCE_LEDGER_V2.md` — **active claim-level causal-evidence ledger** with `[LIT]/[ADAPT]/[THESIS]`, access depth, exact/section locators and transfer boundaries.
+- `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V2.md` — **active paper × mechanism evidence-role matrix**.
 - `evidence/` — mechanism-specific dossiers.
+
+## P0 causal-evidence focus
+
+~~~math
+\boxed{
+M2\text{-}PT\text{-}01:
+P\rightarrow T\ \text{traffic-signal electrical service}
+}
+~~~
+
+~~~math
+\boxed{
+M2\text{-}TP\text{-}01:
+T\rightarrow P\ \text{repair/restoration access}
+}
+~~~
+
+The current literature base is strong enough to justify **case testing** of these mechanism families, but not strong enough to create a thesis-case causal PASS without verified source/interface/receiver mappings and activation evidence.
+
+## Active uncertainty discipline
+
+For each causal candidate, uncertainty is mechanism-specific and disaggregated rather than collapsed into one score. The active v2 register distinguishes, as applicable:
+
+~~~text
+case-connection uncertainty
+activation uncertainty
+interface/service-state uncertainty
+timing/travel uncertainty
+receiver-response uncertainty
+resource/task uncertainty
+alternative-explanation uncertainty
+~~~
+
+## Superseded active-use evidence files
+
+The following remain in the repository for provenance but are superseded for active Stage-2 evidence use:
+
+- `STAGE2_EVIDENCE_REGISTER_V1.md`
+- `supporting_evidence/STAGE2_CLAIM_LEVEL_EVIDENCE_LEDGER_V1.md`
+- `supporting_evidence/STAGE2_MECHANISM_EVIDENCE_MATRIX_V1.md`
 
 ## Stage boundary
 
@@ -39,3 +79,9 @@ Stage 2 must never infer causality from topology, proximity, correlation, common
 ~~~
 
 No Stage-2 relation is accepted merely because it appears in this directory. Acceptance requires an explicit `G2(e)=PASS` record.
+
+At the current P0 evidence state:
+
+~~~math
+\boxed{\mathbb I_{acc}=\varnothing}
+~~~
