@@ -9,9 +9,9 @@ This directory contains **small, auditable computational scaffolds** for the fro
 Canonical scientific authority remains in:
 
 - [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)
-- [`../../project/CANONICAL_7_STAGE_FRAMEWORK.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK.md)
+- [`../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)
 - [`../../project/MATHEMATICAL_FOUNDATION.md`](../../project/MATHEMATICAL_FOUNDATION.md)
-- [`../../project/RESEARCH_HYPOTHESES.md`](../../project/RESEARCH_HYPOTHESES.md)
+- [`../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md)
 
 ---
 
@@ -73,9 +73,9 @@ flowchart LR
     S1["1 · Structure"] --> S2["2 · Causal mechanisms"]
     S2 --> S3["3 · Hybrid multiscale dynamics"]
     S3 --> S4["4 · Observation & control"]
-    S4 --> S5["5 · Viability"]
-    S5 --> S6["6 · Transformation diagnosis"]
-    S6 --> S7["7 · Transformation pathways"]
+    S4 --> S5["5 · Viability & Reachability"]
+    S5 --> S6["6 · Intervention & Sustainability"]
+    S6 --> S7["7 · Engineering Decision"]
 
     classDef frozen fill:#DAFBE1,stroke:#1A7F37,color:#0B1F33,stroke-width:2px;
     class S1,S2,S3,S4,S5,S6,S7 frozen;
@@ -86,17 +86,17 @@ The corresponding mathematical handoff is
 ```math
 \mathcal S
 \rightarrow
-\mathfrak I
+\mathbb I
 \rightarrow
 F_{\mathcal G}^{m}
 \rightarrow
-u(t)
+(\widehat Y,\mathcal U,u)
 \rightarrow
-\mathcal V_{\rm sus}^{u,T}
+\mathfrak R_T
 \rightarrow
-\Phi_{\rm ST}
+(a_k,\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
 \rightarrow
-\mathfrak P_{\rm ST}.
+\mathcal A_{R,S}^{\star}.
 ```
 
 ---
