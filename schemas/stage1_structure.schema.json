@@ -14,12 +14,13 @@
     "service_traceability",
     "assumptions",
     "provenance",
-    "stage1_status"
+    "stage1_status",
+    "normative_register"
   ],
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.0"
+      "const": "1.1"
     },
     "system_boundary": {
       "type": "object",
@@ -28,7 +29,8 @@
         "temporal_support",
         "infrastructure_scope",
         "service_scope",
-        "operating_modes"
+        "operating_modes",
+        "jurisdiction_context"
       ],
       "properties": {
         "geographic_support": {
@@ -59,6 +61,27 @@
             "type": "string"
           },
           "minItems": 1
+        },
+        "jurisdiction_context": {
+          "type": "object",
+          "required": [
+            "case_jurisdiction",
+            "authority_scope"
+          ],
+          "properties": {
+            "case_jurisdiction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authority_scope": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
@@ -152,6 +175,42 @@
               "string",
               "null"
             ]
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "operator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "regulator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "electrical_supplier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "transport_authority": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "jurisdiction": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": false
@@ -214,7 +273,8 @@
           "status_class",
           "structural_predicate_pass",
           "structural_evidence",
-          "provenance_status"
+          "provenance_status",
+          "normative_admissibility"
         ],
         "properties": {
           "relation_id": {
@@ -276,6 +336,21 @@
           "causal_dependency_accepted": {
             "type": "boolean",
             "const": false
+          },
+          "normative_admissibility": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "N/A"
+            ]
+          },
+          "normative_authority_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
           }
         },
         "additionalProperties": false
@@ -302,6 +377,13 @@
           "structural_role": {
             "type": "string",
             "minLength": 1
+          },
+          "requirement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
           }
         },
         "additionalProperties": false
@@ -396,6 +478,157 @@
         "BLOCKED",
         "OPEN"
       ]
+    },
+    "normative_register": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "authority_id",
+          "authority_type",
+          "authority_name",
+          "jurisdiction",
+          "document_id",
+          "edition_or_version",
+          "status",
+          "applicability",
+          "verification_status"
+        ],
+        "properties": {
+          "authority_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority_type": {
+            "enum": [
+              "statute",
+              "regulation",
+              "code",
+              "standard",
+              "utility_procedure",
+              "agency_procedure",
+              "guidance",
+              "other"
+            ]
+          },
+          "authority_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdiction": {
+            "type": "string",
+            "minLength": 1
+          },
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edition_or_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effective_from": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "effective_to": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "current",
+              "superseded",
+              "draft",
+              "historical",
+              "unknown"
+            ]
+          },
+          "clause_or_locator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "applicability": {
+            "enum": [
+              "APPLICABLE",
+              "CONDITIONAL",
+              "NOT_APPLICABLE",
+              "UNRESOLVED"
+            ]
+          },
+          "affected_entity_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "affected_interface_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requirement_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "service_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requirement_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "measure": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "threshold_or_rule": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "verification_status": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "OPEN"
+            ]
+          },
+          "source_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "$defs": {
