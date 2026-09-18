@@ -1,6 +1,6 @@
 # Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v2.0
 
-**Status:** PRE-FREEZE SYNCHRONIZED STANDARD  
+**Status:** **PASS — FROZEN**  
 **Date:** 2026-09-18  
 **Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md` + `stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md`
 
@@ -118,3 +118,7 @@ Fixtures must cover schema/source classes, semantic entities, templates vs case 
 ~~~math
 \boxed{G_1^{\rm framework}\neq G_1^{\rm case}(c).}
 ~~~
+
+## 11. Freeze state
+
+This generic data contract is part of the frozen Stage-1 framework. Source-specific adapters and case configurations may evolve only if they continue to conform to this contract; semantic changes to CIR objects or Stage-1 relation governance require explicit amendment/unfreeze.
