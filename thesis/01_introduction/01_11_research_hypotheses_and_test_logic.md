@@ -78,6 +78,18 @@ so Stage 5 represents **remain + return + confidence**, not viability alone.
 
 **Mapping:** RQ6/SO6.
 
+The H4 evaluation preserves the distinction
+
+```math
+\boxed{
+\text{effectiveness}
+\neq
+\text{resource efficiency}
+\neq
+\text{sustainability consequence}.
+}
+```
+
 ```math
 a_k
 \rightarrow
