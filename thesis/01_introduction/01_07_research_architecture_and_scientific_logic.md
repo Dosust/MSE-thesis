@@ -1,4 +1,4 @@
-# 1.7 Research Architecture and Scientific Logic
+# 1.7 Research Framework and Logic
 
 Section 1.6 defined the validity domain of the study. Within that domain, Section 1.7 provides the **reader-facing architecture** that connects critical-service requirements, scientific objects, stage outputs, acceptance gates, and engineering decisions. It does not reproduce the physical Power–Transportation system as a literal seven-step process, and it does not duplicate the detailed mathematics or experiments of Chapters 3 and 4.
 
