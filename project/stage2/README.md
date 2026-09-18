@@ -1,9 +1,10 @@
 # Stage 2 — Evidence-Grounded Causal Interdependencies
 
-**Status:** **OPEN / WORKING — NOT FROZEN**  
+**Status:** **ACTIVE / WORKING — NOT FROZEN**  
 **Canonical RQ2:** Why and through which mechanisms do components and layers affect each other?  
 **Canonical SO2:** Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.  
-**Input authority:** frozen Stage-1 relation register `mathfrak r_e^(1)` plus the locked Stage-1 supporting-evidence traceability layer.
+**Input authority:** frozen Stage-1 relation register `mathfrak r_e^(1)` plus the locked Stage-1 supporting-evidence traceability layer.  
+**Formal activation authority:** `../../thesis/00_governance/STAGE1_TO_STAGE2_FORMAL_TRANSITION_2026-09-19.md`.
 
 ## Thesis-level statement
 
