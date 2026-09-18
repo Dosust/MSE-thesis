@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/schemas/stage1_structure.schema.json",
+  "title": "Stage 1 Structural Handoff Contract",
+  "description": "Machine-readable contract for the Stage-1 structural/spatial handoff. This schema does not admit causal dependencies; Stage-2 qualification is separate.",
+  "type": "object",
+  "required": [
+    "version",
+    "system_boundary",
+    "layers",
+    "entities",
+    "intralayer_edges",
+    "candidate_relations",
+    "service_traceability",
+    "assumptions",
+    "provenance",
+    "stage1_status"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "system_boundary": {
+      "type": "object",
+      "required": [
+        "geographic_support",
+        "temporal_support",
+        "infrastructure_scope",
+        "service_scope",
+        "operating_modes"
+      ],
+      "properties": {
+        "geographic_support": {
+          "type": "string",
+          "minLength": 1
+        },
+        "temporal_support": {
+          "type": "string",
+          "minLength": 1
+        },
+        "infrastructure_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "service_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "operating_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "layers": {
+      "type": "object",
+      "required": [
+        "physical",
+        "supporting"
+      ],
+      "properties": {
+        "physical": {
+          "type": "array",
+          "const": [
+            "power",
+            "transportation"
+          ]
+        },
+        "supporting": {
+          "type": "array",
+          "const": [
+            "information",
+            "organization"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "entity_id",
+          "entity_type",
+          "layer",
+          "source_dataset",
+          "geometry_ref",
+          "state_schema",
+          "service_roles",
+          "provenance_status",
+          "inclusion_rule"
+        ],
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layer": {
+            "$ref": "#/$defs/layer"
+          },
+          "source_dataset": {
+            "type": "string",
+            "minLength": 1
+          },
+          "geometry_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state_schema": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "service_roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "provenance_status": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "OPEN"
+            ]
+          },
+          "inclusion_rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exclusion_rule": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "intralayer_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "edge_id",
+          "layer",
+          "source_entity",
+          "target_entity",
+          "edge_semantics",
+          "provenance_status"
+        ],
+        "properties": {
+          "edge_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layer": {
+            "$ref": "#/$defs/layer"
+          },
+          "source_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edge_semantics": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provenance_status": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "OPEN"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "candidate_relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relation_id",
+          "source_layer",
+          "target_layer",
+          "source_entity",
+          "target_entity",
+          "status_class",
+          "structural_predicate_pass",
+          "structural_evidence",
+          "provenance_status"
+        ],
+        "properties": {
+          "relation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_layer": {
+            "$ref": "#/$defs/layer"
+          },
+          "target_layer": {
+            "$ref": "#/$defs/layer"
+          },
+          "source_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status_class": {
+            "enum": [
+              "PRIOR_DOCUMENTED",
+              "STRUCTURAL_CANDIDATE"
+            ]
+          },
+          "structural_predicate_pass": {
+            "type": "boolean"
+          },
+          "structural_evidence": {
+            "type": "object",
+            "properties": {
+              "asset_crosswalk": {
+                "type": "boolean"
+              },
+              "interface_hardware": {
+                "type": "boolean"
+              },
+              "spatial_relation": {
+                "type": "boolean"
+              },
+              "access_geometry": {
+                "type": "boolean"
+              },
+              "geographic_coexposure": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "provenance_status": {
+            "enum": [
+              "PASS",
+              "CONDITIONAL",
+              "BLOCKED",
+              "OPEN"
+            ]
+          },
+          "causal_dependency_accepted": {
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "service_traceability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "entity_id",
+          "service_id",
+          "structural_role"
+        ],
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "service_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "structural_role": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "assumption_id",
+          "statement",
+          "reason",
+          "consequence",
+          "sensitivity_test"
+        ],
+        "properties": {
+          "assumption_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sensitivity_test": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "crs",
+        "source_vintage",
+        "hashes_complete",
+        "topology_qa",
+        "spatial_qa"
+      ],
+      "properties": {
+        "crs": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_vintage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hashes_complete": {
+          "type": "boolean"
+        },
+        "topology_qa": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "OPEN"
+          ]
+        },
+        "spatial_qa": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "OPEN"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "stage1_status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "OPEN"
+      ]
+    }
+  },
+  "$defs": {
+    "layer": {
+      "type": "string",
+      "enum": [
+        "power",
+        "transportation",
+        "information",
+        "organization"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
