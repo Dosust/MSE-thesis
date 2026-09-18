@@ -122,3 +122,15 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 ## Chapter I freeze
 
 - [`CHAPTER_I_FREEZE_2026-09-18.md`](CHAPTER_I_FREEZE_2026-09-18.md) — **PASS — FROZEN** scientific baseline for Sections 1.1–1.13.
+
+
+## Stage-1 framework freeze
+
+- `STAGE1_FRAMEWORK_FREEZE_2026-09-18.md` — formal freeze authority for the generic Stage-1 framework.
+- Active evidence/ontology authority: `../../project/stage1_v2/Stage1_Evidence_and_Ontology_Register_v2_FINAL.md`.
+- Active mathematical contract: `../../project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md`.
+- Active data contract: `../../project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V2.md`.
+- Exit audit: `../../project/STAGE1_EXIT_GATE_AUDIT_V2_2026-09-18.md`.
+- Exact freeze manifest: `../../project/STAGE1_FREEZE_MANIFEST_V2_2026-09-18.md`.
+
+The freeze applies to the generic framework, not to any particular case instantiation.
