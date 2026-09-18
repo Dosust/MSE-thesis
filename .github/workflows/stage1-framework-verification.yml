@@ -1,0 +1,52 @@
+name: Stage 1 Framework Verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md"
+      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md"
+      - "schemas/stage1_structure.schema.json"
+      - "schemas/stage1_source_manifest.schema.json"
+      - "methods/stage1_data/**"
+      - "tests/stage1_data/**"
+      - ".github/workflows/stage1-framework-verification.yml"
+  pull_request:
+    paths:
+      - "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md"
+      - "project/STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md"
+      - "schemas/stage1_structure.schema.json"
+      - "schemas/stage1_source_manifest.schema.json"
+      - "methods/stage1_data/**"
+      - "tests/stage1_data/**"
+      - ".github/workflows/stage1-framework-verification.yml"
+  workflow_dispatch:
+
+jobs:
+  verify-stage1-framework:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install verification dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install jsonschema==4.26.0 pyproj==3.7.2 shapely==2.1.2 networkx==3.6.1
+
+      - name: Compile Stage 1 Python contracts
+        run: |
+          python -m py_compile methods/stage1_data/adapter_contract.py
+          python -m py_compile methods/stage1_data/normalization.py
+          python -m py_compile tests/stage1_data/test_stage1_framework.py
+
+      - name: Run case-independent Stage 1 verification
+        run: |
+          python -m unittest tests/stage1_data/test_stage1_framework.py -v
