@@ -134,3 +134,15 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 - Exact freeze manifest: `../../project/STAGE1_FREEZE_MANIFEST_V2_2026-09-18.md`.
 
 The freeze applies to the generic framework, not to any particular case instantiation.
+
+
+## Formal Stage-1 → Stage-2 transition
+
+- `STAGE1_TO_STAGE2_FORMAL_TRANSITION_2026-09-19.md` — **GO: Stage 1 CLOSED/FROZEN; Stage 2 FORMALLY ACTIVE**.
+- No further generic Stage-1 conceptual-framework development is authorized without explicit amendment/unfreeze.
+- Case-specific Stage-1 materialization may continue under `G_1^{case}(c)` without reopening the generic framework.
+- Current active scientific stage: **Stage 2 — Evidence-Grounded Causal Interdependencies**.
+
+~~~math
+\boxed{\text{Stage 1 CLOSED / FROZEN}\rightarrow\text{Stage 2 ACTIVE}}
+~~~
