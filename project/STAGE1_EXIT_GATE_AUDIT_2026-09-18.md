@@ -4,11 +4,11 @@
 **Canonical RQ1:** What entities exist, what layers constitute the system, and where can interactions occur?  
 **Canonical SO1:** Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.  
 **Authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Audit status:** **FRAMEWORK NOT YET FROZEN — SCIENTIFIC/MATHEMATICAL DESIGN PASS; GENERIC DATA-FRAMEWORK VERIFICATION OPEN; AUSTIN CASE SEPARATE/OPEN**
+**Audit status:** **PASS — STAGE-1 FRAMEWORK READY FOR FREEZE; CASE INSTANTIATIONS REMAIN SEPARATE**
 
 ## 1. Executive conclusion
 
-Stage 1 must be separated into a **case-independent framework gate** and a **case-specific instantiation gate**. Austin is not allowed to determine whether the Stage-1 framework itself is complete.
+Stage 1 is separated into a **case-independent framework gate** and a **case-specific instantiation gate**. The framework gate now passes; Austin and all other cases remain independent downstream instantiations.
 
 The literature, systems-engineering basis, multilayer/SoS ontology, Stage-1/Stage-2 separation, and the corrected spatial-proximity guardrail are sufficiently strong for continued thesis development. However, Stage 1 cannot be scientifically frozen because the candidate Austin case has not yet produced a verified case-specific structural handoff.
 
@@ -17,8 +17,9 @@ The current correct state is:
 ```math
 \boxed{
 \text{Stage-1 science/mathematics}=\mathrm{PASS},\qquad
-\text{generic data framework}=\mathrm{OPEN\text{-}VERIFY},\qquad
-\text{Austin case}=\mathrm{OPEN}
+\text{generic data framework}=\mathrm{PASS},\qquad
+\text{generic fixture verification}=\mathrm{PASS},\qquad
+\text{Austin case}=\mathrm{OPEN\ (SEPARATE)}
 }
 ```
 
@@ -26,7 +27,7 @@ and therefore:
 
 ```math
 \boxed{
-\text{Stage-1 framework freeze}=\mathrm{NOT\ YET\ PASS}\;\text{only because generic fixture verification remains open}
+\text{Stage-1 framework gate}=\mathrm{PASS\ —\ READY\ FOR\ FREEZE}
 }
 ```
 
@@ -64,14 +65,14 @@ This is not an Austin-data blocker. The remaining framework work is case-indepen
 | ID | Framework requirement | Status | Closure condition |
 |---|---|---|---|
 | S1-F01 | Stage-1 mathematical/ontology contract | **PASS** | frozen in `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md` |
-| S1-F02 | Canonical intermediate representation | **PASS-DESIGN** | frozen in `STAGE1_DATA_ABSTRACTION_AND_INGESTION_STANDARD_V1.md` |
-| S1-F03 | Generic source manifest | **PASS-DESIGN** | `schemas/stage1_source_manifest.schema.json` |
-| S1-F04 | Stage-1 structural handoff schema | **PASS-DESIGN** | `schemas/stage1_structure.schema.json` |
-| S1-F05 | Generic adapter interface | **PASS-DESIGN** | `methods/stage1_data/adapter_contract.py` |
-| S1-F06 | Cleaning/normalization rules | **PASS-DESIGN** | immutable raw, explicit CRS/units/time/null/topology/geometry rules frozen |
-| S1-F07 | Provenance/QA contract | **PASS-DESIGN** | source hashes + QA ledger + transformation trace defined |
-| S1-F08 | Case-independent fixture tests | **OPEN** | synthetic fixtures must verify schema, provenance, IDs, CRS, units, nulls, topology, temporal roles, and Stage-1 causal guardrail |
-| S1-F09 | Framework freeze | **BLOCKED ONLY BY F08** | may PASS without Austin once F08 passes |
+| S1-F02 | Canonical intermediate representation | **PASS** | CIR-1 through CIR-10 frozen, including authority/requirements register |
+| S1-F03 | Generic source manifest | **PASS** | source schema validates heterogeneous and normative/authority sources |
+| S1-F04 | Stage-1 structural handoff schema | **PASS** | structural schema v1.1 includes jurisdiction, normative register, requirement traceability and causal guardrail |
+| S1-F05 | Generic adapter interface | **PASS** | adapter contract includes canonical bundle, authority records and noncausal runtime guards |
+| S1-F06 | Cleaning/normalization rules | **PASS** | immutable raw, explicit CRS/units/time/null/topology/geometry rules frozen and fixture-tested |
+| S1-F07 | Provenance/QA contract | **PASS** | SHA-256, source manifest, transformation trace, QA ledger and normative provenance defined |
+| S1-F08 | Case-independent fixture tests | **PASS** | 18/18 tests passed; see `STAGE1_GENERIC_FIXTURE_VERIFICATION_REPORT_2026-09-18.md` |
+| S1-F09 | Framework freeze readiness | **PASS — READY FOR FREEZE** | all framework-level gates closed; case gates remain independent |
 ## 3. What is already complete
 
 The following Stage-1 scientific foundations do **not** need to be reinvented:
@@ -274,9 +275,10 @@ and the resulting `Z1_impl` is versioned and reproducible.
 \text{Canonical Stage-1 definition} &= \mathrm{PASS},\\
 \text{Literature/theory basis} &= \mathrm{PASS},\\
 \text{Ontology/mathematical contract} &= \mathrm{PASS},\\
-\text{Generic data-framework design} &= \mathrm{PASS\text{-}DESIGN},\\
-\text{Generic fixture verification} &= \mathrm{OPEN},\\
-\text{Stage-1 framework freeze} &= \mathrm{BLOCKED\ ONLY\ BY\ GENERIC\ VERIFICATION},\\
+\text{Generic data-framework design} &= \mathrm{PASS},\\
+\text{Normative/jurisdictional integration} &= \mathrm{PASS},\\
+\text{Generic fixture verification} &= \mathrm{PASS},\\
+\text{Stage-1 framework gate} &= \mathrm{PASS\ —\ READY\ FOR\ FREEZE},\\
 \text{Austin case instantiation} &= \mathrm{OPEN\ (SEPARATE)}.
 \end{aligned}
 }
@@ -284,7 +286,7 @@ and the resulting `Z1_impl` is versioned and reproducible.
 
 ### Interpretation
 
-Stage 1 does **not** require further conceptual or mathematical expansion. Framework closure now requires only case-independent fixture verification of the generic ingestion/cleaning architecture. Austin structural execution is a separate Chapter-4/case-admissibility activity.
+Stage 1 requires no further conceptual, mathematical, ontology, normative, data-contract, or generic-verification work before framework freeze. Austin structural execution remains a separate Chapter-4/case-admissibility activity.
 
 ## 8. Deterministic closure sequence
 
@@ -307,3 +309,11 @@ A3. close Austin spatial/topology/crosswalk/provenance gates
 A4. emit Austin `Z1_impl`
 A5. declare Austin case PASS / FAIL / BLOCKED
 ```
+
+## 10. Final closure artifacts
+
+- `project/STAGE1_FINAL_FRAMEWORK_V1.md` — consolidated final Stage-1 framework specification; status PASS — READY FOR FREEZE.
+- `project/STAGE1_GENERIC_FIXTURE_VERIFICATION_REPORT_2026-09-18.md` — 18/18 case-independent verification tests PASS.
+- `.github/workflows/stage1-framework-verification.yml` — remote CI mirror; first hosted run classified BLOCKED-ENVIRONMENT because zero steps executed and no job log was produced.
+
+The remaining Austin/Greensboro/etc. work belongs to `G_1^{case}(c)` and is not a framework-freeze blocker.
