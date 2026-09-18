@@ -1,6 +1,6 @@
-# Stage 1 Mathematical and Ontology Contract v1.1
+# Stage 1 Mathematical and Ontology Contract v1.2
 
-**Status:** FINAL METHODOLOGICAL CONTRACT — READY FOR STAGE-1 FRAMEWORK FREEZE  
+**Status:** REVISED FINAL CANDIDATE — NEW EVIDENCE INTEGRATED; REVERIFICATION REQUIRED  
 **Date:** 2026-09-18  
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
 **Canonical authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`
@@ -113,7 +113,48 @@ r_i\in\mathbb R^2
 
 for point-like physical assets where a 2-D coordinate is meaningful, while dynamic state variables are never denoted by the same symbol.
 
-## 7. Structural-admissibility predicate
+## 7. Thesis entity representation
+
+`[THESIS-SYNTHESIS]`
+
+Ontology/GIS and functional-dependency literature support semantic infrastructure entities, but the exact thesis tuple below is a thesis construction:
+
+```math
+\boxed{
+E_i^\alpha
+=
+(
+id_i,
+type_i,
+layer_i,
+r_i,
+f_i,
+\mathcal Y_i,
+o_i,
+a_i,
+\ell_i,
+\mathcal D_i
+).
+}
+```
+
+where:
+
+```math
+\begin{aligned}
+r_i &= \text{location/geometry reference},\\
+f_i &= \text{engineering function/service roles},\\
+\mathcal Y_i &= \text{declared state schema},\\
+o_i &= \text{ownership/operator roles},\\
+a_i &= \text{authority/regulatory roles},\\
+\ell_i &= \text{modeling resolution level},\\
+\mathcal D_i &= \text{evidence/data/provenance references}.
+\end{aligned}
+```
+
+This retains the thesis-wide use of `r_i` for geometry rather than reusing `x_i`, which is reserved from state notation.
+
+## 8. Structural-admissibility predicate
 
 `[THESIS]`
 
@@ -149,7 +190,7 @@ where:
 
 It may not use Stage-2 mechanism strength, causal-effect estimates, activation probabilities, or H1 outcomes.
 
-## 8. Structural candidate set
+## 9. Structural candidate set
 
 `[THESIS]`
 
@@ -174,7 +215,7 @@ i\rightarrow j.
 
 Stage 1 identifies where a relation is structurally admissible for investigation; Stage 2 determines whether a causal dependency exists.
 
-## 9. Geographic co-exposure guardrail
+## 10. Geographic co-exposure guardrail
 
 The frozen wording is:
 
@@ -188,7 +229,7 @@ The frozen wording is:
 
 A shared local hazard pathway may justify a geographic co-exposure candidate but still does not establish a functional causal dependency.
 
-## 10. Relation-status ontology
+## 11. Relation-status ontology
 
 `[THESIS]`
 
@@ -218,7 +259,78 @@ Mandatory guardrails:
 
 Stage 1 is prohibited from assigning `I_acc`.
 
-## 11. Entity-to-service traceability schema
+## 12. Stage-1 relation representation
+
+`[THESIS-SYNTHESIS]`
+
+Stage 1 represents more than a node pair while remaining explicitly pre-causal:
+
+```math
+\boxed{
+\mathfrak R_{ij}^{\alpha\beta,(1)}
+=
+(
+E_i^\alpha,
+E_j^\beta,
+\Gamma_{ij}^{\rm str},
+\gamma_{ij},
+\Phi_{ij},
+d_{ij},
+m_{ij}^{\rm cand},
+c_{ij}^{\rm cand},
+b_{ij},
+s_{ij},
+\mathcal E_{ij},
+q_{ij}^{\rm evid},
+\ell_{ij},
+\chi_{ij}^{\rm norm}
+).
+}
+```
+
+where:
+
+```math
+\begin{aligned}
+\gamma_{ij} &= \text{interface semantics / interface class},\\
+\Phi_{ij} &= \text{exchanged function/service/resource/information semantics},\\
+d_{ij} &= \text{declared direction of the candidate relation},\\
+m_{ij}^{\rm cand} &= \text{candidate mechanism family},\\
+c_{ij}^{\rm cand} &= \text{candidate operating/activation context},\\
+b_{ij} &= \text{basis for structural admission},\\
+s_{ij} &= \text{Stage-1 relation/evidence status},\\
+\mathcal E_{ij} &= \text{evidence/provenance references},\\
+q_{ij}^{\rm evid} &= \text{evidence-confidence representation},\\
+\ell_{ij} &= \text{relation modeling resolution},\\
+\chi_{ij}^{\rm norm} &= \text{normative/jurisdictional admissibility}.
+\end{aligned}
+```
+
+The candidate mechanism and operating context are descriptors inherited from prior evidence; they are not accepted Stage-2 mechanisms.
+
+The following quantities are frozen as distinct:
+
+```math
+\boxed{
+\text{existence status}
+\neq
+\text{coupling strength}
+\neq
+\text{evidence confidence}.
+}
+```
+
+Stage 1 does not estimate functional coupling strength:
+
+```math
+\boxed{
+w_{ij}=\mathrm{NOT\ ESTIMATED\ IN\ STAGE\ 1}.
+}
+```
+
+Evidence confidence may be represented numerically only under a declared, auditable calibration/scoring rule; otherwise a categorical confidence class plus method/provenance is required.
+
+## 13. Entity-to-service traceability schema
 
 `[THESIS]`
 
@@ -232,15 +344,38 @@ Every retained Stage-1 entity type must have a traceability row with:
 | source_dataset | evidence/data source |
 | geometry | coordinate/line/polygon/reference |
 | intra_edge_semantics | meaning of same-layer connectivity |
+| engineering_function | engineering function/role of the entity |
 | state_schema | later state variables associated with the entity |
 | service_roles | service quantities the entity may contribute to |
+| resolution_level | component/facility/network/agent/aggregate or other declared modeling level |
+| evidence_refs | evidence/provenance references supporting semantics and inclusion |
 | provenance_status | source/vintage/license/hash/QC state |
 | inclusion_rule | why retained |
 | exclusion_rule | why excluded, if applicable |
 
 The service-role field is structural traceability only. It does not assert causal effect magnitude.
 
-## 12. Normative and jurisdictional admissibility
+## 13A. Hard scientific separation rules
+
+`[THESIS-SYNTHESIS]`
+
+```math
+\boxed{
+\begin{aligned}
+\text{topology} &\neq \text{function},\\
+\text{proximity} &\neq \text{dependency},\\
+\text{correlation} &\neq \text{causality},\\
+\text{standardized interface} &\neq \text{case-specific connection},\\
+\text{case connection} &\neq \text{causal mechanism},\\
+\text{dependency existence} &\neq \text{dependency strength},\\
+\text{dependency strength} &\neq \text{evidence confidence}.
+\end{aligned}
+}
+```
+
+These distinctions are mandatory Stage-1 guardrails.
+
+## 14. Normative and jurisdictional admissibility
 
 `[THESIS]`
 
@@ -334,7 +469,7 @@ jurisdiction
 
 because ownership, operating authority, regulatory authority, and physical/electrical supply roles are not assumed identical.
 
-## 13. Requirement provenance
+## 15. Requirement provenance
 
 `[THESIS]`
 
@@ -372,7 +507,7 @@ This establishes the trace:
 
 A requirement may constrain later service or intervention definitions, but Stage 1 does not infer dynamic performance from the requirement itself.
 
-## 14. Stage-1 assumptions
+## 16. Stage-1 assumptions
 
 `[ASSUMP]`
 
@@ -386,7 +521,7 @@ A_k^{(1)}
 
 At minimum, the case must explicitly state assumptions concerning boundary vintage, coordinate consistency, asset persistence through the study period, semisynthetic crosswalks, road-network cleaning/snap tolerances, and any retrospective signal/sensor filtering.
 
-## 15. Stage-1 implementation handoff
+## 17. Stage-1 implementation handoff
 
 `[THESIS]`
 
@@ -403,6 +538,7 @@ R,
 \mathcal Y;
 \Omega_{\rm sys}^{+},
 \mathcal C_{\rm cross},
+\mathfrak R_1,
 \mathcal T_{\rm svc},
 \mathcal A_1,
 \mathcal N_1,
@@ -415,13 +551,14 @@ where:
 
 - `R` = spatial embedding;
 - `Y`/`mathcal Y` = state schema/state-space declaration, not Stage-3 trajectory;
-- `C_cross` = structural candidate relation register;
+- `C_cross` = structural candidate pair set;
+- `R_1` = typed Stage-1 relation-object register `mathfrak R_{ij}^{alpha beta,(1)}`;
 - `T_svc` = entity-to-service traceability table;
 - `A_1` = Stage-1 assumption register;
 - `N_1` = normative/authority and requirement-provenance register;
 - `Pi_1` = provenance/QC bundle.
 
-## 16. Stage-1 verification obligations
+## 18. Stage-1 verification obligations
 
 `[THESIS/METHODOLOGY]`
 
@@ -441,6 +578,12 @@ Stage 1 passes only if:
 \land
 \text{candidate relations reproducible}
 \land
+\text{interface/exchange semantics explicit}
+\land
+\text{resolution declared}
+\land
+\text{existence/strength/confidence separated}
+\land
 \text{service traceability complete}
 \land
 \text{normative applicability resolved where relevant}
@@ -455,12 +598,12 @@ Stage 1 passes only if:
 
 The gate is developmental verification supporting H1; it is not itself H1.
 
-## 17. What literature must and need not justify
+## 19. What literature must and need not justify
 
 Literature is required for the scientific legitimacy of SoS reasoning, multilayer/network representation, infrastructure dependency concepts, spatial/geographic relations, and domain-specific entity/interface semantics.
 
-Literature is **not** required to contain the exact thesis notation `Gamma^str`, `C_struct`, `T_svc`, `Z1_impl`, or the PASS/FAIL/BLOCKED packaging. These are thesis-defined methodological objects and are valid if internally coherent, physically interpretable, explicitly declared, and verified against case data.
+Literature is **not** required to contain the exact thesis notation `Gamma^str`, the thesis entity tuple `E_i^alpha`, the Stage-1 relation tuple `mathfrak R_ij^(1)`, `C_struct`, `T_svc`, `Z1_impl+`, or the PASS/FAIL/BLOCKED packaging. These are thesis-defined methodological objects and are valid if internally coherent, physically interpretable, explicitly declared, and verified against case data.
 
-## 18. Freeze state
+## 20. Freeze state
 
-The **Stage-1 mathematical/ontology contract is final and ready for framework freeze**, subject only to successful generic fixture verification of the machine/data contracts. Case-specific instantiations remain governed by separate `G_1^{case}` gates and do not control framework validity.
+The **Stage-1 mathematical/ontology contract has been revised using the Stage-1 Evidence and Ontology Register**. Framework freeze requires successful re-verification of the revised machine/data contracts and fixtures. Case-specific instantiations remain governed by separate `G_1^{case}` gates and do not control framework validity.
