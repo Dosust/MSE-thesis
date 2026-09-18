@@ -3,6 +3,10 @@
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
 
+## Controlled evidence register
+
+- **[Chapter 2 Literature Classification and Ontology Register v1.0](02_00_literature_classification_ontology_register.md)** — controlled classification authority for evidence type, system role, network representation, dependency direction, mechanism, dynamics, model family, information/organization, resilience, uncertainty, intervention, sustainability consequence, validation maturity, and RQ/SO/H traceability. It contains the current verified core reference set and a separately labelled arXiv discovery lane.
+
 ## Purpose
 
 Determine what is established, contradictory, limited, unvalidated and unresolved before proposing the thesis framework. Chapter 2 provides the evidence and theoretical foundation for Chapter 1 gap claims and Chapter 3 constructs.
