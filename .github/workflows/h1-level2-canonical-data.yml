@@ -1,0 +1,64 @@
+name: H1 Level-2 Canonical Data Acquisition
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/h1-level2-canonical-data.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: h1-level2-canonical-data
+  cancel-in-progress: false
+
+jobs:
+  acquire-small-public-inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install acquisition dependency
+        run: python -m pip install --upgrade requests
+
+      - name: Acquire reproducible federal study-area inputs
+        run: |
+          python models/H1/level2/data/acquire_canonical_data.py \
+            --outdir models/H1/level2/data/materialized
+
+      - name: Record commit-safe outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Always retain the machine acquisition report.
+          git add models/H1/level2/data/materialized/acquisition_report_v1.json
+
+          # Commit individual materialized public-data files only when each is
+          # below 45 MiB. Larger authoritative objects remain external and are
+          # represented by provenance/checksum metadata rather than ordinary Git.
+          while IFS= read -r -d '' f; do
+            size=$(stat -c%s "$f")
+            if [ "$size" -le 47185920 ]; then
+              git add "$f"
+            fi
+          done < <(find models/H1/level2/data/materialized -type f -print0)
+
+          if git diff --cached --quiet; then
+            echo "No commit-safe acquisition changes."
+            exit 0
+          fi
+
+          git commit -m "Materialize canonical Level-2 public data extracts"
+          git push
