@@ -1,7 +1,7 @@
 """Case-independent Stage-1 source-adapter contract.
 
-This module defines interfaces only. It does not encode Austin-specific rules,
-causal interdependencies, or scientific conclusions.
+This module enforces the final v2 Stage-1 evidence/ontology boundary.
+It does not encode case-specific causal acceptance or coupling strength.
 """
 
 from __future__ import annotations
@@ -42,12 +42,7 @@ class QARecord:
 
 @dataclass
 class CanonicalBundle:
-    """Canonical Stage-1 payload emitted by an adapter.
-
-    The container is intentionally generic. Domain-specific adapters map source
-    semantics into these typed records; downstream Stage-1 logic should not
-    depend on the original file format.
-    """
+    """Canonical Stage-1 payload emitted by an adapter."""
 
     entities: List[Dict[str, Any]] = field(default_factory=list)
     intralayer_edges: List[Dict[str, Any]] = field(default_factory=list)
@@ -95,28 +90,24 @@ class Stage1SourceAdapter(ABC):
 
     @abstractmethod
     def report_quality(self) -> Iterable[QARecord]:
-        """Return all source, mapping, normalization, and structural QA results."""
+        """Return source, mapping, normalization, and structural QA results."""
 
 
 def assert_stage1_noncausal(bundle: CanonicalBundle) -> None:
-    """Enforce the Stage-1/Stage-2 boundary.
-
-    Stage 1 may emit prior-documented or structural-candidate relations only.
-    It may never declare a causal dependency accepted.
-    """
+    """Stage 1 may never accept a causal dependency."""
     for rel in bundle.candidate_relations:
-        if rel.get("causal_dependency_accepted") is True:
+        if rel.get("causal_dependency_accepted") is not False:
             raise ValueError(
-                "Stage 1 cannot promote a structural relation to an accepted causal dependency."
+                "Stage 1 requires causal_dependency_accepted=false for every relation."
             )
 
 
 def assert_normative_noncausal(bundle: CanonicalBundle) -> None:
-    """Ensure normative conformity is never promoted to scientific causality."""
+    """Normative admissibility must remain separate from scientific causality."""
     for rel in bundle.candidate_relations:
-        if rel.get("normative_admissibility") in {"PASS", "CONDITIONAL"} and rel.get(
-            "causal_dependency_accepted"
-        ) is True:
+        meta = rel.get("metadata", {})
+        norm = meta.get("normative_admissibility")
+        if norm in {"PASS", "CONDITIONAL"} and rel.get("causal_dependency_accepted") is True:
             raise ValueError(
                 "Normative admissibility cannot establish an accepted causal dependency."
             )
@@ -141,26 +132,54 @@ def assert_authority_scope(authority: Mapping[str, Any]) -> None:
 
 
 def assert_stage1_relation_semantics(bundle: CanonicalBundle) -> None:
-    """Enforce semantic separation inside Stage-1 candidate relations."""
-    structural_keys = {
-        "asset_crosswalk",
-        "spatial_relation",
-        "access_geometry",
-        "geographic_coexposure",
+    """Enforce the v2 core-relation + secondary-metadata contract."""
+    structural_case_bases = {
+        "ASSET_CROSSWALK",
+        "SPATIAL_RELATION",
+        "ACCESS_GEOMETRY",
+        "GEOGRAPHIC_COEXPOSURE",
     }
 
     for rel in bundle.candidate_relations:
+        record_level = rel.get("record_level")
+        scope = rel.get("scope")
+        participants = rel.get("participants", [])
+        existence = rel.get("structural_existence")
+        case_status = rel.get("case_connection_status")
+        mechanism_status = rel.get("mechanism_status")
+        meta = rel.get("metadata", {})
+
         if rel.get("strength_status") != "NOT_ESTIMATED_STAGE1":
-            raise ValueError(
-                "Stage 1 cannot estimate functional coupling strength."
-            )
+            raise ValueError("Stage 1 cannot estimate functional coupling strength.")
 
-        if rel.get("candidate_mechanism_status") != "CANDIDATE_ONLY":
-            raise ValueError(
-                "Stage 1 mechanism labels must remain candidate-only."
-            )
+        if rel.get("causal_dependency_accepted") is not False:
+            raise ValueError("Stage 1 cannot accept a causal dependency.")
 
-        confidence = rel.get("evidence_confidence", {})
+        if not rel.get("interface_semantics") or not rel.get("exchange_semantics"):
+            raise ValueError("Every Stage-1 relation requires interface and exchange semantics.")
+
+        if not rel.get("evidence_refs"):
+            raise ValueError("Every Stage-1 relation requires evidence/provenance references.")
+
+        if record_level == "MECHANISM_TEMPLATE":
+            if existence != "TEMPLATE_ONLY" or case_status != "NOT_CASE_EVALUATED":
+                raise ValueError("Mechanism templates must remain TEMPLATE_ONLY and not case-evaluated.")
+            if rel.get("structural_admissibility", {}).get("predicate_pass") is not None:
+                raise ValueError("Mechanism templates cannot fabricate a case structural predicate.")
+
+        if record_level == "CASE_RELATION" and existence == "TEMPLATE_ONLY":
+            raise ValueError("Case relations cannot use TEMPLATE_ONLY structural existence.")
+
+        if existence == "VERIFIED_STRUCTURAL":
+            if record_level != "CASE_RELATION" or case_status != "VERIFIED_STRUCTURAL":
+                raise ValueError("VERIFIED_STRUCTURAL is valid only for verified case relations.")
+            admission = set(meta.get("admission_basis", []))
+            if not admission.intersection(structural_case_bases):
+                raise ValueError(
+                    "Verified structural case relations require case structural evidence."
+                )
+
+        confidence = meta.get("evidence_confidence", {})
         score = confidence.get("score")
         method = confidence.get("method")
         if score is not None and not method:
@@ -168,20 +187,27 @@ def assert_stage1_relation_semantics(bundle: CanonicalBundle) -> None:
                 "Numeric evidence confidence requires an explicit scoring/calibration method."
             )
 
-        if rel.get("case_connection_status") == "VERIFIED_STRUCTURAL":
-            evidence = rel.get("structural_evidence", {})
-            if not any(bool(evidence.get(k)) for k in structural_keys):
-                raise ValueError(
-                    "A verified structural case connection requires case structural evidence."
-                )
+        path = meta.get("path")
+        mediator_path = meta.get("mediator_path", [])
+        if path == "MEDIATED" and not mediator_path:
+            raise ValueError("MEDIATED relations require an explicit mediator path.")
 
-            admission = set(rel.get("admission_basis", []))
-            if admission and admission.issubset(
-                {"PRIOR_LITERATURE", "NORMATIVE_INTERFACE", "OPERATOR_DOCUMENTATION"}
-            ):
-                raise ValueError(
-                    "Prior/normative/documentary evidence alone cannot establish a verified case connection."
-                )
+        arity = meta.get("arity")
+        if arity == "PAIRWISE" and len(participants) != 2:
+            raise ValueError("PAIRWISE Stage-1 relations require exactly two participants.")
+        if arity == "HIGHER_ORDER" and len(participants) < 3:
+            raise ValueError("HIGHER_ORDER relations require at least three participants.")
+
+        participant_layers = {p.get("layer") for p in participants}
+        if scope == "INTRA" and len(participant_layers) != 1:
+            raise ValueError("INTRA relations must remain within one layer.")
+        if scope == "INTER" and len(participant_layers) < 2:
+            raise ValueError("INTER relations must involve at least two layers.")
+        if scope == "CONTEXT":
+            if mechanism_status != "CONTEXT_ONLY":
+                raise ValueError("CONTEXT relations require mechanism_status=CONTEXT_ONLY.")
+            if rel.get("direction") not in {"UNDIRECTED_SCREENING", "CONTEXT_TO_SYSTEM"}:
+                raise ValueError("CONTEXT relations cannot masquerade as P->T or T->P causality.")
 
 
 def assert_stage1_entity_semantics(bundle: CanonicalBundle) -> None:
