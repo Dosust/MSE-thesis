@@ -1,6 +1,6 @@
-# Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.0
+# Stage 1 Data Abstraction, Ingestion, Cleaning, and Validation Standard v1.1
 
-**Status:** FROZEN METHODOLOGICAL STANDARD  
+**Status:** FINAL METHODOLOGICAL STANDARD — READY FOR STAGE-1 FRAMEWORK FREEZE  
 **Date:** 2026-09-18  
 **Scope:** case-independent Stage-1 structural data processing for coupled Power–Transportation infrastructure  
 **Authority:** `STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V1.md`
@@ -72,6 +72,7 @@ Stage 1 must accept any source that can be deterministically mapped into the can
 | time-indexed records | CSV/Parquet/API snapshots | vintage, asset status, structural availability |
 | API snapshot | REST/JSON downloaded and hashed | reproducible source snapshot |
 | document/manual metadata | operator manuals, asset catalogs | prior relationship class / interface metadata only |
+| normative/authority source | statute, regulation, code, standard, utility/agency procedure | jurisdiction, applicability, requirements, engineering admissibility |
 
 No source format is scientifically privileged. Source semantics and provenance determine admissibility.
 
@@ -132,6 +133,14 @@ source_vintage
 sha256
 adapter_id
 adapter_version
+authority_type
+jurisdiction
+document_id
+edition_or_version
+effective_from
+effective_to
+status
+applicability
 ```
 
 ### CIR-2 — Entity table
@@ -241,6 +250,34 @@ threshold
 message
 ```
 
+### CIR-10 — Authority and requirements register
+
+```text
+authority_id
+authority_type
+authority_name
+jurisdiction
+document_id
+edition_or_version
+effective_from
+effective_to
+status
+clause_or_locator
+applicability
+affected_entity_type
+affected_interface_type
+requirement_id
+service_id
+requirement_type
+measure
+unit
+threshold_or_rule
+verification_status
+source_id
+```
+
+CIR-10 records normative applicability and requirement provenance. It does not encode causal mechanisms.
+
 ## 6. Adapter contract
 
 Every source-specific adapter must implement the same logical interface:
@@ -315,6 +352,14 @@ Thus:
 - quality is represented explicitly rather than hidden through cleaning;
 - use PASS / CONDITIONAL / BLOCKED / EXCLUDE at object or source level as appropriate.
 
+### 7.10 Normative and jurisdictional applicability
+- laws, regulations, standards, utility procedures, and agency requirements are typed separately from scientific literature;
+- edition/version, status, effective period, jurisdiction, clause/locator, and applicability are preserved;
+- a requirement outside its jurisdiction or technical scope cannot be silently applied;
+- ownership, operating authority, regulator, utility/supplier, and transport authority are separate attributes where relevant;
+- normative conformity cannot set `causal_dependency_accepted=true`;
+- superseded requirements remain traceable but cannot be treated as current without an explicit historical-use justification.
+
 ## 8. Domain-specific adapter families
 
 ### 8.1 Power adapter
@@ -369,6 +414,9 @@ The generic framework must pass synthetic/fixture tests independent of Austin:
 | missingness preservation | null categories survive ingestion without silent filling |
 | unit normalization | known unit fixtures convert exactly/within numerical tolerance |
 | temporal-role preservation | contemporaneous/proxy/synthetic roles remain distinct |
+| authority metadata | jurisdiction, edition/status, effective period and applicability survive ingestion |
+| authority applicability | a nonapplicable requirement does not become a model constraint |
+| normative/causal separation | standards conformity cannot create a causal dependency |
 | causal guardrail | Stage-1 schema cannot set `causal_dependency_accepted=true` |
 
 These tests define framework readiness independently of any case-study dataset.
@@ -383,6 +431,9 @@ canonical_crs
 system_boundary
 study_period
 service_scope
+jurisdiction
+authority hierarchy
+applicable codes/standards/procedures
 source manifests
 adapter selection
 field mappings
@@ -414,6 +465,8 @@ Therefore Austin, Greensboro, Singapore, a synthetic benchmark, or another P–T
 \text{QA/provenance rules frozen}
 \land
 \text{machine-readable schemas valid}
+\land
+\text{normative applicability contract valid}
 \land
 \text{case-independent fixture tests pass}.
 \end{gathered}
