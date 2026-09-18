@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/schemas/stage1_source_manifest.schema.json",
+  "title": "Stage 1 Source Manifest",
+  "description": "Case-independent manifest for heterogeneous Stage-1 structural data sources.",
+  "type": "object",
+  "required": [
+    "source_id",
+    "source_type",
+    "provider",
+    "native_format",
+    "temporal_semantics",
+    "source_vintage",
+    "adapter",
+    "provenance"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "enum": [
+        "vector_geospatial",
+        "raster_geospatial",
+        "tabular",
+        "graph_network",
+        "power_system_model",
+        "transport_network",
+        "time_indexed_records",
+        "api_snapshot",
+        "document_metadata",
+        "other"
+      ]
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retrieval_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "native_format": {
+      "type": "string",
+      "minLength": 1
+    },
+    "native_crs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "native_units": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "temporal_semantics": {
+      "enum": [
+        "contemporaneous",
+        "retrospective",
+        "persistent_static",
+        "proxy",
+        "synthetic",
+        "mixed"
+      ]
+    },
+    "source_vintage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_to": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "license_or_access": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adapter": {
+      "type": "object",
+      "required": [
+        "adapter_id",
+        "adapter_version"
+      ],
+      "properties": {
+        "adapter_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "field_mapping": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "unit_mapping": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "configuration_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "sha256",
+        "retrieved_at",
+        "raw_immutable"
+      ],
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_immutable": {
+          "type": "boolean",
+          "const": true
+        },
+        "retrieval_tool": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "quality_status": {
+      "enum": [
+        "PASS",
+        "CONDITIONAL",
+        "BLOCKED",
+        "EXCLUDE",
+        "OPEN"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
