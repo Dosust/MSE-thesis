@@ -50,6 +50,7 @@ Need / service requirements
 | `06_STAGE6_INTERVENTION_SUSTAINABILITY_MINDMAP.md` | Stage 6 — Diagnosis, intervention, sustainability consequences | Downstream canonical |
 | `07_STAGE7_DECISION_TRANSFORMATION_MINDMAP.md` | Stage 7 — Engineering decision and adaptive transformation | Downstream canonical |
 | `08_CROSS_CUTTING_VVUQ_MINDMAP.md` | VVUQ, falsification, evidence and reproducibility across Stages 1–7 | Cross-cutting, not Stage 8 |
+| `VALIDATION.md` | Structural, traceability and render-source audit | **PASS** |
 
 ## Status discipline
 
