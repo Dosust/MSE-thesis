@@ -27,6 +27,16 @@ This is a transferability hierarchy, not a journal-quality ranking.
 | A-005 | [Ouyang (2014)](https://doi.org/10.1016/j.ress.2013.06.040) | model-family taxonomy for interdependent infrastructures | no universal best method | 2.2, 2.5; RQ1–RQ3 |
 | A-006 | [Dasuni et al. (2024)](https://doi.org/10.1080/23789689.2024.2403885) | fragmented dependency terminology and directionality problems | systematic-review evidence, not P–T-specific mechanism evidence | 2.2; RQ2 |
 
+### Additional accepted Stage-1 structural evidence
+
+| ID | Source | Accepted support | Restriction | Thesis use |
+|---|---|---|---|---|
+| A-026 | [Eusgeld, Nan, & Dietz (2011)](https://doi.org/10.1016/j.ress.2010.12.010) | SoS treatment of interdependent critical infrastructures; integrated vs coupled model architectures | does not define the thesis's exact four-layer ontology | 2.2; RQ1–RQ2 |
+| A-027 | [Zhang & Peeta (2011)](https://doi.org/10.1016/j.trb.2010.10.001) | multilayer infrastructure representation with heterogeneous system semantics and explicit intersystem links | static/equilibrium focus; not a causal-qualification standard | 2.2–2.3; RQ1–RQ2 |
+| A-028 | [Grafius, Varga, & Jude (2020)](https://doi.org/10.1061/(ASCE)IS.1943-555X.0000575) | infrastructure as SoS; complexity/interdependency framing | broad infrastructure evidence, not P–T-specific | 2.2; RQ1–RQ2 |
+| A-029 | [Mahabadi, Varga, & Dolan (2021)](https://doi.org/10.1109/ACCESS.2021.3116868) | systematic review of multilayer infrastructure models; realistic data, directed links, and feedback are underrepresented | percolation/robustness review, not causal proof | 2.2; RQ1–RQ2 |
+| A-030 | [Vaknin et al. (2021)](https://doi.org/10.1088/1367-2630/ac2e3c) | spatial embedding, anisotropy, modularity, and cascading effects in interdependent spatial networks | abstract/network-science evidence rather than direct P–T case evidence | 2.2, 2.5; RQ1/RQ3 |
+
 ## 3. Accepted direct Power–Transportation evidence
 
 | ID | Source | Accepted support | Restriction | Thesis use |
