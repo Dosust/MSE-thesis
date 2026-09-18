@@ -12,6 +12,7 @@
 4. Stage-3 reference database and temporal/event constitution.
 5. `STAGE3_EXECUTION_AND_CLOSURE_AUDIT_V1_2026-09-19.md` — current execution authority.
 6. `STAGE3_GATE_RESULTS_V1_2026-09-19.csv` — machine-readable gate state.
+7. `STAGE3_SCENARIO_MATRIX_CAUSAL_COMPATIBILITY_AUDIT_V1_2026-09-19.md` — prevents blocked Stage-2 mechanisms from entering Stage-3 scenarios.
 
 ## Executed result
 
@@ -114,6 +115,8 @@ The H1/Level-2 protocol still has open:
 - repository confirmatory authorization.
 
 No missing item may be replaced with an undocumented default merely to make Stage 3 run.
+
+The existing H1 scenario matrix also requires a versioned compatibility amendment before causal execution because its `FULL_DYNAMIC`/ablation definitions predate the latest case-specific G2 results.
 
 ## Preview boundary
 
