@@ -1,3 +1,6 @@
+> **STATUS: SUPERSEDED — RETAINED FOR PROVENANCE.**
+> Active Stage-1 authority is `STAGE1_EXIT_GATE_AUDIT_V2_2026-09-18.md`.
+> Do not use this file for new Stage-1 scientific, mathematical, schema, or freeze decisions.
 # Stage 1 Exit-Gate Audit — 2026-09-18
 
 **Stage:** 1 — Spatiotemporal Multilayer System-of-Systems Structure  
