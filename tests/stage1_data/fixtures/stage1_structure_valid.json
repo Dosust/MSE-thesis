@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "2.0",
   "system_boundary": {
     "geographic_support": "synthetic unit-square test domain",
     "temporal_support": "synthetic fixture epoch",
@@ -167,94 +167,403 @@
   "candidate_relations": [
     {
       "relation_id": "rel:p1-t1",
-      "source_layer": "power",
-      "target_layer": "transportation",
-      "source_entity": "power:bus:001",
-      "target_entity": "transport:signal:001",
-      "status_class": "STRUCTURAL_CANDIDATE",
-      "structural_predicate_pass": true,
-      "structural_evidence": {
-        "asset_crosswalk": true,
-        "interface_hardware": true,
-        "spatial_relation": true,
-        "access_geometry": false,
-        "geographic_coexposure": false
+      "record_level": "CASE_RELATION",
+      "participants": [
+        {
+          "entity_id": "power:bus:001",
+          "layer": "power",
+          "role": "source"
+        },
+        {
+          "entity_id": "transport:signal:001",
+          "layer": "transportation",
+          "role": "receiver"
+        }
+      ],
+      "layer_pair": "P->T",
+      "scope": "INTER",
+      "structural_admissibility": {
+        "status": "PASS",
+        "predicate_pass": true,
+        "evidence": {
+          "asset_crosswalk": true,
+          "interface_hardware": true,
+          "spatial_relation": true,
+          "access_geometry": false,
+          "geographic_coexposure": false
+        }
       },
       "interface_semantics": "electrical supply interface to traffic-control equipment",
-      "exchange_semantics": "electrical power/service availability",
+      "exchange_semantics": "electrical power / service availability",
       "direction": "SOURCE_TO_TARGET",
-      "candidate_mechanism_class": "signal_power_dependency",
-      "candidate_mechanism_status": "CANDIDATE_ONLY",
-      "candidate_operating_context": [
+      "candidate_mechanism": "signal_power_dependency",
+      "mechanism_status": "CANDIDATE_ONLY",
+      "activation_context": [
         "traffic signal requires external electrical supply"
       ],
-      "admission_basis": [
-        "PRIOR_LITERATURE",
-        "ASSET_CROSSWALK",
-        "INTERFACE_HARDWARE"
-      ],
-      "case_connection_status": "VERIFIED_STRUCTURAL",
-      "resolution_level": "component-to-component",
+      "evidence_status": "K",
       "evidence_refs": [
         "E09",
         "fixture:crosswalk:p1-t1"
       ],
-      "evidence_confidence": {
-        "confidence_class": "UNSCORED",
-        "score": null,
-        "method": "qualitative evidence class; no numeric calibration applied"
-      },
+      "structural_existence": "VERIFIED_STRUCTURAL",
+      "case_connection_status": "VERIFIED_STRUCTURAL",
       "strength_status": "NOT_ESTIMATED_STAGE1",
-      "provenance_status": "PASS",
       "causal_dependency_accepted": false,
-      "normative_admissibility": "PASS",
+      "metadata": {
+        "hierarchy_orientation": "HORIZONTAL",
+        "path": "DIRECT",
+        "mediator_path": [],
+        "arity": "PAIRWISE",
+        "resolution_level": "component-to-component",
+        "admission_basis": [
+          "PRIOR_LITERATURE",
+          "ASSET_CROSSWALK",
+          "INTERFACE_HARDWARE"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "qualitative evidence class; no calibrated numerical score"
+        },
+        "normative_admissibility": "PASS"
+      },
       "normative_authority_ids": [
         "AUTH-FIX-001"
-      ]
+      ],
+      "provenance_status": "PASS"
     },
     {
       "relation_id": "rel:t2-p2",
-      "source_layer": "transportation",
-      "target_layer": "power",
-      "source_entity": "transport:roadnode:002",
-      "target_entity": "power:transformer:002",
-      "status_class": "STRUCTURAL_CANDIDATE",
-      "structural_predicate_pass": true,
-      "structural_evidence": {
-        "asset_crosswalk": false,
-        "interface_hardware": false,
-        "spatial_relation": true,
-        "access_geometry": true,
-        "geographic_coexposure": false
+      "record_level": "CASE_RELATION",
+      "participants": [
+        {
+          "entity_id": "transport:roadnode:002",
+          "layer": "transportation",
+          "role": "access_provider"
+        },
+        {
+          "entity_id": "power:transformer:002",
+          "layer": "power",
+          "role": "repair_target"
+        }
+      ],
+      "layer_pair": "T->P",
+      "scope": "INTER",
+      "structural_admissibility": {
+        "status": "PASS",
+        "predicate_pass": true,
+        "evidence": {
+          "asset_crosswalk": false,
+          "interface_hardware": false,
+          "spatial_relation": true,
+          "access_geometry": true,
+          "geographic_coexposure": false
+        }
       },
       "interface_semantics": "repair access pathway",
       "exchange_semantics": "crew accessibility / travel-time service",
       "direction": "SOURCE_TO_TARGET",
-      "candidate_mechanism_class": "repair_access_dependency",
-      "candidate_mechanism_status": "CANDIDATE_ONLY",
-      "candidate_operating_context": [
+      "candidate_mechanism": "repair_access_dependency",
+      "mechanism_status": "CANDIDATE_ONLY",
+      "activation_context": [
+        "recovery",
         "power component requires field repair"
       ],
-      "admission_basis": [
-        "PRIOR_LITERATURE",
-        "ACCESS_GEOMETRY"
-      ],
-      "case_connection_status": "VERIFIED_STRUCTURAL",
-      "resolution_level": "access-node-to-component",
+      "evidence_status": "K",
       "evidence_refs": [
         "E10",
         "fixture:access:t2-p2"
       ],
-      "evidence_confidence": {
-        "confidence_class": "UNSCORED",
-        "score": null,
-        "method": "qualitative evidence class; no numeric calibration applied"
-      },
+      "structural_existence": "VERIFIED_STRUCTURAL",
+      "case_connection_status": "VERIFIED_STRUCTURAL",
       "strength_status": "NOT_ESTIMATED_STAGE1",
-      "provenance_status": "PASS",
       "causal_dependency_accepted": false,
-      "normative_admissibility": "N/A",
-      "normative_authority_ids": []
+      "metadata": {
+        "hierarchy_orientation": "HORIZONTAL",
+        "path": "MEDIATED",
+        "mediator_path": [
+          "road network / route",
+          "repair crew mobility"
+        ],
+        "arity": "PAIRWISE",
+        "resolution_level": "access-node-to-component",
+        "admission_basis": [
+          "PRIOR_LITERATURE",
+          "ACCESS_GEOMETRY",
+          "SPATIAL_RELATION"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "qualitative evidence class; no calibrated numerical score"
+        },
+        "normative_admissibility": "N/A"
+      },
+      "normative_authority_ids": [],
+      "provenance_status": "PASS"
+    },
+    {
+      "relation_id": "tpl:p-t-signal",
+      "record_level": "MECHANISM_TEMPLATE",
+      "participants": [
+        {
+          "entity_id": "template:power_supply",
+          "layer": "power",
+          "role": "source"
+        },
+        {
+          "entity_id": "template:traffic_signal",
+          "layer": "transportation",
+          "role": "receiver"
+        }
+      ],
+      "layer_pair": "P->T",
+      "scope": "INTER",
+      "structural_admissibility": {
+        "status": "N/A_TEMPLATE",
+        "predicate_pass": null,
+        "evidence": {
+          "asset_crosswalk": false,
+          "interface_hardware": false,
+          "spatial_relation": false,
+          "access_geometry": false,
+          "geographic_coexposure": false
+        }
+      },
+      "interface_semantics": "power supply to traffic-control equipment",
+      "exchange_semantics": "electrical service availability",
+      "direction": "SOURCE_TO_TARGET",
+      "candidate_mechanism": "signal_power_dependency",
+      "mechanism_status": "PRIOR_DOCUMENTED_FAMILY",
+      "activation_context": [
+        "normal",
+        "disrupted"
+      ],
+      "evidence_status": "C_L",
+      "evidence_refs": [
+        "E09"
+      ],
+      "structural_existence": "TEMPLATE_ONLY",
+      "case_connection_status": "NOT_CASE_EVALUATED",
+      "strength_status": "NOT_ESTIMATED_STAGE1",
+      "causal_dependency_accepted": false,
+      "metadata": {
+        "hierarchy_orientation": "HORIZONTAL",
+        "path": "DIRECT",
+        "mediator_path": [],
+        "arity": "PAIRWISE",
+        "resolution_level": "component-to-component",
+        "admission_basis": [
+          "PRIOR_LITERATURE"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "literature evidence class only"
+        },
+        "normative_admissibility": "N/A_TEMPLATE"
+      },
+      "normative_authority_ids": [],
+      "provenance_status": "PASS"
+    },
+    {
+      "relation_id": "tpl:pp-topology",
+      "record_level": "MECHANISM_TEMPLATE",
+      "participants": [
+        {
+          "entity_id": "template:power_a",
+          "layer": "power",
+          "role": "upstream"
+        },
+        {
+          "entity_id": "template:power_b",
+          "layer": "power",
+          "role": "downstream"
+        }
+      ],
+      "layer_pair": "P-P",
+      "scope": "INTRA",
+      "structural_admissibility": {
+        "status": "N/A_TEMPLATE",
+        "predicate_pass": null,
+        "evidence": {
+          "asset_crosswalk": false,
+          "interface_hardware": false,
+          "spatial_relation": false,
+          "access_geometry": false,
+          "geographic_coexposure": false
+        }
+      },
+      "interface_semantics": "electrical intralayer connection",
+      "exchange_semantics": "electrical connectivity / power-transfer capability",
+      "direction": "SOURCE_TO_TARGET",
+      "candidate_mechanism": "power_topology",
+      "mechanism_status": "INTRA_STRUCTURAL_SEMANTICS",
+      "activation_context": [
+        "normal",
+        "disrupted"
+      ],
+      "evidence_status": "C_L",
+      "evidence_refs": [
+        "E05"
+      ],
+      "structural_existence": "TEMPLATE_ONLY",
+      "case_connection_status": "NOT_CASE_EVALUATED",
+      "strength_status": "NOT_ESTIMATED_STAGE1",
+      "causal_dependency_accepted": false,
+      "metadata": {
+        "hierarchy_orientation": "HORIZONTAL",
+        "path": "DIRECT",
+        "mediator_path": [],
+        "arity": "PAIRWISE",
+        "resolution_level": "component-to-component",
+        "admission_basis": [
+          "PRIOR_LITERATURE"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "structural semantics only"
+        },
+        "normative_admissibility": "N/A_TEMPLATE"
+      },
+      "normative_authority_ids": [],
+      "provenance_status": "PASS"
+    },
+    {
+      "relation_id": "tpl:context-flood",
+      "record_level": "MECHANISM_TEMPLATE",
+      "participants": [
+        {
+          "entity_id": "template:power_asset",
+          "layer": "power",
+          "role": "exposed_system"
+        },
+        {
+          "entity_id": "template:transport_asset",
+          "layer": "transportation",
+          "role": "exposed_system"
+        }
+      ],
+      "layer_pair": "hazard:(P,T)",
+      "scope": "CONTEXT",
+      "structural_admissibility": {
+        "status": "N/A_TEMPLATE",
+        "predicate_pass": null,
+        "evidence": {
+          "asset_crosswalk": false,
+          "interface_hardware": false,
+          "spatial_relation": false,
+          "access_geometry": false,
+          "geographic_coexposure": true
+        }
+      },
+      "interface_semantics": "shared environmental exposure context",
+      "exchange_semantics": "common flood exposure",
+      "direction": "UNDIRECTED_SCREENING",
+      "candidate_mechanism": "shared_hazard_exposure",
+      "mechanism_status": "CONTEXT_ONLY",
+      "activation_context": [
+        "hazard event"
+      ],
+      "evidence_status": "G",
+      "evidence_refs": [
+        "E16"
+      ],
+      "structural_existence": "TEMPLATE_ONLY",
+      "case_connection_status": "NOT_CASE_EVALUATED",
+      "strength_status": "NOT_ESTIMATED_STAGE1",
+      "causal_dependency_accepted": false,
+      "metadata": {
+        "hierarchy_orientation": "N/A",
+        "path": "N/A",
+        "mediator_path": [],
+        "arity": "PAIRWISE",
+        "resolution_level": "asset-pair exposure context",
+        "admission_basis": [
+          "GEOGRAPHIC_COEXPOSURE"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "geographic/common-exposure evidence class"
+        },
+        "normative_admissibility": "N/A_TEMPLATE"
+      },
+      "normative_authority_ids": [],
+      "provenance_status": "PASS"
+    },
+    {
+      "relation_id": "tpl:ev-charge-higher-order",
+      "record_level": "MECHANISM_TEMPLATE",
+      "participants": [
+        {
+          "entity_id": "template:ev",
+          "layer": "transportation",
+          "role": "mobile_demand_or_storage"
+        },
+        {
+          "entity_id": "template:evse",
+          "layer": "transportation",
+          "role": "interface"
+        },
+        {
+          "entity_id": "template:power_bus",
+          "layer": "power",
+          "role": "electrical_connection"
+        }
+      ],
+      "layer_pair": "T<->P",
+      "scope": "INTER",
+      "structural_admissibility": {
+        "status": "N/A_TEMPLATE",
+        "predicate_pass": null,
+        "evidence": {
+          "asset_crosswalk": false,
+          "interface_hardware": false,
+          "spatial_relation": false,
+          "access_geometry": false,
+          "geographic_coexposure": false
+        }
+      },
+      "interface_semantics": "EV-EVSE-grid charging interface",
+      "exchange_semantics": "charging demand / possible bidirectional electrical service",
+      "direction": "BIDIRECTIONAL",
+      "candidate_mechanism": "ev_charging_v2g_interface",
+      "mechanism_status": "PRIOR_DOCUMENTED_FAMILY",
+      "activation_context": [
+        "vehicle connected to compatible EVSE",
+        "charging or V2G-enabled operating mode"
+      ],
+      "evidence_status": "C_L",
+      "evidence_refs": [
+        "E11",
+        "E14"
+      ],
+      "structural_existence": "TEMPLATE_ONLY",
+      "case_connection_status": "NOT_CASE_EVALUATED",
+      "strength_status": "NOT_ESTIMATED_STAGE1",
+      "causal_dependency_accepted": false,
+      "metadata": {
+        "hierarchy_orientation": "CROSS_SCALE",
+        "path": "DIRECT",
+        "mediator_path": [],
+        "arity": "HIGHER_ORDER",
+        "resolution_level": "agent-interface-component",
+        "admission_basis": [
+          "PRIOR_LITERATURE",
+          "INTERFACE_HARDWARE"
+        ],
+        "evidence_confidence": {
+          "confidence_class": "UNSCORED",
+          "score": null,
+          "method": "mechanism-family evidence only"
+        },
+        "normative_admissibility": "N/A_TEMPLATE"
+      },
+      "normative_authority_ids": [],
+      "provenance_status": "PASS"
     }
   ],
   "service_traceability": [
