@@ -14,6 +14,22 @@
 
 ---
 
+## 0. Stage-1 generic framework freeze
+
+```math
+\boxed{G_1^{\rm framework}=\mathrm{PASS\ —\ FROZEN}}
+```
+
+The generic Stage-1 evidence/ontology, mathematical, data-contract, schema and verification architecture is frozen under `thesis/00_governance/STAGE1_FRAMEWORK_FREEZE_2026-09-18.md`.
+
+This does **not** promote the Austin candidate or any other case:
+
+```math
+G_1^{\rm framework}\neq G_1^{\rm case}(c).
+```
+
+Austin materialization/crosswalk/QC gates remain independently OPEN/BLOCKED as recorded below. Stage-2 work must consume the frozen Stage-1 relation object and may not redefine Stage-1 ontology.
+
 ## 1. Canonical scientific architecture
 
 ```math
