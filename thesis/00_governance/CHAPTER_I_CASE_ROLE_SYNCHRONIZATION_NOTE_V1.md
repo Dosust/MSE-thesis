@@ -1,5 +1,12 @@
 # Chapter-I Case-Role Synchronization Note V1
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+>
+> The official frozen Chapter I dated 2026-09-20 no longer names Austin or Greensboro as the present case-study implementation in Section 1.6. This note's original premise is therefore obsolete.
+>
+> Current case roles are governed by `project/reality_evidence/01_cases/CASE_ROLE_AUTHORITY_V1.md`. Current Chapter-I authority is `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md` with freeze `CHAPTER_I_FREEZE_2026-09-20.md`.
+
+
 **Date:** 2026-09-19  
 **Status:** CONTROLLED INTERPRETATION NOTE — DOES NOT MODIFY THE FROZEN CHAPTER-I BASELINE  
 **Applies to:** `thesis/01_introduction/01_06_scope_boundaries_and_assumptions.md`
