@@ -12,7 +12,7 @@
 
 **Framework label:** Stage 6 — Resilience-to-Sustainability Transformation Interface  
 **Formal Stage-6 specification:** Resilience-to-Sustainability Transition  
-**Status:** CANONICAL / FROZEN  
+**Status:** HISTORICAL / PROVENANCE — ACTIVE STAGE-6 SCOPE SUPERSEDED BY v2.1 + project/stage6  
 **Frozen:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Citation standard:** APA 7th edition author–date  
