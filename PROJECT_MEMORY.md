@@ -2,7 +2,8 @@
 
 > **Current scientific authorities (2026-09-17):**  
 > Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-> RQ–SO–H: `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+> Research questions: `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
+> SO/H wording and test logic: `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 > Chapter I: `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
 > Writing/inference: `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
