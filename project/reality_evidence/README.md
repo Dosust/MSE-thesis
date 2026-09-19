@@ -6,33 +6,33 @@
 **Purpose:** prevent synthetic, proxy, regional, external, or assumed quantities from being silently relabeled as case-matched observed reality.
 
 ```math
-\boxed{
-\mathcal R_{\rm world}
-\;\parallel\;
-S_1\rightarrow S_2\rightarrow S_3\rightarrow S_4\rightarrow S_5\rightarrow S_6\rightarrow S_7
+oxed{
+mathcal R_{m world}
+;parallel;
+S_1ightarrow S_2ightarrow S_3ightarrow S_4ightarrow S_5ightarrow S_6ightarrow S_7
 }
 ```
 
 This is **not an eighth thesis stage**. It is a cross-cutting evidence axis that answers:
 
 ```math
-\boxed{\text{What observable reality makes this scientific object credible?}}
+oxed{	ext{What observable reality makes this scientific object credible?}}
 ```
 
 ## Core real-world evidence object
 
 ```math
-\mathfrak R_{\rm evidence}
+mathfrak R_{m evidence}
 =
 (
-\mathcal R_P,
-\mathcal R_T,
-\mathcal R_{EV},
-\mathcal R_H,
-\mathcal R_I,
-\mathcal R_O,
-\mathcal R_S,
-\mathcal R_A
+mathcal R_P,
+mathcal R_T,
+mathcal R_{EV},
+mathcal R_H,
+mathcal R_I,
+mathcal R_O,
+mathcal R_S,
+mathcal R_A
 )
 ```
 
@@ -41,20 +41,20 @@ with evidence for Power, Transportation, EV/P–T interfaces, hazards, informati
 ## Scientific chain
 
 ```math
-\boxed{
-\text{source}
-\rightarrow
-\text{raw datum}
-\rightarrow
-\text{canonical datum}
-\rightarrow
-\text{model object}
-\rightarrow
-\text{experiment}
-\rightarrow
-\text{result}
-\rightarrow
-\text{claim}
+oxed{
+	ext{source}
+ightarrow
+	ext{raw datum}
+ightarrow
+	ext{canonical datum}
+ightarrow
+	ext{model object}
+ightarrow
+	ext{experiment}
+ightarrow
+	ext{result}
+ightarrow
+	ext{claim}
 }
 ```
 
@@ -68,6 +68,26 @@ Every datum must be classified by:
 7. calibration/validation use;
 8. claim supported and claim not supported.
 
+## Frozen case roles
+
+```math
+oxed{
+C_{DEV}^{Greensboro}
+
+eq
+C_{EXT}^{Austin}
+
+eq
+C_{CONF}^{AUS-P5U-2018-V1}
+}
+```
+
+- `C_DEV`: Greensboro/GreenEVT/SMART-DS — development/benchmark/realistic-synthetic.
+- `C_EXT`: Austin operational reality — external event/operational/organizational evidence.
+- `C_CONF`: `AUS-P5U-2018-V1` — candidate confirmatory integrated case; **NOT YET ADMISSIBLE**.
+
+The Austin 2025 microburst is `C_EXT`, not case-matched validation of the Austin 2018 candidate.
+
 ## Active files
 
 - `00_governance/REAL_WORLD_OPERATIONAL_EVIDENCE_PLAN_V1.md`
@@ -75,6 +95,7 @@ Every datum must be classified by:
 - `00_governance/REAL_DATA_ADMISSIBILITY_GATES_V1.md`
 - `00_governance/DATA_USE_AND_CLAIM_FIREWALL_V1.md`
 - `01_cases/CASE_ROLE_AUTHORITY_V1.md`
+- `01_cases/CASE_ROLE_SYNCHRONIZATION_AND_FREEZE_V1.md`
 - `02_source_catalog/AUTHORITATIVE_SOURCE_CATALOG_V1.md`
 - `03_manifests/REALITY_EVIDENCE_REGISTER_V1.csv`
 - `03_manifests/DATA_ACQUISITION_PRIORITY_V1.csv`
@@ -85,23 +106,28 @@ Every datum must be classified by:
 ## Permanent guardrails
 
 ```math
-\boxed{\text{plausible} \neq \text{empirical}}
+oxed{	ext{plausible} 
+eq 	ext{empirical}}
 ```
 
 ```math
-\boxed{\text{official} \neq \text{case-matched}}
+oxed{	ext{official} 
+eq 	ext{case-matched}}
 ```
 
 ```math
-\boxed{\text{regional operation} \neq \text{feeder state}}
+oxed{	ext{regional operation} 
+eq 	ext{feeder state}}
 ```
 
 ```math
-\boxed{\text{realistic synthetic} \neq \text{observed infrastructure}}
+oxed{	ext{realistic synthetic} 
+eq 	ext{observed infrastructure}}
 ```
 
 ```math
-\boxed{\text{calibration evidence} \neq \text{independent validation evidence}}
+oxed{	ext{calibration evidence} 
+eq 	ext{independent validation evidence}}
 ```
 
 No missing operational datum may be silently imputed into a confirmatory experiment.

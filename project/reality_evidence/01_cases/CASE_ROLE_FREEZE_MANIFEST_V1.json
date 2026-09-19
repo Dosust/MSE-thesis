@@ -1,0 +1,25 @@
+{
+  "title": "Case Role Freeze Manifest V1",
+  "effective_date": "2026-09-19",
+  "parent_commit": "02263553d87058ce240e2882e58965e3d92b9819",
+  "scientific_effect": "case-role synchronization only; no empirical gate changed",
+  "frozen_case_roles": {
+    "C_DEV": "C_DEV_GREENSBORO_GREENEVT_V1",
+    "C_EXT": "C_EXT_AUSTIN_OPERATIONAL_V1",
+    "C_CONF": "C_CONF_AUS_P5U_2018_V1"
+  },
+  "files": {
+    "project/reality_evidence/01_cases/CASE_ROLE_AUTHORITY_V1.md": "85db99cd7631614ed205fd3427ba26bdbea52e99",
+    "project/reality_evidence/01_cases/CASE_ROLE_SYNCHRONIZATION_AND_FREEZE_V1.md": "18901cf8d21da3de26b0522e0280b95037c215ba",
+    "thesis/00_governance/CHAPTER_I_CASE_ROLE_SYNCHRONIZATION_NOTE_V1.md": "63a0f7d9f1f108a7d88ad8717a4c343a28081218",
+    "project/reality_evidence/06_event_replay/AUSTIN_MICROBURST_2025/README.md": "e900e2ca6ed5aca15e9f4c41009bafde7d82b59d",
+    "project/reality_evidence/03_manifests/DATA_ACQUISITION_PRIORITY_V1.csv": "1204e7cb74e2e76c5159c8f70ad6bc8be9e40ae2",
+    "project/reality_evidence/README.md": "d9aa7e37f47c943f16d1673bb67d2b0177722a78"
+  },
+  "gates": {
+    "G_CASE_ROLE": "PASS",
+    "G_AUS": "NOT_CLOSED",
+    "G_STAGE3_CASE": "NOT_CLOSED",
+    "G_CONFIRMATORY_EXECUTION": "NOT_AUTHORIZED"
+  }
+}
