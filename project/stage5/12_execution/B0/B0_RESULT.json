@@ -1,0 +1,54 @@
+{
+  "status": "B0_EXECUTED_PASS_NUMERICAL_VERIFICATION",
+  "claim_ceiling": "mathematical/numerical verification only; not infrastructure validation",
+  "model": {
+    "equations": "dx_i/dt = a_i x_i + u_i, |u_i|<=U_i",
+    "safe_set": "K=[-L1,L1]x[-L2,L2]",
+    "recovery_target": "G=[-r1,r1]x[-r2,r2]",
+    "horizon_h": 1.0,
+    "dimensions": [
+      {"name":"x1","a":1.0,"U":0.6,"L":1.0,"r":0.1},
+      {"name":"x2","a":0.8,"U":0.5,"L":1.0,"r":0.1}
+    ]
+  },
+  "analytic_reference": {
+    "V_halfwidths": [0.7471517764685769,0.7934983615439581],
+    "R_halfwidths": [0.4160602794142788,0.3891022938384587],
+    "formula_V": "c+(L-c)exp(-aT), c=U/a",
+    "formula_R": "c-(c-r)exp(-aT), c=U/a"
+  },
+  "finest_euler": {
+    "dt_h": 0.00625,
+    "N_steps": 160,
+    "V_bound_x1": 0.747610431974991,
+    "V_bound_x2": 0.793834574125061,
+    "R_bound_x1": 0.4154869600312519,
+    "R_bound_x2": 0.38863159622493837,
+    "V_max_coordinate_error": 0.00045865550641410735,
+    "R_max_coordinate_error": 0.0005733193830269045,
+    "V_Hausdorff": 0.0005686860058554383,
+    "R_Hausdorff": 0.0007417892951020968,
+    "V_symmetric_difference_area": 0.0024611937033860443,
+    "R_symmetric_difference_area": 0.0016745944302933857,
+    "V_Hausdorff_observed_order": 0.9963985371343583,
+    "R_Hausdorff_observed_order": 0.9964190720912083,
+    "V_symmetric_difference_area_observed_order": 0.9967810361159816,
+    "R_symmetric_difference_area_observed_order": 0.995518416749303
+  },
+  "observed_order_last3": {
+    "V_Hausdorff": 0.9916833738061018,
+    "R_Hausdorff": 0.9917303119567876,
+    "V_symmetric_difference_area": 0.9925620027256915,
+    "R_symmetric_difference_area": 0.9896544717484638
+  },
+  "pass_logic": {
+    "expected_method_order": "explicit Euler is first-order in time",
+    "required_behavior": "set errors decrease under refinement and observed order tends to 1",
+    "result": "PASS"
+  },
+  "grid_refinement": {
+    "method": "cell-center rasterization of exact reference rectangles",
+    "interpretation": "set error shrinks with spatial refinement but quantization is non-monotone at individual levels; use envelope/resolution bound, not a fitted single-step rate",
+    "geometric_resolution_bound": "For square cells of width h, boundary localization uncertainty is O(h); Euclidean cell half-diagonal = h/sqrt(2)."
+  }
+}
