@@ -9,11 +9,11 @@
 > Do not execute new H4/H5 searches from the old query families below without a versioned v2 search protocol aligned to `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
 
 
-![Status](https://img.shields.io/badge/status-CURRENT%20SEARCH%20GOVERNANCE-0969DA)
+![Status](https://img.shields.io/badge/status-METHOD%20PROVENANCE%20%7C%20H4--H5%20MAPPING%20SUPERSEDED-9A6700)
 ![Search](https://img.shields.io/badge/evidence%20search-FROM%20ZERO-1A7F37)
 ![Old Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20COVERAGE%20CHECK-9A6700)
 
-**Status:** CURRENT SEARCH GOVERNANCE  
+**Status:** METHODOLOGICAL PROVENANCE — H4/H5 MAPPING SUPERSEDED; VERSIONED V2 REQUIRED BEFORE NEW H4/H5 SEARCH  
 **Purpose:** establish a new reproducible evidence base for $H_1$–$H_5$ and the P–T–I–O demonstrator from first principles  
 **Primary rule:** previously known papers, memory, prior rankings, and the frozen 325-paper corpus do **not** determine inclusion  
 **Old-corpus role:** secondary coverage audit only, after the fresh search and eligibility process  
