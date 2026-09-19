@@ -8,7 +8,7 @@
 
 
 **Date:** 2026-09-16  
-**Status:** CURRENT WORKING INDEX  
+**Status:** NEEDS VERSIONED REFRESH — PRIOR-ART INDEX REMAINS PROVENANCE/SUPPORT  
 **Authority note:** this index does not override canonical framework, dependency, hypothesis or preregistration files.
 
 ## Current scientific state
