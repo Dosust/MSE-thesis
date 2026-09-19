@@ -10,7 +10,7 @@
 **User authorization:** Explicitly authorized in conversation on 2026-09-20.  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 **Prior RQ authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Supersession rule:** This file supersedes v3.0 **only for the exact wording and titles of RQ0 and RQ1–RQ7**. Until separately amended, `CANONICAL_RQ_SO_HYPOTHESES_V3.md` remains authoritative for SO1–SO7 and H1–H5 wording and test logic. No hypothesis, threshold, dataset, validation gate, or confirmatory metric is changed by this RQ-only authority update.
+**Supersession rule:** This file supersedes v3.0 **only for the exact wording and titles of RQ0 and RQ1–RQ7**. `CANONICAL_RQ_SO_HYPOTHESES_V4.md` is authoritative for SO1–SO7 and H1–H5 wording and test logic. No hypothesis, threshold, dataset, validation gate, or confirmatory metric is changed by this RQ-only authority update.
 
 ---
 

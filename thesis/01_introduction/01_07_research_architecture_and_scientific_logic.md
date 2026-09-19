@@ -1,247 +1,30 @@
-# 1.7 Research Framework and Logic
+## 1.7 Research Framework and Scientific Logic
 
-Section 1.6 defined the validity domain of the study. Within that domain, Section 1.7 provides the **reader-facing architecture** that connects critical-service requirements, scientific objects, stage outputs, acceptance gates, and engineering decisions. It does not reproduce the physical Power–Transportation system as a literal seven-step process, and it does not duplicate the detailed mathematics or experiments of Chapters 3 and 4.
+Within the bounded domain established in Section 1.6, the thesis uses a seven-stage scientific architecture. The architecture is a **thesis synthesis**, not an established seven-stage framework taken directly from the literature.
 
-The framework preserves two complementary views:
-
-```math
-\boxed{
-\text{System of Systems}=\text{architecture},
-\qquad
-\text{complex dynamical system}=\text{behavior}.
-}
-```
-
-The physical core remains (P+T), with Information and Organization represented as supporting domains that affect observation, interpretation, coordination, resources, authority, and feasible action. Critical-service requirements are an **input to the framework**, not an additional research stage.
-
-The canonical scientific progression is
+It begins with required electricity and mobility services and progresses through structure, causal qualification, dynamics, knowledge and action, resilience, intervention consequences, and decision:
 
 ```math
-\boxed{
-\begin{aligned}
-\text{Critical Service Requirements}
-&\rightarrow
-\text{Spatiotemporal Multilayer System-of-Systems Structure}\\
-&\rightarrow
-\text{Evidence-Grounded Causal Interdependencies}\\
-&\rightarrow
-\text{Physics-Based Hybrid Multiscale Dynamics}\\
-&\rightarrow
-\text{Observation, State Estimation, Organization and Control}\\
-&\rightarrow
-\text{Uncertainty-Aware Viability and Reachability Resilience}\\
-&\rightarrow
-\text{Resilience Diagnosis, Engineering Intervention and Sustainability Consequences}\\
-&\rightarrow
-\text{Engineering Decision and Adaptive Transformation}.
-\end{aligned}}
+\boxed{ \begin{aligned} \text{Critical service requirements} &\rightarrow \text{Spatiotemporal P--T System-of-Systems structure}\\ &\rightarrow \text{Evidence-qualified directional dependencies}\\ &\rightarrow \text{Complex spatiotemporal coupled dynamics}\\ &\rightarrow \text{Spatiotemporal observation, estimation, organization and feasible control}\\ &\rightarrow \text{Uncertainty-aware spatiotemporal viability and recovery}\\ &\rightarrow \text{Spatially and temporally targeted intervention, resources and sustainability consequences}\\ &\rightarrow \text{Defensible engineering decision}. \end{aligned} }
 ```
 
-This order expresses **scientific dependency**, not irreversible chronology. Later evidence may require controlled revision of an earlier representation.
+The architecture is compatible with the service-centered System-of-Systems interpretation developed by Hall et al. (2016) and the separate-but-coupled treatment of energy and transportation used by Ibáñez et al. (2010), but the seven-stage integration itself is a proposed thesis construct.
 
-## 1.7.1 Analytical foundation and stage contract
+**Stage 1** determines what systems, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces constitute the bounded Power–Transportation System of Systems. It is structural rather than causal.
 
-Systems thinking motivates the progression from visible events toward the structures, mechanisms, and rules that generate them:
+**Stage 2** determines which candidate relations can be accepted as evidence-qualified directional mechanisms, where and when they activate, and under what operating, hazard, delay, timescale, uncertainty, and validity conditions. Causal acceptance does not automatically establish that a mechanism is numerically ready for simulation.
 
-```math
-\boxed{
-\text{Event}
-\rightarrow
-\text{Pattern}
-\rightarrow
-\text{Structure}
-\rightarrow
-\text{Mechanism / Rule}.
-}
-```
+**Stage 3** introduces dynamically ready mechanisms into the native physical representations of Power and Transportation and determines how their effects evolve and propagate across space and time. The purpose is to determine whether dynamic coupling provides meaningful information beyond simpler matched representations.
 
-Systems engineering supplies the complementary discipline of moving from service needs to requirements, architecture, interfaces, verification obligations, design alternatives, and decisions. The thesis therefore keeps architectural, dynamical, observation/control, and performance/decision viewpoints distinct.
+**Stage 4** connects the evolving spatiotemporal physical state to distributed observation, estimation, organizational conditions, and feasible control. It distinguishes what physically exists from what can be known and what can actually be done.
 
-Each research stage is represented by the compact scientific contract
+**Stage 5** asks where and when required services can remain acceptable, whether they can be recovered after violation, and how uncertainty affects those conclusions. Viability theory provides a formal basis for remain-within-acceptable-set reasoning, while recovery reachability addresses return after service violation (Béné & Doyen, 2018). Conventional performance and recovery measures remain comparators rather than being discarded (Poulin & Kane, 2021).
 
-```math
-\boxed{
-\Gamma_k
-=
-\left(
-RQ_k,,
-I_k,,
-\Phi_k,,
-Z_k,,
-A_k,,
-\Xi_k
-\right),
-}
-```
+**Stage 6** uses resilience diagnosis to **inform the identification and comparison** of candidate engineering interventions, including their location, timing, and scale where relevant. Resilience effect, resource requirements, resource efficiency, and admitted sustainability consequences remain separate.
 
-where (RQ_k) is the canonical research-question identifier, (I_k) the qualified inputs, (Phi_k) the stage transformation, (Z_k) the output, (A_k) the declared assumptions and constraints, and (Xi_k) the credibility obligation. The exact wording of RQ1–RQ7 is preserved in Section 1.9 and is not replaced here by alternative questions.
+**Stage 7** evaluates which candidate intervention or transformation, including its location, timing, and scale where relevant, remains defensible under requirements, feasibility, uncertainty, resilience evidence, resource requirements, and admitted sustainability consequences. Sequential adaptation remains conditional rather than assumed.
 
-## 1.7.2 Seven-stage specification
+Identification, verification, validation, uncertainty quantification, provenance, and reproducibility operate across the seven stages. They are scientific controls rather than an eighth stage.
 
-The seven rows below define the Chapter-I scientific specification. Detailed equations, algorithms, parameterizations, and confirmatory test designs are deferred to Chapters 3 and 4.
+---
 
-| Stage | RQ | Scientific function | Principal output | Minimum credibility / handoff obligation |
-|---|---|---|---|---|
-| **1. Spatiotemporal Multilayer System-of-Systems Structure** | RQ1 | Define the bounded (P\!-!T\!-!I\!-!O) architecture, locations, states, services, and candidate interfaces | ((\mathcal S,\mathcal G,X,Y)) | Boundary consistency, provenance, topology checks, spatial/temporal compatibility |
-| **2. Evidence-Grounded Causal Interdependencies** | RQ2 | Qualify directional source–mechanism–receiver relations and their activation/validity conditions | (\mathbb I(x,t,Y,m)=\{\mathfrak d_e\}) | Mechanism evidence, directionality, activation conditions, uncertainty and validity domain |
-| **3. Physics-Based Hybrid Multiscale Dynamics** | RQ3 | Translate accepted mechanisms into coupled state-, time-, hazard-, and mode-dependent behavior | (F_{\mathcal G}^{m}), (Y(x,t)), (Q(x,t)) | Dimensional/limiting checks, numerical verification, comparator consistency and available physical validation |
-| **4. Observation, State Estimation, Organization and Control** | RQ4 | Connect physical state to what can be observed, inferred, authorized, coordinated, and executed | ((\widehat Y_t,p(Y_t\mid\mathcal I_t),\mathcal U_t,u_t)) | Observation/estimation adequacy, explicit information/organization assumptions, feasible-control consistency |
-| **5. Uncertainty-Aware Viability and Reachability Resilience** | RQ5 | Determine **remain + return + confidence** under feasible controls and uncertainty | (\mathfrak R_T) | Service set (K(t)), feasible controls, viability/reachability computation, UQ, and comparison with conventional performance/recovery information |
-| **6. Resilience Diagnosis, Engineering Intervention and Sustainability Consequences** | RQ6 | Convert resilience diagnosis into candidate interventions, quantify effectiveness/resource/sustainability consequences, and derive sustainability requirements within declared boundaries | (\mathcal D_R), (\mathcal C(a_k)), derived sustainability requirements | Preserve effectiveness (\neq) efficiency (\neq) sustainability; qualify accounting boundaries, metric admission, feasibility and uncertainty |
-| **7. Engineering Decision and Adaptive Transformation** | RQ7 | Compare defensible transformations and, where separately justified, intervention sequences | (\mathcal A_{R,S}^{\star}) and conditional transformation sequence | Feasibility, dominance/robustness, uncertainty sensitivity, and no unsupported scalar aggregation |
-
-Stage 5 therefore preserves the canonical resilience interpretation
-
-```math
-\boxed{
-\textbf{Resilience}
-=
-\underbrace{\text{remain}}_{\text{viability}}
-+
-\underbrace{\text{return}}_{\text{reachability}}
-+
-\underbrace{\text{confidence}}_{\text{probability}},
-}
-```
-
-where the plus signs indicate conceptual composition rather than numerical addition. Stage 6 preserves
-
-```math
-\boxed{
-u(t)=\text{operate the existing system},
-\qquad
-a_k=\text{change the system},
-}
-```
-
-and the intervention-performance distinction
-
-```math
-\boxed{
-\text{effectiveness}
-\neq
-\text{resource efficiency}
-\neq
-\text{sustainability}.
-}
-```
-
-## 1.7.3 Cross-cutting scientific control
-
-The seven stages specify **what the thesis investigates**. Scientific-control practices specify **how claims are allowed to become defensible**. Systems engineering, evidence qualification, experimental design, verification, validation, uncertainty quantification, statistical inference, and reproducibility therefore act across the architecture rather than as an eighth stage:
-
-```math
-\boxed{
-\text{Stages }1\text{--}7
-\subset
-\text{scientific control + V\&V + UQ + reproducibility}.
-}
-```
-
-Verification, validation, and uncertainty quantification remain distinct:
-
-```math
-\boxed{
-\text{verification}
-\neq
-\text{validation}
-\neq
-\text{uncertainty quantification}.
-}
-```
-
-Hypothesis-bearing stages use controlled comparators and non-support criteria defined in Section 1.11 and operationalized in Chapter 4. RQ1 and RQ2 instead carry developmental and evidence-qualification obligations supporting H1; the thesis therefore does not invent additional hypotheses merely to make the number of hypotheses equal the number of research questions.
-
-## 1.7.4 Scientific handoffs, traceability, and controlled iteration
-
-A stage output is authorized for downstream use only after its acceptance gate is evaluated. Let
-
-```math
-\boxed{
-s_k
-=
-\operatorname{Gate}_k
-\left(
-Z_k,E_k;\Lambda_k
-\right)
-\in
-\{
-\mathrm{PASS},
-\mathrm{FAIL},
-\mathrm{BLOCKED}
-\},
-}
-```
-
-where (E_k) denotes the evidence supporting (Z_k) and (\Lambda_k) the declared acceptance criteria. Forward progression requires
-
-```math
-\boxed{
-s_k=\mathrm{PASS}
-\quad\Rightarrow\quad
-Z_k\rightarrow I_{k+1}.
-}
-```
-
-The three gate states have different meanings:
-
-```math
-\boxed{
-\begin{aligned}
-\mathrm{PASS} &: \text{required acceptance evidence is satisfied},\\
-\mathrm{FAIL} &: \text{a required criterion is demonstrably violated},\\
-\mathrm{BLOCKED} &: \text{required evidence or a prerequisite is unavailable}.
-\end{aligned}}
-```
-
-Hence,
-
-```math
-\boxed{\mathrm{BLOCKED}\neq\mathrm{FAIL}.}
-```
-
-A FAIL triggers diagnosis, revision of the earliest scientifically implicated object, and re-execution of affected downstream stages. A BLOCKED state triggers acquisition or qualification of the missing evidence or prerequisite and subsequent re-gating; it is not evidence that the model or hypothesis is false.
-
-Traceability is maintained bidirectionally:
-
-```math
-\boxed{
-G
-\leftrightarrow
-RQ
-\leftrightarrow
-SO
-\leftrightarrow
-(H/\text{obligation})
-\leftrightarrow
-M
-\leftrightarrow
-T
-\leftrightarrow
-R
-\leftrightarrow
-C.
-}
-```
-
-This chain links evidence-supported gaps to questions, objectives, hypotheses or developmental obligations, models, tests, results, and bounded conclusions. Material revision of an accepted upstream object requires reevaluation of dependent downstream claims.
-
-The two Chapter-I figures therefore have deliberately different roles:
-
-```math
-\boxed{
-\text{Figure 1.X}
-=
-\text{what the seven-stage research architecture is},
-}
-```
-
-```math
-\boxed{
-\text{Figure 1.Y}
-=
-\text{how evidence is accepted, rejected, blocked, traced, and iterated through it}.
-}
-```
-
-Section 1.7 thus closes the framework portion of the Chapter-I research contract without importing the full mathematical derivations or experiment specifications of later chapters. Section 1.8 next states the single overarching research objective consistent with RQ0 and this seven-stage architecture.

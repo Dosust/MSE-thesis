@@ -1,80 +1,26 @@
-# 1.10 Specific Research Objectives
+## 1.10 Specific Research Objectives
 
-The specific research objectives operationalize the general objective in Section 1.8 and pair one-to-one with the research questions in Section 1.9. The wording below is reproduced from \`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md\` without modification.
+The objectives mirror the research questions one-to-one.
 
-## SO1 — System structure
+**SO1.** Define the bounded Power–Transportation System of Systems in terms of constituent systems, supporting Information and Organization domains, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces.
 
-> **Define the coupled Power–Transportation system boundary, entities, layers, locations, interfaces, states and service requirements, with Information and Organization as supporting domains.**
+**SO2.** Qualify candidate Power–Transportation relations as directional dependency mechanisms by establishing their mechanism, direction, spatial and temporal activation conditions, operating and hazard conditions, delays, characteristic timescales, evidence basis, uncertainty, and validity boundaries.
 
-**Paired question:** RQ1  
-**Evidence/test obligation:** Developmental verification supporting H1.
+**SO3.** Develop and verify a physics-based complex spatiotemporal coupled dynamic representation and test the incremental explanatory or predictive information provided by dynamically ready coupling relative to independent and static-coupling representations.
 
-## SO2 — Causal mechanisms
+**SO4.** Evaluate how spatially and temporally distributed measurement, state estimation, information availability, organizational conditions, and feasible control affect response timing, electricity and mobility service trajectories, and recovery.
 
-> **Establish evidence-supported directional causal mechanisms, activation conditions, parameters, uncertainties and validity boundaries linking components and layers.**
+**SO5.** Determine uncertainty-aware spatiotemporal service viability and recovery reachability, evaluate their incremental information beyond conventional service and recovery representations, and characterize interface criticality where the required evidence permits.
 
-**Paired question:** RQ2  
-**Evidence/test obligation:** Mechanism/evidence qualification supporting H1.
+**SO6.** Quantify and compare candidate engineering interventions, including their type, location, timing, and scale where relevant, in terms of resilience effectiveness, resource requirements and efficiency, and admitted sustainability consequences within independently justified requirements and declared accounting boundaries.
 
-## SO3 — Hybrid dynamics
+**SO7.** Evaluate candidate interventions or infrastructure transformations, including their location, timing, and scale where relevant, jointly in terms of resilience, resource efficiency, admitted sustainability consequences, feasibility, and uncertainty; evaluate intervention sequences only where temporal decision structure, data, and validation support them.
 
-> **Develop and verify a physics-based hybrid multiscale dynamic model and test its incremental explanatory or predictive value against independent and static-coupling representations.**
-
-**Paired question:** RQ3  
-**Evidence/test obligation:** H1.
-
-## SO4 — Observation, organization and control
-
-> **Evaluate how observation, state estimation, information availability, organizational constraints and feasible control affect response timing, service trajectories and recovery.**
-
-**Paired question:** RQ4  
-**Evidence/test obligation:** H2.
-
-## SO5 — Viability, reachability and interface diagnostics
-
-> **Determine uncertainty-aware service viability and recovery reachability, evaluate incremental value beyond conventional performance/recovery curves, and characterize interface criticality as a supporting diagnostic.**
-
-**Paired question:** RQ5  
-**Evidence/test obligation:** H3; interface criticality remains a separately qualified supporting diagnostic.
-
-## SO6 — Sustainability requirements and intervention consequences
-
-> **Derive evidence-qualified sustainability requirements from resilience diagnosis and intervention consequences, distinguishing effectiveness, resource efficiency, accessibility, energy, carbon and cost within declared accounting boundaries.**
-
-**Paired question:** RQ6  
-**Evidence/test obligation:** H4; sustainability-requirements derivation remains subject to declared accounting boundaries.
-
-## SO7 — Engineering decision and transformation
-
-> **Evaluate candidate infrastructure transformations and, where justified, intervention sequences using effectiveness, efficiency, sustainability, feasibility and uncertainty to support engineering decisions.**
-
-**Paired question:** RQ7  
-**Evidence/test obligation:** H5, using H4 intervention-performance evidence where admissible.
-
-The required one-to-one correspondence is
+The required traceability is
 
 ```math
-\boxed{
-RQ_k \Longleftrightarrow SO_k,
-\qquad k=1,\ldots,7
-}.
+\boxed{RQ_k\Longleftrightarrow SO_k,\qquad k=1,\ldots,7.}
 ```
 
-The corresponding evidence/test mapping is
+---
 
-```math
-\boxed{
-\begin{aligned}
-RQ_1/SO_1,\;RQ_2/SO_2
-&\rightarrow
-\text{developmental/evidence obligations supporting }H_1,\\
-RQ_3/SO_3 &\rightarrow H_1,\\
-RQ_4/SO_4 &\rightarrow H_2,\\
-RQ_5/SO_5 &\rightarrow H_3,\\
-RQ_6/SO_6 &\rightarrow H_4,\\
-RQ_7/SO_7 &\rightarrow H_5.
-\end{aligned}
-}
-```
-
-Thus seven specific objectives do not imply seven hypotheses. SO1–SO2 establish qualified structure and causal-mechanism evidence; SO3–SO7 carry the five primary hypothesis-bearing comparisons stated in Section 1.11.

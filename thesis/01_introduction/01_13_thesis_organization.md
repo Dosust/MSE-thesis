@@ -1,57 +1,21 @@
-# 1.13 Thesis Organization
+## 1.13 Thesis Organization
 
-The thesis is organized as a seven-chapter scientific argument:
+Chapter 2 establishes the literature and scientific foundations required by the research questions. It distinguishes established evidence from unresolved handoffs and provides the evidence base for the thesis definitions, mechanisms, comparators, and bounded research gap.
 
-```math
-\boxed{
-\text{Research Contract}
-\rightarrow
-\text{Evidence/Theory}
-\rightarrow
-\text{Framework}
-\rightarrow
-\text{Methods/Tests}
-\rightarrow
-\text{Results}
-\rightarrow
-\text{Interpretation}
-\rightarrow
-\text{Closure}.
-}
-```
+Chapter 3 formalizes the conceptual and mathematical framework. It defines the spatiotemporal Power–Transportation System-of-Systems architecture, dependency representation, complex spatiotemporal coupled dynamics, observation and estimation, feasible-control structure, viability and recovery reachability, intervention consequences, and decision objects.
 
-**Chapter 1 — Introduction** establishes the research contract: engineering context, problem, evidence-qualified gaps, scope, seven-stage research architecture, general objective, RQ0/RQ1–RQ7, SO1–SO7, H1–H5, and proposed contributions.
+Chapter 4 specifies the research methodology and experimental design. It establishes source and data qualification, case admissibility, spatial and temporal alignment, measurement models, identification, estimator admission, model verification, scenario design, matched experiments, validation, uncertainty quantification, sensitivity analysis, falsification rules, and reproducibility.
 
-**Chapter 2 — Literature Review and Theoretical Foundations** establishes the qualified evidence, operational definitions, theoretical foundations, and mechanism support required by the framework and experiments.
+Chapter 5 reports the qualified results, including prerequisite case and model results before the confirmatory H1–H5 findings. Each result is reported with its comparator, uncertainty, decision or materiality criterion, and validity domain.
 
-**Chapter 3 — Conceptual and Mathematical Framework** formalizes the system ontology, multilayer structure, causal interdependencies, hybrid dynamics, observation/organization/control architecture, Stage-5 resilience object, intervention-consequence mapping, and engineering-decision formulation.
+Chapter 6 interprets those results in relation to mechanisms, assumptions, rival explanations, prior literature, resource requirements, sustainability consequences, engineering decisions, transferability, and remaining uncertainty.
 
-**Chapter 4 — Methodology and Experimental Design** specifies data and case qualification, comparators, treatments, experiments, verification, validation, uncertainty quantification, sensitivity analysis, preregistration, practical-significance criteria, and falsification/non-support rules.
+Chapter 7 answers the research questions at the level supported by the completed evidence, records the final hypothesis statuses, identifies supported contributions, states the validity limits of the research, and defines the unresolved research agenda.
 
-**Chapter 5 — Results** reports the declared experimental and computational outputs with their uncertainty, comparator, and decision criteria, without extending claims beyond the validated domain.
-
-**Chapter 6 — Discussion** interprets those results against mechanisms, assumptions, rival explanations, prior evidence, sustainable-engineering consequences, limitations, and transferability.
-
-**Chapter 7 — Conclusions and Future Work** answers RQ0/RQ1–RQ7 at the strength justified by the evidence, records H1–H5 status, identifies supported contributions and validity limits, and separates resolved findings from the remaining research agenda.
-
-The dependency of the argument is therefore
+The manuscript therefore follows one end-to-end argument:
 
 ```math
-\boxed{
-\mathrm{Ch}_1
-\rightarrow
-\mathrm{Ch}_2
-\rightarrow
-\mathrm{Ch}_3
-\rightarrow
-\mathrm{Ch}_4
-\rightarrow
-\mathrm{Ch}_5
-\rightarrow
-\mathrm{Ch}_6
-\rightarrow
-\mathrm{Ch}_7.
-}
+\boxed{ \text{Problem} \rightarrow \text{Evidence} \rightarrow \text{Framework} \rightarrow \text{Qualified Method} \rightarrow \text{Results} \rightarrow \text{Interpretation} \rightarrow \text{Engineering Conclusion}. }
 ```
 
-The arrows denote scientific dependency, not chronological independence of research activities. Material changes to upstream evidence, assumptions, models, or validity boundaries require reevaluation of affected downstream claims. This closes Chapter 1 subject to the Chapter-I exit-gate audit.
+---

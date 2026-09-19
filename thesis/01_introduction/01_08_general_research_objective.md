@@ -1,9 +1,10 @@
-# 1.8 General Research Objective
+## 1.8 General Research Objective
 
-Sections 1.1–1.7 establish the engineering context, bounded research problem, evidence-qualified gaps, validity domain, and seven-stage research architecture. Within that research contract, the **general objective** of this thesis is:
+The general objective of this thesis is:
 
-> **To develop and validate an evidence-grounded mathematical and engineering framework for coupled Power–Transportation infrastructure that links multilayer structure, causal interdependencies, hybrid dynamics, information and organizational control, controlled viability, intervention effectiveness and efficiency, sustainability requirements, and infrastructure transformation under uncertainty.**
+> **To develop and validate an evidence-grounded mathematical and engineering framework for coupled Power–Transportation infrastructure that connects spatiotemporal System-of-Systems structure and qualified directional interdependencies to complex spatiotemporal dynamics, observation, information and organizational constraints, feasible control, uncertainty-aware service viability and recovery, engineering intervention consequences, and defensible engineering decisions. Engineering interventions are evaluated through their resilience effects, resource requirements and efficiency, and admitted sustainability consequences.**
 
-This objective states the research endpoint rather than a list of computational methods. Achieving it requires a framework that can represent and qualify coupled structure and causal mechanisms, model their spatiotemporal behavior under observation, organizational, and control constraints, assess whether critical services can remain acceptable or recover under feasible controls and uncertainty, and connect resilience diagnosis to intervention consequences, sustainability requirements, and defensible engineering transformation. In this objective, **controlled viability** is interpreted within the broader Stage-5 resilience object as **viability, recovery reachability, and probability/confidence**, rather than viability alone.
+Validation is interpreted within the declared context and validity domain of the corresponding model, experiment, and evidence rather than as universal validation of the framework.
 
-The objective is bounded to the physical **Power–Transportation** core, with **Information and Organization** as supporting domains, and to the declared hazards, controls, uncertainties, intervention classes, and sustainability-accounting boundaries defined in Section 1.6. The overarching research question (RQ_0) is the interrogative counterpart of this objective; Section 1.9 decomposes it into the exact canonical research questions (RQ_1)–(RQ_7).
+---
+

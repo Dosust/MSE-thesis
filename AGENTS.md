@@ -4,7 +4,7 @@
 
 Whenever a task refers to **Chapter I**, **Chapter 1**, **Introduction**, the **introductory research architecture**, or asks to draft/revise/present any Chapter-I section, first load and follow:
 
-`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`
+`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`
 
 That file is the controlling Chapter-I authority. `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V1.md` is provenance only.
 
@@ -55,8 +55,8 @@ effectiveness ≠ efficiency ≠ sustainability
 
 For any research-question, objective, hypothesis-mapping, outline, figure, result or conclusion task, load:
 
-- `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
-- `thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`
+- `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`
+- `thesis/00_governance/RQ_SO_H_TRACEABILITY_V4.md`
 
 Use RQ0 + RQ1–RQ7, SO1–SO7 and H1–H5. Do not equate question and hypothesis indices or revert to superseded five-question files.
 

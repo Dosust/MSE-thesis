@@ -1,10 +1,11 @@
 # Chapter 1 — Introduction
 
 **Status:** PASS — FROZEN  
-**Freeze:** [`CHAPTER_I_FREEZE_2026-09-18.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-18.md)
+**Official source snapshot:** [`CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md`](CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md)  
+**Freeze:** [`CHAPTER_I_FREEZE_2026-09-20.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-20.md)
 
-**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
+**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Stage-6/7 sustainability authority:** `../00_governance/SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md`  
 **Sustainability status register:** `../00_governance/SUSTAINABILITY_DIMENSION_REGISTER_V1.md`  
@@ -52,7 +53,7 @@ Sections **1.1–1.13 now have one source of truth in this directory**. The repo
 - 1.12 states six candidate contribution categories in conditional proposal language, maps each to its RQ/SO/H evidence chain, distinguishes supported contribution from novelty, and prohibits promotion to a supported claim before the corresponding model/test/VVUQ/result chain closes.
 - 1.13 explains the canonical seven-chapter scientific argument from research contract through evidence, formal framework, experimental testing, results, interpretation, and final RQ/hypothesis closure; it also distinguishes chapter-dependency notation from the contribution labels used in Section 1.12.
 - **Sections 1.9–1.13 were repository-audited on 2026-09-18 for canonical exactness, GitHub Markdown/MathJax rendering, notation consistency, and Chapter-I writing discipline. The audit confirms 8/8 exact RQs, 7/7 exact SOs, 5/5 exact hypotheses, and no malformed control-character LaTeX in these files.**
-- **Chapter I passed the scientific exit gate on 2026-09-18 and is PASS — FROZEN. The frozen baseline is recorded in `../00_governance/CHAPTER_I_FREEZE_2026-09-18.md`.**
+- **Chapter I passed the scientific exit gate on 2026-09-18 and is PASS — FROZEN. The frozen baseline is recorded in `../00_governance/CHAPTER_I_FREEZE_2026-09-20.md`.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
