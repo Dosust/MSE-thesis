@@ -6,8 +6,8 @@
 **Method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 **Research-question authority:** `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
-**SO/H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
+**SO/H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
+**Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
 **Reasoning authority:** `../../project/RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Writing/inference authority:** `SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Verification date for ASU requirements:** 2026-09-17
@@ -363,4 +363,4 @@ The reverse direction — conclusion first, evidence afterward — is prohibited
 - SSEBE Sustainable Engineering MSE Handbook 2026–2027: https://ssebe.engineering.asu.edu/wp-content/uploads/sites/28/2026/07/MSE-Sustainable-Engineering-Handbook-2026-2027.pdf
 - SSEBE Graduate Advising / defense procedures: https://ssebe.engineering.asu.edu/advising/graduate/
 
-Full APA 7 source details for scientific evidence anchors remain in `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md` and the evidence system; exact RQ0/RQ1–RQ7 wording is controlled by `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`.
+Full APA 7 source details for scientific evidence anchors remain in the current evidence system and cited source registers; exact RQ0/RQ1–RQ7 wording is controlled by `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`.
