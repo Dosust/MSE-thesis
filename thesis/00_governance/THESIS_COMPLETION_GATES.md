@@ -1,6 +1,6 @@
 # Thesis Completion Gates
 
-**Status:** CURRENT / SYNCHRONIZED WITH FRAMEWORK v2, RQ–SO–H v3, CHAPTER-I v2  
+**Status:** CURRENT / SYNCHRONIZED WITH FRAMEWORK v2, RESEARCH QUESTIONS v4, RQ–SO–H v4, CHAPTER-I v3  
 **Writing/inference authority:** `SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 **Purpose:** define scientific completion independently of page count or visual polish.
@@ -40,7 +40,7 @@ A section is scientifically frozen only when all required gates pass.
 **Freeze record:** `STAGE1_FRAMEWORK_FREEZE_2026-09-18.md`
 
 The generic Stage-1 framework passes when:
-- RQ1/SO1 remain synchronized with canonical v3;
+- RQ1/SO1 remain synchronized with canonical v4;
 - semantic entities use `r_i` for geometry and preserve function/state/ownership/authority/resolution/provenance;
 - the core relation object `mathfrak r_e^(1)` and secondary metadata `a_e` are synchronized with Evidence/Ontology Register v2;
 - structural existence, coupling strength and evidence confidence remain distinct;
@@ -63,20 +63,20 @@ Pass when:
 
 ## Chapter 1 gate — Introduction
 
-**Current status:** PASS — FROZEN (2026-09-18)  
-**Freeze record:** `CHAPTER_I_FREEZE_2026-09-18.md`
+**Current status:** PASS — FROZEN — OFFICIAL (2026-09-20)  
+**Freeze record:** `CHAPTER_I_FREEZE_2026-09-20.md`
 
 Pass when:
-- Chapter-I v2 sequence and 1.1–1.13 structure are preserved;
+- Chapter-I v3 sequence and 1.1–1.13 structure are preserved;
 - problem is clearly defined;
 - significance is evidence-based;
 - gap is qualified by Chapter-2 evidence rather than asserted;
 - scope/boundary/exclusions explicit;
-- exact RQ0/RQ1–RQ7 and SO1–SO7 are synchronized with v3;
+- exact RQ0/RQ1–RQ7, SO1–SO7 and H1–H5 are synchronized with v4;
 - RQ1/RQ2 developmental obligations and RQ3–RQ7/H1–H5 mapping are correct;
-- Stage-5 wording preserves viability + reachability + probability;
-- H4 is intervention effectiveness/efficiency/sustainability consequences;
-- H5 is joint resilience–sustainability engineering decision;
+- Stage-5 wording preserves viability + reachability with uncertainty qualification; probability is used only where defensible;
+- H4 tests material differences in resource requirements, resource efficiencies, or admitted sustainability consequences among resilience-effective interventions;
+- H5 is the joint engineering-decision comparison using resource efficiency, admitted sustainability consequences, feasibility and uncertainty relative to resilience-only evaluation;
 - interface criticality and adaptive pathways are not silently promoted to H4/H5;
 - proposed contributions are not written as completed results.
 
