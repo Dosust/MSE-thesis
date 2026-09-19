@@ -57,3 +57,34 @@ G_{P1.11.8.1}^{design}=PASS
 30. Sustainability scope unchanged.
 31. P2 normalized fields defined.
 32. H1–H5 remain NOT TESTED.
+
+
+## Deterministic post-commit invariant verification
+
+A connector-level deterministic verification was executed against committed main-branch contents.
+
+~~~text
+24 PASS
+0 FAIL
+~~~
+
+Verified invariants include:
+- G_EST^admit and G_VAL^result separation;
+- admissible estimator != validated result;
+- G_ID^struct and G_ID^strength separation;
+- structural PASS with strength BLOCKED;
+- POINT / SET_PARTIAL / N_A_NONINFERENTIAL identification types;
+- observationally inferred sets retain identification obligations;
+- STATUS=(REPO,SOURCE,CASE);
+- CASE_VALIDATED removed from SOURCE vocabulary;
+- MONTE_CARLO_METHOD_TEST and UNCERTAINTY_PROPAGATION classes;
+- Monte Carlo method test != uncertainty propagation != case validation;
+- sustainability scope unchanged;
+- normalized P2 fields;
+- v1.1 successor protocols;
+- Stage-3 pre/readiness gate split;
+- Stage-4 corrected inference chain;
+- authority precedence and global queue closure;
+- GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx still absent.
+
+This verifies repository invariants only. It does not establish case identification, case validation, or H1–H5 outcomes.

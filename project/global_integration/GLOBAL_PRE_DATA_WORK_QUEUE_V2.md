@@ -442,5 +442,6 @@ P2 remains the next major task and must consume P1.11.8 identification/measureme
 - [x] Preserve sustainability scope unchanged.
 - [x] Add normalized P2 fields.
 - [x] Run P1.11.8.1 repository-consistency audit: 32/32 PASS.
+- [x] Run deterministic post-commit invariant verification: 24/24 PASS.
 
 P2 remains the next major task and must consume P1.11.8.1.
