@@ -14,7 +14,7 @@
 **Supporting domains:** Information + Organization (`I+O`)  
 **Scientific architecture:** interdependent System of Systems + spatiotemporal complex dynamics  
 **Framework:** canonical seven-stage framework v2.0  
-**Research logic:** RQ0 + RQ1–RQ7, SO1–SO7, H1–H5 under canonical v3.0  
+**Research logic:** official RQ0 + RQ1–RQ7 under canonical research-question authority v4.0; SO1–SO7 and H1–H5 remain under canonical v3.0 pending separate synchronization  
 **Research method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Current major phase:** P3 — Case / Data Qualification + Execution Readiness  
 **Active candidate case:** `AUS-P5U-2018-V1` — Austin, Texas; SMART-DS v1.0, 2018, candidate P5U  
@@ -63,7 +63,8 @@ H_i=SUPPORTED.
 | Authority | Role |
 |---|---|
 | [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | canonical seven-stage scientific framework |
-| [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | RQ0 + RQ1–RQ7 / SO1–SO7 / H1–H5 |
+| [`project/CANONICAL_RESEARCH_QUESTIONS_V4.md`](project/CANONICAL_RESEARCH_QUESTIONS_V4.md) | official RQ0 + RQ1–RQ7 wording |
+| [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | SO1–SO7 / H1–H5 wording and test logic pending separate synchronization |
 | [`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`](project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md) | Chapter-I scientific content and flow |
 | [`project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`](project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md) | P–T System-of-Systems / complex-dynamics interpretation |
 | [`project/CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md`](project/CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md) | measurement, identification, estimator-admission and result-validation semantics |
@@ -610,7 +611,8 @@ Permanent rules include:
 | [`thesis/00_governance/CLAIM_EVIDENCE_REGISTER.md`](thesis/00_governance/CLAIM_EVIDENCE_REGISTER.md) | claim/evidence ledger |
 | [`thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`](thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md) | experiment / comparator / VVUQ / falsification control |
 | [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | seven-stage scientific framework |
-| [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | canonical research logic |
+| [`project/CANONICAL_RESEARCH_QUESTIONS_V4.md`](project/CANONICAL_RESEARCH_QUESTIONS_V4.md) | canonical research-question wording |
+| [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | canonical SO/H wording and test logic pending separate synchronization |
 | [`project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx`](project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx) | P2 integrated master scientific contract |
 | [`project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md`](project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md) | P2 design freeze |
 | [`project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md`](project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md) | P3 qualification protocol |
