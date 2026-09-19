@@ -1,3 +1,33 @@
+# RQ–SO–H Traceability v4
+
+**Status:** CURRENT / ACTIVE TRACEABILITY AUTHORITY  
+**Effective date:** 2026-09-20  
+**RQ authority:** `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
+**SO/H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
+**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
+
+## Traceability spine
+
+| RQ | SO | Stage | Hypothesis / obligation | Primary method family | Primary result family | Thesis closure |
+|---|---|---:|---|---|---|---|
+| RQ1 | SO1 | 1 | developmental qualification supporting H1 | SoS ontology, service/spatial/temporal/interface qualification | bounded spatiotemporal SoS representation | Ch.7 answer RQ1 |
+| RQ2 | SO2 | 2 | developmental mechanism/evidence qualification supporting H1 | directional mechanism evidence, activation/delay/timescale/uncertainty qualification | qualified dependency set | Ch.7 answer RQ2 |
+| RQ3 | SO3 | 3 | H1 | matched M0/M1/M2 dynamic comparison | incremental dynamic-coupling information | Ch.5 H1; Ch.7 answer RQ3 |
+| RQ4 | SO4 | 4 | H2 | matched observation/information/organization/feasible-control contrasts | estimation/action/response/recovery differences | Ch.5 H2; Ch.7 answer RQ4 |
+| RQ5 | SO5 | 5 | H3 | conventional service/recovery vs viability+reachability | incremental maintainability/recovery information | Ch.5 H3; Ch.7 answer RQ5 |
+| RQ6 | SO6 | 6 | H4 | matched resilience-effective intervention comparison | resource/efficiency/admitted-sustainability heterogeneity | Ch.5 H4; Ch.7 answer RQ6 |
+| RQ7 | SO7 | 7 | H5 | resilience-only vs joint engineering-decision comparison | decision-set/dominance/regret change | Ch.5 H5; Ch.7 answer RQ7 |
+| RQ0 | — | synthesis | composition of RQ1–RQ7 qualified outputs | cross-stage synthesis | defensible bounded answer to overarching question | Ch.7 answer RQ0 |
+
+```math
+oxed{
+RQ ightarrow SO ightarrow H/	ext{developmental obligation}
+ightarrow Stage ightarrow Method ightarrow Result ightarrow Chapter.
+}
+```
+
+---
+
 ## 1.9 Research Questions
 
 ### RQ0 — Overarching Question
