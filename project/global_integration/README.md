@@ -150,3 +150,44 @@ Then:
 ## Empirical firewall
 
 Global design integration does not imply empirical closure. Case-specific parameters, thresholds, validation outcomes and H1–H5 results remain governed by their stage-specific gates and may remain DEFERRED / NOT TESTED.
+
+## Post-audit mathematical-chain freeze
+
+A separate independent expert mathematical audit has now been incorporated without reopening the seven-stage architecture.
+
+Current control artifact:
+
+- `GLOBAL_MATHEMATICAL_CHAIN_CORRECTION_AND_FREEZE_V1.md` — canonical corrected thesis-wide mathematical chain for equations, figures and cross-stage interpretation.
+
+Narrow stage amendments:
+
+- `../stage3/STAGE3_HYBRID_DOMAIN_CLARIFICATION_V2_1.md`;
+- `../stage4/00_governance/STAGE4_POLICY_INFORMATION_ADAPTATION_AMENDMENT_V1_1.md`;
+- `../stage5/00_governance/STAGE5_MATHEMATICAL_AMENDMENT_V1_1.md`.
+
+Closed audit corrections include:
+
+~~~math
+oxed{
+mathcal V_T^{x}
+eqmathcal V_{alpha,T}^{b},
+qquad
+piinPi^{NA},
+qquad
+T_{rec}^{Delta},
+}
+~~~
+
+plus explicit Stage-3 flow/jump domains and a mechanism-specific perturbation/sensitivity formulation for interface criticality.
+
+Stage-6 and Stage-7 audit corrections were already implemented by the existing v2/v2.1 authorities and were not redundantly rewritten.
+
+~~~math
+oxed{
+G_{GLOBAL_MATHEMATICAL_CHAIN}^{design}
+=
+PASS;—;FROZEN;V1.
+}
+~~~
+
+This is a design/protocol closure only. Stage-3/4/5 empirical closure and H1–H5 remain governed by their existing gates and are not established by this freeze.
