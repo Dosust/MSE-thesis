@@ -76,3 +76,30 @@ source-support is not represented by this number
 H_i\text{ support}.
 }
 ~~~
+
+
+## Deterministic post-commit invariant verification
+
+A connector-level deterministic verification was executed against the committed main-branch contents after the reconciliation commit.
+
+~~~text
+21 PASS
+0 FAIL
+~~~
+
+Verified invariants included:
+- A-033 through A-037 are present in Chapter-2 accepted evidence;
+- mandatory screening wording is present;
+- universal strict timescale ordering is absent from the correction authority;
+- direct cost and operational energy are retained as resource/economic roles;
+- current sustainability core is CO2e-scoped;
+- full LCA remains OUT current scope;
+- Kays-derived K_sus is BLOCKED;
+- embodied consequence is DEFERRED/OPTIONAL;
+- all five exact source SHA-256 values are present;
+- Acosta current terminology is cross-system observational inference;
+- NEXTRANS budget/market/policy states default to DEFERRED / STAGE-7 CONTEXT;
+- two-axis source-support semantics are present;
+- P1.11.6 is closed in the queue.
+
+This deterministic check verifies repository invariants only. It is not automated validation of literature interpretation.

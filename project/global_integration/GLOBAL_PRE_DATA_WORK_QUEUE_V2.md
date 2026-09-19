@@ -370,5 +370,6 @@ P2 remains the next major task and must consume P1.11 through P1.11.5.
 - [x] Replace current Acosta terminology with cross-system observational inference.
 - [x] Add deterministic repository test for reconciliation invariants.
 - [x] Run P1.11.6 repository-consistency audit: 36/36 PASS.
+- [x] Run deterministic post-commit invariant verification: 21/21 PASS.
 
 P2 is now the next major execution task and must consume P1.11.6 as the authority-reconciliation layer.
