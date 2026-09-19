@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "status": "PASS_FROZEN_P1_11_6_SOURCE_AUTHORITY_RECONCILIATION",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "reconciliation_commit": "389b300c2fd861ebbe4f45fec12dabcfd5282ddc",
+  "verification_commit": "4b0248c04f9a00a87f46a57095fbbf02dcca70ed",
+  "design_gate": "G_P1.11.6_design=PASS",
+  "repository_consistency_audit": {
+    "pass": 36,
+    "fail": 0
+  },
+  "deterministic_post_commit_check": {
+    "pass": 21,
+    "fail": 0,
+    "note": "repository invariants only; not literature-validation automation"
+  },
+  "scientific_effect": "Reconciles source governance and authority semantics before P2; no empirical result, hypothesis support, sustainability threshold, case calibration, Pareto result or intervention ranking is introduced.",
+  "current_authority_rules": [
+    "13 P1.11 dimensions are mandatory screening dimensions, not universally modeled quantities",
+    "tau_op, tau_rec and tau_trans are distinct characteristic horizons with case-dependent scale separation",
+    "SUSTAINABILITY_ADMISSION_FREEZE_V1 controls current H4/H5 sustainability/resource role classification",
+    "resource core subset is direct cost and operational energy; sustainability core subset is operational/partial CO2e; distributional accessibility is conditional",
+    "embodied/material GHG and full multi-category LCA remain outside current confirmatory core",
+    "Kays-derived hard sustainability constraints are BLOCKED absent independent P1.8-qualified requirements",
+    "historical P1.11-family PASS counts are repository-consistency checklist counts, not source-support scores",
+    "Acosta current terminology is cross-system observational inference, not noncausal interdependency",
+    "NEXTRANS budget/market/public-policy states default to DEFERRED / STAGE-7 CONTEXT unless explicitly activated and qualified"
+  ],
+  "source_documents": [
+    {
+      "source_id": "SRC-PANT-CH12",
+      "sha256": "cadfa029e3e313e4319a6c99436fc1b9b297339060987a12ba7264b627777b3f",
+      "bytes": 12784873,
+      "pages": 27
+    },
+    {
+      "source_id": "SRC-BARR-CH13",
+      "sha256": "2ac3f57cbda6c486a27cc3f52cd83b03c07281a380800ea6a908c06f8f9b0e54",
+      "bytes": 2123382,
+      "pages": 26
+    },
+    {
+      "source_id": "SRC-NEXTRANS-079PY04",
+      "sha256": "f9b3133402d2e4a6e93a7fd31d2ebbdad81a19cd567b5200afdc2efdedd8b338",
+      "bytes": 583634,
+      "pages": 38
+    },
+    {
+      "source_id": "SRC-ACOSTA-2025-RS",
+      "sha256": "b4253eae45c8be405065d25e7f9f4ff46fbe9c586b0587358e3a0386f5ac5e5b",
+      "bytes": 1094331,
+      "pages": 20
+    },
+    {
+      "source_id": "SRC-KAYS-SADRI",
+      "sha256": "67d986a658aceceedec490f490534d4586d258352063295526bc6b8b0f741c71",
+      "bytes": 1079189,
+      "pages": 23
+    }
+  ],
+  "pinned_artifacts": [
+    {
+      "path": "project/CANONICAL_SPATIOTEMPORAL_SOS_RESILIENCE_TRANSFORMATION_LENS_V1_1.md",
+      "blob_sha": "f8811e5e8355cb3ea64a6ea568ac079842bef7dd"
+    },
+    {
+      "path": "project/CANONICAL_SUSTAINABILITY_TRAJECTORY_TRADEOFF_AMENDMENT_V1_5_1.md",
+      "blob_sha": "47e492c364a90aaa9b5e86ad0730bc4a5fa60ea7"
+    },
+    {
+      "path": "project/stage6/00_governance/STAGE6_SUSTAINABILITY_SCOPE_RECONCILIATION_AMENDMENT_V2_1_1.md",
+      "blob_sha": "f38470b61b7dfb5bd983bccd536214ddbcba839a"
+    },
+    {
+      "path": "project/CANONICAL_SOS_POLICY_OPERATOR_BUDGET_MARKET_AMENDMENT_V1_3_1.md",
+      "blob_sha": "4698e83380c99d2b6510be9b06a4d56bf15fd7d8"
+    },
+    {
+      "path": "project/CANONICAL_CROSS_SYSTEM_OBSERVATIONAL_INFERENCE_AMENDMENT_V1_4_1.md",
+      "blob_sha": "87d698eafa471b16dc8cd3185272567933757cc3"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SOURCE_SUPPORT_CLASSIFICATION_PROTOCOL_V1.md",
+      "blob_sha": "8e90518b20a9809f6526da9375f44bb0fcf5ab3c"
+    },
+    {
+      "path": "project/global_integration/P1_11_AUDIT_REINTERPRETATION_NOTE_V1.md",
+      "blob_sha": "6d5a086f6b1a080f873bfb2693625d60ed5efefd"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md",
+      "blob_sha": "ec19a4a16523a0f1e16cb3fa4f617511baeea276"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv",
+      "blob_sha": "38fd7bb71b9de6ec8d52e2fdea5963f06297f614"
+    },
+    {
+      "path": "project/global_integration/P1_11_5_SOURCE_SUPPORT_RECLASSIFICATION_V1.csv",
+      "blob_sha": "a39cc1ec236927bcb11b9e7b6c14de344c825d20"
+    },
+    {
+      "path": "project/global_integration/P1_11_6_SOURCE_AUTHORITY_RECONCILIATION_V1.md",
+      "blob_sha": "20922e8e5be5bba89b7974e73b421491f58311f3"
+    },
+    {
+      "path": "project/global_integration/P1_11_6_SOURCE_AUTHORITY_RECONCILIATION_AUDIT_V1_2026-09-19.md",
+      "blob_sha": "48d65fdd5590b23e689ec0827c71361716ee1ed3"
+    },
+    {
+      "path": "tests/test_p1_11_6_source_authority_reconciliation.py",
+      "blob_sha": "7d716f02ff7b614c95758d2b471152acbb1a310c"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00c_accepted_core_evidence.md",
+      "blob_sha": "4a7d290091e49c83f7d6ba26a740630c48346f2d"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00_literature_classification_ontology_register.md",
+      "blob_sha": "9940e970ca76a3dcc7d16663b53900e0866e22c6"
+    },
+    {
+      "path": "project/stage6/STAGE6_EVIDENCE_REGISTER_V1.md",
+      "blob_sha": "88f3d3e5389aa9c60982abde104f5ebcdc4fe7a1"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_AUTHORITY_SUPERSESSION_MAP_V1.md",
+      "blob_sha": "3ae298f803418610ccc8a077351b1f4a32fc841d"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "blob_sha": "0b49d98cb8644bab8826bbcf08f209377c44d836"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "blob_sha": "96570976bb585d8263e844d13f7a0c9de849db64"
+    }
+  ],
+  "next": "P2 — GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx and design freeze, consuming P1.11.6 as the authority-reconciliation layer",
+  "manifest_self_hash_policy": "manifest does not self-hash"
+}
