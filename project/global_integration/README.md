@@ -615,3 +615,55 @@ STATUS=(REPO,SOURCE,CASE).
 Monte Carlo method testing and uncertainty propagation are separate computation classes.
 
 P2 may consume these normalized semantics.
+
+
+## P2 global Stage 1–7 master scientific contract — DESIGN FROZEN
+
+P2 master artifacts:
+- GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx
+- P2_GLOBAL_STAGE1_7_MASTER_REGISTER_AUDIT_V1_2026-09-20.md
+- GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md
+
+Workbook SHA-256:
+
+~~~text
+7906fc6eb3bc6b720d41e20315ffed3222efc6d0839add98cd21f56115749b6c
+~~~
+
+Current result:
+
+~~~math
+\boxed{
+G_{P2}^{design}=PASS
+}
+~~~
+
+with 11/11 global design audits PASS and zero unresolved design contradictions.
+
+The workbook contains 27 normalized scientific/control objects and explicitly implements:
+- GATE_REQUIREDNESS;
+- VALIDATION_TYPE;
+- structural-identification versus identification-strength separation;
+- estimator-admission versus result-validation separation;
+- REPO/SOURCE/CASE evidence axes;
+- Monte Carlo method-test versus uncertainty-propagation classes;
+- blocked/deferred-state preservation;
+- current Stage-6 sustainability/resource freeze.
+
+~~~math
+\boxed{
+\text{PRE-DATA COMPLETE}=TRUE
+}
+~~~
+
+means design contradictions are closed. It does not mean data qualification, model validation, Stage-3 execution or H1–H5 testing is complete.
+
+### Next major phase
+
+~~~math
+\boxed{
+\text{P3 = DATA / CASE QUALIFICATION + EXECUTION READINESS}
+}
+~~~
+
+Case-specific data, parameters, hazard objects, thresholds, validation evidence and confirmatory execution remain governed by the frozen P2 contract.

@@ -173,16 +173,35 @@ Permanent rule:
 ```
 
 
-## P2 — master artifact and freeze
-- [ ] Build `GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx`.
-- [ ] Run notation conflict audit.
-- [ ] Run handoff completeness audit.
-- [ ] Run hypothesis/comparator consistency audit.
-- [ ] Run requirement-provenance audit.
-- [ ] Run claim-evidence audit.
-- [ ] Mark every case/data-dependent field DEFERRED.
-- [ ] Create `GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md`.
-- [ ] Create manifest + SHA-256 record.
+## P2 — master artifact and freeze — COMPLETE
+- [x] Build `GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx`.
+- [x] Run notation conflict audit.
+- [x] Run handoff completeness audit.
+- [x] Run hypothesis/comparator consistency audit.
+- [x] Run requirement-provenance audit.
+- [x] Run claim-evidence audit.
+- [x] Run gate-requiredness audit.
+- [x] Run computation-role / provenance audit.
+- [x] Preserve BLOCKED / DEFERRED / N/A / NOT_TESTED without binary coercion.
+- [x] Mark every case/data-dependent field DEFERRED / BLOCKED / NOT_TESTED as scientifically appropriate.
+- [x] Create `P2_GLOBAL_STAGE1_7_MASTER_REGISTER_AUDIT_V1_2026-09-20.md`.
+- [x] Create `GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md`.
+- [x] Record workbook SHA-256: `7906fc6eb3bc6b720d41e20315ffed3222efc6d0839add98cd21f56115749b6c`.
+- [ ] Pin final P2 manifest after freeze commit.
+
+P2 design result:
+
+~~~math
+\boxed{
+G_{P2}^{design}=PASS,
+\qquad
+11/11\ \text{global audits PASS},
+\qquad
+0\ \text{design contradictions}.
+}
+~~~
+
+The master workbook contains 27 normalized scientific/control objects and preserves empirical blockers rather than inventing completion.
 
 ## Definition of pre-data complete
 
