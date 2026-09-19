@@ -1,6 +1,6 @@
-version: 2
+version: 3
 project: MSE-thesis
-source: project/CANONICAL_RQ_SO_HYPOTHESES_V3.md
+source: project/CANONICAL_RQ_SO_HYPOTHESES_V4.md
 status:
   hypothesis_logic_frozen: true
   numerical_thresholds_frozen: false
@@ -8,49 +8,50 @@ status:
 
 hypotheses:
   H1:
-    name: dynamic_causal_interdependency
+    name: dynamic_causal_coupling
     rq_so: RQ3/SO3
     developmental_inputs: [RQ1/SO1, RQ2/SO2]
     stages: [1, 2, 3]
-    core_claim: dynamic_causal_coupling_provides_measurable_incremental_explanatory_or_predictive_information_relative_to_static_coupling_and_independent_system_representations
+    core_claim: evidence_qualified_dynamic_PT_coupling_provides_meaningful_incremental_explanatory_or_predictive_information_relative_to_static_coupling
     comparator: M2_vs_M1_with_M0_reference
     threshold_symbol: delta_1
   H2:
     name: information_organization_and_feasible_control
     rq_so: RQ4/SO4
     stages: [4]
-    core_claim: information_availability_and_organizational_conditions_materially_change_state_estimation_feasible_actions_response_timing_recovery_and_stage5_resilience_outcomes_under_matched_physical_conditions
-    comparator: PT_vs_PTI_vs_PTIO
+    core_claim: information_availability_and_organizational_conditions_produce_meaningful_differences_in_estimation_feasible_action_response_recovery_or_downstream_resilience_under_matched_physical_conditions
+    comparator: matched_information_and_organization_contrasts
     threshold_symbol: delta_2
   H3:
-    name: viability_reachability_incremental_information
+    name: viability_recovery_reachability_information
     rq_so: RQ5/SO5
     stages: [5]
-    core_claim: uncertainty_aware_viability_and_reachability_quantities_add_decision_relevant_information_beyond_conventional_service_loss_and_recovery_metrics
-    comparator: conventional_resilience_vs_conventional_plus_viability_reachability
+    core_claim: uncertainty_aware_viability_and_recovery_reachability_add_meaningful_incremental_predictive_or_decision_information_beyond_conventional_service_and_recovery_measures
+    comparator: conventional_service_recovery_vs_plus_viability_reachability
     threshold_symbol: delta_3
   H4:
-    name: intervention_resilience_sustainability_consequences
+    name: intervention_consequences
     rq_so: RQ6/SO6
     stages: [6]
-    core_claim: resilience_effective_interventions_are_not_equivalent_in_their_sustainability_consequence_vectors_and_at_least_two_produce_materially_different_accessibility_energy_carbon_or_cost_consequences_under_the_declared_comparison_rule
-    comparator: matched_resilience_effective_interventions
+    core_claim: at_least_two_resilience_effective_interventions_produce_materially_different_resource_requirements_resource_efficiencies_or_admitted_sustainability_consequences
+    comparator: qualified_resilience_effective_interventions
     threshold_symbol: delta_4
   H5:
-    name: joint_resilience_sustainability_decision
+    name: joint_engineering_decision
     rq_so: RQ7/SO7
     stages: [7]
-    core_claim: incorporating_sustainability_consequences_into_resilience_based_engineering_evaluation_materially_changes_the_admissible_or_nondominated_intervention_set_or_decision_regret_under_the_declared_uncertainty_domain
-    comparator: resilience_only_vs_joint_resilience_sustainability_decision_set
+    core_claim: adding_resource_efficiency_admitted_sustainability_consequences_feasibility_and_uncertainty_to_resilience_evaluation_materially_changes_the_admissible_or_nondominated_decision_set_dominance_relations_or_regret
+    comparator: resilience_only_vs_joint_engineering_decision
     threshold_symbol: delta_5
 
 confirmatory_rules:
   thresholds_must_be_defined_a_priori: true
   baselines_must_be_predeclared: true
   scenario_domain_must_be_predeclared: true
-  rival_hypothesis_required: true
   falsification_criterion_required: true
   deep_uncertainty_must_not_be_reported_as_probability_without_justification: true
   matched_conditions_required_for_causal_contrasts: true
   empirical_validation_required_for_predictive_claims: true
   no_hypothesis_support_from_verification_only: true
+  interface_criticality_not_primary_H4: true
+  adaptive_pathways_not_primary_H5: true
