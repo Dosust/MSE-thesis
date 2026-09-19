@@ -149,9 +149,29 @@ For every `I(k→k+1)`:
 - [x] Preserve all case thresholds/weights as DEFERRED.
 - [x] Run combined P1.8 audit: 104/104 PASS.
 
-### P1.9 Claim-evidence-result matrix — NEXT
-Every intended thesis conclusion must have:
-`claim | stage | evidence/test | validity domain | result status | allowed wording`.
+### P1.9 Claim-evidence-result matrix — COMPLETE
+- [x] Create GLOBAL_CLAIM_EVIDENCE_RESULT_CONTROL_V1.md.
+- [x] Create Draft 2020-12 machine schema.
+- [x] Register bounded thesis claim families across RQ0–RQ7/SO1–SO7/H1–H5.
+- [x] Separate structural, mechanism, implementation, predictive/causal, viability, diagnostic, intervention, sustainability, requirement, decision and synthesis claims.
+- [x] Freeze claim/result/status axes independently.
+- [x] Bind required evidence, tests/gates, QOI/endpoints, uncertainty and validity domains.
+- [x] Inherit P1.7 C0–C5 credibility ceilings.
+- [x] Create wording/anti-overclaim protocol.
+- [x] Preserve H1–H5 as NOT TESTED.
+- [x] Create empty claim/result register template.
+- [x] Run combined P1.9 audit: 128/128 PASS.
+
+Permanent rule:
+
+```math
+\boxed{
+\text{stated conclusion strength}
+\le
+\text{qualified evidence/result strength}.
+}
+```
+
 
 ## P2 — master artifact and freeze
 - [ ] Build `GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx`.

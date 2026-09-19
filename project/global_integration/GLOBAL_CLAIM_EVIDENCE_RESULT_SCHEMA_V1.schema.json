@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/project/global_integration/GLOBAL_CLAIM_EVIDENCE_RESULT_SCHEMA_V1.schema.json",
+  "title": "Global Claim Evidence Result Schema v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "claims",
+    "results"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/result"
+      }
+    }
+  },
+  "$defs": {
+    "gateState": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL",
+        "DEFERRED",
+        "N/A"
+      ]
+    },
+    "maturity": {
+      "enum": [
+        "DRAFT",
+        "SPECIFIED",
+        "EVIDENCE_QUALIFIED",
+        "TEST_READY",
+        "TESTED",
+        "SUPERSEDED",
+        "RETIRED"
+      ]
+    },
+    "hypothesisResult": {
+      "enum": [
+        "SUPPORTED",
+        "NOT_SUPPORTED",
+        "NOT_TESTED"
+      ]
+    },
+    "nonHypothesisResult": {
+      "enum": [
+        "NO_RESULT",
+        "QUALIFIED",
+        "VERIFIED",
+        "VALIDATED",
+        "PASS",
+        "FAIL",
+        "INCONCLUSIVE"
+      ]
+    },
+    "claimType": {
+      "enum": [
+        "STRUCTURAL",
+        "MECHANISM",
+        "MODEL_IMPLEMENTATION",
+        "PREDICTIVE_OR_EXPLANATORY",
+        "CAUSAL_EFFECT",
+        "VIABILITY_REACHABILITY",
+        "DIAGNOSTIC",
+        "INTERVENTION_PERFORMANCE",
+        "SUSTAINABILITY_CONSEQUENCE",
+        "REQUIREMENT_DERIVATION",
+        "DECISION",
+        "SYNTHESIS"
+      ]
+    },
+    "credibility": {
+      "enum": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cid",
+        "version",
+        "statement",
+        "claim_type",
+        "rq",
+        "so",
+        "hypothesis",
+        "stages",
+        "scope",
+        "required_evidence",
+        "test_or_gate",
+        "qoi_or_endpoint",
+        "uncertainty_record",
+        "validity_domain",
+        "claim_ceiling",
+        "allowed_wording",
+        "prohibited_wording",
+        "gate_state",
+        "maturity",
+        "result_state",
+        "provenance"
+      ],
+      "properties": {
+        "cid": {
+          "type": "string",
+          "pattern": "^C-[A-Z0-9][A-Z0-9._-]+$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_type": {
+          "$ref": "#/$defs/claimType"
+        },
+        "rq": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^RQ[0-7]$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "so": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^SO[1-7]$"
+          },
+          "uniqueItems": true
+        },
+        "hypothesis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            null
+          ]
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "test_or_gate": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "qoi_or_endpoint": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "uncertainty_record": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validity_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_ceiling": {
+          "$ref": "#/$defs/credibility"
+        },
+        "allowed_wording": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "prohibited_wording": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "gate_state": {
+          "$ref": "#/$defs/gateState"
+        },
+        "maturity": {
+          "$ref": "#/$defs/maturity"
+        },
+        "result_state": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/hypothesisResult"
+            },
+            {
+              "$ref": "#/$defs/nonHypothesisResult"
+            }
+          ]
+        },
+        "result_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_id",
+        "cid",
+        "claim_version",
+        "scenario_or_run_ids",
+        "data_versions",
+        "model_versions",
+        "requirement_baseline",
+        "vvuq_record",
+        "uncertainty_record",
+        "validity_domain",
+        "adjudication"
+      ],
+      "properties": {
+        "result_id": {
+          "type": "string",
+          "pattern": "^RSLT-[A-Z0-9._-]+$"
+        },
+        "cid": {
+          "type": "string",
+          "pattern": "^C-[A-Z0-9][A-Z0-9._-]+$"
+        },
+        "claim_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_or_run_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "data_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "model_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "requirement_baseline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vvuq_record": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uncertainty_record": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validity_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adjudication": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

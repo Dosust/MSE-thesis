@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.8 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.9 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -60,6 +60,12 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_REQUIREMENT_CONFLICT_REGISTER_TEMPLATE_V1.csv — empty conflict register.
 - GLOBAL_REQUIREMENT_COMPLIANCE_REGISTER_TEMPLATE_V1.csv — empty compliance register.
 - P1_8_GLOBAL_REQUIREMENTS_PROVENANCE_AUDIT_V1_2026-09-19.md — 104/104 P1.8 audit.
+- GLOBAL_CLAIM_EVIDENCE_RESULT_CONTROL_V1.md — canonical P1.9 claim/evidence/result authority.
+- GLOBAL_CLAIM_EVIDENCE_RESULT_SCHEMA_V1.schema.json — Draft 2020-12 claim/result schema.
+- GLOBAL_CLAIM_EVIDENCE_RESULT_MATRIX_V1.md — RQ0–RQ7/SO1–SO7/H1–H5 claim-family matrix.
+- GLOBAL_CLAIM_WORDING_AND_CEILING_PROTOCOL_V1.md — evidence-to-wording / anti-overclaim control.
+- GLOBAL_CLAIM_EVIDENCE_RESULT_REGISTER_TEMPLATE_V1.csv — empty claim/result register template.
+- P1_9_GLOBAL_CLAIM_EVIDENCE_RESULT_AUDIT_V1_2026-09-19.md — 128/128 P1.9 audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -86,6 +92,8 @@ Historical:
 \text{P1.7 uncertainty/VVUQ control}
 \rightarrow
 \text{P1.8 requirements/provenance control}
+\rightarrow
+\text{P1.9 claim/evidence/result control}
 =
 PASS
 }
@@ -136,16 +144,43 @@ The global requirements architecture now enforces:
 
 Every hard constraint and confirmatory materiality criterion must be bidirectionally traceable from source/need to formal mathematical implementation and back.
 
+## P1.9 claim/evidence/result state
+
+~~~math
+\boxed{
+G_{P1.9}^{design}=PASS
+\qquad
+(128/128\;checks)
+}
+~~~
+
+The controlling writing rule is:
+
+~~~math
+\boxed{
+\text{Claim}
+\rightarrow
+\text{Evidence/Test}
+\rightarrow
+\text{Result}
+\rightarrow
+\text{Uncertainty/Validity}
+\rightarrow
+\text{Claim Ceiling}
+\rightarrow
+\text{Allowed Wording}.
+}
+~~~
+
+H1–H5 remain empirically **NOT TESTED**.
+
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.9 = GLOBAL CLAIM / EVIDENCE / RESULT MATRIX}
+\text{P2 = GLOBAL STAGE 1--7 MASTER WORKBOOK + DESIGN FREEZE}
 }
 ~~~
-
-Then:
-- P2 global master workbook + audits + design freeze.
 
 ## Empirical firewall
 

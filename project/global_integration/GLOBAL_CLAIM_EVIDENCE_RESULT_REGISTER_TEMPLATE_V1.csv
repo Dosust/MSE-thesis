@@ -1,0 +1,2 @@
+cid,version,statement,claim_type,rq,so,hypothesis,stages,scope,required_evidence,evidence_refs,test_or_gate,qoi_or_endpoint,result_id,result_state,uncertainty_record,validity_domain,claim_ceiling,allowed_wording,prohibited_wording,gate_state,maturity,provenance
+C-DEFERRED,1.0,DEFERRED,STRUCTURAL,RQ1,SO1,,1,DEFERRED,DEFERRED,,DEFERRED,DEFERRED,,NO_RESULT,DEFERRED,DEFERRED,C0,DEFERRED,DEFERRED,DEFERRED,DRAFT,DEFERRED
