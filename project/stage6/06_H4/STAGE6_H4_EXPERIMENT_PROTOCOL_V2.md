@@ -1,5 +1,8 @@
 # Stage 6 H4 Experiment Protocol v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is specified by the Stage-6 v3 authorities referenced in `project/stage6/README.md`. Do not use this file as the current H4/requirements/handoff/freeze authority.
+
 **Status:** CANONICAL STAGE-6 H4 PROTOCOL — v2.1 ALIGNED  
 **Effective date:** 2026-09-19  
 **Hypothesis:** canonical H4 unchanged.
