@@ -72,3 +72,61 @@ project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md remains useful for physics
 ~~~
 
 A frozen historical file is preserved; a later authorized canonical amendment controls current interpretation where conflict exists.
+
+
+## 2026-09-19 authority-drift cleanup closure
+
+The repository-wide authority audit found that the highest canonical files are internally consistent, but several active-looking supporting/control files still exposed superseded H4/H5 meanings or legacy Stage-3 dependency notation.
+
+### Files explicitly reclassified in-place
+
+| File | Classification after cleanup | Active replacement / interpretation |
+|---|---|---|
+| `project/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` | **SUPERSEDED** | `thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` v1.2 |
+| `project/FRESH_HYPOTHESIS_EVIDENCE_SEARCH_PROTOCOL.md` | **CURRENT METHODOLOGICAL PROVENANCE / H4-H5 MAPPING SUPERSEDED** | future versioned v2 search protocol aligned to RQ-SO-H v3 |
+| `project/NOVELTY_FOUNDATION_INDEX.md` | **NEEDS AMENDMENT** | current novelty evidence + canonical v3/v2.1 authorities |
+| `project/ENGINEERING_CONFIRMATORY_HYPOTHESIS_MATRIX.md` | **SUPERSEDED** | `thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md` |
+| `project/THESIS_TRACEABILITY_REGISTER_V1.md` | **SUPERSEDED** | RQ-SO-H traceability v3 + model/experiment matrix + claim/evidence register |
+| `project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md` | **CURRENT SUPPORTING THEORY / LEGACY NOTATION NOT ACTIVE** | forthcoming `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md` |
+| `project/STAGE_6_RESILIENCE_TO_SUSTAINABILITY_TRANSITION.md` | **HISTORICAL / PROVENANCE** | canonical v2.1 + `project/stage6/` |
+| `project/STAGE_7_SUSTAINABLE_TRANSFORMATION_PATHWAYS.md` | **HISTORICAL / PROVENANCE** | canonical v2.1 + Stage-7 master register pending alignment |
+
+### Current H4/H5 semantics
+
+```math
+\boxed{
+H_4:
+a_k
+\rightarrow
+(\Delta\mathfrak R,\mathcal E_{fx},\mathcal E_{fy},\Delta\mathbf J_{sus})
+}
+```
+
+with H4 testing qualified intervention-performance / sustainability consequence heterogeneity under prespecified rules, and
+
+```math
+\boxed{
+H_5:
+\mathcal A_R^\star
+\quad\text{vs}\quad
+\mathcal A_{R,S}^\star
+}
+```
+
+with material set/regret/decision change fixed prospectively.
+
+Interface-criticality superiority is not H4. Adaptive-pathway superiority is not H5 unless separately activated and preregistered.
+
+### Dependency notation rule
+
+```math
+\boxed{
+\mathfrak I_{ij}^{\alpha\beta}
+\quad\text{is legacy only;}
+\qquad
+\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)
+\quad\text{is active.}
+}
+```
+
+This cleanup changes **authority interpretation only**. Historical scientific reasoning, prior results, and provenance are preserved.
