@@ -1,10 +1,11 @@
 # MSE Thesis — Multilayer Interdependent Power–Transportation Infrastructure Resilience
 
-> **Current scientific authorities (2026-09-18):**  
+> **Current scientific authorities (2026-09-19):**  
 > Framework: [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
 > RQ–SO–H: [`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V3.md)  
 > Chapter I: [`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`](project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md)  
-> Writing/inference: [`thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`](thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md)
+> Writing/inference: [`thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`](thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md)  
+> P–T SoS / complex-dynamics interpretation: [`project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`](project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md)
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Citation](https://img.shields.io/badge/citations-APA%207-8250DF)
@@ -23,7 +24,7 @@
 **Research logic:** RQ0 + RQ1–RQ7, SO1–SO7, H1–H5 under canonical v3.0  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Citation standard:** APA 7 author–date internally; final style subject to chair approval and ASU precedence  
-**Updated:** 2026-09-18
+**Updated:** 2026-09-19
 
 > **Repository rule:** active thesis development belongs in `Dossiya-SE/MSE-thesis`. Historical/archive material is provenance only and cannot override current canonical files.
 
@@ -238,7 +239,7 @@ Current official ASU Graduate College formatting requirements are tracked separa
 
 ## Current execution state
 
-H1 M0/M1/M2 implementations and confirmatory design are advanced/frozen as applicable; row-level raw-data retrieval/qualification remains the active blocking gate before calibration or confirmatory execution. H2 empirical qualification remains open. H3–H5 remain blocked until their hypothesis-specific preregistration, data, metric, accounting-boundary and VVUQ gates close.
+H1 M0/M1/M2 software fixtures are verified at their declared benchmark/test-harness level, but accepted case M2 execution is **not authorized**: `EV_T_to_P` has Stage-2 causal PASS and Stage2→3 BLOCKED status, while `EV_P_to_T`, `SIGNAL_P_to_T`, and `REPAIR_T_to_P` remain case-causally BLOCKED. Exact runtime binding, case qualification, reference/QOI/VVUQ controls, and the remaining data gates must close before confirmatory H1 execution. H2 empirical qualification remains open. H3–H5 remain blocked until their hypothesis-specific preregistration, data, metric, accounting-boundary and VVUQ gates close.
 
 ```math
 \boxed{

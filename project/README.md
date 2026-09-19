@@ -22,6 +22,7 @@ This directory is the active scientific and mathematical source of truth for the
 **Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
 **Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
 **Mathematical foundations:** `MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md`  
+**P–T SoS / complex-dynamics amendment:** `CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`  
 **Writing/inference authority:** `../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Citation rule:** externally sourced scientific claims require adjacent verified APA 7 author–date citations  
 **Novelty rule:** literature support justifies relevance, mechanisms, mathematics and comparators; novelty is tested separately
@@ -185,14 +186,16 @@ M_2=\text{dynamic causal coupling}.
 Current state:
 
 ```text
-M0 implementation:                  VERIFIED
-M1 implementation:                  VERIFIED
-M2 implementation/regression:       VERIFIED
+M0 software fixture:                VERIFIED
+M1 software fixture:                VERIFIED
+M2 software fixture/regression:     VERIFIED
+current case causal PASS:            EV_T_to_P only
+EV_T_to_P Stage2→3 readiness:       BLOCKED
+accepted case M2 mechanism set:     EMPTY
 row-level acquisition plan:         FROZEN
-offline acquisition/audit tests:    PASS
 raw row-level qualification R1–R8:  PENDING
 candidate train/test split:          NOT FROZEN
-confirmatory H1 execution:           NOT AUTHORIZED before data gates
+confirmatory H1 execution:           NOT AUTHORIZED
 ```
 
 ### H2
@@ -272,3 +275,14 @@ Legacy v1/v2 files remain provenance only where superseded.
 ```
 
 Do not revise the conceptual framework, choose convenient probability levels, or activate new confirmatory claims merely because they are mathematically attractive. Progress comes from closing evidence, model, data and preregistration gates.
+
+## 2026-09-19 P–T source-alignment control
+
+The current Power–Transportation interpretation is additionally governed by:
+
+- `CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`;
+- `stage2/STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md`;
+- `stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md`;
+- `global_integration/POWER_TRANSPORT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_AUDIT_V1_2026-09-19.md`.
+
+The explicit physical SoS object is `\mathscr S_{PT}`; `\mathcal S=\{P,T,I,O\}` remains the four-domain shorthand. Current Stage-3 physical interface memory is mechanism-indexed through `z_{\mathbb I}`, not a forced single reciprocal state.

@@ -235,3 +235,7 @@ Interpretation rule:
 ```
 
 No empirical status, causal PASS, Stage2→3 readiness, or hypothesis result is upgraded by these amendments.
+
+## Chapter-I source-alignment governance — 2026-09-19
+
+The Chapter-I freeze remains controlling. Scientific-source updates made during the P–T SoS alignment are authorized by `thesis/00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md`. The amendment is bounded to Sections 1.1, 1.2 and 1.12 and does not alter the canonical RQ/SO/H or seven-stage architecture.

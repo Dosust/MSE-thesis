@@ -157,3 +157,13 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 ## Exit gate
 
 See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 1 is not complete until the exact v3 questions/objectives/hypotheses, Chapter-I v2 flow, evidence discipline and proposed-contribution status are synchronized. Sections 1.5 and 1.6 must remain consistent with the current sustainability admission freeze and Austin case-admissibility state; Section 1.7 must preserve the seven-stage conceptual architecture while deferring detailed mathematics to Chapter 3.
+
+## Chapter-I source-alignment amendment — 2026-09-19
+
+The Chapter-I freeze remains active. The following bounded scientific-source changes are authorized by `../00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md`:
+
+- Section 1.1: Hall et al. service-centered SoS grounding and Ibáñez et al. separate-but-coupled energy–transport grounding;
+- Section 1.2: explicit physical P–T SoS object, operational/recovery/planning distinction, and conceptual transport infrastructure/fleet/demand/control decomposition;
+- Section 1.12: novelty firewall excluding SoS/P–T interdependence/integrated planning as standalone novelty.
+
+No RQ/SO/H wording or chapter sequence is changed.

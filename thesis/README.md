@@ -55,6 +55,7 @@ Internal conventions never override ASU, SSEBE, or committee requirements.
 | [`../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | seven-stage scientific architecture |
 | [`../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md) | RQ0 + RQ1–RQ7 + SO1–SO7 + H1–H5 |
 | [`../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`](../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md) | Chapter-I content, page allocation and flow authority |
+| [`../project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`](../project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md) | source-grounded P–T SoS/service/dynamics interpretation |
 | [`00_governance/RQ_SO_H_TRACEABILITY_V3.md`](00_governance/RQ_SO_H_TRACEABILITY_V3.md) | thesis-facing question/objective/hypothesis traceability |
 | [`00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`](00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md) | thesis-wide claim/evidence/inference writing standard |
 | [`00_governance/CLAIM_EVIDENCE_REGISTER.md`](00_governance/CLAIM_EVIDENCE_REGISTER.md) | claim/evidence/epistemic ledger |
@@ -133,9 +134,9 @@ Current official Graduate College guidance requires use of the ASU Format Wizard
 
 ## Current execution state
 
-Chapter 1 scientific content is **PASS — FROZEN** as of 2026-09-18 under [`00_governance/CHAPTER_I_FREEZE_2026-09-18.md`](00_governance/CHAPTER_I_FREEZE_2026-09-18.md). Any scientific change to Sections 1.1–1.13 requires explicit unfreeze or a versioned amendment; formatting/rendering and lossless editorial corrections remain controlled exceptions.
+Chapter 1 scientific content remains **PASS — FROZEN** under [`00_governance/CHAPTER_I_FREEZE_2026-09-18.md`](00_governance/CHAPTER_I_FREEZE_2026-09-18.md), with the bounded source-grounding changes to Sections 1.1, 1.2, and 1.12 authorized by [`00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md`](00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md). The amendment changes source grounding and interpretive precision only; it does not alter RQ0/RQ1–RQ7, SO1–SO7, H1–H5, or the seven-stage flow.
 
-The H1 scientific implementation is governed by `../project/` authority files. M0/M1/M2 implementations and the H1 confirmatory design are advanced/frozen as applicable, while row-level raw-data retrieval/qualification remains the active blocking gate before calibration or confirmatory execution. H2–H5 remain subject to their hypothesis-specific evidence, metric, accounting-boundary, VVUQ and preregistration gates.
+The H1 scientific implementation is governed by `../project/` authority files. M0/M1/M2 software fixtures are verified at their declared benchmark level, but accepted case M2 execution remains blocked because no current dependency has Stage2→3 PASS. `EV_T_to_P` is causally accepted for the declared synthetic case but remains Stage2→3 BLOCKED; the other instantiated P–T case relations remain causally BLOCKED. H2–H5 remain subject to their hypothesis-specific evidence, metric, accounting-boundary, VVUQ and preregistration gates.
 
 ## Official ASU sources tracked
 

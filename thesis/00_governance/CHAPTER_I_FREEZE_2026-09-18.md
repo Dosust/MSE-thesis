@@ -111,3 +111,21 @@ The canonical Chapter-I allocation remains 16–18 pages. Exact page count is an
 Freezing Chapter I does **not** freeze Chapter 2 evidence synthesis, Chapter 3 mathematics, Chapter 4 experiments, or H1–H5 confirmatory execution. If downstream evidence invalidates a Chapter-I premise, the affected Chapter-I section must be formally reopened rather than silently edited.
 
 The next admissible thesis action is therefore Chapter 2 / evidence-and-theoretical-foundations work under the frozen Chapter-I research contract.
+
+## Authorized source-alignment amendment — 2026-09-19
+
+A bounded post-freeze scientific-source amendment is authorized by:
+
+`CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md`.
+
+It permits the Hall/Ibáñez grounding corrections in Sections 1.1, 1.2 and 1.12 without reopening the Chapter-I architecture, RQ/SO/H set, or seven-stage framework.
+
+```math
+\boxed{
+\text{Chapter-I freeze}
++
+\text{versioned bounded amendment}
+=
+\text{current controlled Chapter-I interpretation}.
+}
+```
