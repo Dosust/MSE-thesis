@@ -245,3 +245,21 @@ P1.11=PASS
 ~~~
 
 P2 remains the next execution task and must consume P1.11 explicitly.
+
+
+#### P1.11.1 Pant spatial-risk / functional-pathway refinement — COMPLETE
+- [x] Make common-cause vs cascade chronology explicit.
+- [x] Make spatially coherent hazard resolution conditional on mechanism/QOI.
+- [x] Separate graph paths from functional service pathways.
+- [x] Preserve nearest-neighbour mappings as candidate/proxy evidence only.
+- [x] Treat binary failure as a bounded special case.
+- [x] Treat no-rerouting transport as a bounded approximation/benchmark.
+- [x] Freeze criticality classes: topology / flow-service / hazard-conditioned / viability-sensitive.
+- [x] Separate local interface criticality from spatial hotspot criticality.
+- [x] Preserve risk != resilience.
+- [x] Preserve asset state != service disruption != economic consequence.
+- [x] Preserve recovery != transformation.
+- [x] Add twelve required P2 audit fields.
+- [x] Run compatibility audit: 36/36 PASS.
+
+P2 remains the next major task.

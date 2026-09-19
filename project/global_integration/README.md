@@ -280,3 +280,33 @@ Authority:
 ~~~
 
 This is an interpretive/control-plane closure only. It does not change H1–H5 empirical status. P2 must include these mandatory dimensions in its global audit columns.
+
+
+## P1.11.1 Pant spatial-risk / functional-pathway amendment
+
+Pant-derived controls are now explicit through:
+
+- ../CANONICAL_SPATIOTEMPORAL_SOS_LENS_AMENDMENT_V1_1.md
+- P1_11_1_PANT_SPATIAL_RISK_FUNCTIONAL_PATHWAY_AUDIT_V1_2026-09-19.md
+
+Added mandatory distinctions:
+
+~~~math
+\boxed{
+\text{common cause}\neq\text{cascade},
+\quad
+\text{graph path}\neq\text{functional pathway},
+\quad
+\text{risk}\neq\text{resilience},
+\quad
+C^{topo}\neq C^{flow/service}\neq C^{hazard}\neq C^{\mathcal V}.
+}
+~~~
+
+The amendment also requires P2 to audit hazard spatial coherence, spatial-proxy status, state/transport model fidelity, functional pathways and criticality class.
+
+~~~math
+\boxed{G_{P1.11.1}^{design}=PASS\qquad(36/36)}
+~~~
+
+No empirical/H1–H5 status changes.
