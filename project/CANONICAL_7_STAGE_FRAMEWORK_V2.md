@@ -973,7 +973,7 @@ These require preregistered experiments, VVUQ, and evidence-qualified data.
 
 ## Question/objective consolidation — v3, 2026-09-17
 
-**Change type:** user-authorized wording and traceability amendment. The seven scientific stages are unchanged. Use `CANONICAL_RQ_SO_HYPOTHESES_V3.md` for exact RQ0/RQ1–RQ7 and SO1–SO7 wording.
+**Change type:** user-authorized wording and traceability amendment. The seven scientific stages are unchanged. Use `CANONICAL_RESEARCH_QUESTIONS_V4.md` for the exact official RQ0/RQ1–RQ7 wording. Use `CANONICAL_RQ_SO_HYPOTHESES_V3.md` for SO1–SO7 and H1–H5 wording/test logic until a separately authorized synchronization.
 
 | Stage | Question / objective | Evidence or hypothesis mapping |
 |---|---|---|
