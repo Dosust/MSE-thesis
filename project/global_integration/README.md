@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.4 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.5 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -21,6 +21,14 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md — canonical credibility/comparison classification registry.
 - P1_4_BASELINE_BENCHMARK_REFERENCE_AUDIT_V1_2026-09-19.md — 38/38 classification audit.
 - P1_4_BASELINE_BENCHMARK_REFERENCE_MANIFEST_V1.json — exact P1.4 authority/artifact identities.
+- GLOBAL_FINAL_CASE_SCHEMA_V1.md — canonical empty final-case scientific contract.
+- GLOBAL_FINAL_CASE_SCHEMA_V1.schema.json — Draft 2020-12 machine schema.
+- GLOBAL_FINAL_CASE_FIELD_DICTIONARY_V1.md — typed owner/consumer/source/unit dictionary.
+- GLOBAL_FINAL_CASE_SOURCE_PROVENANCE_TEMPLATE_V1.csv — provenance ledger template.
+- GLOBAL_FINAL_CASE_ADMISSIBILITY_GATE_MATRIX_V1.md — case-field qualification gates.
+- GLOBAL_FINAL_CASE_REFERENCE_CLASS_MATRIX_V1.md — P1.4 reference-class binding.
+- GLOBAL_FINAL_CASE_UNCERTAINTY_TEMPLATE_V1.md — case UQ record.
+- P1_5_FINAL_CASE_SCHEMA_AUDIT_V1_2026-09-19.md — 58/58 P1.5 audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -39,6 +47,8 @@ Historical:
 \text{P1.3 H1--H5 preregistration}
 \rightarrow
 \text{P1.4 baseline/benchmark/reference}
+\rightarrow
+\text{P1.5 final-case schema}
 =
 PASS
 }
@@ -61,44 +71,38 @@ G_{P1.3}^{design}=PASS
 
 All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
 
-## P1.4 classification state
+## P1.5 case-schema state
 
 ~~~math
 \boxed{
-G_{P1.4}^{design}=PASS
+G_{P1.5}^{design}=PASS
 \qquad
-(38/38\;checks)
+(58/58\;checks)
 }
 ~~~
 
-The global control plane now enforces:
+The case contract now controls all eleven fields:
 
 ~~~math
-\boxed{
-\text{baseline}
-\neq
-\text{benchmark}
-\neq
-\text{reference solution/calculation}
-\neq
-\text{validation evidence}
-\neq
-\text{ground truth}.
-}
+\mathcal S_{\rm case}
+=
+(
+\mathcal G,Y_0,\theta,\eta,T,K,G_{\rm rec},F_{\rm unsafe},
+\mathcal U_{\rm feas},\mathcal A,\Omega
+).
 ~~~
 
-Synthetic truth, qualified cases, oracles, external factor/practice references and auxiliary counterfactual models are also explicitly typed.
+All values remain DEFERRED until source, provenance, units, UQ, quality, reference class, validity and ownership gates are satisfied.
 
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.5 = GLOBAL FINAL-CASE SCHEMA}
+\text{P1.6 = GLOBAL SCENARIO ID AND PROPAGATION SCHEMA}
 }
 ~~~
 
 Then:
-- P1.6 common scenario schema;
 - P1.7 global uncertainty/VVUQ;
 - P1.8 requirements/provenance;
 - P1.9 claim/evidence/result matrix;

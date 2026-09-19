@@ -1,0 +1,12 @@
+field_id,symbol,source_id,source_class,source_title,source_uri_or_path,source_version,acquisition_date,data_role,independence_required,entity_id,activity_id,agent_id,activity_description,software,software_version,activity_parameters,input_hash,output_hash,license,reference_class,validity_domain,status,notes
+CASE-G,G,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-Y0,Y0,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-THETA,theta,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-ETA,eta,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-T,T,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-K,K,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-GREC,G_rec,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-FUNSAFE,F_unsafe,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-UFEAS,U_feas,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-A,A,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,
+CASE-OMEGA,Omega,,,,,,NONE,false,,,,,,,,,,,,NONE,,DEFERRED,

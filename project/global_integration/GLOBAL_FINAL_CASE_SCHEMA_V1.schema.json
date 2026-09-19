@@ -1,0 +1,864 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/project/global_integration/GLOBAL_FINAL_CASE_SCHEMA_V1.schema.json",
+  "title": "Global Final-Case Schema V1",
+  "description": "Machine-checkable pre-data case contract for the Stage 1→7 P+T thesis framework. Values may remain deferred until qualified.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "schema_version",
+    "case_status",
+    "core",
+    "case_provenance",
+    "case_claim_ceiling"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_status": {
+      "enum": [
+        "SCHEMA_ONLY",
+        "PARTIALLY_BOUND",
+        "EXECUTION_READY",
+        "VALIDATED_FOR_DECLARED_USE",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "case_provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "case_claim_ceiling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "string"
+    },
+    "core": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "graph",
+        "initial_state",
+        "parameters",
+        "hazard",
+        "dynamic_horizon",
+        "viability_set",
+        "recovery_target",
+        "unsafe_set",
+        "feasible_controls",
+        "interventions",
+        "validity_domain"
+      ],
+      "properties": {
+        "graph": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "G"
+                }
+              }
+            }
+          ]
+        },
+        "initial_state": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "Y0"
+                }
+              }
+            }
+          ]
+        },
+        "parameters": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "theta"
+                }
+              }
+            }
+          ]
+        },
+        "hazard": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "eta"
+                }
+              }
+            }
+          ]
+        },
+        "dynamic_horizon": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "T"
+                }
+              }
+            }
+          ]
+        },
+        "viability_set": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "K"
+                }
+              }
+            }
+          ]
+        },
+        "recovery_target": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "G_rec"
+                }
+              }
+            }
+          ]
+        },
+        "unsafe_set": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "F_unsafe"
+                }
+              }
+            }
+          ]
+        },
+        "feasible_controls": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "U_feas"
+                }
+              }
+            }
+          ]
+        },
+        "interventions": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "A"
+                }
+              }
+            }
+          ]
+        },
+        "validity_domain": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/caseField"
+            },
+            {
+              "properties": {
+                "symbol": {
+                  "const": "Omega"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL",
+        "DEFERRED",
+        "N/A"
+      ]
+    },
+    "stage": {
+      "enum": [
+        "GLOBAL",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ]
+    },
+    "semanticClass": {
+      "enum": [
+        "PHYSICAL",
+        "EPISTEMIC",
+        "REQUIREMENT",
+        "CONTROL",
+        "INTERVENTION",
+        "VALIDITY_DOMAIN",
+        "MIXED"
+      ]
+    },
+    "sourceClass": {
+      "enum": [
+        "DIRECT_MEASUREMENT",
+        "DERIVED_OBSERVATION",
+        "CALIBRATED",
+        "INFERRED",
+        "MANUFACTURER",
+        "AUTHORITATIVE_DATABASE",
+        "REGULATORY",
+        "STANDARD",
+        "OPERATOR",
+        "STAKEHOLDER",
+        "PEER_REVIEWED_LITERATURE",
+        "HIGHER_FIDELITY_MODEL",
+        "SYNTHETIC",
+        "SENSITIVITY_ONLY",
+        "RESEARCH_ASSUMPTION",
+        "OTHER"
+      ]
+    },
+    "dataRole": {
+      "enum": [
+        "CALIBRATION",
+        "VALIDATION",
+        "HELD_OUT",
+        "BENCHMARK",
+        "CONFIRMATORY",
+        "OPERATIONAL",
+        "NONE"
+      ]
+    },
+    "referenceClass": {
+      "enum": [
+        "VALIDATION_EVIDENCE",
+        "VALIDATION_REFERENCE",
+        "REFERENCE_SOLUTION",
+        "REFERENCE_CALCULATION",
+        "EVIDENCE_SOURCE_REFERENCE",
+        "EXTERNAL_PRACTICE_FACTOR_REFERENCE",
+        "SYNTHETIC_TRUTH",
+        "GROUND_TRUTH",
+        "QUALIFIED_CASE",
+        "AUXILIARY_COUNTERFACTUAL_MODEL",
+        "BENCHMARK_PROBLEM",
+        "VERIFICATION_FIXTURE",
+        "REQUIREMENT_THRESHOLD",
+        "NONE"
+      ]
+    },
+    "uncertaintyClass": {
+      "enum": [
+        "ALEATORY",
+        "EPISTEMIC",
+        "MODEL_FORM",
+        "NUMERICAL",
+        "MEASUREMENT",
+        "REQUIREMENT",
+        "PERFORMANCE",
+        "VALUE",
+        "MIXED",
+        "NONE"
+      ]
+    },
+    "unitSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quantity",
+        "source_unit",
+        "canonical_unit",
+        "conversion_rule",
+        "status"
+      ],
+      "properties": {
+        "quantity": {
+          "type": "string"
+        },
+        "source_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conversion_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "spatialMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "applicable"
+      ],
+      "properties": {
+        "applicable": {
+          "type": "boolean"
+        },
+        "crs": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "datum": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extent": {
+          "type": [
+            "string",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "resolution": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "coordinate_operation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quality_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "temporalMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "applicable"
+      ],
+      "properties": {
+        "applicable": {
+          "type": "boolean"
+        },
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timezone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "temporal_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolution": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "synchronization_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "sourceRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_classes",
+        "data_role",
+        "independence_required",
+        "qualification_rule"
+      ],
+      "properties": {
+        "source_classes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/sourceClass"
+          }
+        },
+        "data_role": {
+          "$ref": "#/$defs/dataRole"
+        },
+        "independence_required": {
+          "type": "boolean"
+        },
+        "qualification_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acquisition_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_ids",
+        "activity_ids",
+        "agent_ids",
+        "transform_chain",
+        "status"
+      ],
+      "properties": {
+        "entity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "activity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "transform_chain": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "software_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "input_hashes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "output_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "classes",
+        "representation",
+        "dependence",
+        "source",
+        "propagation",
+        "validation",
+        "status"
+      ],
+      "properties": {
+        "classes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/uncertaintyClass"
+          }
+        },
+        "representation": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "null"
+          ]
+        },
+        "dependence": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "propagation": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "completeness",
+        "consistency",
+        "positional_accuracy",
+        "thematic_accuracy",
+        "temporal_quality",
+        "coverage",
+        "lineage",
+        "status"
+      ],
+      "properties": {
+        "completeness": {
+          "type": "string"
+        },
+        "consistency": {
+          "type": "string"
+        },
+        "positional_accuracy": {
+          "type": "string"
+        },
+        "thematic_accuracy": {
+          "type": "string"
+        },
+        "temporal_quality": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "admissibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic",
+        "type",
+        "unit",
+        "spatial",
+        "temporal",
+        "source",
+        "provenance",
+        "quality",
+        "uncertainty",
+        "reference",
+        "validity",
+        "ownership",
+        "gate_result"
+      ],
+      "properties": {
+        "semantic": {
+          "$ref": "#/$defs/status"
+        },
+        "type": {
+          "$ref": "#/$defs/status"
+        },
+        "unit": {
+          "$ref": "#/$defs/status"
+        },
+        "spatial": {
+          "$ref": "#/$defs/status"
+        },
+        "temporal": {
+          "$ref": "#/$defs/status"
+        },
+        "source": {
+          "$ref": "#/$defs/status"
+        },
+        "provenance": {
+          "$ref": "#/$defs/status"
+        },
+        "quality": {
+          "$ref": "#/$defs/status"
+        },
+        "uncertainty": {
+          "$ref": "#/$defs/status"
+        },
+        "reference": {
+          "$ref": "#/$defs/status"
+        },
+        "validity": {
+          "$ref": "#/$defs/status"
+        },
+        "ownership": {
+          "$ref": "#/$defs/status"
+        },
+        "gate_result": {
+          "$ref": "#/$defs/status"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "caseField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_id",
+        "symbol",
+        "definition",
+        "object_type",
+        "shape",
+        "semantic_class",
+        "unit_spec",
+        "spatial",
+        "temporal",
+        "source_requirement",
+        "provenance",
+        "uncertainty",
+        "quality",
+        "reference_class",
+        "admissibility",
+        "status",
+        "owner_stages",
+        "consumer_stages",
+        "validity_domain",
+        "claim_ceiling"
+      ],
+      "properties": {
+        "field_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shape": {
+          "type": "string",
+          "minLength": 1
+        },
+        "semantic_class": {
+          "$ref": "#/$defs/semanticClass"
+        },
+        "unit_spec": {
+          "$ref": "#/$defs/unitSpec"
+        },
+        "spatial": {
+          "$ref": "#/$defs/spatialMetadata"
+        },
+        "temporal": {
+          "$ref": "#/$defs/temporalMetadata"
+        },
+        "source_requirement": {
+          "$ref": "#/$defs/sourceRequirement"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "uncertainty": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "quality": {
+          "$ref": "#/$defs/quality"
+        },
+        "reference_class": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/referenceClass"
+          }
+        },
+        "admissibility": {
+          "$ref": "#/$defs/admissibility"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "owner_stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stage"
+          }
+        },
+        "consumer_stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stage"
+          }
+        },
+        "validity_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_ceiling": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "PASS"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "value"
+            ],
+            "properties": {
+              "admissibility": {
+                "properties": {
+                  "gate_result": {
+                    "const": "PASS"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

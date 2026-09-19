@@ -92,7 +92,16 @@ For every `I(k→k+1)`:
 - [x] Prohibit unnamed reference roles in future confirmatory documentation.
 - [x] Run P1.4 classification audit: 38/38 PASS.
 
-### P1.5 Empty final-case schema — NEXT
+### P1.5 Empty final-case schema — COMPLETE
+- [x] Create GLOBAL_FINAL_CASE_SCHEMA_V1.md.
+- [x] Create Draft 2020-12 machine schema.
+- [x] Create field dictionary for all eleven case objects.
+- [x] Create provenance CSV ledger.
+- [x] Create admissibility gate matrix.
+- [x] Bind P1.4 reference classes.
+- [x] Create uncertainty template.
+- [x] Preserve all case values as DEFERRED.
+- [x] Run combined semantic/machine audit: 58/58 PASS.
 ```math
 \mathcal S_{case}
 =

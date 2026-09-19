@@ -666,3 +666,52 @@ P1.4=PASS.
 ~~~
 
 Next: **P1.5 global final-case schema**.
+
+
+---
+
+## P1.5 final-case schema closure — 2026-09-19
+
+Created:
+- GLOBAL_FINAL_CASE_SCHEMA_V1.md;
+- GLOBAL_FINAL_CASE_SCHEMA_V1.schema.json;
+- GLOBAL_FINAL_CASE_FIELD_DICTIONARY_V1.md;
+- GLOBAL_FINAL_CASE_SOURCE_PROVENANCE_TEMPLATE_V1.csv;
+- GLOBAL_FINAL_CASE_ADMISSIBILITY_GATE_MATRIX_V1.md;
+- GLOBAL_FINAL_CASE_REFERENCE_CLASS_MATRIX_V1.md;
+- GLOBAL_FINAL_CASE_UNCERTAINTY_TEMPLATE_V1.md;
+- P1_5_FINAL_CASE_SCHEMA_AUDIT_V1_2026-09-19.md.
+
+Core case contract:
+
+~~~math
+\boxed{
+\mathcal S_{\rm case}
+=
+(
+\mathcal G,Y_0,\theta,\eta,T,K,G_{\rm rec},F_{\rm unsafe},
+\mathcal U_{\rm feas},\mathcal A,\Omega
+).
+}
+~~~
+
+Every field now requires scientific type, source obligation, unit semantics, provenance, space/time metadata where applicable, UQ, quality, P1.4 reference class, admissibility gate, owner/consumers, validity and claim ceiling.
+
+Machine/semantic audit:
+
+~~~text
+58 PASS
+0 FAIL
+~~~
+
+No final case value was selected or invented.
+
+Therefore:
+
+~~~math
+\boxed{
+P1.5=PASS.
+}
+~~~
+
+Next: **P1.6 global scenario ID and propagation schema**.

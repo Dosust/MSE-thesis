@@ -1,0 +1,176 @@
+{
+  "manifest_id": "P1_5_FINAL_CASE_SCHEMA_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_5_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "315dcb055e9847ace0b5c457e4544f4083356ead",
+  "audit": {
+    "passed": 58,
+    "failed": 0
+  },
+  "source_authorities": [
+    {
+      "path": "project/global_integration/GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_V1.md",
+      "sha": "6f389265ac6e449e814534a7e61e12918a2224aa"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_STAGE_HANDOFF_MATRIX_V1.md",
+      "sha": "711128daad5f150016cf994e1c6da497c3c84bb7"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md",
+      "sha": "b46e393d37f1bc979d7cf2f351d0d586f31898c1"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    },
+    {
+      "path": "project/STAGE1_FINAL_FRAMEWORK_V2.md",
+      "sha": "65fe99930245a68259608cf3b59cc29606bbe605"
+    },
+    {
+      "path": "project/stage3/STAGE3_STATE_INPUT_OUTPUT_QOI_ONTOLOGY_V2.md",
+      "sha": "80dd965391c672df303e46ace919a5dd6bf11ec5"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "450440fd06088202c1266303cddf9b0e0c2a4c8c"
+    },
+    {
+      "path": "project/stage5/00_governance/STAGE5_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "3742632c3a0eda97ec4b6fb85aeb81cb334ed4c2"
+    },
+    {
+      "path": "project/stage6/00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "sha": "3493142f685c9520ee7f6bdf001a3dea131f2649"
+    },
+    {
+      "path": "project/stage7/STAGE7_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "sha": "38a71356b3c99d35d5b73f7b70fb7d32452f71d4"
+    }
+  ],
+  "external_design_references": [
+    {
+      "name": "W3C PROV-O",
+      "url": "https://www.w3.org/TR/prov-o/"
+    },
+    {
+      "name": "FAIR Guiding Principles",
+      "url": "https://doi.org/10.1038/sdata.2016.18"
+    },
+    {
+      "name": "ISO 19115-1:2014",
+      "url": "https://www.iso.org/standard/53798.html"
+    },
+    {
+      "name": "ISO 19157-1:2023",
+      "url": "https://www.iso.org/standard/78900.html"
+    },
+    {
+      "name": "OGC WKT-CRS",
+      "url": "https://www.ogc.org/standards/wkt-crs/"
+    },
+    {
+      "name": "OGC SensorThings API",
+      "url": "https://www.ogc.org/standards/sensorthings/"
+    },
+    {
+      "name": "CF Conventions",
+      "url": "https://cfconventions.org/conventions.html"
+    },
+    {
+      "name": "BIPM SI Brochure",
+      "url": "https://www.bipm.org/en/publications/si-brochure"
+    },
+    {
+      "name": "JCGM Publications",
+      "url": "https://www.bipm.org/en/committees/jc/jcgm/publications"
+    },
+    {
+      "name": "NASA 7000 M&S Standards",
+      "url": "https://standards.nasa.gov/systems-and-subsystem-test"
+    },
+    {
+      "name": "NIST Digital-Twin Credibility",
+      "url": "https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing"
+    },
+    {
+      "name": "JSON Schema Draft 2020-12",
+      "url": "https://json-schema.org/draft/2020-12"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_SCHEMA_V1.md",
+      "sha": "83c66ee25169bb22f6806642a0753fa589d3f42e"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_SCHEMA_V1.schema.json",
+      "sha": "f279ec84004dcca623aa2bff59916cef03ef5fd0"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_FIELD_DICTIONARY_V1.md",
+      "sha": "92b26e7f08a8dbedd3fd854210d5305826fc548b"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_SOURCE_PROVENANCE_TEMPLATE_V1.csv",
+      "sha": "3a58103ab017642f66adbeae817f2f1dc4978235"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_ADMISSIBILITY_GATE_MATRIX_V1.md",
+      "sha": "45af7b40f5989884cd08d23d6fb9eaa77860bf17"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_REFERENCE_CLASS_MATRIX_V1.md",
+      "sha": "2e600bd834a6f1d192d43ea2c1530e7167ac5545"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_UNCERTAINTY_TEMPLATE_V1.md",
+      "sha": "6b579589ad0295a4b997a6ba41a2aedd4973e48d"
+    },
+    {
+      "path": "project/global_integration/P1_5_FINAL_CASE_SCHEMA_AUDIT_V1_2026-09-19.md",
+      "sha": "13563cac5dcacb04e1ef53807e75cae098ed864d"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "59bfb311628a1715fef0ee01c1cc8c34d32990a7"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "a975da0d3b05fc8aa00b89a88646362b9facfc4d"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "a8bfebcc456cc2040f4aa8ca32aa9e4edd4d8084"
+    }
+  ],
+  "core_case_fields": [
+    "G",
+    "Y0",
+    "theta",
+    "eta",
+    "T",
+    "K",
+    "G_rec",
+    "F_unsafe",
+    "U_feas",
+    "A",
+    "Omega"
+  ],
+  "protected_deferred": [
+    "case_location",
+    "network_asset_ids",
+    "interface_crosswalks",
+    "hazard_event_and_intensity",
+    "initial_state_values",
+    "parameter_values_and_distributions",
+    "dynamic_and_recovery_thresholds",
+    "control_bounds",
+    "intervention_set",
+    "scenario_ids_and_probabilities",
+    "H1_H5_results"
+  ],
+  "next_task": "P1.6 GLOBAL SCENARIO ID AND PROPAGATION SCHEMA"
+}
