@@ -6,7 +6,8 @@
 **Thesis page ceiling:** 160 pages  
 **Chapter I target:** 16–18 pages (nominal ≈17)  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Research-question authority:** `CANONICAL_RESEARCH_QUESTIONS_V4.md`  
+**SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Intervention-performance authority:** `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`  
 **Writing/inference authority:** `../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
@@ -227,7 +228,7 @@ Where Chapter 1 discusses “controlled viability,” it must make clear that th
 
 ### 1.9 Research Questions
 
-Use exact RQ0 and RQ1–RQ7 wording from `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. Preserve the dependency:
+Use exact RQ0 and RQ1–RQ7 wording from `CANONICAL_RESEARCH_QUESTIONS_V4.md`. Preserve the dependency:
 
 ```math
 \boxed{RQ1\rightarrow RQ2\rightarrow RQ3\rightarrow RQ4\rightarrow RQ5\rightarrow RQ6\rightarrow RQ7}.
