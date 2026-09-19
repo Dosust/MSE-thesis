@@ -1,0 +1,39 @@
+{
+  "stage": 6,
+  "version": "V1",
+  "date": "2026-09-19",
+  "title": "Resilience Diagnosis, Engineering Intervention and Sustainability Consequences",
+  "rq": "RQ6",
+  "so": "SO6",
+  "hypothesis": "H4",
+  "design_protocol_status": "FINALIZED_V1",
+  "empirical_execution_status": "DEFERRED_UNTIL_7_STAGE_ARCHITECTURE_FROZEN",
+  "canonical_core_outcomes": [
+    "accessibility",
+    "energy",
+    "carbon",
+    "cost"
+  ],
+  "permanent_distinctions": [
+    "resilience_effectiveness != resource_efficiency",
+    "resilience != sustainability",
+    "technical_service != social_consequence",
+    "carbon != total_environmental_sustainability",
+    "Stage6_consequence_assessment != Stage7_decision"
+  ],
+  "files": [
+    "README.md",
+    "00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+    "01_scope/STAGE6_SCOPE_BOUNDARY_FUNCTIONAL_UNIT_V1.md",
+    "02_interventions/STAGE6_INTERVENTION_BASELINE_AND_COMPARATOR_PROTOCOL_V1.md",
+    "03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md",
+    "04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md",
+    "05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V1.md",
+    "06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V1.md",
+    "07_vvuq/STAGE6_VVUQ_PROTOCOL_V1.md",
+    "08_closure/STAGE6_CLOSURE_AUDIT_V1.md",
+    "09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V1.md",
+    "STAGE6_EVIDENCE_REGISTER_V1.md",
+    "STAGE6_FINALIZATION_MANIFEST_V1.json"
+  ]
+}
