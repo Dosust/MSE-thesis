@@ -1,15 +1,26 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-09-20",
   "repository": "Dossiya-SE/MSE-thesis",
   "branch": "main",
-  "status": "P3_IN_PROGRESS_CASE_EXECUTION_BLOCKED",
+  "status": "P3_IN_PROGRESS_EXPERIMENT_EXECUTION_BLOCKED",
   "parent_p2_head": "7ac85fe59125e4883b3227377d6b41f4572c5ea1",
   "p3_initialization_commit": "fdd579b5ec8ac4d4141b538e8adf32ffe8923fee",
   "p3_control_status": "PASS",
-  "repository_runner_status": "BLOCKED",
+  "case_admissibility_status": "BLOCKED",
+  "repository_execution_status": "BLOCKED",
+  "experiment_object_readiness_status": "BLOCKED",
+  "experiment_execution_status": "BLOCKED",
+  "repository_execution_gates": {
+    "G_runner": "BLOCKED",
+    "G_syntax": "DEFERRED",
+    "G_tests": "DEFERRED",
+    "G_authority_lint": "DEFERRED",
+    "G_case_instrument": "DEFERRED"
+  },
+  "runner_classification": "PRE_RUNNER_ASSIGNMENT_FAILURE",
+  "runner_observation": "project/global_integration/P3_RUNNER_ASSIGNMENT_OBSERVATION_V1_2026-09-20.json",
   "final_case_admissibility": false,
-  "case_execution_status": "BLOCKED",
   "hypotheses": {
     "H1": "NOT_TESTED",
     "H2": "NOT_TESTED",
@@ -35,32 +46,21 @@
     "corrected_git_blob": "88e226596dd51b0642580f32dd56851e6d8585f2",
     "superseded_truncated_blob": "307c2b3165308c5d7c4a7aa3a58ef87b208a757f"
   },
-  "first_workflow_observation": [
-    {
-      "workflow": "Python package",
-      "run_id": 35456456998,
-      "conclusion": "failure",
-      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
-    },
-    {
-      "workflow": "Scientific Architecture QA",
-      "run_id": 35456457022,
-      "conclusion": "failure",
-      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
-    },
-    {
-      "workflow": "Austin case data qualification",
-      "run_id": 35456457060,
-      "conclusion": "failure",
-      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
-    }
-  ],
+  "semantics": {
+    "case_admissibility": "G_case,adm",
+    "repository_execution": "G_repo,exec",
+    "experiment_object_readiness": "G_E^objects = AND over o in O_req(E) of G_o^ready",
+    "experiment_execution": "G_exp,exec(E) = G_case,adm AND G_repo,exec AND G_E^objects",
+    "current_required_object_set_status": "OPEN_NOT_FROZEN"
+  },
   "next_required_actions": [
-    "observe runner availability after correction commit",
-    "execute public-data materialization and QC when runner starts",
+    "obtain a workflow job with assigned runner and recorded first step before G_runner can PASS",
+    "materialize and qualify public Austin evidence once execution begins",
+    "perform spatiotemporal QA and feeder gates G_P,G_T,G_S,G_H,G_V",
+    "freeze f* only under pre-result admissibility rule",
     "close G1-G8 only from versioned evidence",
-    "freeze feeder only under pre-result admissibility rule",
-    "do not authorize H1-H5 until final case and execution gates pass"
+    "freeze O_req(E) and each G_o^ready before experiment execution",
+    "do not authorize H1-H5 until G_exp,exec(E)=PASS"
   ],
   "manifest_self_hash_policy": "status manifest does not self-hash"
 }

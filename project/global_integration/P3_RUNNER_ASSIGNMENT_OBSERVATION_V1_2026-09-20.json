@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-20",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "status": "VERSIONED_RUNNER_ASSIGNMENT_OBSERVATION",
+  "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE",
+  "scientific_interpretation": "No runner was assigned and no workflow step was recorded. This is not a test failure, data qualification failure, or hypothesis evidence.",
+  "attempts": [
+    {
+      "attempt_label": "P3_INITIALIZATION",
+      "head_sha": "fdd579b5ec8ac4d4141b538e8adf32ffe8923fee",
+      "runs": [
+        {
+          "workflow": "Python package",
+          "run_id": 35456456998,
+          "run_attempt": 1,
+          "requested_runner_label": "ubuntu-latest",
+          "observed_at": "2026-09-19T16:55:19Z",
+          "jobs": [
+            {
+              "job_id": 105932488676,
+              "name": "build (3.12)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            },
+            {
+              "job_id": 105932488748,
+              "name": "build (3.10)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            },
+            {
+              "job_id": 105932488793,
+              "name": "build (3.11)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        },
+        {
+          "workflow": "Scientific Architecture QA",
+          "run_id": 35456457022,
+          "run_attempt": 1,
+          "requested_runner_label": "ubuntu-latest",
+          "observed_at": "2026-09-19T16:55:18Z",
+          "jobs": [
+            {
+              "job_id": 105932488833,
+              "name": "qa",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        },
+        {
+          "workflow": "Austin case data qualification",
+          "run_id": 35456457060,
+          "run_attempt": 1,
+          "requested_runner_label": "ubuntu-24.04",
+          "observed_at": "2026-09-19T16:55:18Z",
+          "jobs": [
+            {
+              "job_id": 105932488967,
+              "name": "qualify-public-data",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attempt_label": "CONTROLLED_RETRY",
+      "head_sha": "f6f8f69274dee14c7751a80d5e0185181a8759d8",
+      "runs": [
+        {
+          "workflow": "Python package",
+          "run_id": 35456717223,
+          "run_attempt": 2,
+          "requested_runner_label": "ubuntu-latest",
+          "observed_at": "2026-09-19T17:01:23Z",
+          "jobs": [
+            {
+              "job_id": 105933336699,
+              "name": "build (3.12)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            },
+            {
+              "job_id": 105933336886,
+              "name": "build (3.11)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            },
+            {
+              "job_id": 105933336937,
+              "name": "build (3.10)",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        },
+        {
+          "workflow": "Scientific Architecture QA",
+          "run_id": 35456717295,
+          "run_attempt": 2,
+          "requested_runner_label": "ubuntu-latest",
+          "observed_at": "2026-09-19T17:01:29Z",
+          "jobs": [
+            {
+              "job_id": 105933340378,
+              "name": "qa",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        },
+        {
+          "workflow": "Austin case data qualification",
+          "run_id": 35456717378,
+          "run_attempt": 2,
+          "requested_runner_label": "ubuntu-24.04",
+          "observed_at": "2026-09-19T17:01:27Z",
+          "jobs": [
+            {
+              "job_id": 105933347683,
+              "name": "qualify-public-data",
+              "runner_id": 0,
+              "runner_name": "",
+              "recorded_step_count": 0,
+              "conclusion": "failure",
+              "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gate_effect": {
+    "G_runner": "BLOCKED",
+    "G_tests": "NOT_EVALUATED_BY_THESE_RUNS",
+    "G_data": "NOT_EVALUATED_BY_THESE_RUNS",
+    "hypotheses": "NO_EFFECT"
+  }
+}

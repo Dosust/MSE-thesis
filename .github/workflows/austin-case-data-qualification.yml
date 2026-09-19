@@ -8,6 +8,9 @@ on:
       - ".github/workflows/austin-case-data-qualification.yml"
       - "methods/austin_case/**"
       - "project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md"
+      - "project/global_integration/P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md"
+      - "project/global_integration/P3_RUNNER_ASSIGNMENT_OBSERVATION_V1_2026-09-20.json"
+      - "config/p3_repository_execution_readiness_v1.json"
       - "project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx"
       - "project/global_integration/P3_AUSTIN_CASE_QUALIFICATION_AUDIT_V1_2026-09-20.md"
       - "config/austin_case_admissibility_v1.json"
@@ -153,6 +156,7 @@ jobs:
           python methods/austin_case/p3_execution_readiness.py \
             --contract config/austin_case_admissibility_v3.json \
             --preregistry config/austin_preconfirmatory_registry_v1.json \
+            --repo-readiness config/p3_repository_execution_readiness_v1.json \
             --root data/AUS-P5U-2018-V1 \
             --output data/AUS-P5U-2018-V1/qa/p3_case_execution_readiness_manifest.json \
             | tee austin-p3-readiness.txt
@@ -169,6 +173,7 @@ jobs:
             sha256sum config/austin_case_admissibility_v2.json
             sha256sum config/austin_case_admissibility_v3.json
             sha256sum config/austin_preconfirmatory_registry_v1.json
+            sha256sum config/p3_repository_execution_readiness_v1.json
             sha256sum config/austin_road_vintage_v1.json
             sha256sum config/austin_travel_sensor_schema_v1.json
             sha256sum project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md
@@ -191,6 +196,8 @@ jobs:
             sha256sum methods/austin_case/admissibility.py
             sha256sum methods/austin_case/p3_execution_readiness.py
             sha256sum project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md
+            sha256sum project/global_integration/P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md
+            sha256sum project/global_integration/P3_RUNNER_ASSIGNMENT_OBSERVATION_V1_2026-09-20.json
             sha256sum project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx
           } | tee austin-case-evidence/execution-identity.txt
 

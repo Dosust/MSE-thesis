@@ -255,3 +255,50 @@ G_{case,exec}
 Only if the final-case contract itself becomes admissible may case execution become PASS.
 
 No P3 control-plane PASS may be cited as empirical validation or hypothesis support.
+
+
+## P3.0.1 execution-gate semantics — superseding clarification
+
+P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md supersedes Sections 12 and 14 only where execution-gate naming or logic differs.
+
+~~~math
+\boxed{
+G_{case,adm}
+\neq
+G_{repo,exec}
+\neq
+G_E^{objects}
+\neq
+G_{exp,exec}(E).
+}
+~~~
+
+~~~math
+\boxed{
+G_{repo,exec}
+=
+G_{runner}
+\land
+G_{syntax}
+\land
+G_{tests}
+\land
+G_{authority\_lint}
+\land
+G_{case\_instrument}.
+}
+~~~
+
+~~~math
+\boxed{
+G_{exp,exec}(E)
+=
+G_{case,adm}
+\land
+G_{repo,exec}
+\land
+\bigwedge_{o\in\mathcal O_{req}(E)}G_o^{ready}.
+}
+~~~
+
+The earlier F_required(experiment) notation is retired. Feeder symbol f is reserved for feeder-selection semantics.

@@ -146,3 +146,36 @@ H1\ldots H5=NOT\_TESTED.
 ~~~
 
 The repository corrections cannot yet be empirically verified by GitHub Actions because the runner did not execute a step. The next run after the binary-integrity correction remains observational evidence for runner availability only until steps begin executing.
+
+
+## P3.0.1 execution-gate semantics correction
+
+The initialization statement that case execution PASS can occur only through final-case admissibility is superseded by:
+
+~~~math
+\boxed{
+G_{exp,exec}(E)
+=
+G_{case,adm}
+\land
+G_{repo,exec}
+\land
+G_E^{objects}.
+}
+~~~
+
+Current state:
+
+~~~text
+G_case,adm = BLOCKED
+G_runner = BLOCKED
+G_repo,exec = BLOCKED
+G_E^objects = BLOCKED
+G_exp,exec = BLOCKED
+H1-H5 = NOT_TESTED
+~~~
+
+Both the initial attempt and controlled retry are classified PRE_RUNNER_ASSIGNMENT_FAILURE because every observed job has runner_id=0, runner_name="", and zero recorded steps.
+
+Evidence:
+project/global_integration/P3_RUNNER_ASSIGNMENT_OBSERVATION_V1_2026-09-20.json

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-20",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "authority": "project/global_integration/P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md",
+  "runner_observation": "project/global_integration/P3_RUNNER_ASSIGNMENT_OBSERVATION_V1_2026-09-20.json",
+  "gates": {
+    "G_runner": "BLOCKED",
+    "G_syntax": "DEFERRED",
+    "G_tests": "DEFERRED",
+    "G_authority_lint": "DEFERRED",
+    "G_case_instrument": "DEFERRED"
+  },
+  "repository_execution_status": "BLOCKED",
+  "classification": "PRE_RUNNER_ASSIGNMENT_FAILURE",
+  "rule": "PASS only when every required repository gate is PASS"
+}

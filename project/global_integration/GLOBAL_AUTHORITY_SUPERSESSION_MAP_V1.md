@@ -370,3 +370,24 @@ And evidence status is now:
 STATUS=(REPO,SOURCE,CASE).
 }
 ~~~
+
+
+## P3.0.1 execution-gate authority — 2026-09-20
+
+P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md supersedes P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md only for:
+- G_case,adm versus G_exp,exec;
+- explicit G_runner within G_repo,exec;
+- O_req(E) experiment-object notation;
+- runner-assignment evidence classification.
+
+~~~math
+\boxed{
+G_{case,adm}
+\neq
+G_{repo,exec}
+\neq
+G_E^{objects}
+\neq
+G_{exp,exec}.
+}
+~~~

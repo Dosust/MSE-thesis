@@ -517,3 +517,14 @@ P3 CONTROL PLANE = PASS
 FINAL CASE = BLOCKED
 H1–H5 = NOT_TESTED
 ~~~
+
+
+### P3.0.1 Execution-gate semantics — COMPLETE
+- [x] Separate G_case,adm from G_exp,exec.
+- [x] Add explicit G_runner to G_repo,exec.
+- [x] Replace overloaded F_required(experiment) with O_req(E).
+- [x] Version initial + controlled-retry runner evidence.
+- [x] Update machine readiness instrument to fail closed on repository and experiment-object readiness.
+- [x] Preserve H1-H5 = NOT_TESTED.
+
+Next scientific work remains public-data materialization/qualification and feeder/case gates.

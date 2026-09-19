@@ -717,3 +717,22 @@ G8 DEFERRED
 P3 control-plane coherence is PASS, but case execution remains BLOCKED. H1–H5 remain NOT_TESTED.
 
 Repository CI is part of P3 execution readiness. A CI failure is a repository blocker, not evidence for or against a scientific hypothesis.
+
+
+## P3.0.1 execution-gate semantics
+
+~~~math
+\boxed{
+G_{exp,exec}(E)
+=
+G_{case,adm}
+\land
+G_{repo,exec}
+\land
+\bigwedge_{o\in\mathcal O_{req}(E)}G_o^{ready}.
+}
+~~~
+
+with explicit G_runner inside G_repo,exec.
+
+Current runner classification: PRE_RUNNER_ASSIGNMENT_FAILURE. This is not a test, data, or hypothesis failure.
