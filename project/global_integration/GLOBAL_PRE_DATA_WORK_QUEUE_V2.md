@@ -329,3 +329,24 @@ P2 remains the next major task and must consume P1.11, P1.11.1, P1.11.2 and P1.1
 - [x] Run compatibility audit: 50/50 PASS.
 
 P2 remains the next major task and must consume P1.11 through P1.11.4.
+
+
+#### P1.11.5 Kays–Sadri sustainability / resilience / trade-off alignment — COMPLETE
+- [x] Preserve sustainability != resilience != effectiveness != efficiency.
+- [x] Classify temperature/speed/delay/mobility/accessibility/energy/emissions by scientific role instead of treating all as sustainability endpoints.
+- [x] Retain vector sustainability core: accessibility, energy, carbon, cost.
+- [x] Make sustainability accounting explicitly spatial, temporal and boundary-dependent.
+- [x] Add trajectory/accounting states without redefining physical infrastructure state.
+- [x] Preserve sustainability metric != sustainability requirement.
+- [x] Preserve canonical Stage-5 K as the default acceptability set.
+- [x] Permit K_sus / sustainable viability only when qualified hard sustainability requirements exist.
+- [x] Treat conceptual tipping points as hypotheses/regions, not calibrated thresholds.
+- [x] Preserve Pareto-before-preference Stage-7 logic.
+- [x] Require coupled P–T accounting boundary and burden-shifting checks.
+- [x] Preserve J_cost != efficiency.
+- [x] Separate operational from lifecycle/transformation sustainability horizons.
+- [x] Add sustainability accounting/trade-off protocol.
+- [x] Add twenty-five P2 audit fields.
+- [x] Run compatibility audit: 54/54 PASS.
+
+P2 remains the next major task and must consume P1.11 through P1.11.5.

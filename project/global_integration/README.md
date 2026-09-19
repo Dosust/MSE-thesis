@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.4 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.5 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -409,3 +409,49 @@ x_i\neq D_i\neq y_i,
 ~~~
 
 The source is a preprint and is retained as preliminary evidence. P2 must consume the observational/inference audit fields. No H1–H5 empirical status changes.
+
+
+## P1.11.5 Kays–Sadri sustainability trajectory / trade-off amendment
+
+Controls:
+- ../CANONICAL_SUSTAINABILITY_TRAJECTORY_TRADEOFF_AMENDMENT_V1_5.md
+- ../stage6/03_accounting/STAGE6_SPATIOTEMPORAL_SUSTAINABILITY_TRAJECTORY_AMENDMENT_V1_1.md
+- ../stage5/00_governance/STAGE5_SUSTAINABILITY_CONSTRAINT_FIREWALL_V1.md
+- GLOBAL_SUSTAINABILITY_ACCOUNTING_AND_TRADEOFF_PROTOCOL_V1.md
+- P1_11_5_KAYS_SADRI_SUSTAINABILITY_RESILIENCE_AUDIT_V1_2026-09-19.md
+
+Permanent firewalls:
+
+~~~math
+\boxed{
+\text{sustainability}
+\neq
+\text{resilience}
+\neq
+\text{effectiveness}
+\neq
+\text{efficiency},
+}
+~~~
+
+~~~math
+\boxed{
+Y^{phys}\neq\bar Y^{acct},
+\qquad
+\text{sustainability metric}\neq\text{sustainability requirement},
+}
+~~~
+
+~~~math
+\boxed{
+\mathbf J_{\rm sus}\ \text{available}
+\not\Rightarrow
+K_{\rm sus}\ \text{authorized}.
+}
+~~~
+
+~~~math
+\boxed{G_{P1.11.5}^{design}=PASS\qquad(54/54)}
+~~~
+
+P2 must consume the sustainability accounting, trajectory, burden-shifting, hard-requirement and trade-off audit fields. No H1–H5 empirical status changes.
