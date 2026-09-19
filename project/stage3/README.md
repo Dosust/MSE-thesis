@@ -23,24 +23,27 @@
 - `STAGE3_EXECUTION_AND_CLOSURE_AUDIT_V1_2026-09-19.md`
 - `STAGE3_GATE_RESULTS_V1_2026-09-19.csv`
 - `STAGE3_SCENARIO_MATRIX_CAUSAL_COMPATIBILITY_AUDIT_V1_2026-09-19.md`
+- `STAGE3_GREENEVT_SOURCE_MATERIALIZATION_STATUS_V1.md`
+- `STAGE3_EV_CHARGING_PARAMETER_AUTHORITY_V1.md`
+- `STAGE3_EV_T_TO_P_READINESS_AUDIT_V2.md`
 
 The root `project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md` is supporting theory/provenance, not active Stage-3 governance.
 
-## Executed result
+## Executed empirical closure state
 
-The current closure vector is:
+The authoritative execution/closure audit reports:
 
 ```text
 TOTAL   = 17
 PASS    = 1
-BLOCKED = 12
-OPEN    = 4
+BLOCKED = 11
+OPEN    = 5
 ```
 
 Therefore:
 
 ```math
-\boxed{\textbf{STAGE 3 = NOT CLOSED}}
+oxed{	extbf{STAGE 3 = NOT CLOSED}}
 ```
 
 Scientific classification:
@@ -53,7 +56,7 @@ This is not support for or falsification of H1.
 
 ## Accepted causal mechanism
 
-The current GreenEVT/SMART-DS case has one Stage-2 causal PASS:
+The current GreenEVT/SMART-DS development case has one Stage-2 causal PASS:
 
 ```text
 EV_T_to_P
@@ -62,12 +65,12 @@ EV_T_to_P
 The source-level GreenEVT audit confirms:
 
 ```math
-\mathcal A_v(t)
+mathcal A_v(t)
 =
-\mathbf1[
+mathbf1[
 ev_v=1
-\land
-charging\_start_v\le t\le charging\_end_v
+land
+charging_start_vle tle charging_end_v
 ]
 ```
 
@@ -81,9 +84,54 @@ P_b^{base}
 N_{EV,b}^{chg}(t)P_{EV}^{chg}.
 ```
 
-The mapping and update semantics are executable, but Stage-3 readiness remains BLOCKED because the thesis charging-power parameterization and uncertainty are not frozen. The frozen upstream source contains both 7.5 kW and 7.2 kW defaults in different workflows.
+### Q05 parameter authority — updated
 
-The following Stage-2 relations remain excluded from accepted Stage-3 coupling:
+For the `C_DEV` source-backed GreenEVT benchmark:
+
+```math
+oxed{
+P_{EV,0}^{chg}=7.2 {m kW}
+}
+```
+
+is frozen as the published GreenEVT default.
+
+The source-code 7.5 kW setting is retained as a nonprobabilistic implementation-sensitivity variant:
+
+```math
+oxed{
+mathcal U_{P_{EV}}^{src}={7.2,7.5} {m kW}.
+}
+```
+
+This closes `G_theta` and the source-discrepancy component of `G_U` for this declared development benchmark use only. It is **not** empirical Greensboro charger calibration and does not transfer to Austin.
+
+Aggregate Stage2→3 readiness remains:
+
+```math
+oxed{
+G_{2	o3}(EV_{T	o P},C_{DEV})=BLOCKED
+}
+```
+
+because exact audited GreenEVT bytes and the required solver stack are not currently bound in the active execution environment for source-backed runtime implementation verification.
+
+## GreenEVT materialization status
+
+```math
+oxed{
+G_{SRC-ID}=PASS
+quad
+eqquad
+G_{RUNTIME-DATA}=PASS.
+}
+```
+
+The frozen upstream LFS OIDs match the previously audited full-object SHA-256 values exactly. Source identity therefore passes; current execution-local materialization remains blocked.
+
+## Excluded Stage-2 relations
+
+The following remain excluded from accepted Stage-3 causal coupling:
 
 - `SIGNAL_P_to_T`
 - `EV_P_to_T`
@@ -113,10 +161,11 @@ claim/QOI/resolution
 ## Current blocking objects
 
 The H1/Level-2 protocol still has open:
+- exact runtime binding of GreenEVT critical LFS objects and solver stack;
 - development and held-out feeder freeze;
 - complete static flood exposure / feature-matrix qualification;
 - hazard values and geometry;
-- parameter distributions;
+- remaining parameter distributions relevant to activated model components;
 - common-random-number seed manifest;
 - independent reference;
 - exact primary QOI metrics;
@@ -128,27 +177,34 @@ The H1/Level-2 protocol still has open:
 
 No missing item may be replaced with an undocumented default merely to make Stage 3 run.
 
-The existing H1 scenario matrix remains unauthorized for current causal M2 execution until it is versioned against the v2 generic scenario schema and the latest Stage2→3 readiness ledger.
+The existing H1 scenario matrix remains unauthorized for current causal M2 execution until versioned against the v2 generic scenario schema and latest Stage2→3 readiness ledger.
 
 ## Preview boundary
 
-The deterministic preview reproduces its committed software-fixture values, including M2 maximum queue = 150 vehicles and M2 power-service loss = 0.125 h. This is software verification only. Its queue/memory behavior is not automatically a GreenEVT-qualified Q05 mechanism.
+The deterministic preview is software verification only. Its queue/memory behavior is not automatically a GreenEVT-qualified Q05 mechanism.
 
-## Closure rule
-
-Stage 3 can close only after all required gates in the current closure audit are PASS (or explicitly justified N/A where the audit permits that status) and the matched development/held-out M0/M1/M2 experiment is authorized and executed under frozen inputs.
-
-
-## Design-freeze result — 2026-09-19
+## Design-freeze result
 
 ```math
-\boxed{
+oxed{
 G_{3,DESIGN}=PASS
-\qquad\text{and}\qquad
-G_{3,CONTRADICTION}=PASS\;(18/18)
+qquad	ext{and}qquad
+G_{3,CONTRADICTION}=PASS;(18/18)
 }
 ```
 
-This is architecture closure only. The existing empirical Stage-3 status remains **NOT CLOSED / NOT TESTED**.
+This is architecture closure only. Empirical Stage 3 remains **NOT CLOSED / NOT TESTED**.
 
-The next thesis-level pre-data task is Stage-6 v2.1 alignment, followed by Stage-7 v2.1 alignment and the global Stage 1→7 design freeze.
+## Immediate execution priority
+
+```math
+oxed{
+	ext{bind exact GreenEVT bytes + solver stack}
+ightarrow
+G_{impl}
+ightarrow
+G_{2	o3}(Q05)
+ightarrow
+	ext{source-backed Stage-3/B2 execution}.
+}
+```
