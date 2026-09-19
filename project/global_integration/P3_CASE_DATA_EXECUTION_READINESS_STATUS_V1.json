@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-20",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "status": "P3_IN_PROGRESS_CASE_EXECUTION_BLOCKED",
+  "parent_p2_head": "7ac85fe59125e4883b3227377d6b41f4572c5ea1",
+  "p3_initialization_commit": "fdd579b5ec8ac4d4141b538e8adf32ffe8923fee",
+  "p3_control_status": "PASS",
+  "repository_runner_status": "BLOCKED",
+  "final_case_admissibility": false,
+  "case_execution_status": "BLOCKED",
+  "hypotheses": {
+    "H1": "NOT_TESTED",
+    "H2": "NOT_TESTED",
+    "H3": "NOT_TESTED",
+    "H4": "NOT_TESTED",
+    "H5": "NOT_TESTED"
+  },
+  "normalized_austin_gates": {
+    "G0": "PASS",
+    "G1": "BLOCKED",
+    "G2": "DEFERRED",
+    "G3": "DEFERRED",
+    "G4": "DEFERRED",
+    "G5": "BLOCKED",
+    "G6": "BLOCKED",
+    "G7": "BLOCKED",
+    "G8": "DEFERRED"
+  },
+  "workbook": {
+    "path": "project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx",
+    "bytes": 17207,
+    "sha256": "a7aac893dbae82bc1e3195787c594a6a7f01c387cb9a50128a8de356a21b3615",
+    "corrected_git_blob": "88e226596dd51b0642580f32dd56851e6d8585f2",
+    "superseded_truncated_blob": "307c2b3165308c5d7c4a7aa3a58ef87b208a757f"
+  },
+  "first_workflow_observation": [
+    {
+      "workflow": "Python package",
+      "run_id": 35456456998,
+      "conclusion": "failure",
+      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
+    },
+    {
+      "workflow": "Scientific Architecture QA",
+      "run_id": 35456457022,
+      "conclusion": "failure",
+      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
+    },
+    {
+      "workflow": "Austin case data qualification",
+      "run_id": 35456457060,
+      "conclusion": "failure",
+      "classification": "RUNNER_START_BLOCKED_NO_RECORDED_STEPS"
+    }
+  ],
+  "next_required_actions": [
+    "observe runner availability after correction commit",
+    "execute public-data materialization and QC when runner starts",
+    "close G1-G8 only from versioned evidence",
+    "freeze feeder only under pre-result admissibility rule",
+    "do not authorize H1-H5 until final case and execution gates pass"
+  ],
+  "manifest_self_hash_policy": "status manifest does not self-hash"
+}

@@ -75,3 +75,74 @@ H1–H5: NOT_TESTED
 ~~~
 
 The immediate admissible work is public-data qualification and feeder inventory/selection preparation, not confirmatory H1–H5 execution.
+
+
+## Post-initialization repository verification
+
+### Deterministic repository invariants
+
+~~~text
+19 PASS
+0 FAIL
+~~~
+
+The checks cover the P3 firewall, candidate-case state, G0–G8 normalization, identification/readiness semantics, threshold non-invention, fail-closed script behavior, regression tests, CI dependency/matrix controls, optional-SVG semantics, Austin trigger/readiness emission, README/queue phase state, and workbook path existence.
+
+### Binary workbook integrity correction
+
+The first initialization commit contained a truncated binary workbook blob.
+
+~~~text
+initialization blob:
+307c2b3165308c5d7c4a7aa3a58ef87b208a757f
+observed Git blob size:
+8,048 bytes
+
+verified local P3 workbook:
+17,207 bytes
+SHA-256:
+a7aac893dbae82bc1e3195787c594a6a7f01c387cb9a50128a8de356a21b3615
+
+corrected Git blob:
+88e226596dd51b0642580f32dd56851e6d8585f2
+~~~
+
+The truncated blob is not authoritative and is superseded by the corrected blob.
+
+### First post-initialization workflow observation
+
+All three workflows created jobs for commit fdd579b5ec8ac4d4141b538e8adf32ffe8923fee, but each job terminated before any recorded workflow step.
+
+| Workflow | Run ID | Conclusion | Recorded steps | Job log |
+|---|---:|---|---:|---|
+| Python package | 35456456998 | FAILURE | none | no log blob available |
+| Scientific Architecture QA | 35456457022 | FAILURE | none | no log blob available |
+| Austin case data qualification | 35456457060 | FAILURE | none | no log blob available |
+
+Scientific interpretation:
+
+~~~math
+\boxed{
+\text{runner-start failure}
+\neq
+\text{test failure}
+\neq
+\text{data-gate failure}
+\neq
+H_i\text{ evidence}.
+}
+~~~
+
+Therefore:
+
+~~~math
+\boxed{
+G_{repo,runner}=BLOCKED,
+\qquad
+G_{case,exec}=BLOCKED,
+\qquad
+H1\ldots H5=NOT\_TESTED.
+}
+~~~
+
+The repository corrections cannot yet be empirically verified by GitHub Actions because the runner did not execute a step. The next run after the binary-integrity correction remains observational evidence for runner availability only until steps begin executing.

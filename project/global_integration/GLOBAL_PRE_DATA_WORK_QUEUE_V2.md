@@ -489,9 +489,10 @@ H_i=SUPPORTED.
 - [x] Add P3 regression tests.
 - [x] Normalize repository CI dependencies / supported Python matrix.
 - [x] Make absent optional SVG assets N/A rather than a hard CI failure.
-- [ ] Observe post-commit Scientific Architecture QA.
-- [ ] Observe post-commit Python package matrix.
-- [ ] Observe Austin public-data qualification run.
+- [x] Observe post-commit Scientific Architecture QA — RUNNER_START_BLOCKED at run 35456457022; no recorded step/log.
+- [x] Observe post-commit Python package matrix — RUNNER_START_BLOCKED at run 35456456998; all matrix jobs had no recorded step/log.
+- [x] Observe Austin public-data qualification run — RUNNER_START_BLOCKED at run 35456457060; no recorded step/log.
+- [ ] Re-establish GitHub Actions runner availability and observe at least one executed workflow step before claiming repository execution readiness.
 
 ### P3.1 Austin case qualification
 - [ ] Close G1 power materialization / feeder realization.
