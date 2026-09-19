@@ -3,7 +3,7 @@
 **Date:** 2026-09-16  
 **Method:** EGMIV  
 **Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**RQ/SO/H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **Purpose:** track the controlled progression from validated P–T–I–O dynamics through Stage-5 resilience to Stage-6/7 intervention and sustainability decisions.
 
 ---
@@ -29,7 +29,7 @@ Track B may prepare H3 mathematics, evidence, state-set semantics, uncertainty r
 
 | Step | Task | Status | Authority / artifact |
 |---:|---|---|---|
-| 1 | Freeze thesis purpose and causal spine | **PASS** | framework v2 + canonical RQ/SO/H v3 |
+| 1 | Freeze thesis purpose and causal spine | **PASS** | framework v2 + canonical RQ/SO/H v4 |
 | 2 | Freeze H1 dynamic-coupling logic | **PASS** | H1 M0/M1/M2 files |
 | 3 | Qualify H1 row-level data | **BLOCKED_RAW_DATA** | R1–R8 gate remains authoritative |
 | 4 | Execute/close bounded H1 physical-coupling test | **DEFERRED** | requires Step 3 + verification gates |
@@ -45,7 +45,7 @@ Track B may prepare H3 mathematics, evidence, state-set semantics, uncertainty r
 | 14 | Run H3 confirmatory comparison | **NOT AUTHORIZED** | requires `G_H3=1` |
 | 15 | Freeze qualified Stage-6 interventions | **DEFERRED** | requires validated H3/resilience diagnosis |
 | 16 | Run H4 matched intervention/consequence experiments | **DEFERRED** | requires Step 15 |
-| 17 | Run H5 resilience-only vs joint resilience–sustainability decision experiment | **DEFERRED** | requires H4 outcomes + decision preregistration |
+| 17 | Run H5 resilience-only vs joint engineering-decision experiment | **DEFERRED** | requires H4 outcomes + decision preregistration |
 | 18 | Cross-stage VVUQ + held-out validation | **CONTINUOUS / FINAL GATE DEFERRED** | all hypothesis packages |
 | 19 | State surviving contributions | **DEFERRED** | result firewall applies |
 
