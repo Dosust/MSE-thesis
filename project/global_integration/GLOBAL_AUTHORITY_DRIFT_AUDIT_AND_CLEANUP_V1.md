@@ -216,7 +216,7 @@ No additional edit was required where the repository already made supersession u
 | project-root ASU master specification | `57537fe0a487ffe871874e30686827261541bfe6` | `3255cae058250b6c9e227708dee1693a18087a22` | `0158981fb6577cb9ecff54f87c8114d65d5626b9` |
 | fresh hypothesis evidence-search protocol | `d0f00717103abc8b56a404751e39808c2ff0de11` | `6d1167174afacaf583378a4a0f7f5020f9f29c1f` | `a04b76045a462879e2d1edc3f3d82e01612121cc` |
 | novelty foundation index | `43c0941ba8cf32febdb13e04c6fbeca986d9147c` | `1d07b16528af60a47f8f9c449d2e99bae207442f` | `460a3f07ca10549912f51ad6d906818621aa8a09` |
-| engineering confirmatory matrix | `6facbeccd41bf3c47d8dcab42d3737e8facd7968` | `67f5bcf68aa20020bd8e25a5b47cd7e856eb2bd4` | `c6b63b2ead8f71f7ec3bd8eea2bb62ae6f384e10` |
+| engineering confirmatory matrix | `6facbeccd41bf3c47d8dcab42d3737e8facd7968` | `f84c5ee989501789251d818a20529c6650179e40` | `e2a164a1aee0516523327949377c2df7343077ee` |
 | thesis traceability v1 | `43f385438a6af91b3634dad2cccadee4184136aa` | `aa507ecf4cbc63f82ef640aee37adf563cac5970` | `3ffa44105d6f341fa64dabeee6f025eaf2917871` |
 | root Stage-3 theory | `c1b10c571449ffa1b1e1bb31daeb20bb25149357` | `990ef65e0ef5b0871cd354966afa3127dd9db4f0` | `159b04bec54b515e88242d2b1b28d58fa4f1fa65` |
 | root Stage-6 theory | `fbfe110ebcd488c2ad2ddf4df62311669cf2fc67` | `92bf88676a2dc2335dac3d29515f00a58499c4c2` | `d7e709f72b71a90cb52ffba15310d9a9126aa42c` |
