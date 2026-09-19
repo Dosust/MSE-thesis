@@ -114,3 +114,19 @@ Before grading, also load any canonical authority governing the object being gra
 
 Report the overall grade out of 100 together with criterion-level scores and clearly distinguish writing-quality deductions from scientific-content deductions.
 
+## Thesis-wide citation and reference authority
+
+For substantive thesis drafting, revision, literature synthesis, research-gap writing, source attribution, bibliography/reference work, or any task that asks whether a claim needs a citation, first load:
+
+`thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md`
+
+Apply APA 7 author–date formatting together with the thesis evidence rules. Preserve:
+
+```text
+correct citation format ≠ adequate scientific evidence
+```
+
+Externally sourced scientific claims require adjacent qualified citations. Thesis-defined scope, research questions, objectives, hypotheses, assumptions, derivations, proposed framework objects, and proposed contributions must not be padded with irrelevant citations merely for appearance. Every in-text citation must map to a verified reference entry, every reference entry must be cited, and a citation must support the exact proposition and validity domain claimed.
+
+For Chapter I citation work, also use the current Chapter-I evidence sources and claim/evidence registers. Citation completion does not authorize silent changes to frozen GO/RQ/SO/H wording.
+
