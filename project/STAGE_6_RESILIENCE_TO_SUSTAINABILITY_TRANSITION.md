@@ -1,5 +1,12 @@
 # Stage 6 — Resilience-to-Sustainability Transition
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — HISTORICAL STAGE-6 THEORY / ACTIVE SCOPE SUPERSEDED**
+>
+> This 2026-09-11 frozen theory is preserved as literature/theory provenance. Active Stage-6 interpretation is governed by `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`, and `project/stage6/`.  
+> In particular, the current intervention-performance chain must distinguish `\Delta\mathfrak R`, effectiveness `\mathcal E_{fx}`, efficiency `\mathcal E_{fy}`, and sustainability consequences `\Delta\mathbf J_{sus}`.  
+> Legacy regime-adequacy mathematics below does not override that current scope.
+
+
 ![Stage](https://img.shields.io/badge/Stage%206-FROZEN-1A7F37)
 ![Evidence](https://img.shields.io/badge/evidence-10%20passes%20%7C%2030%2B%20sources-0969DA)
 
