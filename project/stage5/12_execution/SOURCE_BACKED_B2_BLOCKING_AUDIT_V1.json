@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED_BY_MATERIALIZATION_NOT_FAILED",
+  "date": "2026-09-19",
+  "required_green_evt_objects": [
+    {"path":"data/UDS.db","git_lfs_oid_sha256":"74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724","declared_bytes":107778048,"materialized":false},
+    {"path":"data/sumo_network/greensboro.net.xml","git_lfs_oid_sha256":"f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06","declared_bytes":351967227,"materialized":false}
+  ],
+  "runtime":{"git_lfs":false,"sumo":false,"opendssdirect_python":false,"external_dns_from_container":false},
+  "scientific_rule":"Git-LFS pointer files cannot be treated as source data; source-backed B2 remains BLOCKED until exact objects are materialized and provenance-audited."
+}
