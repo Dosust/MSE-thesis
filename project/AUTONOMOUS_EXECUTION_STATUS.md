@@ -1,6 +1,6 @@
 # Autonomous Thesis Execution Status
 
-> **Current authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RQ_SO_HYPOTHESES_V3.md`. RQ0 is overarching; RQ1–RQ7 map to SO1–SO7; H1–H5 retain their canonical meanings.
+> **Current authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `CANONICAL_RESEARCH_QUESTIONS_V4.md` + `CANONICAL_RQ_SO_HYPOTHESES_V4.md`. RQ0 is overarching; RQ1–RQ7 map to SO1–SO7; H1–H5 retain their canonical meanings.
 
 **Mode:** autonomous within active tool-enabled sessions  
 **Protocol:** `AUTONOMOUS_EXECUTION_PROTOCOL_V1.md`  
@@ -8,7 +8,7 @@
 **Active case candidate:** `AUS-P5U-2018-V1`  
 **Active case contract:** `config/austin_case_admissibility_v3.json`  
 **Active acquisition workflow:** `.github/workflows/austin-case-data-qualification.yml` using `materialize_public_data_v4.py`  
-**Last synchronized:** 2026-09-18
+**Last synchronized:** 2026-09-20
 
 > This register records execution state. It does not override canonical scientific, mathematical, evidence, or preregistration authorities.
 
@@ -48,8 +48,8 @@ RQ1/SO1 + RQ2/SO2 -> developmental qualification for H1
 RQ3/SO3 -> H1 dynamic causal interdependency
 RQ4/SO4 -> H2 information/organization/control
 RQ5/SO5 -> H3 viability/reachability incremental information
-RQ6/SO6 -> H4 intervention consequence heterogeneity
-RQ7/SO7 -> H5 joint resilience-sustainability decision
+RQ6/SO6 -> H4 resource-requirement / resource-efficiency / admitted-sustainability consequence heterogeneity
+RQ7/SO7 -> H5 joint engineering decision relative to resilience-only evaluation
 ```
 
 No implementation convenience may renumber or redefine these hypotheses.
@@ -285,11 +285,11 @@ Stage-5 structure and reference verification exist, but thresholds, horizons, un
 
 ### H4
 
-Canonical H4 is intervention-consequence heterogeneity across accessibility, energy, carbon, and cost after independently qualifying resilience-effective interventions. Accounting boundaries and `delta_4` remain open.
+Canonical H4 tests whether at least two resilience-effective interventions differ materially in resource requirements, resource efficiencies, or admitted sustainability consequences. Core resource and sustainability dimensions remain controlled by the sustainability admission freeze; `delta_4` remains open.
 
 ### H5
 
-Canonical H5 compares resilience-only vs joint resilience-sustainability decision sets/regret. Feasible intervention set, uncertainty semantics, set/regret metric and materiality remain open.
+Canonical H5 compares resilience-only evaluation with a joint engineering-decision formulation incorporating qualified resource efficiency and admitted sustainability consequences under feasibility and uncertainty governance. Set/dominance/regret metric and materiality remain open.
 
 ---
 
@@ -400,7 +400,7 @@ until the corresponding gates close.
 On every future execution:
 
 1. read this status file;
-2. read `CANONICAL_RQ_SO_HYPOTHESES_V3.md`;
+2. read `CANONICAL_RESEARCH_QUESTIONS_V4.md` and `CANONICAL_RQ_SO_HYPOTHESES_V4.md`;
 3. read `config/austin_case_admissibility_v3.json`;
 4. read the relevant Austin source/temporal/schema protocol;
 5. retry external/raw gates first when execution access becomes available;
