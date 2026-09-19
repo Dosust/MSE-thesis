@@ -1,5 +1,12 @@
 # Thesis Traceability Register v1.0
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — SUPERSEDED TRACEABILITY REGISTER**
+>
+> This register contains obsolete H4 interface-targeting and H5 adaptive-pathway meanings and an outdated authority chain. It is retained for provenance only.  
+> **Current traceability authorities:** `thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`, `thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`, and `thesis/00_governance/CLAIM_EVIDENCE_REGISTER.md`.  
+> Do not compile current H4/H5 thesis logic from the entries below.
+
+
 **Date:** 2026-09-16  
 **Status:** ACTIVE THESIS-CONTROL REGISTER / NO SCIENTIFIC GATE CHANGES  
 **Purpose:** instantiate the thesis master traceability object for H1–H5 and expose every evidence, model, metric, chapter, artifact, V&V, and blocking-state link required before a confirmatory claim can be promoted to a result.  
