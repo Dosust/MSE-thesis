@@ -9,7 +9,7 @@
 
 
 **Date:** 2026-09-16  
-**Status:** ACTIVE THESIS-CONTROL ARTIFACT  
+**Status:** SUPERSEDED FOR ACTIVE THESIS CONTROL — PROVENANCE ONLY  
 **Program:** MSE Sustainable Engineering, Arizona State University  
 **Purpose:** map ASU document requirements, thesis scientific logic, EGMIV evidence/control gates, hypotheses, equations, figures, results and appendices into one traceable structure.
 
