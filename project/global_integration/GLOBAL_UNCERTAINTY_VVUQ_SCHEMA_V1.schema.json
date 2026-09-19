@@ -1,0 +1,455 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/project/global_integration/GLOBAL_UNCERTAINTY_VVUQ_SCHEMA_V1.schema.json",
+  "title": "Global Uncertainty and VVUQ Schema V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "uncertainties",
+    "credibility_activities",
+    "contexts_of_use"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/uncertaintyRecord"
+      }
+    },
+    "credibility_activities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/vvuqRecord"
+      }
+    },
+    "contexts_of_use": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contextOfUse"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL",
+        "DEFERRED",
+        "N/A"
+      ]
+    },
+    "stage": {
+      "enum": [
+        "GLOBAL",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ]
+    },
+    "hypothesis": {
+      "enum": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "NONE"
+      ]
+    },
+    "nature": {
+      "enum": [
+        "ALEATORY",
+        "EPISTEMIC",
+        "MIXED",
+        "UNRESOLVED"
+      ]
+    },
+    "source": {
+      "enum": [
+        "MEASUREMENT",
+        "INITIAL_STATE",
+        "PARAMETER",
+        "HAZARD",
+        "DEPENDENCY",
+        "OBSERVATION",
+        "ESTIMATION",
+        "INFORMATION",
+        "ORGANIZATION",
+        "MODEL_FORM",
+        "NUMERICAL",
+        "REQUIREMENT",
+        "INTERVENTION_PERFORMANCE",
+        "RESOURCE",
+        "ACCOUNTING_FACTOR",
+        "DECISION_METHOD",
+        "VALUE_PREFERENCE",
+        "OTHER"
+      ]
+    },
+    "probabilitySemantics": {
+      "enum": [
+        "JUSTIFIED",
+        "NOT_JUSTIFIED",
+        "NOT_APPLICABLE",
+        "UNRESOLVED"
+      ]
+    },
+    "reducibility": {
+      "enum": [
+        "REDUCIBLE",
+        "PARTLY_REDUCIBLE",
+        "IRREDUCIBLE_IN_CONTEXT",
+        "UNKNOWN"
+      ]
+    },
+    "representation": {
+      "enum": [
+        "DISTRIBUTION",
+        "INTERVAL",
+        "SET",
+        "ENSEMBLE",
+        "COVARIANCE",
+        "MODEL_FAMILY",
+        "SCENARIO_SET",
+        "EMPIRICAL_SAMPLE",
+        "DETERMINISTIC_BOUND",
+        "OTHER",
+        "DEFERRED"
+      ]
+    },
+    "vvuqClass": {
+      "enum": [
+        "CODE_VERIFICATION",
+        "SOLUTION_VERIFICATION",
+        "DATA_PIPELINE_VERIFICATION",
+        "CALIBRATION",
+        "VALIDATION",
+        "UQ_PROPAGATION",
+        "SENSITIVITY_ANALYSIS",
+        "UQ_CONVERGENCE",
+        "CLASSIFICATION_STABILITY",
+        "DECISION_STABILITY",
+        "CREDIBILITY_ACCEPTANCE"
+      ]
+    },
+    "contextOfUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "use_id",
+        "decision_or_claim",
+        "qoi",
+        "domain",
+        "consequence_if_wrong",
+        "model_influence",
+        "credibility_target",
+        "status"
+      ],
+      "properties": {
+        "use_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_or_claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "qoi": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "consequence_if_wrong": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_influence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "credibility_target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "dependence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "group_id",
+        "description",
+        "representation",
+        "independence_justified",
+        "status"
+      ],
+      "properties": {
+        "group_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "representation": {
+          "type": "string"
+        },
+        "independence_justified": {
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_ids",
+        "version",
+        "hash",
+        "status"
+      ],
+      "properties": {
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "uncertaintyRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uncertainty_id",
+        "object",
+        "owner",
+        "entry_stage",
+        "affected_hypotheses",
+        "nature",
+        "source",
+        "representation",
+        "dependence",
+        "probability_semantics",
+        "reducibility",
+        "evidence",
+        "propagation_method",
+        "sensitivity_method",
+        "verification_links",
+        "validation_links",
+        "decision_impact",
+        "claim_impact",
+        "validity_domain",
+        "status",
+        "provenance"
+      ],
+      "properties": {
+        "uncertainty_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entry_stage": {
+          "$ref": "#/$defs/stage"
+        },
+        "affected_hypotheses": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/hypothesis"
+          }
+        },
+        "nature": {
+          "$ref": "#/$defs/nature"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "representation": {
+          "$ref": "#/$defs/representation"
+        },
+        "parameters_or_bounds": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "null"
+          ]
+        },
+        "dependence": {
+          "$ref": "#/$defs/dependence"
+        },
+        "probability_semantics": {
+          "$ref": "#/$defs/probabilitySemantics"
+        },
+        "reducibility": {
+          "$ref": "#/$defs/reducibility"
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "calibration_role": {
+          "type": "string"
+        },
+        "propagation_method": {
+          "type": "string"
+        },
+        "sensitivity_method": {
+          "type": "string"
+        },
+        "verification_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "validation_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decision_impact": {
+          "type": "string"
+        },
+        "claim_impact": {
+          "type": "string"
+        },
+        "validity_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      }
+    },
+    "vvuqRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activity_id",
+        "object",
+        "context_of_use_id",
+        "class",
+        "qoi",
+        "reference",
+        "metric",
+        "acceptance_rule",
+        "uncertainties_considered",
+        "evidence",
+        "independence",
+        "validity_domain",
+        "status",
+        "claim_ceiling"
+      ],
+      "properties": {
+        "activity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context_of_use_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "$ref": "#/$defs/vvuqClass"
+        },
+        "qoi": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uncertainties_considered": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validity_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "claim_ceiling": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

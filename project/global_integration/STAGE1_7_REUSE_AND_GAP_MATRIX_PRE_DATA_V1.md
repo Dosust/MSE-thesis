@@ -783,3 +783,76 @@ P1.6=PASS.
 ~~~
 
 Next: **P1.7 global uncertainty/VVUQ control**.
+
+
+---
+
+## P1.7 global uncertainty/VVUQ closure — 2026-09-19
+
+Created:
+- GLOBAL_UNCERTAINTY_VVUQ_CONTROL_V1.md;
+- GLOBAL_UNCERTAINTY_VVUQ_SCHEMA_V1.schema.json;
+- GLOBAL_UNCERTAINTY_STAGE_HYPOTHESIS_PROPAGATION_MATRIX_V1.md;
+- GLOBAL_VVUQ_GATE_MATRIX_V1.md;
+- GLOBAL_VERIFICATION_VALIDATION_ACCEPTANCE_PROTOCOL_V1.md;
+- GLOBAL_SENSITIVITY_CONVERGENCE_DECISION_STABILITY_PROTOCOL_V1.md;
+- GLOBAL_CREDIBILITY_CLAIM_CEILING_MATRIX_V1.md;
+- GLOBAL_UNCERTAINTY_REGISTRY_TEMPLATE_V1.csv;
+- GLOBAL_VVUQ_ACTIVITY_REGISTER_TEMPLATE_V1.csv;
+- GLOBAL_CONTEXT_OF_USE_REGISTER_TEMPLATE_V1.csv;
+- P1_7_GLOBAL_UNCERTAINTY_VVUQ_AUDIT_V1_2026-09-19.md.
+
+Core scientific normalization:
+
+~~~math
+\boxed{
+\text{uncertainty nature}
+\neq
+\text{uncertainty source}.
+}
+~~~
+
+Nature:
+ALEATORY / EPISTEMIC / MIXED / UNRESOLVED.
+
+Sources include:
+measurement, initial state, parameter, hazard, dependency, observation/estimation, information/organization, model-form, numerical, requirement, intervention-performance, resource, factor, decision-method and value/preference uncertainty.
+
+Permanent credibility firewall:
+
+~~~math
+\boxed{
+\text{verification}
+\neq
+\text{validation}
+\neq
+\text{calibration}
+\neq
+\text{UQ}
+\neq
+\text{sensitivity}
+\neq
+\text{decision stability}.
+}
+~~~
+
+Uncertainty may be PRESERVED / PROPAGATED / REDUCED / CONDITIONED / AGGREGATED / ABSORBED_WITH_TRACE / IRRELEVANT_WITH_JUSTIFICATION / BLOCKED. Silent DROPPED is not authorized.
+
+Audit:
+
+~~~text
+84 PASS
+0 FAIL
+~~~
+
+No uncertainty distribution, dependence coefficient, sample count, tolerance, credibility score or H1–H5 result was invented.
+
+Therefore:
+
+~~~math
+\boxed{
+P1.7=PASS.
+}
+~~~
+
+Next: **P1.8 global requirements / provenance control**.

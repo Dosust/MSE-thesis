@@ -121,16 +121,20 @@ For every `I(k→k+1)`:
 - [x] Preserve scenario-frequency ≠ probability.
 - [x] Run combined scenario audit: 52/52 PASS.
 
-### P1.7 Global uncertainty/VVUQ — NEXT
-Use:
-- aleatory;
-- epistemic;
-- model-form;
-- numerical;
-- requirement;
-- value/normative uncertainty.
+### P1.7 Global uncertainty/VVUQ — COMPLETE
+- [x] Create GLOBAL_UNCERTAINTY_VVUQ_CONTROL_V1.md.
+- [x] Create Draft 2020-12 machine schema.
+- [x] Separate uncertainty nature from uncertainty source.
+- [x] Freeze probability/dependence/reducibility semantics.
+- [x] Create Stage/H1–H5 uncertainty propagation matrix.
+- [x] Create global VVUQ gate matrix.
+- [x] Create verification/validation/acceptance protocol.
+- [x] Create sensitivity/convergence/decision-stability protocol.
+- [x] Create credibility/claim-ceiling matrix.
+- [x] Create empty uncertainty, VVUQ-activity and context-of-use registers.
+- [x] Run combined P1.7 audit: 84/84 PASS.
 
-### P1.8 Global requirements/provenance
+### P1.8 Global requirements/provenance — NEXT
 Unify service, physical, resilience, sustainability and decision constraints without promoting research assumptions into authoritative requirements.
 
 ### P1.9 Claim-evidence-result matrix

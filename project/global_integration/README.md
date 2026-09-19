@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.6 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.7 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -37,6 +37,17 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_SCENARIO_ROOT_MANIFEST_TEMPLATE_V1.csv — empty root-scenario manifest.
 - GLOBAL_SCENARIO_SEED_MANIFEST_TEMPLATE_V1.csv — empty named-stream seed manifest.
 - P1_6_COMMON_SCENARIO_SCHEMA_AUDIT_V1_2026-09-19.md — 52/52 P1.6 audit.
+- GLOBAL_UNCERTAINTY_VVUQ_CONTROL_V1.md — canonical uncertainty/VVUQ control.
+- GLOBAL_UNCERTAINTY_VVUQ_SCHEMA_V1.schema.json — Draft 2020-12 machine schema.
+- GLOBAL_UNCERTAINTY_STAGE_HYPOTHESIS_PROPAGATION_MATRIX_V1.md — Stage/H1–H5 uncertainty lineage.
+- GLOBAL_VVUQ_GATE_MATRIX_V1.md — global credibility gates.
+- GLOBAL_VERIFICATION_VALIDATION_ACCEPTANCE_PROTOCOL_V1.md — context-of-use validation/acceptance control.
+- GLOBAL_SENSITIVITY_CONVERGENCE_DECISION_STABILITY_PROTOCOL_V1.md — sensitivity/convergence/stability control.
+- GLOBAL_CREDIBILITY_CLAIM_CEILING_MATRIX_V1.md — evidence-to-wording claim limits.
+- GLOBAL_UNCERTAINTY_REGISTRY_TEMPLATE_V1.csv — empty uncertainty register.
+- GLOBAL_VVUQ_ACTIVITY_REGISTER_TEMPLATE_V1.csv — empty VVUQ activity register.
+- GLOBAL_CONTEXT_OF_USE_REGISTER_TEMPLATE_V1.csv — empty context-of-use register.
+- P1_7_GLOBAL_UNCERTAINTY_VVUQ_AUDIT_V1_2026-09-19.md — 84/84 P1.7 audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -59,6 +70,8 @@ Historical:
 \text{P1.5 final-case schema}
 \rightarrow
 \text{P1.6 common scenario schema}
+\rightarrow
+\text{P1.7 uncertainty/VVUQ control}
 =
 PASS
 }
@@ -81,42 +94,55 @@ G_{P1.3}^{design}=PASS
 
 All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
 
-## P1.6 scenario-control state
+## P1.7 uncertainty/VVUQ state
 
 ~~~math
 \boxed{
-G_{P1.6}^{design}=PASS
+G_{P1.7}^{design}=PASS
 \qquad
-(52/52\;checks)
+(84/84\;checks)
 }
 ~~~
 
-The global scenario architecture separates:
+The global uncertainty architecture now enforces:
 
 ~~~math
 \boxed{
-SID_r
+\text{uncertainty nature}
 \neq
-AID_{r,a}^{(k)}
-\neq
-RID_{r,a}^{(k)}
-\neq
-ResultID_{r,a}^{(k)}.
+\text{uncertainty source}
 }
 ~~~
 
-and propagates immutable root identity through Stages 3–7 while preserving hypothesis-specific matched comparisons.
+and:
+
+~~~math
+\boxed{
+\text{verification}
+\neq
+\text{validation}
+\neq
+\text{calibration}
+\neq
+\text{UQ}
+\neq
+\text{sensitivity}
+\neq
+\text{decision stability}.
+}
+~~~
+
+Every uncertainty source is traceable to its stage, hypothesis impact, propagation treatment, validation/sensitivity links, decision impact and claim ceiling.
 
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.7 = GLOBAL UNCERTAINTY / VVUQ CONTROL}
+\text{P1.8 = GLOBAL REQUIREMENTS / PROVENANCE CONTROL}
 }
 ~~~
 
 Then:
-- P1.8 requirements/provenance;
 - P1.9 claim/evidence/result matrix;
 - P2 global master workbook + audits + design freeze.
 

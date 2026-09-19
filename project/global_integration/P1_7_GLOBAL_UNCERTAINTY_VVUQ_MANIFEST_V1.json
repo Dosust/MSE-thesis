@@ -1,0 +1,162 @@
+{
+  "manifest_id": "P1_7_GLOBAL_UNCERTAINTY_VVUQ_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_7_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "c06ebee2b35d8e7204b318f4b05fc2d7ff010952",
+  "audit": {
+    "passed": 84,
+    "failed": 0
+  },
+  "source_authorities": [
+    {
+      "path": "project/stage3/STAGE3_UNCERTAINTY_BENCHMARK_VVUQ_PROTOCOL_V2.md",
+      "sha": "83abc66ff5f5d0f66c421847fa789832ac94ab24"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "450440fd06088202c1266303cddf9b0e0c2a4c8c"
+    },
+    {
+      "path": "project/stage4/03_cases/greensboro_greenevt_smartds/02_estimation/STAGE4_ESTIMATION_VALIDATION_V1.md",
+      "sha": "864b7a9687d24a680669f08f68a5ae7235815238"
+    },
+    {
+      "path": "project/stage5/08_VVUQ/STAGE5_VVUQ_PROTOCOL_V1.md",
+      "sha": "2c62b12bece9d4ab041255c63c040c9efa407639"
+    },
+    {
+      "path": "project/stage6/07_vvuq/STAGE6_VVUQ_PROTOCOL_V2.md",
+      "sha": "f050d5d334f2e2a6587785241b30c9ae5606db55"
+    },
+    {
+      "path": "project/stage7/STAGE7_VVUQ_AND_DECISION_STABILITY_PROTOCOL_V2.md",
+      "sha": "dad9344f78260587a2177954c0dee4d033e33a1b"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_UNCERTAINTY_TEMPLATE_V1.md",
+      "sha": "6b579589ad0295a4b997a6ba41a2aedd4973e48d"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_ID_AND_PROPAGATION_SCHEMA_V1.md",
+      "sha": "d05039649c0ac69f4c57ae93e178dff077eb0b6e"
+    }
+  ],
+  "external_design_references": [
+    {
+      "name": "ASME VVUQ Standards / VVUQ 1-2022",
+      "url": "https://www.asme.org/codes-standards/vvuq-standards"
+    },
+    {
+      "name": "ASME VVUQ 50.1-2025",
+      "url": "https://www.asme.org/codes-standards/find-codes-standards/vvuq501-vvuq-50-1-guide-to-a-model-life-cycle-approach-that-incorporates-verification-validation-and-uncertainty-quantification"
+    },
+    {
+      "name": "ASME V&V 40-2018",
+      "url": "https://www.asme.org/codes-standards/find-codes-standards/assessing-credibility-of-computational-modeling-through-verification-and-validation-application-to-medical-devices"
+    },
+    {
+      "name": "NASA-STD-7009B",
+      "url": "https://standards.nasa.gov/node/263"
+    },
+    {
+      "name": "NASA-HDBK-7009B",
+      "url": "https://standards.nasa.gov/node/198"
+    },
+    {
+      "name": "JCGM/BIPM uncertainty publications",
+      "url": "https://www.bipm.org/en/committees/jc/jcgm/publications"
+    },
+    {
+      "name": "NIST Digital Twin Credibility",
+      "url": "https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing"
+    },
+    {
+      "name": "NISTIR 8620 (2026)",
+      "url": "https://doi.org/10.6028/NIST.IR.8620"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_UNCERTAINTY_VVUQ_CONTROL_V1.md",
+      "sha": "9a74b488697b4eedc2e10f1d4c0201c18992b5e5"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_UNCERTAINTY_VVUQ_SCHEMA_V1.schema.json",
+      "sha": "1af63d7b4a280e03761a22c3e76d2c8dbe0d55aa"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_UNCERTAINTY_STAGE_HYPOTHESIS_PROPAGATION_MATRIX_V1.md",
+      "sha": "9fca4a8f4fd2eeb4cd55c3aaa58dd957df3cc888"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_VVUQ_GATE_MATRIX_V1.md",
+      "sha": "b747d6344c3280830314777bd8c7facbbde09569"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_VERIFICATION_VALIDATION_ACCEPTANCE_PROTOCOL_V1.md",
+      "sha": "4c7e636b694e01e6c412d0c348fdb2f766b88732"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SENSITIVITY_CONVERGENCE_DECISION_STABILITY_PROTOCOL_V1.md",
+      "sha": "4cc2f41c5786678eee26f29fbb097de891992e00"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_CREDIBILITY_CLAIM_CEILING_MATRIX_V1.md",
+      "sha": "3ab40bf0542835ead42e6cebb75e6a20cc114ac7"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_UNCERTAINTY_REGISTRY_TEMPLATE_V1.csv",
+      "sha": "6517db4a515290f1caca40923458a60d15a4de21"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_VVUQ_ACTIVITY_REGISTER_TEMPLATE_V1.csv",
+      "sha": "0a5c75a4d4b449bbeca16dc1046ba6798252eb47"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_CONTEXT_OF_USE_REGISTER_TEMPLATE_V1.csv",
+      "sha": "2bab0aa3c9927a87e6367f8bb552ce48718edcfb"
+    },
+    {
+      "path": "project/global_integration/P1_7_GLOBAL_UNCERTAINTY_VVUQ_AUDIT_V1_2026-09-19.md",
+      "sha": "792b182a50feeca6f05b5410e4ab4015d33bc9b4"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "fff1d48deee63a5bf0ac3fe6611898ab92f6b708"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "6ec6b6fe6b536605c18a321490f557747cb68e3b"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "bf8fbfe2eea872c8c2ec77ae02b7b0667b79de7c"
+    }
+  ],
+  "permanent_firewalls": [
+    "uncertainty_nature != uncertainty_source",
+    "verification != validation != calibration != UQ != sensitivity != decision_stability",
+    "scenario_frequency != probability",
+    "seed != distribution_evidence",
+    "uncertainty_reduction != uncertainty_propagation",
+    "BLOCKED != negative_evidence",
+    "validated_requires_context_of_use"
+  ],
+  "protected_deferred": [
+    "uncertainty_distributions_and_bounds",
+    "dependence_or_correlation_coefficients",
+    "sample_counts",
+    "convergence_tolerances",
+    "validation_metrics_and_thresholds_not_independently_justified",
+    "calibration_priors_and_objectives",
+    "credibility_or_model_risk_scores",
+    "decision_stability_thresholds",
+    "H1_H5_results"
+  ],
+  "next_task": "P1.8 GLOBAL REQUIREMENTS / PROVENANCE CONTROL"
+}
