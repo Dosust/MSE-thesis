@@ -1,0 +1,6 @@
+object_id,symbol,meaning,data_realization,gate_status,closure_requirement
+U-PHYS,U_phys,physically admissible actions,OPEN,BLOCKED,requires final case dynamics/limits
+U-INFO,U_info,actions supportable by available/fresh information,MISSING,BLOCKED,requires information layer
+U-ORG,U_org,authorized actions,MISSING,BLOCKED,requires authority/rules
+U-RES,U_resource,resource-feasible actions,MISSING,BLOCKED,requires resource model
+U-FEAS,U_feas,intersection of four constraint classes,MISSING,BLOCKED,thesis-derived integration; must be tested
