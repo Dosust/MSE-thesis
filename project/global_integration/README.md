@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1 BACKBONE (P1.0–P1.2) PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.3 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -16,6 +16,8 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_STAGE_HANDOFF_MATRIX_V1.md — Stage1→2→3→4→5→6→7 handoff control.
 - P1_BACKBONE_CONSISTENCY_AUDIT_V1_2026-09-19.md — 20/20 backbone audit.
 - P1_BACKBONE_FINALIZATION_MANIFEST_V1.json — exact authority/artifact blob identities.
+- GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md — canonical H1–H5 experiment architecture.
+- P1_3_HYPOTHESIS_PREREGISTRATION_AUDIT_V1_2026-09-19.md — 32/32 preregistration audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -30,6 +32,8 @@ Historical:
 \text{P1.1 symbols/ontology}
 \rightarrow
 \text{P1.2 handoffs}
+\rightarrow
+\text{P1.3 H1--H5 preregistration}
 =
 PASS
 }
@@ -40,16 +44,27 @@ Known cross-stage collisions/mismatches are now explicit rather than hidden:
 - Stage4→5 physical-truth lineage;
 - Stage5→6 producer/consumer tuple mismatch.
 
+## H1–H5 preregistration state
+
+~~~math
+\boxed{
+G_{P1.3}^{design}=PASS
+\qquad
+(32/32\;checks)
+}
+~~~
+
+All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
+
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.3 = GLOBAL H1--H5 MASTER PREREGISTRATION}
+\text{P1.4 = BASELINE / BENCHMARK / REFERENCE REGISTRY}
 }
 ~~~
 
 Then:
-- P1.4 baseline/benchmark/reference registry;
 - P1.5 final-case schema;
 - P1.6 common scenario schema;
 - P1.7 global uncertainty/VVUQ;

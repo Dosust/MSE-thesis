@@ -73,13 +73,16 @@ Fields:
 For every `I(k→k+1)`:
 `producer | consumer | object | mandatory fields | units/types | uncertainty | validity | fail/block behavior | claim ceiling`.
 
-### P1.3 H1–H5 master preregistration — NEXT
-Freeze the **schema** for:
-`baseline | treatment | held constants | QOI | materiality | scenarios | UQ | VVUQ | support | not-support | not-tested`.
+### P1.3 H1–H5 master preregistration — COMPLETE
+- [x] Create `GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md`.
+- [x] Freeze the 13-field master object for H1–H5.
+- [x] Preserve canonical baseline/treatment/comparator semantics.
+- [x] Preserve current H1 mechanism-readiness restrictions.
+- [x] Keep unresolved H2/H3/H4/H5 metrics/thresholds DEFERRED.
+- [x] Standardize final adjudication as SUPPORTED / NOT SUPPORTED / NOT TESTED.
+- [x] Run preregistration audit: 32/32 PASS.
 
-Data-dependent numerical values may remain DEFERRED.
-
-### P1.4 Baseline/benchmark/reference registry
+### P1.4 Baseline/benchmark/reference registry — NEXT
 Enforce:
 ```math
 \text{baseline}\neq\text{benchmark}\neq\text{reference}

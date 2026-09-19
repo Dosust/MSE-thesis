@@ -1,0 +1,102 @@
+{
+  "manifest_id": "P1_3_H1_H5_MASTER_PREREGISTRATION_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_3_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "989153e98e84d80508bdd6810faaa328a80c1cd0",
+  "source_authorities": [
+    {
+      "path": "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+      "sha": "e599ef2233f0e4da6b782a29aecec3799c7974c2"
+    },
+    {
+      "path": "thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md",
+      "sha": "662439d04ec4297a1c5cbba047fc40c46d17db57"
+    },
+    {
+      "path": "project/H1_CONFIRMATORY_PREREGISTRATION_V1.md",
+      "sha": "edb4793c426c06b538f9ef3d857ad06d5c31eaac"
+    },
+    {
+      "path": "project/stage3/STAGE3_SCENARIO_SCHEMA_V2.md",
+      "sha": "faba67b66c4468d751dbaf4fbd4cf97fb2b907a8"
+    },
+    {
+      "path": "project/stage3/STAGE3_MODEL_FAMILY_SELECTION_PROTOCOL_V2.md",
+      "sha": "4780c6e2c1bcd202a9dd23629aa903d4cbbb0edf"
+    },
+    {
+      "path": "project/stage4/03_cases/greensboro_greenevt_smartds/05_H2/STAGE4_H2_EXPERIMENT_PROTOCOL_V1.md",
+      "sha": "8f0595487fbd3b1bfc580bebc33890d67a582684"
+    },
+    {
+      "path": "project/H2_PREREGISTRATION_V1.md",
+      "sha": "c43353ce943453150702726d07cd2bc4a6d4962c"
+    },
+    {
+      "path": "project/H3_PREREGISTRATION_V1.md",
+      "sha": "adfa4924bc643196eeb97139b4f2e7ffbedf69dc"
+    },
+    {
+      "path": "project/stage5/07_H3/STAGE5_H3_EXPERIMENT_PROTOCOL_V1.md",
+      "sha": "f00f64c2b1ea01e373d0c428b597427e9f65b4b8"
+    },
+    {
+      "path": "project/stage6/06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md",
+      "sha": "4a4f44ac4367014ea7aa63b5c548d6c22799bb57"
+    },
+    {
+      "path": "project/stage7/STAGE7_H5_PREREGISTRATION_AND_COMPARATOR_PROTOCOL_V2.md",
+      "sha": "93996781499c866ef02f455e8fcf9ed429c98fc9"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_STAGE_HANDOFF_MATRIX_V1.md",
+      "sha": "711128daad5f150016cf994e1c6da497c3c84bb7"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_V1.md",
+      "sha": "6f389265ac6e449e814534a7e61e12918a2224aa"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    },
+    {
+      "path": "project/global_integration/P1_3_HYPOTHESIS_PREREGISTRATION_AUDIT_V1_2026-09-19.md",
+      "sha": "294a2c8695579285e2d6be90f48e8820cf712f32"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "f10d500bdc57841f391925d71513d7ebc7c5a278"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "dbcd37ec27041f8916799bc4b7891b3e0f79a2a7"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "4151f87458715969812afd3e5c176dea2b52d657"
+    }
+  ],
+  "audit": {
+    "passed": 32,
+    "failed": 0
+  },
+  "hypothesis_current_state": {
+    "H1": "NOT_TESTED",
+    "H2": "NOT_TESTED",
+    "H3": "NOT_TESTED",
+    "H4": "NOT_TESTED",
+    "H5": "NOT_TESTED"
+  },
+  "protected_deferred": [
+    "H1_case_specific_epsilon_P_epsilon_T_and_final_scenarios",
+    "H2_primary_endpoint_contrast_logic_delta_2",
+    "H3_selected_skill_metric_delta_3_and_test_sample",
+    "H4_delta_R_delta_Jq_and_final_intervention_set",
+    "H5_primary_decision_change_metric_delta_5_and_decision_set_construction"
+  ],
+  "next_task": "P1.4 BASELINE_BENCHMARK_REFERENCE_REGISTRY"
+}

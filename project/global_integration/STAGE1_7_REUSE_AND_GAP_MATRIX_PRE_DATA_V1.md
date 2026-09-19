@@ -546,3 +546,62 @@ Three previously hidden integration issues are now explicit and controlled:
 Backbone audit: **20/20 PASS**.
 
 Next: **P1.3 H1–H5 master preregistration**.
+
+
+---
+
+## P1.3 master preregistration closure — 2026-09-19
+
+Created:
+- GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md;
+- P1_3_HYPOTHESIS_PREREGISTRATION_AUDIT_V1_2026-09-19.md.
+
+The common hypothesis object is now:
+
+~~~math
+\boxed{
+\mathcal H_i
+=
+(
+\text{question},
+\text{baseline},
+\text{treatment},
+\text{held constants},
+QOI,
+\text{primary endpoint},
+\text{materiality},
+\text{scenarios},
+UQ,
+VVUQ,
+\text{support},
+\text{not-support},
+\text{not-tested}
+).
+}
+~~~
+
+Key controls:
+- H1 M2 mechanisms must remain a subset of Stage2→3-ready dependencies.
+- H2 primary endpoint / contrast logic / delta_2 remain DEFERRED.
+- H3 metric branch and delta_3 remain DEFERRED.
+- H4 preserves A_H4 = A_R+ and consequence-heterogeneity semantics; delta_R and delta_J,q remain DEFERRED.
+- H5 preserves the resilience-only versus resilience+sustainability added-information contrast; primary decision-change metric and delta_5 remain DEFERRED.
+- final confirmatory outcome states are SUPPORTED / NOT SUPPORTED / NOT TESTED.
+- failed prerequisite or VVUQ gate means NOT TESTED, not falsification.
+
+Audit:
+
+~~~text
+32 PASS
+0 FAIL
+~~~
+
+Therefore:
+
+~~~math
+\boxed{
+P1.3=PASS.
+}
+~~~
+
+Next: **P1.4 baseline/benchmark/reference registry**.
