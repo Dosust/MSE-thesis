@@ -1,67 +1,73 @@
-version: 2
+version: 3
 project: MSE-thesis
-framework_status: stages_1_to_7_frozen
+framework_status: stages_1_to_7_frozen_pending_v4_global_reaudit
 system:
-  physical_systems:
-    - power
-    - transportation
-  layers:
-    - information
-    - organization
+  physical_systems: [power, transportation]
+  supporting_domains: [information, organization]
 
 primary_hypotheses:
-  source: project/RESEARCH_HYPOTHESES.md
+  source: project/CANONICAL_RQ_SO_HYPOTHESES_V4.md
   ids: [H1, H2, H3, H4, H5]
   numerical_thresholds_frozen: false
 
 propositions:
   P1:
     name: ptio_representation_adds_value
+    role: supporting_H2
     object: physical_only_vs_ptio_model
     comparison: PT_vs_PTIO
     falsification: no_material_out_of_sample_improvement_after_complexity_control
   P2:
     name: dynamic_interdependencies_change_outcomes
+    role: supporting_H1
     object: dynamic_vs_static_coupling
     comparison: dynamic_interdependency_vs_static_interdependency
-    falsification: trajectory_and_viability_differences_below_predeclared_tolerance
+    falsification: trajectory_and_service_differences_below_predeclared_tolerance
   P3:
     name: information_degradation_changes_control
+    role: supporting_H2
     object: information_state_and_estimation
     comparison: degraded_information_vs_full_information
     falsification: negligible_change_in_estimation_response_or_closed_loop_outcome
   P4:
-    name: organizational_constraints_change_viability
-    object: feasible_action_set_and_controlled_viability
+    name: organizational_constraints_change_feasible_response
+    role: supporting_H2
+    object: feasible_action_set_and_controlled_response
     comparison: realistic_organization_vs_idealized_organization
-    falsification: negligible_change_in_action_set_or_viability_outcomes
+    falsification: negligible_change_in_action_set_or_resilience_outcomes
   P5:
     name: timing_diagnostics_are_decision_relevant
+    role: supporting_H2_H3
     object: response_vs_cascade_and_viability_timing
     comparison: timing_diagnostics_with_vs_without_conditioning
     falsification: no_discrimination_of_successful_vs_failed_response
   P6:
     name: riemannian_margin_adds_value
+    role: supporting_H3
     object: viability_boundary_geometry
     comparison: normalized_euclidean_vs_riemannian_margin
     falsification: no_reproducible_gain_over_simpler_geometry
   P7:
     name: viability_sensitivity_identifies_critical_interfaces
+    role: supporting_stage5_stage6_diagnostic_not_primary_H4
     object: interdependency_viability_sensitivity
     comparison: viability_sensitivity_vs_structural_rankings
     falsification: structural_rankings_equal_or_superior_under_equal_budget
   P8:
     name: reduced_viability_state_preserves_decisions
+    role: H3_implementation_validity
     object: full_vs_reduced_viability_model
     comparison: full_state_vs_reduced_state
     falsification: false_safe_classifications_or_unstable_rankings
   P9:
-    name: current_viability_does_not_imply_regime_adequacy
-    object: stage5_viability_vs_stage6_long_horizon_adequacy
-    comparison: viability_only_vs_viability_plus_long_horizon_requirements
-    falsification: stage6_diagnosis_adds_no_decision_relevant_distinction
+    name: current_viability_does_not_imply_long_horizon_adequacy
+    role: supporting_stage6_stage7_proposition_not_primary_H5
+    object: stage5_viability_vs_long_horizon_requirements
+    comparison: viability_only_vs_viability_plus_qualified_long_horizon_requirements
+    falsification: extension_adds_no_decision_relevant_distinction
   P10:
-    name: persistent_interdependency_lock_in_can_require_structural_change
+    name: persistent_interdependency_lock_in_may_justify_structural_change
+    role: conditional_stage7_extension_not_primary_H4_H5
     object: repeated_recovery_vs_structural_transformation
     comparison: restore_original_dependency_vs_modify_dependency
     falsification: structural_change_has_no_material_long_horizon_advantage
@@ -74,3 +80,5 @@ inference_rules:
   require_baseline_and_ablation: true
   prohibit_global_novelty_from_literature_rank: true
   framework_freeze_does_not_imply_empirical_validation: true
+  interface_criticality_is_not_primary_H4: true
+  adaptive_pathways_are_not_primary_H5: true
