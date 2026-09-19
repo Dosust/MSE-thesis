@@ -3,7 +3,7 @@
 **Status:** FROZEN PRE-H4/H5 STATUS REGISTER / DATA-GATED  
 **Effective date:** 2026-09-18  
 **Governing standard:** `SUSTAINABILITY_DIMENSION_ADMISSION_AND_ACCOUNTING_STANDARD_V1.md`  
-**Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **Evidence basis:** formal Section-1.5 evidence audit + audited P--T corpus + verified standards/close precedents  
 **Metric qualification:** `SUSTAINABILITY_METRIC_CARDS_V1.md`  
 **Case/data audit:** `SUSTAINABILITY_CASE_DATA_FEASIBILITY_AUDIT_V1.md`  
