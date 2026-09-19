@@ -1,5 +1,11 @@
 # Stage 3 — Coupled Hybrid Multiscale Dynamics
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — CURRENT SUPPORTING THEORY, LEGACY NOTATION NOT ACTIVE**
+>
+> This file remains supporting physics/model-family reasoning only. Its flat dependency object `\mathfrak I_{ij}^{\alpha\beta}` is legacy notation and must be interpreted through `CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md` as the active dependency contract `\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)`.  
+> It is **not** the active Stage-3 constitution. The next governed artifact is `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md`, which must use active dependency notation and define the Stage2→3 and Stage3→4 contracts before global freeze.
+
+
 ![Stage](https://img.shields.io/badge/Stage%203-FROZEN-1A7F37)
 
 **Framework stage:** Stage 3 — Coupled Hybrid Multiscale Dynamics  
