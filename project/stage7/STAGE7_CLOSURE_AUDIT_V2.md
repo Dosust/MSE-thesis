@@ -1,5 +1,8 @@
 # Stage 7 Closure Audit v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is the corresponding Stage-7 v3 protocol referenced in `project/stage7/README.md`.
+
 **Status:** DESIGN/PROTOCOL AUDIT  
 **Effective date:** 2026-09-19  
 **Empirical H5 status:** NOT TESTED
