@@ -9,7 +9,7 @@
 
 This case-role authority is subordinate to the current thesis authorities and preserves their case semantics:
 
-1. `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
+1. `project/CANONICAL_RESEARCH_QUESTIONS_V4.md` and `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`
 2. `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
 3. frozen Chapter I, especially `thesis/01_introduction/01_06_scope_boundaries_and_assumptions.md`
 4. `project/AUSTIN_CASE_STUDY_DATA_ADMISSIBILITY_MATRIX_V3.md`
@@ -57,6 +57,37 @@ eq
 ```
 
 GreenEVT/SMART-DS may not be promoted to confirmatory case status without a versioned case-role amendment issued **before** inspecting the proposed confirmatory outcome.
+
+---
+
+### C_DEV-H3 — Houston semisynthetic H3 demonstrator
+
+**Case-role ID:** `C_DEV_HOUSTON_H3_V1`
+
+**Role:** Stage-5/H3 development, algorithm verification, source-materialization QA, threshold/service-set qualification, and semisynthetic demonstrator work.
+
+The active `H3-HOU-FLOOD-V1` stream is therefore explicitly classified as a **development/method-verification case**, not as the held-out confirmatory case.
+
+Permitted uses include:
+- H3 algorithm and dynamic-programming verification;
+- SMART-DS/H-GAC/traffic-signal materialization and mapping QA within their declared source roles;
+- service/state-set and uncertainty-method development;
+- semisynthetic viability/reachability benchmark experiments clearly labeled as development;
+- evidence generation for whether the H3 experiment is executable.
+
+Permanent firewall:
+
+```math
+\boxed{
+C_{DEV,HOUSTON,H3}
+\neq
+C_{CONF,AUSTIN}.
+}
+```
+
+Houston H3 outputs do not support or reject H3 confirmatorily unless a future versioned case-role amendment, leakage audit, admissibility protocol, and preregistration prospectively promote that stream before target outcomes are inspected.
+
+The generic `C_DEV` column in the cross-stage table covers both the Greensboro development stream and this Houston H3 development stream, subject to each stream's declared stage-specific validity domain.
 
 ---
 
