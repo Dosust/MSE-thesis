@@ -405,8 +405,8 @@ Create:
 
 ```text
 P0.1 authority/supersession control       DONE
-P0.2 Stage-3 scientific constitution v2   NEXT
-P0.3 Stage-6 v2.1 alignment               THEN
+P0.2 Stage-3 scientific constitution v2   DONE
+P0.3 Stage-6 v2.1 alignment               NEXT
 P0.4 Stage-7 v2.1 alignment               THEN
 P1.1 global symbol/ontology registry
 P1.2 global handoff matrix

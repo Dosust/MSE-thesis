@@ -1,0 +1,78 @@
+{
+  "manifest_id": "STAGE3_FINALIZATION_MANIFEST_V2",
+  "version": "2.0",
+  "date": "2026-09-19",
+  "status": "DESIGN_PROTOCOL_FROZEN",
+  "empirical_stage3_status": "NOT_CLOSED_NOT_TESTED_BLOCKED_BY_PREREQUISITE_EVIDENCE",
+  "audit": {
+    "id": "G_3_CONTRADICTION",
+    "status": "PASS",
+    "checks_passed": 18,
+    "checks_failed": 0
+  },
+  "authority": {
+    "rq_so_h": "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+    "framework": "project/CANONICAL_7_STAGE_FRAMEWORK_V2.md",
+    "dependency_contract": "project/CANONICAL_DEPENDENCY_CONTRACT_V1.md",
+    "stage4_target": "project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md"
+  },
+  "hash_semantics": "Git blob SHA-1 as returned by GitHub create_blob. Manifest file itself is excluded from its own hash list. The Git commit containing this manifest binds the package atomically.",
+  "files": [
+    {
+      "path": "project/stage3/STAGE3_STAGE2_TO_STAGE3_INPUT_AND_READINESS_CONTRACT_V2.md",
+      "git_blob_sha": "2efdcc64919282d93b02a73a45b9c7ef330dc646"
+    },
+    {
+      "path": "project/stage3/STAGE3_STATE_INPUT_OUTPUT_QOI_ONTOLOGY_V2.md",
+      "git_blob_sha": "80dd965391c672df303e46ace919a5dd6bf11ec5"
+    },
+    {
+      "path": "project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md",
+      "git_blob_sha": "415e574ef4f12f6e427c0d40119eaeaaa3694783"
+    },
+    {
+      "path": "project/stage3/STAGE3_HYBRID_TIME_MULTIRATE_SEMANTICS_V2.md",
+      "git_blob_sha": "3b6df67ae10563455ccc73f5a45a8d45f7316126"
+    },
+    {
+      "path": "project/stage3/STAGE3_MODEL_FAMILY_SELECTION_PROTOCOL_V2.md",
+      "git_blob_sha": "4780c6e2c1bcd202a9dd23629aa903d4cbbb0edf"
+    },
+    {
+      "path": "project/stage3/STAGE3_SCENARIO_SCHEMA_V2.md",
+      "git_blob_sha": "faba67b66c4468d751dbaf4fbd4cf97fb2b907a8"
+    },
+    {
+      "path": "project/stage3/STAGE3_UNCERTAINTY_BENCHMARK_VVUQ_PROTOCOL_V2.md",
+      "git_blob_sha": "83abc66ff5f5d0f66c421847fa789832ac94ab24"
+    },
+    {
+      "path": "project/stage3/STAGE3_TO_STAGE4_HANDOFF_CONTRACT_V2.md",
+      "git_blob_sha": "8ecf4f64c0c97caa99704b130074eab50c271683"
+    },
+    {
+      "path": "project/stage3/STAGE3_V2_INTERNAL_CONTRADICTION_AUDIT_V1_2026-09-19.md",
+      "git_blob_sha": "c926cf91d6c3863ba742b420099b201f97f22e0c"
+    },
+    {
+      "path": "project/stage3/STAGE3_DESIGN_PROTOCOL_FREEZE_V2.md",
+      "git_blob_sha": "b0f4549e28c410e7eb5f48e2d3018e51b61e8cce"
+    }
+  ],
+  "protected_deferred": [
+    "development_feeder_id",
+    "heldout_feeder_id",
+    "road_subnetwork",
+    "hazard_values_geometry",
+    "case_parameter_values_distributions",
+    "blocked_mechanism_promotion",
+    "final_case_model_family",
+    "solver_communication_steps",
+    "independent_reference",
+    "exact_H1_error_metric",
+    "VVUQ_numerical_thresholds",
+    "UQ_convergence_threshold",
+    "delta_1",
+    "H1_result"
+  ]
+}

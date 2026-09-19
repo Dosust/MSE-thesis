@@ -13,19 +13,21 @@
 
 Authority drift cleanup closure: **PASS — 2026-09-19**. No obsolete H4/H5 file may govern active work; legacy Stage-3 notation is explicitly quarantined.
 
-### P0.2 Stage 3 normalization — next task
-- [ ] Create `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md`.
-- [ ] Define active-notation Stage2→3 input contract.
-- [ ] Define Stage3 state/input/output/QOI ontology.
-- [ ] Define model-family selection schema.
-- [ ] Freeze time/hybrid/multirate semantics at design level.
-- [ ] Define generic scenario-template schema.
-- [ ] Define Stage3 benchmark/VVUQ schema.
-- [ ] Define Stage3→4 handoff.
-- [ ] Define Stage3 claim ceiling.
-- [ ] Freeze/version the Stage3 v2 constitution.
+### P0.2 Stage 3 normalization — COMPLETE
+- [x] Create `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md`.
+- [x] Define active-notation Stage2→3 input contract.
+- [x] Define Stage3 state/input/output/QOI ontology.
+- [x] Define model-family selection schema.
+- [x] Freeze time/hybrid/multirate semantics at design level.
+- [x] Define generic scenario-template schema.
+- [x] Define Stage3 benchmark/VVUQ schema.
+- [x] Define Stage3→4 handoff.
+- [x] Define Stage3 claim ceiling.
+- [x] Freeze/version the Stage3 v2 constitution.
 
-### P0.3 Stage 6 v2.1 alignment
+Stage 3 design normalization closure: **PASS — DESIGN/PROTOCOL ONLY; empirical Stage 3 remains NOT TESTED.**
+
+### P0.3 Stage 6 v2.1 alignment — NEXT
 - [ ] Add explicit effectiveness `E_fx(a_k)`.
 - [ ] Add explicit efficiency `E_fy(a_k)` and evidence-supported resource vector.
 - [ ] Keep `ΔR`, `E_fx`, `E_fy`, and `ΔJ_sus` distinct.
