@@ -552,3 +552,27 @@ Permanent:
 \text{formal resilience guarantee}.
 }
 ~~~
+
+
+## 19. P1.11.8 measurement-error / identification classification
+
+Additional labels:
+
+| Label | Definition |
+|---|---|
+| [ECONOMETRICS] | formal econometric identification/estimation evidence |
+| [PEER-REVIEWED] | peer-reviewed journal evidence |
+
+| ID | E | S / R / D | Tau / F / K / Q / J | Validation maturity | Controlled thesis interpretation |
+|---|---|---|---|---|---|
+| A-039 Bramoullé & Maes (2026) | [ADJ][METHOD][ECONOMETRICS][PEER-REVIEWED] | social-network measurement error and peer-effect identification | errors-in-variables; rank/variation identification; GMM/2SLS; Monte Carlo estimator analysis | formal theory + Monte Carlo in source model | supports measurement/identification/estimator-admission doctrine; does not establish P–T mechanisms or prescribe a P–T estimator |
+
+Permanent:
+
+~~~math
+\boxed{
+\text{identified under source model}
+\neq
+\text{identified under P--T model}.
+}
+~~~

@@ -145,3 +145,10 @@ Exact source hashes and page/section mappings are controlled by:
 | ID | Source | Evidence class / status | Accepted bounded support | Restriction | Thesis use / source pin |
 |---|---|---|---|---|---|
 | A-038 | Li & Mostafavi (2025), *Machine learning approach for disaster risk and resilience assessment in coupled human infrastructure systems performance*, *npj Natural Hazards*, 2:56, https://doi.org/10.1038/s44304-025-00104-4 | [ADJ] [EMP] [METHOD] [ML] | post-event multi-source feature computation; Census Block Group analytical support; PCA-based risk/resilience indices; hierarchical clustering of spatial archetypes; baseline/recovery features; spatial/socioeconomic heterogeneity | not direct P–T interdependency evidence; power outages explicitly excluded in Harvey case; PCA/clustering do not establish physical causality, Stage-3 dynamics, thesis resilience definition, sustainability scope, or intervention effects | 2.6–2.8; Stage 4/5 method precedent; P1.11.7; SRC-LI-MOSTAFAVI-2025 |
+
+
+## 2026-09-19 P1.11.8 measurement-error / identification evidence
+
+| ID | Source | Evidence class / status | Accepted bounded support | Restriction | Thesis use / source pin |
+|---|---|---|---|---|---|
+| A-039 | Bramoullé & Maes (2026), *Measurement error and peer effects in networks*, *Journal of Econometrics* 258, 106339, https://doi.org/10.1016/j.jeconom.2026.106339 | [ADJ] [METHOD] [ECONOMETRICS] [PEER-REVIEWED] | measurement error can inflate/smear network-effect estimates; identification under explicit network/moment/rank conditions; GMM/2SLS derived after identification; weak-identification caution; Monte Carlo finite-sample method assessment | social-network linear-in-means setting, not P–T physics; network links primarily treated as observed; no P–T parameter, viability, sustainability, or intervention-effect authority | Stage 3/4 inference/readiness; P1.11.8; SRC-BRAMOULLE-MAES-2026 |

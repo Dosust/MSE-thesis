@@ -1,6 +1,6 @@
 # P1.11 Source-Document Provenance Register v1
 
-**Status:** FROZEN SOURCE-IDENTITY REGISTER FOR P1.11.1–P1.11.7  
+**Status:** FROZEN SOURCE-IDENTITY REGISTER FOR P1.11.1–P1.11.8  
 **Effective date:** 2026-09-19  
 **Binary policy:** source PDFs are not committed to GitHub; exact supplied bytes are identified by SHA-256.
 
@@ -13,6 +13,8 @@
 | SRC-KAYS-SADRI | H M Imran Kays, Arif Mohaimin Sadri. "Towards Unifying Resilience and Sustainability for Transportation Infrastructure Systems: Conceptual Framework, Critical Indicators, and Research Needs" | supplied conceptual manuscript; publication venue/year not established from supplied PDF metadata; use bounded conceptual claims only | 2208.pdf | 23 | 1079189 | 67d986a658aceceedec490f490534d4586d258352063295526bc6b8b0f741c71 |
 
 | SRC-LI-MOSTAFAVI-2025 | Xiangpeng Li & Ali Mostafavi. "Machine learning approach for disaster risk and resilience assessment in coupled human infrastructure systems performance." *npj Natural Hazards* 2:56 (2025), DOI 10.1038/s44304-025-00104-4 | peer-reviewed empirical/data-driven post-disaster risk-resilience method; adjacent to P–T | s44304-025-00104-4.pdf | 15 | 2579338 | bf60180521d59635a9df6ccfbbdca9fb3aa76967de489f7fbc0bcd1022345da2 |
+
+| SRC-BRAMOULLE-MAES-2026 | Yann Bramoullé & Sebastiaan Maes. "Measurement error and peer effects in networks." *Journal of Econometrics* 258 (2026) 106339, DOI 10.1016/j.jeconom.2026.106339 | peer-reviewed econometric methodology; adjacent to P–T | 1-s2.0-S0304407626001594-main (1).pdf | 22 | 4068394 | 5e992b17581712c31e8b0d38c8d656821a9a0414cf4ca9bc2ed16c7c8e124d54 |
 
 ## Provenance rule
 

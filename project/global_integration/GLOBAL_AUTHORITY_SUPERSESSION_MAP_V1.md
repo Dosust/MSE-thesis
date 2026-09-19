@@ -294,3 +294,31 @@ Permanent:
 \text{allowed claim}.
 }
 ~~~
+
+
+## P1.11.8 measurement-error / identification authority — 2026-09-19
+
+Current additive inference authorities:
+- project/CANONICAL_MEASUREMENT_ERROR_IDENTIFICATION_AMENDMENT_V1_8.md
+- project/stage3/STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1.md
+- project/stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4.md
+- project/stage6/03_accounting/STAGE6_QUANTITY_ORIGIN_AND_UNCERTAINTY_AMENDMENT_V1_2.md
+- project/global_integration/GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1.md
+
+These are additive to P1.11.7 computational-role governance and P1.7 uncertainty/VVUQ governance.
+
+They do not create a new stage.
+
+Permanent:
+
+~~~math
+\boxed{
+G_2^{causal}
+\neq
+G_{\rm ID}
+\neq
+G_{\rm EST}
+\neq
+G_{\rm impl}.
+}
+~~~

@@ -397,3 +397,27 @@ P2 is now the next major execution task and must consume P1.11.6 as the authorit
 - [x] Run deterministic post-commit invariant verification: 20/20 PASS.
 
 P2 remains the next major task and must consume P1.11.7 computation-role semantics.
+
+
+#### P1.11.8 Bramoullé–Maes measurement-error / identification reconciliation — COMPLETE
+- [x] Register Bramoullé & Maes (2026) in Chapter-2 controlled evidence.
+- [x] Pin exact supplied PDF byte identity with SHA-256.
+- [x] Add source-page/section → claim → repository-rule mappings.
+- [x] Preserve measurement model before inferential estimation.
+- [x] Separate causal qualification G2 from parameter identification G_ID.
+- [x] Permit G2=PASS with G_ID=BLOCKED.
+- [x] Add estimator-admission gate G_EST.
+- [x] Add weak-identification diagnostics/strength status.
+- [x] Preserve optimizer convergence != scientific identification.
+- [x] Preserve GMM/2SLS as source-specific methods, not P–T defaults.
+- [x] Clarify Monte Carlo as method verification/UQ rather than empirical infrastructure validation.
+- [x] Preserve true-graph vs observed-graph uncertainty as unresolved where applicable.
+- [x] Extend Stage-3 empirical parameter readiness.
+- [x] Extend Stage-4 measurement→identification→estimation control.
+- [x] Preserve P1.7 uncertainty ontology and map the six-label summary into it.
+- [x] Add Stage-6 quantity-origin and uncertainty-lineage classes.
+- [x] Replace universal effect-size>uncertainty rule with representation-aware G_resolve.
+- [x] Extend P1.11.7 computation record rather than create a competing object.
+- [x] Run P1.11.8 repository-consistency audit: 52/52 PASS.
+
+P2 remains the next major task and must consume P1.11.8 identification/measurement semantics.

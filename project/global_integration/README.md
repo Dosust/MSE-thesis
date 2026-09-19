@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.7 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.8 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -538,3 +538,38 @@ Key firewalls:
 The paper does not alter P–T mechanisms or sustainability scope.
 
 P2 must type each material computation by lane, scientific role, input/output object, support, reference state, uncertainty, validation and claim ceiling.
+
+
+## P1.11.8 Bramoullé–Maes measurement error / identification
+
+Controls:
+- ../CANONICAL_MEASUREMENT_ERROR_IDENTIFICATION_AMENDMENT_V1_8.md
+- ../stage3/STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1.md
+- ../stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4.md
+- ../stage6/03_accounting/STAGE6_QUANTITY_ORIGIN_AND_UNCERTAINTY_AMENDMENT_V1_2.md
+- GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1.md
+- P1_11_8_BRAMOULLE_MAES_MEASUREMENT_IDENTIFICATION_AUDIT_V1_2026-09-19.md
+
+Key rules:
+
+~~~math
+\boxed{
+\text{identification}
+\neq
+\text{estimation}
+\neq
+\text{simulation}
+}
+~~~
+
+~~~math
+\boxed{
+G_2^{causal}=PASS
+\ \text{may coexist with}\
+G_{\rm ID}=BLOCKED.
+}
+~~~
+
+P1.7 uncertainty ontology remains controlling; P1.11.8 adds explicit measurement-error → identification → estimator-admission lineage.
+
+P2 must consume identification status, measurement model, estimator admission, uncertainty lineage and effect-resolution fields.
