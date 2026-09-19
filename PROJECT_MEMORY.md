@@ -1,7 +1,7 @@
 # Project Memory Entry Point
 
 > **Current scientific authorities (2026-09-20):**  
-> Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+> Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`  
 > Research questions: `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
 > SO/H wording and test logic: `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 > Chapter I: `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
