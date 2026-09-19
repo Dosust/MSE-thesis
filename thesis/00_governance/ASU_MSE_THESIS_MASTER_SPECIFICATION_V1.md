@@ -4,7 +4,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **School:** School of Sustainable Engineering and the Built Environment (SSEBE)  
 **Method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
-**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`  
 **Research-question authority:** `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
 **SO/H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
