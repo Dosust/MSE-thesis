@@ -25,7 +25,7 @@ All final claims are restricted to the systems, mechanisms, parameter ranges, ha
 The governing inference rule is:
 
 ```math
-\boxed{ \operatorname{Strength}(\text{claim}) \leq \operatorname{Strength}(\text{supporting evidence}). }
+\boxed{ \mathrm{Strength}(\text{claim}) \leq \mathrm{Strength}(\text{supporting evidence}). }
 ```
 
 ---
