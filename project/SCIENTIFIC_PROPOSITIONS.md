@@ -3,9 +3,9 @@
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/H1--H5%20logic-FROZEN-1A7F37)
 
-**Status:** CURRENT / SYNCHRONIZED WITH STAGES 1–7 AND PRIMARY HYPOTHESES  
+**Status:** CURRENT / SYNCHRONIZED WITH RQ–SO–H v4  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Evidence rule:** A proposition is a testable supporting claim, diagnostic or sub-test. The five primary confirmatory hypotheses are defined in [`RESEARCH_HYPOTHESES.md`](RESEARCH_HYPOTHESES.md).  
+**Evidence rule:** A proposition is a testable supporting claim, diagnostic, sub-test, or conditional extension. The five primary confirmatory hypotheses are defined in [`CANONICAL_RQ_SO_HYPOTHESES_V4.md`](CANONICAL_RQ_SO_HYPOTHESES_V4.md).  
 **Framework rule:** Frozen `[P]` objects remain proposed thesis constructs until their scientific value is demonstrated.
 
 ---
@@ -18,16 +18,16 @@ The primary hypothesis set is
 \mathbb H=\{H_1,H_2,H_3,H_4,H_5\}.
 ```
 
-The propositions here are **not ten additional primary hypotheses**. They are subordinate falsifiable claims used to operationalize, stress-test or explain the primary hypotheses:
+The propositions here are **not ten additional primary hypotheses**. They are subordinate falsifiable claims, diagnostics, or conditional extensions used to operationalize, stress-test, explain, or extend the primary research architecture:
 
 ```math
 H_{\rm SYS}
 \rightarrow
 \{H_1,\ldots,H_5\}
-\rightarrow
+\quad + \quad
 \{P_1,\ldots,P_{10}\}
 \rightarrow
-\text{tests / ablations / falsification}.
+\text{tests / diagnostics / conditional extensions / falsification}.
 ```
 
 Numerical thresholds $\delta_1,\ldots,\delta_5$ remain unset until justified *a priori* in the Hypothesis Specification Matrix.
@@ -44,10 +44,10 @@ Numerical thresholds $\delta_1,\ldots,\delta_5$ remain unset until justified *a 
 | **P4** | Organizational constraints can materially reduce the feasible action set and alter controlled viability. | $H_2$ | $\mathcal U(z_I,z_O)$ and $\mathcal V_{\rm sus}^{u,T}$ |
 | **P5** | Response timing relative to cascade/viability clocks contains decision-relevant information, but timing alone is not sufficient for successful control. | $H_2,H_3$ | $\Pi_R$, $S_{\mathcal V}$, $S_K$, $\Pi_{\mathcal V}$, $\Pi_K$ |
 | **P6** | The proposed Riemannian viability margin provides information beyond normalized Euclidean/weighted distance. | $H_3$ | $\rho_E$ vs. $\rho_g$ |
-| **P7** | Interdependency sensitivity can identify interfaces whose perturbation materially changes viability-related outcomes. | $H_4$ | $S_{ij}^{\mathcal V}(\Delta\theta)$ |
+| **P7** | Interdependency sensitivity can identify interfaces whose perturbation materially changes viability-related outcomes. | Supporting Stage-5/6 diagnostic; **not primary H4** | $S_{ij}^{\mathcal V}(\Delta\theta)$ |
 | **P8** | Reduced viability-state models can preserve or conservatively bound conclusions of the higher-dimensional Stage-3 system. | $H_3$ / implementation validity | $Y_V=\mathcal P_V(Y)$ vs. full state |
-| **P9** | A regime can be controllably viable over the Stage-5 horizon yet remain inadequate under long-horizon sustainability, equity, lock-in or adaptation-limit requirements. | $H_5$ / Stage-6 validity | $\mathcal R_5$ vs. $(\Lambda_{\rm LT},\mathbf d_6)$ |
-| **P10** | Persistent critical interdependencies can create regime-level lock-in that makes repeated recovery inferior to structural adaptation/transformation. | $H_4,H_5$ | repeated $S_{ij}^{\mathcal V}$, $\mathcal D_{\mathfrak I}$ and transformation alternatives |
+| **P9** | A regime can be controllably viable over the Stage-5 horizon yet remain inadequate under long-horizon requirements or adaptation limits. | Supporting Stage-6/7 proposition; **not primary H5** | $\mathcal R_5$ vs. $(\Lambda_{\rm LT},\mathbf d_6)$ |
+| **P10** | Persistent critical interdependencies can create regime-level lock-in that may justify testing structural adaptation/transformation against repeated recovery. | Conditional Stage-7 extension; **not primary H4/H5** | repeated $S_{ij}^{\mathcal V}$, $\mathcal D_{\mathfrak I}$ and transformation alternatives |
 
 ---
 
