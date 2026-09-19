@@ -1,10 +1,18 @@
 # Research Hypotheses — Complete Seven-Stage Framework
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+>
+> This file preserves the pre-v4 hypothesis architecture, including obsolete primary H4 interface-criticality and H5 adaptive-pathway meanings. It is **not** an active hypothesis authority.
+>
+> **Current authority:** `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`.
+>
+> Interface criticality is now a supporting diagnostic unless separately preregistered. Adaptive/sequential transformation is a conditional Stage-7 extension, not primary H5. Do not use the H4/H5 text below for current confirmatory design.
+
 ![Framework](https://img.shields.io/badge/framework-1--7%20FROZEN-1A7F37)
 ![Hypotheses](https://img.shields.io/badge/hypothesis%20logic-FROZEN-1A7F37)
 ![Thresholds](https://img.shields.io/badge/numerical%20thresholds-NOT%20SET-9A6700)
 
-**Status:** CANONICAL HYPOTHESIS ARCHITECTURE / LOGIC FROZEN  
+**Status:** SUPERSEDED — PROVENANCE ONLY  
 **Date:** 2026-09-11  
 **Notation synchronization:** 2026-09-16  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
@@ -12,7 +20,7 @@
 **Citation standard:** APA 7th edition author–date  
 **Change rule:** The scientific logic of the five primary hypotheses is frozen. Numerical thresholds $\delta_1,\ldots,\delta_5$, exact metrics, scenario ensembles, and statistical decision rules must be specified *a priori* before confirmatory testing.
 
-> **Authority rule:** This file defines the five primary confirmatory hypotheses. `SCIENTIFIC_PROPOSITIONS.md` remains the broader proposition/falsification registry; its entries are subordinate tests, mechanisms, diagnostics, or supporting claims.
+> **Authority rule:** Current H1–H5 wording and test logic are defined by `CANONICAL_RQ_SO_HYPOTHESES_V4.md`. The content below is historical provenance only.
 
 > **Notation rule:** Stage-2 dependency notation follows `CANONICAL_DEPENDENCY_CONTRACT_V1.md`: one directed dependency is $\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e)$ and the represented active dependency set is $\mathbb I(t)=\{\mathfrak d_e(t):e\in\mathcal E(t)\}$. Hypothesis-specific model variants use dedicated script symbols so they cannot be confused with the Stage-2 mechanism operator $\Phi_e$, the Stage-4 model variants $\mathscr M_k$, or the Stage-7 infrastructure regime $\mathfrak M_k$.
 
