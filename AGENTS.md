@@ -56,6 +56,7 @@ effectiveness ≠ efficiency ≠ sustainability
 For any research-question, objective, hypothesis-mapping, outline, figure, result or conclusion task, load:
 
 - `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`
+- `project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`
 - `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`
 - `thesis/00_governance/RQ_SO_H_TRACEABILITY_V4.md`
 
