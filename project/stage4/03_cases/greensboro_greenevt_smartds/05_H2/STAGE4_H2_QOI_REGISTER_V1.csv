@@ -1,0 +1,10 @@
+qoi_id,family,role,definition,unit,status,closure_requirement
+E_est,estimation,direct,estimation error against declared reference,state units / normalized,OPEN,freeze norm/state weighting/reference
+C_unc,uncertainty,direct,uncertainty calibration/coverage,probability or coverage,OPEN,bind to uncertainty representation
+Delta_AoI,information,direct,age of information,time,OPEN,freeze message semantics
+tau_info,information,direct,information latency,time,OPEN,freeze send/receive semantics
+tau_decision,organization,direct,decision/approval delay,time,OPEN,evidence/scenario rule needed
+r_U,control,direct,feasible-action fraction/measure,1,OPEN,use only if meaningful action-set measure exists
+tau_response,control,downstream,event-to-action execution delay,time,OPEN,freeze event/action endpoints
+L_service,service,downstream,service loss,service×time,OPEN,inherit/freeze H1/H2 compatible service metric
+T_rec,recovery,downstream,recovery time,time,OPEN,freeze recovery threshold/window
