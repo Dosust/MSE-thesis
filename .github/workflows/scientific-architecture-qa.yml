@@ -76,24 +76,66 @@ jobs:
           import yaml
 
           propositions = yaml.safe_load(Path('config/scientific_propositions.yaml').read_text())
-          assert propositions['version'] == 2
+          assert propositions['version'] == 3
           assert set(propositions['propositions']) == {f'P{i}' for i in range(1, 11)}
           assert propositions['inference_rules']['prohibit_global_novelty_from_literature_rank'] is True
           assert propositions['inference_rules']['framework_freeze_does_not_imply_empirical_validation'] is True
 
           hypotheses = yaml.safe_load(Path('config/research_hypotheses.yaml').read_text())
-          assert hypotheses['version'] == 2
-          assert hypotheses['source'] == 'project/CANONICAL_RQ_SO_HYPOTHESES_V3.md'
+          assert hypotheses['version'] == 3
+          assert hypotheses['source'] == 'project/CANONICAL_RQ_SO_HYPOTHESES_V4.md'
           assert set(hypotheses['hypotheses']) == {f'H{i}' for i in range(1, 6)}
           assert hypotheses['status']['hypothesis_logic_frozen'] is True
           assert hypotheses['status']['numerical_thresholds_frozen'] is False
-          assert hypotheses['hypotheses']['H4']['name'] == 'intervention_resilience_sustainability_consequences'
-          assert hypotheses['hypotheses']['H5']['name'] == 'joint_resilience_sustainability_decision'
+          assert hypotheses['hypotheses']['H4']['name'] == 'intervention_consequences'
+          assert hypotheses['hypotheses']['H5']['name'] == 'joint_engineering_decision'
           assert hypotheses['confirmatory_rules']['thresholds_must_be_defined_a_priori'] is True
           assert hypotheses['confirmatory_rules']['no_hypothesis_support_from_verification_only'] is True
 
           print('Scientific proposition registry: PASS')
           print('Primary hypothesis registry: PASS')
+          PY
+
+      - name: Validate canonical RQ-SO-H v4 contract
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+
+          mapping = json.loads(Path('config/research_question_mapping_v4.json').read_text())
+          assert mapping['version'] == '4.0'
+          assert mapping['rq_authority'] == 'project/CANONICAL_RESEARCH_QUESTIONS_V4.md'
+          assert mapping['rq_so_h_authority'] == 'project/CANONICAL_RQ_SO_HYPOTHESES_V4.md'
+          assert [q['id'] for q in mapping['questions']] == [f'RQ{i}' for i in range(1,8)]
+          assert [q['objective_id'] for q in mapping['questions']] == [f'SO{i}' for i in range(1,8)]
+          assert mapping['hypothesis_mapping'] == {
+              'RQ1':'developmental_support_H1',
+              'RQ2':'developmental_support_H1',
+              'RQ3':'H1','RQ4':'H2','RQ5':'H3','RQ6':'H4','RQ7':'H5'
+          }
+
+          rq0 = ("How can coupled Power–Transportation infrastructure be represented as an interdependent "
+                 "System of Systems and modeled as a spatiotemporal complex dynamical system to connect "
+                 "qualified directional dependencies, observation- and organization-constrained feasible "
+                 "response, uncertainty-aware service resilience, engineering intervention consequences, "
+                 "and defensible engineering decisions?")
+          assert mapping['overarching']['question'] == rq0
+
+          active = [
+              Path('project/CANONICAL_RESEARCH_QUESTIONS_V4.md'),
+              Path('project/CANONICAL_RQ_SO_HYPOTHESES_V4.md'),
+              Path('project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md'),
+              Path('thesis/01_introduction/CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md'),
+          ]
+          text = '\n'.join(p.read_text() for p in active)
+          assert rq0 in text
+          assert 'System-of-Systems Structure' in text
+          assert 'Complex Spatiotemporal Coupled Dynamics' in text
+          assert 'What sustainability requirements follow from resilience diagnosis' not in text
+          assert 'What should be changed, where, when and in what sequence' not in text
+          assert 'at least two resilience-effective engineering interventions produce materially different resource requirements' in text
+          assert 'incorporating resource efficiency and admitted sustainability consequences together with feasibility and uncertainty' in text
+          print('Canonical RQ–SO–H v4 contract: PASS')
           PY
 
       - name: Validate JSON schema and example model
