@@ -3,8 +3,8 @@
 > **AUTHORITY-DRIFT CLEANUP 2026-09-19 — SUPERSEDED TRACEABILITY REGISTER**
 >
 > This register contains obsolete H4 interface-targeting and H5 adaptive-pathway meanings and an outdated authority chain. It is retained for provenance only.  
-> **Current traceability authorities:** `thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`, `thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`, and `thesis/00_governance/CLAIM_EVIDENCE_REGISTER.md`.  
-> Do not compile current H4/H5 thesis logic from the entries below.
+> **Current traceability authorities:** `thesis/00_governance/RQ_SO_H_TRACEABILITY_V4.md`, `thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`, and `thesis/00_governance/CLAIM_EVIDENCE_REGISTER.md`.  
+> Do not compile current H4/H5 thesis logic from the entries below. Current H4/H5 authority is `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`; this file remains provenance only.
 
 
 **Date:** 2026-09-16  
