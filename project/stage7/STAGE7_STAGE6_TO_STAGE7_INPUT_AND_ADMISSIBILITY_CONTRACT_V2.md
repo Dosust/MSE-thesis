@@ -1,5 +1,8 @@
 # Stage 7 — Stage 6→7 Input and Admissibility Contract v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is the corresponding Stage-7 v3 protocol referenced in `project/stage7/README.md`.
+
 **Status:** CANONICAL STAGE-7 INPUT / ADMISSIBILITY CONTRACT — DESIGN/PROTOCOL  
 **Effective date:** 2026-09-19  
 **Upstream authority:** \`project/stage6/09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md\`  
