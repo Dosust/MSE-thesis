@@ -69,50 +69,84 @@ jobs:
           test "$(sha256sum external/GreenEVT/data/sumo_network/greensboro.net.xml | awk '{print $1}')" = "$SUMO_NET_SHA256"
           test "$(stat -c '%s' external/GreenEVT/data/sumo_network/greensboro.net.xml)" = "$SUMO_NET_SIZE"
 
-      - name: Build frozen runtime image
-        run: |
-          docker build             --file project/stage3/runtime/Dockerfile.greenevt-v1             --tag thesis-stage3-greenevt:v1             .
-
       - name: Create evidence directory
         run: mkdir -p runtime_artifacts
 
+      - name: Build frozen runtime image
+        id: build
+        run: |
+          set -euo pipefail
+          docker build             --file project/stage3/runtime/Dockerfile.greenevt-v1             --tag thesis-stage3-greenevt:v1             . 2>&1 | tee runtime_artifacts/docker_build.log
+
       - name: Record image identity
+        if: ${{ steps.build.outcome == 'success' }}
         run: |
           docker image inspect thesis-stage3-greenevt:v1 > runtime_artifacts/docker_image_inspect.json
           docker image inspect --format='{{.Id}}' thesis-stage3-greenevt:v1 > runtime_artifacts/docker_image_id.txt
 
-      - name: Run runtime gates
+      - name: Verify environment
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
         run: |
-          set -euo pipefail
-          runq() {
-            docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1 "$@"
-          }
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_environment.py               --thesis-root .               --greenevt external/GreenEVT               --out runtime_artifacts/environment.json
 
-          runq python models/H1/level2/runtime/verify_environment.py             --thesis-root .             --greenevt external/GreenEVT             --out runtime_artifacts/environment.json
+      - name: Verify source bytes
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_source_bytes.py               --greenevt external/GreenEVT               --out runtime_artifacts/source_bytes.json
 
-          runq python models/H1/level2/runtime/verify_source_bytes.py             --greenevt external/GreenEVT             --out runtime_artifacts/source_bytes.json
+      - name: Verify OpenDSS baseline
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_opendss_baseline.py               --greenevt external/GreenEVT               --out runtime_artifacts/opendss_baseline.json
 
-          runq python models/H1/level2/runtime/verify_opendss_baseline.py             --greenevt external/GreenEVT             --out runtime_artifacts/opendss_baseline.json
+      - name: Verify SUMO baseline and config-route microfixture
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_sumo_baseline.py               --greenevt external/GreenEVT               --out runtime_artifacts/sumo_baseline.json
 
-          runq python models/H1/level2/runtime/verify_sumo_baseline.py             --greenevt external/GreenEVT             --out runtime_artifacts/sumo_baseline.json
+      - name: Verify Q05 coupling run 1
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_q05_coupling.py               --greenevt external/GreenEVT               --out runtime_artifacts/q05_run1.json
 
-          runq python models/H1/level2/runtime/verify_q05_coupling.py             --greenevt external/GreenEVT             --out runtime_artifacts/q05_run1.json
+      - name: Verify Q05 coupling run 2
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_q05_coupling.py               --greenevt external/GreenEVT               --out runtime_artifacts/q05_run2.json
 
-          runq python models/H1/level2/runtime/verify_q05_coupling.py             --greenevt external/GreenEVT             --out runtime_artifacts/q05_run2.json
-
-          runq python models/H1/level2/runtime/compare_replicates.py             runtime_artifacts/q05_run1.json             runtime_artifacts/q05_run2.json             --out runtime_artifacts/reproducibility.json             --tol 1e-12
+      - name: Compare deterministic replicates
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/compare_replicates.py               runtime_artifacts/q05_run1.json               runtime_artifacts/q05_run2.json               --out runtime_artifacts/reproducibility.json               --tol 1e-12
 
       - name: Capture package and OS manifests
+        if: ${{ steps.build.outcome == 'success' }}
         run: |
           docker run --rm thesis-stage3-greenevt:v1 python -m pip freeze > runtime_artifacts/pip_freeze.txt
           docker run --rm thesis-stage3-greenevt:v1 sh -lc "dpkg-query -W | sort" > runtime_artifacts/dpkg_manifest.tsv
-          sha256sum runtime_artifacts/* > runtime_artifacts/artifact_sha256_pre_gate.txt
+          sha256sum runtime_artifacts/* | sort > runtime_artifacts/artifact_sha256_pre_gate.txt
+
+      - name: Verify provenance
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/verify_provenance.py               --artifacts runtime_artifacts               --environment runtime_artifacts/environment.json               --out runtime_artifacts/provenance.json
 
       - name: Aggregate runtime qualification
+        if: ${{ steps.build.outcome == 'success' }}
         run: |
-          docker run --rm             -v "$PWD:/workspace"             -w /workspace             thesis-stage3-greenevt:v1             python models/H1/level2/runtime/aggregate_runtime_gate.py               --environment runtime_artifacts/environment.json               --data runtime_artifacts/source_bytes.json               --dss runtime_artifacts/opendss_baseline.json               --sumo runtime_artifacts/sumo_baseline.json               --q05 runtime_artifacts/q05_run1.json               --repro runtime_artifacts/reproducibility.json               --out runtime_artifacts/runtime_gate.json
-
-          sha256sum runtime_artifacts/* > runtime_artifacts/artifact_sha256.txt
+          set +e
+          docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1             python models/H1/level2/runtime/aggregate_runtime_gate.py               --environment runtime_artifacts/environment.json               --data runtime_artifacts/source_bytes.json               --dss runtime_artifacts/opendss_baseline.json               --sumo runtime_artifacts/sumo_baseline.json               --q05 runtime_artifacts/q05_run1.json               --repro runtime_artifacts/reproducibility.json               --provenance runtime_artifacts/provenance.json               --out runtime_artifacts/runtime_gate.json
+          rc=$?
+          sha256sum runtime_artifacts/* | sort > runtime_artifacts/artifact_sha256.txt
+          exit "$rc"
 
       - name: Upload qualification evidence
         if: always()
