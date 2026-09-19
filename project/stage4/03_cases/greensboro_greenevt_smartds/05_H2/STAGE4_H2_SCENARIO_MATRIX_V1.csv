@@ -1,0 +1,4 @@
+scenario_id,architecture,layers,role,information_condition,organization_condition,status,closure_requirement
+N0_REF,N0,P+T,IDEAL_REFERENCE,ideal/full physical-state knowledge for comparator only,no explicit organizational restriction,BLOCKED,Requires final physical model and control catalog
+N1_INFO,N1,P+T+I,INFORMATION_AWARE,measurement/estimation + delay/loss/freshness,no added organizational restriction beyond reference,BLOCKED,"Requires G_OBS, G_E, G_I"
+N2_INFO_ORG,N2,P+T+I+O,INFORMATION_ORGANIZATION,same information architecture as matched N1,authority/resources/coordination/delay explicit,BLOCKED,"Requires G_OBS, G_E, G_I, G_ORG, G_C"
