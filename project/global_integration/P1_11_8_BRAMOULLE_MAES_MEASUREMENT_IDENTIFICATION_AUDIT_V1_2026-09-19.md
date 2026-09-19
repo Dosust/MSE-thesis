@@ -80,3 +80,37 @@ source support is classified separately
 50. Chapter-2 evidence updated.
 51. Source-to-claim mapping updated.
 52. H1–H5 remain NOT TESTED.
+
+
+## Deterministic post-commit invariant verification
+
+A connector-level deterministic verification was executed against committed main-branch contents.
+
+~~~text
+22 PASS
+0 FAIL
+~~~
+
+Verified invariants include:
+- A-039 evidence/DOI registration;
+- P1.11.8 ontology classification;
+- G2 causal qualification separated from G_ID;
+- G2=PASS with G_ID=BLOCKED explicitly represented;
+- GMM/2SLS not promoted as default P–T estimators;
+- P1.7 uncertainty authority retained;
+- observed-graph / true-graph boundary present;
+- representation-aware G_resolve present;
+- P1.11.7 computation record extended rather than duplicated;
+- Stage-3 empirical parameter gate G_theta^emp;
+- optimizer/predictive shortcuts blocked;
+- Stage-4 measurement→identification→estimation chain;
+- observability/identifiability/convergence distinctions;
+- Stage-6 quantity-origin classes and uncertainty lineage;
+- global identification object/status protocol;
+- P2 identification/measurement field extension;
+- exact source SHA-256 and PDF metadata;
+- source-to-claim mapping;
+- Stage-4 authority registration;
+- queue closure and global P1.11.8 status.
+
+This verifies repository invariants only; it is not automated scientific interpretation, identification proof for the P–T case, or empirical validation.

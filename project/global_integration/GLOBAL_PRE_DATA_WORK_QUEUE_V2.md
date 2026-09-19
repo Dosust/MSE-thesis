@@ -419,5 +419,6 @@ P2 remains the next major task and must consume P1.11.7 computation-role semanti
 - [x] Replace universal effect-size>uncertainty rule with representation-aware G_resolve.
 - [x] Extend P1.11.7 computation record rather than create a competing object.
 - [x] Run P1.11.8 repository-consistency audit: 52/52 PASS.
+- [x] Run deterministic post-commit invariant verification: 22/22 PASS.
 
 P2 remains the next major task and must consume P1.11.8 identification/measurement semantics.
