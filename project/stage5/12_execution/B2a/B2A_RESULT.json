@@ -1,0 +1,10 @@
+{
+  "status": "B2A_SYNTHETIC_VERIFICATION_ONLY",
+  "thresholds": {"remain": 0.9, "recovery": 0.95, "hold_h": 0.25, "event_origin_h": 0.75},
+  "results": [
+    {"model":"M0","min_S_P":0.5940229885057471,"min_S_T":0.575,"max_queue_veh":0.0,"remain_pass":false,"first_exit_h":0.9,"recovery_abs_h":2.85,"recovery_from_event_h":2.1,"time_outside_K_h":1.7075,"L_P_h":0.35081459193647563,"L_T_h":0.6590157760062431,"L_service_h":0.5049151839713595},
+    {"model":"M1","min_S_P":0.5638687230023021,"min_S_T":0.4484999999999999,"max_queue_veh":0.0,"remain_pass":false,"first_exit_h":0.9,"recovery_abs_h":2.85,"recovery_from_event_h":2.1,"time_outside_K_h":1.7075,"L_P_h":0.5033816506834424,"L_T_h":0.8246013672079362,"L_service_h":0.6639915089456894},
+    {"model":"M2","min_S_P":0.5638687230023021,"min_S_T":0.4484999999999999,"max_queue_veh":4.187162087421779,"remain_pass":false,"first_exit_h":0.75375,"recovery_abs_h":7.22125,"recovery_from_event_h":6.47125,"time_outside_K_h":6.4662500000000005,"L_P_h":0.5029085646773463,"L_T_h":1.9282776626435134,"L_service_h":1.2155931136604299}
+  ],
+  "claim_ceiling": "synthetic verification; not source-backed B2, not B3, not H3 validation"
+}
