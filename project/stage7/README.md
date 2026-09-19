@@ -1,7 +1,7 @@
 # Stage 7 — Engineering Decision and Adaptive Transformation
 
-**Current status:** DESIGN/PROTOCOL V2 FROZEN / EMPIRICAL H5 NOT TESTED  
-**Effective date:** 2026-09-19  
+**Current status:** DESIGN/PROTOCOL V3 FROZEN / EMPIRICAL H5 NOT TESTED  
+**Effective date:** 2026-09-20  
 **Stage:** 7  
 **RQ:** RQ7  
 **SO:** SO7  
@@ -13,7 +13,7 @@ Stage 7 receives the qualified Stage-6 intervention-performance/sustainability h
 
 \`\`\`math
 \boxed{
-I_{6\to7}^{v2}
+I_{6\to7}^{v3}
 \rightarrow
 \mathcal A_7^{adm}
 \rightarrow
@@ -97,11 +97,11 @@ Primary H5 compares:
 \boxed{
 \mathcal A_R^\star
 \quad\text{vs}\quad
-\mathcal A_{R,S}^\star.
+\mathcal A_{\rm joint}^\star.
 }
 \`\`\`
 
-Effectiveness and efficiency are common Stage-7 performance information in both arms. Sustainability information is the primary changed information block.
+Both arms share the same feasibility and uncertainty governance. The joint arm additionally uses qualified resource-efficiency and admitted sustainability-consequence information; H5 is not a sustainability-only contrast.
 
 ## Value firewall
 
