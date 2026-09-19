@@ -26,7 +26,7 @@ The sole active repository is `Dossiya-SE/MSE-thesis`. Historical/archive materi
 
 | Object | Current authority/state |
 |---|---|
-| Scientific framework | seven-stage framework v2.0 |
+| Scientific framework | seven-stage framework v2.0 + v2.1 alignment amendment; global v4 design freeze v2 PASS |
 | Research questions/objectives | RQ0 + RQ1–RQ7; SO1–SO7 |
 | Primary hypotheses | H1–H5 |
 | Chapter I | v3 authority; PASS — FROZEN — OFFICIAL; 1.1–1.13; 16–18 page internal target |
