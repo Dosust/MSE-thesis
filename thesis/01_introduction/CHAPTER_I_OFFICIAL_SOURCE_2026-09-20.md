@@ -1,17 +1,3 @@
-I revisited the current GitHub thesis authorities and the Chapter 1 source files. The repository makes the citation logic very clear: **externally sourced scientific claims require adjacent verified APA 7 author–date citations; thesis-derived definitions, framework choices, hypotheses, assumptions, and proposed contributions must not be disguised as literature facts.**
-
-The most important improvement is therefore not to add citations everywhere. It is to distinguish:
-
-```math
-\boxed{ \text{external evidence} \neq \text{thesis definition} \neq \text{assumption} \neq \text{hypothesis} \neq \text{proposed contribution}. }
-```
-
-For example, a sentence such as *“EV charging creates operational coupling between transportation and distribution systems”* needs evidence. A sentence such as *“For this thesis,* *`P+T`* *form the physical core while* *`I+O`* *are supporting domains”* is a thesis modeling choice and should be identified as such rather than given a citation that falsely implies the literature prescribed exactly that architecture.
-
-I would now use the following as the **citation-aligned master candidate for Chapter 1**.
-
----
-
 # Chapter 1 — Introduction: Research Problem and Scientific Contract
 
 ## 1.1 Background and Engineering Context
