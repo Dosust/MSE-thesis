@@ -4,14 +4,14 @@
 
 **Stage 6 — Resilience Diagnosis, Intervention Performance and Sustainability Consequences**
 
-RQ6/SO6/H4 remain governed by `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+RQ6/SO6/H4 are governed by `CANONICAL_RQ_SO_HYPOTHESES_V4.md`.
 Intervention-performance semantics are governed by `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`.
 
 ## Status
 
 ```math
 \boxed{
-G_{6,DESIGN}^{v2}=PASS
+G_{6,DESIGN}^{v3}=PASS
 }
 ```
 
@@ -25,7 +25,7 @@ G_{6,DESIGN}^{v2}=PASS
 
 Stage 6 is frozen at design/protocol level before case data are used.
 
-## Canonical v2 chain
+## Canonical v3 chain
 
 ```math
 \boxed{
@@ -64,14 +64,14 @@ with
 4. `02_interventions/STAGE6_EFFECTIVENESS_TARGET_AND_EVALUATION_PROTOCOL_V2.md`
 5. `02_interventions/STAGE6_EFFICIENCY_RESOURCE_AND_EVALUATION_PROTOCOL_V2.md`
 6. `05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md`
-7. `06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md`
+7. `06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V3.md`
 8. `07_vvuq/STAGE6_VVUQ_PROTOCOL_V2.md`
 9. `08_closure/STAGE6_CLOSURE_AUDIT_V2.md`
 10. `08_closure/STAGE6_V2_INTERNAL_CONTRADICTION_AUDIT_V1_2026-09-19.md`
-11. `09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md`
+11. `09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V3.md`
 12. `STAGE6_MASTER_REGISTER_V2.xlsx`
 13. `00_governance/STAGE6_DESIGN_PROTOCOL_FREEZE_V2.md`
-14. `STAGE6_FINALIZATION_MANIFEST_V2.json`
+14. `00_governance/STAGE6_DESIGN_PROTOCOL_FREEZE_V3.md`
 
 ## Reused v1 supporting authorities
 
@@ -79,7 +79,7 @@ The v2.1 amendment does not alter these semantics, so they remain active support
 
 - `01_scope/STAGE6_SCOPE_BOUNDARY_FUNCTIONAL_UNIT_V1.md`
 - `03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md`
-- `04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md`
+- `04_requirements/STAGE6_REQUIREMENTS_QUALIFICATION_AND_PROVENANCE_PROTOCOL_V2.md`
 - `STAGE6_EVIDENCE_REGISTER_V1.md`
 
 Where any conflict exists, v2 controls.
@@ -108,7 +108,7 @@ may be a preregistered secondary stratification only; it does not redefine H4.
 
 ```math
 \boxed{
-I_{6\to7}^{v2}
+I_{6\to7}^{v3}
 =
 (
 \mathcal A_6^{qual},
