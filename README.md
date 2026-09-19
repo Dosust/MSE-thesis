@@ -3,7 +3,7 @@
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
 ![Research Logic](https://img.shields.io/badge/RQ0%20%2B%20RQ1--RQ7%20%7C%20H1--H5-CURRENT-0969DA)
-![P2](https://img.shields.io/badge/P2%20global%20design-PASS%20%2F%20FROZEN-1A7F37)
+![P2](https://img.shields.io/badge/P2%20global%20design-v4%20PASS%20%2F%20FROZEN-1A7F37)
 ![P3](https://img.shields.io/badge/P3%20control-PASS%20%2F%20IN%20PROGRESS-D29922)
 ![Austin Case](https://img.shields.io/badge/Austin%20case-BLOCKED-B42318)
 ![Hypotheses](https://img.shields.io/badge/H1--H5-NOT%20TESTED-B42318)
@@ -69,7 +69,8 @@ H_i=SUPPORTED.
 | [`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`](project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md) | official frozen Chapter-I scientific content and flow |
 | [`project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`](project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md) | P–T System-of-Systems / complex-dynamics interpretation |
 | [`project/CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md`](project/CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md) | measurement, identification, estimator-admission and result-validation semantics |
-| [`project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md`](project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md) | P2 integrated Stage 1–7 design freeze |
+| [`project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V2.md`](project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V2.md) | current v4-aligned integrated Stage 1–7 design freeze |
+| [`project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V2.xlsx`](project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V2.xlsx) | current v4-aligned global master register |
 | [`project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md`](project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md) | P3 case/data qualification and readiness protocol |
 | [`project/global_integration/P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md`](project/global_integration/P3_0_1_EXECUTION_GATE_SEMANTICS_AMENDMENT_V1.md) | current execution-gate semantics |
 | [`thesis/00_governance/SUSTAINABILITY_ADMISSION_FREEZE_V1.md`](thesis/00_governance/SUSTAINABILITY_ADMISSION_FREEZE_V1.md) | current resource/sustainability scope |
