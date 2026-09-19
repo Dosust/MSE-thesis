@@ -186,3 +186,28 @@ Stage-6 design/protocol v2 = FROZEN
 Stage-6 empirical execution = DEFERRED
 H4 = NOT TESTED
 ```
+
+## Post-audit mathematical-chain authority — 2026-09-19
+
+The independent expert audit preserved the seven-stage architecture but required explicit mathematical corrections. Current interpretation for those narrow issues is governed by:
+
+1. `project/global_integration/GLOBAL_MATHEMATICAL_CHAIN_CORRECTION_AND_FREEZE_V1.md` — thesis-wide corrected mathematical chain and figure/equation rule;
+2. `project/stage3/STAGE3_HYBRID_DOMAIN_CLARIFICATION_V2_1.md` — explicit flow/jump domains and timing firewall;
+3. `project/stage4/00_governance/STAGE4_POLICY_INFORMATION_ADAPTATION_AMENDMENT_V1_1.md` — information filtration and nonanticipative/adapted policy class;
+4. `project/stage5/00_governance/STAGE5_MATHEMATICAL_AMENDMENT_V1_1.md` — physical versus belief-space viability, sustained recovery, geometry and mechanism-specific interface sensitivity.
+
+These are **narrow later amendments/clarifications**. They do not supersede RQ/SO/H v3, the seven-stage framework v2, the dependency contract, Stage-6 v2/v2.1, or Stage-7 v2.
+
+Where a frozen Stage-3/4/5 v1/v2 file uses less explicit notation on one of these corrected points, the later amendment controls current mathematical interpretation while the older file remains preserved for provenance.
+
+~~~math
+oxed{
+	ext{historical/frozen parent}
++
+	ext{versioned amendment}
+=
+	ext{current controlled interpretation}.
+}
+~~~
+
+No empirical status is upgraded by this authority update.
