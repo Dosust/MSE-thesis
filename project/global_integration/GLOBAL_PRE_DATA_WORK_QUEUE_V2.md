@@ -109,7 +109,7 @@ For every `I(k→k+1)`:
 \mathcal U_{feas},\mathcal A,\Omega).
 ```
 
-### P1.6 Common scenario schema
+### P1.6 Common scenario schema — NEXT
 One stable scenario ID propagated through Stages 3–7.
 
 ### P1.7 Global uncertainty/VVUQ
