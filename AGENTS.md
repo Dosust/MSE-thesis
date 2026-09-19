@@ -85,3 +85,32 @@ No factual scientific claim without admissible evidence; no mathematical object 
 ## ASU/SSEBE precedence
 
 Repository conventions remain subordinate to current ASU Graduate College requirements, the SSEBE Sustainable Engineering MSE requirements, committee/chair decisions and the approved style guide. Internal files must never be presented as university policy when they are internal scientific controls.
+
+## Thesis-wide grading authority
+
+Whenever a task asks to **grade, score, rate, assess, evaluate, or compare** thesis work, first load and apply:
+
+- `thesis/00_governance/THESIS_WRITING_GRADING_STANDARD_V1.md`
+- `thesis/00_governance/SIMPLE_THESIS_WRITING_GRADING.xlsx`
+
+Use the grading standard as the baseline for thesis writing and scientific communication. Apply its fixed 100-point weighting:
+
+```text
+Useful information                    10%
+Scientific precision                  15%
+Academic / human writing              10%
+Infrastructure terminology            10%
+Thesis alignment                      15%
+Scope and validity control            10%
+Systems thinking                      10%
+Engineering / design thinking          5%
+Research-method rigor                 10%
+Evidence / argument quality            5%
+```
+
+For mathematical models, simulations, code, experiments, datasets, figures, or other technical thesis artifacts, add the relevant task-specific technical criteria, but do not omit this baseline communication/scientific-argument grading standard when an overall thesis-work grade is requested.
+
+Before grading, also load any canonical authority governing the object being graded. A high writing score cannot compensate for scientific, scope, evidence, or governance noncompliance.
+
+Report the overall grade out of 100 together with criterion-level scores and clearly distinguish writing-quality deductions from scientific-content deductions.
+
