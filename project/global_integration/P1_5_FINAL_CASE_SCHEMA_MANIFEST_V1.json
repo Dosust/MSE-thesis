@@ -135,7 +135,7 @@
     },
     {
       "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
-      "sha": "59bfb311628a1715fef0ee01c1cc8c34d32990a7"
+      "sha": "17ecdc66f72d549a44cf85793403da6c3779cb74"
     },
     {
       "path": "project/global_integration/README.md",
@@ -172,5 +172,6 @@
     "scenario_ids_and_probabilities",
     "H1_H5_results"
   ],
-  "next_task": "P1.6 GLOBAL SCENARIO ID AND PROPAGATION SCHEMA"
+  "next_task": "P1.6 GLOBAL SCENARIO ID AND PROPAGATION SCHEMA",
+  "post_finalize_note": "Queue heading was corrected after the initial P1.5 atomic commit so P1.6 is explicitly marked NEXT; this manifest records the corrected queue blob. Scientific artifacts and the 58/58 audit were unchanged."
 }
