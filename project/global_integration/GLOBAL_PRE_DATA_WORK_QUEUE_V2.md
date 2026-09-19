@@ -219,3 +219,29 @@ Closure:
 This does not close P2 and does not authorize H1 execution. P2 must consume the v2 dependency registry and the current `z_{\mathbb I}` interface-state semantics.
 
 **P1.10 manifest pin:** `PT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_MANIFEST_V1.json` records the exact principal artifact identities for the source-alignment package.
+
+
+### P1.11 Mandatory spatiotemporal SoS–resilience–transformation lens — COMPLETE
+- [x] Consolidate spatiotemporal SoS structure as a mandatory cross-stage lens.
+- [x] Preserve the canonical Stage-2 dependency primitive.
+- [x] Preserve directional/interface-state and hybrid Stage-3 semantics.
+- [x] Distinguish operational, recovery and transformation timescales.
+- [x] Keep service, resilience, effectiveness, efficiency and sustainability as separate object classes.
+- [x] Make coupled-system sustainability/burden-shifting review mandatory where applicable.
+- [x] Distinguish intervention from structural transformation.
+- [x] Make path-dependence/adaptive-pathway reasoning conditional on evidence/scope.
+- [x] Define mandatory stage-by-stage audit questions.
+- [x] Require future audits to classify applicable spatial, temporal, SoS, interdependency, dynamics, service, resilience, intervention, effectiveness, efficiency, sustainability, transformation and decision dimensions.
+- [x] Run compatibility audit: 42/42 PASS.
+
+Closure:
+
+~~~math
+\boxed{
+P1.11=PASS
+\quad
+\text{(mandatory interpretive/control-plane lens)}
+}
+~~~
+
+P2 remains the next execution task and must consume P1.11 explicitly.

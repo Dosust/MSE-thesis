@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.10 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -66,6 +66,8 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_CLAIM_WORDING_AND_CEILING_PROTOCOL_V1.md — evidence-to-wording / anti-overclaim control.
 - GLOBAL_CLAIM_EVIDENCE_RESULT_REGISTER_TEMPLATE_V1.csv — empty claim/result register template.
 - P1_9_GLOBAL_CLAIM_EVIDENCE_RESULT_AUDIT_V1_2026-09-19.md — 128/128 P1.9 audit.
+- ../CANONICAL_SPATIOTEMPORAL_SOS_RESILIENCE_TRANSFORMATION_LENS_V1.md — mandatory cross-stage scientific lens for future audits/corrections.
+- P1_11_MANDATORY_SPATIOTEMPORAL_SOS_LENS_AUDIT_V1_2026-09-19.md — 42/42 compatibility audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -241,3 +243,40 @@ These artifacts integrate the service-centered SoS and explicit energy–transpo
 ### P1.10 exact artifact manifest
 
 `PT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_MANIFEST_V1.json` pins the principal amendment/audit/evidence-governance artifact blob identities and the two alignment commits.
+
+
+## P1.11 mandatory scientific lens
+
+~~~math
+\boxed{
+\text{spatiotemporal SoS}
+\rightarrow
+\text{directional interdependencies}
+\rightarrow
+\text{hybrid multiscale dynamics}
+\rightarrow
+\text{service}
+\rightarrow
+\text{resilience}
+\rightarrow
+\text{intervention}
+\rightarrow
+\text{effectiveness + efficiency}
+\rightarrow
+\text{sustainability}
+\rightarrow
+\text{transformation}
+\rightarrow
+\text{adaptive decision}.
+}
+~~~
+
+Authority:
+- ../CANONICAL_SPATIOTEMPORAL_SOS_RESILIENCE_TRANSFORMATION_LENS_V1.md
+- P1_11_MANDATORY_SPATIOTEMPORAL_SOS_LENS_AUDIT_V1_2026-09-19.md
+
+~~~math
+\boxed{G_{P1.11}^{design}=PASS\qquad(42/42)}
+~~~
+
+This is an interpretive/control-plane closure only. It does not change H1–H5 empirical status. P2 must include these mandatory dimensions in its global audit columns.
