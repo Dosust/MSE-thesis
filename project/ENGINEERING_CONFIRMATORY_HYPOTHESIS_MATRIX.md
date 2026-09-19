@@ -1,11 +1,10 @@
-<!--
-
 > **AUTHORITY-DRIFT CLEANUP 2026-09-19 — SUPERSEDED CONFIRMATORY MATRIX**
 >
 > This matrix retains the former H4 interface-criticality and H5 adaptive-transformation hypotheses and is preserved only as historical/provenance material.  
 > **Current confirmatory authority:** `thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md` together with `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.  
 > No new preregistration, analysis, thesis claim, or experiment may use the H4/H5 definitions below.
 
+<!--
 DOCUMENT STATUS: CURRENT ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX
 SOURCE: user-supplied Pasted markdown(20260911-042927).md
 SOURCE_SHA256: f24104a8be55b1f5d42b4087e32df636c72afb04ed5c3e1677ec26a5b7eef271
