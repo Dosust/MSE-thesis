@@ -1,5 +1,10 @@
 # Global Stage 1–7 Design Freeze v1
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+>
+> This pre-v4 freeze predates the official RQ/SO/H v4 contract and the Stage-6/7 v4-aligned re-freezes. Current authority is `GLOBAL_STAGE1_7_DESIGN_FREEZE_V2.md` with master register `GLOBAL_STAGE1_7_MASTER_REGISTER_V2.xlsx`.
+
+
 **Status:** P2 DESIGN FREEZE — PASS  
 **Effective date:** 2026-09-20  
 **Parent audit commit:** \`43e84aed8ba637bd531999e1e7b1515144b2d596\`  
