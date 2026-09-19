@@ -239,3 +239,30 @@ No empirical status, causal PASS, Stage2→3 readiness, or hypothesis result is 
 ## Chapter-I source-alignment governance — 2026-09-19
 
 The Chapter-I freeze remains controlling. Scientific-source updates made during the P–T SoS alignment are authorized by `thesis/00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md`. The amendment is bounded to Sections 1.1, 1.2 and 1.12 and does not alter the canonical RQ/SO/H or seven-stage architecture.
+
+
+## P1.11.6 source/authority reconciliation precedence — 2026-09-19
+
+Current precedence for the corrected P1.11 family:
+
+~~~text
+CANONICAL_SPATIOTEMPORAL_SOS_RESILIENCE_TRANSFORMATION_LENS_V1_1
+  > v1 for screening/timescale/sustainability-scope semantics
+
+CANONICAL_SUSTAINABILITY_TRAJECTORY_TRADEOFF_AMENDMENT_V1_5_1
+  > v1.5 for source attribution/current sustainability scope
+
+STAGE6_SUSTAINABILITY_SCOPE_RECONCILIATION_AMENDMENT_V2_1_1
+  > older broad Stage-6 vector statements for current H4/H5 role classification
+
+SUSTAINABILITY_ADMISSION_FREEZE_V1
+  > broad candidate sustainability schemas until a pre-result V2 freeze exists
+
+CANONICAL_SOS_POLICY_OPERATOR_BUDGET_MARKET_AMENDMENT_V1_3_1
+  > v1.3 for default B/M/public-policy scope and timescale wording
+
+CANONICAL_CROSS_SYSTEM_OBSERVATIONAL_INFERENCE_AMENDMENT_V1_4_1
+  > legacy v1.4 title/terminology for current citation
+~~~
+
+Historical manifests remain valid snapshots of the blobs they pinned; they do not override this later change-control authority.

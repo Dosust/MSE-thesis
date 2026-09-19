@@ -493,3 +493,37 @@ with multiple classes allowed.
 ### Novelty boundary
 
 Neither P–T interdependence, separate-but-coupled energy/transport networks, nor SoS framing may be claimed as thesis novelty. Novelty assessment must target the specific integrated method/result and remain evidence-gated.
+
+
+## 17. P1.11.6 later-source classification reconciliation
+
+Additional controlled evidence labels:
+
+| Label | Definition |
+|---|---|
+| [BOOK-CH] | identified edited-book chapter |
+| [TR] | technical/research-center report |
+| [PREPRINT] | non-peer-reviewed preprint outside the arXiv-specific labels |
+| [CONCEPT] | conceptual framework/evidence; no case validation implied |
+| [SUPPLIED-MANUSCRIPT] | exact supplied source bytes are pinned, but publication venue/year may remain unresolved |
+| [METHOD] | method/information-architecture precedent |
+
+| ID | E | S / R / D | Tau / F / K / J | Validation maturity | Controlled thesis interpretation |
+|---|---|---|---|---|---|
+| A-033 Pant Ch.12 | [BOOK-CH][DIR-CI] | spatial CI SoS; physical/geographic dependencies; directional cascades | spatial-risk/network method; service disruption; risk | published chapter / source method | common cause != cascade; graph path != functional pathway; C^V remains thesis-derived |
+| A-034 Barr Ch.13 | [BOOK-CH][DIR-CI][METHOD] | hierarchical SoS + horizontal relations | database/orchestration; spatial-temporal data; visualization | published chapter / implemented NISMOD-DB precedent | information architecture != physical coupling/validation |
+| A-035 NEXTRANS | [TR][DIR-PT][CONCEPT] | T–Energy policy/economic/operator channels | equilibrium/CGE; operator/budget/market context | conceptual framework; report states no computational experiments | downstream context by default; Y* != Y(t) |
+| A-036 Acosta-Sequeda | [PREPRINT][DIR-PT][EMP] | cross-system observational relation, not physical dependency | data-driven forecasting; Stage-4 observation/estimation | empirical preprint | rightsquigarrow != causal arrow; mode/geography validity retained |
+| A-037 Kays–Sadri | [SUPPLIED-MANUSCRIPT][ADJ][CONCEPT] | transportation sustainability/resilience conceptual overlap | indicators/trade-offs; J conceptual | conceptual; calibration/validation requested by source | supports multidimensionality/trade-offs, not thesis-specific sustainability equations |
+
+For all five sources:
+
+~~~math
+\boxed{
+REPO\_CONSISTENCY
+\neq
+SOURCE\_SUPPORT
+\neq
+CASE\_VALIDATION.
+}
+~~~

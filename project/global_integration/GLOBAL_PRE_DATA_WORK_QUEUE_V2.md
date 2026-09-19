@@ -350,3 +350,25 @@ P2 remains the next major task and must consume P1.11 through P1.11.4.
 - [x] Run compatibility audit: 54/54 PASS.
 
 P2 remains the next major task and must consume P1.11 through P1.11.5.
+
+
+#### P1.11.6 Source / authority reconciliation — COMPLETE
+- [x] Register Pant, Barr, NEXTRANS, Acosta-Sequeda and Kays–Sadri in Chapter-2 controlled evidence.
+- [x] Pin exact supplied PDF byte identities with SHA-256.
+- [x] Create source-page/section → claim → repository-rule mapping.
+- [x] Separate repository consistency from source support and case validation.
+- [x] Reclassify all 54 P1.11.5 audit items on the source-support axis.
+- [x] Preserve SUSTAINABILITY_ADMISSION_FREEZE_V1 as controlling current H4/H5 scope.
+- [x] Reclassify the access/energy/carbon/cost tuple as broad screening/accounting schema, not confirmatory sustainability core.
+- [x] Keep cost and operational energy in resource/economic roles under the current freeze.
+- [x] Keep distributional accessibility conditional.
+- [x] Keep embodied GHG and full LCA outside the current confirmatory core.
+- [x] Set Kays-derived hard sustainability constraints to BLOCKED.
+- [x] Correct mandatory dimensions -> mandatory screening dimensions.
+- [x] Correct universal strict timescale ordering to case-dependent characteristic horizons.
+- [x] Default NEXTRANS budget/market/public-policy variables to DEFERRED / STAGE-7 CONTEXT unless explicitly activated.
+- [x] Replace current Acosta terminology with cross-system observational inference.
+- [x] Add deterministic repository test for reconciliation invariants.
+- [x] Run P1.11.6 repository-consistency audit: 36/36 PASS.
+
+P2 is now the next major execution task and must consume P1.11.6 as the authority-reconciliation layer.

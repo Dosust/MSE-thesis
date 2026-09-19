@@ -25,6 +25,9 @@
 | E6-21 | Wen et al. (2025), DOI 10.1109/TSG.2024.3390657 | P–T intervention precedent | robust charging-infrastructure planning in coupled power/transport systems with cost/resilience | thesis-specific mechanism or sustainability conclusion |
 | E6-22 | Huang et al. (2024), DOI 10.1111/jiec.13605 | Social LCA review | methodological challenges/data issues in S-LCA | proof that all social categories are measurable in the thesis |
 
+
+| E6-23 | Kays & Sadri, *Towards Unifying Resilience and Sustainability for Transportation Infrastructure Systems: Conceptual Framework, Critical Indicators, and Research Needs*; exact supplied PDF pinned as SRC-KAYS-SADRI | Conceptual resilience–sustainability relation | multidimensionality; seven candidate indicators; possible trade-offs/tipping behavior; need for calibration/validation | four-component thesis core; spatiotemporal integral; accounting states; hard sustainability thresholds; K_sus/V_sus; Pareto procedure; case validation |
+
 ## Evidence-use rule
 
 \[

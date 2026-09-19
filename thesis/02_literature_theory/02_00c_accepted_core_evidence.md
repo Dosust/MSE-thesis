@@ -109,3 +109,32 @@ Those remain H1–H5 tests.
 ```
 
 These sources establish important prior art and therefore **narrow**, rather than enlarge, admissible novelty claims.
+
+
+## 2026-09-19 P1.11.6 reconciled source evidence
+
+For user-supplied copyrighted book chapters/reports/manuscripts, exact local source identity may be pinned by SHA-256 when a public DOI/persistent link is absent. This does not waive bibliographic-status disclosure.
+
+| ID | Source | Evidence class / status | Accepted bounded support | Restriction | Thesis use / source pin |
+|---|---|---|---|---|---|
+| A-033 | Pant, Thacker, Hall, Barr, Alderson, & Kelly (2016), Ch.12, *Analysing the risks of failure of interdependent infrastructure networks* | [DIR-CI] [BOOK-CH] | spatial hazards; interdependent spatial networks; source–sink functional pathways; network criticality/reliability; disruption/risk consequences | does not supply thesis hybrid dynamics, viability theory, or C^V; risk != resilience | 2.2, 2.5, 2.7; P1.11.1; SRC-PANT-CH12 |
+| A-034 | Barr, Alderson, Ives, & Robson (2016), Ch.13, *Database, simulation modelling and visualisation for national infrastructure assessment* | [DIR-CI] [BOOK-CH] [METHOD] | asset→network→system→SoS hierarchy; spatial/temporal data organization; result brokering; database representation of interdependencies; visualization | information architecture != physical validation; stored relation != causal proof | 2.2, 2.6; P1.11.2; SRC-BARR-CH13 |
+| A-035 | Peters, Kumar, Zheng, Agrawal, & Peeta (2014), NEXTRANS 079PY04, *Integrated Framework to Capture the Interdependencies between Transportation and Energy Sectors due to Policy Decisions* | [DIR-PT] [TR] [CONCEPT] | policy-induced Transportation–Energy interactions; operators/control; budgetary/economic channels; equilibrium framework; EV examples | report states computational experiments were not performed; data/calibration/time-dynamics unresolved; not Stage-3 transient validation | 2.3, 2.4, 2.8; P1.11.3; SRC-NEXTRANS-079PY04 |
+| A-036 | Acosta-Sequeda, Verbas, Auld, & Derrible (2025), *Interdependencies between electricity consumption and transit and their potential to forecast transit demand in urban settings*, Research Square, DOI 10.21203/rs.3.rs-6959831/v1 | [DIR-PT] [EMP] [PREPRINT] | cross-system observational/predictive value of electricity-consumption covariates for transit demand; spatial/temporal heterogeneity | preprint; predictive association != physical causation; transit scope cannot be generalized to road/freight/repair | 2.6; H2 method precedent; P1.11.4; SRC-ACOSTA-2025-RS |
+| A-037 | Kays & Sadri, *Towards Unifying Resilience and Sustainability for Transportation Infrastructure Systems: Conceptual Framework, Critical Indicators, and Research Needs* | [ADJ] [CONCEPT] [SUPPLIED-MANUSCRIPT] | conceptual sustainability–resilience distinction/interaction; seven candidate indicators; trade-offs/tipping research need | publication venue/year not established from supplied PDF metadata; no P–T four-vector validation, hard thresholds, K_sus, V_sus, Pareto procedure, or case validation | 2.8; P1.11.5; SRC-KAYS-SADRI |
+
+### Current source-attribution firewall
+
+~~~math
+\boxed{
+\text{SOURCE-SUPPORTED}
+\neq
+\text{THESIS-DERIVED}
+\neq
+\text{CASE-VALIDATED}.
+}
+~~~
+
+Exact source hashes and page/section mappings are controlled by:
+- project/global_integration/P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md
+- project/global_integration/P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv

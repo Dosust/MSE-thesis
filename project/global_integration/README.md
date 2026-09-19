@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.5 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.6 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -455,3 +455,46 @@ K_{\rm sus}\ \text{authorized}.
 ~~~
 
 P2 must consume the sustainability accounting, trajectory, burden-shifting, hard-requirement and trade-off audit fields. No H1–H5 empirical status changes.
+
+
+## P1.11.6 source / authority reconciliation
+
+P1.11.6 is complete and precedes P2.
+
+Current authorities:
+- ../CANONICAL_SPATIOTEMPORAL_SOS_RESILIENCE_TRANSFORMATION_LENS_V1_1.md
+- ../CANONICAL_SUSTAINABILITY_TRAJECTORY_TRADEOFF_AMENDMENT_V1_5_1.md
+- ../stage6/00_governance/STAGE6_SUSTAINABILITY_SCOPE_RECONCILIATION_AMENDMENT_V2_1_1.md
+- ../CANONICAL_SOS_POLICY_OPERATOR_BUDGET_MARKET_AMENDMENT_V1_3_1.md
+- ../CANONICAL_CROSS_SYSTEM_OBSERVATIONAL_INFERENCE_AMENDMENT_V1_4_1.md
+- GLOBAL_SOURCE_SUPPORT_CLASSIFICATION_PROTOCOL_V1.md
+- P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md
+- P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv
+- P1_11_AUDIT_REINTERPRETATION_NOTE_V1.md
+- P1_11_5_SOURCE_SUPPORT_RECLASSIFICATION_V1.csv
+- P1_11_6_SOURCE_AUTHORITY_RECONCILIATION_V1.md
+- P1_11_6_SOURCE_AUTHORITY_RECONCILIATION_AUDIT_V1_2026-09-19.md
+
+Corrected rules include:
+
+~~~math
+\boxed{
+\text{mandatory screening dimensions}
+\neq
+\text{mandatory modeled quantities}
+}
+~~~
+
+and current sustainability scope:
+
+~~~math
+\boxed{
+\mathbf r_{\rm core}\subseteq(C_{\rm direct},E_{\rm op}),
+\qquad
+\mathbf J_{\rm sus,core}\subseteq(CO_{2e}).
+}
+~~~
+
+Historical P1.11-family numeric PASS totals are repository-consistency checklist counts, not source-validation scores.
+
+P2 may now proceed from the reconciled authority set.
