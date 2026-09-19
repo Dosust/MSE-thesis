@@ -1,0 +1,9 @@
+authority_id,class,path,sha_or_version,role
+AUTH-01,THESIS,project/CANONICAL_7_STAGE_FRAMEWORK_V2.md,30a9007d0720fd022f35869b50b6d2d729879653,Defines canonical seven-stage architecture and Stage-4 role.
+AUTH-02,THESIS,project/CANONICAL_RQ_SO_HYPOTHESES_V3.md,e599ef2233f0e4da6b782a29aecec3799c7974c2,Defines RQ4/SO4/H2.
+AUTH-03,THESIS,project/RESEARCH_REASONING_PROTOCOL.md,CURRENT,"Defines epistemic status, validation, falsification and citation discipline."
+AUTH-04,THESIS,project/EGMIV_METHOD_V1.md,CURRENT,Defines evidence→mechanism→model→validation method.
+AUTH-05,UPSTREAM,project/stage2/STAGE2_CASE_G2_AUDIT_V1_2026-09-19.md,fca9372483f2934a8d668e176db4392681c82a3c,Current case causal qualification.
+AUTH-06,UPSTREAM,project/stage3/STAGE3_EXECUTION_AND_CLOSURE_AUDIT_V1_2026-09-19.md,3d95d438536e8df9f44b95861315f5f826405273,Current Stage-3 execution/claim ceiling.
+AUTH-07,STAGE4,project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md,THIS_VERSION,Top Stage-4 authority.
+AUTH-08,EVIDENCE,project/stage4/01_evidence/literature/STAGE4_EVIDENCE_GROUNDED_LITERATURE_REVIEW_V1.md,VERIFIED_PACKAGE,Stage-4 evidence synthesis.
