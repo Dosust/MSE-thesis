@@ -34,7 +34,7 @@ This is the clearest structure I recommend now, incorporating the **new abstract
      - Effectiveness
      - Resource efficiency
      - Environmental sustainability consequences
-   - **1.6 Scope, Boundaries, and Assumptions**
+   - **1.6 Scope, Boundaries, Assumptions, and Validity Domain**
      - Physical system boundary
      - Spatial and temporal boundary
      - Hazard boundary
@@ -130,7 +130,8 @@ This is the clearest structure I recommend now, incorporating the **new abstract
      - validity
      - uncertainty
      - common cause versus causality
-   - **3.5 Stage 3 — Physics-Based Hybrid Multiscale Dynamics**
+   - **3.5 Stage 3 — Complex Spatiotemporal Coupled Dynamics**
+     - Physics-based hybrid multiscale representation
      - Power dynamics
      - Transportation dynamics
      - interface dynamics
@@ -152,31 +153,37 @@ This is the clearest structure I recommend now, incorporating the **new abstract
      - viability margin
      - recovery time
      - conventional-curve comparator
-   - **3.8 Stage 6 — Diagnosis, Intervention, Effectiveness, Efficiency, and Sustainability Consequences**
+   - **3.8 Stage 6 — Targeted Intervention Consequences: Resilience, Resources, Efficiency, and Sustainability**
      - Resilience diagnosis
      - interface criticality
      - intervention effects
+     - resource requirements
+     - resource efficiency
      - direct cost
      - operational energy
      - `CO_{2e}`
      - conditional accessibility
-   - **3.9 Stage 7 — Engineering Decision and Transformation**
+   - **3.9 Stage 7 — Defensible Engineering Decision**
      - Feasible alternatives
      - nondominated alternatives
      - robustness
      - uncertainty
-     - transformation
+     - infrastructure transformation where justified
      - sequential adaptation only if activated
    - **3.10 Cross-Stage Handoffs, Evidence Status, Uncertainty, and Claim Ceilings**
 5. **Chapter 4 — Research Methodology and Experimental Design**
    - **4.1 Overall Research Design and EGMIV**
    - **4.2 Evidence and Source Qualification**
-   - **4.3 Austin Case and Data Qualification**
-     - Candidate case
+   - **4.3 Multi-Case Roles and Data Qualification**
+     - Greensboro development/benchmark role
+     - Houston H3 semisynthetic development role
+     - Austin operational external-evidence role
+     - Austin candidate confirmatory role
+     - Candidate confirmatory case
      - SMART-DS role
      - Transportation data
      - Hazard data
-     - provenance
+     - provenance and leakage control
    - **4.4 Spatial and Temporal Alignment**
    - **4.5 Measurement Models and Observational Uncertainty**
    - **4.6 Parameter Identification and Estimator Admission**
