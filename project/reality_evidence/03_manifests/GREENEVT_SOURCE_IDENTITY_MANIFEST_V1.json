@@ -1,0 +1,50 @@
+{
+  "manifest_id": "GREENEVT_SOURCE_IDENTITY_MANIFEST_V1",
+  "date": "2026-09-19",
+  "case_role": "C_DEV_GREENSBORO_GREENEVT_V1",
+  "upstream": {
+    "repository": "GreenEVT/GreenEVT",
+    "commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+    "lfs_tracking": [
+      "*.db",
+      "*.net.xml"
+    ],
+    "readme_declares_git_lfs": true,
+    "readme_declares_fallback_zip": true
+  },
+  "prior_uploaded_archive": {
+    "name": "GreenEVT.zip",
+    "size_bytes": 205091557,
+    "sha256": "643a0f3aab5b61d6396131ede3633741e1d1b34a921761edf3f780a1510c410e",
+    "retrieval_url_frozen": false,
+    "note": "Archive retrieval provenance was not separately frozen; critical object identities are independently tied to upstream LFS OIDs."
+  },
+  "critical_objects": {
+    "data/UDS.db": {
+      "upstream_lfs_oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "upstream_declared_size_bytes": 107778048,
+      "prior_full_object_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+      "prior_full_object_size_bytes": 107778048,
+      "source_identity_gate": "PASS",
+      "current_runtime_materialization": "BLOCKED"
+    },
+    "data/sumo_network/greensboro.net.xml": {
+      "upstream_lfs_oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "upstream_declared_size_bytes": 351967227,
+      "prior_full_object_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+      "prior_full_object_size_bytes": 351967227,
+      "source_identity_gate": "PASS",
+      "current_runtime_materialization": "BLOCKED"
+    }
+  },
+  "gates": {
+    "G_SRC_PTR": "PASS",
+    "G_SRC_FULLHASH": "PASS",
+    "G_SRC_SIZE": "PASS",
+    "G_SRC_PROV": "PASS",
+    "G_RUNTIME_DATA": "BLOCKED",
+    "G_RUNTIME_SOLVERS": "BLOCKED",
+    "G_B2_SOURCEBACKED": "BLOCKED"
+  },
+  "claim_ceiling": "Exact critical GreenEVT source identity is established from frozen upstream LFS OIDs and prior full-object hashes. Current source-backed execution remains blocked until exact bytes and required solvers are bound into the execution environment."
+}

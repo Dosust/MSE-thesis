@@ -1,5 +1,5 @@
 Priority,Reality_or_action,Primary_stage,Reason,Current_status,Next_action
-P0,GreenEVT full Git-LFS materialization,S3/B2,"source-backed coupled benchmark is blocked by missing LFS payloads",BLOCKED,"materialize exact LFS objects and verify hashes/sizes"
+P0,GreenEVT exact runtime data binding,S3/B2,"critical source identity and prior full-object materialization are PASS, but source-backed execution requires the exact bytes in the active runner",SOURCE_IDENTITY_PASS_RUNTIME_BLOCKED,"bind exact audited objects into execution environment; locally reverify SHA-256/size; freeze solver versions"
 P0,Stage-3 charging parameter authority,S2->S3,"blocks simulation readiness of accepted EV T-to-P mechanism",BLOCKED,"resolve workflow/source parameter and uncertainty provenance"
 P0,Final case-role declaration,ALL,"prevents development/external/confirmatory case drift",PASS_FROZEN,"roles frozen in CASE_ROLE_AUTHORITY_V1; amend only by versioned change control"
 P1,Greensboro signal GIS + NCDOT traffic,S1-S3,"real T structure and operational calibration",AVAILABLE_PARTIAL,"acquire/version manifests and crosswalk to model IDs"

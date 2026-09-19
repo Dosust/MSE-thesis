@@ -1,0 +1,40 @@
+{
+  "status": "BLOCKED_BY_RUNTIME_BINDING_NOT_SOURCE_IDENTITY",
+  "date": "2026-09-19",
+  "supersedes_for_current_interpretation": "SOURCE_BACKED_B2_BLOCKING_AUDIT_V1.json",
+  "preserves_v1_as_historical_runtime_record": true,
+  "source_identity": {
+    "status": "PASS",
+    "evidence": [
+      "models/H1/level2/artifacts/uploaded_source_audit_v1.json",
+      "project/reality_evidence/02_source_catalog/GREENEVT_SOURCE_MATERIALIZATION_RECONCILIATION_V1.md",
+      "project/reality_evidence/03_manifests/GREENEVT_SOURCE_IDENTITY_MANIFEST_V1.json"
+    ],
+    "objects": [
+      {
+        "path": "data/UDS.db",
+        "lfs_oid_sha256": "74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724",
+        "bytes": 107778048,
+        "prior_full_object_hash_match": true
+      },
+      {
+        "path": "data/sumo_network/greensboro.net.xml",
+        "lfs_oid_sha256": "f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06",
+        "bytes": 351967227,
+        "prior_full_object_hash_match": true
+      }
+    ]
+  },
+  "current_execution_requirement": {
+    "exact_bytes_must_be_bound": true,
+    "local_hash_reverification_required": true,
+    "solver_environment_required": [
+      "SUMO",
+      "OpenDSSDirect-Python or frozen equivalent"
+    ],
+    "current_status": "BLOCKED"
+  },
+  "scientific_rule": "A prior source-identity/materialization PASS cannot be substituted for execution-local data availability. Conversely, absence of bytes in the current runner does not erase prior cryptographic source qualification.",
+  "B2_status": "BLOCKED",
+  "H3_effect": "NONE"
+}
