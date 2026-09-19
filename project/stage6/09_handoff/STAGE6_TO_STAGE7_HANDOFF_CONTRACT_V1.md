@@ -1,5 +1,10 @@
 # Stage 6 → Stage 7 Handoff Contract v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE STAGE6→7 HANDOFF by `STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md`.
+
+
 ## 1. Purpose
 
 Stage 7 must receive qualified consequences, constraints, uncertainties and provenance — not an embedded Stage-6 recommendation.

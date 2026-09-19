@@ -1,5 +1,10 @@
 # Stage 6 Closure Audit v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE DESIGN CLOSURE by `STAGE6_CLOSURE_AUDIT_V2.md`.
+
+
 ## 1. Gate system
 
 \[

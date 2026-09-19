@@ -128,59 +128,40 @@ Create one normalized Stage2→3 handoff contract in **active dependency notatio
 
 ## Stage 3 — Physics-based hybrid multiscale dynamics
 
-### Use as scientific source material
-- `project/STAGE_3_COUPLED_HYBRID_MULTISCALE_DYNAMICS.md`
-- `project/stage3/README.md`
-- `project/stage3/STAGE3_EXECUTION_AND_CLOSURE_AUDIT_V1_2026-09-19.md`
-- `project/stage3/STAGE3_GATE_RESULTS_V1_2026-09-19.csv`
-- `project/stage3/STAGE3_SCENARIO_MATRIX_CAUSAL_COMPATIBILITY_AUDIT_V1_2026-09-19.md`
-- `project/stage3/reference/Stage3_Reference_Database_v1.xlsx`
+### Use as current authority
+Use the frozen `project/stage3/` v2 design package:
+- Stage2→3 readiness/input contract;
+- state/input/output/QOI ontology;
+- scientific constitution v2;
+- hybrid/time/multirate semantics;
+- model-family selection protocol;
+- generic scenario schema;
+- uncertainty/benchmark/VVUQ protocol;
+- exact Stage3→4 handoff;
+- contradiction audit;
+- design freeze;
+- finalization manifest.
 
-### What is scientifically mature
-- native P and T physics remain distinct;
-- hybrid continuous/algebraic/discrete-event semantics;
-- multirate timing;
-- `event time != causal delay != characteristic timescale`;
-- information/organizational dynamic states are not Stage-4 estimation/control;
-- dynamic topology and mechanism activation;
-- model-family / co-simulation reasoning;
-- verification, conservation, synchronization and ablation concepts;
-- Stage 3 produces trajectories; Stage 4 observes/controls them.
-
-### Critical inconsistency
-The root Stage-3 theory still consumes legacy
+### Frozen global objects
 ```math
-\mathfrak I_{ij}^{\alpha\beta}
-```
-while current authority uses
-```math
-\mathfrak d_e=(\mathcal C_e,\Sigma_e,\Pi_e).
+Y_3^{phys}=(x_P,x_T,z_{PT}),
+qquad
+\mathbb I_{s,M_2}^{active}\subseteq\mathbb I_3^{ready}.
 ```
 
-The current Stage-3 package is also dominated by **case execution blockers**, whereas the pre-data global freeze needs a clean **case-independent constitution**.
+and
 
-### Must build before global workbook
-Create `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md` with:
 ```math
-\mathfrak S_3=
-(RQ_3,SO_3,H_1,I_3,O_3,\mathcal M_3,\Theta_3,G_3,U_3,E_3,\Lambda_3).
+I_{3\to4}
+=
+(\mathcal G,\mathbb I^{qualified},\mathfrak M_3,Y^{phys},Q,\Lambda_3).
 ```
 
-It must freeze:
-1. exact Stage2→3 input in active notation;
-2. Stage-3 state/input/output/QOI classes;
-3. physical vs epistemic variables;
-4. model-family selection schema;
-5. time/hybrid/multirate semantics;
-6. scenario-template schema;
-7. benchmark/VVUQ schema;
-8. Stage3→4 handoff;
-9. claim ceiling.
-
-No feeder, hazard, parameter value or solver choice is required for this constitution.
+### Remaining empirical work
+Case IDs, hazard values, parameter distributions, final case model family, numerical tolerances, independent reference, exact H1 metric/materiality and H1 result remain DEFERRED.
 
 ### Pre-data status
-**MAIN BOTTLENECK — V2 CONSTITUTION REQUIRED**
+**READY / FROZEN DESIGN V2 — EMPIRICAL H1 NOT TESTED**
 
 ---
 
@@ -280,52 +261,73 @@ Older root Stage-5 theory is provenance/support only where it conflicts with the
 ## Stage 6 — Intervention performance and sustainability consequences
 
 ### Use as current authority
-Use `project/stage6/` for scope, boundaries, intervention records, accounting, requirements, benchmarks, H4, VVUQ and handoff **together with** the higher authority:
-- `project/CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`.
+Use the Stage-6 v2 package under the higher authority:
+- `project/CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`;
+- `project/stage6/00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md`;
+- v2 effectiveness, efficiency, benchmark, H4, VVUQ, closure and handoff protocols;
+- `project/stage6/STAGE6_MASTER_REGISTER_V2.xlsx`;
+- v2 freeze/manifest.
 
-### Strong reusable material
-- strategic intervention `a_k` distinct from operational control `u(t)`;
-- functional unit/lifecycle boundary;
-- event vs lifecycle clock;
-- accessibility/social distribution;
-- energy/carbon/cost accounting;
-- requirements provenance;
-- no hidden weighting;
-- B6,0→B6,3;
-- H4 consequence heterogeneity logic;
-- VVUQ and claim ceilings.
+Continue to reuse unchanged v1 scope, lifecycle accounting, requirements and evidence protocols.
 
-### Critical alignment gap
-Current frozen V1 package largely uses:
+### Frozen Stage-6 output
 ```math
-a_k\to(\Delta\mathfrak R,\Delta\mathbf J_{sus},\eta_R).
-```
-
-The controlling v2.1 amendment requires:
-```math
+\boxed{
 a_k
-\to
-(\Delta\mathfrak R,
+\rightarrow
+(
+\Delta\mathfrak R,
 \mathcal E_{fx},
 \mathcal E_{fy},
-\Delta\mathbf J_{sus}).
+\Delta\mathbf J_{sus}
+).
+}
 ```
 
-Therefore effectiveness = target attainment must be explicit and separate from resilience change and resource efficiency.
+Permanent distinction:
+```math
+\boxed{
+\text{Resilience}
+\neq
+\text{Effectiveness}
+\neq
+\text{Efficiency}
+\neq
+\text{Sustainability}.
+}
+```
 
-### Must build before global workbook
-Issue a **Stage-6 v2 alignment amendment/package update** that defines:
-- effectiveness target vector and pass/continuous schema;
-- resource vector for efficiency;
-- dimensional/normalization rule without arbitrary weights;
-- H4 use of effectiveness screening versus sustainability heterogeneity;
-- revised Stage6→7 handoff including `E_fx` and `E_fy`;
-- updated Stage-6 workbook and freeze/manifest version.
+### H4 preservation
+```math
+\boxed{
+\mathcal A_{H4}=\mathcal A_R^+.
+}
+```
 
-Case numerical values remain DEFERRED.
+Effectiveness is first-class performance reporting and may support secondary stratification, but does not redefine canonical H4.
+
+### Stage6→7 handoff
+```math
+I_{6\to7}^{v2}
+=
+(
+\mathcal A_6^{qual},
+\Delta\mathfrak R,
+\mathcal E_{fx},
+\mathcal E_{fy},
+\Delta\mathbf J_{sus},
+\mathcal K_{sus}^{cand},
+\mathbb U_6,
+\Lambda_6,
+\Pi_6
+).
+```
+
+### Remaining empirical work
+Actual target thresholds, resource quantities/distributions, EFX/EFY results, sustainability case inventories, H4 result and intervention decision remain DEFERRED.
 
 ### Pre-data status
-**DESIGN MATURE / CANONICAL v2.1 ALIGNMENT REQUIRED**
+**READY / FROZEN DESIGN V2 — EMPIRICAL H4 NOT TESTED**
 
 ---
 
@@ -406,8 +408,8 @@ Create:
 ```text
 P0.1 authority/supersession control       DONE
 P0.2 Stage-3 scientific constitution v2   DONE
-P0.3 Stage-6 v2.1 alignment               NEXT
-P0.4 Stage-7 v2.1 alignment               THEN
+P0.3 Stage-6 v2.1 alignment               DONE
+P0.4 Stage-7 v2.1 alignment               NEXT
 P1.1 global symbol/ontology registry
 P1.2 global handoff matrix
 P1.3 H1–H5 master preregistration

@@ -1,5 +1,10 @@
 # Stage 6 VVUQ Protocol v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE STAGE-6 VVUQ by `STAGE6_VVUQ_PROTOCOL_V2.md`; v2 adds first-class effectiveness/efficiency V&V.
+
+
 ## 1. Principle
 
 Verification, validation, uncertainty quantification and value judgment are separate.

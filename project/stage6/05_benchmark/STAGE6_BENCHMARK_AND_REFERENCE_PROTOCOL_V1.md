@@ -1,5 +1,10 @@
 # Stage 6 Benchmark and Reference Protocol v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE STAGE-6 BENCHMARK GOVERNANCE by `STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md`.
+
+
 ## 1. Terminology firewall
 
 \[

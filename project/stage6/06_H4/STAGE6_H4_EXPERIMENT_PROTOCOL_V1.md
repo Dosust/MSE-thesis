@@ -1,5 +1,10 @@
 # Stage 6 H4 Experiment Protocol v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE H4 EXECUTION by `STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md`. Canonical H4 itself is unchanged.
+
+
 ## 1. Canonical H4
 
 H4: Across the prespecified intervention and scenario set, engineering interventions that produce meaningful resilience improvement are not equivalent in their sustainability consequence vectors; at least two resilience-effective interventions produce materially different accessibility, energy, carbon, or cost consequences under the declared comparison rule.

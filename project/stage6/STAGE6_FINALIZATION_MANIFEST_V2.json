@@ -1,0 +1,121 @@
+{
+  "manifest_id": "STAGE6_FINALIZATION_MANIFEST_V2",
+  "version": "2.0",
+  "framework_alignment": "CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1",
+  "date": "2026-09-19",
+  "stage": 6,
+  "rq": "RQ6",
+  "so": "SO6",
+  "hypothesis": "H4",
+  "design_protocol_status": "FROZEN_V2",
+  "empirical_execution_status": "DEFERRED_H4_NOT_TESTED",
+  "authority": {
+    "rq_so_h": [
+      "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md"
+    ],
+    "intervention_performance": [
+      "project/CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md",
+      "fd2a5373644a349cd05e27a91420fd126e2325f6"
+    ]
+  },
+  "core_output": [
+    "Delta_resilience",
+    "E_fx_effectiveness",
+    "E_fy_efficiency",
+    "Delta_J_sus"
+  ],
+  "primary_h4_eligibility": "A_H4 = A_R_plus",
+  "workbook": {
+    "path": "project/stage6/STAGE6_MASTER_REGISTER_V2.xlsx",
+    "bytes": 18449,
+    "sha256": "f28dbeb28318ab20038f12b705268775db777fb53f17cf0a1f994700f22753fb",
+    "git_blob_sha": "4a81c562104d2b7edf7a455550addb2bc8088a92",
+    "sheets": 13,
+    "formula_error_scan": "PASS_0_ERRORS",
+    "design_gates": "19_OF_19_PASS"
+  },
+  "frozen_v2_files": [
+    [
+      "project/stage6/00_governance/STAGE6_INTERVENTION_PERFORMANCE_ALIGNMENT_V2.md",
+      "1021c0dcd028985ea7de97d315704171be6cc2fe"
+    ],
+    [
+      "project/stage6/00_governance/STAGE6_V2_1_REUSE_AND_AMENDMENT_AUDIT_V1.md",
+      "e4ee61af47bbe00e34054566062773b763ebee6b"
+    ],
+    [
+      "project/stage6/00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "3493142f685c9520ee7f6bdf001a3dea131f2649"
+    ],
+    [
+      "project/stage6/02_interventions/STAGE6_EFFECTIVENESS_TARGET_AND_EVALUATION_PROTOCOL_V2.md",
+      "63f97b824dc8c77c81a33b3149c7a56e46dcd800"
+    ],
+    [
+      "project/stage6/02_interventions/STAGE6_EFFICIENCY_RESOURCE_AND_EVALUATION_PROTOCOL_V2.md",
+      "a509b91bcb169cad6d8d3b8448d694aac8281fff"
+    ],
+    [
+      "project/stage6/05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md",
+      "41bf51dde8c651d46425d9ac037734c70fcb8657"
+    ],
+    [
+      "project/stage6/06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md",
+      "4a4f44ac4367014ea7aa63b5c548d6c22799bb57"
+    ],
+    [
+      "project/stage6/07_vvuq/STAGE6_VVUQ_PROTOCOL_V2.md",
+      "f050d5d334f2e2a6587785241b30c9ae5606db55"
+    ],
+    [
+      "project/stage6/08_closure/STAGE6_CLOSURE_AUDIT_V2.md",
+      "4ff31c862d434c90bc4a3ebf496b408ca45ec653"
+    ],
+    [
+      "project/stage6/08_closure/STAGE6_V2_INTERNAL_CONTRADICTION_AUDIT_V1_2026-09-19.md",
+      "28af127d6030d960f70dfa4ee014bfc2fe8ab967"
+    ],
+    [
+      "project/stage6/09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md",
+      "9e955de444f13338987ca8669fc3aa5f6557cdc5"
+    ],
+    [
+      "project/stage6/STAGE6_MASTER_REGISTER_V2.xlsx",
+      "4a81c562104d2b7edf7a455550addb2bc8088a92"
+    ],
+    [
+      "project/stage6/00_governance/STAGE6_DESIGN_PROTOCOL_FREEZE_V2.md",
+      "90e67da1c4f869600d97762f55842b2142bfc35e"
+    ]
+  ],
+  "reused_v1_files": [
+    [
+      "project/stage6/01_scope/STAGE6_SCOPE_BOUNDARY_FUNCTIONAL_UNIT_V1.md",
+      "49ecbaadb12ba2c45a63a70592590f23e75ca5f6"
+    ],
+    [
+      "project/stage6/03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md",
+      "61e7e2ee5aa7189b860fb777fc68617ca55d1fb3"
+    ],
+    [
+      "project/stage6/04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md",
+      "3f54bc78a40452544946a8bef3f59c633983ed19"
+    ],
+    [
+      "project/stage6/STAGE6_EVIDENCE_REGISTER_V1.md",
+      "1fdeda1274fbdafa1cccea63adabe94a35bb45ae"
+    ]
+  ],
+  "protected_deferred": [
+    "final_intervention_set",
+    "effectiveness_target_values_and_authority_bindings",
+    "resource_quantities_and_distributions",
+    "effectiveness_results",
+    "efficiency_results",
+    "lifecycle_case_inventories",
+    "case_specific_requirement_thresholds",
+    "H4_result",
+    "Stage7_decision"
+  ],
+  "hash_semantics": "SHA values are Git blob SHA-1 values. Workbook additionally carries SHA-256. This manifest excludes its own blob hash; the final Git commit binds it atomically."
+}

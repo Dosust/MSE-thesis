@@ -1,5 +1,10 @@
 # Stage 6 Scientific Design / Protocol Freeze v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED DESIGN FREEZE — v1 retained for provenance. Active Stage-6 design freeze is `STAGE6_DESIGN_PROTOCOL_FREEZE_V2.md`.
+
+
 **Date:** 2026-09-19  
 **Stage:** 6 — Resilience Diagnosis, Engineering Intervention and Sustainability Consequences  
 **Status:** SCIENTIFIC DESIGN + EXPERIMENTAL PROTOCOL = FINALIZED V1  

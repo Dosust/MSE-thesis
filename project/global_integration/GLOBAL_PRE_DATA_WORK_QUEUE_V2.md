@@ -27,16 +27,18 @@ Authority drift cleanup closure: **PASS — 2026-09-19**. No obsolete H4/H5 file
 
 Stage 3 design normalization closure: **PASS — DESIGN/PROTOCOL ONLY; empirical Stage 3 remains NOT TESTED.**
 
-### P0.3 Stage 6 v2.1 alignment — NEXT
-- [ ] Add explicit effectiveness `E_fx(a_k)`.
-- [ ] Add explicit efficiency `E_fy(a_k)` and evidence-supported resource vector.
-- [ ] Keep `ΔR`, `E_fx`, `E_fy`, and `ΔJ_sus` distinct.
-- [ ] Update H4 screening/decision semantics accordingly.
-- [ ] Update Stage6→7 handoff.
-- [ ] Issue Stage-6 aligned workbook/versioned amendment.
-- [ ] Issue updated freeze/manifest.
+### P0.3 Stage 6 v2.1 alignment — COMPLETE
+- [x] Add explicit effectiveness `E_fx(a_k)`.
+- [x] Add explicit efficiency `E_fy(a_k)` and evidence-supported resource vector.
+- [x] Keep `ΔR`, `E_fx`, `E_fy`, and `ΔJ_sus` distinct.
+- [x] Update H4 performance reporting while preserving canonical primary H4 eligibility `A_H4 = A_R+`.
+- [x] Update Stage6→7 handoff.
+- [x] Issue Stage-6 aligned workbook/versioned amendment.
+- [x] Issue updated freeze/manifest.
 
-### P0.4 Stage 7 v2.1 alignment
+Stage 6 v2.1 alignment closure: **PASS — DESIGN/PROTOCOL V2; empirical Stage 6 remains DEFERRED / H4 NOT TESTED.**
+
+### P0.4 Stage 7 v2.1 alignment — NEXT
 - [ ] Receive resilience + effectiveness + efficiency + sustainability + feasibility + uncertainty.
 - [ ] Update Stage-7 workbook/version.
 - [ ] Add `project/stage7/README.md`.

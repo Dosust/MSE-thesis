@@ -1,5 +1,10 @@
 # Stage 6 Scientific Constitution and Handoff v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> SUPERSEDED FOR ACTIVE STAGE-6 GOVERNANCE. Active constitution is `STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md` under the v2.1 intervention-performance amendment.
+
+
 ## 1. Authority
 
 Stage: 6 — Resilience Diagnosis, Engineering Intervention and Sustainability Consequences

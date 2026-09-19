@@ -1,74 +1,151 @@
-# Stage 6 — Scientific Design / Protocol v1
+# Stage 6 — Scientific Design / Protocol v2
 
 ## Title
 
-Stage 6 — Resilience Diagnosis, Engineering Intervention and Sustainability Consequences
+**Stage 6 — Resilience Diagnosis, Intervention Performance and Sustainability Consequences**
 
-RQ6: What sustainability requirements follow from resilience diagnosis and from the effectiveness, resource efficiency, and sustainability consequences of candidate interventions?
-
-SO6: Derive evidence-qualified sustainability requirements from resilience diagnosis and intervention consequences, distinguishing effectiveness, resource efficiency, accessibility, energy, carbon and cost within declared accounting boundaries.
-
-Evidence/test obligation: H4.
+RQ6/SO6/H4 remain governed by `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+Intervention-performance semantics are governed by `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`.
 
 ## Status
 
-\[
-\boxed{\text{Scientific design + experimental protocol = FINALIZED V1}}
-\]
-
-\[
-\boxed{\text{Case execution / H4 adjudication = DEFERRED UNTIL THE 7-STAGE ARCHITECTURE IS FROZEN}}
-\]
-
-Stage 6 is defined before case data are used. Data instantiate the protocol; they do not define the science.
-
-## Governing distinction
-
-\[
+```math
 \boxed{
-\text{resilience effectiveness}
-\neq
-\text{resource efficiency}
-\neq
-\text{environmental consequence}
-\neq
-\text{social consequence}
-\neq
-\text{economic consequence}
-\neq
-\text{Stage-7 decision}
+G_{6,DESIGN}^{v2}=PASS
 }
-\]
+```
 
-Stage 6 measures intervention consequences and derives qualified requirements. Stage 7 performs the final resilience–sustainability decision.
+```math
+\boxed{
+\text{Case execution / H4 adjudication}
+=
+\text{DEFERRED / NOT TESTED}
+}
+```
 
-## Package
+Stage 6 is frozen at design/protocol level before case data are used.
 
-1. 00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md
-2. 01_scope/STAGE6_SCOPE_BOUNDARY_FUNCTIONAL_UNIT_V1.md
-3. 02_interventions/STAGE6_INTERVENTION_BASELINE_AND_COMPARATOR_PROTOCOL_V1.md
-4. 03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md
-5. 04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md
-6. 05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V1.md
-7. 06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V1.md
-8. 07_vvuq/STAGE6_VVUQ_PROTOCOL_V1.md
-9. 08_closure/STAGE6_CLOSURE_AUDIT_V1.md
-10. 09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V1.md
-11. STAGE6_EVIDENCE_REGISTER_V1.md
-12. STAGE6_FINALIZATION_MANIFEST_V1.json
+## Canonical v2 chain
 
-## Main methodological anchors
+```math
+\boxed{
+a_k
+\rightarrow
+Y^{a_k}
+\rightarrow
+(
+\Delta\mathfrak R,
+\mathcal E_{\rm fx},
+\mathcal E_{\rm fy},
+\Delta\mathbf J_{\rm sus}
+).
+}
+```
 
-Environmental life-cycle accounting follows ISO 14040/14044: goal and scope, functional unit, system boundary, inventory, impact assessment, interpretation, transparency, and explicit boundaries.
+with
 
-Social life-cycle work follows ISO 14075:2024 and the UNEP 2020 Social LCA Guidelines when supply-chain or organization-level social claims are made.
+```math
+\boxed{
+\text{Resilience}
+\neq
+\text{Effectiveness}
+\neq
+\text{Efficiency}
+\neq
+\text{Sustainability}.
+}
+```
 
-Carbon-footprint claims follow ISO 14067:2018 logic and are never treated as full environmental sustainability.
+## Active v2 authority
 
-Life-cycle costing follows ISO 15686-5:2017 principles for constructed assets, supplemented by NIST SP 1197 for status-quo comparison, co-benefits/co-costs, non-market values and uncertainty.
+1. `00_governance/STAGE6_INTERVENTION_PERFORMANCE_ALIGNMENT_V2.md`
+2. `00_governance/STAGE6_V2_1_REUSE_AND_AMENDMENT_AUDIT_V1.md`
+3. `00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md`
+4. `02_interventions/STAGE6_EFFECTIVENESS_TARGET_AND_EVALUATION_PROTOCOL_V2.md`
+5. `02_interventions/STAGE6_EFFICIENCY_RESOURCE_AND_EVALUATION_PROTOCOL_V2.md`
+6. `05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md`
+7. `06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md`
+8. `07_vvuq/STAGE6_VVUQ_PROTOCOL_V2.md`
+9. `08_closure/STAGE6_CLOSURE_AUDIT_V2.md`
+10. `08_closure/STAGE6_V2_INTERNAL_CONTRADICTION_AUDIT_V1_2026-09-19.md`
+11. `09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md`
+12. `STAGE6_MASTER_REGISTER_V2.xlsx`
+13. `00_governance/STAGE6_DESIGN_PROTOCOL_FREEZE_V2.md`
+14. `STAGE6_FINALIZATION_MANIFEST_V2.json`
 
-Normalization/weighting/single-score operations are not treated as objective physics. ISO/TS 14074:2022 explicitly treats weighting as a value choice.
+## Reused v1 supporting authorities
+
+The v2.1 amendment does not alter these semantics, so they remain active supporting protocols:
+
+- `01_scope/STAGE6_SCOPE_BOUNDARY_FUNCTIONAL_UNIT_V1.md`
+- `03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md`
+- `04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md`
+- `STAGE6_EVIDENCE_REGISTER_V1.md`
+
+Where any conflict exists, v2 controls.
+
+## H4 preservation
+
+Primary H4 eligibility remains:
+
+```math
+\boxed{
+\mathcal A_{H4}
+=
+\mathcal A_R^+.
+}
+```
+
+Effectiveness is mandatory first-class intervention-performance reporting. The set
+
+```math
+\mathcal A_R^+\cap\mathcal A_{\rm fx}^+
+```
+
+may be a preregistered secondary stratification only; it does not redefine H4.
+
+## Stage6→7 handoff
+
+```math
+\boxed{
+I_{6\to7}^{v2}
+=
+(
+\mathcal A_6^{qual},
+\Delta\mathfrak R,
+\mathcal E_{\rm fx},
+\mathcal E_{\rm fy},
+\Delta\mathbf J_{\rm sus},
+\mathcal K_{\rm sus}^{cand},
+\mathbb U_6,
+\Lambda_6,
+\Pi_6
+).
+}
+```
+
+## Workbook verification
+
+`STAGE6_MASTER_REGISTER_V2.xlsx`:
+
+- 13 sheets;
+- 19/19 design gates PASS;
+- 0 formula errors;
+- 0 case-specific effectiveness targets populated;
+- 0 case-specific efficiency resources populated;
+- SHA-256 `f28dbeb28318ab20038f12b705268775db777fb53f17cf0a1f994700f22753fb`;
+- Git blob `4a81c562104d2b7edf7a455550addb2bc8088a92`.
 
 ## Claim ceiling
 
-This package establishes a Stage-6 scientific design and preregisterable experimental architecture. It does not establish any intervention ranking, sustainability benefit, social-equity improvement, emissions reduction, life-cycle cost advantage, or H4 result.
+The v2 package establishes a preregisterable methodology. It does **not** establish that any intervention is effective, efficient, sustainable, equitable, preferred, or that H4 is supported.
+
+## Next pre-data task
+
+```math
+\boxed{
+\text{Stage 7 v2.1 alignment}
+\rightarrow
+\text{global Stage 1--7 integration/freeze}.
+}
+```

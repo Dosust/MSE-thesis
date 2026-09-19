@@ -130,3 +130,59 @@ Interface-criticality superiority is not H4. Adaptive-pathway superiority is not
 ```
 
 This cleanup changes **authority interpretation only**. Historical scientific reasoning, prior results, and provenance are preserved.
+
+
+## Stage 6 v2.1 alignment closure — 2026-09-19
+
+The active Stage-6 authority is now the v2 intervention-performance package under `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`.
+
+### Active Stage-6 v2 objects
+
+```math
+\boxed{
+a_k
+\rightarrow
+(
+\Delta\mathfrak R,
+\mathcal E_{fx},
+\mathcal E_{fy},
+\Delta\mathbf J_{sus}
+).
+}
+```
+
+### Supersession
+
+The following v1 performance-dependent files are provenance/supporting only and cannot override v2:
+- Stage-6 constitution/handoff v1;
+- Stage-6 design freeze v1;
+- intervention/baseline v1 for intervention-performance semantics;
+- benchmark v1;
+- H4 protocol v1;
+- VVUQ v1;
+- closure audit v1;
+- Stage6→7 handoff v1.
+
+The following v1 files remain active supporting protocols because their semantics were not changed by v2.1:
+- scope/boundary/functional-unit v1;
+- sustainability accounting v1;
+- requirements derivation v1;
+- evidence register v1.
+
+### Canonical H4 preservation
+
+```math
+\boxed{
+\mathcal A_{H4}=\mathcal A_R^+.
+}
+```
+
+Effectiveness is first-class intervention-performance reporting but does not silently redefine canonical H4.
+
+### Status
+
+```text
+Stage-6 design/protocol v2 = FROZEN
+Stage-6 empirical execution = DEFERRED
+H4 = NOT TESTED
+```

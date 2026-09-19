@@ -1,5 +1,10 @@
 # Stage 6 Intervention, Baseline and Comparator Protocol v1
 
+> **STAGE-6 v2.1 AUTHORITY ALIGNMENT — 2026-09-19**
+>
+> CURRENT SUPPORTING BASELINE/COMPARATOR PROVENANCE. Its baseline and matched-comparison logic remains reusable, but v1 intervention-performance semantics are superseded by the v2 effectiveness/efficiency protocols.
+
+
 ## 1. Intervention eligibility
 
 A candidate \(a_k\) enters Stage 6 only if:
