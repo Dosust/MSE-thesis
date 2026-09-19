@@ -1,5 +1,13 @@
 # ASU MSE Thesis Master Specification v1.0
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — SUPERSEDED FOR ACTIVE THESIS CONTROL**
+>
+> This project-root v1.0 specification is retained for provenance only. It contains obsolete H4/H5 method text.  
+> **Current thesis-control specification:** `thesis/00_governance/ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` (v1.2).  
+> **Current scientific authorities:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, and `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`.  
+> Do not use the H4 interface-ranking or H5 adaptive-pathway passages below as current confirmatory hypotheses.
+
+
 **Date:** 2026-09-16  
 **Status:** ACTIVE THESIS-CONTROL ARTIFACT  
 **Program:** MSE Sustainable Engineering, Arizona State University  
