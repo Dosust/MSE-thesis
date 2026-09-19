@@ -1,5 +1,12 @@
 # Novelty and Mathematical Foundation Index
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — NEEDS VERSIONED REFRESH FOR CURRENT H4/H5**
+>
+> This index remains useful for prior-art subtraction and rejected broad novelty claims, but it predates the current H4/H5 meanings and lists older authority versions.  
+> For active interpretation use `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `CANONICAL_7_STAGE_FRAMEWORK_V2.md`, `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`, and the current governance matrices under `thesis/00_governance/`.  
+> Any interface-ranking or adaptive-pathway residual below is a historical residual, not the current H4/H5 novelty claim.
+
+
 **Date:** 2026-09-16  
 **Status:** CURRENT WORKING INDEX  
 **Authority note:** this index does not override canonical framework, dependency, hypothesis or preregistration files.
