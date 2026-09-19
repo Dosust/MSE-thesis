@@ -10,7 +10,7 @@
 ![Evidence](https://img.shields.io/badge/evidence-50--paper%20synthesis-0969DA)
 
 **Framework stage:** Stage 7 — Sustainable Transformation Pathways  
-**Status:** CANONICAL / FROZEN  
+**Status:** HISTORICAL / PROVENANCE — ACTIVE STAGE-7 DECISION SCOPE SUPERSEDED BY v2.1 + project/stage7  
 **Frozen:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Citation standard:** APA 7th edition author–date  
