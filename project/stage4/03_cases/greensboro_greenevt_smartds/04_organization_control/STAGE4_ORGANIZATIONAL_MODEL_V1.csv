@@ -1,0 +1,7 @@
+object_id,symbol,meaning,data_realization,gate_status,parameter_status
+ORG-ACTORS,V_O,actors/organizations,MISSING,OPEN,OPEN
+ORG-EDGES,E_O,coordination links,MISSING,OPEN,OPEN
+ORG-AUTH,A_O,authority/permissions,MISSING,OPEN,OPEN
+ORG-RES,R_O,resources/ownership,MISSING,OPEN,OPEN
+ORG-DELAY,tau_O,decision/approval/coordination delay,MISSING,OPEN,OPEN
+ORG-RULES,Xi_O,rules/procedures,MISSING,OPEN,OPEN
