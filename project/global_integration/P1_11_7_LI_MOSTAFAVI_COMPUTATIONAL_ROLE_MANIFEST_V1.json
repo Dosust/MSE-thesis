@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "status": "PASS_FROZEN_P1_11_7_COMPUTATIONAL_ROLE_ARCHITECTURE",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "implementation_commit": "724304272c1375361b831852df375c605f15b016",
+  "verification_commit": "6b6f7ff3a517c75c3ae5ef4ed69477045b2f8a46",
+  "design_gate": "G_P1.11.7_design=PASS",
+  "repository_consistency_audit": {
+    "pass": 48,
+    "fail": 0
+  },
+  "deterministic_post_commit_check": {
+    "pass": 20,
+    "fail": 0,
+    "note": "repository invariants only; not automated scientific or empirical validation"
+  },
+  "source_document": {
+    "source_id": "SRC-LI-MOSTAFAVI-2025",
+    "title": "Machine learning approach for disaster risk and resilience assessment in coupled human infrastructure systems performance",
+    "authors": "Xiangpeng Li; Ali Mostafavi",
+    "venue": "npj Natural Hazards",
+    "year": 2025,
+    "volume_issue_or_article": "2:56",
+    "doi": "10.1038/s44304-025-00104-4",
+    "supplied_file": "s44304-025-00104-4.pdf",
+    "pages": 15,
+    "bytes": 2579338,
+    "sha256": "bf60180521d59635a9df6ccfbbdca9fb3aa76967de489f7fbc0bcd1022345da2"
+  },
+  "scientific_effect": "Adds computation-role governance, Stage-4 feature/reference-state semantics, and Stage-5 data-driven diagnostic controls. Does not change P-T causal mechanisms, Stage-3 physics, formal Stage-5 resilience definition, sustainability admission scope, intervention effects, H1-H5 outcomes, or decision preferences.",
+  "permanent_firewalls": [
+    "physical system != observations != computed features != indices != diagnostic patterns != decisions",
+    "algorithm != scientific role != allowed claim",
+    "raw datasets use D_raw notation and are not D_i demand/use",
+    "association != causal mechanism",
+    "feature importance != physical interface strength",
+    "PCA loading != physical coupling parameter != causal importance != viability criticality",
+    "data-driven post-event characterization != physical/hybrid dynamic simulation",
+    "formal resilience R_T != diagnostic products D_R",
+    "machine learning != causal identification",
+    "index != physical state",
+    "population attribute != social-sustainability endpoint",
+    "observational cluster != intervention effect",
+    "more computation != more scientific validity"
+  ],
+  "source_boundary": [
+    "direct/method precedent for multi-source features, CBG analytical support, PCA, clustering, recovery features, spatial/socioeconomic heterogeneity",
+    "explicit Harvey-case exclusion of power outages prevents use as direct P↔T mechanism evidence",
+    "no authority over thesis sustainability definition or viability/reachability geometry"
+  ],
+  "pinned_artifacts": [
+    {
+      "path": "project/CANONICAL_COMPUTATIONAL_ROLE_ARCHITECTURE_AMENDMENT_V1_7.md",
+      "blob_sha": "b092ed86103d426843768fb0c407a39ef178be48"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_FEATURE_ENGINEERING_AND_REFERENCE_STATE_AMENDMENT_V1_3.md",
+      "blob_sha": "3b35e4ca13bab2f36f88c2e169fc4b13e062f330"
+    },
+    {
+      "path": "project/stage5/00_governance/STAGE5_DATA_DRIVEN_RESILIENCE_DIAGNOSTICS_AMENDMENT_V1_2.md",
+      "blob_sha": "29cc99c5fc13f472c9f4ef415b708cef65778d8f"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1.md",
+      "blob_sha": "d874e7edb6496b92a51d9dae8f7c816f1dc1c0dd"
+    },
+    {
+      "path": "project/global_integration/P1_11_7_LI_MOSTAFAVI_COMPUTATIONAL_ROLE_AUDIT_V1_2026-09-19.md",
+      "blob_sha": "73c0f4ee59bc223a03c1a6a8262898a9bf78acdd"
+    },
+    {
+      "path": "tests/test_p1_11_7_computational_role_architecture.py",
+      "blob_sha": "c13270acfa06f878a09a5f3cf50fefc0f7f1e4c8"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00c_accepted_core_evidence.md",
+      "blob_sha": "a04b906b6a1454ce0fbe6882ca0b259293e0399e"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00_literature_classification_ontology_register.md",
+      "blob_sha": "3dd00bd4cc16d307eaf883c2e8c4c871229dbc25"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md",
+      "blob_sha": "4b19c2f55e2a38b80ebe2d3bd6515e527ae55ee1"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv",
+      "blob_sha": "d49731747a1504352f99df7224ce5d200aba04b2"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_AUTHORITY_SUPERSESSION_MAP_V1.md",
+      "blob_sha": "40de9d2c6496b5f3698d4ab96f5b787ed34eee55"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "blob_sha": "a1659be3a379751ba29c2a495afe3641b37bac57"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "blob_sha": "b353fa6f9fbb094cc40db46e75bd52a8e167355a"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_AUTHORITY_REGISTER_V1.csv",
+      "blob_sha": "37d87f64d9797c67f19a2b73398d3e03d474c0a4"
+    },
+    {
+      "path": "project/stage5/00_governance/STAGE5_PACKAGE_INDEX_V1.md",
+      "blob_sha": "5a02e23de9dc3e0fb5052917f37d68fdf4191594"
+    }
+  ],
+  "next": "P2 — GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx and design freeze, consuming P1.11.6 and P1.11.7",
+  "manifest_self_hash_policy": "manifest does not self-hash"
+}
