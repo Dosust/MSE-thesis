@@ -17,6 +17,24 @@ O=\text{Organization}.
 
 This notation does **not** imply that the four domains are physically equivalent infrastructure networks. In this thesis, `P` and `T` are the two principal physical infrastructure systems, whereas `I` and `O` are supporting domains through which conditions are observed, interpreted, communicated, coordinated, and acted upon. The notation is retained for consistency with the canonical Chapter-I architecture; its typed meaning is defined explicitly in the prose. Multilayer-network theory provides a general framework for systems containing multiple subsystems and relationship types, but the existence of a layer or interlayer edge is a structural representation rather than evidence of a causal mechanism (Kivelä et al., 2014).
 
+A service-centered SoS interpretation also prevents the four-domain shorthand from being read as four equivalent infrastructure systems. Following Hall et al. (2016), the physical constituent systems are Power and Transportation because they deliver distinct infrastructure services and retain distinct technologies and operating logic. Information and Organization remain explicit supporting domains because they affect observation and feasible action. For architecture-level reasoning, the physical SoS may therefore be written as
+
+```math
+\boxed{\mathscr S_{PT}=(\mathcal S_P,\mathcal S_T,\mathbb I_{P\to T},\mathbb I_{T\to P})},
+```
+
+while `\mathcal S=\{P,T,I,O\}` remains the controlled four-domain shorthand used elsewhere in the thesis.
+
+Ibáñez et al. (2010) further show that energy–transport coupling occurs at operational and investment/planning levels. The present thesis narrows its dynamic core primarily to operational and recovery-support mechanisms; long-term planning/investment coupling is retained as downstream intervention/transformation context unless separately activated by a research question.
+
+The transportation system is not identified only with its road graph. For mechanism reasoning it may be decomposed conceptually as
+
+```math
+T=(G_T,F_T,D_T,C_T),
+```
+
+where `G_T` is physical transport infrastructure, `F_T` fleet/agent states, `D_T` mobility/OD demand, and `C_T` traffic/operational control. This decomposition is conceptual: the selected model family determines which quantities become states, inputs, parameters, or outputs.
+
 The **Power domain `P`** contains the relevant physical assets and electrical relationships required to deliver electricity to loads within the study boundary. At the structural level it may be represented as
 
 ```math
@@ -100,6 +118,9 @@ Coupled Power–Transportation modeling is already an established research area.
 Section 1.3 therefore moves from **what constitutes the study system** to the engineering problem created by the need to connect structure, causal mechanisms, dynamic propagation, observation, feasible action, and service recovery without treating these distinct concepts as interchangeable.
 
 ## References cited in Section 1.2
+
+- Hall, J. W., Nicholls, R. J., Hickford, A. J., & Tran, M. (2016). Introducing national infrastructure assessment. In J. W. Hall, M. Tran, A. J. Hickford, & R. J. Nicholls (Eds.), *The Future of National Infrastructure: A System-of-Systems Approach* (pp. 3–11). Cambridge University Press. https://doi.org/10.1017/CBO9781107588745.002
+- Ibáñez, E., Gkritza, K., McCalley, J., Aliprantis, D., Brown, R., Somani, A., & Wang, L. (2010). Interdependencies between energy and transportation systems for national long term planning. In *Sustainable and Resilient Critical Infrastructure Systems: Simulation, Modeling, and Intelligent Engineering* (pp. 53–76). Springer. https://doi.org/10.1007/978-3-642-11405-2_2
 
 - Chester, M., Underwood, B. S., Allenby, B., Garcia, M., Samaras, C., Markolf, S., Sanders, K., Preston, B., & Miller, T. R. (2021). Infrastructure resilience to navigate increasingly uncertain and complex conditions in the Anthropocene. *npj Urban Sustainability, 1*, Article 4. https://doi.org/10.1038/s42949-021-00016-y
 - Fan, J., He, P., Li, C., Zhao, C., & Ji, Y. (2024). A post-disaster restoration model for power-gas-transportation distribution networks considering spatial interdependency and energy hubs. *Electric Power Systems Research, 233*, 110505. https://doi.org/10.1016/j.epsr.2024.110505

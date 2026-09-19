@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.9 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.10 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -226,3 +226,14 @@ PASS;—;FROZEN;V1.
 ~~~
 
 This is a design/protocol closure only. Stage-3/4/5 empirical closure and H1–H5 remain governed by their existing gates and are not established by this freeze.
+
+## P1.10 source-grounded P–T alignment
+
+Current cross-cutting alignment artifacts:
+
+- `POWER_TRANSPORT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_AUDIT_V1_2026-09-19.md`
+- `../CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`
+- `../stage2/STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md`
+- `../stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md`
+
+These artifacts integrate the service-centered SoS and explicit energy–transport coupling lessons without changing empirical/H1 status.

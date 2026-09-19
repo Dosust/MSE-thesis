@@ -38,6 +38,12 @@ If the Stage-6 admission and H4 gates close successfully, resilience improvement
 
 If supported by H5, the thesis is intended to contribute a decision formulation that compares resilience-only engineering choices with decisions that also account for admitted sustainability consequences, feasibility, and uncertainty. Adaptive or sequential transformation remains a supporting Stage-7 extension unless separately activated and validated.
 
+## Established-foundation / novelty firewall
+
+The thesis does **not** claim novelty for any of the following by themselves: treating national infrastructure through a system-of-systems lens; recognizing Power/Energy and Transportation as interdependent; representing the two networks separately and coupling them; modeling EV charging/V2G or transport-dependent restoration as mechanism families; or performing integrated energy–transport planning. These foundations are established in prior literature, including Hall et al. (2016) and Ibáñez et al. (2010).
+
+Accordingly, candidate novelty is sought only further downstream in the **specific integrated scientific chain actually demonstrated by this thesis**: evidence-qualified case mechanisms → readiness-gated hybrid dynamics → uncertainty-aware viability/reachability → mechanism-specific diagnosis → intervention/consequence/decision analysis. Any final novelty claim remains subject to the repository novelty and evidence gates.
+
 The contribution traceability is
 
 ```math

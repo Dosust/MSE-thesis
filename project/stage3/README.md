@@ -208,3 +208,39 @@ G_{2	o3}(Q05)
 	ext{source-backed Stage-3/B2 execution}.
 }
 ```
+
+## Directional interface-state amendment — v2.2
+
+`STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md` is a narrow mathematical clarification of the frozen v2 package.
+
+The older aggregate symbol
+
+```math
+z_{PT}
+```
+
+is retained only as a pair-level compatibility alias. Current interpretation is mechanism-indexed:
+
+```math
+\boxed{
+z_{\mathbb I}(t)
+=
+\operatorname{col}\{\zeta_e(t):e\in\mathbb I^{active},\ \zeta_e\neq\varnothing\}.
+}
+```
+
+Directional groupings may be written
+
+```math
+z_{P\to T},\qquad z_{T\to P},
+```
+
+when required. This prevents reciprocal mechanisms with different memory, sign, delay, units, or state dimension from being collapsed into one undifferentiated interface state.
+
+Therefore the currently controlled physical truth is interpreted as
+
+```math
+\boxed{Y_3^{phys}=(x_P,x_T,z_{\mathbb I}).}
+```
+
+This amendment changes notation/typing only. It does not promote any BLOCKED dependency or change the empirical Stage-3 status.

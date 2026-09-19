@@ -1,3 +1,15 @@
+> **SUPERSEDED FOR ACTIVE CONFIRMATORY EXECUTION — 2026-09-19**
+>
+> This v1 preregistration is preserved for provenance. It contains named scenario/mechanism families that were specified before the current Stage-2 causal and Stage2→3 readiness audits. The active confirmatory authority is `project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md` together with the Stage-3 v2 readiness/scenario controls.
+>
+> Permanent execution rule:
+>
+> ```math
+> \boxed{\mathbb I_{s,M_2}^{active}\subseteq\mathbb I_3^{ready}}
+> ```
+>
+> A historical scenario family does not authorize a blocked dependency.
+
 # EGMIV H1 Confirmatory Pre-registration v1.0
 
 **Status:** FROZEN DESIGN — NOT YET EXECUTED  

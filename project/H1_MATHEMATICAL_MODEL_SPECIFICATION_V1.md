@@ -1,9 +1,22 @@
+> **SUPERSEDED FOR ACTIVE H1 EXECUTION — 2026-09-19**
+>
+> This file is retained as historical implementation provenance. It predates the current Stage-2 causal gate, Stage2→3 readiness contract, Stage-3 v2 constitution, and global H1–H5 preregistration. Its three example mechanisms and legacy flat interdependency notation MUST NOT be interpreted as current case acceptance or Stage-3 authorization.
+>
+> Current active interpretation is governed by:
+> - `project/CANONICAL_DEPENDENCY_CONTRACT_V1.md`;
+> - `project/stage2/STAGE2_CASE_G2_AUDIT_V1_2026-09-19.md`;
+> - `project/stage3/STAGE3_STAGE2_TO_STAGE3_INPUT_AND_READINESS_CONTRACT_V2.md`;
+> - `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md`;
+> - `project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md`.
+>
+> Current GreenEVT/SMART-DS status: `EV_T_to_P` has Stage-2 causal PASS but Stage2→3 remains BLOCKED; `EV_P_to_T`, `SIGNAL_P_to_T`, and `REPAIR_T_to_P` remain causally BLOCKED for accepted case execution.
+
 # H1 Mathematical Model Specification v1.0
 
 **Status:** frozen mathematical structure for H1 implementation  
 **Method:** EGMIV  
 **Date:** 2026-09-13  
-**Scope:** physical Power–Transportation demonstrator only; Information and Organization are deferred to H2.
+**Scope:** physical Powerâ€“Transportation demonstrator only; Information and Organization are deferred to H2.
 
 
 We have now moved from **evidence synthesis** to the first actual mathematical model of the thesis.
@@ -379,7 +392,7 @@ Let held-out service-trajectory error be
 \boxed{ E_S(M) = \frac1T \int_0^T \left\| \hat S_M(t)-S_{\mathrm{obs}}(t) \right\|_W dt. }
 ```
 
-Then M2 only earns the claim “more defensible” if
+Then M2 only earns the claim â€œmore defensibleâ€ if
 
 ```math
 E_S(M_2) < \min [ E_S(M_0),E_S(M_1) ] - \varepsilon_{\mathrm{pred}}
@@ -483,4 +496,4 @@ It is now:
 \boxed{ \textbf{IMPLEMENT }M_0 \rightarrow \textbf{VERIFY} \rightarrow M_1 \rightarrow M_2 }
 ```
 
-starting with the independent power and CTM solvers and their conservation/unit�ѕ��́����ɔ���������ٕ���������������ѕɴ�()Q��Ё͕�Օ�������́��ͼ��ɽ镸����ѡ��ݽɭ�����(
+starting with the independent power and CTM solvers and their conservation/unitÑ•ÍÑÌ‰•™½É”…‘‘¥¹œ•Ù•¸½¹”½ÕÁ±¥¹œÑ•É´¸()Q¡…ÐÍ•ÅÕ•¹¥¹œ¥Ì…±Í¼™É½é•¸¥¸Ñ¡”Ý½É­‰½½¬¸(

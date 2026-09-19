@@ -320,3 +320,31 @@ Permanent criticality rule:
 	ext{ is not a universal canonical interface-criticality definition.}
 }
 ~~~
+
+## P–T SoS / directional-interface addendum — 2026-09-19
+
+This addendum resolves the service-centered SoS and interface-directionality issues identified after integrating Hall et al. (2016) and Ibáñez et al. (2010).
+
+| Symbol | Definition | Type / class | Unit | Owner → consumers | Validity / uncertainty | Status |
+|---|---|---|---|---|---|---|
+| \(\mathscr S_{PT}\) | typed Power–Transportation SoS object containing the two physical constituent systems and their qualified directed relations | SoS / architecture | N/A | S1 → S7 | does not make I/O physical constituent systems | CURRENT |
+| \(\mathcal S_P,\mathcal S_T\) | independently meaningful Power and Transportation constituent systems | constituent system | heterogeneous | S1 → S7 | native physics/services remain distinct | CURRENT |
+| \(\mathbf Q_{PT}(t)=[Q_P(t),Q_T(t)]^\top\) | coupled physical service vector | service/output | service-native | S3 → S7 | service \(\neq\) topology \(\neq\) resilience | CURRENT |
+| \(z_{\mathbb I}(t)\) | mechanism-indexed aggregate of only justified dynamic interface-memory states \(\zeta_e\) | interface state / physical | heterogeneous/native | S3 → S7 | only Stage2→3-ready mechanisms; may be empty | CURRENT |
+| \(z_{P\to T},z_{T\to P}\) | optional directional groupings of mechanism-specific interface states | interface state / physical | heterogeneous/native | S3 → S7 | direction-specific; not assumed equal | CURRENT |
+| \(\kappa_e^{role}\) | interaction role: OPERATION / RECOVERY / PLANNING | derived metadata | N/A | S2 → S7 | classification does not establish causality | CURRENT |
+| \(\kappa_e^{effect}\) | transmitted effect class: capacity/flow/demand/delay/accessibility/service/recovery/cost/etc. | derived metadata | N/A | S2 → S7 | one dependency may have multiple effects | CURRENT |
+
+Compatibility rule:
+
+```math
+\boxed{
+z_{PT}^{legacy/aggregate}
+\rightsquigarrow
+z_{\mathbb I}
+=
+\operatorname{col}\{\zeta_e\}.
+}
+```
+
+The existing `\mathcal S=\{P,T,I,O\}` notation remains a controlled domain-level shorthand. It must not be read as four physically equivalent constituent infrastructures. The explicit SoS object is `\mathscr S_{PT}`, with P and T as the physical constituent systems and I/O as supporting domains.

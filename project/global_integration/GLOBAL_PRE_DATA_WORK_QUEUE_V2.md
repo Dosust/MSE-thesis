@@ -195,3 +195,25 @@ Permanent rule:
 ```
 
 Empirical values, datasets, calibration parameters and confirmatory outcomes are allowed to remain unresolved until the subsequent data-qualification phase.
+
+### P1.10 P–T SoS / complex-dynamics source alignment — COMPLETE
+- [x] Integrate Hall et al. service-centered System-of-Systems semantics.
+- [x] Integrate Ibáñez et al. explicit energy–transport operational/planning coupling evidence.
+- [x] Preserve P and T as separate constituent systems with distinct native physics.
+- [x] Add transportation infrastructure/fleet/demand/control distinction.
+- [x] Add OPERATION / RECOVERY / PLANNING and effect-class metadata without altering the canonical dependency primitive.
+- [x] Correct singular aggregate Stage-3 interface-state semantics to mechanism-indexed/directional state notation through v2.2 amendment.
+- [x] Quarantine historical H1 mechanism assumptions that conflict with current G2/readiness status.
+- [x] Create causal/readiness-aware Level-2 dependency registry v2.
+- [x] Add machine guard preventing a non-ready dependency from being labeled accepted M2.
+- [x] Add Hall/Ibáñez to controlled Chapter-2 evidence and Chapter-1 source grounding.
+- [x] Clarify generic figure arrows versus case-specific accepted dependencies.
+- [x] Run source-alignment audit and record residual/open items.
+
+Closure:
+
+```math
+\boxed{P1.10=PASS\quad\text{(semantic/control-plane alignment only)}}
+```
+
+This does not close P2 and does not authorize H1 execution. P2 must consume the v2 dependency registry and the current `z_{\mathbb I}` interface-state semantics.

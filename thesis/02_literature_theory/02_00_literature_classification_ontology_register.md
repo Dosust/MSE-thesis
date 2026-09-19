@@ -439,3 +439,57 @@ It does not establish H1–H5 outcomes. The defensible current research boundary
 $established\ components + fragmented\ handoffs → integration/validation\ research\ need.$
 
 This register remains ACTIVE until the de novo database searches, screening, extraction, contrary-evidence retention, and reference-verification gates close.
+
+## Hall–Ibáñez controlled ontology addendum — 2026-09-19
+
+Two accepted sources add controlled distinctions that are now mandatory in Chapter-2 synthesis:
+
+### Service-centered SoS distinction
+
+```math
+\boxed{
+\text{asset topology}
+\neq
+\text{infrastructure service}
+\neq
+\text{resilience}.
+}
+```
+
+Hall et al. (2016) are coded [FND]/[DIR-CI] for service-centered infrastructure and system-of-systems reasoning. They do not validate a specific P–T coupling law.
+
+### Energy–transport interaction role
+
+For accepted P–T literature, add derived interaction-role metadata
+
+```math
+\kappa_e^{role}
+\in
+\{\mathrm{OPERATION},\mathrm{RECOVERY},\mathrm{PLANNING}\}.
+```
+
+Ibáñez et al. (2010) are coded [DIR-PT]/[FND]/[SIM] and support explicit operational and investment/planning coupling between separate energy and transportation networks.
+
+### Transport representation detail
+
+Where relevant, distinguish
+
+```math
+T=(G_T,F_T,D_T,C_T)
+```
+
+as conceptual categories for transport infrastructure, fleet/agents, mobility demand, and control. This does not force every study into the same state vector.
+
+### Effect class
+
+An interdependency consequence need not be binary failure. Literature coding may distinguish:
+
+```text
+capacity | flow | demand | delay | accessibility | service | recovery | cost | other
+```
+
+with multiple classes allowed.
+
+### Novelty boundary
+
+Neither P–T interdependence, separate-but-coupled energy/transport networks, nor SoS framing may be claimed as thesis novelty. Novelty assessment must target the specific integrated method/result and remain evidence-gated.

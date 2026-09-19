@@ -211,3 +211,27 @@ Where a frozen Stage-3/4/5 v1/v2 file uses less explicit notation on one of thes
 ~~~
 
 No empirical status is upgraded by this authority update.
+
+## Power–Transportation SoS / complex-dynamics alignment — 2026-09-19
+
+The Hall–Ibáñez source integration produced three narrow current amendments. They are subordinate to the canonical RQ/SO/H and seven-stage architecture but control interpretation within their declared scope:
+
+| Amendment | Controls |
+|---|---|
+| `project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md` | service-centered P–T SoS semantics; constituent-system identity; transport infrastructure/fleet/demand/control distinction; non-binary and sign-indefinite coupling consequences; novelty boundary |
+| `project/stage2/STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md` | OPERATION / RECOVERY / PLANNING role metadata and effect-class metadata |
+| `project/stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md` | mechanism-indexed/directional interface-memory state; `z_PT` becomes compatibility alias |
+
+Interpretation rule:
+
+```math
+\boxed{
+\text{frozen parent}
++
+\text{narrow versioned amendment}
+=
+\text{current controlled interpretation}.
+}
+```
+
+No empirical status, causal PASS, Stage2→3 readiness, or hypothesis result is upgraded by these amendments.

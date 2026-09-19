@@ -88,3 +88,24 @@ It does **not** establish the thesis hypothesis outcomes:
 - `A_R* != A_RS*`.
 
 Those remain H1–H5 tests.
+
+## 2026-09-19 accepted SoS / energy–transport foundations
+
+| ID | Source | Evidence class | Accepted support | Restriction | Thesis use |
+|---|---|---|---|---|---|
+| A-031 | Hall, Nicholls, Hickford, & Tran (2016), *Introducing national infrastructure assessment*, https://doi.org/10.1017/CBO9781107588745.002 | [FND] / [DIR-CI] | service-centered infrastructure definition; sector identity; national infrastructure as SoS; cross-sector interdependence as both risk and opportunity | introductory/foundational chapter; does not supply the thesis's Stage-2 causal gate or Stage-3 P–T dynamic law | 1.1–1.2; 2.2; RQ1–RQ2 |
+| A-032 | Ibáñez et al. (2010), *Interdependencies between Energy and Transportation Systems for National Long Term Planning*, https://doi.org/10.1007/978-3-642-11405-2_2 | [DIR-PT] / [FND] / [SIM] | separate energy/transport networks; operational and investment coupling; transport infrastructure/fleet distinction; multi-commodity network-flow integration; contingency/sensitivity framing | long-term multi-period network-flow/optimization model; not a complete hybrid cascading-dynamics, case-causal-identification, or viability-theory treatment | 1.1–1.2; 2.2–2.5; RQ1–RQ3 |
+
+### Controlled synthesis
+
+```math
+\boxed{
+\text{Hall: service-centered SoS foundation}
+\neq
+\text{Ibáñez: coupled energy–transport planning model}
+\neq
+\text{thesis: readiness-gated hybrid dynamics + viability/reachability}.
+}
+```
+
+These sources establish important prior art and therefore **narrow**, rather than enlarge, admissible novelty claims.

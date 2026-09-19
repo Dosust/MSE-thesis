@@ -157,3 +157,22 @@ REPAIR_{T\to P}
 ~~~
 
 Causal acceptance and Stage-3 readiness remain separate. The accepted EV charging-demand relation still requires parameter/status and \(G_{2\to3}\) readiness qualification before confirmatory Stage-3 use.
+
+## Hall–Ibáñez interdependency alignment — 2026-09-19
+
+The generic Stage-2 dependency primitive is unchanged. A narrow versioned amendment now adds two **derived classification axes** without reopening the frozen causal gate:
+
+- `STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md` — distinguishes OPERATION / RECOVERY / PLANNING roles and transmitted effect classes such as demand, capacity, delay, accessibility, service and recovery.
+
+These labels are metadata for interpretation and experiment design; they do not establish causal existence, strength, activation, or Stage-3 readiness.
+
+The current case-execution status remains:
+
+```text
+EV_T_to_P      G2 PASS      Stage2→3 BLOCKED
+EV_P_to_T      G2 BLOCKED   Stage2→3 BLOCKED
+SIGNAL_P_to_T  G2 BLOCKED   Stage2→3 BLOCKED
+REPAIR_T_to_P  G2 BLOCKED   Stage2→3 BLOCKED
+```
+
+Use `models/H1/level2/registries/dependency_registry_v2.csv` for the current machine-readable case-status view.

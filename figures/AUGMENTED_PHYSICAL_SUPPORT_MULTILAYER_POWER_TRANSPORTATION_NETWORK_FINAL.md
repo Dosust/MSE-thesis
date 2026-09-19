@@ -32,3 +32,28 @@ This figure is the canonical network representation for the thesis unless explic
 ## Freeze rule
 
 Do not alter topology, symbol meanings, relation direction, color semantics, layer naming, or legend conventions in downstream thesis figures without an explicit revision of this canonical representation.
+
+## Case-status semantic clarification — 2026-09-19
+
+The orange signal-power and green repair-access arrows in the frozen PNG are **generic framework/mechanism-family semantics**, not evidence that those relations have passed the current Greensboro/GreenEVT case-specific causal gate.
+
+Current case status is:
+
+```text
+SIGNAL_P_to_T  G2 BLOCKED
+REPAIR_T_to_P  G2 BLOCKED
+```
+
+Therefore:
+
+```math
+\boxed{
+\text{mechanism shown in generic figure}
+\not\Rightarrow
+\text{case-specific causal PASS}
+\not\Rightarrow
+\text{Stage-3 readiness}.
+}
+```
+
+The visual asset remains valid as a generic architecture figure under this explicit interpretation. A future case-specific figure must display only the mechanism status actually supported by that case.

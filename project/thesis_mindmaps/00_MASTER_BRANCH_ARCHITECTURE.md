@@ -8,8 +8,8 @@
 flowchart LR
     K["INPUT: Critical service requirements K(t)"]
     S1["STAGE 1: Structure\nRQ1 / SO1\nPASS - FROZEN"]
-    S2["STAGE 2: Causal interdependencies\nRQ2 / SO2\nNEXT - AUTHORIZED"]
-    S3["STAGE 3: Hybrid multiscale dynamics\nRQ3 / SO3 -> H1"]
+    S2["STAGE 2: Causal interdependencies\nRQ2 / SO2\nFRAMEWORK FROZEN · CASE ACTIVE"]
+    S3["STAGE 3: Hybrid multiscale dynamics\nRQ3 / SO3 -> H1\nDESIGN FROZEN · CASE BLOCKED"]
     S4["STAGE 4: Observation + estimation + organization + control\nRQ4 / SO4 -> H2"]
     S5["STAGE 5: Viability + reachability + confidence\nRQ5 / SO5 -> H3"]
     S6["STAGE 6: Diagnosis + intervention + sustainability consequences\nRQ6 / SO6 -> H4"]
@@ -122,4 +122,16 @@ Y(x,t)
 
 ## Status boundary
 
-Stage 1 is frozen at the generic-framework level. Stage 2 is the next scientific construction. The later branches are canonical design targets and must not be interpreted as completed empirical results.
+Stage 1 is frozen at the generic-framework level. Stage 2 has a frozen generic causal framework with case execution active. Stages 3–7 have design/protocol authorities, but empirical/confirmatory results remain NOT TESTED or DEFERRED as governed by their stage gates. The map must never upgrade a design freeze into empirical closure.
+
+## Directional interface-state note — 2026-09-19
+
+Where the map refers to interface states, current Stage-3 interpretation is mechanism-indexed:
+
+```math
+z_{\mathbb I}
+=
+\operatorname{col}\{\zeta_e\},
+```
+
+with optional `z_{P\to T}` and `z_{T\to P}` groupings. A single `z_{PT}` must not be interpreted as forcing reciprocal mechanisms to share one state law.

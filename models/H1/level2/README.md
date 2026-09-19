@@ -129,7 +129,7 @@ where `e_P` is the fraction of feeder buses in the effective FEMA Special Flood 
 - `config/protocol_v1.json` — machine-readable protocol.
 - `config/protocol_status_v1.json` — current gate state.
 - `config/source_manifest_v1.json` — source/method provenance and published validation invariants.
-- `registries/dependency_registry_v1.csv` — canonical directed dependencies.
+- `registries/dependency_registry_v2.csv` — current causal/readiness-aware dependency registry. `dependency_registry_v1.csv` is retained as provenance only.
 - `registries/parameter_registry_v1.csv` — parameter provenance/uncertainty.
 - `registries/scenario_matrix_v1.csv` — matched scenarios and ablations.
 - `registries/qoi_registry_v1.csv` — H1 outcome families and secondary QOIs.
@@ -215,3 +215,19 @@ Preview outputs are **not thesis evidence**.
 ## Hard claim boundary
 
 A realistic synthetic run may establish reproducible model/mechanism differences. It may not establish H1 predictive superiority unless an independent qualified reference, exact primary metrics, V&V acceptance rules, UQ design, R1–R8 data qualification, train/test split, and repository authorization have all been frozen before target-result inspection.
+
+## Current causal/readiness authority — 2026-09-19
+
+Level-2 model code may contain verified software fixtures for mechanisms that are **not currently authorized as accepted case couplings**. Software existence and verification do not override Stage-2 or Stage2→3 gates.
+
+```math
+\boxed{
+\text{fixture exists}
+\not\Rightarrow
+G_2=PASS
+\not\Rightarrow
+G_{2\to3}=PASS.
+}
+```
+
+Current machine-readable authority is `registries/dependency_registry_v2.csv`. An accepted M2 run may activate a dependency only when both `g2_status=PASS` and `stage23_status=PASS`.
