@@ -1,5 +1,8 @@
 # Stage 7 Design / Protocol Freeze v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is the corresponding Stage-7 v3 protocol referenced in `project/stage7/README.md`.
+
 **Status:** FROZEN — DESIGN/PROTOCOL ONLY  
 **Effective date:** 2026-09-19  
 **Stage:** 7 — Engineering Decision and Adaptive Transformation  
