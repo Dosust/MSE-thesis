@@ -34,7 +34,7 @@ A figure is not created merely because it is visually attractive.
 
 | ID | Working title | Question answered | Chapter | Status |
 |---|---|---|---|---|
-| F1.1 | Chapter-I research logic | How does context → problem → gap → scope → framework → RQ/SO/H connect? | Ch.1 | planned; controlled by Chapter-I v2 |
+| F1.1 | Chapter-I research logic | How does context → problem → gap → scope → framework → RQ/SO/H connect? | Ch.1 | planned/current; controlled by Chapter-I v3 |
 | F2.1 | Literature/theory synthesis map | Which established theories support each thesis problem and where are unresolved intersections? | Ch.2 | planned |
 | F3.1 | Theoretical foundation of infrastructure interdependency | How do system → service/interface → dependency → interdependency → dynamic SoS compose? | Ch.3 | working |
 | F3.2 | P–T–I–O / domain×aspect ontology | What entities/aspects are represented and where can interactions occur? | Ch.3 | working/proposed |
@@ -45,7 +45,7 @@ A figure is not created merely because it is visually attractive.
 | F4.2 | H1 data qualification and train/test gate | How do raw event data pass R1–R8 into admissible confirmatory data? | Ch.4 | planned |
 | F4.3 | Verification–validation–UQ workflow | What gates must a model pass before inference? | Ch.4 | planned |
 | F4.4 | H4 intervention-performance architecture | How are effectiveness, efficiency and sustainability consequences distinguished? | Ch.4 | planned |
-| F4.5 | H5 joint-decision architecture | How does resilience-only evaluation differ from joint resilience–sustainability evaluation? | Ch.4 | planned |
+| F4.5 | H5 joint-decision architecture | How does resilience-only evaluation differ from the joint engineering-decision formulation? | Ch.4 | planned |
 | F5.1 | H1 confirmatory result | What does the frozen H1 comparison show? | Ch.5 | BLOCKED until confirmatory execution |
 
 ## Initial table plan
@@ -78,7 +78,7 @@ A figure is not created merely because it is visually attractive.
 | E3.9 | adaptive/sequential transformation pathway | Ch.3 | supporting extension only unless activated |
 | E4.1 | H1 M0/M1/M2 competing representations | Ch.4 | frozen H1 specification |
 | E4.2 | H4 effectiveness/efficiency/sustainability consequences | Ch.4 | preregistration required |
-| E4.3 | H5 `A_R^*` versus `A_{R,S}^*` decision comparison | Ch.4 | preregistration required |
+| E4.3 | H5 `A_R^*` versus `A_joint^*` decision comparison | Ch.4 | preregistration required |
 
 ## Visual QA rules
 
