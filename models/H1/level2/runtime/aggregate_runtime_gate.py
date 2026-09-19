@@ -7,40 +7,57 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-def load(path: str) -> dict:
-    return json.loads(Path(path).read_text())
+def load(path: str) -> tuple[dict, bool, str | None]:
+    p = Path(path)
+    if not p.exists():
+        return {}, False, "missing"
+    try:
+        return json.loads(p.read_text()), True, None
+    except Exception as exc:
+        return {}, False, f"unreadable: {exc}"
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    for name in ["environment", "data", "dss", "sumo", "q05", "repro"]:
+    names = ["environment", "data", "dss", "sumo", "q05", "repro", "provenance"]
+    for name in names:
         ap.add_argument("--" + name, required=True)
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
-    env, data, dss, sumo, q05, repro = [
-        load(getattr(a, name))
-        for name in ["environment", "data", "dss", "sumo", "q05", "repro"]
-    ]
+    reports: dict[str, dict] = {}
+    input_status: dict[str, dict] = {}
+    for name in names:
+        payload, ok, error = load(getattr(a, name))
+        reports[name] = payload
+        input_status[name] = {
+            "path": getattr(a, name),
+            "readable": ok,
+            "error": error,
+        }
 
     gates = {
-        "G_DATA": bool(data.get("G_DATA")),
-        "G_ENV": bool(env.get("G_ENV")),
-        "G_DSS": bool(dss.get("G_DSS")),
-        "G_SUMO": bool(sumo.get("G_SUMO")),
-        "G_Q05": bool(q05.get("G_Q05")),
-        "G_SENS": bool(q05.get("G_SENS")),
-        "G_REPRO": bool(repro.get("G_REPRO")),
-        "G_PROV": True,
+        "G_DATA": bool(reports["data"].get("G_DATA")),
+        "G_ENV": bool(reports["environment"].get("G_ENV")),
+        "G_DSS": bool(reports["dss"].get("G_DSS")),
+        "G_SUMO": bool(reports["sumo"].get("G_SUMO")),
+        "G_Q05": bool(reports["q05"].get("G_Q05")),
+        "G_SENS": bool(reports["q05"].get("G_SENS")),
+        "G_REPRO": bool(reports["repro"].get("G_REPRO")),
+        "G_PROV": bool(reports["provenance"].get("G_PROV")),
     }
     overall = all(gates.values())
 
     report = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
+        "input_status": input_status,
         "gates": gates,
         "G_RUNTIME": overall,
-        "G_impl_Q05_CDEV": "PASS" if overall else "BLOCKED_OR_FAIL",
-        "claim_boundary": "Runtime/software implementation qualification only; not empirical infrastructure validation.",
+        "G_impl_Q05_CDEV": "PASS" if overall else "NOT_QUALIFIED",
+        "claim_boundary": (
+            "Runtime/software implementation qualification only; "
+            "not empirical infrastructure validation and not Stage-3 closure."
+        ),
     }
 
     out = Path(a.out)
