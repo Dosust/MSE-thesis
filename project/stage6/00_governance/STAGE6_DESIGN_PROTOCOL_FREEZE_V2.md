@@ -1,5 +1,8 @@
 # Stage 6 Design / Protocol Freeze v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is specified by the Stage-6 v3 authorities referenced in `project/stage6/README.md`. Do not use this file as the current H4/requirements/handoff/freeze authority.
+
 **Status:** FROZEN — DESIGN/PROTOCOL ONLY  
 **Effective date:** 2026-09-19  
 **Stage:** 6 — Resilience Diagnosis, Intervention Performance and Sustainability Consequences  
