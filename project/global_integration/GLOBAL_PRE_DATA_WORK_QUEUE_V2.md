@@ -284,3 +284,25 @@ P2 remains the next major task.
 - [x] Run compatibility audit: 48/48 PASS.
 
 P2 remains the next major task and must consume P1.11, P1.11.1 and P1.11.2 explicitly.
+
+
+#### P1.11.3 NEXTRANS policy/operator/budget/market feedback — COMPLETE
+- [x] Separate physical/functional, organizational, budget/resource, market/economic and public-policy channels.
+- [x] Preserve Stage-4 organization and feasible-control authority.
+- [x] Separate operational control from strategic/public-policy intervention.
+- [x] Avoid Pi notation collision by using p_pol / P_pol for public-policy instruments.
+- [x] Preserve native units; prohibit universal coupling cost without justified downstream aggregation.
+- [x] Preserve topology != flow != capacity != service.
+- [x] Make policy-induced interdependency admissible only through qualified mechanisms.
+- [x] Treat EV interactions as multiple mechanism-specific channels.
+- [x] Preserve equilibrium != dynamic trajectory.
+- [x] Keep policy/market/budget dynamics out of Stage 3 unless mechanism/QOI/readiness justify inclusion.
+- [x] Preserve multi-actor objectives without inventing one scalar utility.
+- [x] Extend effectiveness to coupled-system targets only when prospectively declared.
+- [x] Allow opportunity/resource costs only with supported accounting boundaries.
+- [x] Add transformation feedback through policy/behavior/demand/budget/investment only when evidence supports it.
+- [x] Add policy/economic calibration and validation firewall.
+- [x] Add seventeen P2 audit fields.
+- [x] Run compatibility audit: 46/46 PASS.
+
+P2 remains the next major task and must consume P1.11, P1.11.1, P1.11.2 and P1.11.3.

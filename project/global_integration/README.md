@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.3 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -341,3 +341,33 @@ P2 must consume the new information-architecture and reproducibility audit field
 ~~~
 
 No H1–H5 empirical status changes.
+
+
+## P1.11.3 NEXTRANS policy/operator/budget/market amendment
+
+Controls:
+- ../CANONICAL_SOS_POLICY_OPERATOR_BUDGET_MARKET_AMENDMENT_V1_3.md
+- GLOBAL_POLICY_OPERATOR_BUDGET_MARKET_FEEDBACK_PROTOCOL_V1.md
+- P1_11_3_NEXTRANS_POLICY_OPERATOR_BUDGET_MARKET_AUDIT_V1_2026-09-19.md
+
+Permanent firewalls include:
+
+~~~math
+\boxed{
+\text{physical coupling}
+\neq
+\text{policy/economic channel},
+\quad
+u(t)\neq a_k,
+\quad
+\pi_t\neq p_k^{pol},
+\quad
+Y^\ast\neq Y(t).
+}
+~~~
+
+~~~math
+\boxed{G_{P1.11.3}^{design}=PASS\qquad(46/46)}
+~~~
+
+P2 must consume the policy/operator/budget/market audit fields. No empirical H1–H5 status changes.
