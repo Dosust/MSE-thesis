@@ -517,3 +517,32 @@ Do not inspect or fit case data yet. The scientifically shortest route is:
 \text{data inspection}
 }
 ```
+
+
+---
+
+## P1 backbone closure — 2026-09-19
+
+The global Stage 1→7 integration backbone is now normalized.
+
+~~~math
+\boxed{
+P1.0=P1.1=P1.2=PASS
+}
+~~~
+
+Created:
+- PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V2.md;
+- GLOBAL_CROSS_STAGE_NOTATION_AND_HANDOFF_NORMALIZATION_V1.md;
+- GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_V1.md;
+- GLOBAL_STAGE_HANDOFF_MATRIX_V1.md;
+- P1_BACKBONE_CONSISTENCY_AUDIT_V1_2026-09-19.md.
+
+Three previously hidden integration issues are now explicit and controlled:
+1. Stage-1 / Stage-2 gamma/Phi semantic collision;
+2. Stage-4→5 physical-truth companion lineage;
+3. Stage-5→6 producer/consumer tuple mismatch.
+
+Backbone audit: **20/20 PASS**.
+
+Next: **P1.3 H1–H5 master preregistration**.

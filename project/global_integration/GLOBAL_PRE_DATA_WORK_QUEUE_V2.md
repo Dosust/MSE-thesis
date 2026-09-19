@@ -50,15 +50,30 @@ Stage 7 v2.1 alignment closure: **PASS — DESIGN/PROTOCOL V2; empirical Stage 7
 
 ## P1 — global control plane
 
-### P1.1 Symbol/ontology registry
+### P1.0 Governance synchronization — COMPLETE
+- [x] Issue PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V2.md.
+- [x] Update global integration README.
+- [x] Reconcile current Stage 3/6/7 design status.
+
+### P1.1 Symbol/ontology registry — COMPLETE
+- [x] Build GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_V1.md.
+- [x] Disambiguate cross-stage symbol collisions.
+- [x] Quarantine legacy dependency primitive.
+
 Fields:
 `symbol | definition | type | unit | physical/epistemic/decision class | created stage | consuming stages | authority | assumptions | validity | legacy aliases`.
 
-### P1.2 Handoff matrix
+### P1.2 Handoff matrix — COMPLETE
+- [x] Build GLOBAL_STAGE_HANDOFF_MATRIX_V1.md.
+- [x] Build GLOBAL_CROSS_STAGE_NOTATION_AND_HANDOFF_NORMALIZATION_V1.md.
+- [x] Resolve Stage4→5 physical-truth lineage.
+- [x] Resolve Stage5→6 producer/consumer mismatch losslessly.
+- [x] Run P1 backbone audit: 20/20 PASS.
+
 For every `I(k→k+1)`:
 `producer | consumer | object | mandatory fields | units/types | uncertainty | validity | fail/block behavior | claim ceiling`.
 
-### P1.3 H1–H5 master preregistration
+### P1.3 H1–H5 master preregistration — NEXT
 Freeze the **schema** for:
 `baseline | treatment | held constants | QOI | materiality | scenarios | UQ | VVUQ | support | not-support | not-tested`.
 

@@ -1,0 +1,119 @@
+{
+  "manifest_id": "P1_BACKBONE_FINALIZATION_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_0_P1_1_P1_2_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "eea610097f119f3f4cd79def49b5e419f20ccdc4",
+  "source_authorities": [
+    {
+      "path": "project/STAGE1_FINAL_FRAMEWORK_V2.md",
+      "sha": "65fe99930245a68259608cf3b59cc29606bbe605"
+    },
+    {
+      "path": "project/STAGE1_MATHEMATICAL_AND_ONTOLOGY_CONTRACT_V2.md",
+      "sha": "8f2c8b23fee9e8df17f6410dc3af2a0c55581de9"
+    },
+    {
+      "path": "thesis/00_governance/STAGE1_TO_STAGE2_FORMAL_TRANSITION_2026-09-19.md",
+      "sha": "b80bb9a194e7ada225f11a5076c8fc9f4134d747"
+    },
+    {
+      "path": "project/CANONICAL_DEPENDENCY_CONTRACT_V1.md",
+      "sha": "ae0b1ead2329b04ee5f55107ca18f72b02758ed0"
+    },
+    {
+      "path": "project/CANONICAL_NOTATION_TRANSLATION_LAYER_V1.md",
+      "sha": "c8ec13cda410218e21093ed62c1d4742445b22e8"
+    },
+    {
+      "path": "project/stage3/STAGE3_STAGE2_TO_STAGE3_INPUT_AND_READINESS_CONTRACT_V2.md",
+      "sha": "2efdcc64919282d93b02a73a45b9c7ef330dc646"
+    },
+    {
+      "path": "project/stage3/STAGE3_STATE_INPUT_OUTPUT_QOI_ONTOLOGY_V2.md",
+      "sha": "80dd965391c672df303e46ace919a5dd6bf11ec5"
+    },
+    {
+      "path": "project/stage3/STAGE3_TO_STAGE4_HANDOFF_CONTRACT_V2.md",
+      "sha": "8ecf4f64c0c97caa99704b130074eab50c271683"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "450440fd06088202c1266303cddf9b0e0c2a4c8c"
+    },
+    {
+      "path": "project/stage4/04_handoff/STAGE4_TO_STAGE5_HANDOFF_CONTRACT_V1.md",
+      "sha": "46557c724ec6c25d47e17f7b9753cf33f9ab0495"
+    },
+    {
+      "path": "project/stage5/00_governance/STAGE5_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "3742632c3a0eda97ec4b6fb85aeb81cb334ed4c2"
+    },
+    {
+      "path": "project/stage5/10_handoff/STAGE5_TO_STAGE6_HANDOFF_CONTRACT_V1.md",
+      "sha": "4aecfafb8515261bb4cd3f81db00b66dfdbd9d0c"
+    },
+    {
+      "path": "project/stage6/00_governance/STAGE6_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "sha": "3493142f685c9520ee7f6bdf001a3dea131f2649"
+    },
+    {
+      "path": "project/stage6/09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md",
+      "sha": "9e955de444f13338987ca8669fc3aa5f6557cdc5"
+    },
+    {
+      "path": "project/stage7/STAGE7_STAGE6_TO_STAGE7_INPUT_AND_ADMISSIBILITY_CONTRACT_V2.md",
+      "sha": "ff3fc77b0f192d3e6ecba0d21a8ea217b5e56c3c"
+    },
+    {
+      "path": "project/stage7/STAGE7_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "sha": "38a71356b3c99d35d5b73f7b70fb7d32452f71d4"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V2.md",
+      "sha": "6737ea927e14385efaa0fedc37744b4d52af4cc2"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_CROSS_STAGE_NOTATION_AND_HANDOFF_NORMALIZATION_V1.md",
+      "sha": "aa91a3a8f84266ce3aaf997100b3994d8d54c0bb"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_V1.md",
+      "sha": "6f389265ac6e449e814534a7e61e12918a2224aa"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_STAGE_HANDOFF_MATRIX_V1.md",
+      "sha": "711128daad5f150016cf994e1c6da497c3c84bb7"
+    },
+    {
+      "path": "project/global_integration/P1_BACKBONE_CONSISTENCY_AUDIT_V1_2026-09-19.md",
+      "sha": "fcf3651d7d9485868fea175bbb5f1665208088b9"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "73094e116bf2786aa464d75cd3267305cb46086f"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "f09cd670fb065a82f482fc4876ac1f1c4b2fde5e"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "7b09d4930d7f8f6fdb5d049ebfcdc57d8ca1bdc5"
+    }
+  ],
+  "audit": {
+    "passed": 20,
+    "failed": 0
+  },
+  "controlled_integrations": [
+    "Stage1/Stage2 gamma semantic collision",
+    "Stage1/Stage2 Phi semantic collision",
+    "Stage1 structural-state versus Stage3 physical-truth notation",
+    "Stage4→5 physical-truth companion lineage",
+    "Stage5→6 producer/consumer tuple mismatch"
+  ],
+  "next_task": "P1.3 GLOBAL H1-H5 MASTER PREREGISTRATION"
+}
