@@ -1,0 +1,124 @@
+name: Stage 3 GreenEVT Runtime Qualification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/stage3-greenevt-runtime-qualification.yml"
+      - "project/stage3/runtime/**"
+      - "models/H1/level2/runtime/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stage3-greenevt-runtime-qualification
+  cancel-in-progress: false
+
+jobs:
+  qualify-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    env:
+      GREENEVT_COMMIT: 6aff1cac48869ccfa0183643979f5f04b04e1124
+      UDS_SHA256: 74efbe9209bb8c7ad160f0966f01349e3c7fc187d3d0afcb3d1ddbfec1202724
+      UDS_SIZE: "107778048"
+      SUMO_NET_SHA256: f0c4cd672a7fd74a5ec1e23cbdb34c6828895af52c1210ee981ef72c79fd7b06
+      SUMO_NET_SIZE: "351967227"
+
+    steps:
+      - name: Checkout thesis
+        uses: actions/checkout@v4
+
+      - name: Install acquisition tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y git-lfs unzip
+          git lfs install
+
+      - name: Clone frozen GreenEVT source
+        env:
+          GIT_LFS_SKIP_SMUDGE: "1"
+        run: |
+          set -euo pipefail
+          git clone https://github.com/GreenEVT/GreenEVT.git external/GreenEVT
+          git -C external/GreenEVT checkout --detach "$GREENEVT_COMMIT"
+          test "$(git -C external/GreenEVT rev-parse HEAD)" = "$GREENEVT_COMMIT"
+
+      - name: Materialize exact LFS objects
+        run: |
+          set -euo pipefail
+          if ! git -C external/GreenEVT lfs pull --include='data/UDS.db,data/sumo_network/greensboro.net.xml' --exclude=''; then
+            echo "Git-LFS pull failed; trying the upstream-documented fallback archive for the two LFS payloads."
+            curl -fL https://gustavnilsson.name/files/GreenEVT.zip -o /tmp/GreenEVT.zip
+            rm -rf /tmp/greenevt-fallback
+            mkdir -p /tmp/greenevt-fallback
+            unzip -q /tmp/GreenEVT.zip -d /tmp/greenevt-fallback
+            uds="$(find /tmp/greenevt-fallback -type f -path '*/data/UDS.db' -print -quit)"
+            net="$(find /tmp/greenevt-fallback -type f -path '*/data/sumo_network/greensboro.net.xml' -print -quit)"
+            test -n "$uds"
+            test -n "$net"
+            cp "$uds" external/GreenEVT/data/UDS.db
+            cp "$net" external/GreenEVT/data/sumo_network/greensboro.net.xml
+          fi
+
+          test "$(sha256sum external/GreenEVT/data/UDS.db | awk '{print $1}')" = "$UDS_SHA256"
+          test "$(stat -c '%s' external/GreenEVT/data/UDS.db)" = "$UDS_SIZE"
+          test "$(sha256sum external/GreenEVT/data/sumo_network/greensboro.net.xml | awk '{print $1}')" = "$SUMO_NET_SHA256"
+          test "$(stat -c '%s' external/GreenEVT/data/sumo_network/greensboro.net.xml)" = "$SUMO_NET_SIZE"
+
+      - name: Build frozen runtime image
+        run: |
+          docker build             --file project/stage3/runtime/Dockerfile.greenevt-v1             --tag thesis-stage3-greenevt:v1             .
+
+      - name: Create evidence directory
+        run: mkdir -p runtime_artifacts
+
+      - name: Record image identity
+        run: |
+          docker image inspect thesis-stage3-greenevt:v1 > runtime_artifacts/docker_image_inspect.json
+          docker image inspect --format='{{.Id}}' thesis-stage3-greenevt:v1 > runtime_artifacts/docker_image_id.txt
+
+      - name: Run runtime gates
+        run: |
+          set -euo pipefail
+          runq() {
+            docker run --rm -v "$PWD:/workspace" -w /workspace thesis-stage3-greenevt:v1 "$@"
+          }
+
+          runq python models/H1/level2/runtime/verify_environment.py             --thesis-root .             --greenevt external/GreenEVT             --out runtime_artifacts/environment.json
+
+          runq python models/H1/level2/runtime/verify_source_bytes.py             --greenevt external/GreenEVT             --out runtime_artifacts/source_bytes.json
+
+          runq python models/H1/level2/runtime/verify_opendss_baseline.py             --greenevt external/GreenEVT             --out runtime_artifacts/opendss_baseline.json
+
+          runq python models/H1/level2/runtime/verify_sumo_baseline.py             --greenevt external/GreenEVT             --out runtime_artifacts/sumo_baseline.json
+
+          runq python models/H1/level2/runtime/verify_q05_coupling.py             --greenevt external/GreenEVT             --out runtime_artifacts/q05_run1.json
+
+          runq python models/H1/level2/runtime/verify_q05_coupling.py             --greenevt external/GreenEVT             --out runtime_artifacts/q05_run2.json
+
+          runq python models/H1/level2/runtime/compare_replicates.py             runtime_artifacts/q05_run1.json             runtime_artifacts/q05_run2.json             --out runtime_artifacts/reproducibility.json             --tol 1e-12
+
+      - name: Capture package and OS manifests
+        run: |
+          docker run --rm thesis-stage3-greenevt:v1 python -m pip freeze > runtime_artifacts/pip_freeze.txt
+          docker run --rm thesis-stage3-greenevt:v1 sh -lc "dpkg-query -W | sort" > runtime_artifacts/dpkg_manifest.tsv
+          sha256sum runtime_artifacts/* > runtime_artifacts/artifact_sha256_pre_gate.txt
+
+      - name: Aggregate runtime qualification
+        run: |
+          docker run --rm             -v "$PWD:/workspace"             -w /workspace             thesis-stage3-greenevt:v1             python models/H1/level2/runtime/aggregate_runtime_gate.py               --environment runtime_artifacts/environment.json               --data runtime_artifacts/source_bytes.json               --dss runtime_artifacts/opendss_baseline.json               --sumo runtime_artifacts/sumo_baseline.json               --q05 runtime_artifacts/q05_run1.json               --repro runtime_artifacts/reproducibility.json               --out runtime_artifacts/runtime_gate.json
+
+          sha256sum runtime_artifacts/* > runtime_artifacts/artifact_sha256.txt
+
+      - name: Upload qualification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage3-greenevt-runtime-qualification
+          path: runtime_artifacts/
+          if-no-files-found: warn
+          retention-days: 90
