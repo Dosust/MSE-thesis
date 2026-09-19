@@ -1,0 +1,19 @@
+{
+  "stage": 4,
+  "version": "V1",
+  "date": "2026-09-19",
+  "architecture_status": "FINALIZED_V1",
+  "empirical_science_status": "NOT_CLOSED_BLOCKED_BY_PREREQUISITES",
+  "governing_chain": "Q4 -> C4 -> R4(D) -> G4 -> Z4 -> Lambda4 -> I4to5",
+  "canonical_master_workbook": "project/stage4/02_constitution/STAGE4_MASTER_SCIENTIFIC_REGISTER_V1.xlsx",
+  "case_observability_workbook": "project/stage4/03_cases/greensboro_greenevt_smartds/01_observability/STAGE4_CASE_STATE_OBSERVABILITY_REGISTRY_V2.xlsx",
+  "case_observability_workbook_sha256": "22223a25a7ce90933b07747a2835630e31ebd9890ef93e22fac29ebe0c408894",
+  "gate_status": {
+    "G4-CON": "PASS",
+    "G4-CASE": "BLOCKED",
+    "G4-V": "BLOCKED",
+    "G4-H2": "BLOCKED_NOT_TESTED",
+    "G4-TO5": "BLOCKED"
+  },
+  "closure_interpretation": "Stage-4 architecture/file system finalized; empirical H2 and validated Stage-5 handoff are not complete and are not claimed."
+}
