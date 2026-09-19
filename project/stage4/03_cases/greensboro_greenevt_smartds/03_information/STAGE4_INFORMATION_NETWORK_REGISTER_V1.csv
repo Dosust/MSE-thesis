@@ -1,0 +1,6 @@
+object_id,symbol,meaning,data_realization,gate_status,definition
+I-NET,G_I,communication topology,MISSING,BLOCKED,who can communicate with whom
+I-STATE,z_I,information-system state,MISSING,BLOCKED,"availability, latency, bandwidth, loss, synchronization, freshness"
+I-SET,I_t,available information set,PROXY,OPEN,source/model observations exist; operator ownership/sharing not instantiated
+I-LAT,tau_info,latency,MISSING,BLOCKED,t_recv-t_send
+I-AOI,Delta_AoI,freshness,MISSING,BLOCKED,t-generation time of freshest received update
