@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "status": "PASS_FROZEN_P1_11_8_MEASUREMENT_IDENTIFICATION",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "implementation_commit": "637c24e06cb6e56cc991f91e20bd7d6702bc99e2",
+  "verification_commit": "53050319b98c81c382f70e40baa1fbaabf83978e",
+  "design_gate": "G_P1.11.8_design=PASS",
+  "repository_consistency_audit": {
+    "pass": 52,
+    "fail": 0
+  },
+  "deterministic_post_commit_check": {
+    "pass": 22,
+    "fail": 0,
+    "note": "repository invariants only; not proof of identification or empirical validation"
+  },
+  "source_document": {
+    "source_id": "SRC-BRAMOULLE-MAES-2026",
+    "title": "Measurement error and peer effects in networks",
+    "authors": "Yann Bramoullé; Sebastiaan Maes",
+    "venue": "Journal of Econometrics",
+    "year": 2026,
+    "volume_article": "258:106339",
+    "doi": "10.1016/j.jeconom.2026.106339",
+    "supplied_file": "1-s2.0-S0304407626001594-main (1).pdf",
+    "pages": 22,
+    "bytes": 4068394,
+    "sha256": "5e992b17581712c31e8b0d38c8d656821a9a0414cf4ca9bc2ed16c7c8e124d54"
+  },
+  "scientific_effect": "Adds measurement-model, identification, estimator-admission, weak-identification, parameter-readiness, quantity-origin, uncertainty-lineage and effect-resolution controls. Does not add a new stage, P-T mechanism, sustainability metric, parameter value, hypothesis result, or preferred estimator.",
+  "permanent_firewalls": [
+    "G2 causal qualification != G_ID identification != G_EST estimator admission != G_impl implementation verification",
+    "G2=PASS may coexist with G_ID=BLOCKED",
+    "estimated nonzero coefficient != qualified causal mechanism",
+    "observability != identifiability != finite-sample estimability != numerical convergence",
+    "optimizer convergence != scientific identification",
+    "GMM/2SLS are not default P-T estimators",
+    "Monte Carlo method verification != empirical infrastructure validation",
+    "true graph may differ from observed graph; source does not solve general link mismeasurement",
+    "P1.7 uncertainty ontology remains controlling",
+    "computed improvement != resolved engineering improvement"
+  ],
+  "pinned_artifacts": [
+    {
+      "path": "project/CANONICAL_MEASUREMENT_ERROR_IDENTIFICATION_AMENDMENT_V1_8.md",
+      "blob_sha": "3bf440f2aea699da5edcc16142a250fc900b6b64"
+    },
+    {
+      "path": "project/stage3/STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1.md",
+      "blob_sha": "ee3f2a4390417567dbb55c9fcc7a7055e3b6b133"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4.md",
+      "blob_sha": "c3fab45a3ad2c62d41a5ba7862712225941ec8b9"
+    },
+    {
+      "path": "project/stage6/03_accounting/STAGE6_QUANTITY_ORIGIN_AND_UNCERTAINTY_AMENDMENT_V1_2.md",
+      "blob_sha": "6e8c19f97dab2fcf5c4d5459f208d77ed6f6892c"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1.md",
+      "blob_sha": "ebe2f059d46a6fce81fe02e676b2513d456fd27a"
+    },
+    {
+      "path": "project/global_integration/P1_11_8_BRAMOULLE_MAES_MEASUREMENT_IDENTIFICATION_AUDIT_V1_2026-09-19.md",
+      "blob_sha": "d3cf528921babe847d4292333328e7208f56351e"
+    },
+    {
+      "path": "tests/test_p1_11_8_measurement_identification.py",
+      "blob_sha": "291f2b25c7ae2aa87215f9f7f81f4ed612daf3ac"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00c_accepted_core_evidence.md",
+      "blob_sha": "8723e6b5353b7751b9bdef1d7ca733e9a909dc42"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00_literature_classification_ontology_register.md",
+      "blob_sha": "cedb506695dd11a7b8c8b092cb5d1425a699a018"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md",
+      "blob_sha": "0a056cd8206576575fc2844a7cc61d55fdb08f00"
+    },
+    {
+      "path": "project/global_integration/P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv",
+      "blob_sha": "729462ece453bffc30828d78c792fef53fc6e16f"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_AUTHORITY_SUPERSESSION_MAP_V1.md",
+      "blob_sha": "3987b460c6218677a33ee9bcbcb1dc603ef00e7b"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "blob_sha": "350ee4fd792e2023330198414a317d7008fd04d3"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "blob_sha": "1bbcce21c49e99ab6b483482a3b07f34c70ec095"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_AUTHORITY_REGISTER_V1.csv",
+      "blob_sha": "28ed223fbcbe9f3672ac7a915974d658cccfc0e1"
+    }
+  ],
+  "next": "P2 — GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx and design freeze, consuming P1.11.6 through P1.11.8",
+  "manifest_self_hash_policy": "manifest does not self-hash"
+}
