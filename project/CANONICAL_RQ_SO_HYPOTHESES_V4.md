@@ -1,3 +1,19 @@
+# Canonical RQ–SO–H Authority — v4.0
+
+![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
+![Traceability](https://img.shields.io/badge/RQ--SO--H-v4.0-1A7F37)
+
+**Status:** CANONICAL v4.0 / ACTIVE SO–H AND INTEGRATED RESEARCH-CONTRACT AUTHORITY  
+**Effective date:** 2026-09-20  
+**RQ wording authority:** `CANONICAL_RESEARCH_QUESTIONS_V4.md`  
+**Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
+**Supersedes:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md` for GO, SO1–SO7, H1–H5 and integrated RQ–SO–H traceability.  
+**Change rule:** material changes require explicit approval, a versioned amendment, downstream protocol impact audit, and prospective handling of any confirmatory design affected.
+
+The exact RQ0/RQ1–RQ7 wording is controlled by `CANONICAL_RESEARCH_QUESTIONS_V4.md`. This file controls the synchronized general objective, SO1–SO7, H1–H5 and their test logic.
+
+---
+
 ## 1.8 General Research Objective
 
 The general objective of this thesis is:
