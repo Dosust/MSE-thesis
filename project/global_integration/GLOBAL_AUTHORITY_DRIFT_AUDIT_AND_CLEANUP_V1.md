@@ -213,16 +213,18 @@ No additional edit was required where the repository already made supersession u
 
 | File | Pre-cleanup blob | Post-cleanup blob | Commit |
 |---|---|---|---|
-| project-root ASU master specification | `57537fe0a487ffe871874e30686827261541bfe6` | `3255cae058250b6c9e227708dee1693a18087a22` | `0158981fb6577cb9ecff54f87c8114d65d5626b9` |
-| fresh hypothesis evidence-search protocol | `d0f00717103abc8b56a404751e39808c2ff0de11` | `6d1167174afacaf583378a4a0f7f5020f9f29c1f` | `a04b76045a462879e2d1edc3f3d82e01612121cc` |
-| novelty foundation index | `43c0941ba8cf32febdb13e04c6fbeca986d9147c` | `1d07b16528af60a47f8f9c449d2e99bae207442f` | `460a3f07ca10549912f51ad6d906818621aa8a09` |
-| engineering confirmatory matrix | `6facbeccd41bf3c47d8dcab42d3737e8facd7968` | `f84c5ee989501789251d818a20529c6650179e40` | `e2a164a1aee0516523327949377c2df7343077ee` |
-| thesis traceability v1 | `43f385438a6af91b3634dad2cccadee4184136aa` | `aa507ecf4cbc63f82ef640aee37adf563cac5970` | `3ffa44105d6f341fa64dabeee6f025eaf2917871` |
-| root Stage-3 theory | `c1b10c571449ffa1b1e1bb31daeb20bb25149357` | `990ef65e0ef5b0871cd354966afa3127dd9db4f0` | `159b04bec54b515e88242d2b1b28d58fa4f1fa65` |
-| root Stage-6 theory | `fbfe110ebcd488c2ad2ddf4df62311669cf2fc67` | `92bf88676a2dc2335dac3d29515f00a58499c4c2` | `d7e709f72b71a90cb52ffba15310d9a9126aa42c` |
-| root Stage-7 theory | `9ed7128c168492646f7dbdbc0ae96797137aded5` | `51e4d56e548585149991f313d267d5a0d2981129` | `52d76a292a47f989fbd3a0518cd0623d80c6019e` |
+| project-root ASU master specification | `57537fe0a487ffe871874e30686827261541bfe6` | `7938092381448f3f0dfff7ac5b9e5bc24c7c38e5` | `138337ddee1815d9bb0f3e1db1d48296ecf9c02d` |
+| fresh hypothesis evidence-search protocol | `d0f00717103abc8b56a404751e39808c2ff0de11` | `c20e64f6fc8a0e76b57415e2920304166c3b58b8` | `a9606654971ccbff4067e8b8077175a2ada6bfe8` |
+| novelty foundation index | `43c0941ba8cf32febdb13e04c6fbeca986d9147c` | `ad579814476043d36badd18ee653f2a3d5578b79` | `73ac42167b2a301c7863a8af0cef4d83bea58ca5` |
+| engineering confirmatory matrix | `6facbeccd41bf3c47d8dcab42d3737e8facd7968` | `8bdcaa066421f68ee3f9eb28e2176ef1b0a8197e` | `2cefd36808eb77c3d261b22b41a1ae78afa4f924` |
+| thesis traceability v1 | `43f385438a6af91b3634dad2cccadee4184136aa` | `105536c7bcf3229d009539357e17a0e2dc5c7287` | `adf9307ff4d8c9caf736901b305d9f7ddaa59d23` |
+| root Stage-3 theory | `c1b10c571449ffa1b1e1bb31daeb20bb25149357` | `b72275ddeb80360917e04536d60854eed545d488` | `ba63440a5bb1969d757f39edee380dd932f793a3` |
+| root Stage-6 theory | `fbfe110ebcd488c2ad2ddf4df62311669cf2fc67` | `3bbd1f411d28925a0f1cc182db18999e65c85cc0` | `388b3c1532f0e2ad1409e500c89db84ad07e0c3d` |
+| root Stage-7 theory | `9ed7128c168492646f7dbdbc0ae96797137aded5` | `29ed14e005abdcf77304fde4993c36775109bde3` | `2487501242c992923f4330c253fb2f898ff04bbe` |
 
 The supersession map and global pre-data queue were also updated to record closure.
+
+**Machine-readable metadata normalization:** the visible cleanup classifications were also written into each affected file's own status/badge metadata so scripts and future readers do not encounter contradictory `ACTIVE`/`CANONICAL` labels beneath the supersession banner.
 
 ## 11. Audit gates
 
