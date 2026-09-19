@@ -1,0 +1,9 @@
+{
+  "status": "B2A_STRUCTURAL_VERIFICATION",
+  "service_bounds_pass": true,
+  "queue_nonnegative_pass": true,
+  "decoupling_limit_max_abs_service_error": 0.0,
+  "M2_to_M1_limit_max_abs_service_error": 0.0,
+  "nested_limits_pass": true,
+  "claim_ceiling": "synthetic structural verification only"
+}
