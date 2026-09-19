@@ -237,3 +237,7 @@ Current cross-cutting alignment artifacts:
 - `../stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md`
 
 These artifacts integrate the service-centered SoS and explicit energy–transport coupling lessons without changing empirical/H1 status.
+
+### P1.10 exact artifact manifest
+
+`PT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_MANIFEST_V1.json` pins the principal amendment/audit/evidence-governance artifact blob identities and the two alignment commits.

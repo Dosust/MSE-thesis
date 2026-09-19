@@ -306,3 +306,21 @@ A normalized handoff is design-PASS only if every consumer-required field has an
 This bridge does not reopen any frozen scientific stage.
 
 If future empirical implementation cannot instantiate a normalized field from its cited authority, the corresponding execution handoff becomes BLOCKED and must be repaired under change control.
+
+## Stage-3 interface-state normalization addendum — 2026-09-19
+
+Where this file records the frozen v2 shorthand
+
+```math
+Y^{phys}=(x_P,x_T,z_{PT}),
+```
+
+the current controlled interpretation under the Stage-3 v2.2 amendment is
+
+```math
+\boxed{
+Y^{phys}=(x_P,x_T,z_{\mathbb I}).
+}
+```
+
+with optional directional groupings `z_{P\to T}` and `z_{T\to P}`. The alias update is lossless and does not change any handoff field, empirical state, or case readiness.

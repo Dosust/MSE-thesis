@@ -217,3 +217,5 @@ Closure:
 ```
 
 This does not close P2 and does not authorize H1 execution. P2 must consume the v2 dependency registry and the current `z_{\mathbb I}` interface-state semantics.
+
+**P1.10 manifest pin:** `PT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_MANIFEST_V1.json` records the exact principal artifact identities for the source-alignment package.

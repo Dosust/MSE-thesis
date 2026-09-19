@@ -293,7 +293,7 @@ flowchart LR
     I --> D --> O --> R --> X --> S --> Q
 
     I --> IO["source · receiver · direction\nmechanism · geometry · delay\nevidence · uncertainty"]
-    D --> DO["cascades · feedback\nthresholds · recovery"]
+    D --> DO["cascades · feedback\nthresholds · recovery\nmechanism-indexed interface memory"]
     O --> OO["Y → y → Ŷ → (z_I,z_O) → U → u"]
     R --> RO["viability · reachability · probability"]
     X --> XO["a_k → ΔR"]
@@ -304,20 +304,24 @@ flowchart LR
 Canonical state and dynamics:
 
 ```math
-Y(t)=
-\begin{bmatrix}
-x_P(t)\\
-x_T(t)\\
-z_I(t)\\
-z_O(t)
-\end{bmatrix},
+Y^{phys}(t)
+=
+\left(
+x_P(t),
+x_T(t),
+z_{\mathbb I}(t)
+\right),
 \qquad
 \boxed{
-\dot Y
+\dot x
 =
 F_{\mathcal G}^{m}
-\left(Y,u,\eta;\mathbb I\right)
+\left(
+x,z_a,u^{exo},\eta;
+\Theta,\Xi_{\mathbb I^{active}}
+\right)
 }.
+
 ```
 
 Canonical resilience composition:
@@ -538,3 +542,7 @@ No silent additions:   PASS required
 
 
 **Question-to-hypothesis mapping convention:** `i=1,…,7` indexes RQ/SO; `j=1,…,5` indexes hypotheses. `\mathcal H(i)` denotes the declared mapping in `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, including developmental qualification for RQ1/RQ2. It does not assert a one-to-one RQ–H correspondence.
+
+## 2026-09-19 directional-interface correction
+
+This draft synthesis now follows the Stage-3 v2.2 interface-state amendment. Stage-3 physical truth uses `z_{\mathbb I}`; `z_I` and `z_O` remain Stage-4 information/organization states. Generic signal-power and repair-access branches are mechanism-family examples and do not override current case G2/readiness status.

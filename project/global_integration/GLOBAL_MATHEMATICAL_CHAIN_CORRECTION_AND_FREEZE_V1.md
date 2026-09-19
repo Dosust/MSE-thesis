@@ -1044,3 +1044,21 @@ while:
 ~~~
 
 The next work is execution and evidence closure under the existing global queue, not redesign of the seven-stage architecture.
+
+## Directional interface-state interpretation — 2026-09-19
+
+The Stage-3 physical-truth line in the frozen parent remains provenance. Under the later `project/stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md`, current interpretation is:
+
+```math
+\boxed{
+Y^{phys}
+=
+(x_P,x_T,z_{\mathbb I}),
+\qquad
+z_{\mathbb I}
+=
+\operatorname{col}\{\zeta_e:e\in\mathbb I^{active},\ \zeta_e\neq\varnothing\}.
+}
+```
+
+The older `z_{PT}` is a compatibility alias only. It must not be read as one common state law shared by all reciprocal P–T mechanisms.

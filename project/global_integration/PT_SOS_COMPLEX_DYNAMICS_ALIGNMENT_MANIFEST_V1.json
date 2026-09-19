@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "alignment_commit": "dde29a6abf0d37b82d9583a38660186d270dfae0",
+  "governance_commit": "eee4ed828795a4574d923610b57b8c06d1d7311d",
+  "purpose": "Pin principal Hall-Ibanez Power-Transportation SoS / complex-dynamics alignment artifacts. This manifest does not imply empirical closure.",
+  "source_basis": [
+    {
+      "id": "Hall2016-Ch1",
+      "doi": "10.1017/CBO9781107588745.002"
+    },
+    {
+      "id": "Ibanez2010",
+      "doi": "10.1007/978-3-642-11405-2_2"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "project/CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md",
+      "blob_sha": "3e0a30deaf76d1974d5ffaaedcd3f5a48db9590a"
+    },
+    {
+      "path": "project/stage2/STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md",
+      "blob_sha": "5618909cc46dad06a3bd455badd82b991684df7e"
+    },
+    {
+      "path": "project/stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md",
+      "blob_sha": "2cfae1e1c0e214c78241436d7858bed40083bf21"
+    },
+    {
+      "path": "project/global_integration/POWER_TRANSPORT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_AUDIT_V1_2026-09-19.md",
+      "blob_sha": "5093d63b0c78f2de890e68d72b428d7d31f612aa"
+    },
+    {
+      "path": "models/H1/level2/registries/dependency_registry_v2.csv",
+      "blob_sha": "05bccb9f41bafe15f3b4b0e5f5d0ae6967b9f978"
+    },
+    {
+      "path": "tests/test_pt_dependency_readiness_registry.py",
+      "blob_sha": "c6037f1fd63c1b8c84b74c1705d5f159adf2790a"
+    },
+    {
+      "path": "thesis/00_governance/CHAPTER_I_SOURCE_ALIGNMENT_AMENDMENT_V1_2026-09-19.md",
+      "blob_sha": "3872e1023f44309a0fd46abeef9d343a9d25efc4"
+    },
+    {
+      "path": "thesis/01_introduction/01_01_background_and_engineering_context.md",
+      "blob_sha": "0786b17e8caedf49f0861b6c911c60b13b2c3b98"
+    },
+    {
+      "path": "thesis/01_introduction/01_02_coupled_ptio_system_context.md",
+      "blob_sha": "1ce78322d6ca5d3f730e9122f632b44b7a005362"
+    },
+    {
+      "path": "thesis/01_introduction/01_12_proposed_contributions.md",
+      "blob_sha": "7c03e6748afa896fdc2edd50a7706c242bb30c6f"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00c_accepted_core_evidence.md",
+      "blob_sha": "980453da2288fb36ed99b1638e6e6128cedeb8bc"
+    },
+    {
+      "path": "thesis/02_literature_theory/02_00_literature_classification_ontology_register.md",
+      "blob_sha": "36076d4fa3be4ac5980c7d38c9b00c00ce499861"
+    }
+  ],
+  "empirical_status": {
+    "stage2_case": "ACTIVE / NOT CLOSED",
+    "stage3": "DESIGN FROZEN / CASE NOT CLOSED",
+    "h1": "NOT TESTED / NOT AUTHORIZED",
+    "accepted_stage3_ready_dependency_count": 0
+  }
+}

@@ -49,15 +49,31 @@ flowchart LR
 ## Canonical mathematical objects
 
 ~~~math
-\dot x_P=F_P(x_P,u_P,\eta_P)+\sum_{e:T\rightarrow P}\Phi_e
+\boxed{
+Y^{phys}
+=
+(x_P,x_T,z_{\mathbb I})
+}
 ~~~
 
 ~~~math
-\dot x_T=F_T(x_T,u_T,\eta_T)+\sum_{e:P\rightarrow T}\Phi_e
+\boxed{
+\dot x
+=
+F_{\mathcal G}^{m}
+\left(
+x,z_a,u^{exo},\eta;
+\Theta,\Xi_{\mathbb I^{active}}
+\right)
+}
 ~~~
 
 ~~~math
-\boxed{\dot Y=F_{\mathcal G}^{m}(Y,u,\eta;\mathbb I)}
+\boxed{
+z_{\mathbb I}
+=
+\operatorname{col}\{\zeta_e:e\in\mathbb I^{active},\ \zeta_e\neq\varnothing\}.
+}
 ~~~
 
 ~~~math
@@ -75,3 +91,15 @@ Stage 3 is complete only when its inputs, objects, evidence, assumptions, VVUQ l
 ## Handoff discipline
 
 The Stage-3 output may be consumed downstream only with its provenance, uncertainty, validity domain, and unresolved limitations attached.
+
+## Coupling-form firewall — 2026-09-19
+
+The map no longer assumes that every P–T mechanism enters native subsystem physics as an additive continuous term. A ready mechanism may compile to an ODE/DAE term, algebraic relation, hybrid guard/reset, topology/capacity update, event transition, or verified co-simulation map.
+
+```math
+\boxed{
+\text{directed dependency}
+\not\Rightarrow
+\text{universal additive }\Phi_e.
+}
+```
