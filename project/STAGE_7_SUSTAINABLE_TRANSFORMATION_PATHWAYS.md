@@ -1,5 +1,11 @@
 # Stage 7 — Sustainable Transformation Pathways
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — HISTORICAL STAGE-7 THEORY / ACTIVE DECISION SCOPE SUPERSEDED**
+>
+> This 2026-09-11 frozen pathway theory is preserved as methodological provenance. Active Stage-7 interpretation is governed by `CANONICAL_RQ_SO_HYPOTHESES_V3.md`, `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`, and `project/stage7/STAGE7_MASTER_REGISTER_V1.xlsx` pending v2.1 alignment.  
+> Current H5 is the resilience-only versus joint resilience–sustainability decision test. Adaptive/sequential pathways are conditional extensions only when separately justified and preregistered.
+
+
 ![Stage](https://img.shields.io/badge/Stage%207-FROZEN-1A7F37)
 ![Evidence](https://img.shields.io/badge/evidence-50--paper%20synthesis-0969DA)
 
