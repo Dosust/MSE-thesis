@@ -1,0 +1,6 @@
+source_or_domain,provides,realization_status,validation_status,claim_boundary
+GreenEVT charging records,EV activation/start/end/bus mapping,DERIVED,VERIFIED_SOURCE,5-min model evaluation common but observation timing semantics not empirical
+SMART-DS/OpenDSS,power truth/model outputs,SYNTHETIC,VERIFIED_SOURCE_IDENTITY,synthetic distribution network; not observed utility wiring
+GreenEVT/SUMO,transport truth/model outputs,SYNTHETIC,VERIFIED_SOURCE_IDENTITY,road topology/source audited; Stage-4 detector model not frozen
+Information network,messages/latency/loss/freshness,MISSING,BLOCKED,requires explicit Stage-4 realization
+Organization,actors/authority/resources/delays/rules,MISSING,BLOCKED,requires evidence or declared scenario design
