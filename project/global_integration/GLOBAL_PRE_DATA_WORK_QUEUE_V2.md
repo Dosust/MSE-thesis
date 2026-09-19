@@ -394,5 +394,6 @@ P2 is now the next major execution task and must consume P1.11.6 as the authorit
 - [x] Add computation-role/output-claim protocol.
 - [x] Add twenty-five P2 computational audit fields.
 - [x] Run P1.11.7 repository-consistency audit: 48/48 PASS.
+- [x] Run deterministic post-commit invariant verification: 20/20 PASS.
 
 P2 remains the next major task and must consume P1.11.7 computation-role semantics.

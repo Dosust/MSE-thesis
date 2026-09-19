@@ -99,3 +99,34 @@ THESIS_AUTHORITY_CONSISTENT:
 - sustainability scope remains frozen;
 - H1–H5 unchanged;
 - Stage-3 physics remains mechanistic.
+
+
+## Deterministic post-commit invariant verification
+
+A connector-level deterministic verification was executed against committed main-branch contents.
+
+~~~text
+20 PASS
+0 FAIL
+~~~
+
+Verified invariants include:
+- A-038 Chapter-2 evidence registration and DOI;
+- P1.11.7 ontology classification;
+- three computational lanes;
+- physical/observation/feature/index/pattern/decision separation;
+- Stage-3 data-driven-versus-mechanistic firewall;
+- \mathfrak R_T versus \mathcal D_R separation;
+- ML-versus-causal-identification firewall;
+- explicit non-P–T evidence boundary and power-outage exclusion;
+- P2 computational audit fields;
+- \mathcal D_raw notation avoiding D_i demand collision;
+- Stage-4 feature/reference-state pipeline;
+- Stage-5 diagnostic amendment;
+- exact Li–Mostafavi SHA-256 and PDF metadata;
+- source-to-claim mappings;
+- computation-role/output-claim protocol;
+- Stage-4 authority registration;
+- queue closure and global P1.11.7 status.
+
+This check verifies repository invariants only; it does not automate scientific interpretation or empirical validation.
