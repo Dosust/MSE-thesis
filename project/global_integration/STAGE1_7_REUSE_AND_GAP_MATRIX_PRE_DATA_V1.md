@@ -334,42 +334,85 @@ Actual target thresholds, resource quantities/distributions, EFX/EFY results, su
 ## Stage 7 — Engineering decision and adaptive transformation
 
 ### Use as current authority
-- `project/stage7/STAGE7_MASTER_REGISTER_V1.xlsx`
-- `CANONICAL_RQ_SO_HYPOTHESES_V3.md`
-- `CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md`
-- DMDU/Pareto/robustness/regret/adaptive-pathway evidence already recorded in the workbook.
+Use the frozen Stage-7 v2 design package:
+- Stage6→7 input/admissibility contract;
+- decision-objective/Pareto/value firewall;
+- H5 preregistration and comparator protocol;
+- robustness/regret/scenario-discovery protocol;
+- conditional adaptive-pathway eligibility protocol;
+- benchmark/reference protocol;
+- VVUQ and decision-stability protocol;
+- scientific constitution v2;
+- closure audit;
+- v2 workbook provenance/identity;
+- contradiction audit;
+- design freeze;
+- finalization manifest.
 
-### Strong reusable material
-- feasibility before optimization;
-- native-unit multiobjective vector;
-- Pareto dominance before weighting;
-- value/preference provenance firewall;
-- robustness metric declared prospectively;
-- scenario discovery;
-- regret/stability;
-- scenario coverage != probability;
-- adaptive pathways conditional on eligibility, not default H5;
-- B7,0→B7,3 and decision VVUQ.
+The older `STAGE7_MASTER_REGISTER_V1.xlsx` is provenance/support only.
 
-### Critical alignment gap
-Stage 7 must explicitly receive and preserve:
+### Frozen Stage-7 input
 ```math
-(\mathfrak R,\mathcal E_{fx},\mathcal E_{fy},\mathbf J_{sus},
-\text{feasibility},\mathbb U).
+I_{6\to7}^{v2}
+=
+(
+\mathcal A_6^{qual},
+\Delta\mathfrak R,
+\mathcal E_{fx},
+\mathcal E_{fy},
+\Delta\mathbf J_{sus},
+\mathcal K_{sus}^{cand},
+\mathbb U_6,
+\Lambda_6,
+\Pi_6
+).
 ```
 
-The current workbook predates full v2.1 operationalization.
+### Frozen decision ordering
+```math
+\boxed{
+\text{feasibility}
+\rightarrow
+\text{native-unit objectives}
+\rightarrow
+\text{Pareto/dominance}
+\rightarrow
+\text{robustness/regret}
+\rightarrow
+\text{preference model if justified}.
+}
+```
 
-### Must build before global workbook
-Create:
-- `project/stage7/README.md`;
-- Stage-7 v2 workbook/alignment amendment receiving explicit effectiveness + efficiency;
-- `STAGE7_DESIGN_PROTOCOL_FREEZE_V1.md` or v2 if the workbook is versioned;
-- `STAGE7_FINALIZATION_MANIFEST_V1.json`;
-- searchable text handoff/constitution summary so the Stage-7 authority is not binary-only.
+Permanent firewalls:
+```math
+\text{infeasible}\neq\text{dominated}\neq\text{unpreferred},
+```
+```math
+\text{evidence}\neq\text{requirement}\neq\text{preference}\neq\text{weight},
+```
+```math
+\text{scenario frequency}\neq\text{probability}.
+```
+
+### H5 preservation
+Primary H5 remains
+```math
+\boxed{
+\mathcal A_R^\star
+\quad\text{vs}\quad
+\mathcal A_{R,S}^\star.
+}
+```
+
+Effectiveness and efficiency are held common across the two H5 arms; sustainability information is the primary changed information block.
+
+Adaptive pathways remain a conditional secondary extension under `G_{7,ADAPT}`.
+
+### Remaining empirical work
+Final admissible interventions, stakeholder weights/value model, `\delta_5`, normalization constants, probability models, robustness/regret thresholds, adaptive triggers, preferred intervention and H5 result remain DEFERRED.
 
 ### Pre-data status
-**DECISION ARCHITECTURE MATURE / v2.1 INPUT ALIGNMENT + TEXT GOVERNANCE REQUIRED**
+**READY / FROZEN DESIGN V2 — EMPIRICAL H5 NOT TESTED**
 
 ---
 
@@ -409,7 +452,7 @@ Create:
 P0.1 authority/supersession control       DONE
 P0.2 Stage-3 scientific constitution v2   DONE
 P0.3 Stage-6 v2.1 alignment               DONE
-P0.4 Stage-7 v2.1 alignment               NEXT
+P0.4 Stage-7 v2.1 alignment               DONE
 P1.1 global symbol/ontology registry
 P1.2 global handoff matrix
 P1.3 H1–H5 master preregistration

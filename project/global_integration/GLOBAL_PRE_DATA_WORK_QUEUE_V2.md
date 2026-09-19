@@ -38,13 +38,15 @@ Stage 3 design normalization closure: **PASS — DESIGN/PROTOCOL ONLY; empirical
 
 Stage 6 v2.1 alignment closure: **PASS — DESIGN/PROTOCOL V2; empirical Stage 6 remains DEFERRED / H4 NOT TESTED.**
 
-### P0.4 Stage 7 v2.1 alignment — NEXT
-- [ ] Receive resilience + effectiveness + efficiency + sustainability + feasibility + uncertainty.
-- [ ] Update Stage-7 workbook/version.
-- [ ] Add `project/stage7/README.md`.
-- [ ] Add searchable Stage-7 constitution/handoff summary.
-- [ ] Add design-freeze record.
-- [ ] Add finalization manifest.
+### P0.4 Stage 7 v2.1 alignment — COMPLETE
+- [x] Receive resilience + effectiveness + efficiency + sustainability + feasibility + uncertainty.
+- [x] Generate and verify Stage-7 workbook v2; exact byte identity recorded.
+- [x] Add `project/stage7/README.md`.
+- [x] Add searchable Stage-7 constitution/handoff and decision protocols.
+- [x] Add design-freeze record.
+- [x] Add finalization manifest.
+
+Stage 7 v2.1 alignment closure: **PASS — DESIGN/PROTOCOL V2; empirical Stage 7 remains DEFERRED / H5 NOT TESTED.**
 
 ## P1 — global control plane
 

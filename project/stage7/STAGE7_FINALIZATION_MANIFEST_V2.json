@@ -1,0 +1,96 @@
+{
+  "manifest_id": "STAGE7_FINALIZATION_MANIFEST_V2",
+  "version": "2.0",
+  "date": "2026-09-19",
+  "status": "DESIGN_PROTOCOL_FROZEN",
+  "empirical_stage7_status": "H5_NOT_TESTED",
+  "audit": {
+    "semantic_checks_passed": 24,
+    "workbook_checks_passed": 4,
+    "total_passed": 28,
+    "failed": 0
+  },
+  "authorities": {
+    "rq_so_h": "project/CANONICAL_RQ_SO_HYPOTHESES_V3.md",
+    "framework": "project/CANONICAL_7_STAGE_FRAMEWORK_V2.md",
+    "intervention_performance": "project/CANONICAL_INTERVENTION_PERFORMANCE_AMENDMENT_V2_1.md",
+    "upstream_handoff": "project/stage6/09_handoff/STAGE6_TO_STAGE7_HANDOFF_CONTRACT_V2.md"
+  },
+  "repository_files": [
+    [
+      "project/stage7/STAGE7_STAGE6_TO_STAGE7_INPUT_AND_ADMISSIBILITY_CONTRACT_V2.md",
+      "ff3fc77b0f192d3e6ecba0d21a8ea217b5e56c3c"
+    ],
+    [
+      "project/stage7/STAGE7_DECISION_OBJECTIVE_AND_VALUE_FIREWALL_V2.md",
+      "34197e5d40e3e94c4bc98980ca0fddbc4ec4cfbb"
+    ],
+    [
+      "project/stage7/STAGE7_H5_PREREGISTRATION_AND_COMPARATOR_PROTOCOL_V2.md",
+      "93996781499c866ef02f455e8fcf9ed429c98fc9"
+    ],
+    [
+      "project/stage7/STAGE7_ROBUSTNESS_REGRET_AND_SCENARIO_DISCOVERY_PROTOCOL_V2.md",
+      "027653969cbfa0959e85384a1d0a52575a23580d"
+    ],
+    [
+      "project/stage7/STAGE7_ADAPTIVE_PATHWAY_ELIGIBILITY_PROTOCOL_V2.md",
+      "c21a6cfdf7c097f536443d51dcc05fbfd0c67700"
+    ],
+    [
+      "project/stage7/STAGE7_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md",
+      "c262d81d217f47bf5d51200324335e6b72fbd724"
+    ],
+    [
+      "project/stage7/STAGE7_VVUQ_AND_DECISION_STABILITY_PROTOCOL_V2.md",
+      "dad9344f78260587a2177954c0dee4d033e33a1b"
+    ],
+    [
+      "project/stage7/STAGE7_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "38a71356b3c99d35d5b73f7b70fb7d32452f71d4"
+    ],
+    [
+      "project/stage7/STAGE7_CLOSURE_AUDIT_V2.md",
+      "0589378f58d6dbf6fb234216700c2a521c24f36b"
+    ],
+    [
+      "project/stage7/STAGE7_MASTER_REGISTER_V2_WORKBOOK_PROVENANCE.md",
+      "44af2756255bd03e8c03b993208987ce6789eeb9"
+    ],
+    [
+      "project/stage7/STAGE7_V2_INTERNAL_CONTRADICTION_AUDIT_V1_2026-09-19.md",
+      "f4f3e2c0d55da7cb35d6e51e9862ac285b5d4ae1"
+    ],
+    [
+      "project/stage7/STAGE7_DESIGN_PROTOCOL_FREEZE_V2.md",
+      "22331d335f9818c11a8c4a9a4e84d0da21a4790f"
+    ],
+    [
+      "project/stage7/README.md",
+      "af633c171913b2ae3f27587900a062cfc11e2ec0"
+    ]
+  ],
+  "workbook_artifact": {
+    "filename": "STAGE7_MASTER_REGISTER_V2.xlsx",
+    "size_bytes": 24385,
+    "sha256": "a29aedb30dd8855a92cc11968780adea26c3b8db6888752423922471efb67743",
+    "git_compatible_blob_sha": "8b0fe00ba3d7ae42dc999fd4749359087a97659d",
+    "sheets": 16,
+    "formula_errors": 0,
+    "fixture_status": "4/4_PASS",
+    "repository_binary_binding": "EXACT_GENERATED_ARTIFACT_VERIFIED; byte identity recorded in repository provenance; binary artifact delivered separately"
+  },
+  "protected_deferred": [
+    "final_preferred_intervention",
+    "stakeholder_weights",
+    "delta_5",
+    "final_normalization_constants",
+    "unsupported_scenario_probabilities",
+    "robustness_threshold",
+    "regret_threshold",
+    "adaptive_triggers",
+    "adaptive_pathway",
+    "H5_result"
+  ],
+  "hash_semantics": "repository_files contain Git blob SHA-1 values. The workbook SHA-256 and Git-compatible blob SHA identify the exact generated workbook bytes. This manifest excludes its own hash and is bound by the atomic finalization commit."
+}
