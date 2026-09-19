@@ -19,7 +19,7 @@ This folder converts the ASU MSE thesis into a traceable scientific system rathe
 | `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md` | top-level specification joining ASU/SSEBE compliance and scientific control |
 | `ASU_REQUIREMENTS_MATRIX.md` | separates verified ASU/SSEBE rules from chair/GSC decisions and internal standards |
 | `THESIS_MASTER_OUTLINE.md` | current seven-chapter architecture and chapter deliverables |
-| `RQ_SO_H_TRACEABILITY_V3.md` | current RQ0/RQ1–RQ7 → SO1–SO7 → H1–H5 → method/result/conclusion traceability |
+| `RQ_SO_H_TRACEABILITY_V4.md` | current RQ0/RQ1–RQ7 → SO1–SO7 → H1–H5 → method/result/conclusion traceability |
 | `SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md` | thesis-wide evidence, definition, assumption, mathematical-writing, inference and validity-domain standard |
 | `CLAIM_EVIDENCE_REGISTER.md` | claim status, source, mechanism, assumptions, uncertainty, experiment/result and thesis-location ledger |
 | `MODEL_EXPERIMENT_VALIDATION_MATRIX.md` | model, baseline, held constants, treatment, data, V&V, UQ, thresholds and falsification control |
@@ -31,7 +31,7 @@ This folder converts the ASU MSE thesis into a traceable scientific system rathe
 | `FIGURE_TABLE_EQUATION_REGISTER.md` | scientific purpose and provenance registry for formal artifacts |
 | `THESIS_COMPLETION_GATES.md` | formal conditions for declaring sections scientifically complete/frozen |
 
-`RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md` and `RQ_SO_H_TRACEABILITY_V2.md` are superseded provenance stubs. They must not override `RQ_SO_H_TRACEABILITY_V3.md`.
+`RESEARCH_QUESTIONS_HYPOTHESES_TRACEABILITY.md` and `RQ_SO_H_TRACEABILITY_V2.md` are superseded provenance stubs. They must not override `RQ_SO_H_TRACEABILITY_V4.md`.
 
 For all Stage-6/7 work and any thesis use of the terms **sustainability**, **sustainable transformation**, **resource efficiency**, **carbon**, **energy consequence**, **accessibility consequence**, **economic consequence**, or **joint resilience–sustainability decision**, the sustainability admission standard, metric cards, feasibility audit, register and current admission freeze are mandatory controls. No new sustainability dimension may enter confirmatory H4/H5 analysis outside that governance chain.
 
@@ -40,8 +40,8 @@ The current admission freeze is deliberately pre-result. A `CONDITIONAL` dimensi
 ## External scientific authorities
 
 - `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
-- `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
-- `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`
+- `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`
+- `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`
 - `../../project/RESEARCH_REASONING_PROTOCOL.md`
 - `../../project/EGMIV_METHOD_V1.md`
 
@@ -121,7 +121,7 @@ Interface criticality is a supporting diagnostic. Adaptive/sequential transforma
 
 ## Chapter I freeze
 
-- [`CHAPTER_I_FREEZE_2026-09-18.md`](CHAPTER_I_FREEZE_2026-09-18.md) — **PASS — FROZEN** scientific baseline for Sections 1.1–1.13.
+- [`CHAPTER_I_FREEZE_2026-09-20.md`](CHAPTER_I_FREEZE_2026-09-20.md) — **PASS — FROZEN — OFFICIAL** scientific contract for Sections 1.1–1.13.
 
 
 ## Stage-1 framework freeze
