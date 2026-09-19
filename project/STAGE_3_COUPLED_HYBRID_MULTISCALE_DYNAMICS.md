@@ -9,7 +9,7 @@
 ![Stage](https://img.shields.io/badge/Stage%203-FROZEN-1A7F37)
 
 **Framework stage:** Stage 3 — Coupled Hybrid Multiscale Dynamics  
-**Status:** CANONICAL / FROZEN  
+**Status:** SUPPORTING THEORY / LEGACY NOTATION — NOT ACTIVE STAGE-3 CONSTITUTION  
 **Frozen:** 2026-09-11  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Citation standard:** APA 7th edition author–date  
