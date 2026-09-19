@@ -1,5 +1,14 @@
 # Fresh Hypothesis Evidence Search Protocol
 
+> **AUTHORITY-DRIFT CLEANUP 2026-09-19 — METHODOLOGICAL PROVENANCE / H4–H5 MAPPING SUPERSEDED**
+>
+> The database-first, outcome-blind search principles in this file remain useful methodological provenance, but its H4/H5 construct labels are obsolete.  
+> **Current H4:** intervention effectiveness/efficiency/sustainability consequence heterogeneity.  
+> **Current H5:** resilience-only versus joint resilience–sustainability engineering decision.  
+> Interface-criticality superiority is a separate optional diagnostic; adaptive-pathway superiority is a conditional Stage-7 extension.  
+> Do not execute new H4/H5 searches from the old query families below without a versioned v2 search protocol aligned to `CANONICAL_RQ_SO_HYPOTHESES_V3.md`.
+
+
 ![Status](https://img.shields.io/badge/status-CURRENT%20SEARCH%20GOVERNANCE-0969DA)
 ![Search](https://img.shields.io/badge/evidence%20search-FROM%20ZERO-1A7F37)
 ![Old Corpus](https://img.shields.io/badge/325--paper%20corpus-SECONDARY%20COVERAGE%20CHECK-9A6700)
