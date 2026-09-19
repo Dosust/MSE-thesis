@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "status": "PASS_FROZEN_P1_11_8_1_GATE_SEMANTICS_NORMALIZATION",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "implementation_commit": "9b019a659b8e722f69a5c4068c70532ff71df0a0",
+  "verification_commit": "e5dc98ef903d34fcd2b965a35047e624635fea45",
+  "design_gate": "G_P1.11.8.1_design=PASS",
+  "repository_consistency_audit": {
+    "pass": 32,
+    "fail": 0
+  },
+  "deterministic_post_commit_check": {
+    "pass": 24,
+    "fail": 0,
+    "note": "repository invariants only; not case identification, validation, or hypothesis evidence"
+  },
+  "scope": "Narrow logical correction to P1.11.8; no new source integration, no new thesis stage, no sustainability change.",
+  "normalized_rules": [
+    "G_EST^admit is pre-estimation and does not include downstream result validation",
+    "G_VAL^result is post-estimation result credibility",
+    "G_ID^struct != G_ID^strength",
+    "G_ID^struct=PASS may coexist with G_ID^strength=BLOCKED",
+    "identification_type is POINT, SET_PARTIAL, or N_A_NONINFERENTIAL",
+    "data-derived interval/set remains subject to identification",
+    "STATUS=(REPO,SOURCE,CASE)",
+    "CASE_VALIDATED is removed from source-support vocabulary",
+    "MONTE_CARLO_METHOD_TEST != UNCERTAINTY_PROPAGATION != CASE_VALIDATION",
+    "sustainability scope remains unchanged"
+  ],
+  "p2_required_fields": [
+    "IDENTIFICATION_TYPE",
+    "IDENTIFICATION_STRUCT_STATUS",
+    "IDENTIFICATION_STRENGTH_METHOD",
+    "IDENTIFICATION_STRENGTH_STATUS",
+    "ESTIMATOR_ADMISSION_STATUS",
+    "ESTIMATOR_RUN_STATUS",
+    "RESULT_VERIFICATION_STATUS",
+    "RESULT_VALIDATION_STATUS",
+    "RESULT_VALIDITY_DOMAIN",
+    "REPOSITORY_STATUS",
+    "SOURCE_SUPPORT_STATUS",
+    "CASE_VALIDATION_STATUS",
+    "MONTE_CARLO_CLASS"
+  ],
+  "pinned_artifacts": [
+    {
+      "path": "project/CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md",
+      "blob_sha": "2f2f067b2f680f8a1aa22e387d59c2083ca9f40d"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1_1.md",
+      "blob_sha": "28b4cb5b129d66fadbca2589e0d1e6700f7d61f5"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SOURCE_SUPPORT_CLASSIFICATION_PROTOCOL_V1_1.md",
+      "blob_sha": "b111185845afbc0def12307e32bac242e58e9d95"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1_1.md",
+      "blob_sha": "81931c8d819a80dd184992e1f56ccd80bbe870b0"
+    },
+    {
+      "path": "project/stage3/STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1_1.md",
+      "blob_sha": "e0ef36b81c0776bb47d59a0eec6f42324e44cca1"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4_1.md",
+      "blob_sha": "31f00d48d67ec72719b028fb75b11174a2e41c5f"
+    },
+    {
+      "path": "project/global_integration/P1_11_8_1_GATE_SEMANTICS_NORMALIZATION_AUDIT_V1_2026-09-19.md",
+      "blob_sha": "27fd08143e2c468745518068ebe4200f16016696"
+    },
+    {
+      "path": "tests/test_p1_11_8_1_gate_semantics.py",
+      "blob_sha": "b8905fbec50a8895eabc4e04682cdb187400a889"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_AUTHORITY_SUPERSESSION_MAP_V1.md",
+      "blob_sha": "80153f2005ee9510240938b33cce9613319c2f52"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "blob_sha": "3f2564ae9d1131cf1352d9818230b9f5503cfabe"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "blob_sha": "e01087dce5b87edfce894378f8de1fc5d966ab54"
+    },
+    {
+      "path": "project/stage4/00_governance/STAGE4_AUTHORITY_REGISTER_V1.csv",
+      "blob_sha": "3e8af625d9bb0e799a3855f2fe7b88e5c555606d"
+    },
+    {
+      "path": "project/stage3/README.md",
+      "blob_sha": "abfd7de7ddc8589bb7c8d16dedfbd933a0a412d2"
+    }
+  ],
+  "p2_workbook_status": "ABSENT",
+  "next": "P2 — create project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx using P1.11.8.1 normalized semantics",
+  "manifest_self_hash_policy": "manifest does not self-hash"
+}
