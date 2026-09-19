@@ -109,10 +109,19 @@ For every `I(k→k+1)`:
 \mathcal U_{feas},\mathcal A,\Omega).
 ```
 
-### P1.6 Common scenario schema — NEXT
-One stable scenario ID propagated through Stages 3–7.
+### P1.6 Common scenario schema — COMPLETE
+- [x] Separate immutable root scenario, experimental arm, executable run and result identity.
+- [x] Create GLOBAL_SCENARIO_ID_AND_PROPAGATION_SCHEMA_V1.md.
+- [x] Create Draft 2020-12 machine schema.
+- [x] Create scenario field dictionary.
+- [x] Create Stage 3→7 propagation matrix.
+- [x] Create matched-comparison/randomness protocol.
+- [x] Create empty root and seed-manifest templates.
+- [x] Freeze H1–H5 matched-field/change-field semantics.
+- [x] Preserve scenario-frequency ≠ probability.
+- [x] Run combined scenario audit: 52/52 PASS.
 
-### P1.7 Global uncertainty/VVUQ
+### P1.7 Global uncertainty/VVUQ — NEXT
 Use:
 - aleatory;
 - epistemic;

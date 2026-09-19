@@ -715,3 +715,71 @@ P1.5=PASS.
 ~~~
 
 Next: **P1.6 global scenario ID and propagation schema**.
+
+
+---
+
+## P1.6 common scenario closure — 2026-09-19
+
+Created:
+- GLOBAL_SCENARIO_ID_AND_PROPAGATION_SCHEMA_V1.md;
+- GLOBAL_SCENARIO_ID_PROPAGATION_SCHEMA_V1.schema.json;
+- GLOBAL_SCENARIO_FIELD_DICTIONARY_V1.md;
+- GLOBAL_SCENARIO_PROPAGATION_MATRIX_V1.md;
+- GLOBAL_SCENARIO_MATCHING_AND_RANDOMNESS_PROTOCOL_V1.md;
+- GLOBAL_SCENARIO_ROOT_MANIFEST_TEMPLATE_V1.csv;
+- GLOBAL_SCENARIO_SEED_MANIFEST_TEMPLATE_V1.csv;
+- P1_6_COMMON_SCENARIO_SCHEMA_AUDIT_V1_2026-09-19.md.
+
+Identity firewall:
+
+~~~math
+\boxed{
+SID_r
+\neq
+AID_{r,a}^{(k)}
+\neq
+RID_{r,a}^{(k)}
+\neq
+ResultID_{r,a}^{(k)}.
+}
+~~~
+
+Scenario roots hold common physical/exogenous realizations; treatment changes belong to explicit ARM records.
+
+Randomness uses named semantic streams; seeds are reproducibility metadata, not probability evidence.
+
+Stage propagation:
+
+~~~math
+SID_r
+\rightarrow
+RID_r^{S3}
+\rightarrow
+RID_r^{S4}
+\rightarrow
+RID_r^{S5}
+\rightarrow
+RID_{r,a}^{S6}
+\rightarrow
+RID_q^{S7}.
+~~~
+
+Audit:
+
+~~~text
+52 PASS
+0 FAIL
+~~~
+
+No final scenario ID, seed, probability or result was invented.
+
+Therefore:
+
+~~~math
+\boxed{
+P1.6=PASS.
+}
+~~~
+
+Next: **P1.7 global uncertainty/VVUQ control**.

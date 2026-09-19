@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.5 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.6 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -29,6 +29,14 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_FINAL_CASE_REFERENCE_CLASS_MATRIX_V1.md — P1.4 reference-class binding.
 - GLOBAL_FINAL_CASE_UNCERTAINTY_TEMPLATE_V1.md — case UQ record.
 - P1_5_FINAL_CASE_SCHEMA_AUDIT_V1_2026-09-19.md — 58/58 P1.5 audit.
+- GLOBAL_SCENARIO_ID_AND_PROPAGATION_SCHEMA_V1.md — canonical root/arm/run/result scenario contract.
+- GLOBAL_SCENARIO_ID_PROPAGATION_SCHEMA_V1.schema.json — Draft 2020-12 machine schema.
+- GLOBAL_SCENARIO_FIELD_DICTIONARY_V1.md — scenario identity field dictionary.
+- GLOBAL_SCENARIO_PROPAGATION_MATRIX_V1.md — Stage 3→7 propagation control.
+- GLOBAL_SCENARIO_MATCHING_AND_RANDOMNESS_PROTOCOL_V1.md — matched-comparison and RNG rules.
+- GLOBAL_SCENARIO_ROOT_MANIFEST_TEMPLATE_V1.csv — empty root-scenario manifest.
+- GLOBAL_SCENARIO_SEED_MANIFEST_TEMPLATE_V1.csv — empty named-stream seed manifest.
+- P1_6_COMMON_SCENARIO_SCHEMA_AUDIT_V1_2026-09-19.md — 52/52 P1.6 audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -49,6 +57,8 @@ Historical:
 \text{P1.4 baseline/benchmark/reference}
 \rightarrow
 \text{P1.5 final-case schema}
+\rightarrow
+\text{P1.6 common scenario schema}
 =
 PASS
 }
@@ -71,39 +81,41 @@ G_{P1.3}^{design}=PASS
 
 All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
 
-## P1.5 case-schema state
+## P1.6 scenario-control state
 
 ~~~math
 \boxed{
-G_{P1.5}^{design}=PASS
+G_{P1.6}^{design}=PASS
 \qquad
-(58/58\;checks)
+(52/52\;checks)
 }
 ~~~
 
-The case contract now controls all eleven fields:
+The global scenario architecture separates:
 
 ~~~math
-\mathcal S_{\rm case}
-=
-(
-\mathcal G,Y_0,\theta,\eta,T,K,G_{\rm rec},F_{\rm unsafe},
-\mathcal U_{\rm feas},\mathcal A,\Omega
-).
+\boxed{
+SID_r
+\neq
+AID_{r,a}^{(k)}
+\neq
+RID_{r,a}^{(k)}
+\neq
+ResultID_{r,a}^{(k)}.
+}
 ~~~
 
-All values remain DEFERRED until source, provenance, units, UQ, quality, reference class, validity and ownership gates are satisfied.
+and propagates immutable root identity through Stages 3–7 while preserving hypothesis-specific matched comparisons.
 
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.6 = GLOBAL SCENARIO ID AND PROPAGATION SCHEMA}
+\text{P1.7 = GLOBAL UNCERTAINTY / VVUQ CONTROL}
 }
 ~~~
 
 Then:
-- P1.7 global uncertainty/VVUQ;
 - P1.8 requirements/provenance;
 - P1.9 claim/evidence/result matrix;
 - P2 global master workbook + audits + design freeze.

@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dossiya-SE/MSE-thesis/project/global_integration/GLOBAL_SCENARIO_ID_PROPAGATION_SCHEMA_V1.schema.json",
+  "title": "Global Scenario ID and Propagation Schema V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_root",
+    "stage_runs",
+    "propagation_edges"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scenario_root": {
+      "$ref": "#/$defs/root"
+    },
+    "stage_runs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/run"
+      }
+    },
+    "propagation_edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL",
+        "DEFERRED",
+        "N/A"
+      ]
+    },
+    "stage": {
+      "enum": [
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ]
+    },
+    "hypothesis": {
+      "enum": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "NONE"
+      ]
+    },
+    "role": {
+      "enum": [
+        "VERIFICATION_FIXTURE",
+        "SUBSYSTEM_BENCHMARK",
+        "COUPLED_SYNTHETIC_BENCHMARK",
+        "DEVELOPMENT",
+        "CALIBRATION",
+        "VALIDATION",
+        "HELD_OUT",
+        "CONFIRMATORY",
+        "SENSITIVITY",
+        "BASELINE",
+        "TREATMENT",
+        "ABLATION",
+        "DIAGNOSTIC"
+      ]
+    },
+    "probabilitySemantics": {
+      "enum": [
+        "NONE",
+        "NONPROBABILISTIC_WEIGHT",
+        "PROBABILITY_MASS",
+        "PROBABILITY_DENSITY",
+        "EMPIRICAL_FREQUENCY_ONLY"
+      ]
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario_root_id",
+        "case_id",
+        "family_id",
+        "roles",
+        "initial_state_ref",
+        "graph_ref",
+        "hazard_ref",
+        "demand_operating_ref",
+        "shared_parameter_ref",
+        "initial_mode_ref",
+        "horizon_ref",
+        "randomness_manifest_ref",
+        "validity_domain_ref",
+        "probability_semantics",
+        "provenance",
+        "claim_ceiling",
+        "status"
+      ],
+      "properties": {
+        "scenario_root_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "case_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_set_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/role"
+          }
+        },
+        "initial_state_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "graph_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hazard_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "demand_operating_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shared_parameter_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "initial_mode_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "horizon_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "randomness_manifest_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validity_domain_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "probability_semantics": {
+          "$ref": "#/$defs/probabilitySemantics"
+        },
+        "probability_or_weight": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "claim_ceiling": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "arm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "arm_id",
+        "stage",
+        "hypothesis",
+        "comparison_group_id",
+        "arm_role",
+        "changed_fields",
+        "held_constant_fields",
+        "provenance",
+        "claim_ceiling",
+        "status"
+      ],
+      "properties": {
+        "arm_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stage": {
+          "$ref": "#/$defs/stage"
+        },
+        "hypothesis": {
+          "$ref": "#/$defs/hypothesis"
+        },
+        "comparison_group_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "arm_role": {
+          "$ref": "#/$defs/role"
+        },
+        "model_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "active_mechanism_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "operational_control_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "information_organization_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resilience_representation_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intervention_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_frame_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "changed_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "held_constant_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "overrides": {
+          "type": "object"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "claim_ceiling": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "scenario_root_id",
+        "arm",
+        "parent_run_ids",
+        "input_bundle_hash",
+        "model_hash",
+        "seed_manifest_hash",
+        "scenario_schema_version",
+        "status",
+        "claim_ceiling"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_root_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "arm": {
+          "$ref": "#/$defs/arm"
+        },
+        "parent_run_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "input_bundle_hash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_hash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seed_manifest_hash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_schema_version": {
+          "const": "1.0"
+        },
+        "result_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "claim_ceiling": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_run_id",
+        "to_run_id",
+        "relation",
+        "status"
+      ],
+      "properties": {
+        "from_run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to_run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relation": {
+          "enum": [
+            "DERIVED_FROM",
+            "CONSUMES",
+            "AGGREGATES",
+            "MATCHED_WITH",
+            "VALIDATES_AGAINST"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_ids",
+        "activity_ids",
+        "agent_ids",
+        "version",
+        "hash",
+        "status"
+      ],
+      "properties": {
+        "entity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "activity_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    }
+  }
+}

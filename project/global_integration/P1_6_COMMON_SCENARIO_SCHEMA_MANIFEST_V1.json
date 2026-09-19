@@ -1,0 +1,132 @@
+{
+  "manifest_id": "P1_6_COMMON_SCENARIO_SCHEMA_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_6_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "bd28748a9865a7f594ae3692bdf1bc492269b115",
+  "audit": {
+    "passed": 52,
+    "failed": 0
+  },
+  "source_authorities": [
+    {
+      "path": "project/stage3/STAGE3_SCENARIO_SCHEMA_V2.md",
+      "sha": "faba67b66c4468d751dbaf4fbd4cf97fb2b907a8"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_SCHEMA_V1.md",
+      "sha": "83c66ee25169bb22f6806642a0753fa589d3f42e"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_STAGE_HANDOFF_MATRIX_V1.md",
+      "sha": "711128daad5f150016cf994e1c6da497c3c84bb7"
+    },
+    {
+      "path": "project/stage4/03_cases/greensboro_greenevt_smartds/05_H2/STAGE4_H2_EXPERIMENT_PROTOCOL_V1.md",
+      "sha": "8f0595487fbd3b1bfc580bebc33890d67a582684"
+    },
+    {
+      "path": "project/stage5/07_H3/STAGE5_H3_EXPERIMENT_PROTOCOL_V1.md",
+      "sha": "f00f64c2b1ea01e373d0c428b597427e9f65b4b8"
+    },
+    {
+      "path": "project/stage6/06_H4/STAGE6_H4_EXPERIMENT_PROTOCOL_V2.md",
+      "sha": "4a4f44ac4367014ea7aa63b5c548d6c22799bb57"
+    },
+    {
+      "path": "project/stage7/STAGE7_H5_PREREGISTRATION_AND_COMPARATOR_PROTOCOL_V2.md",
+      "sha": "93996781499c866ef02f455e8fcf9ed429c98fc9"
+    }
+  ],
+  "external_design_references": [
+    {
+      "name": "W3C PROV Overview",
+      "url": "https://www.w3.org/TR/prov-overview/"
+    },
+    {
+      "name": "NASA-STD-7009B",
+      "url": "https://standards.nasa.gov/node/263"
+    },
+    {
+      "name": "NASA-HDBK-7009B",
+      "url": "https://standards.nasa.gov/node/198"
+    },
+    {
+      "name": "Modelica SSP 2.0",
+      "url": "https://modelica.org/news/2025-01-08-ssp-20-released/"
+    },
+    {
+      "name": "NIST Digital Twin Credibility",
+      "url": "https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_ID_AND_PROPAGATION_SCHEMA_V1.md",
+      "sha": "d05039649c0ac69f4c57ae93e178dff077eb0b6e"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_ID_PROPAGATION_SCHEMA_V1.schema.json",
+      "sha": "6269d4401d241839526e864d952013e0906847ac"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_FIELD_DICTIONARY_V1.md",
+      "sha": "f0058ec07bf3d141620770083a2a54a29953773f"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_PROPAGATION_MATRIX_V1.md",
+      "sha": "db4f17d7e19be48d01fd0ccc201cb3cff9b3a7cf"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_MATCHING_AND_RANDOMNESS_PROTOCOL_V1.md",
+      "sha": "6681cb2520b10816d31808d944b272c929d9c5b3"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_ROOT_MANIFEST_TEMPLATE_V1.csv",
+      "sha": "a2f17c0d4428be79f24eb5e7616bc3c4dec8496b"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_SCENARIO_SEED_MANIFEST_TEMPLATE_V1.csv",
+      "sha": "e028fdd24b7a9b9fde23900ab23a898beddc3e93"
+    },
+    {
+      "path": "project/global_integration/P1_6_COMMON_SCENARIO_SCHEMA_AUDIT_V1_2026-09-19.md",
+      "sha": "7fb50593cd05786244afe097dc192c519b25393d"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "16bb99984dc7978baf8a7f689dbb2e8ec545f4a8"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "f06c8a59838daa657a3969d150ea74465617e542"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "12d477f1582287892dc7c625d4736eefae15cc9f"
+    }
+  ],
+  "identity_firewall": [
+    "ScenarioRootID != ArmID != RunID != ResultID",
+    "scenario_frequency != probability",
+    "seed != distribution_evidence",
+    "root_realization != treatment_arm != result"
+  ],
+  "protected_deferred": [
+    "scenario_root_ids",
+    "scenario_family_membership_and_counts",
+    "hazard_and_demand_realizations",
+    "parameter_draws",
+    "seed_values_and_substreams",
+    "probability_weights",
+    "H1_H5_arm_counts",
+    "interventions",
+    "Stage7_scenario_set",
+    "H1_H5_results"
+  ],
+  "next_task": "P1.7 GLOBAL UNCERTAINTY / VVUQ CONTROL"
+}

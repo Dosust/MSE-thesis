@@ -1,0 +1,2 @@
+scenario_root_id,case_id,family_id,scenario_set_ids,roles,initial_state_ref,graph_ref,hazard_ref,demand_operating_ref,shared_parameter_ref,initial_mode_ref,horizon_ref,randomness_manifest_ref,validity_domain_ref,probability_semantics,probability_or_weight,provenance_version,provenance_hash,claim_ceiling,status,notes
+DEFERRED,DEFERRED,DEFERRED,,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,NONE,,DEFERRED,DEFERRED,DEFERRED,DEFERRED,
