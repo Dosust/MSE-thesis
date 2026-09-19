@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.3 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.4 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -371,3 +371,41 @@ Y^\ast\neq Y(t).
 ~~~
 
 P2 must consume the policy/operator/budget/market audit fields. No empirical H1–H5 status changes.
+
+
+## P1.11.4 Acosta-Sequeda observational / cross-system inference amendment
+
+Controls:
+- ../CANONICAL_OBSERVATIONAL_INFORMATIONAL_INTERDEPENDENCY_AMENDMENT_V1_4.md
+- ../stage4/00_governance/STAGE4_CROSS_SYSTEM_OBSERVATION_INFERENCE_AMENDMENT_V1_2.md
+- GLOBAL_OBSERVATIONAL_CROSS_SYSTEM_INFERENCE_PROTOCOL_V1.md
+- GLOBAL_SYMBOL_AND_ONTOLOGY_REGISTRY_AMENDMENT_V1_1.md
+- P1_11_4_ACOSTA_OBSERVATIONAL_INFERENCE_AUDIT_V1_2026-09-19.md
+
+Permanent firewalls:
+
+~~~math
+\boxed{
+\text{predictive relation}
+\neq
+\text{shared-driver association}
+\neq
+\text{physical causal dependency},
+}
+~~~
+
+~~~math
+\boxed{
+x_i\neq D_i\neq y_i,
+\qquad
+\tau_{obs}\neq\delta_e^{phys}\neq\tau^{info},
+\qquad
+\rightsquigarrow\neq\rightarrow.
+}
+~~~
+
+~~~math
+\boxed{G_{P1.11.4}^{design}=PASS\qquad(50/50)}
+~~~
+
+The source is a preprint and is retained as preliminary evidence. P2 must consume the observational/inference audit fields. No H1–H5 empirical status changes.

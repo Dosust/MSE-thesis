@@ -306,3 +306,26 @@ P2 remains the next major task and must consume P1.11, P1.11.1 and P1.11.2 expli
 - [x] Run compatibility audit: 46/46 PASS.
 
 P2 remains the next major task and must consume P1.11, P1.11.1, P1.11.2 and P1.11.3.
+
+
+#### P1.11.4 Acosta-Sequeda observational / cross-system inference — COMPLETE
+- [x] Separate predictive relation, shared-driver association and physical causal dependency.
+- [x] Avoid overloading canonical dependency set I with noncausal predictive relations.
+- [x] Define Stage-4 observational relation object and noncausal arrow rightsquigarrow.
+- [x] Preserve forecasting association != G2 causal PASS.
+- [x] Allow cross-system observations to enrich Stage-4 information/estimation.
+- [x] Freeze x != demand != observation semantics.
+- [x] Separate observational lag, physical propagation delay and information latency.
+- [x] Require spatial/temporal/resolution/semantic alignment before inference.
+- [x] Preserve spatial and transportation-mode validity domains.
+- [x] Define information effectiveness separately from resilience.
+- [x] Require target-only baseline and protected out-of-sample evaluation.
+- [x] Require explicit abnormal-regime testing for regime-shift claims.
+- [x] Require info -> action -> service -> resilience trace for resilience claims.
+- [x] Preserve forecast improvement != information efficiency != sustainability != transformation.
+- [x] Retain preprint publication status in evidence interpretation.
+- [x] Create additive global symbol/ontology amendment.
+- [x] Add twenty-two P2 audit fields.
+- [x] Run compatibility audit: 50/50 PASS.
+
+P2 remains the next major task and must consume P1.11 through P1.11.4.
