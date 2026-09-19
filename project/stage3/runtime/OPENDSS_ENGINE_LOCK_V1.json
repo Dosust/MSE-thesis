@@ -1,0 +1,16 @@
+{
+  "lock_id": "OPENDSS_ENGINE_LOCK_V1",
+  "date": "2026-09-19",
+  "upstream_requirement": "OpenDSSDirect.py[extras] (unversioned)",
+  "thesis_compatibility_wrapper": {
+    "package": "OpenDSSDirect.py",
+    "version": "0.9.4"
+  },
+  "historical_version_claim": "UNKNOWN",
+  "resolved_components_to_capture": [
+    "dss-python",
+    "dss-python-backend",
+    "DSS engine identity where exposed"
+  ],
+  "status": "WRAPPER_FROZEN_TRANSITIVE_ENGINE_IDENTITY_PENDING_EXECUTION"
+}

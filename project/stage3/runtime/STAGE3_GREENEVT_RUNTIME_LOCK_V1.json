@@ -1,0 +1,23 @@
+{
+  "runtime_lock_id": "STAGE3_GREENEVT_RUNTIME_LOCK_V1",
+  "date": "2026-09-19",
+  "status": "PROVISIONAL_SPECIFICATION_EXECUTION_PENDING",
+  "architecture": "linux/amd64",
+  "base_image": {
+    "reference": "python:3.11.16-slim-bookworm",
+    "digest": "sha256:528257d48c1da0dcecc2e725d1ae34498d60c965f1241e39cd6a85a8859bdf84",
+    "provenance": "existing thesis Phase-1 environment lock"
+  },
+  "python": "3.11.16",
+  "greenevt_commit": "6aff1cac48869ccfa0183643979f5f04b04e1124",
+  "sumo_commit": "98d19a78148690294144002f8e1a18a28e5579cc",
+  "opendssdirect_version": "0.9.4",
+  "final_runtime_identity": {
+    "docker_image_id": "PENDING_EXECUTION",
+    "pip_freeze": "PENDING_EXECUTION",
+    "dpkg_manifest": "PENDING_EXECUTION",
+    "dss_python_version": "PENDING_EXECUTION",
+    "dss_backend_version": "PENDING_EXECUTION"
+  },
+  "qualification_gate": "PENDING"
+}

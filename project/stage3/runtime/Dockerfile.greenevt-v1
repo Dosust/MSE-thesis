@@ -1,0 +1,38 @@
+ARG BASE_IMAGE=python:3.11.16-slim-bookworm@sha256:528257d48c1da0dcecc2e725d1ae34498d60c965f1241e39cd6a85a8859bdf84
+FROM ${BASE_IMAGE}
+
+ENV PYTHONHASHSEED=0 \
+    OMP_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    SUMO_HOME=/opt/sumo-src \
+    PYTHONPATH=/opt/sumo-src/tools
+
+ARG SUMO_COMMIT=98d19a78148690294144002f8e1a18a28e5579cc
+
+RUN apt-get update \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+      ca-certificates cmake g++ git git-lfs make pkg-config libxerces-c-dev zlib1g-dev \
+ && rm -rf /var/lib/apt/lists/* \
+ && git lfs install --system
+
+RUN git clone https://github.com/eclipse-sumo/sumo.git /opt/sumo-src \
+ && git -C /opt/sumo-src checkout --detach "${SUMO_COMMIT}" \
+ && test "$(git -C /opt/sumo-src rev-parse HEAD)" = "${SUMO_COMMIT}" \
+ && cmake -S /opt/sumo-src -B /opt/sumo-src/build/cmake-build \
+      -DCHECK_OPTIONAL_LIBS=OFF -DFMI=OFF -DCMAKE_BUILD_TYPE=Release \
+ && cmake --build /opt/sumo-src/build/cmake-build --target sumo duarouter netconvert -j2 \
+ && ln -s /opt/sumo-src/bin/sumo /usr/local/bin/sumo \
+ && ln -s /opt/sumo-src/bin/duarouter /usr/local/bin/duarouter \
+ && ln -s /opt/sumo-src/bin/netconvert /usr/local/bin/netconvert \
+ && sumo --version
+
+WORKDIR /workspace
+COPY project/stage3/runtime/requirements-greenevt-v1.txt /tmp/requirements-greenevt-v1.txt
+RUN python -m pip install --no-cache-dir -r /tmp/requirements-greenevt-v1.txt \
+ && python -m pip check
+
+CMD ["python","--version"]

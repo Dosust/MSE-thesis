@@ -1,0 +1,18 @@
+{
+  "lock_id": "SUMO_SOURCE_LOCK_V1",
+  "date": "2026-09-19",
+  "repository": "https://github.com/eclipse-sumo/sumo.git",
+  "primary_commit": "98d19a78148690294144002f8e1a18a28e5579cc",
+  "marker_in_greenevt_files": "98d19a78",
+  "build_policy": {
+    "build_type": "Release",
+    "CHECK_OPTIONAL_LIBS": "OFF",
+    "FMI": "OFF",
+    "targets": [
+      "sumo",
+      "duarouter",
+      "netconvert"
+    ]
+  },
+  "status": "SOURCE_REVISION_FROZEN_BUILD_PENDING"
+}
