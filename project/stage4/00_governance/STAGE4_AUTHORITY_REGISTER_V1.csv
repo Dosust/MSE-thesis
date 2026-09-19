@@ -9,3 +9,4 @@ AUTH-07,STAGE4,project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_H
 AUTH-08,EVIDENCE,project/stage4/01_evidence/literature/STAGE4_EVIDENCE_GROUNDED_LITERATURE_REVIEW_V1.md,VERIFIED_PACKAGE,Stage-4 evidence synthesis.
 AUTH-09,STAGE4,project/stage4/00_governance/STAGE4_FEATURE_ENGINEERING_AND_REFERENCE_STATE_AMENDMENT_V1_3.md,THIS_VERSION,"Additive feature-engineering, support-alignment, reference-state and computation-role authority."
 AUTH-10,STAGE4,project/stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4.md,THIS_VERSION,"Additive measurement-model, identification, estimator-admission and weak-identification authority."
+AUTH-11,STAGE4,project/stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4_1.md,THIS_VERSION,"Narrow correction separating structural identification, identification strength, estimator admission and result validation."

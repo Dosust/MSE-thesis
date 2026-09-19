@@ -322,3 +322,51 @@ G_{\rm EST}
 G_{\rm impl}.
 }
 ~~~
+
+
+## P1.11.8.1 gate-semantics normalization — 2026-09-19
+
+Current precedence for inference/evidence/computation gate semantics:
+
+~~~text
+CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1
+  > CANONICAL_MEASUREMENT_ERROR_IDENTIFICATION_AMENDMENT_V1_8
+    for estimator-admission, identification-type/strength and result-validation semantics
+
+GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1_1
+  > V1
+
+GLOBAL_SOURCE_SUPPORT_CLASSIFICATION_PROTOCOL_V1_1
+  > V1
+
+GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1_1
+  > V1 for Monte Carlo class semantics
+
+STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1_1
+  > V2_1
+
+STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4_1
+  > V1_4
+~~~
+
+Permanent:
+
+~~~math
+\boxed{
+G_{\rm ID}^{struct}
+\neq
+G_{\rm ID}^{strength}
+\neq
+G_{\rm EST}^{admit}
+\neq
+G_{\rm VAL}^{result}.
+}
+~~~
+
+And evidence status is now:
+
+~~~math
+\boxed{
+STATUS=(REPO,SOURCE,CASE).
+}
+~~~

@@ -422,3 +422,25 @@ P2 remains the next major task and must consume P1.11.7 computation-role semanti
 - [x] Run deterministic post-commit invariant verification: 22/22 PASS.
 
 P2 remains the next major task and must consume P1.11.8 identification/measurement semantics.
+
+
+#### P1.11.8.1 Gate-semantics normalization — COMPLETE
+- [x] Separate G_EST^admit from G_VAL^result.
+- [x] Remove post-estimation validation from pre-estimation estimator admission.
+- [x] Separate G_ID^struct from G_ID^strength.
+- [x] Permit structural PASS with strength BLOCKED.
+- [x] Add POINT / SET_PARTIAL / N_A_NONINFERENTIAL identification types.
+- [x] Prevent observationally inferred sets/intervals from being mislabeled N/A.
+- [x] Normalize source integration to STATUS=(REPO,SOURCE,CASE).
+- [x] Remove CASE_VALIDATED from source-support vocabulary.
+- [x] Add MONTE_CARLO_METHOD_TEST computation class.
+- [x] Add UNCERTAINTY_PROPAGATION computation class.
+- [x] Preserve Monte Carlo method test != propagation != case validation.
+- [x] Add Stage-3 pre/post empirical-parameter gates.
+- [x] Add Stage-4 corrected inference chain.
+- [x] Preserve P1.7 uncertainty authority.
+- [x] Preserve sustainability scope unchanged.
+- [x] Add normalized P2 fields.
+- [x] Run P1.11.8.1 repository-consistency audit: 32/32 PASS.
+
+P2 remains the next major task and must consume P1.11.8.1.

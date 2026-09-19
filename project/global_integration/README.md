@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.8 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.8.1 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -573,3 +573,45 @@ G_{\rm ID}=BLOCKED.
 P1.7 uncertainty ontology remains controlling; P1.11.8 adds explicit measurement-error → identification → estimator-admission lineage.
 
 P2 must consume identification status, measurement model, estimator admission, uncertainty lineage and effect-resolution fields.
+
+
+## P1.11.8.1 gate-semantics normalization
+
+This is a narrow correction, not a new source-integration package.
+
+Current controls:
+- ../CANONICAL_MEASUREMENT_IDENTIFICATION_GATE_SEMANTICS_AMENDMENT_V1_8_1.md
+- ../stage3/STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1_1.md
+- ../stage4/00_governance/STAGE4_MEASUREMENT_IDENTIFICATION_ESTIMATION_AMENDMENT_V1_4_1.md
+- GLOBAL_IDENTIFICATION_MEASUREMENT_ERROR_AND_ESTIMATOR_ADMISSION_PROTOCOL_V1_1.md
+- GLOBAL_SOURCE_SUPPORT_CLASSIFICATION_PROTOCOL_V1_1.md
+- GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1_1.md
+- P1_11_8_1_GATE_SEMANTICS_NORMALIZATION_AUDIT_V1_2026-09-19.md
+
+Key normalized chain:
+
+~~~math
+\boxed{
+G_{\rm ID}^{struct}
+\rightarrow
+G_{\rm ID}^{strength}
+\rightarrow
+G_{\rm EST}^{admit}
+\rightarrow
+\text{estimation}
+\rightarrow
+G_{\rm VAL}^{result}.
+}
+~~~
+
+Evidence status is three-axis:
+
+~~~math
+\boxed{
+STATUS=(REPO,SOURCE,CASE).
+}
+~~~
+
+Monte Carlo method testing and uncertainty propagation are separate computation classes.
+
+P2 may consume these normalized semantics.

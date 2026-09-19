@@ -244,3 +244,22 @@ Therefore the currently controlled physical truth is interpreted as
 ```
 
 This amendment changes notation/typing only. It does not promote any BLOCKED dependency or change the empirical Stage-3 status.
+
+
+## P1.11.8.1 empirical-parameter gate correction
+
+STAGE3_EMPIRICAL_PARAMETER_IDENTIFICATION_READINESS_AMENDMENT_V2_1_1.md is the current narrow interpretation of empirically inferred Stage-3 parameter readiness.
+
+For inferred parameters:
+
+~~~math
+\boxed{
+G_{\theta}^{pre}
+\neq
+G_{\theta}^{ready}.
+}
+~~~
+
+Estimator admission precedes estimation; result validation follows estimation. Structural identification and identification strength are separate.
+
+This does not change the current empirical Stage-3 closure state.
