@@ -1,0 +1,6 @@
+uncertainty_id,symbol,meaning,data_realization,gate_status,rule
+U-STATE,b_t / U_Yhat,belief/state uncertainty,MISSING,BLOCKED,Must follow selected estimator; covariance not assumed universally
+U-MEAS,nu_k,measurement uncertainty,OPEN,BLOCKED,sensor/log error models not frozen
+U-MODEL,w_k/theta,process/model uncertainty,OPEN,BLOCKED,inherit only evidence-qualified Stage-3 uncertainty
+U-COMM,delay/loss/AoI,information uncertainty,MISSING,BLOCKED,information layer not instantiated
+U-ORG,authority/resource/delay,organizational uncertainty,MISSING,BLOCKED,organization model not instantiated
