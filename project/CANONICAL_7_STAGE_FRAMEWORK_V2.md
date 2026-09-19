@@ -7,11 +7,14 @@
 
 **Effective date:** 2026-09-16  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Status:** CANONICAL v2.0  
+**Status:** CANONICAL v2.0, interpreted with v2.1 alignment amendment  
+**Active semantic amendment:** `CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`  
 **Supersedes:** `CANONICAL_7_STAGE_FRAMEWORK.md` for active framework interpretation; the v1 file remains provenance.  
 **Change basis:** literature-grounded methodological refinement plus explicit thesis decision to replace controlled viability alone with an uncertainty-aware viability–reachability resilience core.  
 **Change control:** any subsequent scientific revision requires explicit approval, versioning, Git history, and re-audit of dependent hypotheses, figures, experiments, and thesis text.
 
+> **v2.1 precedence:** Where Stage-3, Stage-5, Stage-6, or Stage-7 semantics conflict with the v4 research contract, `CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md` controls.
+>
 > **Scientific guardrail:** v2.0 defines the thesis framework and testable mathematical architecture. It does not claim that viability–reachability is empirically superior to conventional resilience assessment. Incremental engineering value must be established by comparison and validation.
 
 ---
