@@ -1,0 +1,5 @@
+PyYAML==6.0.2
+jsonschema==4.23.0
+shapely==2.0.6
+pyproj==3.7.0
+networkx==3.4.2

@@ -7,6 +7,9 @@ on:
     paths:
       - ".github/workflows/austin-case-data-qualification.yml"
       - "methods/austin_case/**"
+      - "project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md"
+      - "project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx"
+      - "project/global_integration/P3_AUSTIN_CASE_QUALIFICATION_AUDIT_V1_2026-09-20.md"
       - "config/austin_case_admissibility_v1.json"
       - "config/austin_case_admissibility_v2.json"
       - "config/austin_case_admissibility_v3.json"
@@ -21,6 +24,7 @@ on:
       - "project/AUSTIN_TEMPORAL_EVIDENCE_PROTOCOL_V1.md"
       - "project/AUSTIN_TRAVEL_SENSOR_SCHEMA_PROTOCOL_V1.md"
       - "tests/test_austin_*.py"
+      - "tests/test_p3_austin_execution_readiness.py"
 
 permissions:
   contents: read
@@ -142,6 +146,17 @@ jobs:
           print('TRAVEL_SENSOR_RUNTIME_SCHEMA_STATE=' + result['schema_status'])
           PY
 
+      - name: Emit fail-closed P3 execution-readiness manifest
+        if: always()
+        run: |
+          set -euo pipefail
+          python methods/austin_case/p3_execution_readiness.py \
+            --contract config/austin_case_admissibility_v3.json \
+            --preregistry config/austin_preconfirmatory_registry_v1.json \
+            --root data/AUS-P5U-2018-V1 \
+            --output data/AUS-P5U-2018-V1/qa/p3_case_execution_readiness_manifest.json \
+            | tee austin-p3-readiness.txt
+
       - name: Freeze execution identity
         if: always()
         run: |
@@ -174,6 +189,9 @@ jobs:
             sha256sum methods/austin_case/travel_sensor_metadata.py
             sha256sum methods/austin_case/radar_2018.py
             sha256sum methods/austin_case/admissibility.py
+            sha256sum methods/austin_case/p3_execution_readiness.py
+            sha256sum project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md
+            sha256sum project/global_integration/P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx
           } | tee austin-case-evidence/execution-identity.txt
 
       - name: Upload immutable Austin qualification evidence
@@ -191,3 +209,4 @@ jobs:
             austin-raw-qc.txt
             austin-radar-prejoin.txt
             austin-travel-sensor-schema.txt
+            austin-p3-readiness.txt

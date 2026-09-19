@@ -464,3 +464,55 @@ P2 remains the next major task and must consume P1.11.8 identification/measureme
 - [x] Run deterministic post-commit invariant verification: 24/24 PASS.
 
 P2 remains the next major task and must consume P1.11.8.1.
+
+
+## P3 — CASE / DATA QUALIFICATION + EXECUTION READINESS — IN PROGRESS
+
+~~~math
+\boxed{
+G_{P2}^{design}=PASS
+\not\Rightarrow
+G_{data}=PASS
+\not\Rightarrow
+G_{case,exec}=PASS
+\not\Rightarrow
+H_i=SUPPORTED.
+}
+~~~
+
+### P3.0 control-plane initialization
+- [x] Bind P3 to frozen P2 design.
+- [x] Create P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md.
+- [x] Create P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx.
+- [x] Create P3 Austin initialization audit.
+- [x] Add fail-closed machine readiness instrument.
+- [x] Add P3 regression tests.
+- [x] Normalize repository CI dependencies / supported Python matrix.
+- [x] Make absent optional SVG assets N/A rather than a hard CI failure.
+- [ ] Observe post-commit Scientific Architecture QA.
+- [ ] Observe post-commit Python package matrix.
+- [ ] Observe Austin public-data qualification run.
+
+### P3.1 Austin case qualification
+- [ ] Close G1 power materialization / feeder realization.
+- [ ] Close G2 common spatial support.
+- [ ] Close G3 transport topology.
+- [ ] Close G4 traffic observations.
+- [ ] Close G5 P→T semisynthetic mapping.
+- [ ] Close G6 T→P repair access.
+- [ ] Close G7 flood exposure.
+- [ ] Close G8 QC/provenance.
+- [ ] Freeze final feeder under the pre-result minimum-state rule.
+- [ ] Set final_case_admissibility=true only if G0–G8 all PASS.
+
+### P3.2 execution readiness
+- [ ] Qualify all required G, Y0, theta, eta, T, K, G_rec, F_unsafe, U_feas, A, Omega fields for the planned experiment.
+- [ ] Close applicable identification/estimator/result-validation gates.
+- [ ] Freeze H1–H5 execution inputs/materiality criteria before result inspection.
+- [ ] Authorize confirmatory execution only after case and repository execution gates PASS.
+
+~~~text
+P3 CONTROL PLANE = PASS
+FINAL CASE = BLOCKED
+H1–H5 = NOT_TESTED
+~~~

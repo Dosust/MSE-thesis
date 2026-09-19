@@ -1,7 +1,7 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.8.1 PASS  
-**Date:** 2026-09-19
+**Current status:** P0 COMPLETE / P1.0–P1.11.8.1 PASS / P2 PASS-FROZEN / P3 IN PROGRESS  
+**Date:** 2026-09-20
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
 
@@ -176,11 +176,11 @@ The controlling writing rule is:
 
 H1–H5 remain empirically **NOT TESTED**.
 
-## Next task
+## Active task
 
 ~~~math
 \boxed{
-\text{P2 = GLOBAL STAGE 1--7 MASTER WORKBOOK + DESIGN FREEZE}
+\text{P3 = CASE / DATA QUALIFICATION + EXECUTION READINESS}
 }
 ~~~
 
@@ -667,3 +667,53 @@ means design contradictions are closed. It does not mean data qualification, mod
 ~~~
 
 Case-specific data, parameters, hazard objects, thresholds, validation evidence and confirmatory execution remain governed by the frozen P2 contract.
+
+
+## P3 case / data qualification + execution readiness
+
+P2 is frozen. P3 is now the active phase.
+
+Controls:
+- P3_CASE_DATA_EXECUTION_READINESS_PROTOCOL_V1.md
+- P3_CASE_DATA_EXECUTION_READINESS_REGISTER_V1.xlsx
+- P3_AUSTIN_CASE_QUALIFICATION_AUDIT_V1_2026-09-20.md
+- ../../methods/austin_case/p3_execution_readiness.py
+- ../../tests/test_p3_austin_execution_readiness.py
+
+~~~math
+\boxed{
+G_{P2}^{design}=PASS
+\not\Rightarrow
+G_{data}=PASS
+\not\Rightarrow
+G_{case,exec}=PASS
+\not\Rightarrow
+H_i=SUPPORTED.
+}
+~~~
+
+Current candidate:
+
+~~~text
+AUS-P5U-2018-V1
+candidate_is_frozen = false
+final_case_admissibility = false
+~~~
+
+Normalized execution-readiness state:
+
+~~~text
+G0 PASS
+G1 BLOCKED
+G2 DEFERRED
+G3 DEFERRED
+G4 DEFERRED
+G5 BLOCKED
+G6 BLOCKED
+G7 BLOCKED
+G8 DEFERRED
+~~~
+
+P3 control-plane coherence is PASS, but case execution remains BLOCKED. H1–H5 remain NOT_TESTED.
+
+Repository CI is part of P3 execution readiness. A CI failure is a repository blocker, not evidence for or against a scientific hypothesis.
