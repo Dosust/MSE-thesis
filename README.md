@@ -63,6 +63,7 @@ H_i=SUPPORTED.
 | Authority | Role |
 |---|---|
 | [`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2.md) | canonical seven-stage scientific framework |
+| [`project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`](project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md) | v4 semantic alignment for Stages 3, 5, 6 and 7 |
 | [`project/CANONICAL_RESEARCH_QUESTIONS_V4.md`](project/CANONICAL_RESEARCH_QUESTIONS_V4.md) | official RQ0 + RQ1–RQ7 wording |
 | [`project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`](project/CANONICAL_RQ_SO_HYPOTHESES_V4.md) | current GO / SO1–SO7 / H1–H5 and integrated test logic |
 | [`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`](project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md) | official frozen Chapter-I scientific content and flow |
