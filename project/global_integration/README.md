@@ -310,3 +310,34 @@ The amendment also requires P2 to audit hazard spatial coherence, spatial-proxy 
 ~~~
 
 No empirical/H1–H5 status changes.
+
+
+## P1.11.2 Barr information-architecture / provenance amendment
+
+Chapter-13 controls are now explicit through:
+
+- ../CANONICAL_SOS_INFORMATION_ARCHITECTURE_AMENDMENT_V1_2.md
+- GLOBAL_MODEL_DATA_HANDOFF_PROVENANCE_PROTOCOL_V1.md
+- P1_11_2_INFORMATION_ARCHITECTURE_PROVENANCE_AUDIT_V1_2026-09-19.md
+
+Permanent scientific firewalls now include:
+
+~~~math
+\boxed{
+\mathscr S_{physical}\neq\mathscr S_{model}\neq\mathscr S_{information},
+\quad
+\text{physical coupling}\neq\text{software coupling},
+\quad
+\text{alignment}\neq\text{causal mechanism},
+\quad
+Y^{phys}\neq y\neq\widehat Y\neq b_t\neq D.
+}
+~~~
+
+P2 must consume the new information-architecture and reproducibility audit fields.
+
+~~~math
+\boxed{G_{P1.11.2}^{design}=PASS\qquad(48/48)}
+~~~
+
+No H1–H5 empirical status changes.

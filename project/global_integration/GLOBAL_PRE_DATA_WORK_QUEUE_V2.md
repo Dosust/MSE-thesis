@@ -263,3 +263,24 @@ P2 remains the next execution task and must consume P1.11 explicitly.
 - [x] Run compatibility audit: 36/36 PASS.
 
 P2 remains the next major task.
+
+
+#### P1.11.2 Barr information architecture / provenance / orchestration — COMPLETE
+- [x] Separate physical SoS, model system and information/provenance system.
+- [x] Separate vertical hierarchy from horizontal dependency.
+- [x] Add explicit spatial, temporal and semantic alignment operations.
+- [x] Preserve alignment != causal mechanism.
+- [x] Preserve database representation != physical truth.
+- [x] Preserve physical coupling != software coupling.
+- [x] Add immutable inter-model handoff provenance record.
+- [x] Require source/target variable, units, support, transformation, uncertainty, model/run/data versions and validity.
+- [x] Extend physical/epistemic firewall to database representation D.
+- [x] Make hazard data provenance/versioning explicit.
+- [x] Preserve visualization != validation/evidence.
+- [x] Separate geographic, graph and viability geometries.
+- [x] Require versioned architectures for Stage-7 transformation.
+- [x] Add reproducibility/auditability questions for material thesis objects.
+- [x] Add eighteen P2 information-architecture audit fields.
+- [x] Run compatibility audit: 48/48 PASS.
+
+P2 remains the next major task and must consume P1.11, P1.11.1 and P1.11.2 explicitly.
