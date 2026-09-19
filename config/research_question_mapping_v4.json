@@ -1,0 +1,105 @@
+{
+  "version": "4.0",
+  "effective_date": "2026-09-20",
+  "status": "CANONICAL_MACHINE_MAPPING",
+  "rq_authority": "project/CANONICAL_RESEARCH_QUESTIONS_V4.md",
+  "rq_so_h_authority": "project/CANONICAL_RQ_SO_HYPOTHESES_V4.md",
+  "overarching": {
+    "id": "RQ0",
+    "question": "How can coupled Power–Transportation infrastructure be represented as an interdependent System of Systems and modeled as a spatiotemporal complex dynamical system to connect qualified directional dependencies, observation- and organization-constrained feasible response, uncertainty-aware service resilience, engineering intervention consequences, and defensible engineering decisions?"
+  },
+  "questions": [
+    {
+      "id": "RQ1",
+      "objective_id": "SO1",
+      "stage": 1,
+      "title": "Spatiotemporal System-of-Systems Structure",
+      "question": "What constituent systems, supporting Information and Organization domains, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces constitute the bounded Power–Transportation System of Systems, and where and when can interactions occur?",
+      "objective": "Define the bounded Power–Transportation System of Systems in terms of constituent systems, supporting Information and Organization domains, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces.",
+      "primary_hypothesis": null,
+      "developmental": true,
+      "supporting_hypotheses": [
+        "H1"
+      ]
+    },
+    {
+      "id": "RQ2",
+      "objective_id": "SO2",
+      "stage": 2,
+      "title": "Evidence-Qualified Spatiotemporal Directional Dependencies",
+      "question": "Which candidate Power–Transportation relations can be admitted as evidence-qualified directional dependency mechanisms, through what mechanisms, where and when do they activate, under what operating and hazard conditions, with what delays, characteristic timescales, and uncertainty, and within what validity domain?",
+      "objective": "Qualify candidate Power–Transportation relations as directional dependency mechanisms by establishing their mechanism, direction, spatial and temporal activation conditions, operating and hazard conditions, delays, characteristic timescales, evidence basis, uncertainty, and validity boundaries.",
+      "primary_hypothesis": null,
+      "developmental": true,
+      "supporting_hypotheses": [
+        "H1"
+      ]
+    },
+    {
+      "id": "RQ3",
+      "objective_id": "SO3",
+      "stage": 3,
+      "title": "Complex Spatiotemporal Coupled Dynamics",
+      "question": "How do qualified and dynamically ready directional dependency mechanisms evolve, interact, and propagate across space and time, and how do they alter coupled physical states and electricity and mobility service trajectories relative to independent and static-coupling representations?",
+      "objective": "Develop and verify a physics-based complex spatiotemporal coupled dynamic representation and test the incremental explanatory or predictive information provided by dynamically ready coupling relative to independent and static-coupling representations.",
+      "primary_hypothesis": "H1",
+      "developmental": false
+    },
+    {
+      "id": "RQ4",
+      "objective_id": "SO4",
+      "stage": 4,
+      "title": "Spatiotemporal Observation, Organization, and Feasible Response",
+      "question": "How do spatially and temporally distributed observations, state estimation, information availability, organizational conditions, and feasible control shape the response and recovery of the evolving coupled Power–Transportation system?",
+      "objective": "Evaluate how spatially and temporally distributed measurement, state estimation, information availability, organizational conditions, and feasible control affect response timing, electricity and mobility service trajectories, and recovery.",
+      "primary_hypothesis": "H2",
+      "developmental": false
+    },
+    {
+      "id": "RQ5",
+      "objective_id": "SO5",
+      "stage": 5,
+      "title": "Uncertainty-Aware Spatiotemporal Service Resilience",
+      "question": "Under what spatiotemporal conditions can required electricity and mobility services remain acceptable or be recovered under feasible actions and uncertainty, and what additional engineering information do viability and reachability provide beyond conventional service-recovery measures?",
+      "objective": "Determine uncertainty-aware spatiotemporal service viability and recovery reachability, evaluate their incremental information beyond conventional service and recovery representations, and characterize interface criticality where the required evidence permits.",
+      "primary_hypothesis": "H3",
+      "developmental": false
+    },
+    {
+      "id": "RQ6",
+      "objective_id": "SO6",
+      "stage": 6,
+      "title": "Spatiotemporally Targeted Engineering Intervention Consequences",
+      "question": "How do candidate engineering interventions, characterized by type, location, timing, and scale where relevant, differ in resilience effectiveness, resource requirements and efficiency, and admitted sustainability consequences under independently qualified requirements, declared accounting boundaries, and uncertainty?",
+      "objective": "Quantify and compare candidate engineering interventions, including their type, location, timing, and scale where relevant, in terms of resilience effectiveness, resource requirements and efficiency, and admitted sustainability consequences within independently justified requirements and declared accounting boundaries.",
+      "primary_hypothesis": "H4",
+      "developmental": false
+    },
+    {
+      "id": "RQ7",
+      "objective_id": "SO7",
+      "stage": 7,
+      "title": "Defensible Spatiotemporal Engineering Decision",
+      "question": "Which candidate interventions or infrastructure transformations, including their location, timing, and scale where relevant, remain defensible when resilience, resource efficiency, admitted sustainability consequences, feasibility, and uncertainty are evaluated jointly?",
+      "objective": "Evaluate candidate interventions or infrastructure transformations, including their location, timing, and scale where relevant, jointly in terms of resilience, resource efficiency, admitted sustainability consequences, feasibility, and uncertainty; evaluate intervention sequences only where temporal decision structure, data, and validation support them.",
+      "primary_hypothesis": "H5",
+      "developmental": false
+    }
+  ],
+  "hypothesis_ids": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5"
+  ],
+  "hypothesis_mapping": {
+    "RQ1": "developmental_support_H1",
+    "RQ2": "developmental_support_H1",
+    "RQ3": "H1",
+    "RQ4": "H2",
+    "RQ5": "H3",
+    "RQ6": "H4",
+    "RQ7": "H5"
+  }
+}
