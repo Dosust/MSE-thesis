@@ -9,7 +9,9 @@
 - [x] Global authority/supersession map exists.
 - [x] Current H4/H5 meanings identified.
 - [x] Legacy dependency notation translation authority identified.
-- [ ] Carry authority/supersession status into the global master workbook.
+- [x] Repository authority-drift audit completed; carry the verified classifications into the global master workbook.
+
+Authority drift cleanup closure: **PASS — 2026-09-19**. No obsolete H4/H5 file may govern active work; legacy Stage-3 notation is explicitly quarantined.
 
 ### P0.2 Stage 3 normalization — next task
 - [ ] Create `project/stage3/STAGE3_SCIENTIFIC_CONSTITUTION_V2.md`.
