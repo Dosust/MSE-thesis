@@ -1,0 +1,95 @@
+{
+  "manifest_id": "P1_4_BASELINE_BENCHMARK_REFERENCE_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_4_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "da04dc26ec1d53039ca8a769031ee82449adc9ae",
+  "source_authorities": [
+    {
+      "path": "thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md",
+      "sha": "662439d04ec4297a1c5cbba047fc40c46d17db57"
+    },
+    {
+      "path": "project/STAGE1_GENERIC_FIXTURE_VERIFICATION_REPORT_2026-09-18.md",
+      "sha": "def6178742d4bca3f4616267a23a0838b555b187"
+    },
+    {
+      "path": "project/H1_VALIDATION_OBSERVATION_SERVICE_REQUIREMENT_ARCHITECTURE_V1.md",
+      "sha": "20f47ce3eeefe68c143b97e2ee4c660314b919ea"
+    },
+    {
+      "path": "project/stage3/STAGE3_UNCERTAINTY_BENCHMARK_VVUQ_PROTOCOL_V2.md",
+      "sha": "83abc66ff5f5d0f66c421847fa789832ac94ab24"
+    },
+    {
+      "path": "project/stage4/03_cases/greensboro_greenevt_smartds/02_estimation/STAGE4_ESTIMATION_VALIDATION_V1.md",
+      "sha": "864b7a9687d24a680669f08f68a5ae7235815238"
+    },
+    {
+      "path": "project/stage5/04_benchmark/STAGE5_BENCHMARK_AND_REFERENCE_PROTOCOL_V1.md",
+      "sha": "48fe92dda9bc819b6769c9e7263734df7461b26f"
+    },
+    {
+      "path": "project/stage5/08_VVUQ/STAGE5_VVUQ_PROTOCOL_V1.md",
+      "sha": "2c62b12bece9d4ab041255c63c040c9efa407639"
+    },
+    {
+      "path": "project/stage6/02_interventions/STAGE6_INTERVENTION_BASELINE_AND_COMPARATOR_PROTOCOL_V1.md",
+      "sha": "95e7ce3c9119d5e10fc4d700c541dbb807ca9032"
+    },
+    {
+      "path": "project/stage6/05_benchmark/STAGE6_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md",
+      "sha": "41bf51dde8c651d46425d9ac037734c70fcb8657"
+    },
+    {
+      "path": "project/stage6/07_vvuq/STAGE6_VVUQ_PROTOCOL_V2.md",
+      "sha": "f050d5d334f2e2a6587785241b30c9ae5606db55"
+    },
+    {
+      "path": "project/stage7/STAGE7_BENCHMARK_AND_REFERENCE_PROTOCOL_V2.md",
+      "sha": "c262d81d217f47bf5d51200324335e6b72fbd724"
+    },
+    {
+      "path": "project/stage7/STAGE7_VVUQ_AND_DECISION_STABILITY_PROTOCOL_V2.md",
+      "sha": "dad9344f78260587a2177954c0dee4d033e33a1b"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md",
+      "sha": "b46e393d37f1bc979d7cf2f351d0d586f31898c1"
+    },
+    {
+      "path": "project/global_integration/P1_4_BASELINE_BENCHMARK_REFERENCE_AUDIT_V1_2026-09-19.md",
+      "sha": "c955a5e74623dd234813b1500d392071f9dc1e13"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "d464c3e8fdcfb250b48f32df669c6aa0d12f737a"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "4ed1e75c56a70eeea751f3e1475a6269dd422ee6"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "a8f87477a59ec9c6e5e5ac9a34b7226eb4a1b39d"
+    }
+  ],
+  "audit": {
+    "passed": 38,
+    "failed": 0
+  },
+  "permanent_firewalls": [
+    "baseline != benchmark != reference_solution_or_calculation != validation_evidence_or_reference != ground_truth",
+    "synthetic_truth != empirical_ground_truth",
+    "oracle != validation_reference",
+    "external_standard_or_factor != validation_evidence_by_default",
+    "requirement_threshold != baseline != reference"
+  ],
+  "next_task": "P1.5 GLOBAL FINAL-CASE SCHEMA"
+}

@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.3 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.4 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -18,6 +18,9 @@ This directory controls thesis-wide integration before final case-data qualifica
 - P1_BACKBONE_FINALIZATION_MANIFEST_V1.json — exact authority/artifact blob identities.
 - GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md — canonical H1–H5 experiment architecture.
 - P1_3_HYPOTHESIS_PREREGISTRATION_AUDIT_V1_2026-09-19.md — 32/32 preregistration audit.
+- GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md — canonical credibility/comparison classification registry.
+- P1_4_BASELINE_BENCHMARK_REFERENCE_AUDIT_V1_2026-09-19.md — 38/38 classification audit.
+- P1_4_BASELINE_BENCHMARK_REFERENCE_MANIFEST_V1.json — exact P1.4 authority/artifact identities.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -34,6 +37,8 @@ Historical:
 \text{P1.2 handoffs}
 \rightarrow
 \text{P1.3 H1--H5 preregistration}
+\rightarrow
+\text{P1.4 baseline/benchmark/reference}
 =
 PASS
 }
@@ -56,16 +61,43 @@ G_{P1.3}^{design}=PASS
 
 All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
 
+## P1.4 classification state
+
+~~~math
+\boxed{
+G_{P1.4}^{design}=PASS
+\qquad
+(38/38\;checks)
+}
+~~~
+
+The global control plane now enforces:
+
+~~~math
+\boxed{
+\text{baseline}
+\neq
+\text{benchmark}
+\neq
+\text{reference solution/calculation}
+\neq
+\text{validation evidence}
+\neq
+\text{ground truth}.
+}
+~~~
+
+Synthetic truth, qualified cases, oracles, external factor/practice references and auxiliary counterfactual models are also explicitly typed.
+
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.4 = BASELINE / BENCHMARK / REFERENCE REGISTRY}
+\text{P1.5 = GLOBAL FINAL-CASE SCHEMA}
 }
 ~~~
 
 Then:
-- P1.5 final-case schema;
 - P1.6 common scenario schema;
 - P1.7 global uncertainty/VVUQ;
 - P1.8 requirements/provenance;

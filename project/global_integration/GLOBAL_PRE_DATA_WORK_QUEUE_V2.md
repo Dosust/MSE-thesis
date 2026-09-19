@@ -82,14 +82,17 @@ For every `I(k→k+1)`:
 - [x] Standardize final adjudication as SUPPORTED / NOT SUPPORTED / NOT TESTED.
 - [x] Run preregistration audit: 32/32 PASS.
 
-### P1.4 Baseline/benchmark/reference registry — NEXT
-Enforce:
-```math
-\text{baseline}\neq\text{benchmark}\neq\text{reference}
-\neq\text{validation evidence}\neq\text{ground truth}.
-```
+### P1.4 Baseline/benchmark/reference registry — COMPLETE
+- [x] Create GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md.
+- [x] Define global baseline/comparator subtypes.
+- [x] Separate benchmark problem, verification fixture, reference solution, reference calculation and validation evidence.
+- [x] Separate synthetic truth from empirical ground truth.
+- [x] Type Stage-3/5/6/7 terminal B(k,3) objects as QUALIFIED_CASE, not synthetic benchmark.
+- [x] Type H1–H5 baseline roles consistently with P1.3.
+- [x] Prohibit unnamed reference roles in future confirmatory documentation.
+- [x] Run P1.4 classification audit: 38/38 PASS.
 
-### P1.5 Empty final-case schema
+### P1.5 Empty final-case schema — NEXT
 ```math
 \mathcal S_{case}
 =

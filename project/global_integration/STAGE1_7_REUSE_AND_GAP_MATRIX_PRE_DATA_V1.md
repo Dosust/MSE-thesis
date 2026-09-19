@@ -605,3 +605,64 @@ P1.3=PASS.
 ~~~
 
 Next: **P1.4 baseline/benchmark/reference registry**.
+
+
+---
+
+## P1.4 baseline/benchmark/reference closure — 2026-09-19
+
+Created:
+- GLOBAL_BASELINE_BENCHMARK_REFERENCE_REGISTRY_V1.md;
+- P1_4_BASELINE_BENCHMARK_REFERENCE_AUDIT_V1_2026-09-19.md.
+
+Global firewall:
+
+~~~math
+\boxed{
+\text{baseline}
+\neq
+\text{benchmark}
+\neq
+\text{reference solution/calculation}
+\neq
+\text{validation evidence/reference}
+\neq
+\text{ground truth}.
+}
+~~~
+
+Additional classifications now distinguish:
+- comparator versus baseline;
+- verification fixture versus benchmark problem;
+- synthetic truth versus empirical ground truth;
+- qualified final case versus synthetic benchmark;
+- reference solution versus reference calculation;
+- validation reference versus evidence-source reference;
+- external practice/factor references versus validation evidence;
+- oracle versus validation reference;
+- auxiliary counterfactual reconstruction model versus experimental baseline;
+- requirement threshold versus reference.
+
+Cross-hypothesis baseline map:
+- H1: M1 primary rival baseline; M0 secondary uncoupled comparator;
+- H2: N0 information/organization architecture baseline;
+- H3: R_curve / Q_conv information baseline;
+- H4: a0, or prospectively justified a_BAU, for incremental consequences;
+- H5: resilience-only decision arm.
+
+Audit:
+
+~~~text
+38 PASS
+0 FAIL
+~~~
+
+Therefore:
+
+~~~math
+\boxed{
+P1.4=PASS.
+}
+~~~
+
+Next: **P1.5 global final-case schema**.
