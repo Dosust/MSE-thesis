@@ -5,7 +5,7 @@
 > No new preregistration, analysis, thesis claim, or experiment may use the H4/H5 definitions below.
 
 <!--
-DOCUMENT STATUS: CURRENT ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX
+DOCUMENT STATUS: SUPERSEDED ENGINEERING CONFIRMATORY HYPOTHESIS MATRIX — PROVENANCE ONLY
 SOURCE: user-supplied Pasted markdown(20260911-042927).md
 SOURCE_SHA256: f24104a8be55b1f5d42b4087e32df636c72afb04ed5c3e1677ec26a5b7eef271
 PRESERVATION RULE: scientific claims, methodological logic, citations, thresholds policy, and references are preserved from the supplied source.
