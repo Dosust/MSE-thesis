@@ -1,0 +1,2 @@
+change_id,requirement_id,old_version,new_version,reason,initiator,change_class,approval_or_authority,effective_date,affected_models,affected_scenarios,affected_hypotheses,affected_results,reexecution_required,target_results_seen_before_change,status,provenance_version,provenance_hash,notes
+DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,OTHER,DEFERRED,DEFERRED,,,,,false,false,DEFERRED,DEFERRED,DEFERRED,

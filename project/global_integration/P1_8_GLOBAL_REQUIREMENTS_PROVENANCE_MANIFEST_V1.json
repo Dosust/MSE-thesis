@@ -1,0 +1,175 @@
+{
+  "manifest_id": "P1_8_GLOBAL_REQUIREMENTS_PROVENANCE_MANIFEST_V1",
+  "date": "2026-09-19",
+  "status": "P1_8_DESIGN_PASS",
+  "empirical_effect": "NONE",
+  "source_snapshot_commit": "6b2d0794608d5fea790f6da578a8faac35cd759c",
+  "audit": {
+    "passed": 104,
+    "failed": 0
+  },
+  "source_authorities": [
+    {
+      "path": "project/stage4/02_constitution/STAGE4_FEASIBLE_CONTROL_SPECIFICATION_V1.md",
+      "sha": "ee3e12ed83a5e4d60d755bdd15d19ee4d5bd550b"
+    },
+    {
+      "path": "project/stage5/00_governance/STAGE5_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md",
+      "sha": "3742632c3a0eda97ec4b6fb85aeb81cb334ed4c2"
+    },
+    {
+      "path": "project/H3_SERVICE_AND_STATE_SET_SPECIFICATION_V1.md",
+      "sha": "93a65d884e310e0cb07824deb7d0feafe3c98ff2"
+    },
+    {
+      "path": "project/stage6/02_interventions/STAGE6_EFFECTIVENESS_TARGET_AND_EVALUATION_PROTOCOL_V2.md",
+      "sha": "63f97b824dc8c77c81a33b3149c7a56e46dcd800"
+    },
+    {
+      "path": "project/stage6/02_interventions/STAGE6_EFFICIENCY_RESOURCE_AND_EVALUATION_PROTOCOL_V2.md",
+      "sha": "a509b91bcb169cad6d8d3b8448d694aac8281fff"
+    },
+    {
+      "path": "project/stage6/04_requirements/STAGE6_REQUIREMENTS_DERIVATION_PROTOCOL_V1.md",
+      "sha": "3f54bc78a40452544946a8bef3f59c633983ed19"
+    },
+    {
+      "path": "project/stage6/03_accounting/STAGE6_SUSTAINABILITY_ACCOUNTING_PROTOCOL_V1.md",
+      "sha": "61e7e2ee5aa7189b860fb777fc68617ca55d1fb3"
+    },
+    {
+      "path": "project/stage7/STAGE7_DECISION_OBJECTIVE_AND_VALUE_FIREWALL_V2.md",
+      "sha": "34197e5d40e3e94c4bc98980ca0fddbc4ec4cfbb"
+    },
+    {
+      "path": "project/stage7/STAGE7_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V2.md",
+      "sha": "38a71356b3c99d35d5b73f7b70fb7d32452f71d4"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_FINAL_CASE_SCHEMA_V1.md",
+      "sha": "83c66ee25169bb22f6806642a0753fa589d3f42e"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_H1_H5_MASTER_PREREGISTRATION_V1.md",
+      "sha": "9b80cb8a2bbb882b53ed5dd3f86d007596e0e9f6"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_UNCERTAINTY_VVUQ_CONTROL_V1.md",
+      "sha": "9a74b488697b4eedc2e10f1d4c0201c18992b5e5"
+    }
+  ],
+  "external_design_references": [
+    {
+      "name": "ISO/IEC/IEEE 29148:2018 Requirements Engineering",
+      "url": "https://www.iso.org/standard/72089.html",
+      "status_note": "Current published edition; confirmed 2024; revision underway as of 2026-09-19."
+    },
+    {
+      "name": "NASA Systems Engineering Handbook §6.2 Requirements Management",
+      "url": "https://www.nasa.gov/reference/6-2-requirements-management/"
+    },
+    {
+      "name": "NASA Systems Engineering Handbook Appendices C-E",
+      "url": "https://www.nasa.gov/reference/system-engineering-handbook-appendix/"
+    },
+    {
+      "name": "W3C PROV Overview",
+      "url": "https://www.w3.org/TR/prov-overview/"
+    },
+    {
+      "name": "JSON Schema Draft 2020-12",
+      "url": "https://json-schema.org/draft/2020-12"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENTS_PROVENANCE_CONTROL_V1.md",
+      "sha": "e6ec2e50cb585fe88dd81ad150302be6e411d75b"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENTS_PROVENANCE_SCHEMA_V1.schema.json",
+      "sha": "0538862de97a0a85ae998ac8781f8487b9ee6584"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_AUTHORITY_TYPE_MATRIX_V1.md",
+      "sha": "42c7785c83d716eb7a820746b77759aec0877958"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENTS_STAGE_HYPOTHESIS_TRACEABILITY_MATRIX_V1.md",
+      "sha": "42c0aa7c32e186e72442ace279d38094193eb43f"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_CONFLICT_CHANGE_CONTROL_PROTOCOL_V1.md",
+      "sha": "73f9bb4dbf40b59b903cc0ba514a8aa96f4dc5ee"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_VERIFICATION_VALIDATION_COMPLIANCE_PROTOCOL_V1.md",
+      "sha": "39dc2632210101f470d787b37f29af6b2a5fec14"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENTS_REGISTER_TEMPLATE_V1.csv",
+      "sha": "e153ac711afb724b840d01f194501817d6a48c5e"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_PROVENANCE_LEDGER_TEMPLATE_V1.csv",
+      "sha": "493a3ce7b9b99ec2063b3f9a5e9289397888a0b5"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_CHANGE_REGISTER_TEMPLATE_V1.csv",
+      "sha": "9762f1c48ec9a639d47b13c800931ed4a9b97a14"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_CONFLICT_REGISTER_TEMPLATE_V1.csv",
+      "sha": "7526a9eef80ec105b5a1003a27410cfd24ad9240"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_REQUIREMENT_COMPLIANCE_REGISTER_TEMPLATE_V1.csv",
+      "sha": "5b6e1b56c968e544772a57af7d4c2331bda8a4d0"
+    },
+    {
+      "path": "project/global_integration/P1_8_GLOBAL_REQUIREMENTS_PROVENANCE_AUDIT_V1_2026-09-19.md",
+      "sha": "d54c0747ece41f3cd59249b8550a58db9cabe4e9"
+    },
+    {
+      "path": "project/global_integration/GLOBAL_PRE_DATA_WORK_QUEUE_V2.md",
+      "sha": "052515103f8ff19854f2be2e1368da600c639632"
+    },
+    {
+      "path": "project/global_integration/README.md",
+      "sha": "17be747eb1b34e4b6b14b98462e22948e1d2be13"
+    },
+    {
+      "path": "project/global_integration/STAGE1_7_REUSE_AND_GAP_MATRIX_PRE_DATA_V1.md",
+      "sha": "6145b44c62927354fcb0170c984bf9129011e226"
+    }
+  ],
+  "permanent_firewalls": [
+    "authoritative_requirement != engineering_derived_criterion != research_assumption != experimental_materiality_criterion != decision_preference",
+    "requirement_kind != authority_class",
+    "hard_requirement != soft_target",
+    "sustainability_metric != sustainability_requirement",
+    "resource_consumption != resource_constraint != efficiency_metric",
+    "requirement_uncertainty != compliance_uncertainty",
+    "delta_i != real_system_requirement_by_default",
+    "requirement_id != compliance_result_id",
+    "stricter_threshold != higher_authority"
+  ],
+  "protected_deferred": [
+    "case_regulations",
+    "operator_requirements",
+    "stakeholder_thresholds",
+    "service_minimums",
+    "safety_limits",
+    "recovery_deadlines",
+    "effectiveness_targets",
+    "resource_caps",
+    "sustainability_limits",
+    "feasibility_cutoffs",
+    "experimental_delta_values",
+    "decision_weights_preferences",
+    "legal_precedence",
+    "compliance_outcomes",
+    "H1_H5_results"
+  ],
+  "next_task": "P1.9 GLOBAL CLAIM / EVIDENCE / RESULT MATRIX"
+}

@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.7 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.8 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -48,6 +48,18 @@ This directory controls thesis-wide integration before final case-data qualifica
 - GLOBAL_VVUQ_ACTIVITY_REGISTER_TEMPLATE_V1.csv — empty VVUQ activity register.
 - GLOBAL_CONTEXT_OF_USE_REGISTER_TEMPLATE_V1.csv — empty context-of-use register.
 - P1_7_GLOBAL_UNCERTAINTY_VVUQ_AUDIT_V1_2026-09-19.md — 84/84 P1.7 audit.
+- GLOBAL_REQUIREMENTS_PROVENANCE_CONTROL_V1.md — canonical global requirements/provenance authority.
+- GLOBAL_REQUIREMENTS_PROVENANCE_SCHEMA_V1.schema.json — Draft 2020-12 machine schema.
+- GLOBAL_REQUIREMENT_AUTHORITY_TYPE_MATRIX_V1.md — requirement kind/authority/hardness control.
+- GLOBAL_REQUIREMENTS_STAGE_HYPOTHESIS_TRACEABILITY_MATRIX_V1.md — Stage 1→7 and H1–H5 traceability.
+- GLOBAL_REQUIREMENT_CONFLICT_CHANGE_CONTROL_PROTOCOL_V1.md — baselines, conflicts and changes.
+- GLOBAL_REQUIREMENT_VERIFICATION_VALIDATION_COMPLIANCE_PROTOCOL_V1.md — requirement-quality/need/compliance control.
+- GLOBAL_REQUIREMENTS_REGISTER_TEMPLATE_V1.csv — empty requirement register.
+- GLOBAL_REQUIREMENT_PROVENANCE_LEDGER_TEMPLATE_V1.csv — empty translation/provenance ledger.
+- GLOBAL_REQUIREMENT_CHANGE_REGISTER_TEMPLATE_V1.csv — empty change register.
+- GLOBAL_REQUIREMENT_CONFLICT_REGISTER_TEMPLATE_V1.csv — empty conflict register.
+- GLOBAL_REQUIREMENT_COMPLIANCE_REGISTER_TEMPLATE_V1.csv — empty compliance register.
+- P1_8_GLOBAL_REQUIREMENTS_PROVENANCE_AUDIT_V1_2026-09-19.md — 104/104 P1.8 audit.
 
 Historical:
 - PRE_DATA_STAGE1_7_INTEGRATION_AUDIT_V1.md — pre-repair snapshot, retained for provenance.
@@ -72,6 +84,8 @@ Historical:
 \text{P1.6 common scenario schema}
 \rightarrow
 \text{P1.7 uncertainty/VVUQ control}
+\rightarrow
+\text{P1.8 requirements/provenance control}
 =
 PASS
 }
@@ -94,56 +108,43 @@ G_{P1.3}^{design}=PASS
 
 All five hypotheses remain empirically **NOT TESTED**. No unresolved materiality threshold was invented.
 
-## P1.7 uncertainty/VVUQ state
+## P1.8 requirements/provenance state
 
 ~~~math
 \boxed{
-G_{P1.7}^{design}=PASS
+G_{P1.8}^{design}=PASS
 \qquad
-(84/84\;checks)
+(104/104\;checks)
 }
 ~~~
 
-The global uncertainty architecture now enforces:
+The global requirements architecture now enforces:
 
 ~~~math
 \boxed{
-\text{uncertainty nature}
+\text{authoritative requirement}
 \neq
-\text{uncertainty source}
+\text{engineering-derived criterion}
+\neq
+\text{research assumption}
+\neq
+\text{experimental materiality criterion}
+\neq
+\text{decision preference}.
 }
 ~~~
 
-and:
-
-~~~math
-\boxed{
-\text{verification}
-\neq
-\text{validation}
-\neq
-\text{calibration}
-\neq
-\text{UQ}
-\neq
-\text{sensitivity}
-\neq
-\text{decision stability}.
-}
-~~~
-
-Every uncertainty source is traceable to its stage, hypothesis impact, propagation treatment, validation/sensitivity links, decision impact and claim ceiling.
+Every hard constraint and confirmatory materiality criterion must be bidirectionally traceable from source/need to formal mathematical implementation and back.
 
 ## Next task
 
 ~~~math
 \boxed{
-\text{P1.8 = GLOBAL REQUIREMENTS / PROVENANCE CONTROL}
+\text{P1.9 = GLOBAL CLAIM / EVIDENCE / RESULT MATRIX}
 }
 ~~~
 
 Then:
-- P1.9 claim/evidence/result matrix;
 - P2 global master workbook + audits + design freeze.
 
 ## Empirical firewall

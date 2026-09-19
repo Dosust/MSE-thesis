@@ -856,3 +856,79 @@ P1.7=PASS.
 ~~~
 
 Next: **P1.8 global requirements / provenance control**.
+
+
+---
+
+## P1.8 global requirements/provenance closure — 2026-09-19
+
+Created:
+- GLOBAL_REQUIREMENTS_PROVENANCE_CONTROL_V1.md;
+- GLOBAL_REQUIREMENTS_PROVENANCE_SCHEMA_V1.schema.json;
+- GLOBAL_REQUIREMENT_AUTHORITY_TYPE_MATRIX_V1.md;
+- GLOBAL_REQUIREMENTS_STAGE_HYPOTHESIS_TRACEABILITY_MATRIX_V1.md;
+- GLOBAL_REQUIREMENT_CONFLICT_CHANGE_CONTROL_PROTOCOL_V1.md;
+- GLOBAL_REQUIREMENT_VERIFICATION_VALIDATION_COMPLIANCE_PROTOCOL_V1.md;
+- GLOBAL_REQUIREMENTS_REGISTER_TEMPLATE_V1.csv;
+- GLOBAL_REQUIREMENT_PROVENANCE_LEDGER_TEMPLATE_V1.csv;
+- GLOBAL_REQUIREMENT_CHANGE_REGISTER_TEMPLATE_V1.csv;
+- GLOBAL_REQUIREMENT_CONFLICT_REGISTER_TEMPLATE_V1.csv;
+- GLOBAL_REQUIREMENT_COMPLIANCE_REGISTER_TEMPLATE_V1.csv;
+- P1_8_GLOBAL_REQUIREMENTS_PROVENANCE_AUDIT_V1_2026-09-19.md.
+
+Core firewall:
+
+~~~math
+\boxed{
+\text{authoritative requirement}
+\neq
+\text{engineering-derived criterion}
+\neq
+\text{research assumption}
+\neq
+\text{experimental materiality criterion}
+\neq
+\text{decision preference}.
+}
+~~~
+
+Bidirectional trace:
+
+~~~math
+Source/Need
+\leftrightarrow
+RID
+\leftrightarrow
+FormalCriterion
+\leftrightarrow
+StageObject
+\leftrightarrow
+Gate/QOI
+\leftrightarrow
+Scenario/Run
+\leftrightarrow
+Compliance/Result.
+~~~
+
+Requirement kind, authority, hardness, maturity, effectivity, uncertainty and compliance are distinct.
+
+No universal legal hierarchy or stricter-threshold shortcut is imposed.
+
+Audit:
+
+~~~text
+104 PASS
+0 FAIL
+~~~
+
+No case regulation, service threshold, recovery deadline, sustainability limit, experimental delta, decision weight or H1–H5 result was invented.
+
+Therefore:
+
+~~~math
+\boxed{
+P1.8=PASS.
+}
+~~~
+
+Next: **P1.9 global claim / evidence / result matrix**.

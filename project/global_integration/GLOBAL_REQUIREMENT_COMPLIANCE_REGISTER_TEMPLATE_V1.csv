@@ -1,0 +1,2 @@
+compliance_id,requirement_id,requirement_version,requirement_baseline_id,run_or_scenario_id,result_id,evaluated_qoi,uncertainty_id,margin,margin_unit,outcome,evaluation_method,gate_status,provenance_version,provenance_hash,notes
+DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,,DEFERRED,UNRESOLVED,DEFERRED,DEFERRED,DEFERRED,DEFERRED,

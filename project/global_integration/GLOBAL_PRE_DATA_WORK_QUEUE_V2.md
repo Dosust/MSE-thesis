@@ -134,10 +134,22 @@ For every `I(k→k+1)`:
 - [x] Create empty uncertainty, VVUQ-activity and context-of-use registers.
 - [x] Run combined P1.7 audit: 84/84 PASS.
 
-### P1.8 Global requirements/provenance — NEXT
-Unify service, physical, resilience, sustainability and decision constraints without promoting research assumptions into authoritative requirements.
+### P1.8 Global requirements/provenance — COMPLETE
+- [x] Create GLOBAL_REQUIREMENTS_PROVENANCE_CONTROL_V1.md.
+- [x] Create Draft 2020-12 machine schema.
+- [x] Separate requirement kind, authority, hardness, maturity and effectivity.
+- [x] Freeze source→interpretation→formalization→allocation→compliance provenance.
+- [x] Freeze bidirectional traceability.
+- [x] Separate qualitative source statements from numerical translations.
+- [x] Create authority/type matrix.
+- [x] Create Stage 1→7 / H1–H5 traceability matrix.
+- [x] Create conflict/change-control protocol.
+- [x] Create requirement verification/validation/compliance protocol.
+- [x] Create empty requirement, provenance, change, conflict and compliance registers.
+- [x] Preserve all case thresholds/weights as DEFERRED.
+- [x] Run combined P1.8 audit: 104/104 PASS.
 
-### P1.9 Claim-evidence-result matrix
+### P1.9 Claim-evidence-result matrix — NEXT
 Every intended thesis conclusion must have:
 `claim | stage | evidence/test | validity domain | result status | allowed wording`.
 
