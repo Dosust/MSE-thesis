@@ -84,5 +84,8 @@
     "H4",
     "H5"
   ],
-  "hypotheses_renumbered": false
+  "hypotheses_renumbered": false,
+  "status": "SUPERSEDED_PROVENANCE_ONLY",
+  "superseded_by": "config/research_question_mapping_v4.json",
+  "superseded_date": "2026-09-20"
 }
