@@ -1,0 +1,16 @@
+object_id,symbol,source_stage,epistemic_status,data_realization,gate_status,validation_status,case_source,notes
+OBJ-YPHYS,Y_phys,S3,U,SYNTHETIC,BLOCKED,UNVERIFIED,SMART-DS/OpenDSS + SUMO candidate truth,Exact G3 state/model class not frozen.
+OBJ-Q05-A,A_v(t),S2→S3,E/D,DERIVED,OPEN,VERIFIED,GreenEVT charging records,Source activation law verified; observation error model not frozen.
+OBJ-Q05-N,N_EV,b^chg(t),S2→S3,E/D,DERIVED,OPEN,VERIFIED,GreenEVT bus-grouped charging records,Bus aggregation source-supported.
+OBJ-PBUS,P_b(t),S3,E,SYNTHETIC,OPEN,UNVERIFIED,SMART-DS/OpenDSS,Model output available; Stage-4 meter specification not frozen.
+OBJ-VBUS,V_b(t),S3/S4,E,SYNTHETIC,BLOCKED,UNVERIFIED,OpenDSS truth candidate,Required-state membership/sensor placement depends on final Stage-3/H2 binding.
+OBJ-TFLOW,q_e(t),S3/S4,E,SYNTHETIC,BLOCKED,UNVERIFIED,SUMO output candidate,Detector/measurement binding not frozen.
+OBJ-TSPEED,v_e(t),S3/S4,E,SYNTHETIC,BLOCKED,UNVERIFIED,SUMO output candidate,Detector/measurement binding not frozen.
+OBJ-GI,G_I,S4,E/D,MISSING,BLOCKED,UNVERIFIED,None current,Information topology not instantiated.
+OBJ-ZI,z_I(t),S4,D/P,MISSING,BLOCKED,UNVERIFIED,None current,Delay/loss/AoI process not instantiated.
+OBJ-IT,I_t,S4,D,PROXY,OPEN,UNVERIFIED,Source logs/model outputs only,Operator-specific information ownership not instantiated.
+OBJ-BELIEF,b_t,S4,E/D,MISSING,BLOCKED,UNVERIFIED,No estimator selected,Observability constitution must precede estimator selection.
+OBJ-ORG,O,S4,E/D,MISSING,BLOCKED,UNVERIFIED,None current,Actors/authority/resources/delays/rules not instantiated.
+OBJ-ZO,z_O(t),S4,D/P,MISSING,BLOCKED,UNVERIFIED,None current,Dynamic organizational state absent.
+OBJ-UFEAS,U_feas(t),S4,P/D,MISSING,BLOCKED,UNVERIFIED,None current,Cannot construct before information + organization + resources.
+OBJ-POLICY,Pi/u_t,S4,E/D,MISSING,BLOCKED,UNVERIFIED,No Stage-4 control policy frozen,Must follow U_feas and H2 protocol.
