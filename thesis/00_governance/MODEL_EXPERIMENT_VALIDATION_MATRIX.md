@@ -1,7 +1,7 @@
 # Model–Experiment–Validation Matrix
 
-**Status:** CURRENT / SYNCHRONIZED WITH RQ–SO–H v3.0  
-**Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
+**Status:** CURRENT / SYNCHRONIZED WITH RQ–SO–H v4.0  
+**Scientific authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
 
 **Purpose:** enforce preregistration, rival-model comparison, physical admissibility, uncertainty quantification, practical significance and falsification before scientific inference.
@@ -126,28 +126,29 @@ Verification and validation are not interchangeable.
 | Element | Required specification |
 |---|---|
 | Question/objective | RQ6/SO6 |
-| Claim | interventions with comparable or improved resilience outcomes can differ materially in resource efficiency and sustainability consequence vectors |
+| Claim | at least two resilience-effective interventions can differ materially in resource requirements, resource efficiencies, or admitted sustainability consequences |
 | Candidate intervention set | MUST BE DECLARED before confirmatory execution |
 | Resilience-effectiveness criterion | MUST BE FROZEN (`\delta_R` or equivalent) |
 | Efficiency definition | benefit/resource denominator and accounting boundary MUST BE FROZEN |
-| Sustainability vector | evidence-supported outcomes such as accessibility, operational energy, carbon and cost, with explicit accounting boundaries |
+| Resource vector | qualified resource requirements such as direct cost and operational energy in native units |
+| Sustainability vector | admitted sustainability consequences only; core environmental candidate is `CO2e`, with distributional accessibility conditional on separate qualification |
 | Held constants | matched disturbance/scenario domain and comparable resource/accounting assumptions where required by contrast |
 | Treatment | intervention `a_k` |
-| Primary object | `a_k→(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{sus}^{a_k})` plus declared effectiveness/efficiency quantities |
+| Primary object | `a_k→(\Delta\mathfrak R^{a_k},\mathbf r^{a_k},\mathcal E_{fy}^{a_k},\Delta\mathbf J_{sus}^{a_k})` with effectiveness reported separately |
 | Distance/materiality rule | `D_J` and `delta_4` NOT YET FROZEN |
 | Falsification/non-support | resilience-effective interventions do not exhibit the preregistered material differences in efficiency or sustainability outcomes over the declared domain |
 
-## H5 — Joint resilience–sustainability engineering decision
+## H5 — Joint engineering decision
 
 | Element | Required specification |
 |---|---|
 | Question/objective | RQ7/SO7 |
-| Claim | incorporating sustainability consequences into resilience-based evaluation materially changes the feasible/nondominated decision set or declared regret relative to resilience-only evaluation |
+| Claim | incorporating resource efficiency and admitted sustainability consequences under common feasibility and uncertainty governance materially changes the admissible/nondominated set, dominance relations, or regret relative to resilience-only evaluation |
 | Baseline decision set | `\mathcal A_R^{\star}` |
-| Joint decision set | `\mathcal A_{R,S}^{\star}` |
+| Joint decision set | `\mathcal A_{\rm joint}^{\star}` |
 | Inputs | H4 intervention-performance consequences plus feasibility and uncertainty |
 | Held constants | same candidate actions, scenario ensemble and feasibility/resource rules across decision formulations |
-| Treatment | inclusion of declared sustainability consequence dimensions in the decision rule |
+| Treatment | inclusion of qualified resource-efficiency and admitted sustainability-consequence information in the joint decision record |
 | Set/regret metric | NOT YET FROZEN |
 | Materiality threshold | `delta_5` NOT YET FROZEN |
 | Sequential/adaptive pathway | supporting extension only; requires separate activation/preregistration if tested |
