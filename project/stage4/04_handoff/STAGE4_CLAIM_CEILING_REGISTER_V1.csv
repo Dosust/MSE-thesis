@@ -1,0 +1,8 @@
+maturity_state,maximum_claim,prohibited_overclaim
+CONSTITUTION_ONLY,Stage-4 mathematical/specification framework,No case performance claim
+SOURCE_BOUND_CASE,Source-supported/synthetic case realization,No empirical real-system claim
+OBSERVABILITY_VERIFIED,Estimability in declared model/mode/sensor domain,No estimator superiority claim
+ESTIMATOR_VERIFIED,Numerical/benchmark estimator behavior,No empirical claim without validation
+ESTIMATOR_VALIDATED,Estimation performance within validated domain,No transfer outside domain
+H2_MATCHED_TEST,Information/organization effects within matched tested domain,No universal causal generalization
+STAGE4_CLOSED,Admissible Stage-5 handoff within final claim ceiling,Cannot exceed Lambda3/upstream evidence ceiling
