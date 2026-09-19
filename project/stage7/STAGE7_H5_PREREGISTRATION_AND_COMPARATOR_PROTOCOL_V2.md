@@ -1,5 +1,8 @@
 # Stage 7 — H5 Preregistration and Comparator Protocol v2
 
+> **SUPERSEDED — PROVENANCE ONLY (2026-09-20)**
+> Active v4-aligned replacement is the corresponding Stage-7 v3 protocol referenced in `project/stage7/README.md`.
+
 **Status:** CANONICAL H5 OPERATIONAL PROTOCOL  
 **Effective date:** 2026-09-19  
 **Hypothesis authority:** \`project/CANONICAL_RQ_SO_HYPOTHESES_V3.md\`
