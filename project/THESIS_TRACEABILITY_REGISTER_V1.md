@@ -8,7 +8,7 @@
 
 
 **Date:** 2026-09-16  
-**Status:** ACTIVE THESIS-CONTROL REGISTER / NO SCIENTIFIC GATE CHANGES  
+**Status:** SUPERSEDED TRACEABILITY REGISTER — PROVENANCE ONLY / NO SCIENTIFIC GATE CHANGES  
 **Purpose:** instantiate the thesis master traceability object for H1–H5 and expose every evidence, model, metric, chapter, artifact, V&V, and blocking-state link required before a confirmatory claim can be promoted to a result.  
 **Scientific effect:** none. This register does not change the seven-stage framework, the frozen H1–H5 logic, any numerical threshold, any novelty status, or any empirical conclusion.
 
