@@ -27,12 +27,12 @@ structure ≠ causality ≠ dynamics ≠ control ≠ resilience outcome
 
 ```text
 Spatiotemporal SoS Structure
-→ Evidence-Grounded Causal Interdependencies
-→ Physics-Based Hybrid Multiscale Dynamics
-→ Observation/Estimation/Organization/Control
-→ Viability + Reachability + Probability
-→ Intervention + Sustainability Consequences
-→ Engineering Decision / Transformation
+→ Evidence-Qualified Directional Dependencies
+→ Complex Spatiotemporal Coupled Dynamics
+→ Observation/Estimation/Organization/Feasible Control
+→ Uncertainty-Aware Spatiotemporal Service Resilience
+→ Targeted Intervention Consequences
+→ Defensible Engineering Decision
 ```
 
 5. A reader-facing simplified chain may be used for communication only if it preserves the exact scientific meaning of framework v2.
@@ -55,6 +55,7 @@ effectiveness ≠ efficiency ≠ sustainability
 
 For any research-question, objective, hypothesis-mapping, outline, figure, result or conclusion task, load:
 
+- `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`
 - `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`
 - `thesis/00_governance/RQ_SO_H_TRACEABILITY_V4.md`
 
