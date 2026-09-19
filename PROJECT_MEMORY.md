@@ -1,14 +1,14 @@
 # Project Memory Entry Point
 
-> **Current scientific authorities (2026-09-17):**  
+> **Current scientific authorities (2026-09-20):**  
 > Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 > Research questions: `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
-> SO/H wording and test logic: `project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-> Chapter I: `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
+> SO/H wording and test logic: `project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
+> Chapter I: `project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
 > Writing/inference: `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0%20CURRENT-1A7F37)
-![Traceability](https://img.shields.io/badge/RQ--SO--H-v3.0%20CURRENT-1A7F37)
+![Traceability](https://img.shields.io/badge/RQ--SO--H-v4.0%20CURRENT-1A7F37)
 ![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
 ![H1 Models](https://img.shields.io/badge/M0%20M1%20M2-VERIFIED-1A7F37)
 ![Prereg](https://img.shields.io/badge/H1%20confirmatory%20design-FROZEN-1A7F37)
@@ -29,7 +29,7 @@ The sole active repository is `Dossiya-SE/MSE-thesis`. Historical/archive materi
 | Scientific framework | seven-stage framework v2.0 |
 | Research questions/objectives | RQ0 + RQ1–RQ7; SO1–SO7 |
 | Primary hypotheses | H1–H5 |
-| Chapter I | v2 authority; 1.1–1.13; 16–18 page internal target |
+| Chapter I | v3 authority; PASS — FROZEN — OFFICIAL; 1.1–1.13; 16–18 page internal target |
 | Stage 5 | viability + reachability + probability/confidence |
 | H4 | intervention effectiveness/efficiency/sustainability consequences |
 | H5 | resilience-only vs joint resilience–sustainability decision set |
