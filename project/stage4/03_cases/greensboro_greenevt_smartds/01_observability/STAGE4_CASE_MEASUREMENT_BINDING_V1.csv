@@ -1,0 +1,7 @@
+measurement_id,target,source_type,equation,unit,timing,data_realization,gate_status,notes
+M-Q05-A,A_v,GreenEVT record/log,y_A=A_v+nu_A,1,source/model time,DERIVED,OPEN,Source fields exist; measurement-error/receive-time model not frozen
+M-Q05-N,N_EV,b^chg,aggregation of charging records,y_N=sum 1[bus=b] y_A,vehicle,same as source records,DERIVED,OPEN,Not an independent physical sensor unless explicitly modeled
+M-PBUS,P_b,power meter candidate,y_P=P_b+nu_P,kW,OPEN,SYNTHETIC,BLOCKED,meter class/placement/noise/timing not frozen
+M-VBUS,V_b,voltage meter/PMU/AMI candidate,y_V=V_b+nu_V,p.u. or V,OPEN,SYNTHETIC,BLOCKED,meter class/placement/noise/timing not frozen
+M-TFLOW,q_e,traffic detector/probe candidate,y_q=q_e+nu_q,veh/h,OPEN,SYNTHETIC,BLOCKED,detector/probe realization not frozen
+M-TSPEED,v_e,traffic detector/probe candidate,y_v=v_e+nu_v,km/h,OPEN,SYNTHETIC,BLOCKED,detector/probe realization not frozen
