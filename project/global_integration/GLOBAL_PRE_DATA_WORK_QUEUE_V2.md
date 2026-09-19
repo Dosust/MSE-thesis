@@ -187,7 +187,7 @@ Permanent rule:
 - [x] Create `P2_GLOBAL_STAGE1_7_MASTER_REGISTER_AUDIT_V1_2026-09-20.md`.
 - [x] Create `GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md`.
 - [x] Record workbook SHA-256: `7906fc6eb3bc6b720d41e20315ffed3222efc6d0839add98cd21f56115749b6c`.
-- [ ] Pin final P2 manifest after freeze commit.
+- [x] Pin final P2 manifest after freeze commit.
 
 P2 design result:
 

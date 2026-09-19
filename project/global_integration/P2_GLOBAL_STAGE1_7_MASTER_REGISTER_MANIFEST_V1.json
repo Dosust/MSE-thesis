@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-20",
+  "status": "PASS_FROZEN_P2_GLOBAL_STAGE1_7_MASTER_REGISTER",
+  "repository": "Dossiya-SE/MSE-thesis",
+  "branch": "main",
+  "baseline_pre_p2_head": "873a36f2cc8f942e788025b2fb381b5ff42d2695",
+  "workbook_audit_commit": "43e84aed8ba637bd531999e1e7b1515144b2d596",
+  "design_freeze_commit": "8616f432a2feb830ced22888981232f33bffc115",
+  "design_gate": "G_P2_design=PASS",
+  "pre_data_complete": true,
+  "pre_data_complete_definition": "all design contradictions are closed; empirical/data/calibration/confirmatory outcomes may remain unresolved",
+  "global_design_audit": {
+    "pass": 11,
+    "fail": 0,
+    "design_contradictions": 0
+  },
+  "master_register": {
+    "path": "project/global_integration/GLOBAL_STAGE1_7_MASTER_REGISTER_V1.xlsx",
+    "git_blob_sha": "c993dc19a6e612e0745e601c61748cbe37bc56d6",
+    "sha256": "7906fc6eb3bc6b720d41e20315ffed3222efc6d0839add98cd21f56115749b6c",
+    "bytes": 48098,
+    "sheets": 15,
+    "normalized_objects": 27,
+    "object_status_counts": {
+      "PASS": 6,
+      "BLOCKED": 2,
+      "DEFERRED": 13,
+      "NOT_TESTED": 6,
+      "FAIL": 0
+    }
+  },
+  "audit": {
+    "path": "project/global_integration/P2_GLOBAL_STAGE1_7_MASTER_REGISTER_AUDIT_V1_2026-09-20.md",
+    "blob_sha": "e04ddaae80d4dff91d98959b15044993f4ce62a9"
+  },
+  "freeze": {
+    "path": "project/global_integration/GLOBAL_STAGE1_7_DESIGN_FREEZE_V1.md",
+    "blob_sha": "232e3a8ae57e104bd7aee3e555af5ccab180d915"
+  },
+  "normalized_rules": [
+    "same global gate vocabulary != same gates required for every scientific object",
+    "G_ID_struct != G_ID_strength != G_EST_admit != G_VAL_result",
+    "POINT != SET_PARTIAL != N_A_NONINFERENTIAL",
+    "STATUS=(REPO,SOURCE,CASE)",
+    "MONTE_CARLO_METHOD_TEST != UNCERTAINTY_PROPAGATION != CASE_VALIDATION",
+    "G2 causal PASS does not imply Stage2-to-3 readiness PASS",
+    "BLOCKED/DEFERRED/NOT_TESTED are preserved and do not imply negative hypothesis evidence",
+    "resource core remains direct cost + operational energy; sustainability core remains operational/partial CO2e with accessibility conditional"
+  ],
+  "hypothesis_state": {
+    "H1": "NOT_TESTED",
+    "H2": "NOT_TESTED",
+    "H3": "NOT_TESTED",
+    "H4": "NOT_TESTED",
+    "H5": "NOT_TESTED"
+  },
+  "next_phase": "P3 — data / case qualification + execution readiness",
+  "manifest_self_hash_policy": "manifest does not self-hash"
+}
