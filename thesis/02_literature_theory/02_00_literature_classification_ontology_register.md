@@ -527,3 +527,28 @@ SOURCE\_SUPPORT
 CASE\_VALIDATION.
 }
 ~~~
+
+
+## 18. P1.11.7 computational-method classification
+
+Additional evidence label:
+
+| Label | Definition |
+|---|---|
+| [ML] | machine-learning/data-driven analytical method; predictive/diagnostic status does not imply causal identification |
+
+| ID | E | S / R / D | Tau / F / K / Q / J | Validation maturity | Controlled thesis interpretation |
+|---|---|---|---|---|---|
+| A-038 Li & Mostafavi (2025) | [ADJ][EMP][METHOD][ML] | coupled human–infrastructure post-event assessment; not P–T mechanism evidence | observational big data; feature engineering; PCA; clustering; recovery duration; risk/resilience diagnostics | peer-reviewed empirical case in Harris County/Hurricane Harvey | supports typed observational/diagnostic computation; does not replace Stage-3 physics, formal Stage-5 resilience, sustainability admission or causal intervention evaluation |
+
+Permanent:
+
+~~~math
+\boxed{
+\text{statistical pattern}
+\neq
+\text{physical mechanism}
+\neq
+\text{formal resilience guarantee}.
+}
+~~~

@@ -138,3 +138,10 @@ For user-supplied copyrighted book chapters/reports/manuscripts, exact local sou
 Exact source hashes and page/section mappings are controlled by:
 - project/global_integration/P1_11_SOURCE_DOCUMENT_PROVENANCE_REGISTER_V1.md
 - project/global_integration/P1_11_SOURCE_TO_CLAIM_MAPPING_V1.csv
+
+
+## 2026-09-19 P1.11.7 computational-method evidence
+
+| ID | Source | Evidence class / status | Accepted bounded support | Restriction | Thesis use / source pin |
+|---|---|---|---|---|---|
+| A-038 | Li & Mostafavi (2025), *Machine learning approach for disaster risk and resilience assessment in coupled human infrastructure systems performance*, *npj Natural Hazards*, 2:56, https://doi.org/10.1038/s44304-025-00104-4 | [ADJ] [EMP] [METHOD] [ML] | post-event multi-source feature computation; Census Block Group analytical support; PCA-based risk/resilience indices; hierarchical clustering of spatial archetypes; baseline/recovery features; spatial/socioeconomic heterogeneity | not direct P–T interdependency evidence; power outages explicitly excluded in Harvey case; PCA/clustering do not establish physical causality, Stage-3 dynamics, thesis resilience definition, sustainability scope, or intervention effects | 2.6–2.8; Stage 4/5 method precedent; P1.11.7; SRC-LI-MOSTAFAVI-2025 |

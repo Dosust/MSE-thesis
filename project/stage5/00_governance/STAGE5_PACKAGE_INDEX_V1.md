@@ -24,6 +24,9 @@
 - `README.md`
 - `package/STAGE5_FINALIZATION_PACKAGE_V1.zip`
 
+
+- 00_governance/STAGE5_DATA_DRIVEN_RESILIENCE_DIAGNOSTICS_AMENDMENT_V1_2.md — additive observational/diagnostic computation firewall; preserves \(\mathfrak R_T\neq\mathcal D_R\).
+
 ## Binary integrity
 
 The committed Git blob hashes match the locally verified artifacts:

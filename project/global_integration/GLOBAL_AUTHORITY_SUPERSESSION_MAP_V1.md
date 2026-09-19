@@ -266,3 +266,31 @@ CANONICAL_CROSS_SYSTEM_OBSERVATIONAL_INFERENCE_AMENDMENT_V1_4_1
 ~~~
 
 Historical manifests remain valid snapshots of the blobs they pinned; they do not override this later change-control authority.
+
+
+## P1.11.7 computational-role authority — 2026-09-19
+
+Current additive computation authorities:
+- project/CANONICAL_COMPUTATIONAL_ROLE_ARCHITECTURE_AMENDMENT_V1_7.md
+- project/stage4/00_governance/STAGE4_FEATURE_ENGINEERING_AND_REFERENCE_STATE_AMENDMENT_V1_3.md
+- project/stage5/00_governance/STAGE5_DATA_DRIVEN_RESILIENCE_DIAGNOSTICS_AMENDMENT_V1_2.md
+- project/global_integration/GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1.md
+
+These govern computational object-role semantics without superseding:
+- Stage-3 mechanistic/hybrid dynamics;
+- Stage-4 physical-truth/estimation constitution;
+- Stage-5 formal viability/reachability resilience object;
+- SUSTAINABILITY_ADMISSION_FREEZE_V1;
+- Stage-7 feasibility/Pareto/regret/preference authority.
+
+Permanent:
+
+~~~math
+\boxed{
+\text{algorithm}
+\neq
+\text{scientific role}
+\neq
+\text{allowed claim}.
+}
+~~~

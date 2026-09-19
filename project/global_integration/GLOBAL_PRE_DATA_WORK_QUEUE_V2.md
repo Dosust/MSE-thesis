@@ -373,3 +373,26 @@ P2 remains the next major task and must consume P1.11 through P1.11.5.
 - [x] Run deterministic post-commit invariant verification: 21/21 PASS.
 
 P2 is now the next major execution task and must consume P1.11.6 as the authority-reconciliation layer.
+
+
+#### P1.11.7 Li–Mostafavi computational-role architecture — COMPLETE
+- [x] Register Li & Mostafavi (2025) in Chapter-2 controlled evidence.
+- [x] Pin exact supplied PDF byte identity with SHA-256.
+- [x] Add source-page/section → claim → repository-rule mappings.
+- [x] Separate physical system, observation, feature, index, pattern and decision objects.
+- [x] Define MECHANISTIC / OBSERVATIONAL / DECISION computation lanes without replacing seven stages.
+- [x] Use \mathcal D_raw for raw datasets to avoid collision with D_i demand/use.
+- [x] Add explicit spatial/temporal analysis-support alignment.
+- [x] Add Stage-4 feature/reference-state pipeline.
+- [x] Preserve association/feature importance/PCA loading != physical causality/interface strength.
+- [x] Preserve data-driven characterization != Stage-3 physical dynamics.
+- [x] Preserve formal Stage-5 resilience R_T != diagnostic products D_R.
+- [x] Preserve PCA/clustering as diagnostics, not viability or causal proof.
+- [x] Preserve socioeconomic attribute != social-sustainability endpoint.
+- [x] Preserve current sustainability admission freeze.
+- [x] Preserve observational clusters != intervention effects.
+- [x] Add computation-role/output-claim protocol.
+- [x] Add twenty-five P2 computational audit fields.
+- [x] Run P1.11.7 repository-consistency audit: 48/48 PASS.
+
+P2 remains the next major task and must consume P1.11.7 computation-role semantics.

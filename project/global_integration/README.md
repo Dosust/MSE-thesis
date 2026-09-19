@@ -1,6 +1,6 @@
 # Global Stage 1→7 Integration
 
-**Current status:** P0 COMPLETE / P1.0–P1.11.6 PASS  
+**Current status:** P0 COMPLETE / P1.0–P1.11.7 PASS  
 **Date:** 2026-09-19
 
 This directory controls thesis-wide integration before final case-data qualification and confirmatory execution.
@@ -498,3 +498,43 @@ and current sustainability scope:
 Historical P1.11-family numeric PASS totals are repository-consistency checklist counts, not source-validation scores.
 
 P2 may now proceed from the reconciled authority set.
+
+
+## P1.11.7 Li–Mostafavi computational-role architecture
+
+Controls:
+- ../CANONICAL_COMPUTATIONAL_ROLE_ARCHITECTURE_AMENDMENT_V1_7.md
+- ../stage4/00_governance/STAGE4_FEATURE_ENGINEERING_AND_REFERENCE_STATE_AMENDMENT_V1_3.md
+- ../stage5/00_governance/STAGE5_DATA_DRIVEN_RESILIENCE_DIAGNOSTICS_AMENDMENT_V1_2.md
+- GLOBAL_COMPUTATIONAL_ROLE_AND_OUTPUT_CLAIM_PROTOCOL_V1.md
+- P1_11_7_LI_MOSTAFAVI_COMPUTATIONAL_ROLE_AUDIT_V1_2026-09-19.md
+
+Key firewalls:
+
+~~~math
+\boxed{
+\text{physical system}
+\neq
+\text{observations}
+\neq
+\text{features}
+\neq
+\text{indices}
+\neq
+\text{patterns}
+\neq
+\text{decisions}
+}
+~~~
+
+~~~math
+\boxed{
+\mathfrak R_T\neq\mathcal D_R,
+\qquad
+\text{ML}\neq\text{causal identification}.
+}
+~~~
+
+The paper does not alter P–T mechanisms or sustainability scope.
+
+P2 must type each material computation by lane, scientific role, input/output object, support, reference state, uncertainty, validation and claim ceiling.

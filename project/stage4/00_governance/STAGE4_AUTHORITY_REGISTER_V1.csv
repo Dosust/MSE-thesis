@@ -7,3 +7,4 @@ AUTH-05,UPSTREAM,project/stage2/STAGE2_CASE_G2_AUDIT_V1_2026-09-19.md,fca9372483
 AUTH-06,UPSTREAM,project/stage3/STAGE3_EXECUTION_AND_CLOSURE_AUDIT_V1_2026-09-19.md,3d95d438536e8df9f44b95861315f5f826405273,Current Stage-3 execution/claim ceiling.
 AUTH-07,STAGE4,project/stage4/00_governance/STAGE4_SCIENTIFIC_CONSTITUTION_AND_HANDOFF_V1.md,THIS_VERSION,Top Stage-4 authority.
 AUTH-08,EVIDENCE,project/stage4/01_evidence/literature/STAGE4_EVIDENCE_GROUNDED_LITERATURE_REVIEW_V1.md,VERIFIED_PACKAGE,Stage-4 evidence synthesis.
+AUTH-09,STAGE4,project/stage4/00_governance/STAGE4_FEATURE_ENGINEERING_AND_REFERENCE_STATE_AMENDMENT_V1_3.md,THIS_VERSION,"Additive feature-engineering, support-alignment, reference-state and computation-role authority."

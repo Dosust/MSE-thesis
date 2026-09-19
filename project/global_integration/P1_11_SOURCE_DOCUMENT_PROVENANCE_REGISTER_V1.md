@@ -1,6 +1,6 @@
 # P1.11 Source-Document Provenance Register v1
 
-**Status:** FROZEN SOURCE-IDENTITY REGISTER FOR P1.11.1–P1.11.5  
+**Status:** FROZEN SOURCE-IDENTITY REGISTER FOR P1.11.1–P1.11.7  
 **Effective date:** 2026-09-19  
 **Binary policy:** source PDFs are not committed to GitHub; exact supplied bytes are identified by SHA-256.
 
@@ -11,6 +11,8 @@
 | SRC-NEXTRANS-079PY04 | Jeffrey C. Peters, Amit Kumar, Hong Zheng, Shubham Agrawal, Srinivas Peeta. "Integrated Framework to Capture the Interdependencies between Transportation and Energy Sectors due to Policy Decisions." NEXTRANS Project No. 079PY04 Final Report, May 14, 2014 | technical report; direct Transportation–Energy conceptual/equilibrium framework | 079PY04-Final Report.pdf | 38 | 583634 | f9b3133402d2e4a6e93a7fd31d2ebbdad81a19cd567b5200afdc2efdedd8b338 |
 | SRC-ACOSTA-2025-RS | Juan Acosta-Sequeda, Ömer Verbas, Joshua Auld, Sybil Derrible. "Interdependencies between electricity consumption and transit and their potential to forecast transit demand in urban settings." Research Square preprint, posted 2025-08-14, DOI 10.21203/rs.3.rs-6959831/v1 | preprint; empirical observational/predictive evidence | v1_covered_6df5c62b-935e-45f8-9f6a-688ea9444f70.pdf | 20 | 1094331 | b4253eae45c8be405065d25e7f9f4ff46fbe9c586b0587358e3a0386f5ac5e5b |
 | SRC-KAYS-SADRI | H M Imran Kays, Arif Mohaimin Sadri. "Towards Unifying Resilience and Sustainability for Transportation Infrastructure Systems: Conceptual Framework, Critical Indicators, and Research Needs" | supplied conceptual manuscript; publication venue/year not established from supplied PDF metadata; use bounded conceptual claims only | 2208.pdf | 23 | 1079189 | 67d986a658aceceedec490f490534d4586d258352063295526bc6b8b0f741c71 |
+
+| SRC-LI-MOSTAFAVI-2025 | Xiangpeng Li & Ali Mostafavi. "Machine learning approach for disaster risk and resilience assessment in coupled human infrastructure systems performance." *npj Natural Hazards* 2:56 (2025), DOI 10.1038/s44304-025-00104-4 | peer-reviewed empirical/data-driven post-disaster risk-resilience method; adjacent to P–T | s44304-025-00104-4.pdf | 15 | 2579338 | bf60180521d59635a9df6ccfbbdca9fb3aa76967de489f7fbc0bcd1022345da2 |
 
 ## Provenance rule
 
