@@ -5,7 +5,8 @@
 **Scope:** repository-wide synchronization required by the Chapter-I/RQ v4 audit.  
 **Chapter I:** PASS — FROZEN — OFFICIAL.  
 **Empirical hypotheses:** H1–H5 NOT TESTED.  
-**Automated post-change CI runtime evidence:** UNVERIFIED.
+**Automated post-change CI runtime evidence:** UNVERIFIED.  
+**Last Chapter-I prose synchronization:** 2026-09-21 — DFCI-1; no RQ/SO/H/scope expansion.
 
 ## Current controlling authorities
 
@@ -14,7 +15,7 @@
 - \`project/CANONICAL_7_STAGE_FRAMEWORK_V2.md\`
 - \`project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md\`
 - \`project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md\`
-- \`thesis/00_governance/CHAPTER_I_FREEZE_2026-09-20.md\`
+- \`thesis/00_governance/CHAPTER_I_FREEZE_2026-09-21.md\`
 - \`thesis/00_governance/RQ_SO_H_TRACEABILITY_V4.md\`
 
 ## Machine-readable contract
