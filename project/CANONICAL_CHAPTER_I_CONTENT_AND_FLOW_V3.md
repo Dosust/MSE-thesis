@@ -102,7 +102,7 @@ Coupled-infrastructure modeling is not absent from the literature. Interdependen
 
 The engineering problem addressed by this thesis is instead the **reliability of the scientific transitions connecting these capabilities**.
 
-First, **structure does not establish a qualified directional dependency**. A graph can show where interaction is possible without explaining why the receiver changes state, when the mechanism activates, or whether the resulting effect is large enough to matter.
+First, **structure does not establish a qualified directional dependency**. A graph can show where interaction is possible without explaining why the receiver changes state, when the mechanism activates, or whether the resulting effect is large enough to matter. Recent review evidence continues to identify challenges associated with representing infrastructure interdependencies and uncertainty and with connecting these representations to resilience assessment (Ghasemkhani et al., 2026; Wang et al., 2024).
 
 Second, **mechanism existence does not establish numerical identifiability**. Even where a physical mechanism is plausible, its magnitude may not be uniquely inferable from available observations. The thesis therefore distinguishes:
 
@@ -116,7 +116,7 @@ Third, **physical possibility does not establish feasible action**. Operators re
 
 Fourth, **a realized service trajectory does not completely characterize resilience**. Performance and recovery curves provide important information about degradation and restoration, but their interpretation depends on the selected service variable, reference state, threshold, horizon, and summary metric (Poulin & Kane, 2021; Trucco & Petrenj, 2023). A different engineering question is whether required service can remain within acceptable conditions and, after violation, whether acceptable service can be recovered under feasible actions and uncertainty.
 
-Finally, **resilience improvement does not by itself determine an engineering decision**. Candidate interventions can produce similar resilience effects while requiring different financial resources, operational energy, personnel, or carbon emissions. Infrastructure studies already demonstrate trade-offs among resilience, recovery, cost, and greenhouse-gas consequences (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
+Finally, **resilience improvement does not by itself determine an engineering decision**. Candidate interventions can produce similar resilience effects while requiring different direct intervention or recovery costs and operational energy, and while producing different admitted carbon-dioxide-equivalent consequences within the declared accounting boundary. Additional resource or distributional quantities are included only where independently qualified. Infrastructure studies already demonstrate trade-offs among resilience, recovery, cost, and greenhouse-gas consequences (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
 
 The research problem is therefore end-to-end:
 
@@ -154,7 +154,7 @@ RQ1 defines the bounded system and candidate interfaces. RQ2 determines which ca
 
 ### 1.4.2 G2 — Qualified Directional Dependency to Dynamic Consequence
 
-Dynamic Power–Transportation models already represent charging interactions, hazard-responsive traffic, emergency-resource movement, and multistage recovery (Lian et al., 2026; Wang et al., 2026; Zhang et al., 2026).
+Dynamic Power–Transportation models already represent charging interactions, hazard-responsive traffic, emergency-resource movement, and multistage recovery (Lian et al., 2026; Wang et al., 2026; Zhang et al., 2027).
 
 Their existence does not establish the incremental engineering value of representing a qualified mechanism dynamically rather than through simpler matched representations.
 
@@ -188,7 +188,7 @@ This handoff generates RQ5, SO5, and H3.
 
 ### 1.4.5 G5 — Resilience Effect to Intervention Consequences
 
-Infrastructure interventions that improve resilience can require different quantities of capital, energy, personnel, or other resources and can produce different environmental or distributional consequences. Existing studies show that resilience, recovery, cost, and greenhouse-gas objectives can favor different intervention strategies (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
+Infrastructure interventions that improve resilience can differ in direct intervention or recovery cost, operational energy requirements, and admitted environmental consequences. Existing studies show that resilience, recovery, cost, and greenhouse-gas outcomes can lead to different judgments about candidate strategies (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
 
 The unresolved handoff is
 
