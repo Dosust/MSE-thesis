@@ -6,7 +6,7 @@
 **Chapter I:** PASS — FROZEN — OFFICIAL.  
 **Empirical hypotheses:** H1–H5 NOT TESTED.  
 **Automated post-change CI runtime evidence:** UNVERIFIED.  
-**Last Chapter-I prose synchronization:** 2026-09-21 — DFCI-1; no RQ/SO/H/scope expansion.
+**Last Chapter-I prose synchronization:** 2026-09-21 — DFCI-R1 Audit Pass 1; no RQ/SO/H/scope expansion.
 
 ## Current controlling authorities
 
@@ -143,3 +143,16 @@ H_1,\ldots,H_5=\text{NOT TESTED}.
 \`\`\`
 
 No empirical support is inferred from repository synchronization.
+
+
+## Chapter-I Audit Pass 1 — 2026-09-21
+
+Applied without changing scientific scope:
+
+- narrowed Section 1.3 resource wording to direct intervention/recovery cost, operational energy, and admitted bounded CO2e consequences;
+- narrowed G5 wording to the same admitted resource/consequence boundary;
+- restored Ghasemkhani et al. (2026) selectively in Section 1.3 as recent evidence on interdependency/uncertainty challenges;
+- updated Zhang et al. to the current indexed assignment: *Reliability Engineering & System Safety*, volume 277 (2027), article 113032;
+- retained H1–H5 as NOT TESTED.
+
+Remaining QA: full publisher-level APA metadata verification, figure/caption inference audit, final redundancy check, and university-formatting review.
