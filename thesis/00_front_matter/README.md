@@ -17,11 +17,13 @@ This folder is reserved for front matter generated and audited against the curre
 
 ## Abstract gate
 
+- current evidence-grounded working abstract: `ABSTRACT.md`;
 - maximum 350 words;
 - page `i` under ASU pagination convention;
 - no first-person plurals `we`, `our`, `us`;
 - acronyms/abbreviations written out fully at first use;
-- no bibliographic citations unless ASU guidance changes and is reverified.
+- the working scientific abstract may retain in-text citations for claim-to-evidence traceability during thesis QA;
+- final submission formatting must be rechecked against current ASU guidance, and citations are removed only if the verified ASU requirement requires a citation-free abstract.
 
 ## Formatting authority
 
