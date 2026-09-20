@@ -1,8 +1,8 @@
 # Chapter 1 — Introduction
 
 **Status:** PASS — FROZEN — OFFICIAL  
-**Official source snapshot:** [`CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md`](CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md)  
-**Freeze:** [`CHAPTER_I_FREEZE_2026-09-20.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-20.md)
+**Official source snapshot:** [`CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md`](CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md)  
+**Freeze:** [`CHAPTER_I_FREEZE_2026-09-21.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-21.md)
 
 **Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
 **Research-question authority:** `../../project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
@@ -15,6 +15,9 @@
 **Current admission freeze:** `../00_governance/SUSTAINABILITY_ADMISSION_FREEZE_V1.md`
 
 ## Purpose
+
+**Current reader-facing manuscript identity:** **DFCI-1 — Dakou Final Chapter I, Evidence-Controlled Scientific Narrative.** This wording preserves the frozen scientific contract while improving reader-facing scientific clarity.
+
 
 Establish the research contract: engineering context, problem, evidence-qualified gap, scope, research architecture, questions, objectives, hypotheses/test logic and proposed contribution. Chapter 1 does not present unverified thesis results or detailed Chapter-3/4 derivations.
 
@@ -54,7 +57,7 @@ Sections **1.1–1.13 now have one source of truth in this directory**. The repo
 - 1.12 states six candidate contribution categories in conditional proposal language, maps each to its RQ/SO/H evidence chain, distinguishes supported contribution from novelty, and prohibits promotion to a supported claim before the corresponding model/test/VVUQ/result chain closes.
 - 1.13 explains the canonical seven-chapter scientific argument from research contract through evidence, formal framework, experimental testing, results, interpretation, and final RQ/hypothesis closure; it also distinguishes chapter-dependency notation from the contribution labels used in Section 1.12.
 - **Sections 1.1–1.13 were synchronized on 2026-09-20 to the official Chapter-I v3 content authority and v4 RQ–SO–H authority. The current research contract contains 8/8 exact RQs (RQ0 + RQ1–RQ7), 7/7 exact SOs, and 5/5 hypotheses. GitHub math rendering was rechecked after the `Strength(claim) ≤ Strength(evidence)` compatibility correction.**
-- **Chapter I is PASS — FROZEN — OFFICIAL as of 2026-09-20. The governing freeze is `../00_governance/CHAPTER_I_FREEZE_2026-09-20.md`.**
+- **Chapter I is PASS — FROZEN — OFFICIAL as of 2026-09-21. The governing freeze is `../00_governance/CHAPTER_I_FREEZE_2026-09-21.md`.**
 
 Section 1.5 must not introduce a sustainability dimension merely because it is normatively desirable or common in broad sustainability frameworks. It may discuss only quantities whose scientific role is clear (`R-SVC`, `RES`, `SUS`, `FEAS`, `TRANS`, or `CTX`) and whose current scope/admission state is controlled by `SUSTAINABILITY_ADMISSION_FREEZE_V1.md`.
 
@@ -201,12 +204,12 @@ Any future change to frozen RQ0, RQ1–RQ7, SO1–SO7, H1–H5, Chapter-I scient
 
 The 2026-09-19 source-alignment amendment remains historical provenance for the bounded Hall/Ibáñez/novelty-firewall source corrections. It is not the current wording authority.
 
-The current official state is the **2026-09-20 synchronization**:
+The current official state is the **2026-09-21 DFCI-1 synchronization**:
 
 - Chapter-I content authority: `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`;
 - exact research-question authority: `CANONICAL_RESEARCH_QUESTIONS_V4.md`;
 - RQ–SO–H authority: `CANONICAL_RQ_SO_HYPOTHESES_V4.md`;
-- freeze record: `CHAPTER_I_FREEZE_2026-09-20.md`;
-- official source snapshot: `CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md`.
+- freeze record: `CHAPTER_I_FREEZE_2026-09-21.md`;
+- official source snapshot: `CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md`.
 
 The official Chapter-I sequence remains Sections **1.1–1.13**.
