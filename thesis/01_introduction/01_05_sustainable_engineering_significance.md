@@ -1,20 +1,25 @@
 ## 1.5 Sustainable Engineering Significance
 
-The Sustainable Engineering significance of this research lies in evaluating how infrastructure interventions affect not only service resilience but also the resources consumed and the consequences generated in achieving that resilience. Contemporary resilience research increasingly recognizes that infrastructure decisions must account for uncertainty, adaptation, and interactions among technical and institutional systems rather than asset robustness alone (Chester et al., 2021).
+The Sustainable Engineering significance of this research lies in evaluating whether infrastructure interventions that improve service resilience do so with materially different resource requirements and admitted sustainability consequences.
 
-Resilience, effectiveness, efficiency, and sustainability are not treated as interchangeable concepts.
+Four concepts are deliberately kept separate.
 
-**Resilience effect** describes the change in the ability of electricity and mobility services to remain acceptable or recover. **Effectiveness** asks whether an intervention achieves its declared engineering objective. **Resource efficiency** considers the resources required to produce that effect. **Sustainability consequences** describe admitted environmental or distributional consequences within a declared accounting boundary.
+**Resilience effect** describes how an intervention changes the ability of electricity and mobility services to remain acceptable or recover.
 
-Existing Power–Transportation research demonstrates the relevance of these trade-offs. Coupled traffic–power resilience studies include budget and repair-resource constraints, while more recent planning studies combine resilience, investment or operating costs, and carbon-related objectives (Sun et al., 2025; Zou & Chen, 2019). More broadly, infrastructure-recovery studies show that resilience, cost, and greenhouse-gas outcomes can lead to different judgments about candidate recovery strategies (Mitoulis et al., 2023).
+**Effectiveness** asks whether the intervention achieves its declared engineering objective.
 
-For the present thesis, direct intervention or recovery cost and operational electrical energy are treated as resource quantities. Carbon-dioxide-equivalent emissions constitute the planned core environmental sustainability consequence. Distributional accessibility remains conditional on adequate construct definition, data, population boundaries, and accounting rules.
+**Resource efficiency** relates an engineering effect to the resources required to obtain it.
 
-This distinction also prevents service quantities from being counted twice. Electricity served, mobility provided, service loss, accessibility required for system function, and recovery time primarily characterize service and resilience. They are not automatically reclassified as independent sustainability outcomes. The interpretation of resilience quantities already depends strongly on the chosen performance measure, normalization, threshold, and time horizon (Poulin & Kane, 2021).
+**Sustainability consequence** describes an admitted environmental or distributional consequence evaluated within a declared accounting boundary.
 
-The thesis therefore asks a bounded question: when interventions provide similar resilience benefits, do their resource requirements or admitted sustainability consequences differ enough to change the engineering decision?
+These quantities need not move in the same direction. Infrastructure-recovery studies demonstrate that resilience, cost, energy, and greenhouse-gas objectives can lead to different judgments about candidate strategies (Mitoulis et al., 2023). Coupled transportation–power studies also include budget, investment, operating-cost, recovery-resource, and carbon-related considerations (Sun et al., 2025; Zou & Chen, 2019).
 
-It does not assume that they will.
+The present thesis therefore uses a deliberately narrow consequence boundary. Direct intervention or recovery cost and operational electrical energy are treated as resource quantities. Carbon-dioxide-equivalent emissions constitute the principal planned environmental sustainability consequence within the qualified accounting boundary. Distributional accessibility remains conditional on adequate construct definition, population boundaries, data, and accounting rules.
 
----
+This separation also prevents double counting. Electricity served, mobility provided, service loss, accessibility required for infrastructure operation, and recovery time primarily characterize service and resilience. They are not automatically reclassified as independent sustainability outcomes.
 
+The Sustainable Engineering question is therefore bounded:
+
+> **When candidate interventions produce resilience benefits, do their resource requirements, resource efficiencies, or admitted sustainability consequences differ enough to affect the engineering decision?**
+
+The thesis does not assume that they will.
