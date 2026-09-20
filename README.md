@@ -18,7 +18,7 @@
 **Research method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Current major phase:** P3 — Case / Data Qualification + Execution Readiness  
 **Active candidate case:** `AUS-P5U-2018-V1` — Austin, Texas; SMART-DS v1.0, 2018, candidate P5U  
-**Updated:** 2026-09-20
+**Updated:** 2026-09-21
 
 > **Repository rule:** this repository is the active thesis source of truth. Historical/archive material is provenance only and cannot override current canonical authorities.
 
@@ -30,7 +30,7 @@
 
 | Control object | Current state | Meaning |
 |---|---|---|
-| Chapter I | **PASS — FROZEN** | Sections 1.1–1.13 are synchronized to the current Chapter-I and RQ/SO/H authorities |
+| Chapter I | **PASS — FROZEN (DFCI-1)** | Sections 1.1–1.13 are synchronized to the current Chapter-I and RQ/SO/H authorities |
 | P2 global Stage 1–7 design | **PASS — FROZEN** | 11/11 global design audits PASS; 0 unresolved design contradictions |
 | Pre-data design | **COMPLETE** | All design contradictions are closed; this does **not** mean empirical/data completion |
 | P3 control plane | **PASS — IN PROGRESS** | Qualification and readiness machinery is internally coherent |
