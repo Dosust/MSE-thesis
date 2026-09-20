@@ -16,7 +16,10 @@
 
 ## Purpose
 
-**Current reader-facing manuscript identity:** **DFCI-1 — Dakou Final Chapter I, Evidence-Controlled Scientific Narrative.** This wording preserves the frozen scientific contract while improving reader-facing scientific clarity.
+**Audit Pass 1 applied:** Stage-6 resource wording is narrowed to the admitted boundary; Ghasemkhani et al. (2026) is restored selectively in Section 1.3 for recent interdependency/uncertainty evidence; Zhang et al. metadata is synchronized to the current indexed 2027 volume assignment. Scientific architecture is unchanged.
+
+
+**Current reader-facing manuscript identity:** **DFCI-R1 — Dakou Final Chapter I, Evidence-Controlled Scientific Narrative, Audit Pass 1.** This wording preserves the frozen scientific contract while improving reader-facing scientific clarity.
 
 
 Establish the research contract: engineering context, problem, evidence-qualified gap, scope, research architecture, questions, objectives, hypotheses/test logic and proposed contribution. Chapter 1 does not present unverified thesis results or detailed Chapter-3/4 derivations.
@@ -204,7 +207,7 @@ Any future change to frozen RQ0, RQ1–RQ7, SO1–SO7, H1–H5, Chapter-I scient
 
 The 2026-09-19 source-alignment amendment remains historical provenance for the bounded Hall/Ibáñez/novelty-firewall source corrections. It is not the current wording authority.
 
-The current official state is the **2026-09-21 DFCI-1 synchronization**:
+The current official state is the **2026-09-21 DFCI-R1 Audit Pass 1 synchronization**:
 
 - Chapter-I content authority: `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`;
 - exact research-question authority: `CANONICAL_RESEARCH_QUESTIONS_V4.md`;
