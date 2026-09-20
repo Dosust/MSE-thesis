@@ -1,30 +1,40 @@
 ## 1.7 Research Framework and Scientific Logic
 
-Within the bounded domain established in Section 1.6, the thesis uses a seven-stage scientific architecture. The architecture is a **thesis synthesis**, not an established seven-stage framework taken directly from the literature.
+Within the bounded domain established above, the thesis uses a seven-stage scientific architecture. The architecture is a **thesis synthesis**, not an established seven-stage framework taken directly from the literature.
 
-It begins with required electricity and mobility services and progresses through structure, causal qualification, dynamics, knowledge and action, resilience, intervention consequences, and decision:
+The scientific chain is
 
 ```math
-\boxed{ \begin{aligned} \text{Critical service requirements} &\rightarrow \text{Spatiotemporal P--T System-of-Systems structure}\\ &\rightarrow \text{Evidence-qualified directional dependencies}\\ &\rightarrow \text{Complex spatiotemporal coupled dynamics}\\ &\rightarrow \text{Spatiotemporal observation, estimation, organization and feasible control}\\ &\rightarrow \text{Uncertainty-aware spatiotemporal viability and recovery}\\ &\rightarrow \text{Spatially and temporally targeted intervention, resources and sustainability consequences}\\ &\rightarrow \text{Defensible engineering decision}. \end{aligned} }
+\boxed{ \begin{aligned} \text{Critical service requirements} &\rightarrow \text{Spatiotemporal P--T System-of-Systems structure}\\ &\rightarrow \text{Evidence-qualified directional dependencies}\\ &\rightarrow \text{Complex spatiotemporal coupled dynamics}\\ &\rightarrow \text{Observation, estimation, organization, and feasible control}\\ &\rightarrow \text{Uncertainty-aware service viability and recovery}\\ &\rightarrow \text{Targeted intervention consequences}\\ &\rightarrow \text{Defensible engineering decision}. \end{aligned}}
 ```
 
-The architecture is compatible with the service-centered System-of-Systems interpretation developed by Hall et al. (2016) and the separate-but-coupled treatment of energy and transportation used by Ibáñez et al. (2010), but the seven-stage integration itself is a proposed thesis construct.
+The architecture is compatible with service-centered infrastructure System-of-Systems reasoning and with separate-but-coupled treatment of energy and transportation systems (Hall et al., 2016; Ibáñez et al., 2010). The seven-stage integration itself is the thesis construct.
 
-**Stage 1** determines what systems, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces constitute the bounded Power–Transportation System of Systems. It is structural rather than causal.
+**Stage 1 — Spatiotemporal System-of-Systems Structure.**
+This stage defines the bounded systems, services, entities, states, locations, temporal characteristics, and candidate interfaces. It establishes where and when interaction could occur without establishing a directional dependency.
 
-**Stage 2** determines which candidate relations can be accepted as evidence-qualified directional mechanisms, where and when they activate, and under what operating, hazard, delay, timescale, uncertainty, and validity conditions. Causal acceptance does not automatically establish that a mechanism is numerically ready for simulation.
+**Stage 2 — Evidence-Qualified Directional Dependencies.**
+Candidate relations are evaluated by mechanism, direction, activation conditions, operating and hazard context, delay, characteristic timescale, uncertainty, evidence, and validity domain. Acceptance as a directional dependency does not automatically imply numerical readiness for simulation.
 
-**Stage 3** introduces dynamically ready mechanisms into the native physical representations of Power and Transportation and determines how their effects evolve and propagate across space and time. The purpose is to determine whether dynamic coupling provides meaningful information beyond simpler matched representations.
+**Stage 3 — Complex Spatiotemporal Coupled Dynamics.**
+Dynamically ready mechanisms are introduced into the native physical representations of Power and Transportation. The stage tests whether dynamic coupling provides meaningful information beyond matched independent or static-coupling representations.
 
-**Stage 4** connects the evolving spatiotemporal physical state to distributed observation, estimation, organizational conditions, and feasible control. It distinguishes what physically exists from what can be known and what can actually be done.
+**Stage 4 — Observation, Estimation, Organization, and Feasible Control.**
+The evolving physical state is connected to what can be measured, estimated, communicated, authorized, coordinated, and executed. Physical possibility is therefore distinguished from operational feasibility.
 
-**Stage 5** asks where and when required services can remain acceptable, whether they can be recovered after violation, and how uncertainty affects those conclusions. Viability theory provides a formal basis for remain-within-acceptable-set reasoning, while recovery reachability addresses return after service violation (Béné & Doyen, 2018). Conventional performance and recovery measures remain comparators rather than being discarded (Poulin & Kane, 2021).
+The conceptual progression is
 
-**Stage 6** uses resilience diagnosis to **inform the identification and comparison** of candidate engineering interventions, including their location, timing, and scale where relevant. Resilience effect, resource requirements, resource efficiency, and admitted sustainability consequences remain separate.
+```math
+Y \rightarrow y \rightarrow \widehat Y \rightarrow (I,O) \rightarrow \mathcal U_{\mathrm{feas}} \rightarrow u.
+```
 
-**Stage 7** evaluates which candidate intervention or transformation, including its location, timing, and scale where relevant, remains defensible under requirements, feasibility, uncertainty, resilience evidence, resource requirements, and admitted sustainability consequences. Sequential adaptation remains conditional rather than assumed.
+**Stage 5 — Uncertainty-Aware Service Resilience.**
+The analysis asks whether required services can remain acceptable and, after violation, whether they can be recovered. Viability provides a formal basis for remaining within acceptable conditions, whereas recovery reachability addresses return after service violation. Conventional service and recovery measures remain explicit comparators rather than being discarded (Béné & Doyen, 2018; Poulin & Kane, 2021; Vinod & Oishi, 2021).
 
-Identification, verification, validation, uncertainty quantification, provenance, and reproducibility operate across the seven stages. They are scientific controls rather than an eighth stage.
+**Stage 6 — Engineering Intervention Consequences.**
+Resilience diagnosis informs the identification and comparison of candidate interventions. Type, location, timing, and scale are considered where relevant, while resilience effectiveness, resource requirements, resource efficiency, and admitted sustainability consequences remain distinct quantities.
 
----
+**Stage 7 — Defensible Engineering Decision.**
+Candidate alternatives are evaluated jointly under feasibility, resilience evidence, resource efficiency, admitted sustainability consequences, and uncertainty. The output is a defensible decision set rather than an assumed universal optimum.
 
+Identification, verification, validation, uncertainty quantification, provenance, and reproducibility operate across the seven stages. They are cross-cutting scientific controls rather than an eighth stage.
