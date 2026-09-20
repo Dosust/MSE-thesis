@@ -13,7 +13,7 @@
 
 The Chapter I wording approved on 2026-09-21 is the official pre-results thesis research contract and supersedes the active Chapter-I prose frozen on 2026-09-20.
 
-This replacement is **DFCI-1 — Dakou Final Chapter I, Evidence-Controlled Scientific Narrative**. It is an editorial-scientific consolidation only. It does **not** expand or alter the thesis scope, the `P+T` physical core, the `I+O` supporting-domain ontology, the seven-stage scientific architecture, RQ0–RQ7, SO1–SO7, H1–H5, the sustainability/resource boundary, or the proposed-contribution logic.
+This replacement is **DFCI-R1 — Dakou Final Chapter I, Evidence-Controlled Scientific Narrative, Audit Pass 1**. It is an editorial-scientific consolidation only. It does **not** expand or alter the thesis scope, the `P+T` physical core, the `I+O` supporting-domain ontology, the seven-stage scientific architecture, RQ0–RQ7, SO1–SO7, H1–H5, the sustainability/resource boundary, or the proposed-contribution logic.
 
 The official source snapshot, the thirteen Chapter-I section files, and `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md` are synchronized to this wording.
 
@@ -21,10 +21,16 @@ RQ0 and RQ1–RQ7 remain controlled by `CANONICAL_RESEARCH_QUESTIONS_V4.md`. SO1
 
 The 2026-09-20 official source snapshot is retained only as historical provenance.
 
-Bibliographic metadata verification, final figure insertion/caption audit, and university-formatting review remain downstream editorial closure tasks; they may not silently change the frozen scientific contract.
+## Evidence QA status
+
+Audit Pass 1 has been applied to the active Chapter-I manuscript. The pass narrows Stage-6 resource wording to the admitted quantitative boundary, restores recent interdependency/uncertainty review evidence in Section 1.3, and updates the Zhang et al. bibliographic year/volume assignment to the current indexed version-of-record metadata.
+
+The scientific architecture remains frozen. No RQ, SO, hypothesis, stage, infrastructure sector, hazard family, sustainability dimension, or mathematical framework was added.
+
+Remaining closure tasks are the complete publisher-level APA-7 metadata audit, figure/caption inference audit, final redundancy audit, and university-formatting review. These tasks may not silently change the frozen scientific contract.
 
 ```math
-\boxed{\text{Chapter I}=\text{PASS — FROZEN — OFFICIAL — DFCI-1}}
+\boxed{\text{Chapter I}=\text{PASS — FROZEN — OFFICIAL — DFCI-R1}}
 ```
 
 ```math
