@@ -1,6 +1,6 @@
 # Chapter I Freeze — 2026-09-20
 
-**Status:** PASS — FROZEN / OFFICIAL  
+**Status:** HISTORICAL — SUPERSEDED BY `CHAPTER_I_FREEZE_2026-09-21.md`  
 **Effective date:** 2026-09-20  
 **Official source snapshot:** `../01_introduction/CHAPTER_I_OFFICIAL_SOURCE_2026-09-20.md`  
 **Chapter-I authority:** `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V3.md`  
@@ -8,6 +8,10 @@
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V4.md`  
 **RQ–SO–H traceability:** `RQ_SO_H_TRACEABILITY_V4.md`  
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
+
+## Supersession notice
+
+This freeze remains as provenance for the 2026-09-20 official wording. The active Chapter-I wording is controlled by `CHAPTER_I_FREEZE_2026-09-21.md` and `CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md`.
 
 ## Freeze statement
 
