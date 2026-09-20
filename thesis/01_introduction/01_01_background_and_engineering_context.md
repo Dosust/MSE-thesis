@@ -1,34 +1,33 @@
 ## 1.1 Background and Engineering Context
 
-The electrification of transportation is increasing the operational interaction between electric-power and transportation infrastructures. Electric-vehicle charging links mobility demand to the location, timing, and availability of electricity supply, while charging demand can influence distribution-system operation and planning (Unterluggauer et al., 2022; Wei et al., 2019). Emerging vehicle-to-grid and mobile-energy applications create additional opportunities for transportation resources to interact with the power system (Oladigbolu et al., 2025).
+Electricity and mobility are critical infrastructure services. Their provision depends on distinct physical systems, but transportation electrification is increasing the number and importance of interfaces between electric-power and transportation infrastructures. Electric-vehicle charging connects mobility demand to the location, timing, capacity, and availability of electricity supply, while charging demand can affect distribution-system operation and planning. Vehicle-to-grid and mobile-energy applications create additional pathways through which transportation resources may interact with the power system when the required technical and operating conditions are present (Oladigbolu et al., 2025; Unterluggauer et al., 2022; Wei et al., 2019).
 
-The relationship also extends beyond normal operation. Transportation conditions can affect power-system restoration because repair crews, equipment, replacement components, and mobile energy resources depend on physical access to damaged electrical assets. Post-disaster restoration studies explicitly show that road conditions can constrain repair routing and coordinated infrastructure recovery (Fan et al., 2024; Lian et al., 2026). Power-to-Transportation and Transportation-to-Power dependencies therefore arise through different physical and operational mechanisms.
+The interaction extends beyond normal operation. Power-system restoration depends on physical access for repair crews, equipment, replacement components, mobile generators, and other restoration resources. Transportation disruption can therefore constrain access to damaged electrical assets and alter restoration timing (Fan et al., 2024; Lian et al., 2026).
 
-These infrastructures matter because they provide services rather than simply because they contain assets. Hall et al. (2016) frame infrastructure assessment around the services produced by coordinated infrastructure systems. Under this interpretation, the power system supports electricity service, whereas the transportation system supports mobility and physical accessibility. A failure becomes important when it changes the ability of these systems to provide the required services or constrains the operation and recovery of another system.
+The engineering significance of these infrastructures follows from the services they provide rather than from their assets alone. The power system provides electricity service, whereas the transportation system provides mobility and physical accessibility. A disruption becomes consequential when it reduces one of these services or constrains the operation or recovery of the other system. This service-centered interpretation is consistent with infrastructure System-of-Systems reasoning, in which constituent systems retain their identities while contributing to broader service functions (Hall et al., 2016).
 
-Power and Transportation nevertheless remain distinct constituent systems. Integrated energy–transport studies can model them jointly while retaining their separate network structures, operational logic, and planning variables (Ibáñez et al., 2010). Coupling therefore does not require electrical and transportation physics to be homogenized into one generic network.
+Power and Transportation nevertheless remain physically distinct systems. Power networks obey electrical laws, operating constraints, and electrical-control requirements. Transportation networks represent roads, traffic, routing, accessibility, mobility demand, and transportation-control processes. Their interaction does not require their native physical descriptions to be replaced by one homogeneous network. Integrated energy–transport studies instead show that distinct systems can remain separately represented while selected states, flows, constraints, or decisions are coupled (Ibáñez et al., 2010).
 
-Direction is equally important. Electricity availability may affect charging infrastructure and other electrically dependent transportation functions, whereas road availability may affect repair access and restoration of the power system. Charging behavior and mobile electrical resources can create additional Transportation-to-Power effects under appropriate operating conditions (Oladigbolu et al., 2025; Wang et al., 2026). For this thesis,
+Directionality is therefore fundamental. Electricity availability can affect charging infrastructure and other electrically dependent transportation functions. Transportation availability can affect repair access and power-system restoration. Charging behavior and mobile electrical resources can create additional Transportation-to-Power effects under appropriate operating conditions (Fan et al., 2024; Fotouhi et al., 2017; Wang et al., 2026).
 
-```math
-P\rightarrow T \qquad\text{and}\qquad T\rightarrow P
-```
-
-are qualified independently. Evidence of one direction does not establish the other.
-
-The broader infrastructure-interdependency literature likewise distinguishes different forms of dependency and recognizes that cascading consequences can arise when a change in one infrastructure affects another through a functional relationship (Ouyang, 2014; Rinaldi et al., 2001). At the same time, simultaneous exposure to the same hazard does not by itself establish such a relationship. Two assets can fail together because they share a flood footprint without either failure causing the other.
-
-The thesis therefore uses two complementary perspectives. A **System-of-Systems perspective** is used to represent the architecture of distinct constituent systems and their interfaces, while a **complex-dynamical-systems perspective** is used to study how their states, dependencies, disturbances, controls, and recovery processes evolve through time. Systems-of-systems research emphasizes the continued identity and operational characteristics of constituent systems within a larger architecture (Maier, 1998), while infrastructure-interdependency research demonstrates that interactions between constituent infrastructures can generate behavior not captured by isolated-system analysis (Ouyang, 2014; Rinaldi et al., 2001).
-
-For analytical clarity, the thesis therefore adopts the modeling convention
+For this thesis,
 
 ```math
-\boxed{ \text{System of Systems}=\text{architectural view}, \qquad \text{complex dynamical system}=\text{behavioral view}. }
+\boxed{ P\rightarrow T \not\Rightarrow T\rightarrow P }
 ```
 
-This is a **thesis modeling convention**, not a claim that the two concepts are universally separate.
+because evidence of a dependency in one direction does not establish a dependency in the reverse direction. Each direction can have a different mechanism, activation condition, magnitude, delay, characteristic timescale, uncertainty, and validity domain.
 
-The engineering problem consequently extends beyond determining whether Power and Transportation are connected. It concerns whether specific directional mechanisms are supported by evidence, whether those mechanisms materially affect coupled behavior and service trajectories, whether the resulting system condition can be observed and acted upon, and whether critical services can remain acceptable or be recovered under disruption and uncertainty.
+Structural proximity must also be distinguished from functional dependency. Two assets can be exposed simultaneously to the same flood without either asset causing the state change of the other. Common exposure can therefore generate correlated disruption without establishing a cross-system directional dependency (Ouyang, 2014; Rinaldi et al., 2001).
 
----
+Two complementary perspectives are used to represent the resulting coupled infrastructure. The **System-of-Systems perspective** describes architecture: constituent systems, services, entities, interfaces, and relations. The **complex-dynamical-systems perspective** describes behavior: how physical states, disturbances, dependencies, feedback, controls, delays, and recovery processes evolve through space and time. Systems-of-systems theory emphasizes the continued identity of constituent systems within a larger architecture, whereas infrastructure-interdependency research shows that cross-system interaction can produce behavior that isolated-system analysis does not represent (Maier, 1998; Ouyang, 2014; Rinaldi et al., 2001).
 
+For analytical clarity, this thesis adopts the modeling convention
+
+```math
+\boxed{ \text{System of Systems} = \text{architectural view}, \qquad \text{complex dynamical system} = \text{behavioral view}. }
+```
+
+This convention is specific to the thesis and is not presented as a universal separation between the two concepts.
+
+The engineering problem therefore extends beyond determining whether Power and Transportation are connected. It requires establishing which cross-system relations are scientifically admissible as directional dependencies, what those dependencies do dynamically, what operators can observe and feasibly do while the system evolves, whether required services can remain acceptable or recover, and how intervention consequences affect the final engineering decision.
