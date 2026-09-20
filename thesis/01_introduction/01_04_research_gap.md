@@ -24,7 +24,7 @@ RQ1 defines the bounded system and candidate interfaces. RQ2 determines which ca
 
 ### 1.4.2 G2 — Qualified Directional Dependency to Dynamic Consequence
 
-Dynamic Power–Transportation models already represent charging interactions, hazard-responsive traffic, emergency-resource movement, and multistage recovery (Lian et al., 2026; Wang et al., 2026; Zhang et al., 2026).
+Dynamic Power–Transportation models already represent charging interactions, hazard-responsive traffic, emergency-resource movement, and multistage recovery (Lian et al., 2026; Wang et al., 2026; Zhang et al., 2027).
 
 Their existence does not establish the incremental engineering value of representing a qualified mechanism dynamically rather than through simpler matched representations.
 
@@ -58,7 +58,7 @@ This handoff generates RQ5, SO5, and H3.
 
 ### 1.4.5 G5 — Resilience Effect to Intervention Consequences
 
-Infrastructure interventions that improve resilience can require different quantities of capital, energy, personnel, or other resources and can produce different environmental or distributional consequences. Existing studies show that resilience, recovery, cost, and greenhouse-gas objectives can favor different intervention strategies (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
+Infrastructure interventions that improve resilience can differ in direct intervention or recovery cost, operational energy requirements, and admitted environmental consequences. Existing studies show that resilience, recovery, cost, and greenhouse-gas outcomes can lead to different judgments about candidate strategies (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
 
 The unresolved handoff is
 
