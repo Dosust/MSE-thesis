@@ -6,5 +6,8 @@ The general objective of this thesis is:
 
 Validation is interpreted within the declared context and validity domain of the corresponding model, experiment, and evidence rather than as universal validation of the framework.
 
----
+The objective can be read operationally as
 
+```math
+\boxed{ \text{Define} \rightarrow \text{Qualify} \rightarrow \text{Model} \rightarrow \text{Respond} \rightarrow \text{Assess} \rightarrow \text{Compare} \rightarrow \text{Decide}. }
+```
