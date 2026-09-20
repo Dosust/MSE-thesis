@@ -30,7 +30,7 @@
 
 | Control object | Current state | Meaning |
 |---|---|---|
-| Chapter I | **PASS — FROZEN (DFCI-1)** | Sections 1.1–1.13 are synchronized to the current Chapter-I and RQ/SO/H authorities |
+| Chapter I | **PASS — FROZEN (DFCI-R1)** | Sections 1.1–1.13 are synchronized to the current Chapter-I and RQ/SO/H authorities |
 | P2 global Stage 1–7 design | **PASS — FROZEN** | 11/11 global design audits PASS; 0 unresolved design contradictions |
 | Pre-data design | **COMPLETE** | All design contradictions are closed; this does **not** mean empirical/data completion |
 | P3 control plane | **PASS — IN PROGRESS** | Qualification and readiness machinery is internally coherent |
