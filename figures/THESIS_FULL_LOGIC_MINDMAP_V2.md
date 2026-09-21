@@ -342,7 +342,7 @@ J_\theta
 =
 \frac{\partial H\mathcal M(\theta)}{\partial\theta},
 \qquad
-\operatorname{rank}(J_\theta)=\dim(\theta),
+\mathrm{rank}(J_\theta)=\dim(\theta),
 ~~~
 
 within the declared parameterization and experiment. This is a diagnostic condition, not a universal sufficiency theorem for every model family.
@@ -983,7 +983,7 @@ GitHub Mermaid render QA:           OPEN
 Until render QA is completed:
 
 ~~~math
-\boxed{\texttt{STATUS = DRAFT-UNVERIFIED}}
+\boxed{\text{STATUS = DRAFT-UNVERIFIED}}
 ~~~
 
 ---
