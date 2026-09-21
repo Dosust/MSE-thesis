@@ -1,0 +1,109 @@
+flowchart LR
+    ROOT["COUPLED POWER–TRANSPORTATION<br/>INFRASTRUCTURE RESILIENCE"]
+
+    INP["INPUT<br/>Critical electricity + mobility<br/>service requirements"]
+
+    S1["1 · SPATIOTEMPORAL<br/>SYSTEM-OF-SYSTEMS<br/>STRUCTURE"]
+    S2["2 · EVIDENCE-QUALIFIED<br/>SPATIOTEMPORAL DIRECTIONAL<br/>DEPENDENCIES"]
+    G23["2→3 HANDOFF<br/>Identification · provenance<br/>uncertainty · dynamic readiness<br/>NOT A STAGE"]
+    S3["3 · COMPLEX<br/>SPATIOTEMPORAL<br/>COUPLED DYNAMICS"]
+    S4["4 · OBSERVATION · ESTIMATION<br/>ORGANIZATION · FEASIBLE CONTROL"]
+    S5["5 · UNCERTAINTY-AWARE<br/>SPATIOTEMPORAL<br/>SERVICE RESILIENCE"]
+    S6["6 · SPATIOTEMPORALLY TARGETED<br/>ENGINEERING INTERVENTION<br/>CONSEQUENCES"]
+    S7["7 · DEFENSIBLE<br/>SPATIOTEMPORAL<br/>ENGINEERING DECISION"]
+
+    CTRL["CROSS-CUTTING CONTROLS<br/>Evidence qualification · identification<br/>parameter provenance · VVUQ · sensitivity<br/>falsification · reproducibility · claim ceilings"]
+    RC["RESEARCH CONTRACT<br/>RQ1/SO1 + RQ2/SO2 = prerequisites<br/>RQ3→H1 · RQ4→H2 · RQ5→H3 · RQ6→H4 · RQ7→H5"]
+    EXE["EXECUTION REALIZATIONS<br/>Gate-controlled; not theory authority"]
+    FND["FOUNDATIONS<br/>Systems thinking · systems engineering"]
+
+    ROOT --> INP
+    INP --> S1
+    S1 --> S2 --> G23 --> S3 --> S4 --> S5 --> S6 --> S7
+
+    ROOT --> CTRL
+    ROOT --> RC
+    ROOT --> EXE
+    ROOT --> FND
+
+    INP -. "service acceptability" .-> S5
+    CTRL -. "cross-cutting" .-> S4
+    RC -. "tests" .-> S5
+    EXE -. "instantiates" .-> S3
+    FND -. "reasoning discipline" .-> S1
+
+    S1 --> P["Physical core P + T"]
+    S1 --> IO["Support domains I + O"]
+    S1 --> ST["Space + time"]
+    S1 --> CAND["Candidate interfaces / relations<br/>structural; non-causal"]
+    S1 --> HAZ["Hazard η(x,t)<br/>common exposure ≠ dependency"]
+
+    S2 --> PT["P → T"]
+    S2 --> TP["T → P"]
+    S2 --> QUAL["Mechanism · direction · activation<br/>space · time · delay · timescale<br/>evidence · uncertainty · validity"]
+    S2 --> FIRE["co-location ≠ dependency<br/>association ≠ causality<br/>P→T does not imply T→P"]
+
+    G23 --> PID["Parameter definition"]
+    G23 --> IDENT["Identifiability"]
+    G23 --> PROV["Provenance"]
+    G23 --> PU["Parameter uncertainty"]
+    G23 --> READY["Dynamic readiness"]
+
+    S3 --> FP["Native Power physics"]
+    S3 --> FT["Native Transportation dynamics"]
+    S3 --> COUP["Directional coupling operators<br/>C_PT ≠ C_TP"]
+    S3 --> HYB["Hybrid modes / resets"]
+    S3 --> TRAJ["Electricity + mobility<br/>service trajectories"]
+
+    S4 --> OBS["Observation y(x,t)"]
+    S4 --> EST["Estimate Ŷ(x,t)"]
+    S4 --> IORG["Information + Organization"]
+    S4 --> UF["Feasible action set U_feas"]
+    S4 --> U["Operational control u(x,t)"]
+
+    S5 --> K["K_sus<br/>acceptable service set"]
+    S5 --> V["Viability<br/>remain"]
+    S5 --> R["Recovery reachability<br/>return"]
+    S5 --> GU["Uncertainty qualification Γ_U<br/>probability only if justified"]
+    S5 --> COMP["Conventional measures<br/>explicit comparator"]
+
+    S6 --> AK["Intervention a_k<br/>type · location · timing · scale"]
+    S6 --> RE["Resilience effect"]
+    S6 --> RR["Resource requirements<br/>direct cost · operational energy"]
+    S6 --> EFF["Resource efficiency"]
+    S6 --> SUS["Admitted sustainability<br/>CO2e core"]
+    S6 --> FEAS["Feasibility + uncertainty"]
+    S6 --> COND["Accessibility/equity<br/>CONDITIONAL"]
+
+    S7 --> AF["Feasibility"]
+    S7 --> NATIVE["Native-unit criteria"]
+    S7 --> PAR["Pareto / dominance"]
+    S7 --> REG["Robustness / regret"]
+    S7 --> DEF["Defensible decision set"]
+    S7 --> ADAPT["Adaptive pathways<br/>CONDITIONAL"]
+
+    EXE --> AUS["Austin AUS-P5U-2018-V1<br/>ACTIVE CANDIDATE<br/>NOT YET ADMISSIBLE"]
+    EXE --> HOU["Houston H3<br/>FROZEN ARCHITECTURE<br/>EXECUTION BLOCKED"]
+    EXE --> NYC["NYC/ACN H1<br/>PARTIAL / COMPONENT<br/>VALIDATION ROLES"]
+
+    classDef root fill:#111827,color:#FFFFFF,stroke:#111827,stroke-width:3px;
+    classDef stage fill:#F8FAFC,color:#111827,stroke:#334155,stroke-width:2.5px;
+    classDef power fill:#E5E7EB,color:#0B1F3A,stroke:#0B1F3A,stroke-width:2px;
+    classDef transport fill:#ECFDF5,color:#0F766E,stroke:#0F766E,stroke-width:2px;
+    classDef info fill:#EFF6FF,color:#1E3A8A,stroke:#2563EB,stroke-width:2px;
+    classDef org fill:#FFFBEB,color:#78350F,stroke:#D97706,stroke-width:2px;
+    classDef hazard fill:#FEF2F2,color:#991B1B,stroke:#B91C1C,stroke-width:2px;
+    classDef derived fill:#F5F3FF,color:#4C1D95,stroke:#7E22CE,stroke-width:2px;
+    classDef execution fill:#FFF7ED,color:#7C2D12,stroke:#D97706,stroke-width:2px;
+    classDef input fill:#ECFDF5,color:#065F46,stroke:#15803D,stroke-width:2px;
+
+    class ROOT root;
+    class S1,S2,S3,S4,S5,S6,S7 stage;
+    class G23,CTRL,RC,FND derived;
+    class EXE,AUS,HOU,NYC execution;
+    class INP,K,V,R input;
+    class P,FP power;
+    class FT transport;
+    class OBS,EST,IORG info;
+    class UF,U org;
+    class HAZ hazard;
