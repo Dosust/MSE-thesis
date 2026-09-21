@@ -136,3 +136,37 @@ Promotion to CANONICAL-VERIFIED requires inspection of GitHub Mermaid rendering 
 The v2 map is now aligned with the current thesis scientific contract at the semantic/content level. It may be used for internal reasoning and review immediately, but it should not yet be treated as the final thesis-ready figure until render QA closes.
 
 No canonical scientific source was modified by this update.
+
+
+---
+
+## 6. GitHub math-render compatibility correction — 2026-09-21
+
+A GitHub Preview error was observed for the local-identifiability equation because GitHub rejected the macro:
+
+~~~latex
+\operatorname{rank}
+~~~
+
+The source has been corrected to the GitHub-compatible form:
+
+~~~math
+J_\theta
+=
+\frac{\partial H\mathcal M(\theta)}{\partial\theta},
+\qquad
+\mathrm{rank}(J_\theta)=\dim(\theta).
+~~~
+
+The status expression was also normalized from \(\texttt{DRAFT-UNVERIFIED}\) to \(\text{DRAFT-UNVERIFIED}\) to reduce renderer-specific macro risk.
+
+Source-level compatibility scan across:
+
+- THESIS_FULL_LOGIC_MINDMAP_V2.md;
+- THESIS_FULL_LOGIC_MINDMAP_V2.mmd;
+- THESIS_FULL_LOGIC_MINDMAP_V2_AUDIT.md;
+- FRAMEWORK_VISUAL_FIDELITY_PROTOCOL_V2.md
+
+found no remaining occurrences of \(\backslash\mathrm{operatorname}\) or \(\backslash\mathrm{texttt}\).
+
+This closes the **known source-level macro defect**. Full visual GitHub render QA remains open until the rendered diagrams and equations are visually inspected for clipping, overlap, or hierarchy errors.
