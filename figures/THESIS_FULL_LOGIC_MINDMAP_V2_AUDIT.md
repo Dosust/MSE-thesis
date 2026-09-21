@@ -114,7 +114,7 @@ Therefore:
 \boxed{
 \text{THESIS_FULL_LOGIC_MINDMAP_V2 status}
 =
-\texttt{DRAFT-UNVERIFIED}.
+\text{DRAFT-UNVERIFIED}.
 }
 \]
 
