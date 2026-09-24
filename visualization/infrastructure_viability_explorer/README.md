@@ -1,33 +1,75 @@
-# Infrastructure Viability Explorer — synthetic demonstrator v0.1
+# Infrastructure Viability Explorer — graph-aware synthetic demonstrator v0.2
 
-This directory contains a deterministic browser visualization driven by data generated from the thesis repository's reduced power–transport demonstrator.
+This directory contains a deterministic browser visualization driven entirely by data generated from the thesis repository's Python computational layer.
 
 ## Run
 
 From the repository root:
 
-1. Run: python tools/run_viability_explorer.py
-2. Run: python -m http.server 8000
-3. Open: http://localhost:8000/visualization/infrastructure_viability_explorer/
+1. Run: `python tools/run_viability_explorer.py`
+2. Run: `python -m http.server 8000`
+3. Open: `http://localhost:8000/visualization/infrastructure_viability_explorer/`
+
+## v0.2 architecture
+
+The demonstrator now contains an explicit synthetic multilayer graph:
+
+- **4 power nodes**
+- **5 transportation nodes**
+- **12 total edges**
+- **2 cross-sector interface edges**
+
+The computational chain is:
+
+[
+\mathcal G_{PT}
+\rightarrow \eta(x,t)
+\rightarrow Y(t)
+\rightarrow \text{graph projection}
+\rightarrow K_{\mathrm{sus}}
+\rightarrow \rho_{K}
+\rightarrow \text{diagnostics}
+\rightarrow \text{animation}
+]
+
+where (Y(t)=[P(t),T(t),C_{PT}(t)]) remains the reduced dynamic state.
 
 ## Scientific boundary
 
-The demonstrator is intentionally narrow:
+The graph is structural scaffolding. v0.2 does **not** solve AC/DC power flow, traffic assignment, cascading outage physics, or a calibrated restoration model.
 
-- systems: Power P plus Transportation T;
-- hazard: one smooth synthetic flood-intensity pulse;
-- state: normalized power service, transport service, and interface health;
-- dynamics: interpretable reduced ODE integrated by deterministic fixed-step RK4;
-- geometry: signed distance to declared sustainability thresholds under a diagonal metric;
-- ML: transparent ridge-regression surrogate trained and validated only against the synthetic simulator;
-- criticality: finite-difference model sensitivity of minimum constraint margin.
+For each node, local flood exposure is projected from the synthetic spatial hazard field. Node availability is a declared visualization projection combining reduced sector service and local exposure. Edge activity is a diagnostic proxy based on endpoint availability, additionally scaled by (C_{PT}) for interface edges.
 
-The threshold set is **not** a computed viability kernel. The criticality diagnostic is **not** causal identification. The ML hold-out error is **not** evidence of real-world predictive skill.
+Therefore:
+
+- graph projection ≠ physical network-flow solution;
+- threshold set ≠ viability kernel;
+- parameter sensitivity ≠ causal identification;
+- synthetic ML hold-out accuracy ≠ empirical predictive validity.
+
+## Reliability
+
+- deterministic fixed-step RK4;
+- normalized-domain checks;
+- RK4 refinement regression;
+- multilayer topology validation;
+- cross-layer interface validation;
+- spatial hazard bounds;
+- graph-state bounds;
+- deterministic JSON export;
+- SHA-256 record fingerprint;
+- Python 3.10/3.11/3.12 CI definition;
+- JavaScript syntax check;
+- no-gold palette contract;
+- committed-vs-regenerated numerical comparison.
 
 ## Rendering rule
 
-The browser consumes demo-data.json; it does not recompute or invent model states. Animation is therefore a view of reproducible computational output, not decorative motion.
+The browser consumes `demo-data.json`. It does not recompute the ODE, spatial hazard, node availability, edge activity, sustainability margin, ML error, or sensitivity values.
 
 ## Palette
 
-No gold-family colors are used. Primary accents are Light Sky Blue rgb(135, 206, 250) / #87CEFA and Deep Sky Blue rgb(0, 191, 255) / #00BFFF.
+No gold-family colors are used.
+
+- Light Sky Blue: `rgb(135, 206, 250)` / `#87CEFA`
+- Deep Sky Blue: `rgb(0, 191, 255)` / `#00BFFF`
