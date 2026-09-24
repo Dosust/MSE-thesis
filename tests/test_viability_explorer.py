@@ -1,0 +1,107 @@
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+import pytest
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from models.viability_explorer import (
+    DiagonalMetric,
+    Parameters,
+    State,
+    SustainableConstraints,
+    annotate_margins,
+    build_experiment,
+    constraint_margin,
+    gaussian_flood,
+    parameter_criticality,
+    simulate,
+    train_surrogate,
+    validation_rmse,
+    vector_field,
+)
+
+
+def test_gaussian_flood_is_bounded_and_peaks_at_declared_amplitude():
+    assert gaussian_flood(8.0) == pytest.approx(0.92)
+    assert 0.0 <= gaussian_flood(-100.0) <= 1.0
+    assert 0.0 <= gaussian_flood(100.0) <= 1.0
+
+
+def test_vector_field_points_inward_on_service_boundaries():
+    p = Parameters()
+    low = vector_field(State(0.0, 0.0, 0.0), 0.8, p)
+    high = vector_field(State(1.0, 1.0, 1.0), 0.8, p)
+    assert low.power >= 0 and low.transport >= 0 and low.interface >= 0
+    assert high.power <= 0 and high.transport <= 0 and high.interface <= 0
+
+
+def test_simulation_is_deterministic_and_bounded():
+    a = simulate(duration=4.0, dt=0.05)
+    b = simulate(duration=4.0, dt=0.05)
+    assert a == b
+    assert len(a) == 81
+    for s in a:
+        s.state.validate()
+        assert 0.0 <= s.hazard <= 1.0
+
+
+def test_constraint_margin_sign_and_metric_semantics():
+    c = SustainableConstraints(0.6, 0.6, 0.6)
+    m = DiagonalMetric(4.0, 1.0, 1.0)
+    assert constraint_margin(State(0.7, 0.8, 0.9), c, m) == pytest.approx(0.2)
+    assert constraint_margin(State(0.5, 0.8, 0.9), c, m) == pytest.approx(-0.2)
+
+
+def test_margin_annotation_matches_sample_count():
+    samples = simulate(duration=1.0, dt=0.05)
+    annotated = annotate_margins(samples)
+    assert len(annotated) == len(samples)
+    assert all(s.margin is not None for s in annotated)
+
+
+def test_parameter_criticality_is_finite_and_reproducible():
+    r1 = parameter_criticality(parameter="power_to_transport", duration=6.0, dt=0.05)
+    r2 = parameter_criticality(parameter="power_to_transport", duration=6.0, dt=0.05)
+    assert r1 == r2
+    assert abs(r1.sensitivity) < 100
+
+
+def test_invalid_parameter_criticality_is_rejected():
+    with pytest.raises(ValueError):
+        parameter_criticality(parameter="not_a_parameter")
+
+
+def test_experiment_payload_has_explicit_epistemic_boundary_and_valid_hash():
+    payload = build_experiment(sample_every=10)
+    assert payload["status"] == "synthetic_demonstrator_not_empirically_calibrated"
+    assert "not a viability kernel" in payload["semantics"]["margin"]
+    digest = payload.pop("sha256_without_hash_field")
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    assert hashlib.sha256(canonical).hexdigest() == digest
+
+
+def test_experiment_contains_required_synchronized_variables():
+    payload = build_experiment(sample_every=20)
+    row = payload["samples"][0]
+    assert {"time", "hazard", "power", "transport", "interface", "margin"} <= set(row)
+
+
+def test_large_time_step_is_rejected_to_protect_numerical_reliability():
+    with pytest.raises(ValueError):
+        simulate(duration=1.0, dt=0.5)
+
+
+def test_transparent_ml_surrogate_reconstructs_synthetic_vector_field_on_holdout():
+    model = train_surrogate()
+    rmse = validation_rmse(model)
+    assert max(rmse.values()) < 1e-6
+
+
+def test_experiment_labels_ml_scope_as_synthetic_only():
+    payload = build_experiment(sample_every=20)
+    assert payload["ml_surrogate"]["status"] == "trained_and_validated_on_synthetic_simulator_only"
