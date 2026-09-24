@@ -7,9 +7,11 @@ let data=null,index=0,playing=false,lastFrame=0,accumulator=0;
 function ctx2d(canvas){
   const dpr=Math.max(1,Math.min(2,window.devicePixelRatio||1));
   const rect=canvas.getBoundingClientRect();
-  const w=Math.max(1,Math.round(rect.width*dpr)),h=Math.max(1,Math.round(rect.width*(canvas.height/canvas.width)*dpr));
+  const w=Math.max(1,Math.round(rect.width*dpr));
+  const h=Math.max(1,Math.round(rect.width*(canvas.height/canvas.width)*dpr));
   if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}
-  const ctx=canvas.getContext("2d");ctx.setTransform(dpr,0,0,dpr,0,0);
+  const ctx=canvas.getContext("2d");
+  ctx.setTransform(dpr,0,0,dpr,0,0);
   return {ctx,w:rect.width,h:rect.width*(430/(canvas.id==="timeline"?1400:900))};
 }
 function line(ctx,x1,y1,x2,y2,color=COLORS.grid,width=1,dash=[]){
@@ -21,32 +23,51 @@ function text(ctx,s,x,y,size=12,color=COLORS.muted,align="left",weight=500){
 function circle(ctx,x,y,r,fill,stroke=null,width=1){
   ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke()}
 }
-function clear(ctx,w,h){ctx.clearRect(0,0,w,h);ctx.fillStyle="#081018";ctx.fillRect(0,0,w,h)}
+function clear(ctx,w,h){ctx.clearRect(0,0,w,h);ctx.fillStyle=COLORS.bg;ctx.fillRect(0,0,w,h)}
+function rgba(hex,alpha){
+  const n=parseInt(hex.slice(1),16),r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+  return `rgba(${r},${g},${b},${alpha})`;
+}
 
 function drawNetwork(s){
   const {ctx,w,h}=ctx2d(canvases.network);clear(ctx,w,h);
-  const pad=42,cY=h*.52,pX=w*.23,tX=w*.77,iX=w*.5;
-  const hazard=s.hazard;
-  ctx.save();ctx.globalAlpha=.07+hazard*.18;ctx.fillStyle=COLORS.deep;ctx.beginPath();ctx.ellipse(w*.5,h*.58,w*.47*(.45+hazard*.55),h*.33*(.45+hazard*.55),0,0,Math.PI*2);ctx.fill();ctx.restore();
+  const L=42,R=42,T=38,B=38,pw=w-L-R,ph=h-T-B;
+  const xy=node=>[L+node.x*pw,T+node.y*ph];
+  const nodeById=Object.fromEntries(data.graph.nodes.map(n=>[n.id,n]));
+  const gs=s.graph_state;
 
-  text(ctx,"POWER",pX,34,12,COLORS.sky,"center",800);
-  text(ctx,"TRANSPORT",tX,34,12,COLORS.sky,"center",800);
-  const powerNodes=[[pX-60,cY-72],[pX+34,cY-72],[pX-60,cY+62],[pX+34,cY+62]];
-  const roadNodes=[[tX-52,cY-72],[tX+52,cY-72],[tX-52,cY+62],[tX+52,cY+62]];
-  [[0,1],[0,2],[1,3],[2,3]].forEach(([a,b])=>line(ctx,...powerNodes[a],...powerNodes[b],COLORS.grid,4));
-  [[0,1],[0,2],[1,3],[2,3],[0,3]].forEach(([a,b])=>line(ctx,...roadNodes[a],...roadNodes[b],COLORS.grid,4));
-  const pColor=s.power>=data.constraints.min_power?COLORS.sky:COLORS.danger;
-  const tColor=s.transport>=data.constraints.min_transport?COLORS.deep:COLORS.danger;
-  powerNodes.forEach(([x,y])=>circle(ctx,x,y,8+8*s.power,pColor,COLORS.white,.8));
-  roadNodes.forEach(([x,y])=>circle(ctx,x,y,7+7*s.transport,tColor,COLORS.white,.8));
-  const iColor=s.interface>=data.constraints.min_interface?COLORS.sky:COLORS.danger;
-  line(ctx,pX+55,cY,iX-24,cY,iColor,2+5*s.interface);
-  line(ctx,iX+24,cY,tX-68,cY,iColor,2+5*s.interface);
-  circle(ctx,iX,cY,12+16*s.interface,"#0d1821",iColor,3);
-  text(ctx,"C_PT",iX,cY+4,11,COLORS.ink,"center",800);
-  text(ctx,`P=${s.power.toFixed(3)}`,pX,h-28,12,pColor,"center",700);
-  text(ctx,`T=${s.transport.toFixed(3)}`,tX,h-28,12,tColor,"center",700);
-  text(ctx,`η=${hazard.toFixed(3)}`,w/2,62,12,COLORS.deep,"center",700);
+  text(ctx,"POWER",L+pw*.18,24,11,COLORS.sky,"center",800);
+  text(ctx,"TRANSPORT",L+pw*.78,24,11,COLORS.deep,"center",800);
+  text(ctx,"graph-driven projection",w-18,24,10,COLORS.muted,"right",600);
+
+  for(const node of data.graph.nodes){
+    const [x,y]=xy(node),state=gs.nodes[node.id],hazard=state.hazard;
+    if(hazard>0.01){
+      circle(ctx,x,y,14+30*hazard,rgba(COLORS.deep,.035+.14*hazard));
+    }
+  }
+
+  for(const edge of data.graph.edges){
+    const a=nodeById[edge.source],b=nodeById[edge.target];
+    const [x1,y1]=xy(a),[x2,y2]=xy(b);
+    const activity=gs.edges[edge.id].activity;
+    const color=edge.layer==="power"?COLORS.sky:edge.layer==="transport"?COLORS.deep:COLORS.white;
+    const dash=edge.layer==="interface"?[5,5]:[];
+    line(ctx,x1,y1,x2,y2,rgba(color,.20+.75*activity),1.2+4.3*activity,dash);
+  }
+
+  for(const node of data.graph.nodes){
+    const [x,y]=xy(node),state=gs.nodes[node.id];
+    const layerColor=node.layer==="power"?COLORS.sky:COLORS.deep;
+    const availability=state.availability,hazard=state.hazard;
+    const fill=availability<.45?COLORS.danger:layerColor;
+    circle(ctx,x,y,7+8*availability,rgba(fill,.25+.7*availability),COLORS.white,.7);
+    if(hazard>.25) circle(ctx,x,y,12+10*hazard,"rgba(0,0,0,0)",COLORS.danger,1.2);
+    text(ctx,node.id,x,y+3,9,COLORS.ink,"center",800);
+  }
+
+  const interfaces=data.graph.edges.filter(e=>e.layer==="interface");
+  text(ctx,`${data.graph.nodes.length} nodes · ${data.graph.edges.length} edges · ${interfaces.length} interfaces`,w/2,h-16,10,COLORS.muted,"center",650);
 }
 
 function drawPhase(s){
@@ -104,8 +125,10 @@ function setPlaying(next){
 }
 function buildQA(){
   const qa=$("qa"),rmse=data.ml_surrogate.holdout_rmse;
+  const interfaces=data.graph.edges.filter(e=>e.layer==="interface").length;
   const rows=[
     ["Data status",data.status],
+    ["Graph",`${data.graph.nodes.length} nodes / ${data.graph.edges.length} edges / ${interfaces} interfaces`],
     ["ML scope",data.ml_surrogate.status],
     ["RMSE · dP/dt",Number(rmse.power).toExponential(2)],
     ["RMSE · dT/dt",Number(rmse.transport).toExponential(2)],
@@ -118,7 +141,7 @@ async function init(){
   try{
     const response=await fetch("demo-data.json",{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);
     data=await response.json();
-    if(data.schema_version!=="ive-demo-0.1.0"||!Array.isArray(data.samples)||data.samples.length<2)throw new Error("unexpected data schema");
+    if(data.schema_version!=="ive-demo-0.2.0"||!Array.isArray(data.samples)||data.samples.length<2||!data.graph)throw new Error("unexpected data schema");
     $("time").max=String(data.samples.length-1);
     $("status").textContent=`${data.samples.length} samples · ${data.schema_version}`;
     $("fingerprint").textContent=`SHA-256 model record: ${data.sha256_without_hash_field}`;
