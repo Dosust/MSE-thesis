@@ -17,9 +17,12 @@ from models.viability_explorer import (
     annotate_margins,
     build_experiment,
     constraint_margin,
+    default_multilayer_graph,
     gaussian_flood,
+    graph_snapshot,
     parameter_criticality,
     simulate,
+    spatial_hazard,
     train_surrogate,
     validation_rmse,
     vector_field,
@@ -100,10 +103,39 @@ def test_invalid_parameter_criticality_is_rejected():
         parameter_criticality(parameter="not_a_parameter")
 
 
+def test_default_multilayer_graph_is_structurally_valid():
+    graph = default_multilayer_graph()
+    graph.validate()
+    node_layers = {n.id: n.layer for n in graph.nodes}
+    interfaces = [e for e in graph.edges if e.layer == "interface"]
+    assert len(graph.nodes) == 9
+    assert len(interfaces) == 2
+    assert all(node_layers[e.source] != node_layers[e.target] for e in interfaces)
+
+
+def test_spatial_hazard_is_bounded_and_spatially_nonuniform():
+    center = spatial_hazard(8.0, 0.56, 0.58)
+    corner = spatial_hazard(8.0, 0.0, 0.0)
+    assert 0.0 <= corner <= center <= 1.0
+    assert center > corner
+
+
+def test_graph_snapshot_contains_bounded_node_and_edge_projections():
+    graph = default_multilayer_graph()
+    snapshot = graph_snapshot(graph, State(0.8, 0.7, 0.6), 8.0)
+    assert set(snapshot["nodes"]) == {n.id for n in graph.nodes}
+    assert set(snapshot["edges"]) == {e.id for e in graph.edges}
+    assert all(0.0 <= x["hazard"] <= 1.0 for x in snapshot["nodes"].values())
+    assert all(0.0 <= x["availability"] <= 1.0 for x in snapshot["nodes"].values())
+    assert all(0.0 <= x["activity"] <= 1.0 for x in snapshot["edges"].values())
+
+
 def test_experiment_payload_has_explicit_epistemic_boundary_and_valid_hash():
     payload = build_experiment(sample_every=10)
+    assert payload["schema_version"] == "ive-demo-0.2.0"
     assert payload["status"] == "synthetic_demonstrator_not_empirically_calibrated"
     assert "not a viability kernel" in payload["semantics"]["margin"]
+    assert "not physical network-flow solutions" in payload["semantics"]["graph"]
     digest = payload.pop("sha256_without_hash_field")
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
     assert hashlib.sha256(canonical).hexdigest() == digest
@@ -112,7 +144,9 @@ def test_experiment_payload_has_explicit_epistemic_boundary_and_valid_hash():
 def test_experiment_contains_required_synchronized_variables():
     payload = build_experiment(sample_every=20)
     row = payload["samples"][0]
-    assert {"time", "hazard", "power", "transport", "interface", "margin"} <= set(row)
+    assert {"time", "hazard", "power", "transport", "interface", "margin", "graph_state"} <= set(row)
+    assert {"nodes", "edges"} <= set(row["graph_state"])
+    assert len(payload["graph"]["nodes"]) == 9
 
 
 def test_large_time_step_is_rejected_to_protect_numerical_reliability():
