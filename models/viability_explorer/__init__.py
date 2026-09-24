@@ -11,12 +11,23 @@ from .geometry import (
     minimum_margin,
     parameter_criticality,
 )
+from .graph import (
+    Edge,
+    MultilayerGraph,
+    Node,
+    default_multilayer_graph,
+    graph_payload,
+    graph_snapshot,
+    spatial_hazard,
+)
 from .surrogate import LinearVectorFieldSurrogate, train_surrogate, validation_rmse
 
 __all__ = [
     "CriticalityResult", "LinearVectorFieldSurrogate", "Derivative", "DiagonalMetric",
-    "Parameters", "Sample", "State", "SustainableConstraints", "annotate_margins",
-    "build_experiment", "constraint_margin", "gaussian_flood", "minimum_margin",
-    "parameter_criticality", "simulate", "train_surrogate", "validation_rmse",
-    "vector_field", "write_experiment",
+    "Edge", "MultilayerGraph", "Node", "Parameters", "Sample", "State",
+    "SustainableConstraints", "annotate_margins", "build_experiment",
+    "constraint_margin", "default_multilayer_graph", "gaussian_flood", "graph_payload",
+    "graph_snapshot", "minimum_margin", "parameter_criticality", "simulate",
+    "spatial_hazard", "train_surrogate", "validation_rmse", "vector_field",
+    "write_experiment",
 ]
