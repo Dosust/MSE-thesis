@@ -9,9 +9,10 @@ from pathlib import Path
 
 from .core import Parameters, State, simulate, thin
 from .geometry import DiagonalMetric, SustainableConstraints, annotate_margins, parameter_criticality
+from .graph import default_multilayer_graph, graph_payload, graph_snapshot
 from .surrogate import train_surrogate, validation_rmse
 
-SCHEMA_VERSION = "ive-demo-0.1.0"
+SCHEMA_VERSION = "ive-demo-0.2.0"
 
 
 def build_experiment(*, sample_every: int = 4) -> dict:
@@ -19,6 +20,7 @@ def build_experiment(*, sample_every: int = 4) -> dict:
     constraints = SustainableConstraints()
     metric = DiagonalMetric()
     initial = State(0.96, 0.95, 0.93)
+    graph = default_multilayer_graph()
 
     annotated = annotate_margins(simulate(initial=initial, params=params), constraints, metric)
     samples = list(thin(annotated, sample_every))
@@ -27,6 +29,33 @@ def build_experiment(*, sample_every: int = 4) -> dict:
         parameter_criticality(parameter=name, params=params)
         for name in ("transport_to_power", "power_to_transport", "interface_hazard")
     ]
+
+    exported_samples = []
+    for s in samples:
+        snapshot = graph_snapshot(graph, s.state, s.time)
+        exported_samples.append(
+            {
+                "time": round(s.time, 10),
+                "hazard": round(s.hazard, 10),
+                "power": round(s.state.power, 10),
+                "transport": round(s.state.transport, 10),
+                "interface": round(s.state.interface, 10),
+                "margin": round(float(s.margin), 10),
+                "graph_state": {
+                    "nodes": {
+                        node_id: {
+                            "hazard": round(values["hazard"], 10),
+                            "availability": round(values["availability"], 10),
+                        }
+                        for node_id, values in snapshot["nodes"].items()
+                    },
+                    "edges": {
+                        edge_id: {"activity": round(values["activity"], 10)}
+                        for edge_id, values in snapshot["edges"].items()
+                    },
+                },
+            }
+        )
 
     payload = {
         "schema_version": SCHEMA_VERSION,
@@ -37,6 +66,10 @@ def build_experiment(*, sample_every: int = 4) -> dict:
                 "transport": "normalized transport service in [0,1]",
                 "interface": "normalized P-T interface health in [0,1]",
             },
+            "graph": (
+                "explicit synthetic multilayer P-T structure; node availability and edge activity "
+                "are visualization projections, not physical network-flow solutions"
+            ),
             "margin": "signed distance-to-threshold proxy under a diagonal metric; not a viability kernel",
             "criticality": "finite-difference model sensitivity; not causal identification",
         },
@@ -44,17 +77,8 @@ def build_experiment(*, sample_every: int = 4) -> dict:
         "parameters": asdict(params),
         "constraints": asdict(constraints),
         "metric": asdict(metric),
-        "samples": [
-            {
-                "time": round(s.time, 10),
-                "hazard": round(s.hazard, 10),
-                "power": round(s.state.power, 10),
-                "transport": round(s.state.transport, 10),
-                "interface": round(s.state.interface, 10),
-                "margin": round(float(s.margin), 10),
-            }
-            for s in samples
-        ],
+        "graph": graph_payload(graph),
+        "samples": exported_samples,
         "ml_surrogate": {
             "status": "trained_and_validated_on_synthetic_simulator_only",
             "model": "transparent ridge regression over declared nonlinear features",
