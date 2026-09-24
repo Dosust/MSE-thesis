@@ -50,6 +50,30 @@ def test_simulation_is_deterministic_and_bounded():
         assert 0.0 <= s.hazard <= 1.0
 
 
+def test_rk4_refinement_shows_monotone_terminal_convergence():
+    def terminal(dt):
+        return simulate(duration=24.0, dt=dt)[-1].state
+
+    def max_norm(a, b):
+        return max(
+            abs(a.power - b.power),
+            abs(a.transport - b.transport),
+            abs(a.interface - b.interface),
+        )
+
+    s020 = terminal(0.20)
+    s010 = terminal(0.10)
+    s005 = terminal(0.05)
+    s0025 = terminal(0.025)
+
+    e1 = max_norm(s020, s010)
+    e2 = max_norm(s010, s005)
+    e3 = max_norm(s005, s0025)
+
+    assert e3 < e2 < e1
+    assert e3 < 1e-9
+
+
 def test_constraint_margin_sign_and_metric_semantics():
     c = SustainableConstraints(0.6, 0.6, 0.6)
     m = DiagonalMetric(4.0, 1.0, 1.0)
