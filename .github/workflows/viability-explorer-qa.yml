@@ -36,6 +36,14 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest
       - name: Run focused scientific regression tests
         run: python -m pytest -q tests/test_viability_explorer.py
+      - name: Check browser JavaScript syntax
+        run: node --check visualization/infrastructure_viability_explorer/app.js
+      - name: Enforce no-gold color contract
+        run: |
+          if grep -Eiq '#(ffd700|d4af37|daa520|b8860b|c5a000|ffbf00)' visualization/infrastructure_viability_explorer/styles.css; then
+            echo "Forbidden gold-family color found."
+            exit 1
+          fi
       - name: Regenerate deterministic explorer data
         run: python tools/run_viability_explorer.py --output /tmp/demo-data.json
       - name: Verify committed data against regenerated model output
