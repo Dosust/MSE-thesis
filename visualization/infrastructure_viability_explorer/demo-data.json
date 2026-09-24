@@ -1,0 +1,1042 @@
+{
+  "schema_version": "ive-demo-0.1.0",
+  "status": "synthetic_demonstrator_not_empirically_calibrated",
+  "semantics": {
+    "state": {
+      "power": "normalized power service in [0,1]",
+      "transport": "normalized transport service in [0,1]",
+      "interface": "normalized P-T interface health in [0,1]"
+    },
+    "margin": "signed distance-to-threshold proxy under a diagonal metric; not a viability kernel",
+    "criticality": "finite-difference model sensitivity; not causal identification"
+  },
+  "initial_state": {
+    "power": 0.96,
+    "transport": 0.95,
+    "interface": 0.93
+  },
+  "parameters": {
+    "power_recovery": 0.16,
+    "transport_recovery": 0.12,
+    "interface_recovery": 0.1,
+    "power_hazard": 0.36,
+    "transport_hazard": 0.46,
+    "interface_hazard": 0.4,
+    "transport_to_power": 0.24,
+    "power_to_transport": 0.32,
+    "mismatch_to_interface": 0.2
+  },
+  "constraints": {
+    "min_power": 0.62,
+    "min_transport": 0.58,
+    "min_interface": 0.55
+  },
+  "metric": {
+    "power_weight": 1,
+    "transport_weight": 1,
+    "interface_weight": 0.75
+  },
+  "samples": [
+    {
+      "time": 0,
+      "hazard": 0.0035566465,
+      "power": 0.96,
+      "transport": 0.95,
+      "interface": 0.93,
+      "margin": 0.3290896534
+    },
+    {
+      "time": 0.2,
+      "hazard": 0.0046791837,
+      "power": 0.958679096,
+      "transport": 0.9483919208,
+      "interface": 0.9307105466,
+      "margin": 0.3297050049
+    },
+    {
+      "time": 0.4,
+      "hazard": 0.0061134104,
+      "power": 0.9572409908,
+      "transport": 0.9466346873,
+      "interface": 0.9313014891,
+      "margin": 0.3302167761
+    },
+    {
+      "time": 0.6,
+      "hazard": 0.0079319702,
+      "power": 0.955659248,
+      "transport": 0.9446954559,
+      "interface": 0.9317482697,
+      "margin": 0.3306036994
+    },
+    {
+      "time": 0.8,
+      "hazard": 0.0102202768,
+      "power": 0.9539016021,
+      "transport": 0.9425341164,
+      "interface": 0.9320207696,
+      "margin": 0.3308396913
+    },
+    {
+      "time": 1,
+      "hazard": 0.0130776079,
+      "power": 0.9519290226,
+      "transport": 0.9401021499,
+      "interface": 0.9320824262,
+      "margin": 0.3308930875
+    },
+    {
+      "time": 1.2,
+      "hazard": 0.0166179723,
+      "power": 0.949694743,
+      "transport": 0.9373414537,
+      "interface": 0.9318893193,
+      "margin": 0.329694743
+    },
+    {
+      "time": 1.4,
+      "hazard": 0.0209706464,
+      "power": 0.9471432931,
+      "transport": 0.9341831881,
+      "interface": 0.9313892623,
+      "margin": 0.3271432931
+    },
+    {
+      "time": 1.6,
+      "hazard": 0.0262802607,
+      "power": 0.9442095915,
+      "transport": 0.9305467192,
+      "interface": 0.930520949,
+      "margin": 0.3242095915
+    },
+    {
+      "time": 1.8,
+      "hazard": 0.0327063129,
+      "power": 0.9408181679,
+      "transport": 0.9263387534,
+      "interface": 0.9292132206,
+      "margin": 0.3208181679
+    },
+    {
+      "time": 2,
+      "hazard": 0.0404219789,
+      "power": 0.9368826081,
+      "transport": 0.9214527876,
+      "interface": 0.9273845335,
+      "margin": 0.3168826081
+    },
+    {
+      "time": 2.2,
+      "hazard": 0.0496121013,
+      "power": 0.932305332,
+      "transport": 0.9157690197,
+      "interface": 0.9249427244,
+      "margin": 0.312305332
+    },
+    {
+      "time": 2.4,
+      "hazard": 0.0604702463,
+      "power": 0.9269778324,
+      "transport": 0.9091548903,
+      "interface": 0.9217851815,
+      "margin": 0.3069778324
+    },
+    {
+      "time": 2.6,
+      "hazard": 0.073194748,
+      "power": 0.9207815167,
+      "transport": 0.9014664395,
+      "interface": 0.9177995424,
+      "margin": 0.3007815167
+    },
+    {
+      "time": 2.8,
+      "hazard": 0.0879836892,
+      "power": 0.913589301,
+      "transport": 0.8925506678,
+      "interface": 0.9128650402,
+      "margin": 0.293589301
+    },
+    {
+      "time": 3,
+      "hazard": 0.1050288192,
+      "power": 0.9052680963,
+      "transport": 0.8822490783,
+      "interface": 0.9068546114,
+      "margin": 0.2852680963
+    },
+    {
+      "time": 3.2,
+      "hazard": 0.1245084606,
+      "power": 0.8956823069,
+      "transport": 0.8704025338,
+      "interface": 0.8996378609,
+      "margin": 0.2756823069
+    },
+    {
+      "time": 3.4,
+      "hazard": 0.1465795251,
+      "power": 0.8846984129,
+      "transport": 0.8568574981,
+      "interface": 0.8910849381,
+      "margin": 0.2646984129
+    },
+    {
+      "time": 3.6,
+      "hazard": 0.1713688266,
+      "power": 0.8721906375,
+      "transport": 0.8414736206,
+      "interface": 0.8810713235,
+      "margin": 0.2521906375
+    },
+    {
+      "time": 3.8,
+      "hazard": 0.1989639535,
+      "power": 0.8580475996,
+      "transport": 0.82413248,
+      "interface": 0.8694834486,
+      "margin": 0.2380475996
+    },
+    {
+      "time": 4,
+      "hazard": 0.2294040321,
+      "power": 0.8421797275,
+      "transport": 0.8047471292,
+      "interface": 0.8562249766,
+      "margin": 0.2221797275
+    },
+    {
+      "time": 4.2,
+      "hazard": 0.2626707765,
+      "power": 0.8245270666,
+      "transport": 0.7832718872,
+      "interface": 0.8412234708,
+      "margin": 0.2032718872
+    },
+    {
+      "time": 4.4,
+      "hazard": 0.29868027,
+      "power": 0.8050669702,
+      "transport": 0.7597116407,
+      "interface": 0.8244370677,
+      "margin": 0.1797116407
+    },
+    {
+      "time": 4.6,
+      "hazard": 0.3372759533,
+      "power": 0.783821039,
+      "transport": 0.7341297636,
+      "interface": 0.8058606872,
+      "margin": 0.1541297636
+    },
+    {
+      "time": 4.8,
+      "hazard": 0.3782233073,
+      "power": 0.7608605965,
+      "transport": 0.7066536958,
+      "interface": 0.7855312446,
+      "margin": 0.1266536958
+    },
+    {
+      "time": 5,
+      "hazard": 0.4212066928,
+      "power": 0.7363099859,
+      "transport": 0.6774772625,
+      "interface": 0.7635313229,
+      "margin": 0.0974772625
+    },
+    {
+      "time": 5.2,
+      "hazard": 0.4658287673,
+      "power": 0.7103470664,
+      "transport": 0.6468589951,
+      "interface": 0.7399908078,
+      "margin": 0.0668589951
+    },
+    {
+      "time": 5.4,
+      "hazard": 0.5116128131,
+      "power": 0.6832004836,
+      "transport": 0.6151160427,
+      "interface": 0.7150861082,
+      "margin": 0.0351160427
+    },
+    {
+      "time": 5.6,
+      "hazard": 0.5580082069,
+      "power": 0.6551435789,
+      "transport": 0.5826137042,
+      "interface": 0.6890367634,
+      "margin": 0.0026137042
+    },
+    {
+      "time": 5.8,
+      "hazard": 0.6043991241,
+      "power": 0.626485155,
+      "transport": 0.5497511223,
+      "interface": 0.6620994709,
+      "margin": -0.0302488777
+    },
+    {
+      "time": 6,
+      "hazard": 0.6501164156,
+      "power": 0.5975576768,
+      "transport": 0.5169441667,
+      "interface": 0.6345598181,
+      "margin": -0.0630558333
+    },
+    {
+      "time": 6.2,
+      "hazard": 0.6944524338,
+      "power": 0.5687038002,
+      "transport": 0.4846069248,
+      "interface": 0.6067222376,
+      "margin": -0.0953930752
+    },
+    {
+      "time": 6.4,
+      "hazard": 0.7366784107,
+      "power": 0.5402623294,
+      "transport": 0.4531334214,
+      "interface": 0.5788988963,
+      "margin": -0.1268665786
+    },
+    {
+      "time": 6.6,
+      "hazard": 0.7760638371,
+      "power": 0.5125547638,
+      "transport": 0.4228811665,
+      "interface": 0.5513983343,
+      "margin": -0.1571188335
+    },
+    {
+      "time": 6.8,
+      "hazard": 0.8118971504,
+      "power": 0.4858735052,
+      "transport": 0.3941578886,
+      "interface": 0.5245146854,
+      "margin": -0.1858421114
+    },
+    {
+      "time": 7,
+      "hazard": 0.8435069273,
+      "power": 0.4604725627,
+      "transport": 0.3672123818,
+      "interface": 0.4985182229,
+      "margin": -0.2127876182
+    },
+    {
+      "time": 7.2,
+      "hazard": 0.8702827114,
+      "power": 0.4365612721,
+      "transport": 0.3422298762,
+      "interface": 0.4736478123,
+      "margin": -0.2377701238
+    },
+    {
+      "time": 7.4,
+      "hazard": 0.8916945757,
+      "power": 0.4143011887,
+      "transport": 0.3193318104,
+      "interface": 0.450105631,
+      "margin": -0.2606681896
+    },
+    {
+      "time": 7.6,
+      "hazard": 0.9073105474,
+      "power": 0.3938059796,
+      "transport": 0.2985794395,
+      "interface": 0.4280542784,
+      "margin": -0.2814205605
+    },
+    {
+      "time": 7.8,
+      "hazard": 0.9168110951,
+      "power": 0.375143879,
+      "transport": 0.2799804019,
+      "interface": 0.4076161751,
+      "margin": -0.3000195981
+    },
+    {
+      "time": 8,
+      "hazard": 0.92,
+      "power": 0.3583421017,
+      "transport": 0.2634972229,
+      "interface": 0.3888749691,
+      "margin": -0.3165027771
+    },
+    {
+      "time": 8.2,
+      "hazard": 0.9168110951,
+      "power": 0.3433925437,
+      "transport": 0.2490567399,
+      "interface": 0.3718785413,
+      "margin": -0.3309432601
+    },
+    {
+      "time": 8.4,
+      "hazard": 0.9073105474,
+      "power": 0.3302581186,
+      "transport": 0.2365595573,
+      "interface": 0.3566431423,
+      "margin": -0.3434404427
+    },
+    {
+      "time": 8.6,
+      "hazard": 0.8916945757,
+      "power": 0.3188791667,
+      "transport": 0.2258888396,
+      "interface": 0.3431581878,
+      "margin": -0.3541111604
+    },
+    {
+      "time": 8.8,
+      "hazard": 0.8702827114,
+      "power": 0.3091794956,
+      "transport": 0.2169179767,
+      "interface": 0.3313912828,
+      "margin": -0.3630820233
+    },
+    {
+      "time": 9,
+      "hazard": 0.8435069273,
+      "power": 0.3010717495,
+      "transport": 0.2095168703,
+      "interface": 0.3212931195,
+      "margin": -0.3704831297
+    },
+    {
+      "time": 9.2,
+      "hazard": 0.8118971504,
+      "power": 0.2944619329,
+      "transport": 0.2035567742,
+      "interface": 0.3128019798,
+      "margin": -0.3764432258
+    },
+    {
+      "time": 9.4,
+      "hazard": 0.7760638371,
+      "power": 0.2892530282,
+      "transport": 0.1989137574,
+      "interface": 0.3058476674,
+      "margin": -0.3810862426
+    },
+    {
+      "time": 9.6,
+      "hazard": 0.7366784107,
+      "power": 0.2853477273,
+      "transport": 0.1954709446,
+      "interface": 0.3003547749,
+      "margin": -0.3845290554
+    },
+    {
+      "time": 9.8,
+      "hazard": 0.6944524338,
+      "power": 0.2826503605,
+      "transport": 0.1931197407,
+      "interface": 0.296245264,
+      "margin": -0.3868802593
+    },
+    {
+      "time": 10,
+      "hazard": 0.6501164156,
+      "power": 0.2810681385,
+      "transport": 0.1917602546,
+      "interface": 0.2934403872,
+      "margin": -0.3882397454
+    },
+    {
+      "time": 10.2,
+      "hazard": 0.6043991241,
+      "power": 0.2805118405,
+      "transport": 0.191301132,
+      "interface": 0.2918620186,
+      "margin": -0.388698868
+    },
+    {
+      "time": 10.4,
+      "hazard": 0.5580082069,
+      "power": 0.2808960804,
+      "transport": 0.1916589856,
+      "interface": 0.2914334828,
+      "margin": -0.3883410144
+    },
+    {
+      "time": 10.6,
+      "hazard": 0.5116128131,
+      "power": 0.2821392783,
+      "transport": 0.1927575789,
+      "interface": 0.2920799824,
+      "margin": -0.3872424211
+    },
+    {
+      "time": 10.8,
+      "hazard": 0.4658287673,
+      "power": 0.2841634453,
+      "transport": 0.1945268925,
+      "interface": 0.2937287244,
+      "margin": -0.3854731075
+    },
+    {
+      "time": 11,
+      "hazard": 0.4212066928,
+      "power": 0.2868938756,
+      "transport": 0.1969021722,
+      "interface": 0.2963088424,
+      "margin": -0.3830978278
+    },
+    {
+      "time": 11.2,
+      "hazard": 0.3782233073,
+      "power": 0.2902588194,
+      "transport": 0.1998230307,
+      "interface": 0.2997511997,
+      "margin": -0.3801769693
+    },
+    {
+      "time": 11.4,
+      "hazard": 0.3372759533,
+      "power": 0.2941891918,
+      "transport": 0.2032326554,
+      "interface": 0.303988147,
+      "margin": -0.3767673446
+    },
+    {
+      "time": 11.6,
+      "hazard": 0.29868027,
+      "power": 0.2986183542,
+      "transport": 0.2070771531,
+      "interface": 0.3089532946,
+      "margin": -0.3729228469
+    },
+    {
+      "time": 11.8,
+      "hazard": 0.2626707765,
+      "power": 0.303481991,
+      "transport": 0.2113050478,
+      "interface": 0.3145813411,
+      "margin": -0.3686949522
+    },
+    {
+      "time": 12,
+      "hazard": 0.2294040321,
+      "power": 0.308718089,
+      "transport": 0.2158669357,
+      "interface": 0.3208079916,
+      "margin": -0.3641330643
+    },
+    {
+      "time": 12.2,
+      "hazard": 0.1989639535,
+      "power": 0.3142670147,
+      "transport": 0.2207152896,
+      "interface": 0.3275699771,
+      "margin": -0.3592847104
+    },
+    {
+      "time": 12.4,
+      "hazard": 0.1713688266,
+      "power": 0.3200716753,
+      "transport": 0.2258043965,
+      "interface": 0.3348051803,
+      "margin": -0.3541956035
+    },
+    {
+      "time": 12.6,
+      "hazard": 0.1465795251,
+      "power": 0.3260777454,
+      "transport": 0.2310904073,
+      "interface": 0.342452858,
+      "margin": -0.3489095927
+    },
+    {
+      "time": 12.8,
+      "hazard": 0.1245084606,
+      "power": 0.3322339313,
+      "transport": 0.2365314712,
+      "interface": 0.3504539438,
+      "margin": -0.3434685288
+    },
+    {
+      "time": 13,
+      "hazard": 0.1050288192,
+      "power": 0.3384922492,
+      "transport": 0.2420879276,
+      "interface": 0.3587514058,
+      "margin": -0.3379120724
+    },
+    {
+      "time": 13.2,
+      "hazard": 0.0879836892,
+      "power": 0.3448082906,
+      "transport": 0.2477225269,
+      "interface": 0.3672906346,
+      "margin": -0.3322774731
+    },
+    {
+      "time": 13.4,
+      "hazard": 0.073194748,
+      "power": 0.3511414521,
+      "transport": 0.2534006525,
+      "interface": 0.376019831,
+      "margin": -0.3265993475
+    },
+    {
+      "time": 13.6,
+      "hazard": 0.0604702463,
+      "power": 0.3574551102,
+      "transport": 0.2590905232,
+      "interface": 0.3848903679,
+      "margin": -0.3209094768
+    },
+    {
+      "time": 13.8,
+      "hazard": 0.0496121013,
+      "power": 0.3637167291,
+      "transport": 0.2647633542,
+      "interface": 0.3938571042,
+      "margin": -0.3152366458
+    },
+    {
+      "time": 14,
+      "hazard": 0.0404219789,
+      "power": 0.3698978926,
+      "transport": 0.2703934659,
+      "interface": 0.4028786303,
+      "margin": -0.3096065341
+    },
+    {
+      "time": 14.2,
+      "hazard": 0.0327063129,
+      "power": 0.3759742583,
+      "transport": 0.2759583313,
+      "interface": 0.4119174355,
+      "margin": -0.3040416687
+    },
+    {
+      "time": 14.4,
+      "hazard": 0.0262802607,
+      "power": 0.3819254381,
+      "transport": 0.2814385594,
+      "interface": 0.4209399897,
+      "margin": -0.2985614406
+    },
+    {
+      "time": 14.6,
+      "hazard": 0.0209706464,
+      "power": 0.3877348109,
+      "transport": 0.2868178167,
+      "interface": 0.4299167405,
+      "margin": -0.2931821833
+    },
+    {
+      "time": 14.8,
+      "hazard": 0.0166179723,
+      "power": 0.3933892795,
+      "transport": 0.2920826934,
+      "interface": 0.4388220296,
+      "margin": -0.2879173066
+    },
+    {
+      "time": 15,
+      "hazard": 0.0130776079,
+      "power": 0.3988789833,
+      "transport": 0.2972225212,
+      "interface": 0.4476339389,
+      "margin": -0.2827774788
+    },
+    {
+      "time": 15.2,
+      "hazard": 0.0102202768,
+      "power": 0.4041969812,
+      "transport": 0.3022291557,
+      "interface": 0.4563340773,
+      "margin": -0.2777708443
+    },
+    {
+      "time": 15.4,
+      "hazard": 0.0079319702,
+      "power": 0.4093389172,
+      "transport": 0.3070967325,
+      "interface": 0.4649073224,
+      "margin": -0.2729032675
+    },
+    {
+      "time": 15.6,
+      "hazard": 0.0061134104,
+      "power": 0.4143026812,
+      "transport": 0.3118214086,
+      "interface": 0.4733415304,
+      "margin": -0.2681785914
+    },
+    {
+      "time": 15.8,
+      "hazard": 0.0046791837,
+      "power": 0.4190880763,
+      "transport": 0.3164011003,
+      "interface": 0.4816272292,
+      "margin": -0.2635988997
+    },
+    {
+      "time": 16,
+      "hazard": 0.0035566465,
+      "power": 0.4236965012,
+      "transport": 0.3208352248,
+      "interface": 0.4897573047,
+      "margin": -0.2591647752
+    },
+    {
+      "time": 16.2,
+      "hazard": 0.0026846976,
+      "power": 0.4281306542,
+      "transport": 0.3251244539,
+      "interface": 0.4977266927,
+      "margin": -0.2548755461
+    },
+    {
+      "time": 16.4,
+      "hazard": 0.0020124918,
+      "power": 0.4323942638,
+      "transport": 0.329270485,
+      "interface": 0.505532084,
+      "margin": -0.250729515
+    },
+    {
+      "time": 16.6,
+      "hazard": 0.0014981556,
+      "power": 0.4364918489,
+      "transport": 0.3332758329,
+      "interface": 0.5131716491,
+      "margin": -0.2467241671
+    },
+    {
+      "time": 16.8,
+      "hazard": 0.0011075512,
+      "power": 0.4404285092,
+      "transport": 0.3371436444,
+      "interface": 0.5206447864,
+      "margin": -0.2428563556
+    },
+    {
+      "time": 17,
+      "hazard": 0.0008131202,
+      "power": 0.444209746,
+      "transport": 0.3408775371,
+      "interface": 0.5279518972,
+      "margin": -0.2391224629
+    },
+    {
+      "time": 17.2,
+      "hazard": 0.0005928294,
+      "power": 0.4478413117,
+      "transport": 0.3444814619,
+      "interface": 0.5350941877,
+      "margin": -0.2355185381
+    },
+    {
+      "time": 17.4,
+      "hazard": 0.0004292288,
+      "power": 0.4513290865,
+      "transport": 0.3479595871,
+      "interface": 0.5420734977,
+      "margin": -0.2320404129
+    },
+    {
+      "time": 17.6,
+      "hazard": 0.0003086256,
+      "power": 0.4546789784,
+      "transport": 0.3513162044,
+      "interface": 0.5488921551,
+      "margin": -0.2286837956
+    },
+    {
+      "time": 17.8,
+      "hazard": 0.0002203734,
+      "power": 0.4578968458,
+      "transport": 0.3545556523,
+      "interface": 0.5555528542,
+      "margin": -0.2254443477
+    },
+    {
+      "time": 18,
+      "hazard": 0.0001562681,
+      "power": 0.4609884372,
+      "transport": 0.3576822567,
+      "interface": 0.5620585548,
+      "margin": -0.2223177433
+    },
+    {
+      "time": 18.2,
+      "hazard": 0.0001100439,
+      "power": 0.4639593471,
+      "transport": 0.3607002847,
+      "interface": 0.5684124007,
+      "margin": -0.2192997153
+    },
+    {
+      "time": 18.4,
+      "hazard": 0.0000769565,
+      "power": 0.4668149853,
+      "transport": 0.3636139108,
+      "interface": 0.5746176537,
+      "margin": -0.2163860892
+    },
+    {
+      "time": 18.6,
+      "hazard": 0.0000534452,
+      "power": 0.4695605557,
+      "transport": 0.3664271928,
+      "interface": 0.5806776428,
+      "margin": -0.2135728072
+    },
+    {
+      "time": 18.8,
+      "hazard": 0.0000368601,
+      "power": 0.472201044,
+      "transport": 0.369144055,
+      "interface": 0.5865957229,
+      "margin": -0.210855945
+    },
+    {
+      "time": 19,
+      "hazard": 0.0000252457,
+      "power": 0.474741212,
+      "transport": 0.3717682778,
+      "interface": 0.5923752449,
+      "margin": -0.2082317222
+    },
+    {
+      "time": 19.2,
+      "hazard": 0.0000171713,
+      "power": 0.4771855967,
+      "transport": 0.3743034931,
+      "interface": 0.5980195323,
+      "margin": -0.2056965069
+    },
+    {
+      "time": 19.4,
+      "hazard": 0.0000115985,
+      "power": 0.4795385131,
+      "transport": 0.3767531818,
+      "interface": 0.6035318644,
+      "margin": -0.2032468182
+    },
+    {
+      "time": 19.6,
+      "hazard": 0.0000077801,
+      "power": 0.4818040599,
+      "transport": 0.3791206754,
+      "interface": 0.6089154639,
+      "margin": -0.2008793246
+    },
+    {
+      "time": 19.8,
+      "hazard": 0.0000051827,
+      "power": 0.4839861268,
+      "transport": 0.3814091585,
+      "interface": 0.6141734891,
+      "margin": -0.1985908415
+    },
+    {
+      "time": 20,
+      "hazard": 0.0000034285,
+      "power": 0.4860884028,
+      "transport": 0.3836216736,
+      "interface": 0.6193090279,
+      "margin": -0.1963783264
+    },
+    {
+      "time": 20.2,
+      "hazard": 0.0000022524,
+      "power": 0.4881143859,
+      "transport": 0.3857611261,
+      "interface": 0.624325095,
+      "margin": -0.1942388739
+    },
+    {
+      "time": 20.4,
+      "hazard": 0.0000014695,
+      "power": 0.4900673921,
+      "transport": 0.38783029,
+      "interface": 0.6292246296,
+      "margin": -0.19216971
+    },
+    {
+      "time": 20.6,
+      "hazard": 9.521e-7,
+      "power": 0.4919505657,
+      "transport": 0.3898318141,
+      "interface": 0.6340104956,
+      "margin": -0.1901681859
+    },
+    {
+      "time": 20.8,
+      "hazard": 6.126e-7,
+      "power": 0.493766888,
+      "transport": 0.391768228,
+      "interface": 0.6386854814,
+      "margin": -0.188231772
+    },
+    {
+      "time": 21,
+      "hazard": 3.914e-7,
+      "power": 0.4955191872,
+      "transport": 0.3936419479,
+      "interface": 0.6432523012,
+      "margin": -0.1863580521
+    },
+    {
+      "time": 21.2,
+      "hazard": 2.484e-7,
+      "power": 0.4972101466,
+      "transport": 0.3954552828,
+      "interface": 0.647713596,
+      "margin": -0.1845447172
+    },
+    {
+      "time": 21.4,
+      "hazard": 1.565e-7,
+      "power": 0.4988423136,
+      "transport": 0.3972104399,
+      "interface": 0.6520719358,
+      "margin": -0.1827895601
+    },
+    {
+      "time": 21.6,
+      "hazard": 9.79e-8,
+      "power": 0.5004181069,
+      "transport": 0.3989095299,
+      "interface": 0.6563298209,
+      "margin": -0.1810904701
+    },
+    {
+      "time": 21.8,
+      "hazard": 6.09e-8,
+      "power": 0.501939825,
+      "transport": 0.4005545725,
+      "interface": 0.660489684,
+      "margin": -0.1794454275
+    },
+    {
+      "time": 22,
+      "hazard": 3.76e-8,
+      "power": 0.5034096525,
+      "transport": 0.4021475004,
+      "interface": 0.6645538923,
+      "margin": -0.1778524996
+    },
+    {
+      "time": 22.2,
+      "hazard": 2.3e-8,
+      "power": 0.5048296669,
+      "transport": 0.4036901649,
+      "interface": 0.6685247491,
+      "margin": -0.1763098351
+    },
+    {
+      "time": 22.4,
+      "hazard": 1.4e-8,
+      "power": 0.5062018449,
+      "transport": 0.405184339,
+      "interface": 0.6724044962,
+      "margin": -0.174815661
+    },
+    {
+      "time": 22.6,
+      "hazard": 8.5e-9,
+      "power": 0.5075280684,
+      "transport": 0.4066317224,
+      "interface": 0.6761953152,
+      "margin": -0.1733682776
+    },
+    {
+      "time": 22.8,
+      "hazard": 5.1e-9,
+      "power": 0.5088101296,
+      "transport": 0.4080339447,
+      "interface": 0.6798993302,
+      "margin": -0.1719660553
+    },
+    {
+      "time": 23,
+      "hazard": 3e-9,
+      "power": 0.5100497362,
+      "transport": 0.409392569,
+      "interface": 0.6835186087,
+      "margin": -0.170607431
+    },
+    {
+      "time": 23.2,
+      "hazard": 1.8e-9,
+      "power": 0.5112485163,
+      "transport": 0.4107090953,
+      "interface": 0.687055164,
+      "margin": -0.1692909047
+    },
+    {
+      "time": 23.4,
+      "hazard": 1.1e-9,
+      "power": 0.5124080228,
+      "transport": 0.4119849636,
+      "interface": 0.6905109565,
+      "margin": -0.1680150364
+    },
+    {
+      "time": 23.6,
+      "hazard": 6e-10,
+      "power": 0.5135297375,
+      "transport": 0.4132215567,
+      "interface": 0.6938878959,
+      "margin": -0.1667784433
+    },
+    {
+      "time": 23.8,
+      "hazard": 4e-10,
+      "power": 0.514615075,
+      "transport": 0.414420203,
+      "interface": 0.6971878419,
+      "margin": -0.165579797
+    },
+    {
+      "time": 24,
+      "hazard": 2e-10,
+      "power": 0.5156653865,
+      "transport": 0.4155821792,
+      "interface": 0.7004126066,
+      "margin": -0.1644178208
+    }
+  ],
+  "ml_surrogate": {
+    "status": "trained_and_validated_on_synthetic_simulator_only",
+    "model": "transparent ridge regression over declared nonlinear features",
+    "holdout_rmse": {
+      "power": 7.114059817621967e-12,
+      "transport": 6.376364307458724e-12,
+      "interface": 8.480673337248782e-9
+    }
+  },
+  "criticality": [
+    {
+      "parameter": "transport_to_power",
+      "baseline_min_margin": -0.38869886803621134,
+      "perturbed_min_margin": -0.38971853339587326,
+      "delta": 0.02,
+      "sensitivity": -0.050983267983095715
+    },
+    {
+      "parameter": "power_to_transport",
+      "baseline_min_margin": -0.38869886803621134,
+      "perturbed_min_margin": -0.393229354849012,
+      "delta": 0.02,
+      "sensitivity": -0.22652434064003302
+    },
+    {
+      "parameter": "interface_hazard",
+      "baseline_min_margin": -0.38869886803621134,
+      "perturbed_min_margin": -0.38869886803621134,
+      "delta": 0.02,
+      "sensitivity": 0
+    }
+  ],
+  "sha256_without_hash_field": "75663fe1000468197c9f71148fc97fe7be0e50d989e88799b1734d297cc3a335"
+}
