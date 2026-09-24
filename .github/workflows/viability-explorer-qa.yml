@@ -8,6 +8,7 @@ on:
       - "tests/test_viability_explorer.py"
       - "tools/run_viability_explorer.py"
       - "visualization/infrastructure_viability_explorer/**"
+      - "methods/computational/INFRASTRUCTURE_VIABILITY_EXPLORER_V0_*.md"
       - ".github/workflows/viability-explorer-qa.yml"
   push:
     branches: ["main"]
@@ -16,6 +17,8 @@ on:
       - "tests/test_viability_explorer.py"
       - "tools/run_viability_explorer.py"
       - "visualization/infrastructure_viability_explorer/**"
+      - "methods/computational/INFRASTRUCTURE_VIABILITY_EXPLORER_V0_*.md"
+      - ".github/workflows/viability-explorer-qa.yml"
 
 permissions:
   contents: read
@@ -42,6 +45,16 @@ jobs:
         run: |
           if grep -Eiq '#(ffd700|d4af37|daa520|b8860b|c5a000|ffbf00)' visualization/infrastructure_viability_explorer/styles.css; then
             echo "Forbidden gold-family color found."
+            exit 1
+          fi
+      - name: Guard explorer Markdown math surfaces
+        run: |
+          files=(
+            methods/computational/INFRASTRUCTURE_VIABILITY_EXPLORER_V0_2.md
+            visualization/infrastructure_viability_explorer/README.md
+          )
+          if grep -nE '^\[$|^\]$|\(mathcal|\(\\rho_' "${files[@]}"; then
+            echo "Malformed explorer math delimiters detected."
             exit 1
           fi
       - name: Regenerate deterministic explorer data
