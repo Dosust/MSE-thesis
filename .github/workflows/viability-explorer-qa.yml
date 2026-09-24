@@ -44,6 +44,16 @@ jobs:
             echo "Forbidden gold-family color found."
             exit 1
           fi
+      - name: Guard explorer Markdown math surfaces
+        run: |
+          files=(
+            methods/computational/INFRASTRUCTURE_VIABILITY_EXPLORER_V0_2.md
+            visualization/infrastructure_viability_explorer/README.md
+          )
+          if grep -nE '^\[$|^\]$|\(mathcal|\(\\rho_' "${files[@]}"; then
+            echo "Malformed explorer math delimiters detected."
+            exit 1
+          fi
       - name: Regenerate deterministic explorer data
         run: python tools/run_viability_explorer.py --output /tmp/demo-data.json
       - name: Verify committed data against regenerated model output
