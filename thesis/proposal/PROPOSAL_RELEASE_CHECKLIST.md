@@ -1,5 +1,8 @@
 # Thesis Proposal Release Checklist
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 **Purpose:** qualify a proposal as an auditable research release before advisor/GSC submission.
 
 ## Scientific content
@@ -45,6 +48,7 @@
 
 ## Compliance
 
+- [ ] Thesis title exactly matches `Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience`.
 - [ ] Degree named correctly as Master of Science in Engineering (MSE), Sustainable Engineering.
 - [ ] Institutional claims checked against current ASU/SSEBE sources.
 - [ ] Advisor/GSC-specific proposal requirements recorded separately from ASU rules.
