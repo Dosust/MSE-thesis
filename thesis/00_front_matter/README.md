@@ -1,5 +1,11 @@
 # Preliminary Matter — ASU-Controlled
 
+## Official thesis title
+
+> **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+
+Controlled by: `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 This folder is reserved for front matter generated and audited against the current ASU Graduate College Format Manual and Format Wizard.
 
 ## Required/possible sequence

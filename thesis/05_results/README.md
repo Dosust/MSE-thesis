@@ -1,5 +1,8 @@
 # Chapter 5 — Results
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
 **Experiment authority:** `../00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`
 

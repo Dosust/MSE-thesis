@@ -1,5 +1,8 @@
 # Project Mathematical Architecture
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 > **Current question authority:** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](CANONICAL_RQ_SO_HYPOTHESES_V3.md)  
 > **Current framework authority:** [CANONICAL_7_STAGE_FRAMEWORK_V2.md](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
 > **Current Chapter-I authority:** [CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md](CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md)

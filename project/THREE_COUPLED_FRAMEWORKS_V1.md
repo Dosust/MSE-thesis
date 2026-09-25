@@ -1,5 +1,8 @@
 # Three Coupled Frameworks for the Seven-Stage Thesis — v1.0
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 **Status:** SUPPORTING SYNTHESIS — NON-CANONICAL  
 **Date:** 2026-09-24  
 **Repository:** `Dossiya-SE/MSE-thesis`  

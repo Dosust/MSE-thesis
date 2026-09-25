@@ -1,5 +1,8 @@
 # ASU MSE Thesis Master Specification v1.2
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 **Status:** CURRENT THESIS CONTROL SPECIFICATION  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **School:** School of Sustainable Engineering and the Built Environment (SSEBE)  

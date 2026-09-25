@@ -1,4 +1,7 @@
-# MSE Thesis — Multilayer Interdependent Power–Transportation Infrastructure Resilience
+# Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience
+
+**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
 ![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)

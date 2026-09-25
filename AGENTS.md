@@ -1,5 +1,17 @@
 # Repository Working Instructions
 
+## Canonical thesis-title authority
+
+For any active thesis, proposal, manuscript, presentation, figure, README, research-identity, or repository-governance task, use the exact title controlled by:
+
+`project/CANONICAL_THESIS_TITLE_V1.md`
+
+The exact active title is:
+
+> **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+
+Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
+
 ## Chapter I activation rule
 
 Whenever a task refers to **Chapter I**, **Chapter 1**, **Introduction**, the **introductory research architecture**, or asks to draft/revise/present any Chapter-I section, first load and follow:

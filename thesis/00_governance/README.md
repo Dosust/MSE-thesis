@@ -1,5 +1,8 @@
 # Thesis Governance and Control Plane
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 This folder converts the ASU MSE thesis into a traceable scientific system rather than a loose writing project.
 
 ## Governing rule

@@ -1,5 +1,8 @@
 # Chapter 1 — Introduction: Research Problem and Scientific Contract
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 ## 1.1 Background and Engineering Context
 
 Electricity and mobility are critical infrastructure services. Their provision depends on distinct physical systems, but transportation electrification is increasing the number and importance of interfaces between electric-power and transportation infrastructures. Electric-vehicle charging connects mobility demand to the location, timing, capacity, and availability of electricity supply, while charging demand can affect distribution-system operation and planning. Vehicle-to-grid and mobile-energy applications create additional pathways through which transportation resources may interact with the power system when the required technical and operating conditions are present (Oladigbolu et al., 2025; Unterluggauer et al., 2022; Wei et al., 2019).

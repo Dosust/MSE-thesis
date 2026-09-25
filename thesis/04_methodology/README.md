@@ -1,5 +1,8 @@
 # Chapter 4 — Methodology and Experimental Design
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 **RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
 **Experiment authority:** `../00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`  
 **Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
