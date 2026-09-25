@@ -1,5 +1,8 @@
 # Chapter 1 — Introduction
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 **Status:** PASS — FROZEN — OFFICIAL  
 **Official source snapshot:** [`CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md`](CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md)  
 **Freeze:** [`CHAPTER_I_FREEZE_2026-09-21.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-21.md)
