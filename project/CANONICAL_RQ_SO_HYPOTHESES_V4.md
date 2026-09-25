@@ -1,5 +1,8 @@
 # Canonical RQ–SO–H Authority — v4.0
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 ![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
 ![Traceability](https://img.shields.io/badge/RQ--SO--H-v4.0-1A7F37)
 
