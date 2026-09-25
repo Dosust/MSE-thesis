@@ -1,5 +1,8 @@
 # Thesis Appendices
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 ## Purpose
 
 Preserve reproducibility, detailed evidence, technical derivations and supplementary results without obscuring the main scientific argument.
