@@ -1,5 +1,8 @@
 # Canonical Research Questions — v4.0
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 ![Authority](https://img.shields.io/badge/authority-CANONICAL-0969DA)
 ![Logic](https://img.shields.io/badge/RQ0%20%2B%20RQ1--RQ7-v4.0%20OFFICIAL-1A7F37)
 ![Spatiotemporal](https://img.shields.io/badge/spatiotemporal-EXPLICIT-8250DF)
