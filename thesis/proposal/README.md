@@ -1,5 +1,8 @@
 # Thesis Proposal — Controlled Release Workspace
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 ## Role
 
 The proposal is the first controlled release of the thesis architecture, not a temporary essay.
