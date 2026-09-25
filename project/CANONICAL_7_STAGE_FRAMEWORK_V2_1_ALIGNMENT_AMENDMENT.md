@@ -1,5 +1,8 @@
 # Canonical Seven-Stage Framework v2.1 — RQ/SO/H v4 Alignment Amendment
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+
 ![Authority](https://img.shields.io/badge/authority-CANONICAL%20AMENDMENT-0969DA)
 ![Framework](https://img.shields.io/badge/framework-v2.1%20ALIGNMENT-1A7F37)
 
