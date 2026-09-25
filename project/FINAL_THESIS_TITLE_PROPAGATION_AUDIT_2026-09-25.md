@@ -1,6 +1,6 @@
 # Final Thesis Title Propagation Audit — 2026-09-25
 
-**Status:** PASS — READY TO MERGE  
+**Status:** PASS — MERGED  
 **Canonical title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Title authority:** `project/CANONICAL_THESIS_TITLE_V1.md`
 
@@ -34,6 +34,12 @@ Record the controlled repository-wide adoption of the final thesis title without
 22. `thesis/appendices/README.md`
 23. `thesis/proposal/README.md`
 24. `thesis/proposal/PROPOSAL_RELEASE_CHECKLIST.md`
+
+## Merge record
+
+- Pull request: #24 — Finalize canonical thesis title across active thesis surfaces
+- Squash merge commit: `129b41882e068c0fb471d40737c7f05f51d8bbf8`
+- Merged to: `main`
 
 ## Verification
 

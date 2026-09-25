@@ -1,6 +1,5 @@
 # Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience
 
-**Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)
 
 ![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
@@ -21,7 +20,7 @@
 **Research method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation Method  
 **Current major phase:** P3 — Case / Data Qualification + Execution Readiness  
 **Active candidate case:** `AUS-P5U-2018-V1` — Austin, Texas; SMART-DS v1.0, 2018, candidate P5U  
-**Updated:** 2026-09-21
+**Updated:** 2026-09-25
 
 > **Repository rule:** this repository is the active thesis source of truth. Historical/archive material is provenance only and cannot override current canonical authorities.
 
