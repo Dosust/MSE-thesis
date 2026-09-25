@@ -1,5 +1,8 @@
 # Proposed synchronized thesis outline
 
+**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+
 This is the clearest structure I recommend now, incorporating the **new abstract, seven-stage framework, measurement–identification logic, P2/P3 architecture, and narrower sustainability scope**.
 
 1. **Preliminary Matter**
