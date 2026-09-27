@@ -364,3 +364,329 @@ Any future wording change that alters the scientific meaning of:
 - or the claim of novelty,
 
 must first be checked against the canonical Chapter I and governance authorities before this presentation file is revised.
+
+
+---
+
+# CANONICAL VISUAL SPECIFICATION — 7-SLIDE PRESENTATION
+
+**Status:** CANONICAL — PRESENTATION VISUAL LAYER  
+**Rule:** The slide wording above is frozen. The specifications below define only the illustration, spatial organization, and visual grammar. They must not introduce new scientific claims or replace slide text.
+
+## Global visual grammar
+
+- **Canvas:** 16:9 landscape; white or very light neutral background.
+- **Primary colors:** Light Sky Blue \`#87CEFA\`, Deep Sky Blue \`#00BFFF\`, navy/charcoal, white. **No gold.**
+- **Power layer:** navy / Deep Sky Blue.
+- **Transportation layer:** Light Sky Blue / charcoal.
+- **Cross-system mechanism:** thin Deep Sky Blue directional arrow; never a generic bidirectional arrow unless both directions are separately evidenced.
+- **Inputs:** circles / spheres.
+- **Physical systems or models:** rectangles / cuboids.
+- **Qualification gates:** diamonds.
+- **Dynamic evolution:** trajectories, layered surfaces, vector fields, or time-space manifolds.
+- **Interventions:** cone / triangular wedge.
+- **Decision narrowing:** pyramid / trapezoid / Pareto frontier.
+- **Uncertainty:** translucent envelope, distribution, interval band, or scenario cloud.
+- **Cross-cutting traceability:** thin lower rail for evidence, provenance, V&V, UQ, falsification, and reproducibility.
+- Every visual element must encode a scientific role; avoid decorative geometry.
+
+---
+
+## Slide 1 — Background
+
+### Visual purpose
+Show **two physically distinct systems** and one concrete feedback pathway without implying that all P–T relations are symmetric.
+
+### Recommended composition
+- **Left half:** Power network as a layered cuboid: substation → feeder → charger / signal.
+- **Right half:** Transportation network as a road-network layer: intersections → vehicles → repair route.
+- **Between them:** two separate directional arrows:
+  - upper arrow \(P\rightarrow T\)
+  - lower arrow \(T\rightarrow P\)
+- **Bottom strip:** four-step cascade matching the existing slide formula:
+  power outage → signal failure → congestion → repair delay.
+- Add a subtle \((x,t)\) coordinate grid behind the two systems to encode space-time dependence.
+
+### Geometry
+\[
+\boxed{
+\text{Power cuboid}
+\;\xrightleftarrows[\,T\to P\,]{\,P\to T\,}\;
+\text{Transportation cuboid}
+}
+\]
+
+### Avoid
+Do not draw one undifferentiated double-headed coupling edge as the only mechanism depiction.
+
+---
+
+## Slide 2 — What Exists and What Is Missing
+
+### Visual purpose
+Show that **many capabilities already exist**, while the thesis gap is the unresolved connection among them.
+
+### Recommended composition
+- **Top row:** six compact capability nodes:
+  Charging | Equilibrium | Operation | Resilience | Restoration | Planning.
+- Represent each as a separate rounded rectangle or hexagonal cell to show that these are established but differently scoped modeling capabilities.
+- **Middle:** a sequence of heterogeneous model blocks with visibly different internal structures, emphasizing different assumptions, scales, uncertainty treatments, and objectives.
+- **Center-right:** a broken bridge / unclosed handoff between “system structure” and “engineering decision.”
+- **Bottom:** the exact thesis-gap equation already on the slide, visually spanning the broken bridge.
+- A small EV/fast-charging icon may sit near the “Why now?” line, but should not dominate the slide.
+
+### Geometry
+\[
+\boxed{
+\{\text{existing capabilities}\}
+\longrightarrow
+\text{unresolved scientific handoffs}
+\longrightarrow
+\text{thesis gap}
+}
+\]
+
+### Avoid
+Do not portray the literature as absent or scientifically inadequate in general; the visual must show **existing strength + unresolved integration**.
+
+---
+
+## Slide 3 — Research Question and Objective
+
+### Visual purpose
+Map **RQ0 → seven question/objective pairs → one complete research chain**.
+
+### Recommended composition
+- **Top center:** RQ0 inside one large ellipse or capsule spanning the slide width.
+- **Middle:** seven numbered nodes \(1\ldots7\) arranged left-to-right along one scientific spine:
+  Structure → Mechanisms → Dynamics → Response → Resilience → Intervention → Decision.
+- **Under each node:** a small paired marker \(RQ_k\leftrightarrow SO_k\).
+- **Bottom:** group the seven nodes into three brackets:
+  - RQ1–RQ2
+  - RQ3–RQ5
+  - RQ6–RQ7
+- Use the existing objective equation as the central spine rather than adding more prose.
+
+### Geometry
+\[
+\boxed{
+RQ_0
+\Downarrow
+\left[
+RQ_1\leftrightarrow SO_1
+\rightarrow\cdots\rightarrow
+RQ_7\leftrightarrow SO_7
+\right]
+}
+\]
+
+### Avoid
+Do not add hypotheses here; Slide 3 is about the research contract, not testing.
+
+---
+
+## Slide 4 — Three-Framework Architecture
+
+### Visual purpose
+Make the **three framework responsibilities** immediately distinguishable.
+
+### Recommended composition
+Use three large connected modules occupying the full width:
+
+1. **Framework I — Architecture**
+   - shape: cuboid / layered System-of-Systems stack
+   - show Power and Transportation as separate layers with candidate interfaces.
+
+2. **Framework II — Behavior**
+   - shape: central dynamic manifold / trajectory surface
+   - include state evolution, observation, control, and viable/recoverable regions.
+
+3. **Framework III — Change**
+   - shape: intervention cone feeding a Pareto / decision pyramid
+   - show engineering change narrowing toward defensible alternatives.
+
+- Connect modules with thick solid handoff arrows \(F_I\rightarrow F_{II}\rightarrow F_{III}\).
+- Place a thin **Systems Engineering** rail underneath:
+  Requirements → Architecture → Model → V&V → Decision.
+- Carry a subtle \((x,t)\) axis across Frameworks I and II.
+
+### Geometry
+\[
+\boxed{
+\underbrace{F_I}_{\text{Architecture}}
+\rightarrow
+\underbrace{F_{II}}_{\text{Behavior}}
+\rightarrow
+\underbrace{F_{III}}_{\text{Change}}
+}
+\]
+
+### Avoid
+Do not visually collapse the seven stages into only three stages; the three frameworks are groupings of the seven-stage authority.
+
+---
+
+## Slide 5 — Framework I: Qualify the Coupling
+
+### Visual purpose
+Show the conversion **candidate relation → qualified mechanism → dynamically ready mechanism**.
+
+### Recommended composition
+Use a strict **Input → Transform → Output** pipeline.
+
+### Input
+Five circles/spheres:
+- systems/services
+- location
+- time
+- evidence
+- candidate interface
+
+### Transform
+- **Step 1:** typed P–T graph cuboid.
+- **Step 2:** candidate-interface diamond.
+- **Step 3:** qualification gate composed of six thin filters:
+  Direction | Mechanism | Activation | Delay | Uncertainty | Validity.
+- Use a crossed-out proximity symbol beside the gate to reinforce:
+  co-location ≠ dependency.
+- Use two separate arrows \(P\to T\) and \(T\to P\) to reinforce directionality.
+
+### Output
+One sealed output block:
+\[
+\mathcal I^{ready}
+\]
+feeding directly toward Framework II.
+
+### Geometry
+\[
+\boxed{
+\text{Evidence + structure}
+\rightarrow
+\mathcal I^{cand}
+\rightarrow
+\mathcal I^{qualified}
+\rightarrow
+\mathcal I^{ready}
+}
+\]
+
+### Avoid
+Do not show coupling strength as already known unless it has passed identification/estimation requirements.
+
+---
+
+## Slide 6 — Framework II: From Mechanisms to Resilience
+
+### Visual purpose
+Show how a qualified mechanism becomes **physical behavior → knowledge → feasible action → resilience**.
+
+### Recommended composition
+Use four connected zones:
+
+1. **Physical dynamics**
+   - dynamic surface / state trajectory \(Y(x,t)\)
+   - separate Power and Transportation states feeding the coupled trajectory.
+
+2. **Observation and estimation**
+   - sensor icon / sphere producing \(y\)
+   - estimator producing \(\widehat Y\)
+   - uncertainty envelope around the estimate.
+
+3. **Feasible action**
+   - control gate producing \(\mathcal U_{\rm feas}\)
+   - visibly distinguish “physically possible” from “operationally feasible.”
+
+4. **Resilience geometry**
+   - acceptable set \(K\)
+   - inner viable set \(\mathcal V\)
+   - recovery arrow toward \(\mathcal R\)
+   - boundary / distance cue for resilience margin if space permits.
+
+### Geometry
+\[
+\boxed{
+Y(x,t)
+\rightarrow
+\widehat Y(x,t)
+\rightarrow
+\mathcal U_{\rm feas}(x,t)
+\rightarrow
+(\mathcal V,\mathcal R)
+}
+\]
+
+Use three visually distinct resilience cues:
+- **Remain:** trajectory staying inside \(\mathcal V\)
+- **Return:** trajectory re-entering acceptable region
+- **Uncertainty:** translucent envelope/scenario fan
+
+### Avoid
+Do not use only a generic resilience curve; the purpose is to show the added viability/recovery structure while retaining conventional metrics as comparators.
+
+---
+
+## Slide 7 — Framework III: Intervention, Decision, and Test
+
+### Visual purpose
+Combine **engineering intervention, consequence evaluation, decision filtering, and hypothesis comparison** in one coherent final slide.
+
+### Recommended composition
+
+### Upper two-thirds — intervention to decision
+- **Input:** resilience diagnosis from Framework II as a small viable/recovery surface.
+- **Intervention:** cone / triangular wedge \(a_k\).
+- **Modified system:** cuboid \(\mathfrak M^{a_k}\).
+- **Consequences:** diamond \(\mathcal C(a_k)\) branching into small icons/axes for:
+  resilience | resources | efficiency | sustainability | feasibility | uncertainty.
+- **Decision:** Pareto scatter / frontier feeding a narrow decision pyramid ending at
+  \(\mathcal A_{\rm joint}^{\star}\).
+
+### Lower third — H1 comparison
+Three parallel lanes:
+- \(M_0\): independent systems
+- \(M_1\): static coupling
+- \(M_2\): evidence-qualified dynamic coupling
+
+Route the three lanes into a common comparison gate labelled only by the existing slide text/formula. Use progressively richer geometry, not progressively brighter color, to avoid implying that \(M_2\) is automatically superior before testing.
+
+### Final footer
+Use the existing complete-story chain:
+Reality → Evidence → Mechanisms → Behavior → Resilience → Intervention → Decision.
+
+### Geometry
+\[
+\boxed{
+a_k
+\rightarrow
+\mathcal C(a_k)
+\rightarrow
+\mathcal A_{\rm joint}^{\star}
+}
+\]
+
+and
+
+\[
+\boxed{
+M_0\quad\text{vs.}\quad M_1\quad\text{vs.}\quad M_2
+}
+\]
+
+### Avoid
+Do not visually crown \(M_2\) as the winner. H1–H5 are tests; the outcome is not predetermined.
+
+---
+
+## Publication and slide-production rules
+
+1. **Do not rewrite, shorten, or add scientific claims to the canonical slide text.**
+2. Use the visual specifications as a separate design layer.
+3. Keep citations visible in the final deck.
+4. Use **Times New Roman** for slide text; preserve the requested approximate hierarchy of 41–20 pt.
+5. Equations should remain vector-rendered where possible.
+6. Prefer editable vector geometry (SVG, TikZ, native PowerPoint shapes) over raster illustrations.
+7. Keep each slide to one dominant visual system rather than several unrelated pictures.
+8. Maintain white space; visuals should clarify the argument, not decorate it.
+9. Use the official blue palette and **no gold**.
+10. Any future visual change that alters scientific meaning must be checked against the Chapter I and canonical framework authorities.
