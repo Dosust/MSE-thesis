@@ -410,7 +410,24 @@ M_2
 }
 \]
 
-where \(M_0\) is independent, \(M_1\) static/algebraic coupling, and \(M_2\) evidence-qualified dynamic coupling.
+where \(M_0\) is the **independent baseline**, \(M_1\) is **prescribed static coupling**, and \(M_2\) is **evidence-qualified dynamic coupling**.
+
+**[T] Comparator definitions**
+
+\[
+\boxed{
+\begin{aligned}
+M_0 &: \text{Independent baseline},
+& C_{PT}=C_{TP}=0,\\
+M_1 &: \text{Prescribed static coupling},
+& z=\Phi(x),\\
+M_2 &: \text{Evidence-qualified dynamic coupling},
+& z(t)=C(x(t-\delta);\widehat\theta).
+\end{aligned}
+}
+\]
+
+All three model classes have precedents in the literature. The thesis test is whether the evidence-qualified dynamic formulation provides incremental, decision-relevant information beyond the simpler matched baselines.
 
 **[T] Contribution chain**
 \[
