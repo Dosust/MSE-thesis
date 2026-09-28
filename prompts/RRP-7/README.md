@@ -2,12 +2,11 @@
 
 **Canonical call:** `RRP-7`
 
-RRP-7 is the vendor-neutral thesis reasoning protocol for rigorous resilience analysis, causal/interdependency auditing, scientific infographic design, controlled-viability reasoning, sustainability translation, and engineering decision support.
+This directory stores the canonical vendor-neutral RRP-7 protocol for the thesis.
 
-## Repository contents
+## Entry point
 
-- `RRP-7_UNIVERSAL_AI_PROTOCOL.md` — canonical vendor-neutral protocol to supply to any capable AI system.
-- `RRP-7_Resilience_Reasoning_Protocol.zip` — complete skill suite, including the infographic, resilience-purpose, causal-claim, and stage-boundary skills plus test cases.
+- `RRP-7_UNIVERSAL_AI_PROTOCOL.md` — the authoritative protocol file to provide to ChatGPT, Claude, Gemini, Copilot, DeepSeek, local LLMs, or another capable AI system.
 
 ## Canonical chain
 
@@ -21,8 +20,14 @@ RRP-7 is the vendor-neutral thesis reasoning protocol for rigorous resilience an
 > No conclusion without evidence.  
 > No analysis without a decision consequence.
 
-## Universal call
+## Call syntax
+
+Use:
 
 `Apply RRP-7.`
 
-For stricter use: `Apply RRP-7 to this material and audit meaning, mechanism, evidence, resilience purpose, stage correctness, interpretation, boundary of validity, and engineering decision consequence.`
+For stricter application:
+
+`Apply RRP-7 to this material and audit meaning, mechanism, evidence, resilience purpose, stage correctness, interpretation, boundary of validity, and engineering decision consequence.`
+
+The protocol file is the canonical cross-AI definition of RRP-7. Supporting decomposed skills can be added under this directory without changing the call name or governing rules.
