@@ -24,7 +24,7 @@ Do not report “200 papers screened to 26” until `01_deduplicated_pool.csv` c
 
 ## Files
 
-- `CPTS_26_High_Rigor_Literature_Map.xlsx` — main evidence workbook.
+- `CPTS_26_High_Rigor_Literature_Map.xlsx` — generated evidence workbook (SHA-256 recorded in the manifest; binary workbook remains a generated artifact and is not committed by this connector run).
 - `CPTS_literature_screening_protocol.md` — screening protocol and rubric.
 - `cpts_26_screened.csv` — 26-paper priority evidence table.
 - `cpts_26_seed.json` — structured seed dataset.
