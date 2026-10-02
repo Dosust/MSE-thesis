@@ -1,0 +1,35 @@
+{
+  "thesis": "Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience",
+  "run_date": "2026-10-02",
+  "stage": "verified title/abstract/metadata screening",
+  "funnel": {
+    "raw_provenance_records": 687,
+    "deduplicated_base_master_records": 404,
+    "augmented_unique_working_records": 433,
+    "screened_records": 200,
+    "priority_fulltext_records": 26
+  },
+  "evidence_architecture": {
+    "framework_review": 3,
+    "heat_physics": 8,
+    "closest_temperature_power_transportation": 2,
+    "core_dynamic_power_transportation": 8,
+    "service_control": 3,
+    "transferable_dynamic_coupling": 2
+  },
+  "interpretation": "The 26 are a priority full-text corpus, not a full-text evidence synthesis. Screening score is a prioritization device, not a scientific quality ranking.",
+  "evidence_rule": "author-stated limitation != reviewer-inferred limitation != thesis contribution",
+  "binary_artifacts": {
+    "workbook": {
+      "filename": "PT_200_to_26_High_Rigor_Audit.xlsx",
+      "sha256": "532947b066545d67c80a5d3c23995a088101b0660a0cb1f14cedbaa1816404f6",
+      "committed": false,
+      "note": "Generated binary artifact; hash recorded here. The GitHub connector run commits the auditable text/data/code sources."
+    },
+    "portable_zip": {
+      "filename": "PT_200_to_26_Literature_Audit_Package.zip",
+      "sha256": "1be529affe27871ff9892f18d70ac98c76d7e056155a1bb0f6b39594c279cf71",
+      "committed": false
+    }
+  }
+}

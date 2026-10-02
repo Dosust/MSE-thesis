@@ -40,3 +40,17 @@ Keep these separate:
 `author-stated limitation != reviewer-inferred limitation != thesis contribution`
 
 A limitation becomes a candidate contribution only after a controlled comparison shows that the proposed adaptation materially improves explanation, prediction, service-resilience assessment, or intervention choice.
+
+## Verified 200→26 run
+
+A subsequent auditable title/abstract/metadata screening run has now been completed and is preserved in:
+
+`verified_200_to_26/`
+
+Executed funnel:
+
+`687 raw provenance records → 404 base master records → 433 augmented unique working records → 200 screened records → 26 priority full-text papers`
+
+The original 26-paper seed above is retained for provenance. The verified run supersedes the earlier statement that the 200→26 flow was still pending.
+
+**Evidence boundary:** the 26-paper set is a priority corpus for full-text review. It is not yet a full-text evidence synthesis, and its screening score must not be interpreted as a ranking of paper quality.

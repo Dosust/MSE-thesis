@@ -1,0 +1,27 @@
+priority_rank,evidence_role,Title,Year,DOI,rigor_score
+1,CLOSEST_TEMP_PT,Graph-Attentional Multiagent Reinforcement Learning for V2G Emergency Dispatch in Cold-Weather Coupled Networks,2026,10.1109/tte.2026.3651255,73.16
+2,SERVICE_CONTROL,Experimental platform design for enhancing resilience of distribution network under flood disasters based on power-transportation coupling; [考虑电力-交通协同的洪涝灾害下配电网韧性提升实验平台设计],2026,10.16791/j.cnki.sjg.2026.06.013,72.52000000000001
+3,CORE_PT_DYNAMIC,Resilient mobile energy storage resources-based microgrid formation considering power-transportation-information network interdependencies,2025,10.1016/j.apenergy.2025.125716,72.39999999999999
+4,CORE_PT_DYNAMIC,A Real-Time Robust Method for Post-Disaster Load Restoration of Coordinated Power-Transportation System With Vehicle-to-Grid Response,2025,10.1109/tsg.2025.3568619,71.88
+5,FRAMEWORK_REVIEW,Leveraging Electric Vehicles for Enhancing Power System Resilience: A Review of Strategies and Challenges,2025,10.1007/s40518-025-00259-8,71.6
+6,CORE_PT_DYNAMIC,Enhancing Resilience of Urban Distribution Networks: Integrating Agent-Based V2G Response Model for Extreme Event Restoration,2025,10.1109/tte.2025.3589233,71.28
+7,CORE_PT_DYNAMIC,Planning of a multi-agent mobile robot-based adaptive charging network for enhancing power system resilience under extreme conditions,2025,10.1016/j.apenergy.2025.126252,70.52
+8,CORE_PT_DYNAMIC,A Digital-Twin-Assisted Multi-Level Framework for EV scheduling in a Coupled power -transportation system,2026,10.2139/ssrn.6293656,70.28
+9,CORE_PT_DYNAMIC,Resilience-oriented optimal post-disruption reconfiguration for coupled traffic-power systems,2022,10.1016/j.ress.2022.108408,69.28
+10,SERVICE_CONTROL,Load restoration strategy for post-disaster distribution networks considering cyber-physical-traffic coupling with multi-resource collaboration,2026,10.1016/j.apenergy.2026.127373,66.75999999999999
+11,CORE_PT_DYNAMIC,Resilient pricing-driven coordination of coupled power and transportation networks: A learning-augmented mixed-integer reformulation approach,2026,10.1016/j.apenergy.2026.128158,65.83999999999999
+12,SERVICE_CONTROL,A Two-Stage Robust Optimization-Based Coordinated Dispatch Method for Mobile Emergency Resources Under Ice Disasters,2025,10.1109/apet68390.2025.11428862,62.52
+13,FRAMEWORK_REVIEW,A review of electric vehicles’ participation in resilience enhancement of power-transportation coupled networks,2025,10.1109/ei268505.2025.11425128,60.52
+14,CLOSEST_TEMP_PT,Tri-level collaborative optimization strategy for coupled power and transportation networks considering energy scheduling of fast charging stations,2025,10.1016/j.apenergy.2025.126806,52.760000000000005
+15,HEAT_PHYSICS,Resilience-oriented scheduling and evaluation of multi-energy complementary systems under extreme heat,2026,10.1016/j.epsr.2026.113171,52.68
+16,HEAT_PHYSICS,Grid Resilience Enhancement Under Extreme Heat Wave Events,2026,10.1049/gtd2.70362,49.63999999999999
+17,HEAT_PHYSICS,Dynamic thermal impact of heatwaves on resilience of power system considering transmission line and generators capacities,2026,10.1016/j.segan.2026.102137,47.8
+18,HEAT_PHYSICS,The vulnerability of interdependent urban infrastructure systems to climate change: could Phoenix experience a Katrina of extreme heat?,2019,10.1080/23789689.2018.1448668,45.35999999999999
+19,FRAMEWORK_REVIEW,Spatial and temporal modelling of coupled power and transportation systems: A comprehensive review,2021,10.1049/enc2.12034,44.67999999999999
+20,CORE_PT_DYNAMIC,Interdependency analysis of coupled power and transportation networks considering the charging decision preferences of EV drivers,2026,10.1016/j.ress.2025.112005,43.48
+21,HEAT_PHYSICS,Impact of extreme climatic conditions on fast EV charger performance: field experimental insights from Qatar,2026,10.1016/j.ecmx.2026.101960,41.76
+22,HEAT_PHYSICS,Extreme heat threatens railroads with connectivity and ridership loss in the United States,2025,10.1038/s42949-025-00227-7,40.75999999999999
+23,HEAT_PHYSICS,Impacts of rising air temperatures on electric transmission ampacity and peak electricity load in the United States,2016,10.1088/1748-9326/11/11/114008,40.08
+24,TRANSFER_DYNAMIC,Recovery coupling in multilayer networks,2022,10.1038/s41467-022-28379-5,39.79999999999999
+25,HEAT_PHYSICS,Extreme heat effects on electric vehicle energy consumption and driving range,2025,10.1016/j.apenergy.2024.125051,37.72
+26,TRANSFER_DYNAMIC,Vulnerability analyses of power-water interdependent infrastructure networks by using load-functional dependency coupled cascading failure model,2026,10.1016/j.ress.2026.113092,37.16
