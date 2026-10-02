@@ -1,0 +1,15 @@
+{
+  "package": "CPTS literature screening package",
+  "date": "2026-10-02",
+  "status": "26-paper priority evidence seed; exact 200→26 flow pending verified 200-record corpus",
+  "files": {
+    "CPTS_26_High_Rigor_Literature_Map.xlsx": "ffdf08c61c54827e961cfb8609a5e57215c4da3c8074605212e6d78828ec46a0",
+    "CPTS_literature_screening_protocol.md": "e2f28e26fae4d746ee8302e77121660178ca21a3af851df10d78679499173fc0",
+    "cpts_26_screened.csv": "a97656a256a47c8c58b0d9f7d7d07bd391ccd86af5c21b2fa59949b482a563f0",
+    "cpts_26_seed.json": "af63aef0eedb07ed92d79d07738af45ab1abe5143e99ee635dd2f8c6b151f91a",
+    "screen_cpts_literature.py": "97b6c6777983c5d242d9482a4aa0454bd38508b11371c94f227b5afa36c5199c",
+    "screen_cpts_literature.js": "be0fd586eb0c0b44c1f580bf663b01be86b6aa3c256760b75e72de147bc0a0e1",
+    "js_seed_ranked.json": "20095fef52bf261e80b07630825adaa6327bed8e4f9b88722a9de9b927b6ef29",
+    "README.md": "4f2aa0d9f9a9d8e4ef82e547908605cff643bb0162a189b04df374df926d7578"
+  }
+}
