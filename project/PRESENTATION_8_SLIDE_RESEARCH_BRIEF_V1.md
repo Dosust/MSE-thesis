@@ -410,3 +410,20 @@ Use for Slides 1, 2, 4, 5, 6, 7 and 8:
 - time-resolved quasi-static PF/OPF should not be described as full dynamic operation.
 
 Boundary: power-side evidence only. It does not decide transport mode or coupled P-T equations.
+
+
+## Evidence update - E-THERMALSTATE-001 and E-THERMALMODEL-001
+
+Evidence notes:
+- `evidence/E_THERMALSTATE_001_DANILOV_ROMANENKO_2025.md`
+- `evidence/E_THERMALMODEL_001_ZOCHOLL_GUZMAN_2000.md`
+
+Presentation use:
+- physics-based mathematical engineering can improve state estimation/monitoring by coupling electrical and thermal equations;
+- conductor temperature and thermal history can materially alter currents, losses, thermal margins and protection decisions;
+- "improvement first" should mean improvement relative to a declared baseline in model adequacy, functioning, serviceability, reliability, or operating decision quality;
+- added mathematics is justified only when the added physical state changes an engineering conclusion.
+
+Boundary:
+- these sources support power-side physics and model adequacy;
+- they do not establish transport-side mechanisms, P-T coupling, adaptation, or restoration.
