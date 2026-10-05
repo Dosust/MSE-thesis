@@ -367,3 +367,17 @@ The presentation is ready only when the audience can answer:
 ```
 
 If any answer is unclear, the slide set is not yet frozen.
+
+
+## Evidence update - E-POWERHEAT-002
+
+Source note: `evidence/E_POWERHEAT_002_MARTINEZ_2026.md`
+
+Use for Slides 1, 2, 4, 5, 6, 7 and 8:
+- extreme heat can increase electrical demand while reducing branch capability;
+- time-resolved state and capability updates are relevant;
+- ENS is a service-deficit measure;
+- reliability and resilience remain distinct;
+- time-resolved quasi-static PF/OPF should not be described as full dynamic operation.
+
+Boundary: power-side evidence only. It does not decide transport mode or coupled P-T equations.
