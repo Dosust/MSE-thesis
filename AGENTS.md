@@ -12,6 +12,14 @@ The exact active title is:
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
 
+## Research decision and freeze authority
+
+For any task that selects, narrows, freezes, reopens, or compares thesis scope, terminology, mechanisms, models, presentation claims, or research decisions, also load and apply:
+
+`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+
+Its role is decision closure and reopening control. It complements the canonical reasoning protocol and EGMIV; it does not replace them. Respect `OPEN`, `WORKING-FROZEN`, `FROZEN`, and `SUPERSEDED` statuses exactly.
+
 ## 8-slide MSE presentation workstream
 
 For the current 8-slide MSE research presentation, after loading the canonical authorities required by the task, also load:
