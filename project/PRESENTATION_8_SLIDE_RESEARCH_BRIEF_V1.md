@@ -481,3 +481,20 @@ Use only as contextual/motivational evidence:
 - useful mainly for Slide 1 motivation and Slide 8 engineering value.
 
 Do **not** use this industry article for mechanism equations, model parameters, validation, transport physics, P-T coupling, or novelty claims.
+
+
+## Evidence update - E-TRANSPORT-IPT-001
+
+Source note: `evidence/E_TRANSPORT_IPT_001_PEARSON_ET_AL_2026.md`
+
+Use for Slides 2, 3, 4, 6, 7, and 8:
+- IPT is a specific road-transport electrification technology, not a transport mode;
+- the physical charging path is grid supply → power electronics → primary pad → magnetic coupling → secondary pad → battery;
+- a coupled IPT interface requires electro-magnetic, solid-thermal, and fluid-thermal physics;
+- coupled primary–secondary operation can produce materially different thermal states from a single-pad simplification;
+- experimental validation provides a strong precedent for model-fidelity testing;
+- this source strongly supports the thesis **IMPROVE** phase: better physical representation can identify safer limits and thermal-management/design opportunities.
+
+Boundary:
+- the experiments begin at 20 °C ambient and are not an extreme-heat study;
+- this source does not establish road vs rail, generic EVSE physics, Transportation → Power feedback, mobility-service metrics, adaptation, or restoration.
