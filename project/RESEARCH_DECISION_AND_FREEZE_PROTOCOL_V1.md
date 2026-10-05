@@ -251,6 +251,36 @@ This table records the current 2026-10-05 presentation/thesis-narrowing workstre
 | V2G | Not active by default | **OPEN / excluded unless justified** | Mechanism and scope gates pass |
 | Energy efficiency | Secondary criterion after service is defined | **WORKING-FROZEN** | Research question changes |
 | Real-time operation | Term not adopted unless online/live control is modeled | **OPEN** | Implementation justifies it |
+| Engineering action sequence | Improvement/enhancement → adaptation → restoration | **WORKING-FROZEN** | Evidence or implementation shows a different sequence is required |
+
+## 12A. Engineering action sequence
+
+The current thesis workstream uses the following engineering progression:
+
+```text
+IMPROVEMENT / ENHANCEMENT
+→ ADAPTATION
+→ RESTORATION
+```
+
+Interpretation:
+
+- **Improvement / enhancement** is the starting engineering objective. Physics-based mathematical engineering is used to identify where performance can be improved relative to a declared baseline. It is not treated as a separate standard resilience type.
+- **Adaptation** is the time-dependent operational adjustment made while extreme-heat conditions and system states are evolving.
+- **Restoration** is the recovery of degraded electricity and mobility service toward a declared acceptable or reference level after or as the disturbance relaxes.
+
+This sequence must remain service-centered:
+
+```text
+physical state
+→ functioning
+→ serviceability
+→ reliability
+→ improvement/adaptation/restoration action
+→ service-resilience consequence
+```
+
+The thesis must measure improvement against explicit service metrics and a comparator rather than assume that a more detailed model or more control automatically improves resilience.
 
 ## 13. Presentation integration
 
