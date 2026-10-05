@@ -12,6 +12,14 @@ The exact active title is:
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
 
+## 8-slide MSE presentation workstream
+
+For the current 8-slide MSE research presentation, after loading the canonical authorities required by the task, also load:
+
+`project/PRESENTATION_8_SLIDE_RESEARCH_BRIEF_V1.md`
+
+Use its decision ledger, slide architecture, evidence-admission record, and freeze rules to avoid circular redefinition. Treat **OPEN** and **WORKING-FROZEN** entries exactly as labeled; do not promote them to canonical thesis authority without a versioned amendment.
+
 ## Chapter I activation rule
 
 Whenever a task refers to **Chapter I**, **Chapter 1**, **Introduction**, the **introductory research architecture**, or asks to draft/revise/present any Chapter-I section, first load and follow:
