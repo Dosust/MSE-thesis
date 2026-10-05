@@ -469,3 +469,15 @@ physical state
 → service trajectory
 ```
 with reliability evaluated over the service trajectory and resilience evaluated through disturbance response and Improve–Adapt–Restore effectiveness.
+
+
+## Evidence update - E-CONTEXT-HEAT-001
+
+Source note: `evidence/E_CONTEXT_HEAT_001_MITIGA_2024.md`
+
+Use only as contextual/motivational evidence:
+- extreme heat can threaten infrastructure, business continuity, workers and assets;
+- proactive vulnerability assessment and adaptation are decision-relevant;
+- useful mainly for Slide 1 motivation and Slide 8 engineering value.
+
+Do **not** use this industry article for mechanism equations, model parameters, validation, transport physics, P-T coupling, or novelty claims.
