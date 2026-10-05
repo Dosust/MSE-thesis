@@ -92,6 +92,7 @@ Do not reopen a decision merely because a different wording appears attractive.
 | Energy efficiency | Secondary performance/sustainability criterion | **WORKING-FROZEN** | Evaluate after service requirement is defined |
 | “Real-time” control | Terminology not frozen | **OPEN** | Use only if live/online estimation-control requirements are actually modeled |
 | Exact resilience capacity label | Not frozen | **OPEN** | Do not prematurely label the thesis as only adaptive/absorptive/restorative |
+| Engineering action sequence | Improvement/enhancement → adaptation → restoration | **WORKING-FROZEN** | Improvement is the engineering starting objective; adaptation and restoration are subsequent response phases |
 | Comparator architecture | Needs reconciliation with canonical M0/M1/M2 repository state and current narrower M0/M1 discussion | **OPEN** | No silent replacement |
 
 ## 5. Scientific distinctions that must remain visible
@@ -129,6 +130,34 @@ Interpretation:
 - **Resilience** evaluates disturbance-driven degradation, persistence/adaptation and recovery of service through time.
 - **Energy efficiency** is evaluated only after the service delivered is defined.
 - **Operational control** is the engineering response layer, not the resilience outcome itself.
+
+### Engineering action sequence
+
+The presentation should show the thesis engineering purpose in this order:
+
+```text
+IMPROVE
+→ ADAPT
+→ RESTORE
+```
+
+- **Improve:** use physics-based mathematical engineering to identify and test changes that improve functioning, serviceability, reliability, or service margins relative to a baseline.
+- **Adapt:** use time-varying state information to adjust operation during extreme heat.
+- **Restore:** recover degraded electricity and mobility services toward their declared acceptable/reference levels.
+
+This is an **engineering action sequence**, not a claim that "improvement" is a standard resilience category.
+
+The scientific chain remains:
+
+```text
+Extreme heat
+→ physical state
+→ functionality
+→ serviceability
+→ reliability
+→ engineering action
+→ resilience consequence
+```
 
 ## 7. Current 8-slide scientific backbone
 
