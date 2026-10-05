@@ -252,6 +252,7 @@ This table records the current 2026-10-05 presentation/thesis-narrowing workstre
 | Energy efficiency | Secondary criterion after service is defined | **WORKING-FROZEN** | Research question changes |
 | Real-time operation | Term not adopted unless online/live control is modeled | **OPEN** | Implementation justifies it |
 | Engineering action sequence | Improvement/enhancement → adaptation → restoration | **WORKING-FROZEN** | Evidence or implementation shows a different sequence is required |
+| Operational resilience decomposition | Improve → Adapt → Restore | **WORKING-FROZEN** | New evidence, supervisor instruction, or inability to operationalize one phase |
 
 ## 12A. Engineering action sequence
 
@@ -281,6 +282,39 @@ physical state
 ```
 
 The thesis must measure improvement against explicit service metrics and a comparator rather than assume that a more detailed model or more control automatically improves resilience.
+
+## 12B. Thesis operational definition of resilience
+
+For this thesis, resilience is operationalized as:
+
+```text
+RESILIENCE
+= IMPROVE
++ ADAPT
++ RESTORE
+```
+
+This is a **thesis-specific engineering decomposition**, not a claim that the wider resilience literature universally defines resilience using exactly these three words.
+
+### Improve
+Use physics-based mathematical engineering to identify and test changes that improve functioning, serviceability, reliability, or service margin relative to a declared baseline before or in anticipation of extreme-heat degradation.
+
+### Adapt
+Use changing system-state information to adjust operation while the extreme-heat disturbance is evolving so that acceptable electricity and mobility services are maintained as far as feasible.
+
+### Restore
+Recover degraded electricity and mobility services toward declared acceptable/reference levels after or as the disturbance relaxes.
+
+The required measurable structure is:
+
+```text
+baseline
+→ physics-based state representation
+→ engineering action
+→ change in service metric
+```
+
+Therefore improvement is not inferred from model complexity alone. A model or intervention counts as an improvement only if a declared performance or decision metric improves under controlled comparison.
 
 ## 13. Presentation integration
 
