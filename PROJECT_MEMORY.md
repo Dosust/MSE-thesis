@@ -1,5 +1,8 @@
 # Project Memory Entry Point
 
+> **Research decision-control authority — active 2026-10-05:**  
+> `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md` is the canonical decision-closure and reopening protocol. It complements `project/RESEARCH_REASONING_PROTOCOL.md` and `project/EGMIV_METHOD_V1.md`. Use it whenever a scope, terminology, mechanism, model, or presentation decision is selected, frozen, or reconsidered.
+
 > **Presentation workstream — active 2026-10-05:**  
 > For the current 8-slide MSE research presentation, read `project/PRESENTATION_8_SLIDE_RESEARCH_BRIEF_V1.md` after the canonical thesis authorities. It records presentation-specific working decisions, open scope questions, slide logic, evidence-admission rules, and anti-repetition/freeze controls. It does **not** silently override canonical thesis authorities.
 
