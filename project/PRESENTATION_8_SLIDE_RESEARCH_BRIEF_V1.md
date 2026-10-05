@@ -269,6 +269,25 @@ Boundary:
 - it does not establish a Power–Transportation interdependency;
 - the GKLT rare-event algorithm is not automatically part of the thesis method.
 
+### E-POWERHEAT-001 — Dynamic power-system thermal capability under heatwaves
+**Epistemic status:** [E] external evidence  
+**Candidate slides:** 1, 2, 4, 5, 6, 7, 8  
+**Evidence note:** `evidence/E_POWERHEAT_001_GUPTA_VERMA_2026.md`
+
+Supported presentation use:
+- extreme heat can change power-system component capability through thermal mechanisms;
+- transmission ampacity and generator capacity can be represented as temperature/weather dependent;
+- capability loss can propagate to electrical service deficit;
+- EENS/LOLE/SOP illustrate service/reliability-oriented outcome measures;
+- static versus dynamic physical-capacity representation is a legitimate model-fidelity question;
+- sensitivity analysis is necessary when thermal assumptions can alter conclusions.
+
+Boundary:
+- power-side evidence only;
+- does not select the Transportation mode;
+- does not establish P–T coupling laws;
+- study-specific thresholds and IEEE-57 numerical results are not transferable thesis parameters.
+
 ## 9. Open research decisions that must be resolved before the 8 slides are frozen
 
 1. Which electrified transportation mode produces the strongest combination of:
