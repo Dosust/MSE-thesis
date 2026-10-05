@@ -20,7 +20,7 @@ This file does **not** silently replace canonical thesis authorities. Where the 
 
 ## 2. Governing research method
 
-The presentation uses the repository-wide **Canonical Research Reasoning Protocol** and **EGMIV Method**.
+The presentation uses the repository-wide **Canonical Research Reasoning Protocol**, **EGMIV Method**, and **Research Decision and Freeze Protocol V1** (`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`).
 
 Primary reasoning chain:
 
