@@ -65,3 +65,24 @@ Improvement starts with more physically adequate state representation and engine
 ```
 
 This does not by itself freeze the exact intervention or transport mode.
+
+
+## Verification update — uploaded PDF
+
+**Verified against uploaded PDF on 2026-10-05.**
+
+The paper's abstract explicitly frames the method as a means to improve efficiency and safety/reliability of power-system operation by increasing calculation accuracy through temperature-aware conductor modeling and by adding conductor heat-balance equations to traditional power-flow expressions.
+
+Verified thesis-use chain:
+
+```text
+traditional power-flow model
+→ add physically relevant conductor thermal state
+→ revise resistance / voltage / current / losses
+→ improve monitoring and operating information
+→ support safer and more efficient grid operation
+```
+
+The paper also reports that temperature-aware calculations alter voltages, currents and active-power losses relative to traditional calculations, reinforcing the need to test whether added physical state representation changes engineering conclusions.
+
+Use this source for **IMPROVE** only at the power-side model/decision layer. It does not establish coupled P-T adaptation or restoration.
