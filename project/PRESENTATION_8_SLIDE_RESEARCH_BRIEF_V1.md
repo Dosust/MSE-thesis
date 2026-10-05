@@ -443,3 +443,29 @@ Presentation use:
 Boundary:
 - these sources support power-side physics and model adequacy;
 - they do not establish transport-side mechanisms, P-T coupling, adaptation, or restoration.
+
+
+## Presentation resilience cycle
+
+Use the thesis-defined cycle:
+
+```text
+IMPROVE → ADAPT → RESTORE → LEARN → IMPROVE
+```
+
+Presentation meaning:
+- **Improve:** strengthen future service capability relative to a baseline.
+- **Adapt:** modify operation as physical states evolve.
+- **Restore:** return degraded electricity and mobility service to an acceptable/reference level.
+- **Learn:** use evidence from disturbance and recovery to improve the next design/operating decision.
+
+Do not present this as a universal resilience standard. Present it as the thesis operational engineering cycle.
+
+For slide logic, use:
+```text
+physical state
+→ functionality
+→ serviceability
+→ service trajectory
+```
+with reliability evaluated over the service trajectory and resilience evaluated through disturbance response and Improve–Adapt–Restore effectiveness.
