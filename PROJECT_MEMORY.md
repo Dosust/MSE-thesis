@@ -1,5 +1,8 @@
 # Project Memory Entry Point
 
+> **Presentation workstream — active 2026-10-05:**  
+> For the current 8-slide MSE research presentation, read `project/PRESENTATION_8_SLIDE_RESEARCH_BRIEF_V1.md` after the canonical thesis authorities. It records presentation-specific working decisions, open scope questions, slide logic, evidence-admission rules, and anti-repetition/freeze controls. It does **not** silently override canonical thesis authorities.
+
 > **Current scientific authorities (2026-09-20):**  
 > Framework: `project/CANONICAL_7_STAGE_FRAMEWORK_V2.md` + `project/CANONICAL_7_STAGE_FRAMEWORK_V2_1_ALIGNMENT_AMENDMENT.md`  
 > Research questions: `project/CANONICAL_RESEARCH_QUESTIONS_V4.md`  
