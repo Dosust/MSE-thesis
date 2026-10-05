@@ -159,6 +159,22 @@ Extreme heat
 → resilience consequence
 ```
 
+### Thesis resilience decomposition
+
+For presentation purposes, the thesis operationalizes resilience as:
+
+```text
+IMPROVE
+→ ADAPT
+→ RESTORE
+```
+
+- **Improve:** identify and test physics-based changes that improve functioning, serviceability, reliability, or service margin relative to a baseline.
+- **Adapt:** adjust operation as extreme heat and system states evolve.
+- **Restore:** recover degraded electricity and mobility service toward acceptable/reference levels.
+
+This is the thesis engineering decomposition, not a universal standard definition.
+
 ## 7. Current 8-slide scientific backbone
 
 ### Slide 1 — Engineering problem and motivation
