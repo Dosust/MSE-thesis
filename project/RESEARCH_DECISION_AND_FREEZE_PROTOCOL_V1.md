@@ -362,3 +362,79 @@ Therefore:
 ```text
 No repeated conceptual reset without new evidence or an explicit reopening condition.
 ```
+
+
+## 12C. Thesis-defined resilience cycle
+
+For this thesis, use the following **thesis-defined engineering resilience cycle**:
+
+```text
+IMPROVE
+→ ADAPT
+→ RESTORE
+→ LEARN
+→ IMPROVE
+```
+
+This is not claimed as a universal standard definition of resilience. It is the operational engineering cycle used to structure the thesis.
+
+### Improve — proactive engineering
+Select or design changes that increase future service capability, robustness, or decision quality relative to a declared baseline.
+
+Possible test criteria:
+```text
+S^a(t) > S^base(t)
+```
+or
+```text
+L_service^a < L_service^base
+```
+
+### Adapt — state-aware operation during disturbance
+Use observed or estimated state information to modify operation while extreme heat evolves:
+
+```text
+T_amb(t) → x(t) → u(t) → S(t)
+```
+
+Adaptation is state-aware operational modification intended to preserve acceptable service.
+
+### Restore — recovery of acceptable service
+If service falls below its threshold:
+
+```text
+S(t) < S_min
+```
+
+restoration evaluates return to acceptable service:
+
+```text
+S(t) ≥ S_min
+```
+
+using metrics such as recovery time and integrated service deficit.
+
+### Learn — close the engineering loop
+Use evidence from the event, model validation, intervention performance, and recovery trajectory to revise assumptions, parameters, models, and future improvement actions.
+
+```text
+event evidence
+→ model/parameter update
+→ revised engineering decision
+→ next improvement
+```
+
+### Important structural refinement
+Do not force reliability into a causal sequence after serviceability. Use:
+
+```text
+physical state
+→ functionality
+→ serviceability
+→ service trajectory
+```
+
+Then evaluate:
+- **reliability** as consistency/probability of acceptable service over a declared domain;
+- **resilience** as disturbance-time behavior and the effectiveness of Improve–Adapt–Restore actions.
+
