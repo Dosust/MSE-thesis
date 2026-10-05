@@ -283,7 +283,7 @@ Required:
 **Question answered:** What useful information will the thesis produce?
 
 Contribution must be expressed conditionally:
-- when does added physical fidelity change service/resilience conclusions?
+- when does representing the relevant physical states change service/resilience conclusions?
 - when is a simpler representation adequate?
 - when does the intervention change engineering action?
 - what remains outside the validation domain?
@@ -324,7 +324,7 @@ Supported presentation use:
 - transmission ampacity and generator capacity can be represented as temperature/weather dependent;
 - capability loss can propagate to electrical service deficit;
 - EENS/LOLE/SOP illustrate service/reliability-oriented outcome measures;
-- static versus dynamic physical-capacity representation is a legitimate model-fidelity question;
+- static versus time-varying physical-capacity representation is a legitimate controlled-model comparison;
 - sensitivity analysis is necessary when thermal assumptions can alter conclusions.
 
 Boundary:
@@ -492,7 +492,7 @@ Use for Slides 2, 3, 4, 6, 7, and 8:
 - the physical charging path is grid supply → power electronics → primary pad → magnetic coupling → secondary pad → battery;
 - a coupled IPT interface requires electro-magnetic, solid-thermal, and fluid-thermal physics;
 - coupled primary–secondary operation can produce materially different thermal states from a single-pad simplification;
-- experimental validation provides a strong precedent for model-fidelity testing;
+- experimental validation provides a strong precedent for controlled comparison of alternative physical representations;
 - this source strongly supports the thesis **IMPROVE** phase: better physical representation can identify safer limits and thermal-management/design opportunities.
 
 Boundary:
