@@ -40,22 +40,22 @@ Transferable lessons:
 ## Project integration
 
 Use jointly with:
-- `../SKILL.md`;
-- `../../engineering-framework-design/SKILL.md`;
-- `../../scientific-diagram-design/SKILL.md`.
+- \`../SKILL.md\`;
+- \`../../engineering-framework-design/SKILL.md\`;
+- \`../../scientific-diagram-design/SKILL.md\`.
 
 ## Permanent project rule
 
-[
-oxed{
-	ext{Scientific diagram}
+\[
+\boxed{
+\text{Scientific diagram}
 =
-	ext{formal model}
+\text{formal model}
 +
-	ext{declared visual encoding}
+\text{declared visual encoding}
 +
-	ext{verified rendering}
+\text{verified rendering}
 }
-]
+\]
 
 A visual effect without a mathematical or scientific mapping is decoration and should be removed.

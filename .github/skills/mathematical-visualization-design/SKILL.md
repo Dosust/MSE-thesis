@@ -10,11 +10,11 @@ license: MIT
 
 This skill enforces one principle:
 
-[
-oxed{
-	ext{model} ightarrow 	ext{visual encoding} ightarrow 	ext{rendering}
+\[
+\boxed{
+\text{model} \rightarrow \text{visual encoding} \rightarrow \text{rendering}
 }
-]
+\]
 
 Never reverse the order.
 
@@ -35,8 +35,8 @@ Use this skill for:
 - scientific SVG/WebGL/Canvas renderings.
 
 Use together with:
-- `engineering-framework-design`;
-- `scientific-diagram-design`.
+- \`engineering-framework-design\`;
+- \`scientific-diagram-design\`.
 
 ---
 
@@ -46,43 +46,43 @@ Before drawing anything, define the mathematical object being visualized.
 
 Examples:
 
-[
-mathcal G=(V,E)
-]
+\[
+\mathcal G=(V,E)
+\]
 
-[
-dot X=F(X,H,u;	heta)
-]
+\[
+\dot X=F(X,H,u;\theta)
+\]
 
-[
-T:M_1ightarrow M_2
-]
+\[
+T:M_1\rightarrow M_2
+\]
 
-[
-Rsubseteq A	imes B
-]
+\[
+R\subseteq A\times B
+\]
 
-[
+\[
 Q=G(X)
-]
+\]
 
-[
-	au_i=inf{t:g_i(X_i(t))=0}
-]
+\[
+\tau_i=\inf\{t:g_i(X_i(t))=0\}
+\]
 
 The visual is only a representation of this structure.
 
 Reject:
 
-[
-	ext{nice-looking diagram} ightarrow 	ext{invented mathematical meaning}
-]
+\[
+\text{nice-looking diagram} \rightarrow \text{invented mathematical meaning}
+\]
 
 Require:
 
-[
-	ext{defined mathematical meaning} ightarrow 	ext{visual form}
-]
+\[
+\text{defined mathematical meaning} \rightarrow \text{visual form}
+\]
 
 ---
 
@@ -92,9 +92,9 @@ Every visual channel must encode a declared mathematical or scientific quantity.
 
 For each graphical property, define a mapping:
 
-[
-phi_k : 	ext{model quantity} ightarrow 	ext{visual channel}
-]
+\[
+\phi_k : \text{model quantity} \rightarrow \text{visual channel}
+\]
 
 Possible channels:
 - position;
@@ -114,21 +114,21 @@ Possible channels:
 
 Example:
 
-[
-phi_M(M_i)=	ext{node border width}
-]
+\[
+\phi_M(M_i)=\text{node border width}
+\]
 
-[
-phi_	au(	au_i)=	ext{event location on timeline}
-]
+\[
+\phi_\tau(\tau_i)=\text{event location on timeline}
+\]
 
-[
-phi_delta(delta_{ij})=	ext{animation delay on edge }(i,j)
-]
+\[
+\phi_\delta(\delta_{ij})=\text{animation delay on edge }(i,j)
+\]
 
-[
-phi_Q(Q_k)=	ext{service trajectory height}
-]
+\[
+\phi_Q(Q_k)=\text{service trajectory height}
+\]
 
 A channel with no mapping is decorative and should be removed.
 
@@ -159,13 +159,13 @@ If a node position changes in an animation, define what mathematical quantity dr
 
 If the system is represented as a graph:
 
-[
-mathcal G=(V,E)
-]
+\[
+\mathcal G=(V,E)
+\]
 
 define:
-- node set (V);
-- edge set (E);
+- node set \(V\);
+- edge set \(E\);
 - edge direction;
 - edge type;
 - edge state;
@@ -186,39 +186,39 @@ Never add edges for symmetry.
 
 When state and time are central, the visual spine is:
 
-[
+\[
 X_i(t)
-]
+\]
 
 not separate decorative boxes called “state” and “time”.
 
 For the thesis:
 
-[
+\[
 H(x,t)
-ightarrow
+\rightarrow
 X_i(t)
-ightarrow
-	au_i^C
-ightarrow
-delta_{ij}
-ightarrow
+\rightarrow
+\tau_i^C
+\rightarrow
+\delta_{ij}
+\rightarrow
 Q_k(t)
-]
+\]
 
 but do not force a serial visual chain if the mathematics is not serial.
 
 If transition time, propagation delay, and service are parallel functionals of a state trajectory, visualize them as parallel derived quantities:
 
-[
+\[
 X(t)
-ightarrow
-egin{cases}
-	au_i^C\
-delta_{ij}\
+\rightarrow
+\begin{cases}
+\tau_i^C\\
+\delta_{ij}\\
 Q_P(t),Q_T(t)
-end{cases}
-]
+\end{cases}
+\]
 
 ---
 
@@ -228,23 +228,23 @@ Use a hybrid representation when physical dynamics are continuous but operationa
 
 Continuous state:
 
-[
+\[
 X_i(t)
-]
+\]
 
 Discrete mode:
 
-[
-q_i(t)in{N,D,C,F,R}
-]
+\[
+q_i(t)\in\{N,D,C,F,R\}
+\]
 
 Transitions require explicit guards:
 
-[
-q_i:Nightarrow D
-quad	ext{when}quad
+\[
+q_i:N\rightarrow D
+\quad\text{when}\quad
 g_i(X_i,t)=0
-]
+\]
 
 Visual implication:
 - continuous variables control continuous visual changes;
@@ -259,9 +259,9 @@ Do not animate a “failure” transition without a defined event condition.
 
 If a model is constrained by:
 
-[
-g(X,t)le 0
-]
+\[
+g(X,t)\le 0
+\]
 
 the visualization should distinguish:
 - feasible region;
@@ -271,17 +271,17 @@ the visualization should distinguish:
 
 For viability:
 
-[
-X(t)inmathcal V(t)
-]
+\[
+X(t)\in\mathcal V(t)
+\]
 
 represent the viability set geometrically when possible.
 
 For service:
 
-[
-Q(t)ge Q^{min}
-]
+\[
+Q(t)\ge Q^{\min}
+\]
 
 make the acceptable-service threshold explicit.
 
@@ -293,9 +293,9 @@ This creates visuals that explain the mathematics instead of merely displaying i
 
 When the figure shows a model transformation, define the transformation first:
 
-[
-T:M_1ightarrow M_2
-]
+\[
+T:M_1\rightarrow M_2
+\]
 
 Then visually show:
 - source object;
@@ -305,12 +305,12 @@ Then visually show:
 - what changes.
 
 Examples:
-- raw physical variable (ightarrow) normalized physical margin;
-- state (ightarrow) capability;
-- capability (ightarrow) service;
-- component event (ightarrow) system consequence;
-- observation (ightarrow) state estimate;
-- design variable (ightarrow) modified dynamics.
+- raw physical variable \(\rightarrow\) normalized physical margin;
+- state \(\rightarrow\) capability;
+- capability \(\rightarrow\) service;
+- component event \(\rightarrow\) system consequence;
+- observation \(\rightarrow\) state estimate;
+- design variable \(\rightarrow\) modified dynamics.
 
 Never draw an unexplained arrow between two views.
 
@@ -323,12 +323,12 @@ Color is a mathematical encoding, not decoration.
 Use color only when it represents a declared class or quantity.
 
 Default thesis semantic palette:
-- external hazard/forcing: vermillion `#D55E00`;
-- physical/empirical system: bluish green `#009E73`;
-- mathematical dynamics/analysis: blue `#0072B2`;
-- engineering intervention/decision: dark amber `#B86E00`;
-- neutral scientific content: black `#000000`;
-- all backgrounds/interiors: pure white `#FFFFFF`.
+- external hazard/forcing: vermillion \`#D55E00\`;
+- physical/empirical system: bluish green \`#009E73\`;
+- mathematical dynamics/analysis: blue \`#0072B2\`;
+- engineering intervention/decision: dark amber \`#B86E00\`;
+- neutral scientific content: black \`#000000\`;
+- all backgrounds/interiors: pure white \`#FFFFFF\`.
 
 Rules:
 - no colored panel fills;
@@ -345,31 +345,31 @@ Rules:
 Animation must be generated by equations or event logic.
 
 Allowed motion drivers:
-- (X_i(t));
-- (M_i(t));
-- (	au_i);
-- (delta_{ij});
-- (Q_k(t));
-- parameter sweep (lambda);
-- control input (u(t)).
+- \(X_i(t)\);
+- \(M_i(t)\);
+- \(\tau_i\);
+- \(\delta_{ij}\);
+- \(Q_k(t)\);
+- parameter sweep \(\lambda\);
+- control input \(u(t)\).
 
 Examples:
 
-[
-X_i(t)mapsto 	ext{node geometry}
-]
+\[
+X_i(t)\mapsto \text{node geometry}
+\]
 
-[
-M_i(t)mapsto 	ext{border emphasis}
-]
+\[
+M_i(t)\mapsto \text{border emphasis}
+\]
 
-[
-delta_{ij}mapsto 	ext{edge animation delay}
-]
+\[
+\delta_{ij}\mapsto \text{edge animation delay}
+\]
 
-[
-Q_k(t)mapsto 	ext{service trajectory}
-]
+\[
+Q_k(t)\mapsto \text{service trajectory}
+\]
 
 Animation speed must represent time or another defined parameter when possible.
 
@@ -382,11 +382,11 @@ Do not use looping motion merely to look advanced.
 Interactive controls must correspond to model parameters.
 
 Examples:
-- ambient temperature slider (ightarrow T_{mathrm{amb}});
-- heat duration slider (ightarrow Delta t);
-- load slider (ightarrow L_i);
-- design parameter control (ightarrow 	heta);
-- adaptation control (ightarrow u_A(t)).
+- ambient temperature slider \(\rightarrow T_{\mathrm{amb}}\);
+- heat duration slider \(\rightarrow \Delta t\);
+- load slider \(\rightarrow L_i\);
+- design parameter control \(\rightarrow \theta\);
+- adaptation control \(\rightarrow u_A(t)\).
 
 Every interaction must update:
 1. the mathematical model;
@@ -395,15 +395,15 @@ Every interaction must update:
 
 This is the core interactive loop:
 
-[
-	ext{parameter}
-ightarrow
-	ext{model recomputation}
-ightarrow
-	ext{derived state}
-ightarrow
-	ext{visual update}
-]
+\[
+\text{parameter}
+\rightarrow
+\text{model recomputation}
+\rightarrow
+\text{derived state}
+\rightarrow
+\text{visual update}
+\]
 
 ---
 
@@ -411,68 +411,68 @@ This is the core interactive loop:
 
 For the extreme-heat coupled Power–Transportation thesis, use:
 
-[
+\[
 H(x,t)
-ightarrow
+\rightarrow
 X(t)
-ightarrow
-{	au_i^C,delta_{ij},Q_P(t),Q_T(t)}
-ightarrow
-{	ext{Improve, Adapt, Restore}}
-]
+\rightarrow
+\{\tau_i^C,\delta_{ij},Q_P(t),Q_T(t)\}
+\rightarrow
+\{\text{Improve, Adapt, Restore}\}
+\]
 
 where:
 
-[
+\[
 X(t)=
-[X_P^	op,Z^	op,X_T^	op]^	op
-]
+[X_P^\top,Z^\top,X_T^\top]^\top
+\]
 
-The interface state (Z(t)) is not a decorative middle box. It represents modeled interface conditions.
+The interface state \(Z(t)\) is not a decorative middle box. It represents modeled interface conditions.
 
 Use the physical architecture:
 
-[
-mathcal P
-leftrightarrow
-mathcal I_{PT}
-leftrightarrow
-mathcal T
-]
+\[
+\mathcal P
+\leftrightarrow
+\mathcal I_{PT}
+\leftrightarrow
+\mathcal T
+\]
 
 only when each direction has an explicit exchanged quantity.
 
 Recommended mathematical views:
 
 ### A. State trajectory view
-Show (X_i(t)) against time.
+Show \(X_i(t)\) against time.
 
 ### B. Threshold view
-Show (g_i(X_i,t)=0) and (	au_i^C).
+Show \(g_i(X_i,t)=0\) and \(\tau_i^C\).
 
 ### C. Propagation view
 Show event pair and delay:
 
-[
-delta_{ij}
+\[
+\delta_{ij}
 =
-	au_j^{mathrm{response}}
+\tau_j^{\mathrm{response}}
 -
-	au_i^{mathrm{transition}}
-]
+\tau_i^{\mathrm{transition}}
+\]
 
 ### D. Service view
 Show:
 
-[
-Q_P(t),Q_T(t),Q^{min}
-]
+\[
+Q_P(t),Q_T(t),Q^{\min}
+\]
 
 ### E. Intervention view
 Show how:
-- Improve modifies (	heta);
-- Adapt modifies (u_A(t));
-- Restore modifies (u_R(t)).
+- Improve modifies \(\theta\);
+- Adapt modifies \(u_A(t)\);
+- Restore modifies \(u_R(t)\).
 
 ---
 
@@ -480,18 +480,18 @@ Show how:
 
 For code-based scientific visualization, separate:
 
-```text
+\`\`\`text
 MODEL
 → DERIVED QUANTITIES
 → VISUAL ENCODING
 → RENDERER
 → INTERACTION
 → VALIDATION
-```
+\`\`\`
 
 Recommended modules:
 
-```text
+\`\`\`text
 model/
   dynamics.py|ts
   thresholds.py|ts
@@ -517,7 +517,7 @@ validation/
   semantic_checks.py|ts
   math_checks.py|ts
   visual_checks.py|ts
-```
+\`\`\`
 
 Do not mix model equations and arbitrary drawing commands in one script.
 
@@ -569,15 +569,15 @@ Static thesis figures should be deterministically generated when possible.
 
 Preferred pipeline:
 
-[
-	ext{formal specification}
-ightarrow
-	ext{SVG/TikZ/draw.io}
-ightarrow
-	ext{QA}
-ightarrow
-	ext{PNG/PDF export}
-]
+\[
+\text{formal specification}
+\rightarrow
+\text{SVG/TikZ/draw.io}
+\rightarrow
+\text{QA}
+\rightarrow
+\text{PNG/PDF export}
+\]
 
 Generative image tools may be used for exploratory composition, but not as the scientific authority.
 
@@ -645,17 +645,17 @@ Do not copy:
 
 The reusable principle is:
 
-[
-oxed{
-	ext{mathematical structure drives the visual}
+\[
+\boxed{
+\text{mathematical structure drives the visual}
 }
-]
+\]
 
 not:
 
-[
-	ext{imitate the source image}
-]
+\[
+\text{imitate the source image}
+\]
 
 ---
 
