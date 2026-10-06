@@ -923,12 +923,24 @@ Default to scientific, publication-quality design.
 
 ## Canvas
 
-- white background;
-- no gradients;
-- no textures;
-- no shadows;
+- **pure white background exactly `#FFFFFF` / `RGB(255,255,255)` across the entire canvas**;
+- every panel, box, enclosure, and empty interior region must also remain `#FFFFFF` unless a scientifically necessary exception is explicitly requested;
+- no gray tint;
+- no cream or off-white;
+- no vignette;
+- no shading;
+- no texture;
+- no gradient;
+- no shadow;
+- no paper/canvas effect;
 - no decorative background panels;
 - no gold unless explicitly requested.
+
+For generative rendering, use this exact instruction when a white scientific framework is required:
+
+> **Pure white #FFFFFF background across the entire canvas and inside every panel/box. No gray, cream, off-white, shading, texture, gradient, shadow, vignette, or paper effect. Only semantically required text, lines, arrows, and small color accents.**
+
+If a rendered result is visibly off-white or gray, it fails visual QA and must be regenerated or corrected before delivery.
 
 ## Color
 
@@ -1235,7 +1247,7 @@ Use semantic versioning:
 
 Current conceptual version:
 
-`1.1.0`
+`1.1.1`
 
 ## Update rule
 
@@ -1266,6 +1278,17 @@ Do **not** change the core rules merely because a new visual style is preferred.
 ---
 
 # 24. Changelog
+
+## 1.1.1
+
+Pure-white rendering clarification.
+
+Added:
+- exact canvas requirement `#FFFFFF / RGB(255,255,255)`;
+- pure-white requirement inside every panel and box;
+- explicit prohibition of gray/off-white tint, vignette, shading, texture, gradients, shadows, and paper effects;
+- exact generative-rendering instruction for white scientific frameworks;
+- visual QA failure rule for non-white backgrounds.
 
 ## 1.1.0
 

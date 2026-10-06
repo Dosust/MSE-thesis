@@ -472,13 +472,27 @@ Every displayed equation must connect to an object, relation, or decision in the
 
 Default:
 
-- white canvas;
+- **pure white canvas exactly `#FFFFFF` / `RGB(255,255,255)`**;
+- every panel, box, enclosure, and unused interior region must also remain `#FFFFFF` unless a scientifically justified exception is explicitly requested;
 - black/dark charcoal text;
 - restrained line colors;
 - color only for semantic differentiation;
 - no large colored panel backgrounds;
+- no gray tint or off-white cast;
+- no cream;
+- no vignette;
+- no shading;
+- no texture;
 - no gradients;
+- no shadows;
+- no paper/canvas effect;
 - no gold unless explicitly requested.
+
+When a generative image model is used, include the following instruction verbatim or equivalently strongly:
+
+> **Pure white #FFFFFF background across the entire canvas and inside every panel/box. No gray, cream, off-white, shading, texture, gradient, shadow, vignette, or paper effect. Only semantically required text, lines, arrows, equations, and small color accents.**
+
+A background that is visually gray, cream, off-white, shaded, textured, vignetted, or paper-like is a rendering defect and must be corrected before delivery.
 
 Color must answer:
 
@@ -732,7 +746,9 @@ Before delivery, audit:
 
 ## Visual QA
 - [ ] readable at intended size;
-- [ ] white background unless explicitly changed;
+- [ ] background is exactly pure white `#FFFFFF / RGB(255,255,255)` unless explicitly changed;
+- [ ] panel and box interiors are also pure white unless a scientific exception is explicitly justified;
+- [ ] no gray/off-white tint, vignette, shading, texture, gradient, shadow, or paper effect;
 - [ ] no decorative gradients/shadows;
 - [ ] no generic AI visual motifs;
 - [ ] arrows are large and clear;
@@ -807,7 +823,7 @@ Use semantic versioning.
 Current version:
 
 ```text
-1.0.0
+1.0.1
 ```
 
 Update when:
@@ -844,6 +860,17 @@ Core authorities include:
 ---
 
 # 28. Changelog
+
+## 1.0.1
+
+Pure-white rendering enforcement.
+
+Added:
+- exact `#FFFFFF / RGB(255,255,255)` canvas requirement;
+- pure-white panel/box interior rule;
+- explicit ban on gray, cream, off-white, vignette, shading, texture, gradients, shadows, and paper effects;
+- exact generative-rendering instruction;
+- QA failure condition for non-white scientific backgrounds.
 
 ## 1.0.0
 
