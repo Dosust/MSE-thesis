@@ -498,3 +498,30 @@ Use for Slides 2, 3, 4, 6, 7, and 8:
 Boundary:
 - the experiments begin at 20 °C ambient and are not an extreme-heat study;
 - this source does not establish road vs rail, generic EVSE physics, Transportation → Power feedback, mobility-service metrics, adaptation, or restoration.
+
+
+## Evidence update - E-RESILIENCE-001
+
+Source note: `evidence/E_RESILIENCE_001_FATURECHI_MILLER_HOOKS_2014.md`
+
+Use for Slides 2, 5, 6, 7, and 8:
+- established resilience literature distinguishes preparedness/robustness, flexibility/adaptability, recovery capability, and resilience;
+- pre-event actions can improve resistance, capacity, readiness, and resource availability;
+- postevent adaptive actions support flexibility;
+- recovery actions restore lost system performance;
+- time-dependent disruption profiles provide a basis for minimum performance, recovery time, and area-under-curve service/resilience metrics;
+- a two-stage stochastic decision structure provides a precedent for pre-event and postevent intervention optimization under uncertainty.
+
+Presentation mapping:
+```text
+THESIS: IMPROVE
+≈ preparedness / robustness-enhancing pre-event action
+
+THESIS: ADAPT
+≈ flexibility / adaptive response
+
+THESIS: RESTORE
+≈ recovery capability / restoration
+```
+
+Do not claim that Improve → Adapt → Restore is the universal literature definition of resilience. Present it as the thesis operational cycle grounded in established resilience concepts.
