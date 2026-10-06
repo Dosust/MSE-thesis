@@ -1,102 +1,213 @@
 # Chapter 3 — Conceptual and Mathematical Framework
 
-**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
-
-**Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Current-scope authority:** [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Framework specification:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md)  
+**Status:** CURRENT WORKING FRAMEWORK  
+**Date:** 2026-10-06
 
 ## Purpose
 
-Derive the thesis framework from definitions, evidence-qualified mechanisms and mathematical necessity rather than from a preselected diagram.
+Derive a mathematically traceable framework for how extreme heat changes selected physical states over time, how qualified Power–Transportation interfaces transmit consequences, and how those consequences affect electricity and mobility services and engineering interventions.
 
-## Required derivation
+The framework is derived from mathematics and mechanism, not from a preselected picture.
 
-```math
-\boxed{
-K(t)
-\rightarrow
-(\mathcal S,\mathcal G,X)
-\rightarrow
-\mathbb I(x,t,Y,m)
-\rightarrow
-F_{\mathcal G}^{m}
-\rightarrow
-Y(x,t)
-\rightarrow
-(y,\widehat Y,z_I,z_O,\mathcal U,u)
-\rightarrow
-\mathfrak R_T
-\rightarrow
-(a_k,\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
-\rightarrow
-\mathcal A_{R,S}^{\star}.
-}
-```
+---
 
-The scientific meaning is:
+## System boundary
+
+### External environment
 
 ```math
-\boxed{
-\text{service requirements}
-\rightarrow\text{spatiotemporal SoS structure}
-\rightarrow\text{causal interdependencies}
-\rightarrow\text{hybrid multiscale dynamics}
-\rightarrow\text{observation/estimation/organization/control}
-\rightarrow\text{viability + reachability + probability}
-\rightarrow\text{intervention + sustainability consequences}
-\rightarrow\text{engineering decision}.
-}
+H(x,t)
 ```
 
-## Required content
+represents extreme-heat forcing.
 
-- definitions, notation and service requirements;
-- constituent power and transportation system representations;
-- physical/informational/organizational ontology;
-- directed dependency/interdependency primitives and evidence status;
-- spatiotemporal and mode-dependent interdependency semantics;
-- multilayer graph, geography and graph-to-dynamics mapping;
-- physics-based hybrid multiscale dynamics;
-- observation/state-estimation/information/organization/control architecture;
-- uncertainty-aware viability and recovery reachability;
-- maintainability/recovery probability semantics where evidence supports probabilistic treatment;
-- intervention effectiveness, resource efficiency and sustainability-consequence objects;
-- engineering decision set under feasibility and uncertainty;
-- complete seven-stage architecture and stage-to-stage handoffs;
-- notation, units, assumptions, parameter provenance and validity domains.
+### System of interest
 
-## Stage-5 rule
+Selected:
 
-Do not reduce the current resilience object to viability alone. The active scientific object is
+```text
+Power P
++
+Physical Interfaces I_PT
++
+Battery-Electric Road Transportation T
+```
+
+Common heat exposure is **not** itself an interdependency.
+
+---
+
+## Structural architecture
+
+```text
+P ↔ I_PT ↔ T
+```
+
+Every direction must have an independently justified exchanged quantity.
+
+Examples:
+
+```text
+P → I_PT      available electrical power / capacity
+I_PT → P      charging load / current demand
+I_PT → T      delivered charging capability
+T → I_PT      vehicle arrival / charging demand
+```
+
+---
+
+## State architecture
 
 ```math
-\boxed{
-\mathfrak R_T
-=
-(\mathcal V_{\alpha,T_V},\mathcal R_{\beta,T_R},\rho_{\mathcal V},T_{\mathcal V},T_{\rm rec},P_{\rm viable},P_{\rm recover}).
-}
+X(t)=[X_P^\top,Z^\top,X_T^\top]^\top.
 ```
 
-Conventional performance/recovery curves remain an explicit comparator.
+- `X_P(t)` = selected Power states;
+- `Z(t)` = selected interface states;
+- `X_T(t)` = selected battery-electric transport states.
 
-## Stage-6/7 rule
+`I_PT` (architecture) and `Z(t)` (state) are distinct.
 
-Interface criticality is a supporting diagnostic, not the primary H4 claim. H4 concerns intervention effectiveness/efficiency/sustainability consequences. H5 concerns joint resilience–sustainability engineering decision. Adaptive or sequential pathways remain a supporting extension unless separately activated and preregistered.
+---
 
-## Epistemic rule
+## Dynamics
 
-Every construct is classified during development as `[E]`, `[D]`, `[H]`, `[P]`, `[A]`, `[U]` or `[R]` where appropriate. Mathematical sophistication does not convert a proposal, assumption or hypothesis into established theory.
+```math
+\dot X=F(X,H,u;\theta).
+```
 
-## Mathematical semantics rule
+Selected components/interfaces retain their own governing physics:
 
-Every object must declare, as applicable, symbol, type/domain, units, physical meaning, inputs/outputs, assumptions, parameter provenance, limiting cases and validity domain. Externally adopted equations/algorithms/parameters require adjacent attribution.
+```math
+\dot X_i=f_i(X_i,H,L_i,Z_{ji},u_i;\theta_i).
+```
 
-## Figure rule
+Use **minimum sufficient physics**.
 
-High-level framework figures appear only after the underlying objects and handoffs are defined. Generated visuals are drafts until checked against the canonical mathematics and the thesis visual ontology.
+---
+
+## Constraints and critical transition
+
+```math
+g_i(X_i,t)\le 0.
+```
+
+```math
+\tau_i^C=\inf\{t:g_i(X_i(t),t)=0\}.
+```
+
+Each threshold must have explicit physical/operational meaning and evidence.
+
+---
+
+## Propagation timing
+
+Propagation is not topology alone.
+
+For an admitted event relation:
+
+```math
+\delta_{ij}=\tau_j^{response}-\tau_i^{transition}.
+```
+
+Before using `δ_ij`, define:
+- source event;
+- target response;
+- interface/mechanism;
+- direction;
+- timescale;
+- service consequence.
+
+---
+
+## Service mapping
+
+```text
+physical state
+→ functional capability
+→ service
+```
+
+Current service objects:
+
+```math
+Q_P(t),\qquad Q_T(t).
+```
+
+Exact service metrics remain **OPEN**.
+
+---
+
+## Parallel derived analyses
+
+Do not impose false serial dependence:
+
+```math
+X(t)
+\rightarrow
+\begin{cases}
+\tau_i^C\\
+\delta_{ij}\\
+Q_P(t),Q_T(t)
+\end{cases}
+```
+
+---
+
+## Engineering interventions
+
+### Improve
+```math
+\theta\rightarrow\theta'.
+```
+
+### Adapt
+```math
+u_A(t).
+```
+
+### Restore
+```math
+u_R(t).
+```
+
+### Learn
+Use observations, validation, intervention outcomes, and recovery evidence to revise future models and design decisions.
+
+---
+
+## Mathematical-visualization rule
+
+Every framework figure must follow:
+
+```text
+formal model
+→ declared visual encoding
+→ deterministic or verified rendering
+```
+
+Use:
+- `../../.github/skills/engineering-framework-design/SKILL.md`
+- `../../.github/skills/scientific-diagram-design/SKILL.md`
+- `../../.github/skills/mathematical-visualization-design/SKILL.md`
+
+No arrow, color, icon, shape, geometry, or motion is admitted without a declared scientific purpose.
+
+---
 
 ## Exit gate
 
-See `../00_governance/THESIS_COMPLETION_GATES.md`. Chapter 3 passes only when all symbols and stage handoffs are semantically complete, physically admissible, dimensionally/logically consistent and synchronized with framework v2.
+Chapter 3 is ready only when:
+
+- exact charging context is frozen;
+- selected state variables and units are defined;
+- directional interface exchanges are qualified;
+- governing equations and parameters are evidence-supported;
+- thresholds/constraints are defensible;
+- service mappings are operationalized;
+- intervention targets are explicit;
+- assumptions and validity domains are recorded;
+- all figures pass semantic, mathematical, and visual QA.
