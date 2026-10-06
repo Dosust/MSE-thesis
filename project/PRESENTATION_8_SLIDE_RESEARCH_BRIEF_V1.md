@@ -560,3 +560,38 @@ Critical boundary:
 - this is an arXiv preprint and should not be treated as peer-reviewed evidence unless publication status is independently verified;
 - the method is hybrid simulation/Bayesian, not physics-based;
 - synthetic/hypothetical data, independence assumptions, and heuristic interdependency weights are not transferable thesis parameters.
+
+
+## Evidence update — E-CPTN-TEMP-001 / E-CPTN-TEMP-002
+
+Use mainly for Slides 2, 4, 6, and 7.
+
+### Li & Chang (2024)
+
+Strong open-access comparator showing:
+
+```text
+ambient temperature
+→ EV auxiliary / energy consumption
+→ charging demand
+→ station load
+→ distribution-network consequence
+```
+
+It also uses controlled temperature/speed cases and dynamic charging pricing.
+
+**Presentation consequence:** never imply that temperature-aware EV charging-load modeling is absent.
+
+### Ji et al. (2025)
+
+Strong Applied Energy comparator showing temperature-aware FCS selection/routing inside a tri-level EV–FCS–PDN optimization architecture.
+
+**Presentation consequence:** never imply that temperature-aware CPTN routing/optimization is absent.
+
+### Slide 2 wording direction
+
+Use:
+
+> Temperature-aware coupled road-EV/power models already exist. The unresolved thesis question is whether the relevant heat-dependent physical component states materially change electricity and mobility service trajectories and the engineering actions used to improve, adapt, and restore service.
+
+Keep this statement as a **candidate positioning statement** until the closest literature review is complete.
