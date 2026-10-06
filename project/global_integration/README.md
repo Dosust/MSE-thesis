@@ -1,3 +1,27 @@
+# Historical Status Notice — effective 2026-10-06
+
+**Current status:** RETAINED WHOLE FOR PROVENANCE / REUSABLE CONTROL ARCHITECTURE  
+**Current scope authority:** [`../CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)
+
+This directory records the September 2026 Stage 1→7 / P0–P3 integration architecture. It is **not the active reader-facing thesis scope** where it conflicts with the current extreme-heat state-time amendment.
+
+Use it for:
+- provenance;
+- VVUQ;
+- requirements/provenance control;
+- claim/evidence/result discipline;
+- historical case-readiness work;
+- reusable experiment/governance logic.
+
+Do not automatically treat `P3`, Austin/SMART-DS, the complete seven-stage architecture, or the old RQ/SO/H package as the active 2026-10-06 thesis workstream.
+
+The exact pre-reconciliation README is preserved at:
+`../../archive/readme_versions/2026-10-06_pre_reconciliation/GLOBAL_INTEGRATION_README_PRE_2026-10-06.md`.
+
+---
+
+# Historical README content below
+
 # Global Stage 1→7 Integration
 
 **Current status:** P0 COMPLETE / P1.0–P1.11.8.1 PASS / P2 PASS-FROZEN / P3 IN PROGRESS  
