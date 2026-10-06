@@ -1,291 +1,195 @@
-# Project Mathematical Architecture
+# Project — Current Mathematical and Scientific Architecture
 
-**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
+**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Current-scope authority:** [`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Authority index:** [`CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
+**Status date:** 2026-10-06
 
-> **Current question authority:** [CANONICAL_RQ_SO_HYPOTHESES_V3.md](CANONICAL_RQ_SO_HYPOTHESES_V3.md)  
-> **Current framework authority:** [CANONICAL_7_STAGE_FRAMEWORK_V2.md](CANONICAL_7_STAGE_FRAMEWORK_V2.md)  
-> **Current Chapter-I authority:** [CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md](CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md)
-
-![Degree](https://img.shields.io/badge/degree-MSE-0969DA)
-![Citation](https://img.shields.io/badge/citations-APA%207%20MANDATORY-8250DF)
-![Framework](https://img.shields.io/badge/stages%201--7-v2.0-1A7F37)
-![Reasoning](https://img.shields.io/badge/reasoning-v1.2-0969DA)
-![Method](https://img.shields.io/badge/EGMIV-v1.0-0969DA)
-![Traceability](https://img.shields.io/badge/RQ--SO--H-v3.0%20CURRENT-1A7F37)
-![H1](https://img.shields.io/badge/H1-RAW%20DATA%20GATE-B42318)
-![H2](https://img.shields.io/badge/H2-EMPIRICAL%20QUALIFICATION%20OPEN-9A6700)
-![H3](https://img.shields.io/badge/H3-PREREG%20PREPARATION-9A6700)
-
-This directory is the active scientific and mathematical source of truth for the MSE thesis.
-
-**Framework authority:** `CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
-**RQ–SO–H authority:** `CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Chapter-I authority:** `CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`  
-**Reasoning authority:** `RESEARCH_REASONING_PROTOCOL.md` v1.2  
-**Execution method:** EGMIV — Evidence-Grounded Mechanistic Interdependency and Validation  
-**Mathematical foundations:** `MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md`  
-**P–T SoS / complex-dynamics amendment:** `CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`  
-**Writing/inference authority:** `../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`  
-**Citation rule:** externally sourced scientific claims require adjacent verified APA 7 author–date citations  
-**Novelty rule:** literature support justifies relevance, mechanisms, mathematics and comparators; novelty is tested separately
+This directory is the active research-control layer for scope, evidence, mechanism, mathematics, framework specification, and decision memory.
 
 ---
 
-## 1. Canonical scientific architecture
+## 1. Active research problem
 
-```math
-\boxed{
-\text{Spatiotemporal SoS Structure}
-\rightarrow
-\text{Evidence-Grounded Causal Interdependencies}
-\rightarrow
-\text{Physics-Based Hybrid Multiscale Dynamics}
-\rightarrow
-\text{Observation / Estimation / Organization / Control}
-\rightarrow
-\text{Viability + Reachability + Probability}
-\rightarrow
-\text{Intervention + Sustainability Consequences}
-\rightarrow
-\text{Engineering Decision / Transformation}
-}
-```
+The active workstream asks:
 
-Reader-facing simplifications may be used only if they preserve this exact scientific meaning.
+> How does extreme heat change selected physical states over time, how do those changes propagate through qualified Power–Transportation interfaces, when do critical transitions occur, and how do electricity and mobility services respond under Improve, Adapt, and Restore actions?
 
-The Stage-5 resilience core is
-
-```math
-\boxed{
-\text{Resilience}
-=
-\underbrace{\text{remain acceptable}}_{\text{viability}}
-+
-\underbrace{\text{return acceptably}}_{\text{reachability}}
-+
-\underbrace{\text{quantify confidence}}_{\text{probability}}
-}
-```
-
-where `+` denotes conceptual composition rather than scalar addition.
-
-```math
-\boxed{
-\mathfrak R_T
-=
-\left(
-\mathcal V_{\alpha,T_V},
-\mathcal R_{\beta,T_R},
-\rho_{\mathcal V},
-T_{\mathcal V},
-T_{\rm rec},
-P_{\rm viable},
-P_{\rm recover}
-\right).
-}
-```
-
-Conventional performance/recovery curves remain an explicit comparator; incremental value is tested rather than assumed.
-
----
-
-## 2. Canonical research logic
-
-```math
-\boxed{
-RQ_i
-\rightarrow
-SO_i
-\rightarrow
-\mathcal H(i)
-\rightarrow
-\text{mechanism}
-\rightarrow
-\text{metric}
-\rightarrow
-\text{baseline}
-\rightarrow
-\text{experiment}
-\rightarrow
-\text{uncertainty}
-\rightarrow
-\text{falsification}
-\rightarrow
-\text{result}
-\rightarrow
-\text{engineering conclusion}.
-}
-```
-
-RQ0 is overarching. RQ1–RQ7 correspond to SO1–SO7. RQ1/SO1 and RQ2/SO2 supply developmental evidence to H1; RQ3/SO3 → H1; RQ4/SO4 → H2; RQ5/SO5 → H3; RQ6/SO6 → H4; RQ7/SO7 → H5.
-
-The five primary hypothesis contrasts are:
-
-```math
-\boxed{H_1:\ M_2\ \text{vs}\ M_1\ \text{vs}\ M_0}
-```
-
-```math
-\boxed{H_2:\ P+T\ \text{vs}\ P+T+I\ \text{vs}\ P+T+I+O}
-```
-
-```math
-\boxed{H_3:\ R_{\rm curve}\ \text{vs}\ R_{\rm curve}+\mathfrak R_T}
-```
-
-```math
-\boxed{H_4:\ a_k\rightarrow(\Delta\mathfrak R^{a_k},\Delta\mathbf J_{\rm sus}^{a_k})}
-```
-
-```math
-\boxed{H_5:\ \mathcal A_R^{\star}\ \text{vs}\ \mathcal A_{R,S}^{\star}}
-```
-
-Interface criticality is a supporting diagnostic. Adaptive/sequential transformation is a supporting Stage-7 extension unless separately activated and preregistered.
-
----
-
-## 3. Complete mathematical chain
-
-```math
-\boxed{
-K(t)
-\rightarrow
-(\mathcal S,\mathcal G,X)
-\rightarrow
-\mathbb I(x,t,Y,m)
-\rightarrow
-F_{\mathcal G}^{m}
-\rightarrow
-Y(x,t)
-\rightarrow
-(y,\widehat Y,z_I,z_O,\mathcal U,u)
-\rightarrow
-\mathfrak R_T
-\rightarrow
-(a_k,\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
-\rightarrow
-\mathcal A_{R,S}^{\star}
-}
-```
-
-The thesis must preserve constituent-system physics while making cross-system mechanisms explicit and auditable.
-
----
-
-## 4. Current execution architecture
-
-### H1
-
-```math
-\boxed{
-M_0=\text{independent},\qquad
-M_1=\text{static/algebraic coupling},\qquad
-M_2=\text{dynamic causal coupling}.
-}
-```
-
-Current state:
+Compact logic:
 
 ```text
-M0 software fixture:                VERIFIED
-M1 software fixture:                VERIFIED
-M2 software fixture/regression:     VERIFIED
-current case causal PASS:            EV_T_to_P only
-EV_T_to_P Stage2→3 readiness:       BLOCKED
-accepted case M2 mechanism set:     EMPTY
-row-level acquisition plan:         FROZEN
-raw row-level qualification R1–R8:  PENDING
-candidate train/test split:          NOT FROZEN
-confirmatory H1 execution:           NOT AUTHORIZED
-```
-
-### H2
-
-Observation/state-estimation/organization/control architecture exists, but empirical information/organizational qualification remains incomplete. Confirmatory execution remains gated.
-
-### H3
-
-The current Stage-5 package governs acceptability sets, recovery target, uncertainty/probability semantics, algorithm selection and preregistration. No H3 confirmatory run is authorized until the required set, probability, policy, solver, metric, threshold and data gates close.
-
-### H4
-
-H4 concerns intervention effectiveness, resource efficiency and sustainability consequences. Required preregistration includes the candidate intervention set, resilience-effectiveness criterion, efficiency resource denominator/accounting boundary, sustainability outcome vector, distance/materiality rule and `delta_4`.
-
-### H5
-
-H5 concerns the effect of joint resilience–sustainability evaluation on the feasible/nondominated decision set or declared regret. The candidate actions, uncertainty domain, set/regret metric and `delta_5` must be frozen before confirmatory execution.
-
----
-
-## 5. Cross-cutting authorities
-
-| File | Role | Status |
-|---|---|---|
-| [`CANONICAL_7_STAGE_FRAMEWORK_V2.md`](CANONICAL_7_STAGE_FRAMEWORK_V2.md) | seven-stage scientific framework | **CANONICAL v2.0** |
-| [`CANONICAL_RQ_SO_HYPOTHESES_V3.md`](CANONICAL_RQ_SO_HYPOTHESES_V3.md) | RQ0 + RQ1–RQ7 + SO1–SO7 + H1–H5 | **CANONICAL v3.0** |
-| [`CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`](CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md) | Chapter-I authority | **CANONICAL v2.0** |
-| [`RESEARCH_REASONING_PROTOCOL.md`](RESEARCH_REASONING_PROTOCOL.md) | reasoning/citation/falsification discipline | **CURRENT v1.2** |
-| [`EGMIV_METHOD_V1.md`](EGMIV_METHOD_V1.md) | evidence-grounded model construction/validation | **CURRENT v1.0** |
-| [`MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md`](MATHEMATICAL_FOUNDATIONS_AND_ROLES_V1.md) | mathematical foundations, roles, status and activation rules | **CURRENT WORKING** |
-| [`../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md`](../thesis/00_governance/RQ_SO_H_TRACEABILITY_V3.md) | thesis-facing traceability | **CURRENT v3.0** |
-| [`../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`](../thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md) | scientific writing/inference control | **CURRENT v1.0** |
-| [`../thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`](../thesis/00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md) | experiment/VVUQ/falsification matrix | **CURRENT** |
-
-Legacy v1/v2 files remain provenance only where superseded.
-
----
-
-## 6. Governing evidence rules
-
-```math
-\textbf{No paper is evidence because it is remembered.}
-```
-
-```math
-\textbf{No numerical parameter is empirical because it is convenient.}
-```
-
-```math
-\textbf{No preferred model is validated without a relevant rival/baseline.}
-```
-
-```math
-\textbf{No thesis conclusion is stronger than its evidence, experiment, uncertainty analysis and validation domain.}
-```
-
-```math
-\textbf{Scientific support does not equal novelty proof.}
+Extreme heat
+→ physical state
+→ state-time transition
+→ qualified interface propagation
+→ functionality
+→ service consequence
+→ engineering action
 ```
 
 ---
 
-## 7. Immediate controlled work
+## 2. Active physical scope
+
+### Power
+Selected distribution-side states necessary for the chosen charging interface.
+
+### Physical interfaces
+Grid-connected charging infrastructure and associated physical states/capabilities.
+
+### Electrified transportation
+Battery-electric road transportation.
+
+Current mode:
+
+```text
+Road transport
+→ battery-electric road transportation
+→ grid-connected EV charging
+```
+
+Status: **WORKING-FROZEN**.
+
+Next scope gate:
+
+```text
+public DC fast charging
+vs
+fleet/depot charging
+```
+
+Status: **OPEN**.
+
+---
+
+## 3. Current mathematical architecture
 
 ```math
-\boxed{
-\text{H1 raw-data qualification}
-\parallel
-\text{H2 empirical qualification}
-\parallel
-\text{H3 preregistration closure}
+X(t)=[X_P^\top,Z^\top,X_T^\top]^\top.
+```
+
+```math
+\dot X=F(X,H,u;\theta).
+```
+
+Transition time, propagation delay, and service are parallel derived analyses when mathematically appropriate:
+
+```math
+X(t)
 \rightarrow
-\text{H4 intervention/accounting preregistration}
-\rightarrow
-\text{H5 joint-decision preregistration}
-}
+\begin{cases}
+\tau_i^C & \text{critical transition time}\\
+\delta_{ij} & \text{propagation timing}\\
+Q_P(t),Q_T(t) & \text{electricity + mobility service}
+\end{cases}
 ```
 
-Do not revise the conceptual framework, choose convenient probability levels, or activate new confirmatory claims merely because they are mathematically attractive. Progress comes from closing evidence, model, data and preregistration gates.
+The interface architecture `I_PT` and dynamic interface state `Z(t)` are distinct objects.
 
-## 2026-09-19 P–T source-alignment control
+---
 
-The current Power–Transportation interpretation is additionally governed by:
+## 4. Engineering cycle
 
-- `CANONICAL_PT_SOS_COMPLEX_DYNAMICS_AMENDMENT_V1_1.md`;
-- `stage2/STAGE2_INTERDEPENDENCY_SCOPE_EFFECT_AMENDMENT_V1_1.md`;
-- `stage3/STAGE3_DIRECTIONAL_INTERFACE_STATE_AMENDMENT_V2_2.md`;
-- `global_integration/POWER_TRANSPORT_SOS_COMPLEX_DYNAMICS_ALIGNMENT_AUDIT_V1_2026-09-19.md`.
+```text
+Improve → Adapt → Restore → Learn
+```
 
-The explicit physical SoS object is `\mathscr S_{PT}`; `\mathcal S=\{P,T,I,O\}` remains the four-domain shorthand. Current Stage-3 physical interface memory is mechanism-indexed through `z_{\mathbb I}`, not a forced single reciprocal state.
+- **Improve** acts on baseline design/parameters.
+- **Adapt** acts on the state trajectory during heat.
+- **Restore** acts on recovery after unacceptable service degradation.
+- **Learn** updates future models and decisions.
+
+---
+
+## 5. Current decision authorities
+
+| File | Role |
+|---|---|
+| `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md` | current scope precedence |
+| `CURRENT_THESIS_AUTHORITY_INDEX_V1.md` | current entry point |
+| `RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md` | decision-control protocol |
+| `ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` | working transport-mode decision |
+| `CONCEPTUAL_FRAMEWORK_SPEC_V2.md` | current framework specification |
+| `WHY_LOG_2026-10-06.md` | decision rationale |
+| `RESEARCH_REASONING_PROTOCOL.md` | reasoning / evidence protocol |
+| `EGMIV_METHOD_V1.md` | evidence-to-mechanism/model execution |
+
+Candidate mathematical integration:
+- `../methods/architecture/ROSETTA_STATE_TIME_MATHEMATICAL_INTEGRATION_V1.md`
+
+ROSETTA is retained as a possible relation/constraint/design-space aid, not as the governing heat-resilience dynamics.
+
+---
+
+## 6. Current contribution boundary
+
+Already established elsewhere and therefore not sufficient novelty:
+
+```text
+P–T coupling
+EV charging coupling
+temperature-aware charging demand
+dynamic coupled-network restoration
+V2G resilience
+generic physics-based modeling
+```
+
+Candidate unresolved handoff:
+
+```text
+heat-dependent physical state/capability
+→ coupled electricity + mobility service trajectory
+→ engineering-decision consequence
+```
+
+Status: **OPEN** until closest literature and feasibility are closed.
+
+---
+
+## 7. What remains open
+
+- exact charging context;
+- exact Power state;
+- exact interface/EVSE thermal state;
+- exact transportation state;
+- exact electricity-service metric;
+- exact mobility-service metric;
+- exact adaptation/restoration actions;
+- final narrowed RQ/SO/H;
+- final novelty statement;
+- final case/data object.
+
+No open item may be silently treated as frozen.
+
+---
+
+## 8. Historical scientific architecture
+
+The earlier seven-stage framework, RQ0/RQ1–RQ7, SO1–SO7, H1–H5, Austin/P3 execution architecture, broad I/O decomposition, sustainability-control packages, and their VVUQ/gate infrastructure remain preserved.
+
+They may be:
+- reused;
+- re-admitted;
+- cited for provenance;
+- compared against the narrowed design.
+
+They do not automatically override the current scope amendment.
+
+---
+
+## 9. Visualization architecture
+
+Current reusable design skills:
+
+- `../.github/skills/engineering-framework-design/SKILL.md`
+- `../.github/skills/scientific-diagram-design/SKILL.md`
+- `../.github/skills/mathematical-visualization-design/SKILL.md`
+
+Permanent principle:
+
+```text
+model
+→ visual encoding
+→ rendering
+→ verification
+```

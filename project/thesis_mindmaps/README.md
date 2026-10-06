@@ -1,3 +1,34 @@
+# Historical Status Notice — effective 2026-10-06
+
+**Current status:** RETAINED FOR PROVENANCE / REFERENCE  
+**Current scope authority:** [`../CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)
+
+These seven-stage mind maps preserve the earlier broad scientific architecture. They are not deleted and remain useful for traceability, comparison, and recovery of prior reasoning.
+
+The current primary visual direction is:
+
+```text
+Extreme Heat
+→ Physical States
+→ Qualified P–T Interfaces
+→ Coupled State-Time Dynamics
+→ Transition / Propagation / Service
+→ Improve / Adapt / Restore
+→ Learn
+```
+
+Current visualization authorities:
+- `../../.github/skills/engineering-framework-design/SKILL.md`
+- `../../.github/skills/scientific-diagram-design/SKILL.md`
+- `../../.github/skills/mathematical-visualization-design/SKILL.md`
+
+The exact pre-reconciliation README is preserved at:
+`../../archive/readme_versions/2026-10-06_pre_reconciliation/THESIS_MINDMAPS_README_PRE_2026-10-06.md`.
+
+---
+
+# Historical README content below
+
 # Thesis Mind Maps — Seven-Stage Scientific Architecture
 
 **Branch:** `design/seven-stage-thesis-mindmaps`  

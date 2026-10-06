@@ -694,23 +694,123 @@ not:
 
 ---
 
-# 20. Changelog
+
+# 20. Two-Figure Separation Rule
+
+For this thesis, do not collapse the conceptual framework and mathematical framework into one overloaded figure.
+
+## A. Conceptual framework
+
+Purpose:
+
+\[
+\boxed{
+\text{scientific meaning and global thesis logic}
+}
+\]
+
+Rules:
+- no equations;
+- no Greek variables;
+- no state-vector notation;
+- no solver, estimation, calibration, VVUQ, or computational workflow;
+- show only the global scientific phases and their scientifically defined relations;
+- show sustainability as Social, Environmental, and Economic consequences;
+- show SDG relevance/alignment only as a later interpretation layer;
+- do not imply that resilience automatically produces sustainability.
+
+Canonical conceptual chain:
+
+\[
+\text{Extreme Heat}
+\rightarrow
+\text{Coupled Physical System}
+\rightarrow
+\text{State-Time Response}
+\rightarrow
+\text{Interdependency Propagation}
+\rightarrow
+\text{Service Consequences}
+\rightarrow
+\text{Improve / Adapt / Restore}
+\rightarrow
+\begin{cases}
+\text{Resilience Outcome}\\
+\text{Sustainability Impacts}
+\end{cases}
+\rightarrow
+\text{Sustainable + Resilient Outcome}
+\rightarrow
+\text{SDG Relevance / Alignment}.
+\]
+
+The visible conceptual figure must express this chain in words, not formulas.
+
+## B. Mathematical framework
+
+Purpose:
+
+\[
+\boxed{
+\text{formalize the conceptual framework into testable mathematical objects}
+}
+\]
+
+Rules:
+- equations are allowed and expected;
+- show only the minimum equations needed to define state, evolution, transition time, propagation, service, intervention, resilience, sustainability, and SDG-indicator mapping;
+- do not add component inventory text when the mathematical object already identifies the subsystem;
+- preserve the same topology as the conceptual framework;
+- mathematical arrows must be transformations, dependencies, or control actions with explicit semantics.
+
+The conceptual and mathematical frameworks must be isomorphic at the level of scientific meaning, but not identical in visual content.
+
+---
+
+# 21. Reference-Derived Mathematical Visualization Principle
+
+The public work of Juan Carlos Ponce Campuzano on *Complex Analysis: A Visual and Interactive Introduction* demonstrates a reusable design principle: mathematical structure should generate the visual behavior, and interaction should expose mathematical properties rather than decorate them.
+
+For this project, transfer only the principle:
+
+\[
+\boxed{
+\text{mathematical object}
+\rightarrow
+\text{computed state}
+\rightarrow
+\text{visual encoding}
+\rightarrow
+\text{interaction}
+}
+\]
+
+Do not copy source-specific layouts, artwork, applets, code, or domain-coloring aesthetics into thesis figures.
+
+For interactive thesis visualizations:
+- a slider changes a model parameter;
+- the model is recomputed;
+- derived quantities are recomputed;
+- the visualization updates from those quantities;
+- animation time must correspond to model time;
+- visual changes must remain deterministic and auditable.
+
+Source notes and permitted transfer are documented in:
+\`resources/JCPONCE_COMPLEX_ANALYSIS_REFERENCE.md\`.
+
+---
+
+# 22. Changelog
+
+## 1.1.0
+
+Added:
+- explicit separation of conceptual and mathematical frameworks;
+- no-mathematics rule for the conceptual framework;
+- formal-isomorphism rule between conceptual and mathematical frameworks;
+- source-derived mathematical-visualization principle from the public J.C. Ponce complex-analysis project;
+- explicit prohibition on copying source-specific visual style or applet implementation.
 
 ## 1.0.0
 
 Initial release.
-
-Established:
-- model-first mathematical visualization;
-- visual encoding functions;
-- geometry/topology semantics;
-- state-time and hybrid-state visualization;
-- constraint/viability visualization;
-- transformation-driven diagrams;
-- mathematical color semantics;
-- equation-driven animation and interaction;
-- thesis-specific state-time resilience views;
-- deterministic script architecture;
-- renderer selection;
-- mathematical-backstory requirement;
-- comprehensive QA gates.

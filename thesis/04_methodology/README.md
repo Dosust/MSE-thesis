@@ -1,88 +1,196 @@
 # Chapter 4 — Methodology and Experimental Design
 
-**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
-
-**RQ–SO–H authority:** `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`  
-**Experiment authority:** `../00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md`  
-**Writing/inference authority:** `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Current-scope authority:** [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Status:** CURRENT WORKING METHODOLOGY  
+**Date:** 2026-10-06
 
 ## Purpose
 
-Convert hypotheses into preregistered, reproducible experiments with explicit baselines, held constants, treatments, data qualification, verification, validation, uncertainty, practical significance and falsification.
+Test whether explicitly modeling **extreme-heat-dependent** physical states and state-time evolution changes predicted Power–Transportation service consequences and the engineering value of Improve, Adapt, and Restore actions.
 
-## Core structure
+---
 
-1. EGMIV research method
-2. evidence-search and qualification
-3. data provenance and row-level qualification
-4. minimal sufficient experimental realization
-5. H1 — dynamic causal interdependency experiment
-6. H2 — information/organization/feasible-control experiment
-7. H3 — viability/reachability incremental-information experiment
-8. H4 — intervention effectiveness/efficiency/sustainability-consequence experiment
-9. H5 — joint resilience–sustainability decision experiment
-10. supporting interface-criticality analysis, if activated
-11. optional adaptive/sequential transformation extension, if separately activated
-12. verification
-13. validation
-14. uncertainty quantification and sensitivity
-15. decision/falsification rules
-16. computational reproducibility
+## Methodological chain
 
-## Experiment object
-
-```math
-\boxed{
-\mathcal T_i=
-(H_i,M_i,B_i,\Omega_i,D_i,\theta_i,X_i,T_i,Z_i,\delta_i,\mathcal F_i,V_i,U_i)
-}
+```text
+Evidence qualification
+→ scope qualification
+→ component/interface selection
+→ minimum-sufficient physics
+→ state + constraint definition
+→ matched heat scenarios
+→ state-time simulation / estimation
+→ transition / propagation / service extraction
+→ intervention comparison
+→ verification
+→ validation
+→ uncertainty quantification
+→ engineering inference
 ```
 
-where `X_i` records held-constant conditions and `T_i` records the treatment/change. Calibration, verification and validation roles of `D_i` must be declared separately.
+---
 
-## Confirmatory design rule
+## Scope gate
 
-Before execution, each primary hypothesis must have:
+A candidate mechanism enters the active model only if it passes:
 
-- comparator/baseline;
-- held constants;
-- treatment/change;
-- primary response vector;
-- practical/engineering significance criterion;
-- uncertainty treatment;
-- scenario/domain;
-- data role and provenance;
-- verification/validation protocol;
-- falsification/non-support condition.
+```text
+research relevance
++ service relevance
++ physical measurability
++ data/model feasibility
++ Master's tractability
+```
 
-A failed prerequisite gate produces `NOT TESTED`, not hypothesis falsification.
+The road-over-rail decision is **WORKING-FROZEN**.
 
-## H1 current gate
+Next scope decision:
 
-Current project authority indicates M0/M1/M2 implementations and confirmatory design are advanced/frozen as applicable, but raw row-level event retrieval/qualification remains blocking. No H1 calibration or confirmatory run is authorized until the predeclared data gates pass.
+```text
+public DC fast charging
+vs
+fleet/depot charging
+```
 
-## H3–H5 prerequisite rule
+---
 
-H3 requires frozen service/acceptability/recovery sets, horizons, uncertainty semantics, probability levels where justified, primary Skill metric and `delta_3`.
+## Candidate matched model hierarchy
 
-H4 requires a declared intervention set, resilience-effectiveness criterion, efficiency definition/resource denominator, sustainability accounting boundaries, consequence-distance rule and `delta_4`.
+```text
+M0 — nominal/static baseline
+M1 — heat-dependent component/interface physics
+M2 — M1 + coupled P–T interface/service propagation
+M3 — M2 + Improve/Adapt/Restore interventions
+```
 
-H5 requires the same candidate actions and uncertainty domain across resilience-only and joint evaluation, plus a frozen set/regret metric and `delta_5`.
+This hierarchy is a **current candidate methodology**, not an established standard. It must be frozen before confirmatory use.
 
-Interface-ranking superiority and adaptive-pathway superiority are not silently substituted for H4/H5.
+Matched conditions should preserve, where applicable:
+
+- topology;
+- demand;
+- component inventory;
+- heat event;
+- initial state;
+- service requirements;
+- simulation horizon.
+
+---
+
+## Physics layer
+
+For selected component/interface `i`:
+
+```math
+\dot X_i=f_i(X_i,H,L_i,Z_{ji},u_i;\theta_i).
+```
+
+Do not force heterogeneous assets into one universal component equation.
+
+---
+
+## State-time outputs
+
+Primary candidate outputs:
+
+```math
+X_i(t),\qquad
+\tau_i^C,\qquad
+\delta_{ij},\qquad
+Q_P(t),Q_T(t).
+```
+
+Possible service deficit:
+
+```math
+D_k=\int [Q_k^{req}-Q_k(t)]_+\,dt.
+```
+
+Any confirmatory metric must be defined before inspection of confirmatory results.
+
+---
+
+## Intervention experiments
+
+### Improve
+Compare a declared design/parameter change with a matched baseline.
+
+### Adapt
+Compare a declared operational control with a matched no-adaptation/reference policy.
+
+### Restore
+Compare a declared recovery action/policy after service degradation.
+
+Evaluate interventions through physical and service consequences, not model complexity.
+
+---
+
+## Data roles
+
+Data may have distinct roles:
+
+```text
+forcing
+parameterization
+initialization
+calibration
+validation
+service observation
+```
+
+Do not reuse one evidence object across incompatible roles without justification.
+
+---
+
+## VVUQ
+
+### Verification
+Check equations/code against analytical limits, standards, conservation laws, or known cases.
+
+### Validation
+Compare modeled quantities against independent empirical/experimental/operator evidence appropriate to the context of use.
+
+### Uncertainty quantification
+Propagate uncertainty in:
+- heat forcing;
+- operating load;
+- physical parameters;
+- threshold values;
+- demand;
+- initial conditions.
+
+### Decision/ranking stability
+If plausible uncertainty reverses a ranking, do not claim a definitive ranking.
+
+---
 
 ## Prohibited practices
 
-- tuning confirmatory thresholds after observing relevant results;
-- validating only the preferred model;
-- treating assumed parameters as measured data;
-- using training/calibration evidence as held-out validation evidence;
-- changing held-out events because model performance is poor;
-- suppressing null/negative results;
-- introducing post hoc primary metrics without labeling the analysis exploratory;
-- assigning probability distributions without defensible evidentiary support.
+- simulation presented as validation;
+- post hoc confirmatory thresholds;
+- assumed values presented as measurements;
+- causality inferred from topology/correlation alone;
+- state variables with no physical semantics;
+- cascade claims without sequential dependent mechanisms;
+- instability claims without stability analysis;
+- resilience rankings based only on raw temperature when service is the objective;
+- model complexity treated as engineering improvement.
+
+---
 
 ## Exit gate
 
-See `../00_governance/MODEL_EXPERIMENT_VALIDATION_MATRIX.md` and `../00_governance/THESIS_COMPLETION_GATES.md`. Confirmatory execution is authorized only after all hypothesis-specific prerequisite gates pass.
+Confirmatory execution is authorized only after:
+
+- exact charging context is frozen;
+- selected states are defined;
+- state equations/parameters have admissible evidence;
+- interface exchanges are qualified;
+- service metrics are operationalized;
+- matched baselines are frozen;
+- validation evidence is identified;
+- uncertainty plan is frozen;
+- intervention definitions are frozen;
+- non-support/falsification logic is declared;
+- narrowed RQ/SO/H is frozen.

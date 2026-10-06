@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the 2026-08-21 thesis memory capsule without overriding current authority.
+"""Validate historical memory-capsule integrity and current thesis-scope handoff.
 
-The capsule is a historical project-state snapshot. This repository-consistency
-check verifies (1) capsule integrity, (2) provenance locks that still belong to
-that snapshot, and (3) that the current canonical thesis explicitly supersedes
-legacy P-W-T-SW scope. It does not validate scientific truth, full-text
-literature claims, empirical calibration, or require current thesis files to
-retain historical scientific content.
+This check deliberately separates historical capsule integrity from current
+scientific authority. It does not validate scientific truth or empirical
+results.
 """
 
 from __future__ import annotations
@@ -36,9 +33,7 @@ def main() -> None:
     for name in manifest["files"]:
         require((CAPSULE / name).exists(), f"Manifest file missing: {name}")
 
-    # 2. Historical snapshot self-consistency. Do not compare these legacy
-    # scientific objects with the current thesis scope: the capsule is dated
-    # 2026-08-21 and has since been superseded scientifically.
+    # 2. Historical snapshot self-consistency.
     invariants = manifest["critical_invariants"]
     require(
         memory["thesis"]["precise_formulation"] == invariants["precise_title"],
@@ -53,26 +48,28 @@ def main() -> None:
         "Historical frozen-dataset SHA-256 drifted inside the v2 memory capsule",
     )
 
-    # 3. Current-authority guardrail. The active thesis must identify itself as
-    # current P-T-I-O authority and explicitly demote earlier P-W-T-SW material
-    # to historical/provenance status.
+    # 3. Current scope must be explicit and must not be inferred from legacy files.
     scope = read(ROOT / "project" / "THESIS_SCOPE.md")
     require("CANONICAL CURRENT SCOPE" in scope, "Current scope authority marker missing")
-    require("Power–Transportation" in scope, "Current P-T system description missing")
-    require("\\mathcal S=\\{P,T,I,O\\}" in scope, "Current P-T-I-O system object missing")
+    require("Extreme heat" in scope, "Current extreme-heat hazard missing")
+    require("battery-electric road transportation" in scope, "Current road-BEV mode missing")
+    require("grid-connected EV charging" in scope, "Current charging mechanism missing")
+    require("state-time" in scope.lower(), "Current state-time focus missing")
+    require("final narrowed RQ/SO/H" in scope, "Open narrowed RQ/SO/H state missing")
     require(
-        "Earlier P–W–T–SW" in scope and "historical/provenance material" in scope,
-        "Current scope does not explicitly supersede the legacy P-W-T-SW formulation",
+        "historical/provenance material" in scope,
+        "Legacy material is not explicitly demoted to provenance status",
     )
 
-    # 4. Current RQ/SO/H authority must remain RQ0 + RQ1-RQ7 with H1-H5.
-    project_readme = read(ROOT / "project" / "README.md")
-    require(
-        "CANONICAL_RQ_SO_HYPOTHESES_V3.md" in project_readme,
-        "Current RQ/SO/H authority link missing from project README",
+    # 4. Current authority index and scope amendment must control current work.
+    current_index = read(ROOT / "project" / "CURRENT_THESIS_AUTHORITY_INDEX_V1.md")
+    scope_amendment = read(
+        ROOT / "project" / "CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md"
     )
-    require("RQ1–RQ7" in project_readme, "Current RQ1-RQ7 architecture marker missing")
-    require("H1–H5" in project_readme, "Current H1-H5 architecture marker missing")
+    require("final narrowed RQ/SO/H" in current_index, "Authority index omits narrowed RQ/SO/H state")
+    require("OPEN" in current_index, "Authority index does not preserve open decisions")
+    require("common heat exposure ≠ P–T interdependency" in scope_amendment,
+            "Current common-exposure/interdependency firewall missing")
 
     # 5. Frozen 2026-08-20 literature-corpus lock retained for provenance.
     prompt = read(ROOT / "prompts" / "PRISMA_Monte_Carlo_325_Single_Dataset_Master_Prompt.md")
@@ -104,25 +101,25 @@ def main() -> None:
         "Manifest supersession path drift",
     )
 
-    # 8. Root README must point to current authority and state the archive rule;
-    # it must not be forced to repeat the historical demonstrator.
+    # 8. Root README must point to the current scope and preserve history.
     root_readme = read(ROOT / "README.md")
     require(
-        "CANONICAL_RQ_SO_HYPOTHESES_V3.md" in root_readme,
-        "Root README does not point to current RQ/SO/H authority",
+        "CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md" in root_readme,
+        "Root README does not point to current scope authority",
     )
     require(
-        "Historical/archive material is provenance only" in root_readme,
-        "Root README no longer states the historical-material authority guardrail",
+        "Historical architecture retained whole" in root_readme,
+        "Root README no longer states historical-preservation rule",
     )
 
-    # 9. Correction-log guardrail: the intermediate nu-notation claim remains retracted.
+    # 9. Correction-log guardrail remains.
     correction_log = read(CAPSULE / "14_CORRECTION_LOG.md")
-    require("typo claim is retracted" in correction_log.lower(), "Retracted audit finding is not documented")
+    require("typo claim is retracted" in correction_log.lower(),
+            "Retracted audit finding is not documented")
 
     print(
-        "PASS: historical memory capsule integrity is preserved and current "
-        "P-T-I-O / RQ1-RQ7 thesis authority is not overridden by legacy scope."
+        "PASS: historical memory capsule integrity is preserved and the "
+        "2026-10-06 extreme-heat state-time thesis scope controls current work."
     )
 
 
