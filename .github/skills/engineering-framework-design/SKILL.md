@@ -1,6 +1,6 @@
 ---
 name: engineering-framework-design
-description: Design, audit, and improve rigorous scientific and engineering frameworks with explicit system boundaries, environments, system-of-interest elements, interfaces, state-time dynamics, functions, services, flows, controls, outputs, arrow semantics, and validation rules. Use for thesis frameworks, systems-engineering architectures, resilience frameworks, lifecycle-style system diagrams, physics-based mathematical-engineering frameworks, and any visual or conceptual framework where every box and arrow must have a defined scientific meaning.
+description: Design, audit, visualize, and improve rigorous resource-grounded scientific and engineering frameworks with explicit system boundaries, environments, system-of-interest elements, interfaces, state-time dynamics, functions, services, flows, controls, outputs, arrow semantics, viewpoint selection, model transformations, and validation rules. Use for thesis frameworks, systems-engineering architectures, resilience frameworks, lifecycle-style system diagrams, physics-based mathematical-engineering frameworks, and any visual or conceptual framework where every box and arrow must have a defined scientific meaning.
 license: MIT
 ---
 
@@ -974,6 +974,146 @@ If the framework contains too much text to understand at normal presentation siz
 
 ---
 
+
+
+## 19A. Viewpoint and Scope-of-Concerns Rule
+
+Before rendering a framework, define the **viewpoint** and the **scope of concerns**.
+
+A framework may contain many valid facts, but one diagram should answer one principal concern.
+
+Examples:
+
+| Concern | Preferred view |
+|---|---|
+| What is inside/outside? | context / boundary view |
+| What physically exists? | structural / block view |
+| What transforms what? | functional / IDEF0-style view |
+| How does behavior unfold? | activity / sequence / state-transition view |
+| How do states propagate? | causal / dynamic state-flow view |
+| How are requirements mapped to design variables? | relational / transformation view |
+| What changes under alternative scenarios? | scenario / conditional behavior view |
+
+Do not combine multiple incompatible viewpoints merely to place all available information in one picture.
+
+The governing rule is:
+
+```text
+one diagram
+=
+one declared concern
++
+one compatible visual grammar
+```
+
+When several concerns are essential, use a coordinated family of diagrams with explicit transformations between them.
+
+---
+
+## 19B. Model-Transformation Rule
+
+A framework image must preserve traceability between semantic layers.
+
+For example:
+
+```text
+Need / requirement
+→ function
+→ behavior
+→ physical element
+→ interface
+→ state
+→ service
+→ engineering decision
+```
+
+A visual transition between layers is valid only when the mapping is defined.
+
+Examples:
+
+- Function → component requires an allocation relation.
+- Component → state requires a physical state definition.
+- State → service requires a capability/service mapping.
+- Hazard → state requires a forcing mechanism.
+- Control → state requires a control channel.
+- Requirement → design variable requires a traceable objective/constraint relation.
+
+Never imply a transformation merely by placing two boxes next to each other.
+
+---
+
+## 19C. Resource-Grounded Rendering Rule
+
+Framework rendering must use the companion skill:
+
+```text
+.github/skills/scientific-diagram-design/SKILL.md
+```
+
+when that skill is available.
+
+Before generating the final diagram, create an internal evidence-and-visual basis:
+
+1. user-provided source figures or documents;
+2. governing standards and architecture conventions;
+3. peer-reviewed domain diagrams or mathematical models;
+4. previously approved project visuals;
+5. project-specific visual constraints.
+
+Use these sources to determine **semantics, diagram type, hierarchy, notation, and layout logic**.
+
+Do not copy copyrighted figures or reproduce them with superficial visual changes. Extract the general modeling principle and create an original representation.
+
+---
+
+## 19D. Anti-Generic-AI Visual Rule
+
+Do not default to visual conventions commonly produced by generic image generation when they are not scientifically meaningful.
+
+Reject unless specifically justified:
+
+- glowing nodes;
+- neon gradients;
+- pseudo-3D or isometric infrastructure;
+- floating rounded cards;
+- arbitrary icon collections;
+- decorative circuit-board backgrounds;
+- radial hub-and-spoke layouts used only for symmetry;
+- small repeated arrows;
+- arrows used as ornament;
+- colored panel fills covering large portions of the canvas;
+- ungrounded futuristic imagery;
+- artificial depth, lens effects, shadows, or glassmorphism;
+- decorative labels such as “AI”, “digital twin”, or “smart” with no modeled role.
+
+The framework should look like a **designed scientific model view**, not an AI-generated technology poster.
+
+---
+
+## 19E. Framework-to-Image Contract
+
+Before rendering, freeze a compact diagram specification:
+
+| Field | Required content |
+|---|---|
+| Purpose | one sentence |
+| Viewpoint | context / structure / function / behavior / state / relation / service / decision |
+| Scope of concerns | what the diagram is intended to answer |
+| Boundary | inside / outside |
+| Elements | exact object list |
+| Relations | exact relation list |
+| Arrow grammar | meaning of each line/arrow type |
+| Layout logic | why elements occupy their positions |
+| Labels | exact text to render |
+| Equations | exact equations, if any |
+| Source basis | standards / papers / project evidence |
+| Prohibited content | concepts that must not be introduced |
+| Output form | SVG / diagram code / raster image / slide figure |
+
+No final rendering should be generated before this contract is semantically valid.
+
+---
+
 # 20. Domain Adaptation Rule
 
 This skill is domain-general.
@@ -1095,7 +1235,7 @@ Use semantic versioning:
 
 Current conceptual version:
 
-`1.0.0`
+`1.1.0`
 
 ## Update rule
 
@@ -1126,6 +1266,20 @@ Do **not** change the core rules merely because a new visual style is preferred.
 ---
 
 # 24. Changelog
+
+## 1.1.0
+
+Resource-grounded visualization upgrade.
+
+Added:
+- viewpoint and scope-of-concerns selection before rendering;
+- explicit model-transformation traceability;
+- companion scientific-diagram-design skill integration;
+- resource-grounded rendering requirement;
+- prohibition of generic AI visual conventions;
+- framework-to-image contract;
+- Math DSIG / relational-orientation lessons;
+- current ISO/IEC/IEEE 42010:2022 and SysML 2.0 reference anchors.
 
 ## 1.0.0
 
@@ -1159,8 +1313,8 @@ Use the latest applicable edition when executing the skill.
 - INCOSE Systems Engineering resources  
   https://www.incose.org/
 
-- OMG Systems Modeling Language (SysML)  
-  https://www.omg.org/sysml/
+- OMG Systems Modeling Language (SysML 2.0)  
+  https://www.omg.org/spec/SysML/2.0/
 
 - NIST IDEF0 / FIPS 183  
   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub183.pdf
@@ -1173,6 +1327,16 @@ Use the latest applicable edition when executing the skill.
 
 - OpenAI Skills documentation  
   https://developers.openai.com/api/docs/guides/tools-skills
+
+---
+
+## Project evidence anchors
+
+- OMG Math DSIG relational model-transformation evidence:  
+  `../../../evidence/E_OMG_MATH_DSIG_2022_RELATIONAL_MODEL_TRANSFORMATIONS.md`
+
+- ROSETTA / UPR evidence:  
+  `../../../evidence/E_ROSETTA_UPR_001_OMG_2019.md`
 
 ---
 
