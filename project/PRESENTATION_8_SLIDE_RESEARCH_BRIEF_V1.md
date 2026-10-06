@@ -542,3 +542,21 @@ Use for Slides 1, 2, 3, 4, 7, and 8:
 Critical boundary:
 - this is a graph/risk/fuzzy time-based framework, not a physics-based dynamical model;
 - use it to qualify dependency structure and timing, not to supply heat-transfer, power-flow, charging, or transport equations.
+
+
+## Evidence update - E-INTERDEP-002
+
+Source note: `evidence/E_INTERDEP_002_GANGULY_MUKHERJEE_2022.md`
+
+Use for Slides 2, 3, 4, 5, 7, and 8:
+- existing hybrid frameworks already separate intra-infrastructure and inter-infrastructure failure propagation;
+- interdependency should be tied to service/state reliance before spatial proximity is used to modulate edge strength;
+- time-dependent vulnerability can be modeled probabilistically under incomplete information;
+- redundancy can reduce vulnerability in modeled systems and is therefore a candidate improvement lever;
+- information sharing and coordination among infrastructure managers can reduce underestimation of interdependent risk;
+- vulnerability probability is not the same as serviceability or resilience.
+
+Critical boundary:
+- this is an arXiv preprint and should not be treated as peer-reviewed evidence unless publication status is independently verified;
+- the method is hybrid simulation/Bayesian, not physics-based;
+- synthetic/hypothetical data, independence assumptions, and heuristic interdependency weights are not transferable thesis parameters.
