@@ -595,3 +595,31 @@ Use:
 > Temperature-aware coupled road-EV/power models already exist. The unresolved thesis question is whether the relevant heat-dependent physical component states materially change electricity and mobility service trajectories and the engineering actions used to improve, adapt, and restore service.
 
 Keep this statement as a **candidate positioning statement** until the closest literature review is complete.
+
+
+## Evidence update — E-CPTN-RESILIENCE-003
+
+**Ma et al. (2026), Applied Energy 420, 128158**
+
+Use mainly for Slides 2, 3, 6, 7, and 8.
+
+The paper already provides:
+- bilevel resilient pricing-driven CPTN coordination;
+- PDN restoration;
+- price-aware dynamic traffic and energy assignment;
+- EV charging/discharging as decision variables;
+- spatio-temporal V2G flexibility;
+- restoration trajectories;
+- controlled comparison of baseline vs two nonlinear-reformulation methods.
+
+Important thesis boundary:
+
+```text
+dynamic CPTN resilience / restoration already exists
+```
+
+but the paper does not model extreme-heat forcing or heat-dependent physical component states.
+
+Presentation consequence:
+
+> Do not present restoration, V2G-supported resilience, dynamic traffic-energy coupling, or bilevel coordination as the thesis novelty. Use this paper as the resilience/restoration benchmark against which the heat-physics question must be differentiated.
