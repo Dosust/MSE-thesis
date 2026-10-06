@@ -352,3 +352,57 @@ adapt, and restore electricity and mobility services in a coupled
 Power–Transportation system under extreme heat.
 ```
 
+
+
+---
+
+# 11. Closest temperature-aware CPTN review completed
+
+Two road-EV comparators now materially constrain the novelty boundary:
+
+## Li & Chang (2024)
+
+Open-access full text confirms:
+
+```text
+ambient temperature
+→ EV HVAC / energy consumption
+→ SOC / charging demand
+→ charging-station load
+→ distribution-network consequence
+```
+
+The paper also uses controlled cases and a dynamic charging-price intervention.
+
+Therefore, the thesis cannot claim novelty for:
+- ambient-temperature-aware EV energy consumption;
+- temperature-aware charging-load prediction in coupled road/P-D systems;
+- dynamic charging intervention after temperature-aware load prediction.
+
+## Ji et al. (2025)
+
+Accessible publisher/indexed material confirms:
+- temperature-aware EV FCS selection/routing;
+- queue waiting time;
+- FCS microgrid energy scheduling;
+- PDN ACOPF;
+- tri-level collaborative optimization.
+
+The exact temperature equation is not available in the accessible material, so no claim is made about its physical mechanism beyond what the source explicitly states.
+
+## Revised candidate gap boundary
+
+The strongest remaining candidate handoff is now:
+
+```text
+temperature-sensitive EV demand models already exist
+
+QUESTION:
+does an explicit heat-dependent physical state/capability representation
+on the relevant power/transport-electrification components
+materially change electricity + mobility service trajectories
+and the engineering actions selected for
+Improve → Adapt → Restore?
+```
+
+This is still a candidate gap, not a frozen novelty claim.
