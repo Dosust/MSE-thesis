@@ -1,3 +1,20 @@
+# Historical Status Notice — effective 2026-10-06
+
+**Status:** RETAINED LEGACY PROPOSITION / FALSIFICATION PACKAGE  
+**Current scope authority:** `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`
+
+The P1–P10 and H1–H5 architecture below belongs to the September broad thesis design. It is retained for provenance, falsification logic, and possible re-use.
+
+It is **not the current narrowed RQ/SO/H authority**. The final extreme-heat state-time RQ/SO/H set remains OPEN.
+
+The exact pre-reconciliation file is preserved at:
+
+`../archive/readme_versions/2026-10-06_pre_reconciliation/SCIENTIFIC_PROPOSITIONS_PRE_2026-10-06.md`.
+
+---
+
+# Historical proposition package below
+
 # Scientific Propositions and Falsification Plan
 
 ![Framework](https://img.shields.io/badge/stages%201--7-FROZEN-1A7F37)

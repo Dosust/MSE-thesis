@@ -90,6 +90,9 @@ jobs:
           assert 'Improve → Adapt → Restore → Learn' in scope
 
           assert 'CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md' in root
+          thesis_scope = Path('project/THESIS_SCOPE.md').read_text(encoding='utf-8')
+          assert 'CANONICAL CURRENT SCOPE' in thesis_scope
+          assert 'battery-electric road transportation' in thesis_scope
           assert 'CURRENT_THESIS_AUTHORITY_INDEX_V1.md' in root
           assert 'Historical architecture retained whole' in root
           assert 'September seven-stage/RQ-H/P3/Austin packages' in index

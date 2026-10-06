@@ -1,10 +1,12 @@
-name: Project memory QA
+name: Project memory + current-scope QA
 
 on:
   push:
     paths:
       - 'project_memory/**'
       - 'project/THESIS_SCOPE.md'
+      - 'project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md'
+      - 'project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md'
       - 'project/MATHEMATICAL_FOUNDATION.md'
       - 'project/SCIENTIFIC_PROPOSITIONS.md'
       - 'config/scientific_propositions.yaml'
@@ -35,5 +37,5 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate corrected project memory
+      - name: Validate historical memory capsule and current scope handoff
         run: python project_memory/2026-08-21_chain_architecture_v2/validate_memory.py
