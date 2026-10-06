@@ -245,8 +245,8 @@ This table records the current 2026-10-05 presentation/thesis-narrowing workstre
 | Hazard | Extreme heat | **WORKING-FROZEN** | New evidence, infeasibility, supervisor instruction, or canonical amendment |
 | Performance focus | Functioning, serviceability, reliability | **WORKING-FROZEN** | Literature/operationalization requires correction |
 | Primary outcome | Electricity and mobility service trajectories / resilience | **WORKING-FROZEN** | RQ or model contract changes |
-| Transport electrification mechanism | Under qualification | **OPEN** | — |
-| Road vs rail | Under qualification | **OPEN** | — |
+| Transport electrification mechanism | Battery-mediated electric mobility through grid-connected EV charging | **WORKING-FROZEN** | New contradictory evidence, infeasibility, supervisor instruction, or scope amendment |
+| Road vs rail | Road transport selected; battery-electric road transportation is the active transport mode | **WORKING-FROZEN** | Reopen only under the conditions in `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
 | Exact resilience-capacity label | Not selected | **OPEN** | — |
 | V2G | Not active by default | **OPEN / excluded unless justified** | Mechanism and scope gates pass |
 | Energy efficiency | Secondary criterion after service is defined | **WORKING-FROZEN** | Research question changes |
