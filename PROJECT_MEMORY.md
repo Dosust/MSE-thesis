@@ -1,3 +1,29 @@
+# CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-06
+
+**Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
+**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`  
+**Current framework spec:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md`
+
+Current direction:
+
+```text
+Extreme heat
+→ physical state
+→ state-time dynamics
+→ qualified P–T interface propagation
+→ electricity + mobility service
+→ Improve / Adapt / Restore / Learn
+```
+
+Current transport mode: **battery-electric road transportation through grid-connected EV charging** (WORKING-FROZEN).  
+Exact charging context and final narrowed RQ/SO/H remain OPEN.
+
+The September seven-stage/RQ-H/P3/Austin material below is retained as historical/provenance and reusable scientific control logic. It must not override the current scope amendment.
+
+---
+
+# Historical project-memory record below
+
 # Project Memory Entry Point
 
 > **Research decision-control authority — active 2026-10-05:**  
