@@ -61,6 +61,42 @@ jobs:
       - name: Mathematical display and ontology lint
         run: python tools/thesis_display_lint.py
 
+      - name: Validate current 2026-10-06 thesis-scope authority
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required = {
+              'scope': Path('project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md'),
+              'index': Path('project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md'),
+              'framework': Path('project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md'),
+              'root': Path('README.md'),
+              'agents': Path('AGENTS.md'),
+              'memory': Path('PROJECT_MEMORY.md'),
+          }
+          for name, path in required.items():
+              assert path.exists(), f'missing current authority object: {name} -> {path}'
+
+          scope = required['scope'].read_text(encoding='utf-8')
+          root = required['root'].read_text(encoding='utf-8')
+          index = required['index'].read_text(encoding='utf-8')
+
+          assert 'extreme-heat' in scope.lower() or 'extreme heat' in scope.lower()
+          assert 'battery-electric road transportation' in scope
+          assert 'grid-connected EV charging' in scope
+          assert 'state-time' in scope.lower()
+          assert 'final narrowed RQ/SO/H set is OPEN' in scope
+          assert 'common heat exposure ≠ P–T interdependency' in scope
+          assert 'Improve → Adapt → Restore → Learn' in scope
+
+          assert 'CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md' in root
+          assert 'CURRENT_THESIS_AUTHORITY_INDEX_V1.md' in root
+          assert 'Historical architecture retained whole' in root
+          assert 'September seven-stage/RQ-H/P3/Austin packages' in index
+
+          print('Current extreme-heat state-time scope authority: PASS')
+          PY
+
       - name: Numerical geometry smoke tests
         run: pytest -q tests/test_viability_geometry.py
 
@@ -69,7 +105,7 @@ jobs:
           pytest -q tests/test_austin_case_admissibility.py
           pytest -q tests/test_p3_austin_execution_readiness.py
 
-      - name: Validate proposition and hypothesis registries
+      - name: Validate retained proposition and hypothesis registries (legacy control)
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -96,7 +132,7 @@ jobs:
           print('Primary hypothesis registry: PASS')
           PY
 
-      - name: Validate canonical RQ-SO-H v4 contract
+      - name: Validate retained RQ-SO-H v4 historical contract
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -135,7 +171,7 @@ jobs:
           assert 'What should be changed, where, when and in what sequence' not in text
           assert 'at least two resilience-effective engineering interventions produce materially different resource requirements' in text
           assert 'incorporating resource efficiency and admitted sustainability consequences together with feasibility and uncertainty' in text
-          print('Canonical RQ–SO–H v4 contract: PASS')
+          print('Retained RQ–SO–H v4 historical contract: PASS')
           PY
 
       - name: Validate JSON schema and example model
@@ -154,7 +190,7 @@ jobs:
           assert instance['system']['physical_systems'] == ['power', 'transportation']
           assert instance['system']['layers'] == ['information', 'organization']
           print('Thesis model JSON schema: PASS')
-          print('Canonical P-T-I-O example model: PASS')
+          print('Retained legacy P-T-I-O example model: PASS')
           PY
 
       - name: Validate SVG assets when present
@@ -177,7 +213,7 @@ jobs:
         with:
           version: "1.11"
 
-      - name: Julia P-T-I-O scaffold smoke test
+      - name: Retained legacy Julia P-T-I-O scaffold smoke test
         run: |
           julia --startup-file=no -e '
             include("methods/architecture/CoupledInfrastructure.jl");
