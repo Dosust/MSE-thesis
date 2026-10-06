@@ -525,3 +525,20 @@ THESIS: RESTORE
 ```
 
 Do not claim that Improve → Adapt → Restore is the universal literature definition of resilience. Present it as the thesis operational cycle grounded in established resilience concepts.
+
+
+## Evidence update - E-DEPENDENCY-TIME-001
+
+Source note: `evidence/E_DEPENDENCY_TIME_001_STERGIOPOULOS_ET_AL_2016.md`
+
+Use for Slides 1, 2, 3, 4, 7, and 8:
+- dependency is directional reliance on an input, interaction, or requirement needed for proper function;
+- co-location/geographical exposure is not itself functional dependency;
+- cascading, escalating, and common-cause failures should be distinguished;
+- dependency consequences can evolve through time rather than appear instantaneously;
+- reaction time and mitigation-control placement can matter;
+- proactive dependency analysis can identify where improvement should be targeted.
+
+Critical boundary:
+- this is a graph/risk/fuzzy time-based framework, not a physics-based dynamical model;
+- use it to qualify dependency structure and timing, not to supply heat-transfer, power-flow, charging, or transport equations.
