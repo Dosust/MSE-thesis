@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Derive a mathematically traceable framework for how extreme heat changes selected physical states over time, how qualified Power–Transportation interfaces transmit consequences, and how those consequences affect electricity and mobility services and engineering interventions.
+Derive a mathematically traceable **state-time framework** for how extreme heat changes selected physical states over time, how qualified Power–Transportation interfaces transmit consequences, and how those consequences affect electricity and mobility services and engineering interventions.
 
 The framework is derived from mathematics and mechanism, not from a preselected picture.
 

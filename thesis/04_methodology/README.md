@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Test whether explicitly modeling heat-dependent physical states and state-time evolution changes predicted Power–Transportation service consequences and the engineering value of Improve, Adapt, and Restore actions.
+Test whether explicitly modeling **extreme-heat-dependent** physical states and state-time evolution changes predicted Power–Transportation service consequences and the engineering value of Improve, Adapt, and Restore actions.
 
 ---
 
