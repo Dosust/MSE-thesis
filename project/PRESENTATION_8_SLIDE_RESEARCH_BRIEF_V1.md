@@ -86,8 +86,8 @@ Do not reopen a decision merely because a different wording appears attractive.
 | Interdependency focus | Electricity-based dependency created by transport electrification | **WORKING-FROZEN** | Excludes petrol, diesel, natural gas and other non-electric propulsion-energy pathways |
 | Performance lens | Functioning + serviceability + reliability | **WORKING-FROZEN** | Used to characterize service performance before/through resilience assessment |
 | Primary outcome | Electricity and mobility service trajectories / resilience | **WORKING-FROZEN** | Interface/component states are mechanisms, not the final outcome |
-| Transport mode | Road vs rail / other electrified mode | **OPEN** | Must be selected through evidence + service relevance + tractability gates |
-| Electrical dependency architecture | Continuous grid-supplied traction vs battery-mediated electric mobility | **OPEN** | Compare before freezing transport subsystem |
+| Transport mode | Road transport → battery-electric road transportation | **WORKING-FROZEN** | Selected through the five canonical scope gates; see `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
+| Electrical dependency architecture | Battery-mediated electric mobility through grid-connected EV charging | **WORKING-FROZEN** | Exact charging context remains open |
 | V2G | Not active by default | **OPEN/EXCLUDED UNLESS JUSTIFIED** | Do not equate interdependency with reverse electrical flow |
 | Energy efficiency | Secondary performance/sustainability criterion | **WORKING-FROZEN** | Evaluate after service requirement is defined |
 | “Real-time” control | Terminology not frozen | **OPEN** | Use only if live/online estimation-control requirements are actually modeled |
@@ -623,3 +623,34 @@ but the paper does not model extreme-heat forcing or heat-dependent physical com
 Presentation consequence:
 
 > Do not present restoration, V2G-supported resilience, dynamic traffic-energy coupling, or bilevel coordination as the thesis novelty. Use this paper as the resilience/restoration benchmark against which the heat-physics question must be differentiated.
+
+
+## Scope update — Road vs Rail gate decision
+
+Authority: `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`
+
+The active presentation workstream now uses:
+
+```text
+Road transport
+→ battery-electric road transportation
+→ grid-connected EV charging
+```
+
+Reason for selection:
+
+```text
+direct electrification coupling
++ measurable heat-dependent charger states
++ accessible data
++ Master's tractability
++ remaining physics-to-service handoff
+```
+
+Do **not** say road was selected because it has stronger direct electricity dependence than rail. Electric rail has the stronger immediate traction dependence.
+
+Still OPEN:
+- public DC fast charging vs fleet/depot charging;
+- exact charger thermal state;
+- exact service metrics;
+- exact intervention.
