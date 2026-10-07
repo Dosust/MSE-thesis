@@ -250,6 +250,8 @@ battery-mediated electric mobility
 through grid-connected EV charging
 ```
 
+Implementation boundary authority: `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Under that definition, EVSE, the physical charging connection, and required charging communication/control functions belong to the Electrified Transportation System `T_e`; the Power–Transportation interface/coupling object remains a cross-system mathematical object rather than a third physical infrastructure system.
+
 ### Status
 
 **WORKING-FROZEN**
