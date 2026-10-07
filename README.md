@@ -34,6 +34,10 @@ Extreme heat
 
 Supporting engineering response, when analyzed:
 Improve → Adapt → Restore
+
+Bounded sustainability assessment:
+Pathway 1 — direct thermal/service consequence
+Pathway 2 — engineering-response consequence
 ```
 
 ### Active physical scope
@@ -204,6 +208,80 @@ Thermal State ≠ Capability ≠ Service ≠ Resilience
 
 Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the definition of resilience itself.
 
+## Canonical two-pathway sustainability assessment
+
+> **Sustainability in this thesis is assessed through two pathways: (1) the direct environmental, economic, and social consequences of thermal interdependencies on electricity and mobility services, and (2) the environmental, economic, and social consequences of engineering responses used to improve, adapt, or restore those services. Both pathways are evaluated within a declared system boundary and time horizon.**
+
+The thesis uses **one sustainability framework with two pathways**.
+
+### Pathway 1 — Direct consequence
+
+```text
+Extreme Heat
+→ Thermal Interdependency
+→ Electricity + Mobility Service Consequence
+→ Environmental + Economic + Social Consequence
+```
+
+### Pathway 2 — Engineering-response consequence
+
+```text
+Improve / Adapt / Restore
+→ Changed State / Capability / Service
+→ Environmental + Economic + Social Consequence
+```
+
+The three sustainability dimensions are:
+
+```text
+Environmental
+→ energy use / losses
+→ GHG emissions
+→ material / resource burden
+
+Economic
+→ operating cost
+→ maintenance / replacement cost
+→ intervention cost
+→ service-disruption cost
+
+Social
+→ service access
+→ service continuity
+→ affordability
+→ equity
+→ safety
+```
+
+Only indicators that are relevant, measurable, and supported by the adopted boundary and data are activated.
+
+The comparison architecture is:
+
+```text
+Reference / Baseline
+→ Extreme Heat without Engineering Response
+→ Extreme Heat with Engineering Response
+```
+
+Permanent SDG rule:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
+
+Exact sustainability indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN until operationalized.
+
+Permanent distinctions:
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience ≠ Sustainability
+Resilience improvement ≠ sustainability improvement
+Direct sustainability consequence ≠ engineering-response sustainability consequence
+Measured indicator ≠ sustainability dimension ≠ SDG target
+```
+
 ## Supporting engineering-response boundary
 
 Improve, Adapt, Restore, and Learn may be used only as **supporting interpretation or optional experiments** when they directly help explain a thermal state-time consequence. They are not primary research objectives.
@@ -225,11 +303,16 @@ The active thesis chain ends at quantified electricity and mobility service cons
 | battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
+| sustainability assessment | **FROZEN — CANONICAL TWO-PATHWAY FRAMEWORK** |
+| sustainability dimensions | **FROZEN — ENVIRONMENTAL + ECONOMIC + SOCIAL** |
+| SDG linkage rule | **FROZEN — INDICATOR → DIMENSION → RELEVANT SDG TARGET/INDICATOR** |
 | Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |
 | exact component/interface states | **OPEN** |
 | exact electricity/mobility service metrics | **OPEN** |
 | exact intervention set | **OPEN — optional/supporting, thermal only** |
+| exact sustainability indicators / functional unit / time horizon | **OPEN — bounded and measurable** |
+| exact SDG targets | **OPEN — after indicator definition and measurement** |
 | general + specific objectives | **FROZEN — GO + SO1–SO3** |
 | final RQ wording | **OPEN — thermal/state-time only** |
 | hypotheses | **OPEN — thermal/state-time only** |
@@ -244,11 +327,12 @@ The active thesis chain ends at quantified electricity and mobility service cons
 | [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) | canonical Electrified Transportation composition and boundary |
 | [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) | canonical thermal-interdependency focus |
 | [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md) | canonical service-level state-time resilience definition |
+| [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md) | canonical two-pathway sustainability assessment |
 | [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md) | current extreme-heat / thermal-interdependency / state-time scope precedence |
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
 | [`project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`](project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md) | road-over-rail working decision |
-| [`project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md) | current thermal-only conceptual framework |
+| [`project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md) | current thermal/resilience/two-pathway sustainability conceptual framework |
 | [`project/WHY_LOG_2026-10-06.md`](project/WHY_LOG_2026-10-06.md) | rationale / rejected alternatives |
 | [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | reasoning / evidence discipline |
 | [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md) | evidence-grounded mechanism/model method |
