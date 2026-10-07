@@ -1,5 +1,7 @@
 ## 1.12 Proposed Contributions
 
+**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+
 The proposed contributions are bounded by the thermal-only scope and remain conditional until supported by completed evidence and validation.
 
 ### C1 — Thermal-interdependency qualification
@@ -35,3 +37,11 @@ Pathway 2: Engineering Response → Changed Service → Environmental / Economic
 ```
 
 This is a bounded assessment output, not a fourth primary objective or a standalone novelty claim. SDG relevance is linked only from measured sustainability indicators to relevant SDG targets or indicators.
+
+SDG interpretation follows only this chain:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
