@@ -109,3 +109,24 @@ Canonical definition:
 > **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
 
 Resilience is evaluated at the **service level through time**. Component survival, reliability alone, robustness alone, or recovery time alone must not be substituted for resilience. Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the definition of resilience itself.
+
+
+## Canonical sustainability authority — 2026-10-07
+
+For every active sustainability assessment, interpretation, figure, discussion, or SDG linkage, use `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+
+Canonical definition:
+
+> **Sustainability in this thesis is assessed through two pathways: (1) the direct environmental, economic, and social consequences of thermal interdependencies on electricity and mobility services, and (2) the environmental, economic, and social consequences of engineering responses used to improve, adapt, or restore those services. Both pathways are evaluated within a declared system boundary and time horizon.**
+
+The two pathways share one sustainability framework with three dimensions: **environmental, economic, and social**.
+
+Permanent SDG rule:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
+
+Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN until operationalized and supported by data. Full LCA/social LCA, economy-wide assessment, universal sustainability optimization, and automatic scalar aggregation remain outside the active scope unless separately authorized.
