@@ -9,6 +9,7 @@
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Supersedes for active conceptual work:** `CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
 
 ## 1. Purpose
@@ -61,6 +62,38 @@ Extreme Heat
 ```
 
 Exact active states remain OPEN and must satisfy the minimum-sufficient-physics and state-admission rules.
+
+## 2A. State-time ontology
+
+The conceptual framework uses the definitions in `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+External extreme heat = forcing
+Thermal temperature/health variables = physical states when dynamically required
+SOC = operational/energy state
+Aging/degradation = possible slow state
+Thermally conditioned capacity = capability
+Q_P, Q_T = service outputs
+Z_PT = coupling object; state only when independent dynamics/memory require it
+```
+
+The framework therefore preserves:
+
+```text
+full physical state space
+≠ active reduced thesis state vector
+```
+
+and the dynamic semantic chain:
+
+```text
+State
+→ Capability
+→ Cross-System Consequence
+→ Service
+```
+
+through time.
 
 ## 3. Resilience meaning
 
