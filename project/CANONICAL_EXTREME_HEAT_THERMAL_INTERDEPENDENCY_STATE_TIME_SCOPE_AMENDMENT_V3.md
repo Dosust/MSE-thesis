@@ -94,9 +94,9 @@ This scope amendment creates no empirical result and no novelty claim.
 
 ## 11. Terminology
 
-Use **qualify** only. Do not use “evidence-qualify.”
+Use **qualify** consistently.
 
-Do not use **selected** as a filler adjective in objectives or scope statements.
+In objectives and scope statements, name the physical object or variable class directly.
 
 Use **Electrified Transportation System**; do not use “standards-defined” as part of the system name.
 
