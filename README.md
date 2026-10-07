@@ -29,8 +29,10 @@ Extreme heat
 → Power ↔ Electrified Transportation thermal interdependency
 → state-time consequence
 → electricity + mobility service consequence
-→ Improve / Adapt / Restore
-→ Learn
+→ resilience interpretation
+
+Supporting engineering response, when analyzed:
+Improve → Adapt → Restore
 ```
 
 ### Active physical scope
