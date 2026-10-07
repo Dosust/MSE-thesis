@@ -4,6 +4,7 @@
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Supersedes for active mathematical work:** `MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
 
@@ -21,7 +22,7 @@ Let
 H(x,t)
 ]
 
-denote the external extreme-heat forcing field or time series required by the selected models.
+denote the external extreme-heat forcing field or time series required by the adopted models.
 
 [
 H(x,t)
@@ -38,7 +39,7 @@ Let
 X_P^{th}(t)
 ]
 
-contain only selected Power-system states whose thermal dependence is required by the admitted mechanism.
+contain only Power-system states whose thermal dependence is required by the admitted mechanism.
 
 Let
 
@@ -46,7 +47,7 @@ Let
 X_{T_e}^{th}(t)
 ]
 
-contain only selected Electrified-Transportation states whose thermal dependence is required by the admitted mechanism.
+contain only Electrified-Transportation states whose thermal dependence is required by the admitted mechanism.
 
 The canonical Electrified Transportation System scope remains broader than the activated state model:
 
@@ -203,7 +204,45 @@ Q_T(t)ge Q_T^{min},
 
 with thresholds independently justified.
 
-## 9. Directional thermal pathways
+A service deficit for service (k) occurs when
+
+[
+Q_k(t)<Q_k^{req}(t).
+]
+
+## 9. Resilience interpretation
+
+Canonical definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is evaluated from the service trajectories through time, not from component survival alone.
+
+The permanent distinction is
+
+[
+\text{Thermal State}
+\neq
+\text{Capability}
+\neq
+\text{Service}
+\neq
+\text{Resilience}.
+]
+
+The central resilience question is whether required service can be maintained and, if it cannot, how quickly and effectively it can be recovered.
+
+Candidate descriptors include:
+- minimum service level;
+- service deficit;
+- disruption duration;
+- recovery time.
+
+These quantities do not individually define resilience; they characterize the service trajectory used for resilience interpretation.
+
+Improve, Adapt, and Restore may be represented as engineering response classes if needed, but they do not redefine resilience.
+
+## 10. Directional thermal pathways
 
 ### Power → Electrified Transportation
 
@@ -231,7 +270,7 @@ Q_P.
 
 Reciprocity is not assumed. Each direction requires independent evidence.
 
-## 10. Active outputs
+## 11. Active outputs
 
 The primary mathematical outputs are:
 
@@ -251,7 +290,7 @@ quad
 Q_T(t).
 ]
 
-## 11. Excluded mathematical objects
+## 12. Excluded mathematical objects
 
 The active framework does not require:
 - generic organizational state;
@@ -265,7 +304,7 @@ The active framework does not require:
 
 Such objects require a future explicit scope amendment before becoming active thesis mathematics.
 
-## 12. Governing discipline
+## 13. Governing discipline
 
 [
 oxed{
