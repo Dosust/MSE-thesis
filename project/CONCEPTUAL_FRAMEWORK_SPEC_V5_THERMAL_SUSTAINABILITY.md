@@ -3,6 +3,7 @@
 **Status:** CANONICAL — CURRENT ACTIVE CONCEPTUAL FRAMEWORK  
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**State-time authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
@@ -34,6 +35,32 @@ Thermal / Temperature-Dependent Physical States
                  ↓
          Resilience Interpretation
 ```
+
+## Canonical state-time meaning
+
+State is the minimum set of evolving physical or operational variables required by the adopted model. The primary states are thermal; non-thermal states enter only when required by the thermal interdependency or service consequence.
+
+Time represents state evolution and the timing of critical transitions, interdependency propagation, service degradation, and recovery where modeled.
+
+```text
+external forcing ≠ system state
+state ≠ capability ≠ service
+thermal state ≠ operational/energy state
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+Conceptually:
+
+```text
+Extreme Heat
+→ Thermal State Evolution
+→ Thermal Capability / Constraint
+→ Qualified Thermal Interdependency
+→ State-Time Consequence
+→ Electricity / Mobility Service Consequence
+```
+
+Exact active states remain OPEN and must satisfy the minimum-sufficient-physics and state-admission rules.
 
 ## 3. Resilience meaning
 
