@@ -2,10 +2,11 @@
 
 **Status:** ACTIVE COMPANION / NOT A SECOND SOURCE OF TRUTH  
 **Thermal scope:** [`../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
-**State-time amendment:** [`../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**State-time amendment:** [`../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**Canonical state-time definitions:** [`../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
 **Objective authority:** [`../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
-**Conceptual framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
-**Mathematical framework:** [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)
+**Conceptual framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)  
+**Mathematical framework:** [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)
 
 This directory contains implementation and numerical scaffolds. It does **not** define thesis scope.
 
@@ -31,13 +32,24 @@ EVSE belongs to `T_e`. Interface/coupling variables do not form a third physical
 ## Active mathematical orientation
 
 ```math
-X^{th}(t)
+X(t)
 =
 \begin{bmatrix}
 X_P^{th}(t)\\
-Z_{PT}^{th}(t)\\
-X_{T_e}^{th}(t)
-\end{bmatrix},
+X_{T_e}^{th}(t)\\
+X_{T_e}^{en}(t)\\
+X^{deg}(t)
+\end{bmatrix}_{active},
+```
+
+where only dynamically necessary and evidence-supported blocks are activated. `Z_{PT}^{th}` is represented separately as a coupling/exchange object unless independent dynamics require it to be augmented into the state.
+
+State ontology:
+
+```text
+SOC is an energy state, not a thermal state
+aging/degradation may be a slow state
+coupling quantity ≠ state unless independent dynamics require it
 ```
 
 with primary outputs
