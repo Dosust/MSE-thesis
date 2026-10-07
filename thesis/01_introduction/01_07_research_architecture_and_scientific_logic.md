@@ -1,6 +1,6 @@
 ## 1.7 Research Architecture and Scientific Logic
 
-**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 The active research architecture is deliberately short:
 
