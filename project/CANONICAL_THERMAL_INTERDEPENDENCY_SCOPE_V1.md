@@ -4,7 +4,9 @@
 **Effective date:** 2026-10-07  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Current scope amendment:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 
 ## 1. Canonical focus
 
@@ -106,7 +108,18 @@ Resilience is governed by `CANONICAL_RESILIENCE_DEFINITION_V1.md`:
 
 Resilience is a service-level state-time interpretation of the consequences quantified by this scope. Component survival alone does not establish resilience. Improve, Adapt, and Restore are engineering response classes and do not define resilience.
 
-## 10. Terminology rules
+## 10. Bounded sustainability relationship
+
+The core research mechanisms remain thermal interdependencies and their state-time service consequences. Sustainability is a bounded downstream assessment governed by `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+
+```text
+Pathway 1: thermal interdependency → service consequence → environmental / economic / social consequence
+Pathway 2: engineering response → changed state/capability/service → environmental / economic / social consequence
+```
+
+This does not reactivate broad sustainability optimization, full LCA/social LCA, or economy-wide analysis.
+
+## 11. Terminology rules
 
 Use **qualify** consistently.
 
@@ -114,7 +127,7 @@ In objectives and scope statements, name the actual physical object, variable cl
 
 Use the system name **Electrified Transportation System**. Do not use “standards-defined electrified transportation system.”
 
-## 11. Precedence
+## 12. Precedence
 
 For the active scientific focus, this file supersedes broader formulations that treat all Power–Transportation interdependencies as within scope.
 
@@ -122,6 +135,6 @@ The thesis title is retained. Within that title, **interdependencies** means the
 
 Historical broad frameworks are retained for provenance and reusable methods but do not control the active reader-facing scope where they conflict with this authority.
 
-## 12. Reopen conditions
+## 13. Reopen conditions
 
 This focus may be reopened only by explicit user/supervisor/chair/committee direction, contradictory evidence, model/data infeasibility, conflict with higher ASU/SSEBE requirements, or a formally versioned scope amendment.
