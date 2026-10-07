@@ -6,6 +6,7 @@
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**State-time interpretation authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Current scope amendment:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 
 ## 1. Canonical focus
@@ -138,3 +139,23 @@ Historical broad frameworks are retained for provenance and reusable methods but
 ## 13. Reopen conditions
 
 This focus may be reopened only by explicit user/supervisor/chair/committee direction, contradictory evidence, model/data infeasibility, conflict with higher ASU/SSEBE requirements, or a formally versioned scope amendment.
+
+
+## State-time interpretation
+
+The scope phrase **through state and time** is controlled by `CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+
+```text
+State = minimum evolving physical/operational condition required by the adopted model.
+Time = evolution and timing of transitions, propagation, service consequence, and recovery where modeled.
+```
+
+Preserve:
+
+```text
+external forcing ≠ system state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+Exact active state variables remain OPEN.
