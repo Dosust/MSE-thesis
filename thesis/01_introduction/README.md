@@ -3,8 +3,8 @@
 **Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
 
-**Current active-scope override (2026-10-07):** `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` + `../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
-**Rule:** the frozen September Chapter-I text is retained for provenance; any active Chapter-I revision, presentation, or interpretation must use the current Electrified Transportation System composition and extreme-heat/state-time scope.
+**Current active-scope override (2026-10-07):** `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` + `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
+**Rule:** the frozen September Chapter-I text is retained for provenance; any active Chapter-I revision, presentation, or interpretation must focus only on thermal interdependencies between the Power System and Electrified Transportation System and their consequences through state and time.
 **Status:** PASS — FROZEN — OFFICIAL  
 **Official source snapshot:** [`CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md`](CHAPTER_I_OFFICIAL_SOURCE_2026-09-21.md)  
 **Freeze:** [`CHAPTER_I_FREEZE_2026-09-21.md`](../00_governance/CHAPTER_I_FREEZE_2026-09-21.md)
