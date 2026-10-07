@@ -328,7 +328,7 @@ The active thesis chain ends at quantified electricity and mobility service cons
 | [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) | canonical thermal-interdependency focus |
 | [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md) | canonical service-level state-time resilience definition |
 | [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md) | canonical two-pathway sustainability assessment |
-| [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md) | current extreme-heat / thermal-interdependency / state-time scope precedence |
+| [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md) | current extreme-heat / thermal-interdependency / state-time scope precedence |
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
 | [`project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`](project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md) | road-over-rail working decision |
@@ -406,5 +406,7 @@ freeze final thermal RQ wording
 → qualify directional thermal mechanisms
 → implement minimum-sufficient thermal physics
 → VVUQ
+→ freeze sustainability indicators, functional/accounting basis, and time horizon
+→ map only measured indicators to relevant SDG targets/indicators
 → execute only after evidence/data/model gates pass
 ```
