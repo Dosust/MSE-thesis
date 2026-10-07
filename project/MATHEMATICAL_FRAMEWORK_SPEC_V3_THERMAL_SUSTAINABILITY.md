@@ -4,12 +4,12 @@
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
 **State-time authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
+**State-time alignment date:** 2026-10-08  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
-**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Supersedes for active mathematical work:** `MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
 
 ## 1. Purpose
@@ -26,10 +26,10 @@ The mathematical framework uses the canonical definitions in `CANONICAL_STATE_TI
 
 has the following semantics:
 
-- (X(t)) contains only admitted evolving physical/operational state variables required by the adopted model;
-- (H(t)) is external extreme-heat forcing and is not itself a system state;
-- (u(t)) is a control/operating input where used;
-- (	heta) contains parameters, not dynamic states unless explicitly reformulated.
+- `X(t)` contains only admitted evolving physical/operational state variables required by the adopted model;
+- `H(t)` is external extreme-heat forcing and is not itself a system state;
+- `u(t)` is a control/operating input where used;
+- `θ` contains parameters, not dynamic states unless explicitly reformulated.
 
 Preserve:
 
