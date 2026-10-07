@@ -28,6 +28,32 @@ Extreme Heat
 
 State and time remain the primary analytical dimensions.
 
+## 1A. Meaning of state and time
+
+State and time are governed by `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+State:
+the minimum set of evolving physical, operational, energy, or degradation variables
+required to characterize the current modeled condition and determine subsequent evolution.
+
+Time:
+the independent variable through which state evolution, critical transitions,
+interdependency propagation, service consequences, and—where modeled—recovery
+and degradation are ordered and quantified.
+```
+
+The thesis distinguishes:
+
+```text
+fast thermal state
+≠ operational/energy state
+≠ slow degradation/health state
+≠ service
+```
+
+SOC is an energy state, not a thermal state. Aging can be a legitimate slow degradation state. External heat is forcing, not an internal state under the active convention. Capability and service are derived/response quantities rather than states unless a selected model explicitly gives them independent dynamics.
+
 ## 2. Physical core
 
 ```text
