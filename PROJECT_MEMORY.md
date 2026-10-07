@@ -4,6 +4,7 @@
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
 **Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**Canonical state-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`  
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
@@ -24,6 +25,27 @@ Canonical analytical chain:
 `Extreme heat → thermal physical state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity + mobility service consequence`
 
 State and time are the primary analytical dimensions.
+
+Canonical state definition:
+
+> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+
+Canonical time definition:
+
+> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+
+Preserve:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+Exact active state variables, capability laws, service metrics, event horizon, and propagation-identification procedures remain OPEN.
+
 
 Canonical resilience definition:
 
