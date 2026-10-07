@@ -6,6 +6,7 @@
 **Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`  
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+**Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 
 Permanent active thesis focus:
@@ -21,6 +22,16 @@ Canonical analytical chain:
 `Extreme heat → thermal physical state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity + mobility service consequence`
 
 State and time are the primary analytical dimensions.
+
+Canonical resilience definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is evaluated at the service level through time. Component survival is not resilience. Preserve:
+
+`Thermal State ≠ Capability ≠ Service ≠ Resilience`
+
+The service conditions are (Q_P(t) \ge Q_P^{req}(t)) and (Q_T(t) \ge Q_T^{req}(t)); where (Q_k(t) < Q_k^{req}(t)), a service deficit exists. Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the resilience definition.
 
 Active objective chain:
 
