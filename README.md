@@ -4,6 +4,7 @@
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
+**Canonical resilience authority:** [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md)  
 **Current objective authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
 **Current conceptual framework:** [`project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
 **Current mathematical framework:** [`project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)  
@@ -157,6 +158,49 @@ The governing rule is **minimum sufficient physics**: include only the physical 
 
 ---
 
+## Canonical resilience definition
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is not component survival. It is evaluated at the **service level through time**.
+
+```text
+Extreme Heat
+→ Thermal State Change
+→ Capability Change
+→ Thermal Interdependency
+→ Service Degradation
+→ Resilience Response
+```
+
+Service conditions are:
+
+```math
+Q_P(t) \ge Q_P^{req}(t),
+\qquad
+Q_T(t) \ge Q_T^{req}(t).
+```
+
+A service deficit occurs when:
+
+```math
+Q_k(t) < Q_k^{req}(t).
+```
+
+The central resilience question is:
+
+> **Can required service be maintained, and if not, how quickly and effectively can it be recovered?**
+
+Candidate state-time descriptors include minimum service level, service deficit, disruption duration, and recovery time.
+
+Permanent distinction:
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience
+```
+
+Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the definition of resilience itself.
+
 ## Supporting engineering-response boundary
 
 Improve, Adapt, Restore, and Learn may be used only as **supporting interpretation or optional experiments** when they directly help explain a thermal state-time consequence. They are not primary research objectives.
@@ -177,7 +221,8 @@ The active thesis chain ends at quantified electricity and mobility service cons
 | state-time analytical focus | **FROZEN — CANONICAL** |
 | battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
-| Improve → Adapt → Restore → Learn | **SUPPORTING — thermal consequences only** |
+| resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
+| Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |
 | exact component/interface states | **OPEN** |
 | exact electricity/mobility service metrics | **OPEN** |
@@ -195,6 +240,7 @@ The active thesis chain ends at quantified electricity and mobility service cons
 |---|---|
 | [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) | canonical Electrified Transportation composition and boundary |
 | [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) | canonical thermal-interdependency focus |
+| [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md) | canonical service-level state-time resilience definition |
 | [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md) | current extreme-heat / thermal-interdependency / state-time scope precedence |
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
