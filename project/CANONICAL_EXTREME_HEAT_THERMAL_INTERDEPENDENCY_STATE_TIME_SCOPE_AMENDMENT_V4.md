@@ -2,6 +2,7 @@
 
 **Status:** CANONICAL — CURRENT ACTIVE SCOPE AMENDMENT  
 **Effective date:** 2026-10-07  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Supersedes for active scope:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
@@ -176,3 +177,36 @@ Measured indicator ≠ sustainability dimension ≠ SDG target
 ## 12. Reopen conditions
 
 This scope may be reopened only through explicit user/supervisor/chair/committee direction, contradictory evidence, implementation/data infeasibility, conflict with higher ASU/SSEBE requirements, or a formally versioned scope amendment.
+
+
+## Canonical state-time clarification — 2026-10-08
+
+### Canonical meaning of state and time
+
+Use `CANONICAL_STATE_TIME_DEFINITION_V1.md` for all active interpretation of state and time.
+
+> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+
+> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+
+The controlling chain is:
+
+```text
+Extreme Heat
+→ Thermal State Evolution
+→ Thermal Capability / Constraint
+→ Qualified Thermal Interdependency
+→ State-Time Consequence
+→ Electricity / Mobility Service Consequence
+```
+
+Preserve:
+
+```text
+external forcing ≠ system state
+state ≠ capability ≠ service
+thermal state ≠ operational/energy state
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+This clarification does not freeze the exact active state variables or time horizon; those remain OPEN until independently qualified.
