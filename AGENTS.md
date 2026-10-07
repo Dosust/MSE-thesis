@@ -3,11 +3,12 @@
 Before applying any older instruction in this file, load:
 
 - `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
-- `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
+- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
 - `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
 - `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
 
-The active thesis workstream is extreme-heat and state-time analysis of coupled Power and Electrified Transportation systems. The canonical Electrified Transportation System composition is controlled by `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Battery-electric road transport and a selected charging context are bounded application subsets, not the thesis-wide definition of the transportation system. The September seven-stage / RQ1–RQ7 / H1–H5 / Austin-P3 architecture is retained for provenance and reusable methods but is **not current scope authority where it conflicts with the 2026-10-06 scope amendment**.
+The active thesis workstream focuses **only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time**. The Electrified Transportation System composition is controlled by `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Battery-electric road transport and a charging context are bounded application subsets, not the thesis-wide definition of the transportation system. The September seven-stage / RQ1–RQ7 / H1–H5 / Austin-P3 architecture is retained for provenance and reusable methods but is **not current scope authority where it conflicts with the 2026-10-06 scope amendment**.
 
 Do not silently reactivate historical Chapter-I, RQ/SO/H, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The final narrowed RQ/SO/H set is OPEN.
 
@@ -33,6 +34,40 @@ The exact active title is:
 > **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
+
+## Canonical thermal-interdependency focus
+
+For every active thesis, model, diagram, presentation, Chapter-I, research-question, objective, method, result, discussion, or conclusion task, load:
+
+`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
+
+and
+
+`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+
+Permanent active focus:
+
+> **The thesis studies only thermal interdependencies between the Power System and the Electrified Transportation System and their consequences through state and time.**
+
+Do not broaden the active thesis back to generic Power–Transportation interdependencies, generic coupled-network behavior, non-thermal dependency classes, or broad infrastructure-resilience analysis.
+
+Non-thermal variables may appear only when they are necessary boundary conditions, coupling variables, controls, or constraints for a thermal mechanism or its consequence.
+
+Use **qualify**, not “evidence-qualify.” Do not use **selected** as a filler adjective in objectives or scope statements. Name the actual physical object or variable class.
+
+State and time are the primary analytical dimensions. Preserve:
+
+```text
+extreme heat
+→ thermal physical state
+→ thermal capability / constraint
+→ thermal interdependency
+→ state-time consequence
+→ electricity / mobility service consequence
+→ Improve / Adapt / Restore
+```
+
+This focus remains controlling unless reopened by explicit user/supervisor/chair/committee direction or by a formally versioned scope amendment under the repository decision/freeze protocol.
 
 ## Canonical Electrified Transportation System scope
 
