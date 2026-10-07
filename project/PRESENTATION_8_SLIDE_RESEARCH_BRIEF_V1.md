@@ -10,6 +10,7 @@
 Authorities:
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
+- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
 
 > **The thesis focuses only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time.**
 
@@ -22,6 +23,27 @@ Presentation rules:
 - preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → resilience interpretation; sustainability then has two pathways: direct consequence and engineering-response consequence;
 - use **qualify** consistently;
 - name the physical object or variable class directly in objectives and scope statements.
+
+## Canonical state-time definition — FROZEN 2026-10-08
+
+Authority: `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+
+> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+
+> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+
+Presentation rules:
+- external forcing is not a system state;
+- state is not capability and service is not state;
+- SOC is an operational/energy state, not a thermal state;
+- exact active state variables remain open until qualified;
+- distinguish transition time, propagation delay, service-consequence time, and recovery time;
+- use recovery time only when recovery is actually modeled.
+
+```text
+State = what condition is the modeled system in?
+Time = when and how state changes and consequences propagate.
+```
 
 ## Canonical resilience definition — FROZEN 2026-10-07
 
@@ -193,6 +215,7 @@ Do not reopen a decision merely because a different wording appears attractive.
 | Core infrastructure systems | Power + Transportation | **FROZEN** | Preserve thesis meaning |
 | Hazard for current presentation workstream | Extreme heat | **FROZEN — CURRENT** | Controlled by current thermal-interdependency scope authority |
 | Interdependency focus | Thermal interdependencies between Power and Electrified Transportation only | **FROZEN — CANONICAL** | Non-thermal relations enter only when required to represent a thermal mechanism |
+| State-time meaning | Canonical dynamic state + temporal evolution/transition/propagation interpretation | **FROZEN — CANONICAL** | Exact active states and time horizon remain open |
 | Performance lens | Functioning + serviceability + reliability | **WORKING-FROZEN** | Used to characterize service performance before/through resilience assessment |
 | Primary outcome | Electricity and mobility service trajectories interpreted for resilience | **FROZEN INTERPRETATION / METRICS OPEN** | Resilience is service-level and state-time; exact metrics remain open |
 | Transport mode | Road transport → battery-electric road transportation | **WORKING-FROZEN** | Chosen through the five canonical scope gates; see `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
