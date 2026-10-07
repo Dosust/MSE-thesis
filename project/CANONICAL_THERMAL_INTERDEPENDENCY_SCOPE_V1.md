@@ -100,9 +100,9 @@ The exact state variables, constitutive laws, thresholds, service metrics, and i
 
 ## 9. Terminology rules
 
-Use **qualify**, not “evidence-qualify.”
+Use **qualify** consistently.
 
-Do not use **selected** as a filler adjective in objectives or scope statements. Name the actual physical object, variable class, or boundary instead.
+In objectives and scope statements, name the actual physical object, variable class, or boundary directly.
 
 Use the system name **Electrified Transportation System**. Do not use “standards-defined electrified transportation system.”
 
