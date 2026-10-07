@@ -1,7 +1,7 @@
 # Canonical Extreme-Heat State-Time Scope Amendment V1
 
 **Status:** CANONICAL CURRENT-SCOPE AMENDMENT  
-**Effective date:** 2026-10-06  
+**Effective date:** 2026-10-07  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
@@ -16,13 +16,15 @@ It does **not** delete prior work. It changes which scientific objects are curre
 For questions of **current thesis scope**, use this order:
 
 1. `CANONICAL_THESIS_TITLE_V1.md`
-2. this file: `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`
-3. `CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
-4. `RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-5. `ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`
-6. `CONCEPTUAL_FRAMEWORK_SPEC_V2.md`
-7. `RESEARCH_REASONING_PROTOCOL.md`
-8. `EGMIV_METHOD_V1.md`
+2. `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+3. this file: `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`
+4. `CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
+5. `RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+6. `ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`
+7. `CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
+8. `MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
+9. `RESEARCH_REASONING_PROTOCOL.md`
+10. `EGMIV_METHOD_V1.md`
 
 ASU/SSEBE/committee requirements remain higher authority for degree, formatting, defense, and program compliance.
 
@@ -60,6 +62,14 @@ Road transport
 ```
 
 Status: **WORKING-FROZEN**.
+
+### Canonical Electrified Transportation System boundary
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+Composition/boundary authority: `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`.
+
+For the active thesis, EVSE and the physical charging connection belong to the Electrified Transportation System `T_e`. The Power–Transportation coupling/interface object represents exchanged quantities, coupling conditions, constraints, and interface states between `P` and `T_e`; it is not a third physical infrastructure system and is not synonymous with EVSE.
 
 ### Exact charging context
 
