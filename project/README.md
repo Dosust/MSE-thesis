@@ -1,195 +1,95 @@
-# Project — Current Mathematical and Scientific Architecture
+# Project — Current Thermal-Interdependency Thesis Architecture
 
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Current-scope authority:** [`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Thermal focus authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
+**State-time scope amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**Objective authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
+**Conceptual framework:** [`CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
+**Mathematical framework:** [`MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)  
 **Authority index:** [`CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
-**Status date:** 2026-10-06
+**Status date:** 2026-10-07
 
-This directory is the active research-control layer for scope, evidence, mechanism, mathematics, framework specification, and decision memory.
+## Active research problem
 
----
-
-## 1. Active research problem
-
-The active workstream asks:
-
-> How does extreme heat change selected physical states over time, how do those changes propagate through qualified Power–Transportation interfaces, when do critical transitions occur, and how do electricity and mobility services respond under Improve, Adapt, and Restore actions?
-
-Compact logic:
+The active thesis studies **only thermal interdependencies between the Power System and Electrified Transportation System and their consequences through physical state and time**.
 
 ```text
 Extreme heat
-→ physical state
-→ state-time transition
-→ qualified interface propagation
-→ functionality
-→ service consequence
-→ engineering action
+→ thermal physical state
+→ thermal capability / constraint
+→ qualified thermal P ↔ T_e interdependency
+→ state-time evolution
+→ critical transition / propagation timing
+→ electricity + mobility service consequence
 ```
 
----
+Non-thermal Power–Transportation interdependencies are outside the active analytical scope unless required strictly as boundary conditions, constraints, or supporting variables for a thermal mechanism.
 
-## 2. Active physical scope
-
-### Power
-Selected distribution-side states necessary for the chosen charging interface.
-
-### Physical interfaces
-Grid-connected charging infrastructure and associated physical states/capabilities.
-
-### Electrified transportation
-Battery-electric road transportation.
-
-Current mode:
+## Active physical scope
 
 ```text
-Road transport
-→ battery-electric road transportation
-→ grid-connected EV charging
+Power System P
+↔
+Electrified Transportation System T_e
 ```
 
-Status: **WORKING-FROZEN**.
+EVSE belongs to `T_e`. Coupling/interface variables do not constitute a third physical system.
 
-Next scope gate:
+Battery-electric road transportation with grid-connected charging remains the bounded application subset. Exact charging context remains open.
 
-```text
-public DC fast charging
-vs
-fleet/depot charging
-```
+## Frozen objective contract
 
-Status: **OPEN**.
+**General Objective**
 
----
+> To characterize and model thermal interdependencies between the Power System and the Electrified Transportation System under extreme heat, and to quantify how their consequences evolve through physical state and time.
 
-## 3. Current mathematical architecture
+**SO1 — Identify and qualify**
+
+> Identify and qualify the thermally sensitive physical states and directional thermal interdependency mechanisms connecting the Power System and the Electrified Transportation System.
+
+**SO2 — Model state-time evolution**
+
+> Develop a physics-based state-time model of the qualified thermal interdependencies and their propagation under extreme heat.
+
+**SO3 — Quantify consequences**
+
+> Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences.
+
+## Active mathematical outputs
 
 ```math
-X(t)=[X_P^\top,Z^\top,X_T^\top]^\top.
+X_P^{th}(t),quad
+X_{T_e}^{th}(t),quad
+Z_{PT}^{th}(t),quad
+	au_i^C,quad
+delta_{ij}^{th},quad
+Q_P(t),quad
+Q_T(t).
 ```
 
-```math
-\dot X=F(X,H,u;\theta).
-```
-
-Transition time, propagation delay, and service are parallel derived analyses when mathematically appropriate:
-
-```math
-X(t)
-\rightarrow
-\begin{cases}
-\tau_i^C & \text{critical transition time}\\
-\delta_{ij} & \text{propagation timing}\\
-Q_P(t),Q_T(t) & \text{electricity + mobility service}
-\end{cases}
-```
-
-The interface architecture `I_PT` and dynamic interface state `Z(t)` are distinct objects.
-
----
-
-## 4. Engineering cycle
-
-```text
-Improve → Adapt → Restore → Learn
-```
-
-- **Improve** acts on baseline design/parameters.
-- **Adapt** acts on the state trajectory during heat.
-- **Restore** acts on recovery after unacceptable service degradation.
-- **Learn** updates future models and decisions.
-
----
-
-## 5. Current decision authorities
-
-| File | Role |
-|---|---|
-| `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md` | current scope precedence |
-| `CURRENT_THESIS_AUTHORITY_INDEX_V1.md` | current entry point |
-| `RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md` | decision-control protocol |
-| `ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` | working transport-mode decision |
-| `CONCEPTUAL_FRAMEWORK_SPEC_V2.md` | current framework specification |
-| `WHY_LOG_2026-10-06.md` | decision rationale |
-| `RESEARCH_REASONING_PROTOCOL.md` | reasoning / evidence protocol |
-| `EGMIV_METHOD_V1.md` | evidence-to-mechanism/model execution |
-
-Candidate mathematical integration:
-- `../methods/architecture/ROSETTA_STATE_TIME_MATHEMATICAL_INTEGRATION_V1.md`
-
-ROSETTA is retained as a possible relation/constraint/design-space aid, not as the governing heat-resilience dynamics.
-
----
-
-## 6. Current contribution boundary
-
-Already established elsewhere and therefore not sufficient novelty:
-
-```text
-P–T coupling
-EV charging coupling
-temperature-aware charging demand
-dynamic coupled-network restoration
-V2G resilience
-generic physics-based modeling
-```
-
-Candidate unresolved handoff:
-
-```text
-heat-dependent physical state/capability
-→ coupled electricity + mobility service trajectory
-→ engineering-decision consequence
-```
-
-Status: **OPEN** until closest literature and feasibility are closed.
-
----
-
-## 7. What remains open
+## Open objects
 
 - exact charging context;
-- exact Power state;
-- exact interface/EVSE thermal state;
-- exact transportation state;
-- exact electricity-service metric;
-- exact mobility-service metric;
-- exact adaptation/restoration actions;
-- final narrowed RQ/SO/H;
-- final novelty statement;
-- final case/data object.
+- exact thermally active states;
+- exact thermal thresholds;
+- exact electricity and mobility service metrics;
+- validation data/case;
+- final thermal RQ wording;
+- hypotheses;
+- optional thermal intervention set;
+- final novelty claim.
 
-No open item may be silently treated as frozen.
+## Historical material
 
----
+Earlier seven-stage, broad P–T–I–O, RQ0/RQ1–RQ7, SO1–SO7, H1–H5, viability, sustainability, and engineering-decision packages remain preserved for provenance and reusable methods only. They do not control the active thesis where they conflict with the thermal-only authorities.
 
-## 8. Historical scientific architecture
-
-The earlier seven-stage framework, RQ0/RQ1–RQ7, SO1–SO7, H1–H5, Austin/P3 execution architecture, broad I/O decomposition, sustainability-control packages, and their VVUQ/gate infrastructure remain preserved.
-
-They may be:
-- reused;
-- re-admitted;
-- cited for provenance;
-- compared against the narrowed design.
-
-They do not automatically override the current scope amendment.
-
----
-
-## 9. Visualization architecture
-
-Current reusable design skills:
-
-- `../.github/skills/engineering-framework-design/SKILL.md`
-- `../.github/skills/scientific-diagram-design/SKILL.md`
-- `../.github/skills/mathematical-visualization-design/SKILL.md`
-
-Permanent principle:
+## Governing rule
 
 ```text
-model
-→ visual encoding
-→ rendering
-→ verification
+thermal mechanism
+→ state
+→ time
+→ service consequence
 ```
+
+No broader architecture may override this chain without an explicit versioned scope change.
