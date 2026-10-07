@@ -3,7 +3,7 @@
 **Status:** CURRENT WORKING-FROZEN CONCEPTUAL SPECIFICATION  
 **Date:** 2026-10-07  
 **Supersedes for active conceptual-figure work:** \`CONCEPTUAL_FRAMEWORK_SPEC_V2.md\`  
-**Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md\`
+**Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md\` + \`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md\`
 
 ## 1. Purpose
 
@@ -11,7 +11,7 @@ Show the global scientific logic of the thesis without mathematical notation and
 
 The conceptual framework answers:
 
-> What happens in the system, what are the main scientific relationships, and how can resilience responses lead to sustainable and resilient outcomes?
+> How do thermal interdependencies between the Power System and Electrified Transportation System evolve through state and time, what service consequences result, and how can resilience responses change those consequences?
 
 It does not answer:
 
@@ -37,33 +37,30 @@ Words may still express the concepts of state, time, propagation, service, resil
 \`\`\`text
 External Environment — Extreme Heat Forcing
                 ↓
-      Physical System of Interest
+         Thermal Physical State
+                ↓
+      Thermal Capability / Constraint
+                ↓
 Power System ↔ Electrified Transportation System
+       Thermal Interdependency
                 ↓
-         State-Time Response
-                ↓
-     Interdependency Propagation
+       State-Time Consequence
                 ↓
         Service Consequences
  Electricity Service + Mobility Service
                 ↓
         Engineering Response
       Improve | Adapt | Restore
-           ↙             ↘
- Resilience Outcome   Sustainability Impacts
-                       Social
-                       Environmental
-                       Economic
-           ↘             ↙
-    Sustainable and Resilient Outcome
                 ↓
-       SDG Relevance / Alignment
+        Resilience Outcome
+                ↓
+   Bounded Sustainability Consequences
 \`\`\`
 
 ## 4. Scientific meaning of each phase
 
 ### Extreme Heat
-External physical forcing. It may affect relevant Power-system states and relevant components of the Electrified Transportation System. Common heat exposure is not itself an interdependency.
+External physical forcing. It may change thermal states in the Power System and Electrified Transportation System. Common heat exposure is not itself a thermal interdependency.
 
 ### Physical System of Interest
 Current scope:
@@ -72,15 +69,21 @@ Current scope:
 
 The Electrified Transportation System comprises the electrically propelled road vehicle, rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and the communication/control functions required for electrical power transfer, including bidirectional transfer where supported.
 
-Power-transfer, charging, communication/control, and bidirectional-transfer relations are represented as interdependencies/coupling conditions between the two physical systems; they are not drawn as a third physical infrastructure system.
+Power-transfer, charging, communication/control, and bidirectional-transfer relations are represented only when they are required to express a thermal interdependency or its consequence. They are not drawn as a third physical infrastructure system.
 
 A battery-electric road-transport or fleet/depot case remains a bounded application subset and does not redefine the thesis-wide system composition.
 
-### State-Time Response
-How physical conditions evolve over time under heat.
+### Thermal Physical State
+The temperature-dependent physical states required to explain the thermal mechanism.
 
-### Interdependency Propagation
-How a physically qualified change in one subsystem/interface influences another through an admitted dependency.
+### Thermal Capability / Constraint
+How thermal state changes capability, limits, or operating feasibility.
+
+### Thermal Interdependency
+How a qualified directional thermal mechanism in one coupled system changes the physical or functional capability of the other system or changes service over time.
+
+### State-Time Consequence
+How the thermal interdependency changes state trajectories, critical transitions, propagation timing, and service trajectories.
 
 ### Service Consequences
 Consequences for:
@@ -96,8 +99,8 @@ Three distinct response classes:
 ### Resilience Outcome
 Whether acceptable electricity and mobility service can be maintained or recovered, including disruption duration and recovery performance.
 
-### Sustainability Impacts
-Evaluate the consequences of both the resilience outcome and the intervention burden through three dimensions:
+### Bounded Sustainability Consequences
+Evaluate only sustainability consequences that arise from the bounded resilience interventions and are supported by declared data and accounting boundaries. Candidate dimensions may include:
 
 #### Social
 Candidate constructs:
@@ -122,37 +125,16 @@ Candidate constructs:
 
 These are candidate constructs until operational indicators are frozen.
 
-### Sustainable and Resilient Outcome
-A system outcome is not called sustainable merely because it is resilient. The final interpretation requires both:
-- acceptable resilience/service performance;
-- acceptable social, environmental, and economic consequences.
-
-### SDG Relevance / Alignment
-SDGs are an interpretation layer, not a causal system layer.
-
-Do not draw:
-\`\`\`text
-Social → SDG 3
-\`\`\`
-as an automatic causal claim.
-
-Use:
-\`\`\`text
-measured sustainability indicator
-→ relevant SDG target/indicator
-\`\`\`
-
-after the indicator mapping is evidence-supported.
+Do not interpret resilience improvement as automatic sustainability improvement. Sustainability remains a bounded consequence assessment, not a second broad thesis domain.
 
 ## 5. Arrow semantics
 
-- hazard forcing → subsystem: external physical forcing;
-- solid physical arrow: delivered physical capability/energy;
-- dashed physical arrow: demand/dependency imposed on another subsystem;
-- downward conceptual arrows: consequence / conceptual progression;
-- branch from Engineering Response: decomposition into resilience outcome and sustainability impacts;
-- convergence into Sustainable and Resilient Outcome: joint interpretation;
-- SDG arrow: policy-facing relevance/alignment only.
+- hazard forcing → thermal state: external heat forcing;
+- thermal state → capability/constraint: thermophysical consequence;
+- Power ↔ Electrified Transportation arrow: qualified thermal interdependency only;
+- downward arrows: state-time consequence or service consequence;
+- Engineering Response → Resilience Outcome: effect of Improve / Adapt / Restore;
+- Resilience Outcome → Bounded Sustainability Consequences: consequence assessment only, not automatic causality.
 
 No arrow may exist merely to make the composition look connected.
 
@@ -174,6 +156,6 @@ The conceptual framework is ready for canonical freeze only when:
 - all visible terms belong to the current scope;
 - no methodology step is embedded;
 - no mathematics appears;
-- sustainability dimensions are clearly visible;
-- SDG language is relevance/alignment rather than unsupported causal mapping;
+- thermal interdependency is explicit and non-thermal interdependencies are excluded from the active figure;
+- sustainability remains bounded to consequences of the resilience interventions;
 - the figure passes grayscale and semantic QA.
