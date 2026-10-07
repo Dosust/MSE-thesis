@@ -3,7 +3,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
-**Canonical state-time authority:** [`project/CANONICAL_STATE_TIME_DEFINITION_V1.md`](project/CANONICAL_STATE_TIME_DEFINITION_V1.md)  
+**Canonical state-time authority:** [`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **Canonical resilience authority:** [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md)  
 **Canonical sustainability authority:** [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md)  
@@ -20,6 +20,29 @@
 > **Scientific rule:** no scope decision, model, simulation, figure, or repository status may be interpreted as empirical support unless the corresponding evidence, validation, and test gates pass.
 
 ---
+
+## Canonical state-time meaning
+
+State/time semantics are frozen in [`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md).
+
+```text
+State = minimum evolving physical / operational / energy / degradation variables
+        needed to characterize the current modeled condition and predict what happens next.
+
+Time = independent variable through which state evolution, transitions, propagation,
+       service consequences, and—where modeled—recovery/degradation are quantified.
+```
+
+Permanent distinctions:
+
+```text
+full physical state space ≠ active reduced thesis state vector
+external forcing ≠ internal state
+SOC = energy state, not thermal state
+aging/degradation can be a slow state, but is not automatically active
+state ≠ capability ≠ service
+coupling quantity ≠ state unless independent dynamics require it
+```
 
 ## Current thesis direction
 
@@ -346,6 +369,7 @@ The core thermal modeling chain ends at quantified electricity and mobility serv
 | active hazard: extreme heat | **FROZEN — CURRENT** |
 | thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
+| canonical state/time definitions | **FROZEN — CANONICAL** |
 | battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
