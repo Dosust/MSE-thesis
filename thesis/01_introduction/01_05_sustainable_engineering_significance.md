@@ -1,5 +1,7 @@
 ## 1.5 Sustainable Engineering Significance
 
+**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+
 The Sustainable Engineering significance of the thesis lies in connecting the state-time consequences of thermal interdependencies to both **resilience** and a **bounded sustainability assessment** of electricity and mobility service.
 
 Resilience is interpreted at the service level: whether required electricity and mobility services can be maintained or recovered as thermal states and thermal interdependencies evolve over time.
