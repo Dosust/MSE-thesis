@@ -2,155 +2,253 @@
 
 **Status:** CURRENT WORKING MATHEMATICAL-FRAMEWORK SPECIFICATION  
 **Date:** 2026-10-07  
-**Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md\`  
-**Conceptual counterpart:** \`CONCEPTUAL_FRAMEWORK_SPEC_V3.md\`
+**Scope authorities:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` + `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
+**Conceptual counterpart:** `CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
 
 ## 1. Purpose
 
-Formalize the conceptual framework into a minimum set of testable mathematical objects.
+Formalize the thesis focus on **thermal interdependencies between the Power System and Electrified Transportation System and their consequences through state and time**.
 
-The mathematical framework must preserve the same scientific topology as the conceptual framework, while replacing verbal relations with explicit mathematical definitions.
+The framework does not represent every Power–Transportation interdependency. Non-thermal relations enter only when required as boundary conditions, coupling quantities, controls, or constraints for a thermal mechanism.
 
 ## 2. Extreme-heat forcing
 
 \[
-H(x,t)
+H(t)
 =
-[T_{\mathrm{amb}}(x,t),G_s(x,t),v_w(x,t),\Delta t,\ldots].
+[T_{\mathrm{amb}}(t),G_s(t),v_w(t),\ldots].
 \]
 
-Only variables required by the selected physical models are retained.
+Only forcing variables required by the governing thermal models are retained.
 
-## 3. Subsystem states
+## 3. Thermal state
 
-Power System:
+Power-system thermal states:
 
 \[
-\dot X_P
-=
-f_P(X_P,H,Z_{PT},u_P;\theta_P).
+X_{P,th}(t).
 \]
 
-Electrified Transportation System:
+Electrified Transportation thermal states:
 
 \[
-\dot X_{T_e}
-=
-f_{T_e}(X_{T_e},H,Z_{PT},u_{T_e};\theta_{T_e}).
+X_{T_e,th}(t).
 \]
 
-The canonical transportation-state container is structurally decomposed as
+Coupled thermal state:
 
 \[
-X_{T_e}
+X_{th}(t)
 =
-\left[
-X_V^\top,
-X_{RESS}^\top,
-X_{EP}^\top,
-X_{AUX}^\top,
-X_{VPSC}^\top,
-X_{EVSE}^\top,
-X_{CC}^\top,
-X_{COM}^\top
-\right]^\top,
+\begin{bmatrix}
+X_{P,th}^{\top}(t) & X_{T_e,th}^{\top}(t)
+\end{bmatrix}^{\top}.
 \]
 
-where the blocks correspond respectively to the electrically propelled road vehicle, rechargeable energy-storage system, electric propulsion, auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and communication/control functions.
+The Electrified Transportation System composition is broader than the active thermal-state vector. A component is modeled dynamically only when its thermal state is required to explain the thermal interdependency or its service consequence.
 
-This is a **scope decomposition**, not a requirement that every block receive a detailed dynamic model. Only states required by the research question and supported by evidence are activated.
-
-Bidirectional power transfer, where supported, is represented through admitted power-flow/coupling variables and controls rather than assumed for every case.
-
-### Power–Electrified Transportation coupling object
+## 4. Thermal-conditioned coupling object
 
 \[
+Z_{PT}(t)
+=
+\mathcal Z
+\left(
+X_{P,th}(t),
+X_{T_e,th}(t),
+D(t),
+u(t);
+\theta_Z
+\right).
+\]
+
+`Z_PT` contains the exchanged quantities, coupling conditions, or interface states required to represent the thermal interdependency, such as power, energy, current, charging demand, charging capability, or bidirectional transfer where supported.
+
+`Z_PT` is not a third physical infrastructure system.
+
+## 5. State-time dynamics
+
+A general differential-algebraic structure is:
+
+\[
+\dot X_{th}
+=
+F_{th}
+\left(
+X_{th},H,Z_{PT},u;\theta
+\right),
+\]
+
+\[
+0
+=
+G
+\left(
+X_{th},Z_{PT},D,u;\theta
+\right).
+\]
+
+Component laws remain heterogeneous. A transformer thermal model, EVSE thermal model, battery thermal model, connector thermal model, or auxiliary-load model is used only when required by the thermal mechanism being tested.
+
+## 6. Thermal capability and constraints
+
+For component or subsystem \(i\):
+
+\[
+C_i(t)
+=
+\mathcal C_i
+\left(
+X_{i,th}(t),
+Z_{PT}(t);
+\theta_i
+\right),
+\]
+
+with operating or service-relevant constraint:
+
+\[
+g_i
+\left(
+X_{i,th}(t),
+C_i(t),
+Z_{PT}(t),
+t
+\right)
+\le 0.
+\]
+
+This preserves the distinction:
+
+\[
+\text{thermal state}
+\neq
+\text{functional capability}
+\neq
+\text{service}.
+\]
+
+## 7. Thermal interdependency
+
+A directional thermal interdependency is represented only when a thermally conditioned change in a source system changes the state, capability, or service consequence of the coupled receiver through an explicit physical pathway.
+
+Conceptually:
+
+\[
+X_{P,th}
+\rightarrow
 Z_{PT}
-=
-\mathcal Z(X_P,X_{T_e},H,u;\theta_Z)
+\rightarrow
+\{X_{T_e,th},C_{T_e},Q_T\}
 \]
 
-collects the exchanged quantities, coupling conditions, constraints, and interface states required to represent qualified Power ↔ Electrified Transportation dependencies.
-
-\(Z_{PT}\) is a mathematical coupling/interface object. It is **not a third physical infrastructure system**.
-
-These are general structural forms. Each selected component retains its own defensible governing physics under the minimum-sufficient-physics rule.
-
-## 4. Coupled state
+for \(P\rightarrow T_e\), and
 
 \[
-X(t)
-=
-[X_P^\top(t),Z_{PT}^\top(t),X_{T_e}^\top(t)]^\top.
+X_{T_e,th}
+\rightarrow
+Z_{PT}
+\rightarrow
+\{X_{P,th},C_P,Q_P\}
 \]
 
-\[
-\dot X
-=
-F(X,H,u;\theta).
-\]
+for \(T_e\rightarrow P\), when the reverse thermal mechanism is physically supported.
 
-The coupled form is assembled from admitted subsystem dynamics and qualified directional Power ↔ Electrified Transportation dependencies.
+Common heat exposure alone does not satisfy this definition.
 
-## 5. Constraints and critical transition time
+## 8. Critical thermal transition time
 
-For state/component \(i\):
-
-\[
-g_i(X_i,t)\le 0.
-\]
-
-Critical transition time:
+For a physically justified thermal threshold:
 
 \[
 \tau_i^C
 =
-\inf\{t:g_i(X_i(t),t)=0\}.
+\inf
+\left\{
+t:
+g_i
+\left(
+X_{i,th}(t),C_i(t),Z_{PT}(t),t
+\right)
+=0
+\right\}.
 \]
 
-The threshold must have physical or operational evidence.
+The threshold must have a physical or operational basis.
 
-## 6. Propagation timing
+## 9. Thermal-interdependency propagation timing
 
-For a qualified source event \(i\) and target response \(j\):
+For a qualified source transition and physically linked receiver response:
 
 \[
-\delta_{ij}
+\delta_{ij}^{th}
 =
 t_j^{\mathrm{response}}
 -
 \tau_i^C.
 \]
 
-This is used only when the source-target mechanism is physically admitted. It is not graph distance and not automatically a cascade measure.
+This quantity is used only when the source–receiver thermal mechanism is established. It is not graph distance and is not automatically a cascade metric.
 
-## 7. Service trajectories
-
-\[
-Q_P(t)=G_P(X(t)),
-\qquad
-Q_T(t)=G_T(X(t)).
-\]
-
-Service acceptability:
+## 10. Service trajectories
 
 \[
-Q_P(t)\ge Q_P^{\min},
-\qquad
-Q_T(t)\ge Q_T^{\min}.
+Q_P(t)
+=
+G_P
+\left(
+X_{th}(t),Z_{PT}(t)
+\right),
 \]
 
-Exact service definitions remain open until their operational indicators are frozen.
+\[
+Q_T(t)
+=
+G_T
+\left(
+X_{th}(t),Z_{PT}(t)
+\right).
+\]
 
-## 8. Engineering interventions
+Service requirements are represented separately:
+
+\[
+Q_P(t)\ge Q_P^{req}(t),
+\qquad
+Q_T(t)\ge Q_T^{req}(t).
+\]
+
+Exact service definitions remain OPEN until their operational indicators and thresholds are frozen.
+
+## 11. Verification and validation
+
+The framework requires separate checks for:
+
+- governing-equation and dimensional consistency;
+- numerical verification and convergence;
+- parameter and threshold provenance;
+- comparison with empirical, experimental, or benchmark thermal behavior;
+- service-level validation where appropriate;
+- uncertainty and sensitivity;
+- declared validity boundaries.
+
+Permanent rule:
+
+\[
+\text{simulation}
+\neq
+\text{validation}.
+\]
+
+## 12. Engineering interventions
 
 ### Improve
 
 \[
-\theta'=\theta+\Delta\theta.
+\theta' = \theta + \Delta\theta.
 \]
 
-Improve changes baseline design/physical parameters.
+Improve changes baseline thermal capability, design, or physical parameters before the heat event.
 
 ### Adapt
 
@@ -158,7 +256,7 @@ Improve changes baseline design/physical parameters.
 u_A(t).
 \]
 
-Adapt changes operation during the heat event.
+Adapt changes operation while thermal states evolve.
 
 ### Restore
 
@@ -168,11 +266,11 @@ u_R(t).
 
 Restore changes the post-degradation recovery trajectory.
 
-Do not collapse \(\Delta\theta\), \(u_A(t)\), and \(u_R(t)\) into one undifferentiated control object.
+An intervention is included only when it changes a thermal state, thermal capability, thermal-interdependency consequence, or electricity/mobility service outcome.
 
-## 9. Resilience performance
+## 13. Resilience performance
 
-A generic performance functional may be written as:
+A structural resilience functional may be written as:
 
 \[
 R
@@ -182,127 +280,43 @@ R
 Q_P(\cdot),
 Q_T(\cdot),
 \tau^C,
-\delta,
+\delta^{th},
 \theta',
 u_A,
 u_R
 \right).
 \]
 
-This notation is structural only. The exact resilience functional is OPEN until the chosen performance metrics are frozen.
+The exact resilience metric remains OPEN.
 
-Candidate quantities may include:
-- service deficit;
-- disruption duration;
-- recovery time;
-- maintained service fraction.
+## 14. Bounded sustainability consequences
 
-## 10. Sustainability dimensions
+Sustainability is not modeled as a separate broad system. Consequences are admitted only when they arise from the bounded resilience interventions and are supported by a declared accounting boundary.
 
-Define a sustainability vector:
+A consequence vector may be represented as:
 
 \[
 S
 =
-[S_{\mathrm{soc}},S_{\mathrm{env}},S_{\mathrm{econ}}]^\top.
+[S_{env},S_{econ},S_{service}]^{\top},
 \]
 
-Candidate dimension functions:
+with exact indicators left OPEN until data and accounting boundaries are frozen.
 
-\[
-S_{\mathrm{soc}}
-=
-\Phi_{\mathrm{soc}}(I_{\mathrm{access}},I_{\mathrm{safety}},I_{\mathrm{equity}},\ldots),
-\]
+Resilience improvement does not imply sustainability improvement.
 
-\[
-S_{\mathrm{env}}
-=
-\Phi_{\mathrm{env}}(I_{\mathrm{energy}},I_{\mathrm{emissions}},I_{\mathrm{resource}},\ldots),
-\]
+## 15. Visual encoding requirement
 
-\[
-S_{\mathrm{econ}}
-=
-\Phi_{\mathrm{econ}}(I_{\mathrm{cost}},I_{\mathrm{loss}},I_{\mathrm{recovery}},\ldots).
-\]
+Every mathematical figure must preserve the active chain:
 
-The exact indicator functions and normalization are OPEN.
+`extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → service consequence → resilience response`
 
-Sustainability assessment must include both:
-- resilience/service consequences;
-- intervention burdens.
+No non-thermal interdependency is shown as part of the active thesis mechanism unless it is explicitly labeled as a supporting boundary condition or constraint.
 
-## 11. Sustainable and resilient outcome
+## 16. Terminology rule
 
-A placeholder joint mapping may be written:
+Use **qualify**, not “evidence-qualify.”
 
-\[
-Y_{\mathrm{SR}}
-=
-\Psi(R,S).
-\]
+Do not use **selected** as a filler adjective in objectives or scope statements.
 
-This is not yet an operational aggregation rule.
-
-Before using \(\Psi\), the thesis must decide whether the joint decision is represented by:
-- explicit constraints;
-- Pareto analysis;
-- multicriteria decision analysis;
-- a justified scalar functional;
-- another defensible approach.
-
-No arbitrary weighting is allowed.
-
-## 12. SDG relevance / alignment
-
-The rigorous mapping is:
-
-\[
-S_k
-\rightarrow
-I_k
-\rightarrow
-T_m^{\mathrm{SDG}},
-\]
-
-where:
-- \(S_k\) is a sustainability dimension;
-- \(I_k\) is an operational indicator;
-- \(T_m^{\mathrm{SDG}}\) is a relevant SDG target/indicator.
-
-Do not map a broad sustainability dimension directly to an SDG number without an indicator/target rationale.
-
-## 13. Visual encoding requirement
-
-The mathematical figure must:
-- omit component inventory prose when equations already define the subsystem;
-- keep equations minimal and legible;
-- preserve pure white backgrounds;
-- preserve semantic arrow types;
-- show only equations required to explain the global mathematical architecture.
-
-## 14. Interactive extension
-
-Inspired by visual-interactive mathematics references, an optional interactive implementation follows:
-
-\[
-\text{parameter}
-\rightarrow
-\text{model recomputation}
-\rightarrow
-\text{derived quantities}
-\rightarrow
-\text{visual update}.
-\]
-
-Candidate interactive parameters:
-- heat intensity;
-- heat duration;
-- loading;
-- charging demand;
-- design parameter;
-- adaptive control;
-- recovery action.
-
-The interactive visualization is an implementation aid, not the scientific model itself.
+Use **Electrified Transportation System**; do not use “standards-defined” as part of the system name.
