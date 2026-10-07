@@ -3,6 +3,7 @@
 **Status:** ACTIVE READING / EVIDENCE-TRANSFER METHOD  
 **Effective date:** 2026-10-08  
 **Scope:** thermal Power–Electrified Transportation interdependencies; physical state; time; electricity/mobility consequence.  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 ## Canonical state-time reading rule
@@ -64,6 +65,20 @@ A limitation is a boundary on what can legitimately be inferred, generalized, tr
 | L9 | Uncertainty | Are measurement/model/parameter uncertainties quantified and propagated? |
 | L10 | Service translation | Does component behavior reach Q_P or Q_T? |
 | L11 | Intervention trade-off | Does mitigation introduce energy, cost, power-quality, or other penalties? |
+
+## Canonical state interpretation
+
+The paper school uses the state ontology in `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+physical phenomenon ≠ automatically an active state
+full physical state space ≠ active reduced thesis state vector
+SOC = energy state, not thermal state
+aging/degradation can be a slow state
+coupling quantity ≠ state unless independent dynamics require it
+```
+
+For every candidate state, the reading school must determine whether the variable is physically legitimate, dynamically necessary, materially relevant over the selected horizon, and sufficiently supported by observation, estimation, parameter evidence, and validation.
 
 ## Permanent evidence chain
 
