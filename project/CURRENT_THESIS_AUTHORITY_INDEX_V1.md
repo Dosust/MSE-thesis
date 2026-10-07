@@ -9,13 +9,14 @@
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
-5. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
-6. `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
-7. `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
-8. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-9. `project/RESEARCH_REASONING_PROTOCOL.md`
-10. `project/EGMIV_METHOD_V1.md`
-11. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+5. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+6. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+7. `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
+8. `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+9. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+10. `project/RESEARCH_REASONING_PROTOCOL.md`
+11. `project/EGMIV_METHOD_V1.md`
+12. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Current status matrix
 
@@ -29,7 +30,8 @@
 | state-time analytical focus | **FROZEN — CANONICAL** |
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
 | grid-connected EV charging context | **WORKING-FROZEN** |
-| Improve → Adapt → Restore → Learn | **SUPPORTING — only when directly tied to thermal consequences** |
+| resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
+| Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |
 | exact state variables | **OPEN** |
 | exact service metrics | **OPEN** |
@@ -44,6 +46,7 @@
 
 - `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md` — current thermal-only conceptual framework.
 - `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md` — current thermal-only mathematical framework.
+- `project/CANONICAL_RESILIENCE_DEFINITION_V1.md` — frozen service-level state-time definition of resilience.
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
 - Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, sustainability, and decision packages are historical/provenance where they conflict with the thermal-only scope.
 
@@ -86,3 +89,14 @@ The controlling active scope is:
 The thesis studies **thermal interdependencies only** between the Power System and Electrified Transportation System and their consequences through **physical state and time**. Non-thermal interdependencies are outside the active analytical scope except as boundary conditions, constraints, or supporting variables strictly required to represent a thermal mechanism.
 
 The active general objective and three specific objectives are controlled by `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
+
+
+## Canonical resilience authority — 2026-10-07
+
+For every use of **resilience** in active thesis work, use `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`.
+
+Canonical definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is evaluated at the **service level through time**. Component survival, reliability alone, robustness alone, or recovery time alone must not be substituted for resilience. Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the definition of resilience itself.
