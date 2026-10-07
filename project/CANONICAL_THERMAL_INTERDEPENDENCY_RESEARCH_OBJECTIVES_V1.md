@@ -6,6 +6,7 @@
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability alignment:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
+**State-time interpretation authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 
 ## General Research Objective
 
@@ -55,3 +56,10 @@ Only the minimum sufficient physical states, parameters, thresholds, and couplin
 ## Research-question status
 
 The objectives above are frozen. Final research-question wording and hypotheses must remain consistent with this three-objective thermal-only contract and require separate versioned authority when frozen.
+
+
+## State-time semantics
+
+The words **physical state** and **time** in the frozen General Objective and SO2–SO3 are interpreted only through `CANONICAL_STATE_TIME_DEFINITION_V1.md`. This cross-reference does not alter the frozen objective wording.
+
+State means the minimum evolving physical/operational variables required by the adopted model, with thermal states primary. Time means their evolution and the timing of critical transitions, thermal-interdependency propagation, service consequences, and recovery only where modeled.
