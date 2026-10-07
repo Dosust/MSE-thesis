@@ -1,12 +1,19 @@
 # Architecture-Methods Scope
 
 **Status:** ACTIVE COMPANION / NOT A SECOND SOURCE OF TRUTH  
-**Canonical scope:** [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)  
-**Canonical framework:** [`../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)
+**Canonical scope:** [`../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) + [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Canonical framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md) + [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md)
 
-This directory implements **small, auditable computational scaffolds** for the frozen P–T–I–O thesis framework. It does not define an alternative thesis scope.
+This directory implements **small, auditable computational scaffolds**. It does not define an alternative thesis scope. Legacy P–T–I–O toy scaffolds in this folder remain software-QA/provenance artifacts and must defer to the current Power–Electrified Transportation scope authorities above.
 
 ## Canonical system
+
+Current active physical-system boundary:
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+For active thesis interpretation, EVSE belongs to `T_e`; cross-system coupling/interface variables do not constitute a third physical system. The older `P,T,I,O` toy state below is retained only to document the legacy software scaffold and must not override current thesis scope.
+
 
 ```math
 \mathcal S=\{P,T,I,O\},
