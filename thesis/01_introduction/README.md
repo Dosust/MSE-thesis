@@ -8,6 +8,7 @@
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+- `../../project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 - `../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
 - `../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
@@ -56,12 +57,24 @@ Context
 → proposed contribution
 ```
 
+## Canonical resilience interpretation
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Chapter I must treat resilience as a service-level state-time concept, not component survival. Preserve:
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience
+```
+
+Improve, Adapt, and Restore are engineering response classes; they are not the definition of resilience.
+
 ## Permanent distinctions
 
 ```text
 common heat exposure ≠ thermal interdependency
 connection ≠ directional dependency
-thermal state ≠ function ≠ service
+thermal state ≠ capability ≠ service ≠ resilience
 transition time ≠ propagation delay ≠ recovery time
 simulation ≠ validation
 ```
