@@ -1,5 +1,7 @@
 ## 1.7 Research Architecture and Scientific Logic
 
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+
 The active research architecture is deliberately short:
 
 ```text
@@ -11,6 +13,21 @@ The active research architecture is deliberately short:
 ```
 
 The architecture follows the frozen objectives.
+
+### Canonical state-time semantics
+
+State is the minimum set of evolving physical or operational variables required to determine the adopted model trajectory. Thermal states are primary; non-thermal operational states enter only where required by the thermal interdependency or service consequence.
+
+Time represents state evolution and the timing of critical transitions, interdependency propagation, service consequences, and recovery where modeled.
+
+```text
+external forcing ≠ system state
+state ≠ capability ≠ service
+thermal state ≠ operational/energy state
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+Exact active states remain open until qualified under minimum-sufficient physics.
 
 ### Step 1 — Thermal mechanism qualification
 
@@ -56,10 +73,12 @@ Q_T(t).
 The final scientific chain is:
 
 ```text
-Thermal mechanism
-→ State
-→ Time
-→ Service consequence
+Extreme Heat
+→ Thermal State Evolution
+→ Thermal Capability / Constraint
+→ Qualified Thermal Interdependency
+→ State-Time Consequence
+→ Electricity / Mobility Service Consequence
 ```
 
 Broader seven-stage, viability, organization, sustainability, and engineering-decision architectures are historical or supporting methods and are not the active thesis research architecture.
