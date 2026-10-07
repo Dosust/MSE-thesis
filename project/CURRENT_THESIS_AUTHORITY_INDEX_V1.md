@@ -33,11 +33,16 @@
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
 | grid-connected EV charging context | **WORKING-FROZEN** |
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
+| sustainability assessment | **FROZEN — CANONICAL TWO-PATHWAY FRAMEWORK** |
+| sustainability dimensions | **FROZEN — ENVIRONMENTAL + ECONOMIC + SOCIAL** |
+| SDG linkage rule | **FROZEN — MEASURED INDICATOR → DIMENSION → RELEVANT SDG TARGET/INDICATOR** |
 | Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |
 | exact state variables | **OPEN** |
 | exact service metrics | **OPEN** |
 | exact intervention set | **OPEN — optional/supporting, thermal only** |
+| exact sustainability indicators / functional unit / accounting boundary / time horizon | **OPEN** |
+| exact SDG targets | **OPEN — only after indicator definition and measurement** |
 | general + specific objectives | **FROZEN — 3-objective thermal contract** |
 | final narrowed RQ wording | **OPEN — must remain thermal/state-time only** |
 | hypotheses | **OPEN — must remain thermal/state-time only** |
@@ -46,11 +51,13 @@
 
 ## Current framework authorities
 
-- `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md` — current thermal-only conceptual framework.
-- `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md` — current thermal-only mathematical framework.
+- `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability conceptual framework.
+- `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability mathematical framework.
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md` — frozen service-level state-time definition of resilience.
+- `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md` — frozen two-pathway sustainability assessment authority.
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
-- Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, sustainability, and decision packages are historical/provenance where they conflict with the thermal-only scope.
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md` — sustainability alignment without creating SO4.
+- Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, broad sustainability-optimization, and decision packages are historical/provenance where they conflict with the current bounded scope.
 
 ## Current visualization authorities
 
