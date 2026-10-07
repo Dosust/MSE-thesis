@@ -4,6 +4,7 @@
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Supersedes for active conceptual work:** `CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
 
@@ -30,6 +31,8 @@ Thermal / Temperature-Dependent Physical States
  Critical Transition + Propagation Timing
                  ↓
  Electricity-Service + Mobility-Service Consequences
+                 ↓
+         Resilience Interpretation
 ```
 
 ## 3. Scientific meaning
@@ -40,7 +43,7 @@ Extreme heat is external forcing. It is not itself a system state and does not b
 
 ### Thermal physical states
 
-Only physical states whose temperature dependence matters to the selected cross-system mechanism are active.
+Only physical states whose temperature dependence matters to the cross-system mechanism are active.
 
 Examples may include temperature-dependent capacity, derating, thermal limits, charging capability, energy-state consequences, or other thermally justified physical quantities.
 
@@ -72,6 +75,24 @@ The final active consequences are:
 - mobility service.
 
 Physical-state change is not automatically service loss.
+
+### Resilience interpretation
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is evaluated at the service level through time. It is not component survival.
+
+The conceptual distinction is:
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience
+```
+
+The resilience question is:
+
+> **Can required service be maintained, and if not, how quickly and effectively can it be recovered?**
+
+Improve, Adapt, and Restore may be used as engineering response classes when needed, but they do not define resilience.
 
 ## 4. Directional pathways
 
@@ -127,6 +148,7 @@ Heat
 → thermal interdependency
 → state-time propagation
 → service consequence
+→ resilience interpretation
 ```
 
 Every arrow must correspond to a physically interpretable relation.
