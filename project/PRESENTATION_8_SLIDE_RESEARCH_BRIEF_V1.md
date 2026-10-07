@@ -9,7 +9,7 @@
 
 Authorities:
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
-- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 
 > **The thesis focuses only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time.**
 
@@ -19,7 +19,7 @@ Presentation rules:
 - do not present generic Power–Transportation coupling as the thesis object;
 - do not present non-thermal interdependencies as active mechanisms;
 - non-thermal quantities may appear only as boundary conditions, coupling variables, controls, or constraints required for a thermal mechanism;
-- preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → resilience interpretation; Improve / Adapt / Restore may follow as engineering responses;
+- preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → resilience interpretation; sustainability then has two pathways: direct consequence and engineering-response consequence;
 - use **qualify** consistently;
 - name the physical object or variable class directly in objectives and scope statements.
 
@@ -38,6 +38,46 @@ Presentation rules:
 - the central question is: **Can required service be maintained, and if not, how quickly and effectively can it be recovered?**
 - minimum service level, service deficit, disruption duration, and recovery time may characterize the service trajectory;
 - Improve, Adapt, and Restore are engineering response classes, not the definition of resilience.
+
+## Canonical two-pathway sustainability assessment — FROZEN 2026-10-07
+
+Authority: `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+
+> **Sustainability in this thesis is assessed through two pathways: (1) the direct environmental, economic, and social consequences of thermal interdependencies on electricity and mobility services, and (2) the environmental, economic, and social consequences of engineering responses used to improve, adapt, or restore those services. Both pathways are evaluated within a declared system boundary and time horizon.**
+
+Presentation rule: show **one sustainability framework with two clearly labeled pathways**.
+
+```text
+Pathway 1 — Direct consequence
+Thermal Interdependency
+→ Electricity + Mobility Service Consequence
+→ Environmental / Economic / Social
+
+Pathway 2 — Engineering-response consequence
+Improve / Adapt / Restore
+→ Changed State / Capability / Service
+→ Environmental / Economic / Social
+```
+
+Dimension content:
+
+```text
+Environmental → energy use/losses; GHG emissions; material/resource burden
+Economic → operating; maintenance/replacement; intervention; service-disruption cost
+Social → access; continuity; affordability; equity; safety
+```
+
+Use only measurable, scope-relevant indicators.
+
+SDG rule:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
+
+Do not map a broad dimension directly to an SDG number. Exact SDG targets remain open until indicators are operationalized.
 
 ## Canonical Electrified Transportation scope — FROZEN 2026-10-07
 
@@ -142,6 +182,8 @@ Do not reopen a decision merely because a different wording appears attractive.
 | “Real-time” control | Terminology not frozen | **OPEN** | Use only if live/online estimation-control requirements are actually modeled |
 | Exact resilience capacity label | Not frozen | **OPEN** | Do not prematurely label the thesis as only adaptive/absorptive/restorative |
 | Engineering action sequence | Improvement/enhancement → adaptation → restoration | **WORKING-FROZEN** | Improvement is the engineering starting objective; adaptation and restoration are subsequent response phases |
+| Sustainability framework | Direct consequence + engineering-response consequence | **FROZEN — CANONICAL TWO-PATHWAY** | Both use environmental, economic, and social dimensions |
+| SDG linkage | Measured indicator → dimension → relevant SDG target/indicator | **FROZEN RULE** | Exact targets remain open until measurement |
 | Comparator architecture | Needs reconciliation with canonical M0/M1/M2 repository state and current narrower M0/M1 discussion | **OPEN** | No silent replacement |
 
 ## 5. Scientific distinctions that must remain visible
