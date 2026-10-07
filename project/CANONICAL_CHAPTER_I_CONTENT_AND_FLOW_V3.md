@@ -1,5 +1,10 @@
 # Chapter 1 — Introduction: Research Problem and Scientific Contract
 
+> **ACTIVE THERMAL-SCOPE SUPERSESSION NOTICE — 2026-10-07**
+> This file is retained for historical/provenance purposes. It does **not** control the active thesis where it conflicts with `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`, `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`, and `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
+> The active thesis studies only thermal Power–Electrified Transportation interdependencies and their consequences through physical state and time.
+
+
 **Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Title authority:** `CANONICAL_THESIS_TITLE_V1.md`
 
