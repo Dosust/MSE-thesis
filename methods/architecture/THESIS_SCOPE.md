@@ -1,65 +1,79 @@
 # Architecture-Methods Scope
 
 **Status:** ACTIVE COMPANION / NOT A SECOND SOURCE OF TRUTH  
-**Canonical scope:** [`../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) + [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
-**Canonical framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md) + [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md)
+**Thermal scope:** [`../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
+**State-time amendment:** [`../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**Objective authority:** [`../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
+**Conceptual framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
+**Mathematical framework:** [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)
 
-This directory implements **small, auditable computational scaffolds**. It does not define an alternative thesis scope. Legacy P–T–I–O toy scaffolds in this folder remain software-QA/provenance artifacts and must defer to the current Power–Electrified Transportation scope authorities above.
+This directory contains implementation and numerical scaffolds. It does **not** define thesis scope.
 
-## Canonical system
+## Active scientific model boundary
 
-Current active physical-system boundary:
-
-> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
-
-For active thesis interpretation, EVSE belongs to `T_e`; cross-system coupling/interface variables do not constitute a third physical system. The older `P,T,I,O` toy state below is retained only to document the legacy software scaffold and must not override current thesis scope.
-
-
-```math
-\mathcal S=\{P,T,I,O\},
+```text
+Power System P
+↔
+Electrified Transportation System T_e
 ```
 
-where $P,T$ are the physical Power and Transportation systems and $I,O$ are the informational and organizational layers.
+Active scientific focus:
 
-The canonical state is
+```text
+thermal interdependency
++ physical state
++ time
++ electricity/mobility consequence
+```
+
+EVSE belongs to `T_e`. Interface/coupling variables do not form a third physical infrastructure system.
+
+## Active mathematical orientation
 
 ```math
-Y(t)=
+X^{th}(t)
+=
 \begin{bmatrix}
-x_P(t)\\
-x_T(t)\\
-z_I(t)\\
-z_O(t)
-\end{bmatrix}.
+X_P^{th}(t)\\
+Z_{PT}^{th}(t)\\
+X_{T_e}^{th}(t)
+\end{bmatrix},
 ```
 
-The computational chain supported by this directory is
+with primary outputs
 
 ```math
-\mathbb I
-\rightarrow
-F_{\mathcal G}^{m}
-\rightarrow
-(\widehat Y,\mathcal U,u)
-\rightarrow
-\mathfrak R_T
-\rightarrow
-(a_k,\Delta\mathfrak R,\Delta\mathbf J_{\rm sus})
-\rightarrow
-\mathcal A_{R,S}^{\star}.
+\tau_i^C,
+\qquad
+\delta_{ij}^{th},
+\qquad
+Q_P(t),
+\qquad
+Q_T(t).
 ```
 
-## What belongs here
+## Legacy scaffold rule
 
-| Content | Purpose |
-|---|---|
-| Julia scaffold | transparent toy P–T–I–O coupled dynamics for software QA |
-| Python geometry utilities | finite-dimensional viability/geometry baselines and smoke tests |
-| configuration/schema files | machine-readable contracts aligned with the frozen framework |
-| CI checks | syntax, configuration, rendering and scientific-drift checks |
+Existing P–T–I–O, viability, seven-stage, sustainability, and decision code in this directory is retained as **software-QA/provenance scaffolding only**.
 
-## What does **not** belong here
+It may be used to test:
+- syntax;
+- interfaces;
+- numerical utilities;
+- reproducibility;
+- visualization plumbing.
 
-This folder must not reintroduce superseded P–W–T–SW, waste–drainage, or other historical architectures. Historical models remain in Git history/archive only.
+It does not define:
+- active thesis ontology;
+- active research questions;
+- active hypotheses;
+- active thermal state variables;
+- final scientific results.
 
-The toy code in this folder is **not a calibrated case study and not thesis evidence**. It exists to test software interfaces, notation, numerical plumbing and reproducibility before the validated numerical demonstrator is specified.
+## Admission rule
+
+A computational component becomes part of the active thesis model only after it is explicitly aligned with the thermal-only scope and its equations, parameters, units, thresholds, boundary conditions, verification, validation, uncertainty treatment, and provenance are qualified.
+
+```text
+software scaffold ≠ validated scientific model
+```
