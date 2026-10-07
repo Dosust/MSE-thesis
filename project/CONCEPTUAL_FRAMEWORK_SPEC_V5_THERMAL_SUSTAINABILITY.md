@@ -4,12 +4,12 @@
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
 **State-time authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
+**State-time alignment date:** 2026-10-08  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
-**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Supersedes for active conceptual work:** `CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
 
 ## 1. Purpose
