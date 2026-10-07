@@ -2,9 +2,10 @@
 
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
-**Current scope:** [`../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) + [`../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**Current scope:** [`../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) + [`../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**State-time definitions:** [`../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
 **Objective authority:** [`../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
-**Status date:** 2026-10-07
+**Status date:** 2026-10-08
 
 ## Governing distinction
 
@@ -28,6 +29,19 @@ Extreme heat
 
 State and time are the primary analytical dimensions.
 
+## Canonical state-time distinction
+
+```text
+State = current modeled condition needed to determine subsequent evolution.
+Time = independent variable through which states, transitions, propagation,
+       service consequences, and—where modeled—recovery/degradation are quantified.
+
+full physical state space ≠ active reduced thesis state vector
+SOC = energy state, not thermal state
+aging/degradation may be a slow state
+state ≠ capability ≠ service
+```
+
 ## Current chapter architecture
 
 | Chapter | Current intended scientific output |
@@ -42,15 +56,19 @@ State and time are the primary analytical dimensions.
 
 ## Chapter 3 mathematical spine
 
-```math
+\`\`\`math
 H(t)
-ightarrow
-X^{th}(t)
-ightarrow
+\rightarrow
+X(t)
+\rightarrow
+C(t)
+\rightarrow
 Z_{PT}^{th}(t)
-ightarrow
-{\tau_i^C,\delta_{ij}^{th},Q_P(t),Q_T(t)}.
-```
+\rightarrow
+X_{receiver}(t)
+\rightarrow
+\{\tau_i^C,\delta_{ij}^{th},Q_P(t),Q_T(t)\}.
+\`\`\`
 
 ## Chapter 4 methodological spine
 
@@ -79,11 +97,12 @@ Earlier seven-stage, broad P–T–I–O, RQ/SO/H, viability, sustainability, an
 ## Current scientific entry points
 
 - [Thermal interdependency scope](../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)
-- [Thermal state-time scope amendment](../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)
+- [Thermal state-time scope amendment](../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)
+- [Canonical state-time definitions](../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)
 - [Thermal objectives](../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)
 - [Electrified Transportation boundary](../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)
-- [Thermal conceptual framework](../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)
-- [Thermal mathematical framework](../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)
+- [Thermal/resilience/sustainability conceptual framework](../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)
+- [Thermal/resilience/sustainability mathematical framework](../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)
 - [Current authority index](../project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md)
 
 ## Preservation rule
