@@ -18,7 +18,7 @@ Physical core:
 
 Canonical analytical chain:
 
-`Extreme heat → thermal physical state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity + mobility service consequence → Improve / Adapt / Restore → Learn`
+`Extreme heat → thermal physical state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity + mobility service consequence`
 
 State and time are the primary analytical dimensions.
 
