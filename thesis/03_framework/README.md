@@ -1,22 +1,32 @@
 # Chapter 3 — Conceptual and Mathematical Framework
 
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Current-scope authority:** [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
-**Framework specification:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md)  
-**Status:** CURRENT WORKING FRAMEWORK  
-**Date:** 2026-10-06
+**Current-scope authority:** [`../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**State-time definition authority:** [`../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
+**Conceptual framework:** [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)  
+**Mathematical framework:** [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)  
+**Status:** CURRENT ACTIVE FRAMEWORK  
+**Date:** 2026-10-08
 
 ## Purpose
 
-Derive a mathematically traceable **state-time framework** for how extreme heat changes selected physical states over time, how qualified Power–Transportation interfaces transmit consequences, and how those consequences affect electricity and mobility services and engineering interventions.
+Chapter 3 formalizes how extreme heat changes selected Power and Electrified-Transportation states through time, how qualified thermal interdependencies transmit consequences, how those consequences affect electricity and mobility services, and how service trajectories support resilience interpretation and bounded downstream sustainability assessment.
 
-The framework is derived from mathematics and mechanism, not from a preselected picture.
+## Required section
 
----
+- [3.1 Canonical State-Time Definitions](03_01_state_time_definitions.md)
 
 ## System boundary
 
-### External environment
+```text
+Power System P
+↔
+Electrified Transportation System T_e
+```
+
+EVSE belongs to `T_e`. The cross-system coupling object does not form a third physical infrastructure system.
+
+## External forcing
 
 ```math
 H(x,t)
@@ -24,190 +34,150 @@ H(x,t)
 
 represents extreme-heat forcing.
 
-### System of interest
-
-Selected:
-
 ```text
-Power P
-+
-Physical Interfaces I_PT
-+
-Battery-Electric Road Transportation T
+external forcing ≠ internal system state
 ```
 
-Common heat exposure is **not** itself an interdependency.
+## State architecture
 
----
+The thesis distinguishes the full physical state space from the active reduced model state.
 
-## Structural architecture
-
-```text
-P ↔ I_PT ↔ T
+```math
+X(t)
+=
+\begin{bmatrix}
+X_P^{th}(t)\\
+X_{T_e}^{th}(t)\\
+X_{T_e}^{en}(t)\\
+X^{deg}(t)
+\end{bmatrix}_{active}.
 ```
 
-Every direction must have an independently justified exchanged quantity.
+Only dynamically necessary and evidence-supported blocks are activated.
 
 Examples:
 
 ```text
-P → I_PT      available electrical power / capacity
-I_PT → P      charging load / current demand
-I_PT → T      delivered charging capability
-T → I_PT      vehicle arrival / charging demand
+thermal state: transformer top-oil / hot-spot temperature, EVSE temperature
+energy state: SOC
+slow degradation state: transformer insulation aging/health, only if materially relevant
 ```
 
----
-
-## State architecture
+## Coupling architecture
 
 ```math
-X(t)=[X_P^\top,Z^\top,X_T^\top]^\top.
+Z_{PT}^{th}(t)
 ```
 
-- `X_P(t)` = selected Power states;
-- `Z(t)` = selected interface states;
-- `X_T(t)` = selected battery-electric transport states.
+represents the thermally relevant cross-system exchange, constraint, or interface condition.
 
-`I_PT` (architecture) and `Z(t)` (state) are distinct.
+By default it is an algebraic coupling object:
 
----
+```math
+Z_{PT}^{th}(t)
+=
+\Psi(X,H,u;\theta_Z).
+```
+
+It becomes an interface state only when independent dynamics/memory are physically required.
 
 ## Dynamics
 
 ```math
-\dot X=F(X,H,u;\theta).
-```
-
-Selected components/interfaces retain their own governing physics:
-
-```math
-\dot X_i=f_i(X_i,H,L_i,Z_{ji},u_i;\theta_i).
+\dot X(t)
+=
+F(X,H,u;\theta).
 ```
 
 Use **minimum sufficient physics**.
 
----
-
-## Constraints and critical transition
+## Capability mapping
 
 ```math
-g_i(X_i,t)\le 0.
+C(t)=\mathcal C(X(t),H(t);\theta_C).
 ```
+
+```text
+state ≠ capability
+```
+
+## Critical transition
+
+For a declared and evidence-supported boundary:
 
 ```math
-\tau_i^C=\inf\{t:g_i(X_i(t),t)=0\}.
+\tau_i^C
+=
+\inf\{t:g_i(X_i(t),H(t),t)=0\}.
 ```
 
-Each threshold must have explicit physical/operational meaning and evidence.
-
----
+A temperature crossing is not automatically a critical transition unless the boundary has physical or operational meaning.
 
 ## Propagation timing
 
-Propagation is not topology alone.
-
-For an admitted event relation:
+For a qualified directional mechanism:
 
 ```math
-\delta_{ij}=\tau_j^{response}-\tau_i^{transition}.
+\delta_{ij}^{th}
+=
+t_j^{response}
+-
+\tau_i^C.
 ```
 
-Before using `δ_ij`, define:
-- source event;
-- target response;
-- interface/mechanism;
-- direction;
-- timescale;
-- service consequence.
-
----
+Propagation delay is not graph distance and is not inferred from correlation alone.
 
 ## Service mapping
 
 ```text
-physical state
-→ functional capability
-→ service
+physical / operational state
+→ capability
+→ cross-system consequence
+→ electricity or mobility service
 ```
-
-Current service objects:
 
 ```math
 Q_P(t),\qquad Q_T(t).
 ```
 
-Exact service metrics remain **OPEN**.
-
----
-
-## Parallel derived analyses
-
-Do not impose false serial dependence:
-
-```math
-X(t)
-\rightarrow
-\begin{cases}
-\tau_i^C\\
-\delta_{ij}\\
-Q_P(t),Q_T(t)
-\end{cases}
+```text
+state ≠ capability ≠ service
 ```
 
----
-
-## Engineering interventions
-
-### Improve
-```math
-\theta\rightarrow\theta'.
-```
-
-### Adapt
-```math
-u_A(t).
-```
-
-### Restore
-```math
-u_R(t).
-```
-
-### Learn
-Use observations, validation, intervention outcomes, and recovery evidence to revise future models and design decisions.
-
----
-
-## Mathematical-visualization rule
-
-Every framework figure must follow:
+## Temporal distinctions
 
 ```text
-formal model
-→ declared visual encoding
-→ deterministic or verified rendering
+heat-event onset / exposure duration
+≠ critical transition time
+≠ interdependency propagation delay
+≠ service-disruption onset
+≠ operational departure deadline
+≠ recovery time
+≠ degradation / aging horizon
 ```
 
-Use:
-- `../../.github/skills/engineering-framework-design/SKILL.md`
-- `../../.github/skills/scientific-diagram-design/SKILL.md`
-- `../../.github/skills/mathematical-visualization-design/SKILL.md`
+## Resilience and sustainability
 
-No arrow, color, icon, shape, geometry, or motion is admitted without a declared scientific purpose.
+Resilience is interpreted from service trajectories through time under `CANONICAL_RESILIENCE_DEFINITION_V1.md`.
 
----
+Sustainability is a bounded downstream assessment under `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience ≠ Sustainability
+```
 
 ## Exit gate
 
 Chapter 3 is ready only when:
 
-- exact charging context is frozen;
-- selected state variables and units are defined;
-- directional interface exchanges are qualified;
+- exact charging/application context is frozen;
+- admitted state variables and units are defined;
+- forcing and initial conditions are defined;
+- directional thermal mechanisms are qualified;
+- coupling objects are classified as algebraic or dynamic;
 - governing equations and parameters are evidence-supported;
-- thresholds/constraints are defensible;
+- thresholds/capability laws are defensible;
 - service mappings are operationalized;
-- intervention targets are explicit;
-- assumptions and validity domains are recorded;
-- all figures pass semantic, mathematical, and visual QA.
+- transition, propagation, and any recovery/degradation times are precisely defined;
+- assumptions, uncertainty, and validity domains are recorded;
+- figures pass semantic, mathematical, and visual QA.
