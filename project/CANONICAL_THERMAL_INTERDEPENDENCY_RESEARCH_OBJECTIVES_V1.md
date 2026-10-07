@@ -1,0 +1,47 @@
+# Canonical Thermal-Interdependency Research Objectives V1
+
+**Status:** CANONICAL — FROZEN ACTIVE RESEARCH OBJECTIVES  
+**Effective date:** 2026-10-07  
+**Scope authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
+**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+
+## General Research Objective
+
+> **To characterize and model thermal interdependencies between the Power System and the Electrified Transportation System under extreme heat, and to quantify how their consequences evolve through physical state and time.**
+
+## Specific Research Objectives
+
+### SO1 — Identify and qualify
+
+> **Identify and qualify the thermally sensitive physical states and directional thermal interdependency mechanisms connecting the Power System and the Electrified Transportation System.**
+
+### SO2 — Model state-time evolution
+
+> **Develop a physics-based state-time model of the qualified thermal interdependencies and their propagation under extreme heat.**
+
+### SO3 — Quantify consequences
+
+> **Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences.**
+
+## Objective chain
+
+```text
+Identify and qualify
+→ Model
+→ Quantify consequences
+```
+
+## Feasibility rule
+
+The objectives do not require:
+- modeling every component in the canonical Electrified Transportation System;
+- representing every Power–Transportation dependency;
+- modeling non-thermal interdependencies;
+- optimizing all resilience interventions;
+- broad sustainability or economic modeling.
+
+Only the minimum sufficient physical states, parameters, thresholds, and coupling quantities needed to answer the thermal-interdependency state-time problem are activated.
+
+## Research-question status
+
+The objectives above are frozen. Final research-question wording and hypotheses must remain consistent with this three-objective thermal-only contract and require separate versioned authority when frozen.
