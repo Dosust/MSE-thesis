@@ -10,7 +10,7 @@
 Authorities:
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
-- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+- `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 > **The thesis focuses only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time.**
 
@@ -26,7 +26,7 @@ Presentation rules:
 
 ## Canonical state-time definition — FROZEN 2026-10-08
 
-Authority: `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+Authority: `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 > **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
 
