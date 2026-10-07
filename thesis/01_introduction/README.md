@@ -10,6 +10,7 @@
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 - `../../project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `../../project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+- `../../project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
 - `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 - `../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
@@ -92,7 +93,7 @@ Engineering Response
 Dimension families:
 
 ```text
-Environmental → energy use/losses; GHG emissions; material/resource burden
+Environmental → energy use; energy efficiency; electrical/conversion losses; GHG emissions; material/resource burden
 Economic → operating; maintenance/replacement; intervention; service-disruption cost
 Social → access; continuity; affordability; equity; safety
 ```
@@ -107,12 +108,23 @@ Measured Sustainability Indicator
 
 Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
 
+## Canonical effectiveness and energy-efficiency placement
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Effectiveness evaluates whether an engineering response maintains or recovers required service. Energy efficiency evaluates useful service relative to energy input and is treated as an environmental-sustainability indicator when measurable.
+
 ## Permanent distinctions
 
 ```text
 common heat exposure ≠ thermal interdependency
 connection ≠ directional dependency
 thermal state ≠ capability ≠ service ≠ resilience ≠ sustainability
+effectiveness ≠ energy efficiency ≠ sustainability
+effective resilience response ≠ sustainable response
 transition time ≠ propagation delay ≠ recovery time
 simulation ≠ validation
 ```

@@ -1,6 +1,7 @@
 ## 1.5 Sustainable Engineering Significance
 
-**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 The Sustainable Engineering significance of the thesis lies in connecting the state-time consequences of thermal interdependencies to both **resilience** and a **bounded sustainability assessment** of electricity and mobility service.
 
@@ -25,7 +26,9 @@ The same three sustainability dimensions are used in both pathways:
 
 ```text
 Environmental
-→ energy use / losses
+→ energy use
+→ energy efficiency
+→ electrical / conversion losses
 → GHG emissions
 → material / resource burden
 
@@ -51,6 +54,13 @@ SDG relevance is interpreted only after measurable sustainability indicators are
 Measured Sustainability Indicator
 → Sustainability Dimension
 → Relevant SDG Target / Indicator
+```
+
+Effectiveness is evaluated in the resilience / engineering-response layer: it asks whether Improve, Adapt, or Restore maintains or recovers required service. Energy efficiency is evaluated in the environmental sustainability dimension: it relates useful service delivered to energy input within a declared boundary.
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
 ```
 
 The thesis therefore does not equate resilience with sustainability:

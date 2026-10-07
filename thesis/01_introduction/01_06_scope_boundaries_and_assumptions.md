@@ -6,7 +6,8 @@ The active thesis scope is controlled by:
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`;
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`;
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`;
-- `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+- `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`;
+- `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`.
 
 | Boundary | Included | Outside active analytical scope |
 |---|---|---|
@@ -18,6 +19,8 @@ The active thesis scope is controlled by:
 | Transportation application | Battery-electric road transport with grid-connected charging | All transportation modes |
 | Modeling fidelity | Minimum sufficient thermal physics | Full component-detail modeling by default |
 | Sustainability | Two bounded pathways: direct thermal/service consequences and engineering-response consequences, each across environmental, economic, and social dimensions | Broad sustainability optimization, full LCA/social LCA, economy-wide analysis, automatic scalar aggregation |
+| Effectiveness | Resilience / engineering-response assessment | Sustainability dimension or energy-efficiency substitute |
+| Energy efficiency | Environmental sustainability indicator when relevant and measurable | Resilience-effectiveness substitute |
 
 A thermal interdependency is admitted only when temperature or thermal state changes the activation, magnitude, capacity, timing, or consequence of a directional cross-system dependency.
 

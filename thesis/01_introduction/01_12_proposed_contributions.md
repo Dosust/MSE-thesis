@@ -1,6 +1,7 @@
 ## 1.12 Proposed Contributions
 
-**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+**Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 The proposed contributions are bounded by the thermal-only scope and remain conditional until supported by completed evidence and validation.
 
@@ -45,3 +46,15 @@ Measured Sustainability Indicator
 → Sustainability Dimension
 → Relevant SDG Target / Indicator
 ```
+
+
+### Effectiveness and energy-efficiency interpretation
+
+Effectiveness, where an engineering response is tested, is interpreted within the resilience / engineering-response layer. Energy efficiency, where relevant and measurable, is interpreted within environmental sustainability.
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
+These placements are interpretation rules, not separate novelty claims or additional primary objectives.
