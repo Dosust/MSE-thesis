@@ -9,6 +9,7 @@
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
+5. `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 5. `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
 6. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 7. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
@@ -32,6 +33,7 @@
 | active hazard: extreme heat | **FROZEN — CURRENT** |
 | active interdependency class: thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
+| canonical state/time definitions | **FROZEN — CANONICAL** |
 | state definition | **FROZEN — CANONICAL MINIMUM-SUFFICIENT DYNAMIC STATE INTERPRETATION** |
 | time definition | **FROZEN — CANONICAL EVOLUTION / TRANSITION / PROPAGATION INTERPRETATION** |
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
@@ -61,6 +63,8 @@
 - `tools/thermal_paper_school_v2.py` — executable audit helper for limitation coding, scope admission, and state-admission checks.
 
 ## Current framework authorities
+
+- `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md` — frozen definitions of state classes, active reduced state, forcing/capability/service distinctions, and temporal quantities.
 
 - `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability conceptual framework.
 - `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability mathematical framework.
