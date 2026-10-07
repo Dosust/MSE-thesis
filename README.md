@@ -13,7 +13,7 @@
 **Current mathematical framework:** [`project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)  
 **Electrified Transportation scope authority:** [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)  
 **Current authority index:** [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
-**Current direction date:** 2026-10-07
+**Current direction date:** 2026-10-08
 
 > **Repository rule:** current work, historical work, and superseded work remain distinguishable. Earlier whole versions are preserved for provenance and are not deleted when scope changes.
 
@@ -25,12 +25,16 @@
 
 State/time semantics are frozen in [`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md).
 
-```text
-State = minimum evolving physical / operational / energy / degradation variables
-        needed to characterize the current modeled condition and predict what happens next.
+> **State in this thesis refers to the minimum set of evolving physical, operational, energy, or degradation variables required to characterize the current modeled condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. Thermal states are primary; non-thermal states are included only when required to represent the thermal interdependency or its consequences.**
 
-Time = independent variable through which state evolution, transitions, propagation,
-       service consequences, and—where modeled—recovery/degradation are quantified.
+> **Time in this thesis is the independent variable through which those states evolve and through which critical thermal transitions, interdependency propagation, service consequences, and—where explicitly modeled—recovery and degradation are ordered and quantified.**
+
+Short form:
+
+```text
+State: What modeled condition is the system in now, such that we can determine what happens next?
+Time: When and how does that condition evolve, cross a meaningful boundary, propagate, and affect service?
+State + Time: How thermally driven system conditions evolve and generate coupled consequences.
 ```
 
 Permanent distinctions:
@@ -42,6 +46,7 @@ SOC = energy state, not thermal state
 aging/degradation can be a slow state, but is not automatically active
 state ≠ capability ≠ service
 coupling quantity ≠ state unless independent dynamics require it
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time ≠ aging/degradation horizon
 ```
 
 ## Current thesis direction
@@ -116,32 +121,6 @@ fleet/depot charging
 ```
 
 ---
-
-## Canonical meaning of state and time
-
-> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
-
-> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
-
-Concise interpretation:
-
-```text
-State = what condition is the modeled system in?
-Time = when and how state changes and consequences propagate.
-State + Time = dynamic physical evolution and timing of coupled service consequences.
-```
-
-Permanent distinctions:
-
-```text
-external forcing ≠ system state
-physical quantity ≠ state variable ≠ active thesis state
-thermal state ≠ operational/energy state
-state ≠ capability ≠ service
-transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
-```
-
-The exact active state set remains **OPEN**. Candidate quantities such as transformer top-oil/hottest-spot temperature, EVSE internal temperature, battery temperature, and SOC are admitted only when required by the qualified mechanism and minimum-sufficient-physics rule.
 
 ## State-time mathematical spine
 
