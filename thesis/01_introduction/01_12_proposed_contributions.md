@@ -1,6 +1,6 @@
 ## 1.12 Proposed Contributions
 
-**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`  
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
