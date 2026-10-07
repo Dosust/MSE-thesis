@@ -58,6 +58,33 @@ Permanent rules:
 - a service deficit occurs where (Q_k(t) < Q_k^{req}(t));
 - Improve, Adapt, and Restore are engineering response classes supporting resilience analysis, not the definition of resilience itself.
 
+## Canonical sustainability assessment
+
+For active sustainability or SDG work, use `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+
+Use one sustainability framework with two pathways:
+
+```text
+Pathway 1: thermal interdependency → service consequence → environmental / economic / social consequence
+Pathway 2: engineering response → changed state/capability/service → environmental / economic / social consequence
+```
+
+Use only measurable, scope-relevant indicators. Preserve:
+
+```text
+Resilience improvement ≠ sustainability improvement
+Direct sustainability consequence ≠ engineering-response sustainability consequence
+Measured indicator ≠ sustainability dimension ≠ SDG target
+```
+
+SDG linkage is only:
+
+```text
+Measured Sustainability Indicator → Sustainability Dimension → Relevant SDG Target / Indicator
+```
+
+Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
+
 ## Canonical thermal-interdependency focus
 
 For every active thesis, model, diagram, presentation, Chapter-I, research-question, objective, method, result, discussion, or conclusion task, load:
