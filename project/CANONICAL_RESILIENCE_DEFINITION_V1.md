@@ -1,0 +1,107 @@
+# Canonical Resilience Definition V1
+
+**Status:** CANONICAL — FROZEN THESIS DEFINITION  
+**Effective date:** 2026-10-07  
+**Repository:** `Dossiya-SE/MSE-thesis`  
+**Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
+**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+
+## 1. Canonical definition
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+For thesis use, resilience is not the survival of a component. It is evaluated at the service level and through time.
+
+## 2. Canonical state-time logic
+
+```text
+Extreme Heat
+→ Thermal State Change
+→ Capability Change
+→ Thermal Interdependency
+→ Service Degradation
+→ Resilience Response
+```
+
+Resilience is therefore interpreted only after the thermal-state, capability, interdependency, and service relationships are defined.
+
+## 3. Service-level condition
+
+Electricity service:
+
+```math
+Q_P(t) \ge Q_P^{req}(t).
+```
+
+Mobility service:
+
+```math
+Q_T(t) \ge Q_T^{req}(t).
+```
+
+If a required service falls below its requirement,
+
+```math
+Q_k(t) < Q_k^{req}(t),
+```
+
+the system experiences a service deficit for service `k`.
+
+## 4. Resilience question
+
+> **Can required service be maintained, and if not, how quickly and effectively can it be recovered?**
+
+## 5. Engineering responses
+
+The thesis uses three engineering response classes:
+
+```text
+Improve → Adapt → Restore
+```
+
+- **Improve:** acts before extreme heat to increase thermal capability or reduce vulnerability.
+- **Adapt:** changes operation while thermal states are evolving.
+- **Restore:** returns degraded electricity or mobility service to an acceptable level after disruption.
+
+These response classes support resilience analysis; they do not redefine resilience itself.
+
+## 6. State-time evaluation
+
+Resilience is fundamentally evaluated through the service trajectory:
+
+```math
+Q(t).
+```
+
+Candidate characterizing quantities include:
+
+- minimum service level;
+- service deficit;
+- disruption duration;
+- recovery time.
+
+Exact metrics remain model- and case-dependent until independently frozen.
+
+## 7. Permanent distinction
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience
+```
+
+A transformer, EVSE, battery, vehicle, or another component may remain physically operational while required electricity or mobility service has become unacceptable. Component survival alone therefore does not establish resilience.
+
+## 8. One-sentence thesis interpretation
+
+> **Resilience in this thesis is the state-time ability of the coupled Power–Electrified Transportation system to maintain or recover required electricity and mobility services under the consequences of thermal interdependencies caused by extreme heat.**
+
+## 9. Terminology and use rule
+
+Use this definition consistently in thesis prose, objectives, research questions, conceptual and mathematical frameworks, presentations, figures, results, discussion, and conclusions whenever resilience is defined or interpreted.
+
+Do not substitute component survival, component availability alone, robustness alone, reliability alone, or recovery time alone for resilience.
+
+Reliability and resilience remain distinct. Reliability may characterize the consistency or probability of acceptable service over a declared domain; resilience characterizes maintaining or recovering required service through disturbance and recovery over time.
+
+## 10. Reopen conditions
+
+This definition may be changed only through an explicit versioned amendment authorized by the user, supervisor/chair/committee direction, or a higher ASU/SSEBE requirement.
