@@ -8,8 +8,12 @@ This directory contains **small, auditable computational scaffolds** for the fro
 
 Canonical scientific authority remains in:
 
-- [`../../project/THESIS_SCOPE.md`](../../project/THESIS_SCOPE.md)
-- [`../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`](../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md)
+> Legacy P–T–I–O scaffolds in this directory do not redefine the active thesis scope. The current physical scope is Power + Electrified Transportation under the canonical scope authorities listed below.
+
+- [`../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)
+- [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)
+- [`../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`](../../project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md)
+- [`../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`](../../project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md)
 - [`../../project/MATHEMATICAL_FOUNDATION.md`](../../project/MATHEMATICAL_FOUNDATION.md)
 - [`../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`](../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md)
 
