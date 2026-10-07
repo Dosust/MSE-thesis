@@ -1,51 +1,27 @@
 ## 1.11 Research Hypotheses and Test Logic
 
-The thesis retains five primary confirmatory hypotheses. RQ1 and RQ2 establish the structural and evidence prerequisites required by the downstream tests rather than requiring additional hypotheses.
+**Current status:** final hypotheses are **OPEN**.
 
-| HypothesisPrimary comparisonScientific purposeCurrent status |                                                                       |                                                                                     |            |
-| ------------------------------------------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------- |
-| **H1**                                                       | `M_2` vs. `M_1`, with `M_0` reference                                 | Test incremental value of dynamic coupling                                          | NOT TESTED |
-| **H2**                                                       | Matched information/organization contrasts                            | Test effects on estimation, feasible action, response, and recovery                 | NOT TESTED |
-| **H3**                                                       | Conventional service/recovery vs. viability–reachability augmentation | Test incremental resilience information                                             | NOT TESTED |
-| **H4**                                                       | Qualified intervention alternatives                                   | Test differences in resources, efficiency, and admitted sustainability consequences | NOT TESTED |
-| **H5**                                                       | Resilience-only vs. joint decision evaluation                         | Test decision-set, dominance, or regret change                                      | NOT TESTED |
+No hypothesis is frozen until the final thermal research-question wording, thermally active state variables, thermal thresholds, service metrics, comparators, and validation data are specified.
 
-### H1 — Dynamic Causal Coupling
+Any future hypothesis must remain inside the frozen thesis scope:
 
-> **Under matched disturbances, initial conditions, service requirements, and exogenous conditions, an evidence-qualified dynamic Power–Transportation coupling representation provides meaningful incremental explanatory or predictive information for prespecified service-loss, propagation, cascade, or recovery outcomes relative to a corresponding static-coupling representation.**
-
-The primary comparison is `M_2` against `M_1`, with `M_0` retained as the uncoupled reference.
-
-### H2 — Information, Organization, and Feasible Control
-
-> **Under matched physical conditions and disturbances, changes in information availability and organizational conditions produce meaningful differences in state-estimation quality, feasible action, response timing, service trajectories, recovery, or downstream resilience outcomes.**
-
-The comparisons are interpreted as matched modeled contrasts and are not automatically interpreted as identified real-world causal effects.
-
-### H3 — Viability and Recovery-Reachability Information
-
-> **For the declared Power–Transportation test domain, uncertainty-aware viability and recovery-reachability information provides meaningful incremental predictive or decision-relevant information about service maintainability and acceptable recovery beyond prespecified conventional service and recovery measures.**
-
-H3 therefore tests incremental engineering information rather than assuming that viability and reachability are superior by definition.
-
-### H4 — Intervention Consequences
-
-> **Across the prespecified intervention and scenario set, at least two resilience-effective engineering interventions produce materially different resource requirements, resource efficiencies, or admitted sustainability consequences under the declared comparison rule.**
-
-Resilience effect, resource requirement, resource efficiency, and sustainability consequence remain separate objects throughout this test.
-
-### H5 — Joint Engineering Decision
-
-> **Under the declared uncertainty domain, incorporating resource efficiency and admitted sustainability consequences together with feasibility and uncertainty materially changes the admissible or nondominated engineering decision set, dominance relations, or decision regret relative to resilience-only evaluation.**
-
-The analysis seeks a defensible decision set. It does not assume a universal scalar objective or universally optimal intervention.
-
-The confirmatory traceability is
-
-```math
-\boxed{ RQ_3/SO_3\rightarrow H_1,\quad RQ_4/SO_4\rightarrow H_2,\quad RQ_5/SO_5\rightarrow H_3,\quad RQ_6/SO_6\rightarrow H_4,\quad RQ_7/SO_7\rightarrow H_5. }
+```text
+thermal interdependency
++ physical state
++ time
++ electricity/mobility consequence
 ```
 
-RQ1/SO1 and RQ2/SO2 provide the structural and dependency-qualification prerequisites supporting H1 and the downstream analyses.
+The former H1–H5 package covering generic dynamic coupling, Information/Organization, viability/reachability, sustainability consequences, and joint decision evaluation is historical/provenance material for the active thesis.
 
-If evidence, data, model readiness, or another prerequisite prevents a confirmatory experiment from being executed, the appropriate status is **NOT TESTED**, not automatic rejection of the hypothesis.
+A future confirmatory hypothesis may test a thermal mechanism or its state-time consequence only after:
+
+1. the directional thermal mechanism is qualified;
+2. the relevant thermal state and threshold are defined;
+3. the comparator is prespecified;
+4. the service consequence is operationalized;
+5. numerical, observational, and engineering materiality criteria are independently justified;
+6. the validation domain is declared.
+
+No hypothesis will be written to presuppose that a thermal effect exists or is material.
