@@ -4,8 +4,9 @@ The active thesis scope is controlled by:
 
 - `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`;
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`;
-- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`;
-- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
+- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`;
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`;
+- `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
 
 | Boundary | Included | Outside active analytical scope |
 |---|---|---|
@@ -16,7 +17,7 @@ The active thesis scope is controlled by:
 | Active consequences | Electricity + mobility service | Economy-wide welfare/GDP modeling |
 | Transportation application | Battery-electric road transport with grid-connected charging | All transportation modes |
 | Modeling fidelity | Minimum sufficient thermal physics | Full component-detail modeling by default |
-| Sustainability | Only bounded consequences directly required by a thermal-resilience action | Broad sustainability optimization / full LCA |
+| Sustainability | Two bounded pathways: direct thermal/service consequences and engineering-response consequences, each across environmental, economic, and social dimensions | Broad sustainability optimization, full LCA/social LCA, economy-wide analysis, automatic scalar aggregation |
 
 A thermal interdependency is admitted only when temperature or thermal state changes the activation, magnitude, capacity, timing, or consequence of a directional cross-system dependency.
 
@@ -27,6 +28,16 @@ common heat exposure ≠ thermal interdependency
 ```
 
 The Electrified Transportation System includes EVSE and the physical charging connection according to the canonical system-boundary definition. System-scope membership does not require equal model fidelity for every component.
+
+Sustainability comparison must preserve the same indicator definition, unit, accounting boundary, and time horizon across the reference, extreme-heat, and engineering-response cases. Exact indicators, functional unit, and SDG targets remain OPEN until operationalized.
+
+The SDG interpretation rule is:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
 
 The principal temporal quantities are distinct:
 
