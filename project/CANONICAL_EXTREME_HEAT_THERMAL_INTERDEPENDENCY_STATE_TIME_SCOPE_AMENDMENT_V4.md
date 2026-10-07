@@ -2,7 +2,7 @@
 
 **Status:** CANONICAL — CURRENT ACTIVE SCOPE AMENDMENT  
 **Effective date:** 2026-10-07  
-**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Supersedes for active scope:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
@@ -209,7 +209,7 @@ This scope may be reopened only through explicit user/supervisor/chair/committee
 
 ### Canonical meaning of state and time
 
-Use `CANONICAL_STATE_TIME_DEFINITION_V1.md` for all active interpretation of state and time.
+Use `CANONICAL_STATE_TIME_DEFINITIONS_V1.md` for all active interpretation of state and time.
 
 > **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
 
