@@ -7,6 +7,7 @@
 **Current authorities:**
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
+- `../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 - `../../project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 - `../../project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
@@ -135,6 +136,20 @@ Energy Efficiency → Environmental Sustainability
 ```
 
 Effectiveness evaluates whether an engineering response maintains or recovers required service. Energy efficiency evaluates useful service relative to energy input and is treated as an environmental-sustainability indicator when measurable.
+
+## Canonical state-time definitions
+
+Chapter I uses `../../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+full physical state space ≠ active reduced thesis state vector
+external forcing ≠ internal state
+thermal state ≠ operational/energy state
+fast state ≠ slow degradation/health state
+SOC = energy state, not thermal state
+aging/degradation may be a state but is not automatically active
+state ≠ capability ≠ service
+```
 
 ## Permanent distinctions
 
