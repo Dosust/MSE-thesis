@@ -14,6 +14,21 @@ The active research architecture is deliberately short:
 
 The architecture follows the frozen objectives.
 
+### State-time definition used by this architecture
+
+State/time semantics are controlled by `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+State:
+minimum dynamically necessary physical / operational / energy / degradation variables.
+
+Time:
+independent variable through which state evolution, transitions, propagation,
+service consequences, and—where modeled—recovery/degradation are quantified.
+```
+
+Aging/degradation can be a legitimate slow state. SOC can be a legitimate energy state. Neither is automatically included in the active state vector. `Z_{PT}^{th}` is a coupling object by default and is treated as an interface state only when the selected physics gives it independent dynamic memory.
+
 ### Canonical state-time semantics
 
 State is the minimum set of evolving physical or operational variables required to determine the adopted model trajectory. Thermal states are primary; non-thermal operational states enter only where required by the thermal interdependency or service consequence.
@@ -48,13 +63,16 @@ Represent the evolution of the thermally active Power states, Electrified-Transp
 Structural form:
 
 ```math
-X^{th}(t)=
+X(t)=
 \begin{bmatrix}
 X_P^{th}(t)\\
-Z_{PT}^{th}(t)\\
-X_{T_e}^{th}(t)
-\end{bmatrix}.
+X_{T_e}^{th}(t)\\
+X_{T_e}^{en}(t)\\
+X^{deg}(t)
+\end{bmatrix}_{active},
 ```
+
+with only dynamically necessary and evidence-supported state blocks activated. The cross-system coupling object is represented separately unless independent dynamics require it to be augmented into the state.
 
 ### Step 3 — Consequence quantification
 
