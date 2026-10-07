@@ -1,12 +1,13 @@
 # Conceptual Framework Specification V4 — Thermal Interdependency State-Time Focus
 
-**Status:** CANONICAL — CURRENT ACTIVE CONCEPTUAL FRAMEWORK  
+**Status:** SUPERSEDED FOR ACTIVE CONCEPTUAL WORK — RETAINED FOR PROVENANCE  
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
-**Supersedes for active conceptual work:** `CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
+**Superseded by:** `CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`  
+**Previously superseded:** `CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
 
 ## 1. Purpose
 
