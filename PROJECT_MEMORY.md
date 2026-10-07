@@ -2,27 +2,36 @@
 
 **Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
-**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
+**Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
+**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`  
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
 
-Current physical core:
+Permanent active thesis focus:
+
+> **The thesis focuses only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time.**
+
+Physical core:
 
 `Power System P ↔ Electrified Transportation System T_e`
+
+Canonical analytical chain:
+
+`Extreme heat → thermal physical state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity + mobility service consequence → Improve / Adapt / Restore → Learn`
+
+State and time are the primary analytical dimensions.
 
 Canonical Electrified Transportation scope:
 
 > **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
 
-Use the name **Electrified Transportation System**. Do not use “standards-defined” as part of the system name.
+Use **Electrified Transportation System**. Do not use “standards-defined” as part of the system name.
 
-Current direction:
+Use **qualify** only. Do not use “evidence-qualify.” Do not use **selected** as a filler adjective in objectives or scope statements.
 
-`Extreme heat → physical states → state-time dynamics → qualified P ↔ T_e propagation → electricity + mobility service → Improve / Adapt / Restore / Learn`
+Battery-electric road transportation and grid-connected charging remain bounded application subsets. Exact charging context, exact thermal states, service metrics, validation datasets, intervention set, and final narrowed objective/RQ/SO/H wording remain OPEN unless separately frozen.
 
-Battery-electric road transportation and grid-connected charging remain bounded application subsets. Exact charging context and final narrowed RQ/SO/H remain OPEN.
-
-The September seven-stage/RQ-H/P3/Austin material below is retained as historical/provenance and reusable scientific control logic. It must not override the current scope authorities.
+Historical broad seven-stage/RQ-H/P3/Austin material below is retained for provenance and reusable methods. It must not override the current thermal-interdependency scope.
 ---
 
 # Historical project-memory record below
