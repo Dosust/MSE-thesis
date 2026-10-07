@@ -16,7 +16,7 @@ V1 and V2 remain preserved for provenance.
 
 The active thesis workstream is:
 
-`Extreme heat → thermal physical state → thermal capability/constraint → Power ↔ Electrified Transportation thermal interdependency → state-time consequence → electricity + mobility service consequence → Improve / Adapt / Restore → Learn`
+`Extreme heat → thermal physical state → thermal capability/constraint → Power ↔ Electrified Transportation thermal interdependency → state-time consequence → electricity + mobility service consequence`
 
 State and time are the primary analytical dimensions.
 
@@ -49,7 +49,7 @@ The application subset does not redefine the thesis-wide Electrified Transportat
 
 ## 6. State-time mathematical spine
 
-`H(t) → X_th(t) → Z_PT(t) → {critical thermal transition time, thermal propagation timing, Q_P(t), Q_T(t)} → {Improve, Adapt, Restore}`
+`H(t) → X_th(t) → Z_PT(t) → {critical thermal transition time, thermal propagation timing, Q_P(t), Q_T(t)}`
 
 where:
 
@@ -74,21 +74,19 @@ Permanent distinctions:
 - transition time ≠ propagation time ≠ recovery time;
 - simulation ≠ validation.
 
-## 8. Engineering response
+## 8. Supporting engineering response boundary
 
-The thesis operational cycle remains:
+Engineering responses may be discussed or tested only when needed to interpret a thermal state-time consequence. They are **supporting analyses, not primary thesis objectives**.
 
-**Improve → Adapt → Restore → Learn → Improve**.
-
-Interventions are included only when they directly change thermal states, thermal capability, thermal-interdependency consequences, or electricity/mobility service outcomes.
+The active scientific chain ends at quantified electricity and mobility service consequences.
 
 ## 9. Sustainability boundary
 
-Sustainability is not a separate broad research domain. Sustainability consequences are evaluated only when they arise from the bounded resilience interventions and only within declared environmental, economic, or service boundaries supported by data.
+Broad sustainability assessment is outside the active analytical scope. Sustainable Engineering implications may be discussed only as bounded interpretation of the thermal findings; they do not constitute a separate modeled research domain.
 
 ## 10. Research-logic status
 
-The final narrowed General Objective, Specific Objectives, RQ/SO/H set, exact thermal states, service metrics, validation datasets, and intervention set remain **OPEN** until separately frozen.
+The General Objective and SO1–SO3 are **FROZEN** under `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`. Final research-question wording, hypotheses, exact thermal states, service metrics, validation datasets, and any optional supporting intervention set remain **OPEN** until separately frozen.
 
 This scope amendment creates no empirical result and no novelty claim.
 
