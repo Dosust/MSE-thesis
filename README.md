@@ -3,6 +3,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**Canonical state-time authority:** [`project/CANONICAL_STATE_TIME_DEFINITION_V1.md`](project/CANONICAL_STATE_TIME_DEFINITION_V1.md)  
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **Canonical resilience authority:** [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md)  
 **Canonical sustainability authority:** [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md)  
@@ -93,6 +94,32 @@ fleet/depot charging
 
 ---
 
+## Canonical meaning of state and time
+
+> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+
+> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+
+Concise interpretation:
+
+```text
+State = what condition is the modeled system in?
+Time = when and how state changes and consequences propagate.
+State + Time = dynamic physical evolution and timing of coupled service consequences.
+```
+
+Permanent distinctions:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+The exact active state set remains **OPEN**. Candidate quantities such as transformer top-oil/hottest-spot temperature, EVSE internal temperature, battery temperature, and SOC are admitted only when required by the qualified mechanism and minimum-sufficient-physics rule.
+
 ## State-time mathematical spine
 
 ```math
@@ -113,7 +140,7 @@ X_{th}(t)=[X_{P,th}^\top,X_{T_e,th}^\top]^\top.
 
 Where:
 
-- `H(t)` = extreme-heat forcing;
+- `H(t)` = extreme-heat forcing; it is an external input, not a Power- or Electrified-Transportation-system state;
 - `X_{P,th}(t)` = Power-system thermal states required by the model;
 - `X_{T_e,th}(t)` = Electrified Transportation thermal states required by the model;
 - `Z_{PT}(t)` = coupling quantities and conditions required to represent the thermal interdependency; this is not a third physical system;
