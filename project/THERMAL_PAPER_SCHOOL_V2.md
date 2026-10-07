@@ -3,7 +3,7 @@
 **Status:** ACTIVE READING / EVIDENCE-TRANSFER METHOD  
 **Effective date:** 2026-10-08  
 **Scope:** thermal Power–Electrified Transportation interdependencies; physical state; time; electricity/mobility consequence.  
-**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 ## Canonical state-time reading rule
 
