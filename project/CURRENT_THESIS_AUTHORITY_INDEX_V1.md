@@ -9,17 +9,18 @@
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
-5. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
-6. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
-7. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
-8. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
-9. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
-10. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
-11. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
-12. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-13. `project/RESEARCH_REASONING_PROTOCOL.md`
-14. `project/EGMIV_METHOD_V1.md`
-15. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+5. `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+6. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+7. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+8. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
+9. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+10. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
+11. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
+12. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
+13. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+14. `project/RESEARCH_REASONING_PROTOCOL.md`
+15. `project/EGMIV_METHOD_V1.md`
+16. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Current status matrix
 
@@ -31,6 +32,8 @@
 | active hazard: extreme heat | **FROZEN — CURRENT** |
 | active interdependency class: thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
+| state definition | **FROZEN — CANONICAL MINIMUM-SUFFICIENT DYNAMIC STATE INTERPRETATION** |
+| time definition | **FROZEN — CANONICAL EVOLUTION / TRANSITION / PROPAGATION INTERPRETATION** |
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
 | grid-connected EV charging context | **WORKING-FROZEN** |
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
@@ -61,6 +64,7 @@
 
 - `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability conceptual framework.
 - `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability mathematical framework.
+- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md` — frozen canonical meaning of state, active-state admission, and temporal quantities.
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md` — frozen service-level state-time definition of resilience.
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md` — frozen two-pathway sustainability assessment authority.
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
@@ -106,6 +110,29 @@ The controlling active scope is:
 The thesis studies **thermal interdependencies only** between the Power System and Electrified Transportation System and their consequences through **physical state and time**. Non-thermal interdependencies are outside the active analytical scope except as boundary conditions, constraints, or supporting variables strictly required to represent a thermal mechanism.
 
 The active general objective and three specific objectives are controlled by `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
+
+## Canonical state-time authority — 2026-10-08
+
+For every active use of **state**, **state variable**, **state-time**, **transition time**, or **propagation delay**, use `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+
+Canonical definitions:
+
+> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+
+> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+
+Preserve:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+Exact active state variables, capability laws, service metrics, event horizon, and propagation-identification procedures remain OPEN.
+
 
 
 ## Canonical resilience authority — 2026-10-07
