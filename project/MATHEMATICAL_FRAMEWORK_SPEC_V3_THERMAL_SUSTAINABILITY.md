@@ -1,0 +1,341 @@
+# Mathematical Framework Specification V3 — Thermal Interdependency, Resilience, and Two-Pathway Sustainability
+
+**Status:** CANONICAL — CURRENT ACTIVE MATHEMATICAL FRAMEWORK  
+**Effective date:** 2026-10-07  
+**Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**Supersedes for active mathematical work:** `MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+
+## 1. Purpose
+
+Formalize the active thermal-interdependency state-time problem and its downstream resilience and bounded two-pathway sustainability interpretation.
+
+## 2. Extreme-heat forcing
+
+Let
+
+```math
+H(x,t)
+```
+
+denote the external extreme-heat forcing field or time series required by the adopted models.
+
+```math
+H(x,t) \neq X(t).
+```
+
+External heat forcing is not itself a system state.
+
+## 3. Thermally active subsystem states
+
+```math
+X_P^{th}(t)
+```
+
+contains the Power-system states whose thermal dependence is required by the admitted mechanism.
+
+```math
+X_{T_e}^{th}(t)
+```
+
+contains the Electrified Transportation states whose thermal dependence is required by the admitted mechanism.
+
+```math
+\text{system-scope membership} \neq \text{mandatory detailed state}.
+```
+
+## 4. Thermal coupling object
+
+Define
+
+```math
+Z_{PT}^{th}(t)
+```
+
+as the thermally relevant cross-system exchanged quantities, constraints, or interface states required to represent a qualified directional thermal dependency.
+
+It is a mathematical coupling object, not a third physical infrastructure system.
+
+## 5. Coupled thermal state
+
+```math
+X^{th}(t)
+=
+\begin{bmatrix}
+X_P^{th}(t)\\
+Z_{PT}^{th}(t)\\
+X_{T_e}^{th}(t)
+\end{bmatrix}.
+```
+
+A general active representation is
+
+```math
+\dot X^{th}
+=
+F_{th}\!\left(X^{th},H,u;\theta\right).
+```
+
+No universal thermal law is assumed across heterogeneous components.
+
+## 6. Critical transition and propagation timing
+
+For a thermally relevant state or capability constraint
+
+```math
+g_i(X_i^{th},H,t)\le 0,
+```
+
+define
+
+```math
+\tau_i^C
+=
+\inf\{t:g_i(X_i^{th}(t),H(t),t)=0\}.
+```
+
+For an admitted source transition `i` and receiver response `j`,
+
+```math
+\delta_{ij}^{th}
+=
+t_j^{response}-\tau_i^C.
+```
+
+Transition time, propagation delay, and recovery time remain distinct.
+
+## 7. Service consequences
+
+```math
+Q_P(t)=G_P(X^{th}(t)),
+\qquad
+Q_T(t)=G_T(X^{th}(t)).
+```
+
+Required-service conditions are
+
+```math
+Q_P(t)\ge Q_P^{req}(t),
+\qquad
+Q_T(t)\ge Q_T^{req}(t).
+```
+
+A service deficit exists when
+
+```math
+Q_k(t)<Q_k^{req}(t).
+```
+
+## 8. Resilience interpretation
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Candidate service-trajectory descriptors include minimum service level, service deficit, disruption duration, and recovery time.
+
+```text
+Thermal State ≠ Capability ≠ Service ≠ Resilience
+```
+
+## 9. Sustainability vector
+
+Define the sustainability indicator vector
+
+```math
+\mathbf S
+=
+\begin{bmatrix}
+\mathbf S_{env}\\
+\mathbf S_{econ}\\
+\mathbf S_{soc}
+\end{bmatrix}.
+```
+
+Each block may contain more than one indicator. The vector is not automatically reduced to one scalar score.
+
+Representative indicator families are:
+
+```text
+Environmental: energy / losses, GHG emissions, material-resource burden
+Economic: operating, maintenance-replacement, intervention, service-disruption cost
+Social: access, continuity, affordability, equity, safety
+```
+
+Only indicators supported by the scope, data, and causal interpretation are activated.
+
+## 10. Three comparison cases
+
+Define:
+
+```math
+\mathbf S_0
+=
+\text{sustainability indicators for the reference/baseline case},
+```
+
+```math
+\mathbf S_H
+=
+\text{sustainability indicators under extreme heat without engineering response},
+```
+
+```math
+\mathbf S_A
+=
+\text{sustainability indicators under extreme heat with engineering response}.
+```
+
+All three cases must use the same indicator definition, units, accounting boundary, time horizon, and comparison convention.
+
+## 11. Pathway 1 — Direct sustainability consequence
+
+The direct sustainability consequence of the thermal disturbance is
+
+```math
+\Delta\mathbf S_H
+=
+\mathbf S_H-\mathbf S_0.
+```
+
+This pathway represents:
+
+```text
+Thermal Interdependency
+→ Electricity + Mobility Service Consequence
+→ Environmental + Economic + Social Consequence
+```
+
+## 12. Pathway 2 — Engineering-response sustainability consequence
+
+For an engineering response `a` from Improve, Adapt, or Restore, the response consequence is
+
+```math
+\Delta\mathbf S_A
+=
+\mathbf S_A-\mathbf S_H.
+```
+
+This pathway represents:
+
+```text
+Engineering Response
+→ Changed State / Capability / Service
+→ Environmental + Economic + Social Consequence
+```
+
+Total change relative to the reference case is
+
+```math
+\mathbf S_A-\mathbf S_0
+=
+(\mathbf S_H-\mathbf S_0)
++
+(\mathbf S_A-\mathbf S_H).
+```
+
+This decomposition is descriptive, not a claim that all sustainability mechanisms are linearly additive in a causal sense.
+
+## 13. Indicator directionality
+
+Every indicator must declare whether larger values are beneficial or burdensome.
+
+Examples:
+
+- larger GHG emissions are burdensome;
+- larger service access may be beneficial;
+- larger cost is burdensome.
+
+Therefore, the sign of a raw vector difference must not be interpreted uniformly across all indicators.
+
+Any normalization, weighting, or aggregation requires an independent methodological justification.
+
+## 14. Service / functional basis
+
+Where scientifically appropriate, sustainability burdens or costs may be normalized by a declared electricity- or mobility-service functional unit:
+
+```math
+\frac{B_{env}}{F_{service}},
+\qquad
+\frac{C_{econ}}{F_{service}}.
+```
+
+The exact functional unit is OPEN until the service metrics and study boundary are frozen. Absolute system-level indicators remain valid when they are the correct decision quantities.
+
+## 15. SDG linkage
+
+SDG mapping is an interpretation step after measurement:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
+
+No SDG target enters the governing thermal equations. Exact SDG targets remain OPEN until the corresponding measurable indicators are defined.
+
+## 16. Anti-double-counting
+
+A physical consequence may have distinct physical, monetary, and social representations, but these must remain labeled separately.
+
+Do not sum overlapping representations without a justified aggregation method.
+
+## 17. Active outputs
+
+Primary thermal/service outputs:
+
+```math
+X_P^{th}(t),
+\quad
+X_{T_e}^{th}(t),
+\quad
+Z_{PT}^{th}(t),
+\quad
+\tau_i^C,
+\quad
+\delta_{ij}^{th},
+\quad
+Q_P(t),
+\quad
+Q_T(t).
+```
+
+Bounded downstream sustainability outputs, where activated:
+
+```math
+\mathbf S_0,
+\quad
+\mathbf S_H,
+\quad
+\mathbf S_A,
+\quad
+\Delta\mathbf S_H,
+\quad
+\Delta\mathbf S_A.
+```
+
+## 18. Excluded mathematical objects
+
+The active framework does not require:
+
+- generic organizational or information-network state;
+- non-thermal dependency states;
+- universal sustainability optimization;
+- full LCA or social LCA;
+- one scalar sustainability score;
+- economy-wide economic models;
+- all SDGs;
+- generic intervention optimization.
+
+## 19. Governing discipline
+
+```text
+minimum sufficient thermal physics
++ directional mechanism qualification
++ state-time traceability
++ service-based resilience interpretation
++ bounded two-pathway sustainability accounting
+```
+
+No equation or sustainability indicator enters the active thesis merely because it is mathematically or thematically available.
