@@ -1,30 +1,27 @@
 ## 1.10 Specific Research Objectives
 
-The specific objectives correspond one-to-one with RQ1–RQ7.
+The thesis has three specific objectives.
 
-**SO1 — Define.**
-Define the bounded Power–Transportation System of Systems in terms of constituent systems, supporting Information and Organization domains, services, entities, states, spatial locations, temporal characteristics, and candidate interfaces.
+### SO1 — Identify and qualify
 
-**SO2 — Qualify.**
-Qualify candidate Power–Transportation relations as directional dependency mechanisms by establishing their mechanism, direction, spatial and temporal activation conditions, operating and hazard conditions, delays, characteristic timescales, evidence basis, uncertainty, and validity boundaries.
+> **Identify and qualify the thermally sensitive physical states and directional thermal interdependency mechanisms connecting the Power System and the Electrified Transportation System.**
 
-**SO3 — Model and test.**
-Develop and verify a physics-based complex spatiotemporal coupled dynamic representation and test the incremental explanatory or predictive information provided by dynamically ready coupling relative to independent and static-coupling representations.
+### SO2 — Model state-time evolution
 
-**SO4 — Evaluate knowledge and feasible response.**
-Evaluate how spatially and temporally distributed measurement, state estimation, information availability, organizational conditions, and feasible control affect response timing, electricity and mobility service trajectories, and recovery.
+> **Develop a physics-based state-time model of the qualified thermal interdependencies and their propagation under extreme heat.**
 
-**SO5 — Assess viability and recovery under uncertainty.**
-Determine uncertainty-aware spatiotemporal service viability and recovery reachability, evaluate their incremental information beyond conventional service and recovery representations, and characterize interface criticality where the required evidence permits.
+### SO3 — Quantify consequences
 
-**SO6 — Quantify and compare interventions.**
-Quantify and compare candidate engineering interventions, including their type, location, timing, and scale where relevant, in terms of resilience effectiveness, resource requirements and efficiency, and admitted sustainability consequences within independently justified requirements and declared accounting boundaries.
+> **Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences.**
 
-**SO7 — Evaluate and decide.**
-Evaluate candidate interventions or infrastructure transformations, including their location, timing, and scale where relevant, jointly in terms of resilience, resource efficiency, admitted sustainability consequences, feasibility, and uncertainty; evaluate intervention sequences only where temporal decision structure, data, and validation support them.
+The objective chain is:
 
-The required traceability is
-
-```math
-\boxed{ RQ_k\Longleftrightarrow SO_k, \qquad k=1,\ldots,7. }
+```text
+Identify and qualify
+→ Model
+→ Quantify consequences
 ```
+
+These objectives are **FROZEN — CANONICAL** under `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
+
+They do not require modeling every component in the Electrified Transportation System, representing non-thermal interdependencies, optimizing all resilience interventions, or performing broad sustainability or economic analysis.
