@@ -93,3 +93,25 @@ thermal mechanism
 ```
 
 No broader architecture may override this chain without an explicit versioned scope change.
+
+
+## Thermal paper-reading school
+
+The active literature-transfer method is:
+
+- [`THERMAL_PAPER_SCHOOL_V2.md`](THERMAL_PAPER_SCHOOL_V2.md)
+- [`../tools/thermal_paper_school_v2.py`](../tools/thermal_paper_school_v2.py)
+
+Permanent chain:
+
+```text
+Claim
+→ Evidence
+→ Validity domain
+→ Limitation
+→ Remaining unknown
+→ Gap-closing test
+→ Thesis-transfer decision
+```
+
+This method is used to prevent subsystem literature from being transferred into the active thermal model without explicit validity, scale, time, and service checks.
