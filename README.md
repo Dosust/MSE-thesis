@@ -93,9 +93,7 @@ X_{th}(t)
 \rightarrow
 Z_{PT}(t)
 \rightarrow
-\{\tau_{th}^C,\delta_{th},Q_P(t),Q_T(t)\}
-\rightarrow
-\{\text{Improve},\text{Adapt},\text{Restore}\}.
+\{\tau_{th}^C,\delta_{th},Q_P(t),Q_T(t)\}.
 ```
 
 with
@@ -159,20 +157,11 @@ The governing rule is **minimum sufficient physics**: include only the physical 
 
 ---
 
-## Engineering resilience cycle
+## Supporting engineering-response boundary
 
-The thesis-defined engineering cycle is:
+Improve, Adapt, Restore, and Learn may be used only as **supporting interpretation or optional experiments** when they directly help explain a thermal state-time consequence. They are not primary research objectives.
 
-```text
-Improve → Adapt → Restore → Learn → Improve
-```
-
-- **Improve:** change baseline design/parameters before a future event.
-- **Adapt:** change operation while the heat event and states evolve.
-- **Restore:** recover acceptable function/service after unacceptable degradation.
-- **Learn:** use event evidence, validation, intervention performance, and recovery to improve future models and decisions.
-
-This is a thesis-specific engineering architecture, not a claim of a universal resilience definition.
+The active thesis chain ends at quantified electricity and mobility service consequences.
 
 ---
 
