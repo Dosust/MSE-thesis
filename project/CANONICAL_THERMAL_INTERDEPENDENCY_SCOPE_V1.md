@@ -7,7 +7,8 @@
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **State-time interpretation authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
-**Current scope amendment:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
+**Current scope amendment:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 ## 1. Canonical focus
 
@@ -100,6 +101,23 @@ and service consequences:
 `Q_T(t) = G_T(X_th(t), Z_PT(t))`
 
 The exact state variables, constitutive laws, thresholds, service metrics, and interventions remain subject to model-specific evidence and validation before they are frozen.
+
+## 8A. Canonical state-time semantics
+
+State and time are governed by `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+Permanent distinctions:
+
+```text
+full physical state space ≠ active reduced thesis state vector
+external heat forcing ≠ internal system state
+thermal state ≠ operational/energy state
+fast state ≠ slow degradation/health state
+state ≠ capability ≠ service
+coupling quantity ≠ state unless independent dynamics require it
+```
+
+Aging/degradation may be a legitimate slow state, but it is activated only when its evolution over the declared analysis horizon materially changes the thermal interdependency, capability, transition/propagation timing, service trajectory, recovery trajectory, or bounded downstream assessment.
 
 ## 9. Resilience interpretation
 
