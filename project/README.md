@@ -2,12 +2,13 @@
 
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Thermal focus authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
-**State-time scope amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**State-time scope amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**Canonical state-time definitions:** [`CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
 **Objective authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
-**Conceptual framework:** [`CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
-**Mathematical framework:** [`MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)  
+**Conceptual framework:** [`CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)  
+**Mathematical framework:** [`MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)  
 **Authority index:** [`CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
-**Status date:** 2026-10-07
+**Status date:** 2026-10-08
 
 ## Active research problem
 
@@ -37,6 +38,19 @@ EVSE belongs to `T_e`. Coupling/interface variables do not constitute a third ph
 
 Battery-electric road transportation with grid-connected charging remains the bounded application subset. Exact charging context remains open.
 
+## Canonical state-time semantics
+
+```text
+full physical state space ≠ active reduced thesis state vector
+external forcing ≠ internal state
+SOC = operational/energy state, not thermal state
+aging/degradation may be a slow state
+state ≠ capability ≠ service
+Z_PT = coupling object by default; state only if independent dynamics require it
+```
+
+See `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
 ## Frozen objective contract
 
 **General Objective**
@@ -58,12 +72,13 @@ Battery-electric road transportation with grid-connected charging remains the bo
 ## Active mathematical outputs
 
 ```math
-X_P^{th}(t),quad
-X_{T_e}^{th}(t),quad
-Z_{PT}^{th}(t),quad
-	au_i^C,quad
-delta_{ij}^{th},quad
-Q_P(t),quad
+X_P^{th}(t),\quad
+X_{T_e}^{th}(t),\quad
+X_{T_e}^{en}(t),\quad
+X^{deg}(t)\;\text{(only if admitted)},\quad
+\tau_i^C,\quad
+\delta_{ij}^{th},\quad
+Q_P(t),\quad
 Q_T(t).
 ```
 
