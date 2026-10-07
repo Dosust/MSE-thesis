@@ -7,15 +7,14 @@
 
 1. `project/CANONICAL_THESIS_TITLE_V1.md`
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
-3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
-4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
-5. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-6. `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`
-7. `project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`
-8. `project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
-9. `project/RESEARCH_REASONING_PROTOCOL.md`
-10. `project/EGMIV_METHOD_V1.md`
-11. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+4. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+5. `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
+6. `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+7. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+8. `project/RESEARCH_REASONING_PROTOCOL.md`
+9. `project/EGMIV_METHOD_V1.md`
+10. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Current status matrix
 
@@ -24,7 +23,7 @@
 | thesis title | **FROZEN** |
 | physical core P+T | **FROZEN** |
 | Electrified Transportation System composition/boundary | **FROZEN — CANONICAL** |
-| active hazard: extreme heat | **WORKING-FROZEN / CURRENT** |
+| active hazard: extreme heat | **FROZEN — CURRENT** |
 | active interdependency class: thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
@@ -34,15 +33,18 @@
 | exact state variables | **OPEN** |
 | exact service metrics | **OPEN** |
 | exact intervention set | **OPEN** |
-| final narrowed RQ/SO/H | **OPEN** |
+| general + specific objectives | **FROZEN — 3-objective thermal contract** |
+| final narrowed RQ wording | **OPEN — must remain thermal/state-time only** |
+| hypotheses | **OPEN — must remain thermal/state-time only** |
 | final novelty claim | **OPEN** |
 | September seven-stage/RQ-H/P3/Austin packages | **HISTORICAL / RETAINED** |
 
 ## Current framework authorities
 
-- `project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md` — verbal/global scientific framework; no mathematics in the visible figure.
-- `project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md` — formal mathematical counterpart.
-- `project/MATHEMATICAL_VISUALIZATION_IMPLEMENTATION_V1.md` — implementation guide for deterministic/interactive mathematical visualization.
+- `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md` — current thermal-only conceptual framework.
+- `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md` — current thermal-only mathematical framework.
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
+- Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, sustainability, and decision packages are historical/provenance where they conflict with the thermal-only scope.
 
 ## Current visualization authorities
 
@@ -58,6 +60,12 @@ formal model
 → rendering
 → verification
 ```
+
+## Thermal-only scope authority — 2026-10-07
+
+The permanent active research scope is controlled by `project/CANONICAL_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`.
+
+The thesis studies **only thermal Power–Electrified Transportation interdependencies and their consequences through physical state and time**. Non-thermal interdependencies are outside the active analytical scope unless required strictly as boundary conditions for the thermal mechanism.
 
 ## Legacy-use rule
 
