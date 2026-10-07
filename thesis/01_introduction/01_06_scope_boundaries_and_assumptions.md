@@ -1,5 +1,7 @@
 ## 1.6 Scope, Boundaries, Assumptions, and Validity Domain
 
+> **Active-scope override — 2026-10-07.** The September text below is retained as a frozen provenance snapshot. For current thesis work, system composition and current hazard/state-time scope are controlled by `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` and `../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`. In current work, `T_e` means **Electrified Transportation System** as defined by the canonical scope authority; extreme heat is the active hazard; battery-electric road transport is a bounded application subset; mobility service remains distinct from the technical system.
+
 The thesis is deliberately bounded to the Power–Transportation problem defined by the research questions. It is not intended to reproduce every physical, behavioral, institutional, economic, or environmental process affecting infrastructure.
 
 | BoundaryIncludedNot inferred or outside the confirmatory core |                                                                                |                                                                    |
