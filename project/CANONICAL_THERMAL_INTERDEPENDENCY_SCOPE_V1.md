@@ -6,7 +6,7 @@
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
-**State-time interpretation authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
+**State-time interpretation authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Current scope amendment:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
 **State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
@@ -161,7 +161,7 @@ This focus may be reopened only by explicit user/supervisor/chair/committee dire
 
 ## State-time interpretation
 
-The scope phrase **through state and time** is controlled by `CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+The scope phrase **through state and time** is controlled by `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
 
 ```text
 State = minimum evolving physical/operational condition required by the adopted model.
