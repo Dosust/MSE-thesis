@@ -5,7 +5,7 @@ Before applying any older instruction in this file, load:
 - `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
-- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+- `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
 - `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
@@ -43,7 +43,7 @@ Do not silently substitute historical or exploratory titles. Historical archives
 
 For every active use of **state**, **state variable**, **state-time**, **transition time**, **propagation delay**, or **recovery time**, load:
 
-`project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 
 Canonical definitions:
 
