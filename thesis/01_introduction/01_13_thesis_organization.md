@@ -1,23 +1,15 @@
 ## 1.13 Thesis Organization
 
-The remainder of the thesis follows the scientific dependency established in Chapter 1.
+**Chapter 1 — Introduction** defines the thermal-interdependency problem, scope, system boundary, research gap, General Objective, SO1–SO3, working research-question structure, and validity limits.
 
-**Chapter 2 — Literature Review and Scientific Foundations** establishes the evidence and theoretical foundations required by the research questions. It distinguishes established capability from unresolved handoffs and provides the evidence base for the thesis definitions, mechanisms, comparators, and bounded research gap.
+**Chapter 2 — Literature Review and Theoretical Foundations** reviews extreme-heat effects, thermal states and limits, Power–Electrified Transportation coupling, EV/EVSE thermal behavior, directional dependency concepts, state-time modeling, and electricity/mobility service consequences.
 
-**Chapter 3 — Conceptual and Mathematical Framework** formalizes the Power–Transportation architecture, directional-dependency objects, coupled dynamics, observation and estimation, feasible-control structure, acceptable-service conditions, viability, recovery reachability, intervention consequences, and decision objects.
+**Chapter 3 — Conceptual and Mathematical Framework** formalizes the thermal-only conceptual chain and the minimum-sufficient state-time mathematical representation.
 
-**Chapter 4 — Research Methodology and Experimental Design** converts the research contract into reproducible tests. It establishes evidence and source qualification, case and data admissibility, spatial and temporal alignment, measurement models, identification, estimator admission, model realization, numerical verification, scenario design, matched experiments, validation, uncertainty quantification, sensitivity analysis, falsification rules, and reproducibility.
+**Chapter 4 — Methodology** defines the case/data boundary, thermally active states, governing equations, thresholds, coupling variables, service metrics, verification, validation, uncertainty treatment, and comparison logic.
 
-**Chapter 5 — Results** reports qualified prerequisite, model, and confirmatory results. Each primary result is presented with its comparator, uncertainty treatment, materiality or decision criterion, and validity domain before a hypothesis status is assigned.
+**Chapter 5 — Results** reports thermal state trajectories, critical transitions, propagation timing, and electricity/mobility service consequences within the validated domain.
 
-**Chapter 6 — Discussion and Sustainable Engineering Implications** interprets the results in relation to physical mechanisms, assumptions, rival explanations, prior literature, resources, admitted sustainability consequences, engineering decisions, transferability, and remaining uncertainty.
+**Chapter 6 — Discussion and Sustainable Engineering Implications** interprets the thermal mechanisms, state-time consequences, assumptions, limits, engineering meaning, transferability, and bounded implications for resilient and sustainable infrastructure.
 
-**Chapter 7 — Conclusions and Future Work** answers RQ0 and RQ1–RQ7 at the level justified by the completed evidence, records the final H1–H5 statuses, identifies the contributions actually supported by the research, states the limits of validity and generalization, and defines the unresolved research agenda.
-
-The thesis therefore follows one end-to-end argument:
-
-```math
-\boxed{ \text{Problem} \rightarrow \text{Evidence} \rightarrow \text{Mathematical Framework} \rightarrow \text{Qualified Method} \rightarrow \text{Results} \rightarrow \text{Interpretation} \rightarrow \text{Engineering Conclusion}. }
-```
-
-Chapter 1 establishes the scientific contract for that argument. It defines what the thesis studies, why the problem matters, what remains unresolved, what will be tested, what evidence is required, and under what conditions later engineering conclusions will be scientifically admissible.
+**Chapter 7 — Conclusions and Future Work** answers the final thermal research questions at the level justified by the evidence, states the supported contributions and validity limits, and identifies research extensions outside the thermal-only scope.
