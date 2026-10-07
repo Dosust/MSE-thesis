@@ -3,6 +3,7 @@
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
+**Electrified Transportation scope authority:** [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)  
 **Current authority index:** [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
 **Current direction date:** 2026-10-06
 
@@ -32,17 +33,25 @@ Extreme heat
 ```text
 Power System P
 ↔
-Physical Power–Transport Interfaces I_PT
-↔
-Electrified Transportation T
+Electrified Transportation System T_e
 ```
 
-### Active transportation mode
+Power and Electrified Transportation remain distinct coupled physical systems. Power-transfer, charging, communication/control, and bidirectional-transfer quantities may be represented as interface/coupling variables without creating a third physical infrastructure system.
+
+### Canonical Electrified Transportation System scope
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+Status: **FROZEN — CANONICAL**.
+
+The standards justify the technical composition and boundary. The system name is simply **Electrified Transportation System**.
+
+### Current bounded application subset
 
 ```text
-Road transport
-→ battery-electric road transportation
-→ grid-connected EV charging
+electrically propelled road vehicle
+→ battery-electric road-transport application
+→ grid-connected charging context
 ```
 
 Status: **WORKING-FROZEN**.
@@ -72,15 +81,15 @@ X(t)
 with
 
 ```math
-X(t)=[X_P^\top,Z^\top,X_T^\top]^\top.
+X(t)=[X_P^\top,Z_{PT}^\top,X_{T_e}^\top]^\top.
 ```
 
 Where:
 
 - `H(x,t)` = extreme-heat forcing;
 - `X_P(t)` = selected Power-system states;
-- `Z(t)` = selected interface states;
-- `X_T(t)` = selected battery-electric transportation states;
+- `Z_{PT}(t)` = selected exchanged/coupling quantities or interface states between Power and Electrified Transportation; this is not a third physical system;
+- `X_{T_e}(t)` = selected states from the canonical Electrified Transportation System scope;
 - `τ_i^C` = critical transition time;
 - `δ_ij` = propagation delay between defined events;
 - `Q_P(t)` = electricity-service trajectory;
@@ -152,8 +161,9 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 |---|---|
 | thesis title | **FROZEN** |
 | physical core: Power + Transportation | **FROZEN** |
+| Electrified Transportation System composition/boundary | **FROZEN — CANONICAL** |
 | active hazard: extreme heat | **WORKING-FROZEN / CURRENT** |
-| battery-electric road transportation | **WORKING-FROZEN** |
+| battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
 | state-time analytical focus | **WORKING-FROZEN / CURRENT** |
 | Improve → Adapt → Restore → Learn | **WORKING-FROZEN / CURRENT** |
@@ -170,7 +180,8 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 
 | File | Role |
 |---|---|
-| [`project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md) | current scope precedence |
+| [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) | canonical Electrified Transportation composition and boundary |
+| [`project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md) | current extreme-heat/state-time scope precedence |
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
 | [`project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`](project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md) | road-over-rail working decision |
