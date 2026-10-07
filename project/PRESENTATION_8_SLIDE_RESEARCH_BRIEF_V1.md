@@ -20,8 +20,8 @@ Presentation rules:
 - do not present non-thermal interdependencies as active mechanisms;
 - non-thermal quantities may appear only as boundary conditions, coupling variables, controls, or constraints required for a thermal mechanism;
 - preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → Improve / Adapt / Restore;
-- use **qualify**, not “evidence-qualify”;
-- do not use **selected** as a filler adjective in objectives or scope statements.
+- use **qualify** consistently;
+- name the physical object or variable class directly in objectives and scope statements.
 
 ## Canonical Electrified Transportation scope — FROZEN 2026-10-07
 
@@ -119,7 +119,7 @@ Do not reopen a decision merely because a different wording appears attractive.
 | Interdependency focus | Electricity-based dependency created by transport electrification | **WORKING-FROZEN** | Excludes petrol, diesel, natural gas and other non-electric propulsion-energy pathways |
 | Performance lens | Functioning + serviceability + reliability | **WORKING-FROZEN** | Used to characterize service performance before/through resilience assessment |
 | Primary outcome | Electricity and mobility service trajectories / resilience | **WORKING-FROZEN** | Interface/component states are mechanisms, not the final outcome |
-| Transport mode | Road transport → battery-electric road transportation | **WORKING-FROZEN** | Selected through the five canonical scope gates; see `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
+| Transport mode | Road transport → battery-electric road transportation | **WORKING-FROZEN** | Chosen through the five canonical scope gates; see `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
 | Electrical dependency architecture | Battery-mediated electric mobility through grid-connected EV charging | **WORKING-FROZEN** | Exact charging context remains open |
 | V2G | Not active by default | **OPEN/EXCLUDED UNLESS JUSTIFIED** | Do not equate interdependency with reverse electrical flow |
 | Energy efficiency | Secondary performance/sustainability criterion | **WORKING-FROZEN** | Evaluate after service requirement is defined |
@@ -249,8 +249,8 @@ Do not use “nobody has studied this” without a reproducible novelty audit.
 
 Must show:
 - Power system;
-- selected electrified transportation mode;
-- selected electricity-dependency mechanism;
+- defined electrified transportation mode;
+- defined electricity-dependency mechanism;
 - extreme heat;
 - functioning, serviceability, reliability;
 - explicit exclusions.
@@ -284,7 +284,7 @@ Required distinctions:
 - serviceability = acceptable level of delivered service;
 - reliability = consistency/probability of acceptable function/service over the declared domain.
 
-Primary service variables must be selected and operationalized before final slide wording is frozen.
+Primary service variables must be defined and operationalized before final slide wording is frozen.
 
 ### Slide 6 — Mathematical model and controlled comparison
 **Question answered:** What mathematical representation tests the research question?
@@ -376,7 +376,7 @@ Boundary:
    - tractable modeling;
    - defensible MSE scope?
 
-2. Which electrical-dependency architecture is selected:
+2. Which electrical-dependency architecture is adopted:
    - continuous electric traction;
    - battery-mediated electric mobility;
    - another evidence-qualified architecture?
@@ -680,7 +680,7 @@ direct electrification coupling
 + remaining physics-to-service handoff
 ```
 
-Do **not** say road was selected because it has stronger direct electricity dependence than rail. Electric rail has the stronger immediate traction dependence.
+Do **not** say road was chosen because it has stronger direct electricity dependence than rail. Electric rail has the stronger immediate traction dependence.
 
 Still OPEN:
 - public DC fast charging vs fleet/depot charging;
