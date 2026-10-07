@@ -8,6 +8,7 @@
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Canonical sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 
 Permanent active thesis focus:
@@ -68,6 +69,22 @@ Measured indicator ≠ sustainability dimension ≠ SDG target
 ```
 
 Exact sustainability indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
+
+Canonical effectiveness / energy-efficiency placement:
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Effectiveness measures whether Improve, Adapt, or Restore achieves the intended service/resilience outcome. Energy efficiency measures useful electricity or mobility service relative to energy input using a declared boundary and functional/service basis.
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
+Exact effectiveness metrics and exact energy-efficiency definitions remain OPEN until service metrics are frozen.
 
 Active objective chain:
 

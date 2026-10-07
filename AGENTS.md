@@ -7,6 +7,7 @@ Before applying any older instruction in this file, load:
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+- `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 - `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
 - `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
 
@@ -84,6 +85,26 @@ Measured Sustainability Indicator → Sustainability Dimension → Relevant SDG 
 ```
 
 Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
+
+## Canonical effectiveness and energy-efficiency placement
+
+For any task involving **effectiveness**, **energy efficiency**, intervention performance, or environmental-energy performance, load:
+
+`project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Preserve:
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
+Do not place effectiveness inside environmental, economic, or social sustainability. Do not treat energy efficiency as resilience effectiveness.
 
 ## Canonical thermal-interdependency focus
 
