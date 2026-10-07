@@ -1,7 +1,8 @@
 # Canonical Thermal-Interdependency State-Time Scope Amendment V3
 
-**Status:** CANONICAL — FROZEN ACTIVE THESIS SCOPE  
+**Status:** SUPERSEDED PROVENANCE — DO NOT USE AS CURRENT AUTHORITY  
 **Effective date:** 2026-10-07  
+**Superseded by:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
 **Supersedes for active scope:** `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
@@ -202,6 +203,6 @@ simulation ≠ validation
 
 ## 10. Governance
 
-This file is the controlling scope authority for all future thesis work unless the user, supervisor, chair, committee, or a formally versioned scope amendment explicitly changes it.
+This file is retained for provenance only. The controlling current scope is `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` together with `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`.
 
 Earlier broad seven-stage, RQ1–RQ7, P–T–I–O, intervention, sustainability, and decision architectures are retained for provenance and reusable methods but do not control the active research scope where they conflict with this amendment.
