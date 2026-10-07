@@ -5,6 +5,21 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Official thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
+## Canonical Electrified Transportation scope — FROZEN 2026-10-07
+
+Authority: `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+Presentation rules:
+- call the system **Electrified Transportation System**;
+- do not use “standards-defined” as part of its name;
+- keep the external Power System distinct;
+- treat EVSE, the charging connection, and communication/control as part of the Electrified Transportation System scope;
+- treat battery-electric road transport, bus/fleet, public fast charging, or depot charging as bounded application subsets;
+- do not imply that every listed subsystem must be modeled at identical fidelity;
+- keep mobility service separate from the technical system.
+
 ## 1. Purpose
 
 This file is the persistent working source for the current **8-slide Master of Science in Engineering research presentation**.
