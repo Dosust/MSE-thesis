@@ -19,7 +19,7 @@ The thesis does not study every Power–Transportation interdependency. Electric
 
 ## 3. Canonical analytical chain
 
-`Extreme heat → thermal physical state → thermal capability/constraint → Power ↔ Electrified Transportation interdependency → state-time consequence → electricity and/or mobility service consequence → resilience response`
+`Extreme heat → thermal physical state → thermal capability/constraint → Power ↔ Electrified Transportation thermal interdependency → state-time consequence → electricity and/or mobility service consequence`
 
 State and time are the primary analytical dimensions.
 
@@ -45,8 +45,6 @@ The active model may include:
 - timing of interdependency propagation;
 - electricity-service consequences;
 - mobility-service consequences;
-- Improve, Adapt, and Restore actions that directly change thermal states, thermal capability, thermal interdependency consequences, or service outcomes;
-- sustainability consequences only when they arise from the bounded resilience interventions being evaluated.
 
 ## 6. What is outside the active research scope
 
@@ -60,6 +58,7 @@ The thesis does not study, as independent research objects:
 - every component included in the Electrified Transportation System definition;
 - full electrochemical battery physics unless required by the thermal research question;
 - universal resilience or sustainability optimization;
+- generic intervention optimization as a primary research object;
 - a complete life-cycle, social, or economic assessment.
 
 Such objects may appear only as boundary conditions, inputs, constraints, or supporting variables when required to model a thermal interdependency or its consequence.
