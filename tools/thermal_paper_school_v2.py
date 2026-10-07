@@ -30,6 +30,14 @@ LIMITATIONS = {
     "L11": "Intervention trade-off",
 }
 
+STATE_TIME_RULES = [
+    "external forcing != system state",
+    "physical quantity != state variable != active thesis state",
+    "thermal state != operational/energy state",
+    "state != capability != service",
+    "transition time != propagation delay != service-consequence time != recovery time",
+]
+
 READING_PASSES = [
     "Scientific problem",
     "Physics",
@@ -84,25 +92,40 @@ def admission_gate(
         "failed": [k for k, v in gates.items() if not v],
     }
 
-def state_admission(materially_changes_capability=False,
+def state_admission(dynamically_required=False,
+                    materially_changes_capability=False,
                     materially_changes_transition_time=False,
                     materially_changes_propagation=False,
                     materially_changes_QP=False,
-                    materially_changes_QT=False):
-    """Minimum-sufficient-physics admission rule for a candidate state."""
-    return any([
+                    materially_changes_QT=False,
+                    materially_changes_validation=False,
+                    materially_changes_engineering_conclusion=False):
+    """Canonical minimum-sufficient-physics admission rule for a candidate state.
+
+    A physically meaningful quantity is not automatically an active thesis state.
+    It must be dynamically required by the adopted model and materially affect at
+    least one thesis-relevant mechanism, capability, timing, service, validation,
+    or engineering conclusion.
+    """
+    material = any([
         materially_changes_capability,
         materially_changes_transition_time,
         materially_changes_propagation,
         materially_changes_QP,
         materially_changes_QT,
+        materially_changes_validation,
+        materially_changes_engineering_conclusion,
     ])
+    return dynamically_required and material
 
 if __name__ == "__main__":
     print("Thermal Paper School V2")
     print("Reading method:")
     for i, p in enumerate(READING_PASSES, 1):
         print(f"{i}. {p}")
+    print("\nCanonical state-time rules:")
+    for rule in STATE_TIME_RULES:
+        print(f"- {rule}")
     print("\nLimitation taxonomy:")
     for code, name in LIMITATIONS.items():
         print(f"{code}: {name}")
