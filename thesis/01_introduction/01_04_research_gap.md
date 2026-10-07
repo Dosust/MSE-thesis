@@ -1,87 +1,31 @@
 ## 1.4 Research Gap
 
-The research gap is not the absence of interdependent-infrastructure models, coupled Power–Transportation models, resilience measures, recovery optimization, viability theory, or multiobjective decision methods. Substantial work already exists in each of these areas (Ouyang, 2014; Tong et al., 2025; Wang et al., 2024).
+The thesis does not define its gap as the absence of Power–Transportation models, EV-charging models, heat-impact models, or resilience analysis. Those capabilities already exist in different forms.
 
-The bounded gap addressed here is that the reviewed evidence does not, by itself, close all of the scientific handoffs required to move from a candidate cross-system relation to a defensible engineering decision.
+The bounded research gap is the **state-time handoff from thermal physics to cross-system interdependency consequence**.
 
-Each gap is therefore expressed through the same logic:
+The unresolved scientific sequence addressed by the thesis is:
 
-```math
-\boxed{ \text{established capability} \rightarrow \text{documented limitation} \rightarrow \text{unresolved handoff} \rightarrow \text{thesis test}. }
+```text
+heat-dependent physical state / capability
+→ qualified directional thermal interdependency
+→ coupled state-time evolution
+→ critical transition and propagation timing
+→ electricity and mobility service consequence
 ```
 
-### 1.4.1 G1 — Structure to Qualified Directional Dependency
+The gap is therefore divided into three linked obligations:
 
-Infrastructure dependency taxonomies and multilayer representations are well established, but terminology and directionality can become ambiguous when structural relations, one-way dependencies, and reciprocal interdependencies are treated as equivalent (Dasuni et al., 2025; Kivelä et al., 2014; Ouyang, 2014).
+### G1 — Thermal state to directional mechanism
 
-The unresolved handoff is
+Determine which thermally sensitive physical states and temperature-dependent capabilities actually participate in a directional Power–Electrified Transportation dependency.
 
-```math
-\boxed{ \text{candidate structural relation} \rightarrow \text{evidence-qualified directional dependency}. }
-```
+### G2 — Directional mechanism to state-time propagation
 
-RQ1 defines the bounded system and candidate interfaces. RQ2 determines which candidate relations satisfy the required mechanism, direction, activation, evidence, uncertainty, and validity conditions.
+Represent how the qualified thermal dependency evolves and propagates through physical state and time rather than treating coupling as a static link.
 
-### 1.4.2 G2 — Qualified Directional Dependency to Dynamic Consequence
+### G3 — State-time propagation to service consequence
 
-Dynamic Power–Transportation models already represent charging interactions, hazard-responsive traffic, emergency-resource movement, and multistage recovery (Lian et al., 2026; Wang et al., 2026; Zhang et al., 2027).
+Determine whether and when the propagated thermal consequence changes electricity or mobility service, including critical transition time and interdependency propagation delay where these quantities are physically identifiable.
 
-Their existence does not establish the incremental engineering value of representing a qualified mechanism dynamically rather than through simpler matched representations.
-
-The thesis therefore compares
-
-```math
-\boxed{ M_0 \quad\text{vs.}\quad M_1 \quad\text{vs.}\quad M_2 }
-```
-
-where `M_0` represents independent systems, `M_1` static or algebraic coupling, and `M_2` evidence-qualified dynamic coupling.
-
-This handoff generates RQ3, SO3, and H1.
-
-### 1.4.3 G3 — Physical Dynamics to Knowledge and Feasible Action
-
-Information availability, institutional conditions, coordination, and human–infrastructure interactions are recognized as relevant to infrastructure resilience (Chester et al., 2021; Gim & Miller, 2022; Rasoulkhani & Mostafavi, 2018).
-
-The unresolved handoff is whether differences in what can be observed, estimated, authorized, coordinated, and executed produce meaningful changes in response and recovery under matched physical conditions.
-
-This handoff generates RQ4, SO4, and H2.
-
-### 1.4.4 G4 — Service Trajectory to Viability, Recovery, and Uncertainty Qualification
-
-Performance and recovery curves remain widely used, but their interpretation depends on the selected performance variable, reference state, threshold, time horizon, and summary metric (Poulin & Kane, 2021; Trucco & Petrenj, 2023).
-
-Viability methods ask whether a system can remain within an admissible region, while reachability methods address whether a target region can be reached under specified dynamics, controls, and uncertainty (Béné & Doyen, 2018; Doyen & De Lara, 2010; Vinod & Oishi, 2021).
-
-The unresolved handoff is whether viability and recovery reachability provide meaningful incremental information beyond conventional service and recovery measures.
-
-This handoff generates RQ5, SO5, and H3.
-
-### 1.4.5 G5 — Resilience Effect to Intervention Consequences
-
-Infrastructure interventions that improve resilience can differ in direct intervention or recovery cost, operational energy requirements, and admitted environmental consequences. Existing studies show that resilience, recovery, cost, and greenhouse-gas outcomes can lead to different judgments about candidate strategies (Mitoulis et al., 2023; Sun et al., 2025; Zou & Chen, 2019).
-
-The unresolved handoff is
-
-```math
-\boxed{ \text{resilience effect} \rightarrow \text{resource and admitted sustainability consequences}. }
-```
-
-This handoff generates RQ6, SO6, and H4.
-
-### 1.4.6 G6 — Intervention Consequences to Engineering Decision
-
-Multiobjective infrastructure analysis is well established, and recent resilience research emphasizes trade-offs rather than assuming that improvement in one criterion determines the engineering choice (Tong et al., 2025).
-
-The unresolved question is whether qualified resource efficiency, admitted sustainability consequences, feasibility, and uncertainty materially change the admissible or nondominated decision set relative to resilience-only evaluation.
-
-This handoff generates RQ7, SO7, and H5.
-
-The six gaps form one scientific chain:
-
-```math
-\boxed{ \text{Structure} \rightarrow \text{Qualified Directional Dependency} \rightarrow \text{Dynamics} \rightarrow \text{Knowledge and Action} \rightarrow \text{Resilience} \rightarrow \text{Consequences} \rightarrow \text{Decision}. }
-```
-
-Identification operates across this chain whenever unknown quantities must be inferred from observations. It is therefore treated as a cross-cutting scientific requirement rather than as an additional stage.
-
-The thesis is consequently framed as an **integration, incremental-value, and validation problem**, not as a claim that its component methods are individually new.
+The thesis does not claim that every thermal interaction is novel. Novelty claims remain open until the closest literature, model, data, and validation boundaries are fully qualified.
