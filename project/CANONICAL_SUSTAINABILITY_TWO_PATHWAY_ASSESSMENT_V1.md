@@ -5,6 +5,7 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thermal-scope authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
+**State-time authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Effectiveness / energy-efficiency placement authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 ## 1. Canonical definition
