@@ -3,7 +3,7 @@
 **Status:** CANONICAL — CURRENT ACTIVE MATHEMATICAL FRAMEWORK  
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
-**State-time authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
+**State-time authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
@@ -18,7 +18,7 @@ Formalize the active thermal-interdependency state-time problem and its downstre
 
 ## Canonical state and time semantics
 
-The mathematical framework uses the canonical definitions in `CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+The mathematical framework uses the canonical definitions in `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
 
 ```math
 \dot X(t)=F(X(t),H(t),u(t);\theta)
