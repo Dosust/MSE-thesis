@@ -315,8 +315,8 @@ No non-thermal interdependency is shown as part of the active thesis mechanism u
 
 ## 16. Terminology rule
 
-Use **qualify**, not “evidence-qualify.”
+Use **qualify** consistently.
 
-Do not use **selected** as a filler adjective in objectives or scope statements.
+In objectives and scope statements, name the physical object or variable class directly.
 
 Use **Electrified Transportation System**; do not use “standards-defined” as part of the system name.
