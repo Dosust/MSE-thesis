@@ -9,6 +9,7 @@
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Supersedes for active mathematical work:** `MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
 
 ## 1. Purpose
@@ -58,25 +59,71 @@ H(x,t) \neq X(t).
 
 External heat forcing is not itself a system state.
 
-## 3. Thermally active subsystem states
+## 3. Canonical state ontology
+
+State semantics are controlled by `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+The active state vector is model-dependent. A useful hierarchy is:
 
 ```math
-X_P^{th}(t)
+X(t)
+=
+\begin{bmatrix}
+X_P^{th}(t)\\
+X_{T_e}^{th}(t)\\
+X_{T_e}^{en}(t)\\
+X^{deg}(t)
+\end{bmatrix}_{active},
 ```
 
-contains the Power-system states whose thermal dependence is required by the admitted mechanism.
+where only evidence-qualified and dynamically necessary blocks are activated.
+
+- `X_P^{th}(t)`: admitted Power thermal states;
+- `X_{T_e}^{th}(t)`: admitted Electrified-Transportation thermal states;
+- `X_{T_e}^{en}(t)`: admitted operational/energy states such as SOC;
+- `X^{deg}(t)`: admitted slow degradation/health states such as aging, only where materially relevant over the declared horizon.
+
+Therefore:
+
+```text
+SOC is a state but not a thermal state
+aging/degradation can be a state but is not automatically active
+system-scope membership ≠ active model state
+```
+
+A generic dynamic representation is
 
 ```math
-X_{T_e}^{th}(t)
+\dot X(t)
+=
+F\!\left(X(t),H(t),u(t);\theta\right).
 ```
 
-contains the Electrified Transportation states whose thermal dependence is required by the admitted mechanism.
+No universal state vector or governing law is imposed across heterogeneous components.
+
+## 4. External forcing and derived capability
+
+Extreme heat is modeled as external forcing:
 
 ```math
-\text{system-scope membership} \neq \text{mandatory detailed state}.
+H(x,t)\neq X(t).
 ```
 
-## 4. Thermal coupling object
+A thermally conditioned capability is generally derived from state:
+
+```math
+C(t)=\mathcal C\!\left(X(t),H(t);\theta_C\right),
+```
+
+unless the selected physics demonstrates that an additional internal dynamic variable must be augmented into the state.
+
+Thus:
+
+```text
+state ≠ capability
+```
+
+## 5. Thermal coupling object
 
 Define
 
@@ -84,32 +131,31 @@ Define
 Z_{PT}^{th}(t)
 ```
 
-as the thermally relevant cross-system exchanged quantities, constraints, or interface states required to represent a qualified directional thermal dependency.
+as the thermally relevant cross-system exchanged quantities, constraints, or interface conditions required to represent a qualified directional thermal dependency.
 
-It is a mathematical coupling object, not a third physical infrastructure system.
-
-## 5. Coupled thermal state
+By default, `Z_{PT}^{th}` is an algebraic coupling object:
 
 ```math
-X^{th}(t)
+Z_{PT}^{th}(t)
 =
-\begin{bmatrix}
-X_P^{th}(t)\\
-Z_{PT}^{th}(t)\\
-X_{T_e}^{th}(t)
-\end{bmatrix}.
+\Psi\!\left(X(t),H(t),u(t);\theta_Z\right).
 ```
 
-A general active representation is
+It is promoted to an interface state only if the adopted physics gives it independent dynamic memory such that its current value is required to predict future evolution:
 
 ```math
-\dot X^{th}
+\dot Z_{PT}^{th}
 =
-F_{th}\!\left(X^{th},H,u;\theta\right).
+f_Z\!\left(Z_{PT}^{th},X,H,u;\theta_Z\right).
 ```
 
-No universal thermal law is assumed across heterogeneous components.
+Therefore:
 
+```text
+coupling quantity ≠ state unless independent dynamics require it
+```
+
+and the coupling object is never a third physical infrastructure system.
 ## 6. Critical transition and propagation timing
 
 For a thermally relevant state or capability constraint
