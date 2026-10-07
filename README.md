@@ -146,7 +146,7 @@ General coupled representation:
 \dot X=F(X,H,u;\theta).
 ```
 
-Selected components/interfaces retain domain-specific physics:
+Components and interfaces retain domain-specific physics:
 
 ```math
 \dot X_i=f_i(X_i,H,L_i,Z_{ji},u_i;\theta_i).
@@ -275,7 +275,7 @@ No historical scientific work was deleted.
 
 ```text
 freeze exact charging context
-→ freeze selected physical state variables
+→ freeze the physical state variables required by the thermal model
 → freeze service variables
 → rewrite/freeze narrowed RQ / objectives / hypotheses
 → finalize conceptual + mathematical framework
