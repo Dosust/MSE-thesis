@@ -4,8 +4,9 @@
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
 **Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
-**Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`  
-**Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
+**Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`  
+**Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+**Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 
 Permanent active thesis focus:
 
@@ -21,6 +22,10 @@ Canonical analytical chain:
 
 State and time are the primary analytical dimensions.
 
+Active objective chain:
+
+`Identify and qualify thermal mechanisms → Model state-time evolution → Quantify electricity/mobility consequences`
+
 Canonical Electrified Transportation scope:
 
 > **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
@@ -29,7 +34,7 @@ Use **Electrified Transportation System**. Do not use “standards-defined” as
 
 Use **qualify** consistently. In objectives and scope statements, name the physical object or variable class directly.
 
-Battery-electric road transportation and grid-connected charging remain bounded application subsets. Exact charging context, exact thermal states, service metrics, validation datasets, intervention set, and final narrowed objective/RQ/SO/H wording remain OPEN unless separately frozen.
+Battery-electric road transportation and grid-connected charging remain bounded application subsets. The General Objective and SO1–SO3 are **FROZEN**. Exact charging context, exact thermal states, service metrics, validation datasets, optional thermal intervention set, final RQ wording, and hypotheses remain OPEN unless separately frozen.
 
 Historical broad seven-stage/RQ-H/P3/Austin material below is retained for provenance and reusable methods. It must not override the current thermal-interdependency scope.
 ---
