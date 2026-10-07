@@ -3,7 +3,8 @@
 **Status:** CANONICAL — FROZEN ACTIVE RESEARCH OBJECTIVES  
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
-**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`
 
 ## General Research Objective
 
@@ -22,6 +23,14 @@
 ### SO3 — Quantify consequences
 
 > **Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences.**
+
+## Resilience interpretation of SO3
+
+The electricity and mobility service consequences quantified in SO3 are interpreted using the canonical resilience definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+This does not create an additional objective. It defines how the state-time service trajectories produced by SO3 are interpreted in relation to the thesis title and resilience claim.
 
 ## Objective chain
 
