@@ -2,7 +2,8 @@
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
-**Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`](project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md)  
+**Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **Electrified Transportation scope authority:** [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)  
 **Current authority index:** [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
 **Current direction date:** 2026-10-07
@@ -15,14 +16,14 @@
 
 ## Current thesis direction
 
-The active thesis workstream is now centered on **extreme-heat consequences in coupled Power–Electrified Transportation systems**, with **physical state and time** as the primary analytical variables.
+The active thesis workstream is centered **only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time**.
 
 ```text
 Extreme heat
-→ selected physical states
-→ state-time evolution
-→ critical transition timing
-→ interface-mediated propagation timing
+→ thermal physical state
+→ thermal capability / constraint
+→ Power ↔ Electrified Transportation thermal interdependency
+→ state-time consequence
 → electricity + mobility service consequence
 → Improve / Adapt / Restore
 → Learn
@@ -36,7 +37,7 @@ Power System P
 Electrified Transportation System T_e
 ```
 
-Power and Electrified Transportation remain distinct coupled physical systems. Power-transfer, charging, communication/control, and bidirectional-transfer quantities may be represented as interface/coupling variables without creating a third physical infrastructure system.
+Power and Electrified Transportation remain distinct coupled physical systems. The thesis does not study all interdependencies between them. Power-transfer, charging, communication/control, and bidirectional-transfer quantities are included only when required to represent a **thermal interdependency or its state-time consequence**. Interface/coupling variables do not create a third physical infrastructure system.
 
 ### Canonical Electrified Transportation System scope
 
@@ -45,6 +46,20 @@ Power and Electrified Transportation remain distinct coupled physical systems. P
 Status: **FROZEN — CANONICAL**.
 
 The standards justify the technical composition and boundary. The system name is simply **Electrified Transportation System**.
+
+### Canonical thermal-interdependency focus
+
+The thesis studies **thermal interdependencies only**.
+
+A thermal interdependency is a qualified directional Power–Electrified Transportation dependency in which a heat- or temperature-dependent physical state, thermal capability, or thermally conditioned operating limit changes the physical or functional capability of the coupled system or changes electricity or mobility service over time.
+
+Non-thermal Power–Transportation interdependencies are outside the active research scope except as supporting boundary conditions, coupling variables, or constraints needed to represent a thermal mechanism.
+
+Primary analytical dimensions:
+
+```text
+state + time
+```
 
 ### Current bounded application subset
 
@@ -69,11 +84,13 @@ fleet/depot charging
 ## State-time mathematical spine
 
 ```math
-H(x,t)
+H(t)
 \rightarrow
-X(t)
+X_{th}(t)
 \rightarrow
-\{\tau_i^C,\delta_{ij},Q_P(t),Q_T(t)\}
+Z_{PT}(t)
+\rightarrow
+\{\tau_{th}^C,\delta_{th},Q_P(t),Q_T(t)\}
 \rightarrow
 \{\text{Improve},\text{Adapt},\text{Restore}\}.
 ```
@@ -81,28 +98,29 @@ X(t)
 with
 
 ```math
-X(t)=[X_P^\top,Z_{PT}^\top,X_{T_e}^\top]^\top.
+X_{th}(t)=[X_{P,th}^\top,X_{T_e,th}^\top]^\top.
 ```
 
 Where:
 
-- `H(x,t)` = extreme-heat forcing;
-- `X_P(t)` = selected Power-system states;
-- `Z_{PT}(t)` = selected exchanged/coupling quantities or interface states between Power and Electrified Transportation; this is not a third physical system;
-- `X_{T_e}(t)` = selected states from the canonical Electrified Transportation System scope;
-- `τ_i^C` = critical transition time;
-- `δ_ij` = propagation delay between defined events;
+- `H(t)` = extreme-heat forcing;
+- `X_{P,th}(t)` = Power-system thermal states required by the model;
+- `X_{T_e,th}(t)` = Electrified Transportation thermal states required by the model;
+- `Z_{PT}(t)` = coupling quantities and conditions required to represent the thermal interdependency; this is not a third physical system;
+- `τ_{th}^C` = critical thermal transition time;
+- `δ_{th}` = thermal-interdependency propagation timing;
 - `Q_P(t)` = electricity-service trajectory;
 - `Q_T(t)` = mobility-service trajectory.
 
 Permanent distinctions:
 
 ```text
-external forcing ≠ system state
-common heat exposure ≠ Power–Transportation interdependency
-interface architecture ≠ interface state
+external heat forcing ≠ thermal state
+common heat exposure ≠ thermal interdependency
+thermal exposure ≠ thermal interdependency
+system-scope membership ≠ active model state
 state ≠ function ≠ service
-transition time ≠ propagation delay ≠ recovery time
+transition time ≠ propagation time ≠ recovery time
 physical degradation ≠ service criticality
 simulation ≠ validation
 ```
@@ -163,6 +181,8 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 | physical core: Power + Transportation | **FROZEN** |
 | Electrified Transportation System composition/boundary | **FROZEN — CANONICAL** |
 | active hazard: extreme heat | **WORKING-FROZEN / CURRENT** |
+| thermal interdependencies only | **FROZEN — CANONICAL** |
+| state-time analytical focus | **FROZEN — CANONICAL** |
 | battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
 | state-time analytical focus | **WORKING-FROZEN / CURRENT** |
@@ -181,7 +201,8 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 | File | Role |
 |---|---|
 | [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md) | canonical Electrified Transportation composition and boundary |
-| [`project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`](project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md) | current extreme-heat/state-time scope precedence |
+| [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) | canonical thermal-interdependency focus |
+| [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md) | current extreme-heat / thermal-interdependency / state-time scope precedence |
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
 | [`project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`](project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md) | road-over-rail working decision |
