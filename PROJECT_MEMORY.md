@@ -1,10 +1,10 @@
-# CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-07
+# CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-08
 
 **Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
 **Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
-**Canonical state-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`  
+**Canonical state-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
 **Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`  
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
@@ -28,11 +28,11 @@ State and time are the primary analytical dimensions.
 
 Canonical state definition:
 
-> **State in this thesis refers to the minimum set of evolving physical or operational variables required to characterize the current condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. The primary states of interest are thermal states; non-thermal states are included only where required to represent the thermal interdependency or its service consequence.**
+> **State in this thesis refers to the minimum set of evolving physical, operational, energy, or degradation variables required to characterize the current modeled condition of the Power System and Electrified Transportation System and to determine their subsequent evolution under extreme-heat forcing. Thermal states are primary; non-thermal states are included only where required to represent the thermal interdependency or its consequences.**
 
 Canonical time definition:
 
-> **Time in this thesis represents the temporal evolution of those states and the timing of critical thermal transitions, interdependency propagation, service degradation, and, where modeled, service recovery.**
+> **Time in this thesis is the independent variable through which those states evolve and through which critical thermal transitions, interdependency propagation, service consequences, and—where explicitly modeled—recovery and degradation are ordered and quantified.**
 
 Preserve:
 
@@ -40,8 +40,10 @@ Preserve:
 external forcing ≠ system state
 physical quantity ≠ state variable ≠ active thesis state
 thermal state ≠ operational/energy state
+fast state ≠ slow degradation/health state
+aging/degradation can be a state but is not automatically active
 state ≠ capability ≠ service
-transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time ≠ aging/degradation horizon
 ```
 
 Exact active state variables, capability laws, service metrics, event horizon, and propagation-identification procedures remain OPEN.
