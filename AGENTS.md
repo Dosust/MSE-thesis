@@ -2,11 +2,12 @@
 
 Before applying any older instruction in this file, load:
 
+- `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`
 - `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
 - `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
 
-The active thesis workstream is extreme-heat, state-time, battery-electric road transportation through grid-connected charging. The September seven-stage / RQ1–RQ7 / H1–H5 / Austin-P3 architecture is retained for provenance and reusable methods but is **not current scope authority where it conflicts with the 2026-10-06 scope amendment**.
+The active thesis workstream is extreme-heat and state-time analysis of coupled Power and Electrified Transportation systems. The canonical Electrified Transportation System composition is controlled by `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Battery-electric road transport and a selected charging context are bounded application subsets, not the thesis-wide definition of the transportation system. The September seven-stage / RQ1–RQ7 / H1–H5 / Austin-P3 architecture is retained for provenance and reusable methods but is **not current scope authority where it conflicts with the 2026-10-06 scope amendment**.
 
 Do not silently reactivate historical Chapter-I, RQ/SO/H, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The final narrowed RQ/SO/H set is OPEN.
 
@@ -32,6 +33,20 @@ The exact active title is:
 > **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
+
+## Canonical Electrified Transportation System scope
+
+For any active thesis, model, diagram, presentation, Chapter-I, research-question, or scope task involving Transportation or electrification, load:
+
+`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+
+Use the exact system name **Electrified Transportation System**. Do not use the phrase “standards-defined electrified transportation system.”
+
+Canonical scope statement:
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+The standards justify the technical composition and boundary. Do not infer that every listed element requires the same model fidelity. Use minimum sufficient physics. Keep the external Power System distinct. EVSE and the physical charging connection belong to the Electrified Transportation System scope; interface/coupling variables may represent exchanged quantities without becoming a third physical infrastructure system. Mobility service and transportation-operation quantities remain separate outputs/operational layers and require their own definitions and evidence.
 
 ## Research decision and freeze authority
 
