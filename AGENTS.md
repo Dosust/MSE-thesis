@@ -5,6 +5,7 @@ Before applying any older instruction in this file, load:
 - `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+- `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
 - `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
 
@@ -34,6 +35,27 @@ The exact active title is:
 > **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
+
+## Canonical resilience definition
+
+For every active use of **resilience** in thesis text, models, figures, presentations, objectives, research questions, results, discussion, or conclusions, load:
+
+`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+
+Canonical definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Permanent rules:
+- resilience is evaluated at the **service level through time**;
+- component survival is not resilience;
+- reliability alone is not resilience;
+- robustness alone is not resilience;
+- recovery time alone is not resilience;
+- preserve **Thermal State ≠ Capability ≠ Service ≠ Resilience**;
+- use (Q_P(t) \ge Q_P^{req}(t)) and (Q_T(t) \ge Q_T^{req}(t)) when service requirements are operationalized;
+- a service deficit occurs where (Q_k(t) < Q_k^{req}(t));
+- Improve, Adapt, and Restore are engineering response classes supporting resilience analysis, not the definition of resilience itself.
 
 ## Canonical thermal-interdependency focus
 
