@@ -53,7 +53,7 @@ Do not broaden the active thesis back to generic Power–Transportation interdep
 
 Non-thermal variables may appear only when they are necessary boundary conditions, coupling variables, controls, or constraints for a thermal mechanism or its consequence.
 
-Use **qualify**, not “evidence-qualify.” Do not use **selected** as a filler adjective in objectives or scope statements. Name the actual physical object or variable class.
+Use **qualify** consistently. In objectives and scope statements, name the physical object or variable class directly.
 
 State and time are the primary analytical dimensions. Preserve:
 
