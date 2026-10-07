@@ -66,7 +66,7 @@ Permanent distinctions:
 
 ## 6. Minimum-sufficient-physics rule
 
-The standards-grounded scope identifies what belongs to the Electrified Transportation System. The mathematical model activates only those component states, constitutive laws, constraints, and coupling quantities needed to change a threshold, service prediction, validation result, intervention assessment, or engineering decision.
+The canonical scope identifies what belongs to the Electrified Transportation System. The mathematical model activates only those component states, constitutive laws, constraints, and coupling quantities needed to change a threshold, service prediction, validation result, intervention assessment, or engineering decision.
 
 ## 7. Engineering resilience cycle
 
