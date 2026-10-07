@@ -62,7 +62,7 @@ Improve / Adapt / Restore
 Dimension content:
 
 ```text
-Environmental → energy use/losses; GHG emissions; material/resource burden
+Environmental → energy use; energy efficiency; electrical/conversion losses; GHG emissions; material/resource burden
 Economic → operating; maintenance/replacement; intervention; service-disruption cost
 Social → access; continuity; affordability; equity; safety
 ```
@@ -78,6 +78,26 @@ Measured Sustainability Indicator
 ```
 
 Do not map a broad dimension directly to an SDG number. Exact SDG targets remain open until indicators are operationalized.
+
+## Canonical effectiveness / energy-efficiency placement — FROZEN 2026-10-07
+
+Authority: `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Presentation rules:
+- effectiveness asks whether Improve, Adapt, or Restore achieves the intended service/resilience result;
+- energy efficiency belongs under environmental sustainability;
+- never merge effectiveness with energy efficiency;
+- never imply that an effective resilience response is automatically sustainable.
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
 
 ## Canonical Electrified Transportation scope — FROZEN 2026-10-07
 
@@ -183,6 +203,8 @@ Do not reopen a decision merely because a different wording appears attractive.
 | Exact resilience capacity label | Not frozen | **OPEN** | Do not prematurely label the thesis as only adaptive/absorptive/restorative |
 | Engineering action sequence | Improvement/enhancement → adaptation → restoration | **WORKING-FROZEN** | Improvement is the engineering starting objective; adaptation and restoration are subsequent response phases |
 | Sustainability framework | Direct consequence + engineering-response consequence | **FROZEN — CANONICAL TWO-PATHWAY** | Both use environmental, economic, and social dimensions |
+| Effectiveness placement | Resilience / engineering-response assessment | **FROZEN** | Did the response maintain or recover required service? |
+| Energy-efficiency placement | Environmental sustainability | **FROZEN** | Useful service relative to energy input; exact functional basis remains open |
 | SDG linkage | Measured indicator → dimension → relevant SDG target/indicator | **FROZEN RULE** | Exact targets remain open until measurement |
 | Comparator architecture | Needs reconciliation with canonical M0/M1/M2 repository state and current narrower M0/M1 discussion | **OPEN** | No silent replacement |
 

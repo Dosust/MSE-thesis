@@ -6,6 +6,7 @@
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Supersedes for active conceptual work:** `CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
 
@@ -46,6 +47,22 @@ Thermal State ≠ Capability ≠ Service ≠ Resilience
 
 Improve, Adapt, and Restore are engineering responses, not the resilience definition.
 
+### Engineering-response effectiveness
+
+Effectiveness is evaluated within the resilience / engineering-response layer:
+
+```text
+Improve / Adapt / Restore
+→ Changed State / Capability / Service
+→ Effectiveness of the Resilience Response
+```
+
+Effectiveness asks whether the engineering response maintains or recovers required electricity and mobility service. It is not a sustainability dimension.
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+```
+
 ## 4. Two-pathway sustainability architecture
 
 Sustainability is assessed after the relevant thermal/service consequence is defined.
@@ -73,7 +90,9 @@ The two pathways are compared within the same declared system boundary, time hor
 ### Environmental
 
 ```text
-energy use / losses
+energy use
++ energy efficiency
++ electrical / conversion losses
 + GHG emissions
 + material / resource burden
 ```
@@ -167,6 +186,8 @@ Do not reactivate as primary causal layers:
 common heat exposure ≠ thermal interdependency
 connection ≠ dependency
 thermal state ≠ capability ≠ service ≠ resilience ≠ sustainability
+effectiveness ≠ energy efficiency ≠ sustainability
+effective resilience response ≠ sustainable response
 resilience improvement ≠ sustainability improvement
 direct sustainability consequence ≠ engineering-response sustainability consequence
 measured indicator ≠ sustainability dimension ≠ SDG target

@@ -6,6 +6,7 @@
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Supersedes for active mathematical work:** `MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
 
@@ -139,6 +140,31 @@ Candidate service-trajectory descriptors include minimum service level, service 
 Thermal State ≠ Capability ≠ Service ≠ Resilience
 ```
 
+## 9. Effectiveness of an engineering response
+
+Effectiveness belongs to the resilience / engineering-response assessment.
+
+For an engineering response (a), a generic effectiveness functional may be written as:
+
+```math
+E_{\mathrm{eff}}(a)
+=
+\mathcal E\!\left(
+Q_P^{a}(\cdot),
+Q_T^{a}(\cdot);
+Q_P^{H}(\cdot),
+Q_T^{H}(\cdot)
+\right),
+```
+
+where the exact functional (\mathcal E) remains **OPEN** until the final resilience/service metrics are frozen.
+
+Candidate components may include changes in service deficit, minimum service level, disruption duration, or recovery time.
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+```
+
 ## 9. Sustainability vector
 
 Define the sustainability indicator vector
@@ -158,12 +184,33 @@ Each block may contain more than one indicator. The vector is not automatically 
 Representative indicator families are:
 
 ```text
-Environmental: energy / losses, GHG emissions, material-resource burden
+Environmental: energy use, energy efficiency, electrical/conversion losses, GHG emissions, material-resource burden
 Economic: operating, maintenance-replacement, intervention, service-disruption cost
 Social: access, continuity, affordability, equity, safety
 ```
 
 Only indicators supported by the scope, data, and causal interpretation are activated.
+
+### Energy efficiency
+
+When activated as an environmental-sustainability indicator:
+
+```math
+\eta_E
+=
+\frac{F_{service}}{E_{in}},
+\qquad
+I_E
+=
+\frac{E_{in}}{F_{service}}.
+```
+
+The exact useful-service quantity (F_{service}), energy-input boundary, units, and time horizon remain **OPEN**.
+
+```text
+Energy Efficiency → Environmental Sustainability
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+```
 
 ## 10. Three comparison cases
 
