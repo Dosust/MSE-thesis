@@ -6,6 +6,7 @@
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **Canonical resilience authority:** [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md)  
 **Canonical sustainability authority:** [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md)  
+**Effectiveness / energy-efficiency authority:** [`project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`](project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md)  
 **Current objective authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
 **Current conceptual framework:** [`project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)  
 **Current mathematical framework:** [`project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)  
@@ -235,7 +236,9 @@ The three sustainability dimensions are:
 
 ```text
 Environmental
-→ energy use / losses
+→ energy use
+→ energy efficiency
+→ electrical / conversion losses
 → GHG emissions
 → material / resource burden
 
@@ -282,6 +285,22 @@ Direct sustainability consequence ≠ engineering-response sustainability conseq
 Measured indicator ≠ sustainability dimension ≠ SDG target
 ```
 
+## Effectiveness and energy-efficiency placement
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+**Effectiveness** asks whether Improve, Adapt, or Restore actually maintains or recovers required electricity and mobility services.
+
+**Energy efficiency** asks how much useful electricity or mobility service is delivered relative to the energy required to provide that service. It is an environmental-sustainability indicator when relevant and measurable.
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
 ## Supporting engineering-response boundary
 
 Improve, Adapt, Restore, and Learn may be used only as **supporting interpretation or optional experiments** when they directly help explain a thermal state-time consequence. They are not primary research objectives.
@@ -305,6 +324,8 @@ The core thermal modeling chain ends at quantified electricity and mobility serv
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
 | sustainability assessment | **FROZEN — CANONICAL TWO-PATHWAY FRAMEWORK** |
 | sustainability dimensions | **FROZEN — ENVIRONMENTAL + ECONOMIC + SOCIAL** |
+| effectiveness placement | **FROZEN — RESILIENCE / ENGINEERING-RESPONSE ASSESSMENT** |
+| energy-efficiency placement | **FROZEN — ENVIRONMENTAL SUSTAINABILITY INDICATOR** |
 | SDG linkage rule | **FROZEN — INDICATOR → DIMENSION → RELEVANT SDG TARGET/INDICATOR** |
 | Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |

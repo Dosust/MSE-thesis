@@ -11,14 +11,15 @@
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 5. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 6. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
-7. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
-8. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
-9. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
-10. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
-11. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-12. `project/RESEARCH_REASONING_PROTOCOL.md`
-13. `project/EGMIV_METHOD_V1.md`
-14. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+7. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
+8. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+9. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
+10. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
+11. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
+12. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+13. `project/RESEARCH_REASONING_PROTOCOL.md`
+14. `project/EGMIV_METHOD_V1.md`
+15. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Current status matrix
 
@@ -35,6 +36,8 @@
 | resilience definition | **FROZEN — CANONICAL SERVICE-LEVEL STATE-TIME DEFINITION** |
 | sustainability assessment | **FROZEN — CANONICAL TWO-PATHWAY FRAMEWORK** |
 | sustainability dimensions | **FROZEN — ENVIRONMENTAL + ECONOMIC + SOCIAL** |
+| effectiveness placement | **FROZEN — RESILIENCE / ENGINEERING-RESPONSE ASSESSMENT** |
+| energy-efficiency placement | **FROZEN — ENVIRONMENTAL SUSTAINABILITY INDICATOR** |
 | SDG linkage rule | **FROZEN — MEASURED INDICATOR → DIMENSION → RELEVANT SDG TARGET/INDICATOR** |
 | Improve → Adapt → Restore | **SUPPORTING ENGINEERING RESPONSE CLASSES** |
 | exact charging context | **OPEN** |
@@ -130,3 +133,22 @@ Measured Sustainability Indicator
 ```
 
 Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN until operationalized and supported by data. Full LCA/social LCA, economy-wide assessment, universal sustainability optimization, and automatic scalar aggregation remain outside the active scope unless separately authorized.
+
+
+## Canonical effectiveness and energy-efficiency placement — 2026-10-07
+
+Authority: `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`.
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Preserve:
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
+Exact effectiveness metrics and exact energy-efficiency numerator, denominator, units, boundary, and functional/service basis remain OPEN.
