@@ -12,7 +12,7 @@ Before applying any older instruction in this file, load:
 
 The active thesis workstream focuses **only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time**. The Electrified Transportation System composition is controlled by `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Battery-electric road transport and a charging context are bounded application subsets, not the thesis-wide definition of the transportation system. The September seven-stage / RQ1–RQ7 / H1–H5 / Austin-P3 architecture is retained for provenance and reusable methods but is **not current scope authority where it conflicts with the 2026-10-06 scope amendment**.
 
-Do not silently reactivate historical Chapter-I, RQ/SO/H, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The final narrowed RQ/SO/H set is OPEN.
+Do not silently reactivate historical Chapter-I, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The General Objective and SO1–SO3 are frozen; final narrowed research-question wording and hypotheses remain OPEN.
 
 For scientific diagrams, also load:
 - `.github/skills/engineering-framework-design/SKILL.md`
