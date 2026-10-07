@@ -27,7 +27,7 @@ Canonical Electrified Transportation scope:
 
 Use **Electrified Transportation System**. Do not use “standards-defined” as part of the system name.
 
-Use **qualify** only. Do not use “evidence-qualify.” Do not use **selected** as a filler adjective in objectives or scope statements.
+Use **qualify** consistently. In objectives and scope statements, name the physical object or variable class directly.
 
 Battery-electric road transportation and grid-connected charging remain bounded application subsets. Exact charging context, exact thermal states, service metrics, validation datasets, intervention set, and final narrowed objective/RQ/SO/H wording remain OPEN unless separately frozen.
 
@@ -39,7 +39,7 @@ Historical broad seven-stage/RQ-H/P3/Austin material below is retained for prove
 # Project Memory Entry Point
 
 > **Research decision-control authority — active 2026-10-05:**  
-> `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md` is the canonical decision-closure and reopening protocol. It complements `project/RESEARCH_REASONING_PROTOCOL.md` and `project/EGMIV_METHOD_V1.md`. Use it whenever a scope, terminology, mechanism, model, or presentation decision is selected, frozen, or reconsidered.
+> `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md` is the canonical decision-closure and reopening protocol. It complements `project/RESEARCH_REASONING_PROTOCOL.md` and `project/EGMIV_METHOD_V1.md`. Use it whenever a scope, terminology, mechanism, model, or presentation decision is chosen, frozen, or reconsidered.
 
 > **Presentation workstream — active 2026-10-05:**  
 > For the current 8-slide MSE research presentation, read `project/PRESENTATION_8_SLIDE_RESEARCH_BRIEF_V1.md` after the canonical thesis authorities. It records presentation-specific working decisions, open scope questions, slide logic, evidence-admission rules, and anti-repetition/freeze controls. It does **not** silently override canonical thesis authorities.
@@ -162,7 +162,7 @@ Primary H1a comparison is **M2 vs M1**. M2 vs M0 is secondary.
 \Theta_{repr}=\mathbb E_{\omega\sim\Omega_H}[D_{PT}^{2,1}(\omega)].
 ```
 
-Thresholds may not be selected from observed M2−M1 effects.
+Thresholds may not be chosen from observed M2−M1 effects.
 
 Frozen numerical floors for minimal-demonstrator v1:
 
