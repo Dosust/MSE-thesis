@@ -2,7 +2,37 @@
 
 **Status:** ACTIVE READING / EVIDENCE-TRANSFER METHOD  
 **Effective date:** 2026-10-08  
-**Scope:** thermal Power–Electrified Transportation interdependencies; physical state; time; electricity/mobility consequence.
+**Scope:** thermal Power–Electrified Transportation interdependencies; physical state; time; electricity/mobility consequence.  
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
+
+## Canonical state-time reading rule
+
+All paper interpretation must preserve the canonical semantics:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+A paper may establish a physically meaningful quantity without establishing that the quantity belongs in the active thesis state vector. Candidate states are admitted only if their evolution is dynamically required and materially changes the qualified thermal interdependency, capability boundary, service trajectory, validation result, or engineering conclusion.
+
+For every paper that uses a state variable, record:
+
+```text
+state identity
+→ physical meaning
+→ units
+→ governing dynamics
+→ forcing/input
+→ time scale
+→ observability
+→ capability consequence
+→ service materiality
+→ thesis-state admission decision
+```
 
 ## Permanent reading logic
 
@@ -111,7 +141,7 @@ Compare event-scale outputs with and without an aging state. Admit aging only if
 
 ### State/time rule
 ```text
-fast thermal state != operational/energy state != slow degradation state != service
+fast thermal state != operational/energy state != slow degradation state != capability != service
 ```
 
 ---
