@@ -1,6 +1,6 @@
 # Current Thesis Authority Index V1
 
-**Effective date:** 2026-10-06  
+**Effective date:** 2026-10-07  
 **Purpose:** single current entry point for humans and AI systems.
 
 ## Load first
