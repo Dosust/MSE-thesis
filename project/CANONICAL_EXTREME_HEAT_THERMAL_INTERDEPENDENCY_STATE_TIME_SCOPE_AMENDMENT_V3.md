@@ -4,7 +4,8 @@
 **Effective date:** 2026-10-07  
 **Supersedes for active scope:** `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
 **Repository:** `Dossiya-SE/MSE-thesis`  
-**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`
 
 ## 1. Purpose
 
@@ -68,29 +69,37 @@ Permanent distinctions:
 
 - external heat forcing ≠ thermal state;
 - common heat exposure ≠ thermal interdependency;
-- thermal state ≠ functional capability ≠ service;
+- thermal state ≠ functional capability ≠ service ≠ resilience;
 - system-scope membership ≠ active model state;
 - connection ≠ dependency;
 - transition time ≠ propagation time ≠ recovery time;
 - simulation ≠ validation.
 
-## 8. Supporting engineering response boundary
+## 8. Resilience interpretation
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Resilience is evaluated from electricity and mobility service trajectories through time. Component survival alone is insufficient. Where service requirements are operationalized, a service deficit exists when (Q_k(t) < Q_k^{req}(t)).
+
+The governing question is whether required service can be maintained and, if not, how quickly and effectively it can be recovered.
+
+## 9. Supporting engineering response boundary
 
 Engineering responses may be discussed or tested only when needed to interpret a thermal state-time consequence. They are **supporting analyses, not primary thesis objectives**.
 
 The active scientific chain ends at quantified electricity and mobility service consequences.
 
-## 9. Sustainability boundary
+## 10. Sustainability boundary
 
 Broad sustainability assessment is outside the active analytical scope. Sustainable Engineering implications may be discussed only as bounded interpretation of the thermal findings; they do not constitute a separate modeled research domain.
 
-## 10. Research-logic status
+## 11. Research-logic status
 
 The General Objective and SO1–SO3 are **FROZEN** under `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`. Final research-question wording, hypotheses, exact thermal states, service metrics, validation datasets, and any optional supporting intervention set remain **OPEN** until separately frozen.
 
 This scope amendment creates no empirical result and no novelty claim.
 
-## 11. Terminology
+## 12. Terminology
 
 Use **qualify** consistently.
 
@@ -98,6 +107,6 @@ In objectives and scope statements, name the physical object or variable class d
 
 Use **Electrified Transportation System**; do not use “standards-defined” as part of the system name.
 
-## 12. Reopen conditions
+## 13. Reopen conditions
 
 This scope may be reopened only for contradictory evidence, implementation/data infeasibility, explicit user/supervisor/chair/committee direction, conflict with higher ASU/SSEBE requirements, or a formally authorized scope change.
