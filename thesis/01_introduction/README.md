@@ -6,12 +6,14 @@
 
 **Current authorities:**
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
-- `../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+- `../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 - `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 - `../../project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+- `../../project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+- `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
 - `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
-- `../../project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`
-- `../../project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+- `../../project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
+- `../../project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 
 The September 2026 Chapter-I snapshots, V4 RQ/SO/H files, and Chapter-I v3 content contract are retained for provenance only and do not control the active manuscript where they conflict with the thermal-only scope.
 
@@ -69,14 +71,50 @@ Thermal State ≠ Capability ≠ Service ≠ Resilience
 
 Improve, Adapt, and Restore are engineering response classes; they are not the definition of resilience.
 
+## Canonical sustainability interpretation
+
+> **Sustainability in this thesis is assessed through two pathways: (1) the direct environmental, economic, and social consequences of thermal interdependencies on electricity and mobility services, and (2) the environmental, economic, and social consequences of engineering responses used to improve, adapt, or restore those services. Both pathways are evaluated within a declared system boundary and time horizon.**
+
+Chapter I must present **one sustainability framework with two pathways**:
+
+```text
+Pathway 1
+Thermal Interdependency
+→ Electricity / Mobility Service Consequence
+→ Environmental / Economic / Social Consequence
+
+Pathway 2
+Engineering Response
+→ Changed State / Capability / Service
+→ Environmental / Economic / Social Consequence
+```
+
+Dimension families:
+
+```text
+Environmental → energy use/losses; GHG emissions; material/resource burden
+Economic → operating; maintenance/replacement; intervention; service-disruption cost
+Social → access; continuity; affordability; equity; safety
+```
+
+SDG linkage is an interpretation layer only:
+
+```text
+Measured Sustainability Indicator
+→ Sustainability Dimension
+→ Relevant SDG Target / Indicator
+```
+
+Exact indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
+
 ## Permanent distinctions
 
 ```text
 common heat exposure ≠ thermal interdependency
 connection ≠ directional dependency
-thermal state ≠ capability ≠ service ≠ resilience
+thermal state ≠ capability ≠ service ≠ resilience ≠ sustainability
 transition time ≠ propagation delay ≠ recovery time
 simulation ≠ validation
 ```
 
-The active Chapter I must not reintroduce generic Information/Organization, viability/reachability, broad sustainability optimization, or multiobjective engineering-decision analysis as primary research objects.
+The active Chapter I must not reintroduce generic Information/Organization, viability/reachability, broad sustainability optimization, or multiobjective engineering-decision analysis as primary research objects. Sustainability remains bounded to the canonical two-pathway assessment.
