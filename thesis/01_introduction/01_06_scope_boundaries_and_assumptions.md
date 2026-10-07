@@ -5,6 +5,7 @@ The active thesis scope is controlled by:
 - `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`;
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`;
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`;
+- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`;
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`;
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`;
 - `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`.
@@ -14,7 +15,7 @@ The active thesis scope is controlled by:
 | Physical systems | Power System + Electrified Transportation System | Other infrastructure sectors |
 | Hazard | Extreme heat | Flood, storm, earthquake, other hazards |
 | Interdependency class | Thermal interdependencies only | Generic non-thermal P–T interdependencies |
-| Analytical dimensions | Physical state + time | Broad social/institutional dynamics |
+| Analytical dimensions | Canonical state + time: evolving physical/operational states and timing of transitions/propagation/service consequences | Broad social/institutional dynamics |
 | Active consequences | Electricity + mobility service | Economy-wide welfare/GDP modeling |
 | Transportation application | Battery-electric road transport with grid-connected charging | All transportation modes |
 | Modeling fidelity | Minimum sufficient thermal physics | Full component-detail modeling by default |
@@ -42,10 +43,21 @@ Measured Sustainability Indicator
 → Relevant SDG Target / Indicator
 ```
 
+The canonical state-time rules are:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+```
+
+Exact active state variables remain OPEN until qualified by the application case, mechanism evidence, and minimum-sufficient-physics rule.
+
 The principal temporal quantities are distinct:
 
 ```text
-critical transition time ≠ propagation delay ≠ recovery time
+critical transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
 ```
 
 All claims are restricted to the mechanisms, components, parameter ranges, heat conditions, observations, service definitions, and validation evidence actually examined.
