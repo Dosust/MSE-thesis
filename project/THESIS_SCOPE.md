@@ -1,8 +1,9 @@
 # MSE Thesis Scope
 
-**Status:** CANONICAL CURRENT ACTIVE SCOPE — 2026-10-07  
+**Status:** CANONICAL CURRENT ACTIVE SCOPE — 2026-10-08  
 **Thermal focus authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
-**State-time amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
+**State-time amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
+**Canonical state-time definitions:** [`CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
 **Objective authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
 **Electrified Transportation boundary:** [`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)
 
@@ -59,6 +60,34 @@ Q_P(t),
 \qquad
 Q_T(t).
 ```
+
+## Canonical meaning of state and time
+
+State and time are governed by `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
+
+```text
+State:
+minimum evolving physical, operational, energy, or degradation variables
+needed to characterize the current modeled condition and predict subsequent evolution.
+
+Time:
+independent variable through which state evolution, critical transitions,
+interdependency propagation, service consequences, and—where modeled—recovery
+and degradation are ordered and quantified.
+```
+
+Preserve:
+
+```text
+full physical state space ≠ active reduced thesis state vector
+external forcing ≠ state
+thermal state ≠ operational/energy state
+fast state ≠ slow degradation/health state
+state ≠ capability ≠ service
+coupling quantity ≠ state unless independent dynamics require it
+```
+
+SOC is an energy state, not a thermal state. Aging/degradation may be a legitimate slow state, but it is activated only when its evolution materially affects the admitted thermal mechanism or consequence over the declared horizon.
 
 ## Frozen research objectives
 
