@@ -19,9 +19,25 @@ Presentation rules:
 - do not present generic Power–Transportation coupling as the thesis object;
 - do not present non-thermal interdependencies as active mechanisms;
 - non-thermal quantities may appear only as boundary conditions, coupling variables, controls, or constraints required for a thermal mechanism;
-- preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → Improve / Adapt / Restore;
+- preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → resilience interpretation; Improve / Adapt / Restore may follow as engineering responses;
 - use **qualify** consistently;
 - name the physical object or variable class directly in objectives and scope statements.
+
+## Canonical resilience definition — FROZEN 2026-10-07
+
+Authority: `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+Presentation rules:
+- resilience is evaluated at the **service level through time**;
+- component survival is not resilience;
+- preserve **Thermal State ≠ Capability ≠ Service ≠ Resilience**;
+- use service requirements (Q_P(t) \ge Q_P^{req}(t)) and (Q_T(t) \ge Q_T^{req}(t)) when operationalized;
+- a service deficit occurs when (Q_k(t) < Q_k^{req}(t));
+- the central question is: **Can required service be maintained, and if not, how quickly and effectively can it be recovered?**
+- minimum service level, service deficit, disruption duration, and recovery time may characterize the service trajectory;
+- Improve, Adapt, and Restore are engineering response classes, not the definition of resilience.
 
 ## Canonical Electrified Transportation scope — FROZEN 2026-10-07
 
@@ -115,10 +131,10 @@ Do not reopen a decision merely because a different wording appears attractive.
 |---|---|---|---|
 | Thesis title | Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience | **FROZEN** | Canonical title authority |
 | Core infrastructure systems | Power + Transportation | **FROZEN** | Preserve thesis meaning |
-| Hazard for current presentation workstream | Extreme heat | **WORKING-FROZEN** | Requires synchronization with older repository authorities before thesis-wide canonical replacement |
-| Interdependency focus | Electricity-based dependency created by transport electrification | **WORKING-FROZEN** | Excludes petrol, diesel, natural gas and other non-electric propulsion-energy pathways |
+| Hazard for current presentation workstream | Extreme heat | **FROZEN — CURRENT** | Controlled by current thermal-interdependency scope authority |
+| Interdependency focus | Thermal interdependencies between Power and Electrified Transportation only | **FROZEN — CANONICAL** | Non-thermal relations enter only when required to represent a thermal mechanism |
 | Performance lens | Functioning + serviceability + reliability | **WORKING-FROZEN** | Used to characterize service performance before/through resilience assessment |
-| Primary outcome | Electricity and mobility service trajectories / resilience | **WORKING-FROZEN** | Interface/component states are mechanisms, not the final outcome |
+| Primary outcome | Electricity and mobility service trajectories interpreted for resilience | **FROZEN INTERPRETATION / METRICS OPEN** | Resilience is service-level and state-time; exact metrics remain open |
 | Transport mode | Road transport → battery-electric road transportation | **WORKING-FROZEN** | Chosen through the five canonical scope gates; see `project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md` |
 | Electrical dependency architecture | Battery-mediated electric mobility through grid-connected EV charging | **WORKING-FROZEN** | Exact charging context remains open |
 | V2G | Not active by default | **OPEN/EXCLUDED UNLESS JUSTIFIED** | Do not equate interdependency with reverse electrical flow |
@@ -160,7 +176,7 @@ Interpretation:
 - **Functioning** asks whether intended function can still be performed.
 - **Serviceability** asks whether delivered electricity/mobility service remains acceptable.
 - **Reliability** asks whether acceptable performance is sustained consistently over the declared operating domain.
-- **Resilience** evaluates disturbance-driven degradation, persistence/adaptation and recovery of service through time.
+- **Resilience** is the ability to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.
 - **Energy efficiency** is evaluated only after the service delivered is defined.
 - **Operational control** is the engineering response layer, not the resilience outcome itself.
 
@@ -192,21 +208,21 @@ Extreme heat
 → resilience consequence
 ```
 
-### Thesis resilience decomposition
+### Resilience interpretation
 
-For presentation purposes, the thesis operationalizes resilience as:
+The presentation must not define resilience as Improve → Adapt → Restore.
+
+Use the canonical definition:
+
+> **Resilience is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time.**
+
+The engineering response sequence remains:
 
 ```text
-IMPROVE
-→ ADAPT
-→ RESTORE
+Improve → Adapt → Restore
 ```
 
-- **Improve:** identify and test physics-based changes that improve functioning, serviceability, reliability, or service margin relative to a baseline.
-- **Adapt:** adjust operation as extreme heat and system states evolve.
-- **Restore:** recover degraded electricity and mobility service toward acceptable/reference levels.
-
-This is the thesis engineering decomposition, not a universal standard definition.
+but it is evaluated by how it changes the service trajectory, service deficit, disruption duration, recovery time, or other justified resilience descriptors.
 
 ## 7. Current 8-slide scientific backbone
 
