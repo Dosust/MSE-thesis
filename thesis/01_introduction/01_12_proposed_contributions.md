@@ -1,5 +1,6 @@
 ## 1.12 Proposed Contributions
 
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
@@ -11,11 +12,20 @@ A reproducible distinction between common heat exposure and a directional therma
 
 ### C2 — Physics-based state-time representation
 
-A minimum-sufficient physics representation linking thermally active Power states, Electrified-Transportation states, and cross-system coupling quantities through time.
+A minimum-sufficient physics representation linking admitted thermally active Power states, admitted Electrified-Transportation states, and cross-system coupling quantities through time, using the canonical distinction between external forcing, state, capability, coupling, and service.
 
 ### C3 — Timing and service-consequence characterization
 
 A quantified characterization of critical thermal transition time, interdependency propagation delay, and resulting electricity and mobility service trajectories where these quantities are identifiable.
+
+State-time contribution boundary:
+
+```text
+external forcing ≠ state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+The exact active state set remains open until independently qualified; the contribution is not the inclusion of more states, but the minimum-sufficient state-time representation required to explain the qualified thermal interdependency and service consequence.
 
 The contribution chain is:
 
