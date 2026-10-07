@@ -52,6 +52,11 @@
 | final novelty claim | **OPEN** |
 | September seven-stage/RQ-H/P3/Austin packages | **HISTORICAL / RETAINED** |
 
+## Current literature-reading / evidence-transfer method
+
+- `project/THERMAL_PAPER_SCHOOL_V2.md` — active seven-pass paper-reading, limitation-taxonomy, remaining-gap, and thesis-transfer method.
+- `tools/thermal_paper_school_v2.py` — executable audit helper for limitation coding, scope admission, and state-admission checks.
+
 ## Current framework authorities
 
 - `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability conceptual framework.
