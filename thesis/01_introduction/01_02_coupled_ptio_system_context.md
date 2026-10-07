@@ -10,6 +10,10 @@ The physical infrastructure core of the thesis is
 
 where `P` denotes the Power system and `T` denotes the Transportation system.
 
+For the active thesis scope, `T` is specifically the **Electrified Transportation System**. **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+This is a thesis-level synthesis across complementary standards series rather than a claim that any one standard independently defines the complete system. EVSE and the physical charging connection belong to `T_e`; the Power–Transportation coupling/interface object represents cross-system exchange, constraints, and dependency conditions and does not constitute a third physical infrastructure system.
+
 Information and Organization are supporting domains:
 
 ```math
@@ -48,12 +52,12 @@ The progression is therefore
 
 Multilayer-network theory provides mathematical tools for representing multiple networks and relation types, but an interlayer edge is not treated in this thesis as evidence of a physical directional dependency (Kivelä et al., 2014).
 
-For `P\rightarrow T`, candidate mechanism families include electricity supply to charging infrastructure and other electrically dependent transportation functions. Coupled traffic–power studies document interactions among charging demand, transportation behavior, and distribution-system operating constraints (Fotouhi et al., 2017; Unterluggauer et al., 2022; Wei et al., 2019).
+For `P\rightarrow T_e`, the active electrification mechanism is Power-system electrical capability supplied to the Electrified Transportation System, thereby affecting EVSE charging capability, vehicle energy state or availability, and ultimately mobility service. Coupled traffic–power studies document interactions among charging demand, transportation behavior, and distribution-system operating constraints (Fotouhi et al., 2017; Unterluggauer et al., 2022; Wei et al., 2019).
 
-For `T\rightarrow P`, transportation conditions can affect access required for repair, restoration, or deployment of mobile resources. Fan et al. (2024), for example, incorporate transportation-network states into post-disaster repair routing.
+For `T_e\rightarrow P`, the active reciprocal mechanism is the electrical demand created by the Electrified Transportation System: vehicle arrival, energy state, charging requirement, and charging control determine EVSE demand and the power/current imposed on the distribution system. Where bidirectional transfer is technologically supported and explicitly admitted, stored vehicle energy may also provide reverse transfer to the Power system. Bidirectional transfer is conditional, not universal.
 
-These mechanisms are physically distinct and must therefore be represented and qualified independently.
+These directional mechanisms are physically distinct and must therefore be represented and qualified independently.
 
-Common exposure remains separate from dependency. A flood can expose a road and an electrical component simultaneously, but a cross-system dependency is established only when the state of one infrastructure subsequently affects the other through a specified mechanism.
+Common exposure remains separate from dependency. Extreme heat can affect Power-system components and Electrified-Transportation components simultaneously, but common thermal exposure is not a cross-system dependency unless the state or capability of one system subsequently changes the other through a specified Power–Transportation mechanism.
 
 Mechanisms introduced in Chapter 1 are therefore **candidate mechanism families**. Their inclusion in the conceptual architecture does not establish case-specific dependency acceptance, numerical identifiability, parameter readiness, or authorization for dynamic simulation. Those stronger claims require the evidence and methodological controls developed later in the thesis.
