@@ -3,6 +3,7 @@
 **Status:** CANONICAL — CURRENT ACTIVE MATHEMATICAL FRAMEWORK  
 **Effective date:** 2026-10-07  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**State-time authority:** `CANONICAL_STATE_TIME_DEFINITION_V1.md`  
 **Objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
@@ -13,6 +14,33 @@
 ## 1. Purpose
 
 Formalize the active thermal-interdependency state-time problem and its downstream resilience and bounded two-pathway sustainability interpretation.
+
+## Canonical state and time semantics
+
+The mathematical framework uses the canonical definitions in `CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+
+```math
+\dot X(t)=F(X(t),H(t),u(t);\theta)
+```
+
+has the following semantics:
+
+- (X(t)) contains only admitted evolving physical/operational state variables required by the adopted model;
+- (H(t)) is external extreme-heat forcing and is not itself a system state;
+- (u(t)) is a control/operating input where used;
+- (	heta) contains parameters, not dynamic states unless explicitly reformulated.
+
+Preserve:
+
+```text
+external forcing ≠ system state
+physical quantity ≠ state variable ≠ active thesis state
+thermal state ≠ operational/energy state
+state ≠ capability ≠ service
+transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time
+```
+
+The exact active state vector remains OPEN. Candidate transformer, EVSE, battery, SOC, degradation, or health variables must pass the minimum-sufficient-physics and state-admission tests before activation.
 
 ## 2. Extreme-heat forcing
 
