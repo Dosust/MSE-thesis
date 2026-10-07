@@ -3,8 +3,9 @@
 **Status:** CANONICAL — FROZEN THESIS DEFINITION  
 **Effective date:** 2026-10-07  
 **Repository:** `Dossiya-SE/MSE-thesis`  
-**Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
-**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
+**Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
 
 ## 1. Canonical definition
 
@@ -102,6 +103,16 @@ Do not substitute component survival, component availability alone, robustness a
 
 Reliability and resilience remain distinct. Reliability may characterize the consistency or probability of acceptable service over a declared domain; resilience characterizes maintaining or recovering required service through disturbance and recovery over time.
 
-## 10. Reopen conditions
+## 10. Relationship to sustainability
+
+Resilience and sustainability are distinct.
+
+```text
+Resilience improvement ≠ sustainability improvement
+```
+
+Sustainability consequences are assessed under `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
+
+## 11. Reopen conditions
 
 This definition may be changed only through an explicit versioned amendment authorized by the user, supervisor/chair/committee direction, or a higher ASU/SSEBE requirement.
