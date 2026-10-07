@@ -4,6 +4,9 @@
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md)  
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
+**Current objective authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
+**Current conceptual framework:** [`project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md)  
+**Current mathematical framework:** [`project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`](project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md)  
 **Electrified Transportation scope authority:** [`project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`](project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md)  
 **Current authority index:** [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md)  
 **Current direction date:** 2026-10-07
@@ -180,18 +183,19 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 | thesis title | **FROZEN** |
 | physical core: Power + Transportation | **FROZEN** |
 | Electrified Transportation System composition/boundary | **FROZEN — CANONICAL** |
-| active hazard: extreme heat | **WORKING-FROZEN / CURRENT** |
+| active hazard: extreme heat | **FROZEN — CURRENT** |
 | thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
 | battery-electric road transportation as application subset | **WORKING-FROZEN** |
 | grid-connected EV charging mechanism | **WORKING-FROZEN** |
-| state-time analytical focus | **WORKING-FROZEN / CURRENT** |
-| Improve → Adapt → Restore → Learn | **WORKING-FROZEN / CURRENT** |
+| Improve → Adapt → Restore → Learn | **SUPPORTING — thermal consequences only** |
 | exact charging context | **OPEN** |
 | exact component/interface states | **OPEN** |
 | exact electricity/mobility service metrics | **OPEN** |
-| exact intervention set | **OPEN** |
-| final narrowed RQ/SO/H | **OPEN** |
+| exact intervention set | **OPEN — optional/supporting, thermal only** |
+| general + specific objectives | **FROZEN — GO + SO1–SO3** |
+| final RQ wording | **OPEN — thermal/state-time only** |
+| hypotheses | **OPEN — thermal/state-time only** |
 | final novelty claim | **OPEN** |
 
 ---
@@ -206,7 +210,7 @@ This is a thesis-specific engineering architecture, not a claim of a universal r
 | [`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`](project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md) | current authority entry point |
 | [`project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`](project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md) | decision closure / reopening |
 | [`project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md`](project/ROAD_VS_RAIL_SCOPE_GATE_DECISION_V1.md) | road-over-rail working decision |
-| [`project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md) | current conceptual-framework specification |
+| [`project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`](project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md) | current thermal-only conceptual framework |
 | [`project/WHY_LOG_2026-10-06.md`](project/WHY_LOG_2026-10-06.md) | rationale / rejected alternatives |
 | [`project/RESEARCH_REASONING_PROTOCOL.md`](project/RESEARCH_REASONING_PROTOCOL.md) | reasoning / evidence discipline |
 | [`project/EGMIV_METHOD_V1.md`](project/EGMIV_METHOD_V1.md) | evidence-grounded mechanism/model method |
@@ -274,13 +278,11 @@ No historical scientific work was deleted.
 ## Current next work
 
 ```text
-freeze exact charging context
-→ freeze the physical state variables required by the thermal model
-→ freeze service variables
-→ rewrite/freeze narrowed RQ / objectives / hypotheses
-→ finalize conceptual + mathematical framework
-→ define minimum-sufficient physics
-→ define matched baselines
+freeze final thermal RQ wording
+→ freeze exact thermal states and coupling quantities
+→ freeze thermal thresholds and electricity/mobility service metrics
+→ qualify directional thermal mechanisms
+→ implement minimum-sufficient thermal physics
 → VVUQ
-→ execute only after data/model gates pass
+→ execute only after evidence/data/model gates pass
 ```
