@@ -3,10 +3,11 @@
 **Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
-**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`  
-**Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V4_THERMAL.md`  
-**Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V2_THERMAL.md`
+**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`  
+**Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
+**Canonical sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
 
 Permanent active thesis focus:
@@ -32,6 +33,41 @@ Resilience is evaluated at the service level through time. Component survival is
 `Thermal State ≠ Capability ≠ Service ≠ Resilience`
 
 The service conditions are (Q_P(t) \ge Q_P^{req}(t)) and (Q_T(t) \ge Q_T^{req}(t)); where (Q_k(t) < Q_k^{req}(t)), a service deficit exists. Improve, Adapt, and Restore are engineering response classes that support resilience analysis; they are not the resilience definition.
+
+Canonical sustainability definition:
+
+> **Sustainability in this thesis is assessed through two pathways: (1) the direct environmental, economic, and social consequences of thermal interdependencies on electricity and mobility services, and (2) the environmental, economic, and social consequences of engineering responses used to improve, adapt, or restore those services. Both pathways are evaluated within a declared system boundary and time horizon.**
+
+One framework, two pathways:
+
+```text
+Pathway 1: Thermal Interdependency → Service Consequence → Environmental / Economic / Social Consequence
+Pathway 2: Engineering Response → Changed State / Capability / Service → Environmental / Economic / Social Consequence
+```
+
+Dimension families:
+
+```text
+Environmental: energy use/losses; GHG emissions; material/resource burden
+Economic: operating; maintenance/replacement; intervention; service-disruption cost
+Social: access; continuity; affordability; equity; safety
+```
+
+SDG rule:
+
+```text
+Measured Sustainability Indicator → Sustainability Dimension → Relevant SDG Target / Indicator
+```
+
+Preserve:
+
+```text
+Resilience improvement ≠ sustainability improvement
+Direct sustainability consequence ≠ engineering-response sustainability consequence
+Measured indicator ≠ sustainability dimension ≠ SDG target
+```
+
+Exact sustainability indicators, functional unit, accounting boundary, time horizon, and SDG targets remain OPEN.
 
 Active objective chain:
 
