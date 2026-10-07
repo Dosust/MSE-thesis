@@ -1,8 +1,9 @@
 # Canonical Extreme-Heat Thermal-Interdependency State-Time Scope Amendment V3
 
-**Status:** CANONICAL CURRENT-SCOPE AMENDMENT  
+**Status:** SUPERSEDED FOR ACTIVE SCOPE — RETAINED FOR PROVENANCE  
 **Effective date:** 2026-10-07  
-**Supersedes for active scope:** `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
+**Superseded by:** `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
+**Previously superseded:** `CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`
