@@ -1,25 +1,28 @@
-# CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-06
+# CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-07
 
 **Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
-**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`  
-**Current framework spec:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V2.md`
+**Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
+**Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md`  
+**Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V3.md`  
+**Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V1.md`
+
+Current physical core:
+
+`Power System P ↔ Electrified Transportation System T_e`
+
+Canonical Electrified Transportation scope:
+
+> **In this thesis, the electrified transportation system comprises the electrically propelled road vehicle, its rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, the vehicle power-supply circuit, electric-vehicle supply equipment, the physical charging connection, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported (ISO 6469; ISO 5474; ISO 15118; IEC 61851; IEC 62196).**
+
+Use the name **Electrified Transportation System**. Do not use “standards-defined” as part of the system name.
 
 Current direction:
 
-```text
-Extreme heat
-→ physical state
-→ state-time dynamics
-→ qualified P–T interface propagation
-→ electricity + mobility service
-→ Improve / Adapt / Restore / Learn
-```
+`Extreme heat → physical states → state-time dynamics → qualified P ↔ T_e propagation → electricity + mobility service → Improve / Adapt / Restore / Learn`
 
-Current transport mode: **battery-electric road transportation through grid-connected EV charging** (WORKING-FROZEN).  
-Exact charging context and final narrowed RQ/SO/H remain OPEN.
+Battery-electric road transportation and grid-connected charging remain bounded application subsets. Exact charging context and final narrowed RQ/SO/H remain OPEN.
 
-The September seven-stage/RQ-H/P3/Austin material below is retained as historical/provenance and reusable scientific control logic. It must not override the current scope amendment.
-
+The September seven-stage/RQ-H/P3/Austin material below is retained as historical/provenance and reusable scientific control logic. It must not override the current scope authorities.
 ---
 
 # Historical project-memory record below
