@@ -2,12 +2,17 @@
 
 The general objective of this thesis is:
 
-> **To develop and validate an evidence-grounded mathematical and engineering framework for coupled Power–Transportation infrastructure that connects spatiotemporal System-of-Systems structure and qualified directional interdependencies to complex spatiotemporal dynamics, observation, information and organizational constraints, feasible control, uncertainty-aware service viability and recovery, engineering intervention consequences, and defensible engineering decisions. Engineering interventions are evaluated through their resilience effects, resource requirements and efficiency, and admitted sustainability consequences.**
+> **To characterize and model thermal interdependencies between the Power System and the Electrified Transportation System under extreme heat, and to quantify how their consequences evolve through physical state and time.**
 
-Validation is interpreted within the declared context and validity domain of the corresponding model, experiment, and evidence rather than as universal validation of the framework.
+This objective is controlled by `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`.
 
-The objective can be read operationally as
+The operational logic is:
 
-```math
-\boxed{ \text{Define} \rightarrow \text{Qualify} \rightarrow \text{Model} \rightarrow \text{Respond} \rightarrow \text{Assess} \rightarrow \text{Compare} \rightarrow \text{Decide}. }
+```text
+thermal mechanism
+→ state-time evolution
+→ cross-system propagation
+→ electricity/mobility consequence
 ```
+
+The objective does not extend to non-thermal Power–Transportation interdependencies, broad organizational or information architectures, generic sustainability optimization, or economy-wide decision modeling.
