@@ -1,5 +1,7 @@
 ## 1.2 Coupled Power–Transportation System Context
 
+> **Active-scope override — 2026-10-07.** The September text below is retained for provenance. Current active work uses **Power System P ↔ Electrified Transportation System T_e**, with `T_e` composed according to `../../project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. EVSE, the physical charging connection, and communication/control belong to the Electrified Transportation System scope; coupling/interface variables may represent exchanged quantities without becoming a third physical infrastructure system.
+
 The physical infrastructure core of the thesis is
 
 ```math
