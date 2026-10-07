@@ -2,7 +2,7 @@
 
 **Status:** CURRENT WORKING MATHEMATICAL-FRAMEWORK SPECIFICATION  
 **Date:** 2026-10-06  
-**Scope authority:** \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md\`  
+**Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md\`  
 **Conceptual counterpart:** \`CONCEPTUAL_FRAMEWORK_SPEC_V3.md\`
 
 ## 1. Purpose
@@ -23,38 +23,65 @@ Only variables required by the selected physical models are retained.
 
 ## 3. Subsystem states
 
-Power:
+Power System:
 
 \[
 \dot X_P
 =
-f_P(X_P,H,Z,u_P;\theta_P).
+f_P(X_P,H,Z_{PT},u_P;\theta_P).
 \]
 
-Physical charging interface:
+Electrified Transportation System:
 
 \[
-\dot Z
+\dot X_{T_e}
 =
-f_Z(Z,X_P,X_T,H,u_Z;\theta_Z).
+f_{T_e}(X_{T_e},H,Z_{PT},u_{T_e};\theta_{T_e}).
 \]
 
-Electrified transportation:
+The canonical transportation-state container is structurally decomposed as
 
 \[
-\dot X_T
+X_{T_e}
 =
-f_T(X_T,H,Z,u_T;\theta_T).
+\left[
+X_V^\top,
+X_{RESS}^\top,
+X_{EP}^\top,
+X_{AUX}^\top,
+X_{VPSC}^\top,
+X_{EVSE}^\top,
+X_{CC}^\top,
+X_{COM}^\top
+\right]^\top,
 \]
 
-These are general structural forms. Each selected component retains its own defensible governing physics.
+where the blocks correspond respectively to the electrically propelled road vehicle, rechargeable energy-storage system, electric propulsion, auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and communication/control functions.
+
+This is a **scope decomposition**, not a requirement that every block receive a detailed dynamic model. Only states required by the research question and supported by evidence are activated.
+
+Bidirectional power transfer, where supported, is represented through admitted power-flow/coupling variables and controls rather than assumed for every case.
+
+### Power–Electrified Transportation coupling object
+
+\[
+Z_{PT}
+=
+\mathcal Z(X_P,X_{T_e},H,u;\theta_Z)
+\]
+
+collects the exchanged quantities, coupling conditions, constraints, and interface states required to represent qualified Power ↔ Electrified Transportation dependencies.
+
+\(Z_{PT}\) is a mathematical coupling/interface object. It is **not a third physical infrastructure system**.
+
+These are general structural forms. Each selected component retains its own defensible governing physics under the minimum-sufficient-physics rule.
 
 ## 4. Coupled state
 
 \[
 X(t)
 =
-[X_P^\top(t),Z^\top(t),X_T^\top(t)]^\top.
+[X_P^\top(t),Z_{PT}^\top(t),X_{T_e}^\top(t)]^\top.
 \]
 
 \[
@@ -63,7 +90,7 @@ X(t)
 F(X,H,u;\theta).
 \]
 
-The coupled form is assembled from admitted component dynamics and qualified directional interfaces.
+The coupled form is assembled from admitted subsystem dynamics and qualified directional Power ↔ Electrified Transportation dependencies.
 
 ## 5. Constraints and critical transition time
 
