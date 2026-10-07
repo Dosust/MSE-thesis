@@ -23,3 +23,15 @@ Qualify thermal mechanism
 ```
 
 The thesis does not claim contribution from broad Information/Organization modeling, generic viability theory, comprehensive sustainability optimization, or universal infrastructure decision frameworks.
+
+
+### Supporting sustainability assessment
+
+Where data support it, the quantified service consequences and any engineering responses are interpreted through the canonical two-pathway sustainability framework:
+
+```text
+Pathway 1: Thermal Interdependency → Service Consequence → Environmental / Economic / Social Consequence
+Pathway 2: Engineering Response → Changed Service → Environmental / Economic / Social Consequence
+```
+
+This is a bounded assessment output, not a fourth primary objective or a standalone novelty claim. SDG relevance is linked only from measured sustainability indicators to relevant SDG targets or indicators.
