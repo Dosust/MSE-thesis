@@ -5,6 +5,24 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Official thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
 
+## Canonical thermal-interdependency focus — FROZEN 2026-10-07
+
+Authorities:
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
+- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V3.md`
+
+> **The thesis focuses only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time.**
+
+Presentation rules:
+- every slide must remain inside the thermal-interdependency scope;
+- state and time are the primary analytical dimensions;
+- do not present generic Power–Transportation coupling as the thesis object;
+- do not present non-thermal interdependencies as active mechanisms;
+- non-thermal quantities may appear only as boundary conditions, coupling variables, controls, or constraints required for a thermal mechanism;
+- preserve the chain: extreme heat → thermal state → thermal capability/constraint → thermal interdependency → state-time consequence → electricity/mobility service consequence → Improve / Adapt / Restore;
+- use **qualify**, not “evidence-qualify”;
+- do not use **selected** as a filler adjective in objectives or scope statements.
+
 ## Canonical Electrified Transportation scope — FROZEN 2026-10-07
 
 Authority: `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
