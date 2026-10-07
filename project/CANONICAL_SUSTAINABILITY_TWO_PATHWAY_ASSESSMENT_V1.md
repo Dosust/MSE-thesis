@@ -4,7 +4,8 @@
 **Effective date:** 2026-10-07  
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thermal-scope authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
-**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`
+**Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
+**Effectiveness / energy-efficiency placement authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 ## 1. Canonical definition
 
@@ -63,6 +64,7 @@ The three dimensions are evaluated in parallel. They are **not automatically agg
 Core indicator families:
 
 - energy use and additional energy demand;
+- energy efficiency, under the placement authority;
 - electrical or conversion losses where relevant;
 - greenhouse-gas emissions or equivalent climate burden where defensible emission factors are available;
 - material/resource burden and equipment replacement burden where materially affected by the thermal mechanism or engineering response.
@@ -216,7 +218,23 @@ Resilience improvement ≠ sustainability improvement
 
 An engineering response may improve resilience while increasing energy use, emissions, cost, material burden, or social inequity. Conversely, a sustainability benefit does not by itself establish resilience.
 
-## 9. Anti-double-counting rule
+## 9. Effectiveness and energy-efficiency placement
+
+The controlling placement is defined by `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`:
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+Preserve:
+
+```text
+Effectiveness ≠ Energy Efficiency ≠ Sustainability
+Effective Resilience Response ≠ Sustainable Response
+```
+
+## 10. Anti-double-counting rule
 
 The same physical consequence must not be counted twice within or across dimensions without an explicit reason.
 
@@ -225,7 +243,7 @@ Examples:
 - electrical energy loss may be an environmental energy indicator; if monetized, the economic value must be labeled as a separate monetary representation of the same physical loss;
 - service disruption may support both an economic cost and a social-access consequence, but the measures must remain distinct and must not be summed without a justified aggregation method.
 
-## 10. Scope and feasibility boundary
+## 11. Scope and feasibility boundary
 
 This framework does **not** require:
 
@@ -239,13 +257,13 @@ This framework does **not** require:
 
 Only indicators that are relevant to the thermal-interdependency mechanism, electricity/mobility service consequence, or engineering response and supported by data are admitted.
 
-## 11. Research-objective relationship
+## 12. Research-objective relationship
 
 The frozen GO and SO1–SO3 remain unchanged unless separately amended.
 
 The two-pathway sustainability assessment is a **bounded downstream interpretation/assessment of the service consequences and engineering responses**. It does not create a fourth primary objective by itself.
 
-## 12. Permanent thesis distinctions
+## 13. Permanent thesis distinctions
 
 ```text
 Thermal state ≠ capability ≠ service ≠ resilience ≠ sustainability
@@ -261,6 +279,6 @@ engineering-response sustainability consequence
 Measured indicator ≠ sustainability dimension ≠ SDG target
 ```
 
-## 13. Reopen conditions
+## 14. Reopen conditions
 
 This authority may be changed only through an explicit versioned amendment authorized by the user, supervisor/chair/committee direction, contradictory evidence or infeasibility, or a higher ASU/SSEBE requirement.

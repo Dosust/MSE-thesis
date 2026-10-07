@@ -6,7 +6,8 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
 **Resilience authority:** `CANONICAL_RESILIENCE_DEFINITION_V1.md`  
-**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency placement authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 ## 1. Active thesis focus
 

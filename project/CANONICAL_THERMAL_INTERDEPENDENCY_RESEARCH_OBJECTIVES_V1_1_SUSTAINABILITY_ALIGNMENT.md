@@ -3,7 +3,8 @@
 **Status:** CANONICAL ALIGNMENT AMENDMENT  
 **Effective date:** 2026-10-07  
 **Base objective authority:** `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
-**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency placement authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 ## 1. Objective wording remains unchanged
 
@@ -38,3 +39,13 @@ Measured Sustainability Indicator
 ```
 
 Exact SDG targets remain open until the corresponding indicators are operationalized.
+
+
+## 4. Placement rule
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+Energy Efficiency → Environmental Sustainability
+```
+
+These are downstream interpretation rules. They do not create SO4 or alter the frozen GO and SO1–SO3.

@@ -5,7 +5,8 @@
 **Repository:** `Dossiya-SE/MSE-thesis`  
 **Scope authorities:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` + `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
 **System-boundary authority:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
-**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+**Sustainability authority:** `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
+**Effectiveness / energy-efficiency placement authority:** `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
 
 ## 1. Canonical definition
 
@@ -113,6 +114,16 @@ Resilience improvement ≠ sustainability improvement
 
 Sustainability consequences are assessed under `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`.
 
-## 11. Reopen conditions
+## 11. Effectiveness placement
+
+Effectiveness of Improve, Adapt, or Restore belongs to the resilience / engineering-response assessment. It asks whether the response maintains or recovers required electricity and mobility service.
+
+```text
+Effectiveness → Resilience / Engineering-Response Assessment
+```
+
+Energy efficiency is not a resilience-effectiveness metric; its placement is environmental sustainability under `CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`.
+
+## 12. Reopen conditions
 
 This definition may be changed only through an explicit versioned amendment authorized by the user, supervisor/chair/committee direction, or a higher ASU/SSEBE requirement.
