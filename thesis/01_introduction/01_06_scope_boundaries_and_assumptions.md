@@ -33,6 +33,8 @@ common heat exposure ≠ thermal interdependency
 
 The Electrified Transportation System includes EVSE and the physical charging connection according to the canonical system-boundary definition. System-scope membership does not require equal model fidelity for every component.
 
+State/time semantics are controlled by `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`. SOC is an operational/energy state rather than a thermal state. Aging/degradation may be a legitimate slow state, but it is activated only when its evolution over the declared horizon materially changes the admitted thermal mechanism or consequence. External heat is forcing, capability is generally derived from state, and electricity/mobility service remains an output rather than a physical state.
+
 Sustainability comparison must preserve the same indicator definition, unit, accounting boundary, and time horizon across the reference, extreme-heat, and engineering-response cases. Exact indicators, functional unit, and SDG targets remain OPEN until operationalized.
 
 The SDG interpretation rule is:
