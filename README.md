@@ -286,7 +286,7 @@ Measured indicator ≠ sustainability dimension ≠ SDG target
 
 Improve, Adapt, Restore, and Learn may be used only as **supporting interpretation or optional experiments** when they directly help explain a thermal state-time consequence. They are not primary research objectives.
 
-The active thesis chain ends at quantified electricity and mobility service consequences.
+The core thermal modeling chain ends at quantified electricity and mobility service consequences. Resilience is interpreted from those service trajectories, and the bounded two-pathway sustainability assessment follows as a downstream assessment where the required indicators and data are available.
 
 ---
 
