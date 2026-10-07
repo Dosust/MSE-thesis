@@ -1,7 +1,7 @@
 # Conceptual Framework Specification V3
 
 **Status:** CURRENT WORKING-FROZEN CONCEPTUAL SPECIFICATION  
-**Date:** 2026-10-06  
+**Date:** 2026-10-07  
 **Supersedes for active conceptual-figure work:** \`CONCEPTUAL_FRAMEWORK_SPEC_V2.md\`  
 **Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V2.md\`
 
