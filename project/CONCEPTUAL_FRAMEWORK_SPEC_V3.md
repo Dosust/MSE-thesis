@@ -3,7 +3,7 @@
 **Status:** CURRENT WORKING-FROZEN CONCEPTUAL SPECIFICATION  
 **Date:** 2026-10-06  
 **Supersedes for active conceptual-figure work:** \`CONCEPTUAL_FRAMEWORK_SPEC_V2.md\`  
-**Scope authority:** \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md\`
+**Scope authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\` + \`CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md\`
 
 ## 1. Purpose
 
@@ -38,7 +38,7 @@ Words may still express the concepts of state, time, propagation, service, resil
 External Environment — Extreme Heat Forcing
                 ↓
       Physical System of Interest
-Power System ↔ Physical Interface ↔ Electrified Transportation
+Power System ↔ Electrified Transportation System
                 ↓
          State-Time Response
                 ↓
@@ -63,13 +63,18 @@ Power System ↔ Physical Interface ↔ Electrified Transportation
 ## 4. Scientific meaning of each phase
 
 ### Extreme Heat
-External physical forcing. It affects Power, the physical charging interface, and electrified transportation. Common heat exposure is not itself an interdependency.
+External physical forcing. It may affect relevant Power-system states and relevant components of the Electrified Transportation System. Common heat exposure is not itself an interdependency.
 
 ### Physical System of Interest
-Current working scope:
-- Power system;
-- grid-connected charging interface;
-- battery-electric road transportation.
+Current scope:
+- Power System;
+- Electrified Transportation System.
+
+The Electrified Transportation System comprises the electrically propelled road vehicle, rechargeable energy-storage system, electric propulsion and auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and the communication/control functions required for electrical power transfer, including bidirectional transfer where supported.
+
+Power-transfer, charging, communication/control, and bidirectional-transfer relations are represented as interdependencies/coupling conditions between the two physical systems; they are not drawn as a third physical infrastructure system.
+
+A battery-electric road-transport or fleet/depot case remains a bounded application subset and does not redefine the thesis-wide system composition.
 
 ### State-Time Response
 How physical conditions evolve over time under heat.
