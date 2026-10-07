@@ -494,9 +494,9 @@ Boundary:
 - they do not establish transport-side mechanisms, P-T coupling, adaptation, or restoration.
 
 
-## Presentation resilience cycle
+## Presentation engineering-response cycle
 
-Use the thesis-defined cycle:
+Use the supporting engineering-response sequence:
 
 ```text
 IMPROVE → ADAPT → RESTORE → LEARN → IMPROVE
@@ -508,7 +508,7 @@ Presentation meaning:
 - **Restore:** return degraded electricity and mobility service to an acceptable/reference level.
 - **Learn:** use evidence from disturbance and recovery to improve the next design/operating decision.
 
-Do not present this as a universal resilience standard. Present it as the thesis operational engineering cycle.
+Do not present this sequence as the definition of resilience. The canonical definition is the ability of the coupled Power and Electrified Transportation systems to maintain or recover required electricity and mobility services as thermal states and thermal interdependencies evolve over time. Improve, Adapt, Restore, and Learn describe engineering response and learning.
 
 For slide logic, use:
 ```text
@@ -517,7 +517,7 @@ physical state
 → serviceability
 → service trajectory
 ```
-with reliability evaluated over the service trajectory and resilience evaluated through disturbance response and Improve–Adapt–Restore effectiveness.
+with reliability evaluated over the declared service domain and resilience evaluated by whether required service is maintained or recovered through the evolving disturbance and recovery trajectory. Improve–Adapt–Restore effectiveness is assessed by how those responses change that service trajectory.
 
 
 ## Evidence update - E-CONTEXT-HEAT-001
