@@ -10,7 +10,6 @@
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 5. `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
-5. `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`
 6. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 7. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
 8. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
@@ -64,11 +63,9 @@
 
 ## Current framework authorities
 
-- `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md` — frozen definitions of state classes, active reduced state, forcing/capability/service distinctions, and temporal quantities.
-
+- `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md` — frozen definitions of state classes, reduced active-state admission, forcing/capability/service distinctions, and temporal quantities.
 - `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability conceptual framework.
 - `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability mathematical framework.
-- `project/CANONICAL_STATE_TIME_DEFINITION_V1.md` — frozen canonical meaning of state, active-state admission, and temporal quantities.
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md` — frozen service-level state-time definition of resilience.
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md` — frozen two-pathway sustainability assessment authority.
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
@@ -117,7 +114,7 @@ The active general objective and three specific objectives are controlled by `pr
 
 ## Canonical state-time authority — 2026-10-08
 
-For every active use of **state**, **state variable**, **state-time**, **transition time**, or **propagation delay**, use `project/CANONICAL_STATE_TIME_DEFINITION_V1.md`.
+For every active use of **state**, **state variable**, **state-time**, **transition time**, or **propagation delay**, use `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`.
 
 Canonical definitions:
 
