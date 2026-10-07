@@ -56,7 +56,7 @@ state ≠ capability ≠ service
 
 ## Chapter 3 mathematical spine
 
-\`\`\`math
+```math
 H(t)
 \rightarrow
 X(t)
@@ -68,7 +68,7 @@ Z_{PT}^{th}(t)
 X_{receiver}(t)
 \rightarrow
 \{\tau_i^C,\delta_{ij}^{th},Q_P(t),Q_T(t)\}.
-\`\`\`
+```
 
 ## Chapter 4 methodological spine
 
