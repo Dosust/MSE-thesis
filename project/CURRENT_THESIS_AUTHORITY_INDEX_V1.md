@@ -10,17 +10,18 @@
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 5. `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
-6. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
-7. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
-8. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
-9. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
-10. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
-11. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
-12. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
-13. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
-14. `project/RESEARCH_REASONING_PROTOCOL.md`
-15. `project/EGMIV_METHOD_V1.md`
-16. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+6. `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`
+7. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
+8. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
+9. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
+10. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+11. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
+12. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
+13. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
+14. `project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md`
+15. `project/RESEARCH_REASONING_PROTOCOL.md`
+16. `project/EGMIV_METHOD_V1.md`
+17. `thesis/00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
 
 ## Current status matrix
 
@@ -33,6 +34,7 @@
 | active interdependency class: thermal interdependencies only | **FROZEN — CANONICAL** |
 | state-time analytical focus | **FROZEN — CANONICAL** |
 | canonical state/time definitions | **FROZEN — CANONICAL** |
+| evidence / non-invention standard | **FROZEN — CANONICAL** |
 | state definition | **FROZEN — CANONICAL MINIMUM-SUFFICIENT DYNAMIC STATE INTERPRETATION** |
 | time definition | **FROZEN — CANONICAL EVOLUTION / TRANSITION / PROPAGATION INTERPRETATION** |
 | battery-electric road transport as bounded application subset | **WORKING-FROZEN** |
@@ -57,6 +59,8 @@
 | September seven-stage/RQ-H/P3/Austin packages | **HISTORICAL / RETAINED** |
 
 ## Current literature-reading / evidence-transfer method
+
+- `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md` — controlling evidence hierarchy, paper/standard verification, equation/parameter provenance, transferability, and non-invention rule.
 
 - `project/THERMAL_PAPER_SCHOOL_V2.md` — active seven-pass paper-reading, limitation-taxonomy, remaining-gap, and thesis-transfer method.
 - `tools/thermal_paper_school_v2.py` — executable audit helper for limitation coding, scope admission, and state-admission checks.
