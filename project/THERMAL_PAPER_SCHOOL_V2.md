@@ -4,7 +4,8 @@
 **Effective date:** 2026-10-08  
 **Scope:** thermal Power–Electrified Transportation interdependencies; physical state; time; electricity/mobility consequence.  
 **State-time definition authority:** `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
-**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
+**State-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
+**Evidence / non-invention authority:** `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`
 
 ## Canonical state-time reading rule
 
@@ -34,6 +35,29 @@ state identity
 → service materiality
 → thesis-state admission decision
 ```
+
+## Non-invention and source hierarchy
+
+The paper school is governed by `CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`.
+
+```text
+relevance ≠ verification
+verification ≠ full-text audit
+full-text audit ≠ parameter transfer
+parameter transfer ≠ validated thesis model
+```
+
+Source hierarchy:
+
+```text
+Tier A: standards / official technical authorities / exact manufacturer data
+Tier B: peer-reviewed primary research
+Tier C: peer-reviewed reviews / systematic reviews
+Tier D: conference / preprint / technical report
+Tier E: secondary web content — discovery only
+```
+
+No paper title, DOI, standard clause, equation, parameter, threshold, or numerical law may be guessed to fill a corpus slot. Unverified entries remain `TO BE VERIFIED`.
 
 ## Permanent reading logic
 
