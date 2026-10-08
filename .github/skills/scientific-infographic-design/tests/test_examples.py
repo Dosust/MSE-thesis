@@ -3,6 +3,7 @@
 Run: python -m unittest discover -s tests -v
 No test data are real thermal/EVSE measurements.
 """
+import importlib.util
 import math
 import sys
 import tempfile
@@ -99,6 +100,21 @@ class ScientificFigureTests(unittest.TestCase):
                                     for e in rectangles))
                 # Edits are real SVG objects, not a flattened image.
                 self.assertFalse(any(e.tag.endswith("image") for e in root.iter()))
+
+    def test_editable_pptx_example(self):
+        if importlib.util.find_spec("pptx") is None:
+            self.skipTest("python-pptx not installed")
+        from pptx_builder import build
+        from pptx import Presentation
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "native_shapes.pptx"
+            build(path)
+            prs = Presentation(str(path))
+            self.assertEqual(len(prs.slides), 3)
+            self.assertTrue(all(len(slide.shapes) >= 12 for slide in prs.slides))
+            # Shape type 13 is PICTURE: flattened raster images not permitted here.
+            self.assertTrue(all(shape.shape_type != 13
+                                for slide in prs.slides for shape in slide.shapes))
 
     def test_all_external_claim_slides_have_source_note(self):
         for factory in (figures.scene03, figures.scene04, figures.scene05):
