@@ -4,6 +4,7 @@
 **Thermal focus authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **State-time scope amendment:** [`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
 **Canonical state-time definitions:** [`CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
+**Evidence / non-invention standard:** [`CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`](CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md)  
 **Objective authority:** [`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`](CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md)  
 **Conceptual framework:** [`CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`](CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md)  
 **Mathematical framework:** [`MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`](MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md)  
@@ -109,6 +110,15 @@ thermal mechanism
 
 No broader architecture may override this chain without an explicit versioned scope change.
 
+
+## Evidence rule
+
+```text
+If it cannot be traced, it is not frozen.
+If it cannot be verified, it remains open.
+If it is thesis-derived, it is labeled thesis-derived.
+If it is transferred, transferability must be justified.
+```
 
 ## Thermal paper-reading school
 
