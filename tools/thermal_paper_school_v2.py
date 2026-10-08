@@ -16,6 +16,16 @@ class Decision(str, Enum):
     CONDITIONAL = "CONDITIONAL"
     CORE_MECHANISM = "CORE MECHANISM EVIDENCE"
 
+AUTHORITY_CLASSES = {
+    "A1": "Official standard / code / normative authority",
+    "A2": "Exact manufacturer / certified technical documentation",
+    "A3": "Peer-reviewed experiment / field measurement",
+    "A4": "Peer-reviewed mathematical / physics model",
+    "A5": "Recognized textbook / engineering handbook / authoritative theory",
+    "T1": "Thesis-derived from A1-A5 evidence",
+    "OPEN": "Not yet established",
+}
+
 LIMITATIONS = {
     "L1": "Observability",
     "L2": "Model form",
@@ -59,8 +69,15 @@ class PaperAudit:
     gap_closing_test: str
     thesis_transfer: str
     decision: Decision
+    authority_class: str = "OPEN"
+    source_identifier: str = ""
+    full_text_audited: bool = False
 
     def validate(self):
+        if self.authority_class not in AUTHORITY_CLASSES:
+            raise ValueError(f"Unknown authority class: {self.authority_class}")
+        if self.authority_class != "OPEN" and not self.source_identifier.strip():
+            raise ValueError("A1-A5/T1 evidence requires a traceable source identifier or derivation record.")
         unknown = [x for x in self.limitation_codes if x not in LIMITATIONS]
         if unknown:
             raise ValueError(f"Unknown limitation codes: {unknown}")
@@ -129,3 +146,29 @@ if __name__ == "__main__":
     print("\nLimitation taxonomy:")
     for code, name in LIMITATIONS.items():
         print(f"{code}: {name}")
+
+
+def evidence_status(authority_class: str,
+                    source_verified: bool,
+                    full_text_audited: bool = False,
+                    transferability_verified: bool = False):
+    """Return a conservative evidence status under the canonical non-invention rule."""
+    if authority_class not in AUTHORITY_CLASSES:
+        raise ValueError(f"Unknown authority class: {authority_class}")
+    if authority_class == "OPEN" or not source_verified:
+        return "OPEN / UNKNOWN / NOT YET QUALIFIED"
+    if authority_class in {"A3", "A4"} and not full_text_audited:
+        return "CANDIDATE — FULL-TEXT AUDIT PENDING"
+    if authority_class in {"A2", "A3", "A4"} and not transferability_verified:
+        return "CANDIDATE — TRANSFERABILITY PENDING"
+    if authority_class == "A1":
+        return "VERIFIED — STANDARD/OFFICIAL"
+    if authority_class == "A3":
+        return "VERIFIED — PRIMARY PEER-REVIEWED"
+    if authority_class == "A4":
+        return "VERIFIED — PEER-REVIEWED MODEL"
+    if authority_class == "A5":
+        return "VERIFIED — FUNDAMENTAL ESTABLISHED PHYSICS"
+    if authority_class == "T1":
+        return "THESIS-DERIVED — TRACEABILITY REQUIRED"
+    return "VERIFIED — SOURCE CLASSIFIED"
