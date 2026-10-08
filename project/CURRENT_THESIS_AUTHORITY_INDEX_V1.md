@@ -76,6 +76,31 @@ That entry point requires the evidence/non-invention authority and the current t
 - `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md` — evidence-controlled 200-paper screening architecture; unverified bibliographic slots remain blank.
 - `tools/thermal_paper_school_v2.py` — executable audit helper for limitation coding, scope admission, and state-admission checks.
 
+## Active 200-paper execution checkpoint
+
+Current execution workstream:
+
+`project/module_01_transformer_thermal_state_physics/`
+
+Status:
+
+~~~text
+Module 01 — Transformer Thermal-State Physics
+P01–P05 checkpoint saved
+P06–P10 pending
+final Power thermal model NOT FROZEN
+~~~
+
+Working evidence files:
+
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_STANDARDS_SPINE_V1.md`
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_PAPER_AUDITS_P01_P05_V1.md`
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md`
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_MODEL_ADMISSION_LEDGER_V1.md`
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_OPEN_GAPS_V1.md`
+
+These files are **working evidence/control records**, not canonical thesis model authorities. They may inform a future model freeze only after the remaining Module 01 evidence and standards/VVUQ gates are satisfied.
+
 ## Current framework authorities
 
 - `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md` — frozen definitions of state classes, reduced active-state admission, forcing/capability/service distinctions, and temporal quantities.
