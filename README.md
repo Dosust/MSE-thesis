@@ -68,7 +68,9 @@ transition time ≠ propagation delay ≠ service-consequence time ≠ recovery 
 - Module 02, P11: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md`; Souza et al. (2026), ambient-conditioned top-oil parameter identification, with explicit uncertainty/transfer limitations.
 - Module 02, P12: Chen & Su (2013), DOI 10.1002/tee.21862; publisher-abstract-level evidence for Kalman HST estimation; equations/observability/quantitative metrics OPEN. See `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P12_V1.md`.
 - Module 02, P13: Liu et al. (2024), DOI 10.1016/j.csite.2024.104444; **3.31 K HST surrogate-versus-CFD error** is distinct from **3.36–3.97°C measured winding-profile errors**. Audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P13_V1.md`. Steady model, dynamic HST observability OPEN.
-- Next paper slot: P14; prioritize transient field reconstruction with independent sensor validation and explicit hottest-spot error. **State estimate ≠ measured global HST ≠ thermal capability.**
+- Module 02 P14: Li et al. (2026), `10.1016/j.epsr.2026.113033`; transient sparse-sensor winding-field reconstruction with physical comparison at verification points, but **true global HST error and formal observability OPEN**. Audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P14_V1.md`.
+- [P14–P200 screening register](project/THERMAL_200_PAPER_EXECUTION_REGISTER_P14_P200_V1.md): **187 slots, 77 DOI first-pass candidates, 110 unfilled**; no claim of 187 complete audits.
+- [Cross-module evidence decisions](project/THERMAL_200_PAPER_CROSS_MODULE_EVIDENCE_DECISIONS_V1.md): Module 02–20 source-bound findings, limitations, major model-admission barriers. **State estimate ≠ measured global HST ≠ thermal capability.**
 
 ## Current thesis direction
 
