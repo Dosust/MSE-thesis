@@ -71,6 +71,46 @@ Tier D — Conference / preprint / technical report, clearly labeled
 Tier E — Secondary web content, discovery only
 ```
 
+## 4A. Claim-level provenance classes
+
+Every extracted scientific claim, quantity, equation, threshold, or metric should be tagged where practical:
+
+```text
+[A1] Official standard / code / normative authority
+[A2] Exact manufacturer / certified technical documentation
+[A3] Peer-reviewed experiment / field measurement
+[A4] Peer-reviewed mathematical / physics model
+[A5] Recognized textbook / engineering handbook / authoritative theory
+[T1] Thesis-derived from A1–A5 evidence
+[OPEN] Not yet established
+```
+
+A T1 object is admissible only when its derivation is transparent and all source quantities are traceable.
+
+```text
+thesis definition ≠ invention
+thesis definition ≠ standard definition
+```
+
+## 4B. Required extraction record
+
+For each admitted paper:
+
+```text
+1. Standard / authority context
+2. Physical principle
+3. Governing mathematics
+4. Parameters + units
+5. Initial conditions + boundary conditions
+6. Experimental / numerical method
+7. Verification + validation
+8. Limitation + validity domain
+9. What remains unknown
+10. Transferability to this thesis
+```
+
+No equation, parameter, or threshold is admitted from abstract-level evidence alone.
+
 ## 5. Module search order
 
 For each module:
