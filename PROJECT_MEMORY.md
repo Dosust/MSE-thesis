@@ -12,7 +12,8 @@
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Canonical sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
-**Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+**Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
+**Active 200-paper checkpoint:** `project/module_01_transformer_thermal_state_physics/` — P01–P05 saved; P06–P10 pending; final Power thermal model not frozen.
 
 Permanent non-invention rule:
 
