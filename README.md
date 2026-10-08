@@ -4,6 +4,7 @@
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
 **Canonical state-time authority:** [`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
+**Evidence / non-invention authority:** [`project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`](project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md)  
 **Thermal-interdependency scope authority:** [`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md)  
 **Canonical resilience authority:** [`project/CANONICAL_RESILIENCE_DEFINITION_V1.md`](project/CANONICAL_RESILIENCE_DEFINITION_V1.md)  
 **Canonical sustainability authority:** [`project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`](project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md)  
@@ -20,6 +21,17 @@
 > **Scientific rule:** no scope decision, model, simulation, figure, or repository status may be interpreted as empirical support unless the corresponding evidence, validation, and test gates pass.
 
 ---
+
+## Evidence and non-invention rule
+
+```text
+If it cannot be traced, it is not frozen.
+If it cannot be verified, it remains open.
+If it is thesis-derived, it is labeled thesis-derived.
+If it is transferred, transferability must be justified.
+```
+
+No bibliographic record, standard requirement, equation, threshold, parameter, material property, capability law, or numerical result may be invented to fill an evidence gap.
 
 ## Canonical state-time meaning
 
