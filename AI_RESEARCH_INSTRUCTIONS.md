@@ -50,6 +50,12 @@ Every scientific claim should use the strongest appropriate provenance class:
 7. `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
 8. other authorities listed by the current authority index as required by the task.
 
+## Permanent system-boundary wording rule — 2026-10-08
+
+All active scientific writing, slides, figures, generated documents, and models **must** use the full frozen Electrified Transportation System composition in `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`, including its Section 4A binding terminology clarification. The Power System is a separate physical system. EVSE, charging connections, and the charging communication/control functions required for power transfer **belong to** Electrified Transportation, but do **not define the entire system** and do not form a third infrastructure.
+
+In Chapter 1 and presentation material use **System Boundary**, not **Boundary Condition**, for component membership. A mathematical boundary condition is a separate, model-specific physical prescription. Preserve **full technical system != bounded case study != active model**. Do not infer a thermal interdependency from an electrical connection or shared heat exposure; qualify P→T_e and T_e→P separately. Do not silently change this frozen boundary definition anywhere. Formal authorized amendment is required to revise the underlying authority.
+
 ## Prohibited behavior
 
 An AI must not invent or silently infer:
