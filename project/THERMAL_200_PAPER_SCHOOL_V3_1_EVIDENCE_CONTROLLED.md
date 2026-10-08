@@ -61,6 +61,44 @@ Total:
 20 modules × 10 verified-paper targets = 200 verified-paper target
 ```
 
+## 3A. Active Module 01 execution checkpoint
+
+Module 01 is now actively being executed at:
+
+`project/module_01_transformer_thermal_state_physics/`
+
+Current checkpoint:
+
+~~~text
+P01–P05 = audited at declared evidence depth
+P06–P10 = pending
+standards spine = mapped; clause-level freeze still partly OPEN
+final Power thermal model = NOT FROZEN
+~~~
+
+Current Module 01 control files:
+
+- `README.md`
+- `MODULE_01_STANDARDS_SPINE_V1.md`
+- `MODULE_01_PAPER_AUDITS_P01_P05_V1.md`
+- `MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md`
+- `MODULE_01_MODEL_ADMISSION_LEDGER_V1.md`
+- `MODULE_01_OPEN_GAPS_V1.md`
+
+The working candidate reduced Power thermal state vector is:
+
+~~~math
+X_P,th = [theta_TO, theta_HS]^T
+~~~
+
+with status:
+
+~~~text
+CANDIDATE — NOT FROZEN
+~~~
+
+No parameter, threshold, exact ODE, or state-to-capability law has been frozen.
+
 ## 4. Evidence hierarchy
 
 ```text
