@@ -1,0 +1,50 @@
+name: Scientific Infographic Skill Checks
+
+on:
+  push:
+    paths:
+      - '.github/skills/scientific-infographic-design/**'
+      - '.github/workflows/scientific-infographic-skill-checks.yml'
+  pull_request:
+    paths:
+      - '.github/skills/scientific-infographic-design/**'
+      - '.github/workflows/scientific-infographic-skill-checks.yml'
+  workflow_dispatch:
+
+jobs:
+  scientific-figure-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install editable PowerPoint library
+        run: python -m pip install --disable-pip-version-check python-pptx
+      - name: Mathematical + semantic + SVG + editable PowerPoint regression suite
+        working-directory: .github/skills/scientific-infographic-design
+        run: python -m unittest discover -s tests -v
+      - name: Build independent SVG examples
+        working-directory: .github/skills/scientific-infographic-design
+        run: python examples/figures.py --out build
+      - name: Run explicitly synthetic event/deficit checks
+        working-directory: .github/skills/scientific-infographic-design
+        run: python examples/mathematical_metrics.py
+      - name: Build and reopen native editable PPTX
+        working-directory: .github/skills/scientific-infographic-design
+        run: python examples/pptx_builder.py --out build/example_editable.pptx
+      - name: Verify source documentation exists
+        shell: bash
+        run: |
+          for path in \
+            .github/skills/scientific-infographic-design/SKILL.md \
+            .github/skills/scientific-infographic-design/references/FIGURE_REFERENCE_LIBRARY.md \
+            .github/skills/scientific-infographic-design/references/FIGURE_DESIGN_APPLICATION_GUIDE.md \
+            .github/skills/scientific-infographic-design/references/CHAPTER1_FIGURE_STORYBOARD.md \
+            .github/skills/scientific-infographic-design/examples/WORKED_FIGURE_RECIPES.md \
+            .github/skills/scientific-infographic-design/examples/pptx_recipe.md; do
+            test -s "$path" || exit 1
+          done
+          echo "PASS: scientific design documentation present"
