@@ -86,8 +86,8 @@ Status:
 
 ~~~text
 Module 01 — Transformer Thermal-State Physics
-P01–P05 checkpoint saved
-P06–P10 pending
+P01–P08 checkpoint saved
+P09–P10 pending
 final Power thermal model NOT FROZEN
 ~~~
 
