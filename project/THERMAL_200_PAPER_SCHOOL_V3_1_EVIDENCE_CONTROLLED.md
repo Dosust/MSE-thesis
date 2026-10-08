@@ -103,6 +103,15 @@ CANDIDATE — NOT FROZEN
 
 No parameter, threshold, exact ODE, or state-to-capability law has been frozen.
 
+## 3B. Module 02 initial execution checkpoint
+
+**Module 02 — Transformer thermal parameter identification and state estimation** has started at `project/module_02_transformer_thermal_parameter_identification_state_estimation/`.
+
+- P11: Souza et al. (2026), DOI 10.3390/en19174224 — primary full HTML evidence audited, source-scope and identifiability limitations recorded.
+- P12–P20: pending verified primary-source selection and audits.
+- P11 takeaway: condition-dependent effective coefficients can improve top-oil prediction on one transformer; neither physical uniqueness, HST estimation, dynamic state sufficiency, nor state-to-capability mapping is established.
+- Module 01's model admission remains OPEN.
+
 ## 4. Evidence hierarchy
 
 ```text
