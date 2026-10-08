@@ -5,6 +5,42 @@
 **Repository:** `Dossiya-SE/MSE-thesis`
 **Applies to:** literature review, equations, variables, states, parameters, thresholds, constitutive laws, capability laws, service definitions, resilience metrics, sustainability indicators, numerical values, figures, code, validation, and conclusions.
 
+## 0. Mandatory AI / agent rule
+
+This file is a **mandatory repository authority for every AI system, coding assistant, research agent, literature-review agent, visualization agent, and human contributor working on the active thesis**.
+
+Before producing or modifying any active scientific content, the agent must load and apply this file.
+
+This requirement applies to:
+- literature searches and paper summaries;
+- equations and derivations;
+- standards interpretation;
+- parameter and threshold selection;
+- physical mechanisms;
+- model architecture;
+- code and simulation;
+- figures and diagrams;
+- validation and uncertainty claims;
+- service, resilience, sustainability, and SDG interpretation;
+- research questions, hypotheses, results, discussion, and conclusions.
+
+Permanent AI behavior:
+
+```text
+Do not invent.
+Do not guess a source.
+Do not guess a DOI.
+Do not guess a standard clause.
+Do not guess a threshold.
+Do not guess a parameter.
+Do not promote an assumption to established fact.
+Do not promote a thesis definition to a standard definition.
+Do not transfer a numerical law across equipment/cases without a transferability justification.
+If the evidence is unavailable or unverified, mark it OPEN / UNKNOWN / NOT YET QUALIFIED.
+```
+
+Any AI-generated scientific object must remain subordinate to verified evidence and the repository authority hierarchy.
+
 ## 1. Non-invention rule
 
 > **No scientific object may be introduced into the active thesis as established fact, equation, parameter, threshold, limit, mechanism, standard requirement, or validated model unless it is traceable to an authoritative source appropriate to that claim.**
@@ -92,6 +128,70 @@ May support emerging methods, preliminary findings, comparison, or discovery. It
 
 Blogs, summaries, search snippets, commercial pages without primary technical documentation, AI-generated summaries, and unattributed web text are not admissible scientific evidence for model freezing. They may be used only to locate the authoritative source.
 
+## 2A. Claim-level authority classes
+
+In addition to the broad source tiers above, every thesis quantity, equation, threshold, mechanism, or metric should carry a **claim-level provenance class** where practical:
+
+| Class | Source | Permitted use |
+|---|---|---|
+| **A1** | Official standard / code / normative authority | definitions, ratings, limits, required procedures, test methods, accepted equations where explicitly specified |
+| **A2** | Exact manufacturer / certified technical documentation | component-specific ratings, operating envelopes, derating curves, tolerances, parameters |
+| **A3** | Peer-reviewed experiment / field measurement | observed physical relationships, measured behavior, validation evidence |
+| **A4** | Peer-reviewed mathematical / physics model | governing/model equations, constitutive relations, numerical formulation, parameter-identification method |
+| **A5** | Recognized textbook / engineering handbook / authoritative theory source | fundamental laws, standard derivations, dimensional and physical foundations |
+| **T1** | Thesis-derived quantity / equation / metric | transparent derivation from A1–A5 evidence; must be explicitly labeled thesis-derived |
+| **OPEN** | Not yet established | no verified authority sufficient for freezing |
+
+These claim-level classes do **not** imply that all standards outrank all experiments for every claim. The claim-to-source matching rule controls which source type is authoritative for the specific scientific object.
+
+Permanent rule:
+
+```text
+A1–A5 = externally established authority/evidence
+T1 = thesis-derived from established evidence
+OPEN = evidence not yet sufficient
+```
+
+A T1 object is scientifically admissible only when its source chain is explicit and its derivation is checked. It must never be described as standard-defined, manufacturer-defined, or literature-established.
+
+## 2B. Standard information versus scientific-model information
+
+Standards and papers have different roles.
+
+Standards/official authorities are preferred for:
+
+```text
+terminology
++ ratings
++ operating envelopes
++ safety/thermal limits
++ test procedures
++ interface requirements
++ reporting conventions
+```
+
+Peer-reviewed primary research is preferred for:
+
+```text
+physical mechanism
++ measured constitutive behavior
++ model structure
++ parameter identification
++ validation
++ uncertainty
++ limitations
+```
+
+Therefore:
+
+```text
+standard definition ≠ physical constitutive law
+standard scope ≠ validated case-specific model
+```
+
+A standard defining an EVSE, transformer loading procedure, or interface does not automatically supply a case-specific relation such as
+`P_charge,max = f(T)` unless that relation is explicitly contained and applicable.
+
 ## 3. Claim-to-source matching rule
 
 ```text
@@ -144,6 +244,42 @@ Required:
 - validation or limiting-case checks where applicable.
 
 A thesis-derived equation must never be presented as an existing standard or literature equation.
+
+## 4A. Equation provenance record
+
+Every equation considered for active use must carry a provenance record containing, at minimum:
+
+```text
+equation identifier
++ provenance class (A1/A2/A3/A4/A5/T1)
++ exact source
++ standard number / DOI / permanent identifier where applicable
++ equation / clause / page / derivation location where available
++ physical meaning
++ variables
++ units
++ assumptions
++ initial conditions
++ boundary conditions
++ parameter sources
++ validity domain
++ verification status
++ validation status
++ uncertainty treatment
++ thesis-transfer decision
+```
+
+A generic relation such as
+
+```math
+C_{th}\frac{dT}{dt}
+=
+P_{loss}
+-
+\frac{T-T_a}{R_{th}}
+```
+
+must not automatically be called **the transformer model**, **the charger model**, or **the battery model**. It is only a generic lumped energy-balance form until a source, component interpretation, parameters, assumptions, boundary conditions, and validation domain are established.
 
 ## 5. Parameter and threshold admission rule
 
@@ -271,6 +407,73 @@ standard governing physics
 ```
 
 Use the phrase `derived in this thesis from ...` for a thesis derivation. Do not call a relation a standard equation unless that status is directly verified.
+
+## 11A. Thesis-defined objects
+
+A thesis-defined object is permitted when a standardized metric or equation does not exist, but it must be visibly labeled **T1 — THESIS-DERIVED**.
+
+Example:
+
+```math
+Q_T(t_d)
+=
+\frac{N_{departure-ready}}{N_{scheduled}}
+```
+
+may be a defensible thesis-defined mobility-service metric only if its underlying quantities are independently sourced and operationally defined.
+
+For a T1 metric, record:
+
+```text
+definition
++ purpose
++ derivation
++ source quantities
++ units
++ assumptions
++ system boundary
++ time basis
++ sensitivity
++ validation / reasonableness checks
+```
+
+Permanent distinction:
+
+```text
+thesis definition ≠ invention
+thesis definition ≠ standard definition
+```
+
+A defensible thesis definition is a transparent construction from established quantities; an unsupported convenient formula is not.
+
+## 11B. Required 200-paper extraction structure
+
+For every paper admitted to the 200-paper reading school, extract:
+
+```text
+1. Standard / authority context
+2. Physical principle
+3. Governing mathematics
+4. Parameters + units
+5. Initial conditions + boundary conditions
+6. Experimental / numerical method
+7. Verification + validation
+8. Limitation + validity domain
+9. What remains unknown
+10. Transferability to this thesis
+```
+
+Every extracted scientific claim should, where practical, carry one of:
+
+```text
+[A1] Standard-defined
+[A2] Manufacturer/certified technical documentation
+[A3] Experimentally observed
+[A4] Peer-reviewed model
+[A5] Fundamental established physics
+[T1] Thesis-derived
+[OPEN] Not established yet
+```
 
 ## 12. Evidence-status labels
 
