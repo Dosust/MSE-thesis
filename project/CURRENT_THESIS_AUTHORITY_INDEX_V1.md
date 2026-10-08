@@ -108,7 +108,8 @@ These files are **working evidence/control records**, not canonical thesis model
 
 - P11 audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md` (Souza et al., 2026, DOI 10.3390/en19174224).
 - P11 tests ambient- and cooling-dependent effective top-oil model coefficients against a chronological holdout from **one** transformer. Fitted parameter uniqueness, full-state observability, HST prediction, extreme-heat transfer, and normative capability remain OPEN.
-- P12–P20 pending. Module 01 closure decision B remains in force; no transformer state vector is frozen.
+- P12: Chen & Su (2013), DOI 10.1002/tee.21862; publisher abstract only, HST Kalman-estimation concept; full-text observer validation and formal observability OPEN.
+- P13–P20 pending. Module 01 closure decision B remains in force; no transformer state vector is frozen.
 
 ## Current framework authorities
 
