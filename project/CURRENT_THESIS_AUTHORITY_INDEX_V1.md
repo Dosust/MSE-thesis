@@ -141,6 +141,22 @@ These files are **working evidence/control records**, not canonical thesis model
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md` — sustainability alignment without creating SO4.
 - Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, broad sustainability-optimization, and decision packages are historical/provenance where they conflict with the current bounded scope.
 
+## Active scientific infographic design and reproducible coding — 2026-10-08
+
+**Task-specific companion authority:** \`.github/skills/scientific-infographic-design/SKILL.md\` (v2.0). It governs presentation-ready scientific infographic **communication and editable rendering**, not physical truth. Read it with the existing engineering-framework, scientific-diagram and mathematical-visualization skills.
+
+Companion resource files:
+- \`.github/skills/scientific-infographic-design/references/FIGURE_REFERENCE_LIBRARY.md\` — primary source figures and licenses;
+- \`.github/skills/scientific-infographic-design/references/FIGURE_DESIGN_APPLICATION_GUIDE.md\` — **why, when and how** each original figure principle applies;
+- \`.github/skills/scientific-infographic-design/references/CHAPTER1_FIGURE_STORYBOARD.md\` — slide-by-slide routing;
+- \`.github/skills/scientific-infographic-design/examples/WORKED_FIGURE_RECIPES.md\` — source-to-figure semantics;
+- \`.github/skills/scientific-infographic-design/examples/figures.py\` — original editable SVG scenes;
+- \`.github/skills/scientific-infographic-design/examples/pptx_builder.py\` — native-editable PowerPoint examples;
+- \`.github/skills/scientific-infographic-design/examples/mathematical_metrics.py\` and \`tests/test_examples.py\` — mathematical numerical software checks.
+
+Do not treat a generated figure, an example equation, synthetic numerical test, or software PASS as evidence of a physical mechanism or independent validation. Full system scope and minimum-sufficient mathematical state must remain distinct; an interface variable is not a state without admitted dynamics. Current in-text scientific citation rule applies to captions, slides, models, tables and rendered graphics.
+
+---
 ## Current visualization authorities
 
 - `.github/skills/engineering-framework-design/SKILL.md`
