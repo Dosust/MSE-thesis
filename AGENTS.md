@@ -72,6 +72,18 @@ OPEN / UNKNOWN / NOT YET QUALIFIED
 
 not a plausible substitute.
 
+## EVIDENCE-DENSITY / SCIENTIFIC BREVITY RULE
+
+For literature reading, scientific synthesis, model explanation, and thesis interpretation:
+
+~~~text
+More information ≠ better information.
+Rigor ≠ length.
+Best output = strongest evidence + exact physics/mathematics + validity boundary + limitation + thesis consequence.
+~~~
+
+Prefer concise, high-information-density writing. Do not repeat background, equations, or caveats unless repetition changes a scientific decision. Preserve all essential provenance and uncertainty even when shortening.
+
 ---
 
 # Historical / enduring repository instructions below
