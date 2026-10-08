@@ -40,6 +40,23 @@ Use together with:
 
 ---
 
+## CURRENT CANONICAL STATE-TIME OVERRIDE + EXECUTABLE EXAMPLES — 2026-10-08
+
+**Current thesis scope** is *only qualified extreme-heat thermal interdependencies* between separate Power P and the **full** Electrified Transportation T_e systems; the reduced model uses only minimum-sufficient evidence-admitted states. For current figures, **do not automatically treat an interface quantity \(Z_{PT}(t)\) as a dynamic state**. It remains a coupling/transfer quantity unless an independently justified dynamic evolution equation admits it as an actual state. Likewise, external extreme heat is a forcing, not an internal state.
+
+Use \`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md\` and \`project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md\` as current authorities; any older broad conceptual chain/automatic intervention emphasis in this file is illustrative **only**, not a frozen active mathematical model or required thesis result.
+
+**Task examples** (all exact code/authority controls in the companion):
+- "Plot a threshold-event time": first define admitted \(g(X(t),t)\), state units, threshold provenance, time horizon and interpolation; run \`../scientific-infographic-design/examples/mathematical_metrics.py\` for **synthetic software verification only**; real visualization must use cited real or validated model arrays.
+- "Compute a propagation delay": \(\delta=\tau_{\rm receiver}-\tau_{\rm source}\) only if the two events, common time basis, and **causal directional mechanism** are separately defined; code arithmetic does not qualify mechanism.
+- "Compute service deficit": use the documented positive-part integral and declared service/time units; it is not automatically a resilience index.
+- "Generate a mathematical/engineering SVG": \`../scientific-infographic-design/examples/figures.py\` demonstrates deterministic vector bounds, arrows, status and source labels; these specific figures are conceptual, **not numerical state solutions**.
+- "Create editable PowerPoint from model-defined relations": \`../scientific-infographic-design/examples/pptx_builder.py\` makes three example slides with editable native shapes and adjacent citations.
+- "Check the code": run \`python -m unittest discover -s ../scientific-infographic-design/tests -v\` from this skill's directory; the suite checks mathematical edge cases and figure semantic invariants.
+
+**Rendering contract:** derived numerical values → mathematical checks → independent physical validation status → typed visual encodings → caption with in-text scientific citations → rendering QA. Never invent numeric plots or promote interface quantities into dynamic state variables to beautify a diagram. These are worked coding **templates**, not final governing equations.
+
+---
 # 1. Model-First Rule
 
 Before drawing anything, define the mathematical object being visualized.
@@ -424,11 +441,11 @@ X(t)
 where:
 
 \[
-X(t)=
-[X_P^\top,Z^\top,X_T^\top]^\top
+X_{\mathrm{th}}(t)=
+[X_{P,\mathrm{th}}^\top,X_{T_e,\mathrm{th}}^\top]^\top
 \]
 
-The interface state \(Z(t)\) is not a decorative middle box. It represents modeled interface conditions.
+The interface variable \(Z_{PT}(t)\) is a coupling quantity by default, **not an active dynamic state** unless a separate, physically evidenced evolution law admits it. Do not insert \(Z_{PT}\) into \(X_{\mathrm{th}}\) merely because it crosses a system boundary. Exact active states and interface laws remain OPEN.
 
 Use the physical architecture:
 
@@ -801,6 +818,10 @@ Source notes and permitted transfer are documented in:
 ---
 
 # 22. Changelog
+
+## 1.2.0 — 2026-10-08
+
+Added current canonical thermal-only state-time override, corrected automatic interface-as-state implication, and linked runnable event-time/SVG/PPTX examples.
 
 ## 1.1.0
 
