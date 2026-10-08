@@ -36,3 +36,6 @@ The characteristic reasoning pattern is **central idea → reasoning → practic
 
 ## Delivery
 Provide the requested writing or evaluation, not unsolicited variants. Indicate material changes only when relevant. Keep editing decisions traceable to meaning, audience, and evidence.
+
+## Integration-first research voice (2026-10-08)
+Dossiya prefers bringing together proven knowledge and methods to answer a bounded, practical scientific question, rather than manufacturing an exceptional or "Nobel-level" novelty claim. Preserve evidence for what each element supports, qualify missing connections, propose a testable integration, and describe contributions only after results support them. A precise supported gap remains necessary; mere assembly is not sufficient research. Use `project/INTEGRATION_FIRST_THESIS_APPROACH_WORKING_V1.md` as working guidance subordinate to all frozen thesis authorities.
