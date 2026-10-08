@@ -22,6 +22,10 @@ For scientific diagrams, also load:
 - `.github/skills/scientific-diagram-design/SKILL.md`
 - `.github/skills/mathematical-visualization-design/SKILL.md`
 
+## PERMANENT BINDING SYSTEM-BOUNDARY CLARIFICATION — 2026-10-08
+
+For **all active thesis and presentation work**, follow `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` §4A and the authority-index correction. **System Boundary** classifies what belongs to Power vs Electrified Transportation. A **mathematical boundary condition** is a model-specific physical prescription; NEVER label system membership a “Boundary condition.” EVSE, charging connection, and required charging communication/control are **components of the complete Electrified Transportation System**, NOT its entire definition and NOT a third infrastructure. The full T_e includes electrically propelled road vehicle, RESS, propulsion/auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and required transfer communication/control (bidirectional where supported). The Power System remains distinct. Full system definition != active bounded case/model != mobility service. A P↔T_e schematic does not prove both thermal dependency directions. Do not silently alter/narrow the canonical composition in writing, diagrams, summaries, code, or slides. Preserve the formal amendment rule.
+
 ## MANDATORY EVIDENCE / NON-INVENTION RULE FOR ANY AI
 
 Before generating, revising, coding, modeling, visualizing, or interpreting any active scientific thesis content, **every AI/agent must load and obey**:
