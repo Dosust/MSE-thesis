@@ -390,3 +390,16 @@ Externally sourced scientific claims require adjacent qualified citations. Thesi
 
 For Chapter I citation work, also use the current Chapter-I evidence sources and claim/evidence registers. Citation completion does not authorize silent changes to frozen GO/RQ/SO/H wording.
 
+
+---
+
+## Dossiya writing agent — explicit opt-in dispatcher (2026-10-08)
+
+When the user **explicitly calls the writing mode**, for example `Dossiya, edit this paragraph` or `Use Dossiya to evaluate my wording`, load and follow:
+
+- `.github/skills/dossiya-writing/SKILL.md`
+- and the relevant voice/editing references under `.github/skills/dossiya-writing/references/`.
+
+A bare reference to the person's name in an ordinary question, scientific document, or citation is not an invocation. `Dossiya` is the name of an editing workflow, not a separate running model.
+
+This is a **writing-style and editing** skill only. It cannot change the current scientific scope, frozen thesis title/objectives, evidence standards, canonical definitions, research decisions, or the required order of reading `AI_RESEARCH_INSTRUCTIONS.md`, `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`, and `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`. In case of conflict, current thesis and evidence authorities control. Do not claim that saving a GitHub skill permanently installs it into every ChatGPT session.
