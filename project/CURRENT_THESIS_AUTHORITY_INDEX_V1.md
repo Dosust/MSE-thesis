@@ -86,8 +86,8 @@ Status:
 
 ~~~text
 Module 01 — Transformer Thermal-State Physics
-P01–P09 checkpoint saved
-P10 pending
+P01–P10 checkpoint saved at declared evidence depths
+P10 winding validation discrepancy recorded; model still open
 final Power thermal model NOT FROZEN
 ~~~
 
@@ -97,6 +97,7 @@ Working evidence files:
 - `project/module_01_transformer_thermal_state_physics/MODULE_01_PAPER_AUDITS_P01_P05_V1.md`
 - `project/module_01_transformer_thermal_state_physics/MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md`
 - `project/module_01_transformer_thermal_state_physics/MODULE_01_MODEL_ADMISSION_LEDGER_V1.md`
+- `project/module_01_transformer_thermal_state_physics/MODULE_01_PAPER_AUDIT_P10_V1.md`
 - `project/module_01_transformer_thermal_state_physics/MODULE_01_OPEN_GAPS_V1.md`
 
 These files are **working evidence/control records**, not canonical thesis model authorities. They may inform a future model freeze only after the remaining Module 01 evidence and standards/VVUQ gates are satisfied.
