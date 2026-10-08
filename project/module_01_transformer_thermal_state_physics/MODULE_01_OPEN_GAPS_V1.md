@@ -2,8 +2,8 @@
 
 **Status:** ACTIVE WORKING GAP MAP  
 **Effective date:** 2026-10-08  
-**Evidence basis:** P01–P08 checkpoint  
-**Purpose:** record P06–P07 closures and record the P08 observability closure and define exactly what P09–P10 must resolve before any Power-side thermal model freeze.
+**Evidence basis:** P01–P09 checkpoint  
+**Purpose:** record P06–P07 closures and record the P09 spatial-nonuniformity closure and define exactly what P10 must resolve before any Power-side thermal model freeze.
 
 ## 1. Current unresolved core question
 
@@ -99,9 +99,9 @@ candidate hottest-spot state
 → validation feasibility
 ~~~
 
-## 5. P09 burden — dense internal temperature distribution
+## 5. P09 closure — dense internal temperature distribution
 
-**Target role:** quantify spatial nonuniformity.
+**Status:** CLOSED AT CURRENT AUDIT DEPTH. P09 uses 42 internal PT100 sensors in a 10 kVA ONAN distribution transformer and establishes substantial spatial nonuniformity in winding, oil, and core temperatures. It supports theta_HS as a reduced maximum-temperature descriptor but does not prove that the same hottest location or reduced-state sufficiency transfers to the final transformer.
 
 P09 must answer:
 
@@ -164,7 +164,7 @@ Relevant current authority candidates are listed in `MODULE_01_STANDARDS_SPINE_V
 
 ## 8. Model-admission questions after P10
 
-After P09–P10, answer explicitly:
+After P10, answer explicitly:
 
 ### Q1 — State sufficiency
 Can:
