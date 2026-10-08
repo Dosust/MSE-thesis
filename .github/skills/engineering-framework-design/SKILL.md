@@ -42,6 +42,40 @@ Never simplify a framework into a graphical abstract by changing a system bounda
 
 ---
 
+## Worked engineering-to-infographic implementation — 2026-10-08
+
+**Example input:** "Explain a candidate extreme-heat thermal interdependency of the full Power P and Electrified Transportation T_e without implying it has been validated."
+
+**Formal engineering construction (this skill):**
+
+| Object | Type | Membership | Claim status |
+|---|---|---|---|
+| Ambient extreme heat | external forcing | outside P and T_e | scope defined; heat transfer application must be justified |
+| Relevant transformer thermal variable(s) | candidate physical state | P | exact state choice OPEN |
+| Road vehicle, RESS, propulsion, auxiliaries, vehicle circuit, EVSE, connector and required transfer control | technical elements | full T_e | FROZEN composition, not all active states |
+| Electrical supply to charging interface | exchanged electrical quantity | crosses P→T_e boundary | technology/conditions needed |
+| Charging-load influence | behavior influencing P loading | T_e→P direction | literature support at general level; thermal transfer case OPEN |
+| Electricity or mobility service | performance outcome | separate from technical component | metric and requirement OPEN |
+
+**Relationship registration before visualizing:**
+\`\`\`text
+P→T_e: electrical supply; source=P; receiver=T_e; status=general supported;
+       physical direction ≠ qualified thermal dependence.
+T_e→P: charging load influences grid loading; status=general prior art;
+       thermal consequence requires case-specific grid-side AC input and transformer model.
+External heat→P and heat→T_e: two independently qualified forcing paths;
+       common forcing DOES NOT imply cross-system causation.
+\`\`\`
+
+**Then convert for audience** using \`../scientific-infographic-design/examples/WORKED_FIGURE_RECIPES.md\`, \`examples/figures.py\`, and \`examples/pptx_builder.py\`. Same scientific objects, fewer visual labels; exact scope still present in source note and membership registry.
+
+**Why this sequence:** A framework declares the system and physical relationships. A diagram encodes them. An infographic compresses communication. A mathematical renderer computes (or explicitly labels schematic) geometry from declared objects. Never reverse the authority direction.
+
+**QA hard failures:** EVSE promoted to third physical infrastructure; full T_e silently narrowed; mathematics/parameters invented; shared heat misrepresented as bidirectional coupling; control arrow used as uncertainty; bibliography without adjacent factual citations; a method workflow confused with physical flow.
+
+Design reference only: Jambor & Bornhäuser (2024), https://doi.org/10.1371/journal.pcbi.1011789; Rougier et al. (2014), https://doi.org/10.1371/journal.pcbi.1003833. Domain citations must be handled separately.
+
+---
 # 1. Core Rule
 
 Never start by drawing boxes.
