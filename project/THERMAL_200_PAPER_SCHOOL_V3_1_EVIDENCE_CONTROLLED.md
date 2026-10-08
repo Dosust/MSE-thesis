@@ -110,11 +110,19 @@ No parameter, threshold, exact ODE, or state-to-capability law has been frozen.
 - P11: Souza et al. (2026), DOI 10.3390/en19174224 — primary full HTML evidence audited, source-scope and identifiability limitations recorded.
 - P12: Chen & Su (2013), DOI 10.1002/tee.21862 — verified publisher abstract and metadata; Kalman-filter HST estimation reported; full equations, numerical results, sensor mapping and observability audit OPEN.
 - P13: Liu et al. (2024), DOI 10.1016/j.csite.2024.104444 — open-access publisher-indexed method/results audited. The **3.31 K hottest-spot error is ROM-versus-CFD**, while **3.36–3.97°C winding-profile errors** compare ROM with distributed optical-fiber measurements. Static field surrogate only; true-global-HST and transient observability still OPEN.
-- P14–P20: pending verified primary-source selection and audits.
+- P14: Li et al. (2026), DOI 10.1016/j.epsr.2026.113033; publisher-indexed transient field/sparse-sensor experiment, **MAEs 1.95/2.14°C at verification locations, not demonstrated global HST error**. Full equations/measurement uncertainty OPEN.
+- P15–P20: bibliographic candidates screened; full scientific audits OPEN.
 - P11 takeaway: ambient-dependent effective coefficients improve top-oil prediction on one transformer, but parameters may not be physically identifiable.
 - P12 takeaway: HST estimation is a supported methodological concept; **state estimation ≠ demonstrated global spatial observability**, and P12's exact implementation/quantitative errors remain unverified.
 - P13 takeaway: model-to-model hotspot error ≠ sensor-validated physical global HST error; spatial optical sensing validates sampled profiles only, and a steady spatial surrogate is not a transient dynamical observer.
 - Module 01's model admission remains OPEN.
+
+## 3C. Joint P14–P200 screening checkpoint
+
+- [Evidence register](THERMAL_200_PAPER_EXECUTION_REGISTER_P14_P200_V1.md): **187 explicit positions**, **77 DOI-linked first-pass candidates**, **110 UNFILLED**; no fabricated bibliography.
+- [Cross-module evidence/gap synthesis](THERMAL_200_PAPER_CROSS_MODULE_EVIDENCE_DECISIONS_V1.md): one evidence/limitation checkpoint per Module 02–20. **These are screened findings, NOT 187 full-text reviews.**
+- P14 audit lives in `module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P14_V1.md`; publisher-indexed methods/results rather than final independent equation-level full text.
+- Exact state vector, equipment capability, thermal interdependency causal law, service targets and VVUQ **NOT FROZEN**.
 
 ## 4. Evidence hierarchy
 
