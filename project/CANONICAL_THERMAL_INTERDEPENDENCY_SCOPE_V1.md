@@ -38,6 +38,10 @@ The composition of the Electrified Transportation System is controlled by `CANON
 
 EVSE, the physical charging connection, and communication/control belong to the Electrified Transportation System scope. Mathematical coupling variables may represent exchanged power, energy, current, charging demand, charging capability, communication/control conditions, or bidirectional transfer where required, but they do not form a third physical infrastructure system.
 
+### Binding system-boundary terminology clarification (2026-10-08)
+
+For active Chapter 1, slides, models, figures, and thesis materials, apply Section 4A of `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`. Use **System Boundary** (not “Boundary condition”) to assign EVSE, the physical charging connection, and required charging communication/control to the **full Electrified Transportation System**. These are components, **not its exhaustive definition**; the external Power System remains separate. Do not create an EVSE third infrastructure. Distinguish the frozen complete technical system from the minimum-sufficient active application/model, and require independent evidence for each directed thermal dependency. This clarification introduces no additional active research domain, objective, state, or mechanism.
+
 ## 5. What is inside the active research scope
 
 The active model may include:
