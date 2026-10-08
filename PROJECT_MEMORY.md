@@ -5,12 +5,25 @@
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
 **Current scope amendment:** `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`  
 **Canonical state-time authority:** `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`  
+**Canonical evidence / non-invention authority:** `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`  
 **Current conceptual framework:** `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`  
 **Current mathematical framework:** `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
 **Canonical resilience authority:** `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`  
 **Canonical sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+
+Permanent non-invention rule:
+
+```text
+If it cannot be traced, it is not frozen.
+If it cannot be verified, it remains open.
+If it is thesis-derived, it is labeled thesis-derived.
+If it is transferred, transferability must be justified.
+If evidence conflicts, the conflict is reported.
+```
+
+No paper, DOI, standard clause, equation, parameter, threshold, material property, operating limit, validation result, or numerical law may be invented to close an evidence gap.
 
 Permanent active thesis focus:
 
