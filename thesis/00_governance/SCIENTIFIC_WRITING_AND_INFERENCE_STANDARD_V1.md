@@ -7,6 +7,10 @@
 **Framework authority:** `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`  
 **Method authority:** `../../project/EGMIV_METHOD_V1.md`
 
+## 0A. Current citation-precedence amendment — 2026-10-08
+
+**MANDATORY for all thesis-facing scientific content:** `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md` §0A requires adjacent, visible, verified in-text citations on every externally sourced substantive claim in manuscripts, chapter drafts, slide presentations, scientific explanations, figures, tables, and mathematical content. References-only lists do not satisfy citation rigor. Thesis-defined frozen wording must be preserved and attributed to canonical repository authority where presented as an internal definition; original hypotheses/objectives/assumptions/derivations are not falsely assigned to external authors. Unverifiable source-dependent claims remain `[OPEN — source verification required]` and must not be asserted as fact. For scope and chapter structure, current October 2026 canonical authorities supersede any historical seven-stage or RQ/SO/H references in the earlier sections of this document. No change to title/objectives/scope.
+
 ## 1. Purpose
 
 This standard governs how scientific claims are written, supported, qualified and closed across Chapters 1–7. It operationalizes the thesis requirement that research be objective, reproducible, measurable, evidence-grounded and bounded by declared assumptions and validation domains.
