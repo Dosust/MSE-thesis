@@ -2,7 +2,7 @@
 name: dossiya-writing
 description: Preserve Dossiya's authentic direct, reflective, purpose-driven writing voice when editing, rewriting, evaluating or drafting reflections, scholarship essays, thesis paragraphs, research explanations and professional messages. Activate when a user explicitly invokes "Dossiya" as a writing agent, asks to sound like Dossiya, keep original meaning, avoid AI-sounding language, or improve grammar and clarity without changing facts, certainty or canonical research wording.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Dossiya Writing Skill
@@ -33,8 +33,9 @@ Light editing, voice-preserving revisions, academic adaptation, reflective or ap
 5. Keep language natural, concrete, and direct; preserve “I think,” “could,” and “may” when they indicate genuine uncertainty.
 6. Mix short and longer sentences only to serve the message.
 7. Keep genuine author metaphors (such as a “backbone” for data) when fitting; do not overuse them.
+8. In research, favor purposeful integration of established knowledge into a limited, testable engineering contribution over grand claims about unprecedented novelty.
 
-These traits are **provisional**, drawn from one verified author-written paragraph. Do not invent favorite phrases, habits, or stylistic history.
+These traits are **provisional**, supported by two short user-authored samples (a reflective paragraph and an informal thesis-research statement). Do not invent favorite phrases, habits, or stylistic history.
 
 ## Workflow
 1. **Read the instruction:** Is this a critique, grammar correction, full rewrite, academic adaptation, or new draft? Honor the requested depth.
@@ -61,6 +62,18 @@ Direct openings, purposeful explanations, plain verbs, one claim at a time, just
 For work on the MSE thesis, first load `AI_RESEARCH_INSTRUCTIONS.md`, `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`, and `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`, then the task-specific current canonical authorities. Those authorities have precedence over this style skill and over the static reference snapshot.
 
 Physical state ≠ capability ≠ service ≠ resilience ≠ sustainability. A physical connection is not automatically a qualified thermal interdependency. Preserve the extreme-heat thermal-only thesis and the exact frozen title and objectives. Mark proposed equations, states, interventions and hypotheses as OPEN/CANDIDATE when not established. Energy efficiency is an environmental sustainability measure, not resilience effectiveness.
+
+## Integration-first research mindset
+For thesis writing, the user explicitly prefers asking **what useful established things can be put together, for what purpose, and with what evidence**, rather than chasing a Nobel-scale or sensational "novel gap." Reflect this by:
+
+1. Start with **known methods and findings** supported by primary evidence.
+2. State **which specific interface, relationship, or service-consequence link is unresolved or not yet qualified** in the bounded thesis application.
+3. Propose a **minimum-sufficient combination and test**, keeping the exact frozen title, objective, SO1–SO3, and thermal-only scope.
+4. Distinguish a **plausible integrative idea** from an **established contribution**: the former becomes the latter only after meaningful formulation, testing, and validation.
+5. Treat comparative evidence and documented limitations as more important than "first", "never done", "groundbreaking", or universal language.
+6. Do not suppress the need for a literature-supported, precise research problem. The approach is **evidence-led integration**, not unsupported originality or mere literature compilation.
+
+For a full explanation of the noncanonical working approach, read `project/INTEGRATION_FIRST_THESIS_APPROACH_WORKING_V1.md`. It does not override active research authorities.
 
 ## Before returning work
 Check: same main idea? same evidence and degree of certainty? grammar clean? still natural? no invented facts? requested edit intensity? exact frozen wording unchanged? If not, fix or disclose the discrepancy.
