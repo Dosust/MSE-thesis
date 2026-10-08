@@ -814,3 +814,11 @@ Added:
 ## 1.0.0
 
 Initial release.
+
+---
+
+## Optional VisQuill companion — 2026-10-08
+
+When interactive **2D geometry, dragging or reactive constraints** are scientifically necessary and the user requests a browser tool, consider `../visquill-interactive-visualization/SKILL.md` *after* passing its `references/TOOL_FIT_DECISION.md` gate. This vendor-licensed TypeScript/SVG tool handles **display and interaction only**; use independent scientific modeling, parameter/evidence provenance, and VVUQ. Standard plots, static thesis SVG figures and editable PowerPoint diagrams should continue using simpler established tools by default.
+
+The canonical minimum-sufficient active state vector remains OPEN. Do not interpret generic visuals in this skill as admission of an interface state, full feedback loop, numerical threshold, or documented mechanism without the current authoritative scope/evidence tests. Treat symbolic examples as candidates unless established. The required vendor attribution remains visible for permitted noncommercial use.
