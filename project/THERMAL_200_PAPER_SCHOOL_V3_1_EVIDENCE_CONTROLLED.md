@@ -70,10 +70,10 @@ Module 01 is now actively being executed at:
 Current checkpoint:
 
 ~~~text
-P01–P09 = audited at declared evidence depth
-P10 = pending
+P01–P10 = audited at declared, unequal evidence depths
+P10 = Garelli et al. (2021); winding validation discrepancy identified; state sufficiency still OPEN
 standards spine = mapped; clause-level freeze still partly OPEN
-final Power thermal model = NOT FROZEN
+final Power thermal model = NOT FROZEN; post-P10 outcome B
 ~~~
 
 Current Module 01 control files:
@@ -84,6 +84,7 @@ Current Module 01 control files:
 - `MODULE_01_PAPER_AUDITS_P06_P07_V1.md`
 - `MODULE_01_PAPER_AUDIT_P08_V1.md`
 - `MODULE_01_PAPER_AUDIT_P09_V1.md`
+- `MODULE_01_PAPER_AUDIT_P10_V1.md`
 - `MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md`
 - `MODULE_01_MODEL_ADMISSION_LEDGER_V1.md`
 - `MODULE_01_OPEN_GAPS_V1.md`
