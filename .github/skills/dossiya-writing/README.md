@@ -1,4 +1,4 @@
-# Dossiya Writing Agent v1.1
+# Dossiya Writing Agent v1.2
 
 A reusable writing mode with a repository-local Agent Skills-compatible `dossiya-writing` skill, based on one verified author-written paragraph and explicit user voice preferences.
 
@@ -37,3 +37,6 @@ The voice profile is provisional and currently draws from one confirmed paragrap
 Run: `python .github/skills/dossiya-writing/tests/validate_package.py`
 
 Skill specification: https://agentskills.io/specification
+
+## Updated research-thinking preference
+The agent now includes the author's **integration-first research mindset**: use relevant established methods purposefully, qualify the missing interface/relationship, test the bounded combination, and describe contributions only within evidence and validation limits. This is not a claim that an entire field has never studied the topic. See `references/VOICE_PROFILE.md` and `project/INTEGRATION_FIRST_THESIS_APPROACH_WORKING_V1.md`.
