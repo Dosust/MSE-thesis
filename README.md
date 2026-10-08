@@ -484,3 +484,9 @@ freeze final thermal RQ wording
 → map only measured indicators to relevant SDG targets/indicators
 → execute only after evidence/data/model gates pass
 ```
+
+---
+
+## Spring 2027 thesis conversation handoff (2026-10-08)
+
+For a new conversation or research-agent session, start with [the high-priority handoff index](project/handoffs/README.md), then the [full new-chat starter prompt](project/handoffs/NEW_CHAT_STARTER_PROMPT_2026-10-08.md). These are **working continuity documents**, not canonical scientific authorities, supervisor approval, or established model findings. Always load `AI_RESEARCH_INSTRUCTIONS.md` and the current thesis authority index first.
