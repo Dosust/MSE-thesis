@@ -17,6 +17,18 @@ The active thesis workstream focuses **only on thermal interdependencies between
 
 Do not silently reactivate historical Chapter-I, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The General Objective and SO1–SO3 are frozen; final narrowed research-question wording and hypotheses remain OPEN.
 
+## SCIENTIFIC INFOGRAPHIC CODING AND REFERENCES — 2026-10-08
+
+For comprehensive scientific figures, start at \`.github/skills/scientific-infographic-design/SKILL.md\` (v2.0), then load \`references/FIGURE_DESIGN_APPLICATION_GUIDE.md\`, \`examples/WORKED_FIGURE_RECIPES.md\`, and \`examples/README.md\` as relevant. They contain explicit **when/why/how** applications of peer-reviewed design figures and complete source→claim→register→renderer→QA demonstrations.
+
+Example tasks:
+- design Chapter 1 system/heat/mechanism figures → run original \`examples/figures.py\`;
+- create editable native-shape PowerPoint prototype → run \`examples/pptx_builder.py\`;
+- compute event time or service-deficit mathematical quantities → run \`examples/mathematical_metrics.py\` with admitted data, units and assumptions;
+- test code and scientific invariants → run \`python -m unittest discover -s tests -v\` from the infographic skill directory.
+
+A PASS on code/figure syntax **does not** validate coupled thermal physics. Captions must distinguish internal thesis authority, published scientific evidence, candidate hypotheses, and synthetic tests. Follow the current canonical thesis science first.
+
 For scientific **infographics**, graphical abstracts, thesis-slide illustrations and presentation redesign, also load:
 
 - `.github/skills/scientific-infographic-design/SKILL.md`
