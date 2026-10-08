@@ -34,6 +34,21 @@ Never reverse this order.
 
 ---
 
+## Companion infographic skill — current routing (2026-10-08)
+
+For **presentation-ready scientific infographics**, load `../scientific-infographic-design/SKILL.md`, its curated `references/FIGURE_REFERENCE_LIBRARY.md`, and any relevant chapter storyboard. This companion adds message selection, slide readability, visual-reference transfer, scientific citation placement, and PPTX accessibility; this scientific-diagram skill remains authoritative for boundaries, elements, models, and arrow semantics.
+
+**Do not repurpose an established arrow line style as evidence status.** In particular, **dashed = control/intervention**, and an unqualified thermal dependency must be labeled `CANDIDATE / OPEN` independently of the arrow style. Use validated evidence provenance on the particular physical effect; a published design figure is not a domain-science source. The internal frozen full P/T_e system scope must not be narrowed to EVSE in infographic compression.
+
+Three fixture requirements for infographic figures:
+- shared extreme heat must not generate an imaginary P↔T_e coupling arrow;
+- a proposed T_e→P charger effect must pass the grid-side AC-input evidence gate;
+- a bounded EVSE application remains a subset of the full T_e system.
+
+Ref sources: Jambor & Bornhäuser (2024), https://doi.org/10.1371/journal.pcbi.1011789 (Figs 1,5,6); Rougier et al. (2014), https://doi.org/10.1371/journal.pcbi.1003833 (Figs 3,7). Source/diagram citation protocol remains mandatory under `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md`.
+
+---
+
 # 1. Core Principle
 
 A diagram is not a collection of boxes and arrows.
