@@ -102,6 +102,14 @@ Working evidence files:
 
 These files are **working evidence/control records**, not canonical thesis model authorities. They may inform a future model freeze only after the remaining Module 01 evidence and standards/VVUQ gates are satisfied.
 
+## New Module-02 execution checkpoint — 2026-10-08
+
+`project/module_02_transformer_thermal_parameter_identification_state_estimation/README.md` is the new working entry point for transformer thermal parameter identification and state estimation.
+
+- P11 audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md` (Souza et al., 2026, DOI 10.3390/en19174224).
+- P11 tests ambient- and cooling-dependent effective top-oil model coefficients against a chronological holdout from **one** transformer. Fitted parameter uniqueness, full-state observability, HST prediction, extreme-heat transfer, and normative capability remain OPEN.
+- P12–P20 pending. Module 01 closure decision B remains in force; no transformer state vector is frozen.
+
 ## Current framework authorities
 
 - `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md` — frozen definitions of state classes, reduced active-state admission, forcing/capability/service distinctions, and temporal quantities.
