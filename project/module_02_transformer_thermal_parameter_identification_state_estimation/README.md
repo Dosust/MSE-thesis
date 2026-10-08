@@ -1,6 +1,6 @@
 # Module 02 — Transformer Thermal Parameter Identification and State Estimation
 
-**Status:** ACTIVE — P11 evidence audited at publisher-full-HTML level; P12–P20 pending.  
+**Status:** ACTIVE — P11 publisher-full-HTML audit; P12 verified publisher abstract only; P13–P20 pending.  
 **Parent:** `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md`  
 **Rule:** Better temperature prediction does not establish unique parameters, full-state observability, capability limits, or cross-equipment validation.
 
@@ -16,6 +16,12 @@ Determine which reduced transformer thermal states/parameters can be identified 
 
 **Source:** `MODULE_02_PAPER_AUDIT_P11_V1.md`
 
+## P12 checkpoint — Chen & Su (2013)
+
+**P12:** `10.1002/tee.21862` — proposes a differential/discrete Kalman-filter hottest-spot estimator, reporting laboratory heat-run and large-transformer comparison with measurements and historical IEEE Annex G. **Only publisher metadata + abstract directly verified**; exact equations, observation/noise model, numerical errors, formal observability and external applicability remain OPEN.
+
+**Source:** `MODULE_02_PAPER_AUDIT_P12_V1.md`
+
 ## Decision-control ledger
 
 | Object | Status |
@@ -24,7 +30,8 @@ Determine which reduced transformer thermal states/parameters can be identified 
 | Top-oil temperature as reduced thermal state | CANDIDATE |
 | Ambient/cooling-dependent effective parameters | CANDIDATE CONSTITUTIVE/PARAMETERIZATION, not a new state |
 | Unique physical thermal parameters | OPEN |
-| Hottest-spot state estimation/observability | OPEN — P11 does not establish |
+| Hottest-spot estimator mechanism | CONCEPT SUPPORT [A4], P12 abstract-qualified; exact observer OPEN |
+| Global HST observability/measurement uncertainty | OPEN — P12 does not establish |
 | Cross-transformer/extrapolation accuracy | OPEN |
 | Dynamic model-state sufficiency | OPEN |
 | Thermal-state-to-capability map | OPEN, standards/equipment authority required |
