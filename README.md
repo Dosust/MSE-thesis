@@ -66,7 +66,8 @@ transition time ≠ propagation delay ≠ service-consequence time ≠ recovery 
 
 - Module 01, P01–P10: `project/module_01_transformer_thermal_state_physics/`; physics evidence audited at unequal depths; Power reduced model **NOT FROZEN**.
 - Module 02, P11: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md`; Souza et al. (2026), ambient-conditioned top-oil parameter identification, with explicit uncertainty/transfer limitations.
-- Next verified-paper slot: P12, transformer thermal state estimation/observability. **Do not promote top-oil estimation to winding HST or capability validation.**
+- Module 02, P12: Chen & Su (2013), DOI 10.1002/tee.21862; publisher-abstract-level evidence for Kalman HST estimation; equations/observability/quantitative metrics OPEN. See `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P12_V1.md`.
+- Next paper slot: P13; prioritize full-access quantitative HST state/observer validation. **State estimate ≠ measured global HST ≠ thermal capability.**
 
 ## Current thesis direction
 
