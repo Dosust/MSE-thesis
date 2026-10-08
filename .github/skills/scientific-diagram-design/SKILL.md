@@ -49,6 +49,19 @@ Ref sources: Jambor & Bornhäuser (2024), https://doi.org/10.1371/journal.pcbi.1
 
 ---
 
+## Executable diagram construction examples — 2026-10-08
+
+To turn this semantic skill into code:
+- **Architecture diagram:** read \`../scientific-infographic-design/examples/WORKED_FIGURE_RECIPES.md\` Recipe A; register P, full T_e and actual electrical exchange; render via \`../scientific-infographic-design/examples/figures.py\` scene 03 or \`examples/pptx_builder.py\`.
+- **Forcing diagram:** Recipe B; register heat OUTSIDE both systems and exactly two independent forcing→state→capability lanes; SVG scene 04. Semantic fixture rejects imaginary thermal coupling.
+- **Mechanism diagram:** Recipe C; define P→T_e and T_e→P with distinct case evidence gates; SVG scene 05. The grid-side AC-input gate is compulsory for EVSE→Power thermal claims.
+- **Research gap matrix:** Recipe D; each literature row must specify what was established, the study limits, and the bounded thesis test; cite the relevant row.
+- **State-time math:** Recipe H + \`examples/mathematical_metrics.py\`; real state trajectories need model/data validation; synthetic test outputs must never resemble actual measurements.
+- **High-rigor code / PPTX:** \`../scientific-infographic-design/examples/README.md\`; choose SVG, native PowerPoint or numerical plots according to the declared view, run tests, then inspect rendering.
+
+**Source distinction:** published Figure 5/6 of Jambor & Bornhäuser (2024) teaches layout and arrows (https://doi.org/10.1371/journal.pcbi.1011789); it does not justify case-specific physical arrows. For all evidence-bearing figures, the repository's current in-text APA citation rule is mandatory.
+
+---
 # 1. Core Principle
 
 A diagram is not a collection of boxes and arrows.
