@@ -39,6 +39,10 @@ Every scientific claim should use the strongest appropriate provenance class:
 [OPEN] Not yet established
 ```
 
+## MANDATORY VISIBLE IN-TEXT CITATION RULE — 2026-10-08
+
+**Every thesis-related substantive output must expose citations directly alongside externally sourced scientific claims, in every medium:** chat explanations, writing, manuscripts, proposals, chapter text, slides, tables, diagrams, mathematical models, and code documentation. **A references slide or bibliography alone is not sufficient.** Load and obey `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md` §0A before producing thesis content. Verify APA 7 author–date metadata and exact source support before citing; cite standards by verified identifier/edition and relevant clause when necessary. Cite internal canonical files for frozen thesis-specific scope/definitions, not as proof of external science. Mark original thesis work as proposed/T1/OPEN; do not pad original objectives with irrelevant references. Never fabricate citations or omit limitations. If evidence is unverified, use `[OPEN — source verification required]` instead of an unsupported fact. Enforce claim-level citation QA before delivering any thesis content. This is binding until explicitly authorized/versioned amendment.
+
 ## Mandatory load order
 
 1. `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
