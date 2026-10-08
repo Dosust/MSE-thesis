@@ -1,5 +1,6 @@
 # CURRENT PROJECT MEMORY OVERRIDE — effective 2026-10-08
 
+**AI research entry point:** `AI_RESEARCH_INSTRUCTIONS.md`  
 **Current authority index:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`  
 **Canonical Electrified Transportation scope:** `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`  
 **Canonical thermal-interdependency scope:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`  
