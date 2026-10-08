@@ -63,6 +63,7 @@
 - `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md` — controlling evidence hierarchy, paper/standard verification, equation/parameter provenance, transferability, and non-invention rule.
 
 - `project/THERMAL_PAPER_SCHOOL_V2.md` — active seven-pass paper-reading, limitation-taxonomy, remaining-gap, and thesis-transfer method.
+- `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md` — evidence-controlled 200-paper screening architecture; unverified bibliographic slots remain blank.
 - `tools/thermal_paper_school_v2.py` — executable audit helper for limitation coding, scope admission, and state-admission checks.
 
 ## Current framework authorities
