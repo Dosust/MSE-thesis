@@ -490,3 +490,9 @@ freeze final thermal RQ wording
 ## Spring 2027 thesis conversation handoff (2026-10-08)
 
 For a new conversation or research-agent session, start with [the high-priority handoff index](project/handoffs/README.md), then the [full new-chat starter prompt](project/handoffs/NEW_CHAT_STARTER_PROMPT_2026-10-08.md). These are **working continuity documents**, not canonical scientific authorities, supervisor approval, or established model findings. Always load `AI_RESEARCH_INSTRUCTIONS.md` and the current thesis authority index first.
+
+---
+
+## Optional VisQuill interactive visualization skill
+
+An opt-in research-visualization companion is available at [`.github/skills/visquill-interactive-visualization/SKILL.md`](.github/skills/visquill-interactive-visualization/SKILL.md). It describes when reactive TypeScript/SVG geometry is warranted, how to scaffold the GDK in a separate approved browser project, source and licensing restrictions, reproducibility tests, and thesis-science safeguards. It does **not** install VisQuill or change the scientific scope, mathematical model, or status of current validation evidence. Standard static thesis charts/figures do not require VisQuill.
