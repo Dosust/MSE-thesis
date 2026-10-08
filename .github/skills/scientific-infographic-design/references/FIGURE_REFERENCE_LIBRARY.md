@@ -4,6 +4,29 @@
 
 The figure DOI/URL points to the **original figure in its publication**. Textual observations concern design decisions, not validation of the thesis's Power–Transportation physics.
 
+
+## How the agent actually uses this library (v2.0)
+
+This is a **reference-selection** file, not a prompt to replicate someone else's graphic. For exact **when/why/how**, worked arrow registers, publication-vs-slide reduction, and figure-by-figure failure tests, read \`FIGURE_DESIGN_APPLICATION_GUIDE.md\`.
+
+**Six high-value direct mappings:**
+1. **Fig 5 / Jambor & Bornhäuser (2024):** parallel lanes for shared heat, nested/disjoint enclosures for scope, sequential gates for methodology. Why: layout itself communicates which relation exists.
+2. **Fig 6 / Jambor & Bornhäuser (2024):** label \`electricity supply\`, \`charging-load effect\`, \`external heat forcing\`, or \`candidate mechanism\` on each respective direction. Why: arrows are not all causality.
+3. **Fig 3 / Rougier et al. (2014):** move long physics derivations into notes while retaining exact boundary, status, and same-slide citation. Why: oral display requires faster comprehension.
+4. **Fig 7 / Rougier et al. (2014):** separate verified scenarios/services on aligned axes rather than making a cluttered multiseries plot. Why: independent comparison is clearer.
+5. **Fig 1 / Jambor & Bornhäuser (2024):** start with registries and a wireframe, then create a deterministic figure, then rerender and revise. Why: scientific correctness is cheapest to fix before visual polishing.
+6. **Fig 6 / Rougier et al. (2014):** label quantitative axes and scales, never imply important-looking magnitude without data. Why: visual encodings can distort scientific findings.
+
+**Added verified references for checklists and communication:**
+- Jambor (2025), *A checklist for designing and improving the visualization of scientific data*, https://doi.org/10.1038/s41556-025-01684-z — final figure design and feedback QA.
+- Oliverio & Wright (2025), *The art of the graphical abstract—a visual approach to scientific storytelling*, https://doi.org/10.1002/1873-3468.70163 — reading order and visual hierarchy.
+- W3C WCAG 2.2 non-text contrast guidance, https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html — graphical-object contrast.
+- Microsoft PowerPoint accessibility guidance, https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities — titles, reading order and alternative text.
+
+**Rigor check:** each original article must support only the *visual rule* attributed to it. Transformer, charger, mobility-service, P/T_e causality, and model equations need different sources under the frozen repository citation standard.
+
+**Runnable examples:** \`../examples/figures.py\` (three schematic SVG scenes); \`../examples/pptx_builder.py\` (three native-editable PPTX scenes); \`../examples/mathematical_metrics.py\` (synthetic software tests); \`../tests/test_examples.py\` (regression suite); \`../examples/README.md\` (instructions).
+
 ## Ranked primary figures
 
 | Priority | Source and exact figure | What the original demonstrates | Rule to transfer | Thesis slide | Licensing/reuse |
