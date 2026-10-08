@@ -59,6 +59,45 @@ Tier E: secondary web content — discovery only
 
 No paper title, DOI, standard clause, equation, parameter, threshold, or numerical law may be guessed to fill a corpus slot. Unverified entries remain `TO BE VERIFIED`.
 
+## Claim-level provenance classes
+
+Every paper-school claim, equation, threshold, parameter, mechanism, or metric should be tagged where practical:
+
+```text
+[A1] Official standard / code / normative authority
+[A2] Exact manufacturer / certified technical documentation
+[A3] Peer-reviewed experiment / field measurement
+[A4] Peer-reviewed mathematical / physics model
+[A5] Recognized textbook / engineering handbook / authoritative theory
+[T1] Thesis-derived from A1–A5 evidence
+[OPEN] Not yet established
+```
+
+Required distinction:
+
+```text
+thesis definition ≠ invention
+thesis definition ≠ standard definition
+standard definition ≠ physical constitutive law
+```
+
+If a claim cannot be traced to the appropriate authority, its status remains `OPEN / UNKNOWN / NOT YET QUALIFIED`.
+
+## Required per-paper extraction
+
+```text
+1. Standard / authority context
+2. Physical principle
+3. Governing mathematics
+4. Parameters + units
+5. Initial conditions + boundary conditions
+6. Experimental / numerical method
+7. Verification + validation
+8. Limitation + validity domain
+9. What remains unknown
+10. Transferability to this thesis
+```
+
 ## Permanent reading logic
 
 ```text
