@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE CONTROL LEDGER — NO FINAL TRANSFORMER MODEL FROZEN  
 **Effective date:** 2026-10-08  
-**Evidence basis:** Module 01 P01–P08 checkpoint  
+**Evidence basis:** Module 01 P01–P09 checkpoint  
 **Authority:** project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md
 
 ## 1. Purpose
@@ -33,8 +33,8 @@ A concept can be admitted while its numerical parameterization remains OPEN.
 | Temperature-dependent winding/load loss | **ADMITTED CONCEPT** | P03 | Exact formulation remains OPEN |
 | Transformer construction affects thermal dynamics | **ADMITTED CONCEPT** | P04/P05 | Parameter transfer requires architecture compatibility |
 | Top-oil temperature theta_TO | **CANDIDATE ACTIVE STATE** | P01–P07 | Strongly supported but not yet frozen |
-| Winding hottest-spot temperature theta_HS | **CANDIDATE ACTIVE STATE — PHYSICALLY MEASURABLE BUT SPATIALLY CONDITIONAL** | P02–P08 | Embedded fiber-optic sensing supports direct local measurement; true global hottest spot still depends on sensor placement/spatial model |
-| X_P,th = [theta_TO, theta_HS]^T | **CANDIDATE REDUCED STATE VECTOR [T1]** | P01–P08 synthesis | Must still survive P09–P10 spatial/model-fidelity audit |
+| Winding hottest-spot temperature theta_HS | **CANDIDATE ACTIVE STATE — PHYSICALLY MEASURABLE / SPATIALLY CONDITIONAL** | P02–P09 | Direct sensing and dense spatial measurements support it as a reduced field descriptor; global maximum still depends on spatial coverage/model support |
+| X_P,th = [theta_TO, theta_HS]^T | **CANDIDATE REDUCED STATE VECTOR [T1]** | P01–P09 synthesis | Spatial nonuniformity is established; must still survive P10 detailed-physics/minimum-sufficiency audit |
 | Oil time constant tau_o | **CANDIDATE DYNAMIC DESCRIPTOR** | P03–P06 | **SUPPORTED CONCEPT**; numerical law/value OPEN and case-specific |
 | Winding time constant tau_w | **CANDIDATE DYNAMIC DESCRIPTOR** | P03/P04 | Numerical value OPEN |
 | Effective thermal resistance R_th | **OPEN / MODEL-SPECIFIC** | P01–P05 | Do not assume constant; exact units/form depend on model |
@@ -43,7 +43,7 @@ A concept can be admitted while its numerical parameterization remains OPEN.
 | Oil-viscosity curve mu(T) | **OPEN** | P03/P05 | Requires exact fluid/property authority and range |
 | Exact transformer governing ODEs | **OPEN** | P01–P05 | No equation frozen before P06–P10 + standards audit |
 | Bottom-oil / duct-oil / tank / radiator states | **OPEN** | Not yet sufficiently audited | Admit only if materially required |
-| Spatial temperature field T(x,t) | **REFERENCE / HIGH-FIDELITY CANDIDATE, NOT ACTIVE** | P07 | Use to test reduced-state sufficiency; do not adopt unless spatial detail changes thesis-relevant outputs |
+| Spatial temperature field T(x,t) | **REFERENCE / HIGH-FIDELITY CANDIDATE, NOT ACTIVE** | P07/P09 | Spatial nonuniformity is experimentally supported; activate only if reduced states fail to preserve thesis-relevant outputs |
 | Top-oil thermal limit | **OPEN** | Current standard/manufacturer audit pending | No numerical limit allowed yet |
 | Hottest-spot thermal limit | **OPEN** | Current standard/manufacturer audit pending | No numerical limit allowed yet |
 | Transformer allowable electrical capability C_P(t) | **OPEN** | State-to-capability authority not yet established | Must come from standard/equipment evidence |
@@ -101,7 +101,7 @@ unless an exact current standard/manufacturer authority establishes that relatio
 
 No Power-side thermal model freeze is allowed until:
 
-1. P09–P10 are audited and P06–P08 evidence remains consistent;
+1. P10 is audited and P06–P09 evidence remains consistent;
 2. the standards spine is audited to clause/equation level where required;
 3. the selected transformer architecture is defined;
 4. parameter provenance is feasible;
