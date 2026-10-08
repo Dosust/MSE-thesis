@@ -1,6 +1,7 @@
 # Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**AI research entry point:** [`AI_RESEARCH_INSTRUCTIONS.md`](AI_RESEARCH_INSTRUCTIONS.md)  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V1.md`](project/CANONICAL_THESIS_TITLE_V1.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
 **Canonical state-time authority:** [`project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  
