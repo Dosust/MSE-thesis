@@ -1,6 +1,6 @@
 # Module 02 — Transformer Thermal Parameter Identification and State Estimation
 
-**Status:** ACTIVE — P11 primary-HTML, P12 abstract-qualified, P13 primary open-access indexed-method/results audit; P14–P20 pending.  
+**Status:** ACTIVE — P11 primary-HTML, P12 abstract-qualified, P13 primary open-access indexed-method/results audit; P14 publisher-indexed transient sparse-sensor audit (full equations OPEN); P15–P20 bibliography-screened candidates, full audits OPEN.  
 **Parent:** `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md`  
 **Rule:** Better temperature prediction does not establish unique parameters, full-state observability, capability limits, or cross-equipment validation.
 
@@ -28,6 +28,12 @@ Determine which reduced transformer thermal states/parameters can be identified 
 
 **Source:** `MODULE_02_PAPER_AUDIT_P13_V1.md`
 
+## P14 checkpoint — Li et al. (2026)
+
+P14: `10.1016/j.epsr.2026.113033`. Sparse sensor + Gappy-POD reconstruction of transient winding temperature fields, with reported **MAEs 1.95°C and 2.14°C at instrumented verification points**, ~15 ms per-step computation, and separate simulation comparison. **Neither experimental number is established as physical global-HST error.** Exact sensor geometry, noise/covariance and full observation matrices OPEN. Audit: `MODULE_02_PAPER_AUDIT_P14_V1.md`.
+
+Cross-program first-pass register: [P14–P200](../THERMAL_200_PAPER_EXECUTION_REGISTER_P14_P200_V1.md). **77 screened DOI-linked candidates, 110 unfilled positions; none of P15–P200 fully audited.**
+
 ## Decision-control ledger
 
 | Object | Status |
@@ -39,7 +45,8 @@ Determine which reduced transformer thermal states/parameters can be identified 
 | Hottest-spot estimator mechanism | CONCEPT SUPPORT [A4], P12 abstract-qualified; exact observer OPEN |
 | Spatial HST surrogate versus CFD | CONCEPT AND CASE-SPECIFIC ERROR SUPPORT [A4], P13; not independently global-HST validated |
 | Distributed winding-profile comparison | CASE-SPECIFIC MEASUREMENT EVIDENCE [A3], P13; 3.36–3.97°C reported error |
-| Global HST observability/measurement uncertainty | OPEN — P13 does not establish true global-maximum observability |
+| Transient sparse-sensor winding-field reconstruction | CONCEPT / CASE-SPECIFIC EXPERIMENT [A3/A4], P14; exact global HST error OPEN |
+| Global HST observability/measurement uncertainty | OPEN — P14's sensor MAE does not validate global physical maximum |
 | Cross-transformer/extrapolation accuracy | OPEN |
 | Dynamic model-state sufficiency | OPEN |
 | Thermal-state-to-capability map | OPEN, standards/equipment authority required |
