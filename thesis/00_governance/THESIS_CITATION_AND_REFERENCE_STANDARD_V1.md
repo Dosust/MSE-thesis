@@ -7,6 +7,29 @@
 **Claim control:** `CLAIM_EVIDENCE_REGISTER.md`  
 **ASU control:** `ASU_MSE_THESIS_MASTER_SPECIFICATION_V1.md`
 
+## 0A. FROZEN USER REQUIREMENT — VISIBLE IN-TEXT CITATIONS IN ALL THESIS CONTENT (2026-10-08)
+
+**Status: MANDATORY, THESIS-WIDE, ALL OUTPUT FORMATS.** This rule clarifies the existing standard and takes precedence over older advice in this file allowing source-dependent claims to be left without a visible citation in thesis-facing slides, explanations, answers, figures, chapter drafts, and other deliverables. It does **not** change the current thesis title, physical scope, frozen objectives, or externally established science.
+
+**Absolute writing workflow rule:** NEVER deliver substantive thesis-related scientific content with uncited externally sourced claims, even when the content is concise, a presentation outline, a slide bullet, an explanation, a table, a diagram, or a mathematical formulation. A reference list at the end of a response/deck/chapter is insufficient without explicit citations adjacent to the supported claims. Do not use citations as decoration: they must trace to evidence that supports the **exact** claim and validity domain.
+
+### What citations look like
+
+1. **Scientific external claims:** Attach an accurate, verified APA 7 author–date citation immediately after or within the supported sentence or bullet, e.g. `(Verified Author et al., YYYY)` **only when the actual source metadata and claim support have been verified**. Never print a template or illustrative surname as a real citation. A directly verified standard may appear as an organization/standard identifier with edition/year and verified clauses when required.
+2. **Frozen thesis-specific definitions/decisions:** Reproduce the official frozen wording exactly; attribute it locally to its exact canonical repository file, section, and version where a source reference is useful (for example, a slide/source note or an in-text `(Thesis canonical scope definition, V1, §1)`). Internal provenance is NOT an external peer-reviewed scientific source.
+3. **Original thesis content:** Clearly mark proposed research questions, internal decisions, hypotheses, assumptions, model candidates, derived equations, and intended contributions as *proposed*, *thesis-defined*, *T1*, or *OPEN* as appropriate. Cite the external physical/methodological foundations in the surrounding explanation, and cite the internal authority if the item is governed by a frozen file. **Do not falsely attribute original aims or equations to literature.**
+4. **Unavailable or unverified evidence:** Mark the factual assertion `[OPEN — source verification required]` and do not phrase it as established. If the request is to produce a final scientific presentation/chapter and evidence is unavailable, omit or explicitly flag the unsupported claim; NEVER invent a reference to meet a citation quota.
+5. **Every output medium:** In academic prose use adjacent author–date citations with a verified reference list; in slides place short legible author–date citations in the same bullet/claim or an unambiguous same-slide source note; in tables cite the source in the relevant cell/row or explanatory line; in figures cite sources and label thesis-derived elements in the caption; in math place provenance immediately around equations; in conversational thesis analysis use inline linked references/citations adjacent to external claims where supported.
+6. **Prior art, gaps, and novelty:** Cite the closest established work **and** the exact limitation being contrasted; never claim an entire topic unstudied based on a limited search. A proposed integration is not a proven novelty or a validated contribution.
+7. **No citation laundering:** Search snippets, secondary summaries, generic reviews, unmatched citations, and bibliography-only sources cannot substantiate unverified physical laws, equipment parameters, manufacturer thresholds, or validation. Every source reference must support the claimed device, direction, context, methods, and validity domain.
+8. **Citation QA gate before release:** Audit every paragraph/slide/bullet/equation/figure/table for any uncited substantive external claim; check adjacent placement, source verification, claim/source alignment, in-text-to-reference-list matching, and visibility. If verification fails, label `CITATION BLOCKED` / `OPEN` and withhold the unsupported claim, not the whole user response.
+
+### Interpretation and precedence
+
+The existing Section 4 rule against padding original thesis objectives and self-defined constructs with irrelevant external references **remains valid**; however, every thesis-related response must make its evidence provenance visible where evidence is asserted. An entire thesis-facing deliverable may not rely only on a bibliography. The older Chapter-I section numbering/content mapped in Section 15 is **historical** where it conflicts with the current 11-section Chapter 1 outline and frozen October 2026 extreme-heat scope; do not revive the older RQ1–RQ7, SO1–SO7, P+T+I+O, or generic resilience scope.
+
+Do not silently weaken this requirement. Changes to the rule require explicit user authorization and a formally recorded, versioned repository governance change; ASU/committee's controlling formatting rules retain precedence.
+
 ## 1. Purpose
 
 This standard governs how sources are cited, referenced, verified, and connected to scientific claims across the thesis.
