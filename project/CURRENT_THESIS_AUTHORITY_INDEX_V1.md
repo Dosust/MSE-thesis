@@ -3,6 +3,16 @@
 **Effective date:** 2026-10-08  
 **Purpose:** single current entry point for humans and AI systems.
 
+## AI / agent entry point
+
+Any AI or autonomous agent working on the active thesis should first load:
+
+```text
+AI_RESEARCH_INSTRUCTIONS.md
+```
+
+That entry point requires the evidence/non-invention authority and the current thesis authority index. Repository-specific agent instruction files (`AGENTS.md`, `.github/copilot-instructions.md`, `CLAUDE.md`, and `GEMINI.md`) all point to the same canonical evidence rule.
+
 ## Load first
 
 1. `project/CANONICAL_THESIS_TITLE_V1.md`
