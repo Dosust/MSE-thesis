@@ -6,6 +6,8 @@ Before producing or modifying scientific content in this repository, read and ob
 2. `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`
 3. `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`
 
+Mandatory citation rule (2026-10-08): Load `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md` §0A. No externally sourced substantive thesis statement anywhere (chat, slides, reports, figures, diagrams, math, code comments) without a visible adjacent verified in-text citation. Bibliography-only citations are insufficient. Cite frozen thesis-specific definitions via their canonical internal files; label proposed/T1/OPEN items accurately without false external attribution. Reject citation-mismatched or fabricated source metadata. Enforce a citation QA check on every deliverable.
+
 Mandatory rule:
 
 ```text
