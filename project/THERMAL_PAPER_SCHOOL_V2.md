@@ -98,6 +98,21 @@ If a claim cannot be traced to the appropriate authority, its status remains `OP
 10. Transferability to this thesis
 ```
 
+## Evidence-density rule
+
+~~~text
+More information ≠ better information.
+A strong paper audit keeps only:
+evidence
++ physics
++ mathematics
++ validity boundary
++ limitation
++ thesis consequence.
+~~~
+
+Do not use length as a proxy for rigor. Prefer a short, high-information-density audit when additional detail does not change interpretation, model admission, or uncertainty.
+
 ## Permanent reading logic
 
 ```text
