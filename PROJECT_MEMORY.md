@@ -18,6 +18,8 @@
 **P09 spatial-state result:** dense internal measurements establish strong spatial nonuniformity in oil, core, and winding temperatures; `theta_TO` and `theta_HS` remain reduced descriptors of richer fields, not spatially uniform conditions.
 **P10 thermal-hydraulic result:** Garelli et al. (2021), DOI 10.1016/j.tsep.2021.100861, model spatial EM losses, buoyancy-driven oil flow and temperature-dependent properties on a 315 kVA ONAN transformer; modeled mineral-oil winding rises underestimate measured HV/LV rises by 11.8/8.6 K. Fluid physics established; dynamic two-state sufficiency, parameter transfer and state-to-capability relation OPEN. Module-01 outcome B: no model freeze.
 
+**Active Module-02 checkpoint (P11):** `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md`. Souza et al. (2026), DOI 10.3390/en19174224, used 423,072 5-min measurements from one Québec ONAN/ONAF transformer; adaptive ambient-dependent top-oil parameterization reduced test MAE from 3.11°C to 2.03°C (RMSE 4.00°C to 2.56°C). Fitted parameters are effective and nonuniquely identifiable; no HST validation/capability law. Module 02 started, P12–P20 OPEN. Module 01 continues with final thermal model NOT FROZEN.
+
 **Evidence-density rule:** rigor is not measured by volume. Prefer the shortest statement that preserves the strongest evidence, exact mathematics/physics, validity boundary, limitation, and thesis consequence. Remove information that does not change model admission, validation, scope, or engineering interpretation.
 
 Permanent non-invention rule:
