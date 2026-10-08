@@ -13,9 +13,10 @@
 **Canonical sustainability authority:** `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`  
 **Effectiveness / energy-efficiency authority:** `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`  
 **Current objective authority:** `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`  
-**Active 200-paper checkpoint:** `project/module_01_transformer_thermal_state_physics/` — P01–P09 saved; P10 pending; final Power thermal model not frozen.  
+**Active 200-paper checkpoint:** `project/module_01_transformer_thermal_state_physics/` — P01–P10 saved at declared evidence depths; P10 documents detailed oil-flow physics and winding-temperature validation errors; final Power thermal model not frozen.  
 **P08 observability result:** `theta_HS` is physically measurable at embedded locations, but a finite sensor network does not automatically observe the true global hottest spot; sensor placement/spatial-model support is required.  
 **P09 spatial-state result:** dense internal measurements establish strong spatial nonuniformity in oil, core, and winding temperatures; `theta_TO` and `theta_HS` remain reduced descriptors of richer fields, not spatially uniform conditions.
+**P10 thermal-hydraulic result:** Garelli et al. (2021), DOI 10.1016/j.tsep.2021.100861, model spatial EM losses, buoyancy-driven oil flow and temperature-dependent properties on a 315 kVA ONAN transformer; modeled mineral-oil winding rises underestimate measured HV/LV rises by 11.8/8.6 K. Fluid physics established; dynamic two-state sufficiency, parameter transfer and state-to-capability relation OPEN. Module-01 outcome B: no model freeze.
 
 **Evidence-density rule:** rigor is not measured by volume. Prefer the shortest statement that preserves the strongest evidence, exact mathematics/physics, validity boundary, limitation, and thesis consequence. Remove information that does not change model admission, validation, scope, or engineering interpretation.
 
