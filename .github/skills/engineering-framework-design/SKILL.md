@@ -34,6 +34,14 @@ The framework must answer:
 
 ---
 
+## Companion infographic-design routing — 2026-10-08
+
+**Formal framework semantics stay in this skill.** A thesis slide *explaining* a scientific idea may instead use `../scientific-infographic-design/SKILL.md` for message compression, graphical-abstract layout, illustration selection, visible APA citations, accessibility, and editable-PowerPoint production. Its figure references teach design principles, not physical or mathematical validity.
+
+Never simplify a framework into a graphical abstract by changing a system boundary, deleting necessary relationship conditions, relabeling control/causal arrows, implying unsupported bidirectional thermal coupling, narrowing the complete Electrified Transportation System to EVSE, or omitting evidence-status qualifiers. Use `scientific-diagram-design` for scientific arrows, interfaces, and QA. The infographic skill's explicit evidence-status labels are separate from this framework's line-style grammar.
+
+---
+
 # 1. Core Rule
 
 Never start by drawing boxes.
