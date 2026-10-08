@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE CONTROL LEDGER — NO FINAL TRANSFORMER MODEL FROZEN  
 **Effective date:** 2026-10-08  
-**Evidence basis:** Module 01 P01–P07 checkpoint  
+**Evidence basis:** Module 01 P01–P08 checkpoint  
 **Authority:** project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md
 
 ## 1. Purpose
@@ -33,8 +33,8 @@ A concept can be admitted while its numerical parameterization remains OPEN.
 | Temperature-dependent winding/load loss | **ADMITTED CONCEPT** | P03 | Exact formulation remains OPEN |
 | Transformer construction affects thermal dynamics | **ADMITTED CONCEPT** | P04/P05 | Parameter transfer requires architecture compatibility |
 | Top-oil temperature theta_TO | **CANDIDATE ACTIVE STATE** | P01–P07 | Strongly supported but not yet frozen |
-| Winding hottest-spot temperature theta_HS | **CANDIDATE ACTIVE STATE** | P02–P07 | Strongly supported; observability/spatial reduction still requires P08–P10 |
-| X_P,th = [theta_TO, theta_HS]^T | **CANDIDATE REDUCED STATE VECTOR [T1]** | P01–P07 synthesis | Must survive P08–P10 observability/model-fidelity audit |
+| Winding hottest-spot temperature theta_HS | **CANDIDATE ACTIVE STATE — PHYSICALLY MEASURABLE BUT SPATIALLY CONDITIONAL** | P02–P08 | Embedded fiber-optic sensing supports direct local measurement; true global hottest spot still depends on sensor placement/spatial model |
+| X_P,th = [theta_TO, theta_HS]^T | **CANDIDATE REDUCED STATE VECTOR [T1]** | P01–P08 synthesis | Must still survive P09–P10 spatial/model-fidelity audit |
 | Oil time constant tau_o | **CANDIDATE DYNAMIC DESCRIPTOR** | P03–P06 | **SUPPORTED CONCEPT**; numerical law/value OPEN and case-specific |
 | Winding time constant tau_w | **CANDIDATE DYNAMIC DESCRIPTOR** | P03/P04 | Numerical value OPEN |
 | Effective thermal resistance R_th | **OPEN / MODEL-SPECIFIC** | P01–P05 | Do not assume constant; exact units/form depend on model |
@@ -101,7 +101,7 @@ unless an exact current standard/manufacturer authority establishes that relatio
 
 No Power-side thermal model freeze is allowed until:
 
-1. P08–P10 are audited and P06–P07 evidence remains consistent;
+1. P09–P10 are audited and P06–P08 evidence remains consistent;
 2. the standards spine is audited to clause/equation level where required;
 3. the selected transformer architecture is defined;
 4. parameter provenance is feasible;
