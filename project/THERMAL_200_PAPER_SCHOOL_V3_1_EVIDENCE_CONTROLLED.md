@@ -108,8 +108,10 @@ No parameter, threshold, exact ODE, or state-to-capability law has been frozen.
 **Module 02 — Transformer thermal parameter identification and state estimation** has started at `project/module_02_transformer_thermal_parameter_identification_state_estimation/`.
 
 - P11: Souza et al. (2026), DOI 10.3390/en19174224 — primary full HTML evidence audited, source-scope and identifiability limitations recorded.
-- P12–P20: pending verified primary-source selection and audits.
-- P11 takeaway: condition-dependent effective coefficients can improve top-oil prediction on one transformer; neither physical uniqueness, HST estimation, dynamic state sufficiency, nor state-to-capability mapping is established.
+- P12: Chen & Su (2013), DOI 10.1002/tee.21862 — verified publisher abstract and metadata; Kalman-filter HST estimation reported; full equations, numerical results, sensor mapping and observability audit OPEN.
+- P13–P20: pending verified primary-source selection and audits.
+- P11 takeaway: ambient-dependent effective coefficients improve top-oil prediction on one transformer, but parameters may not be physically identifiable.
+- P12 takeaway: HST estimation is a supported methodological concept; **state estimation ≠ demonstrated global spatial observability**, and P12's exact implementation/quantitative errors remain unverified.
 - Module 01's model admission remains OPEN.
 
 ## 4. Evidence hierarchy
