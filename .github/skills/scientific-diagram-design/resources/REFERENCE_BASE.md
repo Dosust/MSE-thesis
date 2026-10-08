@@ -145,6 +145,21 @@ Persistent project preferences:
 
 ---
 
+## 7A. Infographic and presentation figure precedents — 2026-10-08
+
+Companion reference registry:
+`../../scientific-infographic-design/references/FIGURE_REFERENCE_LIBRARY.md`
+
+Key peer-reviewed primary visual-design precedents:
+- Jambor & Bornhäuser (2024), https://doi.org/10.1371/journal.pcbi.1011789 — Fig 1 drafting, Fig 5 layouts, Fig 6 arrow meanings.
+- Rougier et al. (2014), https://doi.org/10.1371/journal.pcbi.1003833 — Fig 3 paper-versus-presentation, Fig 7 small multiples.
+- Kosslyn et al. (2012), https://doi.org/10.3389/fpsyg.2012.00230 — documented presentation comprehension/design problems.
+- Fujii (2026), https://doi.org/10.1038/s41562-026-02466-9 — message, audience, chart-choice strategy (publisher rights).
+
+Design source ≠ scientific evidence for underlying domain claims. Follow `scientific-infographic-design` for visual compression; keep this skill's mathematical and arrow semantics authoritative. For actual Chapter 1 figure production, always consult the frozen P/T_e boundary and citation controls.
+
+---
+
 ## 8. Resource Selection Rule
 
 Before a new figure is designed:
