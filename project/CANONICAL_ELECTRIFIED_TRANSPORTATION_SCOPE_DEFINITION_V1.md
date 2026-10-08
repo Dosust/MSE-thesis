@@ -39,6 +39,43 @@ Power-system states, equipment, network constraints, and electricity-service var
 
 EVSE and the physical charging connection belong to the defined Electrified Transportation System scope. Mathematical interface variables may still represent exchanged quantities, constraints, communication, or coupling conditions between `P` and `T_e`; such variables do not constitute a third physical infrastructure system.
 
+## 4A. Permanent system-boundary terminology and presentation clarification — 2026-10-08
+
+**Status: FROZEN INTERPRETIVE CLARIFICATION.** This clarification preserves Sections 1–4 verbatim and does not redefine the Electrified Transportation System or reopen the thesis scope. It applies to all active Chapter 1 text, proposals, presentations, diagrams, figures, manuscripts, summaries, AI output, and future revisions.
+
+**Controlling system-boundary wording for an active presentation or Chapter 1:**
+
+> **System Boundary:** The Power System and Electrified Transportation System are treated as two distinct physical systems. The Electrified Transportation System includes electrically propelled road vehicles, rechargeable energy-storage systems (RESS), electric propulsion and auxiliary electrical systems, vehicle power-supply circuits, electric-vehicle supply equipment (EVSE), physical charging connections, and the communication and control functions required for electrical power transfer, including bidirectional transfer where supported.
+
+This text is an explanation of the already frozen canonical definition in Section 1. It is **not** permission to replace that canonical sentence or reinterpret the composition.
+
+**Do not label system membership as a mathematical boundary condition.** The obsolete formulation
+
+> "Boundary condition: EVSE, charging connections, and relevant charging-control functions belong to the Electrified Transportation System."
+
+is **PROHIBITED** as a system-scope definition. The correct heading is **System Boundary**, not **Boundary Condition**.
+
+- **System boundary** assigns physical and technical components to the Power System or the Electrified Transportation System.
+- **Mathematical boundary conditions** prescribe conditions at the boundaries of a specific chosen physical model; their exact equations/values remain case- and model-dependent.
+- **Research scope** is the frozen extreme-heat thermal-interdependency, state-time focus.
+- **Active model scope** contains only the minimum sufficient, evidence-admitted states, constraints, interfaces, and service outputs for the selected application. It does not redefine the complete technical system.
+
+Preserve, everywhere in current/future active work:
+
+```text
+Full Electrified Transportation System scope != EVSE/charging alone
+Power System != Electrified Transportation System
+System boundary != mathematical boundary condition
+Full system scope != active model scope
+Technical system != delivered mobility service
+EVSE + physical charging connection + required charging communication/control
+    belong to the Electrified Transportation System, not a third infrastructure
+Physical/electrical connection != established thermal interdependency
+P -> T_e and T_e -> P thermal directions must each be qualified independently
+```
+
+A two-way arrow between the *systems* denotes a candidate interaction framework, not proof of both directed **thermal** mechanisms. A selected vehicle/charger/depot case is only a bounded application subset. The frozen system composition may not be narrowed, relabeled, or otherwise silently changed. An unavoidable future change requires the repository's formal scope-amendment and authorization procedure; historical archives remain as provenance.
+
 ## 5. Service boundary
 
 The technical system is distinct from the service it provides: **Electrified Transportation System ≠ Mobility Service**.
