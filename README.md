@@ -62,6 +62,12 @@ coupling quantity ≠ state unless independent dynamics require it
 transition time ≠ propagation delay ≠ service-consequence time ≠ recovery time ≠ aging/degradation horizon
 ```
 
+## Active literature checkpoints — 2026-10-08
+
+- Module 01, P01–P10: `project/module_01_transformer_thermal_state_physics/`; physics evidence audited at unequal depths; Power reduced model **NOT FROZEN**.
+- Module 02, P11: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P11_V1.md`; Souza et al. (2026), ambient-conditioned top-oil parameter identification, with explicit uncertainty/transfer limitations.
+- Next verified-paper slot: P12, transformer thermal state estimation/observability. **Do not promote top-oil estimation to winding HST or capability validation.**
+
 ## Current thesis direction
 
 The active thesis workstream is centered **only on thermal interdependencies between the Power System and Electrified Transportation System and on their consequences through state and time**.
