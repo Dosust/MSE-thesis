@@ -419,3 +419,15 @@ When the user **explicitly calls the writing mode**, for example `Dossiya, edit 
 A bare reference to the person's name in an ordinary question, scientific document, or citation is not an invocation. `Dossiya` is the name of an editing workflow, not a separate running model.
 
 This is a **writing-style and editing** skill only. It cannot change the current scientific scope, frozen thesis title/objectives, evidence standards, canonical definitions, research decisions, or the required order of reading `AI_RESEARCH_INSTRUCTIONS.md`, `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`, and `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`. In case of conflict, current thesis and evidence authorities control. Do not claim that saving a GitHub skill permanently installs it into every ChatGPT session.
+
+---
+
+## Optional VisQuill interactive-geometry skill — conditional routing (2026-10-08)
+
+When the user explicitly requests **VisQuill**, or a scientific figure genuinely requires constraint-driven browser interaction rather than static diagrams/charts, consult:
+
+- `.github/skills/visquill-interactive-visualization/SKILL.md`
+- `.github/skills/visquill-interactive-visualization/references/TOOL_FIT_DECISION.md`
+- `.github/skills/visquill-interactive-visualization/references/LICENSE_AND_SOURCES.md`
+
+Use existing `engineering-framework-design`, `scientific-diagram-design`, `mathematical-visualization-design` and, if relevant, `scientific-infographic-design` skills to establish **scientific meaning first**. For ordinary static thesis figures and time-series plots, do **not** use VisQuill by default. VisQuill is a vendor-licensed TypeScript/SVG **visualization SDK, not a physics solver or validation method**. It is **optional and not installed** by this repository instruction. No unqualified P→T_e / T_e→P arrows, no invented data, no silent amendment of frozen scope, and no removal of legally required vendor attribution.

@@ -1,0 +1,6 @@
+/* Illustrative classes following the vendor's documented cssPrefix + name rule.
+ * White-only interior, semantic border/text accents; no science encoded.
+ */
+.vq-demo-ring { fill: none; stroke: #21669b; stroke-width: 3; }
+.vq-demo-handle { fill: #ffffff; stroke: #000000; stroke-width: 2.5; cursor: grab; }
+.vq-demo-label { fill: #000000; font-family: Arial, sans-serif; font-size: 16px; }
