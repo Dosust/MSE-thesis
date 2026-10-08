@@ -22,6 +22,8 @@
 
 **P12 HST estimation (LIMITED):** Chen & Su (2013), DOI 10.1002/tee.21862, published abstract reports a differential/discrete Kalman-filter winding HST estimator, laboratory heat-run comparison and large transformer application with closer agreement than an IEEE Annex G comparator. Exact equations, sensor coverage, covariance, numerical errors, formal global hottest-spot observability, extreme-heat transfer, and capability remain OPEN. Full-text not independently accessed. `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P12_V1.md`.
 
+**P13 spatial-estimation evidence:** Liu et al. (2024), DOI 10.1016/j.csite.2024.104444, 3D *steady* POD/cascade-network winding temperature reconstruction, with open-access publisher indexed methods/results. 40-case surrogate-versus-CFD hottest-spot temperature maximum error **3.31 K** (not experimentally measured global-HST error). Distributed optical fiber winding profile comparisons show model-to-measurement errors up to **3.36–3.97°C** by winding. Optical sensing supports sampled spatial profiles; global HST observability, transient estimation, transferability, state sufficiency, and capability are OPEN. Audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P13_V1.md`. P14–P20 pending; final Power model NOT FROZEN.
+
 **Evidence-density rule:** rigor is not measured by volume. Prefer the shortest statement that preserves the strongest evidence, exact mathematics/physics, validity boundary, limitation, and thesis consequence. Remove information that does not change model admission, validation, scope, or engineering interpretation.
 
 Permanent non-invention rule:
