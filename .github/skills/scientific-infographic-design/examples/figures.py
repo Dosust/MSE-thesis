@@ -159,7 +159,7 @@ def scene04() -> ET.Element:
 
 
 def step(s: ET.Element, x: float, y: float, title: str, body: str,
-         color: str, width: int = 329) -> None:
+         color: str, width: int = 290) -> None:
     el("rect", s, x=str(x), y=str(y), width=str(width), height="128",
        rx="9", fill=BG, stroke=color, **{"stroke-width": "4"})
     txt(s, x+15, y+40, title, 22, color, weight="bold")
@@ -189,7 +189,7 @@ def scene05() -> ET.Element:
         for i, (head, sub) in enumerate(items):
             step(s, xs[i], y, head, sub, color)
             if i < 3:
-                arrow(s, xs[i]+329+7, y+65, xs[i+1]-20, y+65,
+                arrow(s, xs[i]+300, y+65, xs[i+1]-28, y+65,
                       color, "blue" if color == BLUE else "green")
     txt(s, 92, 726, "GATE: source law + operating controls + interface behavior + time alignment + independent service evidence", 22)
     txt(s, 92, 769, "Arrow = hypothesized mechanism; CANDIDATE = evidentiary status, not a line style.", 21, BLACK)
