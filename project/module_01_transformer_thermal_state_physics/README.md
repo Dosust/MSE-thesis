@@ -1,6 +1,6 @@
 # Module 01 — Transformer Thermal-State Physics
 
-**Status:** ACTIVE WORKING EVIDENCE CHECKPOINT — P01–P09 COMPLETE AT CURRENT AUDIT DEPTH; P10 PENDING  
+**Status:** ACTIVE WORKING EVIDENCE CHECKPOINT — P01–P10 AUDITED AT DECLARED EVIDENCE DEPTHS; REDUCED MODEL STILL OPEN  
 **Effective date:** 2026-10-08  
 **Parent program:** `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md`  
 **Evidence authority:** `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`  
@@ -26,7 +26,7 @@ The module does **not** freeze a final transformer model.
 
 ## 2. Current evidence checkpoint
 
-Papers P01–P09 currently support the following physical hierarchy:
+Papers P01–P10 currently support the following physical hierarchy:
 
 ```text
 Electrical loading + ambient thermal forcing
@@ -110,7 +110,8 @@ No exact functional form is frozen.
 - `MODULE_01_PAPER_AUDITS_P01_P05_V1.md` — standardized audits of P01–P05.
 - `MODULE_01_PAPER_AUDITS_P06_P07_V1.md` — concise high-rigor audits of P06–P07.
 - `MODULE_01_PAPER_AUDIT_P08_V1.md` — direct hottest-spot observability audit.
-- `MODULE_01_PAPER_AUDIT_P09_V1.md` — spatial thermal nonuniformity and reduced-state sufficiency audit.
+- `MODULE_01_PAPER_AUDIT_P09_V1.md` — spatial thermal nonuniformity audit.
+- `MODULE_01_PAPER_AUDIT_P10_V1.md` — ONAN thermal-hydraulic physics and winding-validation error audit.
 - `MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md` — cross-paper scientific synthesis.
 - `MODULE_01_MODEL_ADMISSION_LEDGER_V1.md` — ADMITTED / CANDIDATE / OPEN control ledger.
 - `MODULE_01_OPEN_GAPS_V1.md` — exact questions P06–P10 must resolve.
@@ -135,7 +136,7 @@ If a quantity cannot be traced, it remains OPEN.
 
 ## 8. Module-completion condition
 
-Module 01 is not complete until P10 has been audited and a cross-paper synthesis determines whether:
+P10 has now been audited against accessible preproof equations and experimental comparisons, but the module remains **OPEN** for model freeze. The decisive remaining tests are whether:
 
 1. `theta_TO` and `theta_HS` are sufficient reduced states for the selected transformer problem;
 2. additional oil/winding/duct/spatial states materially change the engineering result;
@@ -144,4 +145,4 @@ Module 01 is not complete until P10 has been audited and a cross-paper synthesis
 5. a current-standard/equipment-authority state-to-capability map can be established;
 6. the candidate model has an explicit VVUQ plan.
 
-Until then, the Power-side model remains **WORKING / OPEN**.
+**Post-P10 decision: Outcome B — MODEL REMAINS OPEN.** The selected architecture, transient validation, reduced-state sufficiency, standards clauses and VVUQ remain unresolved.
