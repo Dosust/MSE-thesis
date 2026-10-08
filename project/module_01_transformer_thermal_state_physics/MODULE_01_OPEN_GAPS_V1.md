@@ -2,8 +2,8 @@
 
 **Status:** ACTIVE WORKING GAP MAP  
 **Effective date:** 2026-10-08  
-**Evidence basis:** P01–P05 checkpoint  
-**Purpose:** define exactly what P06–P10 must resolve before any Power-side thermal model freeze.
+**Evidence basis:** P01–P07 checkpoint  
+**Purpose:** record P06–P07 closures and define exactly what P08–P10 must resolve before any Power-side thermal model freeze.
 
 ## 1. Current unresolved core question
 
@@ -22,9 +22,9 @@ or do additional spatial/oil-flow/duct/internal states
 materially change the engineering conclusion?
 ~~~
 
-## 2. P06 burden — independent time-constant evidence
+## 2. P06 closure — independent time-constant evidence
 
-**Target role:** numerical + experimental validation of thermal time-constant variation with load factor.
+**Status:** CLOSED AT CURRENT AUDIT DEPTH. P06 provides cross-method support that effective thermal time constants vary with load. Exact RTTC equations/numerical parameters remain OPEN pending complete equation-level audit and case-specific qualification.
 
 P06 must answer:
 
@@ -47,9 +47,9 @@ P05 empirical calibration
 → stronger cross-paper support for state/load-dependent thermal timescale
 ~~~
 
-## 3. P07 burden — detailed thermal-hydraulic model
+## 3. P07 closure — detailed thermal-hydraulic model
 
-**Target role:** determine what reduced models omit.
+**Status:** CLOSED AT CURRENT AUDIT DEPTH. P07 shows that reduced top-oil/hot-spot models compress spatial oil-flow and temperature fields; a validated thermal-hydraulic network predicted detailed winding/oil/radiator temperatures using 29 optical-fiber sensors. Detailed TH modeling is not automatically required for the thesis.
 
 P07 must answer:
 
@@ -164,7 +164,7 @@ Relevant current authority candidates are listed in `MODULE_01_STANDARDS_SPINE_V
 
 ## 8. Model-admission questions after P10
 
-After P06–P10, answer explicitly:
+After P08–P10, answer explicitly:
 
 ### Q1 — State sufficiency
 Can:
