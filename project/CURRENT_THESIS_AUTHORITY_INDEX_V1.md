@@ -68,6 +68,18 @@ That entry point requires the evidence/non-invention authority and the current t
 | final novelty claim | **OPEN** |
 | September seven-stage/RQ-H/P3/Austin packages | **HISTORICAL / RETAINED** |
 
+## Binding system-boundary / Chapter 1 correction — 2026-10-08
+
+**Status: FROZEN INTERPRETIVE CLARIFICATION; no scope or title amendment.** Controlling detail: `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md` §4A, read together with `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` §4.
+
+- **System Boundary** means the physical/technical composition of Power System P and Electrified Transportation System T_e, which remain distinct.
+- T_e includes the electrically propelled road vehicle, RESS, propulsion/auxiliary electrical systems, vehicle power-supply circuit, EVSE, physical charging connection, and required power-transfer communication/control (including supported bidirectional transfer). EVSE/charging components **are not the complete definition of T_e** and are not a third infrastructure.
+- **Mathematical boundary conditions** are imposed in the selected physical model; they do not classify system-component membership.
+- Full system composition != restricted extreme-heat thermal research scope != minimum-sufficient active application/model scope != mobility-service output.
+- Electrical connection and shared extreme-heat exposure do not themselves qualify directed thermal interdependencies; evaluate P→T_e and T_e→P independently.
+
+The old presentation text “Boundary condition: EVSE, charging connections, and relevant charging-control functions belong to the Electrified Transportation System” must **not** be reused as a system definition. Use the frozen Section 4A approved **System Boundary** wording in active slides, Chapter 1, thesis prose, figures, and any future derived artifact. Do not silently revise this rule or narrow the canonical T_e scope. Historical artifacts remain provenance; correct the terminology when actively revising them. Only a formally authorized and versioned amendment may supersede the frozen authority.
+
 ## Current literature-reading / evidence-transfer method
 
 - `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md` — controlling evidence hierarchy, paper/standard verification, equation/parameter provenance, transferability, and non-invention rule.
