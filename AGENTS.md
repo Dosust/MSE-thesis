@@ -17,6 +17,14 @@ The active thesis workstream focuses **only on thermal interdependencies between
 
 Do not silently reactivate historical Chapter-I, P3/Austin, P+T+I+O, flood, or broad sustainability-decision scope. The General Objective and SO1–SO3 are frozen; final narrowed research-question wording and hypotheses remain OPEN.
 
+For scientific **infographics**, graphical abstracts, thesis-slide illustrations and presentation redesign, also load:
+
+- `.github/skills/scientific-infographic-design/SKILL.md`
+- `.github/skills/scientific-infographic-design/references/FIGURE_REFERENCE_LIBRARY.md`
+- the relevant storyboard (currently `references/CHAPTER1_FIGURE_STORYBOARD.md`)
+
+Apply this companion skill together with the scientific-diagram and engineering-framework skills: the companion governs *communication/visual compression*, while the parent skills and canonical files govern *scientific meaning*. Require actual adjacent in-text references on evidence-bearing slides. Maintain fixed arrow semantics (dashed = control, not uncertainty) and separate labels for ESTABLISHED / CANDIDATE / OPEN.
+
 For scientific diagrams, also load:
 - `.github/skills/engineering-framework-design/SKILL.md`
 - `.github/skills/scientific-diagram-design/SKILL.md`
