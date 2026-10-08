@@ -2,8 +2,8 @@
 
 **Status:** ACTIVE WORKING GAP MAP  
 **Effective date:** 2026-10-08  
-**Evidence basis:** P01–P07 checkpoint  
-**Purpose:** record P06–P07 closures and define exactly what P08–P10 must resolve before any Power-side thermal model freeze.
+**Evidence basis:** P01–P08 checkpoint  
+**Purpose:** record P06–P07 closures and record the P08 observability closure and define exactly what P09–P10 must resolve before any Power-side thermal model freeze.
 
 ## 1. Current unresolved core question
 
@@ -74,9 +74,9 @@ spatial thermal-hydraulic reference model
 
 The goal is not to adopt CFD automatically. The goal is to determine whether higher fidelity changes the thesis-relevant result.
 
-## 4. P08 burden — direct hottest-spot observability
+## 4. P08 closure — direct hottest-spot observability
 
-**Target role:** determine how directly winding hottest-spot temperature can be observed.
+**Status:** CLOSED AT CURRENT AUDIT DEPTH. P08 demonstrates direct local internal/winding temperature measurement with a 12-point embedded fiber-optic network. It does not prove that a finite sensor network always captures the global hottest spot; sensor placement/spatial-model support remains necessary.
 
 P08 must answer:
 
@@ -164,7 +164,7 @@ Relevant current authority candidates are listed in `MODULE_01_STANDARDS_SPINE_V
 
 ## 8. Model-admission questions after P10
 
-After P08–P10, answer explicitly:
+After P09–P10, answer explicitly:
 
 ### Q1 — State sufficiency
 Can:
