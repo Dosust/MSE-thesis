@@ -110,7 +110,9 @@ These files are **working evidence/control records**, not canonical thesis model
 - P11 tests ambient- and cooling-dependent effective top-oil model coefficients against a chronological holdout from **one** transformer. Fitted parameter uniqueness, full-state observability, HST prediction, extreme-heat transfer, and normative capability remain OPEN.
 - P12: Chen & Su (2013), DOI 10.1002/tee.21862; publisher abstract only, HST Kalman-estimation concept; full-text observer validation and formal observability OPEN.
 - P13: Liu et al. (2024), DOI 10.1016/j.csite.2024.104444; open-access primary indexed results show **3.31 K ROM-versus-CFD hotspot error** plus distinct **3.36–3.97°C ROM-versus-fiber winding-profile differences**. Does not demonstrate observed true global hotspot or transient state observability. Audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P13_V1.md`.
-- P14–P20 pending. Module 01 closure decision B remains in force; no transformer state vector is frozen.
+- P14: Li et al. (2026), DOI 10.1016/j.epsr.2026.113033; transient sparse-sensor Gappy-POD field reconstruction, **experimental sensor-comparison MAE 1.95/2.14°C; global true HST error and formal observability OPEN**. Audit: `project/module_02_transformer_thermal_parameter_identification_state_estimation/MODULE_02_PAPER_AUDIT_P14_V1.md`.
+- P15–P200: first-pass evidence register `project/THERMAL_200_PAPER_EXECUTION_REGISTER_P14_P200_V1.md` (77 DOI candidates, 110 positions UNFILLED), cross-module synthesis `project/THERMAL_200_PAPER_CROSS_MODULE_EVIDENCE_DECISIONS_V1.md`. Neither document constitutes full-paper admission.
+- Module 01 closure decision B remains in force; no transformer state vector is frozen.
 
 ## Current framework authorities
 
