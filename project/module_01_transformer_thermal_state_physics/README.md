@@ -1,6 +1,6 @@
 # Module 01 — Transformer Thermal-State Physics
 
-**Status:** ACTIVE WORKING EVIDENCE CHECKPOINT — P01–P07 COMPLETE AT CURRENT AUDIT DEPTH; P08–P10 PENDING  
+**Status:** ACTIVE WORKING EVIDENCE CHECKPOINT — P01–P08 COMPLETE AT CURRENT AUDIT DEPTH; P09–P10 PENDING  
 **Effective date:** 2026-10-08  
 **Parent program:** `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md`  
 **Evidence authority:** `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`  
@@ -26,7 +26,7 @@ The module does **not** freeze a final transformer model.
 
 ## 2. Current evidence checkpoint
 
-Papers P01–P07 currently support the following physical hierarchy:
+Papers P01–P08 currently support the following physical hierarchy:
 
 ```text
 Electrical loading + ambient thermal forcing
@@ -109,6 +109,7 @@ No exact functional form is frozen.
 - `MODULE_01_STANDARDS_SPINE_V1.md` — standards/official-authority backbone.
 - `MODULE_01_PAPER_AUDITS_P01_P05_V1.md` — standardized audits of P01–P05.
 - `MODULE_01_PAPER_AUDITS_P06_P07_V1.md` — concise high-rigor audits of P06–P07.
+- `MODULE_01_PAPER_AUDIT_P08_V1.md` — direct hottest-spot observability audit.
 - `MODULE_01_CROSS_PAPER_SYNTHESIS_P01_P05_V1.md` — cross-paper scientific synthesis.
 - `MODULE_01_MODEL_ADMISSION_LEDGER_V1.md` — ADMITTED / CANDIDATE / OPEN control ledger.
 - `MODULE_01_OPEN_GAPS_V1.md` — exact questions P06–P10 must resolve.
@@ -133,7 +134,7 @@ If a quantity cannot be traced, it remains OPEN.
 
 ## 8. Module-completion condition
 
-Module 01 is not complete until P06–P10 have been audited and a cross-paper synthesis determines whether:
+Module 01 is not complete until P09–P10 have been audited and a cross-paper synthesis determines whether:
 
 1. `theta_TO` and `theta_HS` are sufficient reduced states for the selected transformer problem;
 2. additional oil/winding/duct/spatial states materially change the engineering result;
