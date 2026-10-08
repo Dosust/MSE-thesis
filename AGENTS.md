@@ -6,6 +6,7 @@ Before applying any older instruction in this file, load:
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 - `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
 - `project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`
+- `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
 - `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
@@ -20,6 +21,56 @@ For scientific diagrams, also load:
 - `.github/skills/engineering-framework-design/SKILL.md`
 - `.github/skills/scientific-diagram-design/SKILL.md`
 - `.github/skills/mathematical-visualization-design/SKILL.md`
+
+## MANDATORY EVIDENCE / NON-INVENTION RULE FOR ANY AI
+
+Before generating, revising, coding, modeling, visualizing, or interpreting any active scientific thesis content, **every AI/agent must load and obey**:
+
+`project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`
+
+This is a thesis-wide mandatory authority, not optional guidance.
+
+The AI must preserve:
+
+```text
+No equation, threshold, parameter, variable meaning, failure criterion,
+constitutive law, capability relation, bibliographic record, standard clause,
+validation result, or numerical law is accepted merely because it seems reasonable.
+
+If it cannot be traced, it is not frozen.
+If it cannot be verified, it remains OPEN.
+If it is thesis-derived, it is labeled T1 / thesis-derived.
+If it is transferred, transferability must be justified.
+If evidence conflicts, the conflict is reported.
+```
+
+Mandatory claim-level provenance classes:
+
+```text
+[A1] Official standard / code / normative authority
+[A2] Exact manufacturer / certified technical documentation
+[A3] Peer-reviewed experiment / field measurement
+[A4] Peer-reviewed mathematical / physics model
+[A5] Recognized textbook / engineering handbook / authoritative theory
+[T1] Thesis-derived from A1–A5 evidence
+[OPEN] Not yet established
+```
+
+The AI must never:
+- invent or complete a DOI, title, author, year, journal, standard number, clause, equation number, or citation;
+- invent a parameter, threshold, material property, equipment rating, thermal constant, derating curve, BMS rule, service requirement, uncertainty range, or validation result;
+- treat an abstract as authorization to adopt equations/parameters/thresholds;
+- call a thesis-created metric a standard metric;
+- call a generic physics equation the final component model without component-specific provenance and validation;
+- transfer a numerical relation across equipment, chemistry, climate, duty cycle, or scale without a declared transferability test.
+
+When evidence is insufficient, the required output is:
+
+```text
+OPEN / UNKNOWN / NOT YET QUALIFIED
+```
+
+not a plausible substitute.
 
 ---
 
