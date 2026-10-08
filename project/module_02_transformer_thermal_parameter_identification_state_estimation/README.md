@@ -1,6 +1,6 @@
 # Module 02 — Transformer Thermal Parameter Identification and State Estimation
 
-**Status:** ACTIVE — P11 publisher-full-HTML audit; P12 verified publisher abstract only; P13–P20 pending.  
+**Status:** ACTIVE — P11 primary-HTML, P12 abstract-qualified, P13 primary open-access indexed-method/results audit; P14–P20 pending.  
 **Parent:** `project/THERMAL_200_PAPER_SCHOOL_V3_1_EVIDENCE_CONTROLLED.md`  
 **Rule:** Better temperature prediction does not establish unique parameters, full-state observability, capability limits, or cross-equipment validation.
 
@@ -22,6 +22,12 @@ Determine which reduced transformer thermal states/parameters can be identified 
 
 **Source:** `MODULE_02_PAPER_AUDIT_P12_V1.md`
 
+## P13 checkpoint — Liu et al. (2024)
+
+**P13:** `10.1016/j.csite.2024.104444` — POD/cascade-network steady 3D winding temperature reconstruction. **Maximum HST-model-versus-CFD error: 3.31 K** across 40 tested conditions; separate DOFS-measured winding-profile comparison errors: **3.36–3.97 °C** by winding. The 3.31 K value is *not* a measured global HST prediction error. Spatial measurement support exists, but steady-state surrogate does **not** prove dynamic observer validity, global maxima observability or thermal-state sufficiency.
+
+**Source:** `MODULE_02_PAPER_AUDIT_P13_V1.md`
+
 ## Decision-control ledger
 
 | Object | Status |
@@ -31,7 +37,9 @@ Determine which reduced transformer thermal states/parameters can be identified 
 | Ambient/cooling-dependent effective parameters | CANDIDATE CONSTITUTIVE/PARAMETERIZATION, not a new state |
 | Unique physical thermal parameters | OPEN |
 | Hottest-spot estimator mechanism | CONCEPT SUPPORT [A4], P12 abstract-qualified; exact observer OPEN |
-| Global HST observability/measurement uncertainty | OPEN — P12 does not establish |
+| Spatial HST surrogate versus CFD | CONCEPT AND CASE-SPECIFIC ERROR SUPPORT [A4], P13; not independently global-HST validated |
+| Distributed winding-profile comparison | CASE-SPECIFIC MEASUREMENT EVIDENCE [A3], P13; 3.36–3.97°C reported error |
+| Global HST observability/measurement uncertainty | OPEN — P13 does not establish true global-maximum observability |
 | Cross-transformer/extrapolation accuracy | OPEN |
 | Dynamic model-state sufficiency | OPEN |
 | Thermal-state-to-capability map | OPEN, standards/equipment authority required |
