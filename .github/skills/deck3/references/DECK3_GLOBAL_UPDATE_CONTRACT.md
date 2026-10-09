@@ -1,3 +1,7 @@
+## Deck3-governed AI scientific image generation (mandatory)
+
+All generated research figures, photorealistic engineering imagery, system diagrams, mathematical visualizations, poster figures and slide illustrations must follow `references/DECK3_AI_IMAGE_GENERATION_STANDARD.md` **before generation and after rendering**. First define authoritative takeaway, physical boundaries, mechanism/directional-arrow semantics, evidence/assumptions, exact 13-color authored palette and legitimate photographic exceptions, white interiors, figure geometry, and text-label requirements. Never let an image generator invent physical evidence, equations, sources or approved objectives. Evaluate generated artwork against scientific (S), human-design (H), colors/geometry (C) and image/integration (I) gates; failed/unverified figures remain PROVISIONAL and may not be certified via simple PPTX assembly. Align all downstream code, figure briefs, prompts and slide production with these requirements.
+
 # Deck3 Global Update Contract — binding cross-skill authority
 
 **Effective 2026-10-09.** User meaning: when the user says **"update Deck3"**, **"update Deck3 and all"**, or equivalent, the scope is the **entire Deck3 production ecosystem**, not just `deck3/SKILL.md`.
