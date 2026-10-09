@@ -1,5 +1,5 @@
 {
-  "schema": "deck3-ecosystem-registry-v1.8",
+  "schema": "deck3-ecosystem-registry-v1.8.1",
   "update_trigger": [
     "update Deck3",
     "make update of Deck3",
@@ -24,9 +24,11 @@
       "paths": [
         ".github/skills/deck3/SKILL.md",
         ".github/skills/deck3/references/WORKFLOW.md",
-        ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md"
+        ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
+        ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
+        ".github/skills/deck3/references/CHAPTER1_13SLIDE_V18_MEDIA_AUDIT_2026-10-09.md"
       ],
-      "scope": "All Deck3 commands, stage gating, release claims"
+      "scope": "All Deck3 commands, stage gating, release claims; physical AI-image versus native-editable medium selection"
     },
     {
       "category": "writing_text",
@@ -49,7 +51,7 @@
         ".github/skills/scientific-infographic-design/examples/figures.py",
         ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
       ],
-      "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA"
+      "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified"
     },
     {
       "category": "scientific_diagrams",
@@ -86,9 +88,10 @@
         ".github/skills/deck3/tests/test_deck3.py",
         ".github/skills/deck3/examples/mechanism_trace_qa.py",
         ".github/skills/deck3/examples/mechanism_trace_example.json",
-        ".github/skills/deck3/tests/test_mechanism_trace.py"
+        ".github/skills/deck3/tests/test_mechanism_trace.py",
+        ".github/skills/deck3/tests/test_media_routing_and_provisional_image_gate.py"
       ],
-      "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly; inspect same-stem sidecar mechanism trace and reject invalid arrow/quantity/boundary assertions"
+      "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly; inspect same-stem sidecar mechanism trace and reject invalid arrow/quantity/boundary assertions; avoid calling a PNG asset-integrity check Stage 2 science approval"
     },
     {
       "category": "tests_ci",
@@ -120,5 +123,9 @@
     "invalid": "BLOCK_STAGE2_AND_STAGE3",
     "absent": "PROVISIONAL_NO_SCIENTIFIC_CERTIFICATION",
     "structurally_valid": "NOT_PHYSICS_OR_CITATION_VERIFIED"
-  }
+  },
+  "media_routing_authority": ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
+  "figure_only_authority": ".github/skills/deck3/references/DECK3_NO_EXPLANATORY_PANELS_IN_IMAGES_V1.md",
+  "no_assumed_ai_raster_for_editable_science": true,
+  "asset_integrity_is_not_stage2_scientific_approval": true
 }
