@@ -1,6 +1,6 @@
 # Chapter 4 — Methodology and Experimental Design
 
-**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
+**Thesis title:** **Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
 **Current-scope authority:** [`../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md`](../../project/CANONICAL_EXTREME_HEAT_STATE_TIME_SCOPE_AMENDMENT_V1.md)  
 **Status:** CURRENT WORKING METHODOLOGY  
 **Date:** 2026-10-06

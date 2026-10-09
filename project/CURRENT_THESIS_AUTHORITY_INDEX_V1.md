@@ -17,9 +17,13 @@ That entry point requires the evidence/non-invention authority and the current t
 
 **Status: FROZEN USER-DIRECTED WRITING REQUIREMENT.** Governing authority: `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md` §0A. This file is MANDATORY for any thesis scientific content in chat, manuscripts, slides, proposals, models, figures, tables, explanations, and draft chapters. Never provide a substantive externally sourced claim without an adjacent verified in-text citation; bibliography-only material fails the requirement. Use APA 7 author–date for written academic material, short adjacent citations in slides, and valid source-provenance links where appropriate in chat. Preserve internal canonical citations for thesis-defined decisions, and label unsupported matters OPEN without invented references. Original thesis questions/objectives/hypotheses are not to be misattributed to external papers. This updates writing practice only and does not reopen frozen title, physics, scope, or research objectives.
 
+## Active title amendment — 2026-10-09
+
+The current official title uses **Power–Electrified Transportation**, governed by `project/CANONICAL_THESIS_TITLE_V2.md`; V1 is historical. This is a title-only amendment; frozen research objectives and technical scope are unchanged.
+
 ## Load first
 
-1. `project/CANONICAL_THESIS_TITLE_V1.md`
+1. `project/CANONICAL_THESIS_TITLE_V2.md`
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`
