@@ -9,6 +9,8 @@ metadata:
 > **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
 
 # Scientific Infographic Design — Evidence-First Presentation Agent
+> **Cross-skill coordination (Deck3 v1.7):** [Shared scientific-visual router](../scientific-visual-orchestration/SKILL.md) selects this skill as the owner of audience-facing visual communication when appropriate; it does not replace this skill's existing semantics, canonical science, figure tests or cited authorities. Deck3 and its exact v1.6 palette remain binding for thesis-authored PPTX graphics.
+
 
 ## 0. Mission, precedence, and activation
 
@@ -143,7 +145,7 @@ For every arrow record source, target, actual mechanism/exchange, direction, arr
 
 ## 5. Visual grammar and accessibility
 
-- Exact **white #FFFFFF background and white box/panel interiors**. No gray/off-white tints, filled colored cards, gradients, shadows, gold, textures, or invented visual effects.
+- Exact **white #FFFFFF background and white box/panel interiors**. No gray/off-white tints, filled colored cards, gradients, shadows, unauthorized gold/yellow colors, textures, or invented visual effects. Exact ASU Gold #FFC627 remains permitted only as a small nonessential institutional accent, never an essential text/line.
 - Use **black text**. Allow controlled semantic color for borders, headings, large arrows, and small accents only. Thesis profile defaults: blue=Power, green=Electrified Transportation, muted red=external extreme heat; always label components in text.
 - No mini arrows. Every arrow must be thick/large enough to be understood at slide scale.
 - Consistent typefaces, aligned margins, whitespace, label placement, line widths, and diagram icon family.

@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.6.1"
+  version: "1.7.0"
   short_name: "Deck3"
 ---
 
@@ -120,6 +120,22 @@ The advanced (source-grounded) implementation specification is `advanced_powerpo
 
 **Release distinctions:** `SPECIFIED` and `STRUCTURAL_TEST_PASS` are not `POWERPOINT_PLAYBACK_VERIFIED` or `PHYSICALLY_VALIDATED`. The advanced Python example validates registries and geometry only. Native effects and actual desktop playback require their own evidence. Current 3-stage Deck3 commands remain unchanged unless the user requests an advanced stage.
 
+## 1F. Deck3 v1.7 — additive specialist unification without scientific regression
+
+**Router:** `../scientific-visual-orchestration/SKILL.md` and `../scientific-visual-orchestration/references/ROUTING_CONTRACT.json`. Load it **only when a Deck3 figure request crosses specialist boundaries** (formal mechanism, diagram, infographic, mathematical plot, interactive browser work, generative shader lesson). For single-family tasks, use the existing primary specialist directly. The router does not supersede the binding source-of-truth order in §1 or the existing companion figure skills.
+
+**One primary owner per stage and subject:**
+- Deck3 remains the sole owner of Stage 1 editable copy, notes, citations, source/frozen hashes, blank target figure region and 16:9 PowerPoint stage lifecycle. Stage commands `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, `Deck3 all` retain their exact meanings.
+- `engineering-framework-design` owns full P/T_e physical boundaries, function/service distinctions, state/control semantics, scope and allowed interface candidates; `scientific-diagram-design` owns drawn element/arrow grammar; `mathematical-visualization-design` owns admitted equations/coordinate/time mapping; `scientific-infographic-design` owns audience communication and evidence-adjacent figure layout. No downstream skill may invent or edit scientific authorities.
+- `advanced_powerpoint` is an optional *implementation method* for native objects or controlled click animations. `visquill-interactive-visualization` is optional for justified reactive browser geometry and subject to its license/capability gate. `procedural-mathematical-art` is a **synthetic rendering/learning helper only**, based on independently written ideas learned from shader mathematics; it may not create thesis data, evidence, thermal-interface laws or causal links.
+- The five distinct visual outputs retain independent meanings: animation (declared time/parameter), diagram (typed relationships), mind map (concept hierarchy), chart (quantitative data/theory with units), mathematical figure (defined object/projection). No pseudo-random tile, sine hash or smooth noise can substitute for observed extreme-heat exposure, physical uncertainty, component states or P↔T_e causality.
+
+**Unchanged protected commitments:** exact frozen title/GO/SO1–SO3, full T_e composition, extreme-heat-only admitted mechanisms, audience-visible three-point copy format where approved, same-slide APA citations, Stage-1/Stage-3 lossless editable content, and §2A **75% meaningful figure occupancy target** (70–80% acceptable band with documented exceptions). This version adds **no new runtime geometry capability**. The existing `examples/deck3.py` still uses legacy smaller figure slots and must not be certified as meeting 75% until a separate code/rendered-PPTX verification PR succeeds.
+
+**Colors:** Retain **unaltered v1.6 13-token JSON** in `references/DECK3_SRGB_PALETTE.json` as sole authored-design authority. All slide and panel interiors white. Exact ASU Gold `#FFC627` is permitted only as a *small nonessential institutional accent*, never essential text/arrow on white. Exact ASU Maroon `#8C1D40` is a valid institutional heading. Other authored yellow/gold or purple/magenta hues prohibited. Real photographs preserve authentic colors. Any chapter-10-style math art imported from a separate repository is **re-encoded to these registered colors**, not copied with a conflicting project's theme.
+
+**Nonregression and release:** `references/V1_7_SKILL_UNIFICATION.md` and `../scientific-visual-orchestration/references/ACCEPTANCE_MATRIX.md` define source-, science-, runtime-, slide-, palette-, accessibility- and provenance-level tests. A passing static skill test or PPTX file save does not imply actual slide rendering, figure occupancy, playback or research validation. Block/downgrade release claims on unresolved gates; report statuses independently.
+
 ## 2. The slide architecture (text versus illustration)
 
 - **Slide text stays in native PowerPoint text shapes:** title, **one unlabeled scientific statement**, **exactly three concise supporting points with no visible metaheading** on substantive slides, in-text source/footer, slide number, and detailed notes. An approved frozen objective requiring long text remains **verbatim**, not abbreviated to force layout.
@@ -127,7 +143,7 @@ The advanced (source-grounded) implementation specification is `advanced_powerpo
 - **Reserved visual space:** pure white, truly blank; no gray rectangle, text saying `PLACEHOLDER`, decorative dashed outline, or filler symbol in the delivered text stage.
 - **Graphics belong only where they improve comprehension.** Title, outline and references may remain text-only. For active 16-slide Chapter 1, designated figure slots default to Slides **3–13**; Slide 2 has no compulsory figure.
 - **Typography:** Times New Roman on editable slide text; use Times New Roman wherever figure text is generated deterministically (SVG/TikZ). If unavailable, preserve the declared name and disclose visual font substitution.
-- **Visual:** white canvas/boxes only; black readable text, restrained semantic color on borders/large arrows/small accents. No gold unless explicitly requested, no panel fills, glows, gradients, shadows, gray/colored cards, or ornament.
+- **Visual:** white canvas/boxes only; black readable text, restrained semantic color on borders/large arrows/small accents. Only exact ASU Gold #FFC627 as an optional nonessential institutional accent; no other gold/yellow design, panel fills, glows, gradients, shadows, gray/colored cards, or ornament.
 - **Arrow and status register:** each scientific arrow states source, target, physical transfer/cause/control, citation and `ESTABLISHED`/`THESIS-DEFINED`/`CANDIDATE`/`OPEN`. The drawn line style denotes **relationship**, never unverified status. Never add user-facing badges like `CANDIDATE—not case-qualified` if the user asked to omit presenter-only warnings; retain the qualifying semantics in QA/notes and never imply validation in the visual.
 - **Responsive figure fitting:** retain source aspect ratio, contain/center inside the dominant reserved slot, never distort or crop essential evidence to hit an arbitrary quota. Prefer a source figure with the correct final aspect ratio and minimal internal blank margins. High-resolution PNG for reliable PPTX rendering; retain SVG/editable source when available.
 
@@ -149,7 +165,7 @@ The advanced (source-grounded) implementation specification is `advanced_powerpo
 2. Keep the one-message/three-point requirement when the source deck/manifest specifies it; make *supporting* bullets as concise as permitted **before freezing the Stage-1 source**. Do not silently rewrite or remove already approved text.
 3. If the required text cannot fit legibly into the remaining 20–30%, **block or request an approved re-layout, split, or companion text slide**. Do not shrink text to illegibility or overlap it with the figure.
 4. Do not stretch, distort, artificially upscale small type, crop scientific arrows, or surround a small diagram with white padding to fake occupancy. Adapt the **source artwork and figure aspect ratio** to the reserved region.
-5. Preserve **white (#FFFFFF) full slide and white interiors** for all boxes/panels; no gradients, colored fills, texture, shadows, gold or decorative components. Colors may label headings, meaningful lines, arrow classes and small scientific accents only. Use **large, semantically justified directional arrows**, never ornamental arrows.
+5. Preserve **white (#FFFFFF) full slide and white interiors** for all boxes/panels; no gradients, colored fills, texture, shadows or decorative components; ASU Gold is allowed only as a small nonessential institutional accent. Colors may label headings, meaningful lines, arrow classes and small scientific accents only. Use **large, semantically justified directional arrows**, never ornamental arrows.
 6. A large figure that misstates physics, adds an unqualified thermal link, invents data or uses unreadable labels **fails** regardless of measured coverage.
 
 ### Required Stage-by-Stage acceptance
@@ -288,7 +304,11 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 
 ## 8. Version
 
+1.7.0 — 2026-10-09. Adds a non-destructive scientific-visual skill router, an optional Chapter-10-inspired procedural mathematics method, task ownership and explicit nonregression gates. Preserves v1.6 palette, thesis authority, stages and figure-dominance target; does not claim an updated legacy PPTX generator.
+
 1.6.1 — 2026-10-09. Integrates advanced PowerPoint skill as evidence-gated submodule; exact canonical v1.6 sRGB palette remains sole color authority; adds animation, vector, arrow and QA routing without claiming untested backends.
+
+1.6.0 — 2026-10-09. Adds exact 13-color ASU institutional exceptions (Maroon and nonessential Gold), white backgrounds, photographic authenticity and contrast gates; supersedes generic no-gold wording.
 
 
 1.5.0 — 2026-10-09. Defines exact sRGB hex/8-bit RGB registry, white-background contrast, and canonical palette-file authority for Deck3 authored design.

@@ -7,6 +7,9 @@ metadata:
 
 # VisQuill Interactive Scientific Visualization
 
+> **Deck3 v1.7 task router:** [scientific-visual-orchestration](../scientific-visual-orchestration/SKILL.md) invokes VisQuill only when a verified browser-interaction requirement survives the tool-fit and licensing gate. Ordinary static SVGs, charts, PPTX click sequences and equations stay with their respective specialists. This link makes no new vendor compatibility or runtime claim.
+
+
 ## Role and activation
 This is a **conditional tool-specific companion**, NOT a change to the frozen MSE thesis science and NOT a blanket replacement for existing figure skills. Activate when user explicitly requests VisQuill or when an approved scientific visualization genuinely requires a browser-based viewer with linked geometry, reactive constraints, model-driven interaction, or movable handles. Ask before creating a complex web application if the user asked only for static artwork.
 

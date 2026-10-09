@@ -6,6 +6,9 @@ license: MIT
 
 # Mathematical Visualization Design
 
+> **Deck3 v1.7 skill routing:** [scientific-visual-orchestration](../scientific-visual-orchestration/SKILL.md) selects this skill for equation-to-visual encoding, numerical fields, mathematical figures, analytical charts and model-backed animation. Optional [procedural-mathematical-art](../procedural-mathematical-art/SKILL.md) supplies *educational synthetic rendering techniques only*, never thesis physical equations, measured data, or uncertainty evidence. Remap thesis-authored colors to Deck3's exact 13-token v1.6 palette when preparing slides; preserve other repositories' independent design standards in their own scope.
+
+
 ## Purpose
 
 This skill enforces one principle:

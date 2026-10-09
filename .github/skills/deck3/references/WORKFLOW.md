@@ -128,7 +128,7 @@ For a conversational `Deck3 all` request, the assistant actively designs figure 
 2. **Shared external heat** affects both P and T_e independently unless cross-system causality is qualified; a double-headed arrow does not establish bidirectional thermal physics.
 3. **Service-level analysis** distinguishes physical state, functional capability, service, resilience and separately bounded sustainability. A thermal state or reliability metric is not automatically a mobility service outcome.
 
-No numerical plots without admitted equations/data. No gold, colored panels or gray interior backgrounds. Use white/black with restrained border/line accents and clear arrows. Evidence status can remain in notes when presenter-only status badges are deliberately removed, but the diagram must not falsely claim validation.
+No numerical plots without admitted equations/data. Exact ASU Gold #FFC627 is permitted only as a small nonessential institutional accent; no other gold/yellow authored tones, colored panels or gray interior backgrounds. Use white/black with restrained registered line accents and meaningful arrows. Evidence status can remain in notes when presenter-only status badges are deliberately removed, but the diagram must not falsely claim validation.
 
 ## Expected acceptance format
 

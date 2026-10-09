@@ -8,6 +8,9 @@ purpose: Scientific native PowerPoint engineering, vector geometry, accessible a
 
 # Deck3 Advanced PowerPoint — Rigorous Skill Module
 
+> **Deck3 v1.7 optional implementation route:** [scientific-visual-orchestration](../../scientific-visual-orchestration/SKILL.md) may select these advanced native-PowerPoint techniques *after* the canonical Deck3 production stages and science authorities. This skill remains a proposed/installed reference extension, not a claim of tested native animation playback. Do not change the existing frozen Stage-1 copy or §2A meaningful-occupancy acceptance using this helper.
+
+
 ****Installed location:** `.github/skills/deck3/advanced_powerpoint/SKILL.md`. This is an installed **reference/specification extension** of the main Deck3 skill, not a replacement for its canonical authorities or a claim that every animation backend is implemented.nces/ADVANCED_POWERPOINT_SKILLS_V1.md`, or a separately registered `.github/skills/deck3-advanced-powerpoint/SKILL.md`. The present file is an **integration-ready proposal**, **not** an active update of the canonical Deck3 skill. It MUST be invoked under the established `.github/skills/deck3/SKILL.md` and higher scientific governance, not replace those rules.
 
 ## Binding color authority — Deck3 v1.6.0

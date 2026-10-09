@@ -6,6 +6,9 @@ license: MIT
 
 # Engineering Framework Design
 
+> **Deck3 v1.7 skill routing:** [scientific-visual-orchestration](../scientific-visual-orchestration/SKILL.md) selects this skill for physical structure, system boundaries, states, services and interface semantics. The router cannot replace this scientific authority or redefine canonical Power P, full Electrified Transportation T_e, or admitted heat scope. This skill hands an evidence-qualified element/relation inventory to diagram and infographic specialists; it does not own slide layout or GPU rendering.
+
+
 ## Purpose
 
 Use this skill to design **frameworks**, not infographics.
