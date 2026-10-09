@@ -1,0 +1,20 @@
+name: Deck3 unified agent integration
+on:
+  pull_request:
+    paths:
+      - '.github/skills/deck3/**'
+      - '.github/workflows/deck3-unified-agent.yml'
+  workflow_dispatch:
+jobs:
+  deck3-unified:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: python -m pip install python-pptx
+      - run: python -m unittest discover -s .github/skills/deck3/tests -p 'test_unified_agent.py' -v
