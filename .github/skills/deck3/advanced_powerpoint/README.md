@@ -1,47 +1,48 @@
-> Installed in `.github/skills/deck3/advanced_powerpoint/` as an evidence-gated capability reference. The canonical source of design colors is `../references/DECK3_SRGB_PALETTE.json` in the parent Deck3 folder. Automated tests do **not** verify real PowerPoint playback or thesis physics.\n\n# Proposed Deck3 Advanced PowerPoint Skill Package
+# Advanced Deck3 — PowerPoint Engineering and Animation
 
-**Date:** 2026-10-09  
-**Status:** Complete *proposed skill documents* and runnable sample structural tests. **NOT** installed in GitHub, **NOT** proof of implemented PowerPoint animation APIs, **NOT** new thesis scientific authority.
+**Status:** INSTALLED AS A SCIENTIFIC DESIGN / QA EXTENSION (2026-10-09).
+**Parent authority:** [Deck3 SKILL.md](../SKILL.md), v1.6.1.
+**Color authority:** [DECK3_SRGB_PALETTE.json](../references/DECK3_SRGB_PALETTE.json), immutable current v1.6 registry.
 
-## Intended use
+This extension provides a full source- and evidence-conscious skill specification for editable vector diagrams, nonlinear arrow geometry, PowerPoint animation pathways, mathematics, charts, sources and release gates. **It is not a separately validated PowerPoint automation engine**, and cannot supersede the parent Deck3 scientific authority.
 
-Provide rigorous instructions to future Deck3 agents and human developers on selection and engineering of native PowerPoint science figures, custom curved connectors, mathematical notation, scalable SVG assets, genuine On Click animations, Morph, accessibility, programmatic generation and scientific release QA.
+## Installed structure
 
-**Current repository remains authoritative:** `https://github.com/Dossiya-SE/MSE-thesis`, specifically `.github/skills/deck3/SKILL.md` (observed current Oct 9 status), `references/DECK3_SRGB_PALETTE.json`, all mandatory thesis and diagram design authorities.
+| File | Purpose |
+|---|---|
+| `SKILL.md` | Full advanced engineering skill and 12-route decision matrix |
+| `references/ROUTES_AND_MICROSKILLS.md` | 25 methods and their scope/limitations |
+| `references/CHAPTER1_ANIMATION_MAP.md` | Six priority and four optional Chapter 1 reveal specifications |
+| `references/OFFICIAL_SOURCE_REGISTRY.md` | Vendor capability evidence (not physics validation) |
+| `references/ACCEPTANCE_AND_TESTS.md` | Acceptance gates and negative tests |
+| `references/INSTALL_AND_ROLLOUT.md` | Recorded installation and uncompleted runtime roadmap |
+| `examples/advanced_manifest_example.json` | Eight objects, six candidate arrows, four OnClick groups |
+| `examples/chapter1_v2_animation_baseline.json` | Archived, specification-only Chapter 1 v2 animation plan |
+| `examples/geometry_and_manifest_qa.py` | Structural, exact sRGB, arrow geometry and click-order checks |
+| `tests/test_advanced_contract.py` | 22 positive/negative local regression cases |
 
-## Package map
+## Color contract
 
-| Path in ZIP | Purpose | Proposed target |
-|---|---|---|
-| `SKILL.md` | Full detailed advanced skill | `.github/skills/deck3/references/ADVANCED_POWERPOINT_SKILLS_V1.md` |
-| `references/ROUTES_AND_MICROSKILLS.md` | 25 methods, tool selection, best uses | `.github/skills/deck3/references/ROUTES_AND_MICROSKILLS.md` |
-| `references/CHAPTER1_ANIMATION_MAP.md` | 6 required/4 optional slide animation specs | `.github/skills/deck3/references/CHAPTER1_ANIMATION_MAP.md` |
-| `references/OFFICIAL_SOURCE_REGISTRY.md` | Microsoft/Office/Aspose/PptxGenJS primary links and limitations | `.github/skills/deck3/references/OFFICIAL_SOURCE_REGISTRY.md` |
-| `references/ACCEPTANCE_AND_TESTS.md` | 13 release gates, negative fixtures | `.github/skills/deck3/references/ACCEPTANCE_AND_TESTS.md` |
-| `references/INSTALL_AND_ROLLOUT.md` | Non-destructive installation instructions and exact snippet | `.github/skills/deck3/references/INSTALL_AND_ROLLOUT.md` |
-| `examples/advanced_manifest_example.json` | Candidate Slide 5 scientific object/arrow/animation example | `.github/skills/deck3/examples/advanced_manifest_example.json` |
-| `examples/chapter1_v2_animation_baseline.json` | Previous 2026-10-09 original v2 38-group specification | `.github/skills/deck3/examples/chapter1_v2_animation_baseline.json` |
-| `examples/geometry_and_manifest_qa.py` | Structural/Bézier validation, semantic flags | `.github/skills/deck3/examples/geometry_and_manifest_qa.py` |
-| `tests/test_advanced_contract.py` | 12 unit regression tests | `.github/skills/deck3/tests/test_advanced_contract.py` |
-| `TEST_RESULTS.json` | Actual executed test outcome | Keep with proposed package before integration |
+**Do not copy or hardcode a second 13-color palette.** At runtime the checker loads the canonical parent `references/DECK3_SRGB_PALETTE.json` and fails if it is missing. Exact 8-bit sRGB identifiers only. White canvas, boxes, interiors, headings and legends. ASU Maroon `#8C1D40` may be a heading; ASU Gold `#FFC627` is only a nonessential accent, not critical text or a thin evidence-bearing arrow. Bright Turquoise `#6ACEEE` has the same nonessential limitation. Check contrast of critical text and graphics, plus distinct shapes/markers.
 
-## Verified sample tests
+Real photograph colors remain authentic; code that scans all image pixels and rejects nonpalette colors would be invalid.
 
-Executed (on this proposed package) with Python standard library:
+## Run checks
+
+From `.github/skills/deck3/advanced_powerpoint`:
 
 ```bash
 python -m unittest discover -s tests -v
 python examples/geometry_and_manifest_qa.py examples/advanced_manifest_example.json
 ```
 
-Expected result: 12 tests pass, example structural checker PASS with 8 objects, 6 candidate relations and 4 click groups. These tests do not prove native PowerPoint slideshow animations, editable OOXML conversion, 75% effective diagram occupancy, or any model's physical validity.
+The installed parent GitHub Actions workflow `.github/workflows/deck3-tests.yml` now includes these commands. These tests cover example schema, evidence-status discipline, SVG-equivalent Bézier mathematics, exact approved colors, nonwhite fills, essential-arrow contrast, and click specifications.
 
-## Engineering status
+## Release limits
 
-- **SPECIFIED:** 25 advanced authoring routes, 6 prioritized chapter animation slides, 26 click effects, semantics, geometry and mathematical QA requirements, source registry and exact palette use.
-- **TESTED IN THIS PACKAGE:** sample schema/geometry checker with positive and negative fixtures.
-- **NOT IMPLEMENTED HERE:** a complete native slide generation engine, a production effect backend for Aspose/OOXML/Morph, a real PowerPoint UI test, a cross-platform exact color inspector for arbitrary PPTX binary contents, or independent physics validation.
+- **INSTALLED / SPECIFIED:** The skill and documented routes.
+- **LOCAL STRUCTURAL QA:** 22 tests passed on the staged code and 8-object example.
+- **CI:** Workflow updated; independent GitHub Actions completion was not confirmed in the installer session.
+- **NOT VERIFIED:** Real native PowerPoint effect creation/playback, actual PPTX shape inspection, file-level color audit of arbitrary decks, actual 70–80% meaningful-figure coverage, real equipment parameters, physical models or validation.
 
-## Next integration sequence
-
-Read `references/INSTALL_AND_ROLLOUT.md`. Do not replace the current Deck3 SKILL.md wholesale. Add it as a reference module, preserve the existing authoritative palette and baseline decks, then implement Slide 5 as the reference prototype in a separate feature branch with a native desktop PowerPoint playback check.
+Use the parent skill's frozen scientific evidence and citation rules. A shape animation never establishes a thermal causal mechanism. Existing user-approved thesis decks remain unchanged.
