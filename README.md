@@ -496,3 +496,11 @@ For a new conversation or research-agent session, start with [the high-priority 
 ## Optional VisQuill interactive visualization skill
 
 An opt-in research-visualization companion is available at [`.github/skills/visquill-interactive-visualization/SKILL.md`](.github/skills/visquill-interactive-visualization/SKILL.md). It describes when reactive TypeScript/SVG geometry is warranted, how to scaffold the GDK in a separate approved browser project, source and licensing restrictions, reproducibility tests, and thesis-science safeguards. It does **not** install VisQuill or change the scientific scope, mathematical model, or status of current validation evidence. Standard static thesis charts/figures do not require VisQuill.
+
+---
+
+## Dossiya Research Expert — evidence-first mastery skill
+
+[Research Expert skill](.github/skills/dossiya-research-expert/SKILL.md) · [Lessons 01–12 ledger](.github/skills/dossiya-research-expert/references/LESSON_LEDGER_2026-10-09.md) · [Remaining learning to October 23](.github/skills/dossiya-research-expert/references/REMAINING_CURRICULUM_TO_2026-10-23.md).
+
+Invoke "**Expert Dossiya, continue Lesson 12**" or "**Dossiya Research Mastery: examine [specific derivation]**" for concise, source-grounded physics → mathematics → evidence → test → defense training. Existing dossiya-writing is a **separate editing mode**. Lessons 01–11 show chat-based written reasoning passes; Lesson 12, practical computation and independent case validation remain outstanding. October 23 is a foundational study target, **not an official ASU thesis submission deadline**.
