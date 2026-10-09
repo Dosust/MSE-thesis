@@ -137,7 +137,7 @@ def make_text(manifest_path, output_path):
             put(slide, .71, 1.25, 11.9, .28, "MAIN MESSAGE", 12, BLUE, True)
             put(slide, .71, 1.59, 11.92, 1.12 if long else .98,
                 row["message"], 18 if long else 21, INK)
-            put(slide, .72, 2.85 if long else 2.66, 6.6, .26,
+            put(slide, .72, 2.85 if long else 2.66, 6.6 if long else (5.45 if figure else 11.0), .26,
                 "SPECIFIC OBJECTIVES" if long else "THREE KEY POINTS", 12, BLUE, True)
             starts = (3.17, 4.32, 5.48) if long else (3.13, 4.29, 5.45)
             for j, (y, bullet) in enumerate(zip(starts, row["bullets"]), 1):
