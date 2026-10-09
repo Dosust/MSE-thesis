@@ -260,6 +260,11 @@ def figure_records(data, folder, slide=None):
             "alt": row["figure"]["alt"], "status": "ASSET_PRESENT_NOT_PHYSICALLY_VALIDATED",
             "authored_color_source_qa": source_color_qa,
             "mechanism_trace_qa": mechanism_trace_qa,
+            # Figure-only/no-explanatory-panel and authored raster color checks
+            # require a separate visual/source signoff; PNG existence is not approval.
+            "image_composition_review": "NOT_REVIEWED_NO_EXPLANATORY_PANEL_GATE",
+            "native_individual_object_editability": False,
+            "ready_for_certified_assembly": False,
         })
     if missing:
         raise Blocked("Figure assets required before assembly:\n" + "\n".join(missing))
@@ -409,7 +414,7 @@ def main(argv=None):
             make_text(args.manifest, args.out)
         elif args.command == "figures":
             records = figure_records(load_manifest(args.manifest), args.figures, args.slide)
-            print(f"PASS stage 2 asset audit: {len(records)} independent PNG figures present.")
+            print(f"ASSET INTEGRITY ONLY: {len(records)} independent PNG files readable; scientific/design/citation/panel/animation approval NOT verified.")
             if args.report:
                 Path(args.report).write_text(json.dumps(records, indent=2), encoding="utf-8")
         elif args.command == "assemble":
