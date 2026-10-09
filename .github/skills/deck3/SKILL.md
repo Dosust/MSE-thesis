@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   short_name: "Deck3"
 ---
 
@@ -42,9 +42,15 @@ If the user has already supplied approved text or completed stage artifacts, **r
 
 **Absolute:** scientific citations adjacent to supported claims **on the slide** and beside evidence-bearing figure claims (APA author–date); internal frozen definitions attributed to canonical files. No arbitrary DOI, parameters, temperatures, thermal curves, or validated bidirectionality. Scope is Power P + *full* Electrified Transportation T_e, heat-conditioned directional mechanisms only; EVSE is a component of T_e, not a third infrastructure. A reduced active model never silently redefines T_e.
 
+## 1A. AUDIENCE COPY RULE — 2026-10-09
+
+**The presentation should display scientific content, not the names of fields in the authoring template.** On all title/outline/content/reference slides, never render the literal metadata headings `MAIN MESSAGE`, `THREE KEY POINTS`, `MAIN IDEA`, or `3 BULLETS`. Keep the actual `message` text and meaningful `bullets` visible, editable, sourced and unchanged unless a separate copy revision is explicitly authorized. The manifest may continue to use one message plus three points as invisible authoring structure; the audience must not see that structure's generic labels. Real semantic headings such as `General Objective`, `Specific Objectives`, `System Boundary` and `References` are allowed.
+
+**Use the 2026-10-09 comparative audit before the next Chapter 1 design pass:** `references/CHAPTER1_COMPARATIVE_DESIGN_LESSONS_2026-10-09.md`. Preserve strong ASU typography/evidence, restrained scientific figures, clear bidirectional-evidence gates, and ensure figures actually occupy the current §2A dominant visual target. Do not claim a legacy small-image layout satisfies 75%.
+
 ## 2. The slide architecture (text versus illustration)
 
-- **Slide text stays in native PowerPoint text shapes:** title, **one main message**, **exactly three concise points** on substantive slides, in-text source/footer, slide number, and detailed notes. An approved frozen objective requiring long text remains **verbatim**, not abbreviated to force layout.
+- **Slide text stays in native PowerPoint text shapes:** title, **one unlabeled scientific statement**, **exactly three concise supporting points with no visible metaheading** on substantive slides, in-text source/footer, slide number, and detailed notes. An approved frozen objective requiring long text remains **verbatim**, not abbreviated to force layout.
 - **Standalone figure asset:** a scientific mechanism, boundary, research comparison, or method figure inserted into a **dominant dedicated region**. It is not a screenshot or mockup of the whole slide, and it must not repeat the slide title, main message, or three points.
 - **Reserved visual space:** pure white, truly blank; no gray rectangle, text saying `PLACEHOLDER`, decorative dashed outline, or filler symbol in the delivered text stage.
 - **Graphics belong only where they improve comprehension.** Title, outline and references may remain text-only. For active 16-slide Chapter 1, designated figure slots default to Slides **3–13**; Slide 2 has no compulsory figure.
@@ -121,7 +127,7 @@ Coordinates shown here are **illustrative only**, not an automatically validated
 
 1. Read actual approved source content or a manifest of slides; separate `title`, `outline`, `content`, `references`.
 2. Verify every externally supported claim has an adjacent verified citation. Full bibliography on final slides and internal canonical authority where applicable.
-3. Use one main message + **three** concise points for each substantive slide; preserve any frozen GO/SO1–SO3 exact text, even if its bullets are necessarily longer.
+3. Use one main statement + **three** concise points for each substantive slide **as invisible manifest/authoring structure**; never draw `MAIN MESSAGE` or `THREE KEY POINTS` text boxes; preserve any frozen GO/SO1–SO3 exact text, even if its bullets are necessarily longer.
 4. Build 16:9 editable PowerPoint with **no pictures or decorative diagrams**. For every eligible figure-bearing slide reserve the **75%-target primary visual region** (definition in §2A), truly empty/white. Keep required native wording, slide citations and footer fully readable. If the geometry cannot fit, BLOCK and re-author/split only with approval; do not pretend a legacy small slot meets the new rule.
 5. Speaker notes carry full evidence qualification and verbal explanation; they do not replace same-slide references.
 6. For Chapter 1, the default is 16 slides, with 11 figures on Slides 3–13; generalize according to the provided manifest rather than hard-coding future slide counts.
@@ -210,6 +216,6 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 
 ## 8. Version
 
-1.1.0 — 2026-10-09. User-directed 75% dominant-scientific-figure rule (70–80% band), denominator/meaningful-occupancy definition, safe frozen-content conflict gates, stage-specific QA and explicit warning that existing Deck3 CLI geometry remains legacy until separately updated and tested.
+1.2.0 — 2026-10-09. Remove on-slide authoring category labels; preserve actual editable wording. Adds Chapter 1 comparative-design lessons and generator regression gate.\n\n1.1.0 — 2026-10-09. User-directed 75% dominant-scientific-figure rule (70–80% band), denominator/meaningful-occupancy definition, safe frozen-content conflict gates, stage-specific QA and explicit warning that existing Deck3 CLI geometry remains legacy until separately updated and tested.
 
 1.0.0 — 2026-10-09. Introduced single short-name three-stage reusable slide workflow. Older scientific-design skills remain authoritative; this skill only orchestrates artifacts and QA.
