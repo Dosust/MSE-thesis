@@ -11,6 +11,13 @@ These are schematic examples and NOT physical system validation.
 """
 from __future__ import annotations
 
+# Deck3 v1.8: source-only conceptual prototypes. A saved/rendered graphic is NOT a
+# trace-registered scientific mechanism. Supply a separately reviewed
+# same-stem <image>.trace.json using deck3/examples/mechanism_trace_qa.py
+# before requesting scientific mechanism certification. Do not infer laws,
+# variables, evidence or bidirectional thermal causality from these shapes.
+
+
 import argparse
 import json
 from pathlib import Path
@@ -223,7 +230,7 @@ def main() -> None:
     ns = ap.parse_args()
     for output in write_all(Path(ns.out)):
         print(f"CREATED {output}")
-    print("PASS: SVG XML parse + semantic invariants. DOMAIN PHYSICS NOT VALIDATED.")
+    print("SOURCE-ONLY: SVG parse/invariants; no mechanism trace sidecar; DOMAIN PHYSICS NOT VALIDATED.")
 
 
 if __name__ == "__main__":
