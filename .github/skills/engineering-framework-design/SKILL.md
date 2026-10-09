@@ -3,6 +3,9 @@ name: engineering-framework-design
 description: Design, audit, visualize, and improve rigorous resource-grounded scientific and engineering frameworks with explicit system boundaries, environments, system-of-interest elements, interfaces, state-time dynamics, functions, services, flows, controls, outputs, arrow semantics, viewpoint selection, model transformations, and validation rules. Use for thesis frameworks, systems-engineering architectures, resilience frameworks, lifecycle-style system diagrams, physics-based mathematical-engineering frameworks, and any visual or conceptual framework where every box and arrow must have a defined scientific meaning.
 license: MIT
 ---
+## Deck3 weakness learning and scientific regression (2026-10-09)
+For every Deck3-related framework task, load `.github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md`, apply T01–T14, and document evidence-led error → correction → actual retest. Preserve fixed thesis scope, not unvalidated physical assumptions. Respect the established source, palette, boundary and citation governance; do not certify tests without execution.
+
 
 ## Deck3 v1.8 — scientific-mechanism traceability (binding for Deck3 outputs)
 

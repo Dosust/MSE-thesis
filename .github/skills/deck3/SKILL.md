@@ -3,9 +3,13 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.8.1"
+  version: "1.8.2"
   short_name: "Deck3"
 ---
+## Deck3 ecosystem-wide scientific weakness learning (2026-10-09)
+
+When this skill is invoked as part of **any Deck3 form** (text, single slide, figures, generated images, diagram, engineering framework, mathematical visualization, assemble, animation, QA or full pipeline), load `.github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md`. Apply the T01–T14 checks and stage-specific error→correction→adversarial retest requirements. The companion Dossiya Expert weakness ledger is `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V1.md`. Preserve frozen research **scope**, while physically testing candidate science; do not mistake approved slide copy or source authority for empirical validation. Do not claim tests passed before execution. Preserve the skill's established media, palette, scientific-citation and figure-trace standards.
+
 
 ## Deck3 v1.8.1 figure-media routing and fail-closed approval
 

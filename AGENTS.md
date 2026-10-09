@@ -1,3 +1,6 @@
+## Mandatory Deck3 ecosystem weakness learning — 2026-10-09
+For ALL Deck3 forms (text, figures, single-slide, image, scientific diagrams, infographics, engineering frameworks, math visualization, assemble, animation, QA, all), read `.github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md` and apply stage-appropriate T01–T14 evidence/correction/retest checks. Scope remains fixed; frozen text is not scientific validation. Report NOT_RUN when tests have not been executed.
+
 ## User-directed slide visual dominance rule — 2026-10-09
 
 For every **eligible Deck3 figure-bearing slide**, a scientifically necessary standalone infographic/diagram/chart is the **primary communication object**, targeting **75% of the defined usable below-title/above-footer content region** (70–80% acceptance after actual effective-coverage and readability checks). The remaining 20–30% carries approved editable supporting text. Never count blank internal image padding as scientific coverage or fill the slide with unrelated art. Preserve exact frozen objectives, citations, speaker notes, canonical Power/Transportation system boundaries, white canvas/interiors and meaningful arrow semantics. If the three approved points and frozen content cannot fit, obtain approval for a split or text-only layout; do not silently shrink, omit or rewrite.
