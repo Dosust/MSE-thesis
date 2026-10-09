@@ -1,3 +1,18 @@
+## Deck3 — short-name three-stage scientific PowerPoint workflow (2026-10-09)
+
+For any request beginning **Deck3** (case-insensitive), immediately load `.github/skills/deck3/SKILL.md` and its `references/WORKFLOW.md` along with the active canonical science and citation authorities.
+
+- `Deck3 text` or `Deck3 1`: final native editable PPTX text, main message + three points, unchanged frozen objectives/citations/notes, **genuinely empty** figure spaces.
+- `Deck3 figures` or `Deck3 2`: scientifically qualified **standalone** infographic assets (not full-slide designs).
+- `Deck3 figures slide N`: edit or generate only slide N's supporting visual.
+- `Deck3 assemble` or `Deck3 3`: insert validated assets without stretching, preserve exact native text/notes, render and inspect every slide.
+- `Deck3 all`: carry through all three stages, and report blockers rather than invent figures or scientific evidence.
+- `Deck3 QA`: audit figures, citations, semantic arrows, frozen wording, geometry and rendered readability.
+
+This invocation rule routes to existing engineering-framework, scientific-diagram, scientific-infographic and mathematical-visualization skills; **it never supersedes current physics/citation governance**. Figures are separate from PPTX text; removed presenter-only banners must not reappear. Use actual verified file paths; do not invent downloadable artifacts.
+
+---
+
 # CURRENT-SCOPE OVERRIDE — effective 2026-10-06
 
 Before applying any older instruction in this file, load:
