@@ -162,3 +162,7 @@ Release: PASS / BLOCKED / PROVISIONAL
 ```
 
 **Reusable scope:** Chapter 1 is one example; these steps apply to thesis defense decks, conference posters converted to slide presentations, future chapters, and other scientific talks when their own manifests and scientific authorities are supplied.
+
+## Deck3 research-weakness closure (2026-10-09)
+
+For any Deck3-related writing, scientific figure, mathematics, engineering diagram, AI image, slide assembly, animation or QA, read `.github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md`. It records the strengths and scientific deficiencies of versions A/B/C and makes source-level literature comparison, real grid-side AC interface evidence, independent thermal-causality qualification, conservation-based minimum mathematics, falsifiable model comparison, verification versus empirical validation, measured service/resilience, two sustainability pathways and SDG target traceability mandatory. Preserve frozen research scope but never treat frozen statements as experimentally validated. Output only applicable elements; avoid explanatory image panels, off-palette colors and ornamental content. Mark missing checks OPEN/NOT_RUN, never PASS.
