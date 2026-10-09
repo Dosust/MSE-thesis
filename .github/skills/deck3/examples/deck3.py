@@ -22,6 +22,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.text import MSO_ANCHOR
 from pptx.util import Inches, Pt
+from asset_color_qa import check_figure_source
 
 PALETTE_PATH = Path(__file__).resolve().parents[1] / "references" / "DECK3_SRGB_PALETTE.json"
 with PALETTE_PATH.open(encoding="utf-8") as _palette_file:
@@ -226,10 +227,15 @@ def figure_records(data, folder, slide=None):
             raise Blocked(f"Slide {n}: invalid figure PNG {source}: {error}") from error
         if width < 640 or height < 420:
             raise Blocked(f"Slide {n}: image below minimum 640×420 pixels.")
+        source_color_qa = check_figure_source(source, row["figure"].get("source_kind"))
+        if source_color_qa["status"] == "BLOCKED":
+            raise Blocked(f"Slide {n}: authored figure source failed exact Deck3 palette gate: "
+                          + "; ".join(source_color_qa["errors"]))
         records.append({
             "slide": n, "file": filename, "width_px": width, "height_px": height,
             "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "alt": row["figure"]["alt"], "status": "ASSET_PRESENT_NOT_PHYSICALLY_VALIDATED",
+            "authored_color_source_qa": source_color_qa,
         })
     if missing:
         raise Blocked("Figure assets required before assembly:\n" + "\n".join(missing))
@@ -311,13 +317,20 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         "source_text_unchanged": True,
         "source_notes_unchanged": True,
         "image_count": len(records),
+        "color_source_preflight": [
+            {"slide": rec["slide"], "status": rec["authored_color_source_qa"]["status"]}
+            for rec in records
+        ],
+        "color_certification": "NOT_CERTIFIED_FROM_ASSET_SOURCE_OR_ASSEMBLY_ALONE",
         "figure_records": records,
         "manual_required": [
             "Verify figure physics and citation-to-claim mapping",
             "Render EVERY slide and inspect at presentation and thumbnail scale",
             "Inspect true text bounds, contrast, arrow meanings and reading order",
             "Inspect meaningful nonblank figure coverage; picture bounds alone cannot certify occupancy",
-            "Review dense frozen-objectives slide exceptions at presentation size"
+            "Review dense frozen-objectives slide exceptions at presentation size",
+            "Inspect native PPTX authored colors and SVG/raster source provenance; do not infer color certification from file integrity",
+            "Block public final/approved status while any figure is raster-only without verified source"
         ],
     }
     if qa_path:
