@@ -1,0 +1,69 @@
+{
+  "schema": "deck3-unified-agent-routing-cases-v1",
+  "note": "Specification acceptance fixtures only; execution against an agent runtime is NOT_RUN.",
+  "cases": [
+    {
+      "prompt": "Deck3",
+      "expected": "status",
+      "must_not": [
+        "regenerate"
+      ]
+    },
+    {
+      "prompt": "Deck3 figures slide 6",
+      "expected": "native_editable_matrix",
+      "must_not": [
+        "force_ai_png"
+      ]
+    },
+    {
+      "prompt": "Deck3 heat slide 4",
+      "expected": "external_heat_separate_paths",
+      "must_not": [
+        "assume_thermal_interdependence"
+      ]
+    },
+    {
+      "prompt": "Deck3 math slide 10",
+      "expected": "source_to_omml_or_vector_with_source",
+      "must_not": [
+        "claim_svg_native_math"
+      ]
+    },
+    {
+      "prompt": "Deck3 slide 8",
+      "expected": "verbatim_objectives",
+      "must_not": [
+        "truncate_go_so"
+      ]
+    },
+    {
+      "prompt": "Deck3 update colors",
+      "expected": "dependency_impact_review",
+      "must_not": [
+        "blind_recolor"
+      ]
+    },
+    {
+      "prompt": "Deck3 animate slide 9",
+      "expected": "animation_plan_playback_gate",
+      "must_not": [
+        "claim_untested_playback"
+      ]
+    },
+    {
+      "prompt": "Deck3 QA",
+      "expected": "actual_tests_with_not_run",
+      "must_not": [
+        "assume_pass"
+      ]
+    },
+    {
+      "prompt": "Deck3 all",
+      "expected": "stage1_stage2_stage3_fail_closed",
+      "must_not": [
+        "certify_unverified_figures"
+      ]
+    }
+  ]
+}
