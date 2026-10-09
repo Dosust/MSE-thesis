@@ -351,6 +351,11 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
             raise AssertionError("PowerPoint ZIP integrity failed.")
     report = {
         "status": "STAGE3_PROVISIONAL_ASSEMBLY_NOT_SCIENTIFICALLY_APPROVED",
+        "all_forms_learning_authority": "DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md",
+        "scientific_gates": {f"G{i:02d}": "NOT_RUN_OR_OPEN" for i in range(1,16)},
+        "adversarial_probes": "A01_A20_NOT_RUN",
+        "physical_model_validation": "NOT_ESTABLISHED",
+        "powerpoint_playback": "NOT_TESTED",
         "slides": len(after.slides),
         "source_text_unchanged": True,
         "source_notes_unchanged": True,
