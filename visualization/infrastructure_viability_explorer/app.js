@@ -76,10 +76,10 @@ function drawPhase(s){
   const x=v=>L+v*pw,y=v=>T+(1-v)*ph;
   for(let g=0;g<=1.0001;g+=.2){line(ctx,x(g),T,x(g),T+ph,COLORS.grid,.7);line(ctx,L,y(g),L+pw,y(g),COLORS.grid,.7)}
   const xp=x(data.constraints.min_power),yt=y(data.constraints.min_transport);
-  ctx.save();ctx.fillStyle=""rgba(255,255,255,1)"";ctx.fillRect(xp,T,L+pw-xp,yt-T);ctx.strokeStyle=COLORS.sky;ctx.setLineDash([5,5]);ctx.strokeRect(xp,T,L+pw-xp,yt-T);ctx.restore();
+  ctx.save();ctx.fillStyle=COLORS.white;ctx.fillRect(xp,T,L+pw-xp,yt-T);ctx.strokeStyle=COLORS.sky;ctx.setLineDash([5,5]);ctx.strokeRect(xp,T,L+pw-xp,yt-T);ctx.restore();
   text(ctx,"T",24,h/2,13,COLORS.ink,"center",800);text(ctx,"P",L+pw/2,h-14,13,COLORS.ink,"center",800);
   text(ctx,"declared sustainability thresholds",L+pw-8,T+18,10,COLORS.sky,"right",700);
-  ctx.save();ctx.strokeStyle=""rgba(0,114,178,.32)"";ctx.lineWidth=1.4;ctx.beginPath();
+  ctx.save();ctx.strokeStyle=COLORS.sky;ctx.lineWidth=1.4;ctx.beginPath();
   data.samples.forEach((q,j)=>{const xx=x(q.power),yy=y(q.transport);if(j===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)});ctx.stroke();ctx.restore();
   ctx.save();ctx.strokeStyle=COLORS.sky;ctx.lineWidth=2.5;ctx.beginPath();
   data.samples.slice(0,index+1).forEach((q,j)=>{const xx=x(q.power),yy=y(q.transport);if(j===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)});ctx.stroke();ctx.restore();
