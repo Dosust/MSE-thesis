@@ -5,7 +5,7 @@ These are static contract checks, NOT image-level inspection or PPTX certificati
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 DECK3 = ROOT / "deck3" / "SKILL.md"
 INFOGRAPHIC = ROOT / "scientific-infographic-design" / "SKILL.md"
 DIAGRAM = ROOT / "scientific-diagram-design" / "SKILL.md"
