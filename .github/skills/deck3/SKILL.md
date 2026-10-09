@@ -3,13 +3,13 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.6.1"
+  version: "1.6.2"
   short_name: "Deck3"
 ---
 
 ## Deck3 global-update scope (binding)
 
-When the user requests **"update Deck3"** or equivalent, apply the **entire linked design/production ecosystem**, not this skill in isolation. Read `references/DECK3_GLOBAL_UPDATE_CONTRACT.md` and the canonical `deck3/references/DECK3_SRGB_PALETTE.json` (relative to .github/skills). Synchronize source-faithful text and writing, independently generated scientific figures/images, photorealistic asset prompts, code/templates, PPTX assembly, slide geometry, white-only surfaces, exactly 13 authored sRGB tokens, scientific evidence/citation/arrow QA, regression tests, release checks and any impacted root instructions. Archive and natural photographic pixels are preserved. Never claim completed certification from PPTX-open success or from an unexecuted/failing GitHub workflow. If not fully validated, label the result provisional.
+When the user requests **"update Deck3"** or equivalent, apply the **entire linked design/production ecosystem**, not this skill in isolation. Read `references/DECK3_GLOBAL_UPDATE_CONTRACT.md` and the canonical `deck3/references/DECK3_SRGB_PALETTE.json` (relative to .github/skills). Synchronize source-faithful text and writing, independently generated scientific figures/images, photorealistic asset prompts, code/templates, PPTX assembly, slide geometry, white-only surfaces, exactly 13 authored sRGB tokens, scientific evidence/citation/arrow QA, regression tests, release checks and any impacted root instructions. Archive and natural photographic pixels are preserved. Never claim completed certification from PPTX-open success or from an unexecuted/failing GitHub workflow. If not fully validated, label the result provisional. **Required technical annex:** also load `references/DECK3_GLOBAL_UPDATE_CONTRACT_V1.md` and `references/DECK3_DEPENDENCY_REGISTRY.json`. Audit every registered route, marking REVIEWED_NO_CHANGE when unaffected. Regenerate changed source assets, update compilers/assemblers and tests, and report unrun checks. The Stage 2/3 CLI now preflights accompanying SVG colors using `examples/asset_color_qa.py`: any unauthorized vector color blocks; PNG-only scientific diagrams are COLOR_NOT_VERIFIED_RASTER_ONLY, never certified. Authentic photographs require explicit separate review.
 
 
 # Deck3 — Scientific Thesis Slide Production
@@ -292,6 +292,9 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 **User response:** provide exact links to verified newly created files; record passes and limitations honestly. Do not say a physical model is validated because image generation, PPTX integrity checks, or numerical code tests passed.
 
 ## 8. Version
+
+1.6.2 — 2026-10-09. Defines ecosystem-wide update scope using the primary contract, technical annex and dependency registry; SVG source color preflight integrated into Stage 2/3 with raster-only quarantine; cross-skill tests/CI extended.
+
 
 1.6.1 — 2026-10-09. Integrates advanced PowerPoint skill as evidence-gated submodule; exact canonical v1.6 sRGB palette remains sole color authority; adds animation, vector, arrow and QA routing without claiming untested backends.
 
