@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.4.0"
+  version: "1.5.0"
   short_name: "Deck3"
 ---
 
@@ -93,6 +93,30 @@ Applies to **every Deck3 text slide, figure, final assembly, thumbnail, and sour
 - **Failure behavior:** regenerate/repair a scientifically correct but color-noncompliant image; do not call a slide approved when prohibited authored styling remains. Preserve frozen words, citations, notes and evidence regardless of palette changes.
 
 **Priority:** this user's explicit authentic-color contract overrides any older examples or sample palettes mentioning purple, violet, pink, magenta, gold, yellow, amber, colored backgrounds or colored panel fills. Examples in prior sections are not exemptions. See scientific-infographic-design and scientific-diagram-design for corresponding checks.
+
+## 1D. Exact sRGB semantic color registry (mandatory)
+
+**Canonical palette file:** `references/DECK3_SRGB_PALETTE.json`. These are **8-bit sRGB** codes, not unspecified RGB working-space values. Never guess colors, approximate from screenshots, substitute palette names, or infer what ASU institutional colors ought to be. Render authored marks using these exact values, subject to the documented semantics and permitted roles.
+
+| Token | Hex | 8-bit RGB | White contrast | Authorized role |
+|---|---|---|---:|---|
+| white | `#FFFFFF` | (255,255,255) | 1.00:1 | Canvas and all authored panel interiors ONLY |
+| black | `#000000` | (0,0,0) | 21.00:1 | Equations and axes |
+| charcoal | `#25313D` | (37,49,61) | 13.25:1 | Main body text |
+| navy | `#12304A` | (18,48,74) | 13.57:1 | Scientific titles |
+| blue | `#0072B2` | (0,114,178) | 5.19:1 | Power system |
+| slate_blue | `#416985` | (65,105,133) | 5.86:1 | Secondary technical distinctions |
+| teal | `#006D70` | (0,109,112) | 6.14:1 | Qualified cross-system interfaces |
+| cyan_blue | `#087E98` | (8,126,152) | 4.72:1 | Observation and information |
+| forest_green | `#176B42` | (23,107,66) | 6.53:1 | Transportation and service |
+| deep_red | `#B4232C` | (180,35,44) | 6.53:1 | Critical states/constraints |
+| graphite | `#555D66` | (85,93,102) | 6.68:1 | Secondary labels and axes |
+
+Contrast is against **#FFFFFF**, computed using WCAG relative luminance (sRGB transfer function, 0.2126 R + 0.7152 G + 0.0722 B linear luminance). Ordinary authored text requires at least 4.5:1; essential graphics at least 3:1. Contrast with white is **not evidence that two different data lines remain mutually distinguishable**, nor evidence of legibility at projection size. Use direct labels/line patterns/markers.
+
+**Implementation:** generators must load palette tokens from the canonical JSON for authored colors. Charts must not silently choose their framework's automatic rainbow/qualitative scheme. Images depicting real objects are not palette-quantized. Inspect RGB/SVG/PPTX colored backgrounds, strokes and annotations separately from photographs. White is the only allowed authored fill; colored semantic tokens are for text, arrow/line strokes, outlines and small accents only.
+
+**ASU adaptation:** copy the source presentation's measured typography/layout hierarchy when established from the actual PPTX; **never** copy unverified institutional colors into Deck3. Do not claim this registry is an extraction of the ASU template.
 
 ## 2. The slide architecture (text versus illustration)
 
@@ -261,6 +285,8 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 **User response:** provide exact links to verified newly created files; record passes and limitations honestly. Do not say a physical model is validated because image generation, PPTX integrity checks, or numerical code tests passed.
 
 ## 8. Version
+
+1.5.0 — 2026-10-09. Defines exact sRGB hex/8-bit RGB registry, white-background contrast, and canonical palette-file authority for Deck3 authored design.
 
 1.3.0 — 2026-10-09. Adds explicit comparative A/B/C design learning and four production gates W/F/L/Q, source-bound claims, typography and citation checks, complete 11-asset Chapter 1 requirement, and correct distinction between generator geometry and validated effective occupancy.
 
