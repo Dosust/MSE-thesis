@@ -11,6 +11,17 @@ Accepted chat inputs:
 
 The assistant must use the user's actual approved deck/text/source files, not infer paths. This is an execution guide, not permission to invent literature, equipment limits, thermal coupling laws, or case results.
 
+## Dominant scientific-figure layout — current user rule
+
+For every **eligible figure-bearing slide**, the standalone scientific figure targets **75% of usable slide content area**, with an accepted **70–80%** range only after scientific/readability QA. The usable region is explicitly defined below the title/message header, above the citations/footer and inside slide margins. Meaningful artwork must visually occupy the region; a large blank PNG containing a small figure does not satisfy the rule. Title, outline, references and approved text-only/long-objectives exceptions do not require a figure.
+
+- **Stage 1:** reserve an actually empty dominant region before text approval; retain exact native wording, three bullets where specified, citations and notes. Where content cannot fit the remaining 20–30%, stop for approval to split/re-layout. Do not shrink frozen objectives.
+- **Stage 2:** design the infographic for the dominant slot aspect ratio and projection-scale legibility; no whole-slide screenshots, redundant slide title/three bullets, invented results, colored panel interiors or unqualified thermal arrows.
+- **Stage 3:** preserve the Stage-1 source, contain-fit without distortion, compute achieved visible graphic/usable area, inspect each rendered slide, and block final release on illegible labels, overlap or evidence failure.
+- **Current runtime limitation:** `examples/deck3.py` still has **legacy fixed small figure slots**. Merely adding this rule to the skill/manifest does **not** implement or verify new layout geometry. Update and test the authoring/assembly code or use a separately verified compliant slide layout **before claiming 75% QA PASS**. The earlier 16-slide Stage-1 deck and 10-of-11 provisional assembly are not retroactively compliant.
+
+This is a **layout priority**, not permission to displace real scientific content, misrepresent measurements, falsify figure area with padding or violate the canonical source/citation requirements.
+
 ## Stage 1 — The exact text-only deck with deliberate whitespace
 
 Inputs:
