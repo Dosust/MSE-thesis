@@ -19,11 +19,11 @@ from pptx.util import Inches, Pt
 
 # Semantic color is used for borders, arrows and titles only.
 WHITE = RGBColor(255, 255, 255)
-BLACK = RGBColor(20, 20, 20)
-BLUE = RGBColor(36, 95, 150)
-GREEN = RGBColor(39, 118, 80)
-RED = RGBColor(173, 69, 62)
-GRAY = RGBColor(85, 85, 85)
+BLACK = RGBColor(0, 0, 0)
+BLUE = RGBColor(0, 114, 178)
+GREEN = RGBColor(23, 107, 66)
+RED = RGBColor(180, 35, 44)
+GRAY = RGBColor(85, 93, 102)
 W, H = 13.333, 7.5
 
 

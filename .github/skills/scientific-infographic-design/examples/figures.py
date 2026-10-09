@@ -17,11 +17,11 @@ from xml.etree import ElementTree as ET
 
 W, H = 1600, 900
 BG = "#FFFFFF"
-BLACK = "#111111"
-BLUE = "#245F96"    # Power
-GREEN = "#277650"   # Electrified Transportation
-HEAT = "#AD453E"    # External extreme heat
-GRAY = "#555555"    # neutral outline/notes (not fill)
+BLACK = "#000000"
+BLUE = "#0072B2"    # Power
+GREEN = "#176B42"   # Electrified Transportation
+HEAT = "#B4232C"    # External extreme heat
+GRAY = "#555D66"    # neutral outline/notes (not fill)
 SVG = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG)
 
@@ -43,9 +43,9 @@ def root(title: str, subtitle: str, foot: str) -> ET.Element:
     txt(svg, 75, 76, title, 42, BLACK, weight="bold")
     txt(svg, 75, 122, subtitle, 24, BLACK)
     el("line", svg, x1="75", y1="149", x2="1525", y2="149",
-       stroke="#C5C5C5", **{"stroke-width": "2"})
+       stroke="#555D66", **{"stroke-width": "2"})
     el("line", svg, x1="75", y1="811", x2="1525", y2="811",
-       stroke="#C5C5C5", **{"stroke-width": "2"})
+       stroke="#555D66", **{"stroke-width": "2"})
     txt(svg, 76, 842, foot, 18, BLACK)
     txt(svg, 76, 875, "Original schematic, NOT case-qualified or measured. Figure semantics follow frozen thesis authority.", 16, GRAY)
     return svg
