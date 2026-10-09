@@ -3,9 +3,22 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.7.1"
+  version: "1.8.0"
   short_name: "Deck3"
 ---
+
+## Mechanism-centered infographic engineering — v1.8.0 (binding across ALL Deck3 stages)
+
+**Read `references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md`** before any figure brief, image prompt, math diagram, native-PowerPoint visual, animation, or final figure approval. Core design principle: **a diagram explains components, physical/model boundaries, interfaces, quantities, laws/operators, measurements, control, feedback, and service consequences—not merely a taxonomy of colored boxes**. Adapt to the slide purpose; do not force irrelevant layers.
+
+- **Stage 1 / writing:** identify the scientific takeaway, which system/model boundary is being described, which quantities and assumptions the text establishes and any unresolved evidence gate. Do not rewrite approved slide copy or expose editorial headings.
+- **Stage 2 / figures / AI images:** for every engineering connector give source, destination, directed relation *type*, carried quantity/units (or explicitly OPEN), interface/physical law if admitted, and evidence status. Separate physical electrical flows from sensor data, signals, model calculation, decision/optimization, and reporting flows. Physical P and full T_e are distinct from simulation/active-model and post-model assessment boundaries.
+- **Mechanism sidecar:** write `<figure_stem>.trace.json` against `examples/mechanism_trace_qa.py` / `examples/mechanism_trace_example.json`; human source qualification stays mandatory. The 8-object sample is **conceptual**, not equipment evidence. A malformed sidecar blocks Stage 2/3; missing sidecars remain `TRACE_NOT_REGISTERED_PROVISIONAL` (older decks may assemble for review but cannot claim certified physics).
+- **Stage 3 / assembly:** check trace status, approved exact 13-token palette, native text and notes, source/citation consistency, arrow-to-object identity, meaningful content occupancy and actual slide readability. PPTX shape/animation targets must match recorded object IDs where actual independent layers exist.
+- **Animation:** when appropriate reveal physical boundaries → named interfaces/quantities → forcing and state-time → observation/control/feedback → evidence and service consequences, with `Appear` / presenter `On Click`, persistent prior content. Each step must remain scientifically interpretable *even before the next click*. Use progressive-slide fallback when native effects cannot be verified.
+- **Never claim** physical nonlinearity from a curved arrow, empirical causality from a bidirectional diagram, validation from code passing, or scientific certification from SVG/PNG generation. The IEEE 2024 screenshot supplied by the user is design inspiration, **not** proof or permission to reproduce copyrighted material.
+
+**Independent mechanism gate M** supplements current S/H/C/I (scientific image) and S/W/C/F/A/Q (Deck3 release) gates. An automated `STRUCTURAL_TRACE_PASS_NOT_PHYSICS_VERIFIED` is neither source-content verification nor field validation nor Microsoft PowerPoint playback certification.
 
 ## Native PPTX authored-color preflight — v1.7.1
 
