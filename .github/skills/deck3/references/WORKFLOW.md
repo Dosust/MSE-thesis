@@ -22,6 +22,12 @@ For every **eligible figure-bearing slide**, the standalone scientific figure ta
 
 This is a **layout priority**, not permission to displace real scientific content, misrepresent measurements, falsify figure area with padding or violate the canonical source/citation requirements.
 
+## Audience-visible copy contract — updated 2026-10-09
+
+The keys `message`, `bullets`, and `source_note` describe **content**, not audience-visible section labels. Show their actual substantive strings in editable slide shapes, but never print `MAIN MESSAGE`, `THREE KEY POINTS`, `MAIN IDEA`, or `3 BULLETS`. A semantic content heading such as `Specific Objectives` is permitted. The Chapter 1 evidence/design comparison is in `CHAPTER1_COMPARATIVE_DESIGN_LESSONS_2026-10-09.md`.
+
+This rule applies to future Stage 1 authoring and any explicitly approved redesign; it does not authorize changing an earlier frozen or user-approved PPTX while merely inserting existing figures. The 75% visual-occupancy implementation gate above remains unresolved in the legacy code; hide-template-label compliance must not be misreported as 75%-geometry compliance.
+
 ## Stage 1 — The exact text-only deck with deliberate whitespace
 
 Inputs:
