@@ -1,0 +1,1061 @@
+{
+  "schema": "deck3_animation_contract_v1",
+  "status": "SPECIFICATION_ONLY_NOT_IMPLEMENTED",
+  "date": "2026-10-09",
+  "deck": "Chapter 1 v2",
+  "source_baseline": {
+    "pptx_filename": "Deck3_Chapter1_v2_stage1_TEXT_ONLY.pptx",
+    "pptx_sha256": "adec460c7411c7aef2f94c268fdd8038b664284db4508a2e7003bfeb1ee273eb",
+    "manifest_filename": "Deck3_Chapter1_v2_manifest.json",
+    "manifest_sha256": "b3b6daab8dc6e4468aaa03670a749b4e7c314f3aa98b8a89c1725b73308e4032",
+    "slide_count": 16,
+    "source_pptx_picture_count": 0,
+    "immutable_slide_text_sha256": {
+      "1": "32acdefbfbf3920edc434f3b66b6648e472f6b894637163ddc815284dd83ca63",
+      "2": "2dc987c00861a46f1e53b1c1c5467319134e20e92b5097de9627e7aa57cd5742",
+      "3": "57eac1155a0d85b81c3d74b7f01fb07d79fb872dee590465626f0a824fbcd4a0",
+      "4": "c150fdc0db02b4ea705515f0498c778d00860a6edd8430bdf682eb51e41aa85c",
+      "5": "ecb38a1aaa91324f0a3fc60d0b88b604383dc2698a13f583edcb9be916545084",
+      "6": "c408b494bc71fc8fa800c151b276fa0906ef597e06d3de02cda9342f6041f50d",
+      "7": "676312ab291dfab2ae3fe8c3ef2bb3e098f5b6e5c31811d8fd635af518766b1f",
+      "8": "4240608a34d23f98654e0aeee5d0ff12c36f8a140a88c56e78eec370bc2528dd",
+      "9": "549ce80e45bcf6e6d7d337f5fe4234899f0ef5d76333d49b6f795970a524f06f",
+      "10": "bcad79fff3592c1ad98c14c373db5a092e90df14f311f15635fb7add1d037e06",
+      "11": "87651da6e8a9449decdf5bb358715b0e562a54d78edd15050b091e4db9dd7404",
+      "12": "754bb730acacaa19634b64fa6a38fae152e53c3cae865d27fcbff95622aeec6e",
+      "13": "2277a26e50808c6a29f03e1218e5c24c4ec8a4df35eb177214904bac51ade74f",
+      "14": "1247df41cd7052534310eb0e9f7bcb6f96919a75298f1201d2d7f75745b19d40",
+      "15": "bfb97bccb0a1f80cedb77371b7a5133c4d67a64bdb86d604456cceb8827db300",
+      "16": "44f44fcdfee681c4915ec0b7ab21814e4e86764bb3e229d2da799fa18223a2f3"
+    },
+    "immutable_slide_notes_sha256": {
+      "1": "17ec3100eadfabe1d509ffe37c81e68c1ed4c04cc1851a32e1f4831fb93ed26a",
+      "2": "154535816b000dedb95529604ec12e7a8901f76b3dd65b8d8edfe8abe36ae21a",
+      "3": "161e47d0e5e52a43883513f18eb7d65f34b5cb0d06178fe53850509423a963ae",
+      "4": "4b72cb040b523e5b61dc33529fa4752193d3d906d709b6d7c86512613e7c0186",
+      "5": "bec33dfa80646242d47594b8eab9ee71f1aba7ea8311199640312b570c1e327f",
+      "6": "a9f15e6e8b1ce2c3e81dbd3e6965bb4e42c7c57a6058c67025dd25783f77c524",
+      "7": "33cdfeb06f792d827f46c84f3e0c40af9658ab3997e2256d785b026f552632bb",
+      "8": "ea278ce370d55387f483ceb3dfa7fc13a180cbf7af1f2d620786ca7e3a18ed3e",
+      "9": "67998fb0d713d0f4604a1ec906ed6ba97c2a7d8a3dfad8941705dd821165404a",
+      "10": "2ae11717cfb87364cd82e968df62b15a6b72827b185e5bf869c8ed4556351e4b",
+      "11": "8cb65fffca4b6e5d2ab504f3edaacfc6c120db7990a48d9b2c25d253c4612af3",
+      "12": "7e37d4db0846de8446fc5d652457e2aa5d2cbeb4d876a0c3a94ad87b29a32698",
+      "13": "2eb2e5aaee4a2eb2c8ae52e17af048ce0f746e7db5d2743173c3a6b15f54fed9",
+      "14": "a182b89d552d279f2a3278f6d68387d81c87d772499f12f2266c50ca072c90ad",
+      "15": "9a137ed5d502a74a9ce50bcd233d63dd0aec78928642118db194ff631a787a37",
+      "16": "140b01761762ca96faed7a414882b2e604330944330b713b247038ef36756a2a"
+    }
+  },
+  "animation_controls": {
+    "effect": "Appear",
+    "trigger": "On Click",
+    "advance": "Presenter-controlled click / right-arrow / presentation remote",
+    "auto_after": false,
+    "exit_animations": false,
+    "hide_previous_groups": false,
+    "persist_until_slide_exit": true,
+    "previously_revealed_remains_visible": true,
+    "transitions": "None required",
+    "object_grouping": "A reveal group is one click even if it contains multiple native PowerPoint shapes; reveal labels and matching arrows simultaneously",
+    "timing": "instant on each click; no automatic delays",
+    "all_first_frame_native_text_static": true
+  },
+  "format_and_science_gates": {
+    "allowed_layers": "Native editable PowerPoint shapes and/or separate independent transparent vector/PNG groups per click; NEVER a single flattened full-diagram PNG when multiple reveals required",
+    "image_region": "Within existing blank figure_slot_bounds_in only; do not move/scale native slide text or footers",
+    "meaningful_content_share": "Evaluate final fully-built diagram against the 70–80% usable-area design target when figure assets exist; intermediate clicks need not satisfy share",
+    "citations": "Always visible on-slide; source-specific citation attached to diagram claim when canonical source footer alone is ambiguous",
+    "semantics": "Electrical power transfer ≠ Tₑ→P reverse energy transfer; common heat ≠ directional thermal causal dependence; verification ≠ physical validation",
+    "no_claims": "No numeric parameters, thresholds, equipment-specific laws, actual measurements, validated coupling, established novelty or service loss without case-specific evidence",
+    "freeze": "Preserve current native text, full frozen title, exact GO/SO1–SO3 and notes verbatim; no deletion/rewording of original objects",
+    "type": "Professional white background/interiors, Times New Roman, navy/teal line accents, thick scientifically meaningful arrows, no colored fills/shadows/gold",
+    "title_slide_and_references": "Never animated",
+    "status": "Scientific source and evidence claims are not established by animation rendering"
+  },
+  "activation_presets": {
+    "priority_only": {
+      "slides": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        12
+      ],
+      "optional_slides_static": [
+        7,
+        8,
+        11,
+        13
+      ]
+    },
+    "expanded": {
+      "slides": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "slides_overview": [
+    {
+      "slide": 1,
+      "title": "Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": ""
+    },
+    {
+      "slide": 2,
+      "title": "Chapter 1 — Research Argument",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": "Internal: Chapter 1 working presentation outline (2026)."
+    },
+    {
+      "slide": 3,
+      "title": "1. Engineering Background",
+      "mode": "REQUIRED",
+      "click_count": 3,
+      "default_animated": true,
+      "source_note": "Scientific: Qian et al. (2015). Internal: Thermal Scope V1; Electrified Transportation Scope V1."
+    },
+    {
+      "slide": 4,
+      "title": "2. Extreme-Heat Research Context",
+      "mode": "REQUIRED",
+      "click_count": 4,
+      "default_animated": true,
+      "source_note": "Scientific: IEEE Std C57.91-2025; Krama et al. (2026). Internal: State–Time Definitions V1."
+    },
+    {
+      "slide": 5,
+      "title": "3. Research Problem",
+      "mode": "REQUIRED",
+      "click_count": 4,
+      "default_animated": true,
+      "source_note": "Internal: Thermal Interdependency Scope V1; Objectives V1. Both directional mechanisms remain case-dependent."
+    },
+    {
+      "slide": 6,
+      "title": "4. Existing Knowledge and Bounded Gap",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": "Scientific: Qian et al. (2015); Visakh & Selvan (2023); Krama et al. (2026). Exact novelty OPEN."
+    },
+    {
+      "slide": 7,
+      "title": "5. Proposed Research Questions",
+      "mode": "OPTIONAL",
+      "click_count": 3,
+      "default_animated": false,
+      "source_note": "Internal: Research Objectives V1. These research questions are PROPOSED; final wording remains OPEN."
+    },
+    {
+      "slide": 8,
+      "title": "6. General and Specific Research Objectives",
+      "mode": "OPTIONAL",
+      "click_count": 3,
+      "default_animated": false,
+      "source_note": "Frozen verbatim: CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md (2026-10-07)."
+    },
+    {
+      "slide": 9,
+      "title": "7. System Boundary and Active Scope",
+      "mode": "REQUIRED",
+      "click_count": 4,
+      "default_animated": true,
+      "source_note": "Internal: Canonical Electrified Transportation Scope Definition V1 §§1–4A; Thermal Scope V1."
+    },
+    {
+      "slide": 10,
+      "title": "8. Evidence-Led Research Approach",
+      "mode": "REQUIRED",
+      "click_count": 5,
+      "default_animated": true,
+      "source_note": "Scientific: Oberkampf & Trucano (2002). Internal: Evidence Standard V1; Objectives V1."
+    },
+    {
+      "slide": 11,
+      "title": "9. Expected Scientific Contributions",
+      "mode": "OPTIONAL",
+      "click_count": 3,
+      "default_animated": false,
+      "source_note": "Internal: Canonical Research Objectives V1; proposed contributions. Case-specific novelty and validation OPEN."
+    },
+    {
+      "slide": 12,
+      "title": "10. Resilience and Sustainability",
+      "mode": "REQUIRED",
+      "click_count": 6,
+      "default_animated": true,
+      "source_note": "Scientific: Poulin & Kane (2021). Internal: Resilience Definition V1; Sustainability Two-Pathway V1."
+    },
+    {
+      "slide": 13,
+      "title": "11. Thesis Organization",
+      "mode": "OPTIONAL",
+      "click_count": 3,
+      "default_animated": false,
+      "source_note": "Internal: Chapter 1 working thesis organization; later chapter headings are subject to approval."
+    },
+    {
+      "slide": 14,
+      "title": "References — Thermal and Charging Evidence",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": ""
+    },
+    {
+      "slide": 15,
+      "title": "References — Infrastructure and Method",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": ""
+    },
+    {
+      "slide": 16,
+      "title": "References — Technical and Thesis Authorities",
+      "mode": "STATIC",
+      "click_count": 0,
+      "default_animated": false,
+      "source_note": ""
+    }
+  ],
+  "slides_animation_detail": [
+    {
+      "slide": 3,
+      "title": "1. Engineering Background",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_03_Engineering_Background_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Do not portray charging-load effect as V2G reverse energy flow or as a verified heat-conditioned thermal interdependency.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S03_C01_P_SYSTEM",
+          "reveal": "Power System enclosure and its relevant equipment/function labels",
+          "scientific_purpose": "Introduce Power as a distinct system boundary; no selected device or operating limit is asserted.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED",
+          "source_attribution": "Canonical Electrified Transportation Scope Definition V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S03_C02_FULL_TE",
+          "reveal": "Full Electrified Transportation System enclosure and membership: vehicle, RESS, propulsion, auxiliaries, supply circuit, EVSE, physical connection, communication and control",
+          "scientific_purpose": "Present full Tₑ—not EVSE alone—and show both systems without merger.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED",
+          "source_attribution": "Canonical Electrified Transportation Scope Definition V1 §§1–4A"
+        },
+        {
+          "click": 3,
+          "group_id": "S03_C03_ELECTRICAL_INTERFACE",
+          "reveal": "P→Tₑ electrical supply arrow plus separate textual note that EV charging load changes Power-system loading",
+          "scientific_purpose": "Identify electrical power transfer and loading influence; do not draw unsupported reverse energy-transfer or thermal-causality arrows.",
+          "arrows": [
+            {
+              "from": "P electrical output",
+              "to": "Tₑ power-transfer input",
+              "meaning": "actual electrical supply direction; conditional on applicable equipment"
+            }
+          ],
+          "evidence_status": "SOURCE-BACKED GENERAL RELATION; CASE THERMAL EFFECT OPEN",
+          "source_attribution": "Qian et al. (2015); thesis canonical scope"
+        }
+      ]
+    },
+    {
+      "slide": 4,
+      "title": "2. Extreme-Heat Research Context",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_04_Heat_Context_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Never connect P and Tₑ with a thermal arrow on this slide. The two heat-to-capability lanes are separate.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S04_C01_EXTERNAL_HEAT",
+          "reveal": "External extreme-heat forcing node above/outside both systems",
+          "scientific_purpose": "Extreme heat is external forcing, not an internal equipment state.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED",
+          "source_attribution": "Canonical State-Time Definitions V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S04_C02_P_HEAT_LANE",
+          "reveal": "Downward forcing arrow; P thermal physical state; separately labeled capability/constraint node",
+          "scientific_purpose": "Show the possible Power-system response to ambient/loading conditions without adding a Tₑ effect.",
+          "arrows": [
+            {
+              "from": "external heat",
+              "to": "P thermal state",
+              "meaning": "environmental forcing"
+            },
+            {
+              "from": "P thermal state",
+              "to": "P capability/constraint",
+              "meaning": "candidate condition-to-capability mapping"
+            }
+          ],
+          "evidence_status": "GENERAL SOURCE BACKED; CASE-SPECIFIC LAW OPEN",
+          "source_attribution": "IEEE Std C57.91-2025; Thermal Scope V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S04_C03_TE_HEAT_LANE",
+          "reveal": "Second downward forcing arrow; Tₑ thermal physical state; separately labeled capability/constraint",
+          "scientific_purpose": "Show independent charger/vehicle thermal response; no cross-system arrow.",
+          "arrows": [
+            {
+              "from": "external heat",
+              "to": "Tₑ thermal state",
+              "meaning": "independent environmental forcing"
+            },
+            {
+              "from": "Tₑ thermal state",
+              "to": "Tₑ capability/constraint",
+              "meaning": "equipment-dependent response"
+            }
+          ],
+          "evidence_status": "EQUIPMENT-SPECIFIC PRIOR EVIDENCE; CASE OPEN",
+          "source_attribution": "Krama et al. (2026); Thermal Scope V1"
+        },
+        {
+          "click": 4,
+          "group_id": "S04_C04_INFERENCE_LIMIT",
+          "reveal": "Interpretive statement inside figure: Shared exposure ≠ directional thermal dependence",
+          "scientific_purpose": "Contrast common forcing with independently evidenced physical coupling.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED INFERENCE RULE",
+          "source_attribution": "Canonical Thermal Interdependency Scope V1"
+        }
+      ]
+    },
+    {
+      "slide": 5,
+      "title": "3. Research Problem",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_05_Research_Problem_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Both paths are candidate causal chains. No confirmed bidirectionality, equipment limits, propagation delays, or actual service losses.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S05_C01_P_TO_TE_CANDIDATE",
+          "reveal": "Candidate P→Tₑ lane: P thermal state; thermally conditioned Power limit; measured/operated electrical interface; charging capability; separate service consequence",
+          "scientific_purpose": "Trace the source→constraint→interface→receiver and separate permitted capability from observed service.",
+          "arrows": [
+            {
+              "from": "P thermal state",
+              "to": "P operating limit",
+              "meaning": "proposed thermal constraint"
+            },
+            {
+              "from": "P operating limit",
+              "to": "P→Tₑ electrical interface",
+              "meaning": "proposed constrained transfer"
+            },
+            {
+              "from": "interface",
+              "to": "Tₑ charging capability",
+              "meaning": "candidate receiver effect"
+            }
+          ],
+          "evidence_status": "CANDIDATE / CASE EVIDENCE OPEN",
+          "source_attribution": "Canonical Thermal Interdependency Scope V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S05_C02_P_TO_TE_GATE",
+          "reveal": "P→Tₑ evidence gate: source thermal measurement + operating/protection law + interface delivery + receiver/service observations",
+          "scientific_purpose": "Show precisely what data must justify the first direction before qualification.",
+          "arrows": [],
+          "evidence_status": "CASE EVIDENCE OPEN",
+          "source_attribution": "Canonical Evidence and Non-Invention Standard V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S05_C03_TE_TO_P_CANDIDATE",
+          "reveal": "Candidate Tₑ→P lane: Tₑ heat-conditioned control/limit; change at GRID-SIDE AC input; Power load/thermal response",
+          "scientific_purpose": "Avoid inferring AC-side behavior from DC output or confusing reverse influence with reverse power flow.",
+          "arrows": [
+            {
+              "from": "Tₑ thermal state/limit",
+              "to": "EVSE grid-side AC input",
+              "meaning": "conditional impact on AC-side electrical behavior"
+            },
+            {
+              "from": "AC input behavior",
+              "to": "P loading/thermal state",
+              "meaning": "candidate downstream Power influence"
+            }
+          ],
+          "evidence_status": "CANDIDATE / CASE EVIDENCE OPEN",
+          "source_attribution": "Canonical Thermal Interdependency Scope V1"
+        },
+        {
+          "click": 4,
+          "group_id": "S05_C04_TE_TO_P_GATE",
+          "reveal": "Separate Tₑ→P evidence gate: measured AC current/power and grid-side P response; rival shared-heat explanation tested",
+          "scientific_purpose": "Explain the independent qualification required for the second direction.",
+          "arrows": [],
+          "evidence_status": "CASE EVIDENCE OPEN",
+          "source_attribution": "Canonical Evidence and Non-Invention Standard V1"
+        }
+      ]
+    },
+    {
+      "slide": 7,
+      "title": "5. Proposed Research Questions",
+      "priority": "OPTIONAL",
+      "activation_default": "OFF",
+      "approved_fig_asset_name": "Slide_07_Working_RQs_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Working research questions remain OPEN. Connections are logical alignment, not physical causal arrows.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S07_C01_RQ1",
+          "reveal": "RQ1 purpose node, \"Qualify\", and its SO1 correspondence (not a new research question text)",
+          "scientific_purpose": "Make proposed RQ1 traceability visible without overriding frozen SO1.",
+          "arrows": [],
+          "evidence_status": "RQ PROPOSED; SO1 FROZEN",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S07_C02_RQ2",
+          "reveal": "RQ2 purpose node, \"State-time model\", and its SO2 correspondence",
+          "scientific_purpose": "Show which question targets modeling.",
+          "arrows": [],
+          "evidence_status": "RQ PROPOSED; SO2 FROZEN",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S07_C03_RQ3",
+          "reveal": "RQ3 purpose node, \"Time & service\", and its SO3 correspondence",
+          "scientific_purpose": "Show which question targets timed consequences.",
+          "arrows": [],
+          "evidence_status": "RQ PROPOSED; SO3 FROZEN",
+          "source_attribution": "Canonical Research Objectives V1"
+        }
+      ]
+    },
+    {
+      "slide": 8,
+      "title": "6. General and Specific Research Objectives",
+      "priority": "OPTIONAL",
+      "activation_default": "OFF",
+      "approved_fig_asset_name": "Slide_08_Frozen_Objectives_v2.png",
+      "figure_slot_bounds_in": [
+        9.9,
+        3.22,
+        2.78,
+        3.38
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        3.22,
+        12.0,
+        3.5
+      ],
+      "layout_exception": "VERBATIM_FROZEN_OBJECTIVES_TEXT_PRIORITY",
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [
+        "general objective verbatim",
+        "SO1 verbatim",
+        "SO2 verbatim",
+        "SO3 verbatim"
+      ],
+      "scientific_guardrail": "SPECIAL EXCEPTION: full verbatim General Objective and SO1–SO3 must remain visible at all times; tiny figure slot and no scaling/shrinking of objective text.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S08_C01_SO1_OUTPUT",
+          "reveal": "Compact SO1 output node: qualified directional mechanism register",
+          "scientific_purpose": "Emphasize the first output; do not animate or duplicate original complete objective sentence.",
+          "arrows": [],
+          "evidence_status": "FROZEN OBJECTIVE / EXPECTED OUTPUT",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S08_C02_SO2_OUTPUT",
+          "reveal": "Compact SO2 output node: physics-based state-time representation",
+          "scientific_purpose": "Reveal dependency SO1 output→SO2 conceptual process without asserting data admitted.",
+          "arrows": [
+            {
+              "from": "SO1 output",
+              "to": "SO2 output",
+              "meaning": "methodological input, conditional"
+            }
+          ],
+          "evidence_status": "FROZEN OBJECTIVE / EXPECTED OUTPUT",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S08_C03_SO3_OUTPUT",
+          "reveal": "Compact SO3 output node: timed electricity/mobility service consequences",
+          "scientific_purpose": "Complete objective-level chain without altering exact GO/SO1/SO2/SO3 wording.",
+          "arrows": [
+            {
+              "from": "SO2 output",
+              "to": "SO3 output",
+              "meaning": "methodological input, conditional"
+            }
+          ],
+          "evidence_status": "FROZEN OBJECTIVE / EXPECTED OUTPUT",
+          "source_attribution": "Canonical Research Objectives V1"
+        }
+      ]
+    },
+    {
+      "slide": 9,
+      "title": "7. System Boundary and Active Scope",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_09_System_Boundary_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Do not create EVSE as a third infrastructure. Active subset must not erase any Tₑ member; no model parameters/limits frozen.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S09_C01_P_BOUNDARY",
+          "reveal": "Distinct enclosing Power System boundary with component-category labels",
+          "scientific_purpose": "Maintain Power-system membership, states, constraints and electricity service outside Tₑ.",
+          "arrows": [],
+          "evidence_status": "FROZEN SYSTEM-SCOPE DEFINITION",
+          "source_attribution": "Canonical Electrified Transportation Scope Definition V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S09_C02_FULL_TE_BOUNDARY",
+          "reveal": "Complete Tₑ enclosing boundary and inventory: road EV, RESS, propulsion, auxiliaries, vehicle power-supply circuit, EVSE, physical connection, required communication/control",
+          "scientific_purpose": "Make the full frozen system definition visible, even if subsequent model subset is smaller.",
+          "arrows": [],
+          "evidence_status": "FROZEN SYSTEM-SCOPE DEFINITION",
+          "source_attribution": "Canonical Electrified Transportation Scope Definition V1 §§1–4A"
+        },
+        {
+          "click": 3,
+          "group_id": "S09_C03_INTERFACE",
+          "reveal": "P→Tₑ electrical-transfer interface arrow, with no unproven thermal return arrow",
+          "scientific_purpose": "Make the exchange/interface identifiable while keeping P and Tₑ separate.",
+          "arrows": [
+            {
+              "from": "P supply",
+              "to": "Tₑ interface",
+              "meaning": "electrical power delivered under supported conditions"
+            }
+          ],
+          "evidence_status": "GENERAL ELECTRICAL TRANSFER",
+          "source_attribution": "Canonical Electrified Transportation Scope Definition V1"
+        },
+        {
+          "click": 4,
+          "group_id": "S09_C04_ACTIVE_SUBSET",
+          "reveal": "Outlined, explicitly labeled candidate active thermal-model subset within the full system boundaries; external forcing stays outside",
+          "scientific_purpose": "Distinguish selected model variables/components from system membership, and flag selection unresolved.",
+          "arrows": [],
+          "evidence_status": "PROPOSED / ACTIVE STATES OPEN",
+          "source_attribution": "Canonical Thermal Scope V1; State-Time Definitions V1"
+        }
+      ]
+    },
+    {
+      "slide": 10,
+      "title": "8. Evidence-Led Research Approach",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_10_Method_Workflow_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Method-flow arrows denote workflow steps, NOT physical P↔Tₑ causality. No step should visually imply validation achieved.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S10_C01_QUALIFICATION",
+          "reveal": "Evidence/source and directional mechanism-qualification gate",
+          "scientific_purpose": "Only traceable physical mechanisms are candidates for admission.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED RESEARCH PLAN",
+          "source_attribution": "Canonical Evidence and Non-Invention Standard V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S10_C02_FORMULATION",
+          "reveal": "Minimum-sufficient physical state-time formulation, explicit assumptions and constraints; sequence connector from qualification",
+          "scientific_purpose": "Show derivation/admission process; no case-specific equation claimed established.",
+          "arrows": [
+            {
+              "from": "qualified mechanism gate",
+              "to": "minimum state-time formulation",
+              "meaning": "methodological dependency"
+            }
+          ],
+          "evidence_status": "PROPOSED MODEL; DETAILS OPEN",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S10_C03_NUMERICAL_VERIFICATION",
+          "reveal": "Numerical verification gate: dimensional/limit/conservation/solver checks, not physical agreement",
+          "scientific_purpose": "Make code/model verification visibly separate from independent validation.",
+          "arrows": [
+            {
+              "from": "state-time formulation",
+              "to": "numerical verification",
+              "meaning": "numerical checking sequence"
+            }
+          ],
+          "evidence_status": "PLANNED; NUMERICAL TESTS NOT YET SHOWN",
+          "source_attribution": "Oberkampf & Trucano (2002)"
+        },
+        {
+          "click": 4,
+          "group_id": "S10_C04_VALIDATION_UQ",
+          "reveal": "Conditional independent-observation validation and uncertainty quantification gate; explicit OPEN branch if unavailable",
+          "scientific_purpose": "Distinguish predictive empirical adequacy, calibration, verification, and uncertainty; show no automatic passing.",
+          "arrows": [
+            {
+              "from": "numerically checked model",
+              "to": "independent-data check",
+              "meaning": "conditional validation assessment"
+            }
+          ],
+          "evidence_status": "PLANNED / EMPIRICAL VALIDATION OPEN",
+          "source_attribution": "Oberkampf & Trucano (2002); Evidence Standard V1"
+        },
+        {
+          "click": 5,
+          "group_id": "S10_C05_SERVICE_EVALUATION",
+          "reveal": "Event timing, propagation delay and electricity/mobility service-output evaluation node, explicitly conditional on evidence/model credibility",
+          "scientific_purpose": "Show SO3 reporting without implying a validation gate was passed; exploratory outputs stay labeled as such.",
+          "arrows": [
+            {
+              "from": "qualified model and credibility register",
+              "to": "state-time/service interpretation",
+              "meaning": "conditional scientific reporting"
+            }
+          ],
+          "evidence_status": "PROPOSED OUTPUTS / CASE EVIDENCE OPEN",
+          "source_attribution": "Canonical Research Objectives V1"
+        }
+      ]
+    },
+    {
+      "slide": 11,
+      "title": "9. Expected Scientific Contributions",
+      "priority": "OPTIONAL",
+      "activation_default": "OFF",
+      "approved_fig_asset_name": "Slide_11_Contributions_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Do not label planned deliverables as demonstrated findings or novelty claims.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S11_C01_CONTRIB1",
+          "reveal": "SO1→expected directional thermal mechanism/evidence register",
+          "scientific_purpose": "Output is proposed, not a research finding.",
+          "arrows": [],
+          "evidence_status": "EXPECTED / NOT DEMONSTRATED",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S11_C02_CONTRIB2",
+          "reveal": "SO2→expected minimum-sufficient state-time model",
+          "scientific_purpose": "Output is proposed, no admitted equations asserted.",
+          "arrows": [],
+          "evidence_status": "EXPECTED / NOT DEMONSTRATED",
+          "source_attribution": "Canonical Research Objectives V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S11_C03_CONTRIB3",
+          "reveal": "SO3→expected critical times, propagation delays and service consequences",
+          "scientific_purpose": "Output is proposed, not validated or novel by declaration.",
+          "arrows": [],
+          "evidence_status": "EXPECTED / NOT DEMONSTRATED",
+          "source_attribution": "Canonical Research Objectives V1"
+        }
+      ]
+    },
+    {
+      "slide": 12,
+      "title": "10. Resilience and Sustainability",
+      "priority": "REQUIRED",
+      "activation_default": "ON",
+      "approved_fig_asset_name": "Slide_12_Resilience_Sustainability_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Do not draw resilience→sustainability as automatic causal benefit. Separate pathways 1 and 2, and leave indicators unknown.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S12_C01_THERMAL_STATE",
+          "reveal": "Thermal physical state node(s); temporal context without invented curves",
+          "scientific_purpose": "Establish evolving physical condition as distinct from service.",
+          "arrows": [],
+          "evidence_status": "THESIS-DEFINED",
+          "source_attribution": "Canonical State-Time Definitions V1"
+        },
+        {
+          "click": 2,
+          "group_id": "S12_C02_CAPABILITY",
+          "reveal": "Thermally conditioned operating capability/constraint and state-to-capability relationship",
+          "scientific_purpose": "Separate dynamic state from allowed functionality.",
+          "arrows": [
+            {
+              "from": "thermal state",
+              "to": "admissible capability/constraint",
+              "meaning": "state-conditioned relation, case law OPEN"
+            }
+          ],
+          "evidence_status": "CANDIDATE LAW / CASE OPEN",
+          "source_attribution": "Canonical Thermal Scope V1"
+        },
+        {
+          "click": 3,
+          "group_id": "S12_C03_ACTUAL_FLOW_AND_SERVICE",
+          "reveal": "Actual electrical flow/delivered charging and declared electricity/mobility service as distinct quantities",
+          "scientific_purpose": "Do not equate a limit with delivered energy or charging with required mobility service.",
+          "arrows": [
+            {
+              "from": "operating capability",
+              "to": "actual transfer/operation",
+              "meaning": "subject to demand and controls"
+            },
+            {
+              "from": "actual transfer/operation",
+              "to": "required-service outcome",
+              "meaning": "service mapping depends on case"
+            }
+          ],
+          "evidence_status": "PROPOSED MAPPING / REQUIREMENTS OPEN",
+          "source_attribution": "Canonical Resilience Definition V1"
+        },
+        {
+          "click": 4,
+          "group_id": "S12_C04_RESILIENCE",
+          "reveal": "Time-dependent service requirement comparison and maintain/recover resilience interpretation",
+          "scientific_purpose": "Resilience is assessed at required electricity and mobility service level.",
+          "arrows": [],
+          "evidence_status": "FROZEN THESIS RESILIENCE INTERPRETATION",
+          "source_attribution": "Canonical Resilience Definition V1; Poulin & Kane (2021)"
+        },
+        {
+          "click": 5,
+          "group_id": "S12_C05_SUSTAINABILITY_DIRECT",
+          "reveal": "Pathway 1: direct service consequence → bounded environmental/economic/social indicators",
+          "scientific_purpose": "Separate direct downstream assessment; no assumed positive sustainability effect.",
+          "arrows": [
+            {
+              "from": "service consequence",
+              "to": "Pathway 1 outcomes",
+              "meaning": "bounded direct impact assessment"            }
+          ],
+          "evidence_status": "FROZEN ASSESSMENT STRUCTURE; INDICATORS OPEN",
+          "source_attribution": "Canonical Two-Pathway Sustainability Assessment V1"
+        },
+        {
+          "click": 6,
+          "group_id": "S12_C06_SUSTAINABILITY_RESPONSE",
+          "reveal": "Pathway 2: Improve/Adapt/Restore intervention → altered state/capability/service → independently evaluated environmental/economic/social indicators",
+          "scientific_purpose": "Preserve alternative response-path accounting; not a continuation of Pathway 1 or a guaranteed benefit.",
+          "arrows": [
+            {
+              "from": "engineering response",
+              "to": "changed service/operations",
+              "meaning": "conditional response effect"
+            },
+            {
+              "from": "changed operations",
+              "to": "Pathway 2 outcomes",
+              "meaning": "bounded response impact assessment"
+            }
+          ],
+          "evidence_status": "FROZEN ASSESSMENT STRUCTURE; RESPONSE EFFECT OPEN",
+          "source_attribution": "Canonical Two-Pathway Sustainability Assessment V1"
+        }
+      ]
+    },
+    {
+      "slide": 13,
+      "title": "11. Thesis Organization",
+      "priority": "OPTIONAL",
+      "activation_default": "OFF",
+      "approved_fig_asset_name": "Slide_13_Thesis_Roadmap_v2.png",
+      "figure_slot_bounds_in": [
+        3.61,
+        2.46,
+        8.94,
+        4.3
+      ],
+      "usable_content_bounds_in": [
+        0.73,
+        2.42,
+        11.86,
+        4.38
+      ],
+      "layout_exception": null,
+      "static_from_first_frame": [
+        "native slide title",
+        "native complete scientific statement",
+        "all three native supporting statements",
+        "source/citation footer",
+        "slide number",
+        "all existing presenter notes"
+      ],
+      "special_static_content": [],
+      "scientific_guardrail": "Chapter headings/order remain a working plan, not approved manuscript results.",
+      "clicks": [
+        {
+          "click": 1,
+          "group_id": "S13_C01_FOUNDATIONS",
+          "reveal": "Chapters 1–2 logical block: problem, full scope, literature/evidence",
+          "scientific_purpose": "Present working manuscript structure only.",
+          "arrows": [],
+          "evidence_status": "WORKING THESIS ORGANIZATION",
+          "source_attribution": "Chapter 1 working thesis organization"
+        },
+        {
+          "click": 2,
+          "group_id": "S13_C02_METHOD_RESULTS",
+          "reveal": "Chapters 3–5 logical block: formulation, method/VVUQ, bounded results",
+          "scientific_purpose": "Show manuscript progression, not actual completed validation.",
+          "arrows": [
+            {
+              "from": "Ch 1–2",
+              "to": "Ch 3–5",
+              "meaning": "document organization"
+            }
+          ],
+          "evidence_status": "WORKING THESIS ORGANIZATION",
+          "source_attribution": "Chapter 1 working thesis organization"
+        },
+        {
+          "click": 3,
+          "group_id": "S13_C03_INTERPRETATION",
+          "reveal": "Chapters 6–7 logical block: interpretation, limits, conclusions",
+          "scientific_purpose": "End with planned conclusions and limitations, not assumed success.",
+          "arrows": [
+            {
+              "from": "Ch 3–5",
+              "to": "Ch 6–7",
+              "meaning": "document organization"
+            }
+          ],
+          "evidence_status": "WORKING THESIS ORGANIZATION",
+          "source_attribution": "Chapter 1 working thesis organization"
+        }
+      ]
+    }
+  ],
+  "implementation_acceptance": [
+    "Source PPTX remains byte-identical until user requests implementation",
+    "Unique group IDs and ordered click numbers for every animated slide",
+    "Every new graphic lies within its original figure slot and does not hide native text, footer or frozen objectives",
+    "All source notes remain visible from the first frame",
+    "Cross-boundary physical arrows have clear supported/OPEN distinction",
+    "All earlier groups persist in later frames",
+    "Slide 8 shows frozen objective text throughout optional builds",
+    "PowerPoint Slide Show interactive On Click behavior tested on at least one installed desktop Office client",
+    "Final render of all incremental states inspected, plus static PDF export of final states, and text/notes digests matched to baseline",
+    "No claim of successful animation implementation until actual PPTX generated and tested"
+  ]
+}
