@@ -3,7 +3,7 @@ name: scientific-infographic-design
 description: Convert scientific claims, presentations, chapter introductions, research problems, literature comparisons, and evidence-grounded engineering content into original, accessible, editable infographics. Select the correct visual family, declare system and model boundaries, register meaningful arrows and evidence status, keep adjacent scientific citations, and run scientific, visual, accessibility, and PowerPoint QA. Use for science-presentation infographic redesign, graphical abstracts, mechanism figures, comparison matrices, research workflows, and cited thesis slides; defer formal framework semantics to engineering-framework-design and diagram grammar to scientific-diagram-design.
 license: MIT
 metadata:
-  version: "2.2.0"
+  version: "2.3.0"
 ---
 
 > **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
@@ -37,13 +37,28 @@ When this infographic skill is used for an **eligible Deck3 figure-bearing slide
 - Text-intensive frozen objectives require a valid text-only/companion layout when 75% occupancy would destroy legibility; do not paraphrase exact objective wording as a figure.
 - **Implementation note:** legacy `deck3.py` slots do not yet meet this rule; do not claim assembled occupancy validation until geometry and tests have been updated or independently verified.
 
-## 0B. Authentic object colors and strictly white authored surfaces — binding design QA
+## Mandatory Deck3 v1.6 design palette (13 exact sRGB tokens)
 
-For all Dossiya thesis / Deck3 diagrams and independently generated source artwork: **never use purple, violet, magenta or pink** as invented annotation, header, panel, border, arrow, label, icon or other graphical styling. **Never use invented yellow/gold** for design; yellow is acceptable only when physically true to a real/natural object depicted, such as actual sunlight. Fill the whole canvas, figure headings, panels, callouts, legends and box interiors with **pure white (#FFFFFF)**, not beige, gray, tinted white or transparency over a colored background. No fills for semantic categories, gradients, shadows, textures or decorative color blocks.
+**Canonical source:** `../deck3/references/DECK3_SRGB_PALETTE.json`. For every authored scientific design element (figures, lines, labels, charts, SVG, slides), use **only** the following exact hexadecimal 8-bit sRGB colors:
 
-Realistic physical objects may use their authentic actual coloration (vegetation, asphalt, solar panels, EV paint, cables, equipment, nature). Limit abstract notation to charcoal/black, navy/blue, green or red in thin purposeful lines, scientific arrows, titles/headings, labels and small accents, **not large fills**. Do not generate arbitrary colored machinery. Verify large arrows communicate a defensible dependency, not merely bidirectionality or shared hazard.
+- ASU Maroon `#8C1D40` (140,29,64): primary headings; **explicit branded exception** to generic magenta-family ban.
+- ASU Gold `#FFC627` (255,198,39): small nonessential accents only; **explicit branded exception** to generic yellow/gold ban.
+- Black `#000000` (0,0,0): scientific body text, equations.
+- White `#FFFFFF` (255,255,255): every authored background, box, panel, header and legend interior.
+- Deep Navy `#12304A` (18,48,74): technical headings and boundaries.
+- Technical Blue `#0072B2` (0,114,178): Power annotations.
+- Slate Blue `#416985` (65,105,133): secondary technical lines.
+- Deep Teal `#006D70` (0,109,112): qualified interface annotations.
+- Cyan-Blue `#087E98` (8,126,152): information and observation.
+- Forest Green `#176B42` (23,107,66): Transportation annotations.
+- Deep Red `#B4232C` (180,35,44): critical state and constraint.
+- Graphite `#555D66` (85,93,102): supporting labels and axes.
+- Bright Turquoise `#6ACEEE` (106,206,238): large, nonessential emphasis only.
 
-Before approval, audit: (a) author-controlled fills/strokes/text, (b) photographic object authenticity, (c) actual meaning of each arrow and colored mark, (d) white background/interiors, (e) no forbidden designed colors. Image-wide RGB thresholding is not a valid substitute for separating authentic photographic content from annotations. Existing reference figures with colored headers or purple/pink/gold styling must be redesigned, not inherited.
+**Nothing else in designed marks.** No other purple/violet/pink/magenta, yellow/gold, invented gradients, shadows, texture or tinted fills. All panels and diagram backgrounds pure white; colored marks only for justified text, outlines, direction arrows, chart series or small accents. **ASU Gold and Bright Turquoise fail ordinary foreground contrast on white**: never use as independent essential information or fine text/strokes. Use semantic names, direct labels, markers and line styles.
+
+Real photographs and photorealistic physical objects retain their authentic natural/observed colors, including colors not in the design registry; this does not authorize false-color styling or picture overlays. Distinguish photographic pixels from manually designed elements during review and QA. The Deck3 palette supersedes legacy palette examples or generic bans in this skill.
+
 
 ## 1. Peer-reviewed design evidence
 

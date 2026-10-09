@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.5.0"
+  version: "1.6.0"
   short_name: "Deck3"
 ---
 
@@ -80,43 +80,35 @@ If the user has already supplied approved text or completed stage artifacts, **r
 - **A saved PPTX, correct picture count, aspect ratio, static unit tests, or 75% image rectangle never establishes scientific validation or full visual certification.** Mark such outputs `TECHNICAL_ONLY / PROVISIONAL` until a documented final-slide inspection and evidence review pass.
 - Explicitly distinguish changes to the skill, changes to the generator, generated decks and **certified** decks. Never imply an older deck was retroactively updated or certified.
 
-## 1C. Mandatory authentic-color and white-canvas contract (2026-10-09)
+## 1C–1D. Binding Deck3 v1.6 approved-color policy and exact sRGB registry
 
-Applies to **every Deck3 text slide, figure, final assembly, thumbnail, and source asset**, including photographic / photorealistic engineering figures. Scientific correctness remains the highest priority.
+The sole authoritative **13-color authored design palette** is `references/DECK3_SRGB_PALETTE.json` (8-bit sRGB). These tokens apply to all slides, diagrams, figures, charts, legends, headings, borders, SVGs and authored presentation graphics. No approximate colors or unsanctioned substitutes.
 
-- **Forbidden as designed colors:** purple, violet, magenta and pink, regardless of saturation, including headers, borders, arrows, icons, annotations, legends, graph series and decorative accents. Do not create them as semantic labels either.
-- **Forbidden as designed colors:** yellow and gold (including amber/gold-style accents). Yellow can appear **only when it is an authentic observed/natural color** of the pictured object or scene, such as actual sunlight; a yellow bar, border, icon, heading, diagram panel, artificial glow or chart series is not acceptable.
-- **Absolute white:** full slide background and **every designed box, panel, quadrant, title strip, legend surface, inset and figure canvas interior must be plain #FFFFFF**. No off-white / beige wash, colored transparent washes, shaded headers, gradients, shadows, textures or decorative overlays.
-- **Permitted restrained semantic marks:** charcoal/black, navy/blue, green and red only when justified for headings, strokes, boundaries, large scientifically meaningful arrows, graph lines, text and small accents. Their use never authorizes filled colored panels. Prefer black/navy body text and color-independent encoding (labels, line styles, shape).
-- **Photographic authenticity exception:** objects in genuine photography or photorealistic illustration retain their authentic real-world coloration (e.g., vegetation, solar panels, wires, road markings, vehicle paint, equipment, sky, natural lighting). This is **not** permission to recolor backgrounds, add false color overlays, or depict technical equipment with invented unrealistic colors. Other incidental colors visible in authentic objects are not automatically prohibited.
-- **Scope of QA:** inspect presentation template fills, shapes, vector SVG/PNG overlays, chart styling, generated image headers, legends, borders, icons and composition. A color audit must distinguish **designed geometric styling** from genuine image pixels: an indiscriminate global pixel ban would incorrectly reject naturally colored photographs.
-- **Failure behavior:** regenerate/repair a scientifically correct but color-noncompliant image; do not call a slide approved when prohibited authored styling remains. Preserve frozen words, citations, notes and evidence regardless of palette changes.
+| Token | HEX | RGB | Design role |
+|---|---|---|---|
+| ASU Maroon | `#8C1D40` | (140,29,64) | Primary headings and institutional identity |
+| ASU Gold | `#FFC627` | (255,198,39) | Small *nonessential* institutional accents; never body text |
+| Black | `#000000` | (0,0,0) | Body text, mathematical equations and axes |
+| White | `#FFFFFF` | (255,255,255) | ALL authored backgrounds and box/panel interiors |
+| Deep Navy | `#12304A` | (18,48,74) | Technical headings and boundaries |
+| Technical Blue | `#0072B2` | (0,114,178) | Power-system annotations |
+| Slate Blue | `#416985` | (65,105,133) | Secondary curves and technical distinctions |
+| Deep Teal | `#006D70` | (0,109,112) | Evidence-qualified cross-system interfaces |
+| Cyan-Blue | `#087E98` | (8,126,152) | Information/observation |
+| Forest Green | `#176B42` | (23,107,66) | Transportation and mobility services |
+| Deep Red | `#B4232C` | (180,35,44) | Critical states/constraints |
+| Graphite | `#555D66` | (85,93,102) | Secondary labels, axes and source notes |
+| Bright Turquoise | `#6ACEEE` | (106,206,238) | Optional *nonessential*, sufficiently large accents, never critical text/lines on white |
 
-**Priority:** this user's explicit authentic-color contract overrides any older examples or sample palettes mentioning purple, violet, pink, magenta, gold, yellow, amber, colored backgrounds or colored panel fills. Examples in prior sections are not exemptions. See scientific-infographic-design and scientific-diagram-design for corresponding checks.
+**Priority and explicit exceptions.** Exact ASU Maroon (`#8C1D40`) and exact ASU Gold (`#FFC627`) are now intentional branded exceptions to the older generic bans. All *other* purple/violet/pink/magenta and yellow/gold authored design colors remain prohibited. Only the 13 registered HEX/RGB codes may be chosen for authored design marks.
 
-## 1D. Exact sRGB semantic color registry (mandatory)
+**White surfaces.** Entire slide, section/panel/quadrant/box/legend interior, figure canvas and title area must be pure `#FFFFFF`; no filled colored header strips, colored panel backgrounds, tinted whites, gradients, shadows, decorative texture or colored overlays. Semantic tokens are for purposeful headings, text, borders, chart lines, large meaningful arrows, labels and small accents—not filled panel interiors.
 
-**Canonical palette file:** `references/DECK3_SRGB_PALETTE.json`. These are **8-bit sRGB** codes, not unspecified RGB working-space values. Never guess colors, approximate from screenshots, substitute palette names, or infer what ASU institutional colors ought to be. Render authored marks using these exact values, subject to the documented semantics and permitted roles.
+**Visibility gate.** WCAG-style contrast is evaluated against white. Standard text >=4.5:1; nontext essential information >=3:1. Gold and Bright Turquoise are **below required contrast against white** and therefore may not independently encode essential data, thin arrows, boundaries or meaningful text. Support them with high-contrast labels/lines; otherwise omit them. Don't conflate contrast-to-white with pairwise chart-series distinguishability. Add distinct markers, line patterns and direct labeling.
 
-| Token | Hex | 8-bit RGB | White contrast | Authorized role |
-|---|---|---|---:|---|
-| white | `#FFFFFF` | (255,255,255) | 1.00:1 | Canvas and all authored panel interiors ONLY |
-| black | `#000000` | (0,0,0) | 21.00:1 | Equations and axes |
-| charcoal | `#25313D` | (37,49,61) | 13.25:1 | Main body text |
-| navy | `#12304A` | (18,48,74) | 13.57:1 | Scientific titles |
-| blue | `#0072B2` | (0,114,178) | 5.19:1 | Power system |
-| slate_blue | `#416985` | (65,105,133) | 5.86:1 | Secondary technical distinctions |
-| teal | `#006D70` | (0,109,112) | 6.14:1 | Qualified cross-system interfaces |
-| cyan_blue | `#087E98` | (8,126,152) | 4.72:1 | Observation and information |
-| forest_green | `#176B42` | (23,107,66) | 6.53:1 | Transportation and service |
-| deep_red | `#B4232C` | (180,35,44) | 6.53:1 | Critical states/constraints |
-| graphite | `#555D66` | (85,93,102) | 6.68:1 | Secondary labels and axes |
+**Authentic imagery.** Realistic photographs and photorealistic physical objects preserve their real observed colors, whether or not present in the 13-color authored-design registry. Do not recolor nature, skin, infrastructure or equipment to obey the annotation palette. Never permit an artificial tinted photo background, posterization or decorative glow under this exception.
 
-Contrast is against **#FFFFFF**, computed using WCAG relative luminance (sRGB transfer function, 0.2126 R + 0.7152 G + 0.0722 B linear luminance). Ordinary authored text requires at least 4.5:1; essential graphics at least 3:1. Contrast with white is **not evidence that two different data lines remain mutually distinguishable**, nor evidence of legibility at projection size. Use direct labels/line patterns/markers.
-
-**Implementation:** generators must load palette tokens from the canonical JSON for authored colors. Charts must not silently choose their framework's automatic rainbow/qualitative scheme. Images depicting real objects are not palette-quantized. Inspect RGB/SVG/PPTX colored backgrounds, strokes and annotations separately from photographs. White is the only allowed authored fill; colored semantic tokens are for text, arrow/line strokes, outlines and small accents only.
-
-**ASU adaptation:** copy the source presentation's measured typography/layout hierarchy when established from the actual PPTX; **never** copy unverified institutional colors into Deck3. Do not claim this registry is an extraction of the ASU template.
+**QA and code.** Code generators read exact codes from the JSON; no RGB approximations or library auto-palettes. Audit authored vector/shape/chart styling separately from genuine photograph pixels; automated global photographic pixel rejection is invalid. An ASU template's geometry and type hierarchy may be adopted but colors must be remapped to this registry. Scientific mechanism labels and frozen thesis authority override visual styling. The requirements govern Stage 1, standalone Stage 2 and Stage 3 assembly.
 
 ## 2. The slide architecture (text versus illustration)
 
