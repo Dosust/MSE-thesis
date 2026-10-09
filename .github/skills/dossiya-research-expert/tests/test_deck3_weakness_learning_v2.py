@@ -40,9 +40,9 @@ class TestDeck3WeaknessLearning(unittest.TestCase):
 
     def test_complete_corrective_rules_and_challenges(self):
         for i in range(1,14):
-            self.assertRegex(self.protocol,rf"Rule L{i:02}\\b")
+            self.assertRegex(self.protocol,rf"Rule L{i:02}\b")
         for i in range(1,17):
-            self.assertRegex(self.protocol,rf"\\| AT{i:02} \\|")
+            self.assertRegex(self.protocol,rf"\| AT{i:02} \|")
 
     def test_required_negative_and_counterfactual_scenarios(self):
         for item in ["NOT_OBSERVED_IN_HORIZON", "only P→T_e", "only T_e→P",
@@ -54,12 +54,11 @@ class TestDeck3WeaknessLearning(unittest.TestCase):
     def test_coupled_physics_and_validation_not_certified(self):
         for item in ["grid-side AC", "P_losses,incl_aux", "dE_internal/dt",
                      "Matched difference ≠ field validation",
-                     "NOT_YET_MEASURABLE", "NOT TESTED"]:
+                     "NOT_YET_MEASURABLE", "NOT_TESTED"]:
             self.assertIn(item, self.protocol)
 
     def test_expert_lesson_not_claimed_as_model_retraining(self):
         self.assertIn("not model retraining", self.protocol.lower())
-        self.assertIn("not experimental physics", self.protocol.lower()) if False else None
         self.assertIn("No experimental physics", self.protocol)
 
 if __name__ == "__main__":
