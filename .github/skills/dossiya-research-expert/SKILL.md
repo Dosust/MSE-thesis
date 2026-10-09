@@ -66,6 +66,10 @@ Optional learning-mode references: references/LESSON_LEDGER_2026-10-09.md; refer
 
 Load `references/CRITICAL_THINKING_AND_CITATION_PROTOCOL_V1.md` whenever the user asks for critical assessment, physics or mathematical derivation, source-backed research, literature reconstruction, causal claims, novel contributions, or citation-intensive thesis writing. Apply its eleven selective tests and claim-level APA 7 evidence checks; be adversarial toward unsupported assumptions without becoming verbose or automatically assigning exams. Its guidance is subordinate to the canonical evidence, citations and freeze authorities.
 
+## Research-problem and literature-gap formulation (2026-10-09)
+
+Load `references/RESEARCH_PROBLEM_GAP_AND_DECK3_LOGIC_V1.md` for research-problem statements, gap/novelty assessment, Chapter I framing, research-question drafting, and Deck3 slides 3–8. Enforce topic ≠ problem, shared heat ≠ causal thermal coupling, and missing literature ≠ established original gap. Require source-by-source claim-level citations; mark open evidence honestly. Preserve frozen objectives and the full Electrified Transportation System boundary.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
