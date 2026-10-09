@@ -134,11 +134,14 @@ def make_text(manifest_path, output_path):
             figure = kind == "content" and bool(row.get("figure"))
             long = row.get("layout") == "long_objectives"
             put(slide, .69, .40, 11.95, .65, row["title"], 31, NAVY, True)
-            put(slide, .71, 1.25, 11.9, .28, "MAIN MESSAGE", 12, BLUE, True)
-            put(slide, .71, 1.59, 11.92, 1.12 if long else .98,
+            # The manifest's message/bullet labels are editorial metadata, never audience copy.
+            # Keep the substantive strings visible and native/editable; do not draw
+            # the literal template labels "MAIN MESSAGE" or "THREE KEY POINTS".
+            put(slide, .71, 1.30, 11.92, 1.32 if long else 1.18,
                 row["message"], 18 if long else 21, INK)
-            put(slide, .72, 2.85 if long else 2.66, 6.6 if long else (5.45 if figure else 11.0), .26,
-                "SPECIFIC OBJECTIVES" if long else "THREE KEY POINTS", 12, BLUE, True)
+            # Only a meaningful content hierarchy label is retained for objectives.
+            if long:
+                put(slide, .72, 2.85, 6.6, .26, "SPECIFIC OBJECTIVES", 12, BLUE, True)
             starts = (3.17, 4.32, 5.48) if long else (3.13, 4.29, 5.45)
             for j, (y, bullet) in enumerate(zip(starts, row["bullets"]), 1):
                 put(slide, .75, y+.04, .34, .33, f"{j:02}", 13, BLUE, True)
