@@ -1,6 +1,6 @@
-# Deck3 Global Update Contract V1 — All-Skill, All-Stage Change Control
+# Deck3 Global Update Technical Annex V1 — All-Skill, All-Stage Change Control
 
-**Status:** ACTIVE DESIGN AND REPOSITORY CHANGE AUTHORITY; subordinate to the thesis scientific authorities and the current Deck3 palette.
+**Status:** IMPLEMENTATION / QA ANNEX to the **primary** `.github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT.md`, subordinate to current scientific authorities and the canonical Deck3 palette. It elaborates technical checks; in case of textual conflict, primary contract and frozen authorities prevail. This is NOT a second competing policy.
 **Trigger:** A user instruction such as **“update Deck3”**, **“make update of Deck3”**, **“upgrade the Deck3 design solution”**, or an unqualified Deck3 skills update.
 **Scope:** the entire related Deck3 ecosystem, not merely the file named in the most recent turn.
 
