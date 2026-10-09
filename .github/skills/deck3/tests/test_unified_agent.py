@@ -38,8 +38,9 @@ class UnifiedDeck3Tests(unittest.TestCase):
             qa=json.loads(call(sys.executable,str(CLI),"qa",str(out),"--palette",str(PALETTE)).stdout)
             self.assertEqual(qa["checks"]["slide_count"],"PASS")
             self.assertEqual(qa["checks"]["palette_xml"],"PASS")
-            self.assertEqual(qa["checks"]["native_omml"],"NOT_RUN")
+            self.assertEqual(qa["checks"]["omml_presence"],"NOT_APPLICABLE")
             self.assertEqual(qa["checks"]["real_render"],"NOT_RUN")
+            self.assertEqual(qa["checks"]["equation_fidelity"],"NOT_RUN")
             call(sys.executable,str(CLI),"revise",str(out),str(edited),"--slide","9",
                  "--old","Approved message 9","--new","Approved corrected message")
             after=json.loads(call(sys.executable,str(CLI),"inspect",str(edited)).stdout)
