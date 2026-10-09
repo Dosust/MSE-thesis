@@ -1,5 +1,7 @@
 # Advanced Deck3 — PowerPoint Engineering and Animation
 
+**Deck3 v1.8 mechanism-centered architecture:** Follow `.github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md` for physical/model boundaries, named carried quantities/units, separately qualified thermal arrows, measurement/control/identification/simulation/assessment separation and evidence-gated service consequences. A scientific figure `<stem>.trace.json` sidecar permits structural checks (`examples/mechanism_trace_qa.py`); absent = provisional, invalid = blocked, passing structure ≠ evidence validation or native PPTX playback. A five-layer reveal is optional; `Appear` on presenter click keeps earlier elements visible. No IEEE screenshot copying or inferred citations. Current exact 13-color white-surface policy and frozen thesis authority remain unchanged.
+
 **Status:** INSTALLED AS A SCIENTIFIC DESIGN / QA EXTENSION (2026-10-09).
 **Parent authority:** [Deck3 SKILL.md](../SKILL.md), v1.6.1.
 **Color authority:** [DECK3_SRGB_PALETTE.json](../references/DECK3_SRGB_PALETTE.json), immutable current v1.6 registry.
