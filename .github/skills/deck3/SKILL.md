@@ -3,9 +3,15 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.7.0"
+  version: "1.7.1"
   short_name: "Deck3"
 ---
+
+## Native PPTX authored-color preflight — v1.7.1
+
+**Binding gate on every editable text deck and assembled deck:** run `examples/pptx_color_qa.py` against the actual PPTX XML. Reject off-palette explicit `a:srgbClr` on slide shapes, unresolved `a:schemeClr`, nonwhite slide backgrounds and authored slide gradients/shadows/patterns. Stage 3 `examples/deck3.py` must now block off-palette Stage 1 native slide text BEFORE inserting otherwise compliant figures, and recheck the final PPTX after saving. This corrects the case where SVG figures passed the 13-color source check but a legacy slide's editable title/body/citations still used off-palette colors. The checker does not certify raster pixels, unrendered theme masters, scientific relations, meaningful 70–80% occupancy or Microsoft PowerPoint animation playback.
+
+**Migration:** preserve every source string and speaker note, map old authored colors **by verified semantic role**, never by visually nearest color; create a new version rather than overwriting approved source files. Historical decks remain PROVISIONAL until source and actual assembly checks pass. In addition to this gate, apply the v1.7 AI scientific image generation S/H/C/I policy unchanged.
 
 ## Deck3-governed AI scientific image generation (mandatory)
 
