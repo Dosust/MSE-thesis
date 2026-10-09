@@ -9,6 +9,13 @@ Run: python pptx_builder.py --out prototype_editable.pptx
 """
 from __future__ import annotations
 
+# Deck3 v1.8: source-only conceptual prototypes. A saved/rendered graphic is NOT a
+# trace-registered scientific mechanism. Supply a separately reviewed
+# same-stem <image>.trace.json using deck3/examples/mechanism_trace_qa.py
+# before requesting scientific mechanism certification. Do not infer laws,
+# variables, evidence or bidirectional thermal causality from these shapes.
+
+
 import argparse
 import json
 from pathlib import Path
@@ -206,7 +213,7 @@ def main():
     ap.add_argument("--out", default="example_editable.pptx")
     ns = ap.parse_args()
     print(f"PASS: wrote editable prototype {build(ns.out)}")
-    print("Important: a valid PPTX file is NOT a physically validated model.")
+    print("SOURCE-ONLY: valid editable PPTX is NOT a trace-registered or physically validated mechanism.")
 
 
 if __name__ == "__main__":
