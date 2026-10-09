@@ -3,9 +3,13 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.8.0"
+  version: "1.8.1"
   short_name: "Deck3"
 ---
+
+## Deck3 v1.8.1 figure-media routing and fail-closed approval
+
+**Read** `.github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md` for every Deck3 text, figures, image-generation, assemble, and release task. **A scientific diagram is not automatically an AI image.** Use equipment-centered original images only where physical objects matter; use **native editable PowerPoint** for literature/gap matrices, RQ/SO alignment, evidence-gated cross-system pathways, methodological workflows, contribution maps and chapter roadmaps. The strict no-embedded-explanatory-panels rule still applies to all images, and AI-rendered author citations are not evidence. Frozen GO/SO1–SO3 and the actual user-approved slide count must be preserved verbatim; the current 13-slide Chapter 1 baseline remains authoritative unless explicitly changed. **The prior ten AI PNG draft figures are provisional, not approved Stage 2 assets.** Do not use SVG checks, correct output dimensions, or a saved PPTX as a substitute for source review, mechanism trace, figure-only panel inspection, rendered readability, native editing and real animation playback.
 
 ## Mechanism-centered infographic engineering — v1.8.0 (binding across ALL Deck3 stages)
 
