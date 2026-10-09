@@ -1,5 +1,5 @@
 {
-  "schema": "deck3-ecosystem-registry-v1",
+  "schema": "deck3-ecosystem-registry-v1.8",
   "update_trigger": [
     "update Deck3",
     "make update of Deck3",
@@ -23,7 +23,8 @@
       "category": "core_dispatch",
       "paths": [
         ".github/skills/deck3/SKILL.md",
-        ".github/skills/deck3/references/WORKFLOW.md"
+        ".github/skills/deck3/references/WORKFLOW.md",
+        ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md"
       ],
       "scope": "All Deck3 commands, stage gating, release claims"
     },
@@ -48,7 +49,7 @@
         ".github/skills/scientific-infographic-design/examples/figures.py",
         ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
       ],
-      "scope": "Vector and raster image generation, semantic arrows, real system boundary"
+      "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA"
     },
     {
       "category": "scientific_diagrams",
@@ -76,15 +77,18 @@
       "paths": [
         ".github/skills/deck3/advanced_powerpoint/SKILL.md"
       ],
-      "scope": "Native shapes, SVG, math, symbols, motion, animations, export/QA"
+      "scope": "Native shapes, SVG, math, symbols, motion, animations, export/QA; refer to verified object and arrow IDs for native animation layers"
     },
     {
       "category": "runtime_assembly",
       "paths": [
         ".github/skills/deck3/examples/deck3.py",
-        ".github/skills/deck3/tests/test_deck3.py"
+        ".github/skills/deck3/tests/test_deck3.py",
+        ".github/skills/deck3/examples/mechanism_trace_qa.py",
+        ".github/skills/deck3/examples/mechanism_trace_example.json",
+        ".github/skills/deck3/tests/test_mechanism_trace.py"
       ],
-      "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly"
+      "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly; inspect same-stem sidecar mechanism trace and reject invalid arrow/quantity/boundary assertions"
     },
     {
       "category": "tests_ci",
@@ -97,6 +101,7 @@
   "release_gates": [
     "S_scientific_evidence",
     "W_writing",
+    "M_mechanism_traceability",
     "C_colors",
     "F_figures",
     "A_assembly_animation",
@@ -108,5 +113,12 @@
     "python -m unittest discover -s .github/skills/deck3/tests -v",
     "python -m unittest discover -s .github/skills/deck3/advanced_powerpoint/tests -v"
   ],
-  "final_certification_requires_manual_render_science_review": true
+  "final_certification_requires_manual_render_science_review": true,
+  "mechanism_authority": ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
+  "diagram_trace_sidecar": "<stem>.trace.json",
+  "current_trace_policy": {
+    "invalid": "BLOCK_STAGE2_AND_STAGE3",
+    "absent": "PROVISIONAL_NO_SCIENTIFIC_CERTIFICATION",
+    "structurally_valid": "NOT_PHYSICS_OR_CITATION_VERIFIED"
+  }
 }
