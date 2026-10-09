@@ -1,3 +1,9 @@
+## User-directed slide visual dominance rule — 2026-10-09
+
+For every **eligible Deck3 figure-bearing slide**, a scientifically necessary standalone infographic/diagram/chart is the **primary communication object**, targeting **75% of the defined usable below-title/above-footer content region** (70–80% acceptance after actual effective-coverage and readability checks). The remaining 20–30% carries approved editable supporting text. Never count blank internal image padding as scientific coverage or fill the slide with unrelated art. Preserve exact frozen objectives, citations, speaker notes, canonical Power/Transportation system boundaries, white canvas/interiors and meaningful arrow semantics. If the three approved points and frozen content cannot fit, obtain approval for a split or text-only layout; do not silently shrink, omit or rewrite.
+
+**Implementation is not automatic:** existing `.github/skills/deck3/examples/deck3.py` currently uses smaller legacy figure slots. Consult `.github/skills/deck3/SKILL.md` §2A and `.github/skills/deck3/references/WORKFLOW.md`; block any unverified 75%-compliance claim until layout code/output is actually upgraded and tested. Existing Stage-1/Stage-3 artifacts are not retroactively compliant.
+
 ## Deck3 — short-name three-stage scientific PowerPoint workflow (2026-10-09)
 
 For any request beginning **Deck3** (case-insensitive), immediately load `.github/skills/deck3/SKILL.md` and its `references/WORKFLOW.md` along with the active canonical science and citation authorities.
