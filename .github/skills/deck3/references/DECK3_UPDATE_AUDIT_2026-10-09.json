@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-09",
+  "trigger": "unqualified update Deck3 means entire linked skill, design, text, figure, image, writing, assembly, animation, color and QA ecosystem",
+  "primary_contract": ".github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT.md",
+  "technical_annex": ".github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT_V1.md",
+  "dependency_registry": ".github/skills/deck3/references/DECK3_DEPENDENCY_REGISTRY.json",
+  "deck3_version": "1.6.2",
+  "authoritative_palette": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
+  "palette_tokens": 13,
+  "policy": {
+    "existing_thesis_science": "UNCHANGED",
+    "approved_goals_objectives": "UNCHANGED",
+    "system_boundary_and_directional_evidence": "UNCHANGED",
+    "user_account_memory": "NOT_WRITTEN_OR_CONFIRMED",
+    "existing_pptx": "NOT_REBUILT",
+    "existing_noncompliant_stage3": "PROVISIONAL_NOT_RECERTIFIED"
+  },
+  "changes": {
+    "global_contracts": "CREATED_AND_RECONCILED",
+    "registry": "CREATED",
+    "core_skill_dispatch": "UPDATED",
+    "scientific_infographic_skill": "UPDATED",
+    "scientific_diagram_skill": "UPDATED",
+    "mathematical_visualization_skill": "UPDATED",
+    "engineering_framework_skill": "UPDATED",
+    "dossiya_writing_skill": "UPDATED",
+    "dossiya_expert_skill": "UPDATED",
+    "advanced_powerpoint_skill": "UPDATED",
+    "workflow": "UPDATED",
+    "copilot_instructions": "UPDATED",
+    "legacy_svg_generator": "MIGRATED_TO_CANONICAL_PALETTE",
+    "editable_pptx_example_generator": "MIGRATED_TO_CANONICAL_PALETTE",
+    "stage2_3_svg_color_preflight": "IMPLEMENTED",
+    "tests": "ADDED_AND_WIRED_TO_CI"
+  },
+  "verification": {
+    "repository_static_inspection": "PASS_11_KEY_FILES_PRESENT_CANONICAL_TOKENS_13_NO_LEGACY_LITERAL_IN_UPDATED_GENERATORS",
+    "python_regression_tests": "NOT_RUN_IN_THIS_SESSION",
+    "github_actions_result": "NOT_CONFIRMED",
+    "svg_render_or_pptx_playback": "NOT_RUN_IN_THIS_SESSION",
+    "previous_stage3_physical_visual_certification": "NOT_CONFIRMED"
+  },
+  "release": "SOURCE_AND_STATIC_CHECKS_PASS; FINAL_GENERATED_DECK_CERTIFICATION_PENDING",
+  "limitations": [
+    "SVG source gate cannot certify anti-aliased PNG pixels without source/appropriate raster audit",
+    "Photo exceptions require authentic provenance and independent visual review",
+    "Semantic physics, arrow validity, effective 75% occupancy and Microsoft PowerPoint animation playback require further checks",
+    "GitHub skill authority is durable; ChatGPT Memory is a separate product facility"
+  ]
+}
