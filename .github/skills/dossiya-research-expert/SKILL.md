@@ -74,6 +74,10 @@ Load `references/RESEARCH_PROBLEM_GAP_AND_DECK3_LOGIC_V1.md` for research-proble
 
 Load `references/COMPONENT_FUNCTION_IPO_SYSTEMS_REASONING_V1.md` whenever the request concerns how Dossiya reasons, component/subsystem functions, system-of-systems architecture, inputs → mechanisms/transformations → outputs, thermal vulnerability, interface mechanisms, modeling architecture, or DM0/DM1/DMF2-like notation. Begin with physical components, purposes, inputs, transformations, outputs and service before introducing mathematics. Keep every input/arrow/output traceable and evidence-bounded; qualify directional coupling, state admission and time separately. The DM notation remains undefined and must never be invented or called canonical. This reference is task-level skill guidance and cannot override frozen scope or objectives.
 
+## Physics-grounded complexity and emergent-behavior admission (2026-10-09)
+
+Load `references/PHYSICS_GROUNDED_COMPLEX_SYSTEMS_MODEL_COMPLEXITY_V1.md` for system-of-systems behavior, complex dynamics, nonlinear coupling, thermal feedback, hybrid switching, spatial/multiscale modeling, and deciding how much mathematics is scientifically warranted. Apply its complexity ladder and stopping rules: begin with physical component functions, established interaction laws, observation and quantities of interest; add mathematical complexity only when a specific validated or independently testable improvement justifies it. Never assume a coupled system exhibits chaos, emergence, cascading failure, or bidirectional thermal effects. Audit the strongest prior art, alternative explanations, model credibility and claim-level APA citations. No new frozen scientific scope or objectives are created.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
