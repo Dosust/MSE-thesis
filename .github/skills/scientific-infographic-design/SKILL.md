@@ -3,7 +3,7 @@ name: scientific-infographic-design
 description: Convert scientific claims, presentations, chapter introductions, research problems, literature comparisons, and evidence-grounded engineering content into original, accessible, editable infographics. Select the correct visual family, declare system and model boundaries, register meaningful arrows and evidence status, keep adjacent scientific citations, and run scientific, visual, accessibility, and PowerPoint QA. Use for science-presentation infographic redesign, graphical abstracts, mechanism figures, comparison matrices, research workflows, and cited thesis slides; defer formal framework semantics to engineering-framework-design and diagram grammar to scientific-diagram-design.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
 ---
 
 > **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
@@ -36,6 +36,14 @@ When this infographic skill is used for an **eligible Deck3 figure-bearing slide
 - A figure failing scientific integrity or projection legibility **fails regardless of spatial share**. White filler margins or image-container dimensions alone cannot be counted as meaningfully occupied infographic area.
 - Text-intensive frozen objectives require a valid text-only/companion layout when 75% occupancy would destroy legibility; do not paraphrase exact objective wording as a figure.
 - **Implementation note:** legacy `deck3.py` slots do not yet meet this rule; do not claim assembled occupancy validation until geometry and tests have been updated or independently verified.
+
+## 0B. Authentic object colors and strictly white authored surfaces — binding design QA
+
+For all Dossiya thesis / Deck3 diagrams and independently generated source artwork: **never use purple, violet, magenta or pink** as invented annotation, header, panel, border, arrow, label, icon or other graphical styling. **Never use invented yellow/gold** for design; yellow is acceptable only when physically true to a real/natural object depicted, such as actual sunlight. Fill the whole canvas, figure headings, panels, callouts, legends and box interiors with **pure white (#FFFFFF)**, not beige, gray, tinted white or transparency over a colored background. No fills for semantic categories, gradients, shadows, textures or decorative color blocks.
+
+Realistic physical objects may use their authentic actual coloration (vegetation, asphalt, solar panels, EV paint, cables, equipment, nature). Limit abstract notation to charcoal/black, navy/blue, green or red in thin purposeful lines, scientific arrows, titles/headings, labels and small accents, **not large fills**. Do not generate arbitrary colored machinery. Verify large arrows communicate a defensible dependency, not merely bidirectionality or shared hazard.
+
+Before approval, audit: (a) author-controlled fills/strokes/text, (b) photographic object authenticity, (c) actual meaning of each arrow and colored mark, (d) white background/interiors, (e) no forbidden designed colors. Image-wide RGB thresholding is not a valid substitute for separating authentic photographic content from annotations. Existing reference figures with colored headers or purple/pink/gold styling must be redesigned, not inherited.
 
 ## 1. Peer-reviewed design evidence
 
