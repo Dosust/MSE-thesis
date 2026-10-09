@@ -1,0 +1,28 @@
+name: Deck3 Repository Color Policy
+
+on:
+  push:
+    paths:
+      - '.github/skills/**'
+      - 'visualization/**'
+      - '.github/workflows/deck3-color-policy.yml'
+  pull_request:
+    paths:
+      - '.github/skills/**'
+      - 'visualization/**'
+      - '.github/workflows/deck3-color-policy.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-srgb-policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit all active authored design sources
+        run: python .github/skills/deck3/tests/audit_repo_colors.py
+      - name: Validate exact 13-color registry and skill contracts
+        run: python -m unittest discover -s .github/skills/deck3/tests -p test_color_policy.py -v
