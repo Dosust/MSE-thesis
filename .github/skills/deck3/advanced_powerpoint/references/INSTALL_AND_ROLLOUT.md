@@ -1,8 +1,16 @@
 # Integration Plan — Add Advanced PowerPoint Skills to Existing Deck3
 
-**This package is a PROPOSAL.** Installation into `Dossiya-SE/MSE-thesis` has not been performed by creation of this ZIP.
+**Installed integration status (2026-10-09):** The advanced reference extension is installed under `.github/skills/deck3/advanced_powerpoint/` and linked from the main `.github/skills/deck3/SKILL.md` (v1.6.1). The stages below describe the original planned rollout; their path/branch instructions are superseded by this installation. Native animation production features remain subject to the listed runtime and PowerPoint playback gates.
 
-## Safest deployment (non-destructive)
+## Actual installed commands and color authority
+
+- Canonical colors: `.github/skills/deck3/references/DECK3_SRGB_PALETTE.json` — DO NOT duplicate, alter, approximate or supplement this file.
+- Advanced manifest test: `cd .github/skills/deck3/advanced_powerpoint && python -m unittest discover -s tests -v`.
+- Example structural/color check: `python examples/geometry_and_manifest_qa.py examples/advanced_manifest_example.json` (from the same working directory).
+- Repository CI: `.github/workflows/deck3-tests.yml` now runs both core Deck3 and the advanced extension tests on changes.
+- The validator checks exact sRGB tokens, white authored interiors, essential-arrow contrast, object IDs, relation semantics, and click ordering. It does not verify native PowerPoint playback, actual PPTX object colors, image pixels, or physical validity.
+
+## Historical deployment plan (for reference only)
 
 1. Keep the existing `.github/skills/deck3/SKILL.md` as canonical. Do **not** replace it wholesale.
 2. Copy the proposed skills `SKILL.md` into the repo as `.github/skills/deck3/references/ADVANCED_POWERPOINT_SKILLS_V1.md` (or register a separately named skill, subject to your loader conventions).
