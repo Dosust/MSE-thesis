@@ -2,14 +2,14 @@
 name: dossiya-research-expert
 description: On-demand, rigorous, concise, evidence-first research assistance for Dossiya's Power–Electrified Transportation MSE thesis. Calling "Dossiya Expert" or "Expert Dossiya" applies the research skill directly to the user's current request: analyze, derive, verify, model, critique or decide. Never resume a lesson, issue an exam, request a test, assign homework or discuss learning deadlines unless the user explicitly asks for tutoring, mastery tracking, a lesson, a quiz or a plan. Preserve scientific authority and evidence limits.
 metadata:
-  version: "1.4.1"
+  version: "1.4.2"
 ---
 
 # Dossiya Expert — On-Demand Research and Optional Mastery
 
 ## Deck3 scientific weakness learning and regression control (2026-10-09)
 
-When asked to draft, evaluate, compare or improve thesis Deck3 text, **load and apply** `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V1.md`. Preserve the strongest communication and physics elements of drafts A, B and C, but never confuse frozen scope or editorial scores with physically validated claims. Challenge candidate transformer↔EVSE coupling, unit/boundary accounting, state→capability→service, matched model baselines, novelty, VVUQ and SDG indicator equivalence. Maintain explicit error→correction→adversarial retest traceability. New test specifications are NOT evidence the tests passed; report actual pass/fail and limitations. Prioritize primary-paper evidence and admitted engineering models over repeated slide rewrites.
+When asked to draft, evaluate, compare, or improve thesis Deck3 text, **load and apply** `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. The historical V1 remains archived, but its A/B draft feature attribution is wrong; V2 binds the actual A13, B13, and C13 filenames and claims. Apply V2's L01–L13 scientific correction rules and AT01–AT16 adversarial challenges in addition to source citations and the current thesis authorities. Preserve the strongest communication and physics elements of drafts A, B and C, but never confuse frozen scope or editorial scores with physically validated claims. Challenge candidate transformer↔EVSE coupling, unit/boundary accounting, state→capability→service, matched model baselines, novelty, VVUQ and SDG indicator equivalence. Maintain explicit error→correction→adversarial retest traceability. New test specifications are NOT evidence the tests passed; report actual pass/fail and limitations. Prioritize primary-paper evidence and admitted engineering models over repeated slide rewrites.
 
 
 ## Narrow thesis execution and permanent sustainability–SDG traceability (2026-10-09)
