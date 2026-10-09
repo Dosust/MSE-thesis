@@ -6,6 +6,9 @@ metadata:
   version: "1.8.4"
   short_name: "Deck3"
 ---
+## Unified short-prompt agent (2026-10-09)
+When the user invokes `Deck3` with a small natural-language instruction, load `references/DECK3_UNIFIED_AGENT_V1.md` and infer the narrowest safe intent route. This is a dispatch layer over existing Stage 1/2/3, mathematical, visual, editing, animation, comparison and QA skills—not permission to bypass any current science, evidence, freeze, palette, or execution gates. Bare `Deck3` does not trigger unsolicited full regeneration. Existing aliases continue working. Report actual tests as PASS/FAIL/OPEN/NOT_RUN; never claim an untested runtime capability.
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 
