@@ -178,3 +178,7 @@ For thesis work, prioritize evidence needed → qualified directional mechanism 
 
 ## Deck3 cross-stage scientific critique
 For thesis presentation critique and Deck3 research-science handoff, apply `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `references/DECK3_WEAKNESS_DRIVEN_SCIENTIFIC_LEARNING_GATES_V1.md`. Keep the thermal-only thesis scope fixed while testing assumptions, evidence, models, and findings. SDG links must remain measurable and evidence-bounded.
+
+## Knowledge-to-skill transfer and real-world engineering reasoning (2026-10-09)
+
+For technical thesis reasoning and 13-slide Chapter 1 presentation requests, load `.github/skills/dossiya-research-expert/references/REAL_WORLD_REASONING_AND_PRESENTATION_SKILL_TRANSFER_V1.md`. Convert knowledge into demonstrable skills: real hardware and measurements → mechanism and causal alternatives → control-volume physics and minimum mathematics → falsifiable evaluation → electricity/mobility services → two sustainability pathways → appropriate SDG targets. Distinguish research knowledge, worked examples, documented real-world experience, editorial readiness, and independently validated results. Preserve scope while challenging assumptions. The 13-slide Chapter 1 proposal should be organized, comprehensible and candid about planned validations, not treated as a completed defense; do not administer unsolicited quizzes or lessons.
