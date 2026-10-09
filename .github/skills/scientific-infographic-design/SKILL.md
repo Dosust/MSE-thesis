@@ -6,6 +6,11 @@ metadata:
   version: "2.3.0"
 ---
 
+## Deck3 global-update scope (binding)
+
+When the user requests **"update Deck3"** or equivalent, apply the **entire linked design/production ecosystem**, not this skill in isolation. Read `../deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT.md` and the canonical `deck3/references/DECK3_SRGB_PALETTE.json` (relative to .github/skills). Synchronize source-faithful text and writing, independently generated scientific figures/images, photorealistic asset prompts, code/templates, PPTX assembly, slide geometry, white-only surfaces, exactly 13 authored sRGB tokens, scientific evidence/citation/arrow QA, regression tests, release checks and any impacted root instructions. Archive and natural photographic pixels are preserved. Never claim completed certification from PPTX-open success or from an unexecuted/failing GitHub workflow. If not fully validated, label the result provisional.
+
+
 > **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
 
 # Scientific Infographic Design — Evidence-First Presentation Agent

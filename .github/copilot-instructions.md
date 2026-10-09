@@ -1,3 +1,7 @@
+## Deck3 global-update scope (binding)
+
+When the user requests **"update Deck3"** or equivalent, apply the **entire linked design/production ecosystem**, not this skill in isolation. Read `skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT.md` and the canonical `deck3/references/DECK3_SRGB_PALETTE.json` (relative to .github/skills). Synchronize source-faithful text and writing, independently generated scientific figures/images, photorealistic asset prompts, code/templates, PPTX assembly, slide geometry, white-only surfaces, exactly 13 authored sRGB tokens, scientific evidence/citation/arrow QA, regression tests, release checks and any impacted root instructions. Archive and natural photographic pixels are preserved. Never claim completed certification from PPTX-open success or from an unexecuted/failing GitHub workflow. If not fully validated, label the result provisional.
+
 ## Deck3: repeatable scientific slide workflow
 
 If the user invokes **Deck3 text**, **Deck3 figures**, **Deck3 figures slide N**, **Deck3 assemble**, **Deck3 all**, or numeric aliases **Deck3 1/2/3**, load `.github/skills/deck3/SKILL.md` and `references/WORKFLOW.md`. Stage 1 creates editable main-message/three-point text with genuinely empty infographic slots; Stage 2 creates separate scientific images and keeps their registers; Stage 3 inserts them without distorting images or changing frozen text/citations/notes and requires slide render QA. Missing source or figures are BLOCKED, not fabricated. Always obey all current scientific and in-text citation authorities.
