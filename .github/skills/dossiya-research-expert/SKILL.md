@@ -78,6 +78,10 @@ Load `references/COMPONENT_FUNCTION_IPO_SYSTEMS_REASONING_V1.md` whenever the re
 
 Load `references/PHYSICS_GROUNDED_COMPLEX_SYSTEMS_MODEL_COMPLEXITY_V1.md` for system-of-systems behavior, complex dynamics, nonlinear coupling, thermal feedback, hybrid switching, spatial/multiscale modeling, and deciding how much mathematics is scientifically warranted. Apply its complexity ladder and stopping rules: begin with physical component functions, established interaction laws, observation and quantities of interest; add mathematical complexity only when a specific validated or independently testable improvement justifies it. Never assume a coupled system exhibits chaos, emergence, cascading failure, or bidirectional thermal effects. Audit the strongest prior art, alternative explanations, model credibility and claim-level APA citations. No new frozen scientific scope or objectives are created.
 
+## Final four-element component and data-role standard (2026-10-09)
+
+Load `references/FINAL_COMPONENT_FOUR_ELEMENT_DATA_ROLES_V1.md` for all component-architecture, physics-based system modeling, input/output, thermal behavior, data, validation and service-requirement tasks. Apply the user's **exact four component elements** in order: **input → physical transformation → output → state-dependent behavior**, with function and system/subsystem membership recorded separately. Classify data as model input/forcing, physical parameter, observation for calibration/independent validation, or service requirement. Fleet service is an outcome, not a physical component; data are not components. This finalized skill-reasoning method resolves the earlier uncertainty about the four fields, while no transformer/EVSE equations, values or state sets are automatically frozen. Follow canonical authorities and verified adjacent citations.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
