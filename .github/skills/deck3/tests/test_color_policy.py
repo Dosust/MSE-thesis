@@ -33,13 +33,24 @@ class AuthenticColorPolicyTests(unittest.TestCase):
         self.assertIn("panel", text)
         self.assertIn("review", text)
 
+
+    def test_asu_exact_exceptions_and_turquoise(self):
+        data = json.loads((ROOT / "deck3" / "references" / "DECK3_SRGB_PALETTE.json").read_text(encoding="utf-8"))
+        self.assertEqual(data["policy_version"], "1.6.0")
+        self.assertEqual(data["colors"]["asu_maroon"]["hex"], "#8C1D40")
+        self.assertEqual(data["colors"]["asu_gold"]["hex"], "#FFC627")
+        self.assertEqual(data["colors"]["bright_turquoise"]["hex"], "#6ACEEE")
+        self.assertLess(data["colors"]["asu_gold"]["contrast_on_white"], 3)
+        self.assertLess(data["colors"]["bright_turquoise"]["contrast_on_white"], 3)
+        self.assertEqual(set(data["authored_surfaces"].values()), {"#FFFFFF"})
+
     def test_exact_srgb_registry(self):
         palette_path = ROOT / "deck3" / "references" / "DECK3_SRGB_PALETTE.json"
         data = json.loads(palette_path.read_text(encoding="utf-8"))
         self.assertEqual(data["color_space"], "sRGB")
         self.assertEqual(data["channel_bits"], 8)
         self.assertEqual(set(data["authored_surfaces"].values()), {"#FFFFFF"})
-        self.assertEqual(len(data["colors"]), 11)
+        self.assertEqual(len(data["colors"]), 13)
         def luminance(values):
             def linear(v):
                 c = v / 255
@@ -50,7 +61,8 @@ class AuthenticColorPolicyTests(unittest.TestCase):
                 self.assertEqual("#" + "".join(f"{x:02X}" for x in record["rgb"]), record["hex"])
                 if name != "white":
                     contrast = 1.05 / (luminance(record["rgb"]) + .05)
-                    self.assertGreaterEqual(contrast, 4.5)
+                    if name not in ("asu_gold", "bright_turquoise"):
+                        self.assertGreaterEqual(contrast, 4.5)
                     self.assertAlmostEqual(contrast, record["contrast_on_white"], delta=.01)
                     self.assertFalse(record["allowed_as_surface"])
 
