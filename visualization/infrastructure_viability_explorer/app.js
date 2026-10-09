@@ -1,4 +1,4 @@
-const COLORS={bg:"#081018",grid:"#22313f",sky:"#87CEFA",deep:"#00BFFF",ink:"#eef8ff",muted:"#91a8b8",danger:"#ff6b7a",white:"#ffffff"};
+const COLORS={bg:"#FFFFFF",grid:"#416985",sky:"#0072B2",deep:"#176B42",ink:"#000000",muted:"#555D66",danger:"#B4232C",white:"#FFFFFF"};
 
 const $=(id)=>document.getElementById(id);
 const canvases={network:$("network"),phase:$("phase"),timeline:$("timeline")};
@@ -43,7 +43,7 @@ function drawNetwork(s){
   for(const node of data.graph.nodes){
     const [x,y]=xy(node),state=gs.nodes[node.id],hazard=state.hazard;
     if(hazard>0.01){
-      circle(ctx,x,y,14+30*hazard,rgba(COLORS.deep,.035+.14*hazard));
+      /* no decorative hazard halo: encode hazard using labeled outlines */
     }
   }
 
@@ -61,7 +61,7 @@ function drawNetwork(s){
     const layerColor=node.layer==="power"?COLORS.sky:COLORS.deep;
     const availability=state.availability,hazard=state.hazard;
     const fill=availability<.45?COLORS.danger:layerColor;
-    circle(ctx,x,y,7+8*availability,rgba(fill,.25+.7*availability),COLORS.white,.7);
+    circle(ctx,x,y,7+8*availability,fill,COLORS.white,.7);
     if(hazard>.25) circle(ctx,x,y,12+10*hazard,"rgba(0,0,0,0)",COLORS.danger,1.2);
     text(ctx,node.id,x,y+3,9,COLORS.ink,"center",800);
   }
@@ -76,10 +76,10 @@ function drawPhase(s){
   const x=v=>L+v*pw,y=v=>T+(1-v)*ph;
   for(let g=0;g<=1.0001;g+=.2){line(ctx,x(g),T,x(g),T+ph,COLORS.grid,.7);line(ctx,L,y(g),L+pw,y(g),COLORS.grid,.7)}
   const xp=x(data.constraints.min_power),yt=y(data.constraints.min_transport);
-  ctx.save();ctx.fillStyle="rgba(135,206,250,.055)";ctx.fillRect(xp,T,L+pw-xp,yt-T);ctx.strokeStyle=COLORS.sky;ctx.setLineDash([5,5]);ctx.strokeRect(xp,T,L+pw-xp,yt-T);ctx.restore();
+  ctx.save();ctx.fillStyle=""rgba(255,255,255,1)"";ctx.fillRect(xp,T,L+pw-xp,yt-T);ctx.strokeStyle=COLORS.sky;ctx.setLineDash([5,5]);ctx.strokeRect(xp,T,L+pw-xp,yt-T);ctx.restore();
   text(ctx,"T",24,h/2,13,COLORS.ink,"center",800);text(ctx,"P",L+pw/2,h-14,13,COLORS.ink,"center",800);
   text(ctx,"declared sustainability thresholds",L+pw-8,T+18,10,COLORS.sky,"right",700);
-  ctx.save();ctx.strokeStyle="rgba(135,206,250,.32)";ctx.lineWidth=1.4;ctx.beginPath();
+  ctx.save();ctx.strokeStyle=""rgba(0,114,178,.32)"";ctx.lineWidth=1.4;ctx.beginPath();
   data.samples.forEach((q,j)=>{const xx=x(q.power),yy=y(q.transport);if(j===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)});ctx.stroke();ctx.restore();
   ctx.save();ctx.strokeStyle=COLORS.sky;ctx.lineWidth=2.5;ctx.beginPath();
   data.samples.slice(0,index+1).forEach((q,j)=>{const xx=x(q.power),yy=y(q.transport);if(j===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)});ctx.stroke();ctx.restore();
@@ -92,7 +92,7 @@ function drawTimeline(){
   const L=58,R=20,T=25,B=38,pw=w-L-R,serviceH=h*.62;
   const x=i=>L+i/(data.samples.length-1)*pw,y=v=>T+(1-v)*serviceH;
   [0,.25,.5,.75,1].forEach(v=>{line(ctx,L,y(v),L+pw,y(v),COLORS.grid,.7);text(ctx,v.toFixed(2),L-8,y(v)+4,10,COLORS.muted,"right")});
-  const series=[["power",COLORS.sky],["transport",COLORS.deep],["interface",COLORS.white],["hazard","#5f7d91"]];
+  const series=[["power",COLORS.sky],["transport",COLORS.deep],["interface",COLORS.white],["hazard","#555D66"]];
   series.forEach(([key,color])=>{ctx.save();ctx.strokeStyle=color;ctx.lineWidth=key==="hazard"?1.2:2;ctx.beginPath();data.samples.forEach((s,i)=>{const xx=x(i),yy=y(s[key]);i?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy)});ctx.stroke();ctx.restore()});
   const bandTop=T+serviceH+34,bandH=h-bandTop-B;
   const minM=Math.min(...data.samples.map(s=>s.margin))-.03,maxM=Math.max(...data.samples.map(s=>s.margin))+.03;
@@ -101,7 +101,7 @@ function drawTimeline(){
   ctx.save();ctx.strokeStyle=COLORS.sky;ctx.lineWidth=2;ctx.beginPath();data.samples.forEach((s,i)=>{const xx=x(i),yy=ym(s.margin);i?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy)});ctx.stroke();ctx.restore();
   text(ctx,"margin",L,bandTop-10,10,COLORS.sky);text(ctx,"0",L-8,ym(0)+4,10,COLORS.muted,"right");
   const cx=x(index);line(ctx,cx,T,cx,h-B,COLORS.deep,1.2,[3,4]);
-  text(ctx,"P",w-184,18,10,COLORS.sky);text(ctx,"T",w-150,18,10,COLORS.deep);text(ctx,"C_PT",w-110,18,10,COLORS.white);text(ctx,"η",w-52,18,10,"#5f7d91");
+  text(ctx,"P",w-184,18,10,COLORS.sky);text(ctx,"T",w-150,18,10,COLORS.deep);text(ctx,"C_PT",w-110,18,10,COLORS.white);text(ctx,"η",w-52,18,10,"#555D66");
   text(ctx,"time",L+pw/2,h-10,10,COLORS.muted,"center");
 }
 
