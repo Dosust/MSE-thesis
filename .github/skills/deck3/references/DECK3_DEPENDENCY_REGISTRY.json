@@ -171,5 +171,9 @@
     "G15_native_assembly_animation"
   ],
   "required_adversarial_probes": 20,
-  "physical_image_preference": "one coherent real-physical equipment plus exact scientific relationship with minimal labels; prefer native editable interface overlays; no explanatory image panels"
+  "physical_image_preference": "one coherent real-physical equipment plus exact scientific relationship with minimal labels; prefer native editable interface overlays; no explanatory image panels",
+  "all_forms_execution_audit": ".github/skills/deck3/references/DECK3_ALL_FORMS_EXECUTION_AUDIT_2026-10-09.md",
+  "learning_status": "SKILL_AND_POLICY_CONNECTED_TEST_EXECUTION_NOT_CONFIRMED",
+  "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
+  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65"
 }
