@@ -2,6 +2,8 @@
 
 **Effective 2026-10-09.** User meaning: when the user says **"update Deck3"**, **"update Deck3 and all"**, or equivalent, the scope is the **entire Deck3 production ecosystem**, not just `deck3/SKILL.md`.
 
+**Implementation annex and dependency registry:** `DECK3_GLOBAL_UPDATE_CONTRACT_V1.md` is the detailed technical/QA annex to this primary contract, **not a competing policy**. `DECK3_DEPENDENCY_REGISTRY.json` is the machine-readable map for updating every stage and skill. Color/source enforcement examples and the associated tests reside in `../examples/asset_color_qa.py`, `../tests/`, and linked scientific generators. A nonapproved SVG authored stroke must block assembly; raster-only images and PowerPoint rendering require explicit additional review.
+
 ## Mandatory coverage and authority
 
 1. **Text/writing:** source-faithful wording, editable PowerPoint text, titles, messages, 3-point content structure, references, exact frozen GO/SO1–SO3; synchronize with `dossiya-writing` as appropriate. Do not invent citations.
