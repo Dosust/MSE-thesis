@@ -1,0 +1,60 @@
+{
+  "deck_name": "Deck3 — demonstration only, not thesis source",
+  "institution": "SCIENTIFIC PRESENTATION · EXAMPLE",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Scientific Presentation Example",
+      "subtitle": "Demonstration of the three-stage Deck3 process",
+      "notes": "Demonstration structure; not the approved thesis deck."
+    },
+    {
+      "kind": "content",
+      "title": "Independent Response to External Heat",
+      "message": "Separate responses to an external forcing do not establish a cross-system causal mechanism.",
+      "bullets": [
+        "Identify the two physical systems.",
+        "Represent the external forcing separately.",
+        "Qualify any proposed between-system effect."
+      ],
+      "source_note": "Internal example: CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md",
+      "notes": "Conceptual illustration: do not infer a verified two-way thermal interdependency.",
+      "figure": {
+        "file": "Slide_02_Independent_Heat.png",
+        "alt": "A separate conceptual heat-response diagram showing two independent systems."
+      }
+    },
+    {
+      "kind": "content",
+      "layout": "long_objectives",
+      "title": "Canonical Research Objectives",
+      "message": "To characterize and model thermal interdependencies between the Power System and the Electrified Transportation System under extreme heat, and to quantify how their consequences evolve through physical state and time.",
+      "bullets": [
+        "Identify and qualify the thermally sensitive physical states and directional thermal interdependency mechanisms connecting the Power System and the Electrified Transportation System.",
+        "Develop a physics-based state-time model of the qualified thermal interdependencies and their propagation under extreme heat.",
+        "Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences."
+      ],
+      "source_note": "Internal canonical source: CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md",
+      "notes": "GO and SO1–SO3 verbatim; avoid abstracting/replacing these strings on the real slide.",
+      "figure": {
+        "file": "Slide_03_Objectives.png",
+        "alt": "Objective-to-output traceability illustration; no invented numerical results."
+      }
+    },
+    {
+      "kind": "references",
+      "title": "Example Source Authority",
+      "entries": [
+        "Dossiya-SE/MSE-thesis. CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md (internal authority).",
+        "Dossiya-SE/MSE-thesis. CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md (internal authority)."
+      ],
+      "notes": "Internal source references. This demonstration is not the user's full thesis literature list."
+    }
+  ],
+  "frozen_strings": [
+    "To characterize and model thermal interdependencies between the Power System and the Electrified Transportation System under extreme heat, and to quantify how their consequences evolve through physical state and time.",
+    "Identify and qualify the thermally sensitive physical states and directional thermal interdependency mechanisms connecting the Power System and the Electrified Transportation System.",
+    "Develop a physics-based state-time model of the qualified thermal interdependencies and their propagation under extreme heat.",
+    "Quantify critical transition times, interdependency propagation delays, and the resulting electricity and mobility service consequences."
+  ]
+}
