@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "router": "scientific-visual-orchestration",
+  "purpose": "Select primary owner by task; delegate science before rendering; avoid cyclic automatic activation.",
+  "deck3_contract_min_version": "1.6.0",
+  "core_source_authority": "project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md",
+  "palette_authority": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
+  "primary_routes": [
+    {
+      "id": "deck",
+      "trigger": "PowerPoint/slides/deck",
+      "primary": ".github/skills/deck3/SKILL.md",
+      "helpers": [
+        ".github/skills/scientific-infographic-design/SKILL.md"
+      ],
+      "guards": [
+        "stage_1_native_text_frozen",
+        "stage_2_independent_figures",
+        "stage_3_lossless_assembly",
+        "meaningful_75pct_target",
+        "legacy_geometry_not_certified"
+      ]
+    },
+    {
+      "id": "framework",
+      "trigger": "Physical systems/framework",
+      "primary": ".github/skills/engineering-framework-design/SKILL.md",
+      "helpers": [
+        ".github/skills/scientific-diagram-design/SKILL.md",
+        ".github/skills/mathematical-visualization-design/SKILL.md"
+      ],
+      "guards": [
+        "no_undocumented_physical_causality",
+        "canonical_P_Te_and_heat_scope"
+      ]
+    },
+    {
+      "id": "diagram",
+      "trigger": "Typed relations/diagrams",
+      "primary": ".github/skills/scientific-diagram-design/SKILL.md",
+      "helpers": [],
+      "guards": [
+        "typed_arrow_inventory",
+        "no_evidence_upgrade",
+        "no_recursive_specialist_activation"
+      ]
+    },
+    {
+      "id": "infographic",
+      "trigger": "Standalone audience-facing explanatory figures",
+      "primary": ".github/skills/scientific-infographic-design/SKILL.md",
+      "helpers": [
+        ".github/skills/scientific-diagram-design/SKILL.md"
+      ],
+      "guards": [
+        "citation_adjacency",
+        "no_source_graphic_copy"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "trigger": "Math figure/analytic chart/verified animation",
+      "primary": ".github/skills/mathematical-visualization-design/SKILL.md",
+      "helpers": [
+        ".github/skills/scientific-diagram-design/SKILL.md"
+      ],
+      "guards": [
+        "equation_before_pixels",
+        "units_domains_tests"
+      ]
+    },
+    {
+      "id": "powerpoint_advanced",
+      "trigger": "Native editable PowerPoint features",
+      "primary": ".github/skills/deck3/advanced_powerpoint/SKILL.md",
+      "helpers": [
+        ".github/skills/deck3/SKILL.md"
+      ],
+      "guards": [
+        "runtime_capability_review",
+        "preserve_frozen_copy",
+        "actual_powerpoint_playback_if_claimed"
+      ]
+    },
+    {
+      "id": "interactive",
+      "trigger": "Reactive browser geometry when justified",
+      "primary": ".github/skills/visquill-interactive-visualization/SKILL.md",
+      "helpers": [
+        ".github/skills/mathematical-visualization-design/SKILL.md"
+      ],
+      "guards": [
+        "license_tool_fit",
+        "separate_physics_from_interface"
+      ]
+    },
+    {
+      "id": "procedural",
+      "trigger": "Chapter 10 shader mathematical-art lesson",
+      "primary": ".github/skills/procedural-mathematical-art/SKILL.md",
+      "helpers": [
+        ".github/skills/mathematical-visualization-design/SKILL.md"
+      ],
+      "guards": [
+        "synthetic_only",
+        "no_randomness_as_evidence",
+        "no_causal_arrows_from_tiles"
+      ]
+    }
+  ],
+  "family_semantics": {
+    "animation": "time/parameter mapping, not necessarily physical time",
+    "diagram": "typed relations, not quantities",
+    "mind_map": "hierarchy not causality",
+    "chart": "quantities with units or declared nondimensional status",
+    "mathematical_figure": "defined mathematical object and explicit projection"
+  },
+  "nonregression_ids": [
+    "DECK3-V16-PALETTE-13",
+    "DECK3-STAGE-123",
+    "DECK3-TEXT-NOTES-FROZEN",
+    "DECK3-EVIDENCE-APA",
+    "DECK3-LAYOUT-75-MEANINGFUL",
+    "TE-FULL-SYSTEM",
+    "EXTREME-HEAT-ONLY",
+    "NO-PHANTOM-PHYSICS"
+  ],
+  "forbidden_inference": [
+    "independently randomized tiles -> observed network",
+    "smooth noise -> calibrated heat field",
+    "pixel animation -> physical dynamics",
+    "figure rectangle share -> meaningful occupancy",
+    "saved PPTX -> visually certified deck",
+    "shaders -> independent physics validation"
+  ]
+}

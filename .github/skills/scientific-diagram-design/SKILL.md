@@ -5,6 +5,8 @@ license: MIT
 ---
 
 # Scientific Diagram Design
+> **Cross-skill coordination (Deck3 v1.7):** [Shared scientific-visual router](../scientific-visual-orchestration/SKILL.md) selects this skill as the owner of typed diagram relations and arrow grammar when appropriate; it does not replace this skill's existing semantics, canonical science, figure tests or cited authorities. Deck3 and its exact v1.6 palette remain binding for thesis-authored PPTX graphics.
+
 
 ## Mandatory Deck3 v1.6 design palette (13 exact sRGB tokens)
 
@@ -537,7 +539,7 @@ Default:
 - no gradients;
 - no shadows;
 - no paper/canvas effect;
-- no gold unless explicitly requested.
+- only exact ASU Gold #FFC627 as a small nonessential institutional accent under Deck3 v1.6; prohibit all other gold/yellow authored colors.
 
 When a generative image model is used, include the following instruction verbatim or equivalently strongly:
 
