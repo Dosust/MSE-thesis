@@ -57,6 +57,18 @@ class AdvancedDeck3Tests(unittest.TestCase):
         d = self.edited()
         d["gradient"] = True
         self.assertTrue(any("gradient/shadow/texture" in x for x in validate(d)))
+    def test_unapproved_arrow_color(self):
+        d = self.edited()
+        d["relations"][0]["stroke_color_token"] = "random_gold"
+        self.assertTrue(any("unapproved arrow color" in x for x in validate(d)))
+    def test_gold_essential_arrow_forbidden(self):
+        d = self.edited()
+        d["relations"][0]["stroke_color_token"] = "asu_gold"
+        self.assertTrue(any("low-contrast essential arrow" in x for x in validate(d)))
+    def test_arrow_stroke_hex_exactness(self):
+        d = self.edited()
+        d["relations"][0].update(stroke_color_token="teal", stroke_hex="#006D71")
+        self.assertTrue(any("arrow color differs from canonical exact sRGB" in x for x in validate(d)))
     def test_click_order(self):
         d = self.edited()
         d["animation"]["click_groups"][1]["click"] = 1
