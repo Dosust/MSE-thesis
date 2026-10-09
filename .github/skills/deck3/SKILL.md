@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   short_name: "Deck3"
 ---
 
@@ -47,6 +47,38 @@ If the user has already supplied approved text or completed stage artifacts, **r
 **The presentation should display scientific content, not the names of fields in the authoring template.** On all title/outline/content/reference slides, never render the literal metadata headings `MAIN MESSAGE`, `THREE KEY POINTS`, `MAIN IDEA`, or `3 BULLETS`. Keep the actual `message` text and meaningful `bullets` visible, editable, sourced and unchanged unless a separate copy revision is explicitly authorized. The manifest may continue to use one message plus three points as invisible authoring structure; the audience must not see that structure's generic labels. Real semantic headings such as `General Objective`, `Specific Objectives`, `System Boundary` and `References` are allowed.
 
 **Use the 2026-10-09 comparative audit before the next Chapter 1 design pass:** `references/CHAPTER1_COMPARATIVE_DESIGN_LESSONS_2026-10-09.md`. Preserve strong ASU typography/evidence, restrained scientific figures, clear bidirectional-evidence gates, and ensure figures actually occupy the current §2A dominant visual target. Do not claim a legacy small-image layout satisfies 75%.
+
+## 1B. COMPARATIVE DESIGN LESSONS — enforceable acceptance contract
+
+**Source and limits:** The Chapter 1 comparison assigns editorial A=88/100 (ASU text-first), B=85/100 (Expert complete illustration), C=81/100 (Dossiya provisional, one required illustration missing). These grades are reviewer judgments, not psychometric measures or independent experimental evidence. A is the wording/typographic baseline, B the restrained mechanism/traceability baseline, and C an evidence-gate and mechanistic-detail reference, **not** a template for dense labels or icons. Apply the principles to other decks only when appropriate to their evidence and scientific scope.
+
+### Gate W — audience wording and hierarchy
+1. Place a **claim-bearing scientific takeaway immediately below the slide title**. Use the best approved wording, not the shortest possible claim; a headline may state the scientific result/question, but cannot assert an unverified result.
+2. Treat `message` and `bullets` as **authoring fields**, not audience labels. Never display `MAIN MESSAGE`, `THREE KEY POINTS`, or similarly repetitive editorial metadata. Retain meaningful `General Objective`, `Specific Objectives`, `System Boundary`, and `References` headings.
+3. Use native editable PowerPoint text for title/takeaway/supporting points and visible same-slide citations. Avoid duplicating full research questions, frozen objectives or supporting bullets inside a graphic.
+4. Preserve the **complete and exact** approved objective wording and notes. Prefer a text-led objectives slide or approved companion over a miniature diagram or reduced font. Any wording reconciliation between A/B/C needs explicit approval.
+
+### Gate F — figure semantics and visual economy
+1. Choose **one question answered by each figure** and register each node, boundary, variable, causal arrow, arrow direction, label and citation. A visual item without a scientific/communication function is removed.
+2. Separate full system boundary from the simulated subset; identify distinct P and T_e boundaries. Do not replace the full T_e composition with EVSE/charging alone.
+3. For extreme heat, draw **two independent external-forcing pathways** unless a directional physical mechanism is explicitly qualified. Shared exposure/co-location is not evidence of cross-system causation.
+4. Qualify P→T_e and T_e→P **independently**. A candidate T_e→P charging mechanism must connect thermal behavior to **grid-side AC input** before claiming a Power System consequence; DC-side output or a drawn arrow is insufficient.
+5. Distinguish thermal physical state, functional capability, actual flow/power, critical service, resilience outcomes and sustainability conclusions. For sustainability, distinguish direct effects from effects mediated by intervention; neither is automatically demonstrated by resilience outputs.
+6. Make verification, calibration, validation and uncertainty **distinct**. Present proposed SO→output mappings as proposed work, not achieved validated results.
+7. Enlarge mechanism diagrams and readable labels instead of multiplying symbols, annotations, decorative icons or text. Large directional arrows must carry defined scientific meaning. White slide and white panel interiors remain mandatory.
+
+### Gate L — layout and publication quality
+1. On eligible figure slides use §2A's **75% effective meaningful visual area target** (70–80% acceptance range), with a concise supporting text rail. Do not score a large white PNG as meaningful visual area.
+2. Check **figure font sizes, equation readability, arrowheads, reference text, overlap and clipping at actual slide size and thumbnail/projection scale**. If a 20–30% text rail cannot hold frozen wording, document a text-led exception or obtain approval for a companion slide.
+3. Apply one coherent academic typography hierarchy: a substantial title; direct scientific takeaway; readable supporting points; visible source notes. Maintain full, readable bibliography entries across as many reference slides as required; separate **external scholarly/technical standards** from **internal thesis authorities**.
+4. For the 16-slide Chapter 1 baseline, require **11 of 11 independently authored figures on slides 3–13**, with no silent asset substitution; missing Slide 13 chapter-sequence figure is a release blocker. For other decks derive the expected count from the manifest, never assume 11 universally.
+
+### Gate Q — evidence, completeness and honest release claims
+- Before Stage 1 freeze, compare the selected wording to the approved source and record frozen-string digests; check slide-by-slide against the audit in `references/CHAPTER1_COMPARATIVE_DESIGN_LESSONS_2026-10-09.md`.
+- Before Stage 2 admission, verify direction, physics, model-versus-system membership, source proximity, candidate/verified status and actual minimum visual legibility for each asset.
+- Before Stage 3 release, assert all required images exist, text/notes/citations are unchanged, image aspect ratios preserved, no authoring labels leaked, references complete, and **actual rendered visual occupancy** independently inspected. Report `geometry_share` and `effective_meaningful_visual_share` separately.
+- **A saved PPTX, correct picture count, aspect ratio, static unit tests, or 75% image rectangle never establishes scientific validation or full visual certification.** Mark such outputs `TECHNICAL_ONLY / PROVISIONAL` until a documented final-slide inspection and evidence review pass.
+- Explicitly distinguish changes to the skill, changes to the generator, generated decks and **certified** decks. Never imply an older deck was retroactively updated or certified.
 
 ## 2. The slide architecture (text versus illustration)
 
@@ -166,7 +198,7 @@ Do not add presentation-only disclaimers, extra presenter notes, or `CANDIDATE /
 
 ## 6. Runnable orchestrator and manifest contract
 
-- `examples/deck3.py`: generic and deterministic **Stage 1 / Stage 2 asset audit / Stage 3 / all** utility; **current legacy slot geometry does not implement §2A** until separately revised and tested; no internet or fabricated domain data.
+- `examples/deck3.py`: generic deterministic Stage 1 / Stage 2 asset audit / Stage 3 / all utility; standard-slide slot geometry targets §2A and measures rectangle coverage, **but does not automatically certify effective visual occupancy, text-fit, or scientific correctness**; no invented domain data.
 - `examples/deck3_manifest_example.json`: small demonstration schema only; reuse a real approved outline instead of treating sample content as thesis authority.
 - `references/WORKFLOW.md`: exact input/output usage examples, common scientific figure failures, checkpoint/revision protocol.
 - `tests/test_deck3.py`: deterministic regression checks for editable text, slide structure, image aspect ratio, missing-figure blockers, and unchanged text/notes.
@@ -197,7 +229,7 @@ Stage `figures` is an **audit of actual independently generated assets**, not an
 }
 ```
 
-Only `kind=content` with `figure` reserves a figure. A long frozen objective can specify `"layout":"long_objectives"`. Under §2A, a dense objectives slide may require a text-only or split-slide exception, **never an inaccurate figure paraphrase of a frozen objective**. The current generator uses legacy slots; **do not assert 75% implementation until code/tests are updated**. The generator may reject text that cannot fit safely; **never silently truncate frozen research content**.
+Only `kind=content` with `figure` reserves a figure. A long frozen objective can specify `"layout":"long_objectives"`. Under §2A, a dense objectives slide may require a text-only or split-slide exception, **never an inaccurate figure paraphrase of a frozen objective**. The standard generator now reserves a dominant figure slot and reports placed-picture geometry, but **full 75% compliance remains unverified until effective graphic occupancy and projection legibility have been inspected on the actual deck**. The generator may reject text that cannot fit safely; **never silently truncate frozen research content**.
 
 ## 7. Hard-stop gates, release checklist, and user-facing response
 
@@ -215,6 +247,9 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 **User response:** provide exact links to verified newly created files; record passes and limitations honestly. Do not say a physical model is validated because image generation, PPTX integrity checks, or numerical code tests passed.
 
 ## 8. Version
+
+1.3.0 — 2026-10-09. Adds explicit comparative A/B/C design learning and four production gates W/F/L/Q, source-bound claims, typography and citation checks, complete 11-asset Chapter 1 requirement, and correct distinction between generator geometry and validated effective occupancy.
+
 
 1.2.0 — 2026-10-09. Remove on-slide authoring category labels; preserve actual editable wording. Adds Chapter 1 comparative-design lessons and generator regression gate.\n\n1.1.0 — 2026-10-09. User-directed 75% dominant-scientific-figure rule (70–80% band), denominator/meaningful-occupancy definition, safe frozen-content conflict gates, stage-specific QA and explicit warning that existing Deck3 CLI geometry remains legacy until separately updated and tested.
 
