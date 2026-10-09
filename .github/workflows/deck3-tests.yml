@@ -53,7 +53,7 @@ jobs:
         working-directory: .github/skills/scientific-infographic-design/examples
         run: |
           python figures.py --out /tmp/deck3_figure_qa
-          find /tmp/deck3_figure_qa -name '*.svg' -print -exec python ../../../deck3/examples/asset_color_qa.py '{}' \;
+          find /tmp/deck3_figure_qa -name '*.svg' -print -exec python ../../deck3/examples/asset_color_qa.py '{}' \;
       - name: Smoke-test Stage 1 on example manifest
         working-directory: .github/skills/deck3
         run: |
