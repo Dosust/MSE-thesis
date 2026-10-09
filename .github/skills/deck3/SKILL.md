@@ -6,6 +6,9 @@ metadata:
   version: "1.8.3"
   short_name: "Deck3"
 ---
+## Automatic multi-version grading — thesis project (2026-10-09)
+When two or more user-supplied files/texts are versions of the same thesis content, automatically compare, score and rank them without requiring the user to repeat 'high-rigor grade and comparison'. Load `project/AUTOMATIC_MULTI_VERSION_SCIENTIFIC_COMPARISON_V1.md`; preserve fixed research scope but treat all scientific claims as evidence-testable. Read all actual files, use a single correctly summed rubric, explain version-specific strengths/weaknesses and exact corrections; never call approved frozen content scientifically validated merely because approved. Respect explicit requests taking precedence; this rule is not a background file watcher.
+
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every Deck3 text-in-chat, Stage 1 PPTX, one-slide edit, AI scientific figure, mechanism diagram, engineering framework, mathematical visualization, Stage 3 assembly, animation, export and QA, apply `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and corrected Dossiya Research Expert `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. The two old Deck3 learning V1 protocols remain historical and are superseded for active work. Use the actual A13/B13/C13 feature mapping. **Do not equate frozen objectives with validated physics; preserve research scope.** For physical slides, prefer one unified scientifically plausible real-equipment AI scene + scientifically meaningful clearly directed arrows + minimal exact on-scene labels; use native editable labels/ports/equations when possible. Do not turn science into unrelated abstract boxes, invented outputs or embedded literature-card panels. Apply gates G01–G15, falsification cases A01–A20, source/citation review and stage-specific tests; record NOT_RUN rather than PASS for unperformed verification.
