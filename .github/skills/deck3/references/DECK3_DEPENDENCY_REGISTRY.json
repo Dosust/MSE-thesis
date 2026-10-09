@@ -175,5 +175,8 @@
   "all_forms_execution_audit": ".github/skills/deck3/references/DECK3_ALL_FORMS_EXECUTION_AUDIT_2026-10-09.md",
   "learning_status": "SKILL_AND_POLICY_CONNECTED_TEST_EXECUTION_NOT_CONFIRMED",
   "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
-  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65"
+  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65",
+  "unified_agent_reference": ".github/skills/deck3/references/DECK3_UNIFIED_AGENT_V1.md",
+  "unified_agent_invocation": "Deck3 <short natural language request>",
+  "unified_agent_status": "routing_specification_only_runtime_not_certified"
 }
