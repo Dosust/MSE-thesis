@@ -8,7 +8,12 @@ purpose: Scientific native PowerPoint engineering, vector geometry, accessible a
 
 # Deck3 Advanced PowerPoint — Rigorous Skill Module
 
-****Installed location:** `.github/skills/deck3/advanced_powerpoint/SKILL.md`. This is an installed **reference/specification extension** of the main Deck3 skill, not a replacement for its canonical authorities or a claim that every animation backend is implemented.nces/ADVANCED_POWERPOINT_SKILLS_V1.md`, or a separately registered `.github/skills/deck3-advanced-powerpoint/SKILL.md`. The present file is an **integration-ready proposal**, **not** an active update of the canonical Deck3 skill. It MUST be invoked under the established `.github/skills/deck3/SKILL.md` and higher scientific governance, not replace those rules.
+## Deck3 ecosystem-wide update routing (2026-10-09)
+
+When the user says **“update Deck3”** without narrowing the stage, load `.github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT_V1.md` and `DECK3_DEPENDENCY_REGISTRY.json`. This skill is an impacted dependency in the coordinated review: science, slide writing, editable native text, figures, image generation, geometry, colors, mathematics, animations, assembly, accessibility, and final rendered QA. Apply changes here when relevant, or record REVIEWED_NO_CHANGE with reason. **Do not treat a change to the main Deck3 SKILL.md as sufficient.** For Deck3 outputs the sole exact authored color registry is `.github/skills/deck3/references/DECK3_SRGB_PALETTE.json`, loaded at generation time; all authored canvas/panel/box interiors are white. Only approved 13-token colors are allowed for graphic marks. ASU Maroon may be used for headings; ASU Gold and Bright Turquoise only for nonessential accents. Authentic photos retain true colors. Never claim color/figure/scientific/PPTX compliance from successful file creation alone. Any older generic **“no gold”** phrase means no unapproved/decorative gold and **does not forbid the narrowly permitted canonical ASU Gold accent**.
+
+
+**Installed location:** `.github/skills/deck3/advanced_powerpoint/SKILL.md`. This is an installed **reference/specification extension** of the main Deck3 skill, not a replacement for its canonical authorities or a claim that every animation backend is implemented.nces/ADVANCED_POWERPOINT_SKILLS_V1.md`, or a separately registered `.github/skills/deck3-advanced-powerpoint/SKILL.md`. The present file is an **integration-ready proposal**, **not** an active update of the canonical Deck3 skill. It MUST be invoked under the established `.github/skills/deck3/SKILL.md` and higher scientific governance, not replace those rules.
 
 ## Binding color authority — Deck3 v1.6.0
 
