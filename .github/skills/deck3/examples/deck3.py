@@ -194,6 +194,11 @@ def make_text(manifest_path, output_path):
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
     prs.save(str(out))
+    # The generated text-only baseline must itself obey canonical authored colors.
+    text_color_qa = check_pptx_colors(out)
+    if text_color_qa["errors"]:
+        raise Blocked("Stage-1 generated PPTX failed exact native authored-color audit: "
+                      + "; ".join(text_color_qa["errors"][:12]))
     reopened = Presentation(str(out))
     if len(reopened.slides) != len(data["slides"]):
         raise AssertionError("Slide count changed on save.")
