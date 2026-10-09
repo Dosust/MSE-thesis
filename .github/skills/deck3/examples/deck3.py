@@ -24,6 +24,7 @@ from pptx.enum.text import MSO_ANCHOR
 from pptx.util import Inches, Pt
 from asset_color_qa import check_figure_source
 from pptx_color_qa import check as check_pptx_colors
+from mechanism_trace_qa import check as check_mechanism_trace
 
 PALETTE_PATH = Path(__file__).resolve().parents[1] / "references" / "DECK3_SRGB_PALETTE.json"
 with PALETTE_PATH.open(encoding="utf-8") as _palette_file:
@@ -237,11 +238,28 @@ def figure_records(data, folder, slide=None):
         if source_color_qa["status"] == "BLOCKED":
             raise Blocked(f"Slide {n}: authored figure source failed exact Deck3 palette gate: "
                           + "; ".join(source_color_qa["errors"]))
+        # Structure for arrows/quantities/physical vs model boundaries. Legacy
+        # art without a trace record remains permissible only as PROVISIONAL.
+        trace_path = source.with_suffix(".trace.json")
+        if trace_path.exists():
+            mechanism_trace_qa = check_mechanism_trace(trace_path)
+            if mechanism_trace_qa["status"] == "BLOCKED":
+                raise Blocked(f"Slide {n}: malformed or scientifically inconsistent mechanism trace: "
+                              + "; ".join(mechanism_trace_qa["errors"][:12]))
+        else:
+            mechanism_trace_qa = {
+                "status": "TRACE_NOT_REGISTERED_PROVISIONAL",
+                "physics_validated": False,
+                "citation_content_verified": False,
+                "powerpoint_playback_verified": False,
+                "errors": [],
+            }
         records.append({
             "slide": n, "file": filename, "width_px": width, "height_px": height,
             "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "alt": row["figure"]["alt"], "status": "ASSET_PRESENT_NOT_PHYSICALLY_VALIDATED",
             "authored_color_source_qa": source_color_qa,
+            "mechanism_trace_qa": mechanism_trace_qa,
         })
     if missing:
         raise Blocked("Figure assets required before assembly:\n" + "\n".join(missing))
@@ -337,11 +355,18 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
             for rec in records
         ],
         "color_certification": "NOT_CERTIFIED_FROM_ASSET_SOURCE_OR_ASSEMBLY_ALONE",
+        "mechanism_traceability": "STRUCTURAL_ONLY_NOT_SCIENTIFICALLY_CERTIFIED",
+        "mechanism_trace_preflight": [
+            {"slide": rec["slide"], "status": rec["mechanism_trace_qa"]["status"]}
+            for rec in records
+        ],
         "native_color_qa": final_colors["status"],
         "native_color_values": final_colors["visible_srgb_counts"],
         "figure_records": records,
         "manual_required": [
             "Verify figure physics and citation-to-claim mapping",
+            "Inspect every registered mechanism arrow/source/quantity; missing sidecar means PROVISIONAL, not validated",
+            "Separately verify model, simulation, measurement and assessment boundary semantics",
             "Render EVERY slide and inspect at presentation and thumbnail scale",
             "Inspect true text bounds, contrast, arrow meanings and reading order",
             "Inspect meaningful nonblank figure coverage; picture bounds alone cannot certify occupancy",
