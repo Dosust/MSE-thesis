@@ -44,17 +44,6 @@
       "contrast_on_white": 21,
       "allowed_as_surface": false
     },
-    "charcoal": {
-      "hex": "#25313D",
-      "rgb": [
-        37,
-        49,
-        61
-      ],
-      "role": "body text",
-      "contrast_on_white": 13.25,
-      "allowed_as_surface": false
-    },
     "navy": {
       "hex": "#12304A",
       "rgb": [
