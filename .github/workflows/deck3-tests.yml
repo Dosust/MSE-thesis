@@ -26,6 +26,11 @@ jobs:
       - name: Test manifest, text stage, figures gate and composition
         working-directory: .github/skills/deck3
         run: python -m unittest discover -s tests -v
+      - name: Test Deck3 advanced graphics, animation and exact sRGB palette
+        working-directory: .github/skills/deck3/advanced_powerpoint
+        run: |
+          python -m unittest discover -s tests -v
+          python examples/geometry_and_manifest_qa.py examples/advanced_manifest_example.json
       - name: Smoke-test Stage 1 on example manifest
         working-directory: .github/skills/deck3
         run: |
