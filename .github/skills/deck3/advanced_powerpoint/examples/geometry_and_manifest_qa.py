@@ -88,6 +88,16 @@ def validate(doc: dict, palette: dict | None = None) -> list[str]:
             errors.append("invalid arrow endpoint: " + rid)
         if not r.get("meaning") or not r.get("direction"):
             errors.append("missing physical/methodological relation meaning: " + rid)
+        token = r.get("stroke_color_token")
+        if token is not None:
+            if token not in colors:
+                errors.append("unapproved arrow color: " + rid)
+            else:
+                rgb = colors[token]["hex"]
+                if r.get("stroke_hex", rgb) != rgb:
+                    errors.append("arrow color differs from canonical exact sRGB: " + rid)
+                if contrast_on_white(rgb) < p["contrast"]["essential_nontext_min"]:
+                    errors.append("low-contrast essential arrow: " + rid)
         if r.get("relation_type") == "candidate_dependency" and r.get("evidence_status") not in ("OPEN", "CANDIDATE"):
             errors.append("candidate arrow promoted to established without evidence: " + rid)
     animation = doc.get("animation", {})
