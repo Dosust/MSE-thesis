@@ -1,3 +1,7 @@
+
+## Automatic multi-version grading — thesis project (2026-10-09)
+When two or more user-supplied files/texts are versions of the same thesis content, automatically compare, score and rank them without requiring the user to repeat 'high-rigor grade and comparison'. Load `project/AUTOMATIC_MULTI_VERSION_SCIENTIFIC_COMPARISON_V1.md`; preserve fixed research scope but treat all scientific claims as evidence-testable. Read all actual files, use a single correctly summed rubric, explain version-specific strengths/weaknesses and exact corrections; never call approved frozen content scientifically validated merely because approved. Respect explicit requests taking precedence; this rule is not a background file watcher.
+
 ## Mandatory Deck3 ecosystem weakness learning — 2026-10-09
 For ALL Deck3 forms (text, figures, single-slide, image, scientific diagrams, infographics, engineering frameworks, math visualization, assemble, animation, QA, all), read `.github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md` and apply stage-appropriate T01–T14 evidence/correction/retest checks. Scope remains fixed; frozen text is not scientific validation. Report NOT_RUN when tests have not been executed.
 
