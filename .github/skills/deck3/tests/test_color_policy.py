@@ -3,6 +3,7 @@
 These are static contract checks, NOT image-level inspection or PPTX certification.
 """
 import unittest
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -31,6 +32,27 @@ class AuthenticColorPolicyTests(unittest.TestCase):
         self.assertIn("forbidden as designed colors", text)
         self.assertIn("panel", text)
         self.assertIn("review", text)
+
+    def test_exact_srgb_registry(self):
+        palette_path = ROOT / "deck3" / "references" / "DECK3_SRGB_PALETTE.json"
+        data = json.loads(palette_path.read_text(encoding="utf-8"))
+        self.assertEqual(data["color_space"], "sRGB")
+        self.assertEqual(data["channel_bits"], 8)
+        self.assertEqual(set(data["authored_surfaces"].values()), {"#FFFFFF"})
+        self.assertEqual(len(data["colors"]), 11)
+        def luminance(values):
+            def linear(v):
+                c = v / 255
+                return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+            return sum(c * linear(v) for c, v in zip((0.2126, 0.7152, 0.0722), values))
+        for name, record in data["colors"].items():
+            with self.subTest(color=name):
+                self.assertEqual("#" + "".join(f"{x:02X}" for x in record["rgb"]), record["hex"])
+                if name != "white":
+                    contrast = 1.05 / (luminance(record["rgb"]) + .05)
+                    self.assertGreaterEqual(contrast, 4.5)
+                    self.assertAlmostEqual(contrast, record["contrast_on_white"], delta=.01)
+                    self.assertFalse(record["allowed_as_surface"])
 
 
 if __name__ == "__main__":

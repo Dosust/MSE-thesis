@@ -23,11 +23,21 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.text import MSO_ANCHOR
 from pptx.util import Inches, Pt
 
-WHITE = RGBColor(255, 255, 255)
-INK = RGBColor(20, 26, 37)
-NAVY = RGBColor(17, 47, 81)
-BLUE = RGBColor(35, 95, 156)
-GRAY = RGBColor(72, 80, 92)
+PALETTE_PATH = Path(__file__).resolve().parents[1] / "references" / "DECK3_SRGB_PALETTE.json"
+with PALETTE_PATH.open(encoding="utf-8") as _palette_file:
+    PALETTE = json.load(_palette_file)["colors"]
+
+
+def token_rgb(name):
+    r, g, b = PALETTE[name]["rgb"]
+    return RGBColor(r, g, b)
+
+
+WHITE = token_rgb("white")
+INK = token_rgb("charcoal")
+NAVY = token_rgb("navy")
+BLUE = token_rgb("blue")
+GRAY = token_rgb("graphite")
 FONT = "Times New Roman"
 WIDTH, HEIGHT = 13.333333, 7.5
 
