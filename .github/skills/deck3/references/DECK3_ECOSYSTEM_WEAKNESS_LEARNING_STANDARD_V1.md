@@ -1,3 +1,5 @@
+> **HISTORICAL — SUPERSEDED BY ALL-FORMS V2 (2026-10-09).** For active Deck3 work use `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` with Dossiya Expert corrected V2. Historical A/B/C source attribution in this document may be inaccurate. Keep for audit history only; do not use as competing authority.
+
 # Deck3 ecosystem-wide weakness learning and regression standard V1
 **Date:** 2026-10-09 | **Status:** binding methodology for Deck3 and companion design skills; **not** scientific model admission or empirical validation.
 **Scope:** Deck3 text-only, figures, one-slide changes, images, infographics, diagrams, engineering frameworks, mathematical visualization, PPTX assembly, animation, QA and release.
