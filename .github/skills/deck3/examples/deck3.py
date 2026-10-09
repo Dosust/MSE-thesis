@@ -23,6 +23,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.text import MSO_ANCHOR
 from pptx.util import Inches, Pt
 from asset_color_qa import check_figure_source
+from pptx_color_qa import check as check_pptx_colors
 
 PALETTE_PATH = Path(__file__).resolve().parents[1] / "references" / "DECK3_SRGB_PALETTE.json"
 with PALETTE_PATH.open(encoding="utf-8") as _palette_file:
@@ -253,6 +254,11 @@ def notes_register(prs):
 def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
     data = load_manifest(manifest_path)
     records = figure_records(data, figure_directory)
+    # Native editable text, lines and backgrounds must pass before any figure is admitted.
+    native_colors = check_pptx_colors(text_pptx)
+    if native_colors["errors"]:
+        raise Blocked("Stage-1 native PPTX has noncanonical authored colors: "
+                      + "; ".join(native_colors["errors"][:12]))
     before = Presentation(str(text_pptx))
     if len(before.slides) != len(data["slides"]):
         raise Blocked("Input text PPTX does not match manifest slide count.")
@@ -296,6 +302,10 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
     out = Path(output)
     out.parent.mkdir(parents=True, exist_ok=True)
     before.save(str(out))
+    final_colors = check_pptx_colors(out)
+    if final_colors["errors"]:
+        raise Blocked("Assembled PPTX authored-color audit failed: "
+                      + "; ".join(final_colors["errors"][:12]))
     after = Presentation(str(out))
     if text_register(after) != old_text:
         raise AssertionError("Text was changed during figure insertion.")
@@ -322,6 +332,8 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
             for rec in records
         ],
         "color_certification": "NOT_CERTIFIED_FROM_ASSET_SOURCE_OR_ASSEMBLY_ALONE",
+        "native_color_qa": final_colors["status"],
+        "native_color_values": final_colors["visible_srgb_counts"],
         "figure_records": records,
         "manual_required": [
             "Verify figure physics and citation-to-claim mapping",
