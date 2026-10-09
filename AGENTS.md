@@ -458,3 +458,18 @@ When the user explicitly requests **VisQuill**, or a scientific figure genuinely
 - `.github/skills/visquill-interactive-visualization/references/LICENSE_AND_SOURCES.md`
 
 Use existing `engineering-framework-design`, `scientific-diagram-design`, `mathematical-visualization-design` and, if relevant, `scientific-infographic-design` skills to establish **scientific meaning first**. For ordinary static thesis figures and time-series plots, do **not** use VisQuill by default. VisQuill is a vendor-licensed TypeScript/SVG **visualization SDK, not a physics solver or validation method**. It is **optional and not installed** by this repository instruction. No unqualified P→T_e / T_e→P arrows, no invented data, no silent amendment of frozen scope, and no removal of legally required vendor attribution.
+
+---
+
+## Dossiya Research Expert — opt-in mastery training (2026-10-09)
+
+For **explicit scientific-learning invocations**, such as **"Expert Dossiya, ...", "Dossiya Research Mastery", "continue Lesson 12",** or **"use the Dossiya research expert skill"**, load:
+
+- .github/skills/dossiya-research-expert/SKILL.md
+- .github/skills/dossiya-research-expert/references/LESSON_LEDGER_2026-10-09.md (past lessons/checkpoints)
+- .github/skills/dossiya-research-expert/references/REMAINING_CURRICULUM_TO_2026-10-23.md (foundational and research deadlines)
+- the relevant short concept or exam reference only as needed.
+
+**Do not confuse with dossiya-writing:** "Dossiya, edit/rewrite..." is a writing-mode request; "Expert Dossiya, teach/examine/derive..." is research-mastery mode. Normal name references do not activate either. If both are requested, science/evidence checks come first and optional writing-style refinement comes second.
+
+This is an **educational skill**, not a scientific source or separate model. Load AI_RESEARCH_INSTRUCTIONS.md and the current canonical thesis and citation authorities before scientific content. Lessons 01–11 were passed as **chat-written responses only**; Lesson 12 remains PENDING as of 2026-10-09. Do not equate chat scores with unaided mathematical or experimental expertise, model verification, independent physical validation or frozen thesis results. Train one concise evidence-first reasoning/derivation/application at a time; prioritize October 23 foundational closure and October 31 case/evidence feasibility, without altering official ASU deadlines or frozen science.
