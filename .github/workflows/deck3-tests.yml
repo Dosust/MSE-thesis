@@ -1,0 +1,41 @@
+name: Deck3 Scientific Slide Workflow Tests
+
+on:
+  push:
+    paths:
+      - '.github/skills/deck3/**'
+      - '.github/workflows/deck3-tests.yml'
+  pull_request:
+    paths:
+      - '.github/skills/deck3/**'
+      - '.github/workflows/deck3-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  deck3-structure-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Deck3 runtime
+        run: python -m pip install --disable-pip-version-check python-pptx Pillow
+      - name: Test manifest, text stage, figures gate and composition
+        working-directory: .github/skills/deck3
+        run: python -m unittest discover -s tests -v
+      - name: Smoke-test Stage 1 on example manifest
+        working-directory: .github/skills/deck3
+        run: |
+          python examples/deck3.py text --manifest examples/deck3_manifest_example.json --out build/example_text.pptx
+          test -s build/example_text.pptx
+      - name: Confirm design evidence and instructions are present
+        shell: bash
+        run: |
+          test -s .github/skills/deck3/SKILL.md
+          test -s .github/skills/deck3/references/WORKFLOW.md
+          test -s .github/skills/deck3/examples/deck3.py
+          test -s .github/skills/scientific-infographic-design/SKILL.md
+          echo "PASS: files present; generated infographic assets require independent science review"
