@@ -34,7 +34,7 @@ def token_rgb(name):
 
 
 WHITE = token_rgb("white")
-INK = token_rgb("charcoal")
+INK = token_rgb("black")
 NAVY = token_rgb("navy")
 BLUE = token_rgb("blue")
 GRAY = token_rgb("graphite")
