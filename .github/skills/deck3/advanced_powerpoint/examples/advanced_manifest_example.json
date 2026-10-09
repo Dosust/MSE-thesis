@@ -1,0 +1,228 @@
+{
+  "schema": "deck3-advanced-v1",
+  "status": "SYNTHETIC_CONCEPTUAL_EXAMPLE_NOT_CASE_EVIDENCE",
+  "slide": 5,
+  "question": "Can each heat-conditioned direction be independently qualified?",
+  "full_systems": [
+    "P",
+    "T_e"
+  ],
+  "external_forcing": "Extreme heat",
+  "design_palette": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
+  "authored_color_tokens": [
+    "navy",
+    "blue",
+    "forest_green",
+    "teal",
+    "deep_red",
+    "black",
+    "white"
+  ],
+  "canvas_hex": "#FFFFFF",
+  "panel_fill_hex": "#FFFFFF",
+  "core_copy": {
+    "native_slide_title_and_text_static": true,
+    "citations_static_from_first_frame": true,
+    "no_visible_authoring_labels": true,
+    "frozen_authority_verified": null
+  },
+  "objects": [
+    {
+      "id": "s05.p_state",
+      "class": "physical_state",
+      "parent_system": "P",
+      "label": "Power-side thermal state (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Candidate Power-side physical thermal state",
+      "color_token": "blue",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.p_limit",
+      "class": "conditional_operating_constraint",
+      "parent_system": "P",
+      "label": "Thermally conditioned P capability (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Proposed temperature-dependent power-system operating constraint",
+      "color_token": "deep_red",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.p_interface",
+      "class": "electrical_interface",
+      "parent_system": "interface_P_T_e",
+      "label": "Electrical power-transfer pathway",
+      "evidence_status": "THESIS_DEFINED",
+      "alt": "Electrical exchange is not itself proof of thermal causality",
+      "color_token": "teal",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.te_response",
+      "class": "functional_response",
+      "parent_system": "T_e",
+      "label": "Transport charging capability (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Candidate transportation functional response",
+      "color_token": "forest_green",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.te_state",
+      "class": "physical_state",
+      "parent_system": "T_e",
+      "label": "Electrified transportation thermal state (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Unqualified candidate transportation thermal state",
+      "color_token": "forest_green",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.te_limit",
+      "class": "conditional_operating_constraint",
+      "parent_system": "T_e",
+      "label": "Charge/transfer restriction (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Potential temperature-dependent charging restriction",
+      "color_token": "deep_red",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.ac_input",
+      "class": "measurable_interface_quantity",
+      "parent_system": "T_e",
+      "label": "Grid-side AC input behavior",
+      "evidence_status": "OPEN",
+      "alt": "Grid-side AC input evidence gate distinct from DC output",
+      "color_token": "teal",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    },
+    {
+      "id": "s05.p_response",
+      "class": "functional_response",
+      "parent_system": "P",
+      "label": "Power-system response (candidate)",
+      "evidence_status": "OPEN",
+      "alt": "Candidate grid-side Power System thermal or capability response",
+      "color_token": "blue",
+      "color_role": "essential_text",
+      "fill_hex": "#FFFFFF"
+    }
+  ],
+  "relations": [
+    {
+      "id": "s05.edge.1",
+      "from": "s05.p_state",
+      "to": "s05.p_limit",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "P_to_T_e",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    },
+    {
+      "id": "s05.edge.2",
+      "from": "s05.p_limit",
+      "to": "s05.p_interface",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "P_to_T_e",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    },
+    {
+      "id": "s05.edge.3",
+      "from": "s05.p_interface",
+      "to": "s05.te_response",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "P_to_T_e",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    },
+    {
+      "id": "s05.edge.4",
+      "from": "s05.te_state",
+      "to": "s05.te_limit",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "T_e_to_P",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    },
+    {
+      "id": "s05.edge.5",
+      "from": "s05.te_limit",
+      "to": "s05.ac_input",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "T_e_to_P",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    },
+    {
+      "id": "s05.edge.6",
+      "from": "s05.ac_input",
+      "to": "s05.p_response",
+      "meaning": "Proposed intermediate relationship requiring case-specific evidence",
+      "direction": "T_e_to_P",
+      "relation_type": "candidate_dependency",
+      "evidence_status": "OPEN",
+      "line_semantics": "candidate-labeled scientific mechanism, never evidence from style"
+    }
+  ],
+  "animation": {
+    "effect": "Appear",
+    "trigger": "OnClick",
+    "persist": true,
+    "automatic_advance": false,
+    "click_groups": [
+      {
+        "click": 1,
+        "id": "s05.g1",
+        "object_ids": [
+          "s05.p_state",
+          "s05.p_limit",
+          "s05.p_interface",
+          "s05.te_response"
+        ],
+        "meaning": "Reveal candidate Power-to-Transportation pathway"
+      },
+      {
+        "click": 2,
+        "id": "s05.g2",
+        "object_ids": [],
+        "note": "Evidence gate explanatory text to be constructed in PowerPoint; no false case finding"
+      },
+      {
+        "click": 3,
+        "id": "s05.g3",
+        "object_ids": [
+          "s05.te_state",
+          "s05.te_limit",
+          "s05.ac_input",
+          "s05.p_response"
+        ],
+        "meaning": "Reveal independent candidate Transportation-to-Power pathway"
+      },
+      {
+        "click": 4,
+        "id": "s05.g4",
+        "object_ids": [],
+        "note": "Grid-side AC evidence and causal qualification remains OPEN"
+      }
+    ]
+  },
+  "release_limits": [
+    "Not a thermal parameter model",
+    "No independent validation",
+    "No real PowerPoint animation produced by this fixture"
+  ]
+}
