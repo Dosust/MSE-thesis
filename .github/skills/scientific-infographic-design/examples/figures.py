@@ -12,16 +12,24 @@ These are schematic examples and NOT physical system validation.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+# Single source of truth; fail closed if the Deck3 registry is unavailable.
+_PALETTE_FILE = Path(__file__).resolve().parents[2] / "deck3" / "references" / "DECK3_SRGB_PALETTE.json"
+_COLOR_REGISTRY = json.loads(_PALETTE_FILE.read_text(encoding="utf-8"))
+assert len(_COLOR_REGISTRY["colors"]) == 13, "Review changed Deck3 13-color authority"
+def authored_color(token: str) -> str:
+    return _COLOR_REGISTRY["colors"][token]["hex"]
+
 W, H = 1600, 900
-BG = "#FFFFFF"
-BLACK = "#000000"
-BLUE = "#0072B2"    # Power
-GREEN = "#176B42"   # Electrified Transportation
-HEAT = "#B4232C"    # External extreme heat
-GRAY = "#555D66"    # neutral outline/notes (not fill)
+BG = authored_color("white")
+BLACK = authored_color("black")
+BLUE = authored_color("blue")  # Power
+GREEN = authored_color("forest_green")  # Electrified Transportation
+HEAT = authored_color("deep_red")  # External extreme heat
+GRAY = authored_color("graphite")  # notes/neutral outlines, never a panel fill
 SVG = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG)
 
@@ -43,9 +51,9 @@ def root(title: str, subtitle: str, foot: str) -> ET.Element:
     txt(svg, 75, 76, title, 42, BLACK, weight="bold")
     txt(svg, 75, 122, subtitle, 24, BLACK)
     el("line", svg, x1="75", y1="149", x2="1525", y2="149",
-       stroke="#555D66", **{"stroke-width": "2"})
+       stroke=GRAY, **{"stroke-width": "2"})
     el("line", svg, x1="75", y1="811", x2="1525", y2="811",
-       stroke="#555D66", **{"stroke-width": "2"})
+       stroke=GRAY, **{"stroke-width": "2"})
     txt(svg, 76, 842, foot, 18, BLACK)
     txt(svg, 76, 875, "Original schematic, NOT case-qualified or measured. Figure semantics follow frozen thesis authority.", 16, GRAY)
     return svg
