@@ -17,7 +17,7 @@ from xml.etree import ElementTree as ET
 PALETTE = Path(__file__).resolve().parents[1] / "references" / "DECK3_SRGB_PALETTE.json"
 A = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
 P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
-SLIDE = re.compile(r"^ppt/slides/slide[0-9]+\\.xml$")
+SLIDE = re.compile(r"^ppt/slides/slide[0-9]+\.xml$")
 
 def check(path: str | Path) -> dict:
     path = Path(path)
