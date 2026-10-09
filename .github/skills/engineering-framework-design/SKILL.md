@@ -4,6 +4,11 @@ description: Design, audit, visualize, and improve rigorous resource-grounded sc
 license: MIT
 ---
 
+## Deck3-governed AI scientific image generation (mandatory)
+
+All generated research figures, photorealistic engineering imagery, system diagrams, mathematical visualizations, poster figures and slide illustrations must follow `../deck3/references/DECK3_AI_IMAGE_GENERATION_STANDARD.md` **before generation and after rendering**. First define authoritative takeaway, physical boundaries, mechanism/directional-arrow semantics, evidence/assumptions, exact 13-color authored palette and legitimate photographic exceptions, white interiors, figure geometry, and text-label requirements. Never let an image generator invent physical evidence, equations, sources or approved objectives. Evaluate generated artwork against scientific (S), human-design (H), colors/geometry (C) and image/integration (I) gates; failed/unverified figures remain PROVISIONAL and may not be certified via simple PPTX assembly. Align all downstream code, figure briefs, prompts and slide production with these requirements.
+
+
 ## Deck3 global-update scope (binding)
 
 When the user requests **"update Deck3"** or equivalent, apply the **entire linked design/production ecosystem**, not this skill in isolation. Read `../deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT.md` and the canonical `deck3/references/DECK3_SRGB_PALETTE.json` (relative to .github/skills). Synchronize source-faithful text and writing, independently generated scientific figures/images, photorealistic asset prompts, code/templates, PPTX assembly, slide geometry, white-only surfaces, exactly 13 authored sRGB tokens, scientific evidence/citation/arrow QA, regression tests, release checks and any impacted root instructions. Archive and natural photographic pixels are preserved. Never claim completed certification from PPTX-open success or from an unexecuted/failing GitHub workflow. If not fully validated, label the result provisional.
