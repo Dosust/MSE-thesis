@@ -127,7 +127,7 @@ def qa(path, palette_path=None):
     problems, checks = [], {}
     checks["slide_count"] = "PASS" if inv["slide_count"] == 13 else "FAIL"
     checks["native_shape_inventory"] = "PASS"
-    checks["native_omml"] = "PASS" if sum(s["omml_elements"] for s in inv["slides"]) else "NOT_RUN"
+    checks["omml_presence"] = "PASS" if sum(s["omml_elements"] for s in inv["slides"]) else "NOT_APPLICABLE"\n    checks["equation_fidelity"] = "NOT_RUN"
     with zipfile.ZipFile(path) as z:
         for name in z.namelist():
             if not re.fullmatch(r"ppt/slides/slide\d+\.xml", name):
@@ -142,7 +142,7 @@ def qa(path, palette_path=None):
                         problems.append(name+": unauthorized color "+rgb)
     checks["palette_xml"] = "NOT_RUN" if allowed is None else ("FAIL" if problems else "PASS")
     checks["no_gradients"] = "FAIL" if any("gradient" in x for x in problems) else "PASS"
-    checks["real_render"] = "NOT_RUN"
+    checks["notes_preservation"] = "NOT_RUN"\n    checks["real_render"] = "NOT_RUN"
     checks["desktop_playback"] = "NOT_RUN"
     checks["scientific_validation"] = "NOT_RUN"
     return {"checks":checks,"issues":problems,"slide_count":inv["slide_count"],
