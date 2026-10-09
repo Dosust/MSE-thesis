@@ -82,6 +82,10 @@ Load `references/PHYSICS_GROUNDED_COMPLEX_SYSTEMS_MODEL_COMPLEXITY_V1.md` for sy
 
 Load `references/FINAL_COMPONENT_FOUR_ELEMENT_DATA_ROLES_V1.md` for all component-architecture, physics-based system modeling, input/output, thermal behavior, data, validation and service-requirement tasks. Apply the user's **exact four component elements** in order: **input → physical transformation → output → state-dependent behavior**, with function and system/subsystem membership recorded separately. Classify data as model input/forcing, physical parameter, observation for calibration/independent validation, or service requirement. Fleet service is an outcome, not a physical component; data are not components. This finalized skill-reasoning method resolves the earlier uncertainty about the four fields, while no transformer/EVSE equations, values or state sets are automatically frozen. Follow canonical authorities and verified adjacent citations.
 
+## ASU MSE thesis document architecture (2026-10-09)
+
+Read `references/ASU_THESIS_CHAPTER_ARCHITECTURE_V1.md` for thesis chapter count, chapter design, drafting, and institutional-compliance tasks. Official ASU Graduate College format guidance does **not prescribe a universal fixed chapter number**; seven chapters are the **preferred engineering-thesis arrangement**, subject to chair approval: Introduction; Literature Review and Theoretical Foundations; System Architecture and Mathematical Framework; Research Methodology; Results; Discussion; Conclusions and Recommendations. Keep official document formatting/order, program and committee requirements **separate** from recommended scientific organization. Do not label the seven chapters an ASU requirement or a complete thesis absent real results and approvals. Retain current frozen thermal scope, objectives, in-text APA citations and evidence gates.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
