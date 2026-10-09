@@ -461,15 +461,14 @@ Use existing `engineering-framework-design`, `scientific-diagram-design`, `mathe
 
 ---
 
-## Dossiya Research Expert — opt-in mastery training (2026-10-09)
+## Dossiya Expert — on-demand scientific research skill (2026-10-09; updated v1.1)
 
-For **explicit scientific-learning invocations**, such as **"Expert Dossiya, ...", "Dossiya Research Mastery", "continue Lesson 12",** or **"use the Dossiya research expert skill"**, load:
+When the user explicitly says **"Dossiya Expert"**, **"Expert Dossiya"**, **"use the Dossiya research expert skill"**, or **"Dossiya Research Mastery"**, load **.github/skills/dossiya-research-expert/SKILL.md**.
 
-- .github/skills/dossiya-research-expert/SKILL.md
-- .github/skills/dossiya-research-expert/references/LESSON_LEDGER_2026-10-09.md (past lessons/checkpoints)
-- .github/skills/dossiya-research-expert/references/REMAINING_CURRICULUM_TO_2026-10-23.md (foundational and research deadlines)
-- the relevant short concept or exam reference only as needed.
+**Default = EXPERT MODE, NOT EDUCATION.** Treat the words after the invocation as the task to accomplish, e.g., analyze a thermal mechanism, check physics, derive equations, critique a study, review evidence, implement a model or assess research decisions. Answer the requested task directly. **Do not** resume lessons, ask quizzes, assign work, grade unrequested answers, report progress, or push the October mastery schedule merely because the skill was invoked. A bare call "Dossiya Expert" with no task warrants asking for the research task, not opening Lesson 12.
 
-**Do not confuse with dossiya-writing:** "Dossiya, edit/rewrite..." is a writing-mode request; "Expert Dossiya, teach/examine/derive..." is research-mastery mode. Normal name references do not activate either. If both are requested, science/evidence checks come first and optional writing-style refinement comes second.
+**Learning mode requires explicit instruction:** "teach me", "continue Lesson 12", "quiz me", "grade this lesson", "review my mastery", or "make a study plan". Only then load the relevant lesson ledger, exam protocol, and curriculum in .github/skills/dossiya-research-expert/references/. Once a new research task is asked, revert to direct expert mode. Past lesson marks do not constrain expert-mode usage.
 
-This is an **educational skill**, not a scientific source or separate model. Load AI_RESEARCH_INSTRUCTIONS.md and the current canonical thesis and citation authorities before scientific content. Lessons 01–11 were passed as **chat-written responses only**; Lesson 12 remains PENDING as of 2026-10-09. Do not equate chat scores with unaided mathematical or experimental expertise, model verification, independent physical validation or frozen thesis results. Train one concise evidence-first reasoning/derivation/application at a time; prioritize October 23 foundational closure and October 31 case/evidence feasibility, without altering official ASU deadlines or frozen science.
+**Distinguish writing skill:** "Dossiya, rewrite/edit this" invokes .github/skills/dossiya-writing/SKILL.md, not the scientific expert skill; mere reference to a name invokes neither. If both research and writing are explicitly requested, check science/evidence first, then refine style.
+
+**Authority:** Dossiya Expert is a workflow, not an independently trained person or scientific source. Follow AI_RESEARCH_INSTRUCTIONS.md, the current canonical thesis index and evidence/citation standards. The skills cannot amend frozen scope or create source evidence. Written chat lesson grades do not establish independent computational/physical expertise. October 23 foundational learning and October 31 feasibility are **optional planning targets**, not response requirements or official ASU deadlines.
