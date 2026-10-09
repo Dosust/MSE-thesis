@@ -1,5 +1,10 @@
 # AI Research Instructions — Active Thesis Entry Point
 
+## Automatic comparison of multiple uploaded thesis versions (2026-10-09)
+
+When the user provides **two or more alternative versions of the same thesis content** (Deck3, chapter, research plan, equations, figures or framework) and does not explicitly request a different task, automatically perform the high-rigor grade and comparison defined by `project/AUTOMATIC_MULTI_VERSION_SCIENTIFIC_COMPARISON_V1.md`. Read the actual source versions, use the same transparent 100-point weighted rubric and verifiable arithmetic, provide a version-specific strengths/weaknesses and slide-level merge recommendation, preserve the fixed research scope, and never equate frozen repository wording with scientific validation. This rule does not run a background upload monitor or override the user's separately typed request. If the ChatGPT Project's own instructions are not editable from the current tooling, they must be updated separately by the user.
+
+
 **Status:** MANDATORY AI ENTRY POINT  
 **Effective date:** 2026-10-08  
 **Repository:** `Dossiya-SE/MSE-thesis`
