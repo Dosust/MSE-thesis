@@ -70,6 +70,10 @@ Load `references/CRITICAL_THINKING_AND_CITATION_PROTOCOL_V1.md` whenever the use
 
 Load `references/RESEARCH_PROBLEM_GAP_AND_DECK3_LOGIC_V1.md` for research-problem statements, gap/novelty assessment, Chapter I framing, research-question drafting, and Deck3 slides 3–8. Enforce topic ≠ problem, shared heat ≠ causal thermal coupling, and missing literature ≠ established original gap. Require source-by-source claim-level citations; mark open evidence honestly. Preserve frozen objectives and the full Electrified Transportation System boundary.
 
+## Component-first System-of-Systems reasoning (2026-10-09)
+
+Load `references/COMPONENT_FUNCTION_IPO_SYSTEMS_REASONING_V1.md` whenever the request concerns how Dossiya reasons, component/subsystem functions, system-of-systems architecture, inputs → mechanisms/transformations → outputs, thermal vulnerability, interface mechanisms, modeling architecture, or DM0/DM1/DMF2-like notation. Begin with physical components, purposes, inputs, transformations, outputs and service before introducing mathematics. Keep every input/arrow/output traceable and evidence-bounded; qualify directional coupling, state admission and time separately. The DM notation remains undefined and must never be invented or called canonical. This reference is task-level skill guidance and cannot override frozen scope or objectives.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
