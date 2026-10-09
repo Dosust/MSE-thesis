@@ -4,10 +4,24 @@ on:
   push:
     paths:
       - '.github/skills/deck3/**'
+      - '.github/skills/scientific-infographic-design/**'
+      - '.github/skills/scientific-diagram-design/**'
+      - '.github/skills/mathematical-visualization-design/**'
+      - '.github/skills/engineering-framework-design/**'
+      - '.github/skills/dossiya-writing/**'
+      - '.github/skills/dossiya-research-expert/**'
+      - '.github/copilot-instructions.md'
       - '.github/workflows/deck3-tests.yml'
   pull_request:
     paths:
       - '.github/skills/deck3/**'
+      - '.github/skills/scientific-infographic-design/**'
+      - '.github/skills/scientific-diagram-design/**'
+      - '.github/skills/mathematical-visualization-design/**'
+      - '.github/skills/engineering-framework-design/**'
+      - '.github/skills/dossiya-writing/**'
+      - '.github/skills/dossiya-research-expert/**'
+      - '.github/copilot-instructions.md'
       - '.github/workflows/deck3-tests.yml'
   workflow_dispatch:
 
@@ -31,6 +45,15 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           python examples/geometry_and_manifest_qa.py examples/advanced_manifest_example.json
+      - name: Deck3 cross-skill + authored color source regressions
+        working-directory: .github/skills/deck3
+        run: |
+          python -m unittest discover -s tests -v
+      - name: Render 3 deterministic SVG source examples for color preflight
+        working-directory: .github/skills/scientific-infographic-design/examples
+        run: |
+          python figures.py --out /tmp/deck3_figure_qa
+          find /tmp/deck3_figure_qa -name '*.svg' -print -exec python ../../../deck3/examples/asset_color_qa.py '{}' \;
       - name: Smoke-test Stage 1 on example manifest
         working-directory: .github/skills/deck3
         run: |
