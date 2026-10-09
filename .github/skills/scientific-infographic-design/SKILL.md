@@ -6,6 +6,8 @@ metadata:
   version: "2.0.0"
 ---
 
+> **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
+
 # Scientific Infographic Design — Evidence-First Presentation Agent
 
 ## 0. Mission, precedence, and activation
