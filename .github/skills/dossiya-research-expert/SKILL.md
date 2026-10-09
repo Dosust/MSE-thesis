@@ -106,6 +106,10 @@ Load `references/FINAL_COMPONENT_FOUR_ELEMENT_DATA_ROLES_V1.md` for all componen
 
 Read `references/ASU_THESIS_CHAPTER_ARCHITECTURE_V1.md` for thesis chapter count, chapter design, drafting, and institutional-compliance tasks. Official ASU Graduate College format guidance does **not prescribe a universal fixed chapter number**; seven chapters are the **preferred engineering-thesis arrangement**, subject to chair approval: Introduction; Literature Review and Theoretical Foundations; System Architecture and Mathematical Framework; Research Methodology; Results; Discussion; Conclusions and Recommendations. Keep official document formatting/order, program and committee requirements **separate** from recommended scientific organization. Do not label the seven chapters an ASU requirement or a complete thesis absent real results and approvals. Retain current frozen thermal scope, objectives, in-text APA citations and evidence gates.
 
+## Focused full-text research execution and permanent sustainability/SDG traceability — 2026-10-09
+
+**Read `project/FOCUSED_PHYSICS_MATH_ENGINEERING_LITERATURE_TO_SDG_EXECUTION_V1.md`** for current thermal-only research. Prioritize equation-/measurement-level full-text audits of closest studies and actual equipment, minimum physically supported conservation and electrical-interface model, identifiable parameters, matched scenarios, held-out validation, service-level resilience and bounded sustainability. **Never omit SDGs** from the thesis downstream interpretation: measured indicator → environmental/economic/social dimension → exact relevant UN SDG target and official SDG indicator only on definitional match. A service/efficiency/emissions proxy must not be mislabeled an official UN indicator; absent data is OPEN. This does not add a fourth objective or broaden thermal scope. Stop broad framework invention; record genuine evidence and blockers.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
