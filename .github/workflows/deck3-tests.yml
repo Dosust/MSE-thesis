@@ -54,6 +54,14 @@ jobs:
         run: |
           python figures.py --out /tmp/deck3_figure_qa
           find /tmp/deck3_figure_qa -name '*.svg' -print -exec python ../../deck3/examples/asset_color_qa.py '{}' \;
+      - name: Audit mechanism-trace example (structure, not physical validation)
+        working-directory: .github/skills/deck3
+        run: |
+          python examples/mechanism_trace_qa.py examples/mechanism_trace_example.json
+      - name: Check object/arrows metadata regression tests
+        working-directory: .github/skills/deck3
+        run: |
+          python -m unittest discover -s tests -p 'test_mechanism_trace.py' -v
       - name: Smoke-test Stage 1 on example manifest
         working-directory: .github/skills/deck3
         run: |
