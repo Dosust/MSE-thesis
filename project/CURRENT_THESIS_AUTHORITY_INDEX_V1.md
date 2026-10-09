@@ -141,6 +141,12 @@ These files are **working evidence/control records**, not canonical thesis model
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md` — sustainability alignment without creating SO4.
 - Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, broad sustainability-optimization, and decision packages are historical/provenance where they conflict with the current bounded scope.
 
+## Deck3 reusable Chapter 1 / thesis slide workflow (2026-10-09)
+
+**Trigger name: `Deck3`**. Entry point `.github/skills/deck3/SKILL.md`; operational steps `.github/skills/deck3/references/WORKFLOW.md`; runnable implementation `.github/skills/deck3/examples/deck3.py`; example manifest and verification tests within that skill. Dispatch `Deck3 text` (Stage 1), `Deck3 figures` (Stage 2), `Deck3 assemble` (Stage 3), `Deck3 all` (all), and `Deck3 figures slide N` (only N). This is **presentation-production authority only** and changes no frozen research text, scope, objectives, evidence admission or physics. Citation and source-verification standard remains mandatory; figure generation is separate from slide layout.
+
+---
+
 ## Active scientific infographic design and reproducible coding — 2026-10-08
 
 **Task-specific companion authority:** \`.github/skills/scientific-infographic-design/SKILL.md\` (v2.0). It governs presentation-ready scientific infographic **communication and editable rendering**, not physical truth. Read it with the existing engineering-framework, scientific-diagram and mathematical-visualization skills.
