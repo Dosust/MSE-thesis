@@ -10,6 +10,7 @@ Run: python pptx_builder.py --out prototype_editable.pptx
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 from pptx import Presentation
@@ -17,13 +18,19 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Inches, Pt
 
-# Semantic color is used for borders, arrows and titles only.
-WHITE = RGBColor(255, 255, 255)
-BLACK = RGBColor(0, 0, 0)
-BLUE = RGBColor(0, 114, 178)
-GREEN = RGBColor(23, 107, 66)
-RED = RGBColor(180, 35, 44)
-GRAY = RGBColor(85, 93, 102)
+# Canonical authored sRGB colors; fail closed if not found, never substitute.
+_PALETTE_FILE = Path(__file__).resolve().parents[2] / "deck3" / "references" / "DECK3_SRGB_PALETTE.json"
+_COLOR_REGISTRY = json.loads(_PALETTE_FILE.read_text(encoding="utf-8"))
+assert len(_COLOR_REGISTRY["colors"]) == 13, "Review Deck3 palette authority"
+def authored_rgb(token: str) -> RGBColor:
+    return RGBColor(*_COLOR_REGISTRY["colors"][token]["rgb"])
+
+WHITE = authored_rgb("white")
+BLACK = authored_rgb("black")
+BLUE = authored_rgb("blue")
+GREEN = authored_rgb("forest_green")
+RED = authored_rgb("deep_red")
+GRAY = authored_rgb("graphite")
 W, H = 13.333, 7.5
 
 
