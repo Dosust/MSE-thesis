@@ -1,3 +1,7 @@
+## Deck3: repeatable scientific slide workflow
+
+If the user invokes **Deck3 text**, **Deck3 figures**, **Deck3 figures slide N**, **Deck3 assemble**, **Deck3 all**, or numeric aliases **Deck3 1/2/3**, load `.github/skills/deck3/SKILL.md` and `references/WORKFLOW.md`. Stage 1 creates editable main-message/three-point text with genuinely empty infographic slots; Stage 2 creates separate scientific images and keeps their registers; Stage 3 inserts them without distorting images or changing frozen text/citations/notes and requires slide render QA. Missing source or figures are BLOCKED, not fabricated. Always obey all current scientific and in-text citation authorities.
+
 # GitHub Copilot Instructions
 
 Before producing or modifying scientific content in this repository, read and obey:
