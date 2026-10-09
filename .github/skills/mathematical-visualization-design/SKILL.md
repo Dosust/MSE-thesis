@@ -335,15 +335,18 @@ Never draw an unexplained arrow between two views.
 
 # 9. Mathematical Color Rule
 
+**Binding across all figures:** the exclusive 13-token authored palette is `.github/skills/deck3/references/DECK3_SRGB_PALETTE.json`. Exact ASU Maroon and ASU Gold are the only exceptions to older maroon/gold-family bans. No other invented design hues. White-only authored backgrounds and panel interiors; real photographs retain real-world colors. Gold and Bright Turquoise may only be nonessential accents on white. Examples below are role illustrations, not permission to add other hex codes.
+
+
 Color is a mathematical encoding, not decoration.
 
 Use color only when it represents a declared class or quantity.
 
 Default thesis semantic palette:
-- external hazard/forcing: vermillion \`#D55E00\`;
-- physical/empirical system: bluish green \`#009E73\`;
+- external hazard/forcing: deep red `#B4232C`;
+- physical/empirical system: forest green `#176B42`;
 - mathematical dynamics/analysis: blue \`#0072B2\`;
-- engineering intervention/decision: dark amber \`#B86E00\`;
+- engineering intervention/decision: ASU maroon `#8C1D40`;
 - neutral scientific content: black \`#000000\`;
 - all backgrounds/interiors: pure white \`#FFFFFF\`.
 
