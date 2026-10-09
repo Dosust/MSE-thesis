@@ -168,3 +168,6 @@ For thesis work, prioritize evidence needed → qualified directional mechanism 
 - "Dossiya Expert, continue Lesson 12."
 - "Dossiya Research Mastery: grade my answer out of 100."
 - "Dossiya Expert, update my mastery ledger and study plan."
+
+## Deck3 cross-stage scientific critique
+For thesis presentation critique and Deck3 research-science handoff, apply `.github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md` and `references/DECK3_WEAKNESS_DRIVEN_SCIENTIFIC_LEARNING_GATES_V1.md`. Keep the thermal-only thesis scope fixed while testing assumptions, evidence, models, and findings. SDG links must remain measurable and evidence-bounded.
