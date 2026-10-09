@@ -2,9 +2,9 @@
 
 ## Official thesis title
 
-> **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+> **Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience**
 
-Controlled by: `../../project/CANONICAL_THESIS_TITLE_V1.md`
+Controlled by: `../../project/CANONICAL_THESIS_TITLE_V2.md`
 
 This folder is reserved for front matter generated and audited against the current ASU Graduate College Format Manual and Format Wizard.
 
