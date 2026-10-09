@@ -5,6 +5,10 @@ metadata:
   version: "1.4.2"
 ---
 
+## Deck3 all-forms v2 learning contract (2026-10-09)
+For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
+
+
 # Dossiya Expert — On-Demand Research and Optional Mastery
 
 ## Deck3 scientific weakness learning and regression control (2026-10-09)
@@ -170,4 +174,4 @@ For thesis work, prioritize evidence needed → qualified directional mechanism 
 - "Dossiya Expert, update my mastery ledger and study plan."
 
 ## Deck3 cross-stage scientific critique
-For thesis presentation critique and Deck3 research-science handoff, apply `.github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md` and `references/DECK3_WEAKNESS_DRIVEN_SCIENTIFIC_LEARNING_GATES_V1.md`. Keep the thermal-only thesis scope fixed while testing assumptions, evidence, models, and findings. SDG links must remain measurable and evidence-bounded.
+For thesis presentation critique and Deck3 research-science handoff, apply `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `references/DECK3_WEAKNESS_DRIVEN_SCIENTIFIC_LEARNING_GATES_V1.md`. Keep the thermal-only thesis scope fixed while testing assumptions, evidence, models, and findings. SDG links must remain measurable and evidence-bounded.
