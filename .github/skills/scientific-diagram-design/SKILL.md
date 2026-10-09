@@ -6,6 +6,16 @@ license: MIT
 
 # Scientific Diagram Design
 
+## Binding visual-color restrictions for Dossiya thesis designs
+
+- Scientific canvas and every authored panel/box/header/legend background **must be pure white (#FFFFFF)**; no colored fills, beige/off-white backgrounds, gradients, artificial glows, textures or shadows.
+- **Never use purple, violet, pink or magenta** in designed marks (borders, text, headers, arrows, diagrams, chart series or icons).
+- **Never use designed yellow or gold**; yellow may appear only when an authentic feature of a real/natural depicted object (such as sunlight). Do not use yellow/gold as an annotation color.
+- Authentic colors of photographic/photorealistic objects remain, including vehicles and infrastructure, natural landscapes, vegetation, or sky. This exception is **not** permission for colored presentation blocks, fake color treatments or photo overlays.
+- Only restrained black/charcoal, navy/blue, green or red may distinguish purposeful headings, text, scientific lines, arrows, chart series, outlines and small accents. Maintain readable shape/line-style encoding independent of color.
+- QA must examine styled vector/design elements separately from photographs. Reject visual designs with prohibited authored colors even if diagram physics is correct. Do not erase valid natural pixels simply because their hue resembles a forbidden designed color.
+- If an older palette guide conflicts, these stricter rules override it for the specified work.
+
 ## Mission
 
 Create diagrams that behave as **model views**, not decorative pictures.
