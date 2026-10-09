@@ -1,26 +1,31 @@
-# Dossiya Research Expert — Opt-in Skill v1.0
+# Dossiya Expert — On-Demand Research Skill v1.1
 
-A concise, high-rigor, evidence-first scientific learning and oral-examination workflow for the Spring 2027 MSE thesis. Separate from the existing **dossiya-writing** style/editing skill.
+**Default: apply the skill to the research task the user gives.** "Dossiya Expert" or "Expert Dossiya" does not trigger or resume a lesson. This is a scientific research workflow, not a new person, credential or separately running AI.
 
-## Invoke it
-- "Expert Dossiya, continue Lesson 12."
-- "Dossiya Research Mastery: examine my derivation."
-- "Expert Dossiya, audit this proposed thermal interface for evidence."
-- "Expert Dossiya, give me my remaining learning gates before October 23."
+## Expert Mode — DEFAULT
 
-For ordinary rewriting, "Dossiya, edit my paragraph", use the existing writing skill. The bare person's name is not an invocation.
+- "Dossiya Expert, assess this thermal interdependency."
+- "Dossiya Expert, derive this equation and check its assumptions."
+- "Dossiya Expert, compare these papers and identify unsupported claims."
+- "Expert Dossiya, check if the proposed SO3 service indicators are defensible."
 
-## Documents
-- **SKILL.md**: Activation, scientific-authority load order, concise explain→derive→connect→test→defend protocol.
-- **references/LESSON_LEDGER_2026-10-09.md**: Lessons 01–11 graded written passes; Lesson 12 pending; practical skills and real-case claims not tested.
-- **references/CONCEPT_CARDS_AND_DIAGNOSTICS.md**: One idea and one diagnostic per lesson; minimum illustrative equations.
-- **references/EXAMINATION_PROTOCOL.md**: Honest four-part scoring, retest, progression and non-overclaim standards.
-- **references/REMAINING_CURRICULUM_TO_2026-10-23.md**: Priority learning through Oct 23, evidence/case gate by Oct 31, and Nov–April thesis execution.
+Complete the requested task. Do not add lessons, homework, quizzes, progress reports, or deadline reminders unless specifically requested.
 
-## State as of October 9
-11 lessons passed **written chat reasoning**. Lesson 12 **PENDING** (weak observability and estimation noise). There is **no demonstrated independent numerical implementation, case-specific equipment law, secured dataset, validated model or defense-ready thesis result** from these lessons alone.
+## Learning Mode — EXPLICIT OPT-IN
 
-Our practical goal is foundational competence by **October 23** (internal target), evidence-feasible case decision by **October 31**, then learn through actual thesis research. Official university dates and requirements must be checked separately.
+- "Dossiya Expert, teach me observability."
+- "Dossiya Expert, continue Lesson 12."
+- "Dossiya Expert, grade my mastery answer."
+- "Dossiya Expert, plan my remaining learning."
 
-## Authority
-AI_RESEARCH_INSTRUCTIONS.md and all current canonical thesis/evidence/citation rules control every scientific claim. This skill does not reopen the scope, freeze a new model, install a ChatGPT-wide agent, prove student authorship, or create independent evidence.
+Use lesson and examination references only for such requests; do not force lesson continuity across unrelated tasks.
+
+## File map
+
+- **SKILL.md:** expert and optional learning modes, scientific authority and quality checks.
+- **references/LESSON_LEDGER_2026-10-09.md:** earlier written chat examinations; Lesson 12 remains pending.
+- **references/CONCEPT_CARDS_AND_DIAGNOSTICS.md:** optional learning notes.
+- **references/EXAMINATION_PROTOCOL.md:** strict optional examinations.
+- **references/REMAINING_CURRICULUM_TO_2026-10-23.md:** optional study and thesis roadmap.
+
+For voice-preserving text edits use the separate **dossiya-writing** skill. Scientific sources, frozen scope and evidence rules remain binding. The study plan and past quiz grades never gate ordinary on-demand research assistance.
