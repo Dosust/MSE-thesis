@@ -2,10 +2,15 @@
 name: dossiya-research-expert
 description: On-demand, rigorous, concise, evidence-first research assistance for Dossiya's Power–Electrified Transportation MSE thesis. Calling "Dossiya Expert" or "Expert Dossiya" applies the research skill directly to the user's current request: analyze, derive, verify, model, critique or decide. Never resume a lesson, issue an exam, request a test, assign homework or discuss learning deadlines unless the user explicitly asks for tutoring, mastery tracking, a lesson, a quiz or a plan. Preserve scientific authority and evidence limits.
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # Dossiya Expert — On-Demand Research and Optional Mastery
+
+## Narrow thesis execution and permanent sustainability–SDG traceability (2026-10-09)
+
+For **every active thesis reading, modeling, results, or engineering interpretation task**, load `project/THESIS_NARROWED_PHYSICS_MATH_ENGINEERING_RESILIENCE_SUSTAINABILITY_SDG_EXECUTION_V1.md`. Its mandatory chain is **reality/data → component boundaries and physical laws → qualified directional interfaces → minimum sufficient mathematics and state-time behavior → measured/defined electricity and mobility services → canonical resilience interpretation → canonical two-pathway environmental/economic/social sustainability assessment → cautiously verified SDG target/indicator relevance**. This is not a fourth research objective and must not change frozen scope. **Never omit an SDG traceability check**: record `NOT_YET_MEASURABLE` when no eligible measured sustainability indicator exists; never present proxy engineering energy efficiency as official SDG 7.3.1 or fleet readiness as official SDG 9.1.2. Prioritize actual close-paper full-text audits and case-specific physical evidence over expanding frameworks and mock chapters.
+
 
 ## Universal scientific paper reading and human-interpretation skill (2026-10-09)
 
