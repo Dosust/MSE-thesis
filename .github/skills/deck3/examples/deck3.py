@@ -350,7 +350,7 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         if archive.testzip() is not None:
             raise AssertionError("PowerPoint ZIP integrity failed.")
     report = {
-        "status": "GEOMETRY_PASS_EFFECTIVE_OCCUPANCY_SCIENCE_AND_RENDER_UNVERIFIED",
+        "status": "STAGE3_PROVISIONAL_ASSEMBLY_NOT_SCIENTIFICALLY_APPROVED",
         "slides": len(after.slides),
         "source_text_unchanged": True,
         "source_notes_unchanged": True,
