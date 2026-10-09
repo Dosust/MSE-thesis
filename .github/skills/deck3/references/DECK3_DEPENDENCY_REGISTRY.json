@@ -1,5 +1,5 @@
 {
-  "schema": "deck3-ecosystem-registry-v1.8.1",
+  "schema": "deck3-ecosystem-registry-v1.8.3",
   "update_trigger": [
     "update Deck3",
     "make update of Deck3",
@@ -27,7 +27,7 @@
         ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
         ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
         ".github/skills/deck3/references/CHAPTER1_13SLIDE_V18_MEDIA_AUDIT_2026-10-09.md",
-        ".github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md"
+        ".github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md"
       ],
       "scope": "All Deck3 commands, stage gating, release claims; physical AI-image versus native-editable medium selection"
     },
@@ -36,12 +36,13 @@
       "paths": [
         ".github/skills/dossiya-writing/SKILL.md"
       ],
-      "scope": "Native editable slide copy, citations, notes, never expose template headings"
+      "scope": "Native editable slide copy, citations, notes, never expose template headings; frozen wording does not certify scientific truth; A13/B13/C13 attribution required"
     },
     {
       "category": "research_science",
       "paths": [
-        ".github/skills/dossiya-research-expert/SKILL.md"
+        ".github/skills/dossiya-research-expert/SKILL.md",
+        ".github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md"
       ],
       "scope": "Physical mechanisms, references, GO/SO1–SO3, evidence gates"
     },
@@ -52,7 +53,7 @@
         ".github/skills/scientific-infographic-design/examples/figures.py",
         ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
       ],
-      "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified"
+      "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified; first choice is scientifically credible hybrid physical equipment scene plus diagram overlay when physical scene is needed"
     },
     {
       "category": "scientific_diagrams",
@@ -66,7 +67,7 @@
       "paths": [
         ".github/skills/mathematical-visualization-design/SKILL.md"
       ],
-      "scope": "Equations, plots, data provenance, state-time diagrams"
+      "scope": "Equations, plots, data provenance, state-time diagrams; no unadmitted direct cross-state coupling, event censoring and dimensional checks"
     },
     {
       "category": "engineering_framework",
@@ -80,7 +81,7 @@
       "paths": [
         ".github/skills/deck3/advanced_powerpoint/SKILL.md"
       ],
-      "scope": "Native shapes, SVG, math, symbols, motion, animations, export/QA; refer to verified object and arrow IDs for native animation layers"
+      "scope": "Native shapes, SVG, math, symbols, motion, animations, export/QA; refer to verified object and arrow IDs for native animation layers; native independent layer editing/animation requires actual proof"
     },
     {
       "category": "runtime_assembly",
@@ -129,16 +130,46 @@
   "figure_only_authority": ".github/skills/deck3/references/DECK3_NO_EXPLANATORY_PANELS_IN_IMAGES_V1.md",
   "no_assumed_ai_raster_for_editable_science": true,
   "asset_integrity_is_not_stage2_scientific_approval": true,
-  "weakness_learning_authority": ".github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md",
+  "weakness_learning_authority": ".github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md",
   "weakness_learning_gates": [
-    "prior_art_fulltext",
-    "temperature_conditioned_interface",
-    "minimum_equation_laws",
-    "falsifiable_comparators",
-    "VVUQ",
-    "measured_services",
-    "sustainability_two_pathways",
-    "SDG_target_trace",
-    "minimal_native_visuals"
-  ]
+    "G01_scope",
+    "G02_real_physics",
+    "G03_directional_causality",
+    "G04_common_heat",
+    "G05_ac_dc_accounting",
+    "G06_model_mathematics",
+    "G07_causal_time",
+    "G08_comparator_admission",
+    "G09_primary_evidence",
+    "G10_VVUQ",
+    "G11_services_sustainability_SDGs",
+    "G12_presentation_copy",
+    "G13_unified_physical_ai_visual",
+    "G14_image_source_mechanism_qa",
+    "G15_native_assembly_animation"
+  ],
+  "expert_weakness_authority": ".github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md",
+  "historical_weakness_references": [
+    ".github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md",
+    ".github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md"
+  ],
+  "new_release_checks": [
+    "G01_scope",
+    "G02_real_physics",
+    "G03_directional_causality",
+    "G04_common_heat",
+    "G05_ac_dc_accounting",
+    "G06_model_mathematics",
+    "G07_causal_time",
+    "G08_comparator_admission",
+    "G09_primary_evidence",
+    "G10_VVUQ",
+    "G11_services_sustainability_SDGs",
+    "G12_presentation_copy",
+    "G13_unified_physical_ai_visual",
+    "G14_image_source_mechanism_qa",
+    "G15_native_assembly_animation"
+  ],
+  "required_adversarial_probes": 20,
+  "physical_image_preference": "one coherent real-physical equipment plus exact scientific relationship with minimal labels; prefer native editable interface overlays; no explanatory image panels"
 }
