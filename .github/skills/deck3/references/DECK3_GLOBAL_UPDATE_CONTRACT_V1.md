@@ -4,6 +4,12 @@
 **Trigger:** A user instruction such as **“update Deck3”**, **“make update of Deck3”**, **“upgrade the Deck3 design solution”**, or an unqualified Deck3 skills update.
 **Scope:** the entire related Deck3 ecosystem, not merely the file named in the most recent turn.
 
+## Deck3 v1.8 — scientific-mechanism traceability (binding for Deck3 outputs)
+
+Read `.github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md` (relative from repository root). Design each relevant figure to show **real components, independently defined physical/model/simulation boundaries, labeled directed interfaces, carried quantities/units or explicit OPEN, physical laws/operator status, observation/control/feedback, and state-time/service consequences**—not generic attractive boxes. Distinguish physical/electrical transport from measured data, estimates, control decisions, simulations and post-model assessments. Require independently evidenced P→T_e and T_e→P candidate mechanism gates; for T_e→P, grid-side AC behavior is a mandatory evidentiary distinction. Shared extreme heat is external forcing, not proof of interdependency. **A curved arrow is not a nonlinear equation**; two directions are two separate claims.
+
+A scientific figure can supply a same-stem `*.trace.json` sidecar validated with Deck3 `examples/mechanism_trace_qa.py`; successful structural review does not validate the physics. Missing trace means **provisional**, and malformed/provenance-inconsistent trace blocks Deck3 image audit/assembly. Science-source checking, native-PPTX geometry, effective visual occupancy, editable object ID mapping, animation click order, exact 13-token sRGB colors and actual PowerPoint playback remain separate acceptance requirements. Keep approved slide text, real adjacent citations, full P and T_e scope, frozen GO/SO1–SO3 and white-only authored interiors unchanged. The IEEE figure supplied by the user is *design inspiration only*; do not copy its artwork or infer the paper's unverified scientific claims.
+
 ## 1. User-intent contract
 
 An unqualified **update Deck3** request means:
