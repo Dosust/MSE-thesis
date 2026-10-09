@@ -14,7 +14,7 @@ The 2026-10-09 Chapter 1 audit found a **correct 13-slide Stage-1 text-only base
 Each slide must have a *purpose-qualified media plan*, not a default of `image_gen` for every figure slot:
 
 1. **Physical equipment or spatial/thermal engineering scene:** original scientific image/vector allowed, when actual recognizable components add mechanistic comprehension. Show relevant system boundaries, physical devices, scientifically meaningful ports/flows/quantities with short minimal **on-scene** labels only; external heat as external forcing. Use AI image generation only when a rendered image meets the required output properties, then separately review exact mechanisms and science.
-2. **Directed evidence-gated cross-system physical mechanism:** prefer **native editable PowerPoint components and labeled connectors** or layered SVG + individual native labels; a physical image may be added independently, but never embed evidence-gate prose bands or unverified equations in the image. A candidate P→T_e relationship and a candidate T_e→P relationship are distinct assertions; T_e→P needs an independently reviewed grid-side AC measurement/constraint.
+2. **Directed evidence-gated cross-system physical mechanism:** prefer **one integrated recognizable real-equipment scene plus a scientifically precise mechanism diagram** where equipment depiction improves understanding, with individually **native editable** evidence qualifiers, ports, equations and critical arrow labels; use native-only diagrams when equipment imagery adds no scientific value, but never embed evidence-gate prose bands or unverified equations in the image. A candidate P→T_e relationship and a candidate T_e→P relationship are distinct assertions; T_e→P needs an independently reviewed grid-side AC measurement/constraint.
 3. **Research/literature matrix, assumptions, comparison, research questions/objectives, model-method workflow, contributions mapping, schedule/roadmap:** create **native editable PPTX shapes, charts, tables or text** unless the user explicitly requests a separately authored static scientific diagram or image. Do **not** render a slide-within-a-slide as an AI PNG.
 4. **Mathematical result, equation or time evolution:** use editable Office Math/PPTX shapes/actual plotted data and provenance; never generate results, values, thresholds or citations as image content.
 5. **Frozen objectives and title:** preserve exact canonical strings in editable text, normally no dominant illustration. Frozen-objective text is a documented visual-share exception.
@@ -29,14 +29,14 @@ Each slide must have a *purpose-qualified media plan*, not a default of `image_g
 | 2 | Native editable argument roadmap or text | Presentation sequence, not physical causality |
 | 3 | **Physical-system visual** + independently editable electrical-supply/load arrows | P vs full T_e equipment; physical connection is NOT thermal interdependency |
 | 4 | **Physical-heat illustration** or editable dual-lane thermal mechanism | Common external forcing; separate P/T_e state→capability responses |
-| 5 | **Native editable evidence-gated P→T_e / T_e→P chains**, optional supporting equipment visual | Candidate mechanisms, interface observation, directional evidence separately |
+| 5 | **Unified physical hardware scene + two distinct candidate thermal mechanism overlays**, native editable evidence qualifiers | Candidate mechanisms, interface observation, directional evidence separately |
 | 6 | **Native editable and sourced literature-to-gap matrix** | Cite verified work; do not render author claims into pixels |
 | 7 | **Native editable RQ→SO alignment lines** | Matching, not bidirectional physical flows |
 | 8 | **Verbatim editable GO/SO1–SO3 text** | Text-priority exception; no forced AI figure |
 | 9 | **Physical full-system boundary image** with separate editable active-model subset annotation | Distinguish full T_e membership from selected model |
 | 10 | **Native editable scientific workflow/gates** | Numerical verification differs from case validation |
 | 11 | **Native editable SO→proposed output mapping** | Expected is not demonstrated |
-| 12 | **Native editable state→capability→actual transfer→service chain; two bounded assessment pathways** | Service/resilience/sustainability are distinct; assessment captions native |
+| 12 | **Scientifically coherent equipment-to-service hybrid illustration** plus native editable resilience/two-pathway assessment mapping | Service/resilience/sustainability are distinct; assessment captions native |
 | 13 | **Native editable six-chapter roadmap** | Logical chapter order, not causality |
 
 **Do not silently change the current user-approved 13-slide working structure to eight slides** based on an earlier quoted draft. A change in slide count requires express instruction or an accessible new authorized source. Slides 14–16 remain omitted for the current working presentation; citations/source notes stay with relevant slide text.
