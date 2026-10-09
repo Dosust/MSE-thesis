@@ -499,8 +499,12 @@ An opt-in research-visualization companion is available at [`.github/skills/visq
 
 ---
 
-## Dossiya Research Expert — evidence-first mastery skill
+## Dossiya Expert — on-demand research skill
 
-[Research Expert skill](.github/skills/dossiya-research-expert/SKILL.md) · [Lessons 01–12 ledger](.github/skills/dossiya-research-expert/references/LESSON_LEDGER_2026-10-09.md) · [Remaining learning to October 23](.github/skills/dossiya-research-expert/references/REMAINING_CURRICULUM_TO_2026-10-23.md).
+[Open Dossiya Expert v1.1](.github/skills/dossiya-research-expert/SKILL.md) · [Examination record](.github/skills/dossiya-research-expert/references/LESSON_LEDGER_2026-10-09.md) · [Optional learning curriculum](.github/skills/dossiya-research-expert/references/REMAINING_CURRICULUM_TO_2026-10-23.md).
 
-Invoke "**Expert Dossiya, continue Lesson 12**" or "**Dossiya Research Mastery: examine [specific derivation]**" for concise, source-grounded physics → mathematics → evidence → test → defense training. Existing dossiya-writing is a **separate editing mode**. Lessons 01–11 show chat-based written reasoning passes; Lesson 12, practical computation and independent case validation remain outstanding. October 23 is a foundational study target, **not an official ASU thesis submission deadline**.
+**Default use:** "Dossiya Expert, analyze this thermal interdependency" or "Expert Dossiya, derive this physics-based model." The skill **does the requested research work immediately**; it does not continue lessons, test the user, or enforce the learning plan.
+
+**Only on explicit request:** "Dossiya Expert, continue Lesson 12", "quiz me", "evaluate my answer out of 100", or "make my mastery plan" activates learning mode.
+
+The existing [Dossiya writing skill](.github/skills/dossiya-writing/SKILL.md) is a separate voice/editing workflow. Neither skill is a separate model or an automatic global installation. Scientific authority, evidence status and current thesis scope remain unchanged. Lessons 01–11 document written chat passes, not validated physics or independent research competence.
