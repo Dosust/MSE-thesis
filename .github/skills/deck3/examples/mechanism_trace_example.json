@@ -1,0 +1,198 @@
+{
+  "schema": "deck3-mechanism-trace-v1",
+  "figure_id": "S05_candidate_thermal_interface_CONCEPTUAL_FIXTURE",
+  "takeaway": "Two directional thermal interdependency hypotheses require independent interface and evidence qualification.",
+  "science_authority": "project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md; case/equipment choice OPEN",
+  "evidence_status": "CANDIDATE",
+  "assumptions": [
+    "Illustrative block diagram only; no observed thermal cross-system effect assumed.",
+    "No numeric parameter, fitted model, or physical validation asserted."
+  ],
+  "limitations": [
+    "Not a source of external engineering facts.",
+    "Does not demonstrate actual P-to-T_e or T_e-to-P causal thermal propagation.",
+    "The candidate T_e-to-P relationship requires measured grid-side AC input behavior and a Power System response."
+  ],
+  "boundaries": [
+    {
+      "id": "P",
+      "kind": "physical_system",
+      "meaning": "Power System P technical membership, representative components only",
+      "members": [
+        "p_state",
+        "p_constraint",
+        "p_response"
+      ]
+    },
+    {
+      "id": "TE",
+      "kind": "physical_system",
+      "meaning": "Electrified Transportation T_e; full membership defined elsewhere by canonical project scope",
+      "members": [
+        "te_capability",
+        "te_state",
+        "te_constraint"
+      ]
+    },
+    {
+      "id": "INTERFACE",
+      "kind": "active_model",
+      "meaning": "Candidate measured electrical interface quantities; not a third physical network",
+      "members": [
+        "ac_delivery",
+        "ac_input"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "p_state",
+      "boundary": "P",
+      "kind": "thermal_state",
+      "meaning": "Candidate P thermal state, identity and sensor OPEN",
+      "evidence_status": "OPEN"
+    },
+    {
+      "id": "p_constraint",
+      "boundary": "P",
+      "kind": "operating_constraint",
+      "meaning": "Candidate temperature-conditioned limit",
+      "evidence_status": "CANDIDATE"
+    },
+    {
+      "id": "p_response",
+      "boundary": "P",
+      "kind": "state_response",
+      "meaning": "Candidate P load/thermal response",
+      "evidence_status": "OPEN"
+    },
+    {
+      "id": "te_capability",
+      "boundary": "TE",
+      "kind": "functional_capability",
+      "meaning": "T_e conditional charging capability",
+      "evidence_status": "CANDIDATE"
+    },
+    {
+      "id": "te_state",
+      "boundary": "TE",
+      "kind": "thermal_state",
+      "meaning": "T_e thermal state",
+      "evidence_status": "OPEN"
+    },
+    {
+      "id": "te_constraint",
+      "boundary": "TE",
+      "kind": "operating_constraint",
+      "meaning": "Candidate T_e thermally conditioned charge limit",
+      "evidence_status": "CANDIDATE"
+    },
+    {
+      "id": "ac_delivery",
+      "boundary": "INTERFACE",
+      "kind": "interface_transfer",
+      "meaning": "Actual AC delivery, measured variable OPEN",
+      "evidence_status": "OPEN"
+    },
+    {
+      "id": "ac_input",
+      "boundary": "INTERFACE",
+      "kind": "interface_input",
+      "meaning": "Measured grid-side AC charging input behavior OPEN",
+      "evidence_status": "OPEN"
+    }
+  ],
+  "arrows": [
+    {
+      "id": "a1",
+      "from": "p_state",
+      "to": "p_constraint",
+      "type": "constraint_effect",
+      "label": "thermal state → operating limit (candidate)",
+      "carried_quantity": "thermal state influence, value and units OPEN",
+      "direction": "NONE",
+      "interface": "internal P conditional limit",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "P state and protection/operating law required"
+    },
+    {
+      "id": "a2",
+      "from": "p_constraint",
+      "to": "ac_delivery",
+      "type": "constraint_effect",
+      "label": "allowed AC delivery (candidate)",
+      "carried_quantity": "AC power, units OPEN",
+      "direction": "P_TO_TE",
+      "interface": "AC supply/protection",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "Actual AC supply and limit measurement required"
+    },
+    {
+      "id": "a3",
+      "from": "ac_delivery",
+      "to": "te_capability",
+      "type": "state_influence",
+      "label": "charging capability (candidate)",
+      "carried_quantity": "delivered AC power to charging capability, units OPEN",
+      "direction": "P_TO_TE",
+      "interface": "T_e EVSE AC input",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "Receiver capability/service evidence required"
+    },
+    {
+      "id": "a4",
+      "from": "te_state",
+      "to": "te_constraint",
+      "type": "constraint_effect",
+      "label": "T_e heat-conditioned charging limit (candidate)",
+      "carried_quantity": "charging limit, value and units OPEN",
+      "direction": "NONE",
+      "interface": "internal T_e",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "thermal/charging control measurement needed"
+    },
+    {
+      "id": "a5",
+      "from": "te_constraint",
+      "to": "ac_input",
+      "type": "state_influence",
+      "label": "changed grid-side AC input (candidate)",
+      "carried_quantity": "grid-side AC input power, units OPEN",
+      "direction": "TE_TO_P",
+      "interface": "EVSE grid-side AC terminals",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "grid_side_ac input measurement required, not DC output proxy"
+    },
+    {
+      "id": "a6",
+      "from": "ac_input",
+      "to": "p_response",
+      "type": "state_influence",
+      "label": "Power System loading/thermal response (candidate)",
+      "carried_quantity": "AC loading and P thermal state, units OPEN",
+      "direction": "TE_TO_P",
+      "interface": "distribution-grid transformer",
+      "law_or_operator": "OPEN",
+      "evidence_status": "CANDIDATE",
+      "sources": [],
+      "evidence_gate": "grid_side_ac input and P temperature/limit observations needed"
+    }
+  ],
+  "review": {
+    "physics": "OPEN",
+    "labels": "OPEN",
+    "figure": "OPEN",
+    "citations": "OPEN",
+    "animation": "OPEN"
+  }
+}
