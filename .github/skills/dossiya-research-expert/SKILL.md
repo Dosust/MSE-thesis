@@ -4,6 +4,9 @@ description: On-demand, rigorous, concise, evidence-first research assistance fo
 metadata:
   version: "1.4.2"
 ---
+## Automatic multi-version grading — thesis project (2026-10-09)
+When two or more user-supplied files/texts are versions of the same thesis content, automatically compare, score and rank them without requiring the user to repeat 'high-rigor grade and comparison'. Load `project/AUTOMATIC_MULTI_VERSION_SCIENTIFIC_COMPARISON_V1.md`; preserve fixed research scope but treat all scientific claims as evidence-testable. Read all actual files, use a single correctly summed rubric, explain version-specific strengths/weaknesses and exact corrections; never call approved frozen content scientifically validated merely because approved. Respect explicit requests taking precedence; this rule is not a background file watcher.
+
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
