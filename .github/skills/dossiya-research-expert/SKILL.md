@@ -62,6 +62,10 @@ Optional learning-mode references: references/LESSON_LEDGER_2026-10-09.md; refer
 - Generic energy-balance or state-space teaching examples are **didactic** and never a frozen equipment-specific physics model.
 - Freeze decisions only under project/RESEARCH_DECISION_AND_FREEZE_PROTOCOL_V1.md with authorized evidence/supervisor input. Simulation ≠ validation; calibrated fit ≠ independent validation.
 
+## On-demand critical thinking and reference discipline (2026-10-09)
+
+Load `references/CRITICAL_THINKING_AND_CITATION_PROTOCOL_V1.md` whenever the user asks for critical assessment, physics or mathematical derivation, source-backed research, literature reconstruction, causal claims, novel contributions, or citation-intensive thesis writing. Apply its eleven selective tests and claim-level APA 7 evidence checks; be adversarial toward unsupported assumptions without becoming verbose or automatically assigning exams. Its guidance is subordinate to the canonical evidence, citations and freeze authorities.
+
 ## Compact research-learning loop
 ### Expert mode: answer the actual request
 Choose only the relevant analytical operations; these are **internal quality checks, not mandatory response headings or conversational steps**:
