@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.6.0"
+  version: "1.6.1"
   short_name: "Deck3"
 ---
 
@@ -109,6 +109,16 @@ The sole authoritative **13-color authored design palette** is `references/DECK3
 **Authentic imagery.** Realistic photographs and photorealistic physical objects preserve their real observed colors, whether or not present in the 13-color authored-design registry. Do not recolor nature, skin, infrastructure or equipment to obey the annotation palette. Never permit an artificial tinted photo background, posterization or decorative glow under this exception.
 
 **QA and code.** Code generators read exact codes from the JSON; no RGB approximations or library auto-palettes. Audit authored vector/shape/chart styling separately from genuine photograph pixels; automated global photographic pixel rejection is invalid. An ASU template's geometry and type hierarchy may be adopted but colors must be remapped to this registry. Scientific mechanism labels and frozen thesis authority override visual styling. The requirements govern Stage 1, standalone Stage 2 and Stage 3 assembly.
+
+## 1E. Advanced PowerPoint engineering and animation — installed extension
+
+The advanced (source-grounded) implementation specification is `advanced_powerpoint/SKILL.md`, with modules `advanced_powerpoint/references/`, a machine-readable example in `advanced_powerpoint/examples/`, a deterministic geometry/manifest checker, and CI regression tests.
+
+**Use when requested:** `Deck3 native-shapes`, `Deck3 vector-icons`, `Deck3 curved-arrows`, `Deck3 math`, `Deck3 animate`, `Deck3 morph`, `Deck3 chart`, `Deck3 accessibility`, `Deck3 playback-QA`, `Deck3 export`, or `Deck3 advanced all`. These are *design and capability routes*, not blanket claims of implemented production backends. Before asserting any generated native animation or 3D capability, actually build, import and test it.
+
+**Authority:** Every generated or animated shape MUST obey the exact `references/DECK3_SRGB_PALETTE.json` 13-token 8-bit sRGB source of truth (current policy v1.6); all authored canvases/boxes/legends/headers are white. The extension cannot authorize any new color, background fill, thermal causal arrow, model parameter, result, objective, or unverified source. Never duplicate the palette in code. Preserve approved slide text/citations/notes and exact frozen research objectives; presenter-controlled `Appear / OnClick` remains the default requested mode, with no automatic timing, no disappearing prior steps and a progressive-slide fallback. Follow evidence + arrow semantics, accessibility, aspect-ratio and effective figure occupancy gates in this core skill.
+
+**Release distinctions:** `SPECIFIED` and `STRUCTURAL_TEST_PASS` are not `POWERPOINT_PLAYBACK_VERIFIED` or `PHYSICALLY_VALIDATED`. The advanced Python example validates registries and geometry only. Native effects and actual desktop playback require their own evidence. Current 3-stage Deck3 commands remain unchanged unless the user requests an advanced stage.
 
 ## 2. The slide architecture (text versus illustration)
 
@@ -277,6 +287,9 @@ Only `kind=content` with `figure` reserves a figure. A long frozen objective can
 **User response:** provide exact links to verified newly created files; record passes and limitations honestly. Do not say a physical model is validated because image generation, PPTX integrity checks, or numerical code tests passed.
 
 ## 8. Version
+
+1.6.1 — 2026-10-09. Integrates advanced PowerPoint skill as evidence-gated submodule; exact canonical v1.6 sRGB palette remains sole color authority; adds animation, vector, arrow and QA routing without claiming untested backends.
+
 
 1.5.0 — 2026-10-09. Defines exact sRGB hex/8-bit RGB registry, white-background contrast, and canonical palette-file authority for Deck3 authored design.
 
