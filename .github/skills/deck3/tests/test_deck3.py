@@ -81,6 +81,12 @@ class Deck3EndToEndTests(unittest.TestCase):
         self.assertIn(self.data["slides"][1]["message"], text_register(prs)[1])
         self.assertIn(self.data["slides"][2]["bullets"][2], text_register(prs)[2])
         self.assertIn("Test scientific status", notes_register(prs)[1])
+        # Presenter-facing content must never expose authoring metadata labels.
+        visible = [text for slide_text in text_register(prs) for text in slide_text]
+        self.assertNotIn("MAIN MESSAGE", visible)
+        self.assertNotIn("THREE KEY POINTS", visible)
+        self.assertIn("SPECIFIC OBJECTIVES", visible)
+
 
     def test_stage_2_blocks_missing_image(self):
         with self.assertRaises(Blocked):
