@@ -26,7 +26,8 @@
         ".github/skills/deck3/references/WORKFLOW.md",
         ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
         ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
-        ".github/skills/deck3/references/CHAPTER1_13SLIDE_V18_MEDIA_AUDIT_2026-10-09.md"
+        ".github/skills/deck3/references/CHAPTER1_13SLIDE_V18_MEDIA_AUDIT_2026-10-09.md",
+        ".github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md"
       ],
       "scope": "All Deck3 commands, stage gating, release claims; physical AI-image versus native-editable medium selection"
     },
@@ -127,5 +128,17 @@
   "media_routing_authority": ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
   "figure_only_authority": ".github/skills/deck3/references/DECK3_NO_EXPLANATORY_PANELS_IN_IMAGES_V1.md",
   "no_assumed_ai_raster_for_editable_science": true,
-  "asset_integrity_is_not_stage2_scientific_approval": true
+  "asset_integrity_is_not_stage2_scientific_approval": true,
+  "weakness_learning_authority": ".github/skills/deck3/references/DECK3_CROSS_STAGE_WEAKNESS_LEARNING_STANDARD_V1.md",
+  "weakness_learning_gates": [
+    "prior_art_fulltext",
+    "temperature_conditioned_interface",
+    "minimum_equation_laws",
+    "falsifiable_comparators",
+    "VVUQ",
+    "measured_services",
+    "sustainability_two_pathways",
+    "SDG_target_trace",
+    "minimal_native_visuals"
+  ]
 }
