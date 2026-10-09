@@ -6,15 +6,28 @@ license: MIT
 
 # Scientific Diagram Design
 
-## Binding visual-color restrictions for Dossiya thesis designs
+## Mandatory Deck3 v1.6 design palette (13 exact sRGB tokens)
 
-- Scientific canvas and every authored panel/box/header/legend background **must be pure white (#FFFFFF)**; no colored fills, beige/off-white backgrounds, gradients, artificial glows, textures or shadows.
-- **Never use purple, violet, pink or magenta** in designed marks (borders, text, headers, arrows, diagrams, chart series or icons).
-- **Never use designed yellow or gold**; yellow may appear only when an authentic feature of a real/natural depicted object (such as sunlight). Do not use yellow/gold as an annotation color.
-- Authentic colors of photographic/photorealistic objects remain, including vehicles and infrastructure, natural landscapes, vegetation, or sky. This exception is **not** permission for colored presentation blocks, fake color treatments or photo overlays.
-- Only restrained black/charcoal, navy/blue, green or red may distinguish purposeful headings, text, scientific lines, arrows, chart series, outlines and small accents. Maintain readable shape/line-style encoding independent of color.
-- QA must examine styled vector/design elements separately from photographs. Reject visual designs with prohibited authored colors even if diagram physics is correct. Do not erase valid natural pixels simply because their hue resembles a forbidden designed color.
-- If an older palette guide conflicts, these stricter rules override it for the specified work.
+**Canonical source:** `../deck3/references/DECK3_SRGB_PALETTE.json`. For every authored scientific design element (figures, lines, labels, charts, SVG, slides), use **only** the following exact hexadecimal 8-bit sRGB colors:
+
+- ASU Maroon `#8C1D40` (140,29,64): primary headings; **explicit branded exception** to generic magenta-family ban.
+- ASU Gold `#FFC627` (255,198,39): small nonessential accents only; **explicit branded exception** to generic yellow/gold ban.
+- Black `#000000` (0,0,0): scientific body text, equations.
+- White `#FFFFFF` (255,255,255): every authored background, box, panel, header and legend interior.
+- Deep Navy `#12304A` (18,48,74): technical headings and boundaries.
+- Technical Blue `#0072B2` (0,114,178): Power annotations.
+- Slate Blue `#416985` (65,105,133): secondary technical lines.
+- Deep Teal `#006D70` (0,109,112): qualified interface annotations.
+- Cyan-Blue `#087E98` (8,126,152): information and observation.
+- Forest Green `#176B42` (23,107,66): Transportation annotations.
+- Deep Red `#B4232C` (180,35,44): critical state and constraint.
+- Graphite `#555D66` (85,93,102): supporting labels and axes.
+- Bright Turquoise `#6ACEEE` (106,206,238): large, nonessential emphasis only.
+
+**Nothing else in designed marks.** No other purple/violet/pink/magenta, yellow/gold, invented gradients, shadows, texture or tinted fills. All panels and diagram backgrounds pure white; colored marks only for justified text, outlines, direction arrows, chart series or small accents. **ASU Gold and Bright Turquoise fail ordinary foreground contrast on white**: never use as independent essential information or fine text/strokes. Use semantic names, direct labels, markers and line styles.
+
+Real photographs and photorealistic physical objects retain their authentic natural/observed colors, including colors not in the design registry; this does not authorize false-color styling or picture overlays. Distinguish photographic pixels from manually designed elements during review and QA. The Deck3 palette supersedes legacy palette examples or generic bans in this skill.
+
 
 ## Mission
 
