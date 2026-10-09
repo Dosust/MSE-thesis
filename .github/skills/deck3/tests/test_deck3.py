@@ -16,7 +16,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(DIR / "examples"))
 
-from deck3 import Blocked, assemble, figure_records, load_manifest, make_text, main, notes_register, text_register
+from deck3 import Blocked, assemble, figure_records, load_manifest, make_text, main, notes_register, text_register, slot_for, usable_bounds, geometry_share
 
 
 class Deck3EndToEndTests(unittest.TestCase):
@@ -112,7 +112,24 @@ class Deck3EndToEndTests(unittest.TestCase):
                           for slide in final.slides], [0, 1, 1, 0])
         self.assertTrue(all(x["preserved_aspect_ratio"] for x in report["figure_records"]))
         self.assertTrue(self.qa.is_file())
-        self.assertIn("TECHNICAL_PASS", report["status"])
+        self.assertIn("GEOMETRY_PASS", report["status"])
+        self.assertFalse(report["figure_records"][0]["effective_share_verified"])
+        self.assertGreaterEqual(report["figure_records"][0]["placed_picture_share"], .70)
+        self.assertEqual(report["figure_records"][1]["layout_exception"], "LONG_OBJECTIVES_REQUIRES_MANUAL_REVIEW")
+
+    def test_dominant_geometry_for_standard_slides(self):
+        row = self.data["slides"][1]
+        reserved = geometry_share(slot_for(row), usable_bounds(row))
+        self.assertGreaterEqual(reserved, .70)
+        self.assertLessEqual(reserved, .80)
+
+    def test_incompatible_source_aspect_ratio_blocks_assembly(self):
+        self.make_images()
+        Image.new("RGB", (900, 1800), "white").save(
+            self.figure_dir / "figure_02.png")
+        make_text(self.manifest, self.stage)
+        with self.assertRaisesRegex(Blocked, "placed figure share"):
+            assemble(self.manifest, self.stage, self.figure_dir, self.final, self.qa)
 
     def test_all_without_images_exits_with_blocked_status(self):
         code = main(["all", "--manifest", str(self.manifest),

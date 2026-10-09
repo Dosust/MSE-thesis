@@ -104,7 +104,28 @@ def slot_for(row):
         return None
     if row.get("layout", "standard") == "long_objectives":
         return (8.65, 3.25, 4.02, 3.38)
-    return (6.75, 2.83, 5.80, 3.99)
+    return (3.67, 2.05, 8.95, 4.91)
+
+
+def usable_bounds(row):
+    return (.70, 2.05, 11.92, 4.91)
+
+
+def geometry_share(bounds, region):
+    x, y, w, h = bounds
+    rx, ry, rw, rh = region
+    area = max(0, min(x+w, rx+rw)-max(x, rx)) * max(
+        0, min(y+h, ry+rh)-max(y, ry))
+    return area / (rw * rh)
+
+
+def validate_slot(row):
+    slot = slot_for(row)
+    if slot is None or row.get("layout") == "long_objectives":
+        return
+    share = geometry_share(slot, usable_bounds(row))
+    if not .70 <= share <= .80:
+        raise Blocked(f"Figure slot occupancy outside 70–80%: {share:.3f}")
 
 
 def make_text(manifest_path, output_path):
@@ -142,12 +163,15 @@ def make_text(manifest_path, output_path):
             # Only a meaningful content hierarchy label is retained for objectives.
             if long:
                 put(slide, .72, 2.85, 6.6, .26, "SPECIFIC OBJECTIVES", 12, BLUE, True)
-            starts = (3.17, 4.32, 5.48) if long else (3.13, 4.29, 5.45)
+            if figure and not long:
+                validate_slot(row)
+            starts = (3.17, 4.32, 5.48) if long else (
+                (2.23, 3.77, 5.31) if figure else (3.13, 4.29, 5.45))
             for j, (y, bullet) in enumerate(zip(starts, row["bullets"]), 1):
                 put(slide, .75, y+.04, .34, .33, f"{j:02}", 13, BLUE, True)
-                bullet_width = (6.85 if long else 5.25) if figure else 11.1
-                bullet_size = (15.2 if long else 17.8) if figure else (18 if long else 21)
-                put(slide, 1.17, y, bullet_width, .99, bullet, bullet_size, INK)
+                bullet_width = (6.85 if long else 2.37) if figure else 11.1
+                bullet_size = (15.2 if long else 14.3) if figure else (18 if long else 21)
+                put(slide, 1.17, y, bullet_width, 1.37 if figure and not long else .99, bullet, bullet_size, INK)
             if row.get("source_note"):
                 put(slide, .72, 7.04, 11.65, .22, row["source_note"], 10, GRAY)
         put(slide, 12.51, 7.04, .37, .25, f"{n:02}", 9, GRAY)
@@ -224,6 +248,7 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         slide = before.slides[n-1]
         slot = slot_for(data["slides"][n-1])
         x, y, w, h = slot
+        validate_slot(data["slides"][n-1])
         ratio = min(w/rec["width_px"], h/rec["height_px"])
         pw, ph = rec["width_px"]*ratio, rec["height_px"]*ratio
         px, py = x+(w-pw)/2, y+(h-ph)/2
@@ -233,6 +258,22 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         picture.name = f"Deck3 | independent infographic | Slide {n:02}"
         picture._element._nvXxPr.cNvPr.set("descr",rec["alt"])
         rec["geometry_in"] = [round(z, 4) for z in (px, py, pw, ph)]
+        row = data["slides"][n-1]
+        rec["usable_content_bounds_in"] = list(usable_bounds(row))
+        rec["figure_slot_bounds_in"] = list(slot)
+        rec["reserved_share"] = round(geometry_share(slot, usable_bounds(row)), 4)
+        rec["placed_picture_share"] = round(
+            geometry_share((px, py, pw, ph), usable_bounds(row)), 4)
+        rec["effective_meaningful_visual_share"] = None
+        rec["effective_share_verified"] = False
+        rec["layout_exception"] = (
+            "LONG_OBJECTIVES_REQUIRES_MANUAL_REVIEW"
+            if row.get("layout") == "long_objectives" else None)
+        if row.get("layout") != "long_objectives" and not (
+                .70 <= rec["placed_picture_share"] <= .80):
+            raise Blocked(
+                f"Slide {n}: placed figure share {rec['placed_picture_share']:.1%}; "
+                "recompose the figure for the dominant slot aspect ratio.")
         rec["preserved_aspect_ratio"] = abs(pw/ph-rec["width_px"]/rec["height_px"]) < 1e-9
         if not rec["preserved_aspect_ratio"]:
             raise AssertionError(f"Slide {n}: distorted image.")
@@ -255,7 +296,7 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         if archive.testzip() is not None:
             raise AssertionError("PowerPoint ZIP integrity failed.")
     report = {
-        "status": "TECHNICAL_PASS_SCIENTIFIC_REVIEW_AND_RENDER_STILL_REQUIRED",
+        "status": "GEOMETRY_PASS_EFFECTIVE_OCCUPANCY_SCIENCE_AND_RENDER_UNVERIFIED",
         "slides": len(after.slides),
         "source_text_unchanged": True,
         "source_notes_unchanged": True,
@@ -264,13 +305,15 @@ def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
         "manual_required": [
             "Verify figure physics and citation-to-claim mapping",
             "Render EVERY slide and inspect at presentation and thumbnail scale",
-            "Inspect true text bounds, contrast, arrow meanings and reading order"
+            "Inspect true text bounds, contrast, arrow meanings and reading order",
+            "Inspect meaningful nonblank figure coverage; picture bounds alone cannot certify occupancy",
+            "Review dense frozen-objectives slide exceptions at presentation size"
         ],
     }
     if qa_path:
         Path(qa_path).parent.mkdir(parents=True, exist_ok=True)
         Path(qa_path).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"PASS stage 3: {len(after.slides)} slides, {len(records)} figures, exact text/notes retained, {out}")
+    print(f"CHECK stage 3: {len(after.slides)} slides, {len(records)} figures, exact text/notes retained, {out}")
     return report
 
 
