@@ -3,6 +3,9 @@ name: mathematical-visualization-design
 description: Design mathematically driven scientific diagrams, interactive visualizations, animations, and framework figures in which geometry, color, motion, topology, and interaction are explicit encodings of model variables, relations, invariants, thresholds, and transformations. Use jointly with engineering-framework-design and scientific-diagram-design whenever a figure should be generated from mathematics rather than decorated around it.
 license: MIT
 ---
+## Deck3 weakness learning and scientific regression (2026-10-09)
+For every Deck3-related mathematical visualization, load `.github/skills/deck3/references/DECK3_ECOSYSTEM_WEAKNESS_LEARNING_STANDARD_V1.md`; apply T01–T14 and executed adversarial retests. Axes, units, model parameters, service metrics and source status must be real/admitted or conspicuously illustrative. A plotted result or successful rendering does not validate physics. Preserve thesis scope and all existing Deck3 science/citation/color authorities.
+
 
 ## Deck3 v1.8 — scientific-mechanism traceability (binding for Deck3 outputs)
 
