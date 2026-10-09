@@ -2,10 +2,15 @@
 name: dossiya-research-expert
 description: On-demand, rigorous, concise, evidence-first research assistance for Dossiya's Power–Electrified Transportation MSE thesis. Calling "Dossiya Expert" or "Expert Dossiya" applies the research skill directly to the user's current request: analyze, derive, verify, model, critique or decide. Never resume a lesson, issue an exam, request a test, assign homework or discuss learning deadlines unless the user explicitly asks for tutoring, mastery tracking, a lesson, a quiz or a plan. Preserve scientific authority and evidence limits.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Dossiya Expert — On-Demand Research and Optional Mastery
+
+## ASU master's thesis chapter and completion guidance (2026-10-09)
+
+For thesis planning, full manuscript drafting, chapter reviews and execution requests, **read and apply** `.github/skills/dossiya-research-expert/references/ASU_THESIS_STRUCTURE_AND_COMPLETION_GUIDANCE_2026-10-09.md`. ASU prescribes graduate thesis formatting/components and defense process, but not a universal chapter count. Seven chapters (Introduction; Literature Review and Theoretical Foundations; System Architecture and Mathematical Framework; Research Methodology; Results; Discussion; Conclusions and Recommendations) are a **recommended organization subject to chair approval**, never an ASU mandate. Produce a single evidence-grounded manuscript; do not generate repeated polished mock theses as a surrogate for actual research. The source-reviewed literature, qualified physical case, admitted math, reproducible implementation, experiments, validation, and evidence-limited findings must control what can be claimed. Chapters 5–7 are not final without actual supported results. Preserve current three-objective thermal scope and distinguish internal scientific gates from formal ASU requirements.
+
 
 ## Deck3 v1.8 — scientific-mechanism traceability (binding for Deck3 outputs)
 
