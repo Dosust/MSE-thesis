@@ -1,0 +1,112 @@
+{
+  "schema": "deck3-ecosystem-registry-v1",
+  "update_trigger": [
+    "update Deck3",
+    "make update of Deck3",
+    "upgrade Deck3",
+    "Deck3 skills update"
+  ],
+  "contract_path": ".github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT_V1.md",
+  "palette_path": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
+  "palette_tokens": 13,
+  "allow_white_surfaces_only": true,
+  "photo_exception": true,
+  "science_authorities": [
+    "AI_RESEARCH_INSTRUCTIONS.md",
+    "project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md",
+    "project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md",
+    "project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md",
+    "thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md"
+  ],
+  "routes": [
+    {
+      "category": "core_dispatch",
+      "paths": [
+        ".github/skills/deck3/SKILL.md",
+        ".github/skills/deck3/references/WORKFLOW.md"
+      ],
+      "scope": "All Deck3 commands, stage gating, release claims"
+    },
+    {
+      "category": "writing_text",
+      "paths": [
+        ".github/skills/dossiya-writing/SKILL.md"
+      ],
+      "scope": "Native editable slide copy, citations, notes, never expose template headings"
+    },
+    {
+      "category": "research_science",
+      "paths": [
+        ".github/skills/dossiya-research-expert/SKILL.md"
+      ],
+      "scope": "Physical mechanisms, references, GO/SO1–SO3, evidence gates"
+    },
+    {
+      "category": "image_figures",
+      "paths": [
+        ".github/skills/scientific-infographic-design/SKILL.md",
+        ".github/skills/scientific-infographic-design/examples/figures.py",
+        ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
+      ],
+      "scope": "Vector and raster image generation, semantic arrows, real system boundary"
+    },
+    {
+      "category": "scientific_diagrams",
+      "paths": [
+        ".github/skills/scientific-diagram-design/SKILL.md"
+      ],
+      "scope": "Arrow semantics, system composition, orthogonal/curved geometry"
+    },
+    {
+      "category": "math_visual",
+      "paths": [
+        ".github/skills/mathematical-visualization-design/SKILL.md"
+      ],
+      "scope": "Equations, plots, data provenance, state-time diagrams"
+    },
+    {
+      "category": "engineering_framework",
+      "paths": [
+        ".github/skills/engineering-framework-design/SKILL.md"
+      ],
+      "scope": "Physical/system/functional/service boundaries and requirements"
+    },
+    {
+      "category": "powerpoint_advanced",
+      "paths": [
+        ".github/skills/deck3/advanced_powerpoint/SKILL.md"
+      ],
+      "scope": "Native shapes, SVG, math, symbols, motion, animations, export/QA"
+    },
+    {
+      "category": "runtime_assembly",
+      "paths": [
+        ".github/skills/deck3/examples/deck3.py",
+        ".github/skills/deck3/tests/test_deck3.py"
+      ],
+      "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly"
+    },
+    {
+      "category": "tests_ci",
+      "paths": [
+        ".github/workflows/deck3-tests.yml"
+      ],
+      "scope": "Automated cross-skill and color/asset regressions"
+    }
+  ],
+  "release_gates": [
+    "S_scientific_evidence",
+    "W_writing",
+    "C_colors",
+    "F_figures",
+    "A_assembly_animation",
+    "Q_render"
+  ],
+  "updates_must_review_all_routes": true,
+  "never_assume_memory_updated": true,
+  "tests": [
+    "python -m unittest discover -s .github/skills/deck3/tests -v",
+    "python -m unittest discover -s .github/skills/deck3/advanced_powerpoint/tests -v"
+  ],
+  "final_certification_requires_manual_render_science_review": true
+}
