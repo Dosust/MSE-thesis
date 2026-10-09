@@ -1,0 +1,322 @@
+#!/usr/bin/env python3
+"""Deck3: native-text scientific PPTX -> audited independent images -> final PPTX.
+
+Requires python-pptx and Pillow; no web, invented model data, image generation,
+font files, or graphical content embedded in the TEXT stage.
+
+Commands: text | figures (asset audit) | assemble | all.
+Scientific source/physics QA remains the responsibility of the scientific skills.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import sys
+import zipfile
+from pathlib import Path
+
+from PIL import Image
+from pptx import Presentation
+from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pptx.enum.text import MSO_ANCHOR
+from pptx.util import Inches, Pt
+
+WHITE = RGBColor(255, 255, 255)
+INK = RGBColor(20, 26, 37)
+NAVY = RGBColor(17, 47, 81)
+BLUE = RGBColor(35, 95, 156)
+GRAY = RGBColor(72, 80, 92)
+FONT = "Times New Roman"
+WIDTH, HEIGHT = 13.333333, 7.5
+
+
+class Blocked(ValueError):
+    """Required scientific or content input is absent; do not invent substitute."""
+
+
+def load_manifest(path):
+    path = Path(path)
+    data = json.loads(path.read_text(encoding="utf-8"))
+    slides = data.get("slides", [])
+    if not slides:
+        raise Blocked("Manifest must contain a nonempty ordered 'slides' array.")
+    filenames = set()
+    for n, row in enumerate(slides, 1):
+        kind = row.get("kind")
+        if kind not in {"title", "outline", "content", "references"}:
+            raise Blocked(f"Slide {n}: unexpected kind {kind!r}.")
+        if not isinstance(row.get("title"), str) or not row["title"].strip():
+            raise Blocked(f"Slide {n}: missing title.")
+        if kind in {"content", "outline"}:
+            if not row.get("message") or len(row.get("bullets", [])) != 3:
+                raise Blocked(f"Slide {n}: exactly one message and three points required.")
+            if kind == "content" and not row.get("source_note"):
+                raise Blocked(f"Slide {n}: source_note (citation / canonical attribution) required.")
+            if row.get("layout", "standard") not in {"standard", "long_objectives"}:
+                raise Blocked(f"Slide {n}: unsupported layout.")
+        if kind == "references" and not row.get("entries"):
+            raise Blocked(f"Slide {n}: complete reference entries required.")
+        if "figure" in row:
+            if kind != "content":
+                raise Blocked(f"Slide {n}: figure slot only permitted on content slides.")
+            figure = row["figure"]
+            filename = Path(str(figure.get("file", "")))
+            if filename.name != str(figure.get("file", "")) or filename.suffix.lower() != ".png":
+                raise Blocked(f"Slide {n}: figure.file must be one PNG basename.")
+            if not figure.get("alt"):
+                raise Blocked(f"Slide {n}: figure alt text required.")
+            if filename.name in filenames:
+                raise Blocked(f"Slide {n}: duplicate figure filename.")
+            filenames.add(filename.name)
+    for objective in data.get("frozen_strings", []):
+        all_content = "\n".join(str(s.get(k, "")) for s in slides for k in ("title", "message"))
+        all_content += "\n" + "\n".join(x for s in slides for x in s.get("bullets", []))
+        if objective not in all_content:
+            raise Blocked("Frozen objective string not present verbatim: " + str(objective)[:100])
+    return data
+
+
+def put(slide, x, y, width, height, value, size, color=INK, bold=False):
+    shape = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(width), Inches(height))
+    frame = shape.text_frame
+    frame.clear()
+    frame.word_wrap = True
+    frame.vertical_anchor = MSO_ANCHOR.TOP
+    frame.margin_left = Inches(.005)
+    frame.margin_right = Inches(.005)
+    frame.margin_top = Inches(.01)
+    frame.margin_bottom = Inches(.005)
+    p = frame.paragraphs[0]
+    p.text = str(value)
+    p.font.name = FONT
+    p.font.size = Pt(size)
+    p.font.bold = bold
+    p.font.color.rgb = color
+    p.space_after = Pt(0)
+    return shape
+
+
+def slot_for(row):
+    """A reservation in inches; not a drawn placeholder object."""
+    if not row.get("figure"):
+        return None
+    if row.get("layout", "standard") == "long_objectives":
+        return (8.65, 3.25, 4.02, 3.38)
+    return (6.75, 2.83, 5.80, 3.99)
+
+
+def make_text(manifest_path, output_path):
+    data = load_manifest(manifest_path)
+    prs = Presentation()
+    prs.slide_width, prs.slide_height = Inches(WIDTH), Inches(HEIGHT)
+    blank = prs.slide_layouts[6]
+    for n, row in enumerate(data["slides"], 1):
+        slide = prs.slides.add_slide(blank)
+        slide.background.fill.solid()
+        slide.background.fill.fore_color.rgb = WHITE
+        kind = row["kind"]
+        if kind == "title":
+            put(slide, .80, .58, 11.7, .43, data.get("institution", "SCIENTIFIC PRESENTATION"), 16, BLUE, True)
+            put(slide, .80, 1.55, 11.8, 2.4, row["title"], 35, NAVY, True)
+            put(slide, .80, 4.65, 11.7, 1.0, row.get("subtitle", ""), 23, INK)
+        elif kind == "references":
+            put(slide, .75, .45, 11.8, .65, row["title"], 31, NAVY, True)
+            entries = row["entries"]
+            if len(entries) > 9:
+                raise Blocked(f"Slide {n}: too many references; create another references slide.")
+            for i, entry in enumerate(entries):
+                y = 1.42 + i * (5.65 / max(1, len(entries)))
+                put(slide, .81, y, 11.74, 5.05 / max(1, len(entries)),
+                    entry, max(13, 18.0 - .7 * max(0, len(entries) - 4)), INK)
+        else:
+            figure = kind == "content" and bool(row.get("figure"))
+            long = row.get("layout") == "long_objectives"
+            put(slide, .69, .40, 11.95, .65, row["title"], 31, NAVY, True)
+            put(slide, .71, 1.25, 11.9, .28, "MAIN MESSAGE", 12, BLUE, True)
+            put(slide, .71, 1.59, 11.92, 1.12 if long else .98,
+                row["message"], 18 if long else 21, INK)
+            put(slide, .72, 2.85 if long else 2.66, 6.6, .26,
+                "SPECIFIC OBJECTIVES" if long else "THREE KEY POINTS", 12, BLUE, True)
+            starts = (3.17, 4.32, 5.48) if long else (3.13, 4.29, 5.45)
+            for j, (y, bullet) in enumerate(zip(starts, row["bullets"]), 1):
+                put(slide, .75, y+.04, .34, .33, f"{j:02}", 13, BLUE, True)
+                bullet_width = (6.85 if long else 5.25) if figure else 11.1
+                bullet_size = (15.2 if long else 17.8) if figure else (18 if long else 21)
+                put(slide, 1.17, y, bullet_width, .99, bullet, bullet_size, INK)
+            if row.get("source_note"):
+                put(slide, .72, 7.04, 11.65, .22, row["source_note"], 10, GRAY)
+        put(slide, 12.51, 7.04, .37, .25, f"{n:02}", 9, GRAY)
+        try:
+            slide.notes_slide.notes_text_frame.text = row.get("notes", "")
+        except (AttributeError, ValueError):
+            pass
+    out = Path(output_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    prs.save(str(out))
+    reopened = Presentation(str(out))
+    if len(reopened.slides) != len(data["slides"]):
+        raise AssertionError("Slide count changed on save.")
+    for s in reopened.slides:
+        if any(x.shape_type == MSO_SHAPE_TYPE.PICTURE for x in s.shapes):
+            raise AssertionError("A figure leaked into Stage 1.")
+    print(f"PASS stage 1: {len(reopened.slides)} editable text-only slides, white reserved figure regions, {out}")
+    return out
+
+
+def figure_records(data, folder, slide=None):
+    folder = Path(folder)
+    records, missing = [], []
+    for n, row in enumerate(data["slides"], 1):
+        if slide is not None and n != slide:
+            continue
+        if not row.get("figure"):
+            continue
+        filename = row["figure"]["file"]
+        source = folder / filename
+        if not source.is_file():
+            missing.append(f"Slide {n}: {source}")
+            continue
+        if source.suffix.lower() != ".png":
+            raise Blocked(f"Slide {n}: PNG required for reliable PPTX composition.")
+        try:
+            with Image.open(source) as im:
+                im.verify()
+            with Image.open(source) as im:
+                width, height = im.size
+        except Exception as error:
+            raise Blocked(f"Slide {n}: invalid figure PNG {source}: {error}") from error
+        if width < 640 or height < 420:
+            raise Blocked(f"Slide {n}: image below minimum 640×420 pixels.")
+        records.append({
+            "slide": n, "file": filename, "width_px": width, "height_px": height,
+            "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            "alt": row["figure"]["alt"], "status": "ASSET_PRESENT_NOT_PHYSICALLY_VALIDATED",
+        })
+    if missing:
+        raise Blocked("Figure assets required before assembly:\n" + "\n".join(missing))
+    return records
+
+
+def text_register(prs):
+    return [[sh.text for sh in slide.shapes if sh.has_text_frame] for slide in prs.slides]
+
+
+def notes_register(prs):
+    return [s.notes_slide.notes_text_frame.text if s.has_notes_slide else None for s in prs.slides]
+
+
+def assemble(manifest_path, text_pptx, figure_directory, output, qa_path=None):
+    data = load_manifest(manifest_path)
+    records = figure_records(data, figure_directory)
+    before = Presentation(str(text_pptx))
+    if len(before.slides) != len(data["slides"]):
+        raise Blocked("Input text PPTX does not match manifest slide count.")
+    if any(sh.shape_type == MSO_SHAPE_TYPE.PICTURE for s in before.slides for sh in s.shapes):
+        raise Blocked("Assembly input must be the Stage-1 text-only PPTX; image found.")
+    old_text, old_notes = text_register(before), notes_register(before)
+    for rec in records:
+        n = rec["slide"]
+        slide = before.slides[n-1]
+        slot = slot_for(data["slides"][n-1])
+        x, y, w, h = slot
+        ratio = min(w/rec["width_px"], h/rec["height_px"])
+        pw, ph = rec["width_px"]*ratio, rec["height_px"]*ratio
+        px, py = x+(w-pw)/2, y+(h-ph)/2
+        picture = slide.shapes.add_picture(
+            str(Path(figure_directory)/rec["file"]),
+            Inches(px), Inches(py), width=Inches(pw), height=Inches(ph))
+        picture.name = f"Deck3 | independent infographic | Slide {n:02}"
+        picture._element._nvXxPr.cNvPr.set("descr",rec["alt"])
+        rec["geometry_in"] = [round(z, 4) for z in (px, py, pw, ph)]
+        rec["preserved_aspect_ratio"] = abs(pw/ph-rec["width_px"]/rec["height_px"]) < 1e-9
+        if not rec["preserved_aspect_ratio"]:
+            raise AssertionError(f"Slide {n}: distorted image.")
+    out = Path(output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    before.save(str(out))
+    after = Presentation(str(out))
+    if text_register(after) != old_text:
+        raise AssertionError("Text was changed during figure insertion.")
+    if notes_register(after) != old_notes:
+        raise AssertionError("Speaker notes were changed during figure insertion.")
+    for n, slide in enumerate(after.slides, 1):
+        expected = int(bool(data["slides"][n-1].get("figure")))
+        found = sum(sh.shape_type == MSO_SHAPE_TYPE.PICTURE for sh in slide.shapes)
+        if found != expected:
+            raise AssertionError(f"Slide {n}: {found} images; expected {expected}.")
+    if not zipfile.is_zipfile(out):
+        raise AssertionError("Output is not a valid PowerPoint ZIP archive.")
+    with zipfile.ZipFile(out) as archive:
+        if archive.testzip() is not None:
+            raise AssertionError("PowerPoint ZIP integrity failed.")
+    report = {
+        "status": "TECHNICAL_PASS_SCIENTIFIC_REVIEW_AND_RENDER_STILL_REQUIRED",
+        "slides": len(after.slides),
+        "source_text_unchanged": True,
+        "source_notes_unchanged": True,
+        "image_count": len(records),
+        "figure_records": records,
+        "manual_required": [
+            "Verify figure physics and citation-to-claim mapping",
+            "Render EVERY slide and inspect at presentation and thumbnail scale",
+            "Inspect true text bounds, contrast, arrow meanings and reading order"
+        ],
+    }
+    if qa_path:
+        Path(qa_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(qa_path).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"PASS stage 3: {len(after.slides)} slides, {len(records)} figures, exact text/notes retained, {out}")
+    return report
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description="Deck3 scientific presentation workflow")
+    subs = p.add_subparsers(dest="command", required=True)
+    t = subs.add_parser("text", help="Build text PPTX with truly blank figure spaces")
+    t.add_argument("--manifest", required=True)
+    t.add_argument("--out", required=True)
+    f = subs.add_parser("figures", help="Audit existing standalone scientific PNG assets")
+    f.add_argument("--manifest", required=True)
+    f.add_argument("--figures", required=True)
+    f.add_argument("--slide", type=int)
+    f.add_argument("--report")
+    a = subs.add_parser("assemble", help="Insert approved independent images without stretching")
+    a.add_argument("--manifest", required=True)
+    a.add_argument("--text-pptx", required=True)
+    a.add_argument("--figures", required=True)
+    a.add_argument("--out", required=True)
+    a.add_argument("--qa")
+    all_p = subs.add_parser("all", help="Compose all stages; stops when actual image assets are absent")
+    all_p.add_argument("--manifest", required=True)
+    all_p.add_argument("--figures", required=True)
+    all_p.add_argument("--output-dir", required=True)
+    args = p.parse_args(argv)
+    try:
+        if args.command == "text":
+            make_text(args.manifest, args.out)
+        elif args.command == "figures":
+            records = figure_records(load_manifest(args.manifest), args.figures, args.slide)
+            print(f"PASS stage 2 asset audit: {len(records)} independent PNG figures present.")
+            if args.report:
+                Path(args.report).write_text(json.dumps(records, indent=2), encoding="utf-8")
+        elif args.command == "assemble":
+            assemble(args.manifest, args.text_pptx, args.figures, args.out, args.qa)
+        elif args.command == "all":
+            folder = Path(args.output_dir)
+            folder.mkdir(parents=True, exist_ok=True)
+            base = folder / "deck3_stage1_text.pptx"
+            make_text(args.manifest, base)
+            # Explicit stop here when scientifically authored image assets do not exist.
+            figure_records(load_manifest(args.manifest), args.figures)
+            assemble(args.manifest, base, args.figures,
+                     folder / "deck3_final.pptx", folder / "deck3_qa.json")
+    except Blocked as exc:
+        print("BLOCKED: " + str(exc), file=sys.stderr)
+        return 2
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
