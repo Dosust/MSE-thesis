@@ -124,9 +124,9 @@ def qa(path, palette_path=None):
     inv = inspect(path)
     colors = palette_from(palette_path)
     allowed = set(colors.values()) if colors else None
-    problems, checks = [], {}
+    problems, checks = [], {}\n    slide_w, slide_h = inv["width_inches"], inv["height_inches"]\n    bounds = []\n    for slide in inv["slides"]:\n        for shape in slide["shapes"]:\n            if shape["x"] < -0.001 or shape["y"] < -0.001 or shape["x"] + shape["w"] > slide_w + .002 or shape["y"] + shape["h"] > slide_h + .002:\n                bounds.append("slide %s shape %s exceeds slide bounds" % (slide["slide"],shape["id"]))
     checks["slide_count"] = "PASS" if inv["slide_count"] == 13 else "FAIL"
-    checks["native_shape_inventory"] = "PASS"
+    checks["native_shape_inventory"] = "PASS"\n    checks["shape_geometry"] = "FAIL" if bounds else "PASS"\n    problems.extend(bounds)
     checks["omml_presence"] = "PASS" if sum(s["omml_elements"] for s in inv["slides"]) else "NOT_APPLICABLE"\n    checks["equation_fidelity"] = "NOT_RUN"
     with zipfile.ZipFile(path) as z:
         for name in z.namelist():
@@ -142,7 +142,7 @@ def qa(path, palette_path=None):
                         problems.append(name+": unauthorized color "+rgb)
     checks["palette_xml"] = "NOT_RUN" if allowed is None else ("FAIL" if problems else "PASS")
     checks["no_gradients"] = "FAIL" if any("gradient" in x for x in problems) else "PASS"
-    checks["notes_preservation"] = "NOT_RUN"\n    checks["real_render"] = "NOT_RUN"
+    checks["notes_preservation"] = "NOT_RUN"\n    checks["readability"] = "NOT_RUN"\n    checks["real_render"] = "NOT_RUN"
     checks["desktop_playback"] = "NOT_RUN"
     checks["scientific_validation"] = "NOT_RUN"
     return {"checks":checks,"issues":problems,"slide_count":inv["slide_count"],
