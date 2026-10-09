@@ -6,6 +6,10 @@ metadata:
   version: "2.3.0"
 ---
 
+## Deck3 v1.8.1 figure-media routing and fail-closed approval
+
+**Read** `.github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md` for every Deck3 text, figures, image-generation, assemble, and release task. **A scientific diagram is not automatically an AI image.** Use equipment-centered original images only where physical objects matter; use **native editable PowerPoint** for literature/gap matrices, RQ/SO alignment, evidence-gated cross-system pathways, methodological workflows, contribution maps and chapter roadmaps. The strict no-embedded-explanatory-panels rule still applies to all images, and AI-rendered author citations are not evidence. Frozen GO/SO1–SO3 and the actual user-approved slide count must be preserved verbatim; the current 13-slide Chapter 1 baseline remains authoritative unless explicitly changed. **The prior ten AI PNG draft figures are provisional, not approved Stage 2 assets.** Do not use SVG checks, correct output dimensions, or a saved PPTX as a substitute for source review, mechanism trace, figure-only panel inspection, rendered readability, native editing and real animation playback.
+
 ## Deck3 v1.8 — scientific-mechanism traceability (binding for Deck3 outputs)
 
 Read `.github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md` (relative from repository root). Design each relevant figure to show **real components, independently defined physical/model/simulation boundaries, labeled directed interfaces, carried quantities/units or explicit OPEN, physical laws/operator status, observation/control/feedback, and state-time/service consequences**—not generic attractive boxes. Distinguish physical/electrical transport from measured data, estimates, control decisions, simulations and post-model assessments. Require independently evidenced P→T_e and T_e→P candidate mechanism gates; for T_e→P, grid-side AC behavior is a mandatory evidentiary distinction. Shared extreme heat is external forcing, not proof of interdependency. **A curved arrow is not a nonlinear equation**; two directions are two separate claims.
