@@ -3,9 +3,12 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.8.3"
+  version: "1.8.4"
   short_name: "Deck3"
 ---
+## All-forms mathematical typesetting from main.tex (2026-10-09)
+For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
+
 ## Automatic multi-version grading — thesis project (2026-10-09)
 When two or more user-supplied files/texts are versions of the same thesis content, automatically compare, score and rank them without requiring the user to repeat 'high-rigor grade and comparison'. Load `project/AUTOMATIC_MULTI_VERSION_SCIENTIFIC_COMPARISON_V1.md`; preserve fixed research scope but treat all scientific claims as evidence-testable. Read all actual files, use a single correctly summed rubric, explain version-specific strengths/weaknesses and exact corrections; never call approved frozen content scientifically validated merely because approved. Respect explicit requests taking precedence; this rule is not a background file watcher.
 
