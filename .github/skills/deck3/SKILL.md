@@ -3,9 +3,14 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.6.2"
+  version: "1.7.0"
   short_name: "Deck3"
 ---
+
+## Deck3-governed AI scientific image generation (mandatory)
+
+All generated research figures, photorealistic engineering imagery, system diagrams, mathematical visualizations, poster figures and slide illustrations must follow `references/DECK3_AI_IMAGE_GENERATION_STANDARD.md` **before generation and after rendering**. First define authoritative takeaway, physical boundaries, mechanism/directional-arrow semantics, evidence/assumptions, exact 13-color authored palette and legitimate photographic exceptions, white interiors, figure geometry, and text-label requirements. Never let an image generator invent physical evidence, equations, sources or approved objectives. Evaluate generated artwork against scientific (S), human-design (H), colors/geometry (C) and image/integration (I) gates; failed/unverified figures remain PROVISIONAL and may not be certified via simple PPTX assembly. Align all downstream code, figure briefs, prompts and slide production with these requirements.
+
 
 ## Deck3 global-update scope (binding)
 
