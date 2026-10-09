@@ -3,7 +3,7 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
   short_name: "Deck3"
 ---
 
@@ -79,6 +79,20 @@ If the user has already supplied approved text or completed stage artifacts, **r
 - Before Stage 3 release, assert all required images exist, text/notes/citations are unchanged, image aspect ratios preserved, no authoring labels leaked, references complete, and **actual rendered visual occupancy** independently inspected. Report `geometry_share` and `effective_meaningful_visual_share` separately.
 - **A saved PPTX, correct picture count, aspect ratio, static unit tests, or 75% image rectangle never establishes scientific validation or full visual certification.** Mark such outputs `TECHNICAL_ONLY / PROVISIONAL` until a documented final-slide inspection and evidence review pass.
 - Explicitly distinguish changes to the skill, changes to the generator, generated decks and **certified** decks. Never imply an older deck was retroactively updated or certified.
+
+## 1C. Mandatory authentic-color and white-canvas contract (2026-10-09)
+
+Applies to **every Deck3 text slide, figure, final assembly, thumbnail, and source asset**, including photographic / photorealistic engineering figures. Scientific correctness remains the highest priority.
+
+- **Forbidden as designed colors:** purple, violet, magenta and pink, regardless of saturation, including headers, borders, arrows, icons, annotations, legends, graph series and decorative accents. Do not create them as semantic labels either.
+- **Forbidden as designed colors:** yellow and gold (including amber/gold-style accents). Yellow can appear **only when it is an authentic observed/natural color** of the pictured object or scene, such as actual sunlight; a yellow bar, border, icon, heading, diagram panel, artificial glow or chart series is not acceptable.
+- **Absolute white:** full slide background and **every designed box, panel, quadrant, title strip, legend surface, inset and figure canvas interior must be plain #FFFFFF**. No off-white / beige wash, colored transparent washes, shaded headers, gradients, shadows, textures or decorative overlays.
+- **Permitted restrained semantic marks:** charcoal/black, navy/blue, green and red only when justified for headings, strokes, boundaries, large scientifically meaningful arrows, graph lines, text and small accents. Their use never authorizes filled colored panels. Prefer black/navy body text and color-independent encoding (labels, line styles, shape).
+- **Photographic authenticity exception:** objects in genuine photography or photorealistic illustration retain their authentic real-world coloration (e.g., vegetation, solar panels, wires, road markings, vehicle paint, equipment, sky, natural lighting). This is **not** permission to recolor backgrounds, add false color overlays, or depict technical equipment with invented unrealistic colors. Other incidental colors visible in authentic objects are not automatically prohibited.
+- **Scope of QA:** inspect presentation template fills, shapes, vector SVG/PNG overlays, chart styling, generated image headers, legends, borders, icons and composition. A color audit must distinguish **designed geometric styling** from genuine image pixels: an indiscriminate global pixel ban would incorrectly reject naturally colored photographs.
+- **Failure behavior:** regenerate/repair a scientifically correct but color-noncompliant image; do not call a slide approved when prohibited authored styling remains. Preserve frozen words, citations, notes and evidence regardless of palette changes.
+
+**Priority:** this user's explicit authentic-color contract overrides any older examples or sample palettes mentioning purple, violet, pink, magenta, gold, yellow, amber, colored backgrounds or colored panel fills. Examples in prior sections are not exemptions. See scientific-infographic-design and scientific-diagram-design for corresponding checks.
 
 ## 2. The slide architecture (text versus illustration)
 
