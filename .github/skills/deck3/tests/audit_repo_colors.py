@@ -21,9 +21,9 @@ CODE_LOCATIONS = (
 )
 SUFFIXES = {".py", ".css", ".js", ".ts", ".tsx", ".jsx", ".svg", ".html"}
 HEX = re.compile(r"(?<![A-Za-z0-9])#[0-9a-fA-F]{6}(?![A-Za-z0-9])")
-RGB = re.compile(r"\\bRGBColor\\s*\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*\\)")
+RGB = re.compile(r"\bRGBColor\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)")
 # CSS RGB literals, excluding alpha-transparent pixels with a==0; all others must be exact.
-RGBA = re.compile(r"\\brgba?\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*(?:,\\s*([0-9.]+)\\s*)?\\)")
+RGBA = re.compile(r"\brgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([0-9.]+)\s*)?\)")
 
 
 def audit():
