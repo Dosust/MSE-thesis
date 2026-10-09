@@ -3,7 +3,7 @@ name: scientific-infographic-design
 description: Convert scientific claims, presentations, chapter introductions, research problems, literature comparisons, and evidence-grounded engineering content into original, accessible, editable infographics. Select the correct visual family, declare system and model boundaries, register meaningful arrows and evidence status, keep adjacent scientific citations, and run scientific, visual, accessibility, and PowerPoint QA. Use for science-presentation infographic redesign, graphical abstracts, mechanism figures, comparison matrices, research workflows, and cited thesis slides; defer formal framework semantics to engineering-framework-design and diagram grammar to scientific-diagram-design.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 > **Presentation orchestration shortcut:** For a three-stage PPTX task use `Deck3 text`, `Deck3 figures`, `Deck3 assemble`, or `Deck3 all` via `../deck3/SKILL.md`. This scientific-infographic skill remains authoritative for **scientific figure meaning, scene registers and figure QA**, while Deck3 manages stage dispatch, reserved blank spaces and lossless assembly. A standalone infographic is not a screenshot of the entire PowerPoint slide.
@@ -24,6 +24,18 @@ For this repository, always read in order:
 5. relevant frozen scientific scope/system/definition/objective files.
 
 Never change the thesis title, frozen objective wording, full Electrified Transportation System composition, or extreme-heat thermal-only scope when simplifying graphics. A model subset is not the full system definition.
+
+## 0A. Dominant figure scale on Deck3 slides — current user rule
+
+When this infographic skill is used for an **eligible Deck3 figure-bearing slide**, the standalone scientific figure must be designed for approximately **75% of the usable below-title content region** (70–80% acceptance band with verified readability and truthful layout). See `../deck3/SKILL.md` §2A for the exact denominator, meaningful-content occupancy, exemptions and rejection rules.
+
+- Compose for the **actual final PPTX slot aspect ratio**, not arbitrary landscape proportions; keep the artwork scientifically minimal but make core mechanisms, labels, equations and large directional arrows **readable at presentation size**.
+- Figures remain **standalone assets** and must **not** absorb/replace the editable slide title, approved main message, exactly three native slide points or visible scientific source credits merely because the graphic is larger.
+- Strict white canvas and white box interiors. Restrained color only for semantic arrows, borders, headings, line series and small accents. Do not use colored/gray fills, decorative gradients or shadows.
+- Occupancy is not a pretext to invent extra states, causal arrows, temperature limits, output curves, literature evidence or decorative icons. Shared forcing is not interdependency; an unqualified candidate must never appear validated.
+- A figure failing scientific integrity or projection legibility **fails regardless of spatial share**. White filler margins or image-container dimensions alone cannot be counted as meaningfully occupied infographic area.
+- Text-intensive frozen objectives require a valid text-only/companion layout when 75% occupancy would destroy legibility; do not paraphrase exact objective wording as a figure.
+- **Implementation note:** legacy `deck3.py` slots do not yet meet this rule; do not claim assembled occupancy validation until geometry and tests have been updated or independently verified.
 
 ## 1. Peer-reviewed design evidence
 
