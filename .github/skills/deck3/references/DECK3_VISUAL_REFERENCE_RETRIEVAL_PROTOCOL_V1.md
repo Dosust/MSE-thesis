@@ -19,6 +19,9 @@ Use **Times New Roman** for ALL authored written content in Deck3: visible slide
 - **Brand and palette:** ASU publishes branded presentation templates; access may require an ASU account. Retain the existing 13-color Deck3 governance, pure-white slide/panel interiors, and its institutional-only ASU gold exception. Do not invent institutional approval of a custom Deck3 color theme.
 - **Release gates:** assert exact slide dimensions programmatically; check all images/figures are 16:9-compatible at placement and any external photographs preserve aspect ratio; verify run-level Times New Roman and font sizes, adequate text contrast, bounding-box collision-free geometry, 1920×1080 export geometry when requested, and PowerPoint animation after final layout. Flag FAIL/OPEN/NOT_RUN truthfully; do not claim actual slideshow playback from PDF rendering.
 
+## Required minimal-science design gate
+For each candidate selection also read `.github/skills/deck3/references/DECK3_SCIENTIFIC_MINIMAL_INFOGRAPHIC_STANDARD_V1.md`. Use the least complex scientifically adequate design; perform G0–G7 non-compensatory tests and reject invented claims or misleading arrows.
+
 ## Mandatory execution
 1. Resolve source-of-truth 14-slide chapter text and its exact GO/SO1–SO3. Infographics on Slides **3–12** only; no infographic on 1, 2, 13, 14.
 2. Read `samples_160.csv`. Filter `slide` for the current target and compare its 16 entries. Do **not** call all 160 existing verified artworks: these are design briefs, and all asset reuse rights are NOT_CLEARED.

@@ -4,6 +4,10 @@ description: Design mathematically driven scientific diagrams, interactive visua
 license: MIT
 ---
 
+## Deck3 scientific minimal infographic generation — mandatory
+For any Deck3 visual, figure, image-generation brief, infographic, animation, source selection, scientific QA, text-rendering or PowerPoint work, first apply `.github/skills/deck3/references/DECK3_SCIENTIFIC_MINIMAL_INFOGRAPHIC_STANDARD_V1.md` in addition to existing relevant domain authorities. This is a cross-skill reference rule, not permission to override frozen science. Simplicity, correctly typed arrows, qualified evidence, native editability, Times New Roman, 16:9 and approved color governance are all release gates.
+
+
 ## Physics-adapted conceptual-framework competency — 2026-10-10
 Mandatory companion: `project/CONCEPTUAL_FRAMEWORK_CAUSAL_QUALIFICATION_APPLICATION_V1.md`; design/check protocol: `.github/skills/deck3/references/CONCEPTUAL_FRAMEWORK_PHYSICS_TRAINING_V1.md`. The uploaded generic conceptual-framework guidance is a methodological aid, **not** an amendment to frozen scientific authorities. Use constitutive laws, units, state-time dynamics, threshold events and model-identification assumptions before plots; statistical adjustment requires a separate justified causal estimand, not automatic controls. Keep all established Deck3 14-slide, Times New Roman, 16:9, approved 13-color, white-interior, citation and provenance rules. Reject any conflict with current thesis authority and record it as resolved or OPEN.
 
