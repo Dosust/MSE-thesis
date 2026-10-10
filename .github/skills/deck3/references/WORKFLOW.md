@@ -1,4 +1,7 @@
 
+## Universal Times New Roman and approved-theme typography (2026-10-10)
+For all Deck3 scientific figures, 160-sample references, AI image prompts, native PPTX, animation, exported graphics and QA, load `.github/skills/deck3/references/DECK3_UNIVERSAL_TYPOGRAPHY_V1.md`. All authored text and mathematical/engineering labels use Times New Roman; avoid raster-embedded lettering in AI scenes; enforce all 13 exact Deck3 sRGB colors in explicit shapes AND theme defaults; preserve white interiors and licensed photo colors. Do not claim AI image font or actual animation playback checked without inspection.
+
 ## Mandatory 160-sample visual reference retrieval (2026-10-10)
 For all Deck3 All Forms, scientific image generation, source-inspired figures, one-slide design, native animated PowerPoint, review and release, load `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md`. The 160 records are **design briefs**, not approved images; resolve collection files on branch `research/deck3-160-visual-reference-samples-20261010` until PR #72 is merged; filter 16 candidates for each infographic slide 3–12, qualify source rights and conditional physics, record sample IDs, and fail closed for unsupported reuse. This supplements the external-source standard and palette.
 
