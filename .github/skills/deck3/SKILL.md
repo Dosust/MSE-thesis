@@ -6,6 +6,9 @@ metadata:
   version: "1.8.4"
   short_name: "Deck3"
 ---
+## ASU 16:9 projection format is mandatory (2026-10-10)
+For every Deck3 writing, figure, AI-generated image, native PPTX slide, animated infographic, export and QA, read `.github/skills/deck3/references/DECK3_ASU_16_9_PROJECTION_STANDARD_V1.md`. Mandatory 16:9 widescreen (13 1/3 × 7.5 in; raster preview 1920×1080 or higher exact ratio), Times New Roman everywhere in authored text, body 24 pt projection readability target with independently documented citation/math/reference exceptions, exact canonical 13-color white-surface palette and real rendered-slide QA. The official ASU presentation page recommends 16:9; do not falsely attribute 24 pt or Times New Roman to that ASU page. Never silently convert to 4:3.
+
 ## Universal Times New Roman and approved-theme typography (2026-10-10)
 For all Deck3 scientific figures, 160-sample references, AI image prompts, native PPTX, animation, exported graphics and QA, load `.github/skills/deck3/references/DECK3_UNIVERSAL_TYPOGRAPHY_V1.md`. All authored text and mathematical/engineering labels use Times New Roman; avoid raster-embedded lettering in AI scenes; enforce all 13 exact Deck3 sRGB colors in explicit shapes AND theme defaults; preserve white interiors and licensed photo colors. Do not claim AI image font or actual animation playback checked without inspection.
 
