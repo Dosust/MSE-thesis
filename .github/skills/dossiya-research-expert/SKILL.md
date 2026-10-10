@@ -4,6 +4,10 @@ description: On-demand, rigorous, concise, evidence-first research assistance fo
 metadata:
   version: "1.4.4"
 ---
+## Mandatory external visual sourcing and adaptation (2026-10-10)
+For every Deck3 All Forms / Dossiya Expert Research figure, AI image, source-inspired diagram, native PPTX, animation and release workflow, read `.github/skills/deck3/references/DECK3_EXTERNAL_VISUAL_SOURCE_ADAPTATION_STANDARD_V1.md`. Use existing scientific diagrams/photos to understand and ground mechanisms; distinguish REFERENCE_ONLY, ADAPTED_REDRAWN, DIRECT_REUSE_LICENSED, INSPIRATION_ONLY and BLOCKED. Do not copy journal figures without reuse rights. Original thesis-specific designs must preserve exact Deck3 palette, real ports and quantities, evidence-qualified arrows, native-editable equations/citations, 40-entry traceability, current 14-slide baseline and articles-only references. Record source/license/attribution QA and actual playback status; source citation is not reproduction permission.
+
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 
