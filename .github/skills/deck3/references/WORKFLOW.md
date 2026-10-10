@@ -1,4 +1,7 @@
 
+## ASU widescreen rule (2026-10-10)
+Read `.github/skills/deck3/references/DECK3_ASU_16_9_PROJECTION_STANDARD_V1.md` for all Deck3 authoring and QA. Preserve 16:9 widescreen at 13 1/3 by 7.5 inches; produce 1920×1080 projection previews; use Times New Roman and exact Deck3 13-color policy. Use 24-point ordinary body as a project readability target; audit and document unavoidable reference or technical-label exceptions. Test rendering and animation independently.
+
 ## Universal Times New Roman and approved-theme typography (2026-10-10)
 For all Deck3 scientific figures, 160-sample references, AI image prompts, native PPTX, animation, exported graphics and QA, load `.github/skills/deck3/references/DECK3_UNIVERSAL_TYPOGRAPHY_V1.md`. All authored text and mathematical/engineering labels use Times New Roman; avoid raster-embedded lettering in AI scenes; enforce all 13 exact Deck3 sRGB colors in explicit shapes AND theme defaults; preserve white interiors and licensed photo colors. Do not claim AI image font or actual animation playback checked without inspection.
 
