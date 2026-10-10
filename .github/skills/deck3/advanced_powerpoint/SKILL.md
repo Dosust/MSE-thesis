@@ -6,6 +6,10 @@ short_name: deck3-advanced
 purpose: Scientific native PowerPoint engineering, vector geometry, accessible animation, math, evidence-first diagrams, and verified delivery as an additive extension of the existing Deck3 skill.
 ---
 
+## Physics-adapted conceptual-framework competency — 2026-10-10
+Mandatory companion: `project/CONCEPTUAL_FRAMEWORK_CAUSAL_QUALIFICATION_APPLICATION_V1.md`; design/check protocol: `.github/skills/deck3/references/CONCEPTUAL_FRAMEWORK_PHYSICS_TRAINING_V1.md`. The uploaded generic conceptual-framework guidance is a methodological aid, **not** an amendment to frozen scientific authorities. Animate the declared physical and methodological relationships, not automatically assumed X→Y causality. Reveal system/state/constraint/port/service in order and keep all changes native and editable; 16:9 Times New Roman palette QA still applies. Keep all established Deck3 14-slide, Times New Roman, 16:9, approved 13-color, white-interior, citation and provenance rules. Reject any conflict with current thesis authority and record it as resolved or OPEN.
+
+
 ## Shared visual reference retrieval — 2026-10-10
 **Shared 160-sample retrieval (2026-10-10):** For Deck3 visual design, source search, AI-assisted imagery, native PPTX and animations, first read `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and filter `project/deck3_visual_reference_collection/samples_160.csv` by slide. These 160 rows are *design briefs*, not individually verified source figures. Apply the protocol's asset-rights, physical-evidence and actual playback gates; report OPEN/NOT_RUN honestly.
 

@@ -4,6 +4,10 @@ description: Design, generate, audit, and improve rigorous resource-grounded sci
 license: MIT
 ---
 
+## Physics-adapted conceptual-framework competency — 2026-10-10
+Mandatory companion: `project/CONCEPTUAL_FRAMEWORK_CAUSAL_QUALIFICATION_APPLICATION_V1.md`; design/check protocol: `.github/skills/deck3/references/CONCEPTUAL_FRAMEWORK_PHYSICS_TRAINING_V1.md`. The uploaded generic conceptual-framework guidance is a methodological aid, **not** an amendment to frozen scientific authorities. Separate conceptual hypothesis edges, physical conservation paths, electrical AC ports, heat transfer, controls and observations using declared arrow semantics; depict unknown relationships conditionally. Keep all established Deck3 14-slide, Times New Roman, 16:9, approved 13-color, white-interior, citation and provenance rules. Reject any conflict with current thesis authority and record it as resolved or OPEN.
+
+
 ## Shared visual reference retrieval — 2026-10-10
 **Shared 160-sample retrieval (2026-10-10):** For Deck3 visual design, source search, AI-assisted imagery, native PPTX and animations, first read `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and filter `project/deck3_visual_reference_collection/samples_160.csv` by slide. These 160 rows are *design briefs*, not individually verified source figures. Apply the protocol's asset-rights, physical-evidence and actual playback gates; report OPEN/NOT_RUN honestly.
 
