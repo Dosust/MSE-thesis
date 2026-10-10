@@ -6,6 +6,18 @@ metadata:
   version: "1.8.4"
   short_name: "Deck3"
 ---
+
+## Shared visual reference retrieval — 2026-10-10
+**Shared 160-sample retrieval (2026-10-10):** For Deck3 visual design, source search, AI-assisted imagery, native PPTX and animations, first read `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and filter `project/deck3_visual_reference_collection/samples_160.csv` by slide. These 160 rows are *design briefs*, not individually verified source figures. Apply the protocol's asset-rights, physical-evidence and actual playback gates; report OPEN/NOT_RUN honestly.
+
+
+## Chapter 1 14-slide update — 2026-10-10
+**Chapter 1 new working slide version (2026-10-10):** For `Deck3 all`, text, figures, assembly and QA, use `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md` as the slide-sequence/citation contract, informed by the user-supplied full text `Pasted text(20261010-032735).txt`. There are **14 slides**: 13 presentation slides plus Slide 14 containing five peer-reviewed journal references only. Keep citations adjacent to supported claims; do not attach journal citations to original RQs, objectives, IEEE feeder selections or thesis-derived equations. Figures belong only on Slides 3–12. Preserve verbatim GO/SO1–SO3, notes and source-authoritative wording; explicit full-text comparison is required before freezing a new PPTX. Apply existing palette, zero-collision, 40-entry, causal and VVUQ gates.
+
+
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 13-slide micro-rule (2026-10-10):** Preserve source-authoritative Chapter 1 text, notes, citations and frozen GO/SO1–SO3. Slides 1, 2 and 13 require no infographic; give Slides 3–12 one distinct mechanism/purpose-led figure each, with minimal labels and native/editable precision layers. Audit exact 13-color `references/DECK3_SRGB_PALETTE.json`: white canvas/interiors, no authored gradients, colored panels or shadows; authentic equipment pixels retain their natural colors. Distinguish common heat from transmitted effects and P→T_e from T_e→P. Never invent temperatures, plots, performance or physical causality. Measure image/text intersections before release (required zero), verify all source strings/notes, and mark real animation/playback NOT_RUN unless tested.
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 

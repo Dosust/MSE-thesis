@@ -4,6 +4,14 @@ description: Design, audit, visualize, and improve rigorous resource-grounded sc
 license: MIT
 ---
 
+## Shared visual reference retrieval — 2026-10-10
+**Shared 160-sample retrieval (2026-10-10):** For Deck3 visual design, source search, AI-assisted imagery, native PPTX and animations, first read `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and filter `project/deck3_visual_reference_collection/samples_160.csv` by slide. These 160 rows are *design briefs*, not individually verified source figures. Apply the protocol's asset-rights, physical-evidence and actual playback gates; report OPEN/NOT_RUN honestly.
+
+
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 architecture micro-rule (2026-10-10):** A diagram object must denote a real component, control volume, system boundary, observable, service or research stage. Each arrow requires source, destination, quantity/type/direction and evidence status; thermal, electrical, control, observation and workflow arrows must not be conflated. For Slides 3–12 match each figure to its single scientific question, distinguish full P/T_e systems from the transformer–AC–EVSE–vehicle active case, and minimize visual elements. Use exact Deck3 palette and white interiors; no dummy data.
+
+
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
 

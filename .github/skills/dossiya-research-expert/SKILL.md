@@ -4,6 +4,18 @@ description: On-demand, rigorous, concise, evidence-first research assistance fo
 metadata:
   version: "1.4.4"
 ---
+
+## Shared visual reference retrieval — 2026-10-10
+**Shared 160-sample retrieval (2026-10-10):** For Deck3 visual design, source search, AI-assisted imagery, native PPTX and animations, first read `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and filter `project/deck3_visual_reference_collection/samples_160.csv` by slide. These 160 rows are *design briefs*, not individually verified source figures. Apply the protocol's asset-rights, physical-evidence and actual playback gates; report OPEN/NOT_RUN honestly.
+
+
+## Chapter 1 14-slide update — 2026-10-10
+**Chapter 1 revised scientific authority (2026-10-10):** Interpret the user-supplied 14-slide presentation via `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md`. Distinguish external peer-reviewed findings (five cited journal articles) from user-originated RQs, exact GO/SO1–SO3, proposed hybrid equations, the 40 candidate records, IEEE 13-node verification and IEEE 123-node primary benchmark. Claims about charger thermal derating must remain study-specific; shared heat is not directional causality. Keep equipment configuration, B0/B1 results, calibration and physical validation OPEN/NOT_RUN until independently evidenced. Original scientific-governance files outrank slide rhetoric.
+
+
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 scientific micro-rule (2026-10-10):** Audit each of Slides 3–12 for one falsifiable message and a traceable component/function/interface/time/service chain. Distinguish observed physics, proposed directional thermal mechanisms and OPEN parameters; shared extreme heat or electrical connectivity does not prove thermal causality. Preserve the complete 19 P + 21 T_e candidate-class register while acknowledging fewer active devices/states. IEEE 13-node is the approved development reference, IEEE 123-node the main study reference; neither validates thermal physics. Do not infer synthetic plots, equipment derating or VVUQ PASS.
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 
