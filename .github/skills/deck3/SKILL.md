@@ -6,6 +6,10 @@ metadata:
   version: "1.8.4"
   short_name: "Deck3"
 ---
+## Mandatory 160-sample visual reference retrieval (2026-10-10)
+For all Deck3 All Forms, scientific image generation, source-inspired figures, one-slide design, native animated PowerPoint, review and release, load `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md`. The 160 records are **design briefs**, not approved images; resolve collection files on branch `research/deck3-160-visual-reference-samples-20261010` until PR #72 is merged; filter 16 candidates for each infographic slide 3–12, qualify source rights and conditional physics, record sample IDs, and fail closed for unsupported reuse. This supplements the external-source standard and palette.
+
+
 ## Mandatory external visual sourcing and adaptation (2026-10-10)
 For every Deck3 All Forms / Dossiya Expert Research figure, AI image, source-inspired diagram, native PPTX, animation and release workflow, read `.github/skills/deck3/references/DECK3_EXTERNAL_VISUAL_SOURCE_ADAPTATION_STANDARD_V1.md`. Use existing scientific diagrams/photos to understand and ground mechanisms; distinguish REFERENCE_ONLY, ADAPTED_REDRAWN, DIRECT_REUSE_LICENSED, INSPIRATION_ONLY and BLOCKED. Do not copy journal figures without reuse rights. Original thesis-specific designs must preserve exact Deck3 palette, real ports and quantities, evidence-qualified arrows, native-editable equations/citations, 40-entry traceability, current 14-slide baseline and articles-only references. Record source/license/attribution QA and actual playback status; source citation is not reproduction permission.
 
