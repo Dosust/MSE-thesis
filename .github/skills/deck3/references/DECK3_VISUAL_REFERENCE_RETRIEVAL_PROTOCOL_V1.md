@@ -8,6 +8,9 @@ Applies: Deck3 All Forms, Dossiya Research Expert, AI image briefs, advanced nat
 - `project/deck3_visual_reference_collection/README.md`
 - `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md`
 
+## Mandatory typography and palette contract (2026-10-10)
+Use **Times New Roman** for ALL authored written content in Deck3: visible slide titles/body/captions/citations, native diagram and chart text, native editable animation layers, labels/equations where text-font applies, and text inside any newly generated AI infographic. Best practice: generate equipment-only AI scenes with NO embedded text, then place every annotation as a native Times New Roman PowerPoint text object. Never claim to change font inside a flattened raster by adjusting PPTX text runs; regenerate or reconstruct that asset. Apply the exact approved 13 sRGB colors to all authored marks, and pure #FFFFFF to all canvas/box/panel interiors; no decorative fills, gradients, or shadows. Natural authentic equipment-image pixels are exempt from palette quantization. Preserve citations, correct math typography, and source text. Audit actual rendered slides, embedded images separately, and all editable text-font runs before release; animations must retain matching TNR typography throughout reveals.
+
 ## Mandatory execution
 1. Resolve source-of-truth 14-slide chapter text and its exact GO/SO1–SO3. Infographics on Slides **3–12** only; no infographic on 1, 2, 13, 14.
 2. Read `samples_160.csv`. Filter `slide` for the current target and compare its 16 entries. Do **not** call all 160 existing verified artworks: these are design briefs, and all asset reuse rights are NOT_CLEARED.
