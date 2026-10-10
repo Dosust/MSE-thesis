@@ -1,3 +1,6 @@
+
+## Deck3 ASU 16:9 projection governance (2026-10-10)
+When producing any Deck3 figure, AI image brief, animated PowerPoint, thesis presentation text or reviewing layout, apply `.github/skills/deck3/references/DECK3_ASU_16_9_PROJECTION_STANDARD_V1.md`. Require 16:9 widescreen, Times New Roman, exact 13-color palette, white surfaces and projection readability checks. Ordinary body text 24pt is a project target with audited technical/citation exceptions, not an ASU-sourced minimum. Distinguish rendering checks from actual desktop animation playback.
 ---
 name: dossiya-research-expert
 description: On-demand, rigorous, concise, evidence-first research assistance for Dossiya's Power–Electrified Transportation MSE thesis. Calling "Dossiya Expert" or "Expert Dossiya" applies the research skill directly to the user's current request: analyze, derive, verify, model, critique or decide. Never resume a lesson, issue an exam, request a test, assign homework or discuss learning deadlines unless the user explicitly asks for tutoring, mastery tracking, a lesson, a quiz or a plan. Preserve scientific authority and evidence limits.
