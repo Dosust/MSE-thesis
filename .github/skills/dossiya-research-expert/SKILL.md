@@ -4,6 +4,10 @@ description: On-demand, rigorous, concise, evidence-first research assistance fo
 metadata:
   version: "1.4.4"
 ---
+
+## Chapter 1 14-slide update — 2026-10-10
+**Chapter 1 revised scientific authority (2026-10-10):** Interpret the user-supplied 14-slide presentation via `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md`. Distinguish external peer-reviewed findings (five cited journal articles) from user-originated RQs, exact GO/SO1–SO3, proposed hybrid equations, the 40 candidate records, IEEE 13-node verification and IEEE 123-node primary benchmark. Claims about charger thermal derating must remain study-specific; shared heat is not directional causality. Keep equipment configuration, B0/B1 results, calibration and physical validation OPEN/NOT_RUN until independently evidenced. Original scientific-governance files outrank slide rhetoric.
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 

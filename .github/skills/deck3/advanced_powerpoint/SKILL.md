@@ -6,6 +6,10 @@ short_name: deck3-advanced
 purpose: Scientific native PowerPoint engineering, vector geometry, accessible animation, math, evidence-first diagrams, and verified delivery as an additive extension of the existing Deck3 skill.
 ---
 
+## Chapter 1 14-slide update — 2026-10-10
+**Chapter 1 revised animated PPTX contract (2026-10-10):** Read `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md` before native composition/animation. Build 14 slides, with 10 independently meaningful image/native figures on Slides 3–12 and no infographics on 1/2/13/14. Slide 14 must be a readable, editable five-journal-reference list, not a figure. Keep in-slide author–year citations visible beside supported evidence. Use collision-free text/figure zones, native editable arrows/equations, presenter-controlled scientific reveals; test timing XML and actual playback separately. No hypothetical curves or AI images can be labelled validated data.
+
+
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
 

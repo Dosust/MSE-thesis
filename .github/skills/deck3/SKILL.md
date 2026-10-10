@@ -6,6 +6,10 @@ metadata:
   version: "1.8.4"
   short_name: "Deck3"
 ---
+
+## Chapter 1 14-slide update — 2026-10-10
+**Chapter 1 new working slide version (2026-10-10):** For `Deck3 all`, text, figures, assembly and QA, use `.github/skills/deck3/references/CHAPTER1_14_SLIDE_WORKING_REVISION_2026-10-10.md` as the slide-sequence/citation contract, informed by the user-supplied full text `Pasted text(20261010-032735).txt`. There are **14 slides**: 13 presentation slides plus Slide 14 containing five peer-reviewed journal references only. Keep citations adjacent to supported claims; do not attach journal citations to original RQs, objectives, IEEE feeder selections or thesis-derived equations. Figures belong only on Slides 3–12. Preserve verbatim GO/SO1–SO3, notes and source-authoritative wording; explicit full-text comparison is required before freezing a new PPTX. Apply existing palette, zero-collision, 40-entry, causal and VVUQ gates.
+
 ## All-forms mathematical typesetting from main.tex (2026-10-09)
 For any Deck3 mathematical writing, equation extraction, mathematical diagram, slide creation, image/figure, assembly, animation, export or QA, read `.github/skills/deck3/references/LATEX_TO_POWERPOINT_MATH_V1.md`. Treat inspected `main.tex` and included sources as canonical when available. Prefer *actual native OMML Office Math equations* in PPTX; use LaTeX/Presentation MathML conversions only within verified Microsoft 365 support. Fallback SVG/PDF remains scalable but not native-editable equation math; never put source or important equations inside AI images. Keep exact source labels and the equation manifest, check physical dimensions/meaning independently from rendering, and record true OMML, projected render and in-app editing/playback checks as PASS/FAIL/NOT_RUN. No automatic inference of scientific validation from equation conversion.
 
