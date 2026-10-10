@@ -1,4 +1,7 @@
 
+## New 200 compact science design candidates
+Consult `project/deck3_visual_reference_collection/new_200_scientific_simplification_briefs_v1.csv` and its `NEW_200_SCIENTIFIC_BRIEFS_GOVERNANCE_V1.md` for Deck3 slides 3–12 alongside existing 160. The 200 entries are candidate briefs, not approved or rendered images. Reject unsupported arrows; retain text/citations editable, minimal visual scope and all existing thesis visual rules.
+
 ## Canonical 14-slide Chapter 1 text (2026-10-10)
 For Deck3 content, diagrams, animation and QA, load `thesis/presentations/deck3/DECK3_CHAPTER1_14SLIDES_CANONICAL_TEXT_V1.md`. Preserve exact slide copy and frozen objectives; treat scientific hypotheses and model results as OPEN until verified. Apply 16:9, Times New Roman, exact 13 colors and the separate mechanism/source/playback gates.
 
