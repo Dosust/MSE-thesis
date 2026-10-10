@@ -1,3 +1,7 @@
+
+## Mandatory external visual sourcing and adaptation (2026-10-10)
+For every Deck3 All Forms / Dossiya Expert Research figure, AI image, source-inspired diagram, native PPTX, animation and release workflow, read `.github/skills/deck3/references/DECK3_EXTERNAL_VISUAL_SOURCE_ADAPTATION_STANDARD_V1.md`. Use existing scientific diagrams/photos to understand and ground mechanisms; distinguish REFERENCE_ONLY, ADAPTED_REDRAWN, DIRECT_REUSE_LICENSED, INSPIRATION_ONLY and BLOCKED. Do not copy journal figures without reuse rights. Original thesis-specific designs must preserve exact Deck3 palette, real ports and quantities, evidence-qualified arrows, native-editable equations/citations, 40-entry traceability, current 14-slide baseline and articles-only references. Record source/license/attribution QA and actual playback status; source citation is not reproduction permission.
+
 # Deck3 — Three-stage scientific slide workflow
 
 ## Unified short-prompt agent (2026-10-09)
