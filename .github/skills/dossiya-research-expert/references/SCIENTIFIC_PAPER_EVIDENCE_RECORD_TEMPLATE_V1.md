@@ -68,3 +68,19 @@
 - Claim ceiling:
 - Evidence reviewer/date:
 - Open technical issues:
+
+
+## 9. Equation extraction and adaptive answer-level supplement (2026-10-10)
+Apply `AUTOMATIC_EQUATION_EXTRACTION_AND_RESPONSE_LEVELS_V1.md` for `EX0–EX4` source-equation fidelity and `AR0–AR3` response depth, kept independent.
+- Requested output level and explicit word limit:
+- Exact primary source version / author PDF / DOI / corrected version:
+- Full-text access vs per-equation EX tier:
+
+| Paper + precise location | Original number | Exact author equation or separately marked reconstruction | EX tier | Symbols/units/boundary/type | Independent checks actually run | SO1/2/3 applicability + missing evidence |
+|---|---|---|---|---|---|---|
+| | | | | | NOT_RUN | |
+
+- Missing/inaccessible equation numbers (do not fill from memory):
+- Source-versus-reconstruction differences and suspected errors (not silently corrected):
+- Common ambient forcing controls, transformer thermal restriction evidence, grid-side AC vs DC measurements, service metric and matched comparison:
+- Final verdict: DIRECTLY_SUPPORTED / SUPPORTS_STRUCTURE_ONLY / NEEDS_DEVICE_DATA_OR_RULE / NOT_APPLICABLE / BLOCKED_SOURCE.

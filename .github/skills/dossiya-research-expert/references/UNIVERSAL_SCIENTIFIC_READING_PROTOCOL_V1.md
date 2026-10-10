@@ -115,3 +115,7 @@ PASS requires authentic source metadata, checked available full text to claimed 
 
 ## 11. Reuse and provenance
 Do not copy long copyrighted passages. Record brief source locator and concise paraphrase; link verified primary record. Attribute interpretation to analyst; always distinguish what came from the source, canonical repository doctrine and independent engineering reasoning. This skill does not supersede `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md` or `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md`.
+
+
+## 12. Automatic equation extraction companion — 2026-10-10
+When asked to extract or explain mathematical equations, apply `AUTOMATIC_EQUATION_EXTRACTION_AND_RESPONSE_LEVELS_V1.md` (this directory). Preserve per-equation transcription tier EX0–EX4 and separate automatic response depth AR0–AR3. Earlier examples from a chat are *candidate transcriptions* until actual source pages are independently checked. This companion augments the source/reader/inference distinction above; it does not relax any authority or requirement to record page/number/units and VVUQ. Scientific formula accuracy and usability are evaluated independently of response verbosity.
