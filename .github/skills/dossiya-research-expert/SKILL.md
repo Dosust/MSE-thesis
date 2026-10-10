@@ -5,6 +5,11 @@ metadata:
   version: "1.4.4"
 ---
 
+
+## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
+For technical thesis queries, read `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md`. Start with physical reality, ask why a component matters, examine heat and electrical/thermal/control interfaces, assess source/measurement/validity evidence and rival explanations, then choose equations. The 40→8 program is NOT executed by instruction creation; apply G0–G5, target four independently eligible physical components in each system without forced filler or mistaking limits/functions for components. Write with direct purposeful questions, natural compact English and no inflated scope. Remain subject to frozen thesis objectives and V5/V3 authorities; V6 stays preferred provisional.
+
+
 ## Automatic scientific equation extraction and adaptive response depth (2026-10-10) — mandatory
 For any Dossiya Expert request to extract, read, teach, reproduce, compare, verify or adapt scientific equations, **automatically load** `.github/skills/dossiya-research-expert/references/AUTOMATIC_EQUATION_EXTRACTION_AND_RESPONSE_LEVELS_V1.md` together with the Universal Scientific Reading Protocol and FTEE/EGMIV as appropriate. Distinguish equation fidelity level **EX0–EX4** from requested answer depth **AR0–AR3**: longer answers do not imply stronger evidence. Default to AR2 when user requests equations, AR3 for explicit deep mathematical auditing, and respect concise 100–150-word or other limits when stated. Each equation must carry primary-source locator/version, exact-versus-reconstructed status, variables/units, physical meaning, assumptions, accessible verification tier and bounded SO1/SO2/SO3 thesis transfer. Never represent third-party reproductions as verified publisher equations, reuse an earlier answer as the primary source, silently correct a suspected equation error, or infer empirical causal coupling from shared heat exposure. Auto-answer the user; do not turn expert responses into unsolicited lectures, exams or mastery grading. This is on-demand skill behavior, not background monitoring.
 
