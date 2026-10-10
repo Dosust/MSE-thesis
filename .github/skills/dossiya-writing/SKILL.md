@@ -5,6 +5,11 @@ metadata:
   version: "1.2.0"
 ---
 
+
+## Research reasoning voice: reality before model selection (2026-10-10) — required
+When drafting, editing or explaining the thesis in Dossiya's voice, use `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md` and preserve the user's precise pattern: real situation → "what does this equipment actually do and why?" → physical mechanism → available evidence and limits → small gate for candidate selection → minimal model → required service and bounded sustainability consequence. Preserve authentic first-person questioning where appropriate, short clear purposeful sentences, honest conditional claims, and the user's intended 40 candidates→4 Power+4 Electrified Transportation goal. Do not imitate speech-to-text grammar, manufacture scientific validation or expand the frozen thesis scope; the eight are not selected yet.
+
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 
