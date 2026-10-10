@@ -1,3 +1,6 @@
+
+## Deck3 canonical text (2026-10-10)
+For scientific infographics in the thesis Chapter 1, read `thesis/presentations/deck3/DECK3_CHAPTER1_14SLIDES_CANONICAL_TEXT_V1.md` before drafting or revising figures. Preserve exact GO/SOs, slide-specific central messages, candidate-not-proven physical arrows, source rights, citation traces, Times New Roman, 16:9 and canonical palette. Do not treat the master as proof of physics.
 ---
 name: scientific-infographic-design
 description: Convert scientific claims, presentations, chapter introductions, research problems, literature comparisons, and evidence-grounded engineering content into original, accessible, editable infographics. Select the correct visual family, declare system and model boundaries, register meaningful arrows and evidence status, keep adjacent scientific citations, and run scientific, visual, accessibility, and PowerPoint QA. Use for science-presentation infographic redesign, graphical abstracts, mechanism figures, comparison matrices, research workflows, and cited thesis slides; defer formal framework semantics to engineering-framework-design and diagram grammar to scientific-diagram-design.
