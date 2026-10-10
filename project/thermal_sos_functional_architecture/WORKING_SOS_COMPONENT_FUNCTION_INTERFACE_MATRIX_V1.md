@@ -145,6 +145,12 @@ Choose a bounded **actual** fleet service (e.g. electric buses with scheduled de
 
 **No claim that this research has discovered a unique gap, finished the 26-paper full text review, admitted the P→T_e thermal law, or validated the proposed model.**
 
+
+## Candidate equipment-specific thermal limit inventory (2026-10-10)
+
+The full working candidate thermal-limit register is [EQUIPMENT_SPECIFIC_THERMAL_LIMIT_CANDIDATE_INVENTORY_V1.md](EQUIPMENT_SPECIFIC_THERMAL_LIMIT_CANDIDATE_INVENTORY_V1.md). It distinguishes measured temperatures, failure/performance criteria, rated operating envelopes, actual protection/control actions, and admissible interface laws. It is a **candidate register only**: no numeric temperature threshold, transformer state-to-capability relation, EVSE derating law, or validated cross-system thermal link is frozen. Use it as an evidence-collection queue without automatically activating all component thermal dynamics.
+
+
 ## 9. Objective traceability
 
 - **SO1:** map and qualify P2/T1/T3 and I2/I3 state-dependent source→receiver laws.
