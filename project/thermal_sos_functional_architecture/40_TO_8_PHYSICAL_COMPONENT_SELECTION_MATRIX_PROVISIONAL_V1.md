@@ -91,15 +91,32 @@ This is a deliberately stress-tested **candidate portfolio**; it is not a claim 
 | T_e | **T18** DC EV charging station — integrated EVSE assembly | Rectifier loss, heat storage/cooling, thermal derating | RECONSTRUCTED; need compatible named DCFC and time-aligned AC/DC/temperature |
 | T_e | **T05** EVSE active cooling | Convection/flow and cooling duty under hot ambient | Cooling independently adjustable? data on fan/pump and parasitic load missing |
 | T_e | **T08** Physical charging cable | I2R heat/current rating under ambient cooling | Cable rating/thermal measurement and route unknown |
-| T_e | **T20** Traction battery pack — complete installed assembly | Pack thermal conditioning and accepted-current limit | RECONSTRUCTED; same physical pack as T12, requires deduplication; SOC not measured in ACN |
+| T_e | **T12** Battery pack | Pack temperature extremes, gradients and thermal nonuniformity | Battery chemistry/cooling/BMS data unknown |
 
 ### Portfolio conflicts (explicit)
 - P13 transformer may already include P06 cooler. Count P06 separately **only if** physically distinct, independently controllable/measured, relevant to thermal transition, and non-redundant relative to a transformer cooling-mode law. Otherwise substitute another eligible actual P component.
 - T18 EVSE necessarily contains converter/cabinet and may already include T05 cooling. Count T05 separately only under the same independence and ablation criteria. **An EVSE power converter and the EVSE complete assembly must never be counted as two independent components without justified distinct boundaries.**
 - T08 cable without T09 connector must still enforce the connector's documented limits at the AC/DC system boundary if necessary; T09 can be an algebraic constraint without becoming ninth component.
 - P14 must be instantiated as **one actual feeder technology**, not simultaneous overhead and underground network structures. P15 physical breaker must have actual thermal action if used for P→T_e restriction.
-- T20 and T12 are overlapping representations of the same battery pack: retain only one. The BMS (T13/T19) may be operating logic rather than another component.
+- T12 is the directly traceable battery-pack candidate. Reconstructed T20 is a duplicate alternative and is classified MERGE rather than counted in the selected eight. The BMS (T13/T19) may be operating logic rather than another component.
 - IEEE 13-node and 123-node are **electrical benchmarks**; they do not establish transformer/EVSE thermal validation or a physical installation.
+
+## 3A. Explicit comparison against alternatives (structural review only)
+
+These are **not ablation results**. They identify substitution decisions that a real configuration and matched experiments must resolve.
+
+| Provisional | Alternative already screened | Current comparative interpretation | Required deciding observation |
+|---|---|---|---|
+| P13 oil transformer | P11 dry-type transformer | Competing transformer technologies, not two simultaneous components; oil loading guide cannot be reused for dry type | Actual installed technology, ratings and temperature sensor/type |
+| P14 integrated feeder | P08 overhead conductor / P09 underground cable | One actual line technology and the needed degree of electrical/thermal detail | Feeder schematic, conductor/cable rating, voltage/current/time data |
+| P15 circuit breaker | P16 temperature protection relay or P07 dispatch rule | Breaker is power-interruption hardware; relay is an actual controller if installed; policy is not hardware. May require breaker and relay as distinct devices but not two full thermal ODEs | Actual relay-to-breaker actuation records and trip/derate rule |
+| P06 transformer cooling | P18 observation module or aggregate P13 cooling parameter | Cooling often integral to transformer and may be redundant as a separate component. Sensor may improve validation but not physics | Cooler independent actuation/temperatures, ablation and observability comparison |
+| T18 integrated DC EVSE | T02 rectifier/converter and T07 DC stage | Nested details rather than additional independent stations | Manufacturer architecture, available rectifier-temperature and AC-port sensor data |
+| T05 EVSE cooler | Temperature-dependent loss/cooling term within T18 | Separate cooling component only if real, independently actuated, non-redundant | Cooling duty/flow and AC auxiliary measurements |
+| T08 charging cable | T09 connector or T10 vehicle inlet | Connector contact may be earliest thermal current constraint; cable and connector cannot be interchanged blindly | Device-specific sensor/thermal rating and current-limiting log |
+| T12 battery pack | T11 battery cells / T13 BMS / T14 thermal management | Energy/SOC remains necessary for readiness; extra electrothermal states require incremental value | Battery chemistry, BMS acceptance limit, SOC and temperature observations |
+
+**Structural conclusion:** P13 and T18 are the strongest focal device assemblies. P14 and T12 are necessary for electricity-transfer and energy-readiness representation but may admit reduced algebraic/energy-only treatment. P06, P15, T05 and T08 need stronger equipment and leave-one-out evidence to justify counting separately in a strict 4+4 physical-component model. Do **not** fill those positions with substitutes merely to reach eight.
 
 ## 4. Leave-one-out ablation matrix — specified tests, not observed results
 
@@ -114,7 +131,7 @@ This is a deliberately stress-tested **candidate portfolio**; it is not a claim 
 | T18 EVSE | Manufacturer documented ambient-to-power algebraic law, preserve AC/DC conservation | Rectifier thermal timing, available power, actual AC demand; HYPOTHESIS: dynamic model adds no value absent internal memory data | NOT_RUN |
 | T05 EVSE cooler | Equivalent prescribed thermal rejection/derating curve within T18 | Derating onset, delivered power, auxiliary AC energy; HYPOTHESIS: redundant absent independently switched cooling | NOT_RUN |
 | T08 charging cable | Documented fixed permissible transfer current/connector constraints | First current limiting event, charging kWh, departure energy; HYPOTHESIS: dynamic heating possibly unnecessary | NOT_RUN |
-| T20 battery pack | Energy balance and documented charge-acceptance envelope; omit detailed pack thermal PDE | Departure energy, accepted current/power, charging completion; HYPOTHESIS: energy-only model adequate unless BMS thermal restrictions bind | NOT_RUN |
+| T12 battery pack | Energy balance and documented charge-acceptance envelope; omit detailed pack thermal PDE | Departure energy, accepted current/power, charging completion; HYPOTHESIS: energy-only model adequate unless BMS thermal restrictions bind | NOT_RUN |
 
 **Formal decision rule:** Retain an extra dynamic/physical component only if (i) it is actually distinct and present, (ii) its removal causes a material change in the preregistered state/critical-time/service QOI *relative to observation or independently checked physical truth*, not just disagreement with a more elaborate simulation, and (iii) the additional complexity is identifiable with available data. Tolerances and uncertainty must be specified *before testing*, using sensor accuracy, service requirements and physical impact; they are **OPEN**, not arbitrary universal percentages. If outputs cannot be validated, interpret ablation as conditional sensitivity, not scientific proof of necessity.
 
