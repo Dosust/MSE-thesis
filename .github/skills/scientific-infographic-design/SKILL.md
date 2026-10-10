@@ -1,4 +1,7 @@
 
+## New 200 simplified scientific briefs (2026-10-10)
+For Deck3 infographic Slides 3–12, review `project/deck3_visual_reference_collection/new_200_scientific_simplification_briefs_v1.csv` and `project/deck3_visual_reference_collection/NEW_200_SCIENTIFIC_BRIEFS_GOVERNANCE_V1.md` alongside the existing 160 reference leads. There are 200 *new briefs* not generated images. Prioritize one scientific message and the minimum necessary original equipment/diagram assets, with all scientific arrows, exact Times New Roman annotations and citations native in PowerPoint. Reject unsupported claims and do not treat a high ranking as scientific evidence or source-image permission.
+
 ## Deck3 canonical text (2026-10-10)
 For scientific infographics in the thesis Chapter 1, read `thesis/presentations/deck3/DECK3_CHAPTER1_14SLIDES_CANONICAL_TEXT_V1.md` before drafting or revising figures. Preserve exact GO/SOs, slide-specific central messages, candidate-not-proven physical arrows, source rights, citation traces, Times New Roman, 16:9 and canonical palette. Do not treat the master as proof of physics.
 ---
