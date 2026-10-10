@@ -6,6 +6,10 @@ short_name: deck3-advanced
 purpose: Scientific native PowerPoint engineering, vector geometry, accessible animation, math, evidence-first diagrams, and verified delivery as an additive extension of the existing Deck3 skill.
 ---
 
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 composition micro-rule (2026-10-10):** Begin with frozen editable text/notes. Reserve a nonoverlapping visual region before insertion; never stretch or paste full-image diagrams on top of text. For Slides 3–12, use one evidence-checked figure plus independent native labels, equations, connectors, and presenter-controlled reveal layers where required. Slides 1/2/13 need no infographic. Exact 13-token authored palette, pure-white interiors and geometric collision QA are release gates; flattened PNG internals cannot be animated independently. A saved/rendered PPTX is not playback verification.
+
+
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
 

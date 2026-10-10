@@ -5,6 +5,10 @@ metadata:
   version: "1.0.0"
 ---
 
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 interactive-view micro-rule (2026-10-10):** Use interaction only when needed to inspect a declared model state, time evolution or interface; ordinary static slides do not need it. Keep a single scientific takeaway, accessible units and source/destination semantics, evidence-status visibility and clear controls. Apply Deck3's exact 13-token authored palette and white surfaces when exporting thesis graphics; never fabricate state trajectories or label a synthetic animation as validation. Preserve source slides/notes on PPTX export and test it separately.
+
+
 # VisQuill Interactive Scientific Visualization
 
 ## Role and activation

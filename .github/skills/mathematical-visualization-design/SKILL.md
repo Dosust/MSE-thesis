@@ -4,6 +4,10 @@ description: Design mathematically driven scientific diagrams, interactive visua
 license: MIT
 ---
 
+## Deck3 compact cross-skill update — 2026-10-10
+**Deck3 math visualization micro-rule (2026-10-10):** Encode physically defined states, units, time scales, control volumes, ports, initial conditions and applicable laws in native/editable equations and plots where possible. Curves are permitted only from admitted equations/data or visibly identified nonempirical schematics, never misleading measurement-like AI plots. Separate shared heat forcing from directional physical coupling, state change from service outcome, and verification from field validation. Exact Deck3 colors, white interiors and one purpose per slide figure apply.
+
+
 ## Deck3 all-forms v2 learning contract (2026-10-09)
 For every applicable Deck3 text, one-slide edit, AI physical figure, infographic, mathematical/engineering diagram, native PPTX assembly, animation and QA, follow `.github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md` and `.github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md`. Earlier cross-stage learning V1 protocols are historical. Preserve thesis scope, not unverified physical assumptions. Prefer scientifically meaningful hybrid AI physical equipment scenes plus diagram connections and minimal exact labels where physical illustration adds value, with native editable precise ports/notes/equations. Challenge coupled causal mechanisms, AC/DC accounting, event-time censoring, matched comparators, VVUQ, measured service and two sustainability pathways; record real PASS/FAIL/OPEN/NOT_RUN for gates G01–G15 and adversarial cases A01–A20.
 
