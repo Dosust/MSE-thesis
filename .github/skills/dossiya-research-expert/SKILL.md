@@ -1,4 +1,7 @@
 
+## Theory → conceptual framework → physical model rigor (2026-10-10)
+For thesis conceptual-framework writing, evidence synthesis, selection from the 40-component inventory, scientific diagrams, Slide 5 candidate mechanisms, AI scientific images, Deck3 native animated PPTX and QA, read `.github/skills/deck3/references/DECK3_CONCEPTUAL_THEORETICAL_FRAMEWORK_RIGOR_V1.md`. Distinguish theoretical laws, selective conceptual hypotheses, admissible mathematical models and unexecuted numerical tests. Every arrow needs a scientifically classified role and trace; not every conservation/measurement/workflow arrow is a statistical hypothesis. Reject unproved causal claims, automatic conversion of 40 inventory entries into model states and misuse of mediator/moderator terminology for physical states. Integrate with existing 14-slide, Times New Roman, 16:9, 13-color, evidence, license and playback gates; report OPEN/NOT_RUN honestly.
+
 ## Deck3 ASU 16:9 projection governance (2026-10-10)
 When producing any Deck3 figure, AI image brief, animated PowerPoint, thesis presentation text or reviewing layout, apply `.github/skills/deck3/references/DECK3_ASU_16_9_PROJECTION_STANDARD_V1.md`. Require 16:9 widescreen, Times New Roman, exact 13-color palette, white surfaces and projection readability checks. Ordinary body text 24pt is a project target with audited technical/citation exceptions, not an ASU-sourced minimum. Distinguish rendering checks from actual desktop animation playback.
 ---
