@@ -5,6 +5,10 @@ metadata:
   version: "1.0.0"
 ---
 
+## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
+The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
+
+
 ## Deck3 scientific minimal infographic generation — mandatory
 For any Deck3 visual, figure, image-generation brief, infographic, animation, source selection, scientific QA, text-rendering or PowerPoint work, first apply `.github/skills/deck3/references/DECK3_SCIENTIFIC_MINIMAL_INFOGRAPHIC_STANDARD_V1.md` in addition to existing relevant domain authorities. This is a cross-skill reference rule, not permission to override frozen science. Simplicity, correctly typed arrows, qualified evidence, native editability, Times New Roman, 16:9 and approved color governance are all release gates.
 
