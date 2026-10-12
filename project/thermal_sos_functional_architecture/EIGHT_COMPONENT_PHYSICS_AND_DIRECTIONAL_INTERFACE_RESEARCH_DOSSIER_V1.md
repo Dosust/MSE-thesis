@@ -42,7 +42,7 @@ The thesis concerns how extreme heat acts on internal Power and Electrified Tran
 | **Heat-transfer mechanisms inside a system** | P4, T3 | Determine physical cooling and thermal time-history; can affect electrical auxiliary load and cooldown/recovery but are **not** cross-sector interfaces themselves |
 | **Energy storage / service-demand mechanisms** | T2, T4 | Converts charged energy into departure readiness and possible trip energy; HVAC heat-dependent use may affect future charging requests, not instantaneous direct transfer from a vehicle compressor to the grid |
 
-### Actual interfaces under investigation, not eight assumed interface arrows
+### Physical and supporting interface relationships (I1–I6 plus supporting I7; not eight assumed component-to-component arrows)
 
 - **I1, ordinary electricity supply P → T:** transformer/feeder output to **T1's measured grid-side AC port**. This is an electrical transfer, **not yet a thermal interdependency**.
 - **I2, candidate thermal-conditioned T → P:** T1/T3 temperature and operating/cooling response → **measured grid-side AC real/reactive demand and current** → P2/P1 loading and losses → P1 thermal trajectory. This is demand influence, **not V2G/reverse electric energy flow**.
@@ -50,7 +50,7 @@ The thesis concerns how extreme heat acts on internal Power and Electrified Tran
 - **I4, within T:** T1–T3 loss/thermal rejection and actual EVSE derating.
 - **I5, within T:** T1 → transferred DC energy → T2 SOC/readiness; cable/inlet/BMS losses and constraints remain real and are represented at justified reduced fidelity.
 - **I6, demand-mediated (candidate, later times):** T4 hotter-weather vehicle auxiliary energy → T2 trip depletion/next required energy → charging schedule/AC demand at T1 → P loading/thermal trajectory; this is **not** a direct T4→P thermal interface and requires travel-to-charging causal evidence and control of common heat forcing.
-- **H(t) environmental forcing:** ambient air/solar/wind/soil thermal forcing as appropriate. Common hot weather affecting both systems is not cross-system causation.
+- **I7, supporting price-informed charging decision (informational/economic, conditional):** an externally observed applicable electricity or EV charging price \(\pi(t)\) may influence charging request, timing or location; only **actual metered EVSE AC demand** propagates any resulting physical loading response through P2/P1. Price is not heat/power transfer, not I2 thermal causality or I3 P3 curtailment, and not a ninth component. **An explicit tariff/decision and evidence gate is OPEN**. See [I7 Price Decision V2](ELECTRICITY_PRICING_I7_INTERFACE_DECISION_V2.md).\n- **H(t) environmental forcing:** ambient air/solar/wind/soil thermal forcing as appropriate. Common hot weather affecting both systems is not cross-system causation.
 
 ## 4. Eight equipment contracts: reality, physics, mathematics, evidence, service
 
