@@ -11,10 +11,10 @@ scope = (ROOT / "project/PHYSICS_MATHEMATICS_FIRST_HYPOTHESIS_TESTING_SCOPE_DIRE
 objectives = (ROOT / "project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md").read_text()
 ids = ["P1", "P2", "P3", "P4", "T1", "T2", "T3", "T4"]
 for token in ids:
-    assert re.search(rf"\\b{token}\\b", gov), f"missing governance component {token}"
-    assert re.search(rf"\\b{token}\\b", baseline), f"missing baseline component {token}"
+    assert re.search(rf"\b{token}\b", gov), f"missing governance component {token}"
+    assert re.search(rf"\b{token}\b", baseline), f"missing baseline component {token}"
 for token in ("I1","I2","I3","I4","I5","I6"):
-    assert re.search(rf"\\b{token}\\b", gov), f"missing interface {token}"
+    assert re.search(rf"\b{token}\b", gov), f"missing interface {token}"
 for n in range(1, 17):
     assert f"R{n:02d}" in gov, f"missing rule R{n:02d}"
 for n in range(9):
