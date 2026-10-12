@@ -6,6 +6,8 @@ on:
       - 'project/PHYSICS_MATHEMATICS_FIRST_HYPOTHESIS_TESTING_SCOPE_DIRECTIVE_V1.md'
       - 'project/thermal_sos_functional_architecture/SELECTED_EIGHT_COMPONENTS_WORKING_RESEARCH_BASELINE_V1.md'
       - 'scripts/check_thermal_governance.py'
+      - 'scripts/thermal_research_agent.py'
+      - 'tests/test_thermal_research_agent.py'
       - '.github/workflows/thermal-research-governance.yml'
   workflow_dispatch:
 jobs:
@@ -18,3 +20,5 @@ jobs:
           python-version: '3.11'
       - name: Verify scope and governance contract
         run: python scripts/check_thermal_governance.py
+      - name: Run agent routing and claim admission tests
+        run: python -m unittest discover -s tests -p 'test_thermal_research_agent.py' -v
