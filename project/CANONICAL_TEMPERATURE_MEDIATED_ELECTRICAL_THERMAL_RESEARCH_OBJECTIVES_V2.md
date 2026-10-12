@@ -2,11 +2,11 @@
 
 **Decision date:** 2026-10-12  
 **Decision authority:** Researcher-approved formal version-controlled objective amendment.  
-**Status:** APPROVED OBJECTIVE WORDING — PENDING INTEGRATION TO \`main\`; becomes the current canonical objective authority **when the amendment is merged under repository governance**. Until that point, \`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md\` remains the active main-branch frozen record.  
-**Supersession upon merge:** Replaces **only the exact General Research Objective and SO1–SO3 wording** in \`CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md\`. Preserve V1 unchanged as superseded historical provenance.  
-**Official thesis title:** \`CANONICAL_THESIS_TITLE_V2.md\` (unchanged).  
-**Governing scope:** \`CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md\` and \`CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md\` (unchanged).  
-**Other unchanged authorities:** \`CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md\`, \`CANONICAL_STATE_TIME_DEFINITIONS_V1.md\`, \`CANONICAL_RESILIENCE_DEFINITION_V1.md\`, \`CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md\`, \`PHYSICS_MATHEMATICS_FIRST_HYPOTHESIS_TESTING_SCOPE_DIRECTIVE_V1.md\`, conceptual framework V5 and mathematical framework V3.
+**Status:** APPROVED OBJECTIVE WORDING — PENDING INTEGRATION TO `main`; becomes the current canonical objective authority **when the amendment is merged under repository governance**. Until that point, `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` remains the active main-branch frozen record.  
+**Supersession upon merge:** Replaces **only the exact General Research Objective and SO1–SO3 wording** in `CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`. Preserve V1 unchanged as superseded historical provenance.  
+**Official thesis title:** `CANONICAL_THESIS_TITLE_V2.md` (unchanged).  
+**Governing scope:** `CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md` and `CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md` (unchanged).  
+**Other unchanged authorities:** `CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`, `CANONICAL_STATE_TIME_DEFINITIONS_V1.md`, `CANONICAL_RESILIENCE_DEFINITION_V1.md`, `CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`, `PHYSICS_MATHEMATICS_FIRST_HYPOTHESIS_TESTING_SCOPE_DIRECTIVE_V1.md`, conceptual framework V5 and mathematical framework V3.
 
 ## 1. General Research Objective — exact researcher-approved wording
 
@@ -44,7 +44,7 @@ This is a **clarifying objective-language amendment**, not an expansion to gener
 
 ## 4. Scientific chain: interpretation, not a prevalidated causal discovery
 
-\`\`\`text
+```text
 H(t) external heat forcing
     ↓ affects component states (independently unless coupling shown)
 Relevant evolving states and observed port quantities
@@ -54,7 +54,7 @@ Qualified temperature-mediated electrical–thermal interfaces (if supported)
 Coupled state–time trajectories (within admitted model's validity domain)
     ↓ test hypotheses against independent evidence and quantify [SO3]
 Transition/action/receiver/service times and electricity–mobility service resilience
-\`\`\`
+```
 
 Distinguish the methodological sequence from physical arrows. In particular, a physically valid result may be **no identified I3 action, no meaningful propagation delay, or unresolved causal attribution**; do not manufacture an effect to fulfill SO3.
 
@@ -62,56 +62,56 @@ Distinguish the methodological sequence from physical arrows. In particular, a p
 
 An admissible *candidate* physics-first DAE structure is:
 
-\`\`\`math
+```math
 \begin{aligned}
 \dot{\mathbf{x}}_P&=\mathbf f_P(\mathbf{x}_P,\mathbf z,\mathbf u,H;\boldsymbol\theta_P),\\
 \dot{\mathbf{x}}_T&=\mathbf f_T(\mathbf{x}_T,\mathbf z,\mathbf u,H;\boldsymbol\theta_T),\\
 \mathbf 0&=\mathbf g_{\mathrm{network+admitted}}(\mathbf{x}_P,\mathbf{x}_T,\mathbf z,\mathbf u,H).
 \end{aligned}
-\`\`\`
+```
 
-- \`H(t)\` is exogenous heat/weather forcing, not a Power→Transportation or Transportation→Power physical interface, and not an internal state.
-- \`x_P\` and \`x_T\` hold only necessary admitted physical/operational/energy states; \`SOC\` is an **energy** state, not a thermal state.
-- \`z\` contains algebraic interface/port quantities, e.g. **actual EVSE grid-side AC** real/reactive demand and relevant network voltage/current; received DC power and battery-terminal power are not automatically identical.
-- \`u\` contains operating control/permissions when evidenced, **not** arbitrarily presumed thermal actions.
+- `H(t)` is exogenous heat/weather forcing, not a Power→Transportation or Transportation→Power physical interface, and not an internal state.
+- `x_P` and `x_T` hold only necessary admitted physical/operational/energy states; `SOC` is an **energy** state, not a thermal state.
+- `z` contains algebraic interface/port quantities, e.g. **actual EVSE grid-side AC** real/reactive demand and relevant network voltage/current; received DC power and battery-terminal power are not automatically identical.
+- `u` contains operating control/permissions when evidenced, **not** arbitrarily presumed thermal actions.
 
 The user's proposed conceptual decomposition
 
-\`\`\`math
+```math
 \mathbf g \sim
 \begin{bmatrix}
 \mathbf g_{\mathrm{network}}\\
 \mathcal I_{P\to T}\\
 \mathcal I_{T\to P}
 \end{bmatrix}
-\`\`\`
+```
 
-is a useful **relationship classification**, not automatically an exact DAE stacking of three algebraic equalities. Only constraints with compatible defined domains/codomains are assembled as \`0=g(...)\`; qualified I2 may involve a constitutive temperature-to-actual-AC-demand law and cross-network load influence, whereas I3 may involve a measured/evidenced *hybrid control or discrete protection action*. Neither requires an independently evolving interface state without memory evidence. Prevent duplicate counting of I1 grid supply/network flow, P4/T3 heat rejection, and price information as thermal coupling.
+is a useful **relationship classification**, not automatically an exact DAE stacking of three algebraic equalities. Only constraints with compatible defined domains/codomains are assembled as `0=g(...)`; qualified I2 may involve a constitutive temperature-to-actual-AC-demand law and cross-network load influence, whereas I3 may involve a measured/evidenced *hybrid control or discrete protection action*. Neither requires an independently evolving interface state without memory evidence. Prevent duplicate counting of I1 grid supply/network flow, P4/T3 heat rejection, and price information as thermal coupling.
 
 This amendment **does not choose** exact device heat-transfer laws, transformer thresholds, charger derating parameters, P3 trip logic, available datasets or formal validation results.
 
 ## 6. Time, delay, and service-output safeguards
 
-For a physically declared admissible set \`K\`, study horizon \`[t_0,t_f]\`, and meaningful modeled state \`x(t)\`, define first exit only if it occurs:
+For a physically declared admissible set `K`, study horizon `[t_0,t_f]`, and meaningful modeled state `x(t)`, define first exit only if it occurs:
 
-\`\`\`math
+```math
 t_{\mathrm{crit}}=\inf\{t\in[t_0,t_f]:\mathbf x(t)\notin\mathcal K\}.
-\`\`\`
+```
 
 If the set is empty, state **no observed/predicted first exit within the study horizon**; do not fabricate a finite time. Similarly,
 
-\`\`\`math
+```math
 \tau_{i\to j}=t_j^{\mathrm{response}}-t_i^{\mathrm{event}}
-\`\`\`
+```
 
 is an *attributable propagation delay* only after the source-to-receiver mechanism, event/response definitions and confounding controls are qualified. Correlated event times are not enough.
 
 With service quantities defined on compatible units/functional bases:
 
-\`\`\`math
+```math
 D_e(t)=[S_{e,\mathrm{req}}(t)-S_{e,\mathrm{del}}(t)]_+,\qquad
 D_m(t)=[S_{m,\mathrm{req}}(t)-S_{m,\mathrm{del}}(t)]_+.
-\`\`\`
+```
 
 These deficits require explicit time-dependent **service requirements** and **actual delivered services**. Readiness can be a justified *proxy* for mobility service, not proof of completed trips. Maintaining or recovering required services remains the current canonical resilience definition; no universal scalar resilience index is created.
 
