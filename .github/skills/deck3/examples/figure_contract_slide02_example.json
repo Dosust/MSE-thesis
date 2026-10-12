@@ -1,0 +1,42 @@
+{
+  "schema": "deck3-figure-contract-v1",
+  "status": "SYNTHETIC_CONCEPTUAL_FIXTURE_NOT_APPROVED_ARTWORK",
+  "manifest_path": ".github/skills/deck3/examples/deck3_manifest_example.json",
+  "slide_index_1based": 2,
+  "figure_file": "Slide_02_Independent_Heat.png",
+  "figure_id": "demo_slide02_independent_external_heat",
+  "claim": "Separate responses to an external forcing do not establish a cross-system causal mechanism.",
+  "source": {
+    "type": "internal_scope_authority",
+    "path": "project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md",
+    "external_empirical_support": "NOT_CLAIMED",
+    "citation_verified": "NOT_RUN"
+  },
+  "science": {
+    "external_forcing": "extreme heat; no numerical forcing specified",
+    "cross_system_causality": "NOT_ESTABLISHED",
+    "equations": "NONE_CLAIMED",
+    "quantitative_results": "NONE_CLAIMED",
+    "sustainability_effect": "NOT_ASSESSED"
+  },
+  "visual": {
+    "palette_path": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
+    "canvas": "#FFFFFF",
+    "font": "Times New Roman",
+    "aspect_ratio": "16:9",
+    "artwork_render_status": "NOT_RUN"
+  },
+  "animation": {
+    "mode": "STATIC",
+    "click_count": 0,
+    "script_status": "NOT_APPLICABLE",
+    "powerpoint_playback": "NOT_RUN"
+  },
+  "verification": {
+    "structural": "PENDING",
+    "physical": "NOT_VALIDATED",
+    "citation": "NOT_RUN",
+    "asset": "NOT_RUN",
+    "pptx": "NOT_RUN"
+  }
+}
