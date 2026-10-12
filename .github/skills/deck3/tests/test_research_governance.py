@@ -74,5 +74,31 @@ class ResearchGovernanceTests(unittest.TestCase):
         self.assertIn("deck3.py text", workflow)
 
 
+    def test_reference_figure_contract_links_existing_slide_and_evidence(self):
+        fixture = json.loads((DECK / "examples/figure_contract_slide02_example.json").read_text(encoding="utf-8"))
+        self.assertEqual(fixture["schema"], "deck3-figure-contract-v1")
+        self.assertEqual(fixture["status"], "SYNTHETIC_CONCEPTUAL_FIXTURE_NOT_APPROVED_ARTWORK")
+        manifest_path = ROOT / fixture["manifest_path"]
+        self.assertTrue(manifest_path.is_file())
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        slide = manifest["slides"][fixture["slide_index_1based"] - 1]
+        self.assertEqual(slide["kind"], "content")
+        self.assertEqual(slide["figure"]["file"], fixture["figure_file"])
+        self.assertEqual(slide["message"], fixture["claim"])
+        self.assertTrue((ROOT / fixture["source"]["path"]).is_file())
+        self.assertEqual(fixture["source"]["external_empirical_support"], "NOT_CLAIMED")
+        self.assertEqual(fixture["science"]["cross_system_causality"], "NOT_ESTABLISHED")
+        self.assertEqual(fixture["science"]["quantitative_results"], "NONE_CLAIMED")
+        self.assertEqual(fixture["science"]["sustainability_effect"], "NOT_ASSESSED")
+        self.assertEqual(fixture["visual"]["palette_path"], self.registry["palette_path"])
+        self.assertEqual(fixture["visual"]["canvas"], "#FFFFFF")
+        self.assertEqual(fixture["visual"]["font"], "Times New Roman")
+        self.assertEqual(fixture["visual"]["aspect_ratio"], "16:9")
+        self.assertEqual(fixture["animation"]["mode"], "STATIC")
+        self.assertEqual(fixture["animation"]["click_count"], 0)
+        self.assertEqual(fixture["animation"]["powerpoint_playback"], "NOT_RUN")
+        self.assertEqual(fixture["verification"]["physical"], "NOT_VALIDATED")
+
+
 if __name__ == "__main__":
     unittest.main()
