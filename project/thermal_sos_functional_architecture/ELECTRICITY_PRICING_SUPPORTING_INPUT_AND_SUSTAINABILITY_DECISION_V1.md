@@ -1,5 +1,7 @@
 # Electricity Pricing as a Supporting Operational Input — Decision V1
 
+> **SUPERSEDED IN PART, 2026-10-12:** The user subsequently approved adding **I7** as the separate *supporting economic/behavioral pricing-to-charging decision interface*. The authoritative updated decision is [I7 Pricing Interface Decision V2](ELECTRICITY_PRICING_I7_INTERFACE_DECISION_V2.md). This V1 record remains for chronology. Its earlier statements `no new interface ID`, `do not add I7`, and equivalent ID restrictions are **historical and no longer operative**. All constraints on the exact eight components, unchanged I1–I6 meanings, frozen GO/SO1–SO3, evidence, and avoiding unsupported price/thermal causality remain operative.
+
 **Recorded:** 2026-10-12  
 **Decision:** User-approved inclusion of electricity-price information where materially relevant to charging decisions, model interpretation, resilience, or bounded sustainability assessment.  
 **Status:** Working supporting-method decision; **NOT** a canonical scope amendment, new specific objective, new physical component, new interface ID, or validated empirical price-response model.  
