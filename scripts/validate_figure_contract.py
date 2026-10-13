@@ -44,6 +44,7 @@ def validate_contract(c: dict) -> dict:
         nid = n['id']
         _require(_text(nid) and nid not in node_index, 'duplicate or invalid node id')
         _require(nid in COMPONENTS or nid.startswith('EXT_'), 'unknown physical component or external node')
+        _require(_text(n['label']) and _text(n['kind']), 'node label and kind must be nonempty strings')
         _require(n['system'] in ('POWER', 'TRANSPORT', 'EXTERNAL'), 'unknown physical system')
         if nid.startswith('P'):
             _require(n['system'] == 'POWER', 'P component must belong to Power System')
@@ -70,6 +71,7 @@ def validate_contract(c: dict) -> dict:
         if t == 'EXTERNAL_FORCING':
             _require(a.startswith('EXT_') and not b.startswith('EXT_'), 'external heat is forcing from environment to equipment')
         iid = e.get('interface_id')
+        _require(iid is None or _text(iid), 'interface_id must be a string if supplied')
         if iid in CANDIDATES:
             _require(t == 'CANDIDATE_CAUSAL', f'{iid} cannot be encoded as established power/heat/control')
             _require(status == 'CANDIDATE_UNQUALIFIED', f'{iid} must stay unqualified')
