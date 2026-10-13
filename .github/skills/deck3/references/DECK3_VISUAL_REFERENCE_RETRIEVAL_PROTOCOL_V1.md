@@ -2,6 +2,10 @@
 Status: Active workflow instruction, not an asset or scientific validation.
 Applies: Deck3 All Forms, Dossiya Research Expert, AI image briefs, advanced native animated PPTX, diagram and infographic skills.
 
+## FIRST-LAW source order for physical illustration (2026-10-13)
+
+Read `DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md` before each new physical-equipment figure. Prioritize **actual inspected real-world photographs and technical documentation for the exact device family, cooling technology and connections**; use them as the primary visual grounding, then study professional infographic examples for geometry/visual hierarchy. Prefer licensed authentic photographic pixels in the unified visual where relevant; if rights are unknown, no direct embedding or near-copy. Keep a per-slide URL/author, inspected image identity, engineering match, rights determination, source-use method and image count. An uninspected search result or generic concept illustration does not satisfy this gate. Abstract charts and workflow figures justify no-photo choice in writing.
+
 ## Canonical library on main
 - `project/deck3_visual_reference_collection/samples_160.csv`
 - `project/deck3_visual_reference_collection/sources_13.csv`
