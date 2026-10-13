@@ -63,7 +63,18 @@ The existing `DECK3_PRESENTATION_MASTER_ROUTER_V1.md` continues to govern the ei
 | Native editability of text | PASS (API-level) | Text updated through Google Slides native shapes |
 | Source photograph licenses and attribution | REVIEWED | Commons file pages checked, title attribution added; final redistribution to be assessed |
 | Scientific claims and provenance | WORKING | Current checkpoint boundaries preserved; line-by-line literature verification not completed |
-| Slide render / overflow / 75% figure emphasis | NOT_RUN | Requires actual slide-by-slide visual inspection and science-specific figures |
+| Slide thumbnail API and non-line geometry | PASS (structural only) | 10/10 thumbnails generated; objects verified in Google Slides; not pixel-inspected |
+| Full rendered pixel QA and 70–80% figure emphasis | NOT_RUN / NOT_MEASURED | Requires pixel-level inspection, legibility and actual meaningful visual coverage |
 | Animation, export to PPTX and real PowerPoint playback | NOT_RUN | No playback testing claimed |
 
 Use this document as a **pointer/index**, not as proof of final figure assembly or coupled scientific validation.
+
+## Visual implementation update — 13 October 2026
+
+**Detailed audit:** [Deck3 ten-slide scientific visual implementation and QA](DECK3_10SLIDE_ASU_GOOGLE_SLIDES_VISUAL_QA_20261013.md).
+
+- Native, editable, evidence-gated scientific diagrams are now in **Slides 3, 4, 5, 6, 8 and 9**. Slide 7 retains the ASU numerical-evidence layout with a distinct-source status banner. Slides 1/3/5 incorporate authentic, credited example photographs; Slides 2/10 remain intentionally restrained.
+- **Slides API structural/thumbnail checks:** confirmed exactly ten slides in order; ten 800×450 thumbnail render requests succeeded; native diagram elements exist; non-line content has no detected off-canvas geometry.
+- **Not yet approved:** pixel-level overlap/legibility, actual projected closed-caption overlays, 70–80% meaningful-figure coverage, raw-data time-series plotting, figure rights for redistributed/derivative work, accessibility review and native PowerPoint playback/animation. These are **NOT_RUN / NOT_MEASURED**, not PASS.
+- Photograph identities are **not equivalent** to case equipment: the Commons substation transformer and Maryland charging site are separate reference images, not the TU Wien transformer or Qatar CPC50 field experiment.
+- **No integrated cross-sector physical validation, measured service resilience, quantified sustainability outcome or SDG achievement is claimed.**
