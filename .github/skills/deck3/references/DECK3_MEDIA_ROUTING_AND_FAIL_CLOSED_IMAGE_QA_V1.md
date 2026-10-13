@@ -1,3 +1,6 @@
+## External-authority medium selection and 10-slide exception — 2026-10-13
+Before applying the legacy 13-slide media-intention matrix, check `DECK3_PRESENTATION_VARIANT_ROUTER_V1.md`. The user-approved 10-slide progress variant is independent. `DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` governs the professional medium hierarchy: source-qualified electrical topology → single-line diagram; SoS parts/ports → typed structure; heat → balance/control-volume view; time/uncertainty → source-data plot; research evidence/objectives/timeline → native editable PowerPoint; original equipment-only illustration solely when recognizable apparatus improves interpretation. IEEE/IEC/OMG documents are references for precise notation, not a license to copy protected diagrams or to claim IEC/SysML conformance without checking actual normative requirements. Do not approve earlier ten AI PNGs or let invented axes, heat-wave decorations, video frames, collages and synthetic case plots pass Stage 2.
+
 # Deck3 Media Routing & Fail-Closed Image QA — V1
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
