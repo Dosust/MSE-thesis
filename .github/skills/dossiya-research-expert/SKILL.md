@@ -5,6 +5,11 @@ metadata:
   version: "1.4.4"
 ---
 
+## Deck3 Visual Source and Scientific Composition Agents — 2026-10-13
+
+When dispatching a research-sourced illustration, use `.github/skills/deck3-visual-source-agent/SKILL.md` to produce real-image/equipment/permissions records, then `.github/skills/deck3-scientific-composition-agent/SKILL.md` to build independent typed-arrow 10-slide/approved-variant visuals. Research agents must independently gate physical mechanisms, publications, equations, model time, service resilience and two-pathway sustainability; any manifest checker establishes declared structure **only**. Do not merge or rewrite frozen theses or infer actual equipment operation from its photograph.
+
+
 ## Real-world-equipment image FIRST LAW for visual research handoffs — 2026-10-13
 
 When preparing a Deck3/Canva physical illustration or approving an AI-agent visual brief, read `.github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md`. Require **actual visual inspection** of identifiable real-world apparatus/installation examples, evidence of equipment match and rights assessment **before** authoring a unified physical illustration. Prefer licensed real photographs where scientific relevance permits; otherwise use original source-grounded drawings and state that no photograph is embedded. Reject undocumented equipment configurations, fabricated connections, apparent measured curves, or research claims inferred from appearance. Never force photographic content into abstract source matrices, model graphs, plots or timelines. This governs illustration input/provenance only; frozen research authorities still determine physical claims and requirements.
