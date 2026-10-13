@@ -77,6 +77,8 @@ def validate_contract(c: dict) -> dict:
             _require(status == 'CANDIDATE_UNQUALIFIED', f'{iid} must stay unqualified')
             _require('not yet qualified' in e['label'].lower(), f'{iid} requires an explicit visual qualifier')
         if t == 'CANDIDATE_CAUSAL':
+            _require(iid in CANDIDATES, 'training candidate edge must name I2 or I3')
+            _require('not yet qualified' in e['label'].lower(), 'all candidate edges need visible not-yet-qualified status')
             _require(status == 'CANDIDATE_UNQUALIFIED', 'candidate edge cannot be promoted')
             _require(_text(e.get('hypothesis')), 'candidate edge requires explicit hypothesis')
         if t == 'HEAT_TRANSFER':
