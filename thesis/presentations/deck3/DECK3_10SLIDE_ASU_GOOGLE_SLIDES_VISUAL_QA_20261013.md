@@ -83,3 +83,37 @@ Photographs are authentic independent physical references. Cropped/resized prese
 **Rollback copy of the preceding image-first variant:** https://docs.google.com/presentation/d/1-wFWQTaGrOSwdtgGi6VdeHCdxZwz1Nq_3bl0KCP0Ul4/edit?usp=drivesdk
 
 **Verification:** native element readback found 10/10 images each approximately 478×269 pt at x=18 pt, no slide-boundary overflow, and 10/10 Google-native 800×450 thumbnail generation checks passed. This is **layout-level verification**, not a pixel-level overlap, small in-image caption legibility, data-origin or formal scientific validation pass. Previous cautions regarding illustrative charger and transformer scenes, hypothetical service curves, unqualified I2/I3 and source-specific data remain in force.
+
+## Latest active Google Slides layout — 14 October 2026 (supersedes 70/30 draft)
+
+**User-directed result:** The SAME editable native Google Slides presentation now uses a **65/35 usable-content body split**, with a scientific-visual region at approximately x=26–455 pt (width ≈429 pt) and an editable research-message region at approximately x=468–696 pt (width ≈228 pt), separated by a narrow gutter. Percentages describe the two content regions excluding their gutter and slide title/footer. The resulting body split is approximately **65.3% / 34.7%**. White canvas and white panel interiors; all authored elements conform to the canonical 13-color sRGB palette. Photographs retain their natural colors.
+
+**Current artifact:** https://docs.google.com/presentation/d/1sQkwI99ymiz1PYEmy-3suW_064bHDlTjF__8T-yYB9Q/edit?usp=drivesdk
+
+**Recovery backup (before this 65/35 rebuild):** https://docs.google.com/presentation/d/1MBhmtzAfPe6FLFTlKFnTE9zGXYgOB1GCKXj4DbmkrZg/edit?usp=drivesdk
+
+### Scientific content and presentation form corrected
+- **S1:** authentic, separately licensed Wikimedia Commons transformer and DC charging-station photographs (independent installations, not joint field test), with source credits; prior AI image replaced.
+- **S2:** native editable three-stage research roadmap, no generic illustrative chart.
+- **S3:** native editable two-system external-heat and operating-process diagram; independent external forcing does not prove thermal cross-system causality.
+- **S4:** separate T_e→P I2/H1 and P→T_e I3/H2 candidate mechanisms, dashed unknown/conditional links. Three frozen V1 objectives are represented in concise slide-summary text; full official text remains in canonical source.
+- **S5:** all eight selected P1–P4/T1–T4 hardware components placed in their physical-system roles; correct main AC P1→P2→T1 and DC T1→T2 energy path; auxiliary/cooling hardware not falsely inserted in the series supply.
+- **S6:** evidence admission, electrical verification, thermal state formulation, independent directional tests and bounded service assessment, with the **general**, not calibrated, DAE.
+- **S7:** exact checkpoint numerical summaries only; TU Wien 50 kW DC conditional assumptions η=0.95/PF=0.98 with 377.62 V and 4.760 kW *network resistive losses*; independent Bærug 40 MVA dataset 8,592 rows and held-out 0.907 K MAE/1.156 K RMSE; independent published Qatar CPC50 tested charging durations 86 vs 169 min. No fabricated time-series plot, invented feeder topology, or combined installation.
+- **S8:** independent electricity-service and mobility-service assessments, distinct direct vs engineering-response sustainability pathways, and environmental/economic/social consequence categories. No measured service deficits or unsupported SDG claims.
+- **S9:** proposed 2026–2027 research phases, with a prominently identified synchronized-data **GO/NO-GO** evidence requirement. No timeline tasks claimed complete.
+- **S10:** intentionally minimal native conceptual chain labeled **target research logic**, not an established coupled validation result.
+
+### Verified
+- Google Slides native asset/readback: **10 slides**, **all 10 render** as 800×450 thumbnails.
+- All slide-local shapes are within the 720×405 pt canvas; **0 geometrical text-box intersections** under the audit threshold (>8 pt width and >7 pt height).
+- Every authored slide-local foreground and filled shape uses the existing **13-color Deck3 palette** after removal of legacy `#303C49` and `#A5AFBA`.
+- Native text and engineering figure shapes remain independently editable; only the two title-slide *authentic photographs* are image elements.
+- Google Drive folder unchanged; prior deck backed up.
+
+### Open release checks (NOT_RUN)
+- Pixel-level thumbnail inspection for exact kerning, image composition, caption-area collision, and projection-distance readability was not performed.
+- True export/presentation playback, interaction and animation testing were not performed.
+- This remains an engineering design **draft**. Complete equipment-specific thermal-interface validation and measured service/sustainability outcomes are still OPEN. The source records are separate, not one physical testbed.
+
+**Governance:** This ten-slide ASU Google-native variant remains separate from the frozen eight-slide three-minute version and Chapter 1 variants. No canonical thesis authorities or unmerged objective PRs were modified.
