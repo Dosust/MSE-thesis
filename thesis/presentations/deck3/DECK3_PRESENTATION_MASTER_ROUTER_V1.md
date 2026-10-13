@@ -2,6 +2,8 @@
 
 **Status:** Presentation-version routing rule. Does not amend thesis canonical scientific authority. Source of eight-slide text: latest explicitly user-approved version (2026-10-10), preserved verbatim in `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`.
 
+**Consolidated full scientific color governance:** `project/visualization/THESIS_SCIENTIFIC_COLOR_GOVERNANCE_V2.md` (normative 13-token authored-graphic policy + restrained natural-context pixel exception). It does not authorize nonwhite panels, decorative landscaping or new scientific colors.
+
 ## AI infographic scientific reasoning/production (2026-10-13) — mandatory for every deck variant
 
 For each slide requiring visual design or production, Deck3 and Dossiya Research Expert must use the shared `project/visualization/AI_INFOGRAPHIC_SCIENTIFIC_REASONING_AND_PRODUCTION_PROTOCOL_V1.md` and their role-specific references: `.github/skills/deck3/references/AI_INFOGRAPHIC_DESIGN_AND_GENERATION_TRAINING_V1.md` and `.github/skills/dossiya-research-expert/references/AI_INFOGRAPHIC_SCIENCE_REVIEW_TRAINING_V1.md`. Research Expert defines and audits physics/evidence/arrow meaning; Deck3 selects AI equipment-only illustration vs native vector/data chart, integrates editable overlays and checks projection-scale output. Never ask AI imagery to generate measured data, research results, exact objectives, exact month positions or citations. The Slide 10 Gantt must be code/native precise rather than AI-invented. This is a workflow rule, not underlying model-weight training.
