@@ -96,6 +96,7 @@ def validate_contract(c: dict) -> dict:
         if status in ('LITERATURE_SUPPORTED', 'EQUIPMENT_VERIFIED', 'MEASURED', 'MODELED'):
             prov = e.get('provenance')
             _require(isinstance(prov, dict) and all(_text(prov.get(k)) for k in REQUIRED_PROVENANCE), 'asserted evidence requires source ID, scope and evidence status')
+            _require(prov['evidence_status'] == status, 'edge and provenance evidence status disagree')
 
     s = c['style']
     _require(isinstance(s, dict), 'style must be an object')
