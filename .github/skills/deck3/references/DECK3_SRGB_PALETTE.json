@@ -16,7 +16,16 @@
     "non-ASU yellow",
     "non-ASU gold"
   ],
-  "photo_exception": "Authentic colors of actual depicted objects and natural phenomena may remain. No synthetic recoloring or gradients.",
+  "natural_context_exception": {
+    "authority": "project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md",
+    "applies_to": "realistic natural contextual regions in genuine photographs and original AI scientific illustrations",
+    "allowed_examples": ["plants", "herbs", "trees", "flowers", "grass", "soil", "rocks", "gravel", "water", "scientifically justified sky and weather context"],
+    "conditions": ["physically plausible", "restrained saturation", "visually secondary", "present only where relevant to the scene", "do not interfere with scientific semantics or labels", "white canvas and panel interiors remain mandatory"],
+    "exclusion": "No exemption for authored arrows, legends, axes, text, diagrams, data plots, panels or decorative background fills; equipment material realism is allowed in authentic/photo-real physical depictions, not as scientific encoding.",
+    "restricted_hue_interpretation": "A naturally purple, pink or yellow flower may retain its physical color; the same hue is not thereby approved as a scientific graphic, arrow or branded UI token.",
+    "original_ai_artwork": true
+  },
+  "photo_exception": "Authentic materials and natural phenomena retain physically realistic colors. This covers relevant original AI illustrative natural-context objects as well as photographs; see natural_context_exception. No decorative gradients or scenery backgrounds.",
   "contrast": {
     "normal_text_min": 4.5,
     "essential_nontext_min": 3
@@ -166,13 +175,13 @@
       "allowed_as_surface": false
     }
   },
-  "policy_version": "1.6.0",
+  "policy_version": "1.6.1",
   "institutional_exceptions": {
     "maroon": "#8C1D40",
     "gold": "#FFC627",
     "note": "Only these two exact branded colors override previous categorical prohibitions; no other purple/magenta or gold/yellow designed tones are permitted."
   },
-  "photograph_color_policy": "Photographic and photorealistic objects preserve authentic physical colors, and need not be quantized to this authored palette.",
+  "photograph_color_policy": "Photographic and photorealistic physical objects preserve credible material colors; restrained natural context also applies to original illustrative scenes. These pixel colors are exempt from the 13 authored graphic-mark tokens, but never allow decorative scenic fills.",
   "low_contrast_policy": "ASU Gold and Bright Turquoise cannot be used as standalone critical marks or text on white; use only nonessential large accents, paired with high contrast labels or outlines.",
   "color_usage": "Only these 13 named sRGB tokens may be used for authored design elements. All canvas, boxes, headers, panels and legend interiors must be #FFFFFF. No colored fills, textures, gradients or shadows."
 }

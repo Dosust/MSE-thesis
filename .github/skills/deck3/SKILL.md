@@ -3,9 +3,24 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.8.4"
+  version: "1.8.6"
   short_name: "Deck3"
 ---
+
+**Consolidated full scientific color governance:** `project/visualization/THESIS_SCIENTIFIC_COLOR_GOVERNANCE_V2.md` (normative 13-token authored-graphic policy + restrained natural-context pixel exception). It does not authorize nonwhite panels, decorative landscaping or new scientific colors.
+
+## Controlled natural context color exception — 2026-10-13 — MANDATORY
+
+Read `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` and Deck3 `references/DECK3_SRGB_PALETTE.json` (policy v1.6.1) for **every scientific illustration, AI equipment-scene prompt, diagram, color QA and slide export**. All authored scientific arrows, typography, charts, equipment schematics, icons, borders and panel/surface areas retain exact governed tokens; all canvas and box backgrounds stay pure white. Only **contextually necessary natural objects** (plants, herbs, flowers, trees, grasses, soil, rocks, water and physically justified sky fragments) may retain believable, restrained natural colors in photographs **or original AI-generated illustrations**. Keep them visually secondary. Do not create decorative landscapes, oversaturated flowers, invented geographic/environmental evidence or change the scientific meaning of colors. Native color validation excludes exempt natural image pixels only after checking the natural object genuinely qualifies.
+
+## AI infographic scientific reasoning and generation — 2026-10-13 — MANDATORY for all thesis presentation variants
+
+**Whenever Deck3 is asked to plan, generate, design, render, compare, assemble, critique, or revise any thesis infographic**, first read `project/visualization/AI_INFOGRAPHIC_SCIENTIFIC_REASONING_AND_PRODUCTION_PROTOCOL_V1.md`, then `.github/skills/deck3/references/AI_INFOGRAPHIC_DESIGN_AND_GENERATION_TRAINING_V1.md`, together with the existing infographic-minimalism, equipment-selection, palette, media-routing, mechanism trace and citation controls. Ask **Dossiya Research Expert to qualify the mechanism/evidence meaning before visual generation**, then make a purpose-driven DESIGN CARD. Original generative-AI artwork is for physically plausible *equipment-only* scenes when necessary; exact mechanisms/AC/DC quantities, equations, labels, citations, numerical results, objectives and dates belong in verified editable native PowerPoint or code-derived vector layers. AI visual generation is **not mandatory on slides where native diagrams or measured plots better communicate the research**. Always preserve exact P1–P4 + T1–T4 roster on the architecture slide.
+
+**Current ten-slide progress-deck visual rule:** Slide 10 must show the researcher-approved **October 2026–April 2027** overlapping four-phase Gantt (literature Oct–Dec; datasets/testing Dec–Jan; planned model validation Jan–Mar; thesis report writing Apr). The earlier October 13–November 13 four-week schedule is **superseded** for this deck. See `thesis/presentations/deck3/DECK3_10SLIDE_PROGRESS_VISUAL_STORYBOARD_V1.md`. Slide 10's calendar geometry is **native/code-generated**, not an AI-invented raster timeline. Declare planned activities, not guaranteed model validation or ASU deadlines. Keep the existing 8-slide and 13/14-slide masters separate.
+
+Creating this skill update does NOT produce or approve any diagram, PPTX, simulation, AI image or PowerPoint playback; scientific/visual QA remains NOT_RUN until executed.
+
 
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
