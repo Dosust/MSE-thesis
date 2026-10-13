@@ -2,7 +2,7 @@
 
 **Researcher instruction:** 2026-10-13.  
 **Status:** User-directed visual production contract / FIGURES NOT YET PRODUCED OR REVIEWED.  
-**Presentation intent:** What the thesis aims to do; what has been completed; the proposed next-month writing and evidence plan.  
+**Presentation intent:** What the thesis aims to do; what has been completed; the planned October 2026–April 2027 research program.  
 **Content source:** Conversation 2026-10-13 researcher-requested 10-slide presentation, subordinate to active thesis science; proposed slide copy is **not** retroactively merged into any existing source master.  
 **Research authorities:** `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`; `project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md`; the researcher-approved objective amendment `project/CANONICAL_TEMPERATURE_MEDIATED_ELECTRICAL_THERMAL_RESEARCH_OBJECTIVES_V2.md` in PR #76 (not merged to main at this checkpoint); `project/thermal_sos_functional_architecture/SELECTED_EIGHT_COMPONENTS_WORKING_RESEARCH_BASELINE_V1.md`; `project/visualization/ALL_PRESENTATIONS_EIGHT_COMPONENTS_VISIBILITY_RULE_V1.md` (PR #78).  
 **Figure standards:** `.github/skills/deck3/references/DECK3_SCIENTIFIC_MINIMAL_INFOGRAPHIC_STANDARD_V1.md`, `DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md`, `DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md`, `DECK3_SRGB_PALETTE.json`.  
@@ -69,8 +69,17 @@ Separate equipment-case boundary labels; no single shared calibration/validation
 ### Slide 9 — Evidence-gated remaining research
 **Media:** Native editable evidence matrix with rows `I2 actual temperature-conditioned CPC50 AC law`, `I3 actual P3 action`, `TU Wien equipment thermal calibration`, `service thresholds/times/delays`. Columns `Established / Conditional / Open`. Only grounded fields can be marked established. Use short dashed OPEN labels next to missing links. A minimal causal chain can be shown as gray candidate with gaps, never hard-coded thermal trip or quantitative service loss. Outcome: what remains and why. No unsupported claims of full coupled-system validation.
 
-### Slide 10 — October 13 to November 13 research-writing plan
-**Media:** Native four-step horizontal **timeline** with dated phases: Oct 13–19 Chapters 1–2, Oct 20–26 Chapters 3–4, Oct 27–Nov 2 Chapters 5–6, Nov 3–13 Chapter 7 + reference/ASU-format scientific integration. Right-side endpoint `one integrated WORKING manuscript draft for review`. A **separate parallel dashed track** below indicates CPC50 data-access/qualification `conditional on evidence availability`, not committed delivery or confirmed author response. Distinguish proposed writing plan from formal ASU deadline/chair approval; no artificial percentage completion.
+### Slide 10 — October 2026–April 2027 Research Work Plan
+**One scientific/message function:** Show a **planned overlapping research schedule**, not a prediction that model validation or thesis completion will necessarily succeed.
+**Media:** Editable PowerPoint Gantt / code-derived vector horizontal month-duration graphic (Python/Julia); NOT an AI-generated raster of exact dates or bars. **Seven columns** Oct 2026, Nov 2026, Dec 2026, Jan 2027, Feb 2027, Mar 2027, Apr 2027. **Exactly four phase rows**:
+1. **Literature Review — October–December 2026:** transformer thermal physics; charger extreme-heat operation and AC/DC behavior; electrical–thermal interfaces; mathematics and bounded research gaps.
+2. **Datasets and Testing — December 2026–January 2027:** source/data qualification, implement minimum-admissible models, perform numerical tests, investigate I2/I3 candidates.
+3. **Model Validation — January–March 2027:** conduct planned independent predictive/physical evaluation where suitable observations exist, examine rivals/uncertainty, and evaluate *supported* intersystem/service consequences. The word "Validation" is the **activity goal**, not a claim of success.
+4. **Thesis Report Writing — April 2027:** integrate reviewed evidence, real results, assumptions, limitations, figures, citations and references into a supervisory review draft.
+
+**Accurate calendar geometry:** Literature Oct-Nov-Dec; datasets/testing Dec-Jan; model validation Jan-Feb-Mar; reporting Apr. Explicit visual simultaneous occupancy in **December and January**; do not enforce falsely disjoint sequential milestones. No unverified empirical results, completed flags, extra dates, approvals, invented per-week deliverables, or ASU deadline claims.
+**PowerPoint native plan:** Four left-aligned phase names; seven month headers; horizontal thin colored duration strokes over pure white; only necessary faint month guide lines, no shaded bar fills. Keep all date text and lines editable; footer: "Proposed research plan; activities may depend on data and supervisory review." Full exact schedule wording preserved in the presenter notes if projected space is tight.
+**Scientific status:** Planned tasks only. This researcher update formally **supersedes the previous October 13–November 13 four-week writing schedule for Slide 10** and does not change the thesis title, eight-component roster, model evidence or ASU rules.
 
 ## 3. Required figure production acceptance matrix
 For **each** of the ten slides log:
