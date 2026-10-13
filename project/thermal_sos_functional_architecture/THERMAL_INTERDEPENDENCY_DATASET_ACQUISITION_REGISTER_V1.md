@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-13  
 **Status:** WORKING ACQUISITION AND QUALIFICATION REGISTER — NOT AN EXPERIMENTAL VALIDATION CLAIM  
-**Repository:** \`Dossiya-SE/MSE-thesis\`  
+**Repository:** `Dossiya-SE/MSE-thesis`  
 **Scope:** Power System (P) and Electrified Transportation System (T) electrical–thermal interfaces under extreme heat.  
 **Inventory convention:** **14 entries** = five core sources/requirements, six supplementary publicly discoverable datasets/sources, and three conditional evidence requirements. **Not all 14 are downloadable datasets**: D04 is a peer-reviewed thermal-parameter publication; D12–D14 are measurement requirements, not identified public repositories.
 
@@ -38,7 +38,7 @@ Determine whether the **actual measured charger grid-side** active/reactive dema
 |---|---|---|---|---|
 | **D01** | [Schultis & Ilo: TU Wien LV Test Grids v1](https://doi.org/10.17632/hgh8c99tnx.1) | 160 kVA 20/0.4 kV transformer; 20Cable feeder topology, line impedances, customer loads, published electrical solution | **Previously acquired/reconstructed in research workflow**; verify original workbook, hashes and reconstruction artifacts in the current execution environment | P1/P2 reproducible electrical benchmark and conditional charging-scenario response. Not the actual Qatar charging network or a thermal experiment |
 | **D02** | [Krama et al. (2026): Qatar Siemens CPC50 experiment](https://doi.org/10.1016/j.ecmx.2026.101960); [Sezer & Bayhan (2025) conference study](https://journals.library.torontomu.ca/index.php/ictea/article/view/2606) | Charger ambient and rectifier temperatures, observed AC input/DC output, thermal derating, SOC, charging duration, efficiency, power quality; request original synchronized AC P/Q and controller traces | **Published physical evidence; raw synchronized observations not acquired**. Public text/figures are not an independently admitted numerical dataset; request data from authors | Primary T1/T3 thermal-derating precedent and prospective direct I2 identification; **reactive-power time-series availability not independently established** |
-| **D03** | [Esser et al. (2025) open AC/DC charging profiles](https://zenodo.org/records/14065331) | Measured grid-side active/reactive power, charger/DC variables, SOC, charging commands/setpoints, ambient where documented | **Public repository**, files to acquire and audit; first inspect \`measurements.csv\` and \`parameters.csv\` | Open AC/DC interface identification and method validation on its **own** equipment; no established internal rectifier-temperature derating |
+| **D03** | [Esser et al. (2025) open AC/DC charging profiles](https://zenodo.org/records/14065331) | Measured grid-side active/reactive power, charger/DC variables, SOC, charging commands/setpoints, ambient where documented | **Public repository**, files to acquire and audit; first inspect `measurements.csv` and `parameters.csv` | Open AC/DC interface identification and method validation on its **own** equipment; no established internal rectifier-temperature derating |
 | **D04** | [Najar et al. (2017) transformer top-oil thermal modeling](https://doi.org/10.1016/j.applthermaleng.2017.03.061) | Published experimentally fitted ONAN thermal parameters, including 160 kVA example | **Published parameter authority; not an admitted raw field dataset** | Conditional 160 kVA thermal surrogate, with cooling-family and parameter-transfer limitations. Do not interpret the source's matching kVA as proof of TU Wien equipment equivalence |
 | **D05** | [Bærug et al. (2025) measured 40 MVA ONAN transformer data](https://zenodo.org/records/17223516) | Hourly measured current, voltage, ambient, top oil, bottom oil, winding temperatures and clamping quantities | **Uploaded and audited in preceding research work**; 2024 measurement series. Separate real-data holdout evaluation reported (MAE 0.907 K; RMSE 1.156 K); these values require the associated V3 code/results for independent reproduction | Separate equipment-specific 40 MVA physical-time model evaluation only; never substitute fitted parameters for the TU Wien–Najar 160 kVA model. The source's calculated file is **not measured ground truth** |
 
@@ -48,7 +48,7 @@ The **CPC50 bottleneck (D02)** is an *identified thermal state → actual measur
 
 | ID | Dataset and official entry | Evidence to inspect in original files | Recommended role | Status / caution |
 |---|---|---|---|---|
-| **D06** | [EPFL Level-3 EV charging data](https://github.com/DESL-EPFL/Level-3-EV-charging-dataset) | Measured AC charging power, station setpoint \`Pset\`, vehicle request \`Preq\`, SOC, session times | Separate charger-request versus realized-demand comparison; candidate alternative electrical interface | Public repository; **internal charger thermal state not established** |
+| **D06** | [EPFL Level-3 EV charging data](https://github.com/DESL-EPFL/Level-3-EV-charging-dataset) | Measured AC charging power, station setpoint `Pset`, vehicle request `Preq`, SOC, session times | Separate charger-request versus realized-demand comparison; candidate alternative electrical interface | Public repository; **internal charger thermal state not established** |
 | **D07** | [KIT / Beichter et al. (2026)](https://zenodo.org/records/17866847) | Per-phase AC active/reactive power, V/I, charger setpoints, SOC, ambient, sample intervals and phase boundaries | Independent AC P/Q interface and operating-regime benchmark | Public repository; acquire lower-frequency files first; **internal rectifier temperature not verified** |
 | **D08** | [Shenzhen Autosun–PolyU charging data](https://data.mendeley.com/datasets/c7gg94tmvz/3) | Charging port V/I/P, SOC, charging-gun temperature(s), interruption codes, timestamps | Investigate connector-temperature-associated charging outcomes | Public numerical dataset; **connector temperature ≠ internal rectifier temperature**; published field list does not establish grid-side AC P/Q |
 | **D09** | [KU Leuven charging datasets](https://doi.org/10.48804/C5PT0R) | Charger/vehicle charging voltage, current, power and battery temperature; identify exact AC/DC metering boundary | Independent battery acceptance and conversion/energy accounting comparison | Public repository; **grid-side Q and internal EVSE temperature not established** |
@@ -94,15 +94,15 @@ Also request: **session/device IDs**, sample frequency and synchronization accur
 7. **Link to P1/P2 conservatively:** use independently measured or qualified AC demand as conditional load input. TU Wien–Najar outputs remain **scenario predictions**, not an installed Qatar feeder observation.
 8. **Admit physical I2 only with adequate evidence:** receiver response and attribution as required by the approved component/interface protocol; a successful stand-alone charger regression is narrower than coupled physical validation.
 
-**Stop outcomes:** \`NO_SYNCHRONIZED_RAW_AC\`, \`NO_INTERNAL_THERMAL_STATE\`, \`BATTERY_LIMITED_UNRESOLVED\`, \`NO_IDENTIFIABLE_TEMPERATURE_EFFECT\`, \`NO_EQUIPMENT_VALID_RECEIVER\`, \`NO_INDEPENDENT_HOLDOUT\`. A blocker is a research result; do not invent data, parameter values or validated causal arrows.
+**Stop outcomes:** `NO_SYNCHRONIZED_RAW_AC`, `NO_INTERNAL_THERMAL_STATE`, `BATTERY_LIMITED_UNRESOLVED`, `NO_IDENTIFIABLE_TEMPERATURE_EFFECT`, `NO_EQUIPMENT_VALID_RECEIVER`, `NO_INDEPENDENT_HOLDOUT`. A blocker is a research result; do not invent data, parameter values or validated causal arrows.
 
 ## 6. Prioritized acquisition and execution sequence
 
 | Order | Dataset/task | First actionable operation | Completion criterion |
 |---|---|---|---|
 | **1** | **D02 Qatar CPC50 original data** | Request synchronized per-session AC/DC/temperature and controller records from the corresponding authors; clarify whether true AC Q is available | Documented access decision and, if obtained, raw file identity/measurement contract |
-| **2** | **D03 Esser** | Acquire \`measurements.csv\` and \`parameters.csv\`; inventory eligible DC sessions before full archives | AC/DC port and signal mapping with source-preserving IDs |
-| **3** | **D06 EPFL** | Acquire session and measurement tables; inspect \`Pset\`/\`Preq\`/actual AC P | Verified electrical boundary, temporal and request regime mapping |
+| **2** | **D03 Esser** | Acquire `measurements.csv` and `parameters.csv`; inventory eligible DC sessions before full archives | AC/DC port and signal mapping with source-preserving IDs |
+| **3** | **D06 EPFL** | Acquire session and measurement tables; inspect `Pset`/`Preq`/actual AC P | Verified electrical boundary, temporal and request regime mapping |
 | **4** | **D08 Shenzhen** | Download and audit thermal charging-port signals and interruption codes | Qualified **connector-only** thermal observation contract |
 | **5** | **D07 KIT** | Inspect low-frequency electrical and weather files; defer very large waveform archive | Session-specific P/Q and temperature/context eligibility |
 | **6** | **D09–D10 KU Leuven** | Acquire selectively where battery/BMS/HVAC evidence is actually required | Documented relevance to selected T2/T4 model question |
