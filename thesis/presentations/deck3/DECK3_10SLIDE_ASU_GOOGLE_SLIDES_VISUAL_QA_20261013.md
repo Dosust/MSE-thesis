@@ -58,3 +58,17 @@ Photographs are authentic independent physical references. Cropped/resized prese
 | Accessibility/caption overlay at actual projected scale | **NOT_RUN** | Template native layout preserved; final WCAG/readability/captions check still required |
 
 **Acceptance state:** working scientific Google Slides visual draft. It has genuine editable diagram content and authentic reference photos, but should not be described as publication/release-ready until rendered pixel inspection, scientific source verification, photo-credit/reuse audit, complete original objective display, and presentation-scale QA are completed.
+
+
+## 2026-10-13 — Ten generated figure previews placed into Google Slides
+
+**User-directed change:** Imported the ten 1672×941 PNG image previews, one on each corresponding native ASU slide, using the Google Slides API local-image sidecar; removed previous overlapping slide-local content and retained editable native slide titles and evidence caveats. Source 2026 ASU template unchanged; an independent backup of the prior Deck3 presentation was made before this update.
+
+- **Current updated presentation:** https://docs.google.com/presentation/d/1sQkwI99ymiz1PYEmy-3suW_064bHDlTjF__8T-yYB9Q/edit?usp=drivesdk
+- **Backup (previous image/shape integration):** https://docs.google.com/presentation/d/1iHUoIuSXGMxwBhDZAVgO30jPwT9_-7hksxQpfliGAV8/edit?usp=drivesdk
+- **In Google Drive:** same Deck3 folder, id `1DVphEnPcVSgnEG2fexjhVAZ7CkKxhrYx`.
+- **Image-object readback:** 10/10 slides contain exactly one newly embedded `deck3_visual_20261013_sXX` image; each has independently editable title. Figures preserve source 1672:941 aspect ratio.
+- **Render API:** 10/10 native Google Slides thumbnail requests succeeded at 800×450, but this is NOT a pixel/legibility QA pass.
+- **Explicit caveats added:** Figures are conceptual; photos in generated scenes are not authenticated field images; Bærug displayed time series is illustrative rather than source-derived; network and thermal relationship drawings are not engineering-verified; source streams are separate; candidate thermal mechanisms are unqualified and no coupled validation is claimed.
+
+**New representation caveat:** The new primary figures are **raster PNGs**, so internal figure labels/diagrams are not editable native slide objects; native slide titles and caveat notes remain editable. The earlier vector-style diagram draft is preserved in the backup. This version is a **visual review deck**, NOT a final scientifically approved thesis figure set. The earlier science risks documented above still require correction; placing the images does not resolve them.
