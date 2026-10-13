@@ -5,6 +5,10 @@
 **Trigger:** "illustrative image", "illustrative infographic", "illustration", "infographic", "Canva-style image", or equivalent, whether requested for one slide or multiple slides.
 **Terminology:** In this thesis presentation workflow, "illustrative image" and "illustrative infographic" express the same purpose: a **standalone explanatory visual asset** placed within a slide, not an image rendering of the complete slide.
 
+## 0. FIRST LAW — begin with actual real-world images
+
+**MANDATORY:** Read `DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md` **before searching for or generating each physical equipment image**. Seek and visually inspect applicable real-world photos first, and use rights-cleared authentic image pixels in the final unified, purpose-driven composition as much as technically relevant. If image rights are unverified, create original, independently composed *source-grounded* equipment imagery rather than using/copying the photo; disclose that it contains no authentic photographic pixels. For abstract methodology, literature evidence, mathematical plots, objectives or timelines, deliberately select a precise vector/native diagram when photographs have no scientific function. Log the inspected real image URL/origin, matched component/technology, reuse rights, actual source-use mode, and why zero photos were used where relevant. **Search alone is not photographic grounding and photographic realism is not physical validation.**
+
 ## 1. Non-negotiable per-asset rule
 - If the user requests N illustrative images, produce **N genuinely separate, individually meaningful image assets** (one source/render/export per image as applicable), each usable independently. **Never** render a 2×5, 10-panel, contact-sheet, mosaic or single collage **as the response instead of N individual assets**. A separate contact sheet may be supplied only as an additional preview after N actual files exist and are verified.
 - Never substitute one picture split into N panels for N purpose-designed illustrations.
