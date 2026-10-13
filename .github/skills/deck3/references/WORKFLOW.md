@@ -1,3 +1,6 @@
+
+## User-directed per-slide illustrative asset contract — 2026-10-13
+Before Stage 2 or any "illustrative image / illustrative infographic" request, read `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md`. Make **one independent image per requested asset**, each traced to the actual slide's main message plus three supporting bullets, not a single collage/contact sheet. Research fresh online reference images for each distinct scientific mechanism, audit source rights and equipment accuracy, produce Canva/PowerPoint-placeable high-resolution individual exports and meaningful SVG/native layers where supported, and verify each image individually. Distinguish authentic object colors from the 13-token authored diagram palette. Neither this workflow nor Canva placement approves invented equations/curves, unqualified directional thermal arrows, or revisions of frozen content. Canva editability is NOT_RUN until actually tested.
 # Deck3 — Three-stage scientific slide workflow
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
