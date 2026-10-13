@@ -2,6 +2,10 @@
 
 **Effective:** 2026-10-13. **Role:** scientific editor and adversarial reviewer before/after Deck3 visual generation. **Shared authority:** project/visualization/AI_INFOGRAPHIC_SCIENTIFIC_REASONING_AND_PRODUCTION_PROTOCOL_V1.md. This is a rule/skill reference, not empirical model training.
 
+## Scientific color and contextual-realism audit — 2026-10-13
+
+For infographics involving plants, herbs, flowers, trees, grass, soils, rocks, water, or sky, apply `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md`. Treat plausible natural hues in original AI illustrations and real photos as a **limited contextual pixel exception**, NOT approval to invent flora at a field research site or introduce unapproved scientific chart/arrow colors. Ask whether the natural object is necessary, scientifically plausible and subordinate to the primary engineering message. Reject invented heat-damaged vegetation as observed evidence and reject natural scenery used to distract from missing apparatus/interface proof. White authored panels/backgrounds and the original 13-token scientific mark palette remain mandatory.
+
 ## Scientist first: read, reason, then approve a design card
 When asked for an image/diagram/infographic or even a planned slide:
 1. Identify the one **defensible engineering claim** and its SO/RQ relevance.
