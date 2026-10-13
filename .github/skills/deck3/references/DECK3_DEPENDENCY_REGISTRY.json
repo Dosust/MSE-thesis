@@ -51,7 +51,9 @@
       "paths": [
         ".github/skills/scientific-infographic-design/SKILL.md",
         ".github/skills/scientific-infographic-design/examples/figures.py",
-        ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
+        ".github/skills/scientific-infographic-design/examples/pptx_builder.py",
+        ".github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md",
+        ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json"
       ],
       "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified; first choice is scientifically credible hybrid physical equipment scene plus diagram overlay when physical scene is needed"
     },
@@ -171,9 +173,11 @@
     "G15_native_assembly_animation"
   ],
   "required_adversarial_probes": 20,
-  "physical_image_preference": "one coherent real-physical equipment plus exact scientific relationship with minimal labels; prefer native editable interface overlays; no explanatory image panels",
+  "physical_image_preference": "First inspect real-world equipment images and prioritize rights-cleared authentic photos in one unified purpose-led illustration when physically relevant. Otherwise use independently composed original source-grounded imagery; record zero-photo reason. Native editable mathematical/workflow diagrams remain photo-free when appropriate.",
   "all_forms_execution_audit": ".github/skills/deck3/references/DECK3_ALL_FORMS_EXECUTION_AUDIT_2026-10-09.md",
   "learning_status": "SKILL_AND_POLICY_CONNECTED_TEST_EXECUTION_NOT_CONFIRMED",
   "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
-  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65"
+  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65",
+  "real_world_image_first_law_authority": ".github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md",
+  "real_world_image_source_manifest_template": ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json"
 }
