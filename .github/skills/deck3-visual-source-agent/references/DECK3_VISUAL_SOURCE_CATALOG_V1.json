@@ -1,0 +1,297 @@
+{
+  "schema": "deck3-visual-source-catalog-v1",
+  "source_status": "REFERENCE_CANDIDATES_ONLY_NOT_INSPECTED_OR_LICENSED_FOR_FINAL_ASSETS",
+  "date": "2026-10-13",
+  "authority": "Deck3 real-world first law and thesis canonical physics",
+  "notes": [
+    "Individual asset agent must open and visually inspect relevant exact images afresh, not infer from links.",
+    "Manufacturer photos typically reference-only; site-specific topology and device variant may differ.",
+    "Electric charging-station photos do not necessarily establish commercial DC charging.",
+    "ASU brand rules and Deck3 authored diagram policy have different font scopes; preserve current Deck3 Times New Roman without falsely claiming ASU official choice."
+  ],
+  "sources": [
+    {
+      "id": "hitachi_transformer",
+      "kind": "REAL_EQUIPMENT",
+      "component": "P1",
+      "url": "https://www.hitachienergy.com/ca/en/products-and-solutions/transformers/distribution-transformers/liquid-filled-distribution-transformers/medium-distribution-transformers-316-2-499-kva",
+      "role": "liquid-filled transformer tanks/bushings/radiators; examples not verified installation",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        1,
+        3,
+        4,
+        5,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "eaton_green_motion",
+      "kind": "REAL_EQUIPMENT",
+      "component": "T1",
+      "url": "https://www.eaton.com/us/en-us/skuPage.GMDC50-CCSX2.html",
+      "role": "commercial three-phase DC charger form factor and connections",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        1,
+        3,
+        4,
+        5,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "sel_787",
+      "kind": "REAL_EQUIPMENT",
+      "component": "P3",
+      "url": "https://selinc.com/products/787/",
+      "role": "actual transformer relay case/control panel; installed thermal trip unverified",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        5
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "mahle_hvac",
+      "kind": "REAL_EQUIPMENT",
+      "component": "T4",
+      "url": "https://www.mahle.com/en/products-and-services/passenger-cars/air-conditioning/",
+      "role": "automotive electric HVAC component appearance; exact vehicle match unverified",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        5
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "epri_opendss",
+      "kind": "TECHNICAL_TOPOLOGY",
+      "component": "P2",
+      "url": "https://opendss.epri.com/ExamplesDocsandTestCases.html",
+      "role": "feeder nodes/branch topology, not photographic installation evidence",
+      "rights_hint": "LICENSE_CHECK_REQUIRED",
+      "slides": [
+        5,
+        6
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "iec60617",
+      "kind": "SYMBOL_STANDARD",
+      "component": "ENGINEERING",
+      "url": "https://webstore.iec.ch/en/publication/2723",
+      "role": "electrotechnical symbols; subscription standards not free copy/paste icons",
+      "rights_hint": "COPY_NOT_AUTHORIZED",
+      "slides": [
+        3,
+        5
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "nist_resilience",
+      "kind": "METHODOLOGICAL_RESEARCH",
+      "component": "SERVICE_RESILIENCE",
+      "url": "https://www.nist.gov/system/files/community-resilience-planning-guide-volume-1.pdf",
+      "role": "service-functionality and recovery framing, not thesis dataset",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        6,
+        8
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "fontawesome",
+      "kind": "ICON_SET",
+      "component": "GENERAL",
+      "url": "https://fontawesome.com/icons",
+      "role": "documents, magnifiers, services, environment/economic/social icons; review icon license",
+      "rights_hint": "LICENSE_CHECK_REQUIRED",
+      "slides": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "lucide",
+      "kind": "ICON_SET",
+      "component": "GENERAL",
+      "url": "https://lucide.dev/icons/",
+      "role": "consistent optional line-icon alternative, do not mix indiscriminately",
+      "rights_hint": "LICENSE_CHECK_REQUIRED",
+      "slides": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "asu_colors",
+      "kind": "ASU_AUTHORITY",
+      "component": "BRAND",
+      "url": "https://brandguide.asu.edu/brand-elements/design/color",
+      "role": "institutional maroon and gold; Deck3 has its own stricter authored palette",
+      "rights_hint": "OFFICIAL_GUIDANCE",
+      "slides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "asu_fonts",
+      "kind": "ASU_AUTHORITY",
+      "component": "TYPOGRAPHY",
+      "url": "https://brandguide.asu.edu/brand-elements/design/fonts",
+      "role": "official ASU font guidance; Deck3 current Times New Roman must not be silently overwritten",
+      "rights_hint": "OFFICIAL_GUIDANCE",
+      "slides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "asu_presentations",
+      "kind": "ASU_AUTHORITY",
+      "component": "LAYOUT",
+      "url": "https://brandguide.asu.edu/brand-elements/design/color",
+      "role": "consult current university branded presentation standard; no invented logo",
+      "rights_hint": "OFFICIAL_GUIDANCE",
+      "slides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "commons_transformer",
+      "kind": "POTENTIAL_REUSABLE_PHOTO",
+      "component": "P1",
+      "url": "https://commons.wikimedia.org/wiki/File:Distribution_Transformer_1.jpg",
+      "role": "transformer photo; exact file rights and attribution must be rechecked before use",
+      "rights_hint": "RECHECK_FILE_LICENSE",
+      "slides": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "commons_evse",
+      "kind": "POTENTIAL_REUSABLE_PHOTO",
+      "component": "T1",
+      "url": "https://commons.wikimedia.org/wiki/File:Electric_vehicle_charging_station_Plaue.jpg",
+      "role": "physical charging station; connector type and license must be checked; may not depict DC charger",
+      "rights_hint": "RECHECK_FILE_LICENSE",
+      "slides": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "commons_ev",
+      "kind": "POTENTIAL_REUSABLE_PHOTO",
+      "component": "T2",
+      "url": "https://commons.wikimedia.org/wiki/File:Electric_car_charging_station.jpg",
+      "role": "real EV charge setting; charging technology and license must be checked",
+      "rights_hint": "RECHECK_FILE_LICENSE",
+      "slides": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "diagramsnet",
+      "kind": "LAYOUT_AND_SHAPES",
+      "component": "GENERAL",
+      "url": "https://app.diagrams.net/",
+      "role": "engineering drawing shape/style examples, not evidence",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        4,
+        5,
+        6,
+        8
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    },
+    {
+      "id": "canva_timeline",
+      "kind": "LAYOUT_AND_SHAPES",
+      "component": "TIMELINE",
+      "url": "https://www.canva.com/templates/?category=tACZCg-26U0",
+      "role": "reference spacing and milestone grammar; do not copy protected template",
+      "rights_hint": "REFERENCE_ONLY",
+      "slides": [
+        9
+      ],
+      "inspected_for_current_asset": false,
+      "image_reuse_cleared": false
+    }
+  ]
+}
