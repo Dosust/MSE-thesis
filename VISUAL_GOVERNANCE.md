@@ -1,3 +1,6 @@
+## Professional diagram grammar and online exemplar qualification (Deck3, 2026-10-13)
+When `Deck3 all` or its companion research/diagram skills create thesis presentation graphics, read `.github/skills/deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and select an **appropriate professional view before styling**: electrical one-line from actual topology, typed SoS parts/ports, thermal energy balance, model-derived state-time plot, editable evidence matrix, methodology flow or dated plan. IEC 60617, OMG SysML v2, EPRI OpenDSS and published IEEE/Nature figure practice are methodological *leads* whose applicability, source-depth, diagram rights and exact notation must be examined before any compliance/reuse claim. No uniform transformer/car/desert stock composition across slides, invented line/equipment, fake experimental graphs or explanatory slide images. The canonical 13-color Deck3 sRGB policy and white-interior restriction are unchanged; real natural/environmental objects may preserve authentic coloration. Mathematical quantities require units, source/validity and readable axes. Native editable technical arrows, equations and citations should be separate from illustrative equipment raster.
+
 # Visual Governance
 
 ## Scope
