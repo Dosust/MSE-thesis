@@ -59,6 +59,7 @@ def validate_contract(c: dict) -> dict:
         _require(_text(e['id']) and e['id'] not in edge_ids, 'duplicate or invalid edge id')
         edge_ids.add(e['id'])
         a, b, t, status = e['source'], e['target'], e['type'], e['evidence_status']
+        _require(_text(a) and _text(b), 'edge endpoints must be strings')
         _require(a in node_index and b in node_index and a != b, 'edge endpoint unknown or self-loop')
         _require(t in TYPES and status in STATUSES, 'unknown edge type or evidence status')
         _require(_text(e['label']), 'each edge needs an explicit label')
