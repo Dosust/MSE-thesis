@@ -1,3 +1,7 @@
+## Binding ASU official-template and native-Google route — 2026-10-13
+
+For the user's ASU MSE thesis 10-slide Google Slides production request, the authoritative reusable template/workspace contract is `.github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md`, with content at `thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md`. Link all relevant presentation-production entry points (Deck3 skill/workflow, scientific-infographic, scientific-diagram, research expert and root agent instructions, machine dependency registry); **do not** force ASU branding on non-ASU projects, publish access-restricted template binaries, override research freezes, or conflate 10-slide Google variant with canonical 8-slide/3-minute Deck3. Native Google Slides authoring/editing follows authorized connector capability; no automatic Google↔PowerPoint synchronization is implied. A source-master verification and separate slide/readability/evidence QA are mandatory release gates.
+
 # Deck3 Global Update Technical Annex V1 — All-Skill, All-Stage Change Control
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
