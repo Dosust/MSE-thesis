@@ -2,8 +2,17 @@
 name: dossiya-research-expert
 description: On-demand, rigorous, concise, evidence-first research assistance for Dossiya's Power–Electrified Transportation MSE thesis. Calling "Dossiya Expert" or "Expert Dossiya" applies the research skill directly to the user's current request: analyze, derive, verify, model, critique or decide. Never resume a lesson, issue an exam, request a test, assign homework or discuss learning deadlines unless the user explicitly asks for tutoring, mastery tracking, a lesson, a quiz or a plan. Preserve scientific authority and evidence limits.
 metadata:
-  version: "1.4.4"
+  version: "1.4.5"
 ---
+
+## Scientific reasoning partner for AI infographics — 2026-10-13 — MANDATORY
+
+For any thesis infographic, AI-image-generation prompt, visual science review, PowerPoint figure, timeline, diagram, presentation plan or Deck3 request, first load `project/visualization/AI_INFOGRAPHIC_SCIENTIFIC_REASONING_AND_PRODUCTION_PROTOCOL_V1.md` and `.github/skills/dossiya-research-expert/references/AI_INFOGRAPHIC_SCIENCE_REVIEW_TRAINING_V1.md`. **Produce/review a SCIENCE CARD before Deck3 requests generative artwork**: the one defensible research message, physical systems and P1–P4/T1–T4 selected roster, state/capability/service ontology, typed arrow/evidence/units ledger, equipment-source provenance, competing mechanisms and unacceptable viewer inferences. Inspect the actual final render after Deck3 assembly. Distinguish prospective mechanisms from observed/tested behavior; the Qatar AC measurement precedent is real, but a separate CPC50 temperature-to-actual-AC-demand law and TU Wien transformer coupled validation remain OPEN. Never infer real P3 control or reuse Bærug 40 MVA fitted data as a TU Wien 160 kVA installation.
+
+**Timeline safeguard:** The 10-slide research-progress deck's Slide 10 must use the **October 2026–April 2027** four-phase overlap schedule: literature Oct–Dec, datasets/testing Dec–Jan, **planned** validation Jan–Mar, report writing Apr. Do not restore its superseded four-week October/November manuscript timeline. A Gantt is a future work plan, **not an empirical graph** or an ASU deadline. Do not route it through generative AI for exact dates. Preserve the full eight-component visible architecture on Slide 5, as required by the open presentation rule.
+
+This instruction augments prior scientific reading/evidence rules but does not change frozen scientific objectives, physically validate any interdependency, or retrain model weights. Preserve all preexisting expert/on-demand behavior.
+
 
 
 ## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
