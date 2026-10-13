@@ -1,0 +1,53 @@
+# Deck3 Individual Canva-Ready Illustrative Infographic Protocol V1
+
+**Effective:** 2026-10-13
+**Status:** User-directed visual-output and production instruction; subordinate to frozen thesis science, Deck3 slide-text masters, scientific citations, evidence/non-invention, mechanism trace, palette, accessibility and rights.
+**Trigger:** "illustrative image", "illustrative infographic", "illustration", "infographic", "Canva-style image", or equivalent, whether requested for one slide or multiple slides.
+**Terminology:** In this thesis presentation workflow, "illustrative image" and "illustrative infographic" express the same purpose: a **standalone explanatory visual asset** placed within a slide, not an image rendering of the complete slide.
+
+## 1. Non-negotiable per-asset rule
+- If the user requests N illustrative images, produce **N genuinely separate, individually meaningful image assets** (one source/render/export per image as applicable), each usable independently. **Never** render a 2×5, 10-panel, contact-sheet, mosaic or single collage **as the response instead of N individual assets**. A separate contact sheet may be supplied only as an additional preview after N actual files exist and are verified.
+- Never substitute one picture split into N panels for N purpose-designed illustrations.
+- Each asset serves one slide-specific scientific purpose and matches the selected deck's **actual** approved main message and **three supporting bullets** (or actual existing points where that source has a different structure). Do not invent three bullets, change canonical approved slide text, or assume that slide numbers have the same meaning in the 8-, 13- or 14-slide variants.
+- Figures are **illustration-only**, not whole-slide screenshots, title/bullet restatements, generic multi-card layouts or pseudo-Canva templates. Keep slide titles, main message, bullets, citations and long equations in native editable slide objects. In an illustrative infographic, use only a few indispensable short on-object labels and typed relationship arrows. Do not create embedded explanatory panels.
+- The request for N image files does **not** silently alter an approved deck's slide count, number of figure-bearing slides, frozen slide text or image slot. If the user separately requests a new N-slide deck, first use its actual authorized slide text. If user requests 10 assets but the active 8-slide deck permits 5 figure placements, make distinct assets as requested without falsely claiming automatic authorization to insert all ten.
+
+## 2. One slide, one design brief
+Before generating each asset, record separately:
+1. Source deck / variant / slide number and authoritative approved slide text.
+2. **Main message**, up to three actual key supporting points, and the **one scientific question the figure must answer**.
+3. Figure's unique visual grammar (physical equipment cutaway, thermal field, simplified electrical pathway, energy balance/control volume, state trajectory with NO invented data, causal-candidate comparison, event-time schematic, physical-to-service mapping, etc.). Do not give every slide the same transformer–car–sun composition.
+4. Real systems and component membership; physical/model boundaries; external forcing; temperature/energy/electrical states; controls; measured versus modeled quantities; allowed meanings of each arrow.
+5. Confirmed versus CANDIDATE versus OPEN claims, exact equations and evidence status. **A generated graph, number, threshold, thermal curve or arrow is not data or validation.**
+6. Chosen reference imagery, permitted reuse versus concept inspiration, source attribution, and quality checks.
+
+## 3. Research original visual references online, each time
+- Prior to artwork creation for each requested slide, **browse/search current online samples** relevant to that slide: high-quality original engineering figures, actual equipment/manual drawings, standards where licensed, peer-reviewed source figures, real-system photographs, scientific data visualization exemplars, and current Canva/ASU presentation design examples when useful.
+- Also consult the repository's `.github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md` and `project/deck3_visual_reference_collection/samples_160.csv`. These are leads/briefs, **not** 160 independently verified or reuse-cleared images.
+- **Inspect actual sources**, physical topology, original image and licensing/permissions, and applicability to the exact research figure. Maintain a record of URL/source name, inspected object, evidence limits, rights/reuse status and how each reference informs the design.
+- When rights explicitly permit unchanged source-image reuse (or the user owns/provides the asset with appropriate rights), preserve its scientific visual information and any required attribution. Otherwise **create an original illustration informed by visual design principles**; never copy a protected figure exactly, imitate a watermark away, or infer license from online availability. If licensing cannot be verified, mark rights OPEN and do not embed the original source asset.
+- Source graphics inform real hardware/material appearance only; they do not authorize new equations, mechanisms, data, parameter values, equipment properties, standard clauses or results.
+
+## 4. Canva-ready human-designed visual standard
+- Deliver independent, purpose-composed visuals **suited to placement in Canva or PowerPoint**: clean visual hierarchy, generous white space, consistent alignment, technical proportions, meaningful arrows, coherent equipment representation, no fabricated extra wires, fake plots or text-heavy collage styling.
+- Default white `#FFFFFF` canvas and all diagram/panel interiors white; no authored shaded color backgrounds, gradients, ornamental shadows, textures or icons. Use the Deck3 exact `DECK3_SRGB_PALETTE.json` 13 approved sRGB colors for **authored graphic marks**. ASU maroon is available for institutional heading identity; ASU gold is only a restricted small accent. The canonical Deck3 palette is **not** generic Canva default branding.
+- Preserve **natural/authentic visual colors** for real or faithfully illustrated physical objects and environments where useful (vegetation/grass green; vehicles in realistic colors; roads, metal, wires and equipment in appropriate materials). Such faithful object pixels are exempt from the 13-token *authored vector mark* limitation; do not recolor objects merely to fit the diagrams' palette. Do not use natural-color exceptions to sneak colored backgrounds or unsupported heat-field legends into a graphic.
+- ASU presentation context: 16:9 widescreen, project-approved Times New Roman for authored labels, source-adjacent editable citations, readable slide-scale geometry and consistency with the user's actual ASU template when one is provided. Use `https://brandguide.asu.edu/execution-guidelines/presentations` as an official reference, not an assertion that ASU approves custom figures or dictates user-specific fonts.
+- When diagrams/equations/ports/arrow precision matter, render those as separately editable PowerPoint or Canva-compatible elements where feasible; an imported raster/SVG is not automatically composed of native editable objects. Prefer high-resolution PNG plus actual source/vector SVG where available and accurately represented. Never promise unlimited zoom quality for raster output.
+- Choose medium **by scientific need**, not image generation by default: original realistic image for physical equipment only if relevant; precise vector/native editable diagrams for mathematically exact mechanisms; genuine data plots only from verified source data. Make the best fitting figure, not a visual category label.
+
+## 5. Acceptance tests (per individual image, no aggregate shortcuts)
+- **Distinct deliverable:** Each requested file exists independently, and each explains its own slide message rather than a copied layout with a changed heading.
+- **Science:** All physical objects/electrical paths/thermal energy flows, state-vs-forcing-vs-capability-vs-service distinctions, equations, units, arrowheads and causal status are correct or explicitly pending evidence. For P→T_e and T_e→P, qualification is independent; shared external heat is not thermal interdependency.
+- **Human-design:** The image looks professionally composed and is not a miniature complete slide, repeated equipment montage, decorative heat/sun art, pseudo-experimental chart, or excessive explanatory card stack.
+- **Rights/reference:** Each reused visual has verified permissions, otherwise it is original; research sources and limitations are recorded.
+- **Render:** Exact file path/output and image dimensions verified; legibility at the planned Canva/slide insertion size; no cropped/misspelled labels, distorted hardware, collision or off-palette authored shapes.
+- **Production:** Individual files named and mapped to slide numbers; source/vector assets and provenance ledger where possible; sidecar mechanism trace for relevant arrows; citation/permission gate and genuine in-app editability/playback claims remain OPEN/NOT_RUN unless tested.
+- **Fail closed:** Noncompliant/generated images are PROVISIONAL and must not be called science-verified or final Deck3 assets just because generation, export, a ZIP, or visual preview succeeded.
+
+## 6. Scope / dependency impact (2026-10-13)
+- **Changed for future work:** Deck3 Stage 2 briefs, visual reference research, individual asset count, independent exports, scientific-infographic authoring, figure QA, Canva placement handoff, root-agent routing.
+- **REVIEWED_NO_CHANGE:** Official title; current three frozen objectives; thermal-only physical research scope; state–time definitions; citations/evidence hierarchy; approved deck text variants and slide counts; 13-token color registry; existing PNG/PPTX/source assets; numerical solvers or research models.
+- **NOT_RUN:** Rendering, human visual QC, asset/permissions verification, Canva import/editability check, PowerPoint real playback and runtime test suite. This protocol update itself creates **no images** and approves no previous figures.
+
+**Precedence:** Current thesis scientific authority > user-approved source deck and research citations > existing Deck3 mechanism/media/palette standards > this supplementary deliverable-format protocol. When there is a conflict, preserve higher authority and record the issue; do not silently fabricate or rewrite research content.
