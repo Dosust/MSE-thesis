@@ -4,6 +4,11 @@ description: Design, generate, audit, and improve rigorous resource-grounded sci
 license: MIT
 ---
 
+## Deck3 typed-arrow and real-source illustration handoff — 2026-10-13
+
+For external-source physical engineering assets, use `.github/skills/deck3-visual-source-agent/SKILL.md` for actual inspection/rights and `.github/skills/deck3-scientific-composition-agent/SKILL.md` for physics-first layout and typed connector semantics. The authoritative typed-arrow guide for the ten-slide training variant is `.github/skills/deck3-scientific-composition-agent/references/ARROW_ONTOLOGY_AND_GEOMETRY_V1.md`. Preserve independent hypothesis gates and the difference among heat forcing, heat transfer, AC/DC power, measurements, and conditional control. These skills supplement, not replace, this diagram skill's physical graph and evidence authorities.
+
+
 ## Real-world-grounded engineering equipment geometry — First Law (2026-10-13)
 
 When a Deck3 scientific diagram includes visually represented actual equipment, apply `.github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md` **before drafting its equipment art**. Inspect real-world apparatus/source photographs and technology details, maximize lawful authentic visual grounding while letting physically exact ports, topology and relationship arrows govern the diagram. No decorative photos for conceptual graphs/algorithms. Reuse a photograph only when rights permit; otherwise draw independently from inspected real equipment characteristics and record the difference. No unverified equipment configuration, arrows, data or measurements.
