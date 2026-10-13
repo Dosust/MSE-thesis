@@ -1,0 +1,24 @@
+name: Scientific figure contract tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/validate_figure_contract.py'
+      - 'scripts/figure_contract_example.json'
+      - 'scripts/test_figure_contract.py'
+      - 'project/SCIENTIFIC_DESIGN_RESEARCH_AGENT_ALGORITHMS_V1.md'
+      - '.github/skills/scientific-engineering-animation/**'
+      - '.github/workflows/scientific-figure-contract.yml'
+  workflow_dispatch:
+jobs:
+  structural-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate declared example (structure only)
+        run: python scripts/validate_figure_contract.py scripts/figure_contract_example.json
+      - name: Run fail-closed contract tests
+        run: python -m unittest discover -s scripts -p 'test_figure_contract.py' -v
