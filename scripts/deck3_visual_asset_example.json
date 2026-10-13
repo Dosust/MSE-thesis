@@ -1,0 +1,102 @@
+{
+  "asset_id": "mse_slide08_services_sustainability_v1",
+  "slide_number": 8,
+  "presentation_variant": "TEN_SLIDE_MSE_TRAINING",
+  "main_message": "Resilience evaluates required electricity and mobility service; sustainability evaluates direct and engineering-response consequences.",
+  "three_bullets": [
+    "Evaluate required electricity and mobility service through time.",
+    "Assess direct environmental, economic and social consequences.",
+    "Compare engineering-response consequences against the matched extreme-heat case."
+  ],
+  "visual_purpose": "Distinguish service resilience from direct and intervention sustainability pathways.",
+  "asset_only": true,
+  "whole_slide_screenshot": false,
+  "collage": false,
+  "source_mode": "NO_PHOTO_SCIENTIFICALLY_JUSTIFIED",
+  "references": [],
+  "embedded_real_photo_count": 0,
+  "no_photo_reason": "Assessment structure requires precise editable symbols, no real equipment photograph.",
+  "nodes": [
+    {
+      "id": "P_SERVICE",
+      "system": "ASSESSMENT"
+    },
+    {
+      "id": "T_SERVICE",
+      "system": "ASSESSMENT"
+    },
+    {
+      "id": "RESILIENCE",
+      "system": "ASSESSMENT"
+    },
+    {
+      "id": "DIRECT",
+      "system": "ASSESSMENT"
+    },
+    {
+      "id": "RESPONSE",
+      "system": "ASSESSMENT"
+    }
+  ],
+  "arrows": [
+    {
+      "id": "A01",
+      "type": "ASSESSMENT_MAPPING",
+      "source": "P_SERVICE",
+      "target": "RESILIENCE",
+      "evidence_status": "ASSESSMENT",
+      "label": "Electricity service requirement"
+    },
+    {
+      "id": "A02",
+      "type": "ASSESSMENT_MAPPING",
+      "source": "T_SERVICE",
+      "target": "RESILIENCE",
+      "evidence_status": "ASSESSMENT",
+      "label": "Mobility service requirement"
+    },
+    {
+      "id": "A03",
+      "type": "ASSESSMENT_MAPPING",
+      "source": "RESILIENCE",
+      "target": "DIRECT",
+      "evidence_status": "ASSESSMENT",
+      "label": "Direct disturbance consequence"
+    },
+    {
+      "id": "A04",
+      "type": "ASSESSMENT_MAPPING",
+      "source": "RESILIENCE",
+      "target": "RESPONSE",
+      "evidence_status": "ASSESSMENT",
+      "label": "Engineering-response consequence"
+    }
+  ],
+  "style": {
+    "canvas": "#FFFFFF",
+    "panel": "#FFFFFF",
+    "font": "Times New Roman",
+    "aspect_ratio": "16:9",
+    "authored_colors": [
+      "#FFFFFF",
+      "#000000",
+      "#12304A",
+      "#0072B2",
+      "#176B42",
+      "#8C1D40"
+    ],
+    "gradient": false,
+    "shadow": false
+  },
+  "outputs": {
+    "png": "slide08.png",
+    "svg": "slide08.svg",
+    "planned_separate_asset": true
+  },
+  "qa": {
+    "science": "OPEN",
+    "source_rights": "NOT_RUN",
+    "render": "NOT_RUN",
+    "canva_editability": "NOT_RUN"
+  }
+}
