@@ -1,3 +1,8 @@
+
+## Deck3 scientific visual-asset agent routing — 2026-10-13
+
+For new physical-equipment/Canva-ready illustrative images, invoke `.github/skills/deck3-visual-source-agent/SKILL.md` and hand its per-asset source, inspection, rights and physical equipment qualifications to `.github/skills/deck3-scientific-composition-agent/SKILL.md`. Both operate below Deck3 and canonical thesis science, and implement real-world source photographs + scientific geometry + human-designed infographic layout. N requested images = N separate assets, not one slide screenshot/contact sheet. The composition agent's 10-slide visual roles and arrow ontology are variant-specific; do not overwrite canonical eight-slide or other masters. Run `scripts/validate_deck3_visual_manifest.py` for structure, then real image/engineering/rights/render/Canva checks separately; PASS of one is not PASS of all.
+
 ## FIRST LAW — source-grounded real-world image creation (2026-10-13)
 
 For every physical illustration request, before generative imagery or generic SVG drawing, follow `.github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md`: search and **inspect** actual real equipment photographs, verify physical appropriateness and rights, prioritize usable authentic imagery in a **single purpose-driven, Canva-ready image asset**, and document provenance/method. Where no authorized source can be directly reused, make original real-world-grounded art and state that it contains no actual photo; do not claim visual search equals photographic incorporation. Abstract science/maths, evidence workflows and timelines should not acquire irrelevant photos. This rule is subordinate to frozen thesis physics/claims and does not alter source slide versions.
