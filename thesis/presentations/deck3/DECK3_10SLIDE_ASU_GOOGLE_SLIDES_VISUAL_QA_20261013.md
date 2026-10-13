@@ -72,3 +72,14 @@ Photographs are authentic independent physical references. Cropped/resized prese
 - **Explicit caveats added:** Figures are conceptual; photos in generated scenes are not authenticated field images; Bærug displayed time series is illustrative rather than source-derived; network and thermal relationship drawings are not engineering-verified; source streams are separate; candidate thermal mechanisms are unqualified and no coupled validation is claimed.
 
 **New representation caveat:** The new primary figures are **raster PNGs**, so internal figure labels/diagrams are not editable native slide objects; native slide titles and caveat notes remain editable. The earlier vector-style diagram draft is preserved in the backup. This version is a **visual review deck**, NOT a final scientifically approved thesis figure set. The earlier science risks documented above still require correction; placing the images does not resolve them.
+
+
+## 70/30 layout update — 13 October 2026
+
+**Google-native deck:** https://docs.google.com/presentation/d/1sQkwI99ymiz1PYEmy-3suW_064bHDlTjF__8T-yYB9Q/edit?usp=drivesdk
+
+**User-requested redesign:** The ten generated visual previews now occupy approximately **70% of the usable slide-body width** (left region), and each slide has a separately editable **30% concise scientific-text column** (right region). The images are scaled proportionally, not cropped; white background and minimal maroon rule retain the ASU research-deck hierarchy. Each right panel contains one main message and three short content points; evidence caveats/source notes remain at the foot of the slide. The long thesis title received custom header spacing.
+
+**Rollback copy of the preceding image-first variant:** https://docs.google.com/presentation/d/1-wFWQTaGrOSwdtgGi6VdeHCdxZwz1Nq_3bl0KCP0Ul4/edit?usp=drivesdk
+
+**Verification:** native element readback found 10/10 images each approximately 478×269 pt at x=18 pt, no slide-boundary overflow, and 10/10 Google-native 800×450 thumbnail generation checks passed. This is **layout-level verification**, not a pixel-level overlap, small in-image caption legibility, data-origin or formal scientific validation pass. Previous cautions regarding illustrative charger and transformer scenes, hypothetical service curves, unqualified I2/I3 and source-specific data remain in force.
