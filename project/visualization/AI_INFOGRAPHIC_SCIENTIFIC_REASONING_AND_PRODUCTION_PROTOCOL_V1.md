@@ -7,6 +7,10 @@
 **Active authority:** AI_RESEARCH_INSTRUCTIONS.md; project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md; project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md; project/CANONICAL_THESIS_TITLE_V2.md; approved objectives in their current integration state; project/thermal_sos_functional_architecture/SELECTED_EIGHT_COMPONENTS_WORKING_RESEARCH_BASELINE_V1.md; project/visualization/ALL_PRESENTATIONS_EIGHT_COMPONENTS_VISIBILITY_RULE_V1.md; existing Deck3 scientific infographic/arrow/citation/palette/media-routing standards.
 **Precedence:** Thesis science, user-approved exact slide text and the ASU/committee's actual rules precede this visual workflow. Seven chapters is a preferred thesis organization, not a Graduate College imposed chapter count. Proposed timelines are internal plans, not ASU deadlines.
 
+## Approved natural context color exception (2026-10-13)
+
+**Authority:** `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` and Deck3 `DECK3_SRGB_PALETTE.json` policy v1.6.1. A naturally colored plant, herb, tree, flower, grass, soil, gravel/rock, water or necessary sky portion may retain restrained physically plausible color **inside original AI illustration or genuine photography**. The natural object must be scientifically/contextually relevant and visually subordinate; otherwise omit it. Never use this exception to change the white slide/panel interiors, assign unapproved color to scientific arrows/data/typography, recolor equipment into artificial biological hues, make scenic fills, or imply the vegetation/landscape was observed at a study site. Preserve legitimate physical equipment-material colors in realistic imagery. Distinguish authored schematic marks (13 approved colors) from exempt source-image pixels during color QA.
+
 ## A. Evidence-first visual reasoning: NO DESIGN BEFORE PHYSICS
 
 For each slide, work through these questions, recording the answers before generating a figure:
