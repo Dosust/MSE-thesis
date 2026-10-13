@@ -2,6 +2,10 @@
 
 **Status:** Presentation-version routing rule. Does not amend thesis canonical scientific authority. Source of eight-slide text: latest explicitly user-approved version (2026-10-10), preserved verbatim in `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`.
 
+## Mandatory full eight-component visibility — researcher instruction (2026-10-13)
+
+**All thesis presentation variants** must visibly name the exact user-selected eight research components at least once per complete deck: P1 distribution transformer, P2 distribution feeder, P3 transformer protection/load-management hardware, P4 transformer cooling equipment, T1 DC EV charger, T2 vehicle battery pack, T3 EVSE cooling equipment, and T4 vehicle HVAC equipment. This is the required **4+4 physical-system architecture**, not eight independent thermal ODE states or a declaration that I2/I3 are validated. See `project/visualization/ALL_PRESENTATIONS_EIGHT_COMPONENTS_VISIBILITY_RULE_V1.md` for the mandatory roles, arrow semantics, placement and slide-release gates. In the approved **8-slide/3-minute** variant use the Slide **2 Research Background illustration**; in the proposed **10-slide progress** variant use Slide **5 System Architecture**; in the 13/14-slide Chapter 1 format map to its full systems/interface slide. Keep approved source text unchanged unless separately revised by the researcher. Never hide the roster only in notes, or sacrifice legibility to preserve text density.
+
 ## Active for three-minute presentation
 For any prompt referencing **Deck3 three minutes / 3-minute thesis / 8 slides / Slides 1–8 / the latest shortened research presentation**, use the exact eight-slide master in this directory. It **supersedes previous slide text only for this shortened presentation**; do NOT substitute content from old 13-/14-slide outlines. It is the approved presentation wording, **not** evidence that the physical mechanisms are demonstrated.
 
