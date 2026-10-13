@@ -6,6 +6,10 @@ metadata:
   version: "2.3.0"
 ---
 
+## User-directed independently authored illustrative-image semantics — 2026-10-13
+For every user request for "illustrative image", "illustrative infographic", or Canva-ready infographic, apply `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` together with current science, media routing, arrow and evidence standards. An illustrative infographic is an **insertable visual**, not a complete slide. N images means N distinct researched, illustrated, verified and separately exported files, not a stitched contact sheet or repeated generic montage. Design each from the authorized slide main message and actual three bullets; inspect relevant online visual examples and their rights before selecting equipment/scene grammar; preserve authentic object colors and ASU/Deck3 white-interior, typography and color requirements. Never present guessed component topology, results, equations, rights, or editable-Canva status as verified.
+
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 
