@@ -4,6 +4,11 @@ description: Design, generate, audit, and improve rigorous resource-grounded sci
 license: MIT
 ---
 
+## ASU 2026 official Slides destination — 2026-10-13
+
+For any engineering diagram destined for the **ASU MSE official Google Slides thesis deck**, read `.github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md` and the user-approved 10-slide content at `thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md`. Engineer each figure first under actual physics, topology and evidence rules, then fit it into an **editable native Google Slides layout** from the real ASU 2026 template while preserving caption-safe content bounds and legitimate image reuse. Never pretend generated imagery is measured evidence or that a photo alone proves a cross-infrastructure mechanism. ASU styling is an authorized presentation destination, not a replacement for scientific diagram standards or all non-ASU use cases.
+
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 
