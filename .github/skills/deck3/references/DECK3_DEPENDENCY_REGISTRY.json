@@ -53,7 +53,14 @@
         ".github/skills/scientific-infographic-design/examples/figures.py",
         ".github/skills/scientific-infographic-design/examples/pptx_builder.py",
         ".github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md",
-        ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json"
+        ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json",
+        ".github/skills/deck3-visual-source-agent/SKILL.md",
+        ".github/skills/deck3-scientific-composition-agent/SKILL.md",
+        ".github/skills/deck3-visual-source-agent/references/DECK3_VISUAL_SOURCE_CATALOG_V1.json",
+        ".github/skills/deck3-scientific-composition-agent/references/ARROW_ONTOLOGY_AND_GEOMETRY_V1.md",
+        ".github/skills/deck3-scientific-composition-agent/references/TEN_SLIDE_VISUAL_ROLES_V1.md",
+        "scripts/validate_deck3_visual_manifest.py",
+        "scripts/test_deck3_visual_manifest.py"
       ],
       "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified; first choice is scientifically credible hybrid physical equipment scene plus diagram overlay when physical scene is needed"
     },
@@ -179,5 +186,12 @@
   "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
   "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65",
   "real_world_image_first_law_authority": ".github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md",
-  "real_world_image_source_manifest_template": ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json"
+  "real_world_image_source_manifest_template": ".github/skills/deck3/references/DECK3_REAL_WORLD_IMAGE_SOURCE_MANIFEST_TEMPLATE.json",
+  "visual_source_agent": ".github/skills/deck3-visual-source-agent/SKILL.md",
+  "scientific_composition_agent": ".github/skills/deck3-scientific-composition-agent/SKILL.md",
+  "visual_source_catalog": ".github/skills/deck3-visual-source-agent/references/DECK3_VISUAL_SOURCE_CATALOG_V1.json",
+  "visual_arrow_semantics": ".github/skills/deck3-scientific-composition-agent/references/ARROW_ONTOLOGY_AND_GEOMETRY_V1.md",
+  "ten_slide_visual_purposes": ".github/skills/deck3-scientific-composition-agent/references/TEN_SLIDE_VISUAL_ROLES_V1.md",
+  "visual_manifest_validator": "scripts/validate_deck3_visual_manifest.py",
+  "visual_manifest_unit_tests": "scripts/test_deck3_visual_manifest.py"
 }
