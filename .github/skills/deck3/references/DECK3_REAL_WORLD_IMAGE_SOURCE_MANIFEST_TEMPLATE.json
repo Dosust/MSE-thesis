@@ -1,0 +1,35 @@
+{
+  "schema": "deck3-first-law-image-provenance-template-v1",
+  "status": "BLANK_TEMPLATE_NOT_APPROVED_AS_SOURCE_EVIDENCE",
+  "slide_id": "REPLACE_WITH_ACTUAL_SLIDE_ID",
+  "presentation_variant": "REPLACE_WITH_APPROVED_VARIANT",
+  "main_message": "REPLACE_WITH_ACTUAL_MAIN_MESSAGE",
+  "three_source_bullets": [
+    "REPLACE_WITH_BULLET_1",
+    "REPLACE_WITH_BULLET_2",
+    "REPLACE_WITH_BULLET_3"
+  ],
+  "single_visual_purpose": "REPLACE_WITH_THE_SCIENTIFIC_QUESTION_THE_IMAGE_ANSWERS",
+  "scope": "PHYSICAL_EQUIPMENT_OR_ABSTRACT_SCIENTIFIC",
+  "source_use_method": "PHOTO_EMBEDDED_PERMISSION_VERIFIED_OR_SOURCE_GROUNDED_ORIGINAL_OR_NO_PHOTO_JUSTIFIED",
+  "source_references": [
+    {
+      "origin_or_url": "REPLACE_WITH_INSPECTED_REAL_WORLD_SOURCE",
+      "provider_or_author": "REPLACE",
+      "actual_image_inspected": "NOT_RUN",
+      "equipment_identity_and_match": "REPLACE_WITH_VERIFIED_INFORMATION",
+      "source_kind": "REAL_PHOTO_OR_ENGINEERING_DIAGRAM_OR_USER_OWNED",
+      "rights_status": "OPEN",
+      "how_used": "REPLACE_WITH_EXACT_VISUAL_INPUT_ROLE",
+      "embedded_into_final_image": false
+    }
+  ],
+  "embedded_real_photo_count": 0,
+  "why_no_authentic_photograph_in_final_image": "REPLACE_IF_ZERO_FOR_EQUIPMENT_FIGURE",
+  "equipment_connections_and_arrows_provenance": "REPLACE_WITH_APPROVED_PHYSICAL_EDGE_LEDGER",
+  "color_and_ASU_style_QA": "NOT_RUN",
+  "scientific_mechanism_QA": "NOT_RUN",
+  "source_and_rights_QA": "NOT_RUN",
+  "manual_visual_QA": "NOT_RUN",
+  "final_asset_status": "PROVISIONAL"
+}
