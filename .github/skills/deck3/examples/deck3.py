@@ -95,6 +95,8 @@ def load_manifest(path):
     filenames = set()
     for n, row in enumerate(slides, 1):
         kind = row.get("kind")
+        if kind == "thanks" and not variant_10:
+            raise Blocked("thanks kind is reserved for the explicitly approved 10-slide variant.")
         if kind not in {"title", "outline", "content", "references", "thanks"}:
             raise Blocked(f"Slide {n}: unexpected kind {kind!r}.")
         if not isinstance(row.get("title"), str) or not row["title"].strip():
@@ -195,6 +197,16 @@ def make_text(manifest_path, output_path):
             put(slide, .80, .58, 11.7, .43, data.get("institution", "SCIENTIFIC PRESENTATION"), 16, BLUE, True)
             put(slide, .80, 1.55, 11.8, 2.4, row["title"], 35, NAVY, True)
             put(slide, .80, 4.65, 11.7, 1.0, row.get("subtitle", ""), 23, INK)
+        elif kind == "outline" and data.get("deck_variant") == TEN_PROGRESS_VARIANT:
+            put(slide, .70, .40, 11.9, .62, row["title"], 31, NAVY, True)
+            put(slide, .78, 1.27, 11.73, .65, row["message"], 21, INK)
+            topics = row["bullets"]
+            step = min(.84, 4.70 / max(1, len(topics)))
+            for j, topic in enumerate(topics, 1):
+                y = 2.03 + (j - 1) * step
+                put(slide, .88, y, .46, .37, f"{j:02}", 15, BLUE, True)
+                put(slide, 1.50, y - .02, 10.9, max(.43, step - .06),
+                    topic, 21 if len(topics) <= 5 else 17, INK)
         elif kind == "thanks":
             put(slide, 1.0, 2.52, 11.3, 1.05, row["title"], 42, NAVY, True)
             if row.get("subtitle"):
