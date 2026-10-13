@@ -61,5 +61,21 @@ class TestContract(unittest.TestCase):
         self.bad(lambda d: d['edges'][0].update(target='FOO'))
 
 
+    def test_direct_heat_from_charger_to_transformer_rejected(self):
+        self.bad(lambda d: d['edges'].append(dict(id='E06', source='T1', target='P1', type='HEAT_TRANSFER', evidence_status='ESTABLISHED_GENERIC', label='Heat crossing systems')))
+
+    def test_direct_control_from_charger_to_transformer_rejected(self):
+        self.bad(lambda d: d['edges'].append(dict(id='E06', source='T1', target='P1', type='CONTROL', evidence_status='ESTABLISHED_GENERIC', label='Unverified action')))
+
+    def test_candidate_without_interface_id_rejected(self):
+        self.bad(lambda d: d['edges'].append(dict(id='E06', source='T1', target='P1', type='CANDIDATE_CAUSAL', evidence_status='CANDIDATE_UNQUALIFIED', label='Candidate — not yet qualified', hypothesis='H1')))
+
+    def test_wrong_i2_direction_rejected(self):
+        self.bad(lambda d: d['edges'].append(dict(id='E06', source='P1', target='T1', type='CANDIDATE_CAUSAL', evidence_status='CANDIDATE_UNQUALIFIED', label='I2 — not yet qualified', interface_id='I2', hypothesis='H1')))
+
+    def test_wrong_i3_direction_rejected(self):
+        self.bad(lambda d: d['edges'].append(dict(id='E06', source='T1', target='P1', type='CANDIDATE_CAUSAL', evidence_status='CANDIDATE_UNQUALIFIED', label='I3 — not yet qualified', interface_id='I3', hypothesis='H2')))
+
+
 if __name__ == '__main__':
     unittest.main()
