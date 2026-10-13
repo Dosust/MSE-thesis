@@ -81,6 +81,16 @@ def validate_contract(c: dict) -> dict:
             _require('not yet qualified' in e['label'].lower(), 'all candidate edges need visible not-yet-qualified status')
             _require(status == 'CANDIDATE_UNQUALIFIED', 'candidate edge cannot be promoted')
             _require(_text(e.get('hypothesis')), 'candidate edge requires explicit hypothesis')
+        # The training profile disallows inferred physical transfer between systems.
+        source_system, target_system = node_index[a]['system'], node_index[b]['system']
+        if {source_system, target_system} == {'POWER', 'TRANSPORT'}:
+            normal_ac = t == 'AC_POWER' and (a, b) == ('P2', 'T1')
+            i2_candidate = (t == 'CANDIDATE_CAUSAL' and iid == 'I2' and
+                            a in ('T1', 'T3') and b in ('P1', 'P2'))
+            i3_candidate = (t == 'CANDIDATE_CAUSAL' and iid == 'I3' and
+                            a in ('P1', 'P3') and b in ('T1', 'T2'))
+            _require(normal_ac or i2_candidate or i3_candidate,
+                     'cross-system training edge needs ordinary P2→T1 AC or directed, qualified I2/I3 candidate')
         if t == 'HEAT_TRANSFER':
             _require(a not in ('P2', 'T2') or b not in ('P1', 'T1'), 'heat-transfer link is unsupported for this generic training graph')
         if status in ('LITERATURE_SUPPORTED', 'EQUIPMENT_VERIFIED', 'MEASURED', 'MODELED'):
