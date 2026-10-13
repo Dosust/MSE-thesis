@@ -5,6 +5,11 @@ license: MIT
 ---
 
 
+## Shared scientific figure contract and mathematical agent algorithm — 2026-10-13
+
+For evidence-grounded scientific figures, physics-driven diagrams, animations, research-agent figure handoffs, or editable engineering slides, apply `project/SCIENTIFIC_DESIGN_RESEARCH_AGENT_ALGORITHMS_V1.md`. The contract example is `scripts/figure_contract_example.json`; run `python scripts/validate_figure_contract.py scripts/figure_contract_example.json` and `python -m unittest discover -s scripts -p 'test_figure_contract.py' -v` as *structural* admission tests. The validator does NOT verify physics, external citations, measurement authenticity, model fidelity, actual PowerPoint playback or independent scientific release gates. Preserve the thermal-only scope, current source-of-truth title and objectives, frozen eight-slide three-minute master, separate ten-slide training variant, evidence rule and exact Deck3 color/typography policies. This routing supplements existing instructions; do not promote I2/I3 candidates or treat A0–A8 roles as deployed autonomous agents.
+
+
 ## Scientific animation companion — 2026-10-13
 
 For requests involving animated SVG, GIF, MP4, native editable PowerPoint reveals, or physics-based motion, also load `.github/skills/scientific-engineering-animation/SKILL.md` and `references/ANIMATION_QA_CHECKLIST_V1.md` within that skill. This supplemental procedure controls storyboard timing, vector geometry, model-time versus presenter-time interpretation, animation source/reproducibility, and G0–G7 release gating. It does **not** amend frozen thesis science or approved Deck3 slide variants. No animation may promote I2/I3 candidates to verified results; actual Microsoft PowerPoint playback remains NOT_RUN until independently demonstrated.
