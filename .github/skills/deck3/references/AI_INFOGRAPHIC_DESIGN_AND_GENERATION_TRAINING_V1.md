@@ -3,6 +3,12 @@
 **Effective:** 2026-10-13. **Production role:** visual art direction, figure generation/code composition, editable PPTX integration and rendering review. **Science reviewer:** Dossiya Research Expert. **Cross-skill foundation:** project/visualization/AI_INFOGRAPHIC_SCIENTIFIC_REASONING_AND_PRODUCTION_PROTOCOL_V1.md and research expert's AI_INFOGRAPHIC_SCIENCE_REVIEW_TRAINING_V1.md.
 **This is visual-production guidance, not new scientific knowledge, model validation or retraining of AI weights.**
 
+## Natural-color exception for original AI-scene art — 2026-10-13
+
+Load `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` and `.github/skills/deck3/references/DECK3_SRGB_PALETTE.json` before building equipment-scene prompts. A rendered *environmental object* may retain realistic secondary greens, browns, water blues or actual flower colors, including nonpalette hues. Do **not** force realistic foliage into ASU maroon/gold to satisfy institutional branding. The 13 exact authored color tokens still apply to native labels, arrows, charts, scientific icons, outlines and typography. **Every overall canvas/panel/box interior remains white**; no full-scene sky, landscape background or decorative gradients. Authentic/plausible equipment material realism is preserved in images, while schematic equipment and authored marks remain semantic-palette governed. Remove context that crowds the scientific objects or implies evidence not collected.
+
+**Equipment-scene prompt supplement:** "Natural vegetation, flowers, grass, soil, rock or water may keep realistic restrained hues only if actually relevant; environmental objects remain small/subordinate; white backdrop; no stylized red/pink trees as ASU decoration; no fake measurements, data arrows, text, captions, or photographed-study-site claims."
+
 ## A. Pre-visual design analysis
 For EVERY figure use the approved source slide text and the Dossiya SCIENCE CARD to prepare a DESIGN CARD:
 - Exact slide ID/variant/title/message. Does this slide require an original image, a scientific vector drawing, a code plot, or **no image**?
