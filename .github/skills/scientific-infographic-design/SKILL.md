@@ -6,6 +6,11 @@ metadata:
   version: "2.3.0"
 ---
 
+## First Law for Canva-ready physical illustrations — real-world sources first (2026-10-13)
+
+For any Deck3 scientific physical-equipment illustration, first read `.github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md`: actually inspect applicable real-world equipment images, prioritize rights-cleared photographic fidelity within one coherent scientific purpose, and use independently drawn source-grounded visuals when source-image reuse is not permitted. Make no unsupported equipment/wiring assumptions. Log how each real source informs the image and why no photographic pixels are embedded when applicable. Precise mathematical plots and abstract diagrams remain vector/native rather than forced photo collages. Preserve per-slide independent exports, editing boundaries and governing evidence/QA.
+
+
 ## User-directed independently authored illustrative-image semantics — 2026-10-13
 For every user request for "illustrative image", "illustrative infographic", or Canva-ready infographic, apply `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` together with current science, media routing, arrow and evidence standards. An illustrative infographic is an **insertable visual**, not a complete slide. N images means N distinct researched, illustrated, verified and separately exported files, not a stitched contact sheet or repeated generic montage. Design each from the authorized slide main message and actual three bullets; inspect relevant online visual examples and their rights before selecting equipment/scene grammar; preserve authentic object colors and ASU/Deck3 white-interior, typography and color requirements. Never present guessed component topology, results, equations, rights, or editable-Canva status as verified.
 
