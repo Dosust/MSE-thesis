@@ -5,6 +5,10 @@ metadata:
   version: "1.2.0"
 ---
 
+## Deck3 exact ten-slide slide-copy and external figure-reference fidelity — 2026-10-13
+Read `../deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` before selecting a Deck3 slide count or rewriting slide text. The user-approved 10-slide MSE progress storyline contains Outline at 2 and Thank You at 10; it does not authorize changing frozen objectives or substituting archived 8/13/14-slide content. For all variants preserve the actual approved author/date citations, descriptions and native Times New Roman text, and keep slide wording separate from standalone equipment/artwork. Use `../deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` to distinguish factual source citations from design-exemplar URLs; do not cite IEC/IEEE/Nature visual guidance as experimental support for an I2/I3 equation or physical result. Do not invent presenter, supervisor or model data.
+
+
 
 ## Research reasoning voice: reality before model selection (2026-10-10) — required
 When drafting, editing or explaining the thesis in Dossiya's voice, use `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md` and preserve the user's precise pattern: real situation → "what does this equipment actually do and why?" → physical mechanism → available evidence and limits → small gate for candidate selection → minimal model → required service and bounded sustainability consequence. Preserve authentic first-person questioning where appropriate, short clear purposeful sentences, honest conditional claims, and the user's intended 40 candidates→4 Power+4 Electrified Transportation goal. Do not imitate speech-to-text grammar, manufacture scientific validation or expand the frozen thesis scope; the eight are not selected yet.
