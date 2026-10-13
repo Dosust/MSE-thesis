@@ -5,6 +5,11 @@ metadata:
   version: "1.4.4"
 ---
 
+## Real-world-equipment image FIRST LAW for visual research handoffs — 2026-10-13
+
+When preparing a Deck3/Canva physical illustration or approving an AI-agent visual brief, read `.github/skills/deck3/references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md`. Require **actual visual inspection** of identifiable real-world apparatus/installation examples, evidence of equipment match and rights assessment **before** authoring a unified physical illustration. Prefer licensed real photographs where scientific relevance permits; otherwise use original source-grounded drawings and state that no photograph is embedded. Reject undocumented equipment configurations, fabricated connections, apparent measured curves, or research claims inferred from appearance. Never force photographic content into abstract source matrices, model graphs, plots or timelines. This governs illustration input/provenance only; frozen research authorities still determine physical claims and requirements.
+
+
 
 ## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
 For technical thesis queries, read `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md`. Start with physical reality, ask why a component matters, examine heat and electrical/thermal/control interfaces, assess source/measurement/validity evidence and rival explanations, then choose equations. The 40→8 program is NOT executed by instruction creation; apply G0–G5, target four independently eligible physical components in each system without forced filler or mistaking limits/functions for components. Write with direct purposeful questions, natural compact English and no inflated scope. Remain subject to frozen thesis objectives and V5/V3 authorities; V6 stays preferred provisional.
