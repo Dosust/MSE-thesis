@@ -1,3 +1,6 @@
+## Source-specific IEEE/IEC/SysML/Mathematics comparison — 2026-10-13
+Mandatory companion for every `Deck3 all` and individual figure: `DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md`. For electrical network imagery inspect IEC 60617 scope plus the **actual** topology/ports of the selected benchmark and EPRI OpenDSS plot conventions; for SoS inspect OMG SysML v2/INCOSE references and declare whether the drawing is merely SysML-informed rather than formally conformant; for numerical figures use IEEE/Nature legibility/units/citation practices with admitted arrays, and for math animations use Manim's actual scene/mobject conventions. Store the inspected original exemplar URL, source-access depth (catalog page versus actual figure versus original dataset), rights and what *design principle*, not artwork, is adapted. The 160-entry design brief catalog and uninspected screenshots do not count as a current online exemplar inspection. Infer no equipment parameters from visual references.
+
 # Deck3 visual-reference retrieval protocol V1
 Status: Active workflow instruction, not an asset or scientific validation.
 Applies: Deck3 All Forms, Dossiya Research Expert, AI image briefs, advanced native animated PPTX, diagram and infographic skills.
