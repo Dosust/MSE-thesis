@@ -5,6 +5,11 @@ metadata:
   version: "1.4.4"
 ---
 
+## MSE thesis ten-slide ASU Google Slides research handoff — 2026-10-13
+
+For the user's **official 2026 ASU ten-slide thesis presentation** route, read `.github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md` and `thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md`. The live editable Google Slides deck exists but is a **presentation authoring baseline**, not proof of coupled thermal-mechanism qualification or fully reviewed scientific source images. Preserve the main-branch objective authority until a governed V2 merge, independent P/T_e candidate testing, the eight component roster, the resilience/sustainability distinction and noninvented source data. Keep exact citations adjacent to slide claims and coordinate with Deck3 without overriding the approved eight-slide/three-minute alternative.
+
+
 
 ## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
 For technical thesis queries, read `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md`. Start with physical reality, ask why a component matters, examine heat and electrical/thermal/control interfaces, assess source/measurement/validity evidence and rival explanations, then choose equations. The 40→8 program is NOT executed by instruction creation; apply G0–G5, target four independently eligible physical components in each system without forced filler or mistaking limits/functions for components. Write with direct purposeful questions, natural compact English and no inflated scope. Remain subject to frozen thesis objectives and V5/V3 authorities; V6 stays preferred provisional.
