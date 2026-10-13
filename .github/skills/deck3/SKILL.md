@@ -7,6 +7,8 @@ metadata:
   short_name: "Deck3"
 ---
 
+**Consolidated full scientific color governance:** `project/visualization/THESIS_SCIENTIFIC_COLOR_GOVERNANCE_V2.md` (normative 13-token authored-graphic policy + restrained natural-context pixel exception). It does not authorize nonwhite panels, decorative landscaping or new scientific colors.
+
 ## Controlled natural context color exception — 2026-10-13 — MANDATORY
 
 Read `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` and Deck3 `references/DECK3_SRGB_PALETTE.json` (policy v1.6.1) for **every scientific illustration, AI equipment-scene prompt, diagram, color QA and slide export**. All authored scientific arrows, typography, charts, equipment schematics, icons, borders and panel/surface areas retain exact governed tokens; all canvas and box backgrounds stay pure white. Only **contextually necessary natural objects** (plants, herbs, flowers, trees, grasses, soil, rocks, water and physically justified sky fragments) may retain believable, restrained natural colors in photographs **or original AI-generated illustrations**. Keep them visually secondary. Do not create decorative landscapes, oversaturated flowers, invented geographic/environmental evidence or change the scientific meaning of colors. Native color validation excludes exempt natural image pixels only after checking the natural object genuinely qualifies.
