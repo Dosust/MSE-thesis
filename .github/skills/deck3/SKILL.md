@@ -3,9 +3,13 @@ name: deck3
 description: Orchestrate a rigorous three-stage scientific PowerPoint workflow with a dominant scientific infographic occupying approximately 75 percent (acceptable 70–80 percent) of the usable content region on every eligible figure-bearing slide, while preserving accurate scientific claims, editable approved text, citations, exact frozen objectives, notes, and physical system boundaries. Activate for Deck3 text, figures, assemble, all, or one-slide commands.
 license: MIT
 metadata:
-  version: "1.8.5"
+  version: "1.8.6"
   short_name: "Deck3"
 ---
+
+## Controlled natural context color exception — 2026-10-13 — MANDATORY
+
+Read `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` and Deck3 `references/DECK3_SRGB_PALETTE.json` (policy v1.6.1) for **every scientific illustration, AI equipment-scene prompt, diagram, color QA and slide export**. All authored scientific arrows, typography, charts, equipment schematics, icons, borders and panel/surface areas retain exact governed tokens; all canvas and box backgrounds stay pure white. Only **contextually necessary natural objects** (plants, herbs, flowers, trees, grasses, soil, rocks, water and physically justified sky fragments) may retain believable, restrained natural colors in photographs **or original AI-generated illustrations**. Keep them visually secondary. Do not create decorative landscapes, oversaturated flowers, invented geographic/environmental evidence or change the scientific meaning of colors. Native color validation excludes exempt natural image pixels only after checking the natural object genuinely qualifies.
 
 ## AI infographic scientific reasoning and generation — 2026-10-13 — MANDATORY for all thesis presentation variants
 
