@@ -27,14 +27,18 @@
         ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
         ".github/skills/deck3/references/DECK3_MEDIA_ROUTING_AND_FAIL_CLOSED_IMAGE_QA_V1.md",
         ".github/skills/deck3/references/CHAPTER1_13SLIDE_V18_MEDIA_AUDIT_2026-10-09.md",
-        ".github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md"
+        ".github/skills/deck3/references/DECK3_ALL_FORMS_WEAKNESS_LEARNING_V2.md",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "All Deck3 commands, stage gating, release claims; physical AI-image versus native-editable medium selection"
     },
     {
       "category": "writing_text",
       "paths": [
-        ".github/skills/dossiya-writing/SKILL.md"
+        ".github/skills/dossiya-writing/SKILL.md",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "Native editable slide copy, citations, notes, never expose template headings; frozen wording does not certify scientific truth; A13/B13/C13 attribution required"
     },
@@ -42,7 +46,9 @@
       "category": "research_science",
       "paths": [
         ".github/skills/dossiya-research-expert/SKILL.md",
-        ".github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md"
+        ".github/skills/dossiya-research-expert/references/DECK3_WEAKNESS_TO_VERIFIED_LEARNING_V2.md",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "Physical mechanisms, references, GO/SO1–SO3, evidence gates"
     },
@@ -51,14 +57,18 @@
       "paths": [
         ".github/skills/scientific-infographic-design/SKILL.md",
         ".github/skills/scientific-infographic-design/examples/figures.py",
-        ".github/skills/scientific-infographic-design/examples/pptx_builder.py"
+        ".github/skills/scientific-infographic-design/examples/pptx_builder.py",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "Vector and raster image generation, semantic arrows, real system boundary; provide object/arrow and mechanism-evidence metadata, with independent visual/source QA; default physical scene only, no explanatory panels; raster alone not source color certified; first choice is scientifically credible hybrid physical equipment scene plus diagram overlay when physical scene is needed"
     },
     {
       "category": "scientific_diagrams",
       "paths": [
-        ".github/skills/scientific-diagram-design/SKILL.md"
+        ".github/skills/scientific-diagram-design/SKILL.md",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "Arrow semantics, system composition, orthogonal/curved geometry"
     },
@@ -91,7 +101,9 @@
         ".github/skills/deck3/examples/mechanism_trace_qa.py",
         ".github/skills/deck3/examples/mechanism_trace_example.json",
         ".github/skills/deck3/tests/test_mechanism_trace.py",
-        ".github/skills/deck3/tests/test_media_routing_and_provisional_image_gate.py"
+        ".github/skills/deck3/tests/test_media_routing_and_provisional_image_gate.py",
+        ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+        "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md"
       ],
       "scope": "Stage 1 text, Stage 2 asset audit, Stage 3 assembly; inspect same-stem sidecar mechanism trace and reject invalid arrow/quantity/boundary assertions; avoid calling a PNG asset-integrity check Stage 2 science approval"
     },
@@ -175,5 +187,17 @@
   "all_forms_execution_audit": ".github/skills/deck3/references/DECK3_ALL_FORMS_EXECUTION_AUDIT_2026-10-09.md",
   "learning_status": "SKILL_AND_POLICY_CONNECTED_TEST_EXECUTION_NOT_CONFIRMED",
   "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
-  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65"
+  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65",
+  "official_asu_2026_thesis_source_authority": ".github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md",
+  "official_asu_2026_10slide_content_authority": "thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md",
+  "official_asu_2026_google_slides": {
+    "scope": "MSE thesis presentation only; no replacement of 8-slide/13-slide/14-slide variants",
+    "template": "user-provided institutional 2026 ASU pptx, SHA256 22a7b136870223ac7cc6daf283ceed9d489da0cba382fae689267f90fc3aa2e6; ASU access limited to asu.edu",
+    "workspace": "https://docs.google.com/presentation/d/1q6ts7HL1tlmJeo5ac8NROHOCASTbU4LlIK0TVNR87Ls/edit?usp=drivesdk",
+    "native_editable": true,
+    "slides": 10,
+    "source_document_not_public": true,
+    "google_pptx_autosync": false,
+    "content_release": "working; physical figure photo/validation gates open"
+  }
 }
