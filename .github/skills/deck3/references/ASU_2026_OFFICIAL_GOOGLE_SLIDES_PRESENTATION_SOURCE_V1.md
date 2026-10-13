@@ -32,3 +32,6 @@
 ## Scope and activation
 
 This is a **governance/source template reference and delivered deck pointer**, not a new research objective, automatic data sync, approved ASU endorsement or global requirement that all non-ASU projects adopt ASU styles. Update Deck3 dispatcher, workflow, machine registry, root instructions and presentation-related companion skills using the repository's global change contract.
+## Native figures / no-Runway execution checkpoint (2026-10-13)
+
+The user directed continued scientific visual creation **without Runway**. See `.github/skills/deck3/references/ASU_2026_NATIVE_SLIDES_NO_RUNWAY_VISUAL_CHECKPOINT_V1.md` for the directly edited Google Slides visuals on Slides 3–9, content and arrow semantics, verified native-editable slide elements, and outstanding live-render/photo-reuse/QA gates. Retain the current live Google Slides link as the working authority. Do not confuse new native diagrams with rights-cleared actual equipment photographs or assert coupled field validation.
