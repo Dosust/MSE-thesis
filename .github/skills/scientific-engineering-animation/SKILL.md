@@ -6,6 +6,11 @@ metadata:
   version: "1.0.0"
 ---
 
+
+## Shared scientific figure contract and mathematical agent algorithm — 2026-10-13
+
+For evidence-grounded scientific figures, physics-driven diagrams, animations, research-agent figure handoffs, or editable engineering slides, apply `project/SCIENTIFIC_DESIGN_RESEARCH_AGENT_ALGORITHMS_V1.md`. The contract example is `scripts/figure_contract_example.json`; run `python scripts/validate_figure_contract.py scripts/figure_contract_example.json` and `python -m unittest discover -s scripts -p 'test_figure_contract.py' -v` as *structural* admission tests. The validator does NOT verify physics, external citations, measurement authenticity, model fidelity, actual PowerPoint playback or independent scientific release gates. Preserve the thermal-only scope, current source-of-truth title and objectives, frozen eight-slide three-minute master, separate ten-slide training variant, evidence rule and exact Deck3 color/typography policies. This routing supplements existing instructions; do not promote I2/I3 candidates or treat A0–A8 roles as deployed autonomous agents.
+
 # Scientific Engineering Animation AI Skill V1
 
 **Status:** Supplemental production procedure, NOT scientific evidence or a new active-thesis scope. Existing thesis authorities, frozen objectives, 13-color Deck3 palette, approved presentation variants and source/rights standards control all outputs.
