@@ -5,6 +5,12 @@
 **Source basis:** User-supplied 2026-10-10 comparative assessments of two ten-infographic decks; `project/deck3_visual_reference_collection/samples_160.csv`; `project/deck3_visual_reference_collection/sources_13.csv`; `project/CONCEPTUAL_FRAMEWORK_CAUSAL_QUALIFICATION_APPLICATION_V1.md`; current thesis governance.
 **Not a research amendment:** Do not change approved RQs, exact GO/SO1–SO3, literature conclusions, mathematical claims, system boundaries, or statuses.
 
+## Controlled natural-context color exception — 2026-10-13
+
+Use `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md` together with `DECK3_SRGB_PALETTE.json` (policy v1.6.1). The exact 13-color sRGB list continues to govern **all authored scientific graphics, headings, labels, arrows, axes, annotation, borders, diagram marks and institutional accents**; all slide/panel/box/legend backgrounds remain pure white. **Realistic natural environmental objects**—such as plants, herbs, tree foliage, flowers, grass, soil, gravel, rocks, water and strictly necessary sky context—may retain restrained physically plausible colors, in photographs **and original AI illustrative equipment scenes**. Those nonpalette pixels are allowed only as scene-specific, visually secondary **context**, never as new graphic tokens, decorative scenery, colored backgrounds or research-data encoding. Plausible equipment materials may also retain physical material colors in actual/photo-real original scenes. A naturally purple flower is allowed; a purple research arrow is not.
+
+Before releasing any AI figure, inspect natural object purpose, saturation, size, physical plausibility, white surfaces, critical-label contrast and whether the natural depiction might imply unmeasured field/environmental evidence. Native authored marks must be checked separately from exempt scene-image pixels.
+
 ## Governing rule
 **One figure → one defensible scientific message → minimum sufficient objects → explicitly typed relationships.** Simplicity is a condition of scientific interpretability, NOT a ban on necessary complexity. If removing an element compromises the mechanism, retain it; otherwise remove it.
 
