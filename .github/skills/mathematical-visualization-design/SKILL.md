@@ -4,6 +4,16 @@ description: Design mathematically driven scientific diagrams, interactive visua
 license: MIT
 ---
 
+
+## Shared scientific figure contract and mathematical agent algorithm — 2026-10-13
+
+For evidence-grounded scientific figures, physics-driven diagrams, animations, research-agent figure handoffs, or editable engineering slides, apply `project/SCIENTIFIC_DESIGN_RESEARCH_AGENT_ALGORITHMS_V1.md`. The contract example is `scripts/figure_contract_example.json`; run `python scripts/validate_figure_contract.py scripts/figure_contract_example.json` and `python -m unittest discover -s scripts -p 'test_figure_contract.py' -v` as *structural* admission tests. The validator does NOT verify physics, external citations, measurement authenticity, model fidelity, actual PowerPoint playback or independent scientific release gates. Preserve the thermal-only scope, current source-of-truth title and objectives, frozen eight-slide three-minute master, separate ten-slide training variant, evidence rule and exact Deck3 color/typography policies. This routing supplements existing instructions; do not promote I2/I3 candidates or treat A0–A8 roles as deployed autonomous agents.
+
+
+## Scientific animation companion — 2026-10-13
+
+For requests involving animated SVG, GIF, MP4, native editable PowerPoint reveals, or physics-based motion, also load `.github/skills/scientific-engineering-animation/SKILL.md` and `references/ANIMATION_QA_CHECKLIST_V1.md` within that skill. This supplemental procedure controls storyboard timing, vector geometry, model-time versus presenter-time interpretation, animation source/reproducibility, and G0–G7 release gating. It does **not** amend frozen thesis science or approved Deck3 slide variants. No animation may promote I2/I3 candidates to verified results; actual Microsoft PowerPoint playback remains NOT_RUN until independently demonstrated.
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 

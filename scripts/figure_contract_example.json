@@ -1,0 +1,26 @@
+{
+  "figure_id": "charging_pathway_training_v1",
+  "variant": "TEN_SLIDE_TRAINING_SEPARATE_FROM_DECK3",
+  "scientific_message": "Normal AC supply reaches a DC EV charger, then charges an EV battery.",
+  "nodes": [
+    {"id": "P1", "label": "Distribution transformer", "system": "POWER", "kind": "ELECTRICAL_COMPONENT"},
+    {"id": "P2", "label": "AC distribution feeder", "system": "POWER", "kind": "ELECTRICAL_NETWORK"},
+    {"id": "T1", "label": "DC fast charger AC/DC", "system": "TRANSPORT", "kind": "CONVERTER"},
+    {"id": "T2", "label": "Vehicle battery", "system": "TRANSPORT", "kind": "STORAGE"},
+    {"id": "EXT_HEAT", "label": "Ambient extreme heat", "system": "EXTERNAL", "kind": "EXTERNAL_FORCING"}
+  ],
+  "edges": [
+    {"id": "E01", "source": "P1", "target": "P2", "type": "AC_POWER", "evidence_status": "ESTABLISHED_GENERIC", "label": "AC supply"},
+    {"id": "E02", "source": "P2", "target": "T1", "type": "AC_POWER", "evidence_status": "ESTABLISHED_GENERIC", "label": "Three-phase AC input"},
+    {"id": "E03", "source": "T1", "target": "T2", "type": "DC_POWER", "evidence_status": "ESTABLISHED_GENERIC", "label": "DC charging"},
+    {"id": "E04", "source": "EXT_HEAT", "target": "P1", "type": "EXTERNAL_FORCING", "evidence_status": "ESTABLISHED_GENERIC", "label": "Ambient heat exposure"},
+    {"id": "E05", "source": "EXT_HEAT", "target": "T1", "type": "EXTERNAL_FORCING", "evidence_status": "ESTABLISHED_GENERIC", "label": "Separate ambient heat exposure"}
+  ],
+  "style": {
+    "canvas": "#FFFFFF", "panel": "#FFFFFF", "font": "Times New Roman", "aspect_ratio": "16:9",
+    "authored_colors": ["#FFFFFF", "#000000", "#0072B2", "#176B42", "#006D70", "#8C1D40"],
+    "gradient": false, "shadow": false
+  },
+  "animation": {"kind": "EXPLANATORY_REVEAL", "clock": "PRESENTATION_TIME", "physical_time_claim": false, "narrative_duration_s": 6},
+  "scientific_qualification": "Generic explanatory architecture only; no measured or equipment-specific I2/I3 inference."
+}

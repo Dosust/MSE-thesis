@@ -6,6 +6,11 @@ metadata:
 ---
 
 
+## Shared scientific figure contract and mathematical agent algorithm — 2026-10-13
+
+For evidence-grounded scientific figures, physics-driven diagrams, animations, research-agent figure handoffs, or editable engineering slides, apply `project/SCIENTIFIC_DESIGN_RESEARCH_AGENT_ALGORITHMS_V1.md`. The contract example is `scripts/figure_contract_example.json`; run `python scripts/validate_figure_contract.py scripts/figure_contract_example.json` and `python -m unittest discover -s scripts -p 'test_figure_contract.py' -v` as *structural* admission tests. The validator does NOT verify physics, external citations, measurement authenticity, model fidelity, actual PowerPoint playback or independent scientific release gates. Preserve the thermal-only scope, current source-of-truth title and objectives, frozen eight-slide three-minute master, separate ten-slide training variant, evidence rule and exact Deck3 color/typography policies. This routing supplements existing instructions; do not promote I2/I3 candidates or treat A0–A8 roles as deployed autonomous agents.
+
+
 ## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
 For technical thesis queries, read `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md`. Start with physical reality, ask why a component matters, examine heat and electrical/thermal/control interfaces, assess source/measurement/validity evidence and rival explanations, then choose equations. The 40→8 program is NOT executed by instruction creation; apply G0–G5, target four independently eligible physical components in each system without forced filler or mistaking limits/functions for components. Write with direct purposeful questions, natural compact English and no inflated scope. Remain subject to frozen thesis objectives and V5/V3 authorities; V6 stays preferred provisional.
 
