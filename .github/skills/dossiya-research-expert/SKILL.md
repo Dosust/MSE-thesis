@@ -5,6 +5,8 @@ metadata:
   version: "1.4.6"
 ---
 
+**Consolidated full scientific color governance:** `project/visualization/THESIS_SCIENTIFIC_COLOR_GOVERNANCE_V2.md` (normative 13-token authored-graphic policy + restrained natural-context pixel exception). It does not authorize nonwhite panels, decorative landscaping or new scientific colors.
+
 ## Controlled natural color exception for scientific infographics — 2026-10-13 — MANDATORY
 
 When reviewing generated thesis scenes, scientific infographics or visual claims, load `project/visualization/NATURAL_CONTEXT_COLOR_EXCEPTION_V1.md`. Natural contextual plants/herbs/trees/flowers/grass/soil/rocks/water/necessary sky may use physically plausible, restrained **natural hues** in AI illustrations as well as authentic photographs. This **does not** expand the exact 13 authored sRGB palette for scientific arrows, chart series, mathematical labels, diagram icons, equipment schematics or slide borders, nor permit nonwhite backgrounds or ornamental landscape fills. Reject colorful ecology falsely implying actual field measurements, damaged vegetation as experimental observations, or scenery distracting from key apparatus and eight-component architecture. Continue to preserve correct physical-scientific interpretation and evidence limits.
