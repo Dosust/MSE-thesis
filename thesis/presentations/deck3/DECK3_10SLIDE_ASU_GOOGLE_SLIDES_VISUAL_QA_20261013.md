@@ -156,3 +156,18 @@ Photographs are authentic independent physical references. Cropped/resized prese
 - Source photo license/redistribution sign-off for publication: REVIEW, including CC BY-SA obligations.
 
 **Result status:** materially improved human-editable ASU-oriented 65/35 presentation; engineering/scientific release still gated by actual pixel viewing and physical-evidence review.
+
+
+## Current typography and layout correction — 2026-10-14
+
+**User-authorized change:** Changed the **ten-slide active Google Slides presentation** back from the prior Arial variant to **Times New Roman** for all editable slide text. This directly restores the default Deck3 thesis typography policy, superseding the earlier presentation-only Arial exception for this active file. Slide body remains 65/35 with white panels and the established scientific palette.
+
+**Current active Google Slides:** https://docs.google.com/presentation/d/1sQkwI99ymiz1PYEmy-3suW_064bHDlTjF__8T-yYB9Q/edit?usp=drivesdk
+
+**Prior-version backup:** https://docs.google.com/presentation/d/1g9m84mu2YCC4sSYH2g8FQIfmE6R0Xizufs0ElQE6psk/edit?usp=drivesdk
+
+**Changed:** 181 text-bearing shapes initially; one subsequently removed as a duplicate photo-license caption that geometrically overprinted the large official ASU signature on Slide 1. Photo source links on Slide 1 and attribution on Slide 3 remain.
+
+**Readback:** 180/180 current native text-bearing slide objects use Times New Roman (211 explicitly styled text runs); all 10 slides retain their content; bounding-box check found 0 slide-local non-line objects outside 720×405pt slides. Exported Google Slides PDF contains exactly 10 pages and no extracted text spans outside page bounds; rendered all 10 pages at 120 dpi and inspected the whole contact sheet, including title-slide fix. The ASU master/layout's own inherited copyright/signature font was not overridden. The PDF renders do not constitute guaranteed projector playback or exhaustive semantic/physical validation.
+
+**Open design item not changed in this typography-focused pass:** gold vertical stripe inherited from the ASU layout on Slide 2, and other original template decorative features. Does not prevent text fitting. In this iteration avoid patching institutional master layers without a separately authorized review.
