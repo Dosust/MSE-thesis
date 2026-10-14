@@ -35,3 +35,10 @@ This is a **governance/source template reference and delivered deck pointer**, n
 ## Native figures / no-Runway execution checkpoint (2026-10-13)
 
 The user directed continued scientific visual creation **without Runway**. See `.github/skills/deck3/references/ASU_2026_NATIVE_SLIDES_NO_RUNWAY_VISUAL_CHECKPOINT_V1.md` for the directly edited Google Slides visuals on Slides 3–9, content and arrow semantics, verified native-editable slide elements, and outstanding live-render/photo-reuse/QA gates. Retain the current live Google Slides link as the working authority. Do not confuse new native diagrams with rights-cleared actual equipment photographs or assert coupled field validation.
+
+## Latest ASU native scientific design working copy — 2026-10-14
+
+- **Current visual/layout refinement (65% scientific visual / 35% editable text):** https://docs.google.com/presentation/d/1KAV7OFOT18YWGqs42oQ6zVbon2C9QJBVPKaXCqK8a4k/edit?usp=drivesdk
+- **Execution checkpoint:** `.github/skills/deck3/references/ASU_2026_65_35_NATIVE_DESIGN_APPLICATION_V2_20261014.md`
+- Retains real official ASU 2026 master, ten slides, 13 governed authored colors, Arial presentation prose in this scoped derived copy, native vector figures on eight slides, natural original concept-art colors on two image slides, and frozen thesis evidence/causality distinctions.
+- This is an **edited working presentation**, not a full-screen pixel-verified defense-ready release, not an actual equipment-photograph portfolio, and not a science validation result. Keep prior versions available for comparison.
