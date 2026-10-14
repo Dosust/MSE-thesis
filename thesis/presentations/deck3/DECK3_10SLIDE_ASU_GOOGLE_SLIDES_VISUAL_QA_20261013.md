@@ -117,3 +117,42 @@ Photographs are authentic independent physical references. Cropped/resized prese
 - This remains an engineering design **draft**. Complete equipment-specific thermal-interface validation and measured service/sustainability outcomes are still OPEN. The source records are separate, not one physical testbed.
 
 **Governance:** This ten-slide ASU Google-native variant remains separate from the frozen eight-slide three-minute version and Chapter 1 variants. No canonical thesis authorities or unmerged objective PRs were modified.
+
+
+## ASU-native engineering redesign — 2026-10-14 (active)
+
+**Google Slides delivery:** https://docs.google.com/presentation/d/1sQkwI99ymiz1PYEmy-3suW_064bHDlTjF__8T-yYB9Q/edit?usp=drivesdk
+
+**Recovery copy before this pass:** https://docs.google.com/presentation/d/1oIeC4fHNLrTGMZPRSFQQB6kIjLcMECKBtOM-KWTxPn4/edit?usp=drivesdk
+
+**Scope:** User-requested practical implementation of ASU-oriented visual, higher-resolution photographic, scientific-mechanism and Google-native human design improvements in the ten-slide **65/35 variant**. No modification to canonical research files or the separate eight-slide/Chapter-1 masters.
+
+### Applied, native and scientific
+1. All 10 slides: ASU-approved system font **Arial** applied to editable text as an **explicit presentation-variant exception** to the repository's general Deck3 Times New Roman policy (which remains unmodified). Main slide headings upgraded where they fit and colored ASU Maroon `#8C1D40`; physics roles retain approved blue/green/teal/red. The existing 13-token sRGB authored palette, white interiors, 65/35 usable-content arrangement and 16:9 structure are preserved.
+2. Slide 1: replaced two lower-resolution reference imports with Commons originals requested at 2048/3840px variants, with native image frames proportioned to actual *source* image ratios 3672×4896 (transformer) and 8064×4536 (charging site). Natural equipment colors preserved; independent-site/non-testbed caveats and click-through source captions kept.
+3. Slide 3: authentic separate transformer and charger photo references inserted, with source aspect ratios preserved and heat exposure separated. The photograph-connecting AC arrow was removed, because the two photographed facilities are not one physical system; overlapping photo annotation removed.
+4. Slide 5: rebuilt the main P1→P2→T1 AC and T1→T2 DC diagram, and added explicitly differentiated equipment support associations P3→P1 conditionally, P4/P1 transformer cooling, T3/T1 EVSE cooling, and T4 vehicle auxiliaries (NOT battery cooling). Technical figure is individually editable native Slides shapes/lines.
+5. Slide 6: directional process flow added, including an evidence-admission GO/NO-GO-type conditional route. General, not fitted, DAE retained; numerical verification ≠ coupled field validation.
+6. Slide 7: replaced densely packed small number columns with three native, separately attributed evidence rows: TU Wien conditional electrical simulation; independent Bærug transformer test; published Qatar CPC50 field study. No fabricated observational curves or spurious combined testbed.
+7. Slide 8: recreated electricity and mobility service deficits as separate operations; service comparisons feed two scenario *consequence* pathways (direct heat and response), with environmental/economic/social indicators distinguished. No aggregation of unlike service units and no unsupported observed response.
+8. Slide 9: explicit directional proposed chronology, admission decision, and NO-GO narrowing statement; no future tasks reported completed.
+9. Slide 10: removed repetitive boxes; minimal scientific closing with qualifying question.
+
+### Verified after final mutation
+- Native Google Slides readback: **10/10 slides**, 100% editable text with font `Arial` (native diagrams + 4 real photographs across S1/S3). Figure labels, arrows, and right-column copy remain individually editable.
+- 13-color exact governed sRGB palette: **0** unapproved authored text/panel colors detected; natural photo pixels exempt.
+- 720×405pt canvas: **0** slide-local element out-of-bounds errors, **0** text-box geometric overlap pairs. Heuristic line-wrap check reported **0** risks after repair (not equivalent to actual pixel review).
+- Arrow connector counts: S2=2; S3=2 (separate external forcing); S4=4; S5=6; S6=5; S8=4; S9=3; S10=1.
+- Google Slides render service: **10/10** medium 800×450 thumbnails generated.
+- The two authenticated S1 photo captions link to Wikimedia Commons source pages.
+- Photo source identity: Yoshieslunchbox, *Distribution Transformer 1.jpg*, CC BY-SA 4.0, 3672×4896; G. Edward Johnson, *DC fast charging at Ikea College Park MD ...*, CC BY 4.0, 8064×4536. Both are illustrative *independent facilities*, not the research's P1/T1 case or Qatar CPC50. Source: respective Commons image-file metadata.
+- ASU typeface source: https://brandguide.asu.edu/brand-elements/design/fonts (Arial approved system/Google fallback); photo treatment source: https://brandguide.asu.edu/execution-guidelines/photo-video/art-direction; logo usage source: https://brandguide.asu.edu/brand-elements/logos/asu-logo.
+
+### Explicit NOT_RUN / OPEN release gates
+- Google thumbnail **pixel-level visual inspection** at actual projection scale: NOT_RUN (10 successful render API calls do not establish pixel inspection).
+- Insertion and clear-space review of an **approved official ASU logo asset**: NOT_RUN; no fabricated/recolored ASU logo was authored.
+- Projector playback / animation checks and rigorous native chart source-vs-render checks: NOT_RUN.
+- Researched **coupled I2/I3 physical evidence** and field validation, fixed service metrics, and measured sustainability indicators: OPEN, unchanged. The deck describes evidence qualification, not a validated joint physical testbed.
+- Source photo license/redistribution sign-off for publication: REVIEW, including CC BY-SA obligations.
+
+**Result status:** materially improved human-editable ASU-oriented 65/35 presentation; engineering/scientific release still gated by actual pixel viewing and physical-evidence review.
