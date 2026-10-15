@@ -1,0 +1,11 @@
+Known item ID,DOI,Paper,Expected lane(s),Retrieve in broad lane?,Bibliographic database checked?,Source version/PDF verified?,Caveat
+S04,10.1109/TSG.2023.3339374,EV-EcoSim (2023),"L1A or L1B, L5",UNKNOWN,NO,NO,Methodual prior art: may not mention extreme heat; L1B is needed.
+S05,10.1016/j.epsr.2022.108447,Bragone transformer PINN (2022),"L3,L5",UNKNOWN,NO,NO,Compare numerical reference to field observations.
+S06,10.1016/j.segan.2023.101048,Blomgren grey-box (2023),"L3,L5",UNKNOWN,NO,NO,Exact alternative title phrases and grey/gray box spelling.
+S07,10.1049/hve2.12435,Tang transformer PINN (2024),"L3,L5",UNKNOWN,NO,NO,COMSOL simulation-reference vs observed field temperatures.
+S08,10.1038/s41467-025-59749-4,Guddanti grid heat (2025),"L1A,L3",UNKNOWN,NO,NO,May miss L1A for legitimate reason: not an EV paper; try L3 if distribution mechanism relevant.
+S09,10.1016/j.ecmx.2026.101960,Krama charger heat field (2026),"L2,L6",UNKNOWN,NO,NO,Direct charger heat mechanism; abstract may not use 'thermal derating'.
+S10,10.1016/j.etran.2025.100518,Schreiber EV battery field (2026),L4,UNKNOWN,NO,NO,"Real-world test distribution, not confirmed >40 C heat episodes."
+P008,10.1016/j.enconman.2016.04.087,Godina transformer EV-load (2016),L1B,UNKNOWN,NO,NO,Non-extreme-heat EV charging to transformer thermal prior art.
+P010,10.1049/oap-cired.2017.1102,Villarroel transformer thermal experiment (2017),L3,UNKNOWN,NO,NO,Instrumented transformer; no vehicle sector.
+P001,10.1016/j.ecmx.2026.101960,Krama charger field (2026),"L2,L6",UNKNOWN,NO,NO,Same paper as S09; deduplicate by DOI.

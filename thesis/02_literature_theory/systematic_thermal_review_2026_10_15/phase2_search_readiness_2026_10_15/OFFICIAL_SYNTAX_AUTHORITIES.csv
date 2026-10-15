@@ -1,0 +1,6 @@
+Database,Supported syntax/guidance,Official source
+Scopus support,TITLE-ABS-KEY; Boolean OR AND; parentheses; straight quotes,https://service.elsevier.com/app/answers/detail/a_id/11365/supporthub/scopus/~/how-can-i-best-use-the-advanced-search%3F/
+Web of Science help,TS=Topic; Boolean operators; wildcard rules; test in current Core Collection interface,https://webofscience.help.clarivate.com/en-us/Content/search-rules.htm
+IEEE Xplore help,Boolean operators uppercase; Basic/Command Search (advanced-field editor differs),https://ieeexplore.ieee.org/Xplorehelp/searching-ieee-xplore/search-engine
+Compendex Engineering Village support,WN KY subject/title/abstract; CPX WN DB; expert search and field codes,https://www.elsevier.support/engineering-village/answer/what-are-the-search-fields-in-the-compendex-database
+Compendex Engineering Village support,Compendex database CPX code,https://www.elsevier.support/engineering-village/answer/what-are-the-engineering-village-database-search-codes

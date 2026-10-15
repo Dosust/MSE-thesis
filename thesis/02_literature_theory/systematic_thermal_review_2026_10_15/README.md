@@ -70,3 +70,7 @@ Request Professor Phelan's review of the proposed protocol. Once approved, versi
 ## Phase 1 pilot activity — 2026-10-15
 
 A six-stream public indexed-web pilot was **actually executed** and recorded under [pilot_2026_10_15/](pilot_2026_10_15/). It includes exact query texts, topic/data leads and source-visible preliminary evidence. Six Elicit searches were **blocked by account-level API denial**; Scopus, Web of Science, IEEE Xplore and Compendex are **still NOT RUN**. The public-search tool merges retrieved results and supplies no per-query exhaustive hit counts, so no PRISMA counts or completed systematic-review status can be inferred. Original PDFs and raw experimental time series were not opened by this pilot.
+
+## Phase 2 search-readiness preparation — 2026-10-15
+
+Prepared [phase2_search_readiness_2026_10_15/](phase2_search_readiness_2026_10_15/) with **28 unexecuted candidate field-syntax strings** for Scopus, WoS, IEEE Xplore and Compendex, official syntax-source links, separate known-item broad-query recall worksheet and live execution checklist. Provider syntax documentation was reviewed, but there was **no authenticated database execution or raw bibliographic export**. The query translations are `DRAFT / NOT TESTED`, not finalized protocol amendments.
