@@ -1,0 +1,26 @@
+PRISMA 2020 COUNTING WORKSHEET,Unnamed: 1,Unnamed: 2,Unnamed: 3
+Blank values are not zero. Enter numerical values only after corresponding logs exist.,,,
+,,,
+Stage,Count (verified),Source / formula,Verification / rule
+Records identified in indexed databases,,SUM of executed search counts; before dedup,Count only after raw exports complete
+Records from other sources,,"Citation chaining, handsearching, data repositories",Record source-specific identifiers
+Duplicate records removed,,Dedup audit and study-ID crosswalk,Capture journal/preprint version duplicates
+Records screened,,Unique records that reached title/abstract screening,Not equivalent to seed publications
+Title/abstract records excluded,,Consensus exclusions,Count from logged reasons
+Full-text reports sought,,Screening consensus ADVANCE,Keep attempts for inaccessible reports
+Full-text reports not retrieved,,Missing or inaccessible PDFs,Count separately from scientific exclusions
+Full-text reports assessed,,Actually opened and screened,Do not infer from DOI
+Full-text reports excluded,,Full-text EXCLUDE with explicit reason,Report reasons by category
+Studies included,,Deduplicated distinct study IDs with final include,Do not count multiple papers from one study twice
+Reports of included studies,,Papers/abstracts/reports corresponding to studies,Keep studies vs reports distinct
+Total accessible PDFs opened,,PDF Evidence records with actual provenance,Not a formal PRISMA count; internal QC
+Raw dataset files inspected,,Data Audit G=YES and evidence,Not a formal PRISMA count; independent audit
+Paired interface datasets verified,,Data Audit DA5 with proof,No assumption that co-location proves causality
+Peer review of search completed,,PRESS checklist signed and version saved,Must verify actual peer reviewer check
+,,,
+,,,
+Operational counters (only entered tracker rows),,Live tracker-based metrics,Do not equate with final review PRISMA flows
+Title-abstract CONSENSUS ADVANCE,0,Screening!L5:L150,Only decisions actually made
+Full-text final INCLUDE,0,Screening!N5:N150,Not deduplicated by study ID
+Full-text final EXCLUDE,0,Screening!N5:N150,Only recorded full-text exclusions
+Raw files opened (YES),0,Data Audit!G5:G150,"Verifies file-opened flag, not scientific quality"

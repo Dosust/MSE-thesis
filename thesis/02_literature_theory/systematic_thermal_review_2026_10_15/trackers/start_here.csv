@@ -1,0 +1,30 @@
+SYSTEMATIC LITERATURE REVIEW — EXECUTION WORKBOOK,Unnamed: 1,Unnamed: 2
+Active thermal P ↔ Tₑ thesis scope · Operating template · 2026-10-15,,
+,,
+Sequence,Task,Required evidence for completion
+0,Agree and version the protocol,"Freeze review question, scope, inclusion rules, source coverage, reviewer procedure."
+1,Search databases,"Run independently named lanes in Scopus, WoS, IEEE Xplore, Compendex; export exact queries/date/results."
+2,Deduplicate,Link all bibliographic copies and published/preprint versions; preserve original source tags.
+3,Screen,"Apply eligibility at title/abstract and full text, record decisions and reason per record."
+4,Verify original sources,"Inspect full PDF equations, tables, figures, experiments and paper-specific validity domain."
+5,Audit raw datasets,"Open actual raw files, verify variables, timestamps, sensor limits, heat ranges, permissions."
+6,Compare modeling evidence,"Match physics-only, parameter-estimated grey-box, and PI-ML/PINN studies without pooling unlike targets."
+7,Synthesize,"Produce evidence map, gap map, thermal mechanisms, model-readiness decision and advisor memo."
+8,Update before submission,"Rerun approved searches and document last-search date, changes and limitations."
+,,
+,,
+Status,"Protocol-designed, not yet an executed systematic review",
+Frozen SO1,Qualify thermal states and directional thermal interdependencies,
+Frozen SO2,Develop physics-based state–time dynamic model,
+Frozen SO3,"Quantify critical times, delays, electricity and mobility consequences",
+Evidence rule,Source-supported ≠ Thesis-derived ≠ Case-validated,
+Critical caution,Existing seed papers are NOT automatically included in the systematic corpus,
+,,
+,,
+Authority,https://github.com/Dossiya-SE/MSE-thesis/blob/main/project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md,
+Amendment,https://github.com/Dossiya-SE/MSE-thesis/blob/main/project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md,
+Objectives,https://github.com/Dossiya-SE/MSE-thesis/blob/main/project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md,
+Search reporting,https://www.equator-network.org/reporting-guidelines/prisma-s/,
+Review reporting,https://www.prisma-statement.org/prisma-2020,
+Search review,https://doi.org/10.1016/j.jclinepi.2016.01.021,
+Protocol,Thermal_PT_Systematic_Literature_Review_Protocol_v1_2026-10-15.md,

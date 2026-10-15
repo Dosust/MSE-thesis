@@ -1,0 +1,4 @@
+EVIDENCE-GROUNDED MODEL COMPARISON,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16,Unnamed: 17,Unnamed: 18,Unnamed: 19
+Do not pool unmatched tasks or assume larger model = better physical explanation.,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Study ID,Task / target,System,Method class,Governing equations,Estimated parameters,Model inputs,Observed outputs,Train / test separation,Physics-only baseline,Grey-box baseline,Unconstrained ML baseline,Reported metric / unit,Held-out heat event?,Physical feasibility checked?,Uncertainty assessed?,Time / compute cost,Limitations,Research outcome / claim,Review status
