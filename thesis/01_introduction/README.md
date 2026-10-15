@@ -1,6 +1,6 @@
 # Chapter 1 — Introduction
 
-**Thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+**Thesis title:** **Engineering of Power–Electrified Transportation Interdependencies for Resilience**
 
 **Current active scope:** thermal interdependencies only between the Power System and Electrified Transportation System, with consequences analyzed through physical state and time.
 
