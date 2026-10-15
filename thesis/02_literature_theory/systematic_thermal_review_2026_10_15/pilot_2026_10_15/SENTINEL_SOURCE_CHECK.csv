@@ -1,0 +1,12 @@
+Sentinel ID,Known source,Observed pilot status,PDF verified,Counts as systematic inclusion?
+S01,Rinaldi 2001,NOT CHECKED; background conceptual precedent,NO,NO
+S02,Fotouhi 2017,IDENTIFIED by DOI-targeted follow-up; not recall-test pass,NO,NO
+S03,Zou Chen 2019,IDENTIFIED by DOI-targeted follow-up; not recall-test pass,NO,NO
+S04,Balogun 2023,IDENTIFIED in topical public-web pilot; lane attribution not guaranteed,NO,NO
+S05,Bragone 2022,IDENTIFIED in topical public-web pilot; lane attribution not guaranteed,NO,NO
+S06,Blomgren 2023,IDENTIFIED in topical public-web pilot; lane attribution not guaranteed,NO,NO
+S07,Tang 2024,IDENTIFIED by DOI-targeted follow-up; not recall-test pass,NO,NO
+S08,Guddanti 2025,IDENTIFIED by DOI-targeted follow-up; not recall-test pass,NO,NO
+S09,Krama 2026,IDENTIFIED in topical public-web pilot; lane attribution not guaranteed,NO,NO
+S10,Schreiber 2026,IDENTIFIED via targeted dataset follow-up; not recall-test pass,NO,NO
+S11,Doyen and De Lara 2010,"NOT CHECKED; contextual mathematics, out of bounded thermal pilot",NO,NO
