@@ -21,13 +21,17 @@ Research execution reference: `project/FOCUSED_PHYSICS_MATH_ENGINEERING_LITERATU
 
 **Status: FROZEN USER-DIRECTED WRITING REQUIREMENT.** Governing authority: `thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md` §0A. This file is MANDATORY for any thesis scientific content in chat, manuscripts, slides, proposals, models, figures, tables, explanations, and draft chapters. Never provide a substantive externally sourced claim without an adjacent verified in-text citation; bibliography-only material fails the requirement. Use APA 7 author–date for written academic material, short adjacent citations in slides, and valid source-provenance links where appropriate in chat. Preserve internal canonical citations for thesis-defined decisions, and label unsupported matters OPEN without invented references. Original thesis questions/objectives/hypotheses are not to be misattributed to external papers. This updates writing practice only and does not reopen frozen title, physics, scope, or research objectives.
 
-## Active title amendment — 2026-10-09
+## Active title amendment — 2026-10-15
 
-The current official title uses **Power–Electrified Transportation**, governed by `project/CANONICAL_THESIS_TITLE_V2.md`; V1 is historical. This is a title-only amendment; frozen research objectives and technical scope are unchanged.
+The current official thesis title is **Engineering of Power–Electrified Transportation Interdependencies for Resilience**, controlled by `project/CANONICAL_THESIS_TITLE_V3.md`. This user-confirmed title-only amendment supersedes V2 for title wording; V1 and V2 remain historical authorities and are not rewritten. No changes to frozen extreme-heat thermal interdependencies, system boundaries, GO/SO1–SO3, physical state-time meaning, mathematical methodology, resilience/service interpretation or validation status follow from the title amendment.
+
+## Historical title amendment — 2026-10-09
+
+The prior V2 official title used **Power–Electrified Transportation**, governed by `project/CANONICAL_THESIS_TITLE_V2.md`. V1 was historical, and V2 is now superseded by V3 for title wording only.
 
 ## Load first
 
-1. `project/CANONICAL_THESIS_TITLE_V2.md`
+1. `project/CANONICAL_THESIS_TITLE_V3.md`
 2. `project/CANONICAL_ELECTRIFIED_TRANSPORTATION_SCOPE_DEFINITION_V1.md`
 3. `project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`
 4. `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`

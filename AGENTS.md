@@ -157,11 +157,11 @@ Prefer concise, high-information-density writing. Do not repeat background, equa
 
 For any active thesis, proposal, manuscript, presentation, figure, README, research-identity, or repository-governance task, use the exact title controlled by:
 
-`project/CANONICAL_THESIS_TITLE_V1.md`
+`project/CANONICAL_THESIS_TITLE_V3.md`
 
 The exact active title is:
 
-> **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**
+> **Engineering of Power–Electrified Transportation Interdependencies for Resilience**
 
 Do not silently substitute historical or exploratory titles. Historical archives and provenance snapshots remain unchanged.
 
