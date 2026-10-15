@@ -74,3 +74,7 @@ A six-stream public indexed-web pilot was **actually executed** and recorded und
 ## Phase 2 search-readiness preparation — 2026-10-15
 
 Prepared [phase2_search_readiness_2026_10_15/](phase2_search_readiness_2026_10_15/) with **28 unexecuted candidate field-syntax strings** for Scopus, WoS, IEEE Xplore and Compendex, official syntax-source links, separate known-item broad-query recall worksheet and live execution checklist. Provider syntax documentation was reviewed, but there was **no authenticated database execution or raw bibliographic export**. The query translations are `DRAFT / NOT TESTED`, not finalized protocol amendments.
+
+## Original-PDF text verification — 2026-10-15
+
+The first source-level paper audit is in [original_pdf_audit_2026_10_15/](original_pdf_audit_2026_10_15/): **3 actually read original PDF artifacts**, including **2 publisher versions of record and 1 explicitly versioned arXiv author manuscript**. It records 19 source-anchored scientific claims, page/equation/table links, validation boundaries and each of the 15 pilot leads' access status. Figure pixels were not visually rendered because PDF screenshot requests failed; raw time series are uninspected; all pilot leads remain **NOT SCREENED** for systematic review. This source verification is independent of PRISMA inclusion and does not unfreeze the modeling method.
