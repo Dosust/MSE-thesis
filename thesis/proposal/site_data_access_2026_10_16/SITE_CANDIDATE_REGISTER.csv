@@ -1,0 +1,3 @@
+Candidate ID,Case category,Geography/site,Owner/operator,P transformer↔EVSE relationship,Asset ID/ratings documented,P temperature and actual thermal-limit log,EVSE temperature/derate + AC/DC telemetry,Non-EV load + clocks,Vehicle requirement,Permissions,Preliminary evidence tier,Gate F0,Gate F3,Gate F7,Blocking next action
+CATEGORY-DC,Public DC fast charger,UNSELECTED,UNKNOWN,UNVERIFIED,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,NOT REQUESTED,S0 CATEGORY ONLY,BLOCKED,BLOCKED,BLOCKED,Identify location/operator and lawful circuit/topology access
+CATEGORY-DEPOT,Fleet/depot EV charging,UNSELECTED,UNKNOWN,UNVERIFIED,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,NOT REQUESTED,S0 CATEGORY ONLY,BLOCKED,BLOCKED,BLOCKED,Identify potential fleet/depot host and departure-requirement owner

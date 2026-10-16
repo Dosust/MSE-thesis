@@ -1,0 +1,5 @@
+Data asset identifier,Proposed holder,Agreement/approval,Original filename (internal only),Secure location (not public repo),Record start/end UTC,Known sample interval,Units/sensor map verified,Clock offset uncertainty,Equipment mapping passed,Holdout policy,Actual file read,Current status
+P-SITE-DATA,Unknown utility/operator,NOT REQUESTED,,,,,,,,,NO,NO FILE
+EVSE-SITE-DATA,Unknown charger/operator,NOT REQUESTED,,,,,,,,,NO,NO FILE
+VEHICLE-SERVICE,Unknown vehicle/fleet operator,NOT REQUESTED,,,,,,,,,NO,NO FILE
+EXOGENOUS-HEAT,Unknown site/weather steward,NOT REQUESTED,,,,,,,,,NO,NO FILE

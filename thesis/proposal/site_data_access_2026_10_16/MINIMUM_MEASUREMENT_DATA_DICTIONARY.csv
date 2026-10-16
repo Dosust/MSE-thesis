@@ -1,0 +1,19 @@
+Channel key,Subsystem,Unit,Physical location,Evidence needed,Sensor semantics/uncertainty,Recommended minimum access status,Missingness / confounder
+site_token,Meta,identifier,P–T_e mapped site,Owner-approved pseudonym plus documented P↔EVSE association,No public electrical security identifier,UNKNOWN,Shared site not yet known
+timestamp_utc,Meta,ISO 8601,Each logger,Original UTC/offset timestamps and clock quality,Independent source clock offsets,UNAVAILABLE,Clock drift can produce false delays
+ambient_P,Exogenous,°C,Near transformer,Actual local thermal forcing,Sensor placement/calibration,UNAVAILABLE,Common heat / solar exposure
+ambient_E,Exogenous,°C,Near EVSE,Actual local thermal forcing,Sensor placement/calibration,UNAVAILABLE,Shared vs different ambient
+transformer_temperature,P,°C,Exact transformer oil/lid/sensor,Observed temperature with sensor physical location,Lid/oil ≠ direct hotspot; spot accuracy,UNAVAILABLE,Wrong temperature target
+transformer_phase_current,P,A RMS,Upstream distribution transformer secondary,Aligned per-phase RMS and meter identity,"Meter class, sampling and harmonic impact",UNAVAILABLE,Other circuit demand
+transformer_power,P,"kW,kvar,kVA",Upstream utility transformer or feeder,Aligned total load and relationship to EVSE,"3-phase, reactive/imbalance",UNAVAILABLE,Non-EV customer load
+other_circuit_load,P,kW,Other loads under same P asset,Measure/submeter or independently bounded,Avoid subtraction from unlike intervals,UNAVAILABLE,HVAC/solar/weather
+P_thermal_limit_event,P,event/code/timestamp,Actual P protection/utility or operator dispatch,Log proving a heat-conditioned operational action,Limit source/documented setting if sharable,UNAVAILABLE,Voltage / utility dispatch not thermal
+P_allocated_to_EVSE,Interface,kW,AC allocation/control to EVSE,Actual recorded allocation setpoint or hard supply limit,Cannot be inferred from nameplate alone,UNAVAILABLE,Network capacity may be nonthermal
+evse_temperature,T_e,°C,EVSE documented component sensor,Rectifier/cabinet thermal state with mapping,Internal cabinet transformer belongs T_e,UNAVAILABLE,Sensor ≠ junction hottest point
+evse_thermal_derate_event,T_e,event/code/timestamp,EVSE internal thermal management controller,Specific overtemperature/thermal power-limiting flag,Distinguish BMS taper and grid orders,UNAVAILABLE,Coincident ambient heat
+evse_AC_power,Interface/T_e,"kW,kvar,A",AC EVSE inlet,Independently measured real/reactive power/RMS current,Meter interval and phase definitions,UNAVAILABLE,Cooling auxiliary included
+evse_DC_power,T_e,kW,EVSE DC output,Measured delivered power and commanded offered limit,EVSE efficiency and DC meter,UNAVAILABLE,"SOC taper, BMS request"
+session_id,T_e,pseudonym,Vehicle/EVSE session,Join key and consented event history,No personal data in public repository,UNAVAILABLE,Session linkage
+EV_SOC,T_e,%,Vehicle/charger session,Actual SOC time series if legally available,"Energy state, not thermal state",UNAVAILABLE,Unknown battery capacity
+departure_energy_required,Service,kWh,Vehicle/fleet requirement,Independent mission/energy need before departure,Not inferred after inspecting result,UNAVAILABLE,Trip service not verified
+electricity_service_required,Service,defined units,Agreed delivered supply/service boundary,Predefined need and threshold with owner,Not automatically transformer rating,UNDEFINED,Outage/capacity/curtailment
