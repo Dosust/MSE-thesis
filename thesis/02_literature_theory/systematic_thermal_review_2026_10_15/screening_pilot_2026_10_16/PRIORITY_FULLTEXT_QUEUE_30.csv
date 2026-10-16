@@ -1,0 +1,31 @@
+Priority,DOI,Focus,Reason for full-text review,Review status,Equations/physical data/validation status
+P1,10.1109/TSG.2014.2365452,direct_physical_control,25 kVA experimental transformer and EV charging control,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1109/ECTI-CON54298.2022.9795360,direct_physical_control,Transformer oil and ambient measurements linked to charger current control,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.segan.2023.101096,service_and_thermal,EV charging overload and transformer service interruption consequence,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1109/PESGM51994.2024.10688510,dynamic_thermal_rating,EV charging data; ambient-sensitive distribution transformer rating,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1049/icp.2023.3126,thermal_grid_coupling,Ambient-temperature EV charging profiles and modeled distribution network,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.enconman.2016.04.087,transformer_thermal_ev,Measured base load and modeled EV charging/transformer hotspot,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.ijepes.2014.09.040,transformer_thermal_ev,EV load; ambient forcing and transformer thermal ageing,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1109/TTE.2019.2946063,thermal_control,Vehicle-directed smart charging and transformer aging,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1109/EnergyTech.2012.6304673,physical_experiment,Distribution transformer physical test for PEV smart charging,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1109/TSG.2015.2390624,component_thermal_validation,Small service transformer actual temperature measurements,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1049/oap-cired.2017.1102,component_thermal_validation,Internal fiber optic winding temperatures and validation,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.segan.2023.101048,greybox_thermal_physics,Transformer RC/stochastic thermal model measured lid vs hotspot distinction,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.epsr.2022.108447,pinn_vs_numerical,PINN transformer thermal model compared to numerical FVM,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1016/j.ecmx.2026.101960,evse_extreme_heat,Qatar field charger rectifier heat-driven derating,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P1,10.1049/icp.2023.0873,evse_temperature_empirical,Nordic temperature/EV charging measurement relationship,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/TPWRD.2023.3265671,direct_ev_transformer,EV penetration and modeled transformer life,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/EPEC.2018.8598330,ambient_transformer_aging,EV plus solar and ambient-dependent insulation aging,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/ESARS-ITEC60450.2024.10819931,ambient_transformer_aging,Temperature impacts on EV demand and transformer aging,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/ISGTEurope.2011.6162755,hotspot_model,Early EV charging to transformer hotspot approach,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/TPWRD.2021.3123957,component_measured_baseline,Nine power transformers field temperature model comparisons,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/61.915478,governing_heat_equation,Thermal equivalent circuit with nonlinear convection,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/REPC71040.2026.00017,thermal_rating_verification,Transformer thermal testing and dynamic-rating practical investigation,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1016/j.est.2022.105538,electric_transport_component,Experimental EV battery-pack electrothermal model,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/NE-IECCE69680.2026.11665934,conditional_pinn,"Physics-informed transformer transient heat/life, assess validation",AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1016/j.apenergy.2023.121126,adjacent_power_transport,Transport routes and electrical power management but heat not established,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/TSG.2011.2163650,foundational_ev_transformer,Monte Carlo EV charging and modeled transformer hotspot,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/PESGM.2012.6345472,ambient_transformer_aging,"EV charging rates, weather and modeled transformer aging",AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1016/j.epsr.2023.109455,transformer_aging_simulation,Fuzzy simulation of EV load and transformer loss of life,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P2,10.1109/ICPEEV58650.2023.10391876,simulation_only,IEEE-13 bus EV fleet load thermal stress co-model,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS
+P3,10.1109/REPC60353.2025.00014,utility_practice_context,Utility survey on planning/loading for EV growth,AI_ASSISTED_ABSTRACT_OR_TITLE_PRIORITY,NOT_REVIEWED_IN_THIS_SCREENING_PASS

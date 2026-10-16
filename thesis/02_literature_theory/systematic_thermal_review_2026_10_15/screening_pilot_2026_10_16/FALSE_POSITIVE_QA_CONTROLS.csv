@@ -1,0 +1,7 @@
+DOI,Reason for QA flag,Research action
+10.1016/j.csite.2021.101045,Thermal refers to fossil thermal power generation and frequency control not device heat transfer,Do not count as P-Te thermal propagation
+10.1109/ICCMC69250.2026.11624837,Transformer is a neural network architecture,Reject as utility transformer heat evidence
+10.1021/acs.analchem.6c00411,EV means extracellular vesicle,Exclude from EV infrastructure evidence
+10.1109/ICEARS56392.2023.10085292,On-board charger internal transformer belongs T_e rather than upstream P asset,Retag as T_e component where needed
+10.1016/j.applthermaleng.2026.130776,Physics-informed Transformer is model architecture for EV energy/temperature,T_e model only; do not claim physical P-Te transformer interface
+10.1016/j.apenergy.2023.121126,Genuine coupled power/transport route optimization without established heat-related coupling,"Context only, thermal claim unverified"
