@@ -31,3 +31,12 @@ Proposed slice A,PUBYEAR > 1969 AND PUBYEAR < 2020
 Proposed slice B,PUBYEAR > 2019 AND PUBYEAR < 2028
 Year slices executed,NO
 Two original 20000 export jobs known disjoint,NO
+Search 5 reconciled by 1970-2019 supplement,YES
+Combined Search 5 unique EIDs,23054
+Supplement filename,export_0a135ac4-9b38-4e4a-ae65-69ffbdcabd90_2026-10-16T164754.064628789.csv
+Supplement count,8366
+S5 supplement overlap original 20k,5312
+All five search sets unique EIDs after supplement,37376
+EID coverage now,RECONCILED TO SCOPUS SCREENSHOT
+Earlier claim incomplete export,SUPERSEDED
+Exact supplement query history status,UNVERIFIED
