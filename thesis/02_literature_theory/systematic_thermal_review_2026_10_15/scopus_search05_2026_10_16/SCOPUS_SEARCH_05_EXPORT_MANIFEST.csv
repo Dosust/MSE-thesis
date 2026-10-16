@@ -4,7 +4,7 @@ Search ID,SCOPUS-S05-EXPERIMENT-20261016
 Records exported,20000
 Scopus 20000 export cap reached,YES
 Full result set verified,NO
-Query verified in Scopus History,NO
+Query verified in Scopus History,NO - export dashboard screenshot verified only
 Nonempty DOI,18746
 Unique EID,20000
 Duplicate EID,0
@@ -15,3 +15,10 @@ Original bytes,76536950
 SHA256,940f46c2e4fe44750866e06b5460107ca57614cc2881788f942948ab3e34ae36
 Original CSV in GitHub,NO
 Screened studies,NOT YET
+Query verified against Scopus export dashboard screenshot,YES
+Publication year filter shown,PUBYEAR > 1969 AND PUBYEAR < 2028
+Displayed exports using same Search5 expression,2
+Status export A,IN PROGRESS
+Status export B,DOWNLOAD CSV
+Scopus full results-page count,UNKNOWN
+Exports established to be disjoint,NO

@@ -2,7 +2,7 @@
 
 **16 October 2026 | Scopus Advanced Search | Draft PR #84**
 
-**Recorded query:** [SCOPUS_SEARCH_05_RECORDED_QUERY.txt](SCOPUS_SEARCH_05_RECORDED_QUERY.txt). Reconstructed from the previously provided Search 5 expression; confirm exact executed text in Scopus Search History.
+**Recorded query:** [SCOPUS_SEARCH_05_RECORDED_QUERY.txt](SCOPUS_SEARCH_05_RECORDED_QUERY.txt). The query **and year limits** are visibly verified against the researcher's 2026-10-16 **Scopus Exports Dashboard screenshot**; the live Search History/results page and total hit count are still NOT verified. The visible limits are `PUBYEAR > 1969 AND PUBYEAR < 2028` (1970–2027 inclusive). This is narrower than a database-inception search and must be documented as an active filter.
 
 **Export audited:** 20,000 records, 35 columns, 18,746 DOIs, no duplicate EIDs. SHA-256: `940f46c2e4fe44750866e06b5460107ca57614cc2881788f942948ab3e34ae36`.
 
@@ -14,4 +14,6 @@
 
 **Original CSV:** `export_8f61939a-0941-4160-ac56-a41d496093ae_2026-10-16T161631.093642874.csv` (76,536,950 bytes). Full export NOT committed: Scopus bulk retention/sharing rights for GitHub are unconfirmed. Preserve the original in approved research storage. Only this metadata, research description and query are committed.
 
-**Next:** Confirm live Scopus Search 5 total and query, resolve any 20,000-export truncation, then deduplicate/screen and read original eligible articles.
+**Follow-up screenshot audit, 2026-10-16:** The Scopus Exports Dashboard displayed **two Search 5 export jobs**, each labeled **20,000 documents** and showing the **same query plus `PUBYEAR > 1969 AND PUBYEAR < 2028`**. One job was *Export in Progress* and another offered *Download CSV*. This is evidence of **two export jobs**, NOT that the result set has 40,000 hits or that the jobs cover distinct EIDs. Neither job card reports the **total search result count**. Treat the total, percentage exported, and de-duplication of these two jobs as UNKNOWN until independently checked; avoid merging the jobs as separate batches based on the screenshot alone.
+
+**Next:** Open the full Scopus Search 5 results/Search History page and provide the overall document-hit count. Confirm whether the existing 20,000-row CSV covers that total; if not, export genuinely disjoint documented slices. Record year filter in systematic-review search logs. Then deduplicate and screen and inspect original studies.
