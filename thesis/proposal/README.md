@@ -1,78 +1,37 @@
-# Thesis Proposal — Controlled Release Workspace
+# Thesis Proposal — Active Thermal SO1–SO3 Working Workspace
 
-**Canonical thesis title:** **Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
-**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V3.md`
+**Official V3 thesis title:** **Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
+**Current file to review:** [PROPOSAL_THERMAL_SO1_SO3_WORKING_V1.md](PROPOSAL_THERMAL_SO1_SO3_WORKING_V1.md)  
+**Status:** **DRAFT — NOT ADVISOR-APPROVED — NOT RELEASE-READY.**  
+**Title governance:** [Canonical Title V3](../../project/CANONICAL_THESIS_TITLE_V3.md).  
+**Research governance:** [Scope V1](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md), [Extreme-Heat V4](../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md), [Frozen GO/SO1–SO3](../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md), [Evidence Standard](../../project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md).  
 
-> **CURRENT-RELEASE GATE — BLOCKED:** The title metadata is synchronized to V3, but the RQ1–RQ7 / SO1–SO7 / H1–H5 and seven-stage scientific content below is an earlier research contract and is **not release-ready under the current thermal-only GO and SO1–SO3**. Preserve the material for provenance; do not submit or use it as the current proposal until independently revised against `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` and the governing thermal scope authorities. The approved title amendment alone does not authorize changes to objectives, hypotheses, or models.
+## Current proposal structure
 
-## Role
+1. Engineering context and heat-conditioned interdependency problem.
+2. Evidence-supported prior art and **provisional, falsifiable** cross-system gap.
+3. Frozen P and Tₑ boundary and thermal-only constraints.
+4. Exact frozen General Research Objective, SO1, SO2, SO3.
+5. Three **working, unapproved** research questions mapping W-RQ1→SO1, W-RQ2→SO2, W-RQ3→SO3.
+6. Minimum-sufficient state-time equations as **T1 schematic candidate**, not an already calibrated physical law.
+7. Original paper/source qualification, admissible data, model-class comparisons, timing and service validation.
+8. Negative controls, uncertainty, limitations and conditional resilience interpretation.
+9. Working primary references with paper-level source-tier caveats.
 
-The proposal is the first controlled release of the thesis architecture, not a temporary essay.
+The proposal does **not** revive RQ1–RQ7, SO1–SO7, H1–H5, broad seven-stage theory, viability optimization or generic sustainability analysis. It does **not** freeze hypotheses, research questions, parameters, a GREY model, a PINN or a claim of measured cross-system coupling.
 
-```math
-\boxed{\text{Proposal release}\rightarrow\text{approved research architecture}\rightarrow\text{controlled thesis development}}
-```
+## Working documents and release control
 
-## Current authorities
+- [Active working proposal](PROPOSAL_THERMAL_SO1_SO3_WORKING_V1.md).
+- [Revised release checklist](PROPOSAL_RELEASE_CHECKLIST.md).
+- [Objective / claim / method traceability matrix](THERMAL_SO1_SO3_TRACEABILITY_MATRIX.csv).
+- [Research contract migration and evidence caveat](RESEARCH_CONTRACT_MIGRATION_RECORD_2026_10_16.md).
+- [Historical proposal workspace README snapshot](archive/PROPOSAL_README_PRE_THERMAL_2026_10_16.md) and [historical release checklist snapshot](archive/PROPOSAL_RELEASE_CHECKLIST_PRE_THERMAL_2026_10_16.md).
 
-- `../../project/CANONICAL_7_STAGE_FRAMEWORK_V2.md`
-- `../../project/CANONICAL_RQ_SO_HYPOTHESES_V3.md`
-- `../../project/CANONICAL_CHAPTER_I_CONTENT_AND_FLOW_V2.md`
-- `../00_governance/SCIENTIFIC_WRITING_AND_INFERENCE_STANDARD_V1.md`
+**Literature note:** Systematic review audit material is currently on [draft PR #84](https://github.com/Dossiya-SE/MSE-thesis/pull/84), not on main. Its 15 pilot references are NOT 15 systematically screened articles, and the formal four-database search has not executed. The proposal cites only qualified source-level claims and identifies lack of raw/linked field data.
 
-## Recommended content
+**Release-blocking external decisions:** chair-approved proposal format/length, chair-accepted research questions, verified full systematic review or an approved bounded interim literature basis, measurable interface data/experimental alternatives, original equipment manufacturer/standard thresholds, and independent validation design.
 
-1. Background and engineering problem
-2. Sustainable-engineering significance
-3. Condensed literature/theoretical foundation
-4. Evidence-qualified research gap
-5. Scope, system boundary and assumptions
-6. General objective, RQ0, RQ1–RQ7 and SO1–SO7
-7. H1–H5 and developmental/evidence obligations for RQ1/RQ2
-8. Proposed seven-stage conceptual/mathematical framework v2
-9. Methodology and experimental design
-10. Verification, validation, uncertainty and falsification plan
-11. Proposed contributions, clearly labeled as proposed
-12. Completion criteria and timeline
-13. References
+## Historical versus current science
 
-## Scientific semantics
-
-Preserve:
-
-```math
-\boxed{
-\text{Stage 5}=	ext{viability + reachability + probability/confidence}
-}
-```
-
-```math
-\boxed{
-H_4=\text{intervention effectiveness/efficiency/sustainability consequences}
-}
-```
-
-```math
-\boxed{
-H_5=\text{resilience-only vs joint resilience–sustainability engineering decision}
-}
-```
-
-Interface criticality is a supporting diagnostic. Adaptive/sequential pathways are a supporting extension unless separately activated.
-
-## Important compliance distinction
-
-No universal Sustainable Engineering MSE proposal page length is frozen here because no current program-wide proposal-length requirement has been verified in the 2026–2027 MSE handbook. Any advisor/GSC proposal-length instruction should be recorded as a `CHAIR/GSC` decision in `../00_governance/ASU_REQUIREMENTS_MATRIX.md`.
-
-## Change control
-
-After proposal approval, changes to the following require an amendment record rather than silent rewriting:
-
-- research scope/system boundary;
-- primary hypotheses or question/objective mapping;
-- confirmatory model baselines;
-- primary data domains/splits;
-- primary response/decision metrics and thresholds;
-- sustainability accounting boundaries;
-- validation strategy;
-- activation of supporting interface-ranking or adaptive-pathway claims as confirmatory tests.
+The original proposal README and release checklist used September RQ1–RQ7 / SO1–SO7 / H1–H5 and a seven-stage framework. They are preserved separately as historical snapshots. Those structures are not current thesis scientific authority, and the V3 title amendment has not itself granted research approval.
