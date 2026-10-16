@@ -1,0 +1,11 @@
+DOI,Expected topic,Found in five reconciled Scopus exports,Consequence
+10.1109/TSG.2014.2365452,Transformer temperature and experimentally calibrated EV charging control,YES,Critical counterexample review
+10.1016/j.segan.2023.101096,Service disruption from EV loading/thermal stress,YES,Critical service claim review
+10.1016/j.enconman.2016.04.087,EV charging and transformer modeled thermal effects,YES,Foundational direct model
+10.1016/j.segan.2023.101048,Transformer stochastic grey-box with observations,YES,P model baseline
+10.1016/j.epsr.2022.108447,Transformer PINN versus numerical field,YES,Method comparison
+10.1049/oap-cired.2017.1102,Observed internal winding temperatures,YES,P sensor validation
+10.1016/j.ecmx.2026.101960,Extreme-hot weather EVSE rectifier derating,YES,T_e heat evidence
+10.1109/TSG.2023.3339374,EV-EcoSim multiphysics co-simulation,NO,Check indexing and broaden co-simulation query/citation chasing
+10.3390/en11081937,Trentadue experimental charging under extreme temperatures,NO,Check indexing and broaden charger-efficiency/temperature query
+TECHNICAL REPORT 23.ET8.R.0571,Fletcher & Khan 2025 modeled thermal charging constraints,NOT EXPECTED IN SCOPUS,Include separately in technical-report/citation-chasing track
