@@ -17,3 +17,12 @@
 **Follow-up screenshot audit, 2026-10-16:** The Scopus Exports Dashboard displayed **two Search 5 export jobs**, each labeled **20,000 documents** and showing the **same query plus `PUBYEAR > 1969 AND PUBYEAR < 2028`**. One job was *Export in Progress* and another offered *Download CSV*. This is evidence of **two export jobs**, NOT that the result set has 40,000 hits or that the jobs cover distinct EIDs. Neither job card reports the **total search result count**. Treat the total, percentage exported, and de-duplication of these two jobs as UNKNOWN until independently checked; avoid merging the jobs as separate batches based on the screenshot alone.
 
 **Next:** Open the full Scopus Search 5 results/Search History page and provide the overall document-hit count. Confirm whether the existing 20,000-row CSV covers that total; if not, export genuinely disjoint documented slices. Record year filter in systematic-review search logs. Then deduplicate and screen and inspect original studies.
+
+
+## Scopus results-page verification — 2026-10-16
+
+**EVIDENCE:** User-provided screenshot from actual Search 5 results page visibly states **23,054 documents found** for the Search 5 expression. The visible query includes `PUBYEAR > 1969`; the previously provided Exports Dashboard confirms `PUBYEAR < 2028` as well. Thus report **23,054 Scopus hits** under the documented Search 5 year filters, not 20,000 total.
+
+The existing original user-uploaded CSV has **20,000 EIDs**; **3,054 records were not contained in that export**. Two 20,000-record export jobs with the same query are not necessarily disjoint and cannot be summed. Exact set difference remains to be checked once complementary exports are obtained.
+
+**Required completion procedure:** Re-execute the same Search 5 conceptual expression while partitioning **only by nonoverlapping publication years**, e.g. `PUBYEAR > 1969 AND PUBYEAR < 2020` versus `PUBYEAR > 2019 AND PUBYEAR < 2028`. For each slice record its actual hit count and ensure it is below the per-export 20,000 cap; otherwise split the slice again. Export both complete ranges, retain original export and partition query metadata, and compare the combined unique Scopus EIDs with the search-results-page total (acknowledging possible index changes between query times). No claim that the two slices have already been run. The 23,054 count is a **database hit count, not screened included literature**.

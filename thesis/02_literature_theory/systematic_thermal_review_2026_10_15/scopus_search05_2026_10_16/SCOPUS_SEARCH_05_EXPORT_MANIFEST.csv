@@ -22,3 +22,12 @@ Status export A,IN PROGRESS
 Status export B,DOWNLOAD CSV
 Scopus full results-page count,UNKNOWN
 Exports established to be disjoint,NO
+Scopus Search5 results-page total confirmed,23054
+Results page screenshot provided date,2026-10-16
+Current export size,20000
+Not yet exported records at time of screenshot,3054
+Search5 full export status,INCOMPLETE
+Proposed slice A,PUBYEAR > 1969 AND PUBYEAR < 2020
+Proposed slice B,PUBYEAR > 2019 AND PUBYEAR < 2028
+Year slices executed,NO
+Two original 20000 export jobs known disjoint,NO
