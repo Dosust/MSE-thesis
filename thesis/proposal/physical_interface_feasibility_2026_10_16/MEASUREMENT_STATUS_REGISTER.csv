@@ -1,0 +1,8 @@
+Source,Quantity (unit),Evidence from original studies,Status at selected site,Inference guard
+External,Ambient temperature (°C) and weather,Measured at other published sites,UNAVAILABLE,Common heat exposure is not interdependency
+P,Transformer case/lid temperature (°C),Direct field sensor Blomgren 2023,UNAVAILABLE,Not true winding hotspot
+P,Winding hotspot temperature (°C),Direct internal optics Villarroel 2017 DIFFERENT lab transformer,UNAVAILABLE,"If modeled, label estimated"
+P,"Per-phase V/I, P/Q, non-EV loads, protection and thermal allocation",Physical measurement possible but case records not obtained,UNAVAILABLE,Without limit action no observed P→T_e
+T_e,"Internal EVSE temperature, thermal flag/control, AC and DC power",Krama 2026 field reported; raw unavailable,UNAVAILABLE,Internal cabinet sensor not upstream transformer
+T_e,"Vehicle SOC, DC energy, departure requirement",Charging quantities reported in other studies; trip service not verified,UNAVAILABLE,Charging output does not guarantee mobility
+MODEL,Transformer hotspot and coupled trajectories,Godina/Balogun simulated; Blomgren lid fitted,NOT ESTIMATED / NOT RUN,Simulation is not experiment
