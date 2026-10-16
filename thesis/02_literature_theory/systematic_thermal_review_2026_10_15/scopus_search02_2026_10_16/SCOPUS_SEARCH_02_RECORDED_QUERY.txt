@@ -1,0 +1,9 @@
+TITLE-ABS-KEY(
+  (transformer OR "power distribution" OR
+   "transmission line" OR "power cable")
+  AND
+  ("heat transfer" OR "thermal model" OR
+   "thermal dynamics" OR "thermal inertia" OR
+   "dynamic thermal rating" OR "hot spot" OR
+   "hot-spot temperature")
+)
