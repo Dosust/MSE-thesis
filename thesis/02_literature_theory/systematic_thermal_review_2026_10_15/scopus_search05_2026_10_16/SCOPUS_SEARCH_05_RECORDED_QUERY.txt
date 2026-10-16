@@ -1,0 +1,8 @@
+TITLE-ABS-KEY(
+  (transformer OR "EV charging" OR EVSE OR "electric vehicle")
+  AND
+  (thermal OR temperature OR "heat transfer")
+  AND
+  (experiment* OR measurement* OR calibrat* OR validat*
+  OR "physics-informed" OR PINN OR "grey-box" OR "gray-box")
+)
