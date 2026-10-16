@@ -1,0 +1,11 @@
+TITLE-ABS-KEY(
+  (transformer OR "electric vehicle" OR
+   EVSE OR "power system")
+  AND
+  (thermal OR temperature OR "heat transfer")
+  AND
+  ("differential equation" OR "state space" OR
+   "dynamical system" OR "heat equation" OR
+   "finite element" OR "finite volume" OR
+   "thermal network" OR "physics-based model")
+)
