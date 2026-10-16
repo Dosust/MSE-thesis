@@ -1,0 +1,10 @@
+Gate,Evidence required,Present status,Failure or next decision
+F0,"Real P transformer ↔ EVSE diagram; ratings, meter ports and equipment IDs",BLOCKED — NO SITE,Candidate configuration remains schematic
+F1,P thermal sensor; applicable and active rating/protection action; T_e output,NOT ESTABLISHED,Do not claim measured P→T_e curtailment
+F2,EVSE heat-controller log; AC feeder difference; P transformer sensed response,COMPONENT EVIDENCE ONLY,T_e→P receiver effect remains simulated/unqualified
+F3,"Licensed original data, timestamps, sensor calibration, units, sync",BLOCKED — NO RAW JOINT DATA,No coupled empirical fit
+F4,"Physics, states, boundary/initial conditions, dimensional energy balances",PROPOSED ONLY,No final PHY/GREY/PIML method freeze
+F5,"Independent data excitation, parameter rank/profile/uncertainty",NOT TESTED,Mark parameters non-identifiable if failed
+F6,Same measured target on held-out extreme-heat sessions; bias/UQ,NOT TESTED,No validation or guarantees
+F7,Operator electricity service plus actual departure energy/trip requirement,BLOCKED — UNDEFINED,Charger energy only a proxy
+F8,Full literature source checks and advisor feasibility authorization,OPEN,No novelty or final proposal approval
