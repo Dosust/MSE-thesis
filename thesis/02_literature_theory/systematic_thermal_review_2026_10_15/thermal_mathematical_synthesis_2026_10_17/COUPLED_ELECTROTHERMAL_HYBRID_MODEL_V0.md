@@ -212,3 +212,35 @@ Counterfactual ablations must keep hazard realization, electrical loads, resourc
 - The IEEE C57.91-2025 or IEC 60076-7:2018 *complete equation sets* have been verified from publisher scope pages.
 
 **State of artifact:** Mathematically formulated v0 with explicit assumptions and falsification targets; no source-validated cross-infrastructure parameterization, no empirical joint model fitting, and no formal theorem proven.
+
+
+## 10. Analytically proved special-case thermal stability (PROPOSITION)
+
+**Proposition.** Under a fixed ambient temperature \(T_a\), positive constant capacitances \(C_o,C_w>0\), positive constant conductances \(G_{wo},G_{oa}>0\), no internal heat-generation inputs, and no mode switching, the equilibrium of the two-node transformer thermal system is \(T_o=T_w=T_a\), and it is globally asymptotically stable within the unconstrained linear state space.
+
+**Proof.** Write \(\theta_o=T_o-T_a\), \(\theta_w=T_w-T_a\). Then
+\[
+C_w\dot\theta_w=-G_{wo}(\theta_w-\theta_o),\quad
+C_o\dot\theta_o=G_{wo}(\theta_w-\theta_o)-G_{oa}\theta_o.
+\]
+For \(V(\theta_o,\theta_w)=\frac12 C_o\theta_o^2+\frac12 C_w\theta_w^2\),
+\[
+\dot V=\theta_o C_o\dot\theta_o+\theta_w C_w\dot\theta_w
+=-G_{wo}(\theta_w-\theta_o)^2-G_{oa}\theta_o^2.
+\]
+Both terms are nonpositive. Equality requires \(\theta_o=0\) and \(\theta_w=\theta_o=0\), so \(\dot V<0\) at every non-equilibrium point. \(V\) is positive definite and radially unbounded. The origin is globally asymptotically stable. \(\square\)
+
+**Limits of theorem:** This does *not* prove stability under real heat generation, time-varying ambient, thermal hysteresis, grid DAE singularities, parameter uncertainty, nonlinear cooling or service constraints, and is NOT an empirically validated new physical finding. Its purpose is to supply a regression/unit-verification target for the passive two-node heat exchange block.
+
+## 11. Necessary charging-service feasibility inequality (PROPOSITION)
+
+Given an actual required delivered DC energy \(E_{\rm req}\) before departure \(t_d\), every feasible trajectory must satisfy
+\[
+E_{\rm req}\le \int_{0}^{t_d}P_{\rm DC}(t)\,dt
+\le\int_{0}^{t_d}\overline P_{\rm DC}(t)\,dt
+\]
+for any **valid** upper bound \(\overline P_{\rm DC}(t)\) on power achievable by all admissible controls, grid states and thermal modes. If an independently defensible upper power envelope produces \(\int_0^{t_d}\overline P_{\rm DC}(t)\,dt<E_{\rm req}\), no admissible control policy can meet that service obligation.
+
+The inequality follows from \(0\le P_{\rm DC}(t)\le \overline P_{\rm DC}(t)\) almost everywhere and integration. It is **necessary, not sufficient**: network constraints, competing service requests, control delays, thermal-state evolution or other obligations may still prevent meeting the deadline. One may use the trivial bound \(P_{\rm DC}\le P_{\rm rated}\), yielding \(E_{\rm req}\le P_{\rm rated}t_d\) as a weak necessary condition; tighter envelopes must be proved or measured, not asserted.
+
+Neither proposition establishes a full coupled-network viability kernel. They are analytically supported components of a future mathematical verification program.
