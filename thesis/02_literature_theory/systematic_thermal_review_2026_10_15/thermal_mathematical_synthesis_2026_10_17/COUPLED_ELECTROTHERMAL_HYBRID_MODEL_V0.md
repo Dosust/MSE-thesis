@@ -216,7 +216,7 @@ Counterfactual ablations must keep hazard realization, electrical loads, resourc
 
 ## 10. Analytically proved special-case thermal stability (PROPOSITION)
 
-**Proposition.** Under a fixed ambient temperature \(T_a\), positive constant capacitances \(C_o,C_w>0\), positive constant conductances \(G_{wo},G_{oa}>0\), no internal heat-generation inputs, and no mode switching, the equilibrium of the two-node transformer thermal system is \(T_o=T_w=T_a\), and it is globally asymptotically stable within the unconstrained linear state space.
+**Lyapunov stability proposition.** Under a fixed ambient temperature \(T_a\), positive constant capacitances \(C_o,C_w>0\), positive constant conductances \(G_{wo},G_{oa}>0\), no internal heat-generation inputs, and no mode switching, the equilibrium of the two-node transformer thermal system is \(T_o=T_w=T_a\), and it is globally asymptotically stable within the unconstrained linear state space.
 
 **Proof.** Write \(\theta_o=T_o-T_a\), \(\theta_w=T_w-T_a\). Then
 \[
