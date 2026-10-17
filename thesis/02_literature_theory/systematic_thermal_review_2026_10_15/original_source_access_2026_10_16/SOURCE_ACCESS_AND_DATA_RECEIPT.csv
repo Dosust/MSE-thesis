@@ -1,4 +1,4 @@
 Study,DOI,Source record checked,Original PDF downloaded,Original raw data received,Access route,Email draft status
-Gong 2015,10.1109/TSG.2014.2365452,IEEE bibliographic abstract and OSU author directory,NO,NO,ASU IEEE or coauthor manuscript,UNSENT
+Gong 2015,10.1109/TSG.2014.2365452,Original 9-page IEEE Transactions Smart Grid vol6 pp648-656 ASU download 2026-10-17 SHA256 88fe4d90b8bad8eca82d9a598b3ba49135943a17b1a6c5217682b271a8b0f0b2,YES,NO,Uploaded author-licensed original PDF verified in research conversation; PDF not copied to GitHub,AUTHOR_REQUEST_NO_LONGER_REQUIRED_FOR_FULLTEXT
 Kunlasing 2022,10.1109/ECTI-CON54298.2022.9795360,KMUTNB coauthor CV and conference TOC,NO,NO,ASU IEEE or coauthor manuscript,UNSENT
-Krama 2026,10.1016/j.ecmx.2026.101960,Original Elsevier 16-page publisher article uploaded and verified; SHA256 150224c92e07afef9d9685aa2e964b5aaa1d8502a99974e3038e049f469d9a72,YES,NO,Full PDF inspected; raw series author request at akrama@hbku.edu.qa,UNSENT
+Krama 2026,10.1016/j.ecmx.2026.101960,Original Elsevier 16-page publisher article uploaded and verified; SHA256 150224c92e07afef9d9685aa2e964b5aaa1d8502a99974e3038e049f469d9a72,YES,NO,Full PDF inspected; raw field data author request at akrama@hbku.edu.qa,USER_REPORTS_DATA_REQUEST_SENT; AWAITING_AUTHOR_RESPONSE; NOT_INDEPENDENTLY_VERIFIED
