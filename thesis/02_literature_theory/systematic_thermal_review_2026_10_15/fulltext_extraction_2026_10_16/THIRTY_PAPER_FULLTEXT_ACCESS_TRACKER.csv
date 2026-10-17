@@ -1,6 +1,6 @@
 DOI,Full text access status on 2026-10-16,Next fulltext action
 10.1109/TSG.2014.2365452,ORIGINAL_IEEE_PUBLISHER_PDF_9P_VERIFIED_2026_10_17,Full Eqs 1-11 and Table II/Figs 1-8 reviewed; thermal PDE/ODE referenced not printed; P-only temperature validation verified; raw observations and true winding hotspot not available
-10.1109/ECTI-CON54298.2022.9795360,BIBLIOGRAPHIC_AND_ABSTRACT,CRITICAL: IEEE conference full paper needed
+10.1109/ECTI-CON54298.2022.9795360,ORIGINAL_IEEE_ECTI_CON_PDF_4P_VERIFIED_2026_10_17,Extracted sole Eq1 RMS; true P oil/ambient sensing; two-charger manual Zigbee PWM physical actuation vs three-EV simulation; no heat-conditioned control validation or raw aligned observations
 10.1016/j.segan.2023.101096,PUBLISHER_ABSTRACT_AND_INTRO_PREVIEW,Full journal PDF/equation and data checking needed
 10.1109/PESGM51994.2024.10688510,FULLTEXT_NOT_OBTAINED_IN_THIS_TRANCHE,"Retrieve actual publisher/institutional full text; inspect equations, measurement and validation"
 10.1049/icp.2023.3126,FULLTEXT_NOT_OBTAINED_IN_THIS_TRANCHE,"Retrieve actual publisher/institutional full text; inspect equations, measurement and validation"
