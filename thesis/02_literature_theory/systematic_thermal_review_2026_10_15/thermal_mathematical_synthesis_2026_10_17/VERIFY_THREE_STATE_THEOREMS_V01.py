@@ -113,6 +113,14 @@ def main():
         E+=5.*p0
     assert E>=Ereq and np.all(x<=box+1e-8)
 
+    # Time-step refinement on a constant-power thermal trajectory.
+    def integrate(dt):
+        y=np.array([30.,30.,30.])
+        for _ in range(round(t_depart/dt)):
+            y=rk4(y,dt,service,command=p0)
+        return y
+    assert np.linalg.norm(integrate(5.)-integrate(2.5.),ord=np.inf)<1e-5
+
     # Smooth joint negative-feedback sensitivities; analytic cubic check.
     rng=np.random.default_rng(20261017)
     m=base; p=.6*m.Pr; h=Hp(p,m);l=ell(m)
