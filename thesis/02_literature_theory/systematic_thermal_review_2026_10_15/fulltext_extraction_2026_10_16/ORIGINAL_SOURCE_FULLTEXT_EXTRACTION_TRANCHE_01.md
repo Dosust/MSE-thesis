@@ -1,3 +1,5 @@
+> **SUPERSEDING UPDATE — 2026-10-17:** The original full nine-page ASU-access IEEE publisher PDF of **Gong et al. (2015)** has now been obtained, identity/checksum verified, original Eqs. (1)–(11), Tables I–II, Figs. 1–8 and measured-versus-simulated validation audited. The 2026-10-16 “Gong PDF not obtained” statement below is a historical status **no longer current**. See [original Gong audit](../gong_original_ieee_2026_10_17/GONG_2015_ORIGINAL_IEEE_EVIDENCE_AUDIT.md). **Kunlasing (2022) original PDF and Krama (2026) raw field data remain unreceived.**
+
 # Original-source thermal physics and mathematical extraction — Tranche 1
 
 **Date:** 2026-10-16  
