@@ -27,7 +27,7 @@ The **30-priority-DOI register** is an acquisition/extraction **queue**, NOT evi
 
 **IEC 60076-7:2018** official IEC primary metadata: https://webstore.iec.ch/en/publication/34351 . Guide for mineral-oil-immersed power transformers, ambient/thermal loading/insulation ageing; revised thermal models stated on official product page. **Only full scope/public summary verified, original technical formula pages not inspected**. When implementing compare device type/cooling to standard applicability, validate selected equation edition and test type before compliance claims.
 
-**Gong et al. (2015)** original source confirms dynamic transformer model fundamentally credited to Susa [22] and prior Gong [18], while Gon g's Eq.(1) is **load ARMA** and Eq.(9) is calibration loss. The observed top-winding is **not** actual measured hotspot; normalized thermal time constants depend on location/equipment and should not be swapped for hotspot time constant.
+**Gong et al. (2015)** original source confirms dynamic transformer model fundamentally credited to Susa [22] and prior Gong [18], while Gong's Eq.(1) is **load ARMA** and Eq.(9) is calibration loss. The observed top-winding is **not** actual measured hotspot; normalized thermal time constants depend on location/equipment and should not be swapped for hotspot time constant.
 
 ## Additional fulltext-derived prior art from existing thesis source audit
 
