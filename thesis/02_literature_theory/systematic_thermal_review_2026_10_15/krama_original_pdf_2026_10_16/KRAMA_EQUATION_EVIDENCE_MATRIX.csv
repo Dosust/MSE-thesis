@@ -1,0 +1,11 @@
+Equation,Location,Measurement and target,Interpretation,Validation status
+Eq1,p3,semiconductor Tj and equivalent thermal impedance,conceptual approximation not measured junction,NOT CALIBRATED_DEVICE_EQUATION
+Eq2,p3,AC input minus DC delivered power,whole system power loss not device heat flux,MEASURED_SIGNALS_DERIVED_LOSS
+Eqs3-4,p4,current and voltage harmonics,ratio does not measure transformer heating,MEASURED_EVSE_INLET
+Eq5,p5,DC output divided by AC input,wall to DC efficiency,MEASURED_SIGNALS_DERIVED_ETA
+Eq6,p11,offered versus delivered DC charging capability,conditional charger-vs-battery regime,FIELD_DIAGNOSTIC
+Eq8,pp12-13,rectifier temperature predicts offered DC kW,quadratic fit R2=.9625,FIELD_CALIBRATED
+Eq9,p13,ambient temperature predicts offered DC kW,quadratic fit R2=.6865,FIELD_CALIBRATED_WEAKER
+Eq10,p13,DeltaT=Trect-Tamb,measured rectifier minus ambient not safety headroom,MEASURED_DIFFERENCE
+Eq11,p13,ambient and DeltaT predict offered DC kW,polynomial R2=.9852 June LOSO R2=.416,INDEPENDENT_SESSION_TEST_REPORTED
+Eq12,p13,ambient predicts charging duration min,quadratic fit R2=.996,INDEPENDENT_DURATION_HOLDOUT_NOT_DEMONSTRATED

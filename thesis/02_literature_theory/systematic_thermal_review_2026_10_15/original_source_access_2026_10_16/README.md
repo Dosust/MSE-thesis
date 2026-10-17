@@ -1,11 +1,12 @@
-# Three priority original-source access — 16 October 2026
+# Original-source access — corrected 16 October 2026
 
-- [Source-version and data access audit](PRIORITY_ORIGINAL_SOURCE_ACCESS_REPORT.md)
-- [Gong coauthor manuscript request — unsent](GONG_2015_MANUSCRIPT_REQUEST_UNSENT.md)
-- [Kunlasing coauthor manuscript request — unsent](KUNLASING_2022_MANUSCRIPT_REQUEST_UNSENT.md)
-- [Krama original raw field-data request — unsent](KRAMA_2026_DATA_REQUEST_UNSENT.md)
-- [Source receipt status](SOURCE_ACCESS_AND_DATA_RECEIPT.csv)
+**Krama (2026): original 16-page published PDF RECEIVED AND VERIFIED** (checksum in source audit); **raw experimental data NOT RECEIVED**. Gong (2015) and Kunlasing (2022) original IEEE full-text PDFs remain unavailable.
 
-All three original complete PDFs are **NOT verified as downloaded** and raw Krama dataset **NOT RECEIVED**. Gong/Kunlasing IEEE papers require authorized subscription/library access or author provision. Krama 2026 is explicitly **OPEN ACCESS** at publisher, but current machine PDF fetch returned 403/unavailable; publisher Data Availability indicates data **on request**. No emails or data agreements sent/accepted.
+- [Krama original physics/mathematics/validation audit](../krama_original_pdf_2026_10_16/KRAMA_ORIGINAL_PDF_PHYSICS_MATHEMATICS_VALIDATION.md)
+- [Corrected source-access audit](PRIORITY_ORIGINAL_SOURCE_ACCESS_REPORT.md)
+- [Updated paper/data receipt register](SOURCE_ACCESS_AND_DATA_RECEIPT.csv)
+- [Unsent Krama raw-data-only request](KRAMA_2026_DATA_REQUEST_UNSENT.md)
+- [Unsent Gong IEEE request](GONG_2015_MANUSCRIPT_REQUEST_UNSENT.md)
+- [Unsent Kunlasing IEEE request](KUNLASING_2022_MANUSCRIPT_REQUEST_UNSENT.md)
 
-**Do not claim measured directional coupled P↔Tₑ thermal propagation or select PINN by assumption.** Underlying validated thermal physics/mathematics and source limitations govern. Draft stacked on PR #90.
+**Physics/mathematics rule:** measured Tₑ converter temperature and charger capability ≠ external utility P transformer thermal receiving state; source's Eq. 11 is an empirical polynomial, not a first-principles heat ODE/PDE. No PINN chosen, no signed data agreement or email sent.

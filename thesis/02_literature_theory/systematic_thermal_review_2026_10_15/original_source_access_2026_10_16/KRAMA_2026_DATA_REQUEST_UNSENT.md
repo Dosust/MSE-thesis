@@ -1,24 +1,23 @@
-# Unsent academic original field-data request — Krama et al. (2026)
+# Unsent original field data request — Krama et al. 2026
 
-**To:** Dr Abdelbasset Krama, designated corresponding author in HBKU publication record. **No email address independently verified — do not guess.**  
-**Source:** https://elmi.hbku.edu.qa/en/publications/impact-of-extreme-climatic-conditions-on-fast-ev-charger-performa/  
-**Subject:** Request for field measurements and full article — extreme-climate fast EV charger study (ECM-X 2026)
+**To:** akrama@hbku.edu.qa (verified in original publisher PDF, page 1).  
+**Subject:** Original field measurements request — thermal derating of Qatar EV fast charger
 
 Dear Dr. Krama,
 
-I am conducting an MSE Sustainable Engineering thesis study at Arizona State University on physically grounded state-time models of thermal constraints at the interface of electricity distribution and EV charging.
+I am conducting MSE Sustainable Engineering research at Arizona State University on physically grounded thermal-state models of coupled power and electrified transportation.
 
-Your 2026 open-access paper (DOI: 10.1016/j.ecmx.2026.101960) is highly relevant. Its publisher Data Availability statement indicates that the original measurements may be available on request.
+I have read your original 2026 paper (DOI: 10.1016/j.ecmx.2026.101960), and noted that its field measurements are available on request. Would it be possible to receive a permissible anonymized dataset, data dictionary, and research-use conditions?
 
-Would you be willing to share a permissible copy or original publisher PDF link and an anonymized research dataset, subject to your preferred data-use terms? Ideally, the data would include aligned session timestamps/timezone, local ambient and rectifier temperatures, available/offered and delivered power, AC input P/Q/current, DC output, controller thermal-limit/derating flags, battery SOC and charging-session metadata; please include measurement units, sensor position/calibration, sampling intervals and known time synchronization uncertainty where available. If some channels are unavailable, a data dictionary and subset would still be valuable.
+Particularly helpful would be session timestamps/time zone; 5-minute rectifier and ambient sensor data (individual probes if available); 1-minute AC power, current, THD, DC offered and delivered power, and SOC; manufacturer derating/limit flags if recorded; sensor accuracy and time-sync metadata; and the session IDs/splits used in validation.
 
-My purpose is to verify physical heat effects, distinguish EVSE thermal limits from battery-demand taper, and compare physics-based and data-informed models against independent observed quantities. I would not claim your measurements describe an upstream distribution transformer or an actual P↔EVSE field thermal experiment.
+The data would support reproduction of your energy balance and empirical models, and a comparison with independently validated physics-based thermal dynamics. Your study would not be represented as measuring an upstream utility transformer or actual coupled P–EVSE thermal propagation.
 
-I will follow the data ownership, citation, privacy, secure storage and reproduction conditions you specify.
+I will follow your attribution and data privacy requirements.
 
 Kind regards,
 [Your name]
 MSE Sustainable Engineering, Arizona State University
-[Your institutional email]
+[Your university email]
 
-**STATUS: UNSENT; original field data NOT RECEIVED.**
+**UNSENT. No raw dataset received. Original publisher PDF already received.**
