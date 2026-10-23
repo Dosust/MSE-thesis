@@ -1,0 +1,31 @@
+# NUS papers 25–30 — Targeted correction and release report
+
+Date: 23 October 2026. Scope: NUS-120, NUS-124, NUS-153, NUS-2, NUS-9, NUS-127. No final-seven study was reviewed or edited.
+
+## Results
+- Six original PDFs matched by filename, DOI and source identity; 119 source pages.
+- **42 research-method rows completed**, seven for each of six detailed paper records.
+- **92 cell-level changes**, fully logged.
+- **24 sentences source-linked**, with 62 atomic evidence-type assignments (multiple types for compound claims).
+- All 15 prior audit items have an explicit disposition; NUS-153 provenance and original publication integrity remain an externally unresolved issue, not an Excel process omission.
+- Excel archive content: 72 original nonworksheet parts EXACTLY preserved. All existing cells not specifically authorized for the six new papers and the two lookup headers remain unchanged. All 24 prior research rows retain exact cell values.
+- All 51 embedded images, existing comments and named structures preserved in the OOXML archive. The source .xlsm contains no VBA project payload; no VBA functionality was invented. ZIP CRC integrity checked.
+- No original published PDF, original 24-paper workbook, Google Slides or final-seven research materials edited.
+
+## Scientific decisions
+- **NUS-120** — Three-pillar 18-indicator MIVES; 29% economic/39% environmental/32% social, Delphi-based weights and value-function calibrations; social point scoring ≠ Social LCA.
+- **NUS-124** — 60-year whole-building modeled scenario and A1–C4 LCA/LCC; paper discusses discounted future cash flows but a numeric discount rate was not established by this verification.
+- **NUS-153** — Source-integrity **HOLD**. Unrelated cognitive-health content appears in the original article; material results are mixed with illustrative/simulated examples. MPa-labeled “durability” is a mechanical proxy, not an observed lifetime. The reported 15%/8%/20% changes may be cited only as author-reported computational scenarios. Original underlying code/data not independently replicated.
+- **NUS-2** — 28-day strength-normalized MJ, CO₂ and price metrics are distinct from Wiener-process frost probability. Published prose swaps embodied-carbon and energy meanings; preserve physically labeled units rather than silently change source formulas.
+- **NUS-9** — Performance and environmental LCA computed **in parallel**, not strength-normalized. Environmental human-health endpoint is not Social LCA.
+- **NUS-127** — Like-for-like process inventory agreement for climate/energy; ozone values have different definitions/units. Cost compares per-ton sediment processing against cited cement price, not delivered mortar lifecycle costing.
+
+## Approval basis
+Source identity and method mapping for six source papers are supported. Independent reproduction of all reported numeric outputs is **NOT claimed**. Five records are source-consistent with documented boundaries; NUS-153 has ongoing internal-source provenance warnings. Thus **six-of-six unqualified scientific approval has NOT been granted**; the corrected workbook is a controlled research release with explicit qualification.
+
+## Audit reproduction
+Original 30-paper master SHA-256: `5e37c51106fd479895a441ef8ea78efb6aa90f80741743c05fc2cac696821a0f`.
+
+Corrected master SHA-256: `a48dd39f15a0c5f616738e0252f204dadb5d36862eeb77101d5e2558f095bd82`.
+
+Source, row, change and provenance registers accompany this report.
