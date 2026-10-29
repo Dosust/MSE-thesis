@@ -23,7 +23,8 @@ class ThermalCSVResearchTests(unittest.TestCase):
   self.assertEqual(info["populated_schema_pass"],0)
   self.assertEqual(info["physical_validations"],0)
   self.assertEqual(len(list((self.out/"templates").glob("*.csv"))),14)
-  status=list(csv.DictReader((self.out/"research_status.csv").open()))
+  with (self.out/"research_status.csv").open(newline="",encoding="utf-8") as h:
+   status=list(csv.DictReader(h))
   self.assertEqual(len(status),16)
   self.assertEqual(next(r for r in status if r["module"]=="R07")["status"],"BLOCKED_EVIDENCE")
   self.assertEqual(next(r for r in status if r["module"]=="R16")["status"],"OUT_OF_SCOPE_DEFERRED")
@@ -65,7 +66,8 @@ class ThermalCSVResearchTests(unittest.TestCase):
   info=self.result()
   self.assertEqual(info["candidate_linked_pairs"],1)
   self.assertEqual(info["physical_validations"],0)
-  pairs=list(csv.DictReader((self.out/"linked_observation_candidates.csv").open()))
+  with (self.out/"linked_observation_candidates.csv").open(newline="",encoding="utf-8") as h:
+   pairs=list(csv.DictReader(h))
   self.assertIn("NOT_VALIDATION",pairs[0]["status"])
  def test_two_unconnected_sites_not_merged(self):
   self.table("source_evidence",[dict(evidence_id="E1",source_uri="synthetic:fixture",
