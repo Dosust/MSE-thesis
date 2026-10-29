@@ -69,6 +69,11 @@ class ThermalCSVResearchTests(unittest.TestCase):
   with (self.out/"linked_observation_candidates.csv").open(newline="",encoding="utf-8") as h:
    pairs=list(csv.DictReader(h))
   self.assertIn("NOT_VALIDATION",pairs[0]["status"])
+  with (self.out/"ac_power_accounting_residuals.csv").open(newline="",encoding="utf-8") as h:
+   residuals=list(csv.DictReader(h))
+  self.assertEqual(len(residuals),1)
+  self.assertAlmostEqual(float(residuals[0]["unresolved_balance_kw"]),0.0)
+  self.assertIn("NOT_VALIDATED",residuals[0]["status"])
  def test_two_unconnected_sites_not_merged(self):
   self.table("source_evidence",[dict(evidence_id="E1",source_uri="synthetic:fixture",
       source_type="TEST",evidence_class="T1",verified_status="UNVERIFIED")])
