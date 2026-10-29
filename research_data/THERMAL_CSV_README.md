@@ -23,6 +23,7 @@ The GitHub Action runs tests, current thermal governance checks, and the CSV rea
 - dataset_readiness.csv: SCHEMA_PASS means a populated CSV passed limited structural checks, NOT that source, sensors, units or physical models were independently verified.
 - referential_integrity.csv: broken source or equipment references.
 - linked_observation_candidates.csv: graph-connected, same-installation, exact-timestamp pairs. This is preliminary linkage, **not thermal directionality or causal identification**.
+- ac_power_accounting_residuals.csv: transformer measured power minus independently labeled non-EV demand and matched EVSE AC inputs. This unresolved residual is **not** identified transformer losses, conservation verification, or a causal estimate; physical boundaries and sensor errors remain unverified.
 - research_status.csv: R01–R15 data-readiness blockers, R16 deferred under active scope.
 - gate_results.json: G0 indicates presence of governance files only. G1–G8 are not scientific passes.
 - research_manifest.json and RESULTS_SUMMARY.md: traceable run provenance and honest status.
