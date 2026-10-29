@@ -119,6 +119,34 @@ def linked_pairs(data):
     out.append({"installation_id":site,"transformer_asset":src,"evse_asset":tgt,
                 "aligned_timestamps":len(common),"status":"CANDIDATE_ONLY_NOT_VALIDATION"})
  return out
+def ac_accounting(data,pairs):
+ """Observed AC residual; never treat it as losses or verified conservation."""
+ transformers={(r["installation_id"],r["asset_id"],r["timestamp_utc"]):r
+               for r in data["transformer_telemetry"]}
+ evse={(r["installation_id"],r["asset_id"],r["timestamp_utc"]):r
+       for r in data["evse_telemetry"]}
+ grouped=defaultdict(set)
+ for pair in pairs:
+  key=(pair["installation_id"],pair["transformer_asset"])
+  grouped[key].add(pair["evse_asset"])
+ results=[]
+ for (site,transformer),evse_ids in sorted(grouped.items()):
+  for (s,a,time),record in transformers.items():
+   if (s,a)!=(site,transformer):continue
+   try:
+    total=float(record["p_total_kw"]);other=float(record["p_non_ev_kw"])
+    matched=[evse[(site,c,time)] for c in evse_ids if (site,c,time) in evse]
+    if len(matched)!=len(evse_ids):continue
+    inputs=[float(r["p_ac_kw"]) for r in matched]
+    if not all(math.isfinite(v) for v in [total,other,*inputs]):continue
+   except (ValueError,TypeError,KeyError):continue
+   sum_evse=sum(inputs)
+   results.append({"installation_id":site,"transformer_asset":transformer,
+      "timestamp_utc":time,"p_transformer_kw":total,"p_non_ev_kw":other,
+      "sum_evse_ac_kw":sum_evse,"unresolved_balance_kw":total-other-sum_evse,
+      "status":"BOUNDARY_LOSSES_AND_SENSOR_ERRORS_NOT_VALIDATED"})
+ return results
+
 def execute(repo,input_dir,out):
  out.mkdir(parents=True,exist_ok=True)
  readiness=[];data={}
@@ -139,6 +167,10 @@ def execute(repo,input_dir,out):
     if aid not in assets or assets[aid].get("installation_id")!=row.get("installation_id"):
      problems.append({"table":table,"line":i,"error":"unknown_or_wrong_installation_asset"})
  pairs=linked_pairs(data) if not problems else []
+ residuals=ac_accounting(data,pairs) if not problems else []
+ put_csv(out/"ac_power_accounting_residuals.csv",("installation_id","transformer_asset",
+  "timestamp_utc","p_transformer_kw","p_non_ev_kw","sum_evse_ac_kw",
+  "unresolved_balance_kw","status"),residuals)
  put_csv(out/"dataset_readiness.csv",("table","sha256","row_count","status","errors"),readiness)
  put_csv(out/"referential_integrity.csv",("table","line","error"),problems)
  put_csv(out/"linked_observation_candidates.csv",
@@ -167,6 +199,7 @@ def execute(repo,input_dir,out):
   "total_tables":len(TABLES),"populated_schema_pass":len(good),
   "schema_fail":sum(r["status"]=="SCHEMA_FAIL" for r in readiness),
   "referential_errors":len(problems),"candidate_linked_pairs":len(pairs),
+  "ac_balance_rows_unverified":len(residuals),
   "physical_validations":0,"source_sha256":{r["table"]:r["sha256"] for r in readiness if r["sha256"]}}
  (out/"research_manifest.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
  (out/"RESULTS_SUMMARY.md").write_text(
