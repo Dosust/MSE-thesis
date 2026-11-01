@@ -1,0 +1,181 @@
+{
+  "status": "PROPOSED TARGET ONTOLOGY \u2014 NOT MEASURED DATA",
+  "version": "1.0",
+  "table_count": 21,
+  "registered_field_count": 301,
+  "field_counts": {
+    "study_case": 12,
+    "site": 8,
+    "asset": 14,
+    "power_connection": 13,
+    "charging_connection": 10,
+    "sensor": 13,
+    "weather_observation": 13,
+    "power_observation": 24,
+    "evse_observation": 25,
+    "vehicle_observation": 16,
+    "mobility_observation": 20,
+    "service_requirement": 10,
+    "event": 15,
+    "control_action": 14,
+    "mechanism_evidence": 16,
+    "model_parameter": 13,
+    "scenario": 11,
+    "analysis_output": 15,
+    "sustainability_indicator": 13,
+    "source_provenance": 12,
+    "validation_test": 14
+  },
+  "class_count": 37,
+  "relation_count": 29,
+  "primary_keys": {
+    "study_case": "case_id",
+    "site": "site_id",
+    "asset": "asset_id",
+    "power_connection": "connection_id",
+    "charging_connection": "charging_link_id",
+    "sensor": "sensor_id",
+    "weather_observation": "weather_observation_id",
+    "power_observation": "power_observation_id",
+    "evse_observation": "evse_observation_id",
+    "vehicle_observation": "vehicle_observation_id",
+    "mobility_observation": "mobility_observation_id",
+    "service_requirement": "service_requirement_id",
+    "event": "event_id",
+    "control_action": "action_id",
+    "mechanism_evidence": "mechanism_id",
+    "model_parameter": "parameter_id",
+    "scenario": "scenario_id",
+    "analysis_output": "result_id",
+    "sustainability_indicator": "indicator_id",
+    "source_provenance": "source_record_id",
+    "validation_test": "validation_test_id"
+  },
+  "priority_codes": {
+    "M": "required structural when table used",
+    "A": "analysis conditional mechanism-critical",
+    "C": "conditional on chosen physics",
+    "O": "optional"
+  },
+  "claim_status": "OPEN UNTIL DATA/AUTHORITY AUDIT",
+  "field_mappings": 12,
+  "scientific_claim_bundles": 8,
+  "files": {
+    "README.md": {
+      "sha256": "5e7b6ae916a87be5d5b1dc1d6d1bcbf3a19bd308f795a6ffe055380751fe6891",
+      "bytes": 6609
+    },
+    "data_contract.schema.json": {
+      "sha256": "da3de2408a243aeff27ea3d9358431456e9c315717210ee8f121069d115fd7c9",
+      "bytes": 92246
+    },
+    "data_dictionary.csv": {
+      "sha256": "ecc4b0233eba9e4beda57ffea37d8bbf0ad6008d58c9b79fcf7948be482529e6",
+      "bytes": 33190
+    },
+    "field_aliases.csv": {
+      "sha256": "320ac58f76eb3047d3958889c31427cb17281718f09102abdcd2aed3af1d8cdc",
+      "bytes": 1777
+    },
+    "implementation_and_minimum_evidence.md": {
+      "sha256": "d4b6d2c5adcd11211cf7f0aa077ed5a2efd7153d91027d09ad4c47bbd4b63de7",
+      "bytes": 8637
+    },
+    "ontology.ttl": {
+      "sha256": "ac37b91ec552ee5032880bddf2a9a4097d0fe1bc0c7cc2d83002732f433d0bfa",
+      "bytes": 11901
+    },
+    "quality_gates.md": {
+      "sha256": "43558c65ce5c8d5f483df31e246935315860f47b1f586fecff91cdac977ae0f6",
+      "bytes": 5014
+    },
+    "required_variable_bundles.csv": {
+      "sha256": "2e5e0c43c22248847890c5c52e39a96c105833c4ed521724938f97e8dfbc59f2",
+      "bytes": 2781
+    },
+    "tables/analysis_output.csv": {
+      "sha256": "de48ddd607478b48d8ead7cb6368a80822af695e3bfc8d29aab37193cd8c8afd",
+      "bytes": 217
+    },
+    "tables/asset.csv": {
+      "sha256": "2b377a547609c4e0e54492404563afdee31635be0f69c67044c59300dbc023e0",
+      "bytes": 207
+    },
+    "tables/charging_connection.csv": {
+      "sha256": "73d95df9650f4b08942f30792058c7f34ffa3951548ed042b0d65196d0d2f502",
+      "bytes": 185
+    },
+    "tables/control_action.csv": {
+      "sha256": "9e7dc86a782963d453b6a1f852a64e4d9fcd9c4ae0f99f41f1786e55fbcef360",
+      "bytes": 232
+    },
+    "tables/event.csv": {
+      "sha256": "43b7f5dcc9b713c11e253cb59473b7978d4a23bc44c400cc82034775d57c58b1",
+      "bytes": 229
+    },
+    "tables/evse_observation.csv": {
+      "sha256": "0d1f9115c25b879825dfa96b68449cd086886e4e009562ab5465668cf381de8b",
+      "bytes": 507
+    },
+    "tables/mechanism_evidence.csv": {
+      "sha256": "fd662d483422f72212d228ffb94880220a742e179134556803ae3c8d388ed10b",
+      "bytes": 284
+    },
+    "tables/mobility_observation.csv": {
+      "sha256": "14b86b8b11497ba94cbe3e134c4a9a016df161d311d5b2bc56c3669b6dd2f72a",
+      "bytes": 413
+    },
+    "tables/model_parameter.csv": {
+      "sha256": "c1571e5d1e81190f757b0748aba34041589db58c7a90981b0c64ac8e412eda03",
+      "bytes": 210
+    },
+    "tables/power_connection.csv": {
+      "sha256": "3bcc77f44d03c9463a767502f9d48ebe60215c0b43b4dd8ef556a38bc9177904",
+      "bytes": 245
+    },
+    "tables/power_observation.csv": {
+      "sha256": "35f7e1d0b3c2ad83906a4ee9f0df179dfd64356ee56bcbdc13a83025ff1bb52c",
+      "bytes": 562
+    },
+    "tables/scenario.csv": {
+      "sha256": "6003081f92a4b38f8c54eb0f66eb318cb6613d805e1d3882f7c99ff7e53a154c",
+      "bytes": 197
+    },
+    "tables/sensor.csv": {
+      "sha256": "0d3d6a987d4138e9e90b716b0558f28341ccac873d636696ef7793c3959530d3",
+      "bytes": 224
+    },
+    "tables/service_requirement.csv": {
+      "sha256": "1d19fbde970026080eeddcddfa459dc9cc2a96426076ec05e924c52f0ea6762b",
+      "bytes": 161
+    },
+    "tables/site.csv": {
+      "sha256": "68f178bea9248c0a003966d3488ea805c10f15a132830f420378166856d69be8",
+      "bytes": 124
+    },
+    "tables/source_provenance.csv": {
+      "sha256": "b688dba71a97e18d53d29050d8b3e7184506c0f40a08ca9b451e791b28b4e832",
+      "bytes": 209
+    },
+    "tables/study_case.csv": {
+      "sha256": "e96d3f39d0defc0414ebe1ac113ae7d3df49456a464b669cc66e0481901baa6c",
+      "bytes": 191
+    },
+    "tables/sustainability_indicator.csv": {
+      "sha256": "39ecc8ad701c7fbdd001dac496a3a4bc483e6f5359d994f18325de1aaa739e9a",
+      "bytes": 225
+    },
+    "tables/validation_test.csv": {
+      "sha256": "59f7c5d76f4a29f7ecc1fb6e758e82800c33e56baf64783657971ba96d100e5d",
+      "bytes": 250
+    },
+    "tables/vehicle_observation.csv": {
+      "sha256": "322838e1dc853624e357e2fd16bd8498e01f121d808e96ba1ed9a6be910572d6",
+      "bytes": 326
+    },
+    "tables/weather_observation.csv": {
+      "sha256": "8e6a675a4414159d2c4c090b008a8c1f15d8c164606ad492fa2949bc3ddef2da",
+      "bytes": 207
+    }
+  }
+}
