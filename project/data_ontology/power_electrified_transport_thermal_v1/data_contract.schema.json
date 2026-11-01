@@ -1,0 +1,2574 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/pt-thermal-ontology/v1/data-contract.schema.json",
+  "title": "Power-Electrified Transportation Thermal Dataset Contract (Proposed v1)",
+  "description": "Unpopulated target metadata/data schemas, not a measured dataset; M schema required vs A mechanism-critical vs C conditional vs O optional.",
+  "type": "object",
+  "properties": {
+    "study_case": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "study_id": {
+            "type": "string",
+            "description": "Identifier for the study or research collection",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Distinct physically or experimentally bounded case",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "site_id": {
+            "type": "string",
+            "description": "Site where the case is recorded",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_start_utc": {
+            "type": "string",
+            "description": "Beginning of declared observation interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "case_end_utc": {
+            "type": "string",
+            "description": "End of declared observation interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "case_type": {
+            "type": "string",
+            "description": "Observed field, laboratory, component benchmark, or simulated case",
+            "x-ontology-role": "design",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "physical_boundary_description": {
+            "type": "string",
+            "description": "What Power and Electrified Transportation components are included",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "model_boundary_description": {
+            "type": "string",
+            "description": "Minimum-sufficient active model subset and exclusions",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "study_objective": {
+            "type": "string",
+            "description": "SO1, SO2 or SO3 purpose of the case",
+            "x-ontology-role": "methodology",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "site_measurement_status": {
+            "type": "string",
+            "description": "Field measured, laboratory measured, estimated, literature or simulated",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "sampling_design_id": {
+            "type": "string",
+            "description": "Reference to temporal collection protocol",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_notes": {
+            "type": "string",
+            "description": "Known limitations of the case",
+            "x-ontology-role": "metadata",
+            "x-priority": "O",
+            "x-unit": "text"
+          }
+        },
+        "required": [
+          "study_id",
+          "case_id",
+          "site_id",
+          "case_start_utc",
+          "case_end_utc",
+          "case_type",
+          "physical_boundary_description",
+          "model_boundary_description",
+          "study_objective",
+          "site_measurement_status",
+          "sampling_design_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "study_case: 12 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "site": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "description": "Persistent site identifier",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "site_type": {
+            "type": "string",
+            "description": "Depot, public charger, lab or network substation site",
+            "x-ontology-role": "asset context",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "location_reference": {
+            "type": "string",
+            "description": "Approximate site location or non-identifying study area",
+            "x-ontology-role": "spatial",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "original_timezone": {
+            "type": "string",
+            "description": "Timezone used before UTC conversion",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "IANA zone"
+          },
+          "weather_station_id": {
+            "type": "string",
+            "description": "Local station or gridded weather reference",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "latitude_deg": {
+            "type": "number",
+            "description": "Site latitude at permitted resolution",
+            "x-ontology-role": "spatial",
+            "x-priority": "C",
+            "x-unit": "degrees"
+          },
+          "longitude_deg": {
+            "type": "number",
+            "description": "Site longitude at permitted resolution",
+            "x-ontology-role": "spatial",
+            "x-priority": "C",
+            "x-unit": "degrees"
+          },
+          "spatial_uncertainty_m": {
+            "type": "number",
+            "description": "Site-location positional uncertainty",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "C",
+            "x-unit": "m",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "site_id",
+          "site_type",
+          "location_reference",
+          "original_timezone"
+        ],
+        "additionalProperties": false
+      },
+      "description": "site: 8 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "asset": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "description": "Unique stable device or component identity",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "site_id": {
+            "type": "string",
+            "description": "Asset site",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "asset_type": {
+            "type": "string",
+            "description": "Feeder, bus, transformer, EVSE, connector, vehicle, RESS, or load",
+            "x-ontology-role": "entity class",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "system_membership": {
+            "type": "string",
+            "description": "Power or Electrified Transportation; EVSE belongs to T_e",
+            "x-ontology-role": "system boundary",
+            "x-priority": "M",
+            "x-unit": "P or T_e"
+          },
+          "parent_asset_id": {
+            "type": "string",
+            "description": "Parent/containing component when relevant",
+            "x-ontology-role": "composition",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "manufacturer": {
+            "type": "string",
+            "description": "Exact manufacturer when known",
+            "x-ontology-role": "provenance",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "model_number": {
+            "type": "string",
+            "description": "Exact equipment model for transferability",
+            "x-ontology-role": "provenance",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "rating_source_id": {
+            "type": "string",
+            "description": "Verified source for nameplate rating",
+            "x-ontology-role": "evidence",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "rated_voltage_V": {
+            "type": "number",
+            "description": "Rated line voltage with connection convention documented",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "V"
+          },
+          "rated_power_kVA": {
+            "type": "number",
+            "description": "Rated apparent power when applicable",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "kVA"
+          },
+          "rated_power_kW": {
+            "type": "number",
+            "description": "Rated real power when applicable",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "rated_current_A": {
+            "type": "number",
+            "description": "Rated current when applicable",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "A"
+          },
+          "cooling_architecture": {
+            "type": "string",
+            "description": "Equipment cooling technology and configuration",
+            "x-ontology-role": "physics",
+            "x-priority": "C",
+            "x-unit": "categorical"
+          },
+          "commissioned_utc": {
+            "type": "string",
+            "description": "Commissioning date if available",
+            "x-ontology-role": "metadata",
+            "x-priority": "O",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "asset_id",
+          "site_id",
+          "asset_type",
+          "system_membership"
+        ],
+        "additionalProperties": false
+      },
+      "description": "asset: 14 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "power_connection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "connection_id": {
+            "type": "string",
+            "description": "One versioned physical/electrical connection record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "upstream_asset_id": {
+            "type": "string",
+            "description": "Upstream Power-system node or transformer",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "power_bus_id": {
+            "type": "string",
+            "description": "Electrically relevant bus",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "transformer_id": {
+            "type": "string",
+            "description": "Transformer feeding the monitored charging interface",
+            "x-ontology-role": "foreign key",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "feeder_id": {
+            "type": "string",
+            "description": "Source electrical feeder",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "connected_evse_id": {
+            "type": "string",
+            "description": "EVSE receiving Power supply at this interface",
+            "x-ontology-role": "foreign key",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "connection_type": {
+            "type": "string",
+            "description": "Physical electrical connection topology type",
+            "x-ontology-role": "topology",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "connection_valid_from_utc": {
+            "type": "string",
+            "description": "Start of verified connection validity",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "connection_valid_to_utc": {
+            "type": "string",
+            "description": "End of connection validity if disconnected",
+            "x-ontology-role": "time",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "phase_configuration": {
+            "type": "string",
+            "description": "Single or three phase and conductor configuration",
+            "x-ontology-role": "topology",
+            "x-priority": "C",
+            "x-unit": "categorical"
+          },
+          "connection_nominal_voltage_V": {
+            "type": "number",
+            "description": "Nominal bus-to-EVSE AC voltage with reference convention",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "V"
+          },
+          "metering_boundary": {
+            "type": "string",
+            "description": "Physical location of grid-side measurement",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "connection_evidence_id": {
+            "type": "string",
+            "description": "Wiring diagram, operator log or field verification record",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          }
+        },
+        "required": [
+          "connection_id",
+          "upstream_asset_id",
+          "power_bus_id",
+          "feeder_id",
+          "connection_type",
+          "connection_valid_from_utc",
+          "metering_boundary",
+          "connection_evidence_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "power_connection: 13 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "charging_connection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "charging_link_id": {
+            "type": "string",
+            "description": "Versioned charger to vehicle physical connection",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "charging_session_id": {
+            "type": "string",
+            "description": "Charging transaction or session",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "connector_id": {
+            "type": "string",
+            "description": "EVSE connector in T_e",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "charger_evse_id": {
+            "type": "string",
+            "description": "EVSE asset in T_e",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "vehicle_id": {
+            "type": "string",
+            "description": "Vehicle when disclosure is permitted",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "battery_id": {
+            "type": "string",
+            "description": "Rechargeable battery pack identifier",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "physical_connection_start_utc": {
+            "type": "string",
+            "description": "Start of physical charger-vehicle connection",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "physical_connection_end_utc": {
+            "type": "string",
+            "description": "End of physical connection",
+            "x-ontology-role": "time",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "power_flow_direction": {
+            "type": "string",
+            "description": "P to T_e import or bidirectional export where supported",
+            "x-ontology-role": "operational",
+            "x-priority": "M",
+            "x-unit": "import or export"
+          },
+          "session_boundary": {
+            "type": "string",
+            "description": "Definition of transaction interval and meter boundary",
+            "x-ontology-role": "methodology",
+            "x-priority": "M",
+            "x-unit": "text"
+          }
+        },
+        "required": [
+          "charging_link_id",
+          "charging_session_id",
+          "connector_id",
+          "charger_evse_id",
+          "physical_connection_start_utc",
+          "power_flow_direction",
+          "session_boundary"
+        ],
+        "additionalProperties": false
+      },
+      "description": "charging_connection: 10 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "sensor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sensor_id": {
+            "type": "string",
+            "description": "Sensor or telemetry channel identifier",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "observed_asset_id": {
+            "type": "string",
+            "description": "Actual physical feature observed",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "observed_property": {
+            "type": "string",
+            "description": "Physical quantity being measured",
+            "x-ontology-role": "observable property",
+            "x-priority": "M",
+            "x-unit": "controlled variable code"
+          },
+          "instrument_type": {
+            "type": "string",
+            "description": "Thermocouple, RTD, meter, controller telemetry or inferred signal",
+            "x-ontology-role": "measurement method",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "sensor_location": {
+            "type": "string",
+            "description": "Exact measurement point, especially for temperature",
+            "x-ontology-role": "measurement method",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "unit_code": {
+            "type": "string",
+            "description": "Native measurement unit and conversion reference",
+            "x-ontology-role": "units",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "accuracy_statement": {
+            "type": "string",
+            "description": "Accuracy, tolerance or uncertainty with conditions",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "calibration_reference": {
+            "type": "string",
+            "description": "Calibration certificate or procedure",
+            "x-ontology-role": "provenance",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "calibration_date_utc": {
+            "type": "string",
+            "description": "Date of last relevant calibration",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "sampling_interval_s": {
+            "type": "number",
+            "description": "Configured interval; event records may be irregular",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "s",
+            "minimum": 0
+          },
+          "clock_timebase": {
+            "type": "string",
+            "description": "Synchronized UTC, local unsynced or other timebase",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "clock_uncertainty_ms": {
+            "type": "number",
+            "description": "Estimated timestamp uncertainty",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "C",
+            "x-unit": "ms",
+            "minimum": 0
+          },
+          "sensor_source_id": {
+            "type": "string",
+            "description": "Source identifying sensor/telemetry and field access",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          }
+        },
+        "required": [
+          "sensor_id",
+          "observed_asset_id",
+          "observed_property",
+          "instrument_type",
+          "sensor_location",
+          "unit_code",
+          "sampling_interval_s",
+          "clock_timebase",
+          "sensor_source_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "sensor: 13 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "weather_observation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "weather_observation_id": {
+            "type": "string",
+            "description": "Unique weather measurement record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "site_id": {
+            "type": "string",
+            "description": "Site of weather exposure",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "sensor_id": {
+            "type": "string",
+            "description": "Direct sensor or weather-data source",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "description": "Observation time in UTC",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "ambient_temperature": {
+            "type": "number",
+            "description": "Temperature at declared exposure point; not an internal system state",
+            "x-ontology-role": "external forcing",
+            "x-priority": "A",
+            "x-unit": "°C"
+          },
+          "relative_humidity": {
+            "type": "number",
+            "description": "Ambient humidity if relevant to adopted heat transfer model",
+            "x-ontology-role": "external forcing",
+            "x-priority": "C",
+            "x-unit": "%"
+          },
+          "solar_irradiance": {
+            "type": "number",
+            "description": "Measured surface-specific solar irradiance if admitted",
+            "x-ontology-role": "external forcing",
+            "x-priority": "C",
+            "x-unit": "W/m²"
+          },
+          "wind_speed": {
+            "type": "number",
+            "description": "Wind speed when convection mechanism requires it",
+            "x-ontology-role": "external forcing",
+            "x-priority": "C",
+            "x-unit": "m/s"
+          },
+          "heat_event_id": {
+            "type": "string",
+            "description": "Heat event membership under declared threshold definition",
+            "x-ontology-role": "event context",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "heat_exposure_site": {
+            "type": "string",
+            "description": "Substation, EVSE cabinet, battery bay or nearby representative location",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "weather_spatial_gap_m": {
+            "type": "number",
+            "description": "Distance from weather observation to physical equipment",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "C",
+            "x-unit": "m",
+            "minimum": 0
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Raw dataset source for observation",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "quality_flag": {
+            "type": "string",
+            "description": "Observed valid, suspect, missing or simulated",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          }
+        },
+        "required": [
+          "weather_observation_id",
+          "site_id",
+          "sensor_id",
+          "timestamp_utc",
+          "heat_exposure_site",
+          "source_record_id",
+          "quality_flag"
+        ],
+        "additionalProperties": false
+      },
+      "description": "weather_observation: 13 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "power_observation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "power_observation_id": {
+            "type": "string",
+            "description": "Unique power-system time record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "description": "Measurement instant or declared interval end",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "transformer_id": {
+            "type": "string",
+            "description": "Transformer being observed",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "power_bus_id": {
+            "type": "string",
+            "description": "Bus supplying the linked EVSE or electricity service",
+            "x-ontology-role": "foreign key",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Raw source or telemetry record",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "transformer_load_current_A": {
+            "type": "number",
+            "description": "Measured transformer current with phase/rms basis documented",
+            "x-ontology-role": "loading input",
+            "x-priority": "A",
+            "x-unit": "A"
+          },
+          "transformer_apparent_power_kVA": {
+            "type": "number",
+            "description": "Transformer apparent loading; not interchangeable with current",
+            "x-ontology-role": "loading input",
+            "x-priority": "C",
+            "x-unit": "kVA"
+          },
+          "transformer_load": {
+            "type": "number",
+            "description": "User-requested generic label; map to explicit current or apparent-power field before use",
+            "x-ontology-role": "legacy alias",
+            "x-priority": "C",
+            "x-unit": "A or kVA"
+          },
+          "transformer_voltage_V": {
+            "type": "number",
+            "description": "Relevant measured terminal voltage with line/phase basis",
+            "x-ontology-role": "electrical state",
+            "x-priority": "C",
+            "x-unit": "V"
+          },
+          "transformer_top_oil_temperature": {
+            "type": "number",
+            "description": "Observed or separately flagged estimated top-oil temperature",
+            "x-ontology-role": "candidate thermal state",
+            "x-priority": "A",
+            "x-unit": "°C"
+          },
+          "transformer_hot_spot_temperature": {
+            "type": "number",
+            "description": "Measured hot spot only when genuine sensor; otherwise explicitly estimated",
+            "x-ontology-role": "candidate thermal state",
+            "x-priority": "C",
+            "x-unit": "°C"
+          },
+          "transformer_cooling_status": {
+            "type": "string",
+            "description": "Fan/pump/cooling mode affecting thermal state",
+            "x-ontology-role": "operational control",
+            "x-priority": "C",
+            "x-unit": "categorical"
+          },
+          "transformer_loss_power_W": {
+            "type": "number",
+            "description": "Losses as measured or traceably computed and labeled",
+            "x-ontology-role": "thermal input",
+            "x-priority": "C",
+            "x-unit": "W"
+          },
+          "transformer_allowable_loading_kVA": {
+            "type": "number",
+            "description": "Current allowable loading given accepted thermal restriction law",
+            "x-ontology-role": "derived capability",
+            "x-priority": "A",
+            "x-unit": "kVA"
+          },
+          "transformer_restriction_active": {
+            "type": "boolean",
+            "description": "Whether a verifiable thermal-related restriction is active",
+            "x-ontology-role": "capability status",
+            "x-priority": "A",
+            "x-unit": "boolean"
+          },
+          "transformer_restriction_reason": {
+            "type": "string",
+            "description": "Verified reason for restriction, thermal or nonthermal",
+            "x-ontology-role": "mechanism qualification",
+            "x-priority": "A",
+            "x-unit": "controlled category"
+          },
+          "feeder_total_load_kW": {
+            "type": "number",
+            "description": "Total relevant feeder demand at declared metering boundary",
+            "x-ontology-role": "electrical balance",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "feeder_non_ev_load_kW": {
+            "type": "number",
+            "description": "Non-EV background loads for attribution",
+            "x-ontology-role": "confounder",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "feeder_evse_aggregate_load_kW": {
+            "type": "number",
+            "description": "Grid-side EVSE load under same feeder boundary",
+            "x-ontology-role": "interface aggregation",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "bus_voltage_pu": {
+            "type": "number",
+            "description": "Per-unit voltage and declared base",
+            "x-ontology-role": "electrical condition",
+            "x-priority": "C",
+            "x-unit": "p.u."
+          },
+          "breaker_state": {
+            "type": "string",
+            "description": "Switchgear status relevant to availability",
+            "x-ontology-role": "operational state",
+            "x-priority": "C",
+            "x-unit": "open or closed"
+          },
+          "required_electric_load_kW": {
+            "type": "number",
+            "description": "Power demand required for declared electricity service",
+            "x-ontology-role": "service requirement",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "served_electric_load_kW": {
+            "type": "number",
+            "description": "Power delivered to the defined service scope",
+            "x-ontology-role": "service output",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "power_quality_flag": {
+            "type": "string",
+            "description": "Per-record data quality",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          }
+        },
+        "required": [
+          "power_observation_id",
+          "timestamp_utc",
+          "transformer_id",
+          "source_record_id",
+          "power_quality_flag"
+        ],
+        "additionalProperties": false
+      },
+      "description": "power_observation: 24 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "evse_observation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evse_observation_id": {
+            "type": "string",
+            "description": "Unique charger time record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "description": "Measurement instant or interval end",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "evse_id": {
+            "type": "string",
+            "description": "EVSE in Electrified Transportation System",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "connector_id": {
+            "type": "string",
+            "description": "Connector for charger session",
+            "x-ontology-role": "foreign key",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "charging_session_id": {
+            "type": "string",
+            "description": "Session when a vehicle is connected",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "power_bus_id": {
+            "type": "string",
+            "description": "Verified connected Power bus",
+            "x-ontology-role": "foreign key",
+            "x-priority": "A",
+            "x-unit": "identifier"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Raw charger telemetry or meter record",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "evse_temperature": {
+            "type": "number",
+            "description": "Temperature at documented sensor location; not a generic ambient estimate",
+            "x-ontology-role": "candidate thermal state",
+            "x-priority": "A",
+            "x-unit": "°C"
+          },
+          "evse_inlet_temperature": {
+            "type": "number",
+            "description": "Charger inlet-air temperature when applicable",
+            "x-ontology-role": "external/local exposure",
+            "x-priority": "C",
+            "x-unit": "°C"
+          },
+          "evse_cooling_status": {
+            "type": "string",
+            "description": "Cooling mode or status",
+            "x-ontology-role": "operational control",
+            "x-priority": "C",
+            "x-unit": "categorical"
+          },
+          "evse_fault_code": {
+            "type": "string",
+            "description": "Controller fault code with documented interpretation",
+            "x-ontology-role": "event context",
+            "x-priority": "C",
+            "x-unit": "controlled code"
+          },
+          "evse_derating_active": {
+            "type": "boolean",
+            "description": "Verified active charging restriction",
+            "x-ontology-role": "capability status",
+            "x-priority": "A",
+            "x-unit": "boolean"
+          },
+          "evse_derating_reason": {
+            "type": "string",
+            "description": "Evidence-backed thermal, grid, SOC, operator or other reason",
+            "x-ontology-role": "mechanism qualification",
+            "x-priority": "A",
+            "x-unit": "controlled category"
+          },
+          "evse_ac_power": {
+            "type": "number",
+            "description": "Measured grid-side signed AC active power; sign convention recorded",
+            "x-ontology-role": "cross-system exchange",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "charger_power_limit": {
+            "type": "number",
+            "description": "Effective available/commanded maximum and basis documented",
+            "x-ontology-role": "capability",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "requested_charging_power_kW": {
+            "type": "number",
+            "description": "Power requested by charging application or vehicle",
+            "x-ontology-role": "confounder",
+            "x-priority": "A",
+            "x-unit": "kW"
+          },
+          "commanded_charging_power_kW": {
+            "type": "number",
+            "description": "Power setpoint dispatched to charger",
+            "x-ontology-role": "control input",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "measured_dc_output_power_kW": {
+            "type": "number",
+            "description": "DC power output measured downstream of conversion",
+            "x-ontology-role": "device power balance",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "measured_ac_current_A": {
+            "type": "number",
+            "description": "Actual AC current with phases/aggregation declared",
+            "x-ontology-role": "electrical exchange",
+            "x-priority": "C",
+            "x-unit": "A"
+          },
+          "measured_ac_voltage_V": {
+            "type": "number",
+            "description": "Measured AC voltage with line/phase basis",
+            "x-ontology-role": "electrical exchange",
+            "x-priority": "C",
+            "x-unit": "V"
+          },
+          "reactive_power_kvar": {
+            "type": "number",
+            "description": "Reactive power where available",
+            "x-ontology-role": "electrical exchange",
+            "x-priority": "C",
+            "x-unit": "kvar"
+          },
+          "charger_operational_status": {
+            "type": "string",
+            "description": "Available, charging, faulted, disabled or offline",
+            "x-ontology-role": "operational state",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          },
+          "charging_energy_import_kWh": {
+            "type": "number",
+            "description": "Energy imported over declared interval or meter reading basis",
+            "x-ontology-role": "cumulative service input",
+            "x-priority": "C",
+            "x-unit": "kWh"
+          },
+          "charging_protocol_version": {
+            "type": "string",
+            "description": "Documented telemetry/control protocol version",
+            "x-ontology-role": "provenance",
+            "x-priority": "C",
+            "x-unit": "version"
+          },
+          "charger_quality_flag": {
+            "type": "string",
+            "description": "Per-record data quality",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          }
+        },
+        "required": [
+          "evse_observation_id",
+          "timestamp_utc",
+          "evse_id",
+          "source_record_id",
+          "charger_operational_status",
+          "charger_quality_flag"
+        ],
+        "additionalProperties": false
+      },
+      "description": "evse_observation: 25 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "vehicle_observation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vehicle_observation_id": {
+            "type": "string",
+            "description": "Unique vehicle/RESS time record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "description": "Vehicle record UTC timestamp",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "vehicle_id": {
+            "type": "string",
+            "description": "Electrified road vehicle",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "battery_id": {
+            "type": "string",
+            "description": "Rechargeable energy-storage system",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "charging_session_id": {
+            "type": "string",
+            "description": "Current charging transaction if connected",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Vehicle/BMS telemetry provenance",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "battery_soc": {
+            "type": "number",
+            "description": "SOC is an operational energy state, not thermal state",
+            "x-ontology-role": "energy state",
+            "x-priority": "C",
+            "x-unit": "%",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "battery_temperature": {
+            "type": "number",
+            "description": "BMS pack/module temperature with sensor location known",
+            "x-ontology-role": "candidate thermal state",
+            "x-priority": "C",
+            "x-unit": "°C"
+          },
+          "battery_current_A": {
+            "type": "number",
+            "description": "Signed battery current with convention documented",
+            "x-ontology-role": "energy dynamics",
+            "x-priority": "C",
+            "x-unit": "A"
+          },
+          "battery_voltage_V": {
+            "type": "number",
+            "description": "Battery-side DC terminal voltage",
+            "x-ontology-role": "energy dynamics",
+            "x-priority": "C",
+            "x-unit": "V"
+          },
+          "battery_energy_available_kWh": {
+            "type": "number",
+            "description": "Available energy using declared SOC-to-energy model",
+            "x-ontology-role": "energy state",
+            "x-priority": "C",
+            "x-unit": "kWh"
+          },
+          "battery_requested_charge_kW": {
+            "type": "number",
+            "description": "Battery or vehicle requested charging power",
+            "x-ontology-role": "charging confounder",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "vehicle_drive_energy_kWh": {
+            "type": "number",
+            "description": "Energy used during defined trip",
+            "x-ontology-role": "mobility energy",
+            "x-priority": "C",
+            "x-unit": "kWh"
+          },
+          "vehicle_propulsion_power_kW": {
+            "type": "number",
+            "description": "Vehicle traction/auxiliary demand when observed",
+            "x-ontology-role": "operational state",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "vehicle_available_for_service": {
+            "type": "boolean",
+            "description": "Readiness status for scheduled mobility service",
+            "x-ontology-role": "capability",
+            "x-priority": "A",
+            "x-unit": "boolean"
+          },
+          "vehicle_quality_flag": {
+            "type": "string",
+            "description": "Per-record data quality",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          }
+        },
+        "required": [
+          "vehicle_observation_id",
+          "timestamp_utc",
+          "vehicle_id",
+          "source_record_id",
+          "vehicle_quality_flag"
+        ],
+        "additionalProperties": false
+      },
+      "description": "vehicle_observation: 16 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "mobility_observation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mobility_observation_id": {
+            "type": "string",
+            "description": "Unique trip/period service observation",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "description": "Instant or aggregation interval end",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "site_id": {
+            "type": "string",
+            "description": "Location or fleet/service operational boundary",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "vehicle_id": {
+            "type": "string",
+            "description": "Vehicle where linkable and privacy appropriate",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "route_id": {
+            "type": "string",
+            "description": "Scheduled/operated route",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "trip_id": {
+            "type": "string",
+            "description": "Unique trip when available",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Operator/service record provenance",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "service_interval_start_utc": {
+            "type": "string",
+            "description": "Beginning of mobility service measurement interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "service_interval_end_utc": {
+            "type": "string",
+            "description": "End of mobility service measurement interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "mobility_service_unit": {
+            "type": "string",
+            "description": "Trip, departure, passenger-trip, vehicle-km or other declared unit",
+            "x-ontology-role": "service definition",
+            "x-priority": "M",
+            "x-unit": "defined unit"
+          },
+          "mobility_service_required": {
+            "type": "number",
+            "description": "Scheduled or required transportation service in that unit",
+            "x-ontology-role": "service requirement",
+            "x-priority": "A",
+            "x-unit": "service unit"
+          },
+          "mobility_service_delivered": {
+            "type": "number",
+            "description": "Actually provided service on same unit/time basis",
+            "x-ontology-role": "service output",
+            "x-priority": "A",
+            "x-unit": "same service unit"
+          },
+          "scheduled_departure_utc": {
+            "type": "string",
+            "description": "Scheduled departure time for trip-based service",
+            "x-ontology-role": "requirement",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "actual_departure_utc": {
+            "type": "string",
+            "description": "Observed departure time when a trip occurs",
+            "x-ontology-role": "service outcome",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "trip_completed": {
+            "type": "boolean",
+            "description": "Completion of specified trip",
+            "x-ontology-role": "service output",
+            "x-priority": "C",
+            "x-unit": "boolean"
+          },
+          "missed_departures_count": {
+            "type": "integer",
+            "description": "Unfulfilled scheduled departures within period",
+            "x-ontology-role": "service output",
+            "x-priority": "C",
+            "x-unit": "count"
+          },
+          "vehicle_ready_at_departure": {
+            "type": "boolean",
+            "description": "Readiness measured at scheduled departure",
+            "x-ontology-role": "capability",
+            "x-priority": "C",
+            "x-unit": "boolean"
+          },
+          "required_departure_energy_kWh": {
+            "type": "number",
+            "description": "Energy required for specified service trip",
+            "x-ontology-role": "energy requirement",
+            "x-priority": "C",
+            "x-unit": "kWh"
+          },
+          "available_departure_energy_kWh": {
+            "type": "number",
+            "description": "Vehicle available energy at departure instant",
+            "x-ontology-role": "energy capability",
+            "x-priority": "C",
+            "x-unit": "kWh"
+          },
+          "mobility_quality_flag": {
+            "type": "string",
+            "description": "Service observation quality flag",
+            "x-ontology-role": "measurement quality",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          }
+        },
+        "required": [
+          "mobility_observation_id",
+          "timestamp_utc",
+          "site_id",
+          "source_record_id",
+          "service_interval_start_utc",
+          "service_interval_end_utc",
+          "mobility_service_unit",
+          "mobility_quality_flag"
+        ],
+        "additionalProperties": false
+      },
+      "description": "mobility_observation: 20 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "service_requirement": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "service_requirement_id": {
+            "type": "string",
+            "description": "Versioned service contract or defined research requirement",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Case under assessment",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "service_type": {
+            "type": "string",
+            "description": "Type of required service",
+            "x-ontology-role": "service",
+            "x-priority": "M",
+            "x-unit": "electricity or mobility"
+          },
+          "service_scope": {
+            "type": "string",
+            "description": "Customers, nodes, fleet or route scope",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "service_unit": {
+            "type": "string",
+            "description": "Compatible measure for required and delivered quantities",
+            "x-ontology-role": "unit",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "required_quantity": {
+            "type": "number",
+            "description": "Required service level",
+            "x-ontology-role": "requirement",
+            "x-priority": "M",
+            "x-unit": "service unit"
+          },
+          "threshold_comparison": {
+            "type": "string",
+            "description": "Relation used to decide acceptable service",
+            "x-ontology-role": "criterion",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "valid_from_utc": {
+            "type": "string",
+            "description": "Requirement period start",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "valid_to_utc": {
+            "type": "string",
+            "description": "Requirement period end",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "requirement_source_id": {
+            "type": "string",
+            "description": "Operator contract or explicitly thesis-defined T1 requirement",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          }
+        },
+        "required": [
+          "service_requirement_id",
+          "case_id",
+          "service_type",
+          "service_scope",
+          "service_unit",
+          "required_quantity",
+          "threshold_comparison",
+          "valid_from_utc",
+          "valid_to_utc",
+          "requirement_source_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "service_requirement: 10 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "event": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "description": "Unique physical or operational event",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "event_type": {
+            "type": "string",
+            "description": "Heat exposure, threshold crossing, thermal restriction, derating, power loss, service deficit or recovery",
+            "x-ontology-role": "event class",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          },
+          "event_start_utc": {
+            "type": "string",
+            "description": "First verified time of event",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "event_end_utc": {
+            "type": "string",
+            "description": "Event end if observed",
+            "x-ontology-role": "time",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "asset_id": {
+            "type": "string",
+            "description": "Device or service entity at which event occurred",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Study case",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "trigger_variable": {
+            "type": "string",
+            "description": "State/limit/condition used to detect event",
+            "x-ontology-role": "mechanism",
+            "x-priority": "C",
+            "x-unit": "controlled code"
+          },
+          "trigger_threshold": {
+            "type": "number",
+            "description": "Source-qualified threshold; not an assumed constant",
+            "x-ontology-role": "physical condition",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "threshold_unit": {
+            "type": "string",
+            "description": "Units of threshold",
+            "x-ontology-role": "units",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "reason_code": {
+            "type": "string",
+            "description": "Controller/operator reason with unknown distinct from thermal",
+            "x-ontology-role": "mechanism qualification",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          },
+          "source_event_id": {
+            "type": "string",
+            "description": "Potential upstream source event; not proof of causality",
+            "x-ontology-role": "candidate causality",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "receiver_event_id": {
+            "type": "string",
+            "description": "Observed downstream response event",
+            "x-ontology-role": "candidate causality",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Event log or observation used to confirm event",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "event_detection_method": {
+            "type": "string",
+            "description": "Raw log, change point, manual observation or threshold model",
+            "x-ontology-role": "verification",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "event_time_uncertainty_s": {
+            "type": "number",
+            "description": "Uncertainty in event timestamp",
+            "x-ontology-role": "uncertainty",
+            "x-priority": "C",
+            "x-unit": "s"
+          }
+        },
+        "required": [
+          "event_id",
+          "event_type",
+          "event_start_utc",
+          "asset_id",
+          "case_id",
+          "reason_code",
+          "source_record_id",
+          "event_detection_method"
+        ],
+        "additionalProperties": false
+      },
+      "description": "event: 15 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "control_action": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "description": "Distinct intervention or command action",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "action_start_utc": {
+            "type": "string",
+            "description": "Action activation instant",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "action_end_utc": {
+            "type": "string",
+            "description": "Action end instant",
+            "x-ontology-role": "time",
+            "x-priority": "C",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "asset_id": {
+            "type": "string",
+            "description": "Actuated asset in P or T_e",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Study case",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "controller_id": {
+            "type": "string",
+            "description": "Controller or actor issuing action",
+            "x-ontology-role": "control",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "action_type": {
+            "type": "string",
+            "description": "Thermal derating, charger cap, transformer restriction, cooling change, restoration or other",
+            "x-ontology-role": "control",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          },
+          "trigger_reason": {
+            "type": "string",
+            "description": "Verified thermal, grid, battery SOC, scheduling or other trigger",
+            "x-ontology-role": "mechanism qualification",
+            "x-priority": "M",
+            "x-unit": "controlled category"
+          },
+          "commanded_power_limit_kW": {
+            "type": "number",
+            "description": "Power control setpoint where applicable",
+            "x-ontology-role": "control",
+            "x-priority": "C",
+            "x-unit": "kW"
+          },
+          "commanded_current_limit_A": {
+            "type": "number",
+            "description": "Current control setpoint where applicable",
+            "x-ontology-role": "control",
+            "x-priority": "C",
+            "x-unit": "A"
+          },
+          "control_profile_id": {
+            "type": "string",
+            "description": "Protocol/control schedule identity",
+            "x-ontology-role": "control",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "command_acknowledged": {
+            "type": "boolean",
+            "description": "Whether the device received/acknowledged the command",
+            "x-ontology-role": "event verification",
+            "x-priority": "C",
+            "x-unit": "boolean"
+          },
+          "actual_action_verified": {
+            "type": "boolean",
+            "description": "Whether post-command telemetry confirms intended action",
+            "x-ontology-role": "event verification",
+            "x-priority": "A",
+            "x-unit": "boolean"
+          },
+          "source_record_id": {
+            "type": "string",
+            "description": "Control log or operator record",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          }
+        },
+        "required": [
+          "action_id",
+          "action_start_utc",
+          "asset_id",
+          "case_id",
+          "controller_id",
+          "action_type",
+          "trigger_reason",
+          "source_record_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "control_action: 14 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "mechanism_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mechanism_id": {
+            "type": "string",
+            "description": "Candidate or qualified directed thermal mechanism",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Case supporting the mechanism",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "mechanism_direction": {
+            "type": "string",
+            "description": "Direction to be tested independently",
+            "x-ontology-role": "directional hypothesis",
+            "x-priority": "M",
+            "x-unit": "P_to_Te or Te_to_P"
+          },
+          "source_asset_id": {
+            "type": "string",
+            "description": "Source component",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "receiver_asset_id": {
+            "type": "string",
+            "description": "Receiving component",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "source_variable": {
+            "type": "string",
+            "description": "Source state, capability or control variable",
+            "x-ontology-role": "mechanism",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "receiver_variable": {
+            "type": "string",
+            "description": "Observed response variable",
+            "x-ontology-role": "mechanism",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "exchange_quantity": {
+            "type": "string",
+            "description": "Identified exchanged power or constraint quantity",
+            "x-ontology-role": "coupling",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "mechanism_description": {
+            "type": "string",
+            "description": "Stepwise physical mechanism not simply shared heat exposure",
+            "x-ontology-role": "causal hypothesis",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "source_event_id": {
+            "type": "string",
+            "description": "Relevant source event",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "receiver_event_id": {
+            "type": "string",
+            "description": "Relevant receiver event",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "qualification_status": {
+            "type": "string",
+            "description": "Research admission status and decision",
+            "x-ontology-role": "evidence status",
+            "x-priority": "M",
+            "x-unit": "candidate, qualified, rejected, open"
+          },
+          "confounder_evaluation": {
+            "type": "string",
+            "description": "Controls for ambient heat, SOC, other loads, schedules and grid actions",
+            "x-ontology-role": "causal qualification",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "counterfactual_design": {
+            "type": "string",
+            "description": "Matched test or intervention design if available",
+            "x-ontology-role": "causal qualification",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "evidence_source_id": {
+            "type": "string",
+            "description": "Raw field or experimental documentation",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "validity_domain": {
+            "type": "string",
+            "description": "Equipment and conditions over which mechanism is supported",
+            "x-ontology-role": "evidence",
+            "x-priority": "M",
+            "x-unit": "text"
+          }
+        },
+        "required": [
+          "mechanism_id",
+          "case_id",
+          "mechanism_direction",
+          "source_asset_id",
+          "receiver_asset_id",
+          "source_variable",
+          "receiver_variable",
+          "exchange_quantity",
+          "mechanism_description",
+          "qualification_status",
+          "confounder_evaluation",
+          "evidence_source_id",
+          "validity_domain"
+        ],
+        "additionalProperties": false
+      },
+      "description": "mechanism_evidence: 16 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "model_parameter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter_id": {
+            "type": "string",
+            "description": "Versioned parameter identity",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "model_id": {
+            "type": "string",
+            "description": "Component or coupled mathematical model",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "asset_type": {
+            "type": "string",
+            "description": "Component for which parameter is defined",
+            "x-ontology-role": "physics",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "parameter_symbol": {
+            "type": "string",
+            "description": "Model symbol",
+            "x-ontology-role": "equation",
+            "x-priority": "M",
+            "x-unit": "LaTeX or code"
+          },
+          "parameter_name": {
+            "type": "string",
+            "description": "Parameter physical interpretation",
+            "x-ontology-role": "equation",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "parameter_value": {
+            "type": "number",
+            "description": "Value, left null until measured/estimated",
+            "x-ontology-role": "parameter",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "parameter_unit": {
+            "type": "string",
+            "description": "Unit consistent with governing equation",
+            "x-ontology-role": "units",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "parameter_source_id": {
+            "type": "string",
+            "description": "Standard, manufacturer, primary evidence, fitted estimate or OPEN record",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "estimation_method": {
+            "type": "string",
+            "description": "Identification procedure, if fitted",
+            "x-ontology-role": "methodology",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "uncertainty_lower": {
+            "type": "number",
+            "description": "Lower uncertainty bound with confidence declared",
+            "x-ontology-role": "uncertainty",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "uncertainty_upper": {
+            "type": "number",
+            "description": "Upper uncertainty bound with confidence declared",
+            "x-ontology-role": "uncertainty",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "applicable_conditions": {
+            "type": "string",
+            "description": "Cooling mode, ambient range, device and time scale",
+            "x-ontology-role": "transferability",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "admission_status": {
+            "type": "string",
+            "description": "Evidence-based parameter admission status",
+            "x-ontology-role": "gate",
+            "x-priority": "M",
+            "x-unit": "qualified, candidate, open, excluded"
+          }
+        },
+        "required": [
+          "parameter_id",
+          "model_id",
+          "asset_type",
+          "parameter_symbol",
+          "parameter_name",
+          "parameter_unit",
+          "parameter_source_id",
+          "applicable_conditions",
+          "admission_status"
+        ],
+        "additionalProperties": false
+      },
+      "description": "model_parameter: 13 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "scenario": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scenario_id": {
+            "type": "string",
+            "description": "Scenario or experiment identifier",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Underlying site/model case",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "comparison_group": {
+            "type": "string",
+            "description": "Matched scenario category",
+            "x-ontology-role": "study design",
+            "x-priority": "M",
+            "x-unit": "baseline, heat_no_action, heat_with_action"
+          },
+          "heat_profile_source_id": {
+            "type": "string",
+            "description": "Source or declared construction of extreme-heat time series",
+            "x-ontology-role": "external forcing",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "initial_conditions_id": {
+            "type": "string",
+            "description": "Common or deliberately varied initial state record",
+            "x-ontology-role": "model inputs",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "other_load_profile_id": {
+            "type": "string",
+            "description": "Non-EV background loading used in comparisons",
+            "x-ontology-role": "confounder",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "fleet_demand_profile_id": {
+            "type": "string",
+            "description": "EV mobility and charging demand schedule",
+            "x-ontology-role": "confounder",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "control_policy_id": {
+            "type": "string",
+            "description": "Applied action/profile when scenario includes intervention",
+            "x-ontology-role": "control",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "random_seed": {
+            "type": "integer",
+            "description": "Seed for stochastic simulations only",
+            "x-ontology-role": "reproducibility",
+            "x-priority": "C",
+            "x-unit": "integer"
+          },
+          "simulation_or_field": {
+            "type": "string",
+            "description": "Do not label simulated scenario as field measured",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "measured or simulated"
+          },
+          "matching_protocol": {
+            "type": "string",
+            "description": "Fields held common across counterfactual cases",
+            "x-ontology-role": "methodology",
+            "x-priority": "M",
+            "x-unit": "text"
+          }
+        },
+        "required": [
+          "scenario_id",
+          "case_id",
+          "comparison_group",
+          "heat_profile_source_id",
+          "initial_conditions_id",
+          "simulation_or_field",
+          "matching_protocol"
+        ],
+        "additionalProperties": false
+      },
+      "description": "scenario: 11 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "analysis_output": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "result_id": {
+            "type": "string",
+            "description": "Derived result identity",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Source case",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "scenario_id": {
+            "type": "string",
+            "description": "Source scenario",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "model_id": {
+            "type": "string",
+            "description": "Derivation model, if present",
+            "x-ontology-role": "foreign key",
+            "x-priority": "C",
+            "x-unit": "identifier"
+          },
+          "metric_name": {
+            "type": "string",
+            "description": "Transition time, propagation delay, service deficit, recovery time or similar",
+            "x-ontology-role": "derived quantity",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "metric_value": {
+            "type": "number",
+            "description": "Value only after calculation from qualified data",
+            "x-ontology-role": "derived quantity",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "metric_unit": {
+            "type": "string",
+            "description": "Mathematically consistent unit",
+            "x-ontology-role": "units",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "metric_definition": {
+            "type": "string",
+            "description": "Equation, denominator, service scope and rule",
+            "x-ontology-role": "T1 definition",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "input_data_refs": {
+            "type": "string",
+            "description": "Measured/estimated/simulated input records",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier list"
+          },
+          "computed_at_utc": {
+            "type": "string",
+            "description": "Processing time",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "code_commit": {
+            "type": "string",
+            "description": "Versioned analysis implementation",
+            "x-ontology-role": "reproducibility",
+            "x-priority": "M",
+            "x-unit": "hash"
+          },
+          "uncertainty_method": {
+            "type": "string",
+            "description": "Propagation/bootstrap/Monte Carlo or other justified method",
+            "x-ontology-role": "uncertainty",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "uncertainty_interval": {
+            "type": "string",
+            "description": "Reported uncertainty with confidence and basis",
+            "x-ontology-role": "uncertainty",
+            "x-priority": "C",
+            "x-unit": "text"
+          },
+          "verification_status": {
+            "type": "string",
+            "description": "Verified formula, numerical check or still open",
+            "x-ontology-role": "QA",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          },
+          "validation_status": {
+            "type": "string",
+            "description": "Independently validated, conditional, not validated or open",
+            "x-ontology-role": "QA",
+            "x-priority": "M",
+            "x-unit": "categorical"
+          }
+        },
+        "required": [
+          "result_id",
+          "case_id",
+          "metric_name",
+          "metric_unit",
+          "metric_definition",
+          "input_data_refs",
+          "computed_at_utc",
+          "code_commit",
+          "verification_status",
+          "validation_status"
+        ],
+        "additionalProperties": false
+      },
+      "description": "analysis_output: 15 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "sustainability_indicator": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicator_id": {
+            "type": "string",
+            "description": "Environmental, economic or social indicator",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Case assessed",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "scenario_id": {
+            "type": "string",
+            "description": "One of matched baseline/heat/heat-action cases",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "dimension": {
+            "type": "string",
+            "description": "Separate non-aggregated indicator dimensions",
+            "x-ontology-role": "sustainability",
+            "x-priority": "M",
+            "x-unit": "environmental, economic, social"
+          },
+          "indicator_name": {
+            "type": "string",
+            "description": "Energy, losses, emissions, cost, access, continuity or other defensible metric",
+            "x-ontology-role": "indicator",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "indicator_value": {
+            "type": "number",
+            "description": "Calculated or observed value",
+            "x-ontology-role": "indicator",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "indicator_unit": {
+            "type": "string",
+            "description": "Unit and functional basis",
+            "x-ontology-role": "units",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "indicator_direction": {
+            "type": "string",
+            "description": "Whether larger values improve or worsen performance",
+            "x-ontology-role": "interpretation",
+            "x-priority": "M",
+            "x-unit": "benefit or burden"
+          },
+          "functional_unit": {
+            "type": "string",
+            "description": "Denominator and service boundary when normalized",
+            "x-ontology-role": "boundary",
+            "x-priority": "M",
+            "x-unit": "declared service unit"
+          },
+          "accounting_period_start_utc": {
+            "type": "string",
+            "description": "Start of accounting interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "accounting_period_end_utc": {
+            "type": "string",
+            "description": "End of accounting interval",
+            "x-ontology-role": "time",
+            "x-priority": "M",
+            "x-unit": "UTC timestamp",
+            "format": "date-time"
+          },
+          "assumptions_and_sources": {
+            "type": "string",
+            "description": "Calculation, tariff, emission factor and uncertainty provenance",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "sdg_target_reference": {
+            "type": "string",
+            "description": "Only when measured indicator maps to official definition and scale",
+            "x-ontology-role": "interpretation",
+            "x-priority": "O",
+            "x-unit": "exact target if verified"
+          }
+        },
+        "required": [
+          "indicator_id",
+          "case_id",
+          "scenario_id",
+          "dimension",
+          "indicator_name",
+          "indicator_unit",
+          "indicator_direction",
+          "functional_unit",
+          "accounting_period_start_utc",
+          "accounting_period_end_utc",
+          "assumptions_and_sources"
+        ],
+        "additionalProperties": false
+      },
+      "description": "sustainability_indicator: 13 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "source_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_record_id": {
+            "type": "string",
+            "description": "Persistent primary source reference",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "source_kind": {
+            "type": "string",
+            "description": "Primary origin of records",
+            "x-ontology-role": "evidence",
+            "x-priority": "M",
+            "x-unit": "sensor, utility, operator, laboratory, paper, simulation"
+          },
+          "source_title": {
+            "type": "string",
+            "description": "Record or dataset title",
+            "x-ontology-role": "citation",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "source_uri": {
+            "type": "string",
+            "description": "Stable publisher/operator/document URI",
+            "x-ontology-role": "citation",
+            "x-priority": "C",
+            "x-unit": "URI"
+          },
+          "publisher_or_owner": {
+            "type": "string",
+            "description": "Custodian of data",
+            "x-ontology-role": "citation",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "source_version": {
+            "type": "string",
+            "description": "Release, revision, or collection version",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "collection_method": {
+            "type": "string",
+            "description": "How measurements or scenarios were obtained",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "source_license": {
+            "type": "string",
+            "description": "Use and redistribution permissions",
+            "x-ontology-role": "legal",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "raw_file_hash_sha256": {
+            "type": "string",
+            "description": "Content fingerprint of untouched input",
+            "x-ontology-role": "integrity",
+            "x-priority": "C",
+            "x-unit": "SHA256"
+          },
+          "claim_level_authority": {
+            "type": "string",
+            "description": "Thesis evidence class for supported claim",
+            "x-ontology-role": "evidence",
+            "x-priority": "M",
+            "x-unit": "A1-A5, T1, OPEN"
+          },
+          "is_independent_validation_source": {
+            "type": "boolean",
+            "description": "Whether independent of model fitting and scenario construction",
+            "x-ontology-role": "evidence",
+            "x-priority": "M",
+            "x-unit": "boolean"
+          },
+          "limitations": {
+            "type": "string",
+            "description": "Known gaps, provenance uncertainty, transferability constraints",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "text"
+          }
+        },
+        "required": [
+          "source_record_id",
+          "source_kind",
+          "source_title",
+          "publisher_or_owner",
+          "source_version",
+          "collection_method",
+          "source_license",
+          "claim_level_authority",
+          "is_independent_validation_source",
+          "limitations"
+        ],
+        "additionalProperties": false
+      },
+      "description": "source_provenance: 12 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    },
+    "validation_test": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "validation_test_id": {
+            "type": "string",
+            "description": "Unique physical/numerical validation record",
+            "x-ontology-role": "identity",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "model_id": {
+            "type": "string",
+            "description": "Model evaluated",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "validation_data_source_id": {
+            "type": "string",
+            "description": "Independent observational source for validation",
+            "x-ontology-role": "provenance",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "Validation case",
+            "x-ontology-role": "foreign key",
+            "x-priority": "M",
+            "x-unit": "identifier"
+          },
+          "validation_target": {
+            "type": "string",
+            "description": "Temperature, AC power, service response, event time, etc.",
+            "x-ontology-role": "validation",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "observed_variable": {
+            "type": "string",
+            "description": "Independently observed quantity",
+            "x-ontology-role": "validation",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "predicted_variable": {
+            "type": "string",
+            "description": "Prediction with same physical meaning",
+            "x-ontology-role": "validation",
+            "x-priority": "M",
+            "x-unit": "controlled code"
+          },
+          "measurement_unit": {
+            "type": "string",
+            "description": "Shared comparison unit",
+            "x-ontology-role": "units",
+            "x-priority": "M",
+            "x-unit": "declared unit"
+          },
+          "validation_metric": {
+            "type": "string",
+            "description": "Metric to be calculated",
+            "x-ontology-role": "validation",
+            "x-priority": "M",
+            "x-unit": "MAE, RMSE, bias or timing error"
+          },
+          "metric_value": {
+            "type": "number",
+            "description": "Result only after actual test",
+            "x-ontology-role": "validation result",
+            "x-priority": "C",
+            "x-unit": "declared unit"
+          },
+          "train_validation_partition": {
+            "type": "string",
+            "description": "Chronological or site-based holdout protocol",
+            "x-ontology-role": "leakage control",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "conditions_range": {
+            "type": "string",
+            "description": "Temperatures, loading, equipment and event domain",
+            "x-ontology-role": "validity",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "uncertainty_treatment": {
+            "type": "string",
+            "description": "Measurement, parameter, scenario and numeric uncertainty handling",
+            "x-ontology-role": "VVUQ",
+            "x-priority": "M",
+            "x-unit": "text"
+          },
+          "validation_status": {
+            "type": "string",
+            "description": "Outcome without overclaiming broad domain validity",
+            "x-ontology-role": "gate",
+            "x-priority": "M",
+            "x-unit": "pass, fail, open or conditional"
+          }
+        },
+        "required": [
+          "validation_test_id",
+          "model_id",
+          "validation_data_source_id",
+          "case_id",
+          "validation_target",
+          "observed_variable",
+          "predicted_variable",
+          "measurement_unit",
+          "validation_metric",
+          "train_validation_partition",
+          "conditions_range",
+          "uncertainty_treatment",
+          "validation_status"
+        ],
+        "additionalProperties": false
+      },
+      "description": "validation_test: 14 declared fields; conditional A/C/O fields are intentionally not automatically required"
+    }
+  },
+  "additionalProperties": false
+}
