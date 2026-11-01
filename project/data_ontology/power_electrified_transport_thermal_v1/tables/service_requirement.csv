@@ -1,0 +1,1 @@
+service_requirement_id,case_id,service_type,service_scope,service_unit,required_quantity,threshold_comparison,valid_from_utc,valid_to_utc,requirement_source_id
