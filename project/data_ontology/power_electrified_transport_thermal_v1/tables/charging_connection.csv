@@ -1,0 +1,1 @@
+charging_link_id,charging_session_id,connector_id,charger_evse_id,vehicle_id,battery_id,physical_connection_start_utc,physical_connection_end_utc,power_flow_direction,session_boundary
