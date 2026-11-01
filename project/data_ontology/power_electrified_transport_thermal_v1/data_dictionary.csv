@@ -1,0 +1,302 @@
+table,field,unit,data_type,priority,ontology_role,definition
+study_case,study_id,identifier,string,M,identity,Identifier for the study or research collection
+study_case,case_id,identifier,string,M,identity,Distinct physically or experimentally bounded case
+study_case,site_id,identifier,string,M,foreign key,Site where the case is recorded
+study_case,case_start_utc,UTC timestamp,datetime,M,time,Beginning of declared observation interval
+study_case,case_end_utc,UTC timestamp,datetime,M,time,End of declared observation interval
+study_case,case_type,categorical,string,M,design,"Observed field, laboratory, component benchmark, or simulated case"
+study_case,physical_boundary_description,text,string,M,boundary,What Power and Electrified Transportation components are included
+study_case,model_boundary_description,text,string,M,boundary,Minimum-sufficient active model subset and exclusions
+study_case,study_objective,text,string,M,methodology,"SO1, SO2 or SO3 purpose of the case"
+study_case,site_measurement_status,categorical,string,M,provenance,"Field measured, laboratory measured, estimated, literature or simulated"
+study_case,sampling_design_id,identifier,string,M,time,Reference to temporal collection protocol
+study_case,case_notes,text,string,O,metadata,Known limitations of the case
+site,site_id,identifier,string,M,identity,Persistent site identifier
+site,site_type,categorical,string,M,asset context,"Depot, public charger, lab or network substation site"
+site,location_reference,text,string,M,spatial,Approximate site location or non-identifying study area
+site,original_timezone,IANA zone,string,M,time,Timezone used before UTC conversion
+site,weather_station_id,identifier,string,C,foreign key,Local station or gridded weather reference
+site,latitude_deg,degrees,number,C,spatial,Site latitude at permitted resolution
+site,longitude_deg,degrees,number,C,spatial,Site longitude at permitted resolution
+site,spatial_uncertainty_m,m,number,C,measurement quality,Site-location positional uncertainty
+asset,asset_id,identifier,string,M,identity,Unique stable device or component identity
+asset,site_id,identifier,string,M,foreign key,Asset site
+asset,asset_type,categorical,string,M,entity class,"Feeder, bus, transformer, EVSE, connector, vehicle, RESS, or load"
+asset,system_membership,P or T_e,string,M,system boundary,Power or Electrified Transportation; EVSE belongs to T_e
+asset,parent_asset_id,identifier,string,C,composition,Parent/containing component when relevant
+asset,manufacturer,text,string,C,provenance,Exact manufacturer when known
+asset,model_number,text,string,C,provenance,Exact equipment model for transferability
+asset,rating_source_id,identifier,string,C,evidence,Verified source for nameplate rating
+asset,rated_voltage_V,V,number,C,parameter,Rated line voltage with connection convention documented
+asset,rated_power_kVA,kVA,number,C,parameter,Rated apparent power when applicable
+asset,rated_power_kW,kW,number,C,parameter,Rated real power when applicable
+asset,rated_current_A,A,number,C,parameter,Rated current when applicable
+asset,cooling_architecture,categorical,string,C,physics,Equipment cooling technology and configuration
+asset,commissioned_utc,UTC timestamp,datetime,O,metadata,Commissioning date if available
+power_connection,connection_id,identifier,string,M,identity,One versioned physical/electrical connection record
+power_connection,upstream_asset_id,identifier,string,M,foreign key,Upstream Power-system node or transformer
+power_connection,power_bus_id,identifier,string,M,foreign key,Electrically relevant bus
+power_connection,transformer_id,identifier,string,A,foreign key,Transformer feeding the monitored charging interface
+power_connection,feeder_id,identifier,string,M,foreign key,Source electrical feeder
+power_connection,connected_evse_id,identifier,string,A,foreign key,EVSE receiving Power supply at this interface
+power_connection,connection_type,categorical,string,M,topology,Physical electrical connection topology type
+power_connection,connection_valid_from_utc,UTC timestamp,datetime,M,time,Start of verified connection validity
+power_connection,connection_valid_to_utc,UTC timestamp,datetime,C,time,End of connection validity if disconnected
+power_connection,phase_configuration,categorical,string,C,topology,Single or three phase and conductor configuration
+power_connection,connection_nominal_voltage_V,V,number,C,parameter,Nominal bus-to-EVSE AC voltage with reference convention
+power_connection,metering_boundary,text,string,M,boundary,Physical location of grid-side measurement
+power_connection,connection_evidence_id,identifier,string,M,provenance,"Wiring diagram, operator log or field verification record"
+charging_connection,charging_link_id,identifier,string,M,identity,Versioned charger to vehicle physical connection
+charging_connection,charging_session_id,identifier,string,M,foreign key,Charging transaction or session
+charging_connection,connector_id,identifier,string,M,foreign key,EVSE connector in T_e
+charging_connection,charger_evse_id,identifier,string,M,foreign key,EVSE asset in T_e
+charging_connection,vehicle_id,identifier,string,C,foreign key,Vehicle when disclosure is permitted
+charging_connection,battery_id,identifier,string,C,foreign key,Rechargeable battery pack identifier
+charging_connection,physical_connection_start_utc,UTC timestamp,datetime,M,time,Start of physical charger-vehicle connection
+charging_connection,physical_connection_end_utc,UTC timestamp,datetime,C,time,End of physical connection
+charging_connection,power_flow_direction,import or export,string,M,operational,P to T_e import or bidirectional export where supported
+charging_connection,session_boundary,text,string,M,methodology,Definition of transaction interval and meter boundary
+sensor,sensor_id,identifier,string,M,identity,Sensor or telemetry channel identifier
+sensor,observed_asset_id,identifier,string,M,foreign key,Actual physical feature observed
+sensor,observed_property,controlled variable code,string,M,observable property,Physical quantity being measured
+sensor,instrument_type,categorical,string,M,measurement method,"Thermocouple, RTD, meter, controller telemetry or inferred signal"
+sensor,sensor_location,text,string,M,measurement method,"Exact measurement point, especially for temperature"
+sensor,unit_code,declared unit,string,M,units,Native measurement unit and conversion reference
+sensor,accuracy_statement,text,string,C,measurement quality,"Accuracy, tolerance or uncertainty with conditions"
+sensor,calibration_reference,identifier,string,C,provenance,Calibration certificate or procedure
+sensor,calibration_date_utc,UTC timestamp,datetime,C,measurement quality,Date of last relevant calibration
+sensor,sampling_interval_s,s,number,M,time,Configured interval; event records may be irregular
+sensor,clock_timebase,categorical,string,M,time,"Synchronized UTC, local unsynced or other timebase"
+sensor,clock_uncertainty_ms,ms,number,C,measurement quality,Estimated timestamp uncertainty
+sensor,sensor_source_id,identifier,string,M,provenance,Source identifying sensor/telemetry and field access
+weather_observation,weather_observation_id,identifier,string,M,identity,Unique weather measurement record
+weather_observation,site_id,identifier,string,M,foreign key,Site of weather exposure
+weather_observation,sensor_id,identifier,string,M,foreign key,Direct sensor or weather-data source
+weather_observation,timestamp_utc,UTC timestamp,datetime,M,time,Observation time in UTC
+weather_observation,ambient_temperature,°C,number,A,external forcing,Temperature at declared exposure point; not an internal system state
+weather_observation,relative_humidity,%,number,C,external forcing,Ambient humidity if relevant to adopted heat transfer model
+weather_observation,solar_irradiance,W/m²,number,C,external forcing,Measured surface-specific solar irradiance if admitted
+weather_observation,wind_speed,m/s,number,C,external forcing,Wind speed when convection mechanism requires it
+weather_observation,heat_event_id,identifier,string,A,event context,Heat event membership under declared threshold definition
+weather_observation,heat_exposure_site,categorical,string,M,boundary,"Substation, EVSE cabinet, battery bay or nearby representative location"
+weather_observation,weather_spatial_gap_m,m,number,C,measurement quality,Distance from weather observation to physical equipment
+weather_observation,source_record_id,identifier,string,M,provenance,Raw dataset source for observation
+weather_observation,quality_flag,controlled category,string,M,measurement quality,"Observed valid, suspect, missing or simulated"
+power_observation,power_observation_id,identifier,string,M,identity,Unique power-system time record
+power_observation,timestamp_utc,UTC timestamp,datetime,M,time,Measurement instant or declared interval end
+power_observation,transformer_id,identifier,string,M,foreign key,Transformer being observed
+power_observation,power_bus_id,identifier,string,A,foreign key,Bus supplying the linked EVSE or electricity service
+power_observation,source_record_id,identifier,string,M,provenance,Raw source or telemetry record
+power_observation,transformer_load_current_A,A,number,A,loading input,Measured transformer current with phase/rms basis documented
+power_observation,transformer_apparent_power_kVA,kVA,number,C,loading input,Transformer apparent loading; not interchangeable with current
+power_observation,transformer_load,A or kVA,number,C,legacy alias,User-requested generic label; map to explicit current or apparent-power field before use
+power_observation,transformer_voltage_V,V,number,C,electrical state,Relevant measured terminal voltage with line/phase basis
+power_observation,transformer_top_oil_temperature,°C,number,A,candidate thermal state,Observed or separately flagged estimated top-oil temperature
+power_observation,transformer_hot_spot_temperature,°C,number,C,candidate thermal state,Measured hot spot only when genuine sensor; otherwise explicitly estimated
+power_observation,transformer_cooling_status,categorical,string,C,operational control,Fan/pump/cooling mode affecting thermal state
+power_observation,transformer_loss_power_W,W,number,C,thermal input,Losses as measured or traceably computed and labeled
+power_observation,transformer_allowable_loading_kVA,kVA,number,A,derived capability,Current allowable loading given accepted thermal restriction law
+power_observation,transformer_restriction_active,boolean,boolean,A,capability status,Whether a verifiable thermal-related restriction is active
+power_observation,transformer_restriction_reason,controlled category,string,A,mechanism qualification,"Verified reason for restriction, thermal or nonthermal"
+power_observation,feeder_total_load_kW,kW,number,A,electrical balance,Total relevant feeder demand at declared metering boundary
+power_observation,feeder_non_ev_load_kW,kW,number,A,confounder,Non-EV background loads for attribution
+power_observation,feeder_evse_aggregate_load_kW,kW,number,A,interface aggregation,Grid-side EVSE load under same feeder boundary
+power_observation,bus_voltage_pu,p.u.,number,C,electrical condition,Per-unit voltage and declared base
+power_observation,breaker_state,open or closed,string,C,operational state,Switchgear status relevant to availability
+power_observation,required_electric_load_kW,kW,number,A,service requirement,Power demand required for declared electricity service
+power_observation,served_electric_load_kW,kW,number,A,service output,Power delivered to the defined service scope
+power_observation,power_quality_flag,controlled category,string,M,measurement quality,Per-record data quality
+evse_observation,evse_observation_id,identifier,string,M,identity,Unique charger time record
+evse_observation,timestamp_utc,UTC timestamp,datetime,M,time,Measurement instant or interval end
+evse_observation,evse_id,identifier,string,M,foreign key,EVSE in Electrified Transportation System
+evse_observation,connector_id,identifier,string,A,foreign key,Connector for charger session
+evse_observation,charging_session_id,identifier,string,C,foreign key,Session when a vehicle is connected
+evse_observation,power_bus_id,identifier,string,A,foreign key,Verified connected Power bus
+evse_observation,source_record_id,identifier,string,M,provenance,Raw charger telemetry or meter record
+evse_observation,evse_temperature,°C,number,A,candidate thermal state,Temperature at documented sensor location; not a generic ambient estimate
+evse_observation,evse_inlet_temperature,°C,number,C,external/local exposure,Charger inlet-air temperature when applicable
+evse_observation,evse_cooling_status,categorical,string,C,operational control,Cooling mode or status
+evse_observation,evse_fault_code,controlled code,string,C,event context,Controller fault code with documented interpretation
+evse_observation,evse_derating_active,boolean,boolean,A,capability status,Verified active charging restriction
+evse_observation,evse_derating_reason,controlled category,string,A,mechanism qualification,"Evidence-backed thermal, grid, SOC, operator or other reason"
+evse_observation,evse_ac_power,kW,number,A,cross-system exchange,Measured grid-side signed AC active power; sign convention recorded
+evse_observation,charger_power_limit,kW,number,A,capability,Effective available/commanded maximum and basis documented
+evse_observation,requested_charging_power_kW,kW,number,A,confounder,Power requested by charging application or vehicle
+evse_observation,commanded_charging_power_kW,kW,number,C,control input,Power setpoint dispatched to charger
+evse_observation,measured_dc_output_power_kW,kW,number,C,device power balance,DC power output measured downstream of conversion
+evse_observation,measured_ac_current_A,A,number,C,electrical exchange,Actual AC current with phases/aggregation declared
+evse_observation,measured_ac_voltage_V,V,number,C,electrical exchange,Measured AC voltage with line/phase basis
+evse_observation,reactive_power_kvar,kvar,number,C,electrical exchange,Reactive power where available
+evse_observation,charger_operational_status,controlled category,string,M,operational state,"Available, charging, faulted, disabled or offline"
+evse_observation,charging_energy_import_kWh,kWh,number,C,cumulative service input,Energy imported over declared interval or meter reading basis
+evse_observation,charging_protocol_version,version,string,C,provenance,Documented telemetry/control protocol version
+evse_observation,charger_quality_flag,controlled category,string,M,measurement quality,Per-record data quality
+vehicle_observation,vehicle_observation_id,identifier,string,M,identity,Unique vehicle/RESS time record
+vehicle_observation,timestamp_utc,UTC timestamp,datetime,M,time,Vehicle record UTC timestamp
+vehicle_observation,vehicle_id,identifier,string,M,foreign key,Electrified road vehicle
+vehicle_observation,battery_id,identifier,string,C,foreign key,Rechargeable energy-storage system
+vehicle_observation,charging_session_id,identifier,string,C,foreign key,Current charging transaction if connected
+vehicle_observation,source_record_id,identifier,string,M,provenance,Vehicle/BMS telemetry provenance
+vehicle_observation,battery_soc,%,number,C,energy state,"SOC is an operational energy state, not thermal state"
+vehicle_observation,battery_temperature,°C,number,C,candidate thermal state,BMS pack/module temperature with sensor location known
+vehicle_observation,battery_current_A,A,number,C,energy dynamics,Signed battery current with convention documented
+vehicle_observation,battery_voltage_V,V,number,C,energy dynamics,Battery-side DC terminal voltage
+vehicle_observation,battery_energy_available_kWh,kWh,number,C,energy state,Available energy using declared SOC-to-energy model
+vehicle_observation,battery_requested_charge_kW,kW,number,C,charging confounder,Battery or vehicle requested charging power
+vehicle_observation,vehicle_drive_energy_kWh,kWh,number,C,mobility energy,Energy used during defined trip
+vehicle_observation,vehicle_propulsion_power_kW,kW,number,C,operational state,Vehicle traction/auxiliary demand when observed
+vehicle_observation,vehicle_available_for_service,boolean,boolean,A,capability,Readiness status for scheduled mobility service
+vehicle_observation,vehicle_quality_flag,controlled category,string,M,measurement quality,Per-record data quality
+mobility_observation,mobility_observation_id,identifier,string,M,identity,Unique trip/period service observation
+mobility_observation,timestamp_utc,UTC timestamp,datetime,M,time,Instant or aggregation interval end
+mobility_observation,site_id,identifier,string,M,foreign key,Location or fleet/service operational boundary
+mobility_observation,vehicle_id,identifier,string,C,foreign key,Vehicle where linkable and privacy appropriate
+mobility_observation,route_id,identifier,string,C,foreign key,Scheduled/operated route
+mobility_observation,trip_id,identifier,string,C,foreign key,Unique trip when available
+mobility_observation,source_record_id,identifier,string,M,provenance,Operator/service record provenance
+mobility_observation,service_interval_start_utc,UTC timestamp,datetime,M,time,Beginning of mobility service measurement interval
+mobility_observation,service_interval_end_utc,UTC timestamp,datetime,M,time,End of mobility service measurement interval
+mobility_observation,mobility_service_unit,defined unit,string,M,service definition,"Trip, departure, passenger-trip, vehicle-km or other declared unit"
+mobility_observation,mobility_service_required,service unit,number,A,service requirement,Scheduled or required transportation service in that unit
+mobility_observation,mobility_service_delivered,same service unit,number,A,service output,Actually provided service on same unit/time basis
+mobility_observation,scheduled_departure_utc,UTC timestamp,datetime,C,requirement,Scheduled departure time for trip-based service
+mobility_observation,actual_departure_utc,UTC timestamp,datetime,C,service outcome,Observed departure time when a trip occurs
+mobility_observation,trip_completed,boolean,boolean,C,service output,Completion of specified trip
+mobility_observation,missed_departures_count,count,integer,C,service output,Unfulfilled scheduled departures within period
+mobility_observation,vehicle_ready_at_departure,boolean,boolean,C,capability,Readiness measured at scheduled departure
+mobility_observation,required_departure_energy_kWh,kWh,number,C,energy requirement,Energy required for specified service trip
+mobility_observation,available_departure_energy_kWh,kWh,number,C,energy capability,Vehicle available energy at departure instant
+mobility_observation,mobility_quality_flag,controlled category,string,M,measurement quality,Service observation quality flag
+service_requirement,service_requirement_id,identifier,string,M,identity,Versioned service contract or defined research requirement
+service_requirement,case_id,identifier,string,M,foreign key,Case under assessment
+service_requirement,service_type,electricity or mobility,string,M,service,Type of required service
+service_requirement,service_scope,text,string,M,boundary,"Customers, nodes, fleet or route scope"
+service_requirement,service_unit,declared unit,string,M,unit,Compatible measure for required and delivered quantities
+service_requirement,required_quantity,service unit,number,M,requirement,Required service level
+service_requirement,threshold_comparison,categorical,string,M,criterion,Relation used to decide acceptable service
+service_requirement,valid_from_utc,UTC timestamp,datetime,M,time,Requirement period start
+service_requirement,valid_to_utc,UTC timestamp,datetime,M,time,Requirement period end
+service_requirement,requirement_source_id,identifier,string,M,provenance,Operator contract or explicitly thesis-defined T1 requirement
+event,event_id,identifier,string,M,identity,Unique physical or operational event
+event,event_type,controlled category,string,M,event class,"Heat exposure, threshold crossing, thermal restriction, derating, power loss, service deficit or recovery"
+event,event_start_utc,UTC timestamp,datetime,M,time,First verified time of event
+event,event_end_utc,UTC timestamp,datetime,C,time,Event end if observed
+event,asset_id,identifier,string,M,foreign key,Device or service entity at which event occurred
+event,case_id,identifier,string,M,foreign key,Study case
+event,trigger_variable,controlled code,string,C,mechanism,State/limit/condition used to detect event
+event,trigger_threshold,declared unit,number,C,physical condition,Source-qualified threshold; not an assumed constant
+event,threshold_unit,declared unit,string,C,units,Units of threshold
+event,reason_code,controlled category,string,M,mechanism qualification,Controller/operator reason with unknown distinct from thermal
+event,source_event_id,identifier,string,C,candidate causality,Potential upstream source event; not proof of causality
+event,receiver_event_id,identifier,string,C,candidate causality,Observed downstream response event
+event,source_record_id,identifier,string,M,provenance,Event log or observation used to confirm event
+event,event_detection_method,text,string,M,verification,"Raw log, change point, manual observation or threshold model"
+event,event_time_uncertainty_s,s,number,C,uncertainty,Uncertainty in event timestamp
+control_action,action_id,identifier,string,M,identity,Distinct intervention or command action
+control_action,action_start_utc,UTC timestamp,datetime,M,time,Action activation instant
+control_action,action_end_utc,UTC timestamp,datetime,C,time,Action end instant
+control_action,asset_id,identifier,string,M,foreign key,Actuated asset in P or T_e
+control_action,case_id,identifier,string,M,foreign key,Study case
+control_action,controller_id,identifier,string,M,control,Controller or actor issuing action
+control_action,action_type,controlled category,string,M,control,"Thermal derating, charger cap, transformer restriction, cooling change, restoration or other"
+control_action,trigger_reason,controlled category,string,M,mechanism qualification,"Verified thermal, grid, battery SOC, scheduling or other trigger"
+control_action,commanded_power_limit_kW,kW,number,C,control,Power control setpoint where applicable
+control_action,commanded_current_limit_A,A,number,C,control,Current control setpoint where applicable
+control_action,control_profile_id,identifier,string,C,control,Protocol/control schedule identity
+control_action,command_acknowledged,boolean,boolean,C,event verification,Whether the device received/acknowledged the command
+control_action,actual_action_verified,boolean,boolean,A,event verification,Whether post-command telemetry confirms intended action
+control_action,source_record_id,identifier,string,M,provenance,Control log or operator record
+mechanism_evidence,mechanism_id,identifier,string,M,identity,Candidate or qualified directed thermal mechanism
+mechanism_evidence,case_id,identifier,string,M,foreign key,Case supporting the mechanism
+mechanism_evidence,mechanism_direction,P_to_Te or Te_to_P,string,M,directional hypothesis,Direction to be tested independently
+mechanism_evidence,source_asset_id,identifier,string,M,foreign key,Source component
+mechanism_evidence,receiver_asset_id,identifier,string,M,foreign key,Receiving component
+mechanism_evidence,source_variable,controlled code,string,M,mechanism,"Source state, capability or control variable"
+mechanism_evidence,receiver_variable,controlled code,string,M,mechanism,Observed response variable
+mechanism_evidence,exchange_quantity,declared unit,string,M,coupling,Identified exchanged power or constraint quantity
+mechanism_evidence,mechanism_description,text,string,M,causal hypothesis,Stepwise physical mechanism not simply shared heat exposure
+mechanism_evidence,source_event_id,identifier,string,C,foreign key,Relevant source event
+mechanism_evidence,receiver_event_id,identifier,string,C,foreign key,Relevant receiver event
+mechanism_evidence,qualification_status,"candidate, qualified, rejected, open",string,M,evidence status,Research admission status and decision
+mechanism_evidence,confounder_evaluation,text,string,M,causal qualification,"Controls for ambient heat, SOC, other loads, schedules and grid actions"
+mechanism_evidence,counterfactual_design,text,string,C,causal qualification,Matched test or intervention design if available
+mechanism_evidence,evidence_source_id,identifier,string,M,provenance,Raw field or experimental documentation
+mechanism_evidence,validity_domain,text,string,M,evidence,Equipment and conditions over which mechanism is supported
+model_parameter,parameter_id,identifier,string,M,identity,Versioned parameter identity
+model_parameter,model_id,identifier,string,M,foreign key,Component or coupled mathematical model
+model_parameter,asset_type,categorical,string,M,physics,Component for which parameter is defined
+model_parameter,parameter_symbol,LaTeX or code,string,M,equation,Model symbol
+model_parameter,parameter_name,text,string,M,equation,Parameter physical interpretation
+model_parameter,parameter_value,declared unit,number,C,parameter,"Value, left null until measured/estimated"
+model_parameter,parameter_unit,declared unit,string,M,units,Unit consistent with governing equation
+model_parameter,parameter_source_id,identifier,string,M,provenance,"Standard, manufacturer, primary evidence, fitted estimate or OPEN record"
+model_parameter,estimation_method,text,string,C,methodology,"Identification procedure, if fitted"
+model_parameter,uncertainty_lower,declared unit,number,C,uncertainty,Lower uncertainty bound with confidence declared
+model_parameter,uncertainty_upper,declared unit,number,C,uncertainty,Upper uncertainty bound with confidence declared
+model_parameter,applicable_conditions,text,string,M,transferability,"Cooling mode, ambient range, device and time scale"
+model_parameter,admission_status,"qualified, candidate, open, excluded",string,M,gate,Evidence-based parameter admission status
+scenario,scenario_id,identifier,string,M,identity,Scenario or experiment identifier
+scenario,case_id,identifier,string,M,foreign key,Underlying site/model case
+scenario,comparison_group,"baseline, heat_no_action, heat_with_action",string,M,study design,Matched scenario category
+scenario,heat_profile_source_id,identifier,string,M,external forcing,Source or declared construction of extreme-heat time series
+scenario,initial_conditions_id,identifier,string,M,model inputs,Common or deliberately varied initial state record
+scenario,other_load_profile_id,identifier,string,C,confounder,Non-EV background loading used in comparisons
+scenario,fleet_demand_profile_id,identifier,string,C,confounder,EV mobility and charging demand schedule
+scenario,control_policy_id,identifier,string,C,control,Applied action/profile when scenario includes intervention
+scenario,random_seed,integer,integer,C,reproducibility,Seed for stochastic simulations only
+scenario,simulation_or_field,measured or simulated,string,M,provenance,Do not label simulated scenario as field measured
+scenario,matching_protocol,text,string,M,methodology,Fields held common across counterfactual cases
+analysis_output,result_id,identifier,string,M,identity,Derived result identity
+analysis_output,case_id,identifier,string,M,foreign key,Source case
+analysis_output,scenario_id,identifier,string,C,foreign key,Source scenario
+analysis_output,model_id,identifier,string,C,foreign key,"Derivation model, if present"
+analysis_output,metric_name,controlled code,string,M,derived quantity,"Transition time, propagation delay, service deficit, recovery time or similar"
+analysis_output,metric_value,declared unit,number,C,derived quantity,Value only after calculation from qualified data
+analysis_output,metric_unit,declared unit,string,M,units,Mathematically consistent unit
+analysis_output,metric_definition,text,string,M,T1 definition,"Equation, denominator, service scope and rule"
+analysis_output,input_data_refs,identifier list,string,M,provenance,Measured/estimated/simulated input records
+analysis_output,computed_at_utc,UTC timestamp,datetime,M,provenance,Processing time
+analysis_output,code_commit,hash,string,M,reproducibility,Versioned analysis implementation
+analysis_output,uncertainty_method,text,string,C,uncertainty,Propagation/bootstrap/Monte Carlo or other justified method
+analysis_output,uncertainty_interval,text,string,C,uncertainty,Reported uncertainty with confidence and basis
+analysis_output,verification_status,categorical,string,M,QA,"Verified formula, numerical check or still open"
+analysis_output,validation_status,categorical,string,M,QA,"Independently validated, conditional, not validated or open"
+sustainability_indicator,indicator_id,identifier,string,M,identity,"Environmental, economic or social indicator"
+sustainability_indicator,case_id,identifier,string,M,foreign key,Case assessed
+sustainability_indicator,scenario_id,identifier,string,M,foreign key,One of matched baseline/heat/heat-action cases
+sustainability_indicator,dimension,"environmental, economic, social",string,M,sustainability,Separate non-aggregated indicator dimensions
+sustainability_indicator,indicator_name,controlled code,string,M,indicator,"Energy, losses, emissions, cost, access, continuity or other defensible metric"
+sustainability_indicator,indicator_value,declared unit,number,C,indicator,Calculated or observed value
+sustainability_indicator,indicator_unit,declared unit,string,M,units,Unit and functional basis
+sustainability_indicator,indicator_direction,benefit or burden,string,M,interpretation,Whether larger values improve or worsen performance
+sustainability_indicator,functional_unit,declared service unit,string,M,boundary,Denominator and service boundary when normalized
+sustainability_indicator,accounting_period_start_utc,UTC timestamp,datetime,M,time,Start of accounting interval
+sustainability_indicator,accounting_period_end_utc,UTC timestamp,datetime,M,time,End of accounting interval
+sustainability_indicator,assumptions_and_sources,text,string,M,provenance,"Calculation, tariff, emission factor and uncertainty provenance"
+sustainability_indicator,sdg_target_reference,exact target if verified,string,O,interpretation,Only when measured indicator maps to official definition and scale
+source_provenance,source_record_id,identifier,string,M,identity,Persistent primary source reference
+source_provenance,source_kind,"sensor, utility, operator, laboratory, paper, simulation",string,M,evidence,Primary origin of records
+source_provenance,source_title,text,string,M,citation,Record or dataset title
+source_provenance,source_uri,URI,string,C,citation,Stable publisher/operator/document URI
+source_provenance,publisher_or_owner,text,string,M,citation,Custodian of data
+source_provenance,source_version,text,string,M,provenance,"Release, revision, or collection version"
+source_provenance,collection_method,text,string,M,provenance,How measurements or scenarios were obtained
+source_provenance,source_license,text,string,M,legal,Use and redistribution permissions
+source_provenance,raw_file_hash_sha256,SHA256,string,C,integrity,Content fingerprint of untouched input
+source_provenance,claim_level_authority,"A1-A5, T1, OPEN",string,M,evidence,Thesis evidence class for supported claim
+source_provenance,is_independent_validation_source,boolean,boolean,M,evidence,Whether independent of model fitting and scenario construction
+source_provenance,limitations,text,string,M,provenance,"Known gaps, provenance uncertainty, transferability constraints"
+validation_test,validation_test_id,identifier,string,M,identity,Unique physical/numerical validation record
+validation_test,model_id,identifier,string,M,foreign key,Model evaluated
+validation_test,validation_data_source_id,identifier,string,M,provenance,Independent observational source for validation
+validation_test,case_id,identifier,string,M,foreign key,Validation case
+validation_test,validation_target,controlled code,string,M,validation,"Temperature, AC power, service response, event time, etc."
+validation_test,observed_variable,controlled code,string,M,validation,Independently observed quantity
+validation_test,predicted_variable,controlled code,string,M,validation,Prediction with same physical meaning
+validation_test,measurement_unit,declared unit,string,M,units,Shared comparison unit
+validation_test,validation_metric,"MAE, RMSE, bias or timing error",string,M,validation,Metric to be calculated
+validation_test,metric_value,declared unit,number,C,validation result,Result only after actual test
+validation_test,train_validation_partition,text,string,M,leakage control,Chronological or site-based holdout protocol
+validation_test,conditions_range,text,string,M,validity,"Temperatures, loading, equipment and event domain"
+validation_test,uncertainty_treatment,text,string,M,VVUQ,"Measurement, parameter, scenario and numeric uncertainty handling"
+validation_test,validation_status,"pass, fail, open or conditional",string,M,gate,Outcome without overclaiming broad domain validity
