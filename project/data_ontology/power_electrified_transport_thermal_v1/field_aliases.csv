@@ -1,0 +1,13 @@
+user_requested_field,preferred_registered_field,location,ontology_role,caution
+"timestamp_utc","timestamp_utc","weather_observation; power_observation; evse_observation; vehicle_observation; mobility_observation","time","Also record sampling timebase and clocks"
+"transformer_id","transformer_id","power_connection; power_observation","asset foreign key","Not proof of connection without power_connection"
+"evse_id","evse_id","evse_observation","asset foreign key","Join through dated topology and charging session"
+"ambient_temperature","ambient_temperature","weather_observation","external forcing","Specify measurement site and sensor"
+"top_oil_temperature","transformer_top_oil_temperature","power_observation","candidate thermal state","Measured vs estimated must be qualified"
+"transformer_load","transformer_load_current_A OR transformer_apparent_power_kVA","power_observation","loading input","Current and apparent power have different units; no generic numeric field in finalized analysis"
+"evse_temperature","evse_temperature","evse_observation","candidate thermal state","Sensor position is essential"
+"evse_ac_power","evse_ac_power","evse_observation","cross-system AC exchange","Grid side, not DC side"
+"charger_power_limit","charger_power_limit","evse_observation","state-derived/control capability","Limit origin, reason and active/commanded status required"
+"battery_soc","battery_soc","vehicle_observation","energy state","Only admit when needed; not thermal"
+"mobility_service_delivered","mobility_service_delivered","mobility_observation","service output","Same functional unit and timebase as required"
+"mobility_service_required","mobility_service_required","mobility_observation","service requirement","Define service boundary and signed off requirement"
