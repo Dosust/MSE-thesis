@@ -1,0 +1,1 @@
+scenario_id,case_id,comparison_group,heat_profile_source_id,initial_conditions_id,other_load_profile_id,fleet_demand_profile_id,control_policy_id,random_seed,simulation_or_field,matching_protocol
