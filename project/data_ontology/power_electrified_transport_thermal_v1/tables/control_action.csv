@@ -1,0 +1,1 @@
+action_id,action_start_utc,action_end_utc,asset_id,case_id,controller_id,action_type,trigger_reason,commanded_power_limit_kW,commanded_current_limit_A,control_profile_id,command_acknowledged,actual_action_verified,source_record_id
