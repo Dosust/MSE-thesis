@@ -1,0 +1,1 @@
+event_id,event_type,event_start_utc,event_end_utc,asset_id,case_id,trigger_variable,trigger_threshold,threshold_unit,reason_code,source_event_id,receiver_event_id,source_record_id,event_detection_method,event_time_uncertainty_s
