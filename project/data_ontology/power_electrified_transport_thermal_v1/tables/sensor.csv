@@ -1,0 +1,1 @@
+sensor_id,observed_asset_id,observed_property,instrument_type,sensor_location,unit_code,accuracy_statement,calibration_reference,calibration_date_utc,sampling_interval_s,clock_timebase,clock_uncertainty_ms,sensor_source_id
