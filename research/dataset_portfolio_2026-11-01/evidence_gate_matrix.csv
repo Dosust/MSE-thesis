@@ -1,0 +1,5 @@
+"gate","requirement","acceptance_criterion","status","reason"
+"G1","Raw source integrity","Original file bytes, hash, owner/license, source version and schema","OPEN","No primary raw file bytes downloaded in this execution"
+"G2","Physical-time and sensor semantics","Qualified clock/time zone, temporal resolution, device and sensor location, AC/DC boundaries","OPEN","Documentation-only candidate names are insufficient"
+"G3","Directional thermal mechanism","Verified transformer-EVSE connection + controls/reason codes + confounder evidence for each direction separately","BLOCKED","No co-installed directional sensor and restriction dataset"
+"G4","Independent VVUQ and service validation","Hold-out physical observation, required/delivered electricity and mobility service in matched units","BLOCKED","No admitted coupled-case service and hold-out records"
