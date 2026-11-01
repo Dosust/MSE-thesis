@@ -1,0 +1,163 @@
+@prefix pt: <https://example.org/pt-thermal-ontology/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+
+# Proposed thesis-specific ontology; not an externally validated scientific model.
+pt: a owl:Ontology ;
+    rdfs:label "Power-Electrified Transportation Thermal Data Ontology (proposed v1)"@en ;
+    rdfs:comment "Target data semantics. A measured physical connection does not imply a qualified thermal interdependency. No data values or material constants are supplied."@en .
+
+
+pt:StudyCase a owl:Class ; rdfs:label "StudyCase"@en ; rdfs:comment "Bounded observation or experiment"@en .
+
+pt:Site a owl:Class ; rdfs:label "Site"@en ; rdfs:comment "Physical site"@en .
+
+pt:InfrastructureAsset a owl:Class ; rdfs:label "InfrastructureAsset"@en ; rdfs:comment "Physical technical asset in Power or Electrified Transportation infrastructure"@en .
+
+pt:PowerSystem a owl:Class ; rdfs:label "PowerSystem"@en ; rdfs:comment "Electrical infrastructure system P"@en .
+
+pt:ElectrifiedTransportationSystem a owl:Class ; rdfs:label "ElectrifiedTransportationSystem"@en ; rdfs:comment "Electrically propelled road transport system T_e"@en .
+
+pt:Feeder a owl:Class ; rdfs:label "Feeder"@en ; rdfs:comment "Power distribution feeder"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:PowerBus a owl:Class ; rdfs:label "PowerBus"@en ; rdfs:comment "Electrical bus node"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:Transformer a owl:Class ; rdfs:label "Transformer"@en ; rdfs:comment "Thermal/electrical transformer"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:EVSE a owl:Class ; rdfs:label "EVSE"@en ; rdfs:comment "Electric vehicle supply equipment, belongs to T_e"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:Connector a owl:Class ; rdfs:label "Connector"@en ; rdfs:comment "Vehicle charging physical connector"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:ElectricVehicle a owl:Class ; rdfs:label "ElectricVehicle"@en ; rdfs:comment "Electrically propelled road vehicle"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:Battery a owl:Class ; rdfs:label "Battery"@en ; rdfs:comment "Rechargeable energy storage system"@en ; rdfs:subClassOf pt:InfrastructureAsset .
+
+pt:ChargingSession a owl:Class ; rdfs:label "ChargingSession"@en ; rdfs:comment "Vehicle-EVSE power transfer session"@en .
+
+pt:Route a owl:Class ; rdfs:label "Route"@en ; rdfs:comment "Mobility route or service area"@en .
+
+pt:Trip a owl:Class ; rdfs:label "Trip"@en ; rdfs:comment "Scheduled or performed mobility service task"@en .
+
+pt:Sensor a owl:Class ; rdfs:label "Sensor"@en ; rdfs:comment "Measurement instrument or telemetry channel"@en .
+
+pt:QuantitativeObservation a owl:Class ; rdfs:label "QuantitativeObservation"@en ; rdfs:comment "A sampled observation with provenance"@en ; rdfs:subClassOf sosa:Observation .
+
+pt:ExternalHeatForcing a owl:Class ; rdfs:label "ExternalHeatForcing"@en ; rdfs:comment "Exogenous environmental heat exposure"@en .
+
+pt:ThermalState a owl:Class ; rdfs:label "ThermalState"@en ; rdfs:comment "Internal evolving physical temperature condition"@en .
+
+pt:EnergyState a owl:Class ; rdfs:label "EnergyState"@en ; rdfs:comment "Internal evolving energy state, e.g. SOC"@en .
+
+pt:ThermalCapability a owl:Class ; rdfs:label "ThermalCapability"@en ; rdfs:comment "Derived state-dependent operating envelope"@en .
+
+pt:ElectricalConnection a owl:Class ; rdfs:label "ElectricalConnection"@en ; rdfs:comment "Physical AC interface or grid edge"@en .
+
+pt:ThermalInterdependency a owl:Class ; rdfs:label "ThermalInterdependency"@en ; rdfs:comment "Directional heat-conditioned cross-system operating mechanism"@en .
+
+pt:CandidateMechanism a owl:Class ; rdfs:label "CandidateMechanism"@en ; rdfs:comment "Hypothesis awaiting direction and mechanism qualification"@en .
+
+pt:QualifiedMechanism a owl:Class ; rdfs:label "QualifiedMechanism"@en ; rdfs:comment "Direction and evidence qualified mechanism for defined case"@en .
+
+pt:OperationalEvent a owl:Class ; rdfs:label "OperationalEvent"@en ; rdfs:comment "Physical threshold or operation occurrence"@en .
+
+pt:ControlAction a owl:Class ; rdfs:label "ControlAction"@en ; rdfs:comment "Change of equipment controls or limits"@en .
+
+pt:ServiceRequirement a owl:Class ; rdfs:label "ServiceRequirement"@en ; rdfs:comment "Declared electricity or mobility service requirement"@en .
+
+pt:ElectricityService a owl:Class ; rdfs:label "ElectricityService"@en ; rdfs:comment "Measured electricity service output"@en .
+
+pt:MobilityService a owl:Class ; rdfs:label "MobilityService"@en ; rdfs:comment "Measured mobility service output"@en .
+
+pt:StudyScenario a owl:Class ; rdfs:label "StudyScenario"@en ; rdfs:comment "Reference, extreme heat or action case"@en .
+
+pt:ModelParameter a owl:Class ; rdfs:label "ModelParameter"@en ; rdfs:comment "Traceable physical/model parameter"@en .
+
+pt:ModelRun a owl:Class ; rdfs:label "ModelRun"@en ; rdfs:comment "Computational run, distinct from observations"@en .
+
+pt:EvidenceRecord a owl:Class ; rdfs:label "EvidenceRecord"@en ; rdfs:comment "Citable primary raw data or source"@en .
+
+pt:ValidationTest a owl:Class ; rdfs:label "ValidationTest"@en ; rdfs:comment "Independent model-to-measurement check"@en .
+
+pt:SustainabilityIndicator a owl:Class ; rdfs:label "SustainabilityIndicator"@en ; rdfs:comment "Environmental economic or social indicator"@en .
+
+pt:DerivedResilienceMetric a owl:Class ; rdfs:label "DerivedResilienceMetric"@en ; rdfs:comment "Derived from defined service trajectory and requirements"@en .
+
+pt:hasSite a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:Site ; rdfs:comment "A study takes place at a site"@en .
+
+pt:belongsToPowerSystem a owl:ObjectProperty ; rdfs:domain pt:Transformer ; rdfs:range pt:PowerSystem ; rdfs:comment "Transformer is in P"@en .
+
+pt:belongsToTransportationSystem a owl:ObjectProperty ; rdfs:domain pt:EVSE ; rdfs:range pt:ElectrifiedTransportationSystem ; rdfs:comment "EVSE is in T_e"@en .
+
+pt:containsFeeder a owl:ObjectProperty ; rdfs:domain pt:PowerSystem ; rdfs:range pt:Feeder ; rdfs:comment "P includes feeder"@en .
+
+pt:containsPowerBus a owl:ObjectProperty ; rdfs:domain pt:Feeder ; rdfs:range pt:PowerBus ; rdfs:comment "Feeder contains Power bus"@en .
+
+pt:feedsTransformer a owl:ObjectProperty ; rdfs:domain pt:Feeder ; rdfs:range pt:Transformer ; rdfs:comment "Feeder feeds transformer"@en .
+
+pt:suppliesEVSE a owl:ObjectProperty ; rdfs:domain pt:PowerBus ; rdfs:range pt:EVSE ; rdfs:comment "Bus physically supplies EVSE at measured interface"@en .
+
+pt:hasConnector a owl:ObjectProperty ; rdfs:domain pt:EVSE ; rdfs:range pt:Connector ; rdfs:comment "EVSE includes physical charging connector"@en .
+
+pt:connectsToVehicle a owl:ObjectProperty ; rdfs:domain pt:Connector ; rdfs:range pt:ElectricVehicle ; rdfs:comment "Connected in a documented charging session"@en .
+
+pt:hasBattery a owl:ObjectProperty ; rdfs:domain pt:ElectricVehicle ; rdfs:range pt:Battery ; rdfs:comment "Vehicle contains RESS"@en .
+
+pt:operatesOnRoute a owl:ObjectProperty ; rdfs:domain pt:ElectricVehicle ; rdfs:range pt:Route ; rdfs:comment "Vehicle operates scheduled route"@en .
+
+pt:performsTrip a owl:ObjectProperty ; rdfs:domain pt:ElectricVehicle ; rdfs:range pt:Trip ; rdfs:comment "Vehicle performs mobility task"@en .
+
+pt:participatesInSession a owl:ObjectProperty ; rdfs:domain pt:EVSE ; rdfs:range pt:ChargingSession ; rdfs:comment "EVSE participates in transaction"@en .
+
+pt:hasObservation a owl:ObjectProperty ; rdfs:domain pt:Transformer ; rdfs:range pt:QuantitativeObservation ; rdfs:comment "Equipment has quantity observation"@en .
+
+pt:hasEvidence a owl:ObjectProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range pt:EvidenceRecord ; rdfs:comment "Specific source supporting mechanism claim"@en .
+
+pt:hasSourceAsset a owl:ObjectProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range pt:InfrastructureAsset ; rdfs:comment "Source asset; can be Power or Electrified Transportation depending on the direction"@en .
+
+pt:hasReceiverAsset a owl:ObjectProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range pt:InfrastructureAsset ; rdfs:comment "Receiving asset; can be Power or Electrified Transportation depending on the direction"@en .
+
+pt:hasSourceEvent a owl:ObjectProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range pt:OperationalEvent ; rdfs:comment "Observed source event supporting direction test"@en .
+
+pt:hasReceiverEvent a owl:ObjectProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range pt:OperationalEvent ; rdfs:comment "Observed receiver event supporting direction test"@en .
+
+pt:candidateInfluence a owl:ObjectProperty ; rdfs:domain pt:CandidateMechanism ; rdfs:range pt:ThermalInterdependency ; rdfs:comment "Candidate relation, not qualified causality"@en .
+
+pt:qualifiedInfluence a owl:ObjectProperty ; rdfs:domain pt:QualifiedMechanism ; rdfs:range pt:ThermalInterdependency ; rdfs:comment "Qualified evidence-bounded relation"@en .
+
+pt:hasRequirement a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:ServiceRequirement ; rdfs:comment "Required service on declared boundary"@en .
+
+pt:hasElectricityService a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:ElectricityService ; rdfs:comment "Electrical service outputs"@en .
+
+pt:hasMobilityService a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:MobilityService ; rdfs:comment "Mobility service outputs"@en .
+
+pt:hasOperationalEvent a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:OperationalEvent ; rdfs:comment "Event observed within case"@en .
+
+pt:hasControlAction a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:ControlAction ; rdfs:comment "Operational intervention"@en .
+
+pt:usesScenario a owl:ObjectProperty ; rdfs:domain pt:StudyCase ; rdfs:range pt:StudyScenario ; rdfs:comment "Case associated with scenario"@en .
+
+pt:usesParameter a owl:ObjectProperty ; rdfs:domain pt:ModelRun ; rdfs:range pt:ModelParameter ; rdfs:comment "Run uses traceable parameter"@en .
+
+pt:isValidatedBy a owl:ObjectProperty ; rdfs:domain pt:ModelRun ; rdfs:range pt:ValidationTest ; rdfs:comment "Predictions independently checked"@en .
+
+pt:observedAtUTC a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:dateTime ; rdfs:comment "UTC observation time"@en .
+
+pt:hasNumericValue a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:double ; rdfs:comment "Recorded numeric quantity"@en .
+
+pt:hasDeclaredUnit a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:string ; rdfs:comment "Physical unit symbol or URI, map to QUDT when verified"@en .
+
+pt:hasQualityFlag a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:string ; rdfs:comment "Observation quality category"@en .
+
+pt:hasMeasurementSource a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:string ; rdfs:comment "Primary source record ID"@en .
+
+pt:isMeasured a owl:DatatypeProperty ; rdfs:domain pt:QuantitativeObservation ; rdfs:range xsd:boolean ; rdfs:comment "True only for physically measured observations"@en .
+
+pt:hasDirection a owl:DatatypeProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range xsd:string ; rdfs:comment "P_to_Te or Te_to_P"@en .
+
+pt:qualificationStatus a owl:DatatypeProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range xsd:string ; rdfs:comment "candidate, qualified, rejected or open"@en .
+
+pt:requiresConfounderControl a owl:DatatypeProperty ; rdfs:domain pt:ThermalInterdependency ; rdfs:range xsd:boolean ; rdfs:comment "Evidence requirement for causal qualification"@en .
