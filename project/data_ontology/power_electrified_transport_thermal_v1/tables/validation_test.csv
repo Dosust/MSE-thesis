@@ -1,0 +1,1 @@
+validation_test_id,model_id,validation_data_source_id,case_id,validation_target,observed_variable,predicted_variable,measurement_unit,validation_metric,metric_value,train_validation_partition,conditions_range,uncertainty_treatment,validation_status
