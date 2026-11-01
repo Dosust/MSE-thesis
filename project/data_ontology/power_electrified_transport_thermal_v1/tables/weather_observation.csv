@@ -1,0 +1,1 @@
+weather_observation_id,site_id,sensor_id,timestamp_utc,ambient_temperature,relative_humidity,solar_irradiance,wind_speed,heat_event_id,heat_exposure_site,weather_spatial_gap_m,source_record_id,quality_flag
