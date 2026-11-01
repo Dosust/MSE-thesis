@@ -1,0 +1,1 @@
+result_id,case_id,scenario_id,model_id,metric_name,metric_value,metric_unit,metric_definition,input_data_refs,computed_at_utc,code_commit,uncertainty_method,uncertainty_interval,verification_status,validation_status
