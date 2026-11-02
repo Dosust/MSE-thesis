@@ -1,0 +1,280 @@
+{
+  "CCS1_column_headers": {
+    "A": "Date and time",
+    "B": "CCS",
+    "C": "Session",
+    "D": "P (W)",
+    "E": "Pset (W)",
+    "F": "Preq (W)",
+    "G": "TotalCapacity",
+    "H": "RemainingCapacity",
+    "I": "BulkCapacity",
+    "J": "Energy (Wh)",
+    "K": "SOC (%)",
+    "L": "Ctrl_t (0 = False, 1 = True)",
+    "M": "Ctrl_s (0 = False, 1 = True)"
+  },
+  "CCS1": {
+    "all_time_grid_rows": 646680,
+    "populated_session_rows": 36184,
+    "distinct_sessions": 1129,
+    "invalid_timestamp_or_session": 0,
+    "missing_fields_count": {
+      "D": 0,
+      "E": 0,
+      "F": 0,
+      "J": 0,
+      "K": 0
+    },
+    "negative_power_examples": []
+  },
+  "CCS2_column_headers": {
+    "A": "Date and time",
+    "B": "CCS",
+    "C": "Session",
+    "D": "P (W)",
+    "E": "Pset (W)",
+    "F": "Preq (W)",
+    "G": "TotalCapacity",
+    "H": "RemainingCapacity",
+    "I": "BulkCapacity",
+    "J": "Energy (Wh)",
+    "K": "SOC (%)",
+    "L": "Ctrl_t (0 = False, 1 = True)",
+    "M": "Ctrl_s (0 = False, 1 = True)"
+  },
+  "CCS2": {
+    "all_time_grid_rows": 646680,
+    "populated_session_rows": 25632,
+    "distinct_sessions": 749,
+    "invalid_timestamp_or_session": 0,
+    "missing_fields_count": {
+      "D": 0,
+      "E": 0,
+      "F": 0,
+      "J": 0,
+      "K": 0
+    },
+    "negative_power_examples": []
+  },
+  "measured_rows_total": 61816,
+  "published_count_to_verify": 64277,
+  "published_minus_populated": 2461,
+  "unique_observed_minutes": 54919,
+  "concurrent_two_connector_minutes": 6897,
+  "above_documented_station_capacity_minutes": 111,
+  "max_observed_combined_connector_P_W": 252513.0,
+  "station_capacity_assumed_from_source_W": 172500,
+  "above_capacity_examples": [
+    {
+      "excel_minute_index": 64322754,
+      "CCS1_P_W": 108750.0,
+      "CCS2_P_W": 64008.0,
+      "sum_W": 172758.0
+    },
+    {
+      "excel_minute_index": 64322755,
+      "CCS1_P_W": 109098.0,
+      "CCS2_P_W": 64152.0,
+      "sum_W": 173250.0
+    },
+    {
+      "excel_minute_index": 64322756,
+      "CCS1_P_W": 109008.0,
+      "CCS2_P_W": 64644.0,
+      "sum_W": 173652.0
+    },
+    {
+      "excel_minute_index": 64322759,
+      "CCS1_P_W": 107829.0,
+      "CCS2_P_W": 65292.0,
+      "sum_W": 173121.0
+    },
+    {
+      "excel_minute_index": 64322760,
+      "CCS1_P_W": 107940.0,
+      "CCS2_P_W": 65139.0,
+      "sum_W": 173079.0
+    },
+    {
+      "excel_minute_index": 64322763,
+      "CCS1_P_W": 108096.0,
+      "CCS2_P_W": 65403.0,
+      "sum_W": 173499.0
+    },
+    {
+      "excel_minute_index": 64324299,
+      "CCS1_P_W": 43284.0,
+      "CCS2_P_W": 154635.0,
+      "sum_W": 197919.0
+    },
+    {
+      "excel_minute_index": 64324313,
+      "CCS1_P_W": 105018.0,
+      "CCS2_P_W": 67650.0,
+      "sum_W": 172668.0
+    },
+    {
+      "excel_minute_index": 64324314,
+      "CCS1_P_W": 104187.0,
+      "CCS2_P_W": 68442.0,
+      "sum_W": 172629.0
+    },
+    {
+      "excel_minute_index": 64330387,
+      "CCS1_P_W": 106716.0,
+      "CCS2_P_W": 66390.0,
+      "sum_W": 173106.0
+    },
+    {
+      "excel_minute_index": 64365901,
+      "CCS1_P_W": 87429.0,
+      "CCS2_P_W": 109281.0,
+      "sum_W": 196710.0
+    },
+    {
+      "excel_minute_index": 64370556,
+      "CCS1_P_W": 102885.0,
+      "CCS2_P_W": 104145.0,
+      "sum_W": 207030.0
+    },
+    {
+      "excel_minute_index": 64370586,
+      "CCS1_P_W": 150048.0,
+      "CCS2_P_W": 45150.0,
+      "sum_W": 195198.0
+    },
+    {
+      "excel_minute_index": 64371863,
+      "CCS1_P_W": 139236.0,
+      "CCS2_P_W": 70869.0,
+      "sum_W": 210105.0
+    },
+    {
+      "excel_minute_index": 64371864,
+      "CCS1_P_W": 154719.0,
+      "CCS2_P_W": 70869.0,
+      "sum_W": 225588.0
+    },
+    {
+      "excel_minute_index": 64371865,
+      "CCS1_P_W": 154788.0,
+      "CCS2_P_W": 70995.0,
+      "sum_W": 225783.0
+    },
+    {
+      "excel_minute_index": 64374794,
+      "CCS1_P_W": 86784.0,
+      "CCS2_P_W": 103359.0,
+      "sum_W": 190143.0
+    },
+    {
+      "excel_minute_index": 64394848,
+      "CCS1_P_W": 127716.0,
+      "CCS2_P_W": 47472.0,
+      "sum_W": 175188.0
+    },
+    {
+      "excel_minute_index": 64396475,
+      "CCS1_P_W": 35739.0,
+      "CCS2_P_W": 144165.0,
+      "sum_W": 179904.0
+    },
+    {
+      "excel_minute_index": 64401790,
+      "CCS1_P_W": 102375.0,
+      "CCS2_P_W": 70374.0,
+      "sum_W": 172749.0
+    },
+    {
+      "excel_minute_index": 64401791,
+      "CCS1_P_W": 102345.0,
+      "CCS2_P_W": 70518.0,
+      "sum_W": 172863.0
+    },
+    {
+      "excel_minute_index": 64409364,
+      "CCS1_P_W": 109590.0,
+      "CCS2_P_W": 64182.0,
+      "sum_W": 173772.0
+    },
+    {
+      "excel_minute_index": 64453994,
+      "CCS1_P_W": 87345.0,
+      "CCS2_P_W": 107181.0,
+      "sum_W": 194526.0
+    },
+    {
+      "excel_minute_index": 64490216,
+      "CCS1_P_W": 119202.0,
+      "CCS2_P_W": 65022.0,
+      "sum_W": 184224.0
+    },
+    {
+      "excel_minute_index": 64586328,
+      "CCS1_P_W": 78402.0,
+      "CCS2_P_W": 124872.0,
+      "sum_W": 203274.0
+    },
+    {
+      "excel_minute_index": 64586333,
+      "CCS1_P_W": 79566.0,
+      "CCS2_P_W": 124311.0,
+      "sum_W": 203877.0
+    },
+    {
+      "excel_minute_index": 64586334,
+      "CCS1_P_W": 79566.0,
+      "CCS2_P_W": 166431.0,
+      "sum_W": 245997.0
+    },
+    {
+      "excel_minute_index": 64586335,
+      "CCS1_P_W": 79566.0,
+      "CCS2_P_W": 167358.0,
+      "sum_W": 246924.0
+    },
+    {
+      "excel_minute_index": 64587749,
+      "CCS1_P_W": 104385.0,
+      "CCS2_P_W": 69690.0,
+      "sum_W": 174075.0
+    },
+    {
+      "excel_minute_index": 64589478,
+      "CCS1_P_W": 87582.0,
+      "CCS2_P_W": 155145.0,
+      "sum_W": 242727.0
+    }
+  ],
+  "source_sha256": "a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c",
+  "comparison_warning": "Do not infer grid AC/DC efficiencies or violate conservation based on P label until metering boundary and station rating verified. Power-integral vs Energy-column difference is a diagnostic, not a proof of equivalence.",
+  "session_workbook": {
+    "headers": {
+      "A": "Session",
+      "B": "CCS",
+      "C": "Arrival",
+      "D": "Departure",
+      "E": "Stay (min)",
+      "F": "Energy (Wh)",
+      "G": "Pmax (W)",
+      "H": "Preq_max (W)",
+      "I": "Controlled session (0=False, 1=True)",
+      "J": "TotalCapacity",
+      "K": "BulkCapacity",
+      "L": "SOC arrival",
+      "M": "SOC departure"
+    },
+    "total_session_rows": 1878,
+    "observed_session_keys": 1878,
+    "matched_session_keys": 1878,
+    "unmatched_measurement_session_keys": 0,
+    "unmatched_session_book_keys": 0,
+    "CCS2_session_id_offset_for_matching": 1129,
+    "median_measured_P_integral_over_session_energy_for_no_gap_sessions": 1.1498698582253923,
+    "comparisons_eligible": 1878,
+    "selected_energy_mismatch_examples": []
+  },
+  "energy_integral_to_reported_delta_ratio_median_clean_sessions": 1.1611319735966674,
+  "no_gap_sessions_for_ratio": 1878
+}
