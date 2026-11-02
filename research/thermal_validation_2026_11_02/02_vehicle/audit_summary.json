@@ -1,0 +1,9 @@
+{
+  "raw_archive_sha256": "e727b843c4fd69be4fb5d41ab027d8595a0459e197d7ae7a9e1908ac3a6c9d22",
+  "sessions": 134,
+  "AC_sessions": 109,
+  "DC_sessions": 25,
+  "eligible_episodes": 70,
+  "windows": 3354,
+  "caveat": "15min conditional hindcast uses FUTURE observed current and ambient; predictions are not operational real-time forecasts; validation windows overlap."
+}
