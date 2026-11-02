@@ -203,7 +203,14 @@ def zenodo_rows(rec):
           "directional_thermal_causality_verified":"NOT_VERIFIED",
           "scientific_role":role(s),"discovery_method":"ZENODO_API_RECORD"}
     frows=[]
-    entries=(rec.get("files") or {}).get("entries") or {}
+    # Zenodo API representations: files may be a dict with entries OR a list.
+    file_field=rec.get("files") or {}
+    if isinstance(file_field,dict):
+        entries=file_field.get("entries") or {}
+    elif isinstance(file_field,list):
+        entries=file_field
+    else:
+        entries=[]
     if isinstance(entries,dict): files=list(entries.values())
     elif isinstance(entries,list): files=entries
     else:files=[]
@@ -455,6 +462,10 @@ def selftest():
     assert sr["transformer_to_EVSE_topology_verified"]=="NOT_VERIFIED"
     assert fs[0]["download_eligible"] is True
     assert fs[1]["download_eligible"] is False
+    # Regression: Zenodo API search responses sometimes use a file list.
+    sample["files"] = list(sample["files"]["entries"].values())
+    _, fs_alt = zenodo_rows(sample)
+    assert len(fs_alt)==2 and fs_alt[0]["file_name"]=="test.csv"
     assert claim_measured("simulated synthetic dataset")!="CLAIMED_MEASURED_METADATA_ONLY"
     assert relevance("EV charging thermal power transformer measured")>3
     print("SELFTEST PASS: provenance, metadata-only claims, exclusions, scoring")
