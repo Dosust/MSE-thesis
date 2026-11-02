@@ -1,0 +1,63 @@
+name: Install researched ECE6378 thesis skills on review branch
+on:
+  push:
+    branches: [skills-ece6378-physics-ml-v2-2026-11-02]
+    paths:
+      - '.github/skills/_thesis_research_v2_install.zip'
+      - '.github/workflows/install-thesis-research-skills-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Unpack and verify skill files
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,csv
+          archive=Path(".github/skills/_thesis_research_v2_install.zip")
+          assert archive.is_file(), "missing skill archive"
+          with zipfile.ZipFile(archive) as z:
+              assert z.testzip() is None, "ZIP checksum failure"
+              copied=0
+              for name in sorted(z.namelist()):
+                  if name.endswith("/"): continue
+                  if name.startswith(".github/skills/"): dst=Path(name)
+                  else: dst=Path(".github/skills/power-ev-thermal-research")/name
+                  assert ".." not in dst.parts, "disallowed path"
+                  raw=z.read(name)
+                  if dst.exists():
+                      assert dst.read_bytes()==raw, f"conflicting duplicate: {dst}"
+                  else:
+                      dst.parent.mkdir(parents=True,exist_ok=True)
+                      dst.write_bytes(raw)
+                      copied+=1
+              print("New files unpacked:",copied)
+          with open(".github/skills/power-ev-thermal-research/references/ECE6378_LEARNING_MATRIX.csv",newline="") as f:
+              rows=list(csv.DictReader(f))
+          assert len(rows)==27 and [int(r["lecture_number"]) for r in rows]==list(range(1,28))
+          assert all(r["course_status_as_of_2026_11_02"]=="TENTATIVE_OUTLINE" for r in rows[18:])
+          archive.unlink()
+          PY
+      - name: Run regression and schema checks
+        shell: bash
+        run: |
+          python -m unittest discover -s .github/skills/power-ev-thermal-research/tests -v
+          python .github/skills/power-ev-thermal-research/tools/check_evidence.py --root .github/skills/power-ev-thermal-research/templates
+          python .github/skills/power-ev-thermal-research/tools/check_ml_experiments.py --root .github/skills/power-ev-thermal-research/templates
+      - name: Commit validated skills to review branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A .github/skills/
+          git diff --cached --quiet || (git commit -m 'Install eight thesis skills with audited ECE6378 ML learning overlay' && git push)
