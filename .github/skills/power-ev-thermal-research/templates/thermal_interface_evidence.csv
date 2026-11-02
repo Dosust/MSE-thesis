@@ -1,0 +1,1 @@
+evidence_id,site_id,source_id,direction,mechanism,source_link,same_site_verified,physical_topology_verified,clock_sync_verified,transformer_thermal_measured,evse_thermal_measured,directional_mechanism_verified,independent_test_pass,evidence_tier,gate_status,blocker

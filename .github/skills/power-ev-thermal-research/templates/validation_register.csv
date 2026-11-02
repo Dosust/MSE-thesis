@@ -1,0 +1,1 @@
+validation_id,model,site_id,equipment,measured_source_sha256,train_group,validation_group,test_group,heldout_independent,baseline_name,baseline_metric,model_metric,metric_unit,sample_size,prediction_horizon,uses_observed_future_inputs,interval_coverage,domain_shift,validation_claim
