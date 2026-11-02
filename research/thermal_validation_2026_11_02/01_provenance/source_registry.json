@@ -1,0 +1,134 @@
+[
+  {
+    "asset": "Barug2025_sensordata.csv",
+    "file_present": true,
+    "size_bytes": 873041,
+    "sha256": "6aa7384867aace7b697b9e17778decbbdbde280db1fd7983faee08c259b19e51",
+    "source": "SINTEF measured 40MVA transformer 2024",
+    "doi_or_source": "https://doi.org/10.5281/zenodo.17223516",
+    "scientific_classification": "measured original",
+    "publisher_md5_expected": "5d81840a2f901f04fded98c3e1097b6e",
+    "publisher_md5_matches": true
+  },
+  {
+    "asset": "Barug2025_calculated.csv",
+    "file_present": true,
+    "size_bytes": 480949,
+    "sha256": "3fa0709fa754ab84744f57aca9cfb3559481bc992e73dadfba3ed417e472fdeb",
+    "source": "SINTEF calculated 40MVA transformer temperatures",
+    "doi_or_source": "https://doi.org/10.5281/zenodo.17223516",
+    "scientific_classification": "publisher model output; NOT independent truth",
+    "publisher_md5_expected": "a84bf4facad907bae75819c149d0f109",
+    "publisher_md5_matches": true
+  },
+  {
+    "asset": "doi-10.48804-8kpdtw.zip",
+    "file_present": true,
+    "size_bytes": 161636588,
+    "sha256": "e727b843c4fd69be4fb5d41ab027d8595a0459e197d7ae7a9e1908ac3a6c9d22",
+    "source": "KU Leuven BEV Energy Dynamics",
+    "doi_or_source": "https://doi.org/10.48804/8KPDTW",
+    "scientific_classification": "measured vehicle records; nested archive",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "Measurement_data.xlsx",
+    "file_present": true,
+    "size_bytes": 23558382,
+    "sha256": "a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c",
+    "source": "EPFL two-connector charging measurements",
+    "doi_or_source": "https://github.com/DESL-EPFL/Level-3-EV-charging-dataset",
+    "scientific_classification": "measured station power; boundary not established",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "Session_data.xlsx",
+    "file_present": true,
+    "size_bytes": 204514,
+    "sha256": "b886943bf86520f24f5a53870886c4c43709d265cbebdd65e1345321e22cc192",
+    "source": "EPFL CCS session summary",
+    "doi_or_source": "https://github.com/DESL-EPFL/Level-3-EV-charging-dataset",
+    "scientific_classification": "measured/publisher session summary",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "doi_10_5061_dryad_np5hqc04z__v20260204.zip",
+    "file_present": false,
+    "size_bytes": null,
+    "sha256": null,
+    "source": "UrbanEV",
+    "doi_or_source": "https://doi.org/10.5061/dryad.np5hqc04z",
+    "scientific_classification": "real occupancy and estimated energy; not metered thermal data",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "Data.rar",
+    "file_present": true,
+    "size_bytes": 145417774,
+    "sha256": "4d93b692d1b3cb23b6593132efb08a87a60c738a9fc9519227c8fabd545510d8",
+    "source": "Turkish power system reference archive",
+    "doi_or_source": null,
+    "scientific_classification": "network benchmark; not measured coupled topology",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "Reduced Turkish Power System.xlsx",
+    "file_present": true,
+    "size_bytes": 15153791,
+    "sha256": "7b51d54febff76d57db386689aa28fc94c000a62201ff5aa565849d587795351",
+    "source": "Turkish benchmark network",
+    "doi_or_source": null,
+    "scientific_classification": "network benchmark; not field-connected to an EVSE",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "DCs and Cities.xlsx",
+    "file_present": true,
+    "size_bytes": 13527389,
+    "sha256": "898233b5d17da45ab99baf0fef7d849a2482bc413947db588228a06d84fe309d",
+    "source": "Turkish network/city candidate reference",
+    "doi_or_source": null,
+    "scientific_classification": "geography/network benchmark",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "Counties.xlsx",
+    "file_present": true,
+    "size_bytes": 124608814,
+    "sha256": "665060a0b0ddb2eb4cc07f5a3a0de685c2da2b51c211dbd4bc18e038a6681313",
+    "source": "Turkish counties candidate reference",
+    "doi_or_source": null,
+    "scientific_classification": "geographic context",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "power_grid_transport_resilience_dataset.csv",
+    "file_present": true,
+    "size_bytes": 1234017,
+    "sha256": "2b93acefd260f9bd77dc31b313ba703b464779a608c004f5835b2b74f06e96e9",
+    "source": "Unqualified resilience table",
+    "doi_or_source": null,
+    "scientific_classification": "not admitted as thermal observations",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  },
+  {
+    "asset": "17223516.json",
+    "file_present": true,
+    "size_bytes": 11948,
+    "sha256": "40032968f900766974e5d15e1ba5dd2f051e92542a13c6a21706df279e0d6060",
+    "source": "SINTEF source catalogue metadata",
+    "doi_or_source": "https://doi.org/10.5281/zenodo.17223516",
+    "scientific_classification": "source metadata",
+    "publisher_md5_expected": null,
+    "publisher_md5_matches": null
+  }
+]
