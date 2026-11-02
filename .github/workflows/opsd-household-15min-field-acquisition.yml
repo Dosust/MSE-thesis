@@ -68,7 +68,7 @@ jobs:
             total=0
             for row in reader:
              total+=1
-             flagged=set(x.strip().lower() for x in re.split(r"\\s*\\|\\s*|;",(row.get("interpolated") or "")) if x.strip())
+             flagged=set(x.strip().lower() for x in re.split(r"\s*\|\s*|;",(row.get("interpolated") or "")) if x.strip())
              for s in sites:
               ev=s+"_ev";grid=s+"_grid_import"
               if not (row.get(ev) or row.get(grid)):continue
