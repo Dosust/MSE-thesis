@@ -1,0 +1,1 @@
+No thesis-qualified coupled-simulation regeneration. Existing exploratory numerical checks do not constitute field validation.
