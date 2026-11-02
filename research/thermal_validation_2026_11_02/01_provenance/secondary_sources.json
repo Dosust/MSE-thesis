@@ -1,0 +1,82 @@
+[
+  {
+    "file": "Reduced Turkish Power System.xlsx",
+    "status": "workbook_structure_verified",
+    "sheets": [
+      "installed capacity",
+      "transmission lines",
+      "suitable locations (expansion)",
+      "hourly demand"
+    ],
+    "note": "Network benchmark only; no verified transformer-to-EVSE site connectivity"
+  },
+  {
+    "file": "DCs and Cities.xlsx",
+    "status": "workbook_structure_verified",
+    "sheets": [
+      "profiles of DCs",
+      "monthly demand of cities",
+      "hourly demand of cities",
+      "existing power plants"
+    ],
+    "note": "Network benchmark only; no verified transformer-to-EVSE site connectivity"
+  },
+  {
+    "file": "Counties.xlsx",
+    "status": "workbook_structure_verified",
+    "sheets": [
+      "installed capacity of counties",
+      "population and coordinates",
+      "hourly demand of conties"
+    ],
+    "note": "Network benchmark only; no verified transformer-to-EVSE site connectivity"
+  },
+  {
+    "file": "power_grid_transport_resilience_dataset.csv",
+    "status": "excluded_from_thermal_field_validation",
+    "rows": 5000,
+    "columns": [
+      "Record_ID",
+      "Scenario_ID",
+      "Time_Step",
+      "Power_Bus_ID",
+      "Grid_Zone",
+      "Disturbance_Type",
+      "Load_Demand_MW",
+      "Generation_Available_MW",
+      "Line_Loading_Percent",
+      "Voltage_PU",
+      "Frequency_Hz",
+      "Component_Health_Index",
+      "Cyber_Attack_Flag",
+      "Natural_Disaster_Intensity",
+      "Operational_Disruption_Score",
+      "Transportation_Node_ID",
+      "Road_Congestion_Index",
+      "Road_Blockage_Flag",
+      "Repair_Crew_Availability",
+      "Crew_Travel_Time_Min",
+      "Interdependency_Strength",
+      "Failure_Probability",
+      "Cascading_Depth",
+      "Failed_Components_Count",
+      "Unserved_Load_MW",
+      "Restoration_Action",
+      "Action_Priority",
+      "Distributed_Control_Signal",
+      "Coordination_Efficiency",
+      "Repair_Cost_USD",
+      "Restoration_Time_Min",
+      "Load_Restored_Percent",
+      "Resilience_Index",
+      "RL_Reward_Score",
+      "Target_Recovery_Class"
+    ]
+  },
+  {
+    "file": "doi_10_5061_dryad_np5hqc04z__v20260204.zip",
+    "status": "original_zip_not_accessible_locally",
+    "source": "https://doi.org/10.5061/dryad.np5hqc04z",
+    "warning": "UrbanEV published energy is computed from duration and charger rating, not direct thermal or matched transformer measurements"
+  }
+]
