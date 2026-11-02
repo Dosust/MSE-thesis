@@ -1,0 +1,1 @@
+Do not report causal service deficits, propagation delays or sustainability conclusions until physical assumptions, service targets and boundaries pass gates.
