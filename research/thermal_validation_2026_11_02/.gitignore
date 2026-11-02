@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.zip
+*.rar
+*.xlsx
+*.parquet
+*.png
+*.pickle
+*_predictions.csv
+*all_predictions.csv
+*energy_diagnostics.csv
