@@ -1,0 +1,32 @@
+[
+  {
+    "vehicle": "BEV1",
+    "mode": "AC",
+    "holdout_rmse_C": 0.4269273686696428,
+    "test_coverage_nominal90": 0.530920060331825,
+    "mean_session_mae_thermal_C": 0.5000432388051523,
+    "mean_session_mae_persistence_C": 0.5010063345036783,
+    "gate": "BLOCKED",
+    "warning": "Model uses observed future current and ambient; not forecast. Model coefficients not uniquely identified."
+  },
+  {
+    "vehicle": "BEV2",
+    "mode": "AC",
+    "holdout_rmse_C": 0.7405630285238392,
+    "test_coverage_nominal90": 0.7828282828282829,
+    "mean_session_mae_thermal_C": 0.8189097449545713,
+    "mean_session_mae_persistence_C": 0.6781270669632299,
+    "gate": "BLOCKED",
+    "warning": "Model uses observed future current and ambient; not forecast. Model coefficients not uniquely identified."
+  },
+  {
+    "vehicle": "BEV2",
+    "mode": "DC",
+    "holdout_rmse_C": 17.192263731917716,
+    "test_coverage_nominal90": 0.3043478260869565,
+    "mean_session_mae_thermal_C": 13.63624342331468,
+    "mean_session_mae_persistence_C": 16.428199404761905,
+    "gate": "BLOCKED",
+    "warning": "Model uses observed future current and ambient; not forecast. Model coefficients not uniquely identified."
+  }
+]
