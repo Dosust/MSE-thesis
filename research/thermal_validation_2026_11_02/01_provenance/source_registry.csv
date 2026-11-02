@@ -1,0 +1,13 @@
+asset,file_present,size_bytes,sha256,source,doi_or_source,scientific_classification,publisher_md5_expected,publisher_md5_matches
+Barug2025_sensordata.csv,True,873041,6aa7384867aace7b697b9e17778decbbdbde280db1fd7983faee08c259b19e51,SINTEF measured 40MVA transformer 2024,https://doi.org/10.5281/zenodo.17223516,measured original,5d81840a2f901f04fded98c3e1097b6e,True
+Barug2025_calculated.csv,True,480949,3fa0709fa754ab84744f57aca9cfb3559481bc992e73dadfba3ed417e472fdeb,SINTEF calculated 40MVA transformer temperatures,https://doi.org/10.5281/zenodo.17223516,publisher model output; NOT independent truth,a84bf4facad907bae75819c149d0f109,True
+doi-10.48804-8kpdtw.zip,True,161636588,e727b843c4fd69be4fb5d41ab027d8595a0459e197d7ae7a9e1908ac3a6c9d22,KU Leuven BEV Energy Dynamics,https://doi.org/10.48804/8KPDTW,measured vehicle records; nested archive,,
+Measurement_data.xlsx,True,23558382,a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c,EPFL two-connector charging measurements,https://github.com/DESL-EPFL/Level-3-EV-charging-dataset,measured station power; boundary not established,,
+Session_data.xlsx,True,204514,b886943bf86520f24f5a53870886c4c43709d265cbebdd65e1345321e22cc192,EPFL CCS session summary,https://github.com/DESL-EPFL/Level-3-EV-charging-dataset,measured/publisher session summary,,
+doi_10_5061_dryad_np5hqc04z__v20260204.zip,False,,,UrbanEV,https://doi.org/10.5061/dryad.np5hqc04z,real occupancy and estimated energy; not metered thermal data,,
+Data.rar,True,145417774,4d93b692d1b3cb23b6593132efb08a87a60c738a9fc9519227c8fabd545510d8,Turkish power system reference archive,,network benchmark; not measured coupled topology,,
+Reduced Turkish Power System.xlsx,True,15153791,7b51d54febff76d57db386689aa28fc94c000a62201ff5aa565849d587795351,Turkish benchmark network,,network benchmark; not field-connected to an EVSE,,
+DCs and Cities.xlsx,True,13527389,898233b5d17da45ab99baf0fef7d849a2482bc413947db588228a06d84fe309d,Turkish network/city candidate reference,,geography/network benchmark,,
+Counties.xlsx,True,124608814,665060a0b0ddb2eb4cc07f5a3a0de685c2da2b51c211dbd4bc18e038a6681313,Turkish counties candidate reference,,geographic context,,
+power_grid_transport_resilience_dataset.csv,True,1234017,2b93acefd260f9bd77dc31b313ba703b464779a608c004f5835b2b74f06e96e9,Unqualified resilience table,,not admitted as thermal observations,,
+17223516.json,True,11948,40032968f900766974e5d15e1ba5dd2f051e92542a13c6a21706df279e0d6060,SINTEF source catalogue metadata,https://doi.org/10.5281/zenodo.17223516,source metadata,,
