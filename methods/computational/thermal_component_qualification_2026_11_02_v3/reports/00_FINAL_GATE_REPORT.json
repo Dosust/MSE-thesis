@@ -1,0 +1,961 @@
+{
+  "data_scope": "multiple independent physical installations; NEVER a synchronized coupled field dataset",
+  "source_registry": "/mnt/data/Thesis_Drive_Pipeline_V3/results/01_source_registry.csv",
+  "component_gates": {
+    "vehicle": "BLOCKED_FOR_PHYSICAL_VALIDATION",
+    "transformer": "PROVISIONAL",
+    "charging_interface": "PROVISIONAL",
+    "EVSE_internal_temperature": "BLOCKED: no internal EVSE temperature data in Drive",
+    "P_to_Te": "BLOCKED: no connected site field proof",
+    "Te_to_P": "BLOCKED: no connected site field proof",
+    "field_qualified_synthetic": "BLOCKED: candidate component models not fully qualified"
+  },
+  "users_original_Google_Drive_files_changed": false,
+  "epfl_raw_scan_capped": false,
+  "KU_Leuven": {
+    "source_doi": "10.48804/8KPDTW",
+    "files": 134,
+    "sessions_read": 134,
+    "mean_pack_temperature_measured": false,
+    "uncoupled_installation": true,
+    "BMSdissipation312_semantics": "uncertain; fitted statistical covariate only",
+    "future_inputs": "measured current, ambient and BMS signals through target horizon; conditional hindcast, NOT prospective forecast",
+    "charging_current_sign": "observed predominantly negative, charging sign not manufacturer-verified",
+    "mode_horizon_results": {
+      "5": {
+        "AC": {
+          "gate": "BLOCKED_FOR_PHYSICAL_VALIDATION",
+          "selected_model_by_validation": "coupled",
+          "sessions": {
+            "train": 35,
+            "validation": 12,
+            "test": 13
+          },
+          "windows": {
+            "train": 1425,
+            "validation": 473,
+            "test": 349
+          },
+          "candidate_metrics": {
+            "uncoupled": {
+              "validation": {
+                "N": 946,
+                "MAE_C": 0.2081845223857003,
+                "RMSE_C": 0.2800339623858946,
+                "bias_C": -0.08125245015810567
+              },
+              "test": {
+                "N": 698,
+                "MAE_C": 0.2123419565152948,
+                "RMSE_C": 0.3088359263059448,
+                "bias_C": -0.046463305281302034
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 132.23642808781455,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.19435390351505227,
+                  4.264253620467433,
+                  0.17627484673707058,
+                  9.999999999995117
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.001,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    10.0
+                  ]
+                ],
+                "cost": 57.487344733334155
+              }
+            },
+            "coupled": {
+              "validation": {
+                "N": 946,
+                "MAE_C": 0.20660930521059787,
+                "RMSE_C": 0.28082224553141893,
+                "bias_C": -0.07748304785310857
+              },
+              "test": {
+                "N": 698,
+                "MAE_C": 0.21288426726917706,
+                "RMSE_C": 0.30895063707060716,
+                "bias_C": -0.044953766523206797
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 230.61420844568514,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.20460370824677296,
+                  0.3661071688869752,
+                  0.07897648183439869,
+                  0.17627786522721337,
+                  9.999999999998854,
+                  3.5689195833995484e-16
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0
+                  ]
+                ],
+                "cost": 57.42758317736043
+              }
+            },
+            "signal_proxy": {
+              "validation": {
+                "N": 946,
+                "MAE_C": 0.2070653400374197,
+                "RMSE_C": 0.2808139452904925,
+                "bias_C": -0.07809490696048177
+              },
+              "test": {
+                "N": 698,
+                "MAE_C": 0.2125341527241222,
+                "RMSE_C": 0.3085304633648296,
+                "bias_C": -0.044607842775165406
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 2821.647558119528,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.20337186409404323,
+                  1.687145530593909e-11,
+                  0.07333940156883235,
+                  0.1808802365645555,
+                  9.999999999999998,
+                  3.3677784739985718e-21,
+                  4.999999999999999,
+                  -0.008725187306183262,
+                  4.999999999999999,
+                  0.24160850550149002
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0,
+                    -5.0,
+                    -5.0,
+                    -5.0,
+                    -5.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                  ]
+                ],
+                "cost": 57.31875760537096
+              }
+            }
+          },
+          "state_metrics": {
+            "Tmin": {
+              "validation": {
+                "N": 473,
+                "MAE_C": 0.17453978515621676,
+                "RMSE_C": 0.2310252425297993,
+                "bias_C": -0.05778705075421793
+              },
+              "validation_persistence": {
+                "N": 473,
+                "MAE_C": 0.12896405919661733,
+                "RMSE_C": 0.2088172673961392,
+                "bias_C": -0.0021141649048625794
+              },
+              "test": {
+                "N": 349,
+                "MAE_C": 0.16058561927663204,
+                "RMSE_C": 0.21798951652577753,
+                "bias_C": -0.03459657475582002
+              },
+              "test_persistence": {
+                "N": 349,
+                "MAE_C": 0.13968481375358166,
+                "RMSE_C": 0.21116744669672124,
+                "bias_C": 0.012177650429799427
+              },
+              "improved_validation": false,
+              "improved_test": false,
+              "validation_p95_abs_error_C": 0.4482517240573983,
+              "heldout_interval_coverage": 0.9484240687679083
+            },
+            "Tmax": {
+              "validation": {
+                "N": 473,
+                "MAE_C": 0.23867882526497894,
+                "RMSE_C": 0.3230318939124503,
+                "bias_C": -0.09717904495199924
+              },
+              "validation_persistence": {
+                "N": 473,
+                "MAE_C": 0.17970401691331925,
+                "RMSE_C": 0.314173636697562,
+                "bias_C": -0.006342494714587738
+              },
+              "test": {
+                "N": 349,
+                "MAE_C": 0.26518291526172205,
+                "RMSE_C": 0.3786575801136507,
+                "bias_C": -0.05531095829059357
+              },
+              "test_persistence": {
+                "N": 349,
+                "MAE_C": 0.25250716332378226,
+                "RMSE_C": 0.3804522455904093,
+                "bias_C": 0.016117478510028652
+              },
+              "improved_validation": false,
+              "improved_test": false,
+              "validation_p95_abs_error_C": 0.5829942385644571,
+              "heldout_interval_coverage": 0.8739255014326648
+            }
+          },
+          "sufficient_test": true,
+          "stable_identifiability": true,
+          "interior_parameters": false,
+          "predictive_gate": false,
+          "physical_gate": "BLOCKED: heat capacity, sensor location, actual cooling flux and heat losses not identified"
+        },
+        "DC": {
+          "gate": "BLOCKED_FOR_PHYSICAL_VALIDATION",
+          "selected_model_by_validation": "signal_proxy",
+          "sessions": {
+            "train": 13,
+            "validation": 5,
+            "test": 6
+          },
+          "windows": {
+            "train": 69,
+            "validation": 31,
+            "test": 20
+          },
+          "candidate_metrics": {
+            "uncoupled": {
+              "validation": {
+                "N": 62,
+                "MAE_C": 2.0009650291872787,
+                "RMSE_C": 3.3182742889459935,
+                "bias_C": -1.6178384779086747
+              },
+              "test": {
+                "N": 40,
+                "MAE_C": 3.8866304648576753,
+                "RMSE_C": 4.977365193698785,
+                "bias_C": -3.033095375759077
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 22.002600663029096,
+                "on_parameter_boundary": false,
+                "parameter_values": [
+                  0.6594475900765843,
+                  7.86052463951548,
+                  0.6527838083512899,
+                  7.794526528420834
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.001,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    10.0
+                  ]
+                ],
+                "cost": 99.54016061499061
+              }
+            },
+            "coupled": {
+              "validation": {
+                "N": 62,
+                "MAE_C": 1.8496162331207213,
+                "RMSE_C": 3.1854655968849457,
+                "bias_C": -1.4994613911680459
+              },
+              "test": {
+                "N": 40,
+                "MAE_C": 3.703077376000536,
+                "RMSE_C": 4.749923362732714,
+                "bias_C": -2.9274032112549735
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 46.76278432155678,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  1.1655841453770297,
+                  7.051662286799286,
+                  1.9999999999999998,
+                  0.6505221694502288,
+                  7.774078342092983,
+                  6.645621610622948e-10
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0
+                  ]
+                ],
+                "cost": 96.45156545809064
+              }
+            },
+            "signal_proxy": {
+              "validation": {
+                "N": 62,
+                "MAE_C": 1.847165410196654,
+                "RMSE_C": 3.1739915945094532,
+                "bias_C": -1.5134477991567172
+              },
+              "test": {
+                "N": 40,
+                "MAE_C": 3.72490085464418,
+                "RMSE_C": 4.760817784451616,
+                "bias_C": -2.9496313959087033
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 1060.9401138309436,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  1.1807505427891878,
+                  6.610790138192677,
+                  1.9999999999999998,
+                  0.6694842100616827,
+                  7.462459655457506,
+                  6.70722482105045e-11,
+                  4.999999999999999,
+                  4.469673277825445,
+                  4.999999999999999,
+                  4.999999999999999
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0,
+                    -5.0,
+                    -5.0,
+                    -5.0,
+                    -5.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                  ]
+                ],
+                "cost": 95.67928791251128
+              }
+            }
+          },
+          "state_metrics": {
+            "Tmin": {
+              "validation": {
+                "N": 31,
+                "MAE_C": 1.3564001619865336,
+                "RMSE_C": 2.362624000451997,
+                "bias_C": -1.1728744125575574
+              },
+              "validation_persistence": {
+                "N": 31,
+                "MAE_C": 3.0725806451612905,
+                "RMSE_C": 4.659148129253091,
+                "bias_C": -2.379032258064516
+              },
+              "test": {
+                "N": 20,
+                "MAE_C": 3.188064600029821,
+                "RMSE_C": 3.566647431444078,
+                "bias_C": -2.338292500110495
+              },
+              "test_persistence": {
+                "N": 20,
+                "MAE_C": 3.86875,
+                "RMSE_C": 4.5265708599335985,
+                "bias_C": -3.86875
+              },
+              "improved_validation": true,
+              "improved_test": true,
+              "validation_p95_abs_error_C": 5.696858560139173,
+              "heldout_interval_coverage": 0.95
+            },
+            "Tmax": {
+              "validation": {
+                "N": 31,
+                "MAE_C": 2.3379306584067745,
+                "RMSE_C": 3.8166023000204685,
+                "bias_C": -1.854021185755877
+              },
+              "validation_persistence": {
+                "N": 31,
+                "MAE_C": 3.2419354838709675,
+                "RMSE_C": 5.498075176383212,
+                "bias_C": -2.2903225806451615
+              },
+              "test": {
+                "N": 20,
+                "MAE_C": 4.261737109258538,
+                "RMSE_C": 5.710498932078961,
+                "bias_C": -3.560970291706913
+              },
+              "test_persistence": {
+                "N": 20,
+                "MAE_C": 4.5125,
+                "RMSE_C": 6.009237680438343,
+                "bias_C": -4.3125
+              },
+              "improved_validation": true,
+              "improved_test": true,
+              "validation_p95_abs_error_C": 10.159425364208886,
+              "heldout_interval_coverage": 0.85
+            }
+          },
+          "sufficient_test": true,
+          "stable_identifiability": true,
+          "interior_parameters": false,
+          "predictive_gate": false,
+          "physical_gate": "BLOCKED: heat capacity, sensor location, actual cooling flux and heat losses not identified"
+        }
+      },
+      "15": {
+        "AC": {
+          "gate": "BLOCKED_FOR_PHYSICAL_VALIDATION",
+          "selected_model_by_validation": "coupled",
+          "sessions": {
+            "train": 34,
+            "validation": 12,
+            "test": 12
+          },
+          "windows": {
+            "train": 441,
+            "validation": 141,
+            "test": 121
+          },
+          "candidate_metrics": {
+            "uncoupled": {
+              "validation": {
+                "N": 282,
+                "MAE_C": 0.5215575089048955,
+                "RMSE_C": 0.6605575681411632,
+                "bias_C": -0.19519148433674738
+              },
+              "test": {
+                "N": 242,
+                "MAE_C": 0.4735194763552476,
+                "RMSE_C": 0.6661611410162874,
+                "bias_C": -0.14502574839261784
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 108.82855100219496,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.20334004338204456,
+                  4.782721480284347,
+                  0.16171673212689716,
+                  9.999999999998115
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.001,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    10.0
+                  ]
+                ],
+                "cost": 62.4581011554154
+              }
+            },
+            "coupled": {
+              "validation": {
+                "N": 282,
+                "MAE_C": 0.5165242827883864,
+                "RMSE_C": 0.6612179267490529,
+                "bias_C": -0.18394060647703483
+              },
+              "test": {
+                "N": 242,
+                "MAE_C": 0.4752079710781989,
+                "RMSE_C": 0.6698014850601791,
+                "bias_C": -0.1459975414631657
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 210.38452141243826,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.21402308674135104,
+                  1.3208580782333494,
+                  0.06828263059425298,
+                  0.16173779266740154,
+                  9.999999999999616,
+                  5.459767834621181e-16
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0
+                  ]
+                ],
+                "cost": 62.36809381449032
+              }
+            },
+            "signal_proxy": {
+              "validation": {
+                "N": 282,
+                "MAE_C": 0.5188781968986036,
+                "RMSE_C": 0.6623465750726054,
+                "bias_C": -0.18945218746719208
+              },
+              "test": {
+                "N": 242,
+                "MAE_C": 0.4745761222532271,
+                "RMSE_C": 0.6680977942395366,
+                "bias_C": -0.1465300951727231
+              },
+              "fit": {
+                "optimizer_success": true,
+                "jacobian_condition": 2724.065495211345,
+                "on_parameter_boundary": true,
+                "parameter_values": [
+                  0.21416166461144764,
+                  0.9772066222741166,
+                  0.060839052759209394,
+                  0.16785012108616165,
+                  9.999999999999998,
+                  4.31643014487972e-21,
+                  4.999999999999987,
+                  0.17614258932085042,
+                  4.999999999999999,
+                  0.32139040494871157
+                ],
+                "parameter_bounds": [
+                  [
+                    0.001,
+                    0.0,
+                    0.0,
+                    0.001,
+                    0.0,
+                    0.0,
+                    -5.0,
+                    -5.0,
+                    -5.0,
+                    -5.0
+                  ],
+                  [
+                    2.0,
+                    10.0,
+                    2.0,
+                    2.0,
+                    10.0,
+                    2.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                  ]
+                ],
+                "cost": 62.11997305631185
+              }
+            }
+          },
+          "state_metrics": {
+            "Tmin": {
+              "validation": {
+                "N": 141,
+                "MAE_C": 0.43538321651104767,
+                "RMSE_C": 0.558904649118882,
+                "bias_C": -0.12689713627401222
+              },
+              "validation_persistence": {
+                "N": 141,
+                "MAE_C": 0.3475177304964539,
+                "RMSE_C": 0.5182827618941187,
+                "bias_C": 0.0425531914893617
+              },
+              "test": {
+                "N": 121,
+                "MAE_C": 0.3977792874745461,
+                "RMSE_C": 0.5646285771844322,
+                "bias_C": -0.14282933918663138
+              },
+              "test_persistence": {
+                "N": 121,
+                "MAE_C": 0.36983471074380164,
+                "RMSE_C": 0.5097195793637682,
+                "bias_C": -0.002066115702479339
+              },
+              "improved_validation": false,
+              "improved_test": false,
+              "validation_p95_abs_error_C": 1.1471902381876724,
+              "heldout_interval_coverage": 0.9504132231404959
+            },
+            "Tmax": {
+              "validation": {
+                "N": 141,
+                "MAE_C": 0.597665349065725,
+                "RMSE_C": 0.7496958626682763,
+                "bias_C": -0.24098407668005736
+              },
+              "validation_persistence": {
+                "N": 141,
+                "MAE_C": 0.475177304964539,
+                "RMSE_C": 0.7443641677192671,
+                "bias_C": 0.010638297872340425
+              },
+              "test": {
+                "N": 121,
+                "MAE_C": 0.5526366546818517,
+                "RMSE_C": 0.7605673070835521,
+                "bias_C": -0.14916574373969999
+              },
+              "test_persistence": {
+                "N": 121,
+                "MAE_C": 0.5588842975206612,
+                "RMSE_C": 0.7610243477387827,
+                "bias_C": 0.011363636363636364
+              },
+              "improved_validation": false,
+              "improved_test": true,
+              "validation_p95_abs_error_C": 1.5800071600372085,
+              "heldout_interval_coverage": 0.9421487603305785
+            }
+          },
+          "sufficient_test": true,
+          "stable_identifiability": true,
+          "interior_parameters": false,
+          "predictive_gate": false,
+          "physical_gate": "BLOCKED: heat capacity, sensor location, actual cooling flux and heat losses not identified"
+        },
+        "DC": {
+          "gate": "BLOCKED",
+          "reason": "Insufficient independent windows",
+          "sessions": {
+            "train": 7,
+            "validation": 3,
+            "test": 3
+          },
+          "windows": {
+            "train": 11,
+            "validation": 8,
+            "test": 4
+          }
+        }
+      }
+    },
+    "qualification": "ONLY conditional component dynamics; never transformer\u2013EVSE field coupling"
+  },
+  "SINTEF": {
+    "gate": "PROVISIONAL",
+    "source_doi": "10.5281/zenodo.17223516",
+    "records": 8589,
+    "gaps_over_1hr": 5,
+    "duplicate_timestamps": 0,
+    "ambient_C_observed_minmax": [
+      -19.58,
+      25.97
+    ],
+    "model": "effective two-state top-oil and HV-hotspot conditional ODE discrete h=1h, nonphysical constant bias; not a manufacturer rating law",
+    "parameters": [
+      0.1086729682437332,
+      1.0587172811418506,
+      1.4743050381778129,
+      0.12999693317622496,
+      4.204812104775255,
+      -0.9318741709038575
+    ],
+    "training_window_length_hours": 6,
+    "val_residual_abs_q95_C": [
+      2.150756428295408,
+      1.0465545716938998
+    ],
+    "metrics": {
+      "1h": {
+        "n_nonoverlapping_test_windows": 2156,
+        "top_oil": {
+          "model": {
+            "N": 2156,
+            "MAE_C": 0.16446899142107002,
+            "RMSE_C": 0.23058984051544418,
+            "bias_C": 0.03393423610671629
+          },
+          "persistence": {
+            "N": 2156,
+            "MAE_C": 0.14079003803339518,
+            "RMSE_C": 0.24792252563634143,
+            "bias_C": 0.005739795918367347
+          }
+        },
+        "HV_hotspot": {
+          "model": {
+            "N": 2156,
+            "MAE_C": 0.16259805258955098,
+            "RMSE_C": 0.21296333892758265,
+            "bias_C": -0.05071224211411043
+          },
+          "persistence": {
+            "N": 2156,
+            "MAE_C": 0.22560393645640076,
+            "RMSE_C": 0.2941493043006681,
+            "bias_C": 0.003583603896103897
+          }
+        },
+        "coverage_using_6h_validation_halfwidth": [
+          1.0,
+          0.9995361781076066
+        ]
+      },
+      "6h": {
+        "n_nonoverlapping_test_windows": 357,
+        "top_oil": {
+          "model": {
+            "N": 357,
+            "MAE_C": 0.535492819672189,
+            "RMSE_C": 0.7471977507706303,
+            "bias_C": 0.15472079806882488
+          },
+          "persistence": {
+            "N": 357,
+            "MAE_C": 0.729979025210084,
+            "RMSE_C": 1.0462268109939137,
+            "bias_C": 0.03387254901960786
+          }
+        },
+        "HV_hotspot": {
+          "model": {
+            "N": 357,
+            "MAE_C": 0.5892149940354376,
+            "RMSE_C": 0.7436662061622735,
+            "bias_C": -0.19163251009821886
+          },
+          "persistence": {
+            "N": 357,
+            "MAE_C": 1.0095308207282911,
+            "RMSE_C": 1.234798014061117,
+            "bias_C": 0.015770310924369747
+          }
+        },
+        "coverage_using_6h_validation_halfwidth": [
+          0.9775910364145658,
+          0.8263305322128851
+        ]
+      },
+      "24h": {
+        "n_nonoverlapping_test_windows": 87,
+        "top_oil": {
+          "model": {
+            "N": 87,
+            "MAE_C": 0.8588793326558065,
+            "RMSE_C": 1.215578491915769,
+            "bias_C": 0.27003274923428744
+          },
+          "persistence": {
+            "N": 87,
+            "MAE_C": 1.7754886206896552,
+            "RMSE_C": 2.250731518619827,
+            "bias_C": 0.08801724137931037
+          }
+        },
+        "HV_hotspot": {
+          "model": {
+            "N": 87,
+            "MAE_C": 0.7247475252957297,
+            "RMSE_C": 0.9800968250713277,
+            "bias_C": 0.353351691131275
+          },
+          "persistence": {
+            "N": 87,
+            "MAE_C": 1.323663827586207,
+            "RMSE_C": 1.6230223748557229,
+            "bias_C": 0.07001440229885057
+          }
+        },
+        "coverage_using_6h_validation_halfwidth": [
+          0.9425287356321839,
+          0.7701149425287356
+        ]
+      }
+    },
+    "claims_not_authorized": [
+      "Extreme heat field validation (Norwegian ambient exposure only)",
+      "Transformer hot-spot capacity restriction on unrelated 350kVA transformer",
+      "Same-site EVSE connection; feedback P<->Te"
+    ]
+  },
+  "EPFL": {
+    "measured_file": "Measurement_data.xlsx",
+    "sessions_file": "Session_data.xlsx",
+    "measurement_rows_examined": 1293360,
+    "populated_measurement_rows": 61816,
+    "station_or_feeder_power_measured": false,
+    "power_boundary": "P(W) is reported station AC power; must verify whether per connector or total",
+    "temperature_channels_available": false,
+    "original_source_is_xlsx": true,
+    "charging_service_proxies_only": true,
+    "session_distinct": 1878,
+    "session_rows": 1878,
+    "controlled_sessions": 1416,
+    "positive_energy_sessions": 1878,
+    "Pmax_above_172500W_sessions": 9,
+    "session_energy_reconciliation": {
+      "matched_sessions": 1878,
+      "start_timestamp_matches_within_60s": 1878,
+      "start_timestamp_validation_count": 1878,
+      "max_absolute_start_timestamp_mismatch_seconds": 0.0,
+      "total_integrated_AC_Wh_contiguous_only": 69555236.675,
+      "total_reported_session_energy_Wh": 60441935.575,
+      "median_absolute_relative_difference": 0.1498698581354818,
+      "fraction_within_10pct": 0.01863684771033014,
+      "CCS2_local_to_global_session_offset": 1129,
+      "NOT_confirmed_energy_balance": true
+    },
+    "sheets": {
+      "xl/worksheets/sheet1.xml": {
+        "sheet": "xl/worksheets/sheet1.xml",
+        "headers": {
+          "A": "Date and time",
+          "B": "CCS",
+          "C": "Session",
+          "D": "P (W)",
+          "E": "Pset (W)",
+          "F": "Preq (W)",
+          "G": "TotalCapacity",
+          "H": "RemainingCapacity",
+          "I": "BulkCapacity",
+          "J": "Energy (Wh)",
+          "K": "SOC (%)",
+          "L": "Ctrl_t (0 = False, 1 = True)",
+          "M": "Ctrl_s (0 = False, 1 = True)"
+        },
+        "n_examined": 646680,
+        "n_populated": 36184,
+        "n_sessions": 1129,
+        "integrable_intervals": 35055,
+        "negative_power_rows": 0,
+        "power_above_station_rating_rows": 16,
+        "sum_integrated_Wh_on_contiguous_observed_intervals": 42136028.525,
+        "time_gaps_gt_2min": 0,
+        "nonmonotone_time_events": 0
+      },
+      "xl/worksheets/sheet2.xml": {
+        "sheet": "xl/worksheets/sheet2.xml",
+        "headers": {
+          "A": "Date and time",
+          "B": "CCS",
+          "C": "Session",
+          "D": "P (W)",
+          "E": "Pset (W)",
+          "F": "Preq (W)",
+          "G": "TotalCapacity",
+          "H": "RemainingCapacity",
+          "I": "BulkCapacity",
+          "J": "Energy (Wh)",
+          "K": "SOC (%)",
+          "L": "Ctrl_t (0 = False, 1 = True)",
+          "M": "Ctrl_s (0 = False, 1 = True)"
+        },
+        "n_examined": 646680,
+        "n_populated": 25632,
+        "n_sessions": 749,
+        "integrable_intervals": 24883,
+        "negative_power_rows": 0,
+        "power_above_station_rating_rows": 23,
+        "sum_integrated_Wh_on_contiguous_observed_intervals": 27419208.150000002,
+        "time_gaps_gt_2min": 0,
+        "nonmonotone_time_events": 0
+      }
+    },
+    "published_n_measurements": 64277,
+    "difference_from_published_count": -2461,
+    "gate": "PROVISIONAL",
+    "limitations": [
+      "Source summary energy and integrated power use potentially different accounting boundaries; differences are not immediately electrical losses",
+      "What constitutes a published measurement needs reconciliation with paper and 1-minute tabs",
+      "P(W) grid-versus-connector boundary and control semantics require original station documentation",
+      "Session energy and integrated power may use different time/integration definitions",
+      "No measured charger internal temperatures or same-site transformer temperatures."
+    ]
+  },
+  "UrbanEV": {
+    "status": "NOT_MOUNTED"
+  }
+}

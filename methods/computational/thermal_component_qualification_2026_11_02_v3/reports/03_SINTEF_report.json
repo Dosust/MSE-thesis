@@ -1,0 +1,137 @@
+{
+  "gate": "PROVISIONAL",
+  "source_doi": "10.5281/zenodo.17223516",
+  "records": 8589,
+  "gaps_over_1hr": 5,
+  "duplicate_timestamps": 0,
+  "ambient_C_observed_minmax": [
+    -19.58,
+    25.97
+  ],
+  "model": "effective two-state top-oil and HV-hotspot conditional ODE discrete h=1h, nonphysical constant bias; not a manufacturer rating law",
+  "parameters": [
+    0.1086729682437332,
+    1.0587172811418506,
+    1.4743050381778129,
+    0.12999693317622496,
+    4.204812104775255,
+    -0.9318741709038575
+  ],
+  "training_window_length_hours": 6,
+  "val_residual_abs_q95_C": [
+    2.150756428295408,
+    1.0465545716938998
+  ],
+  "metrics": {
+    "1h": {
+      "n_nonoverlapping_test_windows": 2156,
+      "top_oil": {
+        "model": {
+          "N": 2156,
+          "MAE_C": 0.16446899142107002,
+          "RMSE_C": 0.23058984051544418,
+          "bias_C": 0.03393423610671629
+        },
+        "persistence": {
+          "N": 2156,
+          "MAE_C": 0.14079003803339518,
+          "RMSE_C": 0.24792252563634143,
+          "bias_C": 0.005739795918367347
+        }
+      },
+      "HV_hotspot": {
+        "model": {
+          "N": 2156,
+          "MAE_C": 0.16259805258955098,
+          "RMSE_C": 0.21296333892758265,
+          "bias_C": -0.05071224211411043
+        },
+        "persistence": {
+          "N": 2156,
+          "MAE_C": 0.22560393645640076,
+          "RMSE_C": 0.2941493043006681,
+          "bias_C": 0.003583603896103897
+        }
+      },
+      "coverage_using_6h_validation_halfwidth": [
+        1.0,
+        0.9995361781076066
+      ]
+    },
+    "6h": {
+      "n_nonoverlapping_test_windows": 357,
+      "top_oil": {
+        "model": {
+          "N": 357,
+          "MAE_C": 0.535492819672189,
+          "RMSE_C": 0.7471977507706303,
+          "bias_C": 0.15472079806882488
+        },
+        "persistence": {
+          "N": 357,
+          "MAE_C": 0.729979025210084,
+          "RMSE_C": 1.0462268109939137,
+          "bias_C": 0.03387254901960786
+        }
+      },
+      "HV_hotspot": {
+        "model": {
+          "N": 357,
+          "MAE_C": 0.5892149940354376,
+          "RMSE_C": 0.7436662061622735,
+          "bias_C": -0.19163251009821886
+        },
+        "persistence": {
+          "N": 357,
+          "MAE_C": 1.0095308207282911,
+          "RMSE_C": 1.234798014061117,
+          "bias_C": 0.015770310924369747
+        }
+      },
+      "coverage_using_6h_validation_halfwidth": [
+        0.9775910364145658,
+        0.8263305322128851
+      ]
+    },
+    "24h": {
+      "n_nonoverlapping_test_windows": 87,
+      "top_oil": {
+        "model": {
+          "N": 87,
+          "MAE_C": 0.8588793326558065,
+          "RMSE_C": 1.215578491915769,
+          "bias_C": 0.27003274923428744
+        },
+        "persistence": {
+          "N": 87,
+          "MAE_C": 1.7754886206896552,
+          "RMSE_C": 2.250731518619827,
+          "bias_C": 0.08801724137931037
+        }
+      },
+      "HV_hotspot": {
+        "model": {
+          "N": 87,
+          "MAE_C": 0.7247475252957297,
+          "RMSE_C": 0.9800968250713277,
+          "bias_C": 0.353351691131275
+        },
+        "persistence": {
+          "N": 87,
+          "MAE_C": 1.323663827586207,
+          "RMSE_C": 1.6230223748557229,
+          "bias_C": 0.07001440229885057
+        }
+      },
+      "coverage_using_6h_validation_halfwidth": [
+        0.9425287356321839,
+        0.7701149425287356
+      ]
+    }
+  },
+  "claims_not_authorized": [
+    "Extreme heat field validation (Norwegian ambient exposure only)",
+    "Transformer hot-spot capacity restriction on unrelated 350kVA transformer",
+    "Same-site EVSE connection; feedback P<->Te"
+  ]
+}
