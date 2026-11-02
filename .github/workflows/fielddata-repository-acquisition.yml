@@ -1,0 +1,44 @@
+name: Thesis field-data acquisition (bounded public repository search)
+on:
+  push:
+    branches: [fielddata-acquisition-live-2026-11-02]
+    paths:
+      - '.github/workflows/fielddata-repository-acquisition.yml'
+      - 'scripts/fielddata_scraper.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-acquisition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install requests
+        run: python -m pip install requests
+      - name: Self-test
+        run: python scripts/fielddata_scraper.py --self-test
+      - name: Search public research repositories
+        run: python scripts/fielddata_scraper.py --max-api-calls 35 --out fielddata_output/search_only
+      - name: Download eligible original measurement CSV files (5 MB cap)
+        run: |
+          python scripts/fielddata_scraper.py \
+            --download-small-csv \
+            --max-file-mb 5 \
+            --max-api-calls 35 \
+            --out fielddata_output/download_small
+      - name: Package CSV evidence registers and source candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fielddata-evidence-2026-11-02
+          path: fielddata_output/
+          if-no-files-found: error
+          retention-days: 30
