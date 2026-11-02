@@ -1,0 +1,8 @@
+{
+  "EVSE_internal_temperature_measured": false,
+  "EVSE_cooling_state_measured": false,
+  "verified_thermal_derating_law_for_same_model": false,
+  "qatar_2026_article": "https://doi.org/10.1016/j.ecmx.2026.101960",
+  "qatar_raw_field_data_in_current_folder": false,
+  "qualification": "BLOCKED"
+}
