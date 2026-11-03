@@ -132,3 +132,10 @@ Newly documented operational vehicle-side source: [original TUM 7-EV ID1 thermal
 - [Research checkpoint sections F–G](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md): TUM thermal QA limitations, literature priorities, exact next-source acquisition and derivation tasks.
 
 **Science gate:** Data from Qatar, SINTEF, Slovenia, TUM and Li cannot be concatenated into an invented connected experiment. Transfer governing physics **only with verified constitutive terms, calibrated installation parameters, proper boundary conditions, uncertainty and independent validation**. No observed joint transformer–EVSE thermal propagations or resilience benefits have yet been demonstrated.
+
+## Supervisor-directed systematic review and model-method decision — v0.2
+
+- [Executable systematic review protocol v0.2](./SYSTEMATIC_REVIEW_EXECUTION_PROTOCOL_V02_2026-11-03.md): systematic scoping/evidence map plus detailed physical/mathematical model synthesis; PRISMA-ScR, PRISMA-S and PRISMA-P reporting guidance; six independent query blocks; physical evidence F1–F7; PINN-vs-physics criteria; **search not yet executed**.
+- [17 verified seed references, NOT systematically screened](./SYSTEMATIC_REVIEW_VERIFIED_SEED_REFERENCES_V02.csv). Includes key new direct mathematical predecessors: Bragone et al. (2022) transformer thermal PINN and Cao et al. (2026) EV thermal physics-informed neural Transformer, in addition to RACE, Qatar, Li, Wen, general thermal and coupled-resilience reviews.
+- [Empty search log](./SYSTEMATIC_REVIEW_SEARCH_LOG_TEMPLATE_2026-11-03.csv), [empty title/full text screening log](./SYSTEMATIC_REVIEW_SCREENING_TEMPLATE_2026-11-03.csv), [empty full-text equation and evidence matrix](./SYSTEMATIC_REVIEW_EXTRACTION_TEMPLATE_2026-11-03.csv). Templates are deliberately **blank** until authenticated database searches and paper screening occur.
+- [Updated checkpoint H](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md) preserves Professor Phelan's review/data-conditional model-selection request. A targeted prior-art scan is *not* the exhaustive literature review requested by the supervisor.
