@@ -133,11 +133,14 @@ class Scraper:
         identity=(url,filename,source)
         if identity in self._seen: return
         self._seen.add(identity)
+        kind=classify_name(filename)
+        if source=='TU Dortmund DriVe2X' and filename.lower() in ('measurements.csv','parameters.csv'):
+            kind='MEASUREMENT_INDEX_NOT_TIMESERIES'
         self.rows.append({**dict.fromkeys(FIELDS,''), 'source':source,
             'evidence_class':evidence_class,'doi':doi,'record_page':page,
             'file_name':filename,'file_url':url,'reported_bytes':size,
             'reported_checksum':checksum,'provenance':origin,
-            'kind':classify_name(filename),'direct_link_status':'DISCOVERED_UNTESTED',
+            'kind':kind,'direct_link_status':'DISCOVERED_UNTESTED',
             'connected_thermal_field_verified':'NO'})
 
     def zenodo(self, name, record, evidence, doi):
@@ -153,7 +156,7 @@ class Scraper:
             if not isinstance(f,dict):continue
             key=f.get('key') or f.get('filename') or f.get('name') or ''
             links=f.get('links',{})
-            link=links.get('content') or links.get('self') or links.get('download') if isinstance(links,dict) else ''
+            link=(links.get('content') or links.get('self') or links.get('download')) if isinstance(links,dict) else ''
             self.add(name,evidence,doi,page,key,link,f.get('size',''),f.get('checksum',''),'Zenodo public record API file metadata')
 
     def ornl(self,name,slug,evidence,doi):
@@ -245,7 +248,7 @@ class Scraper:
         count=0
         for r in candidates:
             if count>=max_files:break
-            if r['kind'] not in ('CANDIDATE_DATA_FILE','ELECTRICAL_TOPOLOGY_MODEL','ARCHIVE_CONTENT_UNKNOWN'):continue
+            if r['kind'] not in ('CANDIDATE_DATA_FILE','MEASUREMENT_INDEX_NOT_TIMESERIES','ELECTRICAL_TOPOLOGY_MODEL','ARCHIVE_CONTENT_UNKNOWN'):continue
             if r['file_url'].startswith('https://www.dropbox.com/'):
                 r['direct_link_status']='ACCESS_ROUTE_REVIEW_REQUIRED';continue
             if r['reported_bytes']:
@@ -280,9 +283,11 @@ class Scraper:
                 else: match=None
                 r['checksum_verified']='PASS' if match else ('FAIL' if match is False else 'NO_PUBLISHED_CHECKSUM')
                 if match is False:raise ValueError('CHECKSUM_MISMATCH')
-                if r['kind']=='CANDIDATE_DATA_FILE' and r['file_name'].lower().endswith(('.csv','.tsv')) and signature=='TEXT_DELIMITED':
+                if r['kind'] in ('CANDIDATE_DATA_FILE','MEASUREMENT_INDEX_NOT_TIMESERIES') and r['file_name'].lower().endswith(('.csv','.tsv')) and signature=='TEXT_DELIMITED':
                     with tmp.open('r',encoding='utf-8-sig',errors='replace',newline='') as f:
-                        header=next(csv.reader(f,delimiter='\t' if r['file_name'].endswith('.tsv') else ','),[])
+                        sample=f.read(3500);f.seek(0)
+                        delimiter='\t' if r['file_name'].endswith('.tsv') else (';' if sample.splitlines()[0].count(';')>sample.splitlines()[0].count(',') else ',')
+                        header=next(csv.reader(f,delimiter=delimiter),[])
                     r['observed_columns']=' | '.join(header[:50])[:2000]
                 tmp.rename(final)
                 r['local_file']=str(final.relative_to(self.out))
