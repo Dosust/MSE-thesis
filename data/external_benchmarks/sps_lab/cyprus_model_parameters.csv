@@ -1,0 +1,16 @@
+parameter,value,unit,source_type,evidence_note
+transformer_rated,315,kVA,model,pp.create_transformer_from_parameters
+hv_voltage,11,kV,model,source notebook
+lv_voltage,0.4,kV,model,source notebook
+vk,6,percent,model,source notebook
+vkr,0.4,percent,model,source notebook
+feeder1_distribution_nodes,24,count,model,source notebook
+feeder2_distribution_nodes,8,count,model,source notebook
+feeder3_distribution_nodes,29,count,model,source notebook
+feeder1_load_buses,48,count,model,source loop
+feeder2_load_buses,32,count,model,source loop
+feeder3_load_buses,29,count,model,source loop
+load_p_per_phase,0.4,kW,model,source notebook
+load_q_per_phase,0.132,kvar,model,source notebook
+total_load_p,130.8,kW,derived,109 times 3 times 0.4
+total_load_q,43.164,kvar,derived,109 times 3 times 0.132
