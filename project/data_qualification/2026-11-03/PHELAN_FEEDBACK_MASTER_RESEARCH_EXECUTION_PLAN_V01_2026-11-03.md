@@ -2,7 +2,7 @@
 
 **Created:** 3 November 2026  
 **Thesis:** *Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience*  
-**Branch:** \`user-data-qualification-2026-11-03\` (research working branch, not \`main\`)  
+**Branch:** `user-data-qualification-2026-11-03` (research working branch, not `main`)  
 **Status:** **ACTIONABLE PLANNING DOCUMENT — NOT A COMPLETED SYSTEMATIC REVIEW, VALIDATED PINN, SUPERVISOR APPROVAL OR FINISHED THESIS.**  
 **Research owner:** thesis researcher; supervisor: Professor Pat Phelan. An independent second reviewer, data owner, or engineer is included as a role **only if actually available**, never fabricated.
 
@@ -157,7 +157,7 @@ The [machine-readable task register](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11
 
 ## 5. Dependencies, priority and work order
 
-\`\`\`text
+```text
 NOW:  WP0 protocol/roles/log freeze
           |
           +--> WP1 search/export --> WP2 dedup/screen --> WP3 primary equation extraction
@@ -174,7 +174,7 @@ NOW:  WP0 protocol/roles/log freeze
                                                                                |
                                                                                v
                                                                   WP9 full thesis SO1–SO3
-\`\`\`
+```
 
 **Critical path:** systematic search/screen → exact primary-source mathematics → evidence-based novelty boundary, conducted alongside dataset QA → baseline/model choice → supervisor briefing. WP6 can start before WP2 is complete using *already verified physical principles*, but final physics claims must reflect review findings. WP9 is a distinct continuation goal and should not delay answering the literature-review request.
 
@@ -203,14 +203,14 @@ NOW:  WP0 protocol/roles/log freeze
 
 ## 7. Repository organization and artifacts
 
-All new files live in \`project/data_qualification/2026-11-03/\` on the existing review branch; avoid frozen-file edits:
-- **This master plan:** \`PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md\`.
-- **Task register:** \`PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv\` (T01–T44 with owner role, predecessors, deliverable, acceptance test, current state).
-- **Review method:** \`SYSTEMATIC_REVIEW_EXECUTION_PROTOCOL_V02_2026-11-03.md\`.
-- **Starting bibliography:** \`SYSTEMATIC_REVIEW_VERIFIED_SEED_REFERENCES_V02.csv\`.
-- **Search log:** \`SYSTEMATIC_REVIEW_SEARCH_LOG_TEMPLATE_2026-11-03.csv\` (no counts yet).
-- **Screening log:** \`SYSTEMATIC_REVIEW_SCREENING_TEMPLATE_2026-11-03.csv\` (no screened studies yet).
-- **Equation/data extraction:** \`SYSTEMATIC_REVIEW_EXTRACTION_TEMPLATE_2026-11-03.csv\` (no source-level reviewed entries yet).
+All new files live in `project/data_qualification/2026-11-03/` on the existing review branch; avoid frozen-file edits:
+- **This master plan:** `PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md`.
+- **Task register:** `PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv` (T01–T44 with owner role, predecessors, deliverable, acceptance test, current state).
+- **Review method:** `SYSTEMATIC_REVIEW_EXECUTION_PROTOCOL_V02_2026-11-03.md`.
+- **Starting bibliography:** `SYSTEMATIC_REVIEW_VERIFIED_SEED_REFERENCES_V02.csv`.
+- **Search log:** `SYSTEMATIC_REVIEW_SEARCH_LOG_TEMPLATE_2026-11-03.csv` (no counts yet).
+- **Screening log:** `SYSTEMATIC_REVIEW_SCREENING_TEMPLATE_2026-11-03.csv` (no screened studies yet).
+- **Equation/data extraction:** `SYSTEMATIC_REVIEW_EXTRACTION_TEMPLATE_2026-11-03.csv` (no source-level reviewed entries yet).
 - **Prior physical/data evidence:** Report 1 and source-specific audits indexed in existing README.
 
 **Version-control instructions:** add new run-specific logs rather than modifying blank templates; preserve retrieved RIS/BibTeX exports locally or in approved private storage; do not upload copyrighted full texts to public GitHub; use fixed source DOI and retrieval dates, record exact reason for every assumption and every blocked task; amend checkpoint with actual progress but do not change percentage merely from tasks being listed.
