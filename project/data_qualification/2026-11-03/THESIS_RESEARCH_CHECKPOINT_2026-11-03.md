@@ -3,7 +3,7 @@
 **Project:** Engineering of Power–Electrified Transportation Interdependencies for Resilience  
 **Scope:** Physics-based mathematical engineering of thermal/electrical power–electrified-transport interactions under extreme heat, with resilience and service outcomes.  
 **State:** WORKING SCIENTIFIC CHECKPOINT, NOT A FROZEN RESULT OR SUPERVISOR-ASSESSMENT.  
-**Working branch:** \`user-data-qualification-2026-11-03\`; **main has not been changed**.  
+**Working branch:** `user-data-qualification-2026-11-03`; no merge from this branch into `main`. The `main` branch independently contains a newer TUM FD-013 field-audit record.  
 **Purpose:** Preserve complete continuity for the next session without repeating source acquisition or overstating validation.
 
 ## A. Thesis objectives: planning progress (not an objective measurement)
@@ -79,3 +79,13 @@ This physical conservation statement is general. Specific model reductions, cons
 ### Research handoff
 
 **Next working starting point:** [Report 1](./REPORT_01_MEASURED_DATA_RQ1_RQ7_2026-11-03.md) + [This checkpoint](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md) + [master inventory](./MASTER_DATA_INVENTORY_2026-11-03.csv). Begin at task **E.1**, then E.2. Use review branch; do not imply \`main\` contains these outputs until a deliberate merge is verified.
+
+## F. Subsequent evidence — TUM FD-013 / D20 (reconciled 3 November 2026)
+
+- **Original scientific audit:** [TUM ID1 original-field Parquet thermal QA on GitHub main](https://github.com/Dossiya-SE/MSE-thesis/blob/main/data/field_candidates/2026-11-03/TUM_ID1_FIELD_THERMAL_QA_2026-11-03.md). Cross-referenced as **FD-013** in the field-candidate register and **D20** in the master inventory on this working branch. Google Sheet inventories were independently checked to already include the same IDs.
+- **Source:** [TUM real EV UDS dataset](https://github.com/TUMFTM/electric-vehicle-uds-dataset), seven unmodified production vehicles, road/charging/parking records, original Git LFS Parquet. CC BY-NC 4.0 terms and attribution apply; raw originals are on the user's **Mac**, **not** archived in Drive/GitHub through this checkpoint.
+- **Evidence strength:** Real-world **vehicle-side thermal** source is relevant to SO1/SO2, extending the field-origin battery/vehicle evidence beyond lab-only KU Leuven. ID1 reported **40,401,700 long-format records**; sampled ambient −9.5 to **+39.5°C**. Ambient range alone does **not** show high-temperature observations coincident with verified charging, nor validated battery heat dynamics. Actual raw Parquet bytes were not accessible to this current-session execution; the counts are from the saved GitHub audit based on user-terminal results.
+- **Unqualified measurements:** Battery pack inlet/outlet channels IDs 1272/1273 contain many **1023°C-like / >200°C** readings outside their published bounds; **do not use as real battery temperature or delete without verifying UDS decoding/sentinel conventions**. Sensor meaning (coolant vs general inlet/outlet), vehicle clocks, sampling, and charging electrical-state synchronization remain open. Seven original SHA-256 digests and all-seven-vehicle full QA not yet recorded.
+- **Scientific gate:** **FIELD SOURCE RELEVANT — USER-LOCAL ACQUIRED — THERMAL QA PENDING**. Not admitted for thermal-parameter identification, external model validation, or measured transformer↔EVSE coupling. No EVSE internal temperatures or supplying-transformer topology.
+- **Priority next steps:** obtain immutable seven-file SHA-256 manifest and repository/LFS commit; audit all seven files and temperature codes; resolve 1023°C semantics with dictionary/author evidence; align battery temperature, current, voltage, SOC and *verified charging state* with measured event tolerance; perform cross-vehicle temporal/vehicle-separated holdouts and UQ only after QA. Pursue separately an actual physically mapped and instrumented transformer–EVSE installation.
+- **Progress score:** retain prior provisional SO1 35%, SO2 20%, SO3 5%, equal-weight 20% overall **without speculative increase**. TUM expands acquisition and potential validation capacity, but G2 thermal physics and coupled field constraints remain blocked.
