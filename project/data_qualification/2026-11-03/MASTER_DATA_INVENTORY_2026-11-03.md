@@ -90,3 +90,11 @@
 - FCP source original SHA-256: `416a619a829823bfc5cebdf7c193ada6d6807d0aeff734a05e4345c56a025095`. ZIP CRC check passed; the user-uploaded FCP source has **not** been uploaded to Drive or admitted as experimental evidence.
 
 **No model parameters, thermal limits, causal links, or field measurements have been fabricated. No frozen scientific files have been modified.**
+
+## TUM D20 — real-world vehicle thermal evidence (FD-013; reviewed 3 November 2026)
+
+The [main-branch TUM ID1 scientific audit](https://github.com/Dossiya-SE/MSE-thesis/blob/main/data/field_candidates/2026-11-03/TUM_ID1_FIELD_THERMAL_QA_2026-11-03.md) documents user-local Git-LFS acquisition of **seven production-EV UDS/OBD-II Parquet logs** from the [TUM original repository](https://github.com/TUMFTM/electric-vehicle-uds-dataset). D20 is **operational vehicle-side battery thermal** evidence, distinct from controlled laboratory studies and **not** a connected EVSE-transformer field experiment.
+
+Reported ID1 has **40,401,700 long-format rows** and sampled ambient conditions up to **39.5°C**, but charging/battery-temperature co-occurrence and input continuity are not established. Pack inlet/outlet signal IDs **1272/1273** have recurrent **1023°C-like codes and >200°C values** exceeding published dictionary bounds. These are **flagged**, not independently decoded or physically accepted. Original seven-file hashes, full vehicle QA, time/signal definitions, verified charging-state/currents, and external thermal-model validation remain pending. Source original bytes reside on the user's Mac; no Drive backup is asserted.
+
+**Status:** `USER_LOCAL_7_PARQUET_ACQUIRED_ID1_40401700_ROWS_QA_PENDING`, **SO1/SO2 component support only**. Use verified battery physics with valid operational signals only after QA; do not claim charger-internal derating or synchronized power↔transport coupling. Registration cross-reference: [working-branch master CSV](./MASTER_DATA_INVENTORY_2026-11-03.csv) and [working-branch FD-013](../../../../data/field_candidates/2026-11-03/field_candidate_register.csv).
