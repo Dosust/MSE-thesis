@@ -27,6 +27,26 @@ jobs:
         run: |
           python .github/skills/doe-power-ev-data-scraper/scripts/doe_scraper.py \
             --out doe_scraper_output --download-small --max-file-mb 5 --max-files 8 --max-api-calls 70
+      - name: Inspect ORNL public API file-object formats
+        shell: bash
+        run: |
+          python - <<'PY'
+          import requests,json
+          base='https://openenergyhub.ornl.gov/api/explore/v2.1/catalog/datasets'
+          for slug in ('doe-ev-data-collection-charging-data','iowa-distribution-test-systems','energy-router-electric-vehicle-dataset'):
+            for part in ('','/records?limit=2'):
+              r=requests.get(base+'/'+slug+part,timeout=35)
+              data=r.json()
+              print('ORNL SHAPE',slug,part,r.status_code,'top',list(data) if isinstance(data,dict) else type(data),flush=True)
+              if part:
+                results=data.get('results',[]) if isinstance(data,dict) else []
+                print('NUM',data.get('total_count'),len(results),flush=True)
+                for x in results[:2]:
+                  print('ITEM',json.dumps(x,ensure_ascii=False)[:5500],flush=True)
+              else:
+                ds=data.get('dataset',{}) if isinstance(data,dict) else {}
+                print('METADATA',json.dumps(ds,ensure_ascii=False)[:2200],flush=True)
+          PY
       - name: Display scientific qualification summary
         if: always()
         run: |
