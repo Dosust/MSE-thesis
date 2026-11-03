@@ -39,3 +39,9 @@ The intended *systematic* search uses six independent conceptual blocks A–F in
 **Required final outputs:** (1) reproducible systematic scoping evidence map with actual PRISMA-ScR accounting, (2) page/equation-level primary model comparison, (3) critical comparison to closest novelty counterexamples, (4) dataset suitability and identifiable states audit, (5) justified pure-physics vs optional PINN/gray-box choice, (6) thesis-ready synthesis and concise supervisor response.
 
 **No automatic percentages or supervisor approvals:** do not mark completed or interpret pilot source count as review completeness. Do not change frozen thesis authorities or merge to main automatically.
+
+## Historical work reconciliation — READ BEFORE STARTING A NEW SEARCH
+
+**[Full thesis research-history / literature-reuse audit](./HISTORICAL_REUSE_AUDIT_2026-11-03.md)** (2026-11-03): previous October literature work **already includes** a repository-reported **687 → 404 → 433 → 200 metadata-screened → 26 priority papers** funnel; two distinct older 26-paper pools (47 unique DOI keys); transformer P01–P14 source audits; focused five-PDF reading; 40-to-8 component literature; older Q0 209-record workbook not yet reconciled. The November 25-pilot list overlaps the October 26 priority list in only **three normalized DOI keys**. Those are different corpora and must not be added together as independent studies or represented as final PRISMA counts.
+
+**Correct next gate:** HISTORICAL CORPUS RECOVERY + DOI/PROVENANCE RECONCILIATION FIRST, then lock new systematic-review eligibility and run missing database-native searches. The latest formal PRISMA review remains incomplete, but prior metadata screening and source reading must be reused, not restarted.
