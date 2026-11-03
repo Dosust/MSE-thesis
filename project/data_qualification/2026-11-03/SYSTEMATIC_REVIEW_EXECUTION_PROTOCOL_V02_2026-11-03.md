@@ -186,4 +186,6 @@ Constraint-weight selection/normalization, noisy derivatives, structural identif
 - **IEC 60076-7:2018** loading guide for mineral-oil-immersed transformers https://webstore.iec.ch/en/publication/34351 ; an applicable model standard where hardware conditions match; **not** source validation.
 - **TUM seven-EV operational UDS** original https://github.com/TUMFTM/electric-vehicle-uds-dataset and [ID1 thesis QA](https://github.com/Dossiya-SE/MSE-thesis/blob/main/data/field_candidates/2026-11-03/TUM_ID1_FIELD_THERMAL_QA_2026-11-03.md). Battery field source only; anomalous 1023°C-like codes require QA.
 
+**Starting references (NOT systematic-screened):** [17-source verified seed bibliography, each with claim-level limitations](./SYSTEMATIC_REVIEW_VERIFIED_SEED_REFERENCES_V02.csv).
+
 **Immediate next action:** Freeze/approve this protocol, execute platform-valid A–F searches with auditable counts, and independently extract full equations from Bragone, RACE, Cao, Krama and Li before selecting modeling complexity.
