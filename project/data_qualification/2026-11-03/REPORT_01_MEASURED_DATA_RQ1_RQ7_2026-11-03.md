@@ -101,7 +101,7 @@ For a residual-based descriptive band: the July–September 95th percentile abso
 
 ## 5. RQ4 — How do EV charging electrical and battery signals evolve?
 
-**Input:** KU Leuven four AC experimental source CSVs, **7,598 + 4,252 + 15,083 + 13,940 = 40,873 row records**. Measured/processed channels include \`ChargeLinePower264\`, \`ChargeLineVoltage264\`, \`ChargeLineCurrent264\`, \`BattVoltage132\`, \`RawBattCurrent132\`, \`SOCave292\`, \`BMSmaxPackTemperature\`.
+**Input:** KU Leuven four AC experimental source CSVs, **7,598 + 4,252 + 15,083 + 13,940 = 40,873 row records**. Measured/processed channels include `ChargeLinePower264`, `ChargeLineVoltage264`, `ChargeLineCurrent264`, `BattVoltage132`, `RawBattCurrent132`, `SOCave292`, `BMSmaxPackTemperature`.
 
 | Source file | Rows | Median line power (source units) | Median battery voltage | Median battery current (signed) | Time steps backwards |
 |---|---:|---:|---:|---:|---:|
@@ -132,9 +132,9 @@ r_{\mathrm{DC/AC}}=\frac{P_\mathrm{DC,out}}{P_\mathrm{AC,in}},\qquad
 
 For four AC files, an independent **provisional battery-electrical-power/AC-line-power proxy** has median **0.9282, 0.9357, 0.9470, 0.9469** respectively. It includes possible auxiliaries/incompatible metering boundaries and therefore must not be marketed as a laboratory total-efficiency certificate.
 
-**Instrument issue:** In Figure10 EV1_DC2, the \`FC_dcCurrent\` and \`FC_dcVoltage\` headings appear possibly interchanged (values around 368 and 123, while battery voltage is ~368 V). The independent explicitly labeled **AC power/DC power** pair was used for the above summary; the heading issue remains a sensor-definition gate.
+**Instrument issue:** In Figure10 EV1_DC2, the `FC_dcCurrent` and `FC_dcVoltage` headings appear possibly interchanged (values around 368 and 123, while battery voltage is ~368 V). The independent explicitly labeled **AC power/DC power** pair was used for the above summary; the heading issue remains a sensor-definition gate.
 
-**EPFL cross-check:** Earlier audit (not a new raw calculation here) identified **1,878 sessions**, **61,816 populated minute observations** versus 64,277 described publicly, and roughly **15% median relative difference** between independently integrated \`P(W)\` and reported session energy. These figures reflect **unreconciled energy-accounting boundaries**, not charger heat or an efficiency penalty. [Source EPFL](https://github.com/DESL-EPFL/Level-3-EV-charging-dataset).
+**EPFL cross-check:** Earlier audit (not a new raw calculation here) identified **1,878 sessions**, **61,816 populated minute observations** versus 64,277 described publicly, and roughly **15% median relative difference** between independently integrated `P(W)` and reported session energy. These figures reflect **unreconciled energy-accounting boundaries**, not charger heat or an efficiency penalty. [Source EPFL](https://github.com/DESL-EPFL/Level-3-EV-charging-dataset).
 
 **Decision:** conditional electrical input/output loss estimates are possible. The difference \(\Delta P\) is **not a measured EVSE heat rejection**, and neither dataset proves charger temperature-driven derating in extreme heat.
 
@@ -143,7 +143,7 @@ For four AC files, an independent **provisional battery-electrical-power/AC-line
 **Status: source available, quantitative question not freshly tested.** Prior D04 OPSD audit cites **116,355 qualified 15-minute intervals across two locations**, with separate EV and electrical household feeds, but source raw records were not passed to this execution. OPSD notes interpolation and past-day filling of gaps; interpolation status must be included as a quality covariate.
 
 **Minimum valid test design when originals are restored:**
-- Identify same-premises measured \`grid_import\`, EV charging demand and optional PV/storage, their units and 15-minute interval bases; check whether EV usage is part of the metered net site total.
+- Identify same-premises measured `grid_import`, EV charging demand and optional PV/storage, their units and 15-minute interval bases; check whether EV usage is part of the metered net site total.
 - Fit chronological baseline \(\widehat P_{\mathrm{grid},t+h}\) using time-of-day/day-of-week and recent measured grid load; compare a second model adding lagged measured EV demand, with **no future realized EV power leaked into predictors**.
 - Evaluate same test timestamps with MAE and RMSE and report site-separated results and confidence under autocorrelation; compare results on only noninterpolated rows.
 - Do not interpret the prediction improvement as causal impact if EV load is already included in the site meter, or extrapolate to transformer loading with no electrical mapping.
@@ -184,15 +184,15 @@ For four AC files, an independent **provisional battery-electrical-power/AC-line
 
 ## 11. Python reproduction of selected new numerical results
 
-**Script:** [REPORT_01_REPRODUCE.py](./REPORT_01_REPRODUCE.py). Install \`pandas\`, \`numpy\`, \`scipy\` and \`openpyxl\`, then run:
+**Script:** [REPORT_01_REPRODUCE.py](./REPORT_01_REPRODUCE.py). Install `pandas`, `numpy`, `scipy` and `openpyxl`, then run:
 
-\`\`\`bash
+```bash
 python REPORT_01_REPRODUCE.py \
   --sintef "Barug2025_sensordata(2).csv" \
   --p control_measurements_P_2025.csv \
   --q control_measurements_Q_2025.csv \
   --evzip doi-10.48804-c5pt0r.zip
-\`\`\`
+```
 
 Source-original MD5 hashes are checked before calculations. This compact script independently reproduces **key RQ1–RQ5 numerical metrics**: ambient/current correlations; one-hour chronological RC model/persistence RMSE and MAE; Slovenia synchronized-count/sign fractions; KU Leuven AC source summaries and Figure10 DC power ratios. The larger research run also calculated all-sensor correlations, 6/24-hour conditional hindcasts, station-level statistics and lag profiles; these are detailed above and are not implemented in the compact script. RQ6/RQ7 are explicitly **not** reproduced without their original row-level inputs.
 
