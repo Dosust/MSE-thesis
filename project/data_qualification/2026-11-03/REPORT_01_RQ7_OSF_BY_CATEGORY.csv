@@ -1,0 +1,12 @@
+category,source_csv_files,eligible_with_nonzero_baseline,median_event_minus_pre_abs_current_A
+Frequency Deviation,14,14,0.2
+Harmonic,27,18,0
+Sag_extended,63,0,
+Temporary Overvoltage,31,22,-5.6
+Temporary Undervoltage,27,19,-5.4
+Transient Overvoltage,10,1,-0.1
+Transient Undervoltage,10,1,-0.2
+Voltage Deviation,47,47,0
+Voltage Interruption,30,19,-6.1
+Voltage Sag,30,20,-3.5
+voltage Swell,24,16,-5.5
