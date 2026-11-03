@@ -14,6 +14,8 @@
 - [SEARCH_EXECUTION_LOG.csv](./SEARCH_EXECUTION_LOG.csv) — audit log distinguishing actual exploratory searches from database searches NOT RUN
 - [EVIDENCE_EXTRACTION_TEMPLATE.csv](./EVIDENCE_EXTRACTION_TEMPLATE.csv) — field-level recording template for every eventually included study
 - [MILESTONE_GATES.md](./MILESTONE_GATES.md) — controlled workflow and distinct tests for source, modelling and field validation
+- [EXTRACTION_FIELD_GUIDE.md](./EXTRACTION_FIELD_GUIDE.md) — measurement, topology and appraisal-field definitions
+- [FIRST_PASS_CRITICAL_SYNTHESIS.md](./FIRST_PASS_CRITICAL_SYNTHESIS.md) — initial paper-by-paper evidence appraisal and falsifiable gap hypothesis
 
 ## Already existing, but NOT consolidated as reviewed studies without screening
 - [Targeted 18-source methods matrix on the Report 1 working branch](https://github.com/Dossiya-SE/MSE-thesis/blob/research/report-01-rq1-rq11-2026-11-03/project/data_qualification/2026-11-03/REPORT_01_LITERATURE_METHOD_EVIDENCE_MATRIX_2026-11-03.csv).
