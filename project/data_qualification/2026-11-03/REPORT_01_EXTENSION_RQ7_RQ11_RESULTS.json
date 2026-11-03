@@ -1,0 +1,187 @@
+{
+  "report": "Report 1 extended to RQ1-RQ11",
+  "date": "2026-11-03",
+  "evidence": "Separate observed components; no observed coupled power-EVSE system",
+  "sources": {
+    "sintef": {
+      "doi": "10.5281/zenodo.17223516",
+      "publisher_md5": "5d81840a2f901f04fded98c3e1097b6e",
+      "n": 8592
+    },
+    "OSF": {
+      "doi": "10.17605/OSF.IO/94GKC",
+      "upload_sha256": "38af5d53ff8779b75a746c6d5b29d13c84bedccf21793bdad308ba828151b707"
+    }
+  },
+  "RQ6": {
+    "status": "NOT_COMPUTED",
+    "reason": "OPSD original household 15min records not available in executable environment"
+  },
+  "RQ7": {
+    "status": "LAB_COMPONENT_PRELIMINARY",
+    "source_csv": 313,
+    "nonempty_csv": 295,
+    "empty_csv": 18,
+    "main_csv": 250,
+    "extended_sag_csv": 63,
+    "parsed_rows": 3990811,
+    "valid_current_values": 2308606,
+    "valid_temperature_values": 23052,
+    "prior_audit_rows": 4061379,
+    "prior_difference_rows": 70568,
+    "event_sample_duration_eligibility": 179,
+    "nonzero_baseline_eligibility": 177,
+    "event_pre_baseline_window_s": [
+      -10,
+      -2
+    ],
+    "min_duration_s": 0.5,
+    "min_pre_samples": 30,
+    "min_event_samples": 10,
+    "group_median_event_minus_pre_abs_current_A": {
+      "Voltage Interruption": {
+        "n": 19,
+        "median": -6.1
+      },
+      "Voltage Sag": {
+        "n": 20,
+        "median": -3.5
+      },
+      "Temporary Overvoltage": {
+        "n": 22,
+        "median": -5.6
+      },
+      "Temporary Undervoltage": {
+        "n": 19,
+        "median": -5.4
+      },
+      "voltage Swell": {
+        "n": 16,
+        "median": -5.5
+      },
+      "Frequency Deviation": {
+        "n": 14,
+        "median": 0.2
+      },
+      "Voltage Deviation": {
+        "n": 47,
+        "median": 0
+      },
+      "Harmonic": {
+        "n": 18,
+        "median": 0
+      },
+      "Transient Overvoltage": {
+        "n": 1,
+        "median": -0.1
+      },
+      "Transient Undervoltage": {
+        "n": 1,
+        "median": -0.2
+      }
+    },
+    "caveat": "Within-experiment before/during median absolute battery-current; not sham-controlled or grid-side voltage RMS; supplementary files empty or ineligible; no connected EVSE thermal validation"
+  },
+  "RQ8": {
+    "fitted_effective_coefficients": {
+      "a": 0.08074609299697805,
+      "b": 0.0693672319919596,
+      "c": 1.0843352522834755,
+      "Iref_A": 29.375
+    },
+    "training_transitions": 4223,
+    "design_rank": 3,
+    "normalized_condition_number": 16.74461379803042,
+    "bootstrap_24h_blocks": 180,
+    "bootstrap_seed": 20261103,
+    "percentile_2p5_50_97p5": {
+      "a": [
+        0.07415918428265593,
+        0.08232858856550931,
+        0.0913875163072448
+      ],
+      "b": [
+        0.05718677140230525,
+        0.07048481979740973,
+        0.08001758925664522
+      ],
+      "c": [
+        0.9870809934663356,
+        1.1088291213573593,
+        1.2410081034322045
+      ]
+    },
+    "discrete_tau_hours": 11.877484892711648,
+    "status": "EFFECTIVE_STATISTICAL_MODEL_IDENTIFIED_PHYSICAL_COMPONENTS_UNIDENTIFIED"
+  },
+  "RQ9": {
+    "one_hour_dT_dTa": 0.08074609299697805,
+    "one_hour_dT_dI_at_35p692501A": 0.005738595195052096,
+    "one_hour_dT_dI_at_52p4113753A": 0.008426634672158505,
+    "one_hour_dT_dT0": 0.9192539070030219,
+    "one_hour_plus_10pct_current_at_median_C": 0.021506605547489187,
+    "conditional_24h": {
+      "T0_C": 20,
+      "Ta_C": 20,
+      "I_A": 35.692501,
+      "baseline_T24_C": 32.74883003041404,
+      "plus_1C_ambient_C": 0.8674280558850569,
+      "plus_10pct_current_C": 0.23103821307420702,
+      "plus_10pct_a_C": -0.8209673233924022,
+      "plus_10pct_b_C": 0.11001819670200774,
+      "plus_10pct_c_C": 1.164864806339402
+    },
+    "status": "MODEL_ONLY_SENSITIVITIES_NOT_FIELD_CAUSAL_EFFECTS"
+  },
+  "RQ10": {
+    "chronological_test_n": 2158,
+    "training_marginal_ranges": {
+      "ambient_C": [
+        -19.58,
+        25.97
+      ],
+      "current_A": [
+        8.4125,
+        75.1025
+      ],
+      "top_oil_C": [
+        3.8274999,
+        38.86
+      ]
+    },
+    "test_marginal_ranges": {
+      "ambient_C": [
+        -5.855,
+        14.485
+      ],
+      "current_A": [
+        21.43,
+        63.335
+      ],
+      "top_oil_C": [
+        11.78,
+        27.557499
+      ]
+    },
+    "test_fraction_within_each_train_marginal_range": 1,
+    "overall_model_RMSE_C": 0.21467745788413392,
+    "persistence_RMSE_C": 0.24797445498426643,
+    "overall_model_MAE_C": 0.14692441070574894,
+    "persistence_MAE_C": 0.14093643280815568,
+    "monthly_model_RMSE_C": {
+      "October": 0.22267798799539956,
+      "November": 0.20650526215219986,
+      "December": 0.21425727271481912
+    },
+    "monthly_persistence_RMSE_C": {
+      "October": 0.24846021231540175,
+      "November": 0.2592313821069894,
+      "December": 0.2351793510762229
+    },
+    "status": "SAME_INSTALLATION_VALIDATION_ONLY_NO_EXTERNAL_TRANSFER_OR_EXTREME_HEAT"
+  },
+  "RQ11": {
+    "status": "CONDITIONAL_MATHEMATICAL_FORMULATION_ONLY",
+    "missing": "connected transformer-EVSE topology, observed thermal interfaces, equipment limits, derating logs and measured charging-service requirements"
+  }
+}
