@@ -45,7 +45,9 @@ jobs:
                   print('ITEM',json.dumps(x,ensure_ascii=False)[:5500],flush=True)
               else:
                 ds=data.get('dataset',{}) if isinstance(data,dict) else {}
-                print('METADATA',json.dumps(ds,ensure_ascii=False)[:2200],flush=True)
+                print('META_KEYS',list(data.get('metas',{})),flush=True)
+                print('ATTACHMENTS',json.dumps(data.get('attachments',[]),ensure_ascii=False)[:12000],flush=True)
+                print('METADATA',json.dumps(ds,ensure_ascii=False)[:500],flush=True)
           PY
       - name: Display scientific qualification summary
         if: always()
