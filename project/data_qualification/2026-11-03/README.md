@@ -97,3 +97,9 @@ Read [full new archive qualification, checksums and numerical QA](./UPLOADED_ARC
 - **Google Sheets:** [Master data inventory](https://docs.google.com/spreadsheets/d/1zsiI8TPJeI2jKiZqlGj1okBrD6kuBVpw7xHzOxJcV6A/edit) and [Verified Field Candidates](https://docs.google.com/spreadsheets/d/1FgsfDBsCP43L6GyRbJ8v0NmUxseL4aJPeRnHBIHJqzk/edit) updated.
 
 **Admissibility boundary:** authentically paired operational electrical P/Q is not observed thermally coupled transformer–EVSE behavior. No P→Tₑ, Tₑ→P or service-resilience field validation is claimed.
+
+## Report 1 — Seven measured-data research questions
+
+**[Open Report 1: RQ1–RQ7 measured-data answers](./REPORT_01_MEASURED_DATA_RQ1_RQ7_2026-11-03.md)**
+
+Results generated from publisher-checksum-matched SINTEF transformer sensors, Slovenia paired station P/Q, and the KU Leuven experimental charging archive. RQ1–RQ3 have numerical results, RQ4–RQ5 have qualified component numerical results, while RQ6–RQ7 explicitly retain blocked independent reanalysis pending the original observation rows in the runnable environment. No causal coupled P↔Tₑ or extreme-heat field validation is asserted. New report is working evidence on the review branch only.
