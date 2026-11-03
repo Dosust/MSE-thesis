@@ -1,0 +1,5 @@
+dataset_id,source,type,decision,priority,upstream_url,critical_limitation
+SPS-CYP-LV-001,Cyprus-Grids Network1,network_model,PROVISIONAL_ELECTRICAL_BENCHMARK,P1,https://github.com/SPS-L/Cyprus-Grids/blob/main/LV_Suburban_Network/Network1.ipynb,No original temperature/EVSE measurements or executed power-flow results
+SPS-PYE-5BUS-001,PyEPlan five-bus,example_csv,PROVISIONAL_UNIT_TEST,P2,https://github.com/SPS-L/pyeplan/tree/master/examples/5_bus,Identical active/reactive demand matrices and undocumented units
+SPS-TSOC-TOOLS-001,TSOC data analysis,software,METHODS_ONLY,P3,https://github.com/SPS-L/TSOC-data-analysis,No original measurement dataset verified here
+SPS-DYNAGNN-001,DYNAGNN,software_models,METHODS_ONLY,P3,https://github.com/SPS-L/DYNAGNN,Not thermal field data
