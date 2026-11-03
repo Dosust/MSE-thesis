@@ -51,3 +51,9 @@ Previous stage 1–7 model protocols, code and mathematical structure are reusab
 **Consequence:** The latest review's statement “no formal systematic searches have been done” must be qualified: historical **metadata-screening/database-derived work exists**, but a **methodologically complete and provenance-reconciled systematic review under the new protocol is not demonstrated**.
 
 **Status:** HISTORICAL RECONCILIATION DOCUMENTED; FULL SYSTEMATIC REVIEW AND COUPLED FIELD VALIDATION OPEN. No supervisor approval or thesis progress changes implied.
+
+## IMPORTANT CORRECTION — 404 versus 209 (verified against original spreadsheet, 2026-11-03)
+
+The original archived \`Q0_Evidence_Corpus_Audited_v2.xlsx\` was independently imported and its sheets read. **MASTER_Q0 contains 404 distinct rows; PROVENANCE_687 contains 687 original records.** The prior statement that a second separate “209-record Q0 workbook” exists is **not supported by the full file**. Approximately the first 210 records were visible in an indexed text excerpt; this was a **partial extraction window**, not the workbook's total size. Its 404 confirmatory title/abstract and final fulltext statuses are all \`PENDING\`. This supersedes all earlier unqualified references to 209 as a distinct prior study corpus.
+
+The [new canonical 533-record master](./MASTER_SYSTEMATIC_LITERATURE_REGISTER_V01.csv) and [provenance crosswalk](./HISTORICAL_BIBLIOGRAPHY_PROVENANCE_CROSSWALK_V01.csv) integrate the 404 historical base with October and November DOI candidates while retaining the original source IDs. These counts are bibliographic reconciliation, not independent full-paper validation or PRISMA.
