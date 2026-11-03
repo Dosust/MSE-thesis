@@ -121,9 +121,9 @@ The first targeted [systematic-review protocol (10 relevant studies; not a compl
 
 **Immediate priority:** freeze exact searches after supervisor-method approval, export multiple primary bibliographic databases and screen, extract Bragone/RACE/Qatar/Li/Cao equation-by-equation, then decide physics ODE/PDE versus gray-box/PINN using held-out experimental data and UQ. Continue source search for actual physically connected field interface. Keep SO1 35%, SO2 20%, SO3 5% only as provisional planning estimates.
 
-## I. Approved working execution queue to address Professor Phelan
+## I. Documented execution queue to address Professor Phelan
 
-**Note:** *approved working* here means documented internal task order, **not** a claim that Professor Phelan has approved the review protocol or the proposed novel contribution. The protocol remains a draft until a dated methodological lock.
+**Status:** This is an internal documented task order, **not** approval by Professor Phelan of the proposed protocol or claimed novelty. The protocol remains a draft until a dated methodological lock.
 
 [Master work package and stage-gate execution plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md); [44-row implementation register](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv).
 
