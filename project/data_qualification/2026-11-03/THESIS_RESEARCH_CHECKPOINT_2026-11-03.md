@@ -121,14 +121,15 @@ The first targeted [systematic-review protocol (10 relevant studies; not a compl
 
 **Immediate priority:** freeze exact searches after supervisor-method approval, export multiple primary bibliographic databases and screen, extract Bragone/RACE/Qatar/Li/Cao equation-by-equation, then decide physics ODE/PDE versus gray-box/PINN using held-out experimental data and UQ. Continue source search for actual physically connected field interface. Keep SO1 35%, SO2 20%, SO3 5% only as provisional planning estimates.
 
-## I. Documented execution queue to address Professor Phelan
+## I. Active eight-package implementation of Professor Phelan's request — plan v2.0
 
-**Status:** This is an internal documented task order, **not** approval by Professor Phelan of the proposed protocol or claimed novelty. The protocol remains a draft until a dated methodological lock.
+**Version migration (3 November 2026):** The concise eight-package plan is now the *primary* execution structure. The earlier 10-package v1.0 plan and associated 44-task register remain unchanged as version history, preserving all tasks and scientific gates.
 
-[Master work package and stage-gate execution plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md); [44-row implementation register](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv).
+- [Active consolidated plan v2.0](./PHELAN_RESEARCH_EXECUTION_PLAN_V02_2026-11-03.md) — six objectives, eight work packages WP1–WP8, PRISMA-ScR evidence map + critical mathematical synthesis, explicit sensor/equation validation and data-conditional pure physics vs PINN/PIML, eight-week *illustrative* schedule.
+- [Active remapped 44-task register v2.0](./PHELAN_RESEARCH_TASK_REGISTER_V02_2026-11-03.csv) — retain T01–T44 and all dependencies/acceptance criteria, add \`legacy_wp\`, scope, stage gates, target period and evidence-closure fields. New WP1=T01–04, WP2=T05–09, WP3=T10–13, WP4=T14–19, WP5=T20–23, WP6=T24–29, WP7=T30–37, WP8=T38–41; **T42–T44 = THESIS-DOWNSTREAM (not ninth immediate work package)**.
+- [Original technical plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md) and [legacy 44-task register](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv) retained for historical traceability.
+- [Review protocol v0.2](./SYSTEMATIC_REVIEW_EXECUTION_PROTOCOL_V02_2026-11-03.md) remains **DRAFT, NOT METHOD-LOCKED** and is separate from any unreceived supervisor endorsement.
 
-**Core project outputs to deliver Phelan:** (a) executed and source-traceable systematic scoping evidence map + a focused equation-level prior-work synthesis, (b) calibrated and independently evaluated physics baseline, (c) measured-data qualification and physics-vs-PIML decision with either validated comparison or explicit physics-only fallback, (d) concise two-page source-grounded reply.
+**Next immediate work:** WP1 lock protocol and database search expressions (T01–04); WP2 real literature retrieval and exports (T05–09); WP3 screen/dedup (T10–13); WP4 primary equation audit (T14–19), while WP6 measured-data QA (T24–29) runs in parallel. WP5 research-gap synthesis, WP7 matched model decision and WP8 advisor report follow actual evidence.
 
-**Immediate tasks:** T01–T04 protocol scope/search lock; T05–T09 independently execute query blocks A–F and citation chasing; T10–T13 bibliographic screening; T14–T19 verify equation-by-equation Bragone/RACE/Cao/Krama/Li/Wen; in parallel T24–T29 dataset applicability; then T20–T23 novelty evidence and T30–T37 model selection; T38–T41 advisor synthesis. T42–T44 are **downstream thesis work**, not required to answer his immediate questions.
-
-**Not done:** real database search counts or PRISMA-ScR flow, full source-paper extraction, tested multi-model comparison, verified connected EVSE-transformer thermal field data, supervisor approval. **No change** to provisional SO1 35%, SO2 20%, SO3 5% / illustrative overall 20% merely because planning documents now exist.
+**Existing evidence:** 17 seed citations, targeted preliminary comparators, SINTEF site-only thermal model, TUM operational source with sentinel/thermal QA pending. **Still NOT done:** systematic queries with counted exports, PRISMA flow, completed full-text screening/figure verification, qualified connected transformer–EVSE field measurement, proven coupled resilience, or validated PINN-vs-physics model selection. Provisional SO1 35% / SO2 20% / SO3 5% (illustrative 20% total) **not changed** merely by planning.
