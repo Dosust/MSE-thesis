@@ -1,5 +1,29 @@
 # Systematic Literature Review — one research workspace
 
+## Executed consolidated master algorithm — 2026-11-03
+
+**EXECUTED PHASE 1 RECONCILIATION (partial gate)** and source-evidence synthesis. The original Q0 workbook was read in full: **687 raw bibliographic provenance rows and 404 deduplicated Q0 master rows**, *not* a separate 209-record workbook. All 404 Q0 confirmatory T/A and fulltext decisions were still PENDING. Historic October/November/thermal collections merged into **533 distinct provisional bibliography identities** with **784 provenance memberships**; not PRISMA included counts. Metadata classifications are **title-only provisional**, not human screening.
+
+**Active review outputs:**
+1. [Complete recovered 404-record Q0 public bibliographic metadata](./Q0_CANONICAL_PUBLIC_METADATA_404_V01.csv)
+2. [Unified 533-record master literature register](./MASTER_SYSTEMATIC_LITERATURE_REGISTER_V01.csv)
+3. [784-entry source-to-study provenance crosswalk](./HISTORICAL_BIBLIOGRAPHY_PROVENANCE_CROSSWALK_V01.csv)
+4. [Reconciliation method, classifications and historical study-count correction](./RECONCILIATION_METHOD_AND_RESULTS_V01_2026-11-03.md)
+5. [Search/screening status log](./SYSTEMATIC_SEARCH_AND_SCREENING_REGISTER_V01.csv) and [why final PRISMA-ScR is not yet reportable](./PRISMA_SCR_EXECUTION_GATE_V01.md)
+6. [Source-specific mathematical / measurement extraction matrix](./FULLTEXT_MATHEMATICAL_EVIDENCE_MATRIX_V01.csv) — 11 source claims, with original access depth and missing checks
+7. [SO1–SO3 preliminary scientific synthesis](./SO1_SO3_SCIENTIFIC_SYNTHESIS_V01.md)
+8. [Prior-art counterexamples and candidate novelty boundary](./CLOSEST_PRIOR_ART_AND_RESEARCH_GAP_AUDIT_V01.md)
+9. [Experimental-data-to-physics readiness](./EXPERIMENTAL_DATA_TO_MODEL_READINESS_V01.md)
+10. [Provisional physics-first versus conditional PINN decision](./PHYSICS_VS_PINN_MODEL_DECISION_V01.md)
+11. [Draft research progress briefing for Professor Phelan](./PHELAN_SUPERVISOR_LITERATURE_REVIEW_SUMMARY_V01.md)
+12. [Exact execution gate/status and next activities](./EXECUTION_CHECKPOINT_AND_GATE_STATUS_2026-11-03.md)
+
+**Gate status:** historical bibliographic reconciliation PARTIAL; mathematical/experimental primary-source synthesis PARTIAL; formal complete systematic database review/PRISMA-ScR **BLOCKED/NOT DONE**; connected extreme-heat thermal-field data and matched physics/PINN benchmark **NOT DONE**. No finalized novelty or external field validation is claimed.
+
+**Security/copyright:** source-export abstracts and entire licensed bibliographic raw spreadsheets remain in original user files, not uploaded publicly; published GitHub master contains metadata and analysis only.
+
+
+
 **Thesis:** Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience  
 **Start:** 2026-11-03  
 **Purpose:** Answer Professor Pat Phelan's request: *What have others done, how comprehensive is the review, and are qualified experimental data sufficient to justify physics-informed ML instead of pure physics?*
