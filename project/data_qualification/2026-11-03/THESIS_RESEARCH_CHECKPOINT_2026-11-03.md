@@ -89,3 +89,20 @@ This physical conservation statement is general. Specific model reductions, cons
 - **Scientific gate:** **FIELD SOURCE RELEVANT — USER-LOCAL ACQUIRED — THERMAL QA PENDING**. Not admitted for thermal-parameter identification, external model validation, or measured transformer↔EVSE coupling. No EVSE internal temperatures or supplying-transformer topology.
 - **Priority next steps:** obtain immutable seven-file SHA-256 manifest and repository/LFS commit; audit all seven files and temperature codes; resolve 1023°C semantics with dictionary/author evidence; align battery temperature, current, voltage, SOC and *verified charging state* with measured event tolerance; perform cross-vehicle temporal/vehicle-separated holdouts and UQ only after QA. Pursue separately an actual physically mapped and instrumented transformer–EVSE installation.
 - **Progress score:** retain prior provisional SO1 35%, SO2 20%, SO3 5%, equal-weight 20% overall **without speculative increase**. TUM expands acquisition and potential validation capacity, but G2 thermal physics and coupled field constraints remain blocked.
+
+## G. Literature-to-measurement integration — v0.1
+
+The first targeted [systematic-review protocol (10 relevant studies; not a completed PRISMA review)](./TARGETED_LITERATURE_THERMAL_PT_SYSTEMATIC_PROTOCOL_V01.md) and [literature-to-dataset crosswalk](./LITERATURE_TO_DATA_VALIDATION_CROSSWALK_V01.md) are saved on this working branch.
+
+**Closest verified complementary comparators (with evidence limits):**
+
+| Literature comparator | Relevance | Verification gate |
+|---|---|---|
+| **Fletcher & Khan (2025), RACE for 2030** | Dynamic IEC-style transformer oil/winding thermal evolution and temperature-aware EV charging with conditional modeled charging energy | Confirm equipment-specific parameters and heat-run model assumptions; publication's installed thermal Part 2 was future work. Aging-factor and delivered-energy numbers are simulated, not measured actual service |
+| **Krama et al. (2026), Qatar** | Publisher-reported field derating of a commercial 50 kW EV charger in severe heat (15–55°C recorded study regime, seasonal charging time 86 versus 169 min) | Obtain original raw ambient/rectifier/cooling/charging controls and disambiguate temperature, SOC, session and site confounders; no measured supplying transformer thermal response |
+| **Li, Chang & Lu (2026)** | Field operating bus-station transformer primary/secondary electrical metering and harmonics | Primary-paper and raw instrumentation audit; transformer internal thermal sensing and matched EVSE heat records unconfirmed |
+| **TUM production EV UDS** | Seven production EV field traces with ambient and vehicle battery thermal channels; user-local original files | All-vehicle QA, 1023°C-type sentinel decoding, verified charging event overlap, instrument times, SHA-256; not charger-internal or grid-transformer heat |
+
+**Recommended combined research sequence:** (1) derive RACE transformer heat equations and map identifiable SINTEF states/parameters; (2) acquire real Qatar EVSE thermal derating records; (3) examine Li station transformer site electrical topology; (4) qualify TUM vehicle-side battery thermal measurements; (5) construct and compare uncoupled/static/dynamically coupled models only under explicitly justified interfaces and quantified uncertainty; (6) establish service metrics and actual external transfer tests before any claimed resilience gain.
+
+**Novelties and operating range:** A first-pass literature *evidence gap* is not proof of global research novelty; PRISMA counts and global search coverage must not be invented. No observed same-site bidirectional thermal Power↔EVSE interface has been qualified, and TUM's 39.5°C ambient maximum alone does not show charging thermal dynamics under that ambient. The preliminary **20%** progress estimate remains unchanged until material validation milestones are crossed.
