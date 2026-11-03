@@ -102,6 +102,17 @@ Read [full new archive qualification, checksums and numerical QA](./UPLOADED_ARC
 
 **[Open Report 1: RQ1–RQ11 measured-data and mathematical answers](./REPORT_01_MEASURED_DATA_RQ1_RQ7_2026-11-03.md)**
 
-Results generated from publisher-checksum-matched SINTEF transformer sensors, Slovenia paired station P/Q, and the KU Leuven experimental charging archive. RQ1–RQ3 have numerical results, RQ4–RQ5 have qualified component numerical results, while RQ6–RQ7 explicitly retain blocked independent reanalysis pending the original observation rows in the runnable environment. No causal coupled P↔Tₑ or extreme-heat field validation is asserted. New report is working evidence on the review branch only.
+Results generated from publisher-checksum-matched SINTEF transformer sensors, Slovenia paired station P/Q, and the KU Leuven experimental charging archive. RQ1–RQ3 have numerical results, RQ4–RQ5 have qualified component numerical results, while RQ6 remains without a numerical demand-forecasting comparison; RQ7 now has a fresh original-archive laboratory analysis documented in the subsequent extension. No causal coupled P↔Tₑ or extreme-heat field validation is asserted. New report is working evidence on the review branch only.
 
 **Expanded Report 1 current status (2026-11-03):** RQ1–RQ5 measured component findings maintained; RQ7 independently recalculated from the original OSF 94GKC laboratory archive (313 CSV entries, 18 empty); RQ8 effective parameter estimation and 24h-block bootstrap; RQ9 model sensitivity; RQ10 same-site validity analysis; RQ6 (OPSD raw household records) and actual coupled-service RQ11 remain empirically blocked. [Extension Python source](./REPORT_01_EXTENDED_RQ7_RQ10.py), [derived JSON](./REPORT_01_EXTENSION_RQ7_RQ11_RESULTS.json), [PQ comparison summary](./REPORT_01_RQ7_OSF_BY_CATEGORY.csv). No frozen files or main-branch changes.
+
+
+## Thesis progress and continuation checkpoint — 2026-11-03
+
+**[Read the saved SO1–SO3 thesis progress assessment, RQ1–RQ11 status, evidence gates and exact next-session task order](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md).**
+
+- Provisional planning estimate **20% complete / 80% remaining**, based on illustrative equal weights: SO1 **35%**, SO2 **20%**, SO3 **5%**. These are **not verified supervisor/committee completion percentages**.
+- Distinguish **9 of 11 research questions with some analytical findings** from actual **connected-system field validation**, still unavailable.
+- Existing originals and data register remain in thesis Google Drive. Original raw files should not be duplicated to public GitHub.
+- The full **Report_01_RQ1_RQ11_Research_Analysis_2026-11-03.zip** was locally produced and passes ZIP CRC checks; SHA-256: \`ca763a518b6cd668a90bd4c9b84f3acf45269a427fd76d609f4c5b09313da6c7\`. It is in the conversation output, **not in GitHub or Google Drive** as a ZIP. One detailed \`RQ7_OSF_per_experiment_QA.csv\` within that package is not yet a standalone GitHub file. This outstanding archival step is tracked in the checkpoint.
+- **Resume with checkpoint tasks E.1 (archive reconcile) and E.2 (complete OPSD RQ6)**. Do not overclaim coupled Power↔EVSE physical transfer or extreme-heat validation. No frozen authority or main-branch changes.
