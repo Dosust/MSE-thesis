@@ -78,3 +78,18 @@ AND
 5. **Only then** claim a narrowed novelty boundary. Independent field data for SO1–SO3 and component VVUQ remain separate gates.
 
 **No frozen thesis governance documents were edited by this audit.**
+
+## Full-text comparator extraction addendum — Fletcher & Khan (2025)
+
+**Source:** RACE for 2030 final report (2025); `https://www.racefor2030.com.au/content/uploads/Final-report-0571-FINAL-FINAL.pdf`. Numbers below are **report's simulations**, NOT observed field performance.
+
+| Source print page | Setup / observation | Exact modeled result | Evidence boundary |
+|---|---|---|---|
+| p. 10–11 | IEC 60076-7 transformer oil/winding thermal model, 1 MVA target, charging profiles from 23 EVs; time granularity less than a minute | Parameter example: winding time constant **4 min**, oil **180 min**, model exponents x=0.8, y=1.6; rated top-oil rise 55°C, hot-spot gradient 23°C | Selected model assumptions, not identified from our SINTEF original |
+| p. 16, Table 4 | Background non-EV load 0.75 p.u.; charging interval gaps 5 min; different ambient scenarios | Ambient **15–25°C** -> maximum simulated hot-spot **89.8°C**, top-oil **68.1°C**, equivalent aging **0.19**; **35–45°C** -> maximum simulated hot-spot **109.8°C**, top-oil **88°C**, equivalent aging **1.88** | Modeled 1MVA transformer's exposure response; not field-validated extreme-heat effect |
+| p. 25, control section | Four-level hot-spot hysteresis power control, 25% power decrements; thresholds given as 100, 103, 107, 110°C | Over 10 simulated hours with 23 EVs, requested **1364 kWh**, delivered **1262 kWh** (~92.5%); authors round to 92% | Thresholds are study-specific engineering examples, NOT universal limits; simulated shortfall is charging energy, not proven missed mobility journeys |
+| p. 3–4, executive summary | Study design | **Part 1** desktop simulations supported by heat-run test considerations; two installed fiber-optic instrumented transformers named as proposed **Part 2** long-term field assessment | This publication alone does NOT establish completed in-field P–EVSE thermal coupling |
+
+**Immediate mathematical transfer:** thermal time constants, peak duration and inter-session gap must be tested explicitly, not collapsed into static rated MVA. Use source-specific heat balance equations and identify sensor/rating/vehicle acceptance. Hysteresis-limited delivered energy is an admissible simulated service **proxy** when required energy is defined; actual mobility resilience requires departure/trip outcomes. No claim of a single measured two-way thermal field system.
+
+**Full-text verification note:** Retrieved text from original PDF; web screenshot rendering endpoint returned a fetch/cache error, so the embedded PDF figures themselves were not visually independently audited. Page labels above follow PDF printed pagination.
