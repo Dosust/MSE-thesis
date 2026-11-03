@@ -3,7 +3,7 @@
 **Date:** 3 November 2026  
 **Thesis:** Engineering of Power–Electrified Transportation Interdependencies for Resilience  
 **Evidence status:** **Working research report; not a frozen result or validated connected-system model**  
-**Scope:** Answers RQ1–RQ7 to the extent supported by authenticated component observations; distinguishes new calculations, prior audited evidence, and unresolved questions.
+**Scope:** Answers RQ1–RQ11 to the extent supported by original observations, physics-constrained models and documented evidence gates. RQ6 and empirical RQ11 remain unresolved.
 
 ## Executive answer
 
@@ -15,9 +15,9 @@
 | **RQ4** EV charging electrical and battery-thermal behavior | Four KU Leuven AC experimental files: **40,873 row records**; battery voltage and predominantly negative charging current are recorded, as are pack maximum temperature and SOC. For example, Figure7_AC1 sampled-window SOC rises **39.0→90.3%**, while BMS max temperature falls **30.25→28.75°C**, consistent with charging while cooling is possible. Other files have clock resets and/or nonmonotonic SOC; do not interpret their first-to-last values as a continuous session. | **Measured/processed laboratory component answer; time-order gate partial** |
 | **RQ5** EV charging electrical conversion losses | Two Figure10 KU Leuven DC tests at eligible high power give median source-boundary **P_DC/P_AC=0.92635 and 0.92691**, with median **P_AC−P_DC=3.589 kW and 3.549 kW** respectively. These are **electrical input-output differences**, NOT measured heat flux or verified independent charger thermal losses. Prior EPFL energy-balance audit remains unreconciled. | **Provisional converter electrical-boundary result**, thermal efficiency not established |
 | **RQ6** Same-premise EV charging vs grid demand/predictability | Prior OPSD audit recorded **116,355 qualified 15-min intervals** for two locations. Its raw household series were **not** available to this Report 1 execution, and OPSD documents gap interpolation/filling. A quantitative charging–grid correlation or forecasting improvement **has not been recomputed and cannot be asserted** from counts alone. | **Not numerically answered in this execution** |
-| **RQ7** Charging response to power-quality disturbances | Earlier OSF 94GKC audit covered **313 lab experiments, 4,061,379 row records**. Only **23,052 (0.57%)** battery-temperature cells were nonempty, with documented suspect values. Raw per-experiment waveforms were not available to this Report 1 execution; quantitative disturbance effects on charger power/current and their uncertainty **cannot be reported as independently reproduced**. | **Design/evidence inventory only; quantitative response blocked** |
+| **RQ7** Responses to laboratory PQ disturbances | Fresh OSF original analysis: **313 CSV files, 18 empty supplementary files**; predeclared within-experiment event comparison produced **177** analyzable current-magnitude contrasts. Median event-minus-baseline current magnitude **−6.1 A** for 19 voltage interruptions; **−3.5 A** for 20 voltage-sag tests. | **New exploratory original-data laboratory contrast, not grid or EVSE field proof** |
 
-**Important distinction:** completed descriptive analysis of separate systems does **not** establish a physically connected transformer–EVSE interface, an observed extreme-heat thermal cascade, service-level resilience, or a validated coupled model.
+**Important distinction:** new RQ7–RQ10 work supplements the original RQ1–RQ5 component analysis. Completed descriptive analysis of separate systems does **not** establish a physically connected transformer–EVSE interface, an observed extreme-heat thermal cascade, service-level resilience, or a validated coupled model.
 
 ---
 
@@ -29,11 +29,13 @@
 2. **STREAM Slovenia 2025, DOI [10.5281/zenodo.20927130](https://doi.org/10.5281/zenodo.20927130)**: 34,932 rows each in [original P CSV](https://drive.google.com/file/d/1hZ7pCydBAkfnLf4RU2lTu3LozNvuQ4tO/view) and [original Q CSV](https://drive.google.com/file/d/1SQ0ONhiCXK3_Ax--q9j0lUQV7IDACL5I/view), publisher MD5 **6a7fce6170230bcc73b69ba745509dad** and **7b8a9a608b0489c6227ced8cceb08a59**, respectively.
 3. **KU Leuven C5PT0R, DOI [10.48804/C5PT0R](https://doi.org/10.48804/C5PT0R)**: user-uploaded experimental ZIP, four Figure6/7 AC CSVs and Figure10 XLSX, [unchanged raw in Drive](https://drive.google.com/file/d/1zYktMEjoqXu-ZheGW8HGATwx23_lAcjH/view); published MD5s of original payload files checked by the earlier archive audit.
 
+4. **OSF 94GKC**, [DOI 10.17605/OSF.IO/94GKC](https://doi.org/10.17605/OSF.IO/94GKC): independently parsed from its [user-uploaded original ZIP](https://drive.google.com/file/d/1Sjdg5TaGWXybjO_8DOlnkzIeSHpVhR4x/view) for RQ7. Numerical event responses are conditional on the filename protocol and CAN data-quality checks.
+
 ### Reused previous audits; *not* recomputed from raw originals in this execution
 
 - **EPFL Level-3 charging**, [source repository](https://github.com/DESL-EPFL/Level-3-EV-charging-dataset): prior detailed [Drive QA report](https://drive.google.com/file/d/1bPmP58__Ifmnhf4WtpTts0GbpeR5m2_B/view). Its declared 64,277 measurement count differs from the prior scan's 61,816 populated measurement rows; energy accounting mismatch unresolved.
 - **Open Power System Data (OPSD)**, [household_data 2020-04-15](https://data.open-power-system-data.org/household_data/2020-04-15/): prior D04 report states 116,355 qualified 15-min observations; original processed household rows not mounted in this Report 1 run.
-- **OSF 94GKC**, [original dataset DOI](https://doi.org/10.17605/OSF.IO/94GKC), [Li et al. 2026 Scientific Data](https://doi.org/10.1038/s41597-026-06768-5): prior D06/field QA states 313 experiments, 4,061,379 rows; original laboratory experiment files not mounted in this Report 1 run. An earlier original OSF ZIP resides in [Google Drive](https://drive.google.com/file/d/1Sjdg5TaGWXybjO_8DOlnkzIeSHpVhR4x/view).
+- **OSF 94GKC** original ZIP has now been directly analyzed for RQ7 (see §8). The earlier 4,061,379-row audit count differs from the newly parsed archive by 70,568 rows and needs reconciliation. This source is no longer merely a prior-audit reference.
 
 **Never count combined row records as independent vehicles, installations or charging sessions.** No source here provides same-site, synchronized transformer-and-EVSE thermal measurements.
 
@@ -150,17 +152,28 @@ For four AC files, an independent **provisional battery-electrical-power/AC-line
 
 **No computed EV-load coefficient, correlation, prediction score or improvement is claimed in Report 1.**
 
-## 8. RQ7 — How do PQ disturbances influence charging electrical behavior?
+## 8. RQ7 — How do imposed power-quality disturbances change recorded battery-charging current?
 
-**Status: authenticated laboratory data inventory; quantitative question not freshly tested.** Prior OSF 94GKC audit: **313 CSV experiments, 4,061,379 row records**, multiple schemas and disturbance classes, **23,052 nonempty BMS temperature entries (~0.57%)** and suspect values such as 1538.3. The scientific article describes controlled single power-quality disturbances and current/voltage response measurement; it does **not** establish a field heatwave transformer–charger interface.
+**New original-file analysis (3 November 2026).** Source: [OSF 94GKC](https://doi.org/10.17605/OSF.IO/94GKC), [Li et al. 2026](https://doi.org/10.1038/s41597-026-06768-5), [unchanged user-uploaded source ZIP in Drive](https://drive.google.com/file/d/1Sjdg5TaGWXybjO_8DOlnkzIeSHpVhR4x/view). User-uploaded outer ZIP SHA-256: 38af5d53ff8779b75a746c6d5b29d13c84bedccf21793bdad308ba828151b707. No publisher SHA-256 comparison is claimed.
 
-**Minimum valid experiment design when raw archives are remounted:**
-- For each disturbance class and severity, verify source/event time, measured grid voltage/current and charging power channel, units and instrument synchronization.
-- Compare a predeclared pre-event baseline window against disturbance and recovery windows **within each experiment**. Compute normalized RMS-voltage deviation, RMS current response, active power ratio, interruption/duration or return-to-baseline time, where sampling resolution and signals permit.
-- Aggregate over **experiments** (not millions of serially autocorrelated rows) and stratify by SoC/voltage conditions. Require comparable controls rather than treating unequal SoC events as equivalent.
-- Test response uncertainty and exclude invalid temperatures; the sparse battery temperature field is **not sufficient** for temperature-dependent EVSE derating identification.
+**Actual original archive:** 313 CSV file entries, 250 main-paper files and 63 supplementary sag files; 18 supplementary CSVs have no parsed records. The remaining 295 files contain **3,990,811 parsed row records**, including 2,308,606 nonempty high-voltage battery-current values; only 23,052 rows contain a battery-temperature value (0.58% of all rows). An earlier inventory said 4,061,379 raw rows; **70,568-row disagreement remains unresolved**. Do not silently reuse the older count.
 
-**No new effect size, sensitivity slope or resilience improvement is claimed in Report 1.**
+For every experiment, identify the source-defined event start/duration from its filename; use the documented default of 20 s when a Start token is absent. Measure median **absolute** high-voltage battery current in the pre-event window [start−10, start−2) seconds and event window [start, start+duration) seconds. Require event duration ≥0.5 seconds, ≥30 valid pre-event and ≥10 valid during-event current observations, and baseline median |I| ≥1 A. This admits **177** file-level event comparisons (179 pass duration/sample thresholds). Define \(\Delta |I|=\operatorname{median}_{\mathrm{event}}|I|-\operatorname{median}_{\mathrm{before}}|I|\). Values are *within-experiment descriptive differences*, not matched randomized treatment effects.
+
+| Imposed disturbance | Eligible experiments | Median within-experiment Δ|I| (A) |
+|---|---:|---:|
+| Voltage interruption | **19** | **−6.1** |
+| Voltage sag | **20** | **−3.5** |
+| Temporary overvoltage | 22 | **−5.6** |
+| Temporary undervoltage | 19 | **−5.4** |
+| Voltage swell | 16 | **−5.5** |
+| Voltage deviation | 47 | 0.0 |
+| Frequency deviation | 14 | +0.2 |
+| Harmonics | 18 | 0.0 |
+| Transient overvoltage/undervoltage | 1 each | Too few eligible trials |
+| Supplementary extended sag | 0 | Not determined |
+
+**Answer:** During several imposed laboratory PQ disturbances, measured battery-current magnitude is lower than its pre-event level. Short transients are mostly outside this window-based method's resolution. The tests were performed in the lab, not at a verified connected transformer–EVSE field site. Source CAN frames are sparse/asynchronous, event/control comparability and current sign require further QA, and independent AC grid-side RMS voltage was not recomputed. No inference is made about thermal derating, equipment damage, or an actual transformer-to-charger cascade.
 
 ## 9. Thesis integration and research gates
 
@@ -174,7 +187,7 @@ For four AC files, an independent **provisional battery-electrical-power/AC-line
 
 ## 10. Next report tasks
 
-1. Recover original OPSD rows for **RQ6** and OSF original experiment archive for **RQ7** in the same executable environment; deliver matched baselines and uncertainty, or document gate failures.
+1. Recover original OPSD rows for **RQ6** and perform no-leakage load/EV forecasting. For **RQ7**, the original OSF ZIP is now recovered; reconcile 18 empty files, the older row count, control experiments, event timing and charging-state/signal definitions.
 2. Obtain [STREAM transformer nameplates and losses](https://doi.org/10.5281/zenodo.20927801); verify station-ID match, kW/kvar, power direction and rated kVA before any overload claim.
 3. Resolve the KU Leuven time reversals, SOC discontinuities, session boundaries and AC/DC sensor meanings; verify distinctness from the other KU Leuven battery dataset D02.
 4. For RQ2, add independent model families, long-horizon free-running sensitivity, autocorrelation-aware predictive intervals, and heat-range/out-of-distribution evaluation.
@@ -195,4 +208,92 @@ python REPORT_01_REPRODUCE.py \
 ```
 
 Source-original MD5 hashes are checked before calculations. This compact script independently reproduces **key RQ1–RQ5 numerical metrics**: ambient/current correlations; one-hour chronological RC model/persistence RMSE and MAE; Slovenia synchronized-count/sign fractions; KU Leuven AC source summaries and Figure10 DC power ratios. The larger research run also calculated all-sensor correlations, 6/24-hour conditional hindcasts, station-level statistics and lag profiles; these are detailed above and are not implemented in the compact script. RQ6/RQ7 are explicitly **not** reproduced without their original row-level inputs.
+
+
+
+---
+
+## 12. RQ8 — Which physical and mathematical parameters can be identified?
+
+**New calculation using exactly the RQ2 SINTEF Jan–June fitted first-order top-oil model:**
+
+\[
+T_{k+1}=T_k+a(T_{a,k}-T_k)+b(I_k/I_\mathrm{ref})^2+c.
+\]
+
+There are **4,223 contiguous one-hour training transitions**, and the three-column regression matrix has rank **3** (L2-normalized column condition number 16.74; original-design condition number 105.07). The fitted coefficients are \(a=0.0807461\), \(b=0.0693672\), \(c=1.0843353\), with \(I_\mathrm{ref}=29.375\) A.
+
+An exploratory **180-repeat, 24-hour moving-block bootstrap** (fixed seed 20261103; blocks cannot cross recorded gaps) yields these **2.5–97.5 percentile ranges**, conditional on the model and the sample:
+
+| Effective coefficient | Fit | Block-bootstrap percentile range |
+|---|---:|---:|
+| Hourly relaxation fraction \(a\) | 0.08075 | 0.07416–0.09139 |
+| Effective normalized-current-squared term \(b\) | 0.06937 | 0.05719–0.08002 |
+| Unresolved constant heating/intercept \(c\) | 1.08434 | 0.98708–1.24101 |
+
+The equivalent discrete relaxation time \(-1/\ln(1-a)\) is approximately **11.88 hours**, versus the small-\(a\) approximation \(1/a=12.38\) h. **Neither is an independently measured heat capacity or a separately identified cooling constant**. A statistically identifiable fitted difference equation does not uniquely identify physical oil/winding capacitance, copper and core losses, or cooling flux. For KU Leuven, observed BMS pack-maximum temperature and electrical measurements do not independently identify battery-generated heat or cooling mechanisms.
+
+**RQ8 verdict: effective model parameters estimated; intrinsic physical transformer and battery parameters NOT independently identified.** Bootstrap ranges omit sensor, model-form and installation-transfer uncertainty.
+
+## 13. RQ9 — What sensitivities and uncertainties does the model predict?
+
+From the same fitted model, the analytic one-step sensitivities are:
+
+\[
+\frac{\partial T_{k+1}}{\partial T_{a,k}}=a,\quad
+\frac{\partial T_{k+1}}{\partial I_k}=\frac{2bI_k}{I_\mathrm{ref}^2},\quad
+\frac{\partial T_{k+1}}{\partial T_k}=1-a.
+\]
+
+| Input perturbation at other inputs fixed | Modeled one-hour top-oil response |
+|---|---:|
+| +1°C ambient | +0.08075°C |
+| +1 A at held-out median current 35.69 A | +0.00574°C |
+| +1 A at held-out 95th-percentile current 52.41 A | +0.00843°C |
+| +10% current at held-out median current | +0.02151°C |
+| +1°C observed initial oil temperature | +0.91925°C |
+
+A *hypothetical*, model-only, constant-conditions 24-hour experiment at \(T_0=20\)°C, \(T_a=20\)°C and \(I=35.69\) A produces a fitted-model \(T_{24}=32.75\)°C. Holding everything else fixed, increasing ambient by 1°C changes \(T_{24}\) by **+0.867°C**; increasing the current by 10% changes it by **+0.231°C**. Increasing coefficients \(a,b,c\) separately by 10% changes \(T_{24}\) by **−0.821°C, +0.110°C, +1.165°C**, respectively.
+
+**RQ9 verdict: model sensitivity is analytically quantified and computationally checked, but it is not a field-measured causal derivative.** Complete model-form, input, sensor and parameter uncertainty propagation and extreme-heat validation remain open.
+
+## 14. RQ10 — Where does the model stay accurate, and can it transfer?
+
+The October–December top-oil holdout uses **2,158** one-hour transitions at the *same Norwegian transformer*. Its observed ambient temperatures span **−5.855 to +14.485°C**, currents **21.43–63.335 A** and top-oil temperatures **11.78–27.5575°C**. Those values all fall inside the **separate marginal minimum–maximum ranges** of the Jan–June training set: ambient −19.58 to +25.97°C, current 8.4125–75.1025 A, top oil 3.8275–38.86°C. This does **not** prove all combinations of temperature and loading were represented in training.
+
+| Holdout month | Model RMSE (°C) | Persistence RMSE (°C) |
+|---|---:|---:|
+| October | **0.22268** | 0.24846 |
+| November | **0.20651** | 0.25923 |
+| December | **0.21426** | 0.23518 |
+| Combined | **0.21468** | 0.24797 |
+
+The fitted model improves one-hour RMSE in each held-out month, but its **combined one-hour MAE is worse** than persistence (0.1469 vs 0.1409°C; RQ2). The largest SINTEF measured ambient temperature is **25.97°C**. No high-ambient field validation or different-transformer test is performed.
+
+**RQ10 verdict: same-site chronological predictive validity, not transferability to other transformer classes/sites and not severe-heat validity.** The governing energy-balance principle may be transferable, but thermal parameters and sometimes model form must be reidentified for different apparatus and boundary conditions.
+
+## 15. RQ11 — How do constraints affect predicted service availability?
+
+**Only a conditional mathematical engineering problem is presently admissible.** The measured power and charging components are not one physically synchronized connected installation. A candidate viability-constrained formulation is:
+
+\[
+\begin{aligned}
+\dot x&=f(x,u,d;\theta),\\
+\mathcal K&=\{x:T_{\mathrm{tr}}\le T_{\mathrm{tr,max}},\quad
+T_{\mathrm{charger}}\le T_{\mathrm{charger,max}},\quad
+0\le P_{\mathrm{EV}}\le P_{\mathrm{available}},\quad
+\mathrm{SOC}_{\min}\le\mathrm{SOC}\le\mathrm{SOC}_{\max}\},\\
+\min_u&\int_0^H(P_{\mathrm{required}}-P_{\mathrm{delivered}})_+\,dt.
+\end{aligned}
+\]
+
+This is a **proposed, not calibrated or solved connected-site optimization**. To compute meaningful service effects we need site topology, rated transformer/EVSE parameters, verified temperature limits and derating functions, vehicle demand/departure requirements, initial states and evidence of same-site interactions. We must not report invented safety thresholds, percentage reductions in outages or quantified mobility resilience.
+
+**RQ11 verdict: mathematical formulation available; empirical effect, viable boundary and optimized outcomes NOT determined from these datasets.**
+
+## 16. Transferability principle and evidence-qualified conclusion
+
+**Universal conservation laws are not the same as universal fitted coefficients.** A model transferred to another installation must be checked against its equipment class, nameplate and thermal parameters, cooling regime, electrical interface, operating range, disturbance type and independent observations. Report 1 advances physical description (RQ1/RQ3/RQ4/RQ5/RQ7), predictive modeling (RQ2), effective parameter estimation (RQ8), model sensitivities (RQ9) and within-site validity (RQ10). RQ6 still requires original OPSD observation rows for forecasting analysis; RQ11 still lacks a connected transformer–EVSE measurement set.
+
+**Additional reproducibility:** The original RQ1–RQ5 script is [REPORT_01_REPRODUCE.py](./REPORT_01_REPRODUCE.py). The new executed extension source is [REPORT_01_EXTENDED_RQ7_RQ10.py](./REPORT_01_EXTENDED_RQ7_RQ10.py), with derived experiment-level OSF data-quality summaries and machine-readable RQ7–RQ11 results in the same folder. No raw original CSV or ZIP is committed to public GitHub.
 
