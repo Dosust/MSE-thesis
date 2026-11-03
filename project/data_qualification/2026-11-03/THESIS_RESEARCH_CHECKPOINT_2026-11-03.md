@@ -133,3 +133,15 @@ The first targeted [systematic-review protocol (10 relevant studies; not a compl
 **Next immediate work:** WP1 lock protocol and database search expressions (T01–04); WP2 real literature retrieval and exports (T05–09); WP3 screen/dedup (T10–13); WP4 primary equation audit (T14–19), while WP6 measured-data QA (T24–29) runs in parallel. WP5 research-gap synthesis, WP7 matched model decision and WP8 advisor report follow actual evidence.
 
 **Existing evidence:** 17 seed citations, targeted preliminary comparators, SINTEF site-only thermal model, TUM operational source with sentinel/thermal QA pending. **Still NOT done:** systematic queries with counted exports, PRISMA flow, completed full-text screening/figure verification, qualified connected transformer–EVSE field measurement, proven coupled resilience, or validated PINN-vs-physics model selection. Provisional SO1 35% / SO2 20% / SO3 5% (illustrative 20% total) **not changed** merely by planning.
+
+## J. Systematic literature review Day 1 — single workspace (2026-11-03)
+
+**The review work has started; the full systematic review has not been completed.**
+
+- [Canonical systematic literature workspace](../../systematic_literature_review/README.md) connects the official eight WP1–WP8 plan, all legacy research references, six science classes C1–C6, F1–F7 claim-specific evidence, S0–S6 research maturity and real pilot outputs.
+- [Exact pilot source/access log](../../systematic_literature_review/PILOT_SEARCH_ACCESS_LOG_2026-11-03.csv): six *web discovery* thematic searches, one *Wiley Scholar Gateway* relevance query (12 passages/10 articles), one *Elicit* scholarly search blocked by explicit account API entitlement error. These are **not** counted as systematic Scopus/WoS/IEEE/Compendex records.
+- [25-reference pilot source register](../../systematic_literature_review/PILOT_SOURCE_REGISTER_2026-11-03.csv): 17 pre-existing seeds and eight additional sources; no PRISMA counts or final include/exclude claims.
+- [Initial primary-text equation audit](../../systematic_literature_review/EXTRACTION_BRAGONE_ACKER_DAY01_2026-11-03.md): Bragone transformer PINN heat equation and **FVM comparator**, Acker physical EV pack/coolant balance with field/test bench measurements and simulated control outcomes. Both sources have original figures/validation details still to verify.
+- [Day 1 milestones and next scientific activities](../../systematic_literature_review/STATUS_AND_NEXT_ACTIONS_2026-11-03.md). In the [v2 task register](./PHELAN_RESEARCH_TASK_REGISTER_V02_2026-11-03.csv) work notes/evidence links were added without prematurely completing blocked tasks.
+
+**Scientific priority remains:** formal database-native searches, source-critical equations with actual measurements and independent validation, closest-prior-art novelty boundaries, and data-conditional pure-physics vs PIML model choice. Do not increase provisional thesis-progress percentages based merely on pilot bibliography or program management.
