@@ -168,7 +168,7 @@ Full original measured SINTEF ranges: ambient **−19.58 to +25.97°C**, current
 In held-out **October–December one-hour** transitions, ambient-bin sample sizes and errors are:
 - `T_a≤0°C`: **263**, model RMSE **0.1970°C**, persistence **0.2433°C**.
 - `0<T_a≤10°C`: **1,482**, model RMSE **0.2105°C**, persistence **0.2466°C**.
-- `10<T_a≤20°C`: **413**, model RMSE **0.2391°C**, persistence comparator is available in the executed script output but is not asserted here without exact value readback; the model error is grounded.
+- `10<T_a≤20°C`: **413**, model RMSE **0.2391°C**, persistence **0.2556°C**.
 - `T_a>20°C`: **0** held-out 1-hour transitions. Hence **no held-out high-ambient claim**.
 
 Full-horizon conditional hindcast RQ2 results are reported above. The single-year, single-transformer dataset does not identify or verify a transfer map `θ_A→θ_B` for other capacities, insulation/cooling arrangements, climate regimes, feeder networks, EV charging behavior or extreme-heat severity.
