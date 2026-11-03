@@ -149,3 +149,15 @@ Newly documented operational vehicle-side source: [original TUM 7-EV ID1 thermal
 **METHOD:** [Systematic-review protocol v0.2](./SYSTEMATIC_REVIEW_EXECUTION_PROTOCOL_V02_2026-11-03.md); [17 *seed*, not screened references](./SYSTEMATIC_REVIEW_VERIFIED_SEED_REFERENCES_V02.csv); [search](./SYSTEMATIC_REVIEW_SEARCH_LOG_TEMPLATE_2026-11-03.csv), [screening](./SYSTEMATIC_REVIEW_SCREENING_TEMPLATE_2026-11-03.csv), and [mathematical extraction](./SYSTEMATIC_REVIEW_EXTRACTION_TEMPLATE_2026-11-03.csv) templates remain blank pending *actual* work.
 
 **VERSION HISTORY (not deleted):** [earlier detailed 10-package plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md) and [44-task legacy register v1.0](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv). The official v2.0 structure preserves the predecessor's science controls rather than claiming a second completed review. [Current research checkpoint](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md) records outstanding actions.
+
+## Systematic literature review — canonical workspace (started 2026-11-03)
+
+**[OPEN THE ONE SYSTEMATIC LITERATURE REVIEW WORKSPACE](../../systematic_literature_review/README.md)**. The workspace consolidates the existing eight-work-package Professor Phelan plan, 44 task IDs, 17 prior seeds, PRISMA-ScR/PRISMA-S protocol and templates, and *today's executed pilot activity*.
+
+- [C1–C6 domains, F1–F7 claim-level evidence, S0–S6 work maturity](../../systematic_literature_review/CLASSIFICATION_CODEBOOK_V01.md).
+- [Pilot search and access log](../../systematic_literature_review/PILOT_SEARCH_ACCESS_LOG_2026-11-03.csv): six indexed-web discovery queries; Wiley fulltext relevance search returned **12 passages from 10 articles**; Elicit scholarly API access was denied. Not a database-native systematic PRISMA search.
+- [Pilot bibliography and triage](../../systematic_literature_review/PILOT_SOURCE_REGISTER_2026-11-03.csv): **25 working references** = 17 previously saved seeds + 8 newly discovered. All explicitly marked **not formally screened, not PRISMA countable**.
+- [Bragone/Acker original physics and equation examination](../../systematic_literature_review/EXTRACTION_BRAGONE_ACKER_DAY01_2026-11-03.md): source-linked transformer PINN/FVM and EV battery/coolant equations, with identifiable measurement/model limits.
+- [Actual day-one status and next activities](../../systematic_literature_review/STATUS_AND_NEXT_ACTIONS_2026-11-03.md). A completed systematic review or model comparison is **not** claimed.
+
+**Start point for next work:** freeze platform-specific searches and eligibility (WP1), then conduct actual bibliographic source exports (WP2) and log counts. Pilot web/Wiley discoveries are seed validation only, not formal coverage.
