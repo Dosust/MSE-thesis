@@ -76,3 +76,13 @@ Two uploaded archives are suitable for **supporting** work; neither is, alone, a
 
 **No canonical files, frozen objectives, or historical artifacts were revised.**
 
+## Addendum — 2026-11-03: two further source-qualified archives
+
+The original Iowa/OSF and quarantine qualifications above remain unchanged. Two *additional* archives were screened and registered as **D17** and **D18**, expanding the consolidated register from **19 to 21** entries.
+
+- **D17: KU Leuven measured/processed EV charging efficiency data** (DOI https://doi.org/10.48804/C5PT0R): 40,873 AC CSV records, 258 timestamped DC AC-input/DC-output observations and additional 150-kW-labeled test tables. Useful for provisional charger electrical-loss and battery-response assessment. **Open:** backward time jumps, instrumentation boundary, one apparent swapped current/voltage heading, overlap with existing D02. **No EVSE internal temperature/protection or transformer link.** Drive original: https://drive.google.com/file/d/1zYktMEjoqXu-ZheGW8HGATwx23_lAcjH/view
+- **D18: Najafi transformer fault infrared image data** (DOI https://doi.org/10.17632/8mg8mkc7k5.3): 255 lab thermal images and 45 expert region masks for a single-phase bench transformer. Useful only for optional fault segmentation background. **Not dynamic, radiometric or extreme-heat calibration.** Drive original: https://drive.google.com/file/d/1edhFUnQnM6nU5xtr1HPolQDMDBmuwY_G/view
+
+Read [full new archive qualification, checksums and numerical QA](./UPLOADED_ARCHIVES_QUALIFICATION_2026-11-03.md) and [master inventory CSV](./MASTER_DATA_INVENTORY_2026-11-03.csv). The complementary native [Google Sheets master register](https://docs.google.com/spreadsheets/d/1zsiI8TPJeI2jKiZqlGj1okBrD6kuBVpw7xHzOxJcV6A/edit) is stored in the existing thesis Data folder.
+
+**No direct connected P→T_e or T_e→P field thermal validation is claimed.**
