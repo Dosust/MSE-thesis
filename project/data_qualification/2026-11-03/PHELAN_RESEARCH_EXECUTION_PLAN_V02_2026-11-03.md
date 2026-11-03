@@ -3,7 +3,7 @@
 **Thesis:** Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience  
 **Planning date:** 3 November 2026  
 **Repository status:** Active *working* research plan, pending methodological review and protocol lock; **not a supervisor-approved protocol**, executed systematic review, or independently validated coupled model.  
-**Branch:** \`user-data-qualification-2026-11-03\`, not merged to \`main\`.
+**Branch:** `user-data-qualification-2026-11-03`, not merged to `main`.
 
 **Supersedes as the primary *planning structure*:** [Detailed execution plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md). The original v1.0 and [44-task register v1.0](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv) are retained unchanged as methodological and version-history records.
 
@@ -81,7 +81,7 @@ Establish a comprehensive, reproducible scientific evidence base identifying wha
 
 For each primary study: original DOI/page/equation/figure; hardware rated capacities, source sensor positions, measured/derived data and units; governing conservation plus loss/cooling constitutive laws; boundary/initial conditions and state operator \(y=h(x)+\epsilon\); independent parameter source, identifiability and state observability; ambient/charge/load confounders; dynamics/temporal resolution; calibration/holdout metrics and uncertainty; external-asset or high-heat validation; interface map and service consequence quality.
 
-The physical first law is broadly applicable, but a simplified model, fitted coefficient, or specific thermal limit is **not** automatically transferable to other equipment. A single installation's valid coefficients do not establish a general law or extre​me-heat validity.
+The physical first law is broadly applicable, but a simplified model, fitted coefficient, or specific thermal limit is **not** automatically transferable to other equipment. A single installation's valid coefficients do not establish a general law or extreme-heat validity.
 
 ### Experimental-data and model-choice decision
 
@@ -139,7 +139,7 @@ The physical first law is broadly applicable, but a simplified model, fitted coe
 | WP8 | legacy WP8: **T38–T41** | Research reporting |
 | THESIS-DOWNSTREAM | legacy WP9: **T42–T44** | Subsequent SO1–SO3 connected physical validation and resilience research |
 
-Preserve **original** task IDs, priority, objective, activity, prerequisites, deliverable, test, status and role in [v2.0 register](./PHELAN_RESEARCH_TASK_REGISTER_V02_2026-11-03.csv), with a new \`legacy_wp\` and \`scope\` field. Do not silently mark planned tasks as completed or remove WP9 science from overall thesis scope.
+Preserve **original** task IDs, priority, objective, activity, prerequisites, deliverable, test, status and role in [v2.0 register](./PHELAN_RESEARCH_TASK_REGISTER_V02_2026-11-03.csv), with a new `legacy_wp` and `scope` field. Do not silently mark planned tasks as completed or remove WP9 science from overall thesis scope.
 
 **Planning targets and blockers:** register columns indicate target weeks, not strict deadlines. Replanning requires cause, date and no fabricated success. Store each genuine completed gate's artifact hyperlink and note in register before status is changed.
 
@@ -153,4 +153,4 @@ Preserve **original** task IDs, priority, objective, activity, prerequisites, de
 
 **Definition of done for Professor Phelan's immediate request:** a reproducible, source-grounded account of prior work and defensible research gap, plus an honest experimental-data-sufficiency assessment and justified decision between validated pure physics and optional PINN/PIML. It need not claim a successful PINN or finished coupled thesis.
 
-**Source-control policy:** do not edit frozen thesis authority files or merge to \`main\` during this planning update; preserve raw data in authorized storage, original v1.0 plans, protocol v0.2 and empty logs until the relevant activity has actually executed.
+**Source-control policy:** do not edit frozen thesis authority files or merge to `main` during this planning update; preserve raw data in authorized storage, original v1.0 plans, protocol v0.2 and empty logs until the relevant activity has actually executed.
