@@ -122,3 +122,13 @@ Results generated from publisher-checksum-matched SINTEF transformer sensors, Sl
 Newly documented operational vehicle-side source: [original TUM 7-EV ID1 thermal QA in main](https://github.com/Dossiya-SE/MSE-thesis/blob/main/data/field_candidates/2026-11-03/TUM_ID1_FIELD_THERMAL_QA_2026-11-03.md). User locally downloaded seven original Parquet objects; ID1 source audit reports 40,401,700 long-format records and ambient up to 39.5°C. **Original Parquet files were not uploaded to Drive**; whole-file SHA-256 checks and all-vehicle QA are still missing. Repeated 1023°C-like inlet/outlet codes exceed source dictionary limits and must not be used as physical temperatures until source decoding is verified.
 
 **Status:** REAL VEHICLE FIELD — SOURCE LOCAL ON MAC — THERMAL CHANNEL QA PENDING. Improved scope for SO1/SO2 **vehicle-side component physics**, **no verified charging-temperature concurrence, charger-internal temperature or supplying-transformer connection**. Cross-indexed in [working-branch inventory D20](./MASTER_DATA_INVENTORY_2026-11-03.csv), [FD-013 field candidates](../../../../data/field_candidates/2026-11-03/field_candidate_register.csv) and [research checkpoint section F](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md). Previously estimated 20% overall core-thesis completion remains **provisional and unchanged**.
+
+## Integrated literature and dataset physics roadmap — 2026-11-03
+
+**New verified GitHub research artifacts:**
+
+- [Targeted thermal power–transport literature audit and review protocol v0.1](./TARGETED_LITERATURE_THERMAL_PT_SYSTEMATIC_PROTOCOL_V01.md): 10 comparator papers and source-evidence class, full-text RACE preliminary extraction, database search and PRISMA prerequisites. **Not yet a systematic review or established global novelty claim**.
+- [Literature-to-data validation crosswalk v0.1](./LITERATURE_TO_DATA_VALIDATION_CROSSWALK_V01.md): reconcile RACE modeled transformer physics, Qatar measured EVSE field derating, Li operating station electrical monitoring and TUM field vehicle battery thermal traces against SINTEF, Slovenia, KU Leuven and Report 1.
+- [Research checkpoint sections F–G](./THESIS_RESEARCH_CHECKPOINT_2026-11-03.md): TUM thermal QA limitations, literature priorities, exact next-source acquisition and derivation tasks.
+
+**Science gate:** Data from Qatar, SINTEF, Slovenia, TUM and Li cannot be concatenated into an invented connected experiment. Transfer governing physics **only with verified constitutive terms, calibrated installation parameters, proper boundary conditions, uncertainty and independent validation**. No observed joint transformer–EVSE thermal propagations or resilience benefits have yet been demonstrated.
