@@ -181,3 +181,18 @@ For four AC files, an independent **provisional battery-electrical-power/AC-line
 5. Pursue a genuinely connected transformer+charger field installation with measured temperatures, protection actions, charging power, demand and service outcomes.
 
 **Audit linkage:** [New-original field-file QA](./SLOVENIA_STREAM_SINTEF_RAW_AUDIT_2026-11-03.md); [KU Leuven source QA](./UPLOADED_ARCHIVES_QUALIFICATION_2026-11-03.md); [Master inventory](./MASTER_DATA_INVENTORY_2026-11-03.csv). Original measurement bytes are retained in the thesis Google Drive Data folder and are deliberately **not committed as new GitHub data files**.
+
+## 11. Python reproduction of selected new numerical results
+
+**Script:** [REPORT_01_REPRODUCE.py](./REPORT_01_REPRODUCE.py). Install \`pandas\`, \`numpy\`, \`scipy\` and \`openpyxl\`, then run:
+
+\`\`\`bash
+python REPORT_01_REPRODUCE.py \
+  --sintef "Barug2025_sensordata(2).csv" \
+  --p control_measurements_P_2025.csv \
+  --q control_measurements_Q_2025.csv \
+  --evzip doi-10.48804-c5pt0r.zip
+\`\`\`
+
+Source-original MD5 hashes are checked before calculations. This compact script independently reproduces **key RQ1–RQ5 numerical metrics**: ambient/current correlations; one-hour chronological RC model/persistence RMSE and MAE; Slovenia synchronized-count/sign fractions; KU Leuven AC source summaries and Figure10 DC power ratios. The larger research run also calculated all-sensor correlations, 6/24-hour conditional hindcasts, station-level statistics and lag profiles; these are detailed above and are not implemented in the compact script. RQ6/RQ7 are explicitly **not** reproduced without their original row-level inputs.
+
