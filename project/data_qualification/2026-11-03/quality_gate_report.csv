@@ -1,0 +1,17 @@
+check_id,source,test,observed,status,decision
+I001,IOWA_296_2022,network_nodes,296,PASS_DESCRIPTION_ONLY,Not equivalent to load-measurement columns
+I002,IOWA_296_2022,hourly_load_series,226,PASS_STRUCTURE,23+65+138 across three feeders
+I003,IOWA_296_2022,hourly_rows_per_load_sheet,8760,PASS_STRUCTURE,Jan-Dec 2022
+I004,IOWA_296_2022,reactive_power_origin,PF randomly 0.90 to 0.95,ASSUMPTION_DERIVED,Do not report Q as measured
+I005,IOWA_296_2022,matching_circuit_in_upload,no,BLOCKED_EVIDENCE,Fetch independently verified OpenDSS
+O001,OSF_94GKC,experiment_csv_count,313,PASS_COUNT,250 main and 63 extended
+O002,OSF_94GKC,record_count,4061379,PASS_COUNT,Rows across disjoint experiments
+O003,OSF_94GKC,schema_variants,3,WARNING,Duplicate HV_Battery_MaxChargeVoltage header in 250 files
+O004,OSF_94GKC,battery_temp_completeness,23052 of 4061379; 0.57 percent,FAIL_FOR_THERMAL_ID,Not usable directly to calibrate state-time thermal dynamics
+O005,OSF_94GKC,implausible_battery_temp_value,1538.3 in four entries,WARNING,Quarantine values pending DAQ explanation
+O006,OSF_94GKC,extreme_heat_test,absent,BLOCKED_EVIDENCE,Electrical PQ experiment only
+B001,BATTERY_TR_500,avg_temp_midpoint,500/500 exactly,WARNING_CONSTRUCTED,No independent average temperature sensor demonstrated
+B002,BATTERY_TR_500,chargepower_equals_VI,500/500 within rounding,WARNING_CONSTRUCTED,No independent power measurement demonstrated
+B003,BATTERY_TR_500,source_provenance,unverified,BLOCKED_EVIDENCE,No field thermal validation
+F001,FR_EVSE_METADATA,row_count,1,PASS_STRUCTURE,Metadata only; raw contact fields private
+ALL,ALL,connected_transformer_EVSE_thermal_field_evidence,none,BLOCKED_EVIDENCE,Do not claim coupled field validation
