@@ -1,0 +1,40 @@
+name: DOE original Power-EV public data URL audit
+on:
+  push:
+    branches: [doe-original-data-scraper-2026-11-03]
+    paths:
+      - '.github/workflows/doe-original-data-acquisition.yml'
+      - '.github/skills/doe-power-ev-data-scraper/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install requests
+        run: python -m pip install requests
+      - name: Execute scraper regression tests
+        run: python -m unittest discover -s .github/skills/doe-power-ev-data-scraper/tests -v
+      - name: Resolve original links and download only public small files
+        run: |
+          python .github/skills/doe-power-ev-data-scraper/scripts/doe_scraper.py \
+            --out doe_scraper_output --download-small --max-file-mb 5 --max-files 8 --max-api-calls 70
+      - name: Display scientific qualification summary
+        if: always()
+        run: |
+          if [ -f doe_scraper_output/run_summary.json ]; then cat doe_scraper_output/run_summary.json; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: doe-power-ev-public-originals-and-link-audit
+          path: doe_scraper_output/
+          if-no-files-found: warn
+          retention-days: 30
