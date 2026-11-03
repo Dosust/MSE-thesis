@@ -14,7 +14,7 @@
 | [40-to-8 component-literature audit](https://github.com/Dossiya-SE/MSE-thesis/blob/main/project/thermal_sos_functional_architecture/40_TO_8_LITERATURE_VALIDATION_DECISION_V2.md) | Source-backed four-power/four-transport candidate physical component/thermal interface discussion | 40 candidate original identities unreconciled, exact equipment portfolio not admitted, no numerical coupled ablations |
 | [Nov 3 pilot source list](./PILOT_SOURCE_REGISTER_2026-11-03.csv), [source equation audit](./EXTRACTION_BRAGONE_ACKER_DAY01_2026-11-03.md) | 25 working references and initial Bragone/Acker model-source extraction; Wiley 12 passages/10 articles plus web pilot | Not a new formal systematic corpus; Elicit API access was denied and primary fulltext/model comparisons are incomplete |
 
-Another prior project file: Q0_Evidence_Corpus_Audited_v2.xlsx contains a separately reported 209-record bibliography with Scopus/IEEE/Compendex fields. Its DOI-level relationship to the October 687/433/200 run is NOT YET VERIFIED. Prior SCREEN-001 adjudication and EXTRACT-001 fulltext stages remain OPEN. Do not silently add 209 to other counts.
+The original Q0_Evidence_Corpus_Audited_v2.xlsx contains **404 deduplicated MASTER_Q0 records and 687 raw provenance records**, confirmed by a direct spreadsheet import. Historical SCREEN-001 formal adjudication and EXTRACT-001 systematic full-text stages remain OPEN. Do not treat a partial indexed excerpt of ~209 records as a separate corpus.
 
 ## 2. Exact old/new DOI overlap (recomputed in GitHub files)
 
@@ -40,7 +40,7 @@ Previous stage 1–7 model protocols, code and mathematical structure are reusab
 
 ## 4. Correct reuse sequence — BEFORE fresh broad searches
 
-1. Recover original historical 687 raw bibliographic exports, the 433 working corpus, 200 scored rows, BOTH 26 pools, 209 Q0 corpus, newest 25 seeds and original reference IDs. Record access failures without inventing data.
+1. Recover original historical 687 raw provenance rows and 404 Q0 master records, the 433 augmented working-corpus lineage, 200 scored rows, BOTH 26 pools, newest 25 seeds and original reference IDs. Record access failures without inventing data.
 2. Construct a single DOI/title/year/report-version crosswalk with provenance and access status, preserving all historic IDs. Do not sum overlapping counts.
 3. Determine exactly which source and screening activities were genuine executed historical database searches (platform, query, date, filters, raw export hash); mark missing evidence OPEN. The new v0.2 review does NOT have a reproducibly complete logged systematic search yet.
 4. Reuse P01–P14 model/source audits, five full-PDF focused papers, Hilshey/Bragone/RACE and old prior-work falsification. Fill only remaining page/equation, sensor/validation and model-assumption evidence.
