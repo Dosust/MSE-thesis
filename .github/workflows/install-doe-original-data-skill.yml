@@ -1,0 +1,43 @@
+name: Install verified DOE power-EV data skill
+on:
+  push:
+    branches: [doe-original-data-scraper-2026-11-03]
+    paths: ['.github/skills/_doe_original_data_install.zip', '.github/workflows/install-doe-original-data-skill.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract audited source into dedicated review branch
+        shell: bash
+        run: |
+          python - <<'PY'
+          import zipfile,pathlib
+          arc=pathlib.Path(".github/skills/_doe_original_data_install.zip")
+          with zipfile.ZipFile(arc) as z:
+            assert z.testzip() is None
+            for info in z.infolist():
+              if info.is_dir(): continue
+              name=pathlib.PurePosixPath(info.filename)
+              if name.is_absolute() or ".." in name.parts: raise RuntimeError("Unsafe ZIP path")
+              if info.filename.startswith(".github/"):
+                dst=pathlib.Path(*name.parts)
+                dst.parent.mkdir(parents=True,exist_ok=True)
+                dst.write_bytes(z.read(info))
+          arc.unlink()
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install requests
+      - run: python -m unittest discover -s .github/skills/doe-power-ev-data-scraper/tests -v
+      - name: Commit complete skill and runnable acquisition job
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A .github/skills/_doe_original_data_install.zip .github/skills/doe-power-ev-data-scraper/ .github/workflows/doe-original-data-acquisition.yml
+          git diff --cached --quiet || (git commit -m 'Install DOE source-grounded scraper skill and 12 validated tests' && git push)
