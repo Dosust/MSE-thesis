@@ -33,6 +33,11 @@
 | D15 | Kaggle grid–transport resilience table | 5,000 scenario/time-step rows; missing electrical connection/thermal state and charging measurements | **SYNTHETIC/SCENARIO-LIKE; no validation role** | Keep only for synthetic test scaffolding with source documentation |
 | D16 | Physics-informed virtual coupling experiment | 36 virtual cases, 103,680 minute-resolution simulated rows, numerical/conservation checks completed | **SYNTHETIC MODEL TEST ONLY** | Replace illustrative coefficients with admitted laws/parameters; independent connected validation remains blocked |
 
+| D17 | KU Leuven C5PT0R EV charge efficiency, EnergyVille | 40,873 measured/processed AC CSV records (4 files), five XLSX files including 258 DC converter samples with AC/DC input/output and battery temperature; publisher file checksums match | **MEASURED T_e ELECTRICAL + BATTERY THERMAL, CONDITIONAL COMPONENT ONLY** | Three AC files have backward timestamp steps; suspected swapped charger current/voltage labels in one DC test; validate meter boundaries/overlap with D02; no EVSE internal temp, derating, transformer link |
+| D18 | Mendeley single-phase transformer thermal images V3 | 255 RGB 320x240 laboratory IR images of one healthy + 8 induced-fault configurations; 45 expert ROI masks plus 45 paired reference images | **LAB MEASURED FAULT IMAGING, AUXILIARY ONLY** | 1 kW dry-type 1-phase transformer, reported ambient 23°C; color images not calibrated heat time series; cannot validate oil/hotspot dynamics, severe heat, or P↔T_e coupling |
+
+**New upload audit:** [Two uploaded archives — qualification and QA](./UPLOADED_ARCHIVES_QUALIFICATION_2026-11-03.md). Originals are in the existing Drive Data folder, documented by DOI, SHA-256 and Drive links in that audit; these are **D17/D18 additional sources**, not repairs to the existing D01–D16 data.
+
 ## High-value externally identified sources not yet qualified as full connected thermal datasets
 
 | Lead | What public evidence supports | Blocker |
