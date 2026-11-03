@@ -1,0 +1,127 @@
+{
+  "archive_name": "archive.zip",
+  "archive_sha256": "cd590c860a9b2dd5d72bdfa61e2a8d18e09315faf2e10a832fd9206dd97ff62c",
+  "original_member_sha256": {
+    "ev_charging_dataset.csv": "2701452e98f2668fd1cab31bf3927ceb4d7ac021b56f99fc5962dbe647031219",
+    "location_dataset.csv": "9c85962464c14e9f88e42af7883654b1f1241f30e2da09658ea2994c5d777af3"
+  },
+  "source_candidate": "https://www.kaggle.com/datasets/datasetengineer/ev-charging-load-dataset-and-optimal-routing",
+  "drive_original_url": "https://drive.google.com/file/d/1-XY4-xDP5sfpbv3gPzTyHhjJ0ZJR2nYj/view",
+  "source_provenance_status": "MATCHING_FILENAME_AND_STRUCTURE; measurement origin and license NOT VERIFIED",
+  "field_measurement_status": "NOT_QUALIFIED",
+  "synthetic_likelihood": "HIGH based on internal contradictions; generator not proven",
+  "csv_file_count": 2,
+  "charging_rows": 64945,
+  "charging_columns": 28,
+  "charging_header": [
+    "Date_Time",
+    "Vehicle_ID",
+    "Battery_Capacity_kWh",
+    "State_of_Charge_%",
+    "Energy_Consumption_Rate_kWh/km",
+    "Current_Latitude",
+    "Current_Longitude",
+    "Destination_Latitude",
+    "Destination_Longitude",
+    "Distance_to_Destination_km",
+    "Traffic_Data",
+    "Road_Conditions",
+    "Charging_Station_ID",
+    "Charging_Rate_kW",
+    "Queue_Time_mins",
+    "Station_Capacity_EV",
+    "Time_Spent_Charging_mins",
+    "Energy_Drawn_kWh",
+    "Session_Start_Hour",
+    "Fleet_Size",
+    "Fleet_Schedule",
+    "Temperature_C",
+    "Wind_Speed_m/s",
+    "Precipitation_mm",
+    "Weekday",
+    "Charging_Preferences",
+    "Weather_Conditions",
+    "Charging_Load_kW"
+  ],
+  "first_timestamp": "2017-01-01 00:00:00",
+  "last_timestamp": "2024-05-30 00:00:00",
+  "duplicate_timestamp_adjacent": 0,
+  "hourly_gap_or_reordering": 0,
+  "all_columns_missing_cells_total": 0,
+  "missing_by_column": {},
+  "unique_key_counts": {
+    "Vehicle_ID": 1,
+    "Charging_Station_ID": 1,
+    "Battery_Capacity_kWh": 61733,
+    "Session_Start_Hour": 1,
+    "Weekday": 7,
+    "Weather_Conditions": 4,
+    "Road_Conditions": 3,
+    "Fleet_Size": 4
+  },
+  "unique_vehicle_ids": [
+    "106"
+  ],
+  "unique_charging_station_ids": [
+    "2"
+  ],
+  "weekday_mismatches_monday_0": 55612,
+  "weekday_agreements_monday_0": 9333,
+  "charging_energy_exceeds_nominal_rate_x_duration": 20027,
+  "charging_load_exceeds_charging_rate": 15372,
+  "session_duration_nonpositive": 0,
+  "stated_distance_under_80_percent_geodesic": 5097,
+  "clear_weather_with_positive_precipitation": 32328,
+  "clear_weather_rows": 32328,
+  "temperature_min_C": 0.0,
+  "temperature_max_C": 40.0,
+  "temperature_mean_C": 24.654048750071237,
+  "temperature_gt40_C_rows": 0,
+  "temperature_eq0_C_rows": 429,
+  "location_rows": 31,
+  "location_types": {
+    "City": 12,
+    "Port": 5,
+    "Warehouse": 3,
+    "Power Plant": 4,
+    "Industrial Zone": 4,
+    "Mining Site": 3
+  },
+  "has_transformer_temperature": false,
+  "has_evse_internal_temperature": false,
+  "has_verified_transformer_charger_topology": false,
+  "has_qualified_temperature_derating": false,
+  "has_device_sensors_or_calibration_records": false,
+  "initial_rows_selected_fields": [
+    {
+      "Date_Time": "2017-01-01 00:00:00",
+      "Vehicle_ID": "106",
+      "Battery_Capacity_kWh": "66.74648266254076",
+      "Weekday": "1",
+      "Session_Start_Hour": "6"
+    },
+    {
+      "Date_Time": "2017-01-01 01:00:00",
+      "Vehicle_ID": "106",
+      "Battery_Capacity_kWh": "82.73149608675611",
+      "Weekday": "3",
+      "Session_Start_Hour": "6"
+    },
+    {
+      "Date_Time": "2017-01-01 02:00:00",
+      "Vehicle_ID": "106",
+      "Battery_Capacity_kWh": "82.10791250617234",
+      "Weekday": "4",
+      "Session_Start_Hour": "6"
+    }
+  ],
+  "interpretation_notes": [
+    "Battery_Capacity_kWh changes dramatically for a single Vehicle_ID; cannot be modeled as a physical repeated-measurement vehicle history.",
+    "Weekday is inconsistent with Date_Time when Monday=0; label convention is NOT documented.",
+    "Charging rate-duration energy and charge load exceedance tests assume consistent rate/power definitions. Violations imply undocumented conventions or unphysical data, not necessarily the exact generating mechanism.",
+    "Temperature_C is an ambient/recorded attribute, not measured transformer oil/hotspot or EVSE electronics temperature.",
+    "There are no electrical network edges in location_dataset.csv. Coordinate pairs are abstract points without geographic CRS.",
+    "Records are hourly contiguous; this alone is not sensor provenance.",
+    "Archive is suitable only for labelled synthetic/illustrative algorithm unit tests and not for field-coupled thermal calibration or external validity claims."
+  ]
+}

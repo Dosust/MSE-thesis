@@ -1,0 +1,33 @@
+dataset,column,source_unit_or_meaning,measurement_status,research_note
+ev_charging_dataset.csv,Date_Time,Time,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Vehicle_ID,ID,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Battery_Capacity_kWh,kWh,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,State_of_Charge_%,%,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Energy_Consumption_Rate_kWh/km,kWh/km,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Current_Latitude,Latitude,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Current_Longitude,Longitude,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Destination_Latitude,Latitude,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Destination_Longitude,Longitude,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Distance_to_Destination_km,km,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Traffic_Data,Data,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Road_Conditions,Conditions,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Charging_Station_ID,ID,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Charging_Rate_kW,kW,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Queue_Time_mins,mins,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Station_Capacity_EV,EV,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Time_Spent_Charging_mins,mins,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Energy_Drawn_kWh,kWh,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Session_Start_Hour,Hour,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Fleet_Size,Size,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Fleet_Schedule,Schedule,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Temperature_C,C,NOT_SENSOR_VERIFIED,NOT_COMPONENT_TEMPERATURE
+ev_charging_dataset.csv,Wind_Speed_m/s,m/s,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Precipitation_mm,mm,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Weekday,not stated,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Charging_Preferences,Preferences,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Weather_Conditions,Conditions,NOT_SENSOR_VERIFIED,No sensor provenance
+ev_charging_dataset.csv,Charging_Load_kW,kW,NOT_SENSOR_VERIFIED,No sensor provenance
+location_dataset.csv,S#,abstract network field,NOT_PHYSICAL_SITE_VERIFIED,No documented electrical edge list or coordinate reference system
+location_dataset.csv,Location,abstract network field,NOT_PHYSICAL_SITE_VERIFIED,No documented electrical edge list or coordinate reference system
+location_dataset.csv,Type,abstract network field,NOT_PHYSICAL_SITE_VERIFIED,No documented electrical edge list or coordinate reference system
+location_dataset.csv,Coordinates,abstract network field,NOT_PHYSICAL_SITE_VERIFIED,No documented electrical edge list or coordinate reference system

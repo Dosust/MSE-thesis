@@ -1,0 +1,16 @@
+check_id,status,evidence,implication
+ZIP_INTEGRITY,PASS,zipfile.testzip() returned None,Code/data integrity only
+ROW_COUNT,PASS,64945 records in charging CSV,Code/data integrity only
+COLUMN_COUNT,PASS,28 charging attributes,Code/data integrity only
+MISSING_CELLS,PASS,0 missing cells (completeness only),Code/data integrity only
+HOURLY_SEQUENCE,PASS,0 nonhourly steps,Code/data integrity only
+VEHICLE_CAPACITY_CONSISTENCY,FAIL,one vehicle ID but 61733 distinct battery capacities,Do not admit as measured coupled thermal evidence
+WEEKDAY_CONSISTENCY,FAIL,55612/64945 inconsistent with timestamps (Monday=0),Do not admit as measured coupled thermal evidence
+ENERGY_POWER_DURATION,FAIL,20027/64945 E > rate * duration/60; subject to semantics,Do not admit as measured coupled thermal evidence
+LOAD_RATE_BOUND,FAIL,15372/64945 charging load exceeds quoted charging rate; subject to semantics,Do not admit as measured coupled thermal evidence
+AMBIENT_HEAT_RANGE,LIMITATION,max temperature 40.0 C; no >40 C observed,Do not admit as measured coupled thermal evidence
+SENSOR_PROVENANCE,BLOCKED,No exact equipment/sensor/protocol/measurement calibration proven,Do not admit as measured coupled thermal evidence
+TOPOLOGY_CONNECTIVITY,BLOCKED,31 locations but no verified real electrical network or shared transformer–EVSE circuit,Do not admit as measured coupled thermal evidence
+TRANSFORMER_EVSE_TEMPERATURE,BLOCKED,"No oil, winding or charger internal temperature channels",Do not admit as measured coupled thermal evidence
+CROSS_SYSTEM_FIELD_VALIDATION,BLOCKED,No synchronized physically connected thermal field measurements,Do not admit as measured coupled thermal evidence
+RAW_REDISTRIBUTION_RIGHTS,OPEN,Original Kaggle license not independently verified; raw file not authorized for public GitHub redistribution,Do not admit as measured coupled thermal evidence
