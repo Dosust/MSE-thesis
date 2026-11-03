@@ -54,7 +54,7 @@ The following **subjective milestone estimates** were discussed on 3 November 20
 - [Original CSV provenance audit](./SLOVENIA_STREAM_SINTEF_RAW_AUDIT_2026-11-03.md) and [master dataset inventory](./MASTER_DATA_INVENTORY_2026-11-03.csv).
 - [RQ1–RQ5 compact Python](./REPORT_01_REPRODUCE.py), [RQ7–RQ10 extended Python](./REPORT_01_EXTENDED_RQ7_RQ10.py).
 - [RQ7–RQ11 results JSON](./REPORT_01_EXTENSION_RQ7_RQ11_RESULTS.json), [RQ7 grouped CSV](./REPORT_01_RQ7_OSF_BY_CATEGORY.csv), [RQ8 bootstrap CSV](./REPORT_01_RQ8_BLOCK_BOOTSTRAP.csv), and [RQ10 monthly holdout CSV](./REPORT_01_RQ10_MONTHLY_HOLDOUT.csv).
-- **Known reporting gap at this checkpoint:** the Report 1 narrative links a per-experiment RQ7 QA CSV but \`REPORT_01_RQ7_OSF_BY_EXPERIMENT.csv\` is *not present in the current GitHub branch*. It exists in the locally generated Report 1 ZIP package; preserve that output in Drive or commit it before claiming complete archival.
+- **Known reporting gap at this checkpoint:** the Report 1 narrative links a per-experiment RQ7 QA CSV but \`REPORT_01_RQ7_OSF_BY_EXPERIMENT.csv\` is *not present in the current GitHub branch*. It exists inside the validated Report 1 ZIP package, which was saved in the user's persistent Library at `/Thesis Research Archive/Report_01_RQ1_RQ11_Research_Analysis_2026-11-03.zip` (SHA-256 `ca763a518b6cd668a90bd4c9b84f3acf45269a427fd76d609f4c5b09313da6c7`; ZIP CRC check PASS; **20 archive members**). It is preserved across sessions but the per-experiment CSV has not yet been individually committed to GitHub.
 - **Reproduction gate:** the extended GitHub Python script has not been independently shown to byte-for-byte regenerate all files in the full local analysis package. Treat as reproducibility implementation pending independent run comparison, not as certified reproducibility.
 
 ## D. Physics/transferability rule to retain
@@ -68,7 +68,7 @@ This physical conservation statement is general. Specific model reductions, cons
 
 ## E. Next-session task queue — in scientific priority order
 
-1. **Archive reconciliation:** preserve the full local RQ1–RQ11 analysis package (including per-experiment OSF QA, charts if any, generated CSV/JSON); check that GitHub links resolve and source hashes match; correct the 313 vs 295 nonempty file and older row-count discrepancy.
+1. **Archive reconciliation:** **full local RQ1–RQ11 package now preserved in persistent personal Library** (original ZIP, CRC valid). If full version-controlled replication is needed, commit the RQ7 per-experiment QA CSV separately to GitHub; confirm script/metric reproduction, check GitHub links and source hashes, and resolve the 313 vs 295 nonempty file and prior row-count discrepancy.
 2. **RQ6 completion:** retrieve authentic original OPSD paired site-load/EV charging data and conduct no-leakage matched forecasts; record metering boundary, imputation and uncertainty.
 3. **Transformer equipment parameters:** obtain and checksum the [STREAM transformer nameplate/impedance/loss file](https://doi.org/10.5281/zenodo.20927801); verify all 12 TR-ID joins and kW/kvar/sign conventions before computing rated utilization or thermal overload.
 4. **SO1 physical-interface evidence:** prove or explicitly bound P→EVSE grid supply, EVSE→transformer demand, thermal restriction/derating, and EVSE battery/cooling paths; prioritize same-site instrumented extreme-heat evidence.
