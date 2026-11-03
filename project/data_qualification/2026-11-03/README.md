@@ -98,8 +98,10 @@ Read [full new archive qualification, checksums and numerical QA](./UPLOADED_ARC
 
 **Admissibility boundary:** authentically paired operational electrical P/Q is not observed thermally coupled transformer–EVSE behavior. No P→Tₑ, Tₑ→P or service-resilience field validation is claimed.
 
-## Report 1 — Seven measured-data research questions
+## Report 1 — Eleven measured-data and mathematical engineering research questions
 
-**[Open Report 1: RQ1–RQ7 measured-data answers](./REPORT_01_MEASURED_DATA_RQ1_RQ7_2026-11-03.md)**
+**[Open Report 1: RQ1–RQ11 measured-data and mathematical answers](./REPORT_01_MEASURED_DATA_RQ1_RQ7_2026-11-03.md)**
 
 Results generated from publisher-checksum-matched SINTEF transformer sensors, Slovenia paired station P/Q, and the KU Leuven experimental charging archive. RQ1–RQ3 have numerical results, RQ4–RQ5 have qualified component numerical results, while RQ6–RQ7 explicitly retain blocked independent reanalysis pending the original observation rows in the runnable environment. No causal coupled P↔Tₑ or extreme-heat field validation is asserted. New report is working evidence on the review branch only.
+
+**Expanded Report 1 current status (2026-11-03):** RQ1–RQ5 measured component findings maintained; RQ7 independently recalculated from the original OSF 94GKC laboratory archive (313 CSV entries, 18 empty); RQ8 effective parameter estimation and 24h-block bootstrap; RQ9 model sensitivity; RQ10 same-site validity analysis; RQ6 (OPSD raw household records) and actual coupled-service RQ11 remain empirically blocked. [Extension Python source](./REPORT_01_EXTENDED_RQ7_RQ10.py), [derived JSON](./REPORT_01_EXTENSION_RQ7_RQ11_RESULTS.json), [PQ comparison summary](./REPORT_01_RQ7_OSF_BY_CATEGORY.csv). No frozen files or main-branch changes.
