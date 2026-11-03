@@ -86,3 +86,14 @@ The original Iowa/OSF and quarantine qualifications above remain unchanged. Two 
 Read [full new archive qualification, checksums and numerical QA](./UPLOADED_ARCHIVES_QUALIFICATION_2026-11-03.md) and [master inventory CSV](./MASTER_DATA_INVENTORY_2026-11-03.csv). The complementary native [Google Sheets master register](https://docs.google.com/spreadsheets/d/1zsiI8TPJeI2jKiZqlGj1okBrD6kuBVpw7xHzOxJcV6A/edit) is stored in the existing thesis Data folder.
 
 **No direct connected P→T_e or T_e→P field thermal validation is claimed.**
+
+## Original P/Q field-data update — 2026-11-03
+
+**Source-grounded audit:** [SINTEF 2024 and STREAM Slovenian 2025 original-file qualification](./SLOVENIA_STREAM_SINTEF_RAW_AUDIT_2026-11-03.md).
+
+- **D01 (existing SINTEF):** original 8,592-row measured sensor CSV publisher-MD5 verified and stored in [Drive](https://drive.google.com/file/d/1sOEtx-Nlr00n_pLqTdWb4BZI6O35m8Nu/view). NOT a new dataset count; preserve measured versus author-calculated distinction and original CSV numerics because native Sheets locale sometimes coerces values.
+- **D19 (new Slovenian operational field):** P and Q originals [P in Drive](https://drive.google.com/file/d/1hZ7pCydBAkfnLf4RU2lTu3LozNvuQ4tO/view), [Q in Drive](https://drive.google.com/file/d/1SQ0ONhiCXK3_Ax--q9j0lUQV7IDACL5I/view). Both publisher-MD5 verified; 34,932 aligned 15-minute UTC timestamps and 12 anonymized transformer station IDs; 419,184 complete station-time P/Q pairs. Missing only 108 final slots of calendar 2025; real-time source units, sign convention and equipment nameplate crosswalk remain open.
+- **Research-source registry:** [12-source field candidate register updated on review branch](../../../../data/field_candidates/2026-11-03/field_candidate_register.csv) to reflect that FD-001 and FD-004 are now raw-acquired. FD-005 transformer ratings CSV **not acquired**.
+- **Google Sheets:** [Master data inventory](https://docs.google.com/spreadsheets/d/1zsiI8TPJeI2jKiZqlGj1okBrD6kuBVpw7xHzOxJcV6A/edit) and [Verified Field Candidates](https://docs.google.com/spreadsheets/d/1FgsfDBsCP43L6GyRbJ8v0NmUxseL4aJPeRnHBIHJqzk/edit) updated.
+
+**Admissibility boundary:** authentically paired operational electrical P/Q is not observed thermally coupled transformer–EVSE behavior. No P→Tₑ, Tₑ→P or service-resilience field validation is claimed.
