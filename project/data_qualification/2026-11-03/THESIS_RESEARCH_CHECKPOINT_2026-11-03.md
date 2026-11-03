@@ -120,3 +120,15 @@ The first targeted [systematic-review protocol (10 relevant studies; not a compl
 **Method gate:** Real SINTEF transformer field observations support evaluation of a transformer-only PINN *against existing physics and statistical baselines*, provided the candidate heat equations are physically identifiable. TUM vehicle field source has decoding/sync defects, so not yet admissible battery thermal PINN training. Original Qatar charger thermal data are on request, not available to this execution; therefore no independently validated EVSE internal-thermal PINN. These independent datasets cannot substantiate a measured connected-system PINN.
 
 **Immediate priority:** freeze exact searches after supervisor-method approval, export multiple primary bibliographic databases and screen, extract Bragone/RACE/Qatar/Li/Cao equation-by-equation, then decide physics ODE/PDE versus gray-box/PINN using held-out experimental data and UQ. Continue source search for actual physically connected field interface. Keep SO1 35%, SO2 20%, SO3 5% only as provisional planning estimates.
+
+## I. Approved working execution queue to address Professor Phelan
+
+**Note:** *approved working* here means documented internal task order, **not** a claim that Professor Phelan has approved the review protocol or the proposed novel contribution. The protocol remains a draft until a dated methodological lock.
+
+[Master work package and stage-gate execution plan v1.0](./PHELAN_FEEDBACK_MASTER_RESEARCH_EXECUTION_PLAN_V01_2026-11-03.md); [44-row implementation register](./PHELAN_FEEDBACK_TASK_REGISTER_V01_2026-11-03.csv).
+
+**Core project outputs to deliver Phelan:** (a) executed and source-traceable systematic scoping evidence map + a focused equation-level prior-work synthesis, (b) calibrated and independently evaluated physics baseline, (c) measured-data qualification and physics-vs-PIML decision with either validated comparison or explicit physics-only fallback, (d) concise two-page source-grounded reply.
+
+**Immediate tasks:** T01–T04 protocol scope/search lock; T05–T09 independently execute query blocks A–F and citation chasing; T10–T13 bibliographic screening; T14–T19 verify equation-by-equation Bragone/RACE/Cao/Krama/Li/Wen; in parallel T24–T29 dataset applicability; then T20–T23 novelty evidence and T30–T37 model selection; T38–T41 advisor synthesis. T42–T44 are **downstream thesis work**, not required to answer his immediate questions.
+
+**Not done:** real database search counts or PRISMA-ScR flow, full source-paper extraction, tested multi-model comparison, verified connected EVSE-transformer thermal field data, supervisor approval. **No change** to provisional SO1 35%, SO2 20%, SO3 5% / illustrative overall 20% merely because planning documents now exist.
