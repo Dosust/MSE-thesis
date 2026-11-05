@@ -1,5 +1,9 @@
 # Systematic Literature Review — one research workspace
 
+# Current methodological approval (5 November 2026)
+
+The research owner has **approved the methodological direction**, explicitly choosing **Option A: JBI-guided systematic scoping review**, plus the proposed eligibility, two-independent-human-reviewer standard, and S0+A0–F1 search approach. See **[SLR Protocol v0.3 — Researcher-approved working version](./SLR_PROTOCOL_V0_3_RESEARCHER_APPROVED_2026-11-05.md)** for decisions and open gates. **Supervisor approval, actual two-reviewer availability, precise operational eligibility rules, human screening, prospective protocol registration and PRISMA-ScR completion remain unverified/pending.** Earlier dated records below are historical checkpoints, not superseding v0.3.
+
 ## Executed consolidated master algorithm — 2026-11-03
 
 **EXECUTED PHASE 1 RECONCILIATION (partial gate)** and source-evidence synthesis. The original Q0 workbook was read in full: **687 raw bibliographic provenance rows and 404 deduplicated Q0 master rows**, *not* a separate 209-record workbook. All 404 Q0 confirmatory T/A and fulltext decisions were still PENDING. Historic October/November/thermal collections merged into **533 distinct provisional bibliography identities** with **784 provenance memberships**; not PRISMA included counts. Metadata classifications are **title-only provisional**, not human screening.
