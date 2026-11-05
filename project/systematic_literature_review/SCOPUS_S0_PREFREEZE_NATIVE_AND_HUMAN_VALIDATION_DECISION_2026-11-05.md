@@ -19,9 +19,9 @@
 - S0 contains **299 records designated `Conference review`**, including some whole-proceedings summaries; **6 records designated `Retracted`**. **4,604 titles lack explicit thermal-vocabulary tokens**, while **253 titles mention broad power, transport and thermal terms together**. These last two are **title-only descriptive diagnostics, not relevant/irrelevant counts**: abstracts and keywords may provide the actual search match.
 - Examples needing human scrutiny include Scopus EID `2-s2.0-105030827483` (whole ICETA conference proceedings); `2-s2.0-85141219940` (whole SeFeT proceedings); `2-s2.0-78650308053` (solar PV irradiance study); `2-s2.0-105009268153` (solar cell dye simulation); `2-s2.0-84933037185` (power network voltage regulation with EV and line thermal limits); `2-s2.0-105009302889` (transformer-area flexible support with EV loads and overload). Their scientific status remains undecided until review; some can still supply genuine context/constraints.
 
-## Gate 1 — Verify exact live Scopus execution: **PENDING**
+## Gate 1 — Verify exact live Scopus execution: **PARTIAL — NATIVE COUNT CONFIRMED; QUERY/FILTERS/DATE PENDING**
 
-From the user's institutional Scopus session obtain **native screenshot or Search History/export-details evidence** that shows: platform/database Scopus; complete exact executed query; search date/time/timezone; all active year/language/document/subject filters; total **Scopus-reported hit count**; and any automatic query rewriting or errors. Compare the executed text against the archived exact S0 v0.1 file, not a paraphrase. Check whether the **native reported hit count equals 5,662 CSV rows**. The count 5,662 comes from CSV only; it is **NOT yet confirmed as the platform-reported hit count**. A repeat search may have a different count due to indexing changes; log the date and cause rather than silently forcing agreement.
+From the user's institutional Scopus session obtain **native screenshot or Search History/export-details evidence** that shows: platform/database Scopus; complete exact executed query; search date/time/timezone; all active year/language/document/subject filters; total **Scopus-reported hit count**; and any automatic query rewriting or errors. Compare the executed text against the archived exact S0 v0.1 file, not a paraphrase. Check whether the **native reported hit count equals 5,662 CSV rows**. The native platform count **5,662 documents found** is now confirmed by a user-uploaded Scopus screenshot and matches the 5,662 exported CSV rows. The screenshot shows only the beginning of the search string; exact full query, filter settings and native execution timestamp remain unverified. A repeat search may have a different count due to indexing changes; log the date and cause rather than silently forcing agreement.
 
 If the native count differs, investigate export pagination/caps, post-search selection limits, added filters, modified search syntax, and indexing updates. Preserve both versions and a discrepancy memo; never rewrite the original S0 file.
 
@@ -55,4 +55,14 @@ Translate and run documented comparable queries in Web of Science, IEEE Xplore a
 - Source indicators: `S0_PREFREEZE_SAMPLING_AND_NOISE_INDICATORS.json`.
 - Specific examples: `S0_EIGHT_CONCRETE_SEARCH_NOISE_EXAMPLES.csv`.
 
-**Do not claim:** native Scopus search history verified; 5,662 native reported; S0 formally validated; off-target count measured; pilot complete; supervisor approved; or records fully screened. These gates are open.
+**Do not claim:** complete native Scopus query/history/settings verified; S0 formally validated; off-target count measured; pilot complete; supervisor approved; or records fully screened. **The 5,662 native results count is now independently evidenced.** These gates are open.
+
+
+## 2026-11-05 evidence update — platform count verified
+
+- User screenshot shows Scopus **“5,662 documents found”**, matching the original S0 export row count **5,662** (difference 0).
+- Beginning of visible TITLE-ABS-KEY text matches the archived S0 v0.1 query prefix. The rest of the query and filters are not visible, and execution date/time is not shown.
+- Original image SHA-256: `3d89ed2dc7ef9813ab5f5eed2d8c650b19afe59b5a6aca2a75a41d3f727dfe7e` (400,314 bytes).
+- [Native Scopus screenshot preserved in Drive](https://drive.google.com/file/d/1o6wEGlV8Dgz9dgIpEwFzdo-qJ-D6YyNf/view).
+- [Auditable screenshot verification memo and remaining gates](https://drive.google.com/file/d/13ewxVld1DI3j86qCOlPvR1mNRuRo9hsL/view).
+- **Decision unchanged:** S0 v0.1 remains candidate primary search; not frozen until complete native query/filters/date verification, reviewer calibration and precision checks.
