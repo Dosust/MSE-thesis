@@ -1,0 +1,51 @@
+# Independent EV voltage-response and charger-control evidence — source audit and test plan
+
+**Date:** 2026-11-05. **Scope:** mechanism evaluation for thesis Power ↔ electrified transportation, separate from original KIT 50-day field OLTC measurements. This source audit **does not claim any new measured lab-data outcome** until the source files are executed through a documented analysis.
+
+## Source L1 — controlled KIT PHIL voltage perturbations (2026)
+
+- **Publisher record:** Sebastian Beichter et al., *High-Frequency 20 ms Power Hardware-in-the-Loop Measurements of Electric Vehicle Charging Control under Voltage Step Perturbations*. DOI https://doi.org/10.5281/zenodo.22965111 . Published 2026-09-25, KIT Energy Lab Campus North, OPAL-RT simulator and EGSTON power amplifier, 11 kW 230 V AC charging setup, maximum 16 A, five EV models (VW ID.4, Nissan Leaf, MG4, Tesla Model 3, Renault Zoe).
+- **Direct field verification on 2026-11-05:** The actual VW ID.4 publisher CSV was read over HTTPS (first 8,809 rows reported). Its header is EXACTLY `time_s,U_L1_V,U_L2_V,U_L3_V,I_L1_A,I_L2_A,I_L3_A`. Each file is supplied with publisher MD5. There are only time and three phase RMS voltage/current signals in the inspected CSV. **No explicit real active power P in W, charger command time, charger setpoint, charging-state code, SOC or internal EVSE temperature** in that source schema. The Zenodo narrative mentions active power in a general description, but the actual downloadable schema must govern claims.
+- **Relevant physical mechanism:** Deliberately imposed supply-voltage steps/ramp changes, with measured phase-current responses in one controlled laboratory. This is a materially stronger test of the VOLTAGE → CURRENT pathway than field coincidence; it does not establish the KIT campus field EVSE type, charger-state transitions or feeder ancestry.
+- **Primary admissible metrics:** measured ΔU_RMS [V, %], measured ΔI_RMS [A] across phases, sum of per-phase U_RMS × I_RMS [VA] as an **apparent-power proxy** (not real active W, without power factor); sign, transient shape and current recovery. Detect step candidates from actual voltage when specific command timestamps are not in file; do **not call measured-step detection time a logged perturbation command time**.
+- **Files:** `01_voltages_current_iD4.csv`, `02_voltages_current_Nissann_Leaf.csv`, `03_voltages_current_MG4.csv`, `04_voltages_current_Tesla_Model_3.csv`, `05_voltages_current__Renault_Zoe.csv`. Total source record ~3.3 MB including two PDF figures. Original files remain local, checksum verified.
+
+## Source L2 — measured charger state and commanded-power/setpoint dynamics (TU Dortmund; independent laboratory)
+
+- **Publisher dataset:** Esser, Spina, Rehtanz (2024, v2), *Bidirectional and Unidirectional Charging Profiles of Electric Vehicles*, DOI https://doi.org/10.5281/zenodo.14065331 . **Source paper:** Esser et al. (2025), *High-temporal-resolution dataset of uni-, bidirectional, and dynamic electric vehicle charging profiles*, *Scientific Data* 12, 1192, DOI https://doi.org/10.1038/s41597-025-05524-5 .
+- **Data:** 142 laboratory charging measurements in 8 EV models. Source `parameters.csv` (~77 KB) lists columns/semantics, `measurements.csv` (~20 KB) indexes runs; `dataset_merged.zip` ~207.7 MB and `dataset_raw.zip` ~389.8 MB are separate archival data not yet inspected at individual row level here. The new audit program will download **only the small metadata CSVs** and verify publisher MD5 before identifying candidate dynamic sessions.
+- **G (grid)**: RMS voltage/current, real power, ambient temperature; **C (charger)** where available: charging/enable status, grid/AC commanded power or current setpoint, output V/I/P, EV SOC for eligible modes/equipment; data logger often 500 ms–1 s (not all channels necessarily available in every run). **H and E** provide harmonics and/or EV DC instrumentation in qualifying tests. Device-specific and selected profile identifiers must be validated before assuming an exact field exists.
+- **Published paper finding:** In the exemplary dynamic experiments the measured power generally tracks changed setpoints with reported delays around 2 s or less. This **supports charger-command/state transitions as a distinct, empirically observed electrical operating mechanism** in this *other laboratory*. It **does not prove** any of the KIT field power transitions at +11.1 or +13.8 s were commanded, or that the hardware would react equally.
+- **Testable competing mechanism:** event logs of `P_set(t)` / current setpoint / charging enabled / status versus measured P(t), first update time, signed tracking error, median lag and device/SoC limits. Requires individual merged or source session files after metadata selection; cannot be calculated from metadata alone.
+
+## Source L3 — programmed voltage disturbances with battery charging state (Li et al. 2026, separate full-vehicle laboratory)
+
+- **Peer-reviewed source:** Li, Zhang, Yang et al. (2026), *High-resolution Dataset of Electric Vehicle Charging Responses Under Varied Power Quality Disturbances*, *Scientific Data* 13, 403, DOI https://doi.org/10.1038/s41597-026-06768-5 . **Data:** https://doi.org/10.17605/OSF.IO/94GKC .
+- **Protocol:** single-phase 220 V AC charging with **10 programmed power-quality disturbances** (including voltage deviation, interruption, sag and swell); 250 main experimental files totaling ~375.90 MB. Files encode programmed disturbance `Start_<t>` and `duration`, typically start = 20 s; do not use the auxiliary `end` token as the source of truth. Specific experiments may use different SOC, vehicle and charger model. Additional `sag_extended` tests have different chargers, EV models and initial SOCs.
+- **Published table schema:** CAN time [s], `HV_Battery_Current [A]`, `HV_Battery_Voltage [V]`, `Charging_Status`, `HV_Battery_MaxChargeCurrent [A]`, `HV_Charging_MaxPower [W]`, `HV_Battery_Power_Availability_Status`, `HV_Battery_Temperature`, `HV_Battery_SOC [%]`, etc. The max-power/current fields are **limits/availability**, NOT necessarily the external EVSE power command. Charging_Status codes need a verified codebook before assigning state semantics. The paper describes interpolated/replaced missing CAN frames, affecting transient confidence.
+- **Mechanism test:** Given known imposed ΔU and time, measure battery charging current/power-state and Charging_Status transitions during vs pre/post disturbance; distinguish current changes occurring while status/limits remain unchanged from those co-occurring with changes in available power/status. This is stronger evidence for a **controlled disturbance-to-charging-response mechanism**, with limits from processed CAN and single-phase scope. Battery temperature is not a direct EVSE or transformer internal temperature measurement.
+
+## Interpretation matrix and hypothesis-testing hierarchy
+
+| Question | L1 KIT PHIL | L2 TU Dortmund | L3 Li PQD | Original KIT 50-day field |
+|---|---|---|---|---|
+| Deliberately imposed voltage steps | **Yes** | Not the defined stimulus | **Yes** | No, OLTC fault observational |
+| Phase-level U/I synchronized | **Yes, 20 ms** | Grid-side where available | Grid and battery-level (per file) | **Yes, 100 ms** |
+| Verified measured real grid active P (W) | **No in inspected CSV** | **Yes where G-type present** | Battery current×voltage can be derived; do not conflate with grid P | **Yes at EV point** |
+| Logged charger setpoint / enable status | **No in inspected CSV** | **Yes, depending on run/charger** | `Charging_Status`/charging limits (not necessarily command setpoint) | **No in inspected three source files** |
+| Parent 20kV feeder mapping to field EV meter | Not applicable, distinct PHIL bench | Not applicable, different lab | Not applicable, different lab | **Unverified** |
+| EVSE/transformer thermal derating measured | **No verified** | Ambient may exist; not proof of device derating | Battery temperature, not EVSE hot-spot | **No** |
+
+**H1 — electrical voltage/current sensitivity in isolated PHIL:** test measured RMS current changes following known voltage perturbation protocol; compare device models and voltage directions; report voltages/currents and sampling uncertainty, not W active power.
+
+**H2 — command-driven charger operating modes:** within L2, quantify how known command/enable/status changes precede measured power changes, and calculate per-device lag and tracking error. Controlled setpoint changes are a *different treatment* from voltage perturbations.
+
+**H3 — voltage-driven charging-state effect with measured state fields:** within L3, condition on programmed disturbance windows, Charging_Status and power-availability limits, compare current/power states, and check recovery. Claim a mechanism only if actual records and controller/status semantics support it.
+
+**No cross-installation causal transport:** Laboratory findings can supply *plausible mechanism classes and parameter ranges* for physics-based hypotheses. They cannot be pasted onto the original KIT campus timestamps or used as a direct explanation for the 2026-03-10 field events. Matching ~2 s or ~8–14 s between different devices is not causal identification.
+
+## Executable small-data next action
+
+Run [independent_ev_lab_voltage_control_audit.py](../../../tools/independent_ev_lab_voltage_control_audit.py) on the MacBook. It downloads only the five ~2.2 MB KIT PHIL measurement CSVs plus the two small Dortmund metadata CSVs, verifies all publisher MD5 hashes, computes source-qualified PHIL voltage/current step metrics, catalogs Dortmund dynamic sessions and possible controller parameter definitions, and writes source-separated JSON and Markdown in `data/lab_candidates/2026-11-05`. **No 200MB+ archives and no original 129.6M field data are reprocessed.** The new synthetic self-test does NOT stand in for measured laboratory results.
+
+**Admission gates:** `SOURCE_DOCUMENTATION_VERIFIED | KIT_PHIL_ONE_ACTUAL_HEADER_READ | ALL_FIVE_LAB_MEASURED_RESULTS_PENDING | DORTMUND_SESSION_VALUES_PENDING | LI_2026_INDIVIDUAL_CSV_REVIEW_PENDING | KIT_FIELD_CAUSAL_MECHANISM_NOT_IDENTIFIED | HEAT_THERMAL_FIELD_VALIDATION_NOT_ESTABLISHED`.
