@@ -4,7 +4,7 @@
 **Current thesis:** Engineering of Power–Electrified Transportation Interdependencies for Resilience  
 **Primary dataset source:** https://zenodo.org/records/22826984  
 **User-local originals:** ~/Downloads/KIT_OLTC_22826984/  
-**Evidence status:** Original files **acquired and MD5-verified on the user's Mac**, according to user-supplied Terminal results. **No raw Parquet files uploaded to GitHub or accessed by this research agent.** All findings below are reported from those pasted local logs, not an independent rerun.
+**Evidence status:** Original files **acquired and MD5-verified on the user's Mac**, schemas checked, and full **129,600,000-row 100 ms UTC timestamp-grid PASS** (0 mismatches), according to user-supplied Terminal results. **No raw Parquet files uploaded to GitHub or accessed by this research agent.** All findings below are reported from those pasted local logs, not an independent rerun.
 
 ## 0. Controlling scientific scope
 
@@ -194,19 +194,32 @@ Duration: 50 days at nominal 100 ms; 50 × 24 × 3,600 × 10 = 43,200,000 sample
 
 **Limitations:** row-group extrema/edges are not a full-row continuity check. Intra-group missing/duplicated/out-of-order timestamps or clock-drift disagreement are still possible; equal windows do not establish electrical connectivity or synchronization to an independent reference clock.
 
-## 8. Step 7: all-row timestamp and pairwise alignment: PENDING
+## 8. Step 7: ALL-ROW 100 ms UTC GRID TEST: PASS (user-terminal readback)
 
-A follow-up scan of all 129.6 million timestamps was **recommended**, but no resulting execution output has been submitted. **Do not claim that zero row-level errors have been verified.**
+**Evidence update received:** 2026-11-05. The user ran the earlier inline Python/PyArrow+NumPy batch scan supplied in conversation (not a separately evidenced run of the subsequently committed repository script). This scans each observed timestamp in file order against the exact expected 100 ms UTC timestamp at the corresponding zero-based row position, with start at 2026-02-03 23:00:00 UTC. It also counts null timestamps as mismatches. **Full console output pasted by user:**
 
-The runnable read-only [KIT timestamp auditor](../../../tools/kit_oltc_timestamp_audit.py) was committed as the next action. To execute from a local clone:
+~~~text
+FILE: oltc_fail_110kV_PMU04_TK1_100ms.parquet
+ROWS CHECKED: 43200000
+TIMESTAMP MISMATCHES: 0
+RESULT: PASS
 
-~~~bash
-python3 /PATH/TO/MSE-thesis/tools/kit_oltc_timestamp_audit.py \
-  --folder "$HOME/Downloads/KIT_OLTC_22826984" \
-  --output "$HOME/Downloads/KIT_OLTC_22826984/KIT_ROW_TIME_AUDIT.json"
+FILE: oltc_fail_20kV_PMU01_J01_100ms.parquet
+ROWS CHECKED: 43200000
+TIMESTAMP MISMATCHES: 0
+RESULT: PASS
+
+FILE: oltc_fail_400V_EV_SH.J.6_100ms.parquet
+ROWS CHECKED: 43200000
+TIMESTAMP MISMATCHES: 0
+RESULT: PASS
 ~~~
 
-It must check every timestamp against the expected 100 ms UTC grid, nulls, row count and exact common time-grid membership. Save JSON and inspect FAIL cases without modifying original Parquet.
+**Arithmetic:** 3 × 43,200,000 = **129,600,000 checked rows**, **zero reported timestamp mismatches**. Therefore all three user-local files follow the **same ideal UTC 100 ms grid in strict row order** for the checked window (according to the terminal readback). Unlike §7 metadata min/max, this is a full per-record UTC grid test. It rejects missing/repeated/out-of-order/on-grid-offset timestamps relative to the reference and null timestamps (under the actual inline program logic).
+
+**Remaining validity limits:** This is an **intra-dataset timestamp-coordinate test**, not an external sensor-clock calibration or independent proof that the three instruments measured a common electrical circuit. The source timestamp clock could share systematic errors not detectable by grid checks. The user has **not** uploaded the three Parquet files or a JSON report to this GitHub repository; the evidence is the pasted Terminal transcript, not raw-data readback by the GitHub connector.
+
+The separate committed [KIT timestamp auditor](../../../tools/kit_oltc_timestamp_audit.py) is maintained for reproducibility. Its own JSON output has **not** been submitted as of this update. Do not confuse the earlier successful inline algorithm with execution of that newly committed file.
 
 ## 9. Admission gates: statuses are distinct
 
@@ -216,14 +229,14 @@ It must check every timestamp against the expected 100 ms UTC grid, nulls, row c
 | G1 original file acquisition/integrity | USER-LOCAL PASS (MD5) | Three files present and publisher MD5 matched according to pasted Mac output; local SHA-256/GitHub raw-data backup not done. |
 | G2 schema, sensors, units/QC | PARTIAL | Variables, types, header units, row/row-group count established; semantic definitions and missingness/open validity checks remain. |
 | G3 physical P ↔ T_e topology | OPEN | Three measurement designations and same timestamps do not prove common transformer-feeder-charger path. |
-| G4 synchrony/thermal-state adequacy | PARTIAL ELECTRICAL; THERMAL ABSENT | Matching time-range metadata; full timestamp scan pending; no thermal state measurement. |
+| G4 synchrony/thermal-state adequacy | ELECTRICAL RECORD GRID PASS; THERMAL ABSENT | User-terminal full-row 100 ms UTC grid PASS: 43.2M rows × 3, zero mismatches; independent sensor-clock accuracy, site topology, and all thermal states remain unverified. |
 | G5 model validation and uncertainty | NOT STARTED | No KIT model calibration, holdout, uncertainty or validated output. |
 | G6 directional thermal effect | NOT ESTABLISHED | No measured temperatures, derating mechanism or heat-driven causality. |
 | G7 service-level consequences | NOT ESTABLISHED | No charging-by-departure demand or realized mobility-service outcome. |
 
 ## 10. Next verified-action queue (do not repeat completed work)
 
-1. **Timestamp:** run and archive full-row timestamp QA; retain evidence of PASS/FAIL and exact checked row count.
+1. **Provenance:** archive the original full-row timestamp Terminal output or a reproducible JSON report plus local SHA-256 hashes; **do not rerun the completed 129.6M-row check merely to create a new claim**.
 2. **Equipment topology:** inspect source publisher metadata/diagram and instrument descriptions to establish whether all 110 kV, 20 kV and 400 V EV measurements lie on the same physical path and verify source IDs.
 3. **Signal quality:** streaming checks for null/NaN/Inf, power/current sign conventions, extrema, fault_phase semantics, measurement quality, and sampling/phase labels.
 4. **Electrical analysis:** if topology and QA pass, test bounded voltage/power response and event propagation; do not relabel it thermal coupling.
@@ -233,8 +246,8 @@ It must check every timestamp against the expected 100 ms UTC grid, nulls, row c
 ## 11. Traceability
 
 - **Publisher:** https://zenodo.org/records/22826984.
-- **Actual step results:** user's 2026-11-05 Terminal messages (filename search, curl attempts, resume, ls, MD5 PASS, PyArrow schema, time-range audit).
+- **Actual step results:** user's 2026-11-05 Terminal messages (filename search, curl attempts, resume, ls, MD5 PASS, PyArrow schema, metadata time-range audit, and full 129.6M-row 100 ms-grid test with zero reported mismatches).
 - **Canonical thesis interpretation:** repository authorities linked in §0.
-- **Open/unknown:** actual raw-byte access here, SHA-256, row-level timing, true network topology, observed thermal variables, independent validation, extreme-heat exposure, service-level outcomes.
+- **Open/unknown:** actual raw-byte access here, SHA-256, independent external time reference / sensor clock calibration, true network topology, signal-value validity, observed thermal variables, independent model validation, extreme-heat exposure, service-level outcomes.
 
 **This dated acquisition report does not amend or freeze the thesis model or any canonical research objective.**
