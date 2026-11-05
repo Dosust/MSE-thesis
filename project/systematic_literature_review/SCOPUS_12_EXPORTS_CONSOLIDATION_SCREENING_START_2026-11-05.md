@@ -68,3 +68,11 @@ These are search-priority labels derived mechanically from **title and abstract 
 5. Complete the other database/grey-literature searches and final PRISMA-ScR, not just Scopus.
 
 **Method rule:** Scopus EID is a bibliographic identity, not evidence that different EIDs represent independent studies. The consolidated record count must not be treated as scientifically included studies or a finished PRISMA denominator until eligibility and source provenance are complete.
+
+## Pilot title/abstract draft assessment (assistant-only; not human decisions)
+A separate 25-record assistant review, grounded in the exported original titles and abstracts, has been saved in the derived Google Drive folder:
+[14_SCOPUS_25_RECORD_ASSISTANT_PROVISIONAL_TA_ASSESSMENT.csv](https://drive.google.com/file/d/1BNh6upTCJG75rh_Du-W6MK3QvtSh43z1/view).
+Results: 5 provisional core-candidate, 6 provisional supporting, 9 uncertain-supporting and 5 provisional exclusions.
+All are **nonhuman preliminary recommendations**, not independent human decisions, not final exclusion counts, not the official calibration pilot, and not PRISMA numbers. Reviewer 1/2 fields remain blank in the separately preserved pilot sheet.
+
+The full byte-authenticated consolidated master file was too large for an individual Google Drive transfer; it is retained intact inside the [complete ZIP package](https://drive.google.com/file/d/1bIs2aUMuEWKktvr5j0a3RdKWyWCx8H_9/view) and separately available as four row-preserving CSV chunks with [shard index](https://drive.google.com/file/d/1AekJECLZ76DDUku7l2uq46NnBtjLozpM/view) in the derived folder.
