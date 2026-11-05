@@ -1,0 +1,2573 @@
+{
+  "classification": "INDEPENDENT_LABORATORY_ELECTRICAL_MECHANISM_EVIDENCE_NOT_KIT_FIELD",
+  "sources": [
+    "https://doi.org/10.5281/zenodo.22965111",
+    "https://doi.org/10.5281/zenodo.14065331"
+  ],
+  "note": "Observed voltage change screening times are not experimental command timestamps.",
+  "power_caution": "Sum of U_RMS*I_RMS per phase is apparent-power proxy VA, not measured real active power W.",
+  "thermal_caution": "Does not establish device thermal derating or field resilience.",
+  "KIT_PHIL_voltage_current": [
+    {
+      "vehicle": "Volkswagen ID.4",
+      "n_rows": 8809,
+      "time_range_s": [
+        -13.842,
+        171.126
+      ],
+      "median_sampling_period_s": 0.021,
+      "measured_columns": [
+        "time_s",
+        "U_L1_V",
+        "U_L2_V",
+        "U_L3_V",
+        "I_L1_A",
+        "I_L2_A",
+        "I_L3_A"
+      ],
+      "voltage_transition_screen_threshold_V": 2.0,
+      "n_candidate_voltage_transitions": 16,
+      "events": [
+        {
+          "index": 1,
+          "observed_voltage_transition_relative_s": 0.018,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.1931,
+          "pre_mean_phase_current_A": 15.78,
+          "delta_mean_phase_current_A": 0.0,
+          "delta_three_phase_apparent_proxy_VA": -237.16,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.01,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.58,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.46,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.66,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 227.94,
+              "delta_u_V": -5.01,
+              "i_pre_A": 16.11,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 2,
+          "observed_voltage_transition_relative_s": 9.993,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.2423,
+          "pre_mean_phase_current_A": 15.78,
+          "delta_mean_phase_current_A": 0.0033,
+          "delta_three_phase_apparent_proxy_VA": -234.84,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.02,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.58,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.46,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.65,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 222.93,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 3,
+          "observed_voltage_transition_relative_s": 19.968,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.2937,
+          "pre_mean_phase_current_A": 15.79,
+          "delta_mean_phase_current_A": -0.0233,
+          "delta_three_phase_apparent_proxy_VA": -251.76,
+          "pre_current_MAD_scale_A": 0.0395,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.02,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.58,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.45,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.66,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 217.93,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 4,
+          "observed_voltage_transition_relative_s": 29.943,
+          "delta_mean_phase_voltage_V": -5.01,
+          "delta_mean_phase_voltage_pct": -2.3507,
+          "pre_mean_phase_current_A": 15.7633,
+          "delta_mean_phase_current_A": 0.0233,
+          "delta_three_phase_apparent_proxy_VA": -222.33,
+          "pre_current_MAD_scale_A": 0.0346,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.02,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.56,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.44,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.64,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 212.93,
+              "delta_u_V": -5.01,
+              "i_pre_A": 16.09,
+              "delta_i_A": 0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 5,
+          "observed_voltage_transition_relative_s": 39.918,
+          "delta_mean_phase_voltage_V": 5.01,
+          "delta_mean_phase_voltage_pct": 2.4073,
+          "pre_mean_phase_current_A": 15.79,
+          "delta_mean_phase_current_A": -0.03,
+          "delta_three_phase_apparent_proxy_VA": 217.67,
+          "pre_current_MAD_scale_A": 0.0395,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 208.01,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.59,
+              "delta_i_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 208.43,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.66,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 207.92,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 6,
+          "observed_voltage_transition_relative_s": 49.998,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.3476,
+          "pre_mean_phase_current_A": 15.77,
+          "delta_mean_phase_current_A": 0.0133,
+          "delta_three_phase_apparent_proxy_VA": 245.91,
+          "pre_current_MAD_scale_A": 0.0346,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.02,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.56,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.44,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.64,
+              "delta_i_A": 0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 212.93,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.11,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 7,
+          "observed_voltage_transition_relative_s": 59.973,
+          "delta_mean_phase_voltage_V": 4.9967,
+          "delta_mean_phase_voltage_pct": 2.2906,
+          "pre_mean_phase_current_A": 15.79,
+          "delta_mean_phase_current_A": -0.0033,
+          "delta_three_phase_apparent_proxy_VA": 234.3,
+          "pre_current_MAD_scale_A": 0.0346,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.01,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.58,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.45,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.67,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 217.94,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.13,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 8,
+          "observed_voltage_transition_relative_s": 69.948,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.2423,
+          "pre_mean_phase_current_A": 15.79,
+          "delta_mean_phase_current_A": -0.01,
+          "delta_three_phase_apparent_proxy_VA": 230.16,
+          "pre_current_MAD_scale_A": 0.0346,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.01,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.58,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.45,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.67,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 222.93,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.13,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 9,
+          "observed_voltage_transition_relative_s": 79.923,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.1931,
+          "pre_mean_phase_current_A": 15.7933,
+          "delta_mean_phase_current_A": -0.0133,
+          "delta_three_phase_apparent_proxy_VA": 227.58,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.01,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.58,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.46,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.67,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 227.94,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 10,
+          "observed_voltage_transition_relative_s": 90.003,
+          "delta_mean_phase_voltage_V": 5.01,
+          "delta_mean_phase_voltage_pct": 2.149,
+          "pre_mean_phase_current_A": 15.7967,
+          "delta_mean_phase_current_A": -0.01,
+          "delta_three_phase_apparent_proxy_VA": 230.59,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.01,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.59,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.46,
+              "delta_u_V": 5.02,
+              "i_pre_A": 15.67,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 232.93,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.12,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 11,
+          "observed_voltage_transition_relative_s": 99.978,
+          "delta_mean_phase_voltage_V": 5.0,
+          "delta_mean_phase_voltage_pct": 2.0996,
+          "pre_mean_phase_current_A": 15.7933,
+          "delta_mean_phase_current_A": -0.01,
+          "delta_three_phase_apparent_proxy_VA": 229.25,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.01,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.59,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.47,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.67,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 237.94,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 12,
+          "observed_voltage_transition_relative_s": 109.953,
+          "delta_mean_phase_voltage_V": 5.0433,
+          "delta_mean_phase_voltage_pct": 2.0743,
+          "pre_mean_phase_current_A": 15.7967,
+          "delta_mean_phase_current_A": -0.31,
+          "delta_three_phase_apparent_proxy_VA": 8.52,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.0,
+              "delta_u_V": 5.04,
+              "i_pre_A": 15.59,
+              "delta_i_A": -0.31
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.47,
+              "delta_u_V": 5.04,
+              "i_pre_A": 15.68,
+              "delta_i_A": -0.3
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 242.94,
+              "delta_u_V": 5.05,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.31
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 13,
+          "observed_voltage_transition_relative_s": 119.928,
+          "delta_mean_phase_voltage_V": -5.0433,
+          "delta_mean_phase_voltage_pct": -2.0321,
+          "pre_mean_phase_current_A": 15.4933,
+          "delta_mean_phase_current_A": 0.3033,
+          "delta_three_phase_apparent_proxy_VA": -12.55,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 248.04,
+              "delta_u_V": -5.03,
+              "i_pre_A": 15.29,
+              "delta_i_A": 0.3
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 248.52,
+              "delta_u_V": -5.05,
+              "i_pre_A": 15.38,
+              "delta_i_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 247.99,
+              "delta_u_V": -5.05,
+              "i_pre_A": 15.81,
+              "delta_i_A": 0.31
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 14,
+          "observed_voltage_transition_relative_s": 130.008,
+          "delta_mean_phase_voltage_V": -4.9967,
+          "delta_mean_phase_voltage_pct": -2.0551,
+          "pre_mean_phase_current_A": 15.7967,
+          "delta_mean_phase_current_A": -0.0033,
+          "delta_three_phase_apparent_proxy_VA": -239.84,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.01,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.59,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.47,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.68,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 242.94,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 15,
+          "observed_voltage_transition_relative_s": 139.983,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.101,
+          "pre_mean_phase_current_A": 15.7967,
+          "delta_mean_phase_current_A": 0.0,
+          "delta_three_phase_apparent_proxy_VA": -237.28,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.01,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.59,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.47,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.67,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 237.94,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 16,
+          "observed_voltage_transition_relative_s": 149.958,
+          "delta_mean_phase_voltage_V": -5.0067,
+          "delta_mean_phase_voltage_pct": -2.1475,
+          "pre_mean_phase_current_A": 15.7933,
+          "delta_mean_phase_current_A": -0.0,
+          "delta_three_phase_apparent_proxy_VA": -237.54,
+          "pre_current_MAD_scale_A": 0.0297,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.01,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.59,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.47,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.68,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 232.94,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.13,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        }
+      ],
+      "file": "01_voltages_current_iD4.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "vehicle": "Nissan Leaf",
+      "n_rows": 8810,
+      "time_range_s": [
+        -13.854,
+        171.135
+      ],
+      "median_sampling_period_s": 0.021,
+      "measured_columns": [
+        "time_s",
+        "U_L1_V",
+        "U_L2_V",
+        "U_L3_V",
+        "I_L1_A",
+        "I_L2_A",
+        "I_L3_A"
+      ],
+      "voltage_transition_screen_threshold_V": 2.0,
+      "n_candidate_voltage_transitions": 0,
+      "events": [],
+      "file": "02_voltages_current_Nissann_Leaf.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "vehicle": "MG4",
+      "n_rows": 8810,
+      "time_range_s": [
+        -13.859,
+        171.13
+      ],
+      "median_sampling_period_s": 0.021,
+      "measured_columns": [
+        "time_s",
+        "U_L1_V",
+        "U_L2_V",
+        "U_L3_V",
+        "I_L1_A",
+        "I_L2_A",
+        "I_L3_A"
+      ],
+      "voltage_transition_screen_threshold_V": 2.0,
+      "n_candidate_voltage_transitions": 16,
+      "events": [
+        {
+          "index": 1,
+          "observed_voltage_transition_relative_s": 0.001,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.1913,
+          "pre_mean_phase_current_A": 14.8,
+          "delta_mean_phase_current_A": 0.0033,
+          "delta_three_phase_apparent_proxy_VA": -220.06,
+          "pre_current_MAD_scale_A": 0.0593,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.28,
+              "delta_u_V": -4.99,
+              "i_pre_A": 14.82,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.49,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.71,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 228.21,
+              "delta_u_V": -5.02,
+              "i_pre_A": 14.87,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 2,
+          "observed_voltage_transition_relative_s": 9.976,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.2404,
+          "pre_mean_phase_current_A": 14.8067,
+          "delta_mean_phase_current_A": 0.0067,
+          "delta_three_phase_apparent_proxy_VA": -217.9,
+          "pre_current_MAD_scale_A": 0.0741,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.28,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.83,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.48,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.72,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 223.19,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.88,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 3,
+          "observed_voltage_transition_relative_s": 19.951,
+          "delta_mean_phase_voltage_V": -5.0067,
+          "delta_mean_phase_voltage_pct": -2.2933,
+          "pre_mean_phase_current_A": 14.8233,
+          "delta_mean_phase_current_A": 0.01,
+          "delta_three_phase_apparent_proxy_VA": -215.8,
+          "pre_current_MAD_scale_A": 0.0741,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.28,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.84,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.47,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.73,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 218.19,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.89,
+              "delta_i_A": 0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 4,
+          "observed_voltage_transition_relative_s": 29.979,
+          "delta_mean_phase_voltage_V": -5.0067,
+          "delta_mean_phase_voltage_pct": -2.3472,
+          "pre_mean_phase_current_A": 14.8267,
+          "delta_mean_phase_current_A": 0.0067,
+          "delta_three_phase_apparent_proxy_VA": -218.68,
+          "pre_current_MAD_scale_A": 0.0791,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.28,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.84,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.46,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.73,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 213.18,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.91,
+              "delta_i_A": 0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 5,
+          "observed_voltage_transition_relative_s": 40.006,
+          "delta_mean_phase_voltage_V": 5.0067,
+          "delta_mean_phase_voltage_pct": 2.4036,
+          "pre_mean_phase_current_A": 14.83,
+          "delta_mean_phase_current_A": -0.0067,
+          "delta_three_phase_apparent_proxy_VA": 218.31,
+          "pre_current_MAD_scale_A": 0.0741,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 208.27,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.85,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 208.45,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.72,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 208.18,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.93,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 6,
+          "observed_voltage_transition_relative_s": 49.981,
+          "delta_mean_phase_voltage_V": 5.01,
+          "delta_mean_phase_voltage_pct": 2.3487,
+          "pre_mean_phase_current_A": 14.8267,
+          "delta_mean_phase_current_A": -0.0233,
+          "delta_three_phase_apparent_proxy_VA": 207.99,
+          "pre_current_MAD_scale_A": 0.0791,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.27,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.84,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.46,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.73,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 213.19,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.91,
+              "delta_i_A": -0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 7,
+          "observed_voltage_transition_relative_s": 59.956,
+          "delta_mean_phase_voltage_V": 5.0067,
+          "delta_mean_phase_voltage_pct": 2.2933,
+          "pre_mean_phase_current_A": 14.8033,
+          "delta_mean_phase_current_A": -0.01,
+          "delta_three_phase_apparent_proxy_VA": 215.94,
+          "pre_current_MAD_scale_A": 0.0593,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.29,
+              "delta_u_V": 4.99,
+              "i_pre_A": 14.82,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.47,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.71,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 218.19,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.88,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 8,
+          "observed_voltage_transition_relative_s": 69.931,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.2404,
+          "pre_mean_phase_current_A": 14.79,
+          "delta_mean_phase_current_A": -0.0033,
+          "delta_three_phase_apparent_proxy_VA": 219.58,
+          "pre_current_MAD_scale_A": 0.0247,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.29,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.8,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.48,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.7,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 223.2,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.88,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 9,
+          "observed_voltage_transition_relative_s": 80.011,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.1913,
+          "pre_mean_phase_current_A": 14.79,
+          "delta_mean_phase_current_A": -0.0067,
+          "delta_three_phase_apparent_proxy_VA": 217.04,
+          "pre_current_MAD_scale_A": 0.0198,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.29,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.78,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.49,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.71,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 228.21,
+              "delta_u_V": 5.0,
+              "i_pre_A": 14.87,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 10,
+          "observed_voltage_transition_relative_s": 89.986,
+          "delta_mean_phase_voltage_V": 5.02,
+          "delta_mean_phase_voltage_pct": 2.1515,
+          "pre_mean_phase_current_A": 14.7767,
+          "delta_mean_phase_current_A": -0.14,
+          "delta_three_phase_apparent_proxy_VA": 122.45,
+          "pre_current_MAD_scale_A": 0.0346,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.29,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.78,
+              "delta_i_A": -0.14
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.49,
+              "delta_u_V": 5.03,
+              "i_pre_A": 14.69,
+              "delta_i_A": -0.13
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 233.21,
+              "delta_u_V": 5.01,
+              "i_pre_A": 14.86,
+              "delta_i_A": -0.15
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 11,
+          "observed_voltage_transition_relative_s": 99.961,
+          "delta_mean_phase_voltage_V": 5.04,
+          "delta_mean_phase_voltage_pct": 2.1145,
+          "pre_mean_phase_current_A": 14.6367,
+          "delta_mean_phase_current_A": -0.3133,
+          "delta_three_phase_apparent_proxy_VA": -7.33,
+          "pre_current_MAD_scale_A": 0.0692,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.3,
+              "delta_u_V": 5.04,
+              "i_pre_A": 14.64,
+              "delta_i_A": -0.31
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.52,
+              "delta_u_V": 5.04,
+              "i_pre_A": 14.56,
+              "delta_i_A": -0.31
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 238.23,
+              "delta_u_V": 5.04,
+              "i_pre_A": 14.71,
+              "delta_i_A": -0.32
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 12,
+          "observed_voltage_transition_relative_s": 109.936,
+          "delta_mean_phase_voltage_V": 5.04,
+          "delta_mean_phase_voltage_pct": 2.0708,
+          "pre_mean_phase_current_A": 14.3267,
+          "delta_mean_phase_current_A": -0.2967,
+          "delta_three_phase_apparent_proxy_VA": -4.2,
+          "pre_current_MAD_scale_A": 0.0642,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.34,
+              "delta_u_V": 5.03,
+              "i_pre_A": 14.32,
+              "delta_i_A": -0.29
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.56,
+              "delta_u_V": 5.04,
+              "i_pre_A": 14.26,
+              "delta_i_A": -0.3
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 243.27,
+              "delta_u_V": 5.04,
+              "i_pre_A": 14.4,
+              "delta_i_A": -0.3
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 13,
+          "observed_voltage_transition_relative_s": 120.016,
+          "delta_mean_phase_voltage_V": -5.0433,
+          "delta_mean_phase_voltage_pct": -2.0301,
+          "pre_mean_phase_current_A": 14.03,
+          "delta_mean_phase_current_A": 0.3033,
+          "delta_three_phase_apparent_proxy_VA": 9.2,
+          "pre_current_MAD_scale_A": 0.0593,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 248.37,
+              "delta_u_V": -5.03,
+              "i_pre_A": 14.03,
+              "delta_i_A": 0.3
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 248.61,
+              "delta_u_V": -5.05,
+              "i_pre_A": 13.96,
+              "delta_i_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 248.32,
+              "delta_u_V": -5.05,
+              "i_pre_A": 14.09,
+              "delta_i_A": 0.31
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 14,
+          "observed_voltage_transition_relative_s": 129.991,
+          "delta_mean_phase_voltage_V": -5.04,
+          "delta_mean_phase_voltage_pct": -2.0708,
+          "pre_mean_phase_current_A": 14.3333,
+          "delta_mean_phase_current_A": 0.31,
+          "delta_three_phase_apparent_proxy_VA": 5.38,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.34,
+              "delta_u_V": -5.03,
+              "i_pre_A": 14.33,
+              "delta_i_A": 0.31
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.56,
+              "delta_u_V": -5.05,
+              "i_pre_A": 14.27,
+              "delta_i_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 243.27,
+              "delta_u_V": -5.05,
+              "i_pre_A": 14.39,
+              "delta_i_A": 0.33
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 15,
+          "observed_voltage_transition_relative_s": 139.966,
+          "delta_mean_phase_voltage_V": -5.0167,
+          "delta_mean_phase_voltage_pct": -2.1048,
+          "pre_mean_phase_current_A": 14.6467,
+          "delta_mean_phase_current_A": 0.1467,
+          "delta_three_phase_apparent_proxy_VA": -117.62,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.31,
+              "delta_u_V": -5.03,
+              "i_pre_A": 14.64,
+              "delta_i_A": 0.15
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.51,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.58,
+              "delta_i_A": 0.14
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 238.23,
+              "delta_u_V": -5.02,
+              "i_pre_A": 14.71,
+              "delta_i_A": 0.16
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 16,
+          "observed_voltage_transition_relative_s": 149.941,
+          "delta_mean_phase_voltage_V": -5.0033,
+          "delta_mean_phase_voltage_pct": -2.1443,
+          "pre_mean_phase_current_A": 14.7967,
+          "delta_mean_phase_current_A": -0.0033,
+          "delta_three_phase_apparent_proxy_VA": -224.24,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.29,
+              "delta_u_V": -5.01,
+              "i_pre_A": 14.79,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.49,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.72,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 233.21,
+              "delta_u_V": -5.0,
+              "i_pre_A": 14.86,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        }
+      ],
+      "file": "03_voltages_current_MG4.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "vehicle": "Tesla Model 3",
+      "n_rows": 8810,
+      "time_range_s": [
+        -13.854,
+        171.135
+      ],
+      "median_sampling_period_s": 0.021,
+      "measured_columns": [
+        "time_s",
+        "U_L1_V",
+        "U_L2_V",
+        "U_L3_V",
+        "I_L1_A",
+        "I_L2_A",
+        "I_L3_A"
+      ],
+      "voltage_transition_screen_threshold_V": 2.0,
+      "n_candidate_voltage_transitions": 16,
+      "events": [
+        {
+          "index": 1,
+          "observed_voltage_transition_relative_s": 0.006,
+          "delta_mean_phase_voltage_V": -5.0133,
+          "delta_mean_phase_voltage_pct": -2.1982,
+          "pre_mean_phase_current_A": 16.13,
+          "delta_mean_phase_current_A": 0.07,
+          "delta_three_phase_apparent_proxy_VA": -195.74,
+          "pre_current_MAD_scale_A": 0.0049,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.04,
+              "delta_u_V": -5.01,
+              "i_pre_A": 16.03,
+              "delta_i_A": 0.08
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.23,
+              "delta_u_V": -5.02,
+              "i_pre_A": 16.11,
+              "delta_i_A": 0.09
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 227.93,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.24,
+              "delta_i_A": 0.05
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 2,
+          "observed_voltage_transition_relative_s": 9.981,
+          "delta_mean_phase_voltage_V": -4.9867,
+          "delta_mean_phase_voltage_pct": -2.2356,
+          "pre_mean_phase_current_A": 16.2,
+          "delta_mean_phase_current_A": -0.1067,
+          "delta_three_phase_apparent_proxy_VA": -311.97,
+          "pre_current_MAD_scale_A": 0.0049,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.04,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.1,
+              "delta_i_A": -0.1
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.21,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.18,
+              "delta_i_A": -0.09
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 222.93,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.31,
+              "delta_i_A": -0.13
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 3,
+          "observed_voltage_transition_relative_s": 20.061,
+          "delta_mean_phase_voltage_V": -5.01,
+          "delta_mean_phase_voltage_pct": -2.2974,
+          "pre_mean_phase_current_A": 16.0767,
+          "delta_mean_phase_current_A": 0.0533,
+          "delta_three_phase_apparent_proxy_VA": -207.86,
+          "pre_current_MAD_scale_A": 0.0148,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.05,
+              "delta_u_V": -5.0,
+              "i_pre_A": 15.98,
+              "delta_i_A": 0.06
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.23,
+              "delta_u_V": -5.02,
+              "i_pre_A": 16.06,
+              "delta_i_A": 0.07
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 217.94,
+              "delta_u_V": -5.01,
+              "i_pre_A": 16.18,
+              "delta_i_A": 0.04
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 4,
+          "observed_voltage_transition_relative_s": 30.036,
+          "delta_mean_phase_voltage_V": -4.99,
+          "delta_mean_phase_voltage_pct": -2.3421,
+          "pre_mean_phase_current_A": 16.1467,
+          "delta_mean_phase_current_A": -0.1133,
+          "delta_three_phase_apparent_proxy_VA": -312.29,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.04,
+              "delta_u_V": -4.98,
+              "i_pre_A": 16.07,
+              "delta_i_A": -0.13
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.2,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.09
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 212.93,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.24,
+              "delta_i_A": -0.1
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 5,
+          "observed_voltage_transition_relative_s": 40.011,
+          "delta_mean_phase_voltage_V": 4.9967,
+          "delta_mean_phase_voltage_pct": 2.4015,
+          "pre_mean_phase_current_A": 16.0367,
+          "delta_mean_phase_current_A": 0.09,
+          "delta_three_phase_apparent_proxy_VA": 297.6,
+          "pre_current_MAD_scale_A": 0.0148,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 208.04,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.97,
+              "delta_i_A": 0.06
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 208.22,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.02,
+              "delta_i_A": 0.09
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 207.94,
+              "delta_u_V": 4.98,
+              "i_pre_A": 16.15,
+              "delta_i_A": 0.09
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 6,
+          "observed_voltage_transition_relative_s": 49.986,
+          "delta_mean_phase_voltage_V": 5.01,
+          "delta_mean_phase_voltage_pct": 2.3514,
+          "pre_mean_phase_current_A": 16.1,
+          "delta_mean_phase_current_A": -0.04,
+          "delta_three_phase_apparent_proxy_VA": 215.97,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.04,
+              "delta_u_V": 5.02,
+              "i_pre_A": 16.04,
+              "delta_i_A": -0.07
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.21,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.07,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 212.94,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.19,
+              "delta_i_A": -0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 7,
+          "observed_voltage_transition_relative_s": 60.066,
+          "delta_mean_phase_voltage_V": 4.9867,
+          "delta_mean_phase_voltage_pct": 2.2866,
+          "pre_mean_phase_current_A": 16.0367,
+          "delta_mean_phase_current_A": 0.12,
+          "delta_three_phase_apparent_proxy_VA": 320.21,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.05,
+              "delta_u_V": 4.99,
+              "i_pre_A": 15.98,
+              "delta_i_A": 0.1
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.24,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.0,
+              "delta_i_A": 0.13
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 217.95,
+              "delta_u_V": 4.98,
+              "i_pre_A": 16.13,
+              "delta_i_A": 0.13
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 8,
+          "observed_voltage_transition_relative_s": 70.041,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.243,
+          "pre_mean_phase_current_A": 16.1433,
+          "delta_mean_phase_current_A": -0.0233,
+          "delta_three_phase_apparent_proxy_VA": 226.18,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.03,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.08,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.22,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.12,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 222.94,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.23,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 9,
+          "observed_voltage_transition_relative_s": 80.016,
+          "delta_mean_phase_voltage_V": 5.0033,
+          "delta_mean_phase_voltage_pct": 2.1938,
+          "pre_mean_phase_current_A": 16.1233,
+          "delta_mean_phase_current_A": -0.0367,
+          "delta_three_phase_apparent_proxy_VA": 216.21,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.03,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.05,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.23,
+              "delta_u_V": 5.01,
+              "i_pre_A": 16.11,
+              "delta_i_A": -0.06
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 227.95,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.21,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 10,
+          "observed_voltage_transition_relative_s": 89.991,
+          "delta_mean_phase_voltage_V": 4.99,
+          "delta_mean_phase_voltage_pct": 2.141,
+          "pre_mean_phase_current_A": 16.1,
+          "delta_mean_phase_current_A": 0.0567,
+          "delta_three_phase_apparent_proxy_VA": 281.97,
+          "pre_current_MAD_scale_A": 0.0049,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.04,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.02,
+              "delta_i_A": 0.08
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.23,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.09,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 232.95,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.18,
+              "delta_i_A": 0.07
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 11,
+          "observed_voltage_transition_relative_s": 100.071,
+          "delta_mean_phase_voltage_V": 5.01,
+          "delta_mean_phase_voltage_pct": 2.1045,
+          "pre_mean_phase_current_A": 16.19,
+          "delta_mean_phase_current_A": -0.0733,
+          "delta_three_phase_apparent_proxy_VA": 190.01,
+          "pre_current_MAD_scale_A": 0.0148,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.03,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.1,
+              "delta_i_A": -0.05
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.23,
+              "delta_u_V": 5.02,
+              "i_pre_A": 16.19,
+              "delta_i_A": -0.1
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 237.94,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.28,
+              "delta_i_A": -0.06
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 12,
+          "observed_voltage_transition_relative_s": 110.046,
+          "delta_mean_phase_voltage_V": 4.9933,
+          "delta_mean_phase_voltage_pct": 2.0543,
+          "pre_mean_phase_current_A": 16.16,
+          "delta_mean_phase_current_A": 0.0867,
+          "delta_three_phase_apparent_proxy_VA": 306.73,
+          "pre_current_MAD_scale_A": 0.0049,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.03,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.08,
+              "delta_i_A": 0.09
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.23,
+              "delta_u_V": 5.0,
+              "i_pre_A": 16.16,
+              "delta_i_A": 0.07
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 242.94,
+              "delta_u_V": 4.99,
+              "i_pre_A": 16.25,
+              "delta_i_A": 0.09
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 13,
+          "observed_voltage_transition_relative_s": 120.021,
+          "delta_mean_phase_voltage_V": -4.9967,
+          "delta_mean_phase_voltage_pct": -2.0142,
+          "pre_mean_phase_current_A": 16.24,
+          "delta_mean_phase_current_A": -0.0967,
+          "delta_three_phase_apparent_proxy_VA": -313.93,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 248.02,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.14,
+              "delta_i_A": -0.08
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 248.24,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.24,
+              "delta_i_A": -0.1
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 247.93,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.34,
+              "delta_i_A": -0.11
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 14,
+          "observed_voltage_transition_relative_s": 129.996,
+          "delta_mean_phase_voltage_V": -5.0067,
+          "delta_mean_phase_voltage_pct": -2.0598,
+          "pre_mean_phase_current_A": 16.1133,
+          "delta_mean_phase_current_A": 0.0633,
+          "delta_three_phase_apparent_proxy_VA": -196.94,
+          "pre_current_MAD_scale_A": 0.0148,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.03,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.02,
+              "delta_i_A": 0.07
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.24,
+              "delta_u_V": -5.02,
+              "i_pre_A": 16.11,
+              "delta_i_A": 0.08
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 242.94,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.21,
+              "delta_i_A": 0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 15,
+          "observed_voltage_transition_relative_s": 140.076,
+          "delta_mean_phase_voltage_V": -4.9933,
+          "delta_mean_phase_voltage_pct": -2.0974,
+          "pre_mean_phase_current_A": 16.18,
+          "delta_mean_phase_current_A": -0.1033,
+          "delta_three_phase_apparent_proxy_VA": -314.3,
+          "pre_current_MAD_scale_A": 0.0148,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.03,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.08,
+              "delta_i_A": -0.08
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.24,
+              "delta_u_V": -5.0,
+              "i_pre_A": 16.17,
+              "delta_i_A": -0.08
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 237.94,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.28,
+              "delta_i_A": -0.13
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 16,
+          "observed_voltage_transition_relative_s": 150.051,
+          "delta_mean_phase_voltage_V": -5.0,
+          "delta_mean_phase_voltage_pct": -2.1452,
+          "pre_mean_phase_current_A": 16.0867,
+          "delta_mean_phase_current_A": 0.01,
+          "delta_three_phase_apparent_proxy_VA": -234.29,
+          "pre_current_MAD_scale_A": 0.0099,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.04,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.0,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.24,
+              "delta_u_V": -5.02,
+              "i_pre_A": 16.08,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 232.94,
+              "delta_u_V": -4.99,
+              "i_pre_A": 16.18,
+              "delta_i_A": -0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        }
+      ],
+      "file": "04_voltages_current_Tesla_Model_3.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "vehicle": "Renault Zoe",
+      "n_rows": 8810,
+      "time_range_s": [
+        -13.854,
+        171.135
+      ],
+      "median_sampling_period_s": 0.021,
+      "measured_columns": [
+        "time_s",
+        "U_L1_V",
+        "U_L2_V",
+        "U_L3_V",
+        "I_L1_A",
+        "I_L2_A",
+        "I_L3_A"
+      ],
+      "voltage_transition_screen_threshold_V": 2.0,
+      "n_candidate_voltage_transitions": 16,
+      "events": [
+        {
+          "index": 1,
+          "observed_voltage_transition_relative_s": 0.058,
+          "delta_mean_phase_voltage_V": -5.0233,
+          "delta_mean_phase_voltage_pct": -2.199,
+          "pre_mean_phase_current_A": 15.2833,
+          "delta_mean_phase_current_A": -0.0233,
+          "delta_three_phase_apparent_proxy_VA": -250.14,
+          "pre_current_MAD_scale_A": 0.0445,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.4,
+              "delta_u_V": -5.03,
+              "i_pre_A": 15.25,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.57,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.26,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 228.34,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.33,
+              "delta_i_A": -0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 2,
+          "observed_voltage_transition_relative_s": 9.981,
+          "delta_mean_phase_voltage_V": -5.0233,
+          "delta_mean_phase_voltage_pct": -2.2484,
+          "pre_mean_phase_current_A": 15.2667,
+          "delta_mean_phase_current_A": 0.01,
+          "delta_three_phase_apparent_proxy_VA": -217.83,
+          "pre_current_MAD_scale_A": 0.0445,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.38,
+              "delta_u_V": -5.03,
+              "i_pre_A": 15.24,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.57,
+              "delta_u_V": -5.05,
+              "i_pre_A": 15.24,
+              "delta_i_A": 0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 223.33,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.3,
+              "delta_i_A": 0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 3,
+          "observed_voltage_transition_relative_s": 19.851,
+          "delta_mean_phase_voltage_V": -5.0333,
+          "delta_mean_phase_voltage_pct": -2.3041,
+          "pre_mean_phase_current_A": 15.2833,
+          "delta_mean_phase_current_A": -0.0133,
+          "delta_three_phase_apparent_proxy_VA": -232.45,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.37,
+              "delta_u_V": -5.02,
+              "i_pre_A": 15.25,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.59,
+              "delta_u_V": -5.04,
+              "i_pre_A": 15.27,
+              "delta_i_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 218.36,
+              "delta_u_V": -5.04,
+              "i_pre_A": 15.32,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 4,
+          "observed_voltage_transition_relative_s": 29.931,
+          "delta_mean_phase_voltage_V": -4.9967,
+          "delta_mean_phase_voltage_pct": -2.3415,
+          "pre_mean_phase_current_A": 15.2767,
+          "delta_mean_phase_current_A": -0.0767,
+          "delta_three_phase_apparent_proxy_VA": -272.96,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.34,
+              "delta_u_V": -4.98,
+              "i_pre_A": 15.25,
+              "delta_i_A": -0.07
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.54,
+              "delta_u_V": -5.01,
+              "i_pre_A": 15.25,
+              "delta_i_A": -0.06
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 213.31,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.31,
+              "delta_i_A": -0.06
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 5,
+          "observed_voltage_transition_relative_s": 40.064,
+          "delta_mean_phase_voltage_V": 5.0433,
+          "delta_mean_phase_voltage_pct": 2.4201,
+          "pre_mean_phase_current_A": 15.2167,
+          "delta_mean_phase_current_A": 0.0433,
+          "delta_three_phase_apparent_proxy_VA": 259.02,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 208.34,
+              "delta_u_V": 5.05,
+              "i_pre_A": 15.19,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 208.5,
+              "delta_u_V": 5.06,
+              "i_pre_A": 15.2,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 208.31,
+              "delta_u_V": 5.03,
+              "i_pre_A": 15.26,
+              "delta_i_A": 0.04
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 6,
+          "observed_voltage_transition_relative_s": 50.038,
+          "delta_mean_phase_voltage_V": 5.0533,
+          "delta_mean_phase_voltage_pct": 2.3685,
+          "pre_mean_phase_current_A": 15.27,
+          "delta_mean_phase_current_A": -0.0333,
+          "delta_three_phase_apparent_proxy_VA": 209.27,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 213.32,
+              "delta_u_V": 5.04,
+              "i_pre_A": 15.24,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 213.48,
+              "delta_u_V": 5.06,
+              "i_pre_A": 15.25,
+              "delta_i_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 213.29,
+              "delta_u_V": 5.04,
+              "i_pre_A": 15.31,
+              "delta_i_A": -0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 7,
+          "observed_voltage_transition_relative_s": 59.908,
+          "delta_mean_phase_voltage_V": 4.99,
+          "delta_mean_phase_voltage_pct": 2.2845,
+          "pre_mean_phase_current_A": 15.2267,
+          "delta_mean_phase_current_A": 0.0433,
+          "delta_three_phase_apparent_proxy_VA": 249.09,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 218.38,
+              "delta_u_V": 4.97,
+              "i_pre_A": 15.2,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 218.58,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.21,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 218.35,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.27,
+              "delta_i_A": 0.04
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 8,
+          "observed_voltage_transition_relative_s": 70.041,
+          "delta_mean_phase_voltage_V": 4.9833,
+          "delta_mean_phase_voltage_pct": 2.2307,
+          "pre_mean_phase_current_A": 15.26,
+          "delta_mean_phase_current_A": 0.04,
+          "delta_three_phase_apparent_proxy_VA": 246.24,
+          "pre_current_MAD_scale_A": 0.0593,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 223.33,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.24,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 223.53,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.24,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 223.32,
+              "delta_u_V": 4.97,
+              "i_pre_A": 15.3,
+              "delta_i_A": 0.04
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 9,
+          "observed_voltage_transition_relative_s": 80.068,
+          "delta_mean_phase_voltage_V": 4.9667,
+          "delta_mean_phase_voltage_pct": 2.1744,
+          "pre_mean_phase_current_A": 15.29,
+          "delta_mean_phase_current_A": 0.0,
+          "delta_three_phase_apparent_proxy_VA": 230.11,
+          "pre_current_MAD_scale_A": 0.0544,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 228.34,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.26,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 228.55,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.27,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 228.33,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.33,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 10,
+          "observed_voltage_transition_relative_s": 90.043,
+          "delta_mean_phase_voltage_V": 4.9533,
+          "delta_mean_phase_voltage_pct": 2.1218,
+          "pre_mean_phase_current_A": 15.2933,
+          "delta_mean_phase_current_A": 0.0067,
+          "delta_three_phase_apparent_proxy_VA": 236.48,
+          "pre_current_MAD_scale_A": 0.0593,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.4,
+              "delta_u_V": 4.94,
+              "i_pre_A": 15.27,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.6,
+              "delta_u_V": 4.96,
+              "i_pre_A": 15.27,
+              "delta_i_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 233.34,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.34,
+              "delta_i_A": 0.01
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 11,
+          "observed_voltage_transition_relative_s": 100.071,
+          "delta_mean_phase_voltage_V": 4.9867,
+          "delta_mean_phase_voltage_pct": 2.0913,
+          "pre_mean_phase_current_A": 15.31,
+          "delta_mean_phase_current_A": -0.0033,
+          "delta_three_phase_apparent_proxy_VA": 229.81,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.38,
+              "delta_u_V": 4.98,
+              "i_pre_A": 15.28,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.6,
+              "delta_u_V": 4.99,
+              "i_pre_A": 15.29,
+              "delta_i_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 238.35,
+              "delta_u_V": 4.99,
+              "i_pre_A": 15.36,
+              "delta_i_A": 0.0
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 12,
+          "observed_voltage_transition_relative_s": 110.046,
+          "delta_mean_phase_voltage_V": 5.0067,
+          "delta_mean_phase_voltage_pct": 2.0565,
+          "pre_mean_phase_current_A": 15.3233,
+          "delta_mean_phase_current_A": 0.0267,
+          "delta_three_phase_apparent_proxy_VA": 249.65,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.38,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.29,
+              "delta_i_A": 0.03
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.62,
+              "delta_u_V": 5.0,
+              "i_pre_A": 15.3,
+              "delta_i_A": 0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 243.36,
+              "delta_u_V": 5.01,
+              "i_pre_A": 15.37,
+              "delta_i_A": 0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 13,
+          "observed_voltage_transition_relative_s": 120.073,
+          "delta_mean_phase_voltage_V": -4.98,
+          "delta_mean_phase_voltage_pct": -2.0045,
+          "pre_mean_phase_current_A": 15.36,
+          "delta_mean_phase_current_A": -0.0333,
+          "delta_three_phase_apparent_proxy_VA": -251.6,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 248.37,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.33,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 248.62,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.34,
+              "delta_i_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 248.35,
+              "delta_u_V": -4.97,
+              "i_pre_A": 15.4,
+              "delta_i_A": -0.02
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 14,
+          "observed_voltage_transition_relative_s": 130.048,
+          "delta_mean_phase_voltage_V": -4.9767,
+          "delta_mean_phase_voltage_pct": -2.0441,
+          "pre_mean_phase_current_A": 15.3167,
+          "delta_mean_phase_current_A": -0.04,
+          "delta_three_phase_apparent_proxy_VA": -252.61,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 243.39,
+              "delta_u_V": -4.98,
+              "i_pre_A": 15.29,
+              "delta_i_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 243.61,
+              "delta_u_V": -4.95,
+              "i_pre_A": 15.3,
+              "delta_i_A": -0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 243.36,
+              "delta_u_V": -4.97,
+              "i_pre_A": 15.37,
+              "delta_i_A": -0.04
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 15,
+          "observed_voltage_transition_relative_s": 140.024,
+          "delta_mean_phase_voltage_V": -4.98,
+          "delta_mean_phase_voltage_pct": -2.0886,
+          "pre_mean_phase_current_A": 15.2667,
+          "delta_mean_phase_current_A": 0.0367,
+          "delta_three_phase_apparent_proxy_VA": -202.95,
+          "pre_current_MAD_scale_A": 0.0445,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 238.37,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.24,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 238.57,
+              "delta_u_V": -4.97,
+              "i_pre_A": 15.25,
+              "delta_i_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 238.34,
+              "delta_u_V": -4.99,
+              "i_pre_A": 15.32,
+              "delta_i_A": 0.03
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        },
+        {
+          "index": 16,
+          "observed_voltage_transition_relative_s": 150.051,
+          "delta_mean_phase_voltage_V": -4.9667,
+          "delta_mean_phase_voltage_pct": -2.128,
+          "pre_mean_phase_current_A": 15.3133,
+          "delta_mean_phase_current_A": -0.0467,
+          "delta_three_phase_apparent_proxy_VA": -259.94,
+          "pre_current_MAD_scale_A": 0.0494,
+          "first_sustained_current_deviation_after_screen_time_s": null,
+          "phase_deltas": [
+            {
+              "phase": "L1",
+              "u_pre_V": 233.34,
+              "delta_u_V": -4.95,
+              "i_pre_A": 15.29,
+              "delta_i_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "u_pre_V": 233.54,
+              "delta_u_V": -4.95,
+              "i_pre_A": 15.29,
+              "delta_i_A": -0.04
+            },
+            {
+              "phase": "L3",
+              "u_pre_V": 233.32,
+              "delta_u_V": -4.98,
+              "i_pre_A": 15.36,
+              "delta_i_A": -0.05
+            }
+          ],
+          "evidence": "MEASURED_VOLTAGE_CURRENT_ASSOCIATION_UNDER_CONTROLLED_PHIL_PROTOCOL; COMMAND_TIME_AND_STATUS_NOT_IN_CSV"
+        }
+      ],
+      "file": "05_voltages_current__Renault_Zoe.csv",
+      "publisher_md5_verified": true
+    }
+  ],
+  "TU_Dortmund_control_metadata": {
+    "dataset": "TU Dortmund: 10.5281/zenodo.14065331",
+    "publisher_md5_verified": true,
+    "measurement_index_rows": 142,
+    "measurement_index_columns": [
+      "meas_name",
+      "car_name",
+      "charging_power_kW",
+      "meas_type",
+      "meas_soc",
+      "start_soc_percent",
+      "end_soc_percent",
+      "charging_station",
+      "plug_type",
+      "charger",
+      "note",
+      "index"
+    ],
+    "parameters_rows": 883,
+    "parameters_columns": [
+      "Parameter",
+      "Unit",
+      "Description",
+      "Source",
+      "Data type",
+      "csv file suffix"
+    ],
+    "potential_dynamic_record_count": 103,
+    "sample_dynamic_records": [
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_1_202308170945",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "7",
+        "end_soc_percent": "12",
+        "charging_station": "EVTEC",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308170945",
+        "index": "1"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_2_202308171303",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "50",
+        "end_soc_percent": "55",
+        "charging_station": "EVTEC",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308171303",
+        "index": "2"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_3_202308171543",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "79",
+        "end_soc_percent": "83",
+        "charging_station": "EVTEC",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308171543",
+        "index": "3"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_4_202308221500",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "38",
+        "end_soc_percent": "41",
+        "charging_station": "Wirelane",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308221500",
+        "index": "4"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_5_202308230955",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "8",
+        "end_soc_percent": "24",
+        "charging_station": "Wirelane",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308230955",
+        "index": "5"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_6_202308231513",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "58",
+        "end_soc_percent": "67",
+        "charging_station": "Wirelane",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308231513",
+        "index": "6"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_AC_kW_7_202308231609",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "68",
+        "end_soc_percent": "74",
+        "charging_station": "EVTEC",
+        "plug_type": "Type 2",
+        "charger": "AC",
+        "note": "202308231609",
+        "index": "7"
+      },
+      {
+        "meas_name": "Fiat_500e_individual_ts_unidir_arbitrary_1_DC_kW_1_202308170852",
+        "car_name": "Fiat_500e",
+        "charging_power_kW": "",
+        "meas_type": "ts_unidir_arbitrary_1",
+        "meas_soc": "individual",
+        "start_soc_percent": "6",
+        "end_soc_percent": "7",
+        "charging_station": "EVTEC",
+        "plug_type": "CCS",
+        "charger": "DC",
+        "note": "202308170852",
+        "index": "1"
+      }
+    ],
+    "potential_charger_status_setpoint_fields": [
+      {
+        "Parameter": "ChargingEnabled_WL_H",
+        "Unit": "",
+        "Description": "Charging enabled",
+        "Source": "Wirelane charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "I_Setpoint_WL_H",
+        "Unit": "A",
+        "Description": "Current setpoint",
+        "Source": "Wirelane charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "SoC_ID2",
+        "Unit": "percent",
+        "Description": "CCS State of Charge",
+        "Source": "EVTEC charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "AC_Power_set_ID2",
+        "Unit": "kW",
+        "Description": "AC power setpoint on grid side of charger",
+        "Source": "EVTEC charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "SoC_ID3",
+        "Unit": "percent",
+        "Description": "CHAdeMO State of Charge",
+        "Source": "EVTEC charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "AC_Power_set_ID3",
+        "Unit": "kW",
+        "Description": "AC power setpoint on grid side of charger",
+        "Source": "EVTEC charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      },
+      {
+        "Parameter": "AC_Power_set_ID4",
+        "Unit": "kW",
+        "Description": "AC power setpoint on grid side of charger",
+        "Source": "EVTEC charger",
+        "Data type": "C",
+        "csv file suffix": ""
+      }
+    ],
+    "limitation": "Metadata identify candidate experiments/columns only; controller-state values and command-to-power delay not yet extracted from selected 207.7MB merged-session archive."
+  }
+}
