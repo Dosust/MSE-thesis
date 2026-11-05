@@ -128,3 +128,26 @@ After reviewing original measured outputs and checking source variables, sign co
 Measured same-system electrical responses can be analyzed without the exact feeder map, as the user explicitly decided. **Do not infer exact upstream branch causality from synchrony alone.** KIT lacks measured transformer/EVSE temperatures, cooling actuation and recorded thermal derating in the inspected files. Therefore this run is **electrical supporting evidence**, not direct SO1–SO3 thermal field validation.
 
 **Governing thesis authority:** [Current thermal-only scope](../../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md) and [evidence standard](../../../project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md).
+
+
+## F. Verified user Mac checkpoint (2026-11-05)
+
+**User-pasted Terminal evidence:**
+
+- All three original KIT Parquet files present in `$HOME/Downloads/KIT_OLTC_22826984/` with `ls -lh` sizes 917M (110 kV), 711M (20 kV) and 1.0G (400 V EV).
+- The attempted check of `$HOME/Downloads/kit_oltc_electrical_response_analysis.py` returned `No such file or directory` because the script is instead located in **the same KIT_OLTC_22826984 folder as the three Parquet files**, as demonstrated by the user's previous Finder screenshot and by the successful subsequent execution.
+- User successfully executed from that KIT directory: `python3 -c 'import numpy, pyarrow, matplotlib; print("Dependencies: PASS")'`, then `python3 -m py_compile kit_oltc_electrical_response_analysis.py`, then `python3 kit_oltc_electrical_response_analysis.py --self-test`.
+- Pasted output: **`Dependencies: PASS`** and **`PASS: pure-function synthetic tests only. These are NOT measured KIT findings.`**; command returned to macOS shell prompt without traceback. Consequently **dependency and program self-test gate PASSED**.
+- **Measured 129.6M-record electrical-response run: NOT YET REPORTED** in this checkpoint. No measured event count or inferred power response is claimed.
+
+**Correct next command using the user's actual script path:**
+
+~~~bash
+python3 "$HOME/Downloads/KIT_OLTC_22826984/kit_oltc_electrical_response_analysis.py" \\
+  --folder "$HOME/Downloads/KIT_OLTC_22826984" \\
+  --out "$HOME/Downloads/KIT_OLTC_Electrical_Results" \\
+  --step-threshold-pct 0.15 \\
+  --max-events 60
+~~~
+
+**Interpretation:** Step 1 file presence and Step 3/4 dependency, syntax and synthetic-unit-test prerequisites passed. Proceed to raw electrical analysis, then inspect real JSON/CSV outputs. The previous missing-script message is not an analysis failure.
