@@ -1,0 +1,283 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.22826984",
+  "source_kind": "measured original 100ms electrical observations in 551-row extracted event CSV windows",
+  "metric_protocol": "POWER_TRANSPORT_INTERDEPENDENCY_METRICS_AND_EVIDENCE_QUALIFICATION_V1.md",
+  "selection": "two hand-selected events from same March 10 fault episode; not independent experiments",
+  "operational_dependency_causality": "NOT_ESTABLISHED",
+  "thermal_or_mobility_field_measurement": "NOT_PRESENT",
+  "results": [
+    {
+      "event_utc": "2026-03-10T15:32:02+00:00",
+      "sample_count": 551,
+      "sample_interval_s": 0.1,
+      "M2_cross_voltage": {
+        "measurement_definition": "Median voltage step comparing -3..-0.5 s to +0.5..+3 s around selected t=0 voltage event",
+        "voltage_channels": {
+          "u110": {
+            "pre_median_V": 66448.59765,
+            "post_median_V": 66435.72265,
+            "pre_post_delta_pct": -0.019375879183813893,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": 0.023395468982861618,
+            "peak_step_time_relative_s": 0.4,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 6.845534850004401,
+            "n_finite_pre": 26,
+            "n_finite_post": 26
+          },
+          "u20": {
+            "pre_median_V": 11831.760750000001,
+            "post_median_V": 11914.970249999998,
+            "pre_post_delta_pct": 0.7032723341705349,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": 0.37053587359278833,
+            "peak_step_time_relative_s": 0.2,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 0.9642089100011844,
+            "n_finite_pre": 26,
+            "n_finite_post": 26
+          },
+          "u400": {
+            "pre_median_V": 235.73406666666668,
+            "post_median_V": 237.37689999999998,
+            "pre_post_delta_pct": 0.6969011125813607,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": 0.5289316144352578,
+            "peak_step_time_relative_s": 0.2,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 0.022436680000007404,
+            "n_finite_pre": 26,
+            "n_finite_post": 26
+          }
+        },
+        "same_direction_20kV_and_400V_median_steps": true,
+        "observed_relative_voltage_ratio_delta400_over_delta20": 0.9909406053962172,
+        "max_step_timing_difference_400V_minus20kV_s": 0.0,
+        "earlier_20kV_steps_above_0p15pct": [
+          {
+            "relative_s": -17.8,
+            "signed_step_pct": -0.3189556372002895
+          },
+          {
+            "relative_s": -17.7,
+            "signed_step_pct": -0.34054400267329005
+          }
+        ],
+        "evidence_grade": "OBSERVED_CROSS_VOLTAGE_CO_RESPONSE_ONLY"
+      },
+      "M3_EV_point_power": {
+        "measurement_definition": "Pre P -5..-0.5 s; post state +20..+30 s; first continuous >=100W baseline deviation lasting >=3 s",
+        "pre_median_W": 2039.1373,
+        "p_at_selected_voltage_step_W": 2038.4457,
+        "post_20_to_30s_median_W": 1616.8959,
+        "state_pre_post_delta_W": -422.2414000000001,
+        "state_pre_post_delta_percent_of_abs_baseline": -20.706864613775647,
+        "original_5_to_19s_post_median_W": 1743.1498000000001,
+        "pre_robust_MAD_scale_W": 0.7431532499997033,
+        "pre_max_absolute_deviation_from_median_W": 1.531099999999924,
+        "n_finite_pre": 46,
+        "n_finite_post": 101,
+        "first_100W_3s_sustained_state_change": {
+          "time_relative_s": 11.1,
+          "direction": "down",
+          "threshold_W": 100.0,
+          "dwell_s": 3.0
+        },
+        "lag_sustained_change_minus_u20_largest_step_s": 10.9,
+        "largest_100ms_power_jump_pre": {
+          "time_relative_s": -16.0,
+          "signed_step": 4.6344000000001415
+        },
+        "largest_100ms_power_jump_at_or_after": {
+          "time_relative_s": 9.8,
+          "signed_step": -243.5476000000001
+        },
+        "threshold_and_dwell_sensitivity": [
+          {
+            "time_relative_s": 11.1,
+            "direction": "down",
+            "threshold_W": 100,
+            "dwell_s": 2
+          },
+          {
+            "time_relative_s": 11.1,
+            "direction": "down",
+            "threshold_W": 100,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 11.1,
+            "direction": "down",
+            "threshold_W": 150,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 11.1,
+            "direction": "down",
+            "threshold_W": 200,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 14.4,
+            "direction": "down",
+            "threshold_W": 300,
+            "dwell_s": 3
+          }
+        ],
+        "phase_median_changes": {
+          "L1": {
+            "pre_median_W": 742.7126499999999,
+            "post_median_W": 600.0664,
+            "delta_W": -142.6462499999999
+          },
+          "L2": {
+            "pre_median_W": 647.5088,
+            "post_median_W": 507.2361,
+            "delta_W": -140.27269999999993
+          },
+          "L3": {
+            "pre_median_W": 648.44975,
+            "post_median_W": 509.555,
+            "delta_W": -138.89475
+          }
+        },
+        "evidence_grade": "OBSERVED_TIME_ORDERED_POWER_STATE_TRANSITION_CAUSE_UNIDENTIFIED"
+      },
+      "interface_verdict": {
+        "M1_structural_topology": "NOT_VERIFIED_FOR_SPECIFIC_20KV_TO_EV_POINT_PARENTAGE",
+        "M2_electrical": "OBSERVED",
+        "M3_power_to_transport_operational_interdependency": "NOT_ESTABLISHED_AS_CAUSAL_OR_DEVICE_DEPENDENCE",
+        "M4_transport_to_power_loading": "NOT_IDENTIFIED_FROM_SOURCE_POWER_CHANNELS",
+        "M5_heat_thermal": "NOT_MEASURED",
+        "M6_mobility_service": "NOT_MEASURED",
+        "reason": "No confirmed feeder connectivity, EV/EVSE controller state, causal test/control or measured thermal/service variables. Change-point timing alone cannot establish physical causal direction."
+      }
+    },
+    {
+      "event_utc": "2026-03-10T15:55:02+00:00",
+      "sample_count": 551,
+      "sample_interval_s": 0.1,
+      "M2_cross_voltage": {
+        "measurement_definition": "Median voltage step comparing -3..-0.5 s to +0.5..+3 s around selected t=0 voltage event",
+        "voltage_channels": {
+          "u110": {
+            "pre_median_V": 66476.89060000001,
+            "post_median_V": 66462.8711,
+            "pre_post_delta_pct": -0.021089283619424304,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": 0.01170974964752938,
+            "peak_step_time_relative_s": 0.2,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 2.8551169500031928,
+            "n_finite_pre": 26,
+            "n_finite_post": 26
+          },
+          "u20": {
+            "pre_median_V": 11931.7158,
+            "post_median_V": 11846.228,
+            "pre_post_delta_pct": -0.7164753287201231,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": -0.4106560907231526,
+            "peak_step_time_relative_s": 0.3,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 0.6544937699990355,
+            "n_finite_pre": 25,
+            "n_finite_post": 26
+          },
+          "u400": {
+            "pre_median_V": 238.24145,
+            "post_median_V": 236.51528333333334,
+            "pre_post_delta_pct": -0.7245450641215623,
+            "largest_100ms_step_within_minus0p5_to_plus1s_pct": -0.35185048487500575,
+            "peak_step_time_relative_s": 0.3,
+            "pre_ref_difference_MAD_scale_V_per_100ms": 0.01596265999998211,
+            "n_finite_pre": 26,
+            "n_finite_post": 26
+          }
+        },
+        "same_direction_20kV_and_400V_median_steps": true,
+        "observed_relative_voltage_ratio_delta400_over_delta20": 1.0112631029680457,
+        "max_step_timing_difference_400V_minus20kV_s": 0.0,
+        "earlier_20kV_steps_above_0p15pct": [],
+        "evidence_grade": "OBSERVED_CROSS_VOLTAGE_CO_RESPONSE_ONLY"
+      },
+      "M3_EV_point_power": {
+        "measurement_definition": "Pre P -5..-0.5 s; post state +20..+30 s; first continuous >=100W baseline deviation lasting >=3 s",
+        "pre_median_W": 766.7728500000001,
+        "p_at_selected_voltage_step_W": 757.6142000000001,
+        "post_20_to_30s_median_W": 1175.9951,
+        "state_pre_post_delta_W": 409.22225000000003,
+        "state_pre_post_delta_percent_of_abs_baseline": 53.36942355222932,
+        "original_5_to_19s_post_median_W": 843.2477,
+        "pre_robust_MAD_scale_W": 14.175138600000052,
+        "pre_max_absolute_deviation_from_median_W": 34.073749999999905,
+        "n_finite_pre": 46,
+        "n_finite_post": 101,
+        "first_100W_3s_sustained_state_change": {
+          "time_relative_s": 13.8,
+          "direction": "up",
+          "threshold_W": 100.0,
+          "dwell_s": 3.0
+        },
+        "lag_sustained_change_minus_u20_largest_step_s": 13.5,
+        "largest_100ms_power_jump_pre": {
+          "time_relative_s": -18.6,
+          "signed_step": 25.401200000000017
+        },
+        "largest_100ms_power_jump_at_or_after": {
+          "time_relative_s": 8.3,
+          "signed_step": 229.3721999999999
+        },
+        "threshold_and_dwell_sensitivity": [
+          {
+            "time_relative_s": 13.8,
+            "direction": "up",
+            "threshold_W": 100,
+            "dwell_s": 2
+          },
+          {
+            "time_relative_s": 13.8,
+            "direction": "up",
+            "threshold_W": 100,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 13.8,
+            "direction": "up",
+            "threshold_W": 150,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 13.8,
+            "direction": "up",
+            "threshold_W": 200,
+            "dwell_s": 3
+          },
+          {
+            "time_relative_s": 13.9,
+            "direction": "up",
+            "threshold_W": 300,
+            "dwell_s": 3
+          }
+        ],
+        "phase_median_changes": {
+          "L1": {
+            "pre_median_W": 268.50585,
+            "post_median_W": 406.8952,
+            "delta_W": 138.38934999999998
+          },
+          "L2": {
+            "pre_median_W": 247.2175,
+            "post_median_W": 382.743,
+            "delta_W": 135.5255
+          },
+          "L3": {
+            "pre_median_W": 250.96890000000002,
+            "post_median_W": 386.4135,
+            "delta_W": 135.44459999999998
+          }
+        },
+        "evidence_grade": "OBSERVED_TIME_ORDERED_POWER_STATE_TRANSITION_CAUSE_UNIDENTIFIED"
+      },
+      "interface_verdict": {
+        "M1_structural_topology": "NOT_VERIFIED_FOR_SPECIFIC_20KV_TO_EV_POINT_PARENTAGE",
+        "M2_electrical": "OBSERVED",
+        "M3_power_to_transport_operational_interdependency": "NOT_ESTABLISHED_AS_CAUSAL_OR_DEVICE_DEPENDENCE",
+        "M4_transport_to_power_loading": "NOT_IDENTIFIED_FROM_SOURCE_POWER_CHANNELS",
+        "M5_heat_thermal": "NOT_MEASURED",
+        "M6_mobility_service": "NOT_MEASURED",
+        "reason": "No confirmed feeder connectivity, EV/EVSE controller state, causal test/control or measured thermal/service variables. Change-point timing alone cannot establish physical causal direction."
+      }
+    }
+  ]
+}
