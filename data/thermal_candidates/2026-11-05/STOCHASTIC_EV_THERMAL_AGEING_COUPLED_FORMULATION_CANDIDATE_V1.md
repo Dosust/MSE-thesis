@@ -79,3 +79,8 @@ Report scenario distributions, e.g. expected ageing E[L_eq], 95th percentile, co
 - No change to title V3, SO1–SO3 or the decision to treat PINN as a comparative method candidate.
 
 **Decision:** STOCHASTIC_EV_CLUSTER_PLUS_THERMAL_ODE_CANDIDATE | QIAN_2015_PRIOR_ART | CLOSED_LOOP_CHARGING_CAPABILITY_HYPOTHESIS | HST_DATA_AND_COUPLING_VALIDATION_PENDING | MODEL_NOT_FINALIZED
+
+
+## Source-qualified A1–A3 assumption protocol (2026-11-05)
+
+Qian et al.'s original manuscript identifies **ambient temperature, FEV penetration and charging start time as major modeled drivers in their UK LV simulations**, not as universal determinants of actual transformer remaining life. A separate [three-factor assumption and validation matrix](QIAN_2015_THREE_FACTOR_ASSUMPTIONS_AND_VALIDATION_MATRIX_V1.md) records definitions, source assumptions, physical controls, tests E1–E4, and evidence limits. Retain initial SOC, charging modes, non-EV loads, topology and cooling as supporting or confounding variables, not omitted factors.
