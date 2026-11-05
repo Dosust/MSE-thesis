@@ -111,3 +111,17 @@ Contact the original Zenodo record contact persons **Marvin Dorn** and **Sebasti
 - E3 edited book DOI: https://doi.org/10.1007/978-3-031-69031-0
 - Original Mac acquisition QA: [KIT audit](KIT_OLTC_22826984_ACQUISITION_AUDIT.md)
 - Frozen thesis evidence requirements: [standard](../../../project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md)
+
+
+## 9. User-approved scope decision: proceed without feeder-specific mapping
+
+**2026-11-05 user direction:** The user considers the documented campus-level shared electrical infrastructure and exact shared 100 ms timestamp grid sufficient for the present **system-level electrical analysis**. The user explicitly declines additional feeder-specific information gathering as a prerequisite for continuing work.
+
+**Operational interpretation:**
+- **Proceed now** with same-system, synchronized **cross-voltage electrical event/response** analysis for 110 kV, 20 kV and 400 V EV series. Use measured signal changes, appropriate normalization, and explicit event windows; do not make upstream causality claims beyond what the data justify.
+- The published multi-level electrical campus architecture and the user's 129,600,000-row timestamp-grid PASS are sufficient for this **bounded descriptive/comparative analysis**. A detailed 2026 feeder/transformer ID is **not an execution blocker** for this objective.
+- Preserve the distinction **shared power system and synchronized observations != verified serial parent-child route**. The exact PMU04_TK1 -> PMU01_J01 -> EV_SH.J.6 feeder and switch mapping remains **UNVERIFIED** and is relevant only if a future claim demands a unique supply path or branch-specific causal transfer.
+- Avoid repeatedly requesting the same feeder mapping in this workstream unless the user explicitly pursues branch-specific analysis or a scientific result depends on that mapping.
+- KIT still has **no verified ambient/EVSE/transformer temperature or recorded thermal derating fields**. It therefore cannot alone validate SO1–SO3 thermal model/causality/service outcomes; acquire those separately.
+
+**Current progress decision:** proceed with instrument-level power/voltage-quality checks and correlated event analysis; treat exact physical feeder attribution as a *recorded limitation*, not a stoppage criterion. This is a working analysis choice, **not** a change to any canonical thesis authority.
