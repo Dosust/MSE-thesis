@@ -66,3 +66,10 @@ Translate and run documented comparable queries in Web of Science, IEEE Xplore a
 - [Native Scopus screenshot preserved in Drive](https://drive.google.com/file/d/1o6wEGlV8Dgz9dgIpEwFzdo-qJ-D6YyNf/view).
 - [Auditable screenshot verification memo and remaining gates](https://drive.google.com/file/d/13ewxVld1DI3j86qCOlPvR1mNRuRo9hsL/view).
 - **Decision unchanged:** S0 v0.1 remains candidate primary search; not frozen until complete native query/filters/date verification, reviewer calibration and precision checks.
+
+
+## 2026-11-05 native query text verification — completed
+
+The user copied and supplied the full S0 search query from Scopus. Programmatic token-by-token comparison with archived S0 v0.1 returned **148/148 exact token matches and zero differences**, including year filters `PUBYEAR AFT 1999 AND PUBYEAR BEF 2027`. The native Scopus screenshot independently displayed **5,662 documents**, matching the export's **5,662 CSV records**. Thus **query-text match and Scopus-reported count are confirmed**. A simultaneous full native Search History view, post-search refinements, and exact execution time remain uncaptured. **Human screening and S0 strategy freeze remain PENDING.**
+
+Evidence: [Complete query-and-count verification memo](https://drive.google.com/file/d/1tX-NspFEJuOTu9P4sN464E3k00LSxH3m/view).
