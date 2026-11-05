@@ -1,7 +1,7 @@
 # Visakh & Selvan (2022) — Research synthesis: smart charging, resilience, and sustainability
 
 **Date:** 2026-11-05  
-**Status:** Original **publisher abstract examined**, full published PDF retrieval unsuccessful (publisher download blocked). Source-specific equation numbers, solver details, test setup and numerical improvement values **UNVERIFIED**. **Not a completed systematic full-text extraction, not human-screened inclusion, not field-validated coupled thermal result.**
+**Status update 2026-11-05:** Publisher abstract verified; **author-uploaded full-text transcription inspected** at https://www.researchgate.net/publication/360722059_Smart_charging_of_electric_vehicles_to_minimize_the_cost_of_charging_and_the_rate_of_transformer_aging_in_a_residential_distribution_network . Source-specific equations, test setup, solver and numerical results now extracted in the addendum below. **Publisher-hosted PDF still blocked; OCR/transcription versus publisher source has not been independently cross-verified, numerical simulation not reproduced, no reviewer-screened inclusion, no measured coupled thermal resilience validation.**
 **Thesis:** Engineering of Power–Electrified Transportation Interdependencies for Resilience. Official thermal SO1–SO3 remain unchanged.
 **Paper:** Arjun Visakh and M. P. Selvan (2022), *Smart charging of electric vehicles to minimize the cost of charging and the rate of transformer aging in a residential distribution network*, Turkish Journal of Electrical Engineering and Computer Sciences, 30(3), 927–942, DOI https://doi.org/10.55730/1300-0632.3819. Publisher https://journals.tubitak.gov.tr/elektrik/vol30/iss3/28/; prior journal-site PDF link https://aj.tubitak.gov.tr/elektrik/issues/elk-22-30-3/elk-30-3-28-2106-80.pdf inaccessible in audit.
 
@@ -100,6 +100,65 @@ Factorial scenario axes: regular vs documented extreme-hot conditions (beyond SI
 - No same-site measured transformer-HST-to-EVSE-delivery restriction loop currently validated in project. Explicitly distinguish modeled coupled counterfactuals from observed system resilience.
 
 ## 8. Source verification and screening next
-Retrieve publisher PDF or authentic author manuscript; verify original optimization variables, exact tariff price formation, constraints, thermal aging equations, solver, baseline comparison, simulated network/EV numbers, actual % improvements, weather season, service adequacy and price locality; extract page/equation/figure citations. JBI protocol v0.3 researcher-approved, **no reviewer inclusion yet**; keep candidate role **CORE+CONTEXT/CONTROL provisional**. Do not assert the 2022 original contains the proposed full resilience, sustainability, robust-control, carbon or extreme-heat formulation.
+Original author-uploaded full-text transcription now inspected and numerical/model/solver details extracted in the addendum; seek publisher PDF for transcription cross-check and exact figure/tables; then reproduce original simulations with documented parameter equivalence and fair data splits if computationally justified. Audit exact pricing interpretation, device models, short-time thermal limits, departure/charging fulfillment, heatwave and recovery scope. JBI reviewer-screening remains pending. JBI protocol v0.3 researcher-approved, **no reviewer inclusion yet**; keep candidate role **CORE+CONTEXT/CONTROL provisional**. Do not assert the 2022 original contains the proposed full resilience, sustainability, robust-control, carbon or extreme-heat formulation.
 
 **Current status:** STRONG BENCHMARK / PRIOR-ART CANDIDATE FOR PRICE-ONLY SMART CHARGING, not established heat-resilience or LCA validation.
+
+
+## 9. Full-text equations and numerical evidence upgrade — 2026-11-05
+
+**Primary provenance:** Original publisher abstract https://journals.tubitak.gov.tr/elektrik/vol30/iss3/28/ ; author-uploaded full-text transcribed on ResearchGate https://www.researchgate.net/publication/360722059_Smart_charging_of_electric_vehicles_to_minimize_the_cost_of_charging_and_the_rate_of_transformer_aging_in_a_residential_distribution_network . Public publisher PDF link (https://aj.tubitak.gov.tr/elektrik/issues/elk-22-30-3/elk-30-3-28-2106-80.pdf) failed with HTTP 502. The text source displays actual equations, sections, tables and page labels; no publisher-file binary checksum or full experiment reproduction is asserted. **Earlier 'source equations unverified' applies only to the initial abstract-only review and has now been superseded by this original-text extraction.**
+
+### Paper study configuration (pp. 929–938)
+
+- IEEE European LV feeder, **55 households** at 240 V single-phase / 416 V line-line, **160 kVA 11 kV/416 V three-phase distribution transformer**, 0.9 lagging non-EV base power factor (p. 929).
+- **100% EV penetration**: one EV for each of 55 consumers; four historical EV battery models and efficiencies; up to **3 kW AC-side per EV**, no V2G (p. 930).
+- Gaussian-model arrival **18:00 ± 2 h** and departure **07:00 ± 2 h** (paper's means/standard deviations), initial battery energy fraction normal with mean **50%**, sd **30%** of usable capacity; all target full by departure (p. 930). Joint stochastic behavior, physical clipping/truncation of Normal SOC and transferability to actual datasets remain to be checked.
+- Daily scheduling discretized into **96 fifteen-minute intervals**; MATLAB **CVX** convex charging-power optimization, **OpenDSS** electrical simulation, MATLAB IEEE-style thermal model; **two illustrative Madrid days**, one in July/summer and one in December/winter (pp. 929, 937).
+- The original work compares **uncontrolled/dumb** and **smart price-based** charging; a base-load-only scenario is also reported. No adaptive extreme-heat recovery experiment or measured charger–transformer connected site.
+
+### Exact method nuance: price-to-loading construction (pp. 931–933)
+
+The paper models real-time tariff as **r_k(l)=k0+k1*l** (Eq. 5), where 'l' is the relevant load variable. Its cost attributed to EV charging in time slot k (Eqs. 7–12) is the *integral of that marginal price rule from base load to total load*:
+
+C_EV = Delta_t * sum_k integral_{L_B,k}^{L_B,k+P_EV,k} r_k(l) dl
+     = Delta_t * sum_k [k0 P_EV,k + k1 L_B,k P_EV,k + (k1/2) P_EV,k^2].
+
+The constant Delta_t is omitted from the published minimization as it does not change the minimizer. This objective is **convex quadratic** when k1>0 and feasible charger/energy constraints are affine; the authors say it is solvable by an interior-point method (p. 933). **This is not the same expression as an exogenous retailer price \\sum pi_k P_EV,k Delta_t** when prices depend on local EV charging. 'Price minimization equals decongestion' depends on the authors' constructed local price-load link, not a universal retail-price theorem. For exact reproduction verify their use of kW versus kVA and power factor when moving between OpenDSS apparent load and energy-price load.
+
+Constraints Eqs. 13–17: total load = base plus availability/energy-eligible EV power; each EV meets desired departure energy and does not exceed battery capacity, charging power in [0, 3 kW], and final energy = initial + sum_i eta_n p_{n,k} Delta_t. Their model minimizes **charging cost**, while HST and equivalent ageing are **computed after optimization**, not included directly as an objective or explicit validated temperature-limit constraint.
+
+### Original transformer thermal calculation (pp. 935–936)
+
+Eq. 19: HST = ambient + top-oil rise + winding HST rise over oil. Eqs. 20–21 use discrete first-order thermal memory with exp(-Delta_t/tau); Eqs. 22–23 use load factor and IEC/IEEE-type power-law steady-state thermal rises. Paper reports tau_o=3 h, tau_w=5 min, rated top-oil rise 55 degC, rated winding-over-oil rise 25 degC, R=5, n=m=0.8 **for its assumed 160 kVA transformer**. Eq. 24 has F_AA=exp[15000/(110+273)-15000/(T_H+273)], referencing 110 degC; insulation qualification required before transplantation. Eq. 25 reports **F_EQ = sum F_AA,k Delta_t / sum Delta_t**, dimensionless average ageing acceleration. The equivalently aged duration is F_EQ*duration, not F_EQ 'years' or measured remaining lifetime.
+
+### Numerical baseline reproduction targets (pp. 934–939, Table 3)
+
+| Output | Base only | Uncontrolled EV | Price-smart EV |
+|---|---:|---:|---:|
+| Peak transformer apparent loading [kVA] | 143.08 | 255.97 | 143.08 |
+| All-EV charging cost [EUR] | 0 | 421.39 | 266.61 |
+| Summer peak HST [degC] | 91.06 | 167.26 | 94.32 |
+| Summer mean HST [degC] | 64.52 | 88.39 | 79.82 |
+| Summer equivalent ageing factor [dimensionless] | 0.02 | 12.48 | 0.05 rounded (body text 0.046) |
+| Winter peak HST [degC] | 60.95 | 141.34 | 64.22 |
+| Winter mean HST [degC] | 38.89 | 62.77 | 54.20 |
+| Winter equivalent ageing factor [dimensionless] | 0.0004 | 1.22 | 0.004 |
+
+Reported charging cost change **36.73% reduction** and peak transformer loading **44% reduction**, in the particular 55-EV/160 kVA simulated system; drastic ageing reduction follows removal of severe modeled overload, not field-tested percent lifetime extension. Paper notes summer HST peak >160 degC in uncontrolled case, an adverse modeled threshold, not a reliable default operating condition.
+
+### Important limitations / new falsification route
+
+- **Tariff assumption:** local price modeled explicitly as increasing with loading; exogenous time-of-use or wholesale RTP can synchronize EV loads and create local overload. Avoid universal inference price-minimization => transformer safety.
+- **Physics:** transformer thermal law applied via parameterized model, not validation against directly observed HST; original text does not establish measurement-based transformer life consumption or field-calibrated extreme-heat response.
+- **Mobility:** the optimization explicitly imposes full departure-energy satisfaction in its constructed cases; it does **not** quantify mobility service loss/recovery or charging restrictions under infeasible heatwave operation.
+- **Resilience ≠ ageing:** thermal load, fast TOT/HST constraints and charging service disruptions are separate observables from long-term F_EQ; recovery must be a new assessed trajectory, not inferred from a lower cost.
+- **Sustainability:** economic EV cost and modeled asset ageing are supported; network kWh losses, marginal carbon intensity, resource use and equitable charging require additional explicit measurements/models. Lower charging price alone does not imply lower emissions.
+- **Important later prior art by same authors:** Visakh & Selvan (2023), *Analysis and mitigation of the impact of electric vehicle charging on service disruption of distribution transformers*, *Sustainable Energy, Grids and Networks* 35:101096, DOI https://doi.org/10.1016/j.segan.2023.101096. This **already directly studies** short-time apparent loading, top-oil and hot-spot limits, charger harmonics, controlled charging, and simulation-based avoidance of service disruption. Therefore, do **not** claim it is novel to add thermal-limit/service-interruption constraints to EV scheduling. The remaining potential thesis distinction must be narrowed through a systematic audit (e.g., explicit coupled thermal state→available mobility service over time, extreme heat, stochastic viability/recovery, and independent HST/electrical-interface validation), not asserted a priori.
+- **Additional independent caution:** Unterluggauer et al. (2023), *Impact of cost-based smart electric vehicle charging on urban low voltage power distribution networks*, DOI https://doi.org/10.1016/j.segan.2023.101085, shows in multi-feeder simulations that price-driven charging synchronization can aggravate local congestion.
+
+### Proposed fair experiment
+
+Hold EV session requests, network, external base load and ambient scenario fixed across B0 uncontrolled, B1 reconstructed paper-specific local load-coupled pricing, B1b exogenous retail tariff (if available), B2 calibrated HST-constrained, and B3 state/time + thermal-restriction + departure-energy service policy; report peak HST, equivalent aged hours, top-oil/short-time loading/limit criticality, charging kWh shortfall, energy costs, and explicit calibrated carbon/loss measures **only where data support them**. Check feasibility, thermal inertia, price assumptions, uncertainty and real-time information availability. Require source full-text replication of B1 before claiming quantitative superiority.
+
+**Updated evidence status:** ORIGINAL_EQUATIONS_INSPECTED_FROM_AUTHOR_TRANSCRIPTION | SOURCE_NUMBERS_EXTRACTED | PUBLISHER_PDF_BINARY_NOT_VERIFIED | SIMULATION_NOT_REPRODUCED | NO_MEASURED_COUPLED_RESILIENCE_OR_CARBON_RESULT | JBI_REVIEW_PENDING | SO1_SO3_UNCHANGED
