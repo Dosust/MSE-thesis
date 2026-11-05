@@ -3,7 +3,7 @@
 **Date:** 2026-11-05  
 **Active thesis:** Engineering of Power–Electrified Transportation Interdependencies for Resilience.  
 **Original source:** KIT Campus North multivoltage OLTC dataset, Moster et al. (2026), DOI https://doi.org/10.5281/zenodo.22826984.  
-**Status:** PYTHON ANALYSIS CODE PREPARED; MEASURED RESULTS NOT YET EXECUTED ON USER MAC.  
+**Status:** [PYTHON ANALYSIS CODE COMMITTED TO GITHUB](../../../tools/kit_oltc_electrical_response_analysis.py); syntax and synthetic-function tests passed; MEASURED RESULTS NOT YET EXECUTED ON USER MAC.  
 **Input evidence:** [KIT acquisition audit](KIT_OLTC_22826984_ACQUISITION_AUDIT.md), [campus topology and scope decision](KIT_OLTC_ELECTRICAL_TOPOLOGY_EVIDENCE_AUDIT.md).  
 
 ## 1. Already verified, avoid repeating
@@ -41,13 +41,13 @@ E4. Which source annotation labels are present, before and during candidate dist
 
 ## 4. Reproducible preparation
 
-The full Python program delivered as an attachment in the 2026-11-05 ChatGPT conversation is named **kit_oltc_electrical_response_analysis.py**. Its SHA-256 at creation was:
+The full Python program delivered as an attachment in the 2026-11-05 ChatGPT conversation is named **kit_oltc_electrical_response_analysis.py**, also [committed under tools](../../../tools/kit_oltc_electrical_response_analysis.py). Its SHA-256 at creation was:
 
 ~~~text
 d9b526b04b15c514e9d36014e4d1526efe95c535a0a410cdce695806f3c30df9
 ~~~
 
-**IMPORTANT:** The original large Parquet files and this executable file have not been uploaded to GitHub. This repository document records the program's specifications and execution instructions; it does not claim GitHub contains those bytes. The generated Python code passed syntax compilation and pure-function synthetic self-tests in the assistant environment, **not** a raw-KIT measurement run.
+**IMPORTANT:** The [executable Python file is committed in GitHub](../../../tools/kit_oltc_electrical_response_analysis.py), and the committed source was checked for an exact text match against the locally created program. The original large KIT Parquet files **have not** been uploaded to GitHub. Python syntax compilation and pure-function synthetic self-tests passed in the assistant environment; **not** a raw-KIT measurement run.
 
 The program streams original Parquet 100 ms samples in PyArrow batches, creates one-second finite-only arithmetic means per 10 samples, retains first-of-second source fault annotation, preserves original raw bytes, and writes 4,320,000 one-second bins per file. This 1 s aggregation loses sub-second timing resolution; **do not use it to claim precise 100 ms propagation delays**.
 
