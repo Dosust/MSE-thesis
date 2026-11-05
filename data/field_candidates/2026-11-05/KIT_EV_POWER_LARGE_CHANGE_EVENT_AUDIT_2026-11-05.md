@@ -132,3 +132,32 @@ Inspect every one-second point from event -20 through +5 seconds, ideally also t
 **Correct scientific claim:** At this selected event, the EV meter underwent a measured large power-state transition before the significant selected 20 kV step. There is **no support that the t=0 voltage step caused the t=-12/-11 s EV power transition**. Neither an unrelated charger stop nor an earlier electrical disturbance is positively identified because no charger control-state logs or independently verified earlier voltage cause were supplied.
 
 **Method consequence:** Before interpreting the remaining 9 large pre/post changes (and all 60 events), verify **pre-event power stability and temporal order**. Flag cases where a large power jump occurs in the pre-window or before the voltage event. Avoid identifying causal voltage-to-power response solely from pre/post median differences. Analysis can continue with existing derived one-second traces; inspect only narrow original 100 ms windows when necessary. The KIT files contain no measured heat states, so none of this validates extreme-heat thermal SO1–SO3.
+
+## 7. Timing screen of all ten large power-change events
+
+**Evidence:** User's Mac Terminal Step 17 output, calculated solely from previously derived one-second KIT measurements and existing selected-events CSV. Values are user-reported/rounded; the assistant did not access original user-local Parquet files.
+
+| Event UTC | Selected pre/post ΔP (W) | Largest 1-s jump in prior -20..-1 s (W) | Prior jump offset (s) | 20 kV 1-s voltage step at prior jump (%) |
+|---|---:|---:|---:|---:|
+| 2026-02-09 12:57:51 | +356.84 | +221.19 | -3 | +0.004 |
+| 2026-02-09 15:47:49 | +390.11 | +388.06 | -17 | +0.006 |
+| 2026-03-10 15:32:02 | -352.91 | -1.04 | -19 | -0.000 |
+| 2026-03-10 15:34:07 | -421.46 | -235.67 | -12 | +0.001 |
+| 2026-03-10 15:44:44 | +377.92 | +314.20 | -1 | -0.013 |
+| 2026-03-10 15:52:46 | -411.44 | -111.45 | -1 | +0.022 |
+| 2026-03-10 15:54:12 | +401.61 | +345.46 | -6 | -0.011 |
+| 2026-03-10 15:55:02 | +171.27 | +23.52 | -12 | +0.002 |
+| 2026-03-10 15:57:03 | -261.72 | +270.75 | -16 | +0.004 |
+| 2026-03-10 16:00:03 | -752.26 | -503.62 | -11 | -0.040 |
+
+### What the results do and do not establish
+
+- **8/10** events have an EV-point one-second power jump of **absolute magnitude ≥100 W before t=0**, including **7** prior jumps of the same sign as the reported pre/post ΔP and **one** jump of the opposite sign (2026-03-10 15:57:03). Treat the opposite-sign event as temporally complex, not as a simple preceding explanation of its net delta.
+- Each of the **eight** significant earlier power jumps coincides with a measured one-second 20 kV voltage step smaller than **0.15% in absolute magnitude**. Hence the subsequently selected t=0 voltage step **cannot initiate the earlier observed power jump**. This does not exclude unmeasured, earlier, subtler or subsecond electrical events, and cannot prove the source of the power transition.
+- For the other **two** selected events (**2026-03-10 15:32:02 UTC**, -352.91 W net, largest prior 1-s jump -1.04 W at t=-19; and **2026-03-10 15:55:02 UTC**, +171.27 W net, largest prior +23.52 W at t=-12), the current screen does **not** locate a preceding ≥100 W instantaneous power jump. Their response chronology remains open: a gradual earlier trend or a t≥0 power change is possible. Inspect their full one-second traces rather than infer that the selected voltage step caused the change.
+- **Methodological flaw to correct before reporting electric P↔T coupling:** the event filter uses **pre-window median |P_EV|≥500 W**, not EV-point power immediately at the t=0 voltage step. In the 16:00:03 case the prewindow median is ~757 W but the measured power at t=0 is ~1 W. That event should **not** be classified as high-power operation *at voltage-step time*. Separate prewindow exposure from contemporaneous exposure and require a stable pre-event loading state if interpreting power response.
+- Large sample counts of multiple timepoints from one physical episode are not independent event replicates. Already observed March 10 `fault` cluster may include linked disturbance sequences.
+
+**Status:** Original ten-event causal reading **rejected**. Same-system synchronized electric signals remain usable for bounded descriptive co-response, event timing, and sensor/channel characterization. No measured heat/thermal regulation or mobility service outcomes are present in this source.
+
+**Next analysis:** Inspect all one-second P and U values from at least -20 to +20 seconds for the two events without a large prior power jump, and calculate P at t=-1 and t=0 for the full selected 60 events. Then redesign power-conditioning to check measured power at event onset rather than solely the prewindow median. Preserve original selected-event CSV and version any new result output separately.
