@@ -63,3 +63,11 @@ Run [independent_ev_lab_voltage_control_audit.py](../../../tools/independent_ev_
 **Causal boundary:** This mismatch is a model-discrimination result, not a detected controller command. Voltage-dependent controller switching could also produce nonlinear, delayed behavior; the source field data do not identify whether that happened. Controlled PHIL current measurements and separate charger-command/state datasets test candidate mechanisms without asserting they were present in the KIT field installation.
 
 **Research rule:** claim only that the simple static voltage-scaling hypothesis is inconsistent with the measured event changes under its stated assumptions; do not claim that an external charger setpoint caused either event.
+
+
+## Execution checkpoint — macOS certificate failure and secure code correction
+
+- On 2026-11-05 user ran the local CLI: `git pull --ff-only` PASS; `--self-test` PASS, before any real lab CSV processing.
+- First official KIT PHIL CSV retrieval failed with Python `urllib.error.URLError: [SSL: CERTIFICATE_VERIFY_FAILED]` (missing or unconfigured local Python trusted CA certificates). **This is a client TLS trust-store issue, not a dataset analysis failure, source checksum mismatch, or KIT M2/M3 finding.** No real independent laboratory outputs were produced in that stopped run.
+- Corrective code in `tools/independent_ev_lab_voltage_control_audit.py`: preserve Python certificate verification first; if the error is specifically `CERTIFICATE_VERIFY_FAILED`, retry with macOS `/usr/bin/curl` and **TLS certificate verification still enabled**, HTTPS-only redirects and bounded retry/timeouts. After retrieval, validate the publisher-provided MD5 before caching or analysis. Never use `--insecure`, `-k`, `verify=False` or an unvalidated download.
+- Next user-local validation: pull `main`, rerun synthetic self-test plus analysis; only after successful measured output commit new small JSON/Markdown results. Record further failures instead of substituting synthetic data.
