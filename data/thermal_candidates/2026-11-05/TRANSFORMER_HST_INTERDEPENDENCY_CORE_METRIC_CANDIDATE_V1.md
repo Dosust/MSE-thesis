@@ -61,3 +61,29 @@ Publisher describes direct online 2024 measurements from a **40 MVA ONAN transfo
 6. Report SO1 physical mechanism, SO2 state-time evolution and SO3 transition times/service trajectories separately. No measured extreme-heat or EV thermal causal claim from SINTEF-only data.
 
 **Status:** HST_PRIMARY_STATE_CANDIDATE | SINTEF_MEASURED_HV_LV_HST_DATA_IDENTIFIED | NO_HST_MODEL_VALIDATION_EXECUTED | COUPLED_EV_THERMAL_EVIDENCE_OPEN | FROZEN_SCOPE_UNCHANGED
+
+## Decision — physics-informed neural network (PINN) as a benchmark candidate
+
+**Decision (2026-11-05):** Retain a transformer HST **Physics-Informed Neural Network (PINN)** as an **advanced benchmark candidate**, NOT as the automatically selected primary methodology. This is a research comparison choice, not a frozen objective/title change, an implemented PINN, or an originality claim.
+
+### Comparison architecture and fair experimental design
+
+| Model | Benchmark role | Evidence gate |
+|---|---|---|
+| Transformer-specific IEC 60076-7 / IEEE C57.91-type lumped thermal ODE | **Required physical reference** and computational-efficiency baseline | Qualified transformer thermal parameters, cooling conditions, observed HV/LV HST |
+| Physics-Informed Neural Network (PINN), preferably well-documented prior HST architecture | **Candidate advanced estimator benchmark** | Governing physical equations/residual, reproducible implementation and comparable inputs with identical data partitions |
+| Proposed coupled P–electrified-transport thermal state-time framework | **Primary research hypothesis**, pending mathematical formulation and validation | Must estimate thermal state and also quantify qualified EV loading-to-heating and thermal capacity/service propagation; label model-generated scenarios clearly |
+
+Reproduce/retrain each eligible estimator on **identical SINTEF measured transformer sensor inputs and chronologically held-out test periods**; separate HV from LV HST. Apply consistent lookback, forecast horizon, preprocessing, measured-label provenance, tuning budget, uncertainty and timing hardware. Do **not** compare a PINN publication's published error under different data against local test errors as if this were a controlled benchmark. If source code/architecture/physical properties cannot be reconstructed reliably, retain PINN as **literature comparator only**, not an empirical baseline.
+
+### Predeclared metrics
+
+1. **HST estimation:** held-out RMSE/MAE [degC] for directly observed HV and LV winding HST; high-load/high-HST subset and transient/ramp error.
+2. **Physical consistency:** residual of qualified thermal dynamics, limits of predicted states, initial-condition handling and cooling/load parameter admissibility; report numerically with units and calibration.
+3. **Generalization and uncertainty:** temporally held-out performance, temperature/load regime shifts, interval coverage, and critical-limit false negatives where a justified HST limit exists.
+4. **Real-time suitability:** per-step latency [ms], 95th/99th percentile, model memory and training/inference compute; measured on the same hardware, and evaluated against available sample interval.
+5. **Interdependency consequence (proposed framework, *not automatically comparable for HST-only PINN*):** T→P marginal EV-induced HST rise [degC]; P→T thermally admissible charging [kW], lost requested energy [kWh] and time to thermal/service threshold under verified connection or explicitly modeled scenarios.
+
+**Source boundary:** IEC 60076-7:2018 establishes reduced-order thermal loading equations; not all traditional numerical methods are too slow. PINN/PDE-based HST estimation is already explored in 2026 literature, e.g. Nishanth DOI 10.1109/NE-IECCE69680.2026.11665934; another 2026 IEEE dual-stream transformer temperature-field PINN DOI 10.1109/TDEI.2026.3681547. **Novelty must concern an evidence-qualified coupled state-capability-service problem, not merely using PINN.**
+
+**Status:** `ODE_BASELINE_REQUIRED | PINN_BENCHMARK_CANDIDATE_ACCEPTED | PROPOSED_COUPLED_FRAMEWORK_TO_BE_DEFINED | SINTEF_MEASURED_HST_VALIDATION_PENDING | CLAIMED_NOVELTY_NOT_ESTABLISHED`
