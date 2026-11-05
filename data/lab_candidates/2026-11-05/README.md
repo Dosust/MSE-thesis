@@ -11,3 +11,5 @@
 - [Measured KIT PHIL laboratory evidence decision](INDEPENDENT_EV_PHIL_RESULTS_EVIDENCE_DECISION_2026-11-05.md): 64 detected 2 V voltage transitions across four vehicles, small phase-current changes, Nissan Leaf 0 requiring detection-sensitivity QA, separate Dortmund charger-state metadata evidence.
 
 - [KIT PHIL voltage-screen diagnostic script](../../../tools/independent_ev_phil_voltage_screen_diagnostics.py): examine source-verified five-vehicle full-run voltage ranges and 0.5–5 V detector sensitivity from cached original CSVs, without treating zero selected events as no physical disturbance.
+
+- [Phase-aware KIT PHIL V2 source-qualified reanalysis](../../../tools/independent_ev_phil_phase_aware_audit_v2.py): fixes the Nissan Leaf single-energized-phase voltage averaging artifact; preserves V1 as provenance, reconstructs eligible measured events from active phase(s) only, outputs separately versioned V2 JSON/Markdown. Synthetic self-test PASS; actual measured V2 run pending Mac execution.
