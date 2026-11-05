@@ -65,3 +65,28 @@ Files produced locally by the user's run:
 5. Thermal SO1–SO3 validation still requires separate measured thermal/heat/derating data or documented physics-based simulation with explicit limitations.
 
 **Do not upload user original multi-GB Parquet files to GitHub; preserve on MacBook.**
+
+## 5. Follow-up: all 60 selected event EV power deltas (user Terminal)
+
+**Evidence source:** User-pasted Terminal result of a CSV summary applied to the local `power_conditioned_voltage_step_events.csv`, created by the source-constrained program. These are reported results, **not** an independently re-read/uploaded CSV.
+
+| Reported statistic | Value |
+|---|---:|
+| Selected events | 60 |
+| `pre_fault` event labels | 28 |
+| `fault` event labels | 31 |
+| `post_fault` event labels | 1 |
+| Finite signed pre/post EV active-power deltas | 60 / 60 |
+| Median **signed** EV-point pre/post power delta | **+0.38806 W** |
+| Events with **absolute** EV-point power delta >=100 W | **10 / 60 (16.7%)** |
+| Events with **absolute** EV-point power delta >=500 W | **1 / 60 (1.7%)** |
+
+**Correct reading:** The selected event set includes measurable EV-point real-power variations, and a minority exceed exploratory magnitude thresholds. A near-zero *signed* median **does not** demonstrate there is no large response, no effect, no variation, or no charging; use the entire empirical signed/absolute distribution. The event that exceeds 500 W has not yet been identified from its exact time, power before/after or voltage morphology.
+
+**Method:** `ev_delta_power_W_signed` is the post-window (event +5..+19 s) finite median minus pre-window (event -20..-6 s) finite median, based on the 1-second average of sum-of-three measured phase power channels; +/-100 W and +/-500 W are *descriptive selection summaries*, not device thresholds. There is no causal treatment/control, no observed battery charging-state ground truth and no verified thermal variable.
+
+**Phase caveat:** 31 `fault` and 28 `pre_fault` vs only one `post_fault`; the group sizes are dominated by prior event screening and capped, nonrandom selection. Do not compare phase impacts as if samples were balanced or randomly drawn. Source labels are documentation metadata, not necessarily tap-command telemetry.
+
+**Next diagnostic:** Use existing CSV only to list **all 10 rows with |deltaP_EV| >=100 W**, including exact UTC, source phase label, signed before/after power and delta, one-second trigger magnitude, and pre/post 110/20/400 voltage percent changes. In particular investigate the **one |deltaP| >=500 W** event. Verify whether those events reflect charging transitions, ordinary load changes, 1-second averaging artifacts, or a possible voltage-related response; event correlation alone cannot distinguish them.
+
+**Scientific status:** synchronized measured power-voltage co-variation demonstrated; directional power-to-transport causation, EV charging-state confirmation, mobility-service effects and heat-driven state-time thermal SO1–SO3 **NOT ESTABLISHED**.
