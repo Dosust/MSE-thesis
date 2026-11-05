@@ -86,3 +86,49 @@
 Inspect every one-second point from event -20 through +5 seconds, ideally also the per-phase EV real powers and three phase voltages, to identify the first second of the EV load change and any earlier changes in 20 kV voltage. If the evidence merits, inspect only the corresponding 100 ms original raw slice. Avoid rerunning the 129.6-million-record aggregate.
 
 **Source-level limitations unchanged:** phase/power sign conventions, exact feeder ancestry, battery charging state and thermal signals remain unverified/absent.
+## 6. Full one-second transition audit: event -20 through +5 seconds
+
+**Evidence update:** User executed the prescribed full one-second trace on Mac-local derived measured KIT Parquet and pasted all 26 lines into the conversation. Source `2026-03-10T16:00:03+00:00` defines relative t=0. The user-reported displayed values are rounded. This GitHub record is an audited transcription of the user's observed Terminal result, not an independently rerun source extraction.
+
+| Relative s | Measured-derived U20 (V) | One-second ΔU20 (%) | Measured-derived EV-point P (W) | One-second ΔP_EV (W) |
+|---:|---:|---:|---:|---:|
+| -20 | 11918.36 | -0.080 | 757.65 | n/a |
+| -19 | 11924.40 | +0.051 | 757.82 | +0.17 |
+| -18 | 11921.86 | -0.021 | 757.31 | -0.51 |
+| -17 | 11924.81 | +0.025 | 766.29 | +8.98 |
+| -16 | 11923.03 | -0.015 | 761.83 | -4.46 |
+| -15 | 11926.02 | +0.025 | 757.71 | -4.13 |
+| -14 | 11924.64 | -0.012 | 758.03 | +0.33 |
+| -13 | 11931.41 | +0.057 | 757.82 | -0.22 |
+| -12 | 11933.83 | +0.020 | 502.41 | -255.41 |
+| -11 | 11929.08 | -0.040 | -1.21 | -503.62 |
+| -10 | 11922.36 | -0.056 | -0.79 | +0.42 |
+| -9 | 11928.06 | +0.048 | 10.49 | +11.28 |
+| -8 | 11928.83 | +0.006 | 7.42 | -3.07 |
+| -7 | 11931.38 | +0.021 | 1.46 | -5.96 |
+| -6 | 11931.50 | +0.001 | 1.68 | +0.22 |
+| -5 | 11934.80 | +0.028 | 1.47 | -0.21 |
+| -4 | 11923.66 | -0.093 | 1.22 | -0.26 |
+| -3 | 11918.44 | -0.044 | 1.10 | -0.12 |
+| -2 | 11925.25 | +0.057 | 1.05 | -0.05 |
+| -1 | 11921.74 | -0.029 | 1.24 | +0.19 |
+| +0 | 11867.24 | -0.457 | 1.14 | -0.10 |
+| +1 | 11843.92 | -0.197 | 1.32 | +0.18 |
+| +2 | 11844.26 | +0.003 | 2.69 | +1.37 |
+| +3 | 11844.02 | -0.002 | 3.11 | +0.42 |
+| +4 | 11847.67 | +0.031 | 3.06 | -0.05 |
+| +5 | 11848.17 | +0.004 | 3.29 | +0.23 |
+
+### Timing inference and reclassification
+
+- At **t=-13 s (15:59:50 UTC)**, observed EV-point power is **757.82 W**.
+- **t=-12 s (15:59:51 UTC):** EV-point power decreases **255.41 W** to **502.41 W**; corresponding observed one-second 20 kV change **+0.020%**.
+- **t=-11 s (15:59:52 UTC):** EV-point power decreases another **503.62 W** to **-1.21 W**; corresponding observed 20 kV change **-0.040%**.
+- The observed difference **757.82 - (-1.21) = 759.03 W** occurred across two sampled one-second changes at t=-12 and -11 s, **11-12 seconds before** the selected 20 kV event t=0.
+- Between t=-20 and -1, none of the one-second 20 kV voltage changes in the user-pasted sample exceed the **0.15%** event-screening threshold in magnitude. This does not rule out a separate disturbance outside the window or attenuated/subsecond dynamics in original 100 ms signals.
+- **t=0 (16:00:03 UTC):** observed one-second ΔU20 **-0.457%** (11921.74 -> 11867.24 V), EV-point P **1.14 W**, one-second ΔP_EV **-0.10 W**. The selected voltage disturbance therefore **follows** the large power change and is not a plausible initiator of this previously completed decline based on measured temporal order.
+- The earlier reported **-752.26 W** *pre-event (-20..-6 s median) to post-event (+5..+19 s median)* difference is **window contamination by the earlier EV-point load transition**. It should be excluded from claims of voltage-triggered EV power reduction. Do not discard the underlying observation; keep it as a negative-control example of temporal confounding and the importance of event-alignment rules.
+
+**Correct scientific claim:** At this selected event, the EV meter underwent a measured large power-state transition before the significant selected 20 kV step. There is **no support that the t=0 voltage step caused the t=-12/-11 s EV power transition**. Neither an unrelated charger stop nor an earlier electrical disturbance is positively identified because no charger control-state logs or independently verified earlier voltage cause were supplied.
+
+**Method consequence:** Before interpreting the remaining 9 large pre/post changes (and all 60 events), verify **pre-event power stability and temporal order**. Flag cases where a large power jump occurs in the pre-window or before the voltage event. Avoid identifying causal voltage-to-power response solely from pre/post median differences. Analysis can continue with existing derived one-second traces; inspect only narrow original 100 ms windows when necessary. The KIT files contain no measured heat states, so none of this validates extreme-heat thermal SO1–SO3.
