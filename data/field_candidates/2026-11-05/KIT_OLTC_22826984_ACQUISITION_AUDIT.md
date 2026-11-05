@@ -221,6 +221,8 @@ RESULT: PASS
 
 The separate committed [KIT timestamp auditor](../../../tools/kit_oltc_timestamp_audit.py) is maintained for reproducibility. Its own JSON output has **not** been submitted as of this update. Do not confuse the earlier successful inline algorithm with execution of that newly committed file.
 
+**Topology evidence update (2026-11-05):** Published KIT Campus North architecture confirms three 110/20 kV input transformers (87 MVA total), two 20 kV buses and multiple MV/LV distribution stations. However, this does **not** establish that the exact source files PMU04_TK1, PMU01_J01 and EV_SH.J.6 are on one parent-child power path. See [source-bound exact-path audit](KIT_OLTC_ELECTRICAL_TOPOLOGY_EVIDENCE_AUDIT.md). G3 remains OPEN for precise sensor wiring and historical switch states.
+
 ## 9. Admission gates: statuses are distinct
 
 | Gate | Status | Basis |
@@ -228,7 +230,7 @@ The separate committed [KIT timestamp auditor](../../../tools/kit_oltc_timestamp
 | G0 operational real-field source | OPEN | Source described multivoltage EV measurements; exact routine-field-versus-controlled-experiment provenance not independently audited. |
 | G1 original file acquisition/integrity | USER-LOCAL PASS (MD5) | Three files present and publisher MD5 matched according to pasted Mac output; local SHA-256/GitHub raw-data backup not done. |
 | G2 schema, sensors, units/QC | PARTIAL | Variables, types, header units, row/row-group count established; semantic definitions and missingness/open validity checks remain. |
-| G3 physical P ↔ T_e topology | OPEN | Three measurement designations and same timestamps do not prove common transformer-feeder-charger path. |
+| G3 physical P ↔ T_e topology | CAMPUS NETWORK CONFIRMED; EXACT SENSOR PATH OPEN | Publisher and KIT technical sources support 110/20/0.4 kV campus connectivity, but the PMU04_TK1 → PMU01_J01 → EV_SH.J.6 feeder/transformer map and 2026 switch states are not documented. See topology audit. |
 | G4 synchrony/thermal-state adequacy | ELECTRICAL RECORD GRID PASS; THERMAL ABSENT | User-terminal full-row 100 ms UTC grid PASS: 43.2M rows × 3, zero mismatches; independent sensor-clock accuracy, site topology, and all thermal states remain unverified. |
 | G5 model validation and uncertainty | NOT STARTED | No KIT model calibration, holdout, uncertainty or validated output. |
 | G6 directional thermal effect | NOT ESTABLISHED | No measured temperatures, derating mechanism or heat-driven causality. |
