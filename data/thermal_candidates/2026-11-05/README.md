@@ -8,3 +8,5 @@
 - [Stochastic EV-cluster / transformer HST / insulation-ageing / thermal charging-service coupled mathematical formulation candidate](STOCHASTIC_EV_THERMAL_AGEING_COUPLED_FORMULATION_CANDIDATE_V1.md): Qian et al. (2015) verified as prior art; our candidate extends it into hybrid stochastic demand, state-space thermal ODEs, H7 degradation, and thermally constrained P→T service feedback; empirical coupled validation pending.
 
 **Status:** Candidate proposals only. Canonical thesis V3 title and frozen SO1-SO3 are unchanged. No model validated; no coupled EV-HST field data established.
+
+- [Qian (2015) three-factor evidence/assumptions matrix](QIAN_2015_THREE_FACTOR_ASSUMPTIONS_AND_VALIDATION_MATRIX_V1.md): Ambient heat A1, local FEV penetration A2 and charging start time A3 as tested **source-specific major factors**; SOC/charging modes as stochastic inputs; baseline load/topology/cooling as controls; E1–E4 validation plan and no unsupported universal factor ranking.
