@@ -49,3 +49,17 @@
 Run [independent_ev_lab_voltage_control_audit.py](../../../tools/independent_ev_lab_voltage_control_audit.py) on the MacBook. It downloads only the five ~2.2 MB KIT PHIL measurement CSVs plus the two small Dortmund metadata CSVs, verifies all publisher MD5 hashes, computes source-qualified PHIL voltage/current step metrics, catalogs Dortmund dynamic sessions and possible controller parameter definitions, and writes source-separated JSON and Markdown in `data/lab_candidates/2026-11-05`. **No 200MB+ archives and no original 129.6M field data are reprocessed.** The new synthetic self-test does NOT stand in for measured laboratory results.
 
 **Admission gates:** `SOURCE_DOCUMENTATION_VERIFIED | KIT_PHIL_ONE_ACTUAL_HEADER_READ | ALL_FIVE_LAB_MEASURED_RESULTS_PENDING | DORTMUND_SESSION_VALUES_PENDING | LI_2026_INDIVIDUAL_CSV_REVIEW_PENDING | KIT_FIELD_CAUSAL_MECHANISM_NOT_IDENTIFIED | HEAT_THERMAL_FIELD_VALIDATION_NOT_ESTABLISHED`.
+## 5. Field-versus-laboratory physical magnitude test
+
+**Derived directly from user-verified KIT original 100 ms M2/M3 metrics in GitHub (separate from all laboratory sources):**
+
+| KIT field event (UTC) | EV-point 400 V relative voltage change | EV-point real-power settled change relative to pre-event | Ratio (ΔP/P)/(ΔU/U) |
+|---|---:|---:|---:|
+| 2026-03-10 15:32:02 | **+0.696901%** | **-20.706865%** | **-29.71** |
+| 2026-03-10 15:55:02 | **-0.724545%** | **+53.369424%** | **-73.66** |
+
+**Physics-defined conditional check:** for fixed phase currents and power factors, three-phase active power P = Σ U_k I_k cosφ_k and small changes in balanced supply voltage give ΔP/P roughly ΔU/U. Both field events show **far larger changes in P, with opposite signs to ΔU**, so a passive fixed-current and fixed-power-factor mechanism alone cannot account for the observed settled changes. This conclusion depends on treating the observed 400 V voltage as representative of phase magnitudes and checking current/power factor stationarity; it does **not** establish what actually changed. Large variation in current, converter power factor, setpoint, charging session, EV-side limits or other operating variables is necessary to investigate.
+
+**Causal boundary:** This mismatch is a model-discrimination result, not a detected controller command. Voltage-dependent controller switching could also produce nonlinear, delayed behavior; the source field data do not identify whether that happened. Controlled PHIL current measurements and separate charger-command/state datasets test candidate mechanisms without asserting they were present in the KIT field installation.
+
+**Research rule:** claim only that the simple static voltage-scaling hypothesis is inconsistent with the measured event changes under its stated assumptions; do not claim that an external charger setpoint caused either event.
