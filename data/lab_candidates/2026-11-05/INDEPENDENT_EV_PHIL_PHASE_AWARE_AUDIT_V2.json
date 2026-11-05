@@ -1,0 +1,2245 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.22965111",
+  "evidence": "original publisher-MD5-qualified phase U/I laboratory observations",
+  "reason_for_v2": "V1 divided single-phase Nissan Leaf voltage step by three by averaging inactive zero channels",
+  "claim_limit": "V2 measured change-screen candidates are not verified commands or charger controller logs; apparent-power proxy VA not real W",
+  "phase_screen_rule": "95th percentile |U_phase| >= 50 V AND 95th percentile |I_phase| >= 0.5 A across a trial",
+  "voltage_step_threshold_V": 2.0,
+  "trials": [
+    {
+      "vehicle": "Volkswagen ID.4",
+      "sample_count": 8809,
+      "median_dt_s": 0.021,
+      "phase_activity": {
+        "L1": true,
+        "L2": true,
+        "L3": true
+      },
+      "n_active_phases": 3,
+      "active_phase_voltage_range_V": [
+        208.1,
+        248.197
+      ],
+      "active_phase_current_range_A": [
+        15.267,
+        16.057
+      ],
+      "screen_threshold_V": 2.0,
+      "original_V1_all_phase_mean_event_count": 16,
+      "phase_aware_event_count": 16,
+      "near_t0_active_phase_voltage_delta_V": -5.0033,
+      "near_t0_active_phase_current_delta_A": 0.0,
+      "median_abs_voltage_change_pct": 2.1931,
+      "median_abs_mean_active_phase_current_change_A": 0.01,
+      "number_abs_current_change_ge_0p5A": 0,
+      "events": [
+        {
+          "detected_index": 1,
+          "inferred_voltage_transition_time_s": 0.018,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.1931,
+          "delta_mean_active_phase_current_A": 0.0,
+          "delta_active_phase_apparent_power_proxy_VA": -237.16,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 2,
+          "inferred_voltage_transition_time_s": 9.993,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.2423,
+          "delta_mean_active_phase_current_A": 0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": -234.84,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 3,
+          "inferred_voltage_transition_time_s": 19.968,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.2937,
+          "delta_mean_active_phase_current_A": -0.0233,
+          "delta_active_phase_apparent_power_proxy_VA": -251.76,
+          "current_pre_MAD_scale_A": 0.03954,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 4,
+          "inferred_voltage_transition_time_s": 29.943,
+          "delta_active_phase_voltage_V": -5.01,
+          "delta_active_phase_voltage_pct": -2.3507,
+          "delta_mean_active_phase_current_A": 0.0233,
+          "delta_active_phase_apparent_power_proxy_VA": -222.33,
+          "current_pre_MAD_scale_A": 0.03459,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 5,
+          "inferred_voltage_transition_time_s": 39.918,
+          "delta_active_phase_voltage_V": 5.01,
+          "delta_active_phase_voltage_pct": 2.4073,
+          "delta_mean_active_phase_current_A": -0.03,
+          "delta_active_phase_apparent_power_proxy_VA": 217.67,
+          "current_pre_MAD_scale_A": 0.03954,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 6,
+          "inferred_voltage_transition_time_s": 49.998,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.3476,
+          "delta_mean_active_phase_current_A": 0.0133,
+          "delta_active_phase_apparent_power_proxy_VA": 245.91,
+          "current_pre_MAD_scale_A": 0.03459,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 7,
+          "inferred_voltage_transition_time_s": 59.973,
+          "delta_active_phase_voltage_V": 4.9967,
+          "delta_active_phase_voltage_pct": 2.2906,
+          "delta_mean_active_phase_current_A": -0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": 234.3,
+          "current_pre_MAD_scale_A": 0.03459,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 8,
+          "inferred_voltage_transition_time_s": 69.948,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.2423,
+          "delta_mean_active_phase_current_A": -0.01,
+          "delta_active_phase_apparent_power_proxy_VA": 230.16,
+          "current_pre_MAD_scale_A": 0.03459,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 9,
+          "inferred_voltage_transition_time_s": 79.923,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.1931,
+          "delta_mean_active_phase_current_A": -0.0133,
+          "delta_active_phase_apparent_power_proxy_VA": 227.58,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 10,
+          "inferred_voltage_transition_time_s": 90.003,
+          "delta_active_phase_voltage_V": 5.01,
+          "delta_active_phase_voltage_pct": 2.149,
+          "delta_mean_active_phase_current_A": -0.01,
+          "delta_active_phase_apparent_power_proxy_VA": 230.59,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.02,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 11,
+          "inferred_voltage_transition_time_s": 99.978,
+          "delta_active_phase_voltage_V": 5.0,
+          "delta_active_phase_voltage_pct": 2.0996,
+          "delta_mean_active_phase_current_A": -0.01,
+          "delta_active_phase_apparent_power_proxy_VA": 229.25,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 12,
+          "inferred_voltage_transition_time_s": 109.953,
+          "delta_active_phase_voltage_V": 5.0433,
+          "delta_active_phase_voltage_pct": 2.0743,
+          "delta_mean_active_phase_current_A": -0.31,
+          "delta_active_phase_apparent_power_proxy_VA": 8.52,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.31
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.3
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.05,
+              "delta_current_A": -0.31
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 13,
+          "inferred_voltage_transition_time_s": 119.928,
+          "delta_active_phase_voltage_V": -5.0433,
+          "delta_active_phase_voltage_pct": -2.0321,
+          "delta_mean_active_phase_current_A": 0.3033,
+          "delta_active_phase_apparent_power_proxy_VA": -12.55,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": 0.3
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.31
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 14,
+          "inferred_voltage_transition_time_s": 130.008,
+          "delta_active_phase_voltage_V": -4.9967,
+          "delta_active_phase_voltage_pct": -2.0551,
+          "delta_mean_active_phase_current_A": -0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": -239.84,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 15,
+          "inferred_voltage_transition_time_s": 139.983,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.101,
+          "delta_mean_active_phase_current_A": 0.0,
+          "delta_active_phase_apparent_power_proxy_VA": -237.28,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 16,
+          "inferred_voltage_transition_time_s": 149.958,
+          "delta_active_phase_voltage_V": -5.0067,
+          "delta_active_phase_voltage_pct": -2.1475,
+          "delta_mean_active_phase_current_A": -0.0,
+          "delta_active_phase_apparent_power_proxy_VA": -237.54,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        }
+      ],
+      "source_filename": "01_voltages_current_iD4.csv",
+      "publisher_md5_pass": true
+    },
+    {
+      "vehicle": "Nissan Leaf",
+      "sample_count": 8810,
+      "median_dt_s": 0.021,
+      "phase_activity": {
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "n_active_phases": 1,
+      "active_phase_voltage_range_V": [
+        205.97,
+        246.23
+      ],
+      "active_phase_current_range_A": [
+        14.24,
+        16.49
+      ],
+      "screen_threshold_V": 2.0,
+      "original_V1_all_phase_mean_event_count": 0,
+      "phase_aware_event_count": 16,
+      "near_t0_active_phase_voltage_delta_V": -4.98,
+      "near_t0_active_phase_current_delta_A": -0.06,
+      "median_abs_voltage_change_pct": 2.2204,
+      "median_abs_mean_active_phase_current_change_A": 0.145,
+      "number_abs_current_change_ge_0p5A": 0,
+      "events": [
+        {
+          "detected_index": 1,
+          "inferred_voltage_transition_time_s": -0.099,
+          "delta_active_phase_voltage_V": -4.99,
+          "delta_active_phase_voltage_pct": -2.2072,
+          "delta_mean_active_phase_current_A": -0.05,
+          "delta_active_phase_apparent_power_proxy_VA": -90.75,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.05
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 2,
+          "inferred_voltage_transition_time_s": 9.981,
+          "delta_active_phase_voltage_V": -4.99,
+          "delta_active_phase_voltage_pct": -2.2569,
+          "delta_mean_active_phase_current_A": -0.07,
+          "delta_active_phase_apparent_power_proxy_VA": -94.51,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.07
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 3,
+          "inferred_voltage_transition_time_s": 19.956,
+          "delta_active_phase_voltage_V": -4.97,
+          "delta_active_phase_voltage_pct": -2.3001,
+          "delta_mean_active_phase_current_A": -0.11,
+          "delta_active_phase_apparent_power_proxy_VA": -102.54,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.97,
+              "delta_current_A": -0.11
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 4,
+          "inferred_voltage_transition_time_s": 29.931,
+          "delta_active_phase_voltage_V": -4.98,
+          "delta_active_phase_voltage_pct": -2.3592,
+          "delta_mean_active_phase_current_A": -0.13,
+          "delta_active_phase_apparent_power_proxy_VA": -105.81,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.13
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 5,
+          "inferred_voltage_transition_time_s": 39.906,
+          "delta_active_phase_voltage_V": 5.03,
+          "delta_active_phase_voltage_pct": 2.4408,
+          "delta_mean_active_phase_current_A": -0.15,
+          "delta_active_phase_apparent_power_proxy_VA": 48.51,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.03,
+              "delta_current_A": -0.15
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 6,
+          "inferred_voltage_transition_time_s": 49.986,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.3877,
+          "delta_mean_active_phase_current_A": -0.12,
+          "delta_active_phase_apparent_power_proxy_VA": 54.19,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.12
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 7,
+          "inferred_voltage_transition_time_s": 59.961,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.3325,
+          "delta_mean_active_phase_current_A": -0.14,
+          "delta_active_phase_apparent_power_proxy_VA": 49.32,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.14
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 8,
+          "inferred_voltage_transition_time_s": 69.936,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.2797,
+          "delta_mean_active_phase_current_A": -0.19,
+          "delta_active_phase_apparent_power_proxy_VA": 37.53,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.19
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 9,
+          "inferred_voltage_transition_time_s": 79.911,
+          "delta_active_phase_voltage_V": 5.05,
+          "delta_active_phase_voltage_pct": 2.2337,
+          "delta_mean_active_phase_current_A": -0.18,
+          "delta_active_phase_apparent_power_proxy_VA": 38.99,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.05,
+              "delta_current_A": -0.18
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 10,
+          "inferred_voltage_transition_time_s": 89.991,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.1811,
+          "delta_mean_active_phase_current_A": -0.18,
+          "delta_active_phase_apparent_power_proxy_VA": 38.09,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.18
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 11,
+          "inferred_voltage_transition_time_s": 99.966,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.1349,
+          "delta_mean_active_phase_current_A": -0.23,
+          "delta_active_phase_apparent_power_proxy_VA": 25.13,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.23
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 12,
+          "inferred_voltage_transition_time_s": 109.941,
+          "delta_active_phase_voltage_V": 5.05,
+          "delta_active_phase_voltage_pct": 2.0947,
+          "delta_mean_active_phase_current_A": -0.18,
+          "delta_active_phase_apparent_power_proxy_VA": 36.19,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.05,
+              "delta_current_A": -0.18
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 13,
+          "inferred_voltage_transition_time_s": 119.916,
+          "delta_active_phase_voltage_V": -4.96,
+          "delta_active_phase_voltage_pct": -2.0155,
+          "delta_mean_active_phase_current_A": -0.19,
+          "delta_active_phase_apparent_power_proxy_VA": -125.09,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.96,
+              "delta_current_A": -0.19
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 14,
+          "inferred_voltage_transition_time_s": 129.891,
+          "delta_active_phase_voltage_V": -4.97,
+          "delta_active_phase_voltage_pct": -2.0615,
+          "delta_mean_active_phase_current_A": -0.15,
+          "delta_active_phase_apparent_power_proxy_VA": -114.54,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.97,
+              "delta_current_A": -0.15
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 15,
+          "inferred_voltage_transition_time_s": 139.971,
+          "delta_active_phase_voltage_V": -4.96,
+          "delta_active_phase_voltage_pct": -2.1009,
+          "delta_mean_active_phase_current_A": -0.13,
+          "delta_active_phase_apparent_power_proxy_VA": -108.91,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.96,
+              "delta_current_A": -0.13
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 16,
+          "inferred_voltage_transition_time_s": 149.946,
+          "delta_active_phase_voltage_V": -4.98,
+          "delta_active_phase_voltage_pct": -2.1548,
+          "delta_mean_active_phase_current_A": -0.11,
+          "delta_active_phase_apparent_power_proxy_VA": -103.86,
+          "current_pre_MAD_scale_A": 0.02965,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.11
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        }
+      ],
+      "source_filename": "02_voltages_current_Nissann_Leaf.csv",
+      "publisher_md5_pass": true
+    },
+    {
+      "vehicle": "MG4",
+      "sample_count": 8810,
+      "median_dt_s": 0.021,
+      "phase_activity": {
+        "L1": true,
+        "L2": true,
+        "L3": true
+      },
+      "n_active_phases": 3,
+      "active_phase_voltage_range_V": [
+        208.27,
+        248.453
+      ],
+      "active_phase_current_range_A": [
+        13.883,
+        15.103
+      ],
+      "screen_threshold_V": 2.0,
+      "original_V1_all_phase_mean_event_count": 16,
+      "phase_aware_event_count": 16,
+      "near_t0_active_phase_voltage_delta_V": -5.0033,
+      "near_t0_active_phase_current_delta_A": 0.0033,
+      "median_abs_voltage_change_pct": 2.1913,
+      "median_abs_mean_active_phase_current_change_A": 0.01,
+      "number_abs_current_change_ge_0p5A": 0,
+      "events": [
+        {
+          "detected_index": 1,
+          "inferred_voltage_transition_time_s": 0.001,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.1913,
+          "delta_mean_active_phase_current_A": 0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": -220.06,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 2,
+          "inferred_voltage_transition_time_s": 9.976,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.2404,
+          "delta_mean_active_phase_current_A": 0.0067,
+          "delta_active_phase_apparent_power_proxy_VA": -217.9,
+          "current_pre_MAD_scale_A": 0.07413,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 3,
+          "inferred_voltage_transition_time_s": 19.951,
+          "delta_active_phase_voltage_V": -5.0067,
+          "delta_active_phase_voltage_pct": -2.2933,
+          "delta_mean_active_phase_current_A": 0.01,
+          "delta_active_phase_apparent_power_proxy_VA": -215.8,
+          "current_pre_MAD_scale_A": 0.07413,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 4,
+          "inferred_voltage_transition_time_s": 29.9785,
+          "delta_active_phase_voltage_V": -5.0067,
+          "delta_active_phase_voltage_pct": -2.3472,
+          "delta_mean_active_phase_current_A": 0.0067,
+          "delta_active_phase_apparent_power_proxy_VA": -218.68,
+          "current_pre_MAD_scale_A": 0.07907,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 5,
+          "inferred_voltage_transition_time_s": 40.006,
+          "delta_active_phase_voltage_V": 5.0067,
+          "delta_active_phase_voltage_pct": 2.4036,
+          "delta_mean_active_phase_current_A": -0.0067,
+          "delta_active_phase_apparent_power_proxy_VA": 218.31,
+          "current_pre_MAD_scale_A": 0.07413,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 6,
+          "inferred_voltage_transition_time_s": 49.981,
+          "delta_active_phase_voltage_V": 5.01,
+          "delta_active_phase_voltage_pct": 2.3487,
+          "delta_mean_active_phase_current_A": -0.0233,
+          "delta_active_phase_apparent_power_proxy_VA": 207.99,
+          "current_pre_MAD_scale_A": 0.07907,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 7,
+          "inferred_voltage_transition_time_s": 59.956,
+          "delta_active_phase_voltage_V": 5.0067,
+          "delta_active_phase_voltage_pct": 2.2933,
+          "delta_mean_active_phase_current_A": -0.01,
+          "delta_active_phase_apparent_power_proxy_VA": 215.94,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 8,
+          "inferred_voltage_transition_time_s": 69.931,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.2404,
+          "delta_mean_active_phase_current_A": -0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": 219.58,
+          "current_pre_MAD_scale_A": 0.02471,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 9,
+          "inferred_voltage_transition_time_s": 80.011,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.1913,
+          "delta_mean_active_phase_current_A": -0.0067,
+          "delta_active_phase_apparent_power_proxy_VA": 217.04,
+          "current_pre_MAD_scale_A": 0.01977,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 10,
+          "inferred_voltage_transition_time_s": 89.986,
+          "delta_active_phase_voltage_V": 5.02,
+          "delta_active_phase_voltage_pct": 2.1515,
+          "delta_mean_active_phase_current_A": -0.14,
+          "delta_active_phase_apparent_power_proxy_VA": 122.45,
+          "current_pre_MAD_scale_A": 0.03459,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.14
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.03,
+              "delta_current_A": -0.13
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.15
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 11,
+          "inferred_voltage_transition_time_s": 99.961,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.1145,
+          "delta_mean_active_phase_current_A": -0.3133,
+          "delta_active_phase_apparent_power_proxy_VA": -7.33,
+          "current_pre_MAD_scale_A": 0.06919,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.31
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.31
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.32
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 12,
+          "inferred_voltage_transition_time_s": 109.936,
+          "delta_active_phase_voltage_V": 5.04,
+          "delta_active_phase_voltage_pct": 2.0708,
+          "delta_mean_active_phase_current_A": -0.2967,
+          "delta_active_phase_apparent_power_proxy_VA": -4.2,
+          "current_pre_MAD_scale_A": 0.06425,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.03,
+              "delta_current_A": -0.29
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.3
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.3
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 13,
+          "inferred_voltage_transition_time_s": 120.016,
+          "delta_active_phase_voltage_V": -5.0433,
+          "delta_active_phase_voltage_pct": -2.0301,
+          "delta_mean_active_phase_current_A": 0.3033,
+          "delta_active_phase_apparent_power_proxy_VA": 9.2,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": 0.3
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.31
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 14,
+          "inferred_voltage_transition_time_s": 129.991,
+          "delta_active_phase_voltage_V": -5.04,
+          "delta_active_phase_voltage_pct": -2.0708,
+          "delta_mean_active_phase_current_A": 0.31,
+          "delta_active_phase_apparent_power_proxy_VA": 5.38,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": 0.31
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.3
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.33
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 15,
+          "inferred_voltage_transition_time_s": 139.966,
+          "delta_active_phase_voltage_V": -5.0167,
+          "delta_active_phase_voltage_pct": -2.1048,
+          "delta_mean_active_phase_current_A": 0.1467,
+          "delta_active_phase_apparent_power_proxy_VA": -117.62,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": 0.15
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.14
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.16
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 16,
+          "inferred_voltage_transition_time_s": 149.941,
+          "delta_active_phase_voltage_V": -5.0033,
+          "delta_active_phase_voltage_pct": -2.1443,
+          "delta_mean_active_phase_current_A": -0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": -224.24,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        }
+      ],
+      "source_filename": "03_voltages_current_MG4.csv",
+      "publisher_md5_pass": true
+    },
+    {
+      "vehicle": "Tesla Model 3",
+      "sample_count": 8810,
+      "median_dt_s": 0.021,
+      "phase_activity": {
+        "L1": true,
+        "L2": true,
+        "L3": true
+      },
+      "n_active_phases": 3,
+      "active_phase_voltage_range_V": [
+        208.047,
+        248.083
+      ],
+      "active_phase_current_range_A": [
+        15.703,
+        16.45
+      ],
+      "screen_threshold_V": 2.0,
+      "original_V1_all_phase_mean_event_count": 16,
+      "phase_aware_event_count": 16,
+      "near_t0_active_phase_voltage_delta_V": -5.0133,
+      "near_t0_active_phase_current_delta_A": 0.07,
+      "median_abs_voltage_change_pct": 2.196,
+      "median_abs_mean_active_phase_current_change_A": 0.0717,
+      "number_abs_current_change_ge_0p5A": 0,
+      "events": [
+        {
+          "detected_index": 1,
+          "inferred_voltage_transition_time_s": 0.006,
+          "delta_active_phase_voltage_V": -5.0133,
+          "delta_active_phase_voltage_pct": -2.1982,
+          "delta_mean_active_phase_current_A": 0.07,
+          "delta_active_phase_apparent_power_proxy_VA": -195.74,
+          "current_pre_MAD_scale_A": 0.00494,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.08
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.09
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.05
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 2,
+          "inferred_voltage_transition_time_s": 9.981,
+          "delta_active_phase_voltage_V": -4.9867,
+          "delta_active_phase_voltage_pct": -2.2356,
+          "delta_mean_active_phase_current_A": -0.1067,
+          "delta_active_phase_apparent_power_proxy_VA": -311.97,
+          "current_pre_MAD_scale_A": 0.00494,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.1
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.09
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.13
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 3,
+          "inferred_voltage_transition_time_s": 20.061,
+          "delta_active_phase_voltage_V": -5.01,
+          "delta_active_phase_voltage_pct": -2.2974,
+          "delta_mean_active_phase_current_A": 0.0533,
+          "delta_active_phase_apparent_power_proxy_VA": -207.86,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.06
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.07
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.04
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 4,
+          "inferred_voltage_transition_time_s": 30.036,
+          "delta_active_phase_voltage_V": -4.99,
+          "delta_active_phase_voltage_pct": -2.3421,
+          "delta_mean_active_phase_current_A": -0.1133,
+          "delta_active_phase_apparent_power_proxy_VA": -312.29,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.13
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.09
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.1
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 5,
+          "inferred_voltage_transition_time_s": 40.011,
+          "delta_active_phase_voltage_V": 4.9967,
+          "delta_active_phase_voltage_pct": 2.4015,
+          "delta_mean_active_phase_current_A": 0.09,
+          "delta_active_phase_apparent_power_proxy_VA": 297.6,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.06
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.09
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.09
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 6,
+          "inferred_voltage_transition_time_s": 49.986,
+          "delta_active_phase_voltage_V": 5.01,
+          "delta_active_phase_voltage_pct": 2.3514,
+          "delta_mean_active_phase_current_A": -0.04,
+          "delta_active_phase_apparent_power_proxy_VA": 215.97,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.02,
+              "delta_current_A": -0.07
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 7,
+          "inferred_voltage_transition_time_s": 60.066,
+          "delta_active_phase_voltage_V": 4.9867,
+          "delta_active_phase_voltage_pct": 2.2866,
+          "delta_mean_active_phase_current_A": 0.12,
+          "delta_active_phase_apparent_power_proxy_VA": 320.21,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.1
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.13
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.13
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 8,
+          "inferred_voltage_transition_time_s": 70.041,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.243,
+          "delta_mean_active_phase_current_A": -0.0233,
+          "delta_active_phase_apparent_power_proxy_VA": 226.18,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 9,
+          "inferred_voltage_transition_time_s": 80.016,
+          "delta_active_phase_voltage_V": 5.0033,
+          "delta_active_phase_voltage_pct": 2.1938,
+          "delta_mean_active_phase_current_A": -0.0367,
+          "delta_active_phase_apparent_power_proxy_VA": 216.21,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": -0.06
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 10,
+          "inferred_voltage_transition_time_s": 89.991,
+          "delta_active_phase_voltage_V": 4.99,
+          "delta_active_phase_voltage_pct": 2.141,
+          "delta_mean_active_phase_current_A": 0.0567,
+          "delta_active_phase_apparent_power_proxy_VA": 281.97,
+          "current_pre_MAD_scale_A": 0.00494,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.08
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.07
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 11,
+          "inferred_voltage_transition_time_s": 100.071,
+          "delta_active_phase_voltage_V": 5.01,
+          "delta_active_phase_voltage_pct": 2.1045,
+          "delta_mean_active_phase_current_A": -0.0733,
+          "delta_active_phase_apparent_power_proxy_VA": 190.01,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.05
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.02,
+              "delta_current_A": -0.1
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": -0.06
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 12,
+          "inferred_voltage_transition_time_s": 110.046,
+          "delta_active_phase_voltage_V": 4.9933,
+          "delta_active_phase_voltage_pct": 2.0543,
+          "delta_mean_active_phase_current_A": 0.0867,
+          "delta_active_phase_apparent_power_proxy_VA": 306.73,
+          "current_pre_MAD_scale_A": 0.00494,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.09
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.07
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.09
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 13,
+          "inferred_voltage_transition_time_s": 120.021,
+          "delta_active_phase_voltage_V": -4.9967,
+          "delta_active_phase_voltage_pct": -2.0142,
+          "delta_mean_active_phase_current_A": -0.0967,
+          "delta_active_phase_apparent_power_proxy_VA": -313.93,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.08
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.1
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.11
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 14,
+          "inferred_voltage_transition_time_s": 129.996,
+          "delta_active_phase_voltage_V": -5.0067,
+          "delta_active_phase_voltage_pct": -2.0598,
+          "delta_mean_active_phase_current_A": 0.0633,
+          "delta_active_phase_apparent_power_proxy_VA": -196.94,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.07
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.08
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": 0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 15,
+          "inferred_voltage_transition_time_s": 140.076,
+          "delta_active_phase_voltage_V": -4.9933,
+          "delta_active_phase_voltage_pct": -2.0974,
+          "delta_mean_active_phase_current_A": -0.1033,
+          "delta_active_phase_apparent_power_proxy_VA": -314.3,
+          "current_pre_MAD_scale_A": 0.01483,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.08
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.0,
+              "delta_current_A": -0.08
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.13
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 16,
+          "inferred_voltage_transition_time_s": 150.051,
+          "delta_active_phase_voltage_V": -5.0,
+          "delta_active_phase_voltage_pct": -2.1452,
+          "delta_mean_active_phase_current_A": 0.01,
+          "delta_active_phase_apparent_power_proxy_VA": -234.29,
+          "current_pre_MAD_scale_A": 0.00988,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        }
+      ],
+      "source_filename": "04_voltages_current_Tesla_Model_3.csv",
+      "publisher_md5_pass": true
+    },
+    {
+      "vehicle": "Renault Zoe",
+      "sample_count": 8810,
+      "median_dt_s": 0.021,
+      "phase_activity": {
+        "L1": true,
+        "L2": true,
+        "L3": true
+      },
+      "n_active_phases": 3,
+      "active_phase_voltage_range_V": [
+        208.11,
+        248.753
+      ],
+      "active_phase_current_range_A": [
+        14.99,
+        15.427
+      ],
+      "screen_threshold_V": 2.0,
+      "original_V1_all_phase_mean_event_count": 16,
+      "phase_aware_event_count": 16,
+      "near_t0_active_phase_voltage_delta_V": -5.01,
+      "near_t0_active_phase_current_delta_A": -0.03,
+      "median_abs_voltage_change_pct": 2.1867,
+      "median_abs_mean_active_phase_current_change_A": 0.0333,
+      "number_abs_current_change_ge_0p5A": 0,
+      "events": [
+        {
+          "detected_index": 1,
+          "inferred_voltage_transition_time_s": 0.0585,
+          "delta_active_phase_voltage_V": -5.0233,
+          "delta_active_phase_voltage_pct": -2.199,
+          "delta_mean_active_phase_current_A": -0.0233,
+          "delta_active_phase_apparent_power_proxy_VA": -250.14,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 2,
+          "inferred_voltage_transition_time_s": 9.981,
+          "delta_active_phase_voltage_V": -5.0233,
+          "delta_active_phase_voltage_pct": -2.2484,
+          "delta_mean_active_phase_current_A": 0.01,
+          "delta_active_phase_apparent_power_proxy_VA": -217.83,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.03,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.05,
+              "delta_current_A": 0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": 0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 3,
+          "inferred_voltage_transition_time_s": 19.851,
+          "delta_active_phase_voltage_V": -5.0333,
+          "delta_active_phase_voltage_pct": -2.3041,
+          "delta_mean_active_phase_current_A": -0.0133,
+          "delta_active_phase_apparent_power_proxy_VA": -232.45,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -5.02,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.04,
+              "delta_current_A": -0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -5.04,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 4,
+          "inferred_voltage_transition_time_s": 29.931,
+          "delta_active_phase_voltage_V": -4.9967,
+          "delta_active_phase_voltage_pct": -2.3415,
+          "delta_mean_active_phase_current_A": -0.0767,
+          "delta_active_phase_apparent_power_proxy_VA": -272.96,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.07
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -5.01,
+              "delta_current_A": -0.06
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.06
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 5,
+          "inferred_voltage_transition_time_s": 40.0635,
+          "delta_active_phase_voltage_V": 5.0433,
+          "delta_active_phase_voltage_pct": 2.4201,
+          "delta_mean_active_phase_current_A": 0.0433,
+          "delta_active_phase_apparent_power_proxy_VA": 259.02,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.05,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.06,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.03,
+              "delta_current_A": 0.04
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 6,
+          "inferred_voltage_transition_time_s": 50.0385,
+          "delta_active_phase_voltage_V": 5.0533,
+          "delta_active_phase_voltage_pct": 2.3685,
+          "delta_mean_active_phase_current_A": -0.0333,
+          "delta_active_phase_apparent_power_proxy_VA": 209.27,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.06,
+              "delta_current_A": -0.02
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.04,
+              "delta_current_A": -0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 7,
+          "inferred_voltage_transition_time_s": 59.9085,
+          "delta_active_phase_voltage_V": 4.99,
+          "delta_active_phase_voltage_pct": 2.2845,
+          "delta_mean_active_phase_current_A": 0.0433,
+          "delta_active_phase_apparent_power_proxy_VA": 249.09,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.97,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.04
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 8,
+          "inferred_voltage_transition_time_s": 70.041,
+          "delta_active_phase_voltage_V": 4.9833,
+          "delta_active_phase_voltage_pct": 2.2307,
+          "delta_mean_active_phase_current_A": 0.04,
+          "delta_active_phase_apparent_power_proxy_VA": 246.24,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.97,
+              "delta_current_A": 0.04
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 9,
+          "inferred_voltage_transition_time_s": 80.0685,
+          "delta_active_phase_voltage_V": 4.9667,
+          "delta_active_phase_voltage_pct": 2.1744,
+          "delta_mean_active_phase_current_A": 0.0,
+          "delta_active_phase_apparent_power_proxy_VA": 230.11,
+          "current_pre_MAD_scale_A": 0.05436,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 10,
+          "inferred_voltage_transition_time_s": 90.0435,
+          "delta_active_phase_voltage_V": 4.9533,
+          "delta_active_phase_voltage_pct": 2.1218,
+          "delta_mean_active_phase_current_A": 0.0067,
+          "delta_active_phase_apparent_power_proxy_VA": 236.48,
+          "current_pre_MAD_scale_A": 0.0593,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.94,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.96,
+              "delta_current_A": 0.01
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.01
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 11,
+          "inferred_voltage_transition_time_s": 100.071,
+          "delta_active_phase_voltage_V": 4.9867,
+          "delta_active_phase_voltage_pct": 2.0913,
+          "delta_mean_active_phase_current_A": -0.0033,
+          "delta_active_phase_apparent_power_proxy_VA": 229.81,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 4.98,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.0
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 4.99,
+              "delta_current_A": 0.0
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 12,
+          "inferred_voltage_transition_time_s": 110.046,
+          "delta_active_phase_voltage_V": 5.0067,
+          "delta_active_phase_voltage_pct": 2.0565,
+          "delta_mean_active_phase_current_A": 0.0267,
+          "delta_active_phase_apparent_power_proxy_VA": 249.65,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.03
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": 5.0,
+              "delta_current_A": 0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": 5.01,
+              "delta_current_A": 0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 13,
+          "inferred_voltage_transition_time_s": 120.0735,
+          "delta_active_phase_voltage_V": -4.98,
+          "delta_active_phase_voltage_pct": -2.0045,
+          "delta_mean_active_phase_current_A": -0.0333,
+          "delta_active_phase_apparent_power_proxy_VA": -251.6,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": -0.03
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.97,
+              "delta_current_A": -0.02
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 14,
+          "inferred_voltage_transition_time_s": 130.0485,
+          "delta_active_phase_voltage_V": -4.9767,
+          "delta_active_phase_voltage_pct": -2.0441,
+          "delta_mean_active_phase_current_A": -0.04,
+          "delta_active_phase_apparent_power_proxy_VA": -252.61,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -4.95,
+              "delta_current_A": -0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.97,
+              "delta_current_A": -0.04
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 15,
+          "inferred_voltage_transition_time_s": 140.0235,
+          "delta_active_phase_voltage_V": -4.98,
+          "delta_active_phase_voltage_pct": -2.0886,
+          "delta_mean_active_phase_current_A": 0.0367,
+          "delta_active_phase_apparent_power_proxy_VA": -202.95,
+          "current_pre_MAD_scale_A": 0.04448,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -4.97,
+              "delta_current_A": 0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.99,
+              "delta_current_A": 0.03
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        },
+        {
+          "detected_index": 16,
+          "inferred_voltage_transition_time_s": 150.051,
+          "delta_active_phase_voltage_V": -4.9667,
+          "delta_active_phase_voltage_pct": -2.128,
+          "delta_mean_active_phase_current_A": -0.0467,
+          "delta_active_phase_apparent_power_proxy_VA": -259.94,
+          "current_pre_MAD_scale_A": 0.04942,
+          "first_persistent_current_change_after_inferred_voltage_step_s": null,
+          "per_active_phase_deltas": [
+            {
+              "phase": "L1",
+              "delta_voltage_V": -4.95,
+              "delta_current_A": -0.04
+            },
+            {
+              "phase": "L2",
+              "delta_voltage_V": -4.95,
+              "delta_current_A": -0.04
+            },
+            {
+              "phase": "L3",
+              "delta_voltage_V": -4.98,
+              "delta_current_A": -0.05
+            }
+          ],
+          "qualification": "measured phase U/I response; NOT logged voltage command, real P, or causal control latency"
+        }
+      ],
+      "source_filename": "05_voltages_current__Renault_Zoe.csv",
+      "publisher_md5_pass": true
+    }
+  ]
+}
