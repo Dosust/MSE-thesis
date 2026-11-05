@@ -12,3 +12,5 @@
 - [Qian (2015) three-factor evidence/assumptions matrix](QIAN_2015_THREE_FACTOR_ASSUMPTIONS_AND_VALIDATION_MATRIX_V1.md): Ambient heat A1, local FEV penetration A2 and charging start time A3 as tested **source-specific major factors**; SOC/charging modes as stochastic inputs; baseline load/topology/cooling as controls; E1–E4 validation plan and no unsupported universal factor ranking.
 
 - [Qian 2015 optimum charging-time claim: explicit/implicit roles and derived thermal marginal schedule sensitivity](QIAN_2015_OPTIMAL_CHARGING_TIME_EXPLICIT_IMPLICIT_DERIVATION_CANDIDATE_V1.md): manuscript-backed baseline, source vs proposed differentiation, derivative-based equivalent-ageing sensitivity, conditional thermal constraints, charging-service feedback, and 2012 optimization prior-art audit pending.
+
+- [F2 — Gómez & Morcos (2003) harmonic-aware charging-planning and transformer ageing candidate](F2_GOMEZ_MORCOS_2003_HARMONICS_AWARE_CHARGING_MANAGEMENT_CANDIDATE_V1.md): distinct from F1 Qian stochastic EV demand, with possible current-harmonic eddy/stray-loss correction, an IEEE C57.110-2018 standard gate, and explicit THD measurement limitations.
