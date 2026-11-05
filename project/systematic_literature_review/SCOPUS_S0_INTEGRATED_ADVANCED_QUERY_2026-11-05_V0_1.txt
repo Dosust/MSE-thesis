@@ -1,0 +1,29 @@
+TITLE-ABS-KEY(
+  transformer OR transformers OR "distribution network" OR "distribution grid"
+  OR "distribution system" OR "distribution feeder" OR "electricity distribution"
+  OR "power distribution" OR "power grid" OR "electric grid" OR "electrical grid"
+  OR "power network" OR "power system" OR "electricity network"
+  OR "low voltage feeder" OR substation
+)
+AND TITLE-ABS-KEY(
+  "electric vehicle" OR EV OR EVs OR "EV charging" OR "EV charger"
+  OR EVSE OR "charging station" OR "charging infrastructure"
+  OR "charging facility" OR "electric bus" OR "electric transit"
+  OR "electric mobility" OR "electrified transport" OR "e-mobility"
+  OR "battery electric vehicle" OR "plug-in electric vehicle"
+  OR "vehicle-to-grid" OR V2G OR "battery charger"
+)
+AND TITLE-ABS-KEY(
+  thermal OR temperature OR heatwave OR "heat wave" OR "heat stress"
+  OR "extreme heat" OR "hot spot" OR "hot-spot" OR hotspot
+  OR "top oil" OR "top-oil" OR "winding temperature"
+  OR "transformer aging" OR "transformer ageing"
+  OR "life consumption" OR "loss of life" OR derating
+  OR "de-rating" OR derate OR overheating OR cooling
+  OR "ambient conditions" OR "ambient temperature"
+  OR overload OR overloading OR "thermal rating" OR "thermal limit"
+  OR "thermal inertia" OR "transformer losses"
+  OR "core losses" OR "winding losses"
+)
+AND PUBYEAR AFT 1999
+AND PUBYEAR BEF 2027
