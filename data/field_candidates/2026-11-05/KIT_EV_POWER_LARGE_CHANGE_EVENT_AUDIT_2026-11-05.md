@@ -47,3 +47,42 @@
 4. Analyze a suitably selected control/non-event window matched on pre-event EV power, phase and time-of-day to distinguish ordinary power transitions from voltage-linked changes; no causal attribution until assumptions are defended.
 
 **Qualification:** This record is evidence of electrical response, **not validation of SO1–SO3 heat-conditioned power–transportation dynamics**.
+## 5. Subsequent targeted timing check: 2026-03-10 16:00:03 UTC
+
+**Evidence:** User ran the prescribed targeted inspection of the Mac-local one-second 20 kV and EV 400 V measured signals and pasted the Terminal output. This is **user-terminal-reported measurement**, not independent execution of the source files by this assistant.
+
+| Relative time | U20 original-derived mean V | EV 3-phase mean voltage V | EV active power W | source fault_phase |
+|---:|---:|---:|---:|---|
+| -30 s | 11940.74 | 237.91 | 779.24 | fault |
+| -20 s | 11918.36 | 237.50 | 757.65 | fault |
+| -15 s | 11926.02 | 237.61 | 757.71 | fault |
+| -10 s | 11922.36 | 237.49 | -0.79 | fault |
+| -6 s | 11931.50 | 237.68 | 1.68 | fault |
+| -5 s | 11934.80 | 237.75 | 1.47 | fault |
+| -2 s | 11925.25 | 237.57 | 1.05 | fault |
+| -1 s | 11921.74 | 237.50 | 1.24 | fault |
+| 0 s | 11867.24 | 236.53 | 1.14 | fault |
+| +1 s | 11843.92 | 235.98 | 1.32 | fault |
+| +2 s | 11844.26 | 235.99 | 2.69 | fault |
+| +5 s | 11848.17 | 236.06 | 3.29 | fault |
+| +10 s | 11846.61 | 236.01 | 3.96 | fault |
+| +15 s | 11849.84 | 236.04 | 4.95 | fault |
+| +19 s | 11927.51 | 237.71 | 5.13 | fault |
+| +20 s | 11931.02 | 238.13 | 5.17 | fault |
+| +30 s | 11941.02 | 238.38 | 5.05 | fault |
+
+### Finding: temporal precedence reverses the apparent explanation
+
+- The EV-point power changes from **757.71 W at -15 s** to **-0.79 W at -10 s**, a **-758.50 W difference between sparse observed time points**. This locates the power decline in the five-second interval **before** the chosen 20 kV event, though the exact transition second is not established by the sampled rows.
+- The selected 20-kV voltage event (t=0 at 2026-03-10T16:00:03+00:00) therefore occurs **at least approximately 10 s after EV point power is already near zero**. At -1 s measured P was 1.24 W and at t=0 it was 1.14 W.
+- The step between adjacent 20 kV displayed readings at -1 and 0 s is **11921.74 -> 11867.24 V**, about **-0.457%**; the three-phase average 400 V reading changes **237.50 -> 236.53 V**, about **-0.408%**. The strongest voltage decline occurs when power was already near zero.
+- The earlier **-752.26 W pre/post median EV delta** is mechanically produced by the fact that the prewindow (-20 to -6 s) straddles an earlier EV power transition, whereas the postwindow (+5 to +19 s) follows it. It **cannot be attributed to the t=0 voltage step** based on these measurements.
+- The inspected *sparse* readings do not rule out an earlier distinct voltage event between samples or some other upstream event: an exact claim about what initiated the EV power fall requires inspecting every 1-second value, and preferably the original 100 ms signals around the transition.
+
+**Revised scientific classification of this formerly largest power-delta event:** observed voltage change and pre/post power change during the same extended episode; **NOT a verified voltage-triggered EV power reduction**. It illustrates temporal confounding by a preceding charging-point power-state transition. Do not use this event as causal validation or as field confirmation of extreme-heat thermal coupling.
+
+### Immediate follow-up
+
+Inspect every one-second point from event -20 through +5 seconds, ideally also the per-phase EV real powers and three phase voltages, to identify the first second of the EV load change and any earlier changes in 20 kV voltage. If the evidence merits, inspect only the corresponding 100 ms original raw slice. Avoid rerunning the 129.6-million-record aggregate.
+
+**Source-level limitations unchanged:** phase/power sign conventions, exact feeder ancestry, battery charging state and thermal signals remain unverified/absent.
