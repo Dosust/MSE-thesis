@@ -1,3 +1,4 @@
+- [KIT measured power-conditioned voltage-step findings](KIT_EV_POWER_CONDITIONED_VOLTAGE_RESULTS_2026-11-05.md): 45,789 candidate 20 kV one-second steps, 159 with pre-event EV-point |P| ≥500 W; 60 strongest independent capped events with 60/60 finite 110/20/400 V pre/post voltage medians; not thermal or causal field validation.
 - [Measured 50-day EV power distribution](KIT_EV_POWER_FULL_RECORD_FINDINGS_2026-11-05.md) and [power-conditioned voltage-step diagnostic script](../../../tools/kit_ev_power_conditioned_voltage_events.py): 9.628 kW observed peak, 101,930 measured seconds ≥500 W; next test screens 20 kV voltage perturbations *during* EV power exposure before the top-60 cap. Synthetic code tests passed; user-source overlap results PENDING.
 
 # Data acquisition and screening log (2026-11-05)
