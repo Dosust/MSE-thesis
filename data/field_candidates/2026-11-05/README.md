@@ -1,3 +1,5 @@
+- [Measured 50-day EV power distribution](KIT_EV_POWER_FULL_RECORD_FINDINGS_2026-11-05.md) and [power-conditioned voltage-step diagnostic script](../../../tools/kit_ev_power_conditioned_voltage_events.py): 9.628 kW observed peak, 101,930 measured seconds ≥500 W; next test screens 20 kV voltage perturbations *during* EV power exposure before the top-60 cap. Synthetic code tests passed; user-source overlap results PENDING.
+
 # Data acquisition and screening log (2026-11-05)
 
 Current thesis: Engineering of Power–Electrified Transportation Interdependencies for Resilience.
