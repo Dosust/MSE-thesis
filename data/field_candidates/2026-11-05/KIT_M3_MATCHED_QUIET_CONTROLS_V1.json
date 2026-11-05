@@ -1,0 +1,197 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.22826984",
+  "analysis_type": "descriptive observational matching; NOT a causal experiment",
+  "case_times": [
+    "2026-03-10T15:32:02+00:00",
+    "2026-03-10T15:55:02+00:00"
+  ],
+  "sampling": "derived measured 1-second averages at BOTH events and controls; NOT comparable as if 100ms",
+  "matching_policy": {
+    "same_utc_date": true,
+    "same_source_fault_phase": true,
+    "no_abs_20kV_one_second_step_at_or_above_pct_anywhere_in_window": 0.15,
+    "quiet_window": [
+      -20,
+      30
+    ],
+    "exclude_within_s_of_known_events": 180,
+    "power_pre_baseline_window_s": [
+      -5,
+      -1
+    ],
+    "late_post_window_s": [
+      20,
+      30
+    ],
+    "voltage_pre_s": [
+      -3,
+      -1
+    ],
+    "voltage_post_s": [
+      1,
+      3
+    ],
+    "pre_power_tolerance": "max(100 W, 20% of case pre-power)",
+    "pre_voltage_tolerance_pct": 2.0,
+    "control_pre_stability": "MAD scale <= max(30 W, 5% of control pre power); max abs deviation <= max(70 W,10%)",
+    "control_grid_stride_s": 5,
+    "minimum_selected_control_spacing_s": 60,
+    "maximum_controls_per_case": 30
+  },
+  "results": [
+    {
+      "event_utc": "2026-03-10T15:32:02+00:00",
+      "event_metrics_1s": {
+        "utc": "2026-03-10T15:32:02+00:00",
+        "second_index": 2997122,
+        "p_pre_W": 2039.01867,
+        "p_at_W": 2038.4469100000001,
+        "p_late_W": 1616.93088,
+        "delta_p_W": -422.08779000000004,
+        "pre_p_MAD_scale_W": 0.10032754200003112,
+        "max_pre_p_deviation_W": 0.5498999999999796,
+        "u20_pre_V": 11830.880079999999,
+        "u20_post_V": 11914.962,
+        "delta_u20_pct": 0.7106987766881456,
+        "u400_pre_V": 235.71766,
+        "u400_post_V": 237.3712833333333,
+        "delta_u400_pct": 0.7015271292500236
+      },
+      "matching_audit": {
+        "candidate_strided_same_day": 17270,
+        "after_event_exclusion": 17126,
+        "quiet_voltage_windows": 4310,
+        "all_signals_finite_windows": 4310,
+        "same_source_fault_phase": 4310,
+        "load_and_voltage_matched": 55,
+        "pre_power_stable": 52,
+        "selected": 4,
+        "matched_case_fault_phase": "fault",
+        "matched_case_date_utc": "2026-03-10"
+      },
+      "controls_1s": [
+        {
+          "utc": "2026-03-10T15:27:31+00:00",
+          "second_index": 2996851,
+          "p_pre_W": 2415.03715,
+          "p_at_W": 2415.35442,
+          "p_late_W": 2415.64477,
+          "delta_p_W": 0.6076199999997698,
+          "pre_p_MAD_scale_W": 0.2004326939999495,
+          "max_pre_p_deviation_W": 21.01868000000013,
+          "u20_pre_V": 11867.09014,
+          "u20_post_V": 11868.41661,
+          "delta_u20_pct": 0.011177719089938698,
+          "u400_pre_V": 236.86143666666666,
+          "u400_post_V": 236.89397666666665,
+          "delta_u400_pct": 0.013737989796025474
+        },
+        {
+          "utc": "2026-03-10T15:25:31+00:00",
+          "second_index": 2996731,
+          "p_pre_W": 2414.13278,
+          "p_at_W": 2414.1987,
+          "p_late_W": 2414.13604,
+          "delta_p_W": 0.0032599999999547435,
+          "pre_p_MAD_scale_W": 0.12436048799952686,
+          "max_pre_p_deviation_W": 0.3845200000000659,
+          "u20_pre_V": 11869.57432,
+          "u20_post_V": 11878.39407,
+          "delta_u20_pct": 0.07430552909668542,
+          "u400_pre_V": 236.91964999999996,
+          "u400_post_V": 237.09348333333332,
+          "delta_u400_pct": 0.07337227339874186
+        },
+        {
+          "utc": "2026-03-10T15:26:31+00:00",
+          "second_index": 2996791,
+          "p_pre_W": 2415.3809599999995,
+          "p_at_W": 2415.38764,
+          "p_late_W": 2414.8627300000003,
+          "delta_p_W": -0.518229999999221,
+          "pre_p_MAD_scale_W": 0.6629297640006598,
+          "max_pre_p_deviation_W": 1.2091899999995803,
+          "u20_pre_V": 11878.04093,
+          "u20_post_V": 11874.31738,
+          "delta_u20_pct": -0.03134818293641928,
+          "u400_pre_V": 237.09315,
+          "u400_post_V": 237.01080000000002,
+          "delta_u400_pct": -0.03473318398274916
+        },
+        {
+          "utc": "2026-03-10T15:28:41+00:00",
+          "second_index": 2996921,
+          "p_pre_W": 2415.3891,
+          "p_at_W": 2432.65211,
+          "p_late_W": 2415.52054,
+          "delta_p_W": 0.13144000000011147,
+          "pre_p_MAD_scale_W": 0.43812312599988434,
+          "max_pre_p_deviation_W": 32.401490000000194,
+          "u20_pre_V": 11890.88925,
+          "u20_post_V": 11893.181160000002,
+          "delta_u20_pct": 0.01927450463810043,
+          "u400_pre_V": 237.33425,
+          "u400_post_V": 237.37797666666665,
+          "delta_u400_pct": 0.018424086142920792
+        }
+      ],
+      "matched_comparison": {
+        "valid_matched_controls": 4,
+        "control_median_delta_W": 0.0673500000000331,
+        "control_delta_q25_q75_W": [
+          -0.1271124999998392,
+          0.25048500000002605
+        ],
+        "event_minus_control_median_delta_W": -422.1551400000001,
+        "fraction_control_abs_delta_ge_event": 0.0
+      },
+      "admissibility": "DESCRIPTIVE_WITHIN_PHASE_AND_DATE_COMPARISON_ONLY"
+    },
+    {
+      "event_utc": "2026-03-10T15:55:02+00:00",
+      "event_metrics_1s": {
+        "utc": "2026-03-10T15:55:02+00:00",
+        "second_index": 2998502,
+        "p_pre_W": 768.2929700000001,
+        "p_at_W": 773.94463,
+        "p_late_W": 1176.02566,
+        "delta_p_W": 407.73268999999993,
+        "pre_p_MAD_scale_W": 14.455794780000225,
+        "max_pre_p_deviation_W": 19.032609999999863,
+        "u20_pre_V": 11931.270690000001,
+        "u20_post_V": 11846.02471,
+        "delta_u20_pct": -0.7144752827663914,
+        "u400_pre_V": 238.23284,
+        "u400_post_V": 236.52249666666668,
+        "delta_u400_pct": -0.7179292885621136
+      },
+      "matching_audit": {
+        "candidate_strided_same_day": 17270,
+        "after_event_exclusion": 17126,
+        "quiet_voltage_windows": 4310,
+        "all_signals_finite_windows": 4310,
+        "same_source_fault_phase": 4310,
+        "load_and_voltage_matched": 0,
+        "pre_power_stable": 0,
+        "selected": 0,
+        "matched_case_fault_phase": "fault",
+        "matched_case_date_utc": "2026-03-10"
+      },
+      "controls_1s": [],
+      "matched_comparison": {
+        "valid_matched_controls": 0,
+        "control_median_delta_W": null,
+        "event_minus_control_median_delta_W": null,
+        "fraction_control_abs_delta_ge_event": null
+      },
+      "admissibility": "NO_CLEAN_MATCHED_CONTROLS_AVAILABLE"
+    }
+  ],
+  "limits": [
+    "Source 20kV/EV-point direct feeder parentage and charger control logs unverified",
+    "Conventional observed controls cannot identify causal EV power response",
+    "Two selected cases belong to one fault episode and are not independent replications",
+    "Zero selected quiet same-phase same-day controls is a legitimate evidence limitation",
+    "Electrical OLTC anomaly, not an extreme-heat thermal dataset"
+  ]
+}
