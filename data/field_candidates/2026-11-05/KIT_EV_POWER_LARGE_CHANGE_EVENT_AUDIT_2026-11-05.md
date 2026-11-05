@@ -161,3 +161,26 @@ Inspect every one-second point from event -20 through +5 seconds, ideally also t
 **Status:** Original ten-event causal reading **rejected**. Same-system synchronized electric signals remain usable for bounded descriptive co-response, event timing, and sensor/channel characterization. No measured heat/thermal regulation or mobility service outcomes are present in this source.
 
 **Next analysis:** Inspect all one-second P and U values from at least -20 to +20 seconds for the two events without a large prior power jump, and calculate P at t=-1 and t=0 for the full selected 60 events. Then redesign power-conditioning to check measured power at event onset rather than solely the prewindow median. Preserve original selected-event CSV and version any new result output separately.
+
+## 8. Two remaining events: largest EV power jumps occur after voltage-step selection
+
+**Evidence:** User pasted macOS Terminal Step 18 results calculated from the existing 1-second source-derived KIT voltage and EV power series. No new original-data read or upload was performed.
+
+| Candidate event UTC | EV power t=-20 W | EV power t=-1 W | EV power t=0 W | EV power t=+20 W | Largest 1s pre-event ΔP W (time, ΔU20) | Largest 1s post-event ΔP W (time, ΔU20) |
+|---|---:|---:|---:|---:|---|---|
+| 2026-03-10 15:32:02 | 2039.52 | 2038.85 | 2038.45 | 1616.95 | -1.04 at -19 s, -0.000% | **-178.61 at +11 s, -0.024%** |
+| 2026-03-10 15:55:02 | 778.49 | 766.42 | 773.94 | 1175.87 | +23.52 at -12 s, +0.002% | **+349.79 at +14 s, +0.006%** |
+
+### Admissible interpretation
+
+- For both selected 20-kV voltage-step candidates, the largest measured 1-second EV power change in the examined -20..+20-second window occurs **after** the selected voltage-step instant, at **+11** and **+14 seconds** respectively. This differs from the earlier 16:00:03 case, in which the large power decline preceded the voltage step.
+- These are **time-ordered observational candidates** for a possible delayed electrical response, NOT demonstrated propagation delay, voltage causation or evidence of heat conditioning. The measured one-second voltage steps at the moments of the largest power jumps (−0.024%, +0.006%) are below the exploratory 0.15% trigger threshold, but the earlier selected voltage-step magnitudes and control actions need finer event-by-event inspection.
+- The pre/post median EV power deltas of -352.91 W and +171.27 W reported in Step 14 are **different estimands** from the largest single-second jumps -178.61 W and +349.79 W. Do not conflate them.
+- At 15:55:02, contemporaneous P(t=0)=773.94 W versus P(t=-1)=766.42 W; and at 15:32:02, P(t=0)=2038.45 W versus P(t=-1)=2038.85 W. Both selected voltage-step instants are before the largest subsequent observed ΔP.
+- Pre-event stability here means **small compared with the later large jump** in the selected 1-second samples; it does not prove stable charger state or absent confounders.
+
+### Next required evidence
+
+Read only the original **100 ms** 110/20/400-kV Parquet slices around **2026-03-10T15:32:02Z** and **2026-03-10T15:55:02Z**. Inspect U20 and low-voltage per-phase voltage, per-phase EV real power, and source phase labels. Use row-group-bounded extraction to avoid rescanning the 129.6M-record dataset; export a focused time-aligned CSV/plot and compare the exact onset of voltage and power changes. Treat apparent +11/+14 s lag as tentative, and test ordinary charge-session transitions or external controls separately. No claims of field thermal validation.
+
+**Status:** `TEMPORAL_ORDER_TWO_CANDIDATES_CONFIRMED_AT_1S | 100MS_EVENT_WINDOW_QA_PENDING | PHYSICAL_CAUSALITY_OPEN | THERMAL_SO1_SO3_NOT_FIELD_VALIDATED`
