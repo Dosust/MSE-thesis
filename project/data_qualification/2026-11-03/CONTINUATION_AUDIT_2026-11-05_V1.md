@@ -1,21 +1,21 @@
 # November 5 continuation — provenance, mathematical identifiability and primary-source qualification
 
 **Date:** 2026-11-05  
-**Branch:** \`user-data-qualification-2026-11-03\` only  
+**Branch:** `user-data-qualification-2026-11-03` only  
 **Status:** VERIFIED REPOSITORY AUDIT + LIMITED PRIMARY-SOURCE RECHECK + MATHEMATICAL DEDUCTION; FORMAL SYSTEMATIC REVIEW AND FIELD VALIDATION STILL OPEN  
-**Controlling inventory:** \`project/THESIS_RESEARCH_FULL_INVENTORY_AND_ROADMAP_2026-11-05.md\`  
+**Controlling inventory:** `project/THESIS_RESEARCH_FULL_INVENTORY_AND_ROADMAP_2026-11-05.md`  
 **Not an amendment** to any frozen thesis title, system boundary, scope, objectives, or physical-model authority.
 
 ## 1. Frozen authorities read and preserved
 
-- Active title authority: \`project/CANONICAL_THESIS_TITLE_V3.md\`, as indexed in \`project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md\`: *Engineering of Power–Electrified Transportation Interdependencies for Resilience*. The V4 thermal scope file's older longer title is historical for title wording.
-- \`project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md\` is frozen: SO1 qualify thermally sensitive states/directional mechanisms; SO2 physics-based state–time propagation model under extreme heat; SO3 critical times/delays/electricity and mobility service consequences.
-- \`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md\` governs thermal-only Power–Electrified Transportation mechanisms; preserve **state ≠ capability ≠ service ≠ resilience**.
+- Active title authority: `project/CANONICAL_THESIS_TITLE_V3.md`, as indexed in `project/CURRENT_THESIS_AUTHORITY_INDEX_V1.md`: *Engineering of Power–Electrified Transportation Interdependencies for Resilience*. The V4 thermal scope file's older longer title is historical for title wording.
+- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` is frozen: SO1 qualify thermally sensitive states/directional mechanisms; SO2 physics-based state–time propagation model under extreme heat; SO3 critical times/delays/electricity and mobility service consequences.
+- `project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md` governs thermal-only Power–Electrified Transportation mechanisms; preserve **state ≠ capability ≠ service ≠ resilience**.
 - V1.1 sustainability alignment leaves SO1–SO3 unchanged; two-pathway sustainability is downstream and bounded.
 
 ## 2. Actually rerun: 533-row GitHub register check
 
-Source: \`project/systematic_literature_review/MASTER_SYSTEMATIC_LITERATURE_REGISTER_V01.csv\`, blob SHA \`0f14e852fbec7ed9e189b6edb81de889c0838aa8\`. Parsed RFC-like quoted CSV with header-aware records (not merely copied counts).
+Source: `project/systematic_literature_review/MASTER_SYSTEMATIC_LITERATURE_REGISTER_V01.csv`, blob SHA `0f14e852fbec7ed9e189b6edb81de889c0838aa8`. Parsed RFC-like quoted CSV with header-aware records (not merely copied counts).
 
 | Test | Result |
 |---|---:|
@@ -25,16 +25,16 @@ Source: \`project/systematic_literature_review/MASTER_SYSTEMATIC_LITERATURE_REGI
 | Populated DOI fields | 498 |
 | Distinct DOI strings among populated DOI fields | 498 |
 | Blank DOI fields | 35 |
-| Formal-screening status \`PENDING_CURRENT_PROTOCOL\` | 533 |
+| Formal-screening status `PENDING_CURRENT_PROTOCOL` | 533 |
 | Relevance-class counts | 48 CORE; 57 SUPPORTING; 27 HISTORICAL; 220 UNRESOLVED_RELEVANCE; 181 UNRESOLVED_OR_OUT_OF_SCOPE |
 | Blank year fields | 73 |
 | Declared maturity | 530 S1, 3 S3 |
 
 An exact normalized DOI duplicate test showed no collision among populated DOI fields. This **does not rule out** title-level, source-version, family or distinct-DOI same-study duplicates. DOI presence is not DOI validation.
 
-The **590-row V5** counts (555 populated unique DOI strings, 35 blank; 76 CORE/73 SUPPORTING/27 HISTORICAL/233 UNRESOLVED/181 UNRESOLVED_OR_OUT_OF_SCOPE) are **read from the November 5 inventory, not independently rerun**. The exact V5 workbook \`Unified_Thesis_Research_Master_V5_Reconciled_2026-11-04.xlsx\` could not be located by filename in connected Drive searches or in the current mounted input files. There is thus **no row-by-row 533↔590 reconciliation** in this continuation. Numerically, differences are +57 records, +57 filled DOI fields, +28 CORE, +16 SUPPORTING, +13 UNRESOLVED_RELEVANCE, and zero changes to the other two categories. These deltas must not be interpreted as proven additions or source-ID lineage.
+The **590-row V5** counts (555 populated unique DOI strings, 35 blank; 76 CORE/73 SUPPORTING/27 HISTORICAL/233 UNRESOLVED/181 UNRESOLVED_OR_OUT_OF_SCOPE) are **read from the November 5 inventory, not independently rerun**. The exact V5 workbook `Unified_Thesis_Research_Master_V5_Reconciled_2026-11-04.xlsx` could not be located by filename in connected Drive searches or in the current mounted input files. There is thus **no row-by-row 533↔590 reconciliation** in this continuation. Numerically, differences are +57 records, +57 filled DOI fields, +28 CORE, +16 SUPPORTING, +13 UNRESOLVED_RELEVANCE, and zero changes to the other two categories. These deltas must not be interpreted as proven additions or source-ID lineage.
 
-**Reconciliation gate** is BLOCKED on obtaining the unchanged V5 workbook. Required: byte hash, original sheet names and row count; matched \`LIT-\` IDs; normalized DOI strict match; exact title/year and author check where DOI missing; ambiguous year/preprint/journal families reviewed manually; 57 candidate additions audited against all 533; preserve source rows, record IDs, reasons, provenance and unchanged source master. Do not overwrite the 533-row register or manufacture a 590-row replacement.
+**Reconciliation gate** is BLOCKED on obtaining the unchanged V5 workbook. Required: byte hash, original sheet names and row count; matched `LIT-` IDs; normalized DOI strict match; exact title/year and author check where DOI missing; ambiguous year/preprint/journal families reviewed manually; 57 candidate additions audited against all 533; preserve source rows, record IDs, reasons, provenance and unchanged source master. Do not overwrite the 533-row register or manufacture a 590-row replacement.
 
 ## 3. Limited primary-source / mathematical audit (NOT independent human systematic screening)
 
@@ -102,6 +102,6 @@ This is an energy-conservation architecture pending apparatus/units/connection a
 - **B04 source access:** Krama full equations/raw field sessions, Li full article/thermal channels, Bragone original figures screenshot and RACE Part-2 public verified report/data not obtained.
 - **B05 site data:** no synchronized and mapped transformer–EVSE internal thermal/electrical/control/mobility-service installation established.
 - **B06 model:** no physical parameter identifiability proof for a sufficiently rich system, no leakage-safe matched cross-asset baseline, no coupled VVUQ or measured SO3 transition.
-- **Model decision:** \`PROVISIONAL_PHYSICS_FIRST\`. PINN/PIML remains a conditional matched benchmark; no superiority or rejection on demonstrated comparative performance.
+- **Model decision:** `PROVISIONAL_PHYSICS_FIRST`. PINN/PIML remains a conditional matched benchmark; no superiority or rejection on demonstrated comparative performance.
 
 **Next executable task (after this verified snapshot):** acquire the unchanged V5 workbook and carry out deterministic row-level diff against GitHub 533 master, with complete unmatched/ambiguous/study-family tables. In parallel where sources are accessible, manually qualify Bragone's dimensional normalization and RACE Part-1 equations, then retrieve Krama/Li full text and original data through legitimate source channels. Keep all new notes additive; do not modify the frozen authorities or source evidence.
