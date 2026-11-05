@@ -20,6 +20,8 @@ import math
 import statistics
 import time
 import urllib.request
+import urllib.error
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -41,6 +43,40 @@ PHIL_COLS = ["time_s", "U_L1_V", "U_L2_V", "U_L3_V",
              "I_L1_A", "I_L2_A", "I_L3_A"]
 
 
+def fetch_https_bytes(url: str) -> bytes:
+    """Secure HTTPS download with macOS trust-store fallback.
+
+    Some python.org macOS Python builds lack a configured CA certificate
+    bundle, although the operating system curl verifies TLS correctly.
+    Never turn off certificate checks. Publisher MD5 is verified by caller.
+    """
+    request = urllib.request.Request(url, headers={
+        "User-Agent": "ThesisMeasuredEvidenceAudit/1.0 (noncommercial academic research)",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=35) as response:
+            return response.read()
+    except urllib.error.URLError as exc:
+        if "CERTIFICATE_VERIFY_FAILED" not in str(exc):
+            raise
+        print("Python CA bundle unavailable; retrying with macOS curl "
+              "(TLS verification ENABLED).", flush=True)
+        try:
+            cmd = [
+                "/usr/bin/curl", "--fail", "--location",
+                "--silent", "--show-error", "--retry", "2",
+                "--connect-timeout", "15", "--max-time", "120",
+                "--proto", "=https", "--proto-redir", "=https", url,
+            ]
+            done = subprocess.run(cmd, capture_output=True, check=True, timeout=150)
+            return done.stdout
+        except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as curl_exc:
+            raise RuntimeError(
+                "Secure macOS curl also failed. Check internet access and "
+                "macOS certificate settings; TLS verification remains enabled."
+            ) from curl_exc
+
+
 def download_verified(folder: Path, name: str, md5: str, base: str) -> Path:
     folder.mkdir(parents=True, exist_ok=True)
     path = folder / name
@@ -50,11 +86,7 @@ def download_verified(folder: Path, name: str, md5: str, base: str) -> Path:
     last = None
     for attempt in range(3):
         try:
-            request = urllib.request.Request(url, headers={
-                "User-Agent": "ThesisMeasuredEvidenceAudit/1.0 (noncommercial academic research)",
-            })
-            with urllib.request.urlopen(request, timeout=35) as response:
-                payload = response.read()
+            payload = fetch_https_bytes(url)
             actual = hashlib.md5(payload).hexdigest()
             if actual != md5:
                 raise ValueError(f"Source checksum mismatch for {name}: expected {md5}, got {actual}")
