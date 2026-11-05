@@ -1,0 +1,10 @@
+# Independent EV charging laboratory evidence — 2026-11-05
+
+**Separate evidence stream** from measured KIT 50-day campus OLTC field records and the thesis field candidate directory.
+
+- [Three-source independently controlled EV electrical/charger-state mechanism evidence protocol](INDEPENDENT_EV_LAB_MECHANISM_EVIDENCE_PROTOCOL_V1.md): KIT PHIL 20 ms voltage/current (controlled voltage), TU Dortmund charger status/setpoints (controlled charger power), and Li et al. controlled PQ disturbances with CAN battery charging state. Defines mechanism claims and limitations.
+- [Verified script for five KIT PHIL CSVs + Dortmund metadata](../../../tools/independent_ev_lab_voltage_control_audit.py): publisher MD5, source schema checks, controlled-voltage/current response screening, apparent-power-proxy constraint, and separate charger command/state metadata inventory. The synthetic self-test passed; the complete **real measured five-vehicle and Dortmund metadata audit requires local execution**.
+
+**Lab input originals** remain in local Downloads, not in GitHub. The script writes small, reproducible measured outcomes to this directory as `INDEPENDENT_EV_LAB_M2_M3_ELECTRICAL_AUDIT_V1.{json,md}`.
+
+**No source merging:** These lab experiments are not synchronized with, nor identical in equipment to, the original KIT 100 ms 50-day OLTC field time-series and cannot attribute the original two March 10 power-state changes to a particular control/voltage mechanism.
