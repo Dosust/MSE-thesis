@@ -220,3 +220,40 @@ Read only the original **100 ms** 110/20/400-kV Parquet slices around **2026-03-
 Inspect the saved plots and CSV traces for **both candidates**: quantify voltage step at t=0 at 20 kV and EV 400 V, EV power immediately at t=0, first persistent transition after t=0, phase-level changes, and whether other voltage steps in the window could be alternate triggers. Avoid treating the single peak-difference timestamp as a validated response delay. If the user shares the two event PNG figures (or tabulations of waveform windows), perform a morphology QA and explicitly classify results as correlation with possible state transition, not causal thermal validation.
 
 **Execution status:** `ORIGINAL_100MS_TIMESTAMP_WINDOW_QA_PASS | EXTRACTED_PEAK_TIMING_PASS | CSV_PLOT_MORPHOLOGY_REVIEW_PENDING | VOLTAGE_TO_POWER_CAUSALITY_NOT_ESTABLISHED | THERMAL_FIELD_VALIDATION_NOT_ESTABLISHED`.
+
+## 10. Visual morphology audit of original 100 ms event plots
+
+**Evidence provenance:** On 2026-11-05 the user uploaded both actual original-source 100 ms PNG plots produced by the repository event extractor. Reviewed directly as visuals in this conversation. Image attachments, source CSV, and source JSON are not part of this GitHub commit and remain user-local/attached. The plots were drawn from verified per-event 551 original records/voltage level, but their visible axis values and morphology should not be treated as an independent raw-source reexecution.
+
+**User-shared figures:** `KIT_100ms_20260310T153202Z.png` and `KIT_100ms_20260310T155502Z.png`, generated under `~/Downloads/KIT_OLTC_Electrical_Results/100ms_targeted_events/`.
+
+### Event A: 2026-03-10T15:32:02Z
+
+- At selected 20-kV step **t=0**, the 20-kV positive-sequence and 400-V arithmetic-mean phase-voltage curves rise sharply by roughly **+0.7%** relative to their *individual* pre-event medians; 110-kV positive-sequence is relatively stable. The exact voltage step should be calculated from the raw local CSV, because the plot uses normalized baseline and has limited graphical precision.
+- The plot contains an **earlier abrupt downward voltage change near -18 s** affecting 20 kV and 400 V without a comparable immediate EV-point power change. Thus this is not a single isolated voltage event. The earlier voltage change must be accounted for before interpreting t=0 as an independent input.
+- EV-point real power remains roughly **2.04 kW** at t=0, then declines in a **multi-step transition starting around +10 s**, settling near **1.62 kW** after roughly +15 to +18 s. A few brief intermediate plateaus/spikes appear.
+- All three per-phase EV power traces change nearly together; phase L1 is consistently higher than L2/L3, but all three contribute to the total transition.
+- The measured largest individual 100-ms step is **-243.5476 W at +9.8 s** (from the prior program output). **+9.8 s is the largest-jump time, not a calibrated physical delay.**
+- The 400-V normalized voltage rises further relative to 20 kV beginning about +12 s while EV-point power is lower. This is *compatible with* changes in local voltage drop under lower loading but cannot prove that interpretation or feeder connectivity.
+
+### Event B: 2026-03-10T15:55:02Z
+
+- At selected 20-kV step **t=0**, both 20-kV and EV 400-V voltages decrease abruptly by roughly **-0.7%** relative to their own pre-window medians; the 110-kV curve is comparatively stable.
+- EV-point total real power is around **0.75–0.80 kW** before the voltage event, shows a series of transient changes beginning around **+8 s**, and reaches a more sustained higher level of about **1.17–1.18 kW from roughly +14 s onward**.
+- The largest individual 100-ms power step is **+229.3722 W at +8.3 s** (prior program result). Subsequent pulses and plateau transitions show it is **not equivalent to the onset of the final sustained power level**.
+- The 20 kV and 400 V voltages remain depressed during most of the rising-power sequence; voltage recovers abruptly near **+18 s**, *after* the sustained higher power level is already present. This is not the simple static interpretation 'lower voltage -> proportionally lower EV-point real power'.
+- All three measured phase power traces rise together, with the same relative phase imbalance visible before and after. The signal could reflect a charging-point state or setpoint change, but no EV or charger controller state has been verified.
+
+### Cross-event scientific judgment and claims boundary
+
+**Observed:** 20-kV and 400-V voltage responses move nearly simultaneously at t=0 in both opposite-direction voltage events, whereas large per-phase-coordinated EV power transitions occur seconds later. There is comparatively little concurrent 110-kV signal change. Opposite-signed later EV power transitions follow opposite-signed 20-kV voltage steps (up then power down; down then power up), but only **two hand-selected, same-fault-episode cases** exist, so this is not statistical identification or a monotonic physical law.
+
+**Not observed:** A tap-position command, EV charging status/setpoint, battery SOC, device temperatures, ambient temperature, exact causal feeder connectivity, or measured mobility service. Do **not** claim transformer-to-charger propagation, a calibrated ~8–10-second voltage response delay, heat-induced derating, causal voltage-to-power effects, or resilience validation.
+
+**Interpretive ranking:** The near-synchronous 20/400 V shapes are useful descriptive electrical co-movement. The lagged, stair-step EV-point power changes are compatible with discrete controller/operating-state changes; this is a **hypothesis**, not a finding. For Event A the earlier -18 s step is a confounder. For Event B voltage recovery around +18 s occurs *after* the larger power level appears, so charging-power increase cannot be attributed just to voltage recovery.
+
+### Next rigorous evidence gate
+
+Use **existing 2 × 551-row original-source CSVs** to compute: (i) precisely time-stamped instantaneous/local 20-kV and 400-V voltage changes around t=0, (ii) stable pre-event power for at least the immediately preceding several seconds, (iii) first sustained EV power transition (explicit change-point algorithm plus sensitivity), (iv) all earlier/intermediate voltage steps, (v) per-phase relative power changes and cross-phase coherence, and (vi) confidence/limitations without inferring causation. Compare with matched control episodes only if sourced and defensibly matched. Avoid rereading all original 129.6M source rows.
+
+**Audit state:** `100MS_SOURCE_WINDOW_QA_PASS | VISUAL_WAVEFORM_REVIEW_PASS | EVENT_A_EARLIER_VOLTAGE_CHANGE_FLAGGED | EVENT_B_POSTSTEP_HIGHER_POWER_DURING_LOW_VOLTAGE_FLAGGED | CHANGEPOINT_AND_CONTROL_QA_PENDING | CAUSAL_AND_THERMAL_VALIDATION_OPEN`.
