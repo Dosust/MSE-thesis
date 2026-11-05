@@ -10,6 +10,6 @@ Current thesis: Engineering of Power–Electrified Transportation Interdependenc
 
 ## Working checkpoint
 
-KIT is **user-local acquired and original-MD5 verified** (three files). Schemas and row-group time spans have been checked. **Every recorded timestamp matched the expected 100 ms UTC grid (129,600,000/129,600,000; zero mismatches), according to the user's Terminal readback**. Physical network topology, independent sensor clock calibration, operational field qualification, thermal mechanisms, and service outcomes remain open The Mac original files are not stored in this GitHub repository.
+KIT is **user-local acquired and original-MD5 verified** (three files). Schemas and row-group time spans have been checked. **Every recorded timestamp matched the expected 100 ms UTC grid (129,600,000/129,600,000; zero mismatches), according to the user's Terminal readback**. Physical network topology, independent sensor clock calibration, operational field qualification, thermal mechanisms, and service outcomes remain **OPEN**. The Mac original files are not stored in this GitHub repository.
 
 This working log is governed by [current scope](../../../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md), [SO1–SO3](../../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md) and [non-invention standard](../../../project/CANONICAL_EVIDENCE_NON_INVENTION_STANDARD_V1.md). No frozen thesis authority is amended.
