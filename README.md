@@ -508,3 +508,12 @@ An opt-in research-visualization companion is available at [`.github/skills/visq
 **Only on explicit request:** "Dossiya Expert, continue Lesson 12", "quiz me", "evaluate my answer out of 100", or "make my mastery plan" activates learning mode.
 
 The existing [Dossiya writing skill](.github/skills/dossiya-writing/SKILL.md) is a separate voice/editing workflow. Neither skill is a separate model or an automatic global installation. Scientific authority, evidence status and current thesis scope remain unchanged. Lessons 01–11 document written chat passes, not validated physics or independent research competence.
+
+
+---
+
+## Data acquisition checkpoint — 2026-11-05
+
+[Open the step-by-step dataset acquisition and evidence index](data/field_candidates/2026-11-05/README.md). The dated record covers **KIT 110/20/0.4 kV multivoltage EV measurements** (local search, interrupted downloads, successful resume, publisher MD5 checks, Parquet schemas and 50-day timestamp-range check), the **US/UK/EU/Africa EVSE extreme-heat thermal replacement search**, and a [read-only full-row timestamp QA script](tools/kit_oltc_timestamp_audit.py).
+
+**Evidence status:** All three KIT original Parquet files were downloaded and checksum-verified on the user's Mac, **not uploaded to GitHub**. The entire-row timestamp test, physical topology, site provenance and thermal interdependency validation remain **OPEN**. No new thermal coupled-field claim or frozen research objective follows from this acquisition.
