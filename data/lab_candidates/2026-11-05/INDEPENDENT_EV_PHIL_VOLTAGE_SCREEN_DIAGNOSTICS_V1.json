@@ -1,0 +1,174 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.22965111",
+  "status": "MEASURED_SCREEN_SENSITIVITY_ONLY_NOT_COMMAND_LOG_OR_CAUSAL_DELAY",
+  "screens_in_volts": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "limits": [
+    "Original CSV contains phase RMS voltage/current but not measured active power, actual charger state or command time",
+    "A detector count is not a count of confirmed experimental commands",
+    "Separate laboratory from 50-day KIT field study"
+  ],
+  "vehicles": [
+    {
+      "n_samples": 8809,
+      "median_dt_s": 0.021,
+      "mean_phase_voltage_range_V": [
+        208.1,
+        248.1967
+      ],
+      "mean_phase_current_range_A": [
+        15.2667,
+        16.0567
+      ],
+      "max_mean_phase_voltage_span_V": 40.0967,
+      "largest_1s_voltage_change_V": 5.07,
+      "largest_1s_voltage_change_target_time_s": 79.986,
+      "screen_candidate_counts_at_V_thresholds": {
+        "0.5": 16,
+        "1.0": 16,
+        "1.5": 16,
+        "2.0": 16,
+        "3.0": 16,
+        "5.0": 16
+      },
+      "pre_near_t0_voltage_V": 228.13666666666666,
+      "post_near_t0_voltage_V": 223.13333333333333,
+      "near_t0_voltage_delta_V": -5.0033,
+      "near_t0_current_delta_A": 0.0,
+      "interpretation": "TWO_VOLT_EVENT_SCREEN_RETURNED_CANDIDATES",
+      "vehicle": "Volkswagen ID.4",
+      "file": "01_voltages_current_iD4.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "n_samples": 8810,
+      "median_dt_s": 0.021,
+      "mean_phase_voltage_range_V": [
+        68.6567,
+        82.0767
+      ],
+      "mean_phase_current_range_A": [
+        4.7467,
+        5.4967
+      ],
+      "max_mean_phase_voltage_span_V": 13.42,
+      "largest_1s_voltage_change_V": 1.8133,
+      "largest_1s_voltage_change_target_time_s": 99.966,
+      "screen_candidate_counts_at_V_thresholds": {
+        "0.5": 16,
+        "1.0": 16,
+        "1.5": 16,
+        "2.0": 0,
+        "3.0": 0,
+        "5.0": 0
+      },
+      "pre_near_t0_voltage_V": 75.36,
+      "post_near_t0_voltage_V": 73.7,
+      "near_t0_voltage_delta_V": -1.66,
+      "near_t0_current_delta_A": -0.02,
+      "interpretation": "NO_2V_EVENTS_DESPITE_GT_2V_RUN_RANGE_REQUIRES_SCREEN_QA",
+      "vehicle": "Nissan Leaf",
+      "file": "02_voltages_current_Nissann_Leaf.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "n_samples": 8810,
+      "median_dt_s": 0.021,
+      "mean_phase_voltage_range_V": [
+        208.27,
+        248.4533
+      ],
+      "mean_phase_current_range_A": [
+        13.8833,
+        15.1033
+      ],
+      "max_mean_phase_voltage_span_V": 40.1833,
+      "largest_1s_voltage_change_V": 5.0767,
+      "largest_1s_voltage_change_target_time_s": 110.629,
+      "screen_candidate_counts_at_V_thresholds": {
+        "0.5": 16,
+        "1.0": 16,
+        "1.5": 16,
+        "2.0": 16,
+        "3.0": 16,
+        "5.0": 16
+      },
+      "pre_near_t0_voltage_V": 228.32333333333335,
+      "post_near_t0_voltage_V": 223.32000000000002,
+      "near_t0_voltage_delta_V": -5.0033,
+      "near_t0_current_delta_A": 0.00333,
+      "interpretation": "TWO_VOLT_EVENT_SCREEN_RETURNED_CANDIDATES",
+      "vehicle": "MG4",
+      "file": "03_voltages_current_MG4.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "n_samples": 8810,
+      "median_dt_s": 0.021,
+      "mean_phase_voltage_range_V": [
+        208.0467,
+        248.0833
+      ],
+      "mean_phase_current_range_A": [
+        15.7033,
+        16.45
+      ],
+      "max_mean_phase_voltage_span_V": 40.0367,
+      "largest_1s_voltage_change_V": 5.0367,
+      "largest_1s_voltage_change_target_time_s": 50.259,
+      "screen_candidate_counts_at_V_thresholds": {
+        "0.5": 16,
+        "1.0": 16,
+        "1.5": 16,
+        "2.0": 16,
+        "3.0": 16,
+        "5.0": 11
+      },
+      "pre_near_t0_voltage_V": 228.07000000000002,
+      "post_near_t0_voltage_V": 223.0566666666667,
+      "near_t0_voltage_delta_V": -5.0133,
+      "near_t0_current_delta_A": 0.07,
+      "interpretation": "TWO_VOLT_EVENT_SCREEN_RETURNED_CANDIDATES",
+      "vehicle": "Tesla Model 3",
+      "file": "04_voltages_current_Tesla_Model_3.csv",
+      "publisher_md5_verified": true
+    },
+    {
+      "n_samples": 8810,
+      "median_dt_s": 0.021,
+      "mean_phase_voltage_range_V": [
+        208.11,
+        248.7533
+      ],
+      "mean_phase_current_range_A": [
+        14.99,
+        15.4267
+      ],
+      "max_mean_phase_voltage_span_V": 40.6433,
+      "largest_1s_voltage_change_V": 5.5867,
+      "largest_1s_voltage_change_target_time_s": 40.389,
+      "screen_candidate_counts_at_V_thresholds": {
+        "0.5": 16,
+        "1.0": 16,
+        "1.5": 16,
+        "2.0": 16,
+        "3.0": 16,
+        "5.0": 13
+      },
+      "pre_near_t0_voltage_V": 228.41,
+      "post_near_t0_voltage_V": 223.4,
+      "near_t0_voltage_delta_V": -5.01,
+      "near_t0_current_delta_A": -0.03,
+      "interpretation": "TWO_VOLT_EVENT_SCREEN_RETURNED_CANDIDATES",
+      "vehicle": "Renault Zoe",
+      "file": "05_voltages_current__Renault_Zoe.csv",
+      "publisher_md5_verified": true
+    }
+  ]
+}
