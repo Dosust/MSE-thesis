@@ -184,3 +184,39 @@ Inspect every one-second point from event -20 through +5 seconds, ideally also t
 Read only the original **100 ms** 110/20/400-kV Parquet slices around **2026-03-10T15:32:02Z** and **2026-03-10T15:55:02Z**. Inspect U20 and low-voltage per-phase voltage, per-phase EV real power, and source phase labels. Use row-group-bounded extraction to avoid rescanning the 129.6M-record dataset; export a focused time-aligned CSV/plot and compare the exact onset of voltage and power changes. Treat apparent +11/+14 s lag as tentative, and test ordinary charge-session transitions or external controls separately. No claims of field thermal validation.
 
 **Status:** `TEMPORAL_ORDER_TWO_CANDIDATES_CONFIRMED_AT_1S | 100MS_EVENT_WINDOW_QA_PENDING | PHYSICAL_CAUSALITY_OPEN | THERMAL_SO1_SO3_NOT_FIELD_VALIDATED`
+
+## 9. Raw original 100 ms targeted extraction — measured run PASS
+
+**Date:** 2026-11-05. **Evidence provenance:** Mac-local Terminal execution output pasted by the user, from [GitHub 100 ms row-group bounded extractor](../../../tools/kit_oltc_100ms_event_window_audit.py). This record reports that output; the original CSV/PNG/JSON files remain Mac-local, and were not independently examined or uploaded by the assistant.
+
+### Run-level verification
+
+- `git pull --ff-only` completed as a fast-forward of the local `main` branch.
+- `--self-test` returned `PASS: 100ms row-group-only extraction synthetic self-tests (NOT measured KIT output)`, including exercising selective Parquet row groups and timestamp alignment on a synthetic Parquet.
+- Original KIT source windows at **2026-03-10 15:32:02 UTC** and **2026-03-10 15:55:02 UTC** extracted successfully from original 100ms 110 kV, 20 kV and 400 V Parquet, using only row groups intersecting target windows.
+- **551 original 100 ms samples per voltage level per event** (default -25 to +30 seconds inclusive). Source timestamp comparison passed for each extracted 100 ms record in each level.
+
+| Event UTC | Largest EV power 100ms jump before t=0 | Offset (s) | Largest EV power 100ms jump at/after t=0 | Offset (s) |
+|---|---:|---:|---:|---:|
+| 2026-03-10 15:32:02 | +4.6344 W | -16.0 | **-243.5476 W** | **+9.8** |
+| 2026-03-10 15:55:02 | +25.4012 W | -18.6 | **+229.3722 W** | **+8.3** |
+
+**Source file outputs** saved under user-local directory `~/Downloads/KIT_OLTC_Electrical_Results/100ms_targeted_events/`: 
+
+- `KIT_100ms_20260310T153202Z.csv` and `.png`
+- `KIT_100ms_20260310T155502Z.csv` and `.png`
+- `KIT_100ms_event_window_summary.json`
+
+### Scientific judgment
+
+**CONFIRMED, descriptive:** The largest sample-to-sample EV-point power jump in the preceding -20 to 0-second screen is far smaller than the largest jump within the 0 to +30-second screen at both candidate events. The raw high-resolution peak power jumps occur *after* the selected 20 kV voltage-step indices. They support continued scrutiny of post-event electrical state transitions.
+
+**Critical caution:** +9.8 and +8.3 s locate the **largest individual 100ms power increment**, not necessarily **the onset** of a transition, a dynamical impulse response lag, causally linked feeder propagation, control-delay constant, or confirmed charging interruption. Sampling/averaging explains why the largest raw individual 100ms jump can occur at a different offset than the largest derived 1s mean jump (+11 and +14 s). The plots and full CSV waveforms have not yet been inspected in this conversation, and no control/tap-command logs or charger-state telemetry have been validated.
+
+**Scope:** These observed electrical responses do not validate heat-induced transformer or EVSE thermal derating and do not establish mobility service effects.
+
+### Next decisive evidence gate
+
+Inspect the saved plots and CSV traces for **both candidates**: quantify voltage step at t=0 at 20 kV and EV 400 V, EV power immediately at t=0, first persistent transition after t=0, phase-level changes, and whether other voltage steps in the window could be alternate triggers. Avoid treating the single peak-difference timestamp as a validated response delay. If the user shares the two event PNG figures (or tabulations of waveform windows), perform a morphology QA and explicitly classify results as correlation with possible state transition, not causal thermal validation.
+
+**Execution status:** `ORIGINAL_100MS_TIMESTAMP_WINDOW_QA_PASS | EXTRACTED_PEAK_TIMING_PASS | CSV_PLOT_MORPHOLOGY_REVIEW_PENDING | VOLTAGE_TO_POWER_CAUSALITY_NOT_ESTABLISHED | THERMAL_FIELD_VALIDATION_NOT_ESTABLISHED`.
