@@ -87,3 +87,13 @@ Reproduce/retrain each eligible estimator on **identical SINTEF measured transfo
 **Source boundary:** IEC 60076-7:2018 establishes reduced-order thermal loading equations; not all traditional numerical methods are too slow. PINN/PDE-based HST estimation is already explored in 2026 literature, e.g. Nishanth DOI 10.1109/NE-IECCE69680.2026.11665934; another 2026 IEEE dual-stream transformer temperature-field PINN DOI 10.1109/TDEI.2026.3681547. **Novelty must concern an evidence-qualified coupled state-capability-service problem, not merely using PINN.**
 
 **Status:** `ODE_BASELINE_REQUIRED | PINN_BENCHMARK_CANDIDATE_ACCEPTED | PROPOSED_COUPLED_FRAMEWORK_TO_BE_DEFINED | SINTEF_MEASURED_HST_VALIDATION_PENDING | CLAIMED_NOVELTY_NOT_ESTABLISHED`
+
+## H7 extension — EV-attributable thermal ageing and equivalent life consumption
+
+**User-initiated proposal, 2026-11-05:** Alongside HST as a thermal *state*, introduce **H7** as a candidate slow-insulation-degradation metric: (a) relative thermal ageing rate F_AA(T_H), (b) cumulative equivalent ageing L_eq [reference hours], and (c) EV-attributable model-based incremental ageing ΔL_EV [hours], under appropriately paired baseline/EV scenarios.
+
+The relevant prior-art anchor is **Qian, Zhou & Yuan (2015)**, DOI https://doi.org/10.1016/j.ijepes.2014.09.040. They already modeled EV charging penetration, ambient temperature, charging-start time, initial SOC and charging mode in transformer life-consumption simulations. A novel result cannot be claimed for EV-induced ageing alone.
+
+See the [complete H7 equations, insulation-type caveats, provenance, benchmark tests and coupled-service gates](TRANSFORMER_EV_THERMAL_AGEING_METRIC_CANDIDATE_V1.md). Relative ageing is derived from temperature/insulation assumptions; without independent chemical/condition measurements it is **not directly measured actual remaining life**. SINTEF observed HV/LV winding hot-spot data can validate HST estimators, but not directly validate EV-attributable ageing or a transformer's actual remaining years.
+
+**Scope authority unchanged:** H7 supports SO1–SO3 as an optional slow degradation consequence metric; no change to title V3, canonical objectives or PINN-as-candidate benchmarking decision.
