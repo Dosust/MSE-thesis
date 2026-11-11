@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "SINTEF_Barug2025_sensordata_original_MD5verified_2026-11-03.csv",
+    "size_bytes": 873041,
+    "SHA256": "6aa7384867aace7b697b9e17778decbbdbde280db1fd7983faee08c259b19e51",
+    "source": "Authenticated Drive-backed original mounted files"
+  },
+  {
+    "filename": "Session_data.xlsx",
+    "size_bytes": 204514,
+    "SHA256": "b886943bf86520f24f5a53870886c4c43709d265cbebdd65e1345321e22cc192",
+    "source": "Authenticated Drive-backed original mounted files"
+  },
+  {
+    "filename": "Measurement_data.xlsx",
+    "size_bytes": 23558382,
+    "SHA256": "a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c",
+    "source": "Authenticated Drive-backed original mounted files"
+  },
+  {
+    "filename": "KU_Leuven_C5PT0R_Measured_EV_Charging_Efficiency_UserOriginal_2026-11-03.zip",
+    "size_bytes": 2082895,
+    "SHA256": "8d52252aff2ec78f9967c96f728dbc5df55948a6ab15fdd1565318236e0d0aa9",
+    "source": "Authenticated Drive-backed original mounted files"
+  },
+  {
+    "filename": "STREAM_Slovenia_control_measurements_P_2025_original_MD5verified.csv",
+    "size_bytes": 3505062,
+    "SHA256": "8278db817c018cfbfeadb08f980309d70187f07b4c8de4686f8fe1a98c141027",
+    "source": "Authenticated Drive-backed original mounted files"
+  },
+  {
+    "filename": "STREAM_Slovenia_control_measurements_Q_2025_original_MD5verified.csv",
+    "size_bytes": 3978067,
+    "SHA256": "78329c2b4a88b25a752391ccad0834ff23a195ebb0131d9990cac4966c07512e",
+    "source": "Authenticated Drive-backed original mounted files"
+  }
+]

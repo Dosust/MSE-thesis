@@ -1,0 +1,176 @@
+{
+  "recorded_sessions": 1878,
+  "two_connectors": {
+    "CCS1": 1129,
+    "CCS2": 749
+  },
+  "worksheet_audit": {
+    "CCS1": {
+      "worksheet_rows_including_header": 646681,
+      "populated_power_rows": 36184
+    },
+    "CCS2": {
+      "worksheet_rows_including_header": 646681,
+      "populated_power_rows": 25632
+    }
+  },
+  "populated_minute_power_rows": 61816,
+  "published_minute_row_count": 64277,
+  "session_keys_matched_to_power_measurements": 1878,
+  "CCS2_measurement_local_id_offset": 1129,
+  "max_start_timestamp_discrepancy_minutes": 0.0,
+  "total_reported_session_energy_kWh": 60441.935575,
+  "total_contiguous_integrated_measured_power_kWh": 69771.60004985242,
+  "median_abs_fractional_energy_discrepancy": 0.15331483638263754,
+  "fraction_integrated_energy_within_10pct_session_energy": 0.03194888178913738,
+  "eligible_overlap_days": 128,
+  "optimized_days": 16,
+  "offline_optimization_results": [
+    {
+      "sessions": 19,
+      "variables": 557,
+      "frontloaded_hypothetical_peak_kW": 225.68699999999998,
+      "optimized_hypothetical_peak_kW": 112.04454545454611,
+      "peak_reduction_percent_conditional": 50.35400999856167,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-11-11"
+    },
+    {
+      "sessions": 17,
+      "variables": 461,
+      "frontloaded_hypothetical_peak_kW": 202.632,
+      "optimized_hypothetical_peak_kW": 112.89574468085108,
+      "peak_reduction_percent_conditional": 44.28533268148611,
+      "maximum_numerical_energy_shortfall_kWh": 1.4210854715202004e-14,
+      "date": "2022-11-15"
+    },
+    {
+      "sessions": 15,
+      "variables": 407,
+      "frontloaded_hypothetical_peak_kW": 224.838,
+      "optimized_hypothetical_peak_kW": 129.00000000000173,
+      "peak_reduction_percent_conditional": 42.625356923650926,
+      "maximum_numerical_energy_shortfall_kWh": 4.973799150320701e-14,
+      "date": "2022-06-18"
+    },
+    {
+      "sessions": 15,
+      "variables": 382,
+      "frontloaded_hypothetical_peak_kW": 214.16400000000002,
+      "optimized_hypothetical_peak_kW": 115.02000000000004,
+      "peak_reduction_percent_conditional": 46.29349470499242,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-10-14"
+    },
+    {
+      "sessions": 15,
+      "variables": 542,
+      "frontloaded_hypothetical_peak_kW": 277.674,
+      "optimized_hypothetical_peak_kW": 141.59250000000006,
+      "peak_reduction_percent_conditional": 49.00764925776268,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-10-15"
+    },
+    {
+      "sessions": 14,
+      "variables": 356,
+      "frontloaded_hypothetical_peak_kW": 165.528,
+      "optimized_hypothetical_peak_kW": 119.63454545454547,
+      "peak_reduction_percent_conditional": 27.7254932974811,
+      "maximum_numerical_energy_shortfall_kWh": 3.552713678800501e-15,
+      "date": "2022-06-04"
+    },
+    {
+      "sessions": 14,
+      "variables": 428,
+      "frontloaded_hypothetical_peak_kW": 177.98700000000002,
+      "optimized_hypothetical_peak_kW": 123.21272727272947,
+      "peak_reduction_percent_conditional": 30.77431089195871,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-06-16"
+    },
+    {
+      "sessions": 14,
+      "variables": 469,
+      "frontloaded_hypothetical_peak_kW": 271.554,
+      "optimized_hypothetical_peak_kW": 137.48565517241488,
+      "peak_reduction_percent_conditional": 49.37078622579123,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-10-24"
+    },
+    {
+      "sessions": 14,
+      "variables": 554,
+      "frontloaded_hypothetical_peak_kW": 252.59699999999998,
+      "optimized_hypothetical_peak_kW": 97.9288888888899,
+      "peak_reduction_percent_conditional": 61.231174998559005,
+      "maximum_numerical_energy_shortfall_kWh": 4.263256414560601e-14,
+      "date": "2022-10-28"
+    },
+    {
+      "sessions": 14,
+      "variables": 422,
+      "frontloaded_hypothetical_peak_kW": 191.124,
+      "optimized_hypothetical_peak_kW": 109.13636363636364,
+      "peak_reduction_percent_conditional": 42.897614304658944,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-11-04"
+    },
+    {
+      "sessions": 14,
+      "variables": 610,
+      "frontloaded_hypothetical_peak_kW": 153.816,
+      "optimized_hypothetical_peak_kW": 106.50000000000068,
+      "peak_reduction_percent_conditional": 30.761429240130624,
+      "maximum_numerical_energy_shortfall_kWh": 2.842170943040401e-14,
+      "date": "2023-03-29"
+    },
+    {
+      "sessions": 14,
+      "variables": 605,
+      "frontloaded_hypothetical_peak_kW": 150.639,
+      "optimized_hypothetical_peak_kW": 92.02147826086978,
+      "peak_reduction_percent_conditional": 38.91258023428875,
+      "maximum_numerical_energy_shortfall_kWh": 2.842170943040401e-14,
+      "date": "2023-04-04"
+    },
+    {
+      "sessions": 14,
+      "variables": 489,
+      "frontloaded_hypothetical_peak_kW": 256.248,
+      "optimized_hypothetical_peak_kW": 138.42782608695654,
+      "peak_reduction_percent_conditional": 45.9789633140721,
+      "maximum_numerical_energy_shortfall_kWh": 2.1316282072803006e-14,
+      "date": "2023-05-23"
+    },
+    {
+      "sessions": 13,
+      "variables": 383,
+      "frontloaded_hypothetical_peak_kW": 156.723,
+      "optimized_hypothetical_peak_kW": 132.77333333333334,
+      "peak_reduction_percent_conditional": 15.281526429858202,
+      "maximum_numerical_energy_shortfall_kWh": 1.4210854715202004e-14,
+      "date": "2022-06-10"
+    },
+    {
+      "sessions": 13,
+      "variables": 406,
+      "frontloaded_hypothetical_peak_kW": 244.38600000000002,
+      "optimized_hypothetical_peak_kW": 137.50846153846325,
+      "peak_reduction_percent_conditional": 43.73308555381109,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-10-13"
+    },
+    {
+      "sessions": 13,
+      "variables": 451,
+      "frontloaded_hypothetical_peak_kW": 300.5369999999989,
+      "optimized_hypothetical_peak_kW": 139.36909090909091,
+      "peak_reduction_percent_conditional": 53.62664466967747,
+      "maximum_numerical_energy_shortfall_kWh": 7.105427357601002e-15,
+      "date": "2022-10-17"
+    }
+  ],
+  "median_peak_reduction_percent_conditional": 44.009209117648595,
+  "interpretation": "Energy in the session workbook is a measured reported outcome, not an independently documented requested charging need. Differences between power integration and session energy must not be called losses. Scheduling results are offline conditional counterfactuals, not observed implemented outcomes. Pmax is a session field, not verified station rating; site transformer is not known."
+}

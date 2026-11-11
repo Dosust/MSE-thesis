@@ -1,0 +1,580 @@
+{
+  "run_date": "2026-11-11",
+  "status": "EXPLORATORY assistant-executed; no same-site thermal EV coupling",
+  "original_data_sha256": [
+    {
+      "filename": "SINTEF_Barug2025_sensordata_original_MD5verified_2026-11-03.csv",
+      "size_bytes": 873041,
+      "SHA256": "6aa7384867aace7b697b9e17778decbbdbde280db1fd7983faee08c259b19e51",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "Session_data.xlsx",
+      "size_bytes": 204514,
+      "SHA256": "b886943bf86520f24f5a53870886c4c43709d265cbebdd65e1345321e22cc192",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "Measurement_data.xlsx",
+      "size_bytes": 23558382,
+      "SHA256": "a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "KU_Leuven_C5PT0R_Measured_EV_Charging_Efficiency_UserOriginal_2026-11-03.zip",
+      "size_bytes": 2082895,
+      "SHA256": "8d52252aff2ec78f9967c96f728dbc5df55948a6ab15fdd1565318236e0d0aa9",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "STREAM_Slovenia_control_measurements_P_2025_original_MD5verified.csv",
+      "size_bytes": 3505062,
+      "SHA256": "8278db817c018cfbfeadb08f980309d70187f07b4c8de4686f8fe1a98c141027",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "STREAM_Slovenia_control_measurements_Q_2025_original_MD5verified.csv",
+      "size_bytes": 3978067,
+      "SHA256": "78329c2b4a88b25a752391ccad0834ff23a195ebb0131d9990cac4966c07512e",
+      "source": "Authenticated Drive-backed original mounted files"
+    }
+  ],
+  "SINTEF": {
+    "row_count": 8592,
+    "observed_ambient_max_C": 25.97,
+    "hot_spot_audit": {
+      "Hot-spot HV [degC]": {
+        "count": 8589,
+        "fraction_below_top_oil": 0.8410757946210269,
+        "temperature_range_C": [
+          5.6400003,
+          30.313751
+        ],
+        "p95_empirical_threshold_C": 26.44825,
+        "fraction_above_own_empirical_p95": 0.050064035394108745,
+        "mean_excess_C_hours_per_record": 0.053577392245895826,
+        "safety_threshold_status": "None. p95 is a sample quantile, NOT equipment limit.",
+        "aging_life_status": "BLOCKED_SENSOR_SEMANTICS_AND_EQUIPMENT_APPLICABILITY"
+      },
+      "Hot-spot LV [degC]": {
+        "count": 8589,
+        "fraction_below_top_oil": 0.709395738735592,
+        "temperature_range_C": [
+          8.9,
+          30.50625
+        ],
+        "p95_empirical_threshold_C": 26.9515,
+        "fraction_above_own_empirical_p95": 0.050064035394108745,
+        "mean_excess_C_hours_per_record": 0.05164236290604265,
+        "safety_threshold_status": "None. p95 is a sample quantile, NOT equipment limit.",
+        "aging_life_status": "BLOCKED_SENSOR_SEMANTICS_AND_EQUIPMENT_APPLICABILITY"
+      }
+    },
+    "observed_ambient_at_least_30C": 0,
+    "training_pairs": 6012,
+    "holdout_pairs": 2576,
+    "Iref_training_median_A": 22.25875,
+    "params_effective": {
+      "tau_h": 10.982527246884603,
+      "ambient_offset_C": 13.480627836303249,
+      "Iref_current_sq_gain_C": 0.4746796002165402
+    },
+    "training_metrics": {
+      "pairs": 6012,
+      "model_rmse_C": 0.2876894884923598,
+      "model_mae_C": 0.1988742799813487,
+      "model_bias_C": -1.6744593203682456e-10,
+      "persistence_rmse_C": 0.334542218588998,
+      "persistence_mae_C": 0.21138958353293413
+    },
+    "holdout_metrics": {
+      "pairs": 2576,
+      "model_rmse_C": 0.21652866056215456,
+      "model_mae_C": 0.14985387016541224,
+      "model_bias_C": 0.010816143080647371,
+      "persistence_rmse_C": 0.2516987404106104,
+      "persistence_mae_C": 0.14498090916149067
+    },
+    "local_sensitivity": {
+      "coordinates": [
+        "log_tau",
+        "offset_C",
+        "gain_C"
+      ],
+      "raw_col_l2_norm": [
+        12.645352080679748,
+        6.748156531766329,
+        19.698683143621267
+      ],
+      "unit_column_singular_values": [
+        1.3084594072364577,
+        0.9983670715965358,
+        0.5396268803221336
+      ],
+      "standardized_condition_number": 2.424748386246743,
+      "linearized_parameter_column_correlation": [
+        [
+          1.0,
+          -0.01240627367178103,
+          -0.08034880924481969
+        ],
+        [
+          -0.01240627367178103,
+          1.0,
+          0.003918533558678564
+        ],
+        [
+          -0.08034880924481969,
+          0.003918533558678564,
+          1.0
+        ]
+      ],
+      "interpretation": "Local one-step sensitivity only; no structural-identifiability proof or calibrated parameter CI."
+    },
+    "tau_profile": {
+      "tau_grid_h": [
+        3.0,
+        3.391304347826087,
+        3.782608695652174,
+        4.173913043478261,
+        4.565217391304348,
+        4.956521739130435,
+        5.3478260869565215,
+        5.739130434782609,
+        6.130434782608695,
+        6.521739130434783,
+        6.913043478260869,
+        7.304347826086957,
+        7.695652173913044,
+        8.08695652173913,
+        8.478260869565219,
+        8.869565217391305,
+        9.26086956521739,
+        9.652173913043478,
+        10.043478260869566,
+        10.434782608695652,
+        10.826086956521738,
+        11.217391304347826,
+        11.608695652173914,
+        12.0,
+        12.391304347826088,
+        12.782608695652174,
+        13.173913043478262,
+        13.565217391304348,
+        13.956521739130435,
+        14.347826086956522,
+        14.73913043478261,
+        15.130434782608695,
+        15.521739130434783,
+        15.913043478260871,
+        16.304347826086957,
+        16.695652173913047,
+        17.086956521739133,
+        17.47826086956522,
+        17.869565217391305,
+        18.26086956521739,
+        18.652173913043477,
+        19.043478260869566,
+        19.434782608695652,
+        19.82608695652174,
+        20.217391304347828,
+        20.608695652173914,
+        21.0,
+        21.391304347826086,
+        21.782608695652176,
+        22.17391304347826,
+        22.565217391304348,
+        22.956521739130437,
+        23.347826086956523,
+        23.73913043478261,
+        24.130434782608695,
+        24.521739130434785,
+        24.91304347826087,
+        25.304347826086957,
+        25.695652173913043,
+        26.086956521739133,
+        26.47826086956522,
+        26.869565217391305,
+        27.26086956521739,
+        27.65217391304348,
+        28.043478260869566,
+        28.434782608695652,
+        28.826086956521742,
+        29.217391304347828,
+        29.608695652173914,
+        30.0
+      ],
+      "relative_sse_to_fitted_minimum": [
+        2.7823723726111877,
+        2.308980820788509,
+        1.974871278908352,
+        1.7334673767165085,
+        1.555707595479921,
+        1.4227944313681824,
+        1.3221902265571026,
+        1.2453085978191787,
+        1.1861327383073477,
+        1.1403610098393062,
+        1.1048632115105348,
+        1.0773256564540237,
+        1.0560141960491838,
+        1.0396127601553842,
+        1.0271113268100927,
+        1.0177268981178742,
+        1.0108469180890274,
+        1.0059882028973839,
+        1.0027667563849758,
+        1.0008753301290172,
+        1.0000665640720983,
+        1.0001401958726985,
+        1.0009332691289787,
+        1.002312574352312,
+        1.0041687679676428,
+        1.0064117635260175,
+        1.0089670953793572,
+        1.0117730314071414,
+        1.0147782668693326,
+        1.0179400721585523,
+        1.0212227973364276,
+        1.0245966588000106,
+        1.0280367503074201,
+        1.0315222333749055,
+        1.0350356718029394,
+        1.0385624825670916,
+        1.0420904810833713,
+        1.0456095033421322,
+        1.0491110909070107,
+        1.052588227525369,
+        1.0560351182669514,
+        1.0594470038284713,
+        1.0628200040129567,
+        1.0661509854898175,
+        1.0694374498233226,
+        1.0726774384685154,
+        1.07586945200986,
+        1.0790123813863497,
+        1.0821054492290614,
+        1.0851481597500503,
+        1.0881402558785536,
+        1.0910816825522307,
+        1.0939725552462682,
+        1.096813132968246,
+        1.0996037950672908,
+        1.1023450213065897,
+        1.1050373747323132,
+        1.107681486942413,
+        1.1102780454178451,
+        1.1128277826285207,
+        1.115331466668248,
+        1.117789893208432,
+        1.1202038785903408,
+        1.122574253901257,
+        1.1249018599015672,
+        1.1271875426883033,
+        1.1294321499964541,
+        1.1316365280528582,
+        1.1338015189090593,
+        1.1359279581894146
+      ],
+      "profile_type": "unconstrained linear least squares in offset/gain for fixed effective tau; not likelihood CI"
+    },
+    "seasonal_refits": [
+      {
+        "period": "Jan-Apr",
+        "pairs": 2758,
+        "tau_h": 15.981821389002599,
+        "offset_C": 12.870025432025157,
+        "gain_C": 0.6183871495890311,
+        "ambient_range_C": [
+          -19.58,
+          16.2175
+        ]
+      },
+      {
+        "period": "May-Aug",
+        "pairs": 2951,
+        "tau_h": 8.294443413212475,
+        "offset_C": 13.807344187829688,
+        "gain_C": 0.15322929916945255,
+        "ambient_range_C": [
+          6.9875,
+          25.97
+        ]
+      },
+      {
+        "period": "Sep-Dec",
+        "pairs": 2878,
+        "tau_h": 13.570778286597466,
+        "offset_C": 13.213753434253611,
+        "gain_C": 0.528058354397552,
+        "ambient_range_C": [
+          -5.855,
+          25.335
+        ]
+      }
+    ],
+    "chronological_residual_band": {
+      "first_60pct_train_pairs": 5153,
+      "next_20pct_cal_pairs": 1717,
+      "last_20pct_eval_pairs": 1717,
+      "calibrated_abs_residual_cut_C": 0.39030973443693284,
+      "test_marginal_coverage": 0.9528246942341293,
+      "test_mean_band_width_C": 0.7806194688738657,
+      "limitation": "Constant-width empirical residual band; chronology violates usual exchangeability assumptions; not guaranteed physical predictive coverage."
+    },
+    "same_site_load_order_stress_test": {
+      "cases": 106,
+      "median_abs_final_difference_front_vs_back_C": 0.354858830641648,
+      "median_abs_peak_difference_front_vs_back_C": 0.21825587533521507,
+      "max_abs_final_difference_C": 0.7425600482871353,
+      "limitations": "Observed current values permuted, current squared sum preserved; ambient and T0 fixed; offline model-based scenarios, not observed intervention; no EV charging site."
+    }
+  },
+  "EPFL": {
+    "sessions": 1878,
+    "valid_arrival_departure_power_energy_sessions": 1878,
+    "same_calendar_day_sessions": 1865,
+    "days_with_same_day_sessions": 221,
+    "session_energy_kWh_quantiles_10_50_90": [
+      11.0516,
+      29.366999999999997,
+      55.478899999999996
+    ],
+    "stay_hours_quantiles_10_50_90": [
+      0.19999999995343387,
+      0.48333333333721384,
+      0.8833333334187046
+    ],
+    "arrival_hour_quantiles_10_50_90": [
+      9.016666666720994,
+      15.183333333407063,
+      20.738333333353513
+    ],
+    "session_power_field_kW_quantiles_10_50_90": [
+      51.615300000000005,
+      97.65450000000001,
+      160.0743
+    ],
+    "spearman_stay_duration_vs_recorded_energy": 0.6638148495213655,
+    "daily_peak_active_sessions_median": 2.0,
+    "daily_peak_active_sessions_mean": 1.7058823529411764,
+    "block_bootstrap_day_mean_peak_95pct_interval": [
+      1.6425339366515836,
+      1.7647058823529411
+    ],
+    "joint_dependence": "Resampling intact observed calendar days preserves within-day session dependence; does not model out-of-sample site growth or temporal nonstationarity.",
+    "reported_energy_measurement_boundary": "Session energy is observed record, not verified driver target; minute-power energy mismatch unresolved.",
+    "reproduced_16day_peak_optimization_status": "Previously executed/recorded baseline, 44.0092% median vs hypothetical frontloading; new script does not claim reoptimizing it.",
+    "charging_thermal_objective": "BLOCKED_NO_QUALIFIED_POWER_TO_TRANSFORMER_CURRENT_THERMAL_TRANSFER"
+  },
+  "KU_Leuven": {
+    "total_rows": 40873,
+    "files": {
+      "Figure6_AC1.csv": {
+        "rows": 7598,
+        "battery_max_pack_temperature_count": 7598,
+        "range_native": [
+          23.25,
+          27.75
+        ],
+        "temperature_column_name": "BMSmaxPackTemperature",
+        "measurement_semantics": "BMS-reported pack temperature; not charger rectifier temperature",
+        "timestamp_negative_step_count": 5
+      },
+      "Figure6_AC2.csv": {
+        "rows": 4252,
+        "battery_max_pack_temperature_count": 4252,
+        "range_native": [
+          25.0,
+          27.25
+        ],
+        "temperature_column_name": "BMSmaxPackTemperature",
+        "measurement_semantics": "BMS-reported pack temperature; not charger rectifier temperature",
+        "timestamp_negative_step_count": 6
+      },
+      "Figure7_AC1.csv": {
+        "rows": 15083,
+        "battery_max_pack_temperature_count": 15083,
+        "range_native": [
+          27.75,
+          30.5
+        ],
+        "temperature_column_name": "BMSmaxPackTemperature",
+        "measurement_semantics": "BMS-reported pack temperature; not charger rectifier temperature",
+        "timestamp_negative_step_count": 0
+      },
+      "Figure7_AC2.csv": {
+        "rows": 13940,
+        "battery_max_pack_temperature_count": 13940,
+        "range_native": [
+          27.75,
+          33.0
+        ],
+        "temperature_column_name": "BMSmaxPackTemperature",
+        "measurement_semantics": "BMS-reported pack temperature; not charger rectifier temperature",
+        "timestamp_negative_step_count": 1
+      }
+    },
+    "battery_charger_thermal_causality": "NOT_ESTABLISHED"
+  },
+  "STREAM": {
+    "time_rows": 34932,
+    "stations": 12,
+    "P_Q_station_time_pairs": 419184,
+    "native_value_units": "UNVERIFIED; sqrt(P\u00b2+Q\u00b2) is not qualified as kVA",
+    "P_Q_station_statistics": [
+      {
+        "station": "TR1",
+        "P_p50_native": 221.24,
+        "Q_p50_native": 9.04,
+        "P_Q_pearson": 0.4050250399689548,
+        "sqrtP2Q2_p50_native_if_units_consistent": 221.62137441591165,
+        "sqrtP2Q2_p95_native_if_units_consistent": 327.7503557113205,
+        "fraction_Q_negative": 0.028741555021184015
+      },
+      {
+        "station": "TR2",
+        "P_p50_native": 153.48,
+        "Q_p50_native": -6.6,
+        "P_Q_pearson": 0.525602087653267,
+        "sqrtP2Q2_p50_native_if_units_consistent": 154.08559178775835,
+        "sqrtP2Q2_p95_native_if_units_consistent": 245.0882771166038,
+        "fraction_Q_negative": 0.6644337570136265
+      },
+      {
+        "station": "TR3",
+        "P_p50_native": 45.32,
+        "Q_p50_native": -9.6,
+        "P_Q_pearson": -0.6802553164120453,
+        "sqrtP2Q2_p50_native_if_units_consistent": 47.14927782940237,
+        "sqrtP2Q2_p95_native_if_units_consistent": 99.39200047421163,
+        "fraction_Q_negative": 0.7756784610099622
+      },
+      {
+        "station": "TR4",
+        "P_p50_native": 76.96,
+        "Q_p50_native": -8.32,
+        "P_Q_pearson": -0.6752883332069036,
+        "sqrtP2Q2_p50_native_if_units_consistent": 78.52932700242951,
+        "sqrtP2Q2_p95_native_if_units_consistent": 157.7043897563635,
+        "fraction_Q_negative": 0.5798408336196038
+      },
+      {
+        "station": "TR6",
+        "P_p50_native": 86.56,
+        "Q_p50_native": -24.52,
+        "P_Q_pearson": -0.8249530580516513,
+        "sqrtP2Q2_p50_native_if_units_consistent": 96.18111244890059,
+        "sqrtP2Q2_p95_native_if_units_consistent": 177.35765089979589,
+        "fraction_Q_negative": 0.7189396541852743
+      },
+      {
+        "station": "TR8",
+        "P_p50_native": 53.72,
+        "Q_p50_native": 1.6,
+        "P_Q_pearson": 0.27066082452033574,
+        "sqrtP2Q2_p50_native_if_units_consistent": 54.04086601720088,
+        "sqrtP2Q2_p95_native_if_units_consistent": 100.72321677499122,
+        "fraction_Q_negative": 0.3805965876560174
+      },
+      {
+        "station": "TR9",
+        "P_p50_native": 64.32,
+        "Q_p50_native": 15.16,
+        "P_Q_pearson": -0.22889437310462274,
+        "sqrtP2Q2_p50_native_if_units_consistent": 67.60931296792594,
+        "sqrtP2Q2_p95_native_if_units_consistent": 109.4211898922632,
+        "fraction_Q_negative": 0.026709034695980762
+      },
+      {
+        "station": "TR11",
+        "P_p50_native": 40.88,
+        "Q_p50_native": -9.84,
+        "P_Q_pearson": 0.13527993716118147,
+        "sqrtP2Q2_p50_native_if_units_consistent": 42.23516070697423,
+        "sqrtP2Q2_p95_native_if_units_consistent": 78.59483545106426,
+        "fraction_Q_negative": 0.9756383831443948
+      },
+      {
+        "station": "TR12",
+        "P_p50_native": 87.68,
+        "Q_p50_native": 45.32,
+        "P_Q_pearson": 0.028064168220363336,
+        "sqrtP2Q2_p50_native_if_units_consistent": 118.22220771814989,
+        "sqrtP2Q2_p95_native_if_units_consistent": 216.7499462245276,
+        "fraction_Q_negative": 0.06183442116111302
+      },
+      {
+        "station": "TR14",
+        "P_p50_native": 49.08,
+        "Q_p50_native": -7.0,
+        "P_Q_pearson": -0.5572499408144436,
+        "sqrtP2Q2_p50_native_if_units_consistent": 49.66474806100034,
+        "sqrtP2Q2_p95_native_if_units_consistent": 95.16728681331558,
+        "fraction_Q_negative": 0.8230848505668156
+      },
+      {
+        "station": "TR15",
+        "P_p50_native": 86.6,
+        "Q_p50_native": 62.099999999999994,
+        "P_Q_pearson": -0.1020907992563236,
+        "sqrtP2Q2_p50_native_if_units_consistent": 132.8734646035381,
+        "sqrtP2Q2_p95_native_if_units_consistent": 256.5339502883506,
+        "fraction_Q_negative": 0.19137180808427803
+      },
+      {
+        "station": "TR16",
+        "P_p50_native": 187.38,
+        "Q_p50_native": 45.88,
+        "P_Q_pearson": 0.6996556042035345,
+        "sqrtP2Q2_p50_native_if_units_consistent": 193.36051922417226,
+        "sqrtP2Q2_p95_native_if_units_consistent": 496.82393046489005,
+        "fraction_Q_negative": 0.3611015687621665
+      }
+    ],
+    "harmonics_from_P_Q": "BLOCKED_NO_HARMONIC_SPECTRA_OR_WAVEFORMS",
+    "thermal_loss_from_P_Q": "BLOCKED_UNKNOWN_RATINGS_VOLTAGE_BOUNDARY_AND_LOSS_LAW"
+  },
+  "ODE_solver_check": {
+    "exact_solution": 0.4248297431610861,
+    "rows": [
+      {
+        "substeps": 1,
+        "euler_abs_error": 0.0025341026858441418,
+        "rk4_abs_error": 3.236627416081106e-08
+      },
+      {
+        "substeps": 2,
+        "euler_abs_error": 0.0012283047452289475,
+        "rk4_abs_error": 1.9474636903105136e-09
+      },
+      {
+        "substeps": 4,
+        "euler_abs_error": 0.0006049610585353027,
+        "rk4_abs_error": 1.1942746791504533e-10
+      },
+      {
+        "substeps": 8,
+        "euler_abs_error": 0.00030024069781992013,
+        "rk4_abs_error": 7.393696765944924e-12
+      },
+      {
+        "substeps": 16,
+        "euler_abs_error": 0.0001495674129622926,
+        "rk4_abs_error": 4.599098879509711e-13
+      }
+    ],
+    "interpretation": "Numerical test ODE with fixed forcing and nondimensional temperature; not physical validation."
+  },
+  "scientific_gates": {
+    "SO1": "PARTIAL_COMPONENT_ONLY",
+    "SO2": "PARTIAL_TRANSFORMER_ODE_ONLY",
+    "SO3": "BLOCKED_THERMAL_SERVICE_CAUSALITY",
+    "aging_life": "BLOCKED_SENSOR_SEMANTICS_AND_EQUIPMENT_APPLICABILITY",
+    "harmonic_losses": "BLOCKED_MISSING_SPECTRA",
+    "temperature_constrained_EV_optimization": "BLOCKED_SOURCE_TO_SITE_POWER_CURRENT_AND_THERMAL_CAPABILITY_MAPPING",
+    "extreme_heat_empirical_validation": "BLOCKED_NO_30C_PLUS_AMBIENT_MEASUREMENTS_IN_SINTEF",
+    "PDE_model": "BLOCKED_EXACT_EQUIPMENT_GEOMETRY_AND_MATERIAL_PROPERTIES",
+    "Q_compensation_thermal_benefit": "BLOCKED_RATINGS_CAPABILITY_VOLTAGE_AND_LOSS_LAW"
+  }
+}

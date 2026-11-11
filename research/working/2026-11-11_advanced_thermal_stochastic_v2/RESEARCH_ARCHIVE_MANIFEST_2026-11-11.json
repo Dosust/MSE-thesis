@@ -1,0 +1,228 @@
+{
+  "title": "ASU thesis advanced numerical research archival manifest",
+  "date": "2026-11-11",
+  "status": "WORKING_EXPLORATORY_ASSISTANT_EXECUTED",
+  "source_scope": "Google Drive originals only; no redistribution of source files",
+  "packages": [
+    {
+      "name": "thesis_research_execution_20261111.zip",
+      "sha256": "4c1c9ba887067d8c0530d473eed6261ddf962a6936e3749c76d24f3c091d9b4a",
+      "bytes": 225764,
+      "entries": 8,
+      "zip_integrity": "PASS"
+    },
+    {
+      "name": "ASU_Thesis_Drive_Only_Research_Execution_2026-11-11.zip",
+      "sha256": "3bf6f45008f4e33c2862b523fbcb7fb323c03b3cc1c8c5d17491da6e511c59a6",
+      "bytes": 331561,
+      "entries": 21,
+      "zip_integrity": "PASS"
+    },
+    {
+      "name": "ASU_Advanced_Physics_Stochastic_Charging_2026-11-11.zip",
+      "sha256": "dc9d8c7eb72c7497349f1d5f3f93c6ce5b4ba8b33da78563061506cdede5fea6",
+      "bytes": 283383,
+      "entries": 24,
+      "zip_integrity": "PASS"
+    }
+  ],
+  "latest_run_artifacts": [
+    {
+      "filename": "00_SCIENTIFIC_EXECUTIVE_REPORT.md",
+      "bytes": 7362,
+      "sha256": "27ceba6a0e977634badade083ede7e35cc19511b619c058afd61044fa8b5a53f",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "01_ORIGINAL_DATA_AUDIT.md",
+      "bytes": 5642,
+      "sha256": "bae4075f137bba6d37e410ae73af776b3bea897622eac93482e6022d715c1ba6",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "02_EQUATIONS_AND_HYPOTHESES.md",
+      "bytes": 5604,
+      "sha256": "f0da5451cdeb76fc662e86bd0e4e1584c15be90881a7014b7bc71c076007af7b",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "03_SINTEF_THERMAL_HOTSPOT_AND_AGING.md",
+      "bytes": 5370,
+      "sha256": "0ede388f54b53545a8b7dea523373b1056b7f5ca78e6ef0b88523d2eada3f055",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "04_EPFL_STOCHASTIC_CHARGING.md",
+      "bytes": 5059,
+      "sha256": "66954477740a6ec580e5c9873c9a6a7febf235066aa5e03c2a23d4ef8020289f",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "05_MATCHED_OPTIMIZATION_GATE.md",
+      "bytes": 4620,
+      "sha256": "5898045ad7e8f6e3b5407d86ee0996c05fcfecb3a5a1aa223fedaab3774fb75f",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "06_STREAM_KU_HARMONIC_EVIDENCE.md",
+      "bytes": 5031,
+      "sha256": "a1593bcd8250385fdb54627f42936a09977d7ef165451a64b01da736f2d5041f",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "07_VVUQ_IDENTIFIABILITY.md",
+      "bytes": 5372,
+      "sha256": "a7750ed0bd13d6dc8fad0b006550c9b48307ac38841b8ba71c15f29e1fe27539",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "08_FINDINGS_SO_TRACEABILITY_AND_NEXT_GATES.md",
+      "bytes": 8496,
+      "sha256": "2d1fa3c991c0e9ffccde5cf18659f1be777d5be72fc8195cb88dfefc12dc0997",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "EPFL_REPLAY_LOG.txt",
+      "bytes": 1363,
+      "sha256": "6ccbbeffa8918074666f935094075dffebabcba796bac10a825d0eea50437279",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "EPFL_REPLAY_RESULTS.json",
+      "bytes": 6764,
+      "sha256": "84f6f14a272f8785678a9b6533f3ee82a248b9c127ef22adf4029e718596c247",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "ORIGINAL_INPUT_MANIFEST.json",
+      "bytes": 1538,
+      "sha256": "d7a4936a25354fbaa13ad90b90c42edef25f16dbc2672773367b5fd1f1055851",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "REPRODUCE.md",
+      "bytes": 1847,
+      "sha256": "acd6a73520c4195f7ae9addb7c3422d206595bb95b841e61676f203456dd6051",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "RESULTS.json",
+      "bytes": 19777,
+      "sha256": "997f6a613f858fcdf05cebef0c90acd97b3c2c078064b88c0582c34b6c70b50b",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "epfl_16day_lp_replay.png",
+      "bytes": 108110,
+      "sha256": "d6fd988c632257e5beb0f2459a5c77c0eaf782f592d2de32a7cb934c2faa307e",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "epfl_daily_concurrency.png",
+      "bytes": 45462,
+      "sha256": "3fb061b8f53c904ec786066d79ce94ff9b000d4c8149a09677e17425901a725d",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "epfl_day_summary.csv",
+      "bytes": 4600,
+      "sha256": "c74ad564f5da074b4680e4a59a6175add1b9a83337cc0e1801e6c9ab2a383757",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "epfl_reproduce.py",
+      "bytes": 7889,
+      "sha256": "c33c6d7d9a7e2b6c2e57c764c427809f8a4aced2d9d09ba4663b90fdeadbbe25",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "requirements.txt",
+      "bytes": 42,
+      "sha256": "3c5ac6d159fc21bc35d8a53df5d8e99a39a746db1583932344505ee7ad4ac122",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "run_advanced_experiments.py",
+      "bytes": 17082,
+      "sha256": "ee0cc85369984923c942f34d820e8f5e405a26ac9e19263eccdb3c9032e0d5b6",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "sintef_load_order.png",
+      "bytes": 44718,
+      "sha256": "d528da2dfc34730a3279e6815a233445957f9f014d968e5a0e1290d28ad2f398",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "sintef_load_order_cases.csv",
+      "bytes": 13712,
+      "sha256": "91c2e3d2faa6302d11e49d01abb6dbe115ae6114e8a311e990abf05ba41bb2f1",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "sintef_tau_profile.png",
+      "bytes": 60167,
+      "sha256": "0463d1dcab34a9ea484581bf174db864f91274021490a7d587099ef4844aa67a",
+      "in_latest_zip": true
+    },
+    {
+      "filename": "verify_experiment_results.py",
+      "bytes": 1670,
+      "sha256": "77b1171ea367ca01141daaa032dd85391ef76999a4bb6a11206b51b85d5cae43",
+      "in_latest_zip": true
+    }
+  ],
+  "original_empirical_inputs": [
+    {
+      "filename": "SINTEF_Barug2025_sensordata_original_MD5verified_2026-11-03.csv",
+      "size_bytes": 873041,
+      "SHA256": "6aa7384867aace7b697b9e17778decbbdbde280db1fd7983faee08c259b19e51",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "Session_data.xlsx",
+      "size_bytes": 204514,
+      "SHA256": "b886943bf86520f24f5a53870886c4c43709d265cbebdd65e1345321e22cc192",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "Measurement_data.xlsx",
+      "size_bytes": 23558382,
+      "SHA256": "a0a489e2897ec79235ed914376ab7751ab21c68418543234a60042eaee73a89c",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "KU_Leuven_C5PT0R_Measured_EV_Charging_Efficiency_UserOriginal_2026-11-03.zip",
+      "size_bytes": 2082895,
+      "SHA256": "8d52252aff2ec78f9967c96f728dbc5df55948a6ab15fdd1565318236e0d0aa9",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "STREAM_Slovenia_control_measurements_P_2025_original_MD5verified.csv",
+      "size_bytes": 3505062,
+      "SHA256": "8278db817c018cfbfeadb08f980309d70187f07b4c8de4686f8fe1a98c141027",
+      "source": "Authenticated Drive-backed original mounted files"
+    },
+    {
+      "filename": "STREAM_Slovenia_control_measurements_Q_2025_original_MD5verified.csv",
+      "size_bytes": 3978067,
+      "SHA256": "78329c2b4a88b25a752391ccad0834ff23a195ebb0131d9990cac4966c07512e",
+      "source": "Authenticated Drive-backed original mounted files"
+    }
+  ],
+  "latest_results_file": {
+    "filename": "RESULTS.json",
+    "sha256": "997f6a613f858fcdf05cebef0c90acd97b3c2c078064b88c0582c34b6c70b50b"
+  },
+  "environment": "Python; dependencies in latest package; absolute paths in scripts require local adaptation",
+  "limitations": [
+    "No synchronized same-site transformer and EVSE thermal causality established",
+    "No qualified actual transformer remaining insulation lifetime",
+    "No extreme ambient temperature >= 30 C in SINTEF field data",
+    "EPFL 44.01% modeled reduction uses hypothetical front-load comparator, not observed operation",
+    "Peak-temp EV optimization blocked by unverified source-to-site electrical and thermal mapping",
+    "Parameter estimates are effective and potentially regime-sensitive",
+    "Thermal aging laws, reactive-power losses and harmonics require exact applicable evidence",
+    "Author must rerun/review assistant-executed results before personal claims"
+  ]
+}
