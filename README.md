@@ -1,6 +1,7 @@
 # Engineering of Power–Electrified Transportation Interdependencies for Resilience
 
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
+**Scientific keyword reference:** [313 terms and 34 mathematical formula entries](key-words/README.md)  
 **AI research entry point:** [`AI_RESEARCH_INSTRUCTIONS.md`](AI_RESEARCH_INSTRUCTIONS.md)  
 **Canonical title authority:** [`project/CANONICAL_THESIS_TITLE_V3.md`](project/CANONICAL_THESIS_TITLE_V3.md)  
 **Current-scope authority:** [`project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
