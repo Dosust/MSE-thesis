@@ -519,3 +519,10 @@ The existing [Dossiya writing skill](.github/skills/dossiya-writing/SKILL.md) is
 [Run the new KIT 110/20/400 V electrical-response analysis](tools/kit_oltc_electrical_response_analysis.py) · [Scientific analysis protocol](data/field_candidates/2026-11-05/KIT_OLTC_ELECTRICAL_RESPONSE_ANALYSIS_PROTOCOL_V1.md). The program has passed syntax and synthetic-function tests, but measured voltage and EV-power results remain **pending execution against the original Mac files**.
 
 **Evidence status:** All three KIT original Parquet files were downloaded and checksum-verified on the user's Mac, **not uploaded to GitHub**. The user's complete **129,600,000-row timestamp-grid check PASSED with zero mismatches** across the three files. Physical topology, independent sensor-clock accuracy, site provenance, signal QA, and thermal interdependency validation remain **OPEN**. No new thermal coupled-field claim or frozen research objective follows from this acquisition.
+
+
+---
+
+## Advisor updates: short evidence-first reports (2026-11-12)
+
+For all future co-chair/thesis research updates, apply the [Advisor Research Briefing Policy V1](project/communication/ADVISOR_RESEARCH_BRIEFING_POLICY_V1.md) before preparing slides or emails. The [12 November 2026 six-slide Professor Phelan briefing](reports/advisor_2026_11_12/PROFESSOR_PHELAN_SIX_SLIDE_BRIEF_V1.md) is the first example. This rule concerns communications only, and changes no frozen science authority or validation status.
