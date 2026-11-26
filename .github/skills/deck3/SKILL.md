@@ -7,6 +7,11 @@ metadata:
   short_name: "Deck3"
 ---
 
+## Official 2026 ASU → Native Google Slides source routing (2026-10-13)
+
+For **ASU MSE thesis presentations**, first read `references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md`. The user supplied the **actual official 2026 ASU template PPTX**, which has been imported to an authorized native Google Slides workspace. **Use its real ASU master/layouts directly**; do not approximate the logo/theme from memory. The editable ten-slide thesis working deck and its variant-specific content are linked in that source reference. Preserve ASU caption-safe area, live-screen readability, scientific evidence gates, source citations, and editable native text/geometry. The 10-slide variant does **not** supersede the distinct 8-slide/3-minute, 13-slide or 14-slide variants; route by the user-named variant. Do not publicly redistribute the restricted ASU template binary or assume Google Slides/PPTX are pixel-identical.
+
+
 ## User-directed Canva-ready individual illustrative infographics (2026-10-13)
 **MANDATORY for every "illustrative image", "illustrative infographic", or equivalent request:** Read `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` before any figure search, generation, asset delivery, or Canva/PowerPoint insertion. These terms mean **standalone scientific illustration assets**, NOT complete-slide screenshots. If the user requests N images, make N distinct actual files—never substitute one contact-sheet collage. Derive each from its own slide's approved main message and three actual bullets; research current online visual references per slide, inspect source rights, make original independently composed designs unless reuse rights are verified, and preserve physics/equations/claims and ASU/Deck3 layout. Use white surfaces, canonical 13 authored colors and authentic object colors. Keep citations and precise mathematics in editable slide objects, perform independent per-image QA, and never call an untested figure final. This changes no frozen thesis science or deck text.
 

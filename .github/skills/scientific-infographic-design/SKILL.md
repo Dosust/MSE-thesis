@@ -6,6 +6,11 @@ metadata:
   version: "2.3.0"
 ---
 
+## Official 2026 ASU template and Google Slides insertion route — 2026-10-13
+
+For visuals prepared for an **ASU MSE thesis Google Slides presentation**, read `.github/skills/deck3/references/ASU_2026_OFFICIAL_GOOGLE_SLIDES_PRESENTATION_SOURCE_V1.md` and retain that official template's slide aspect, placement constraints and live-caption-safe area. Create a separate figure/source-provenance record and use native editable text, scientific connectors, and citations outside the art where possible. Integrate figures inside the actual official-master Google Slides deck; **do not** convert a standalone figure into a whole-slide background or invent a brand substitute. The ten-slide ASU variant content is `thesis/presentations/deck3/ASU_2026_MSE_THESIS_TEN_SLIDE_CONTENT_V1.md`. Figure evidence rules and real-photo rights requirements remain independent release gates.
+
+
 ## User-directed independently authored illustrative-image semantics — 2026-10-13
 For every user request for "illustrative image", "illustrative infographic", or Canva-ready infographic, apply `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` together with current science, media routing, arrow and evidence standards. An illustrative infographic is an **insertable visual**, not a complete slide. N images means N distinct researched, illustrated, verified and separately exported files, not a stitched contact sheet or repeated generic montage. Design each from the authorized slide main message and actual three bullets; inspect relevant online visual examples and their rights before selecting equipment/scene grammar; preserve authentic object colors and ASU/Deck3 white-interior, typography and color requirements. Never present guessed component topology, results, equations, rights, or editable-Canva status as verified.
 
