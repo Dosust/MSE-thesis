@@ -3,6 +3,12 @@
 **Effective date:** 2026-10-08  
 **Purpose:** single current entry point for humans and AI systems.
 
+## Formal objective wording amendment — 2026-10-12
+
+**Researcher-approved amendment V2:** `project/CANONICAL_TEMPERATURE_MEDIATED_ELECTRICAL_THERMAL_RESEARCH_OBJECTIVES_V2.md`. The exact updated GO and SO1–SO3 focus on **temperature-mediated electrical–thermal interdependencies** while preserving the previously frozen **thermal-only scientific scope**, extreme-heat external forcing, state–time emphasis and service resilience definition. The user explicitly requested “temperature-mediated” in GO/SO1/SO2 and removal of “required” only as an adjective in SO3; **required electricity and mobility services remain inside the canonical resilience definition**.
+
+**Integration rule:** This section designates V2 as the current objective authority **only after this branch has merged into `main` under applicable repository protections**. Until integration, V1 remains the current main-branch objective file. V1 remains preserved as historical, not rewritten. The title V2, scope, system boundary, conceptual V5, mathematical V3, eight components and independently governed I1–I7 interface decisions are unchanged; the separate pricing I7 pull request is not implied to have merged.
+
 ## AI / agent entry point
 
 Any AI or autonomous agent working on the active thesis should first load:
@@ -40,7 +46,7 @@ The prior V2 official title used **Power–Electrified Transportation**, governe
 7. `project/CANONICAL_RESILIENCE_DEFINITION_V1.md`
 8. `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md`
 9. `project/CANONICAL_EFFECTIVENESS_ENERGY_EFFICIENCY_PLACEMENT_V1.md`
-10. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md`
+10. `project/CANONICAL_TEMPERATURE_MEDIATED_ELECTRICAL_THERMAL_RESEARCH_OBJECTIVES_V2.md` **(current once merged; predecessor V1 retained)**
 11. `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md`
 12. `project/CONCEPTUAL_FRAMEWORK_SPEC_V5_THERMAL_SUSTAINABILITY.md`
 13. `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md`
@@ -78,7 +84,7 @@ The prior V2 official title used **Power–Electrified Transportation**, governe
 | exact intervention set | **OPEN — optional/supporting, thermal only** |
 | exact sustainability indicators / functional unit / accounting boundary / time horizon | **OPEN** |
 | exact SDG targets | **OPEN — only after indicator definition and measurement** |
-| general + specific objectives | **FROZEN — 3-objective thermal contract** |
+| general + specific objectives | **FROZEN AMENDED V2 — 3-objective temperature-mediated electrical–thermal wording; unchanged thermal-only scope (effective on merge)** |
 | final narrowed RQ wording | **OPEN — must remain thermal/state-time only** |
 | hypotheses | **OPEN — must remain thermal/state-time only** |
 | final novelty claim | **OPEN** |
@@ -149,7 +155,7 @@ These files are **working evidence/control records**, not canonical thesis model
 - `project/MATHEMATICAL_FRAMEWORK_SPEC_V3_THERMAL_SUSTAINABILITY.md` — current thermal/resilience/two-pathway sustainability mathematical framework.
 - `project/CANONICAL_RESILIENCE_DEFINITION_V1.md` — frozen service-level state-time definition of resilience.
 - `project/CANONICAL_SUSTAINABILITY_TWO_PATHWAY_ASSESSMENT_V1.md` — frozen two-pathway sustainability assessment authority.
-- `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` — frozen general objective + SO1–SO3.
+- `project/CANONICAL_TEMPERATURE_MEDIATED_ELECTRICAL_THERMAL_RESEARCH_OBJECTIVES_V2.md` — researcher-approved amended general objective + SO1–SO3 (current upon merge); earlier V1 preserved as historical.
 - `project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1_1_SUSTAINABILITY_ALIGNMENT.md` — sustainability alignment without creating SO4.
 - Older seven-stage, V4 RQ/SO/H, broad P–T–I–O, broad sustainability-optimization, and decision packages are historical/provenance where they conflict with the current bounded scope.
 
