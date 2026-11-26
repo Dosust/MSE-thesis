@@ -1,0 +1,54 @@
+name: Thermal CSV evidence-readiness and software verification
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/thermal_csv_research.py'
+      - 'tests/test_thermal_csv_research.py'
+      - 'research_data/thermal_inputs/**'
+      - '.github/workflows/thermal-csv-evidence-readiness.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/thermal_csv_research.py'
+      - 'research_data/thermal_inputs/**'
+      - '.github/workflows/thermal-csv-evidence-readiness.yml'
+  schedule:
+    - cron: '15 3 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: thermal-csv-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  evidence-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression tests (synthetic fixtures only)
+        run: python -m unittest discover -s tests -p 'test_thermal_csv_research.py' -v
+      - name: Verify existing thermal governance
+        run: |
+          python scripts/check_thermal_governance.py
+          python -m unittest discover -s tests -p 'test_thermal_research_agent.py' -v
+      - name: Audit available CSVs; never fabricate missing data
+        run: |
+          python scripts/thermal_csv_research.py \
+            --repo . \
+            --input-dir research_data/thermal_inputs \
+            --output-dir research_outputs/thermal_csv \
+            --strict-input
+      - name: Upload readiness reports and blank templates (not private raw inputs)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: thermal-csv-evidence-readiness
+          path: research_outputs/thermal_csv/
+          if-no-files-found: warn
+          retention-days: 30
