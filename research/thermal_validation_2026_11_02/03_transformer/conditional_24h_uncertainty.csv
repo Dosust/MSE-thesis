@@ -1,0 +1,4 @@
+state,nominal_coverage,calibration_windows,evaluation_windows,halfwidth_C,evaluation_coverage,limitation
+Hot-spot HV [degC],0.9,1253,1252,5.094771292968938,0.9848242811501597,"Overlapping 24h windows; descriptive only, not independent conformal coverage"
+Hot-spot LV [degC],0.9,1253,1252,4.865297263640474,0.9800319488817891,"Overlapping 24h windows; descriptive only, not independent conformal coverage"
+Top oil [degC],0.9,1253,1252,1.5356524208459283,0.9225239616613419,"Overlapping 24h windows; descriptive only, not independent conformal coverage"

@@ -1,0 +1,7 @@
+{
+  "dc_sessions": 25,
+  "complete_rows_total": 43174,
+  "median_pack_sensor_spread_C": 9.0,
+  "sessions_with_multiple_contiguous_episodes": 2,
+  "note": "Descriptive exploratory associations are not proof of cooling, causation, sensor identity or battery physical parameters."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PRELIMINARY measured-data grey-box candidate; NO equipment/IEC/heat-coupled model admission",
+  "input": "Barug2025_sensordata.csv",
+  "md5": "5d81840a2f901f04fded98c3e1097b6e",
+  "measurement_rows_after_complete_case": 8589,
+  "train_rows": 6012,
+  "holdout_rows": 2577,
+  "chronological_holdout_start": "2024-09-13 14:00:00+00:00",
+  "train_contiguous_episodes": 4,
+  "holdout_contiguous_episodes": 3,
+  "I_reference_A_observed_median_not_nameplate": 22.25875,
+  "V_reference_kV_observed_median_not_nameplate": 17.6625,
+  "estimated_effective_parameters": {
+    "top_oil": {
+      "Delta_no_load_C": 12.73496477283417,
+      "Delta_current_C": 0.6441916352141456,
+      "tau_o_h": 8.579490001909067
+    },
+    "Hot-spot HV [degC]": {
+      "Delta_hot_C": 0.2549177503465219,
+      "tau_hot_h": 0.10000000211656158
+    },
+    "Hot-spot LV [degC]": {
+      "Delta_hot_C": 0.8045767071459116,
+      "tau_hot_h": 0.10000000000154363
+    }
+  },
+  "limitations": [
+    "Semi-empirical grey-box, not verified implementation of an industry standard",
+    "Model uses measured initial state at each observed episode only",
+    "No interpolation across data gaps; complete-case rows can form new gaps",
+    "Hot-spot time constants below hourly sampling resolution may be poorly identifiable",
+    "Only Norwegian installation; cannot extrapolate to unobserved extreme heat or different rating",
+    "Transformer nameplate losses, cooling stages, loading topology, power factor not supplied",
+    "Full multi-parameter uncertainty/identifiability and external equipment tests still required"
+  ]
+}

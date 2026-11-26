@@ -1,0 +1,137 @@
+{
+  "BEV1_AC": {
+    "thermal": {
+      "parameters_scaled": [
+        5.988923070438468,
+        0.19116142064773772
+      ],
+      "success": true,
+      "fit_cost": 0.12596835589615463,
+      "parameter_lower_bound": [
+        0,
+        0
+      ],
+      "parameter_upper_bound": [
+        200,
+        100
+      ],
+      "alpha_C_per_s_per_A2": 5.988923070438468e-07,
+      "beta_per_s": 1.9116142064773775e-05,
+      "q0_C_per_s": null,
+      "hit_boundary": false
+    },
+    "netheat": {
+      "parameters_scaled": [
+        7.534995479482897,
+        0.019785245913236243,
+        -0.14930999443709592
+      ],
+      "success": true,
+      "fit_cost": 0.10786290556358762,
+      "parameter_lower_bound": [
+        0,
+        0,
+        -1
+      ],
+      "parameter_upper_bound": [
+        200,
+        100,
+        1
+      ],
+      "alpha_C_per_s_per_A2": 7.534995479482897e-07,
+      "beta_per_s": 1.9785245913236243e-06,
+      "q0_C_per_s": -0.00014930999443709593,
+      "hit_boundary": false
+    }
+  },
+  "BEV2_AC": {
+    "thermal": {
+      "parameters_scaled": [
+        8.66024419921342,
+        1.0321475985097144
+      ],
+      "success": true,
+      "fit_cost": 6.917549371557447,
+      "parameter_lower_bound": [
+        0,
+        0
+      ],
+      "parameter_upper_bound": [
+        200,
+        100
+      ],
+      "alpha_C_per_s_per_A2": 8.660244199213419e-07,
+      "beta_per_s": 0.00010321475985097144,
+      "q0_C_per_s": null,
+      "hit_boundary": false
+    },
+    "netheat": {
+      "parameters_scaled": [
+        2.325773018912496,
+        1.7072235156869,
+        0.9259679934434702
+      ],
+      "success": true,
+      "fit_cost": 6.090099397978969,
+      "parameter_lower_bound": [
+        0,
+        0,
+        -1
+      ],
+      "parameter_upper_bound": [
+        200,
+        100,
+        1
+      ],
+      "alpha_C_per_s_per_A2": 2.325773018912496e-07,
+      "beta_per_s": 0.00017072235156869,
+      "q0_C_per_s": 0.0009259679934434703,
+      "hit_boundary": false
+    }
+  },
+  "BEV2_DC": {
+    "thermal": {
+      "parameters_scaled": [
+        2.578980947771544,
+        1.9740982197152364
+      ],
+      "success": true,
+      "fit_cost": 150.57517593781697,
+      "parameter_lower_bound": [
+        0,
+        0
+      ],
+      "parameter_upper_bound": [
+        200,
+        100
+      ],
+      "alpha_C_per_s_per_A2": 2.578980947771544e-07,
+      "beta_per_s": 0.00019740982197152365,
+      "q0_C_per_s": null,
+      "hit_boundary": false
+    },
+    "netheat": {
+      "parameters_scaled": [
+        2.552195479946371,
+        2.2043365680397096,
+        0.9999999999999384
+      ],
+      "success": true,
+      "fit_cost": 144.20810416546723,
+      "parameter_lower_bound": [
+        0,
+        0,
+        -1
+      ],
+      "parameter_upper_bound": [
+        200,
+        100,
+        1
+      ],
+      "alpha_C_per_s_per_A2": 2.552195479946371e-07,
+      "beta_per_s": 0.00022043365680397096,
+      "q0_C_per_s": 0.0009999999999999384,
+      "hit_boundary": false
+    }
+  }
+}

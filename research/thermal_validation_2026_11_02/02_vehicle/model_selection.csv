@@ -1,0 +1,4 @@
+vehicle,mode,selected,validation_mae_C,best_baseline,baseline_validation_mae_C,netheat_validation_mae_C,temperature_threshold_not_established
+BEV1,AC,thermal,0.19270844586268338,persistence,0.202744708994709,0.15390236643565633,True
+BEV2,AC,thermal,0.5226699485096737,persistence,0.6160650623885918,0.46902899876128323,True
+BEV2,DC,thermal,3.8143224231220834,persistence,6.16934046345811,3.7239424005918558,True

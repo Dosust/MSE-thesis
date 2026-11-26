@@ -1,0 +1,13 @@
+{
+  "P_to_Te": {
+    "mechanism": "transformer thermal capability -> charger available AC input -> charging service",
+    "required": "verified transformer rating, thermal operating limits, feeder-to-EVSE connection, synchronized logs",
+    "status": "BLOCKED"
+  },
+  "Te_to_P": {
+    "mechanism": "charging + EVSE cooling power -> transformer loading -> transformer thermal state",
+    "required": "metered grid-side AC input and auxiliary, EVSE thermal control, common node and synchronized timestamps",
+    "status": "BLOCKED"
+  },
+  "warning": "Separate installations cannot be concatenated and represented as observed causal coupling"
+}

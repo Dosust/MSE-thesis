@@ -1,0 +1,9 @@
+work_package,decision,evidence_and_reason
+01_Raw_Data_Provenance_and_QA,PROVISIONAL,SINTEF sensor and calculated CSV publisher MD5 match; BEV charging CSV SHA256 registered. Full equipment signal dictionary and all published hashes not verified.
+02_KU_Leuven_Vehicle_Thermal_Validation,BLOCKED,AC test intervals under-cover and independent session-weight improvements inconsistent; DC model large errors; BEV1 DC insufficient sessions. Physical pack-state identification unresolved.
+03_SINTEF_Transformer_Thermal_Validation,PROVISIONAL,Top-oil 24h holdout RMSE 1.008 vs persistence 2.002 C. Hotspot HV 3.377 vs 1.710; LV 3.219 vs 1.755. Norway operating range not extreme-heat transfer verified.
+04_EPFL_Electrical_Interface_Validation,PROVISIONAL,"Measurement rows=61816, original reported 64277, discrepancy=2461; session records matched 1878/1878 after time-verified CCS2 ID offset; observed concurrent sums above stated shared capacity 111 times. AC/DC metering boundary unknown."
+05_EVSE_Thermal_Law_Evidence,BLOCKED,"No current Drive original internal EVSE rectifier/heatsink temperatures, cooling states or source-equipment thermal ratings. Qatar author dataset request-only; do not transplant charger limits."
+06_Directional_Coupling_Qualification,BLOCKED,"SINTEF Norway, KU Leuven vehicles, EPFL Switzerland and Turkish network not demonstrated to share physical connection. No same-site synchronized thermal interdependency."
+07_Coupled_Model_VVUQ,BLOCKED,Existing synthetic model tests numerical structure only. Component thermal/EVSE law gates fail; do not issue thesis-qualified coupled output.
+08_Service_Resilience_Sustainability_Results,BLOCKED,"EPFL sessions support conditional charging-service metrics; mobility readiness and grid-service requirements, field propagation and sustainability inventory not established."
