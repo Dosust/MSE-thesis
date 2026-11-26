@@ -6,6 +6,10 @@ metadata:
   version: "2.3.0"
 ---
 
+## Deck3 evidence-led illustration family selection — 2026-10-13
+Before any Deck3 infographic, read `../deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and `../deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md`. Different slide questions require DIFFERENT professionally established representation grammars: original equipment-only image for recognition; electrical one-line for connectivity; typed SoS diagram for systems/boundaries; heat balance for thermal states; editable native evidence/gap/method/timeline; actual-data Matplotlib for results. IEC 60617, OMG SysML v2, INCOSE, EPRI OpenDSS, IEEE and Nature are source/notation/design references, not automatic proof of specific equipment, normative compliance, source rights, or measured case results. Record inspected example URL/access depth/design adaptation/rights for each image. User's exactly ten-slide progress route is independent of the older 8/13/14 variants; no whole-slide AI screenshots or unapproved ten-image mosaics. Native editable labels/citations/equations, 13 authored sRGB colors and source-qualified physical arrow semantics remain mandatory.
+
+
 ## User-directed independently authored illustrative-image semantics — 2026-10-13
 For every user request for "illustrative image", "illustrative infographic", or Canva-ready infographic, apply `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` together with current science, media routing, arrow and evidence standards. An illustrative infographic is an **insertable visual**, not a complete slide. N images means N distinct researched, illustrated, verified and separately exported files, not a stitched contact sheet or repeated generic montage. Design each from the authorized slide main message and actual three bullets; inspect relevant online visual examples and their rights before selecting equipment/scene grammar; preserve authentic object colors and ASU/Deck3 white-interior, typography and color requirements. Never present guessed component topology, results, equations, rights, or editable-Canva status as verified.
 

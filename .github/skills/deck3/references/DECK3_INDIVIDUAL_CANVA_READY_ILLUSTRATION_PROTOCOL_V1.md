@@ -1,3 +1,6 @@
+## First choose scientifically justified medium — 2026-10-13
+Read `DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and `DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` before prompting image generation. A slide's insertable “illustrative image” may be original vector equipment, IEEE-style electrical one-line, typed SoS schematic, mathematical plot from admitted data, or native editable engineering diagram—not automatically AI-generated equipment art. IEC 60617 symbol conformity and formal SysML v2 conformity require verified normative fidelity; **IEC-inspired** and **SysML-informed conceptual** are safer labels unless proved. Compare recognized professional examples with access depth, intellectual-property status and applicable data/model boundaries. Reject stock repeated infrastructure, fabricated circuits, overhead-line substitutions for TU Wien 20Cable, unsourced model curves, heat-wave symbols used as causal evidence, and unverified bidirectional arrows. In `mse_progress_10_2026_10_13`, keep Outline 2 and Thank You 10 text/native first; no invented ten-image demand or collage. Separate editable slide text, citations, arrows, equations and actual plotted points from the equipment image layer. Renderer success ≠ human QA.
+
 # Deck3 Individual Canva-Ready Illustrative Infographic Protocol V1
 
 **Effective:** 2026-10-13

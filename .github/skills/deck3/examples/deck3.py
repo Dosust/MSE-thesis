@@ -49,21 +49,63 @@ class Blocked(ValueError):
     """Required scientific or content input is absent; do not invent substitute."""
 
 
+# Explicitly user-approved 10-slide MSE progress variant. Other variants stay unchanged.
+TEN_PROGRESS_VARIANT = "mse_progress_10_2026_10_13"
+TEN_PROGRESS_SLIDE_TITLES = (
+    None, "Outline", "Research Background",
+    "Research Problem, Gap & Objectives", "Physical System Architecture",
+    "Research Methodology", "Work Completed", "Preliminary Results",
+    "Remaining Work & Research Plan", "Thank You",
+)
+TEN_PROGRESS_KINDS = (
+    "title", "outline", "content", "content", "content",
+    "content", "content", "content", "content", "thanks",
+)
+
+
+def validate_ten_slide_route(data):
+    """Routing/structure only, not approval of scientific content or final slides."""
+    slides = data.get("slides", [])
+    if len(slides) != 10:
+        raise Blocked("Explicit 10-slide progress variant requires exactly ten slides including Outline and Thank You.")
+    if not data.get("source_record"):
+        raise Blocked("10-slide progress variant requires an identifiable approved source_record; summary copy is insufficient.")
+    for index, (row, expected_title, expected_kind) in enumerate(zip(slides, TEN_PROGRESS_SLIDE_TITLES, TEN_PROGRESS_KINDS), 1):
+        if row.get("kind") != expected_kind:
+            raise Blocked(f"10-slide variant: slide {index} must be kind {expected_kind!r}.")
+        if index == 1:
+            if not isinstance(row.get("title"), str) or row["title"].strip() in {"", "Title"}:
+                raise Blocked("Title slide requires the actual frozen thesis title, not a generic placeholder.")
+        elif row.get("title") != expected_title:
+            raise Blocked(f"10-slide variant: slide {index} must be titled {expected_title!r}.")
+        if row.get("figure") and index in {2, 10}:
+            raise Blocked("Do not force a raster figure into Outline or Thank You; use independent native content.")
+    return True
+
+
 def load_manifest(path):
     path = Path(path)
     data = json.loads(path.read_text(encoding="utf-8"))
     slides = data.get("slides", [])
     if not slides:
         raise Blocked("Manifest must contain a nonempty ordered 'slides' array.")
+    variant_10 = data.get("deck_variant") == TEN_PROGRESS_VARIANT
+    if variant_10:
+        validate_ten_slide_route(data)
     filenames = set()
     for n, row in enumerate(slides, 1):
         kind = row.get("kind")
-        if kind not in {"title", "outline", "content", "references"}:
+        if kind == "thanks" and not variant_10:
+            raise Blocked("thanks kind is reserved for the explicitly approved 10-slide variant.")
+        if kind not in {"title", "outline", "content", "references", "thanks"}:
             raise Blocked(f"Slide {n}: unexpected kind {kind!r}.")
         if not isinstance(row.get("title"), str) or not row["title"].strip():
             raise Blocked(f"Slide {n}: missing title.")
         if kind in {"content", "outline"}:
-            if not row.get("message") or len(row.get("bullets", [])) != 3:
+            if variant_10 and kind == "outline":
+                if not row.get("message") or not 1 <= len(row.get("bullets", [])) <= 9:
+                    raise Blocked("10-slide Outline requires approved message and 1–9 real outline topics.")
+            elif not row.get("message") or len(row.get("bullets", [])) != 3:
                 raise Blocked(f"Slide {n}: exactly one message and three points required.")
             if kind == "content" and not row.get("source_note"):
                 raise Blocked(f"Slide {n}: source_note (citation / canonical attribution) required.")
@@ -155,6 +197,20 @@ def make_text(manifest_path, output_path):
             put(slide, .80, .58, 11.7, .43, data.get("institution", "SCIENTIFIC PRESENTATION"), 16, BLUE, True)
             put(slide, .80, 1.55, 11.8, 2.4, row["title"], 35, NAVY, True)
             put(slide, .80, 4.65, 11.7, 1.0, row.get("subtitle", ""), 23, INK)
+        elif kind == "outline" and data.get("deck_variant") == TEN_PROGRESS_VARIANT:
+            put(slide, .70, .40, 11.9, .62, row["title"], 31, NAVY, True)
+            put(slide, .78, 1.27, 11.73, .65, row["message"], 21, INK)
+            topics = row["bullets"]
+            step = min(.84, 4.70 / max(1, len(topics)))
+            for j, topic in enumerate(topics, 1):
+                y = 2.03 + (j - 1) * step
+                put(slide, .88, y, .46, .37, f"{j:02}", 15, BLUE, True)
+                put(slide, 1.50, y - .02, 10.9, max(.43, step - .06),
+                    topic, 21 if len(topics) <= 5 else 17, INK)
+        elif kind == "thanks":
+            put(slide, 1.0, 2.52, 11.3, 1.05, row["title"], 42, NAVY, True)
+            if row.get("subtitle"):
+                put(slide, 1.0, 4.05, 11.3, 0.80, row["subtitle"], 24, INK)
         elif kind == "references":
             put(slide, .75, .45, 11.8, .65, row["title"], 31, NAVY, True)
             entries = row["entries"]

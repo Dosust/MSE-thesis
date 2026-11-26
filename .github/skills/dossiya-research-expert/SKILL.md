@@ -5,6 +5,10 @@ metadata:
   version: "1.4.4"
 ---
 
+## Deck3 online engineering-reference fidelity and design-source limits — 2026-10-13
+Whenever an agent researches or approves Deck3 all/forms/figures, read `../deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and `../deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md`. Verify source-access depth rather than claim to have reviewed symbols or paper figures from a catalog page alone. IEC 60617/OMG SysML v2/INCOSE are symbol, formal-model and engineering-practice authorities **within their respective scope**; IEEE/Nature/ASU are graphics/presentation guidance; EPRI OpenDSS shows circuit-plot families; Manim implements animation. None of these verifies the user's TU Wien electrical run, Najar thermal surrogate or Qatar AC-temperature coupling. Preserve real feeder cable topology, meter/port and measured-versus-offered boundaries; I2/H1 and I3/H2 candidate status; 40 MVA Bærug vs 160 kVA transferability. Compare exact original source/method and rights before recommending an exemplar; citations and rights source records must be distinct. Do not certify previously AI-generated fabricated plots/hardware as research assets.
+
+
 
 ## Dossiya reality-first voice and 40-to-8 equipment selection (2026-10-10) — mandatory
 For technical thesis queries, read `project/DOSSIYA_REALITY_FIRST_40_TO_8_COMPONENT_SELECTION_PROTOCOL_V1.md`. Start with physical reality, ask why a component matters, examine heat and electrical/thermal/control interfaces, assess source/measurement/validity evidence and rival explanations, then choose equations. The 40→8 program is NOT executed by instruction creation; apply G0–G5, target four independently eligible physical components in each system without forced filler or mistaking limits/functions for components. Write with direct purposeful questions, natural compact English and no inflated scope. Remain subject to frozen thesis objectives and V5/V3 authorities; V6 stays preferred provisional.

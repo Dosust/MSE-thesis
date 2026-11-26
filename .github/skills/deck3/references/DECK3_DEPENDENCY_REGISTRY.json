@@ -1,10 +1,12 @@
 {
-  "schema": "deck3-ecosystem-registry-v1.8.3",
+  "schema": "deck3-ecosystem-registry-v1.8.4",
   "update_trigger": [
     "update Deck3",
     "make update of Deck3",
     "upgrade Deck3",
-    "Deck3 skills update"
+    "Deck3 skills update",
+    "Deck3 all",
+    "put information into Deck3 all"
   ],
   "contract_path": ".github/skills/deck3/references/DECK3_GLOBAL_UPDATE_CONTRACT_V1.md",
   "palette_path": ".github/skills/deck3/references/DECK3_SRGB_PALETTE.json",
@@ -19,6 +21,17 @@
     "thesis/00_governance/THESIS_CITATION_AND_REFERENCE_STANDARD_V1.md"
   ],
   "routes": [
+    {
+      "category": "professional_visual_reference",
+      "paths": [
+        ".github/skills/deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md",
+        ".github/skills/deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md",
+        ".github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md",
+        ".github/skills/deck3/references/DECK3_VISUAL_REFERENCE_RETRIEVAL_PROTOCOL_V1.md",
+        ".github/skills/deck3/tests/test_professional_engineering_ten_slide_route.py"
+      ],
+      "scope": "Online-reviewed source-example/rights depth, IEC-informed actual electrical topology, SysML-informed typed SoS views, mathematical/thermal/data plots, reproducible figure layers and separate 10-slide progress source route; no retroactive AI-asset approval"
+    },
     {
       "category": "core_dispatch",
       "paths": [
@@ -110,13 +123,15 @@
     "C_colors",
     "F_figures",
     "A_assembly_animation",
-    "Q_render"
+    "Q_render",
+    "E_professional_reference_rights_and_diagram_family"
   ],
   "updates_must_review_all_routes": true,
   "never_assume_memory_updated": true,
   "tests": [
     "python -m unittest discover -s .github/skills/deck3/tests -v",
-    "python -m unittest discover -s .github/skills/deck3/advanced_powerpoint/tests -v"
+    "python -m unittest discover -s .github/skills/deck3/advanced_powerpoint/tests -v",
+    "python -m unittest discover -s .github/skills/deck3/tests -p 'test_professional_engineering_ten_slide_route.py' -v"
   ],
   "final_certification_requires_manual_render_science_review": true,
   "mechanism_authority": ".github/skills/deck3/references/DECK3_MECHANISM_TRACEABILITY_STANDARD_V1.md",
@@ -175,5 +190,33 @@
   "all_forms_execution_audit": ".github/skills/deck3/references/DECK3_ALL_FORMS_EXECUTION_AUDIT_2026-10-09.md",
   "learning_status": "SKILL_AND_POLICY_CONNECTED_TEST_EXECUTION_NOT_CONFIRMED",
   "native_hybrid_assembly_status": "TRACKED_OPEN_ISSUE_62",
-  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65"
+  "physical_model_evidence_status": "TRACKED_OPEN_ISSUE_65",
+  "professional_visual_reference_authority": ".github/skills/deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md",
+  "presentation_variant_router": ".github/skills/deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md",
+  "user_approved_mse_progress_2026_10_13": {
+    "id": "mse_progress_10_2026_10_13",
+    "slide_count": 10,
+    "outline_slide": 2,
+    "thank_you_slide": 10,
+    "stage1_requires_verbatim_source": true,
+    "older_8_13_14_variants_unchanged": true,
+    "preexisting_assets_retroactive_approval": false
+  },
+  "professional_source_review": {
+    "authorities": [
+      "IEC 60617",
+      "OMG SysML 2.0",
+      "INCOSE Systems Engineering Handbook",
+      "EPRI OpenDSS",
+      "IEEE Graphics Author Center",
+      "Nature Research Figure Guide",
+      "ASU Presentation Guide",
+      "Manim Community"
+    ],
+    "per_figure_actual_source_inspection": true,
+    "access_depth_and_rights_record_required": true,
+    "standards_compliance_not_inferred": true,
+    "journal_plot_rules_do_not_override_asu_projection": true
+  },
+  "workflow_integration_note": "New structural ten-slide manifest gate is integrated in examples/deck3.py; this does not generate missing approved copy or certify science, visual references, animations or 75-percent actual slide coverage."
 }

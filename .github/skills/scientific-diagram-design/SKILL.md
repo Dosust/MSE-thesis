@@ -4,6 +4,10 @@ description: Design, generate, audit, and improve rigorous resource-grounded sci
 license: MIT
 ---
 
+## Deck3 professional electrical and SoS notation — 2026-10-13
+For Deck3 diagrams read `../deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` and `../deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` BEFORE choosing a diagram type. Select IEC-60617-informed electrical one-lines for actual feeder topology/AC ports (verify individual licensed standard symbols before claiming compliance), OMG-SysML-v2-informed part/port/connectors for SoS membership (label `CONCEPTUAL` unless normative conformance checked), explicit thermal control volumes for heat mechanisms, and research-process graphs only for evidence/workflows. Do not substitute imagined overhead poles for the TU Wien 20Cable feeder, or draw an unregistered temperature-mediated I2/I3 influence as established. A professional graphic requires source/rights/access depth, evidence/status and readable mathematically correct native port/arrow layers. A prior AI illustration, even visually polished, remains PROVISIONAL until all applicable checks are genuinely executed.
+
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 

@@ -1,3 +1,6 @@
+## Professional reference and explicit variant dependency — 2026-10-13
+Implement the common `DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and `DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` authority at Deck3 text/figure/assemble/QA routing, scientific-diagram and research-expert validation, vector/native-PPTX figure paths, matplotlib/Manim data-derived renderers, source-rights/access records, and stage-specific tests. IEEE/Nature journal graphics rules are *not automatically PPTX font or dpi rules*. Catalog-only IEC symbols are not inspected normative symbols; SysML-informed conceptual diagrams are not proven SysML compliant. The 10-slide MSE progress variant and older 8-,13-,14-slide masters remain separate and must be chosen explicitly. Audit impacted routes and record tests not actually run as NOT_RUN.
+
 # Deck3 Global Update Technical Annex V1 — All-Skill, All-Stage Change Control
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)

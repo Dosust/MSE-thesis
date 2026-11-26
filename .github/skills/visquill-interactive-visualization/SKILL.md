@@ -5,6 +5,10 @@ metadata:
   version: "1.0.0"
 ---
 
+## Deck3 professional-reference selective interaction — 2026-10-13
+Read `../deck3/references/DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md` and `../deck3/references/DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` for Deck3 interactive visuals. A defined port or a measured/model-derived trajectory may be interactive only when inquiry into actual state or uncertainty warrants it. IEEE-quality static charts, IEC-inspired electrical single-lines and typed SysML-informed SoS diagrams remain preferred for ordinary slides; do not add controls or dynamic heat particles for decoration. Maintain authentic original geometry, evidence status, precise units, reduced-motion/static fallback and no fabricated simulation/validation. For 10-slide progress, avoid external interactive-only elements that cannot survive editable native PPTX export.
+
+
 ## Active Deck3 three-minute eight-slide presentation (2026-10-10) — variant routing
 The currently user-approved short Deck3 presentation is the **eight-slide, three-minute** master at `thesis/presentations/deck3/DECK3_3MIN_8SLIDES_CANONICAL_TEXT_V1.md`. Before working on Deck3 slides or visuals, read `thesis/presentations/deck3/DECK3_PRESENTATION_MASTER_ROUTER_V1.md` to distinguish this short deck from the separate existing 13/14-slide Chapter 1 versions. For eight-slide tasks preserve its exact text (especially frozen GO/SO1–SO3, five citations, four SDGs), and use exactly five purpose-specific scientific illustrations on Slides 2–6, not eight complete slide images. Do not map full-deck sample IDs by number alone. This instruction overrides older default slide counts ONLY for the explicit three-minute variant; never changes higher-authority thesis science. Keep approved Deck3 color, Times New Roman, 16:9, white-background, evidence/rights, editable-annotation and animation QA controls.
 

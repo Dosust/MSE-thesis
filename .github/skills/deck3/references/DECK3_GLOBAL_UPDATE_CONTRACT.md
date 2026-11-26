@@ -1,3 +1,6 @@
+## External professional-engineering standards integration — 2026-10-13
+All `Deck3 all` ecosystem updates must also read `DECK3_PRESENTATION_VARIANT_ROUTER_V1.md` and `DECK3_PROFESSIONAL_ENGINEERING_VISUAL_REFERENCES_V1.md`, and propagate them through research, diagram, infographic, mathematical, advanced PowerPoint, source-exemplar review, animation and CI. Verified online guides from IEC 60617, OMG SysML v2, INCOSE, EPRI OpenDSS, IEEE graphics, Nature figures, ASU presentations and Manim are *methodological/design references*, never proof of installation-specific components, equations, measured data, compliance, originality or rights clearance. Select the correct visual grammar before any generation. The user-approved **10-slide** progress outline must not be silently remapped to historical 8/13/14-slide Deck3 versions. Preserve canonical science, palette, evidence, native editing and fail-closed release status.
+
 ## Deck3-governed AI scientific image generation (mandatory)
 
 ## Deck3 all-forms v2 learning contract (2026-10-09)
