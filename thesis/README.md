@@ -1,6 +1,6 @@
 # ASU MSE Thesis Document Architecture — Thermal-Interdependency Direction
 
-**Thesis title:** **Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
+**Thesis title:** **Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
 **Degree:** Master of Science in Engineering (MSE), Sustainable Engineering  
 **Current scope:** [`../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md`](../project/CANONICAL_THERMAL_INTERDEPENDENCY_SCOPE_V1.md) + [`../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md`](../project/CANONICAL_EXTREME_HEAT_THERMAL_INTERDEPENDENCY_STATE_TIME_SCOPE_AMENDMENT_V4.md)  
 **State-time definitions:** [`../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md`](../project/CANONICAL_STATE_TIME_DEFINITIONS_V1.md)  

@@ -1,6 +1,6 @@
 Slide 1 — Thesis Title
 
-**Physics-Based Mathematical Engineering of Power–Electrified Transportation Interdependencies for Resilience**
+**Engineering of Power–Electrified Transportation Interdependencies for Resilience**
 
 **Chapter 1 — Research Introduction**
 

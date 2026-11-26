@@ -1,7 +1,9 @@
 # Thesis Proposal Release Checklist
 
-**Canonical thesis title:** **Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience**  
-**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V1.md`
+**Canonical thesis title:** **Engineering of Power–Electrified Transportation Interdependencies for Resilience**  
+**Title authority:** `../../project/CANONICAL_THESIS_TITLE_V3.md`
+
+> **CURRENT-RELEASE GATE — BLOCKED:** The title metadata is synchronized to V3, but the RQ1–RQ7 / SO1–SO7 / H1–H5 and seven-stage scientific content below is an earlier research contract and is **not release-ready under the current thermal-only GO and SO1–SO3**. Preserve the material for provenance; do not submit or use it as the current proposal until independently revised against `../../project/CANONICAL_THERMAL_INTERDEPENDENCY_RESEARCH_OBJECTIVES_V1.md` and the governing thermal scope authorities. The approved title amendment alone does not authorize changes to objectives, hypotheses, or models.
 
 **Purpose:** qualify a proposal as an auditable research release before advisor/GSC submission.
 
@@ -48,7 +50,7 @@
 
 ## Compliance
 
-- [ ] Thesis title exactly matches `Physics-Based Mathematical Engineering of Power–Transportation Interdependencies for Resilience`.
+- [ ] Thesis title exactly matches `Engineering of Power–Electrified Transportation Interdependencies for Resilience`.
 - [ ] Degree named correctly as Master of Science in Engineering (MSE), Sustainable Engineering.
 - [ ] Institutional claims checked against current ASU/SSEBE sources.
 - [ ] Advisor/GSC-specific proposal requirements recorded separately from ASU rules.
