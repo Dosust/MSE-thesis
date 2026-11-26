@@ -1,0 +1,22 @@
+Field,Value
+Search ID,SCOPUS-S02-PHYSICS-20261016
+Scopus interface,Advanced Search
+Query file,SCOPUS_SEARCH_02_RECORDED_QUERY.txt
+Query confirmation against Scopus search history,PENDING - query reconstructed from prior instructions
+Search date,2026-10-16
+Rows exported,5932
+Columns exported,35
+DOI present,4887
+Blank titles,0
+Blank abstracts,0
+Duplicated EID within Search 2,0
+Overlap EID with Search 1,145
+Distinct EID Search 1 plus Search 2,8796
+Raw CSV file name,export_3afecaa7-7afa-4c92-9fbd-6db8c0fd08bf_2026-10-16T155530.041806193.csv
+File bytes,18745858
+SHA256,78b091fc9bcab397e2c5b4819f3237709041630f0357aaacfdce49ea4f5ae5ef
+References column,ABSENT
+Original CSV saved in GitHub,NO - external storage permission not established
+Safe storage,Institutionally approved personal research storage
+Screening status,NOT STARTED
+Novelty determination,NOT ESTABLISHED

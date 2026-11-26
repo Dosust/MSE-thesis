@@ -1,0 +1,11 @@
+TITLE-ABS-KEY(
+  ("electric vehicle" OR "EV charging" OR
+   "charging station" OR EVSE OR
+   "charging infrastructure")
+  AND
+  (transformer OR "distribution grid" OR
+   "distribution network" OR "power system")
+  AND
+  (thermal OR temperature OR "hot spot" OR
+   "hot-spot" OR derating OR aging OR ageing)
+)

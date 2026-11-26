@@ -1,0 +1,42 @@
+Metric,Value
+Date,2026-10-16
+Search ID,SCOPUS-S05-EXPERIMENT-20261016
+Records exported,20000
+Scopus 20000 export cap reached,YES
+Full result set verified,NO
+Query verified in Scopus History,NO - export dashboard screenshot verified only
+Nonempty DOI,18746
+Unique EID,20000
+Duplicate EID,0
+Overlap with previous four EIDs,6727
+New EIDs,13273
+All five unique EIDs,35006
+Original bytes,76536950
+SHA256,940f46c2e4fe44750866e06b5460107ca57614cc2881788f942948ab3e34ae36
+Original CSV in GitHub,NO
+Screened studies,NOT YET
+Query verified against Scopus export dashboard screenshot,YES
+Publication year filter shown,PUBYEAR > 1969 AND PUBYEAR < 2028
+Displayed exports using same Search5 expression,2
+Status export A,IN PROGRESS
+Status export B,DOWNLOAD CSV
+Scopus full results-page count,UNKNOWN
+Exports established to be disjoint,NO
+Scopus Search5 results-page total confirmed,23054
+Results page screenshot provided date,2026-10-16
+Current export size,20000
+Not yet exported records at time of screenshot,3054
+Search5 full export status,INCOMPLETE
+Proposed slice A,PUBYEAR > 1969 AND PUBYEAR < 2020
+Proposed slice B,PUBYEAR > 2019 AND PUBYEAR < 2028
+Year slices executed,NO
+Two original 20000 export jobs known disjoint,NO
+Search 5 reconciled by 1970-2019 supplement,YES
+Combined Search 5 unique EIDs,23054
+Supplement filename,export_0a135ac4-9b38-4e4a-ae65-69ffbdcabd90_2026-10-16T164754.064628789.csv
+Supplement count,8366
+S5 supplement overlap original 20k,5312
+All five search sets unique EIDs after supplement,37376
+EID coverage now,RECONCILED TO SCOPUS SCREENSHOT
+Earlier claim incomplete export,SUPERSEDED
+Exact supplement query history status,UNVERIFIED

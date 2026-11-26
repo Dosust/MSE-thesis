@@ -1,0 +1,28 @@
+Field,Value
+Search ID,SCOPUS-S04-MATH-PHYS-20261016
+Database,Scopus
+Interface,Advanced Search
+Search date,2026-10-16
+Recorded query file,SCOPUS_SEARCH_04_RECORDED_QUERY.txt
+Exact query confirmed with Scopus Search History,NO - CONFIRM
+Scopus UI hits,NOT VERIFIED - CSV ONLY
+Original CSV basename,export_fc290122-aa6c-4c61-bd50-7f392adbb404_2026-10-16T160905.777621326.csv
+Rows in original file,5108
+Columns in file,35
+Nonempty titles,5108
+Nonempty abstracts,5108
+Nonempty EIDs,5108
+Nonempty DOIs,4481
+Duplicate EIDs within Search 4,0
+Overlapping EIDs with Search 1,119
+Overlapping EIDs with Search 2,681
+Overlapping EIDs with Search 3,524
+Overlap of Search 4 with union of Searches 1-3,1283
+New EIDs from Search 4 not found in Searches 1-3,3825
+Unique EIDs across Searches 1-4,21733
+Raw CSV bytes,18253181
+Raw CSV sha256,6fa53d195469a86d53236ec68bb834c8b4c5ac96f73476d526c094757edbb68e
+Reference list column,ABSENT
+Original CSV committed to GitHub,NO - BULK LICENSED SCOPUS DATA REQUIRES AUTHORIZATION
+Screened relevance,NOT STARTED
+Novelty claim,NOT ESTABLISHED

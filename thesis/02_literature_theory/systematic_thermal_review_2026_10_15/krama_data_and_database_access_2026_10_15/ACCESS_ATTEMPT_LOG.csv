@@ -1,0 +1,14 @@
+Check ID,Requested item,Exact source / route,Observed access result,Date,Established,Blocking limitation
+A-K01,Krama Elsevier article metadata,https://www.sciencedirect.com/science/article/pii/S2590174526004435,PUBLISHER_INDEX_RESULT_OK; DIRECT_OPEN_403,2026-10-15,"Publisher identity, open-access status, data statement, abstract",PDF bytes not accessible
+A-K02,Krama HBKU official publication profile,https://elmi.hbku.edu.qa/en/publications/impact-of-extreme-climatic-conditions-on-fast-ev-charger-performa/,OPENED_OFFICIAL_METADATA_ABSTRACT,2026-10-15,"16 pages, authors, DOI, corresponding author",No full PDF attachment surfaced
+A-K03,ScienceDirect /pdfft,https://www.sciencedirect.com/science/article/pii/S2590174526004435/pdfft,CACHE_MISS,2026-10-15,No PDF obtained,No inference about reader access via institutional login
+A-K04,ScienceDirect /pdf,https://www.sciencedirect.com/science/article/pii/S2590174526004435/pdf,CACHE_MISS,2026-10-15,No PDF obtained,Not a tested rendered PDF
+A-K05,User library LibKey resolution,https://libkey.io/libraries/158/articles/710205762/full-text-file?utm_source=nomad,CACHE_MISS,2026-10-15,No file was delivered,Authentication may be required elsewhere
+A-K06,ResearchGate author full-text request,https://www.researchgate.net/publication/404913019_Impact_of_extreme_climatic_conditions_on_fast_EV_charger_performance_field_experimental_insights_from_Qatar,REQUEST_PDF_ONLY,2026-10-15,Publisher-independent request route,No actual full text
+A-K07,Third-party Scribd transcription,https://www.scribd.com/document/1055961993/Impact-of-Extreme-Climatic-Conditions-on-Fast-EV-Charger-Performance,THIRD_PARTY_TEXT_UNVERIFIED,2026-10-15,Not authenticated against publisher PDF,Must not upgrade equations/data status
+A-DB1,Scopus Advanced Search interface,https://www.scopus.com/search/form.uri?display=advanced,HTTP_403_FORBIDDEN,2026-10-15,No authenticated database query run,Hit count and export unavailable
+A-DB2,Web of Science Core Collection Advanced Search,https://www.webofscience.com/wos/woscc/advanced-search,HTTP_403_FORBIDDEN,2026-10-15,No authenticated database query run,Hit count and export unavailable
+A-DB3,IEEE Xplore Advanced Search,https://ieeexplore.ieee.org/search/advanced,HTTP_418_AUTOMATED_ACCESS_ERROR,2026-10-15,No authenticated database query run,Hit count and export unavailable
+A-DB4,Engineering Village Compendex,https://www.engineeringvillage.com/search/quick.url,OAUTH_REDIRECT_MINIMAL_PAGE,2026-10-15,Only session redirect observed; no results,Hit count and export unavailable
+A-DB5,Elicit scholarly index,Connected Elicit academic search API,API_ACCESS_DENIED_PLAN_RESTRICTION,2026-10-15,Six separate lane requests blocked in prior pilot,Not four indexed subscription databases
+A-DB6,Wiley Scholar Gateway,Connected Wiley Scholar Gateway,INTERNAL_CONNECTOR_ERROR_PRIOR_AUDIT,2026-10-15,No successful substitute full-text claim,Not Scopus/WoS/IEEE/Compendex

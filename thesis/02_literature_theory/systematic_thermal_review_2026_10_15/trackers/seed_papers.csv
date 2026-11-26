@@ -1,0 +1,15 @@
+KNOWN-ITEM SENTINEL PAPERS — NOT SCREENED,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+"These are search-sensitivity checks, not included studies. Confirm paper versions and PDFs individually.",,,,,,
+,,,,,,
+Sentinel ID,Reference,DOI / URL,Review lane,Question triggered,Status,Caveat
+S01,Rinaldi et al. (2001),https://doi.org/10.1109/37.969131,SoS context,How are directional infrastructure dependencies defined?,SEED ONLY,Foundational—not direct thermal data
+S02,Fotouhi et al. (2017),https://doi.org/10.1016/j.ress.2017.01.026,P–T coupling,What electricity–traffic feedback and resilience methods already exist?,SEED ONLY,Not proof of heat-specific coupling
+S03,Zou and Chen (2019),https://doi.org/10.1016/j.ress.2019.106557,P–T coupling,How is dynamic traffic coupled to power system recovery?,SEED ONLY,Not automatically a thermal field experiment
+S04,Balogun et al. EV-EcoSim,https://doi.org/10.1109/TSG.2023.3339374,Co-simulation / thermal,"What models already couple charger, transformer and grid?",SEED ONLY,Confirm battery thermal assumptions in primary text
+S05,Bragone et al. (2022),https://doi.org/10.1016/j.epsr.2022.108447,Transformer PINN,What evidence supports PINN vs numerical thermal solvers?,SEED ONLY,Inspect exact experimental/numerical comparison
+S06,Blomgren et al. (2023),https://doi.org/10.1016/j.segan.2023.101048,Thermal grey-box,How did stochastic thermal estimation use field data?,SEED ONLY,Authors cannot share original field measurements
+S07,Tang et al. (2024),https://doi.org/10.1049/hve2.12435,Transformer PINN,What is physically constrained and independently tested?,SEED ONLY,Distinguish COMSOL labels from field measurement
+S08,Guddanti et al. (2025),https://doi.org/10.1038/s41467-025-59749-4,Heat and grid,How does temperature affect distribution operating limits?,SEED ONLY,Inspect modeled vs measured network evidence
+S09,Krama et al. (2026),https://doi.org/10.1016/j.ecmx.2026.101960,Charger field thermal,How is charger thermal derating observed at extreme heat?,SEED ONLY,Raw data on request; availability not confirmed
+S10,Schreiber et al. (2026),https://doi.org/10.1016/j.etran.2025.100518,EV thermal field,How do measured temperatures differ between lab and real driving?,SEED ONLY,Verify independent extreme-heat episodes
+S11,Doyen and De Lara (2010),https://doi.org/10.1016/j.sysconle.2010.07.008,Resilience context,Mathematical viability foundations if required by actual thermal service model,SEED ONLY,"Adjacent mathematics, not direct thermal P–T study"

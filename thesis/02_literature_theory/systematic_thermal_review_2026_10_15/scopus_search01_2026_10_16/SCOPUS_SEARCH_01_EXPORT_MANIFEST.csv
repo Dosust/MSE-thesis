@@ -1,0 +1,20 @@
+Field,Value
+Search ID,SCOPUS-S01-PT-THERMAL-20261016
+Database,Scopus
+Interface,Advanced Search
+Search executed,2026-10-16
+Query file,SCOPUS_SEARCH_01_EXACT_QUERY.txt
+Results shown in Scopus,3009
+CSV rows parsed,3009
+Records with DOI,2642
+Duplicated EIDs,0
+Export columns,33
+References column,ABSENT
+Original CSV basename,export_948fd5b4-d17c-4aef-a7c4-9f9d839aefbb_2026-10-16T155123.210615672.csv
+File byte size,10869578
+SHA256,f9c2d13779c96bf1c8a5965fa10804fc3d5949284b682ef09f581a4cd33b90fd
+Original bulk CSV in GitHub,NO - LICENSE/STORAGE PERMISSION UNCONFIRMED
+Original bulk CSV custody,USER-OWNED ATTACHMENT / AUTHORIZED STORAGE REQUIRED
+Screening,NOT STARTED
+PRISMA dedup across queries,NOT STARTED
+Novelty status,UNVERIFIED

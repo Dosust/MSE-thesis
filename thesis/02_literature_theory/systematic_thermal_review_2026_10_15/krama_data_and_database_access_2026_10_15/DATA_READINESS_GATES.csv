@@ -1,0 +1,11 @@
+Gate,Necessary evidence,Required verification,Current status,Blocking reason
+K-IDENTITY,Publisher DOI/PII/license,Match official publisher and institutional record,VERIFIED,None
+K-PDF,16-page publisher/accepted PDF,"Actually open file; inspect pages, equations, figures, tables",BLOCKED,403/cache misses; no authentic PDF bytes
+K-RAW,Original timestamped observations,Open at least one legitimate raw file and view numeric rows,BLOCKED,Data available on request; no files supplied
+K-TIMESYNC,Sensor channels/session clock keys,"Check time zones, time alignment and sampling rate",BLOCKED,Raw time series not available
+K-THERMAL,"Ambient, rectifier, charger thermal and power values","Inspect units, missingness, actual heat range and sensor accuracy",BLOCKED,Measurement data not available
+K-IDENTIFIABILITY,"Excitation, loss separation, physical parameter priors",Sensitivity rank and profile likelihood or equivalent under proposed model,NOT TESTABLE,Data not available; no model fixed
+K-VAL,Independent session/time heat events,Reproduce train/test partitions and compare out-of-sample,NOT TESTABLE,Neither author split nor raw rows available
+K-COUPLING,Matched upstream distribution transformer and EVSE data,Same site/IDs/time plus measured P and T_e physical conditions,UNKNOWN,Study abstract does not establish external transformer sensor
+K-SERVICE,Actual trip/schedule mobility outcome,Matched delivered energy and required trip/schedule output,UNKNOWN,Reported charging duration alone insufficient
+K-RIGHTS,Data license/permission,Written permission for thesis use and secure storage,NOT OBTAINED,No author response

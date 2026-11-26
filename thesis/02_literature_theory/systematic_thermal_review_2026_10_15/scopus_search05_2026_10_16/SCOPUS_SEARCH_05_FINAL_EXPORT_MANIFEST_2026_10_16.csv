@@ -1,0 +1,25 @@
+Field,Value
+Search identifier,SCOPUS-S05-EXPERIMENT-20261016
+Reported Scopus result total,23054
+Original S5 exported EIDs,20000
+Supplemented S5 1970-2019 exported EIDs,8366
+S5 original and supplement duplicate EIDs,5312
+S5 union unique EIDs,23054
+S5 count reconciled to UI,YES
+Records still absent from S5 by count,0
+1970-2019 supplement original filename,export_0a135ac4-9b38-4e4a-ae65-69ffbdcabd90_2026-10-16T164754.064628789.csv
+1970-2019 supplement SHA256,5169e270bf4752d96a216e82644c5f31f454770a0c561ed5cf29383175824d39
+1970-2019 supplement bytes,25356172
+1970-2019 rows with DOI,6392
+1970-2019 rows with title,8365
+1970-2019 duplicated EIDs,0
+1970-2019 exact query independently checked in Scopus history,NO
+Second new upload identical to prior Search 2,YES
+Second new upload filename,export_3afecaa7-7afa-4c92-9fbd-6db8c0fd08bf_2026-10-16T155530.041806193(1).csv
+Search2 repeated upload original SHA256,78b091fc9bcab397e2c5b4819f3237709041630f0357aaacfdce49ea4f5ae5ef
+Search2 repeat adds new EIDs,0
+New EIDs relative original Search5 20k,3054
+New EIDs relative all previous Search1-5 uploads,2370
+Updated distinct EIDs across all five searches,37376
+Original bulk Scopus CSVs in GitHub,NO
+Formal paper screening completed,NO

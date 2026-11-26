@@ -1,0 +1,30 @@
+Field,Value
+Search ID,SCOPUS-S03-EV-THERMAL-20261016
+Database,Scopus
+Interface,Advanced Search
+Search date,2026-10-16
+Recorded query path,SCOPUS_SEARCH_03_RECORDED_QUERY.txt
+Exact query checked against executed Scopus search history,NO - CONFIRM
+Displayed Scopus hits,NOT IN CSV - CONFIRM UI
+Rows in actual original CSV,9595
+Columns in actual CSV,35
+Records with DOI,9008
+Records with title,9595
+Records with abstract,9595
+Records with EID,9595
+Duplicate EID within Search 3,0
+Overlap EIDs Search 1,473
+Overlap EIDs Search 2,75
+EIDs found in all 3,65
+Distinct EIDs across Searches 1 to 3,17908
+Title-only battery keyword heuristic,4890
+Title-only charger keyword heuristic,1496
+Title-only transformer keyword heuristic,62
+Document Type Retracted in CSV,11
+Original CSV basename,export_11a30dfb-e1a1-4e89-a69d-4e5e85e92400_2026-10-16T160243.361739678.csv
+Original CSV bytes,35932669
+Original CSV sha256,b1f3746a38f1db15c49424c1aaaa20573601fa5bfd17799d63e8fb89137768b6
+References column,ABSENT
+Original CSV committed to GitHub,NO - BULK LICENSED METADATA
+Screening status,NOT STARTED
+Math and physics extraction,NOT STARTED FOR THESE RESULTS

@@ -1,0 +1,10 @@
+TITLE-ABS-KEY(
+  ("electric vehicle" OR EVSE OR
+   "EV charging" OR "charging station" OR
+   "fast charger")
+  AND
+  ("extreme heat" OR "ambient temperature" OR
+   heatwave OR "thermal derating" OR
+   "thermal management" OR "heat transfer" OR
+   "charging efficiency")
+)
