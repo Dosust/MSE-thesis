@@ -7,6 +7,15 @@ metadata:
   short_name: "Deck3"
 ---
 
+## Visual Source and Scientific Composition Agents — mandatory Deck3 illustration handoff (2026-10-13)
+
+For every new **illustrative image / illustrative infographic / scientific asset**, route the task through `.github/skills/deck3-visual-source-agent/SKILL.md` and then `.github/skills/deck3-scientific-composition-agent/SKILL.md`. The Source Agent inspects real physical imagery, verifies equipment match and documents image permissions; the Composition Agent applies three-layer `REAL + PHYSICS + LAYOUT` construction, the ten-slide purpose map, typed arrow ontology, and individually exported Canva-ready assets. Read the source candidate catalog, `references/TEN_SLIDE_VISUAL_ROLES_V1.md`, and `references/ARROW_ONTOLOGY_AND_GEOMETRY_V1.md` in the Composition Agent as appropriate. The optional `scripts/validate_deck3_visual_manifest.py` is **structural admission only**, never evidence that actual image pixels, real-world source rights, I2/I3 or PowerPoint/Canva editability are verified. Preserve current canonical slide variants, frozen thesis science, 13 authored colors, white interiors, native editable labels and truthful QA.
+
+
+## First Law — real-world-image-grounded unified illustration (2026-10-13)
+
+**READ FIRST for any illustrative image/infographic involving physical equipment:** `references/DECK3_REAL_WORLD_REFERENCE_FIRST_LAW_V1.md`. Search, genuinely inspect and qualify real-world photographs of relevant equipment before drawing; use authentic licensed imagery as much as scientifically appropriate in one coherent slide-purpose visual, otherwise produce an original source-grounded depiction with transparent disclosure. Apply hard physics, geometry, evidence, provenance and rights QA. Real equipment photography is **not** mandatory for abstract mathematical/evidence/workflow/timeline figures. Ten images means ten separate assets, never one montage or ten whole slides.
+
 ## User-directed Canva-ready individual illustrative infographics (2026-10-13)
 **MANDATORY for every "illustrative image", "illustrative infographic", or equivalent request:** Read `.github/skills/deck3/references/DECK3_INDIVIDUAL_CANVA_READY_ILLUSTRATION_PROTOCOL_V1.md` before any figure search, generation, asset delivery, or Canva/PowerPoint insertion. These terms mean **standalone scientific illustration assets**, NOT complete-slide screenshots. If the user requests N images, make N distinct actual files—never substitute one contact-sheet collage. Derive each from its own slide's approved main message and three actual bullets; research current online visual references per slide, inspect source rights, make original independently composed designs unless reuse rights are verified, and preserve physics/equations/claims and ASU/Deck3 layout. Use white surfaces, canonical 13 authored colors and authentic object colors. Keep citations and precise mathematics in editable slide objects, perform independent per-image QA, and never call an untested figure final. This changes no frozen thesis science or deck text.
 

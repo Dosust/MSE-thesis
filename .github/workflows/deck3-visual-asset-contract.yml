@@ -1,0 +1,24 @@
+name: Deck3 visual asset manifest structure checks
+on:
+  pull_request:
+    paths:
+      - 'scripts/validate_deck3_visual_manifest.py'
+      - 'scripts/test_deck3_visual_manifest.py'
+      - 'scripts/deck3_visual_asset_example.json'
+      - '.github/skills/deck3-visual-source-agent/**'
+      - '.github/skills/deck3-scientific-composition-agent/**'
+      - '.github/workflows/deck3-visual-asset-contract.yml'
+  workflow_dispatch:
+jobs:
+  validate-asset-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate qualified example (structural only)
+        run: python scripts/validate_deck3_visual_manifest.py scripts/deck3_visual_asset_example.json
+      - name: Run visual-manifest regression tests
+        run: python -m unittest discover -s scripts -p 'test_deck3_visual_manifest.py' -v
